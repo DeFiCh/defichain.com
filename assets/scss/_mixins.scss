@@ -1,0 +1,18 @@
+// To deal with the notch in iPhone X series of devices
+@mixin iphone-x-landscape() {
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin text-hide() {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1); /* 2 */
+}

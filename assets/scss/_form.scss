@@ -1,0 +1,51 @@
+form {
+  border: $form-control-border;
+  border-radius: $form-control-border-radius;
+  box-shadow: $base-box-shadow;
+  overflow: hidden;
+}
+
+.form-field {
+  display: flex;
+  justify-content: space-between;
+  background-color: $color-ui-white;
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    flex-grow: 1;
+    display: block;
+    appearance: none;
+    outline: none;
+    border: 0;
+    margin: 0;
+    padding-left: $form-control-padding-horizontal;
+    padding-right: $form-control-padding-horizontal;
+    padding-top: $form-control-padding-vertical - 0.5px;
+    padding-bottom: $form-control-padding-vertical - 0.5px;
+    font-size: $form-control-font-size;
+    line-height: $form-control-line-height;
+    background-color: $form-control-bg;
+    color: $form-control-color;
+    resize: none;
+
+    &::placeholder {
+      color: $color-ui-medium;
+      transition: $form-control-transition;
+    }
+
+    &:focus {
+      &::placeholder {
+        color: $color-ui-dark;
+      }
+    }
+  }
+
+  .btn-plain {
+    background-color: transparent;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

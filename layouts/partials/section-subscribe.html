@@ -1,0 +1,66 @@
+<section class="subscribe">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col col-lg-4 offset-xl-1">
+        <h2 data-scroll="once">{{ $.Param "content.sections.roadmap.description" }}</h2>
+
+        <!-- Begin Sendinblue Form -->
+        <!-- START - We recommend to place the below code where you want the form in your website html  -->
+        <div class="sib-form">
+          <div id="sib-form-container" class="sib-form-container">
+            <div id="error-message" class="sib-form-message-panel">
+              <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                <span class="sib-form-message-panel__inner-text">
+                  {{ $.Param "content.sections.roadmap.subscribe.messages.error.general" }}
+                </span>
+              </div>
+            </div>
+            <div id="success-message" class="sib-form-message-panel">
+              <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                <span class="sib-form-message-panel__inner-text">
+                  {{ $.Param "content.sections.roadmap.subscribe.messages.success" }}
+                </span>
+              </div>
+            </div>
+            <div id="sib-container" class="sib-container--medium sib-container--horizontal">
+              <form id="sib-form" method="POST"
+                action="https://sibforms.com/serve/MUIEANvPA0bQKQwjtmWLE4S_naKE1WHvIPVrTBJOf11iq_hXn-nAi4EY9zv4EP-lBswKpWr8nUYCqa3zWfKPF1cWu0Aq4K8hCxsErBUnJTgjtB9Csv_vvo7_EFzkjHgLRt2vso_HMtPsF2JJZXE9J-QQbbHW3Z1aBLyYtjNgrz4UReS564Xr044v1bBLVDEv-qX_VyWh3FtrFnyU"
+                data-type="subscription">
+                <div class="form-field form__entry entry_block">
+                  <input class="input" maxlength="200" type="email" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="{{ $.Param "content.sections.roadmap.subscribe.textfield.placeholder" }}" data-required="true" required />
+                  <button class="btn btn-plain" form="sib-form" type="submit">
+                    <svg class="d-none"></svg>
+                    {{ $.Param "content.sections.roadmap.subscribe.button.label" }}
+                  </button>
+                  <div class="entry__error entry__error--primary"></div>
+                </div>
+                <input type="text" name="email_address_check" value="" class="input--hidden">
+                <input type="hidden" name="locale" value="en">
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- END - We recommend to place the below code where you want the form in your website html  -->
+        <!-- START - We recommend to place the below code in footer or bottom of your website html  -->
+        <script>
+          window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+          window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+          window.REQUIRED_ERROR_MESSAGE = "{{ $.Param "content.sections.roadmap.subscribe.messages.error.blank_field" }}";
+          window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+          window.translation = {
+            common: {
+              selectedList: '{quantity} list selected',
+              selectedLists: '{quantity} lists selected'
+            }
+          };
+          var AUTOHIDE = Boolean(0);
+        </script>
+        <script src="https://sibforms.com/forms/end-form/build/main.js">
+        </script>
+        <script src="https://www.google.com/recaptcha/api.js?hl=en"></script>
+        <!-- END - We recommend to place the above code in footer or bottom of your website html  -->
+        <!-- End Sendinblue Form -->
+      </div>
+    </div>
+  </div>
+</section>

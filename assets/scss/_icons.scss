@@ -1,0 +1,23 @@
+//
+// Feature icons
+//
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+  background-color: $color-ui-white;
+  color: $color-brand-purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .light & {
+    background-color: $color-brand-llc;
+  }
+}

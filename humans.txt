@@ -1,0 +1,14 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+  Designer, developer: Aen
+  Contact: aen@cakedefi.com
+  Twitter: @AenTan
+  From: Singapore
+
+# SITE
+  Standards: HTML5, CSS3, JavaScript
+  Generator: Hugo
+  Deploy: Github Pages
+  Editor: VS Code

@@ -1,0 +1,19 @@
+// 
+// Show/hide
+//
+
+.d-none {
+  display: none;
+}
+
+$displays: inline, block, flex;
+
+@each $bp, $w in $breakpoints {
+  @each $d in $displays {
+    .d-#{$d}-#{$bp} {
+      @include media(">#{$bp}") {
+        display: #{$d};
+      }
+    }
+  }
+}

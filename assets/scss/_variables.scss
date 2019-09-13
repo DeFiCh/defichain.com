@@ -1,0 +1,158 @@
+// Colors
+
+$color-brand-purple:           #5B10FF;
+$color-brand-green:             #02B31B;
+
+$color-ui-black:                black;
+$color-ui-white:                white;
+
+// Black and gray ui colors (intensity as coffee roasts)
+$color-ui-default:              $color-ui-black;
+$color-ui-darkest:              $color-brand-green;
+$color-ui-dark:                 rgba(0,0,0,0.7);
+$color-ui-medium:               rgba(0,0,0,0.5);
+$color-ui-light:                rgba(0,0,0,0.3);
+$color-ui-lighter:              rgba(0,0,0,0.1);
+$color-ui-lightest:             rgba(0,0,0,0.05);
+
+$color-ui-action:               $color-brand-purple;
+$color-ui-red:                  red;
+$color-ui-green:                green;
+
+$color-linkedin:                #0077B5;
+
+
+// Typography
+
+$base-font-family:              'IBM Plex Sans', sans-serif;
+$base-font-features:            "liga" 1, "kern" 1, "salt" 1;
+// aalt case dnom frac kern liga numr onum pnum sinf sups tnum
+$monospace-font-family:         'IBM Plex Mono', sans-serif;
+$monospace-font-features:       "tnum" 1;
+
+$font-weight-light:             300;
+$font-weight-regular:           400;
+$font-weight-medium:            500;
+$font-weight-semibold:          600;
+$font-weight-bold:              700;
+$font-weight-extrabold:         800;
+
+$h1-font-size:                  8.0rem;
+$h1-line-height:                10.0rem;
+$h1-letter-spacing:             0;
+$h1-font-weight:                $font-weight-regular;
+$h1-margin-bottom:              8.0rem;
+
+$h2-font-size:                  4.0rem;
+$h2-line-height:                7.0rem;
+$h2-letter-spacing:             0;
+$h2-font-weight:                $font-weight-regular;
+$h2-margin-bottom:              4.0rem;
+
+$h3-font-size:                  2.4rem;
+$h3-line-height:                4.0rem;
+$h3-letter-spacing:             0;
+$h3-font-weight:                $font-weight-bold;
+$h3-margin-bottom:              4.0rem;
+
+// No h4 to h6
+
+$body-lg-font-size:             2.4rem;
+$body-lg-line-height:           4.0rem;
+$body-lg-letter-spacing:        0;
+$body-lg-font-weight:           $font-weight-regular;
+$body-lg-margin-bottom:         2.4rem;
+
+$body-md-font-size:             1.8rem;
+$body-md-line-height:           3.2rem;
+$body-md-letter-spacing:        0;
+$body-md-font-weight:           $font-weight-regular;
+$body-md-margin-bottom:         0;
+
+$body-sm-font-size:             1.4rem;
+$body-sm-line-height:           2.4rem;
+$body-sm-letter-spacing:        0;
+$body-sm-font-weight:           $font-weight-regular;
+$body-sm-margin-bottom:         2.4rem;
+
+$note-font-size:                1.4rem;
+$note-line-height:              2.0rem;
+$note-letter-spacing:           0;
+$note-font-weight:              $font-weight-regular;
+$note-margin-bottom:            2.0rem;
+
+$button-font-size:              2.4rem;
+$button-line-height:            3.2rem;
+$button-letter-spacing:         0;
+$button-font-weight:            $font-weight-regular;
+
+
+// UI knick knacks
+
+$base-border-radius:            4px;
+$base-border-style:             1px solid $color-ui-lighter;
+$base-box-shadow:               0 6px 12px 0 rgba(91,16,255,0.08), 0 8px 16px 0 rgba(0,0,0,0.04);
+$dark-box-shadow:               0 4px 8px 0 rgba(91,16,255,0.16), 0 8px 16px 0 rgba(0,0,0,0.32);
+
+
+// Z indeices
+
+$zindex-dropdown:               1000;
+$zindex-sticky:                 1020;
+$zindex-fixed:                  1030;
+$zindex-modal-backdrop:         1040;
+$zindex-modal:                  1050;
+$zindex-popover:                1060;
+$zindex-tooltip:                1070;
+
+
+// Grid system
+
+$breakpoints: (
+  sm:     576px,
+  md:     812px,
+  lg:     992px,
+  xl:     1248px,
+  ul:     1408px
+);
+
+$grid-max-columns:              12;
+$grid-gutter:                   32px;
+
+$container-max-width:           1408px;
+
+
+
+// Sections
+
+$section-padding-top:           48px;
+$section-padding-bottom:        48px;
+
+$section-padding-top-lg:        96px;
+$section-padding-bottom-lg:     96px;
+
+$section-bg:                    $color-ui-darkest;
+
+
+// Components
+
+$form-control-border-radius:    $base-border-radius;
+$form-control-border:           $base-border-style;
+$form-control-padding-horizontal: 16px;
+$form-control-padding-vertical: 12px;
+$form-control-color:            $color-ui-default;
+$form-control-bg:               transparent;
+$form-control-font-size:        $body-sm-font-size;
+$form-control-line-height:      $body-sm-line-height;
+$form-control-transition:       all 0.3s ease;
+
+$button-border-radius:          $base-border-radius;
+$button-box-shadow:             $base-box-shadow;
+$button-padding-horizontal:     $form-control-padding-horizontal;
+$button-padding-vertical:       $form-control-padding-vertical;
+
+$button-primary-color:          $color-ui-white;
+$button-primary-bg:             $color-brand-purple;
+
+$button-plain-color:            $color-brand-purple;
+$button-plain-bg:               transparent;

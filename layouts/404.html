@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="{{ $.Param "meta.description" }}">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+  {{ if .IsTranslated }}
+  {{ range .Translations }}
+  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+  {{ end }}
+  {{ end }}
+  <title>{{ .Site.Params.title }} &ndash; This page is missing</title>
+  {{ $style := resources.Get "scss/main.scss" | toCSS | postCSS | minify | fingerprint }}
+  <link href="{{ $style.RelPermalink }}" rel="stylesheet">
+</head>
+
+<body class="lang-{{.Language}}">
+
+  {{ partial "header.html" . }}
+
+  <main>
+
+    <section class="hero home-hero">
+      <div class="container">
+        <div class="row">
+          <div class="col col-sm-8 col-lg-7">
+            <h1>This page is missing.</h1>
+            <p><a href="/">Go back to the homepage</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  {{ partial "footer.html" . }}
+
+  {{ $main := resources.Get "js/main.js" }}
+  {{ $js := slice $main | resources.Concat "js/bundle-all.js" | resources.Minify | resources.Fingerprint }}
+  <script src="{{ $js.RelPermalink }}" type="text/javascript"></script>
+  {{ template "_internal/google_analytics_async.html" . }}
+</body>
+
+</html>

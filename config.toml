@@ -23,11 +23,13 @@ DefaultContentLanguage = "en"
     description = "Making the world a brighter place"
     company_name = "Cake Pte. Ltd."
     copyright = "All Rights Reserved"
+    fast_track = "Fast-track"
     weight = 20
-  [languages.de]
-    languageName = "Deutsch"
-    title = "DeFi Blockchain"
-    description = "Making the world a brighter place"
-    company_name = "Cake Pte. Ltd."
-    copyright = "Alle Rechte vorbehalten"
-    weight = 30
+  # [languages.de]
+  #   languageName = "Deutsch"
+  #   title = "DeFi Blockchain"
+  #   description = "Making the world a brighter place"
+  #   company_name = "Cake Pte. Ltd."
+  #   copyright = "Alle Rechte vorbehalten"
+  #   fast_track = "Fast-track"
+  #   weight = 30

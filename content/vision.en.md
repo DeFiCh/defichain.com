@@ -1,5 +1,5 @@
 ---
-title: DeFi Blockchain
+title: Vision
 type: vision
 long_title: Making the world a brighter place
 meta:
@@ -17,14 +17,7 @@ content:
       name: hero
       headline: Vision
       subhead: To allow everyone to truly be their own bank.
-    defi_blockchain:
-      name: defi-blockchain
-      fast_track_name: DeFi Blockchain
-      video: https://www.youtube.com/watch?v=2UehwDPc3Tk
-      headline: DeFi Blockchain
-      subject_name: with Dr. Julian Hosp
-      subject_title: CEO, Cake
-      quote: Healthy finances. For someone like me with the background at medicine, sounds like doing the right thing for the people.
+    #defi_blockchain in /
     highlights:
       name: highlights
       fast_track_name: Highlights
@@ -48,4 +41,6 @@ content:
         - icon:
           title: User-friendly
           description: Our GUI allows you to conduct defi in an easy manner.
+    #subscribe in /
+    #closer_look in /
 ---

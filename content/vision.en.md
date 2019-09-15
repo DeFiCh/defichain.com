@@ -2,6 +2,9 @@
 title: Vision
 type: vision
 long_title: Making the world a brighter place
+menu:
+  main:
+    weight: 20
 meta:
   description: By DeFi providing access to financial markets to people all around the world.
   og:
@@ -11,6 +14,8 @@ meta:
     image: 
     image_type: image/jpg
     locale: en_US
+theme:
+  header: dark
 content:
   sections:
     hero:

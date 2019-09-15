@@ -2,6 +2,9 @@
 title: Learn
 type: learn
 long_title: Secure your financial freedom with Decentralized Finance.
+menu:
+  main:
+    weight: 70
 meta:
   description: Secure your financial freedom with Decentralized Finance.
   og:

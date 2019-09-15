@@ -2,6 +2,9 @@
 title: Media
 type: media
 long_title: DeFi Blockchain and DeFi Token in the news and media.
+menu:
+  main:
+    weight: 80
 meta:
   description: DeFi Blockchain and DeFi Token in the news and media.
   og:

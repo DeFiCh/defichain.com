@@ -1,43 +1,44 @@
-<header>
+<header class="{{ with $.Param "theme.header" }}{{.}}{{ end }}">
  
-  <nav class="container-fluid">
+  <div class="container-fluid">
     <div class="row">
 
-      <div class="col col-lg-2 col-xl-2 offset-xl-1 ">
+      <nav class="col col-ul-10 offset-ul-1">
         <a class="brand" href="/" data-scroll="once">
           {{ readFile "/static/svg/logos/logo-defi.svg" | safeHTML }}
         </a>
-      </div>
-
-      <div class="menu col col-lg-10 col-xl-8" data-scroll="once">
-        <ul>
-          <li><a href="{{ relref . "/#about" }}">About</a></li>
-          <li><a href="{{ relref . "/#roadmap" }}">Roadmap</a></li>
-          <li><a href="{{ relref . "/#team" }}">Team</a></li>
-          <li class="lang-switcher">
-            <a href="#lang-menu">{{ .Language }}</a>
-            <div class="lang-menu current-{{ .Language }}" id="lang-switcher">
-              <ul>
-                {{ range $.Site.Home.AllTranslations }}
-                <li class="option-{{ .Language }}">
-                  <a href="{{ .Permalink | relURL }}">{{ .Language.LanguageName }}</a>
-                </li>
-                {{ end }}
-              </ul>
-            </div>
+        <ul class="menu">
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
+          <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+            <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
           </li>
+          {{ end }}
         </ul>
-      </div>
-
-      <div class="hbg">
-        <svg height="12" width="18" xmlns="http://www.w3.org/2000/svg">
-          <g fill="currentColor" fill-rule="evenodd">
-            <path d="M0 12h18v-2H0zm0-5h18V5H0zm0-7v2h18V0z" fill-rule="nonzero" />
-          </g>
-        </svg>
-      </div>
+        <div class="spacer"></div>
+        <a href="#" class="btn btn-pill">White Paper</a>
+        <div class="lang-switcher">
+          <a href="#lang-menu" class="btn">
+            {{ .Language }}
+            {{ readFile "/static/svg/icons/icon-globe.svg" | safeHTML }}
+          </a>
+          <!-- <div class="lang-menu current-{{ .Language }}" id="lang-switcher">
+            <ul>
+              {{ range $.Site.Home.AllTranslations }}
+              <li class="option-{{ .Language }}">
+                <a href="{{ .Permalink | relURL }}">{{ .Language.LanguageName }}</a>
+              </li>
+              {{ end }}
+            </ul>
+          </div> -->
+        </div>
+        <div class="hbg">
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </nav>
 
     </div>
-  </nav>
+  </div>
 
 </header>

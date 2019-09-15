@@ -23,6 +23,14 @@
     text-decoration: none;
   }
 
+  &.btn-pill {
+    border-radius: 30px;
+    border: 1px solid currentColor;
+    background: transparent;
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+
   .icon-wrapper {
     display: flex;
     align-items: center;
@@ -36,28 +44,20 @@
     height: 24px;
   }
 
-  &.btn-plain {
-    background-color: $color-ui-lightest;
-    color: $color-ui-action;
-
-    &:hover {
-      background-color: lighten($color-ui-action, 42%);
-    }
-  }
-
-  &.btn-linkedin {
-    background-color: $color-linkedin;
-
-    &:hover {
-      background-color: darken($color-linkedin, 10%);
-    }
-  }
-
   &[disabled] {
-    color: $color-ui-medium;
+    color: $color-ui-black60;
 
     &:hover  {
       text-decoration: none;
     }
+  }
+}
+
+.dark .btn {
+  color: $color-ui-white;
+
+  &:hover {
+    background-color: $color-ui-white10;
+    color: $color-ui-white;
   }
 }

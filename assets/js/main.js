@@ -1,8 +1,8 @@
 $(function () {
 
   $('.hbg').click(function() {
-    $('.menu').toggle();
     $(this).toggleClass('active');
+    $('.menu').toggleClass('active');
   });
 
   // Carousel for timeline
@@ -49,34 +49,13 @@ document.addEventListener('DOMContentLoaded', function () {
   trigger.callScope = scope;
 
   scope.heroOut = function () {
-    $('body > header').hide().addClass('sticky').fadeIn();
+    $('body > header').addClass('opaque');
     // pause hero animation
   };
 
   scope.heroIn = function () {
-    $('body > header').fadeOut(function() {
-      $(this).removeClass('sticky').show();
-    });
+    $('body > header').removeClass('opaque');
     // play hero animation
   };
 
-  scope.mapFaces = function () {
-    var $lms = $('.location-member');
-    var currRandom;
-    function randomFace() {
-      var nextRandom = Math.floor(Math.random() * $lms.length);
-      if (nextRandom != currRandom) {
-        currRandom = nextRandom;
-        var life = Math.floor(Math.random() * (4000 - 2000 + 1) + 2000);
-        $('.location.active').removeClass('active');
-        $lms.eq(nextRandom).parent().addClass('active');
-        $lms.eq(nextRandom).fadeIn('fast').delay(life).fadeOut('fast', function () {
-          randomFace();
-        });
-      } else {
-        randomFace();
-      }
-    }
-    randomFace();
-  }
 });

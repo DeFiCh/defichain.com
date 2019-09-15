@@ -2,6 +2,9 @@
 title: Foundation
 type: foundation
 long_title: Discover companies that build their services on DeFi Blockchain.
+menu:
+  main:
+    weight: 30
 meta:
   description: Discover companies that build their services on DeFi Blockchain.
   og:

@@ -78,9 +78,13 @@ p, .p {
       text-indent: $grid-gutter * 2;
     }
   }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
-.lead {
+.lg {
   font-size: $body-lg-font-size;
   line-height: $body-lg-line-height;
   font-weight: $body-lg-font-weight;
@@ -177,7 +181,7 @@ table {
 
   th, td {
     padding: $form-control-padding-vertical $form-control-padding-horizontal;
-    border: 1px solid $color-ui-medium;
+    border: 1px solid $color-ui-black60;
   }
   th {
     text-align: left;

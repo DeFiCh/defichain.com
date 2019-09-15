@@ -30,13 +30,13 @@ form {
     resize: none;
 
     &::placeholder {
-      color: $color-ui-medium;
+      color: $color-ui-black60;
       transition: $form-control-transition;
     }
 
     &:focus {
       &::placeholder {
-        color: $color-ui-dark;
+        color: $color-ui-black80;
       }
     }
   }

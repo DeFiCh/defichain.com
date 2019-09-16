@@ -42,52 +42,6 @@ body {
 }
 
 
-// 
-// Sections
-// 
-
-main {
-  overflow: hidden;
-
-  > section {
-    position: relative;
-    z-index: 10;
-    padding-top: $section-padding-top;
-    padding-bottom: $section-padding-bottom;
-
-    @include media(">lg") {
-      padding-top: $section-padding-top-lg;
-      padding-bottom: $section-padding-bottom-lg;
-    }
-
-    .scroll-detector {
-      width: 1px;
-      height: 1px;
-      position: absolute;
-      left: 50vw;
-      top: 50vh;
-      right: 50vw;
-      bottom: 50vh;
-      z-index: 999;
-    }
-  }
-}
-
-.spt1 {
-  padding-top: $section-padding-top;
-  @include media(">lg") {
-    padding-top: $section-padding-top-lg;
-  }
-}
-
-.spb1 {
-  padding-bottom: $section-padding-bottom;
-  @include media(">lg") {
-    padding-bottom: $section-padding-bottom-lg;
-  }
-}
-
-
 //
 // Header
 //
@@ -328,6 +282,59 @@ body > header {
 }
 
 
+// 
+// Sections
+// 
+
+main {
+  overflow: hidden;
+
+  > section {
+    position: relative;
+    z-index: 10;
+    padding-top: $section-padding-top;
+    padding-bottom: $section-padding-bottom;
+
+    @include media(">lg") {
+      padding-top: $section-padding-top-lg;
+      padding-bottom: $section-padding-bottom-lg;
+    }
+
+    &.dark {
+      color: $color-ui-white;
+    }
+
+    .scroll-detector {
+      width: 1px;
+      height: 1px;
+      position: absolute;
+      left: 50vw;
+      top: 50vh;
+      right: 50vw;
+      bottom: 50vh;
+      z-index: 999;
+    }
+
+    h2 {
+      max-width: 600px;
+    }
+  }
+}
+
+.spt1 {
+  padding-top: $section-padding-top;
+  @include media(">lg") {
+    padding-top: $section-padding-top-lg;
+  }
+}
+
+.spb1 {
+  padding-bottom: $section-padding-bottom;
+  @include media(">lg") {
+    padding-bottom: $section-padding-bottom-lg;
+  }
+}
+
 
 //
 // Hero section
@@ -353,7 +360,116 @@ section.hero {
   .hero-start {
     @include media(">lg") {
       max-width: 450px;
-      margin-left: 60px;
+    }
+  }
+}
+
+
+// 
+// Featured video sections
+// 
+
+section.featured-video {
+  background-color: $color-brand-night;
+
+  .video-player {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  }
+
+  .video-info {
+    padding: 60px 30px 0;
+    text-align: center;
+
+    @include media(">lg") {
+      padding-top: 0;
+      text-align: left;
+    }
+  }
+
+  h2.lg {
+    font-weight: $font-weight-bold;
+  }
+
+  .subject-name {
+    margin-bottom: 0;
+  }
+
+  .subject-title {
+    color: $color-ui-white40;
+  }
+
+  .quote {
+    position: relative;
+    max-width: 396px;
+    margin-left: 40px;
+    margin-top: 100px;
+    font-weight: $font-weight-light;
+
+    @include media("<sm") {
+      display: none;
+    }
+
+    &:before {
+      content: "“";
+      font-size: 8.0rem;
+      color: $color-ui-white20;
+      position: absolute;
+      top: -40px;
+      left: -40px;
+    }
+
+    &:after {
+      content: "”";
+      font-size: 8.0rem;
+      color: $color-ui-white20;
+      position: absolute;
+      bottom: -60px;
+      right: -40px;
+    }
+  }
+}
+
+
+// 
+// Highlights
+// 
+
+section.highlights {
+  .highlight {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    @include media(">md") {
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+
+    .wrapper {
+      max-width: 300px;
+    }
+  }
+
+  .highlight-icon {
+    margin-bottom: 30px;
+
+    @include media(">md") {
+      margin-bottom: 60px;
+    }
+
+    svg {
+      fill: currentColor;
     }
   }
 }
@@ -373,6 +489,9 @@ section.hero {
   section.hero {
     background-color: $color-brand-green;
     color: $color-ui-white;
+  }
+  .highlight-icon {
+    color: $color-brand-green;
   }
 }
 
@@ -412,269 +531,6 @@ section.subscribe {
     line-height: $note-line-height;
     color: $color-ui-red;
     margin-top: $form-control-padding-vertical;
-  }
-}
-
-
-//
-// Team
-//
-
-section.team {
-  .founder,
-  .member {
-    .member-linkedin {
-      display: block;
-      width: 32px;
-      height: 32px;
-      border-radius: $base-border-radius;
-      background-image: url(/svg/icons/icon-linkedin.svg);
-      background-position: center;
-      background-repeat: no-repeat;
-      position: absolute;
-      box-shadow: $base-box-shadow;
-
-      @include text-hide;
-      background-color: $color-linkedin; // this needs to be after text-hide()
-    }
-
-    h4 {
-      margin-bottom: 0;
-    }
-
-    small {
-      font-size: $note-font-size;
-      line-height: $note-line-height;
-      color: $color-ui-black80;
-      display: block;
-    }
-  }
-
-  .founder {
-    margin-bottom: $grid-gutter * 2;
-
-    .row {
-      align-items: flex-start;
-    }
-
-    h3 {
-      margin-bottom: 0;
-    }
-
-    small {
-      font-size: $body-md-font-size;
-      line-height: $body-md-line-height;
-      margin-bottom: $grid-gutter / 2;
-    }
-
-    .member-linkedin {
-      left: 72px;
-      top: 56px;
-      
-      @include media(">lg") {
-        left: calc(100% - 48px);
-        top: calc(100% - 40px);
-      }
-
-      @include media(">xl") {
-        left: calc(100% - 56px);
-        top: calc(100% - 48px);
-      }
-
-      @include media(">ul") {
-        left: calc(100% - 64px);
-        top: calc(100% - 56px);
-      }
-    }
-
-    img {
-      display: block;
-      border-radius: 50%;
-      width: 80px;
-      height: auto;
-
-      @include media(">lg") {
-        width: 100%;
-      }
-    }
-  }
-
-  .member {
-    margin-bottom: $grid-gutter * 2;
-
-    .member-linkedin {
-      left: 72px;
-      top: 56px;
-    }
-
-    img {
-      display: block;
-      border-radius: 50%;
-      width: 80px;
-      height: auto;
-      margin-bottom: 24px;
-    }
-  }
-
-  .team-world-map-wrapper {
-    position: relative;
-    height: 320px;
-    overflow: hidden;
-    margin-left: -$grid-gutter;
-    margin-right: -$grid-gutter;
-
-    @include media(">sm") {
-      height: 336px;
-    }
-
-    @include media(">md") {
-      height: 408px;
-    }
-
-    @include media(">ul") {
-      height: 608px;
-    }
-  }
-
-  .team-world-map {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 480px;
-
-    @include media(">sm") {
-      width: 640px;
-    }
-
-    @include media(">md") {
-      width: 800px;
-    }
-
-    @include media(">ul") {
-      width: 1120px;
-    }
-
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    .locations {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .location {
-      position: absolute;
-      width: 8px;
-      height: 8px;
-      border-radius: 4px;
-      margin-left: -4px;
-      margin-top: -4px;
-      background-color: rgba($color-ui-action, 0.3);
-
-      &.active {
-        background-color: $color-ui-action;
-      }
-
-      .location-member {
-        display: none;
-        position: absolute;
-        z-index: $zindex-dropdown;
-        width: 48px;
-        height: 48px;
-        margin-left: -20px;
-        margin-top: -52px;
-        border-radius: 50%;
-        box-shadow: $dark-box-shadow;
-
-        img {
-          width: 100%;
-          height: 100%;
-          display: block;
-          border-radius: 50%;
-        }
-      }
-    }
-  }
-}
-
-//
-// Jobs
-//
-
-section.jobs {
-  text-align: center;
-  background-color: $color-ui-black10;
-}
-
-
-// 
-// Press Materials
-// 
-
-.pm-asset-row,
-.pm-color-row {
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: flex-start;
-  margin-left: -$grid-gutter / 2;
-  margin-right: -$grid-gutter / 2;
-}
-
-.pm-asset,
-.pm-color {
-  min-width: 300px;
-  flex-grow: 1;
-  border: 1px solid $color-ui-black40;
-  border-radius: $base-border-radius;
-  width: calc(50% - #{$grid-gutter});
-  margin-left: $grid-gutter / 2;
-  margin-right: $grid-gutter / 2;
-  margin-bottom: $grid-gutter / 2;
-  overflow: hidden;
-
-  .image-wrapper,
-  .color-wrapper {
-    padding: $grid-gutter * 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 256px;
-    
-    .image {
-      width: 100%;
-      height: 100%;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-  }
-
-  .text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 64px;
-    border-top: 1px solid $color-ui-black40;
-  }
-
-  a {
-    text-decoration: none;
-    font-weight: $font-weight-medium;
-  }
-}
-
-.pm-color {
-  &.dark {
-    border: 0;
-    color: $color-ui-white;
-    border: transparent;
   }
 }
 

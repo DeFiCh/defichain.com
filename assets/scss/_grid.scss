@@ -27,6 +27,17 @@
   }
 }
 
+.container-flush {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include iphone-x-landscape() {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;

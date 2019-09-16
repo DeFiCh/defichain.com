@@ -19,11 +19,11 @@ content:
     defi_blockchain:
       name: defi-blockchain
       fast_track_name: DeFi Blockchain
-      video: https://www.youtube.com/watch?v=2UehwDPc3Tk
+      video: 2UehwDPc3Tk
       headline: DeFi Blockchain
-      subject_name: with Dr. Julian Hosp
+      subject_name: _with_ Dr. Julian Hosp
       subject_title: CEO, Cake
-      quote: Healthy finances. For someone like me with the background at medicine, sounds like doing the right thing for the people.
+      quote: Healthy finances. For someone like me with the background at medicine, sounds like _doing the right thing for the people_.
     contributors:
       name: contributor
       fast_track_name: Main contributors

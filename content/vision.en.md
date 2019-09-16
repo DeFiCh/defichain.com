@@ -28,22 +28,22 @@ content:
       fast_track_name: Highlights
       headline: To empower anyone to become their own bank.
       highlights_list:
-        - icon:
+        - icon: /static/svg/icons/highlights/coolface.svg
           title: Built for DeFi
           description: No insecure smart contracts with high gas fees.
-        - icon:
+        - icon: /static/svg/icons/highlights/thumbsup.svg
           title: Native
           description: Financial operations are implemented via native OPCODEs.
-        - icon:
+        - icon: /static/svg/icons/highlights/rocket.svg
           title: Tokenization
           description: Launch your own secure token on DeFi blockchain with ease.
-        - icon:
+        - icon: /static/svg/icons/highlights/links.svg
           title: Coin peg
           description: … in any crypto asset, be it Bitcoin, Ethereum or any other.
-        - icon:
+        - icon: /static/svg/icons/highlights/ok.svg
           title: Maximum coverage
           description: The DeFi chain does not focus on one specific asset (such as Ethereum).
-        - icon:
+        - icon: /static/svg/icons/highlights/hearteyes.svg
           title: User-friendly
           description: Our GUI allows you to conduct defi in an easy manner.
     #subscribe in /

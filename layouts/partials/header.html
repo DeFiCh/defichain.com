@@ -14,9 +14,14 @@
             <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
           </li>
           {{ end }}
+          {{ range .Site.Menus.white_paper }}
+          <li class="white-paper-list-link {{ if $currentPage.IsMenuCurrent "white_paper" . }}active{{ end }}">
+            <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+          </li>
+          {{ end }}
         </ul>
         <div class="spacer"></div>
-        <a href="#" class="btn btn-pill">White Paper</a>
+        <a href="#" class="btn btn-pill white-paper-link">White Paper</a>
         <div class="lang-switcher">
           <a href="#lang-menu" class="btn">
             {{ .Language }}

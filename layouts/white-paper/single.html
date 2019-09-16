@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="{{ $.Param "meta.description" }}">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+  <title>{{ $.Param "long_title" }}: {{ $.Param "long_title" }} &ndash; {{ .Site.Params.title }}</title>
+  {{ $style := resources.Get "scss/main.scss" | toCSS | postCSS | minify | fingerprint }}
+  <link href="{{ $style.RelPermalink }}" rel="stylesheet">
+  {{ if .IsTranslated }}
+  {{ range .Translations }}
+  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+  {{ end }}
+  {{ end }}
+  <meta property="og:title" content="{{ $.Param "meta.og.title" }}">
+  <meta property="og:description" content="{{ $.Param "meta.og.description" }}">
+  <meta property="og:site_name" content="{{ $.Param "meta.og.site_name" }}">
+  <meta property="og:url" content="{{ $.Param "meta.og.url" }}">
+  <meta property="og:image" content="{{ $.Param "meta.og.image" }}">
+  <meta property="og:image:type" content="{{ $.Param "meta.og.image_type" }}">
+  <meta property="og:locale" content="{{ $.Param "meta.og.locale" }}">
+</head>
+
+<body class="home">
+
+  {{ partial "header.html" . }}
+
+  <main>
+
+    <section class="hero" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
+      <div class="container-fluid">
+        <div class="row">
+          <div id="{{ $.Param "content.sections.hero.name" }}" class="col col-lg-6 col-xl-5 offset-xl-1">
+            <h1 data-scroll="once">{{ $.Param "content.sections.hero.headline" }}</h1>
+            
+          </div>
+        </div>
+      </div>
+      <!-- animation hero here -->
+    </section>
+
+    {{ partial "section-subscribe.html" . }}
+
+  </main>
+
+  {{ partial "footer.html" . }}
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  {{ $scrolltrigger := resources.Get "js/ScrollTrigger.min.js" }}
+  {{ $slick := resources.Get "js/slick.min.js" }}
+  {{ $main := resources.Get "js/main.js" }}
+  {{ $js := slice $scrolltrigger $slick $main | resources.Concat "js/bundle.js" | resources.Fingerprint }}
+  <script src="{{ $js.RelPermalink }}" type="text/javascript"></script>
+  {{ template "_internal/google_analytics_async.html" . }}
+</body>
+
+</html>

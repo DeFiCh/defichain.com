@@ -103,7 +103,12 @@ body > header {
 
   .row {
     align-items: center;
-    height: 112px;
+    height: $header-height;
+    align-items: stretch;
+
+    @include media(">md") {
+      height: $header-height-md;
+    }
   }
 
   nav {
@@ -121,22 +126,8 @@ body > header {
         display: flex;
       }
 
-      &.active {
-        display: block;
-        position: absolute;
-        z-index: 0;
-        left: -15px;
-        right: -16px;
-        top: 81px;
-        height: 100vh;
-
-        a {
-          padding-left: 30px;
-          padding-right: 30px;
-          padding-top: 10px;
-          padding-bottom: 10px;
-          font-size: $body-lg-font-size;
-        }
+      li {
+        position: relative;
       }
 
       a {
@@ -153,6 +144,10 @@ body > header {
 
       li.active a {
         color: $color-ui-black;
+      }
+
+      .white-paper-list-link {
+        display: none;
       }
     }
   }
@@ -187,8 +182,13 @@ body > header {
     box-sizing: content-box;
     display: block;
     width: 90px;
-    height: 51px;
+    height: 31px;
     margin-right: 40px;
+    overflow: hidden;
+
+    @include media(">md") {
+      height: 51px;
+    }
 
     svg {
       width: 90px;
@@ -202,7 +202,7 @@ body > header {
     flex-grow: 999;
   }
 
-  .btn-pill,
+  .white-paper-link,
   .lang-switcher {
     display: none;
     margin-right: 10px;
@@ -257,16 +257,72 @@ body > header {
         top: 21px;
       }
     }
+  }
+}
 
-    &.active {
-      .line:first-child {
-        transform: rotate(-45deg);
-        top: 50%;
+.menu-open {
+  overflow: hidden;
+
+  nav .menu {
+    position: absolute;
+    display: block;
+    z-index: 0;
+    left: -16px;  
+    right: -16px;
+    top: $header-height;
+    height: 100vh;
+
+    @include media(">md") {
+      top: $header-height-md;
+    }
+
+    @include media("<md", "landscape") {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      align-content: flex-start;
+
+      li {
+        width: 50%;
       }
-      .line:nth-child(2) {
-        top: 50%;
-        transform: rotate(45deg);
+    }
+
+    a {
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      font-size: $body-lg-font-size;
+
+      &:hover {
+        background-color: $color-ui-white10;
       }
+    }
+  }
+
+  header nav .menu .white-paper-list-link {
+    display: block;
+    margin-top: 30px;
+    width: 100%;
+    
+    &:before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      width: 100%;
+      height: 1px;
+      background-color: $color-ui-black10;
+    }
+  }
+
+  .hbg {
+    .line:first-child {
+      transform: rotate(-45deg);
+      top: 50%;
+    }
+    .line:nth-child(2) {
+      top: 50%;
+      transform: rotate(45deg);
     }
   }
 }
@@ -283,6 +339,10 @@ section.hero {
   align-items: flex-end;
   text-align: center;
   padding-bottom: $section-padding-bottom * 1.25;
+
+  @include media("<md", "landscape") {
+    height: 352px;
+  }
 
   @include media(">lg") {
     text-align: left;
@@ -307,7 +367,7 @@ section.hero {
   > header {
     background-color: $color-brand-green;
   }
-  .menu.active {
+  &.menu-open .menu {
     background-color: $color-brand-green;
   }
   section.hero {

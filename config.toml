@@ -13,6 +13,7 @@ title = "DeFi Blockchain"
     telegram = "https://t.me/CakeDeFi_EN"
 
 [blackfriday]
+  extensions = ["hardLineBreak"]
 
 DefaultContentLanguage = "en"
 

@@ -1,30 +1,29 @@
 $(function () {
 
   $('.hbg').click(function() {
-    $(this).toggleClass('active');
-    $('.menu').toggleClass('active');
+    $('body').toggleClass('menu-open');
   });
 
-  // Carousel for timeline
-  if ($(".timeline-slider").length > 0) {
-    $(".timeline-slider").slick({
-      appendArrows: '.timeline-nav',
-      arrows: true,
-      autoplay: false,
-      autoplaySpeed: 5000,
-      centerMode: true,
-      dots: false,
-      draggable: false,
-      infinite: false,
-      initialSlide: 2,
-      mobileFirst: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      speed: 500,
-      variableWidth: true,
-      waitForAnimate: false
-    });
-  }
+  // Carousel for closer look
+  // if ($(".timeline-slider").length > 0) {
+  //   $(".timeline-slider").slick({
+  //     appendArrows: '.timeline-nav',
+  //     arrows: true,
+  //     autoplay: false,
+  //     autoplaySpeed: 5000,
+  //     centerMode: true,
+  //     dots: false,
+  //     draggable: false,
+  //     infinite: false,
+  //     initialSlide: 2,
+  //     mobileFirst: true,
+  //     slidesToShow: 1,
+  //     slidesToScroll: 1,
+  //     speed: 500,
+  //     variableWidth: true,
+  //     waitForAnimate: false
+  //   });
+  // }
 
   $('.lang-switcher > a').click(function(e) {
     e.preventDefault();

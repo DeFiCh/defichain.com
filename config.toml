@@ -21,8 +21,8 @@ DefaultContentLanguage = "en"
   [languages.en]
     languageName = "English"
     title = "DeFi Blockchain"
-    description = "Making the world a brighter place"
-    company_name = "Cake Pte. Ltd."
+    description = "Decentralized finance. _Different finance._"
+    company_name = "DeFi Blockchain"
     copyright = "All Rights Reserved"
     fast_track = "Fast-track"
     weight = 20

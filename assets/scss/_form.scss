@@ -1,14 +1,5 @@
-form {
-  border: $form-control-border;
-  border-radius: $form-control-border-radius;
-  box-shadow: $base-box-shadow;
-  overflow: hidden;
-}
-
 .form-field {
   display: flex;
-  justify-content: space-between;
-  background-color: $color-ui-white;
 
   input[type="text"],
   input[type="email"],
@@ -26,6 +17,10 @@ form {
     font-size: $form-control-font-size;
     line-height: $form-control-line-height;
     background-color: $form-control-bg;
+    border: $form-control-border;
+    border-radius: $form-control-border-radius;
+    box-shadow: $base-box-shadow;
+    background-color: $color-ui-white;
     color: $form-control-color;
     resize: none;
 
@@ -41,11 +36,7 @@ form {
     }
   }
 
-  .btn-plain {
-    background-color: transparent;
-
-    &:hover {
-      background-color: transparent;
-    }
+  .btn {
+    margin-left: 30px;
   }
 }

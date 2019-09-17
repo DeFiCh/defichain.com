@@ -84,6 +84,11 @@ content:
         button:
           label: Join now
         helper: We’ll send you the most important updates. We won’t spam your mailbox. By joining our mailing list you agree to our [Privacy Policy](/privacy-policy/).
+        messages:
+          success: Thank you for subscribing!
+          error: 
+            general: Oops! That didn't go through.
+            blank_field: This field cannot be left blank.
     closer_look:
       headline: Discover DeFi Blockchain. See your financial hurdles turning into a breeze.
 

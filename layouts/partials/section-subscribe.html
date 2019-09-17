@@ -1,8 +1,12 @@
+{{ $Home := .Site.GetPage "/" }}
 <section class="subscribe">
   <div class="container-fluid">
     <div class="row">
       <div class="col col-lg-4 offset-xl-1">
-        <h2 data-scroll="once">{{ $.Param "content.sections.roadmap.description" }}</h2>
+        <div class="section-icon">
+          {{ readFile "/static/svg/icons/icon-email.svg" | safeHTML }}
+        </div>
+        <h2 data-scroll="once">{{ $Home.Param "content.sections.subscribe.headline" }}</h2>
 
         <!-- Begin Sendinblue Form -->
         <!-- START - We recommend to place the below code where you want the form in your website html  -->
@@ -11,14 +15,14 @@
             <div id="error-message" class="sib-form-message-panel">
               <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
                 <span class="sib-form-message-panel__inner-text">
-                  {{ $.Param "content.sections.roadmap.subscribe.messages.error.general" }}
+                  {{ $Home.Param "content.sections.subscribe.form.messages.error.general" }}
                 </span>
               </div>
             </div>
             <div id="success-message" class="sib-form-message-panel">
               <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
                 <span class="sib-form-message-panel__inner-text">
-                  {{ $.Param "content.sections.roadmap.subscribe.messages.success" }}
+                  {{ $Home.Param "content.sections.subscribe.form.messages.success" }}
                 </span>
               </div>
             </div>
@@ -27,10 +31,10 @@
                 action="https://sibforms.com/serve/MUIEANvPA0bQKQwjtmWLE4S_naKE1WHvIPVrTBJOf11iq_hXn-nAi4EY9zv4EP-lBswKpWr8nUYCqa3zWfKPF1cWu0Aq4K8hCxsErBUnJTgjtB9Csv_vvo7_EFzkjHgLRt2vso_HMtPsF2JJZXE9J-QQbbHW3Z1aBLyYtjNgrz4UReS564Xr044v1bBLVDEv-qX_VyWh3FtrFnyU"
                 data-type="subscription">
                 <div class="form-field form__entry entry_block">
-                  <input class="input" maxlength="200" type="email" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="{{ $.Param "content.sections.roadmap.subscribe.textfield.placeholder" }}" data-required="true" required />
+                  <input class="input" maxlength="200" type="email" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="{{ $Home.Param "content.sections.subscribe.form.textfield.placeholder" }}" data-required="true" required />
                   <button class="btn btn-plain" form="sib-form" type="submit">
                     <svg class="d-none"></svg>
-                    {{ $.Param "content.sections.roadmap.subscribe.button.label" }}
+                    {{ $Home.Param "content.sections.subscribe.form.button.label" }}
                   </button>
                   <div class="entry__error entry__error--primary"></div>
                 </div>

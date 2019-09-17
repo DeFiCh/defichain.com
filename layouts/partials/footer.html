@@ -1,35 +1,56 @@
-<footer class="footer">
+<footer class="footer{{ with $.Param "theme.footer" }} {{.}}{{ end }}">
   <div class="container-fluid">
-    <div class="row mbg1">
+    <div class="footer-logo row">
       <div class="col col-xl-7 offset-xl-1">
-        <a class="brand mbg1" href="/" data-scroll="once">
-          {{ readFile "/static/svg/logos/logo-defi.svg" | safeHTML }}
+        <a class="brand" href="/" data-scroll="once">
+          {{ readFile "/static/svg/logos/logo-defichain.svg" | safeHTML }}
         </a>
-        <h3 data-scroll="once">{{ $.Site.Params.description }}</h3>
+        <h3 data-scroll="once">{{ $.Site.Params.description | markdownify }}</h3>
       </div>
     </div>
-    <div class="row mbg1" data-scroll="once">
-      <div class="social-links col offset-xl-1">
-        <a href="{{ $.Site.Params.social.facebook }}" class="social-link facebook" target="_blank">
-          <img src="/svg/icons/social/icon-facebook.svg" alt="Facebook">
-        </a>
-        <a href="{{ $.Site.Params.social.twitter }}" class="social-link twitter" target="_blank">
-          <img src="/svg/icons/social/icon-twitter.svg" alt="Twitter">
-        </a>
-        <a href="{{ $.Site.Params.social.reddit }}" class="social-link reddit" target="_blank">
-          <img src="/svg/icons/social/icon-reddit.svg" alt="Reddit">
-        </a>
-        <a href="{{ $.Site.Params.social.youtube }}" class="social-link youtube" target="_blank">
-          <img src="/svg/icons/social/icon-youtube.svg" alt="YouTube">
-        </a>
-        <a href="{{ $.Site.Params.social.telegram }}" class="social-link telegram" target="_blank">
-          <img src="/svg/icons/social/icon-telegram.svg" alt="Telegram">
-        </a>
+    <div class="footer-menu row" data-scroll="once">
+      <div class="col col-xl-6 offset-xl-1">
+        <ul class="menu">
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
+          <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+            <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+          </li>
+          {{ end }}
+          {{ range .Site.Menus.white_paper }}
+          <li class="{{ if $currentPage.IsMenuCurrent "white_paper" . }}active{{ end }}">
+            <a href="{{ .URL | relLangURL }}">
+              {{ readFile "/static/svg/icons/icon-cloud-download.svg" | safeHTML }}
+              {{ .Name }}
+            </a>
+          </li>
+          {{ end }}
+        </ul>
       </div>
     </div>
     <div class="row" data-scroll="once">
-      <div class="col col-xl-7 offset-xl-1">
+      <div class="col col-xl-3 offset-xl-1">
         <p>&copy; {{ $.Site.Params.company_name }}</p>
+      </div>
+      <div class="col col-xl-3">
+        <p>Language</p>
+      </div>
+      <div class="social-links col col-xl-4">
+        <a href="{{ $.Site.Params.social.facebook }}" class="social-link facebook" target="_blank">
+          {{ readFile "/static/svg/icons/social/icon-facebook.svg" | safeHTML }}
+        </a>
+        <a href="{{ $.Site.Params.social.twitter }}" class="social-link twitter" target="_blank">
+          {{ readFile "/static/svg/icons/social/icon-twitter.svg" | safeHTML }}
+        </a>
+        <a href="{{ $.Site.Params.social.reddit }}" class="social-link reddit" target="_blank">
+          {{ readFile "/static/svg/icons/social/icon-reddit.svg" | safeHTML }}
+        </a>
+        <a href="{{ $.Site.Params.social.youtube }}" class="social-link youtube" target="_blank">
+          {{ readFile "/static/svg/icons/social/icon-youtube.svg" | safeHTML }}
+        </a>
+        <a href="{{ $.Site.Params.social.telegram }}" class="social-link telegram" target="_blank">
+          {{ readFile "/static/svg/icons/social/icon-telegram.svg" | safeHTML }}
+        </a>
       </div>
     </div>
   </div>

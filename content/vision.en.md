@@ -16,6 +16,7 @@ meta:
     locale: en_US
 theme:
   header: dark
+  footer: light
 content:
   sections:
     hero:

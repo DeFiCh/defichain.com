@@ -135,18 +135,19 @@ body > header {
     z-index: $zindex-sticky;
     box-sizing: content-box;
     display: block;
-    width: 90px;
-    height: 31px;
+    width: 168px;
+    height: 28px;
     margin-right: 40px;
     overflow: hidden;
 
     @include media(">md") {
-      height: 51px;
+      width: 97px;
+      height: 50px;
     }
 
     svg {
-      width: 90px;
-      height: 51px;
+      width: 168px;
+      height: 50px;
       fill: currentColor;
       transition: all 0.5s ease;
     }
@@ -335,6 +336,10 @@ main {
   }
 }
 
+.section-icon {
+  margin-bottom: 60px;
+}
+
 
 //
 // Hero section
@@ -501,8 +506,7 @@ section.highlights {
 //
 
 section.subscribe {
-  border-bottom: $base-border-style;
-  background-color: $color-ui-black10;
+  background-color: $color-brand-day;
 
   form {
     margin-top: $section-padding-top / 2;
@@ -540,8 +544,8 @@ section.subscribe {
 // 
 
 .footer {
-  background-color: $color-brand-night;
-  color: $color-ui-white;
+  background-color: $color-ui-white;
+  color: $color-ui-default;
   padding-top: $section-padding-top;
   padding-bottom: $section-padding-bottom;
 
@@ -550,48 +554,89 @@ section.subscribe {
     padding-bottom: $section-padding-bottom-lg;
   }
 
+  .footer-logo {
+    margin-bottom: 50px;
+  }
+
   .brand {
     display: block;
+    color: $color-ui-black;
+    width: 168px;
+    height: 28px;
+    margin-bottom: 60px;
+    overflow: hidden;
+
+    @include media(">md") {
+      width: 97px;
+      height: 50px;
+    }
+
+    svg {
+      width: 168px;
+      height: 50px;
+      fill: currentColor;
+      transition: all 0.5s ease;
+    }
   }
 
-  h4 {
-    padding: 16px 0;
-    margin-bottom: 16px;
-    border-bottom: 1px solid rgba($color-ui-white, 0.2);
+  h3 {
+    font-weight: $font-weight-light;
+
+    em {
+      display: block;
+    }
   }
 
-  ul {
+  .footer-menu {
+    margin-bottom: 90px;
+  }
+
+  .menu {
+    display: block;
     list-style: none;
     padding: 0;
-    margin-bottom: $grid-gutter;
+    columns: 2;
 
     li {
       display: block;
+      font-size: $body-lg-font-size;
+      line-height: $body-lg-line-height;
+      margin-bottom: 24px;
     }
 
     a {
       display: block;
       color: $color-ui-white;
       text-decoration: none;
-      padding: 4px 0;
-      color: rgba($color-ui-white, 0.7);
+      color: $color-ui-black40;
+
+      &:hover {
+        color: $color-ui-default;
+      }
+
+      svg {
+        fill: currentColor;
+        margin-right: 5px;
+      }
     }
   }
 
   .social-links {
     display: flex;
+    justify-content: flex-end;
   }
 
   .social-link {
     display: flex;
-    width: 32px;
-    height: 32px;
-    margin-right: $grid-gutter;
     justify-content: center;
     align-items: center;
+    width: 32px;
+    height: 32px;
+    margin-left: $grid-gutter;
+    color: $color-ui-black20;
 
-    img {
-      display: block;
+    svg {
+      fill: currentColor;
     }
   }
 

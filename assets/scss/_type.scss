@@ -56,7 +56,22 @@ h1, .h1 {
   }
 }
 
-h2, .h2 { font-size: $h2-font-size; line-height: $h2-line-height; font-weight: $h2-font-weight; margin-bottom: $h2-margin-bottom; letter-spacing: $h2-letter-spacing; }
+h2, .h2 {
+  font-size: $h2-font-size;
+  line-height: $h2-line-height; 
+  font-weight: $h2-font-weight; 
+  margin-bottom: $h2-margin-bottom; 
+  letter-spacing: $h2-letter-spacing; 
+
+  @include media("<lg") {
+    font-size: $h3-font-size;
+    line-height: $h3-line-height;
+    font-weight: $h3-font-weight;
+    margin-bottom: $h3-margin-bottom;
+    letter-spacing: $h3-letter-spacing;
+  }
+}
+
 h3, .h3 { font-size: $h3-font-size; line-height: $h3-line-height; font-weight: $h3-font-weight; margin-bottom: $h3-margin-bottom; letter-spacing: $h3-letter-spacing; }
 
 

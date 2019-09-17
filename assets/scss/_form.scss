@@ -1,5 +1,6 @@
 .form-field {
   display: flex;
+  flex-wrap: wrap;
 
   input[type="text"],
   input[type="email"],
@@ -37,6 +38,11 @@
   }
 
   .btn {
-    margin-left: 30px;
+    margin-top: $grid-gutter;
+
+    @include media(">sm") {
+      margin-left: 30px;
+      margin-top: 0;
+    }
   }
 }

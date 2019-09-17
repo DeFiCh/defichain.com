@@ -508,10 +508,6 @@ section.highlights {
 section.subscribe {
   background-color: $color-brand-day;
 
-  form {
-    margin-top: $section-padding-top / 2;
-  }
-
   // Send In Blue styles
   #error-message {
     color: $color-ui-red;
@@ -555,7 +551,11 @@ section.subscribe {
   }
 
   .footer-logo {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+
+    @include media(">md") {
+      margin-bottom: 50px;
+    }
   }
 
   .brand {
@@ -588,14 +588,21 @@ section.subscribe {
   }
 
   .footer-menu {
-    margin-bottom: 90px;
+    margin-bottom: 60px;
+
+    @include media(">md") {
+      margin-bottom: 90px;
+    }
   }
 
   .menu {
     display: block;
     list-style: none;
     padding: 0;
-    columns: 2;
+
+    @include media(">sm") {
+      columns: 2;
+    }
 
     li {
       display: block;
@@ -623,7 +630,11 @@ section.subscribe {
 
   .social-links {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+
+    @include media(">sm") {
+      justify-content: flex-end;
+    }
   }
 
   .social-link {
@@ -632,8 +643,11 @@ section.subscribe {
     align-items: center;
     width: 32px;
     height: 32px;
-    margin-left: $grid-gutter;
     color: $color-ui-black20;
+
+    @include media(">sm") {
+      margin-left: $grid-gutter;
+    }
 
     svg {
       fill: currentColor;

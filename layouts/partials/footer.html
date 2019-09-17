@@ -1,7 +1,7 @@
 <footer class="footer{{ with $.Param "theme.footer" }} {{.}}{{ end }}">
   <div class="container-fluid">
     <div class="footer-logo row">
-      <div class="col col-xl-7 offset-xl-1">
+      <div class="col col-ul-7 offset-ul-1">
         <a class="brand" href="/" data-scroll="once">
           {{ readFile "/static/svg/logos/logo-defichain.svg" | safeHTML }}
         </a>
@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="footer-menu row" data-scroll="once">
-      <div class="col col-xl-6 offset-xl-1">
+      <div class="col col-md-6 offset-ul-1">
         <ul class="menu">
           {{ $currentPage := . }}
           {{ range .Site.Menus.main }}
@@ -29,13 +29,13 @@
       </div>
     </div>
     <div class="row" data-scroll="once">
-      <div class="col col-xl-3 offset-xl-1">
+      <div class="mbg1 col col-lg-3 offset-ul-1">
         <p>&copy; {{ $.Site.Params.company_name }}</p>
       </div>
-      <div class="col col-xl-3">
+      <div class="mbg1 col col-lg-3">
         <p>Language</p>
       </div>
-      <div class="social-links col col-xl-4">
+      <div class="mbg1 social-links col col-lg-6 col-ul-4">
         <a href="{{ $.Site.Params.social.facebook }}" class="social-link facebook" target="_blank">
           {{ readFile "/static/svg/icons/social/icon-facebook.svg" | safeHTML }}
         </a>

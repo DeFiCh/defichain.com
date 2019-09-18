@@ -452,6 +452,8 @@ section.featured-video {
 // 
 
 section.highlights {
+  background-color: $color-brand-day;
+
   .highlight {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -506,7 +508,7 @@ section.highlights {
 //
 
 section.subscribe {
-  background-color: $color-brand-day;
+  background-color: $color-ui-white;
 
   h2 {
     margin-bottom: 60px;
@@ -540,6 +542,74 @@ section.subscribe {
     margin-top: $form-control-padding-vertical;
 
     @include text-hide;
+  }
+}
+
+
+//
+// Subscribe
+//
+
+section.closer-look {
+  background-color: $color-brand-day;
+
+  h2 {
+  }
+
+  .carousel-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include media("<sm") {
+      display: none;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 36px;
+    height: 36px;
+    background-color: $color-ui-black;
+  }
+
+  .swiper-button-next {
+    margin-left: 30px;
+  }
+
+  .carousel {
+    margin-top: 60px;
+    padding-left: 45px;
+    padding-right: 45px;
+
+    @include media(">ul") {
+      padding-left: calc((100% - 30px) / 12 + 45px);
+      padding-right: calc((100% - 30px) / 12 + 45px);
+    }
+  }
+
+  .swiper-slide {
+    width: 200px;
+    height: 265px;
+    color: $color-ui-white;
+    background-color: $color-brand-night;
+
+    @include media(">md") {
+      width: 300px;
+      height: 370px;
+    }
+
+    @include media(">lg") {
+      width: 400px;
+      height: 475px;
+    }
+
+    > a {
+      text-decoration: none;
+      color: $color-ui-white;
+      display: block;
+      padding: 15px 30px;
+    }
   }
 }
 

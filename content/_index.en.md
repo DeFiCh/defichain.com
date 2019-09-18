@@ -90,6 +90,7 @@ content:
             general: Oops! That didn't go through.
             blank_field: This field cannot be left blank.
     closer_look:
-      headline: Discover DeFi Blockchain. See your financial hurdles turning into a breeze.
+      headline: A closer look
+      subhead: Discover DeFi Blockchain. See your financial hurdles turning into a breeze.
 
 ---

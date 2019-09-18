@@ -1,15 +1,15 @@
 ---
 title: Foundation
 type: foundation
-long_title: Discover companies that build their services on DeFi Blockchain.
+long_title: Understand how the DeFi Foundation operates and how to get involved.
 menu:
   main:
     weight: 30
 meta:
-  description: Discover companies that build their services on DeFi Blockchain.
+  description: Understand how the DeFi Foundation operates and how to get involved.
   og:
     title: Foundation
-    description: Discover companies that build their services on DeFi Blockchain.
+    description: Understand how the DeFi Foundation operates and how to get involved.
     site_name: DeFi Blockchain
     image: 
     image_type: image/jpg

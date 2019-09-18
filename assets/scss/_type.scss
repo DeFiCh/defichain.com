@@ -133,6 +133,30 @@ em {
 
 
 //
+// Blockquote
+//
+
+blockquote,
+.blockquote {
+  padding-left: 32px;
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+  position: relative;
+  max-width: 360px;
+
+  &:before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background-color: $color-ui-black10;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+
+//
 // Lists
 //
 

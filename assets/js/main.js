@@ -4,26 +4,25 @@ $(function () {
     $('body').toggleClass('menu-open');
   });
 
-  // Carousel for closer look
-  // if ($(".timeline-slider").length > 0) {
-  //   $(".timeline-slider").slick({
-  //     appendArrows: '.timeline-nav',
-  //     arrows: true,
-  //     autoplay: false,
-  //     autoplaySpeed: 5000,
-  //     centerMode: true,
-  //     dots: false,
-  //     draggable: false,
-  //     infinite: false,
-  //     initialSlide: 2,
-  //     mobileFirst: true,
-  //     slidesToShow: 1,
-  //     slidesToScroll: 1,
-  //     speed: 500,
-  //     variableWidth: true,
-  //     waitForAnimate: false
-  //   });
-  // }
+
+  var closerLookCarousel = new Swiper('.carousel', {
+    slidesPerView: 'auto',
+    spaceBetween: 30,
+    watchOverflow: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      812: {
+        spaceBetween: 60
+      },
+      992: {
+        spaceBetween: 90
+      }
+    }
+  });
+
 
   $('.lang-switcher > a').click(function(e) {
     e.preventDefault();

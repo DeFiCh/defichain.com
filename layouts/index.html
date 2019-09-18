@@ -321,9 +321,9 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   {{ $scrolltrigger := resources.Get "js/ScrollTrigger.min.js" }}
-  {{ $slick := resources.Get "js/slick.min.js" }}
+  {{ $swiper := resources.Get "js/swiper.min.js" }}
   {{ $main := resources.Get "js/main.js" }}
-  {{ $js := slice $scrolltrigger $slick $main | resources.Concat "js/bundle.js" | resources.Fingerprint }}
+  {{ $js := slice $scrolltrigger $swiper $main | resources.Concat "js/bundle.js" | resources.Fingerprint }}
   <script src="{{ $js.RelPermalink }}" type="text/javascript"></script>
   {{ template "_internal/google_analytics_async.html" . }}
 </body>

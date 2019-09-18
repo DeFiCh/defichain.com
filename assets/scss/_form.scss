@@ -1,3 +1,7 @@
+form {
+  margin-bottom: 30px;
+}
+
 .form-field {
   display: flex;
   flex-wrap: wrap;
@@ -32,17 +36,118 @@
 
     &:focus {
       &::placeholder {
-        color: $color-ui-black80;
+        color: $color-ui-black40;
       }
     }
   }
+}
 
-  .btn {
-    margin-top: $grid-gutter;
+form.integrated {
+  border: $form-control-border;
+  border-radius: $form-control-border-radius;
+  box-shadow: $base-box-shadow;
+  background-color: $form-control-bg;
 
-    @include media(">sm") {
-      margin-left: 30px;
-      margin-top: 0;
+  &:focus {
+    border-color: $color-ui-black40;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    border: 0;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .btn-plain {
+    font-weight: $font-weight-bold;
+  }
+}
+
+.form-helper {
+  color: $color-ui-black60;
+}
+
+
+// 
+// Float labels
+//
+
+@mixin float-label-container {
+  display: flex;
+  position: relative;
+}
+
+@mixin float-label {
+  label, > span {
+    position: absolute;
+    left: $form-control-padding-horizontal - 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: $color-brand-day;
+    color: $color-ui-black60;
+    top: -16px;
+    cursor: text;
+    font-size: $note-font-size;
+    opacity: 1;
+    transition: all .2s;
+    @content;
+  }
+}
+
+@mixin float-label-input {
+  &::placeholder {
+    opacity: 1;
+    transition: all .2s;
+  }
+  &:placeholder-shown:not(:focus)::placeholder {
+      opacity: 0;
+  }
+}
+
+@mixin float-label-scaled {
+  &:placeholder-shown:not(:focus) + * {
+      font-size: $form-control-font-size;
+      @content;
+  }
+}
+
+.has-float-label {
+  @include float-label-container;
+
+  @include float-label;
+
+  select {
+    appearance: none;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  input, select, textarea {
+    @include float-label-input;
+    font-size: inherit;
+    padding-top: 1em;
+    margin-bottom: 2px;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 2px solid rgba(0,0,0,.1);
+
+    @include float-label-scaled {
+      top: $form-control-padding-vertical - 1px;
     }
+
+    &:focus {
+      outline: none;
+      border-color: rgba(0,0,0,.5);
+    }
+  }
+
+  select {
+    padding-right: 1em;
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right .5em bottom .25em;
+    background-size: 8px 10px;
   }
 }

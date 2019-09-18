@@ -31,6 +31,15 @@
     padding-bottom: 9px;
   }
 
+  &.btn-plain {
+    background-color: $button-plain-bg;
+    color: $button-plain-color;
+
+    &:hover {
+      color: lighten($button-plain-color, 10%);
+    }
+  }
+
   .icon-wrapper {
     display: flex;
     align-items: center;

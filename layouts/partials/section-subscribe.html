@@ -27,11 +27,12 @@
               </div>
             </div>
             <div id="sib-container" class="sib-container--medium sib-container--horizontal">
-              <form id="sib-form" method="POST"
-                action="https://sibforms.com/serve/MUIEANvPA0bQKQwjtmWLE4S_naKE1WHvIPVrTBJOf11iq_hXn-nAi4EY9zv4EP-lBswKpWr8nUYCqa3zWfKPF1cWu0Aq4K8hCxsErBUnJTgjtB9Csv_vvo7_EFzkjHgLRt2vso_HMtPsF2JJZXE9J-QQbbHW3Z1aBLyYtjNgrz4UReS564Xr044v1bBLVDEv-qX_VyWh3FtrFnyU"
+              <form id="sib-form" method="POST" class="integrated"
+                action="https://sibforms.com/serve/MUIEAGyZKryyZrFrkQx_JV4wK7j8Cc5FFu5GkcR9tSa80SKyf1NP-RiHo2UEAroSjWxNe5YXYS7EznZ-bpkWfnky5wDNk8JzbQMiSASahIkout0gUTBZNz710-YhsRKidQnLJ_G1BEzR9KH2hAatGLRgsfbvGD_bl6sNgadEAQWDbKY4Kaa-Dn_IMf5hHxNqvcZqVAlOHDvtwkZ0"
                 data-type="subscription">
-                <div class="form-field form__entry entry_block">
+                <div class="form-field has-float-label form__entry entry_block">
                   <input class="input" maxlength="200" type="email" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="{{ $Home.Param "content.sections.subscribe.form.textfield.placeholder" }}" data-required="true" required />
+                  <label for="EMAIL">{{ $Home.Param "content.sections.subscribe.form.textfield.label" }}</label>
                   <button class="btn btn-plain" form="sib-form" type="submit">
                     <svg class="d-none"></svg>
                     {{ $Home.Param "content.sections.subscribe.form.button.label" }}
@@ -41,6 +42,7 @@
                 <input type="text" name="email_address_check" value="" class="input--hidden">
                 <input type="hidden" name="locale" value="en">
               </form>
+              <p class="form-helper">{{ $Home.Param "content.sections.subscribe.form.helper" | markdownify }}</p>
             </div>
           </div>
         </div>

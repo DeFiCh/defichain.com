@@ -152,8 +152,8 @@ $form-control-padding-horizontal: 20px;
 $form-control-padding-vertical: 18px;
 $form-control-color:            $color-ui-default;
 $form-control-bg:               transparent;
-$form-control-font-size:        $body-sm-font-size;
-$form-control-line-height:      $body-sm-line-height;
+$form-control-font-size:        $body-md-font-size;
+$form-control-line-height:      $body-md-line-height;
 $form-control-transition:       all 0.3s ease;
 
 $button-border-radius:          $base-border-radius;
@@ -164,5 +164,5 @@ $button-padding-vertical:       $form-control-padding-vertical;
 $button-primary-color:          $color-ui-white;
 $button-primary-bg:             $color-brand-green;
 
-$button-plain-color:            $color-brand-purple;
+$button-plain-color:            $color-brand-green;
 $button-plain-bg:               transparent;

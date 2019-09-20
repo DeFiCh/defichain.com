@@ -30,11 +30,10 @@ content:
     contributors:
       name: contributor
       fast_track_name: Main contributors
-      theme: dark
       headline: "DeFi Blockchain and DFI token main contributor:"
       contributors_list:
         - name: Cake
-          logo: logo_cake.svg
+          logo: /static/svg/logos/logo-cake.svg
           description: Simple and accessible finance for everyone.
       become_contributor:
         headline: Become a _contributor_

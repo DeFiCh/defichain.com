@@ -7,7 +7,7 @@
   height: 64px;
   border-radius: 32px;
   background-color: $color-ui-white;
-  color: $color-brand-purple;
+  color: map-get($brand-colors, purple);
   display: flex;
   justify-content: center;
   align-items: center;

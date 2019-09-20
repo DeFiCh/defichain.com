@@ -1,14 +1,16 @@
 // Colors
 
-$color-brand-purple:            #5B10FF;
-$color-brand-green:             #02B31B;
-$color-brand-yellow:            #F1EE05;
-$color-brand-night:             #080820;
-$color-brand-evening:           #16162B;
-$color-brand-day:               #FAFAFA;
-$color-brand-smoke:             #404040;
-$color-brand-paper:             #F5F5F5;
-$color-brand-white:             #FFFFFF;
+$brand-colors: (
+  purple:   #5B10FF,
+  green:    #02B31B,
+  yellow:   #F1EE05,
+  night:    #080820,
+  evening:  #16162B,
+  day:      #FAFAFA,
+  smoke:    #404040,
+  paper:    #F5F5F5,
+  white:    #FFFFFF
+);
 
 $color-ui-black:                black;
 $color-ui-black80:              rgba(0,0,0,0.8);
@@ -25,10 +27,10 @@ $color-ui-white20:              rgba(255,255,255,0.2);
 $color-ui-white10:              rgba(255,255,255,0.1);
 
 $color-ui-default:              $color-ui-black;
-$color-ui-action:               $color-brand-purple;
+$color-ui-action:               map-get($brand-colors, purple);
 
 $color-ui-red:                  red;
-$color-ui-green:                $color-brand-green;
+$color-ui-green:                map-get($brand-colors, green);
 
 $color-linkedin:                #0077B5;
 
@@ -142,8 +144,6 @@ $section-padding-bottom:        60px;
 $section-padding-top-lg:        120px;
 $section-padding-bottom-lg:     120px;
 
-$section-bg:                    $color-brand-night;
-
 
 // Components
 
@@ -166,7 +166,7 @@ $button-padding-horizontal:     $form-control-padding-horizontal;
 $button-padding-vertical:       $form-control-padding-vertical;
 
 $button-primary-color:          $color-ui-white;
-$button-primary-bg:             $color-brand-green;
+$button-primary-bg:             map-get($brand-colors, green);
 
-$button-plain-color:            $color-brand-green;
+$button-plain-color:            map-get($brand-colors, green);
 $button-plain-bg:               transparent;

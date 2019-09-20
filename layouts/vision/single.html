@@ -23,7 +23,7 @@
   <meta property="og:locale" content="{{ $.Param "meta.og.locale" }}">
 </head>
 
-<body class="vision">
+<body class="vision{{ with $.Param "theme.base" }} {{.}}{{ end }}">
 
   {{ partial "header.html" . }}
 

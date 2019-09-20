@@ -32,7 +32,7 @@ strong, bold {
 }
 
 ::selection {
-  background: $color-brand-purple;
+  background: map-get($brand-colors, purple);
   color: $color-ui-white;
 }
 

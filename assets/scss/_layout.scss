@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: $color-brand-day;
+  background-color: map-get($brand-colors, day);
 }
 
 
@@ -282,6 +282,8 @@ body > header {
   }
 }
 
+@include menu-themes;
+
 
 // 
 // Sections
@@ -390,14 +392,14 @@ section.hero {
 // 
 
 section.featured-video {
-  background-color: $color-brand-night;
+  background-color: map-get($brand-colors, night);
 
   .video-player {
     width: 100%;
     position: relative;
     overflow: hidden;
     padding-top: 56.25%;
-    background-color: $color-brand-evening;
+    background-color: map-get($brand-colors, evening);
 
     iframe {
       position: absolute;
@@ -468,7 +470,7 @@ section.featured-video {
 // 
 
 section.highlights {
-  background-color: $color-brand-day;
+  background-color: map-get($brand-colors, day);
 
   .highlight {
     margin-top: 30px;
@@ -503,18 +505,11 @@ section.highlights {
 // 
 
 .vision {
-  > header {
-    background-color: $color-brand-green;
-  }
-  &.menu-open .menu {
-    background-color: $color-brand-green;
-  }
-  section.hero {
-    background-color: $color-brand-green;
-    color: $color-ui-white;
+  p a {
+    color: map-get($brand-colors, green);
   }
   .highlight-icon {
-    color: $color-brand-green;
+    color: map-get($brand-colors, green);
   }
 }
 

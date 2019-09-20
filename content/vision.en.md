@@ -16,6 +16,7 @@ meta:
     image_type: image/jpg
     locale: en_US
 theme:
+  base: green
   hero: dark green
 content:
   sections:

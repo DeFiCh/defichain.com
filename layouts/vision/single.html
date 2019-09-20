@@ -35,7 +35,7 @@
           <div id="{{ $.Param "content.sections.hero.name" }}" class="col offset-ul-1">
             <div class="hero-start">
               <h1 data-scroll="once">{{ $.Param "content.sections.hero.headline" }}</h1>
-              <p class="lg">{{ $.Param "content.sections.hero.subhead" }}</p>
+              <p class="lg" data-scroll="once">{{ $.Param "content.sections.hero.subhead" }}</p>
             </div>
           </div>
         </div>
@@ -48,7 +48,7 @@
       <div class="container-flush">
         <div class="row">
           <div class="col col-lg-6">
-            <div class="video-player">
+            <div class="video-player" data-scroll="once">
               <div id="player-embed"></div>
               <script>
                 var tag = document.createElement('script');
@@ -90,7 +90,7 @@
             </div>
           </div>
           <div class="col col-lg-6">
-            <div class="video-info">
+            <div class="video-info" data-scroll="once">
               <h2 class="lg">{{ $Home.Param "content.sections.defi_blockchain.headline" }}</h2>
               <div class="subject-name small">
                 {{ $Home.Param "content.sections.defi_blockchain.subject_name" | markdownify }}</div>
@@ -109,14 +109,14 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col offset-ul-1">
-            <h2>{{ $.Param "content.sections.highlights.headline" }}</h2>
+            <h2 data-scroll="once">{{ $.Param "content.sections.highlights.headline" }}</h2>
           </div>
         </div>
         <div class="row">
           <div class="col col-ul-10 offset-ul-1">
             <div class="row">
               {{ range $highlight := $.Param "content.sections.highlights.highlights_list" }}
-              <div class="highlight col col-sm-6 col-md-4">
+              <div class="highlight col col-sm-6 col-md-4" data-scroll="once">
                 <div class="wrapper">
                   <div class="highlight-icon">
                     {{ readFile $highlight.icon  | safeHTML }}

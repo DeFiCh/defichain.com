@@ -30,12 +30,12 @@
           {{ else }}
           <div class="swiper-slide{{ with .Page.Params.theme.hero }} {{.}}{{ end }}">
             <a href="{{ .URL | relLangURL }}">
-              <h3 class="h2">{{ .Name }}</h3>
-              <blockquote>
+              <h3 class="h2" data-scroll="once">{{ .Name }}</h3>
+              <blockquote data-scroll="once">
                 {{ .Page.Params.long_title }}
               </blockquote>
               <div class="spacer"></div>
-              <div class="cta-to">
+              <div class="cta-to" data-scroll="once">
                 {{ .Page.Params.cta_to }}
                 <span>&#10142;</span>
               </div>

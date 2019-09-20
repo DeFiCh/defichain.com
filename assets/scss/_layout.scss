@@ -51,6 +51,8 @@ body > header {
   width: 100%;
   z-index: $zindex-sticky;
 
+  @include brand-background-variations;
+
   a {
     color: $color-ui-black;
   }

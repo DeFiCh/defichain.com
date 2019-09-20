@@ -1,22 +1,22 @@
 ---
 title: Vision
 type: vision
-long_title: Making the world a brighter place
+long_title: To allow everyone to truly be their own bank.
+cta_to: Enter
 menu:
   main:
     weight: 20
 meta:
-  description: By DeFi providing access to financial markets to people all around the world.
+  description: To allow everyone to truly be their own bank.
   og:
     title: DeFi Blockchain
-    description: By DeFi providing access to financial markets to people all around the world.
+    description: To allow everyone to truly be their own bank.
     site_name: DeFi Blockchain
     image: 
     image_type: image/jpg
     locale: en_US
 theme:
-  header: dark
-  footer: light
+  hero: dark green
 content:
   sections:
     hero:

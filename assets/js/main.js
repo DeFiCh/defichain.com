@@ -9,6 +9,10 @@ $(function () {
     slidesPerView: 'auto',
     spaceBetween: 30,
     watchOverflow: true,
+    mousewheel: {
+      forceToAxis: true,
+      invert: true
+    },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

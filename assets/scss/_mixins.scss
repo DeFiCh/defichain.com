@@ -16,3 +16,15 @@
 @function parseInt($n) {
   @return $n / ($n * 0 + 1); /* 2 */
 }
+
+@mixin brand-background-variations() {
+  &.purple { background-color: $color-brand-purple; }
+  &.green { background-color: $color-brand-green; }
+  &.yellow { background-color: $color-brand-yellow; }
+  &.night { background-color: $color-brand-night; }
+  &.evening { background-color: $color-brand-evening; }
+  &.day { background-color: $color-brand-day; }
+  &.smoke { background-color: $color-brand-smoke; }
+  &.paper { background-color: $color-brand-paper; }
+  &.white { background-color: $color-brand-white; }
+}

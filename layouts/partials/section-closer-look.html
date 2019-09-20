@@ -1,4 +1,3 @@
-{{ $Site := .Site }}
 {{ $Home := .Site.GetPage "/" }}
 <section class="closer-look">
   <div class="container-fluid">
@@ -12,8 +11,12 @@
         <blockquote data-scroll="once">{{ $Home.Param "content.sections.closer_look.subhead" }}</blockquote>
       </div>
       <div class="carousel-nav col col-sm-4 col-md-6">
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev">
+          {{ readFile "/static/svg/icons/icon-arrow-big.svg" | safeHTML }}
+        </div>
+        <div class="swiper-button-next">
+          {{ readFile "/static/svg/icons/icon-arrow-big.svg" | safeHTML }}
+        </div>
       </div>
     </div>
   </div>
@@ -22,13 +25,23 @@
       <div class="carousel swiper-container col">
         <div class="swiper-wrapper">
           {{ $currentPage := . }}
-          {{ range $Site.Menus.main }}
-          {{ $P := $Site.GetPage "/vision" }}
-          <div class="swiper-slide {{ if $currentPage.IsMenuCurrent "main" . }}current{{ end }}">
+          {{ range .Site.Menus.main }}
+          {{ if $currentPage.IsMenuCurrent "main" . }}
+          {{ else }}
+          <div class="swiper-slide{{ with .Page.Params.theme.hero }} {{.}}{{ end }}">
             <a href="{{ .URL | relLangURL }}">
               <h3 class="h2">{{ .Name }}</h3>
+              <blockquote>
+                {{ .Page.Params.long_title }}
+              </blockquote>
+              <div class="spacer"></div>
+              <div class="cta-to">
+                {{ .Page.Params.cta_to }}
+                <span>&#10142;</span>
+              </div>
             </a>
           </div>
+          {{ end }}
           {{ end }}
         </div>
       </div>

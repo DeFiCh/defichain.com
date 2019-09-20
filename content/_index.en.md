@@ -10,6 +10,8 @@ meta:
     image: 
     image_type: image/jpg
     locale: en_US
+theme:
+  hero: dark night
 content:
   sections:
     hero:

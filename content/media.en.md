@@ -2,6 +2,7 @@
 title: Media
 type: media
 long_title: DeFi Blockchain and DeFi Token in the news and media.
+cta_to: Read
 menu:
   main:
     weight: 80
@@ -14,6 +15,8 @@ meta:
     image: 
     image_type: image/jpg
     locale: en_US
+theme:
+  hero: yellow
 content:
   sections:
     hero:

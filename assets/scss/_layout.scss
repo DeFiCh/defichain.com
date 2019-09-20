@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: $color-ui-white;
+  background-color: $color-brand-day;
 }
 
 
@@ -301,6 +301,8 @@ main {
       padding-bottom: $section-padding-bottom-lg;
     }
 
+    @include brand-background-variations;
+
     &.dark {
       color: $color-ui-white;
     }
@@ -316,8 +318,21 @@ main {
       z-index: 999;
     }
 
-    h2 {
-      max-width: 600px;
+    @include media("<sm") {
+      .section-icon {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        max-width: 600px;
+        text-align: center;
+      }
+
+      .col > blockquote {
+        text-align: center;
+        max-width: none;
+      }
     }
   }
 }
@@ -551,9 +566,11 @@ section.subscribe {
 //
 
 section.closer-look {
-  background-color: $color-brand-day;
 
-  h2 {
+  @include media("<sm") {
+    h2 {
+      display: none;
+    }
   }
 
   .carousel-nav {
@@ -568,13 +585,39 @@ section.closer-look {
 
   .swiper-button-prev,
   .swiper-button-next {
-    width: 36px;
-    height: 36px;
-    background-color: $color-ui-black;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: 0;
+    cursor: pointer;
+    color: $color-ui-black60;
+
+    &:hover {
+      color: $color-ui-black;
+    }
+
+    svg {
+      fill: currentColor;
+    }
   }
 
-  .swiper-button-next {
-    margin-left: 30px;
+  .swiper-button-prev {
+    margin-right: 30px;
+    svg {
+      transform: rotate(180deg);
+      transform-origin: center;
+    }
+  }
+
+  .swiper-button-disabled {
+    color: $color-ui-black20;
+    cursor: not-allowed;
+
+    &:hover {
+      color: $color-ui-black20;
+    }
   }
 
   .carousel {
@@ -591,8 +634,10 @@ section.closer-look {
   .swiper-slide {
     width: 200px;
     height: 265px;
-    color: $color-ui-white;
-    background-color: $color-brand-night;
+    color: $color-ui-default;
+    border-radius: 2px;
+
+    @include brand-background-variations;
 
     @include media(">md") {
       width: 300px;
@@ -604,11 +649,69 @@ section.closer-look {
       height: 475px;
     }
 
+    &.dark {
+      > a {
+        color: $color-ui-white;
+      }
+    }
+
     > a {
       text-decoration: none;
-      color: $color-ui-white;
-      display: block;
-      padding: 15px 30px;
+      color: $color-ui-default;
+      height: 100%;
+      padding: 15px 30px 30px;
+      display: flex;
+      align-content: flex-start;
+      flex-direction: column;
+
+      @include media(">md") {
+        padding-bottom: 55px;
+      }
+
+      @include media(">lg") {
+        padding-bottom: 60px;
+      }
+    }
+
+    h3 {
+      font-weight: $font-weight-regular;
+    }
+
+    blockquote {
+      font-size: $body-md-font-size;
+      line-height: $body-md-line-height;
+      padding-left: 20px;
+      max-width: 230px;
+      display: none;
+
+      @include media(">md") {
+        display: block;
+      }
+
+      &:before {
+        width: 1px;
+        background-color: $color-ui-black40;
+      }
+    }
+
+    &.dark blockquote {
+      &:before {
+        background-color: $color-ui-white20;
+      }
+    }
+
+    .spacer {
+      flex-grow: 999;
+    }
+
+    .cta-to {
+      opacity: 0.6;
+      width: 140px;
+      height: 32px;
+      line-height: 1;
+      border-bottom: 1px solid currentColor;
+      display: flex;
+      justify-content: space-between;
     }
   }
 }

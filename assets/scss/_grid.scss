@@ -8,6 +8,8 @@
   margin-left: auto;
   max-width: $container-max-width;
 
+  @include brand-background-variations;
+
   @include iphone-x-landscape() {
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
@@ -21,6 +23,8 @@
   margin-right: auto;
   margin-left: auto;
 
+  @include brand-background-variations;
+
   @include iphone-x-landscape() {
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
@@ -31,6 +35,8 @@
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+
+  @include brand-background-variations;
 
   @include iphone-x-landscape() {
     padding-left: env(safe-area-inset-left);

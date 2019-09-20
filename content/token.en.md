@@ -2,6 +2,7 @@
 title: Token
 type: token
 long_title: All about the DFI token that powers up the DeFi Blockchain.
+cta_to: More
 menu:
   main:
     weight: 60
@@ -14,6 +15,8 @@ meta:
     image: 
     image_type: image/jpg
     locale: en_US
+theme:
+  hero: dark purple
 content:
   sections:
     hero:

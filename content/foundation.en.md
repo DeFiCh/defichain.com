@@ -2,6 +2,7 @@
 title: Foundation
 type: foundation
 long_title: Understand how the DeFi Foundation operates and how to get involved.
+cta_to: Explore
 menu:
   main:
     weight: 30
@@ -14,6 +15,12 @@ meta:
     image: 
     image_type: image/jpg
     locale: en_US
+theme:
+  hero: dark night
+  contributors: dark night
+  subscribe: dark evening
+  closer_look: dark night
+  footer: dark night
 content:
   sections:
     hero:

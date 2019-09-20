@@ -2,6 +2,7 @@
 title: Developers
 type: developers
 long_title: Everything you need to know to start building on DeFi Blockchain.
+cta_to: Study
 menu:
   main:
     weight: 40
@@ -14,6 +15,8 @@ meta:
     image: 
     image_type: image/jpg
     locale: en_US
+theme:
+  hero: dark purple
 content:
   sections:
     hero:

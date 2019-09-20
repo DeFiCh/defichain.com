@@ -2,6 +2,7 @@
 title: Whitepaper
 type: whitepaper
 long_title: The official DeFi Blockchain whitepaper comprehensive summary.
+cta_to: Read
 menu:
   white_paper:
     weight: 10

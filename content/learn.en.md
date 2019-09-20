@@ -2,6 +2,7 @@
 title: Learn
 type: learn
 long_title: Secure your financial freedom with Decentralized Finance.
+cta_to: Learn
 menu:
   main:
     weight: 70
@@ -14,6 +15,8 @@ meta:
     image: 
     image_type: image/jpg
     locale: en_US
+theme:
+  hero: dark smoke
 content:
   sections:
     hero:

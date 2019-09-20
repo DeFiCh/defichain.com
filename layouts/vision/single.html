@@ -29,7 +29,7 @@
 
   <main>
 
-    <section class="hero dark" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
+    <section class="hero{{ with $.Param "theme.hero" }} {{.}}{{ end }}" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
           <div id="{{ $.Param "content.sections.hero.name" }}" class="col offset-ul-1">

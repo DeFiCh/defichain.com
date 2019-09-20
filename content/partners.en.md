@@ -2,6 +2,7 @@
 title: Partners
 type: partners
 long_title: Discover companies that build their services on DeFi Blockchain.
+cta_to: Join
 menu:
   main:
     weight: 50
@@ -14,6 +15,8 @@ meta:
     image: 
     image_type: image/jpg
     locale: en_US
+theme:
+  hero: dark green
 content:
   sections:
     hero:

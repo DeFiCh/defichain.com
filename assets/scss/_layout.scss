@@ -12,21 +12,8 @@ body {
 
 
 // 
-// Flex helpers
-// 
-
-.d-flex {
-  display: flex;
-}
-
-
-// 
 // Margin helpers
 //
-
-.mbg0 {
-  margin-bottom: 0;
-}
 
 .mtg1 {
   margin-top: $grid-gutter;
@@ -174,10 +161,11 @@ body > header {
       margin-right: -20px;
     }
 
-    a {
+    > a {
       display: flex;
       align-items: center;
       text-transform: capitalize;
+      background-color: transparent;
     }
 
     svg {
@@ -369,6 +357,7 @@ section.hero {
   display: flex;
   align-items: flex-end;
   text-align: center;
+  padding-top: $header-height + 30px;
   padding-bottom: $section-padding-bottom * 1.25;
 
   @include media("<md", "landscape") {
@@ -383,7 +372,7 @@ section.hero {
 
   .hero-start {
     @include media(">lg") {
-      max-width: 450px;
+      // max-width: 450px;
     }
   }
 }
@@ -503,10 +492,23 @@ section.highlights {
 
 
 // 
-// Page-specific colors
+// Page-specific layout and colors
 // 
 
-.vision {
+body.home {
+  section.hero {
+    min-height: 100vh;
+    align-items: stretch;
+    align-content: space-between;
+    text-align: left;
+
+    @include media(">lg") {
+      padding-bottom: 200px;
+    }
+  }
+}
+
+body.vision {
   p a {
     color: map-get($brand-colors, green);
   }

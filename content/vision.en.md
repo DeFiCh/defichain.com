@@ -9,7 +9,7 @@ menu:
 meta:
   description: To allow everyone to truly be their own bank.
   og:
-    title: DeFi Blockchain
+    title: Vision
     description: To allow everyone to truly be their own bank.
     site_name: DeFi Blockchain
     image: 

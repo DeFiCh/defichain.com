@@ -43,67 +43,7 @@
       <!-- animation hero here -->
     </section>
 
-    {{ $Home := .Site.GetPage "/" }}
-    <section class="defi-blockchain featured-video dark" id="{{ $Home.Param "content.sections.defi_blockchain.name" }}">
-      <div class="container-flush">
-        <div class="row">
-          <div class="col col-lg-6">
-            <div class="video-player" data-scroll="once">
-              <div id="player-embed"></div>
-              <script>
-                var tag = document.createElement('script');
-                tag.src = "https://www.youtube.com/iframe_api";
-                var firstScriptTag = document.getElementsByTagName('script')[0];
-                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-                var player;
-                function onYouTubeIframeAPIReady() {
-                  player = new YT.Player('player-embed', {
-                    height: '390',
-                    width: '640',
-                    videoId: '{{ $Home.Param "content.sections.defi_blockchain.video" }}',
-                    events: {
-                      'onReady': onPlayerReady,
-                      'onStateChange': onPlayerStateChange
-                    },
-                    playerVars: {
-                      controls: 0,
-                      iv_load_policy: 3,
-                      modestbranding: 1,
-                      showinfo: 0
-                    }
-                  });
-                }
-                function onPlayerReady(event) {
-                  // play and pause
-                }
-                var done = false;
-                function onPlayerStateChange(event) {
-                  if (event.data == YT.PlayerState.PLAYING && !done) {
-                    setTimeout(stopVideo, 6000);
-                    done = true;
-                  }
-                }
-                function stopVideo() {
-                  player.stopVideo();
-                }
-              </script>
-            </div>
-          </div>
-          <div class="col col-lg-6">
-            <div class="video-info" data-scroll="once">
-              <h2 class="lg">{{ $Home.Param "content.sections.defi_blockchain.headline" }}</h2>
-              <div class="subject-name small">
-                {{ $Home.Param "content.sections.defi_blockchain.subject_name" | markdownify }}</div>
-              <div class="subject-title small">
-                {{ $Home.Param "content.sections.defi_blockchain.subject_title" }}</div>
-              <div class="quote lg">
-                {{ $Home.Param "content.sections.defi_blockchain.quote" | markdownify }}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    {{ partial "section-featured-video.html" . }}
 
     <section class="highlights" id="{{ $.Param "content.sections.highlights.name" }}">
       <div class="container-fluid">

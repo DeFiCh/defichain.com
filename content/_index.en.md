@@ -19,8 +19,8 @@ content:
       name: hero
       headline: Making the world a brighter place
       subhead: By DeFi providing access to financial markets to people all around the world.
-    defi_blockchain:
-      name: defi-blockchain
+    featured-video:
+      name: featured-video
       fast_track_name: DeFi Blockchain
       video: 2UehwDPc3Tk
       headline: DeFi Blockchain
@@ -51,10 +51,12 @@ content:
       headline: "Start building on DeFi Blockchain with developer resources, topics and code:"
       fast_track_name: Resources
       github:
+        image: /static/svg/icons/icon-octocat.svg
         headline: Come back to the Source, the chosen one.
         label: Get started
         url: ==PENDING==
       white_paper:
+        image: /static/svg/icons/icon-whitepaper.svg
         headline: Study DFI Token and the DeFi Blockchain topics.
         label: Study
         url: /white-paper

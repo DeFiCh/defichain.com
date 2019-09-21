@@ -29,7 +29,7 @@ content:
       subhead: Understand how the DeFi Foundation operates and how to get involved.
     animation:
       source: ==PENDING==
-    #contributors in /
-    #subscribe in /
-    #closer_look in /
+    # contributors in /
+    # subscribe in /
+    # closer_look in /
 ---

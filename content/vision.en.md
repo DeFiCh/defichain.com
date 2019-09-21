@@ -24,7 +24,7 @@ content:
       name: hero
       headline: Vision
       subhead: To allow everyone to truly be their own bank.
-    #defi_blockchain in /
+    #featured-video in /
     highlights:
       name: highlights
       fast_track_name: Highlights

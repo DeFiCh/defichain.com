@@ -364,7 +364,7 @@ main {
 
   > a {
     text-decoration: none;
-    color: $color-ui-default;
+    color: $color-ui-black60;
     height: 100%;
     padding: 15px 30px 30px;
     display: flex;
@@ -385,8 +385,11 @@ main {
       height: 100%;
       background-color: map-get($brand-colors, white);
       left: 0;
+      right: 0;
       top: 0;
+      bottom: 0;
       z-index: -1;
+      transform-origin: center;
       transition: all 0.3s ease;
     }
 
@@ -400,6 +403,7 @@ main {
 
   h3 {
     font-weight: $font-weight-regular;
+    color: $color-ui-default;
   }
 
   blockquote,
@@ -435,6 +439,10 @@ main {
 section.dark .card,
 .card.dark {
   > a {
+    color: $color-ui-white60;
+  }
+
+  h3 {
     color: $color-ui-white;
   }
 
@@ -601,6 +609,12 @@ section.contributors {
 
     .description {
       max-width: 300px;
+    }
+  }
+
+  &.dark {
+    .contributor {
+      color: $color-ui-white60;
     }
   }
 }
@@ -850,6 +864,18 @@ body.vision {
   }
   .highlight-icon {
     color: map-get($brand-colors, green);
+  }
+}
+
+body.foundation {
+  .contributors {
+    .card {
+      background-color: map-get($brand-colors, evening);
+
+      .bg {
+        background-color: map-get($brand-colors, evening);
+      }
+    }
   }
 }
 

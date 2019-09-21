@@ -11,7 +11,6 @@ meta:
     image_type: image/jpg
     locale: en_US
 theme:
-  base: night
   hero: dark night
 content:
   sections:

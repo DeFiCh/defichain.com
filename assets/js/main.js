@@ -7,9 +7,13 @@ $(function () {
 
   // FAQ toggles
   function storeAnswerHeights() {
-    $('.faq-a').each(function (i) {
+    $('.faq-a').css({
+      'height': 'auto'
+    }).each(function (i) {
       $(this).attr('data-h', $(this).height());
     });
+
+    $('.faq-q.active').siblings('.faq-q').next('.faq-a').css('height', 0).removeClass('active');
   }
 
   storeAnswerHeights();
@@ -35,8 +39,6 @@ $(function () {
     }
     // $(this).toggleClass('active').siblings('.faq-q').removeClass('active');
   });
-
-  $('.faq-q.active').siblings('.faq-q').next('.faq-a').css('height', 0);
 
   // Closer look carousel
   var closerLookCarousel = new Swiper('.carousel', {

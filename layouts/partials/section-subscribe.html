@@ -1,5 +1,5 @@
 {{ $Home := .Site.GetPage "/" }}
-<section class="subscribe">
+<section class="subscribe{{ with $.Param "theme.subscribe" }} {{.}}{{ end }}">
   <div class="container-fluid">
     <div class="row">
       <div class="col col-lg-6 col-ul-4 offset-ul-1">

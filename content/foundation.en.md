@@ -16,11 +16,12 @@ meta:
     image_type: image/jpg
     locale: en_US
 theme:
+  base: dark night
   hero: dark night
-  contributors: dark night
+  contributors: dark
   subscribe: dark evening
-  closer_look: dark night
-  footer: dark night
+  closer_look: dark
+  footer: dark
 content:
   sections:
     hero:

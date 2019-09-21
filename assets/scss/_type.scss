@@ -145,6 +145,17 @@ blockquote,
   }
 }
 
+.dark {
+  blockquote,
+  .blockquote {
+    @include media(">md") {
+    &:before {
+      background-color: $color-ui-white20;
+    }
+  }
+  }
+}
+
 
 //
 // Lists

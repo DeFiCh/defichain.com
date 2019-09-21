@@ -42,6 +42,24 @@ form {
   }
 }
 
+.dark .form-field {
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    color: $color-ui-white;
+
+    &::placeholder {
+      color: $color-ui-white60;
+    }
+
+    &:focus {
+      &::placeholder {
+        color: $color-ui-white40;
+      }
+    }
+  }
+}
+
 form.integrated {
   border: $form-control-border;
   border-radius: $form-control-border-radius;
@@ -69,6 +87,16 @@ form.integrated {
   color: $color-ui-black60;
 }
 
+.dark {
+  form.integrated {
+    border-color: $color-ui-white20;
+  }
+
+  .form-helper {
+    color: $color-ui-white60;
+  }
+}
+
 
 // 
 // Float labels
@@ -85,8 +113,8 @@ form.integrated {
     left: $form-control-padding-horizontal - 10px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: $color-ui-white;
-    color: $color-ui-black60;
+    background-color: inherit;
+    color: inherit;
     top: -16px;
     cursor: text;
     font-size: $note-font-size;

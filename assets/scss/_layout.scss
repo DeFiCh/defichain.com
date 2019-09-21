@@ -8,6 +8,8 @@
 
 body {
   background-color: map-get($brand-colors, day);
+
+  @include brand-background-variations;
 }
 
 
@@ -345,6 +347,10 @@ main {
 
 .section-icon {
   margin-bottom: 60px;
+
+  svg {
+    fill: currentColor;
+  }
 }
 
 
@@ -847,6 +853,18 @@ body.vision {
   }
 }
 
+body.foundation {
+  &.dark {
+    .form-field {
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        background-color: map-get($brand-colors, evening);
+      }
+    }
+  }
+}
+
 
 //
 // Subscribe
@@ -854,6 +872,8 @@ body.vision {
 
 section.subscribe {
   background-color: $color-ui-white;
+
+  @include brand-background-variations;
 
   h2 {
     margin-bottom: 60px;
@@ -892,7 +912,7 @@ section.subscribe {
 
 
 //
-// Subscribe
+// Closer look
 //
 
 section.closer-look {
@@ -1011,7 +1031,7 @@ section.closer-look {
 
   .brand {
     display: block;
-    color: $color-ui-black;
+    color: inherit;
     width: 168px;
     height: 28px;
     margin-bottom: 60px;
@@ -1064,7 +1084,6 @@ section.closer-look {
 
     a {
       display: block;
-      color: $color-ui-white;
       text-decoration: none;
       color: $color-ui-black40;
 
@@ -1100,6 +1119,10 @@ section.closer-look {
       margin-left: $grid-gutter;
     }
 
+    &:hover {
+      color: $color-ui-black40;
+    }
+
     svg {
       fill: currentColor;
     }
@@ -1108,6 +1131,31 @@ section.closer-look {
   .logos {
     display: flex;
     justify-content: flex-end;
+  }
+
+  @include brand-background-variations;
+
+  &.dark {
+    background-color: transparent;
+    color: $color-ui-white;
+
+    .menu {
+      a {
+        color: $color-ui-white40;
+
+        &:hover {
+          color: $color-ui-white;
+        }
+      }
+    }
+
+    .social-link {
+      color: $color-ui-white40;
+
+      &:hover {
+        color: $color-ui-white60;
+      }
+    }
   }
 }
 

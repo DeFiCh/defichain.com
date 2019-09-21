@@ -641,8 +641,8 @@ section.resources {
 
 section.faq {
   .faq-q {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     cursor: pointer;
     color: $color-ui-black60;
     transition: all 0.3s ease;
@@ -675,6 +675,7 @@ section.faq {
         border-radius: 1px;
         background-color: currentColor;
         top: 50%;
+        transition: all 0.3s ease;
 
         &:first-child {
           transform: rotate(30deg);
@@ -695,6 +696,17 @@ section.faq {
           .bar {
             height: 2px;
           }
+        }
+      }
+    }
+
+    &.active {
+      .toggle .bar {
+        &:first-child {
+          transform: rotate(-30deg);
+        }
+        &:nth-child(2) {
+          transform: rotate(30deg);
         }
       }
     }
@@ -725,6 +737,45 @@ section.faq {
   .faq-q.active + .faq-a {
     margin-bottom: 70px;
     height: auto;
+  }
+
+  .faq-add {
+    display: none;
+  }
+
+  .faq-more {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    .col {
+      padding-left: 10px;
+
+      @include media(">lg") {
+        padding-left: 30px;
+      }
+    }
+
+    button {
+      appearance: none;
+      width: 200px;
+      display: flex;
+      justify-content: space-between;
+      font-size: $body-md-font-size;
+      line-height: $body-md-line-height;
+      border: none;
+      background: transparent;
+      padding: 30px;
+      color: $color-ui-black60;
+      cursor: pointer;
+
+      span {
+        transform: rotate(90deg);
+      }
+
+      &:hover {
+        color: $color-ui-black;
+      }
+    }
   }
 }
 

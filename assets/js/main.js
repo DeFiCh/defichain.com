@@ -13,7 +13,7 @@ $(function () {
       $(this).attr('data-h', $(this).height());
     });
 
-    $('.faq-q.active').siblings('.faq-q').next('.faq-a').css('height', 0).removeClass('active');
+    $('.faq-q').not('.active').next('.faq-a').css('height', 0).removeClass('active');
   }
 
   storeAnswerHeights();
@@ -38,6 +38,12 @@ $(function () {
       $q.addClass('active');
     }
     // $(this).toggleClass('active').siblings('.faq-q').removeClass('active');
+  });
+
+  // FAQ show more
+  $('.faq-more button').click(function() {
+    $('.faq-add').show();
+    $(this).hide();
   });
 
   // Closer look carousel

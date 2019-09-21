@@ -636,6 +636,100 @@ section.resources {
 
 
 // 
+// FAQ
+//
+
+section.faq {
+  .faq-q {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    color: $color-ui-black60;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &.active {
+      color: $color-ui-black;
+    }
+
+    .col {
+      padding-left: 40px;
+
+      @include media(">lg") {
+        padding-left: 60px;
+      }
+    }
+
+    .toggle {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: 0;
+      top: 5px;
+      transform: scale(0.75);
+
+      .bar {
+        position: absolute;
+        width: 15px;
+        height: 3px;
+        border-radius: 1px;
+        background-color: currentColor;
+        top: 50%;
+
+        &:first-child {
+          transform: rotate(30deg);
+          left: 1.5px;
+        }
+        &:nth-child(2) {
+          transform: rotate(-30deg);
+          left: 14px;
+        }
+      }
+
+      @include media(">lg") {
+        left: $grid-gutter / 2;
+
+        .toggle {
+          transform: scale(1);
+
+          .bar {
+            height: 2px;
+          }
+        }
+      }
+    }
+
+    h3 {
+      font-weight: $font-weight-regular;
+      margin-bottom: 0;
+    }
+  }
+
+  .faq-a {
+    background-color: $color-ui-white;
+    margin-bottom: 0;
+    overflow: hidden;
+
+    .col {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-left: 65px;
+      padding-right: 30px;
+
+      @include media(">lg") {
+        padding-left: 85px;
+      }
+    }
+  }
+
+  .faq-q.active + .faq-a {
+    margin-bottom: 70px;
+    height: auto;
+  }
+}
+
+
+// 
 // Highlights
 // 
 

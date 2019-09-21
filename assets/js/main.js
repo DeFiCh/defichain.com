@@ -1,10 +1,44 @@
 $(function () {
 
+  // Hamburger menu
   $('.hbg').click(function() {
     $('body').toggleClass('menu-open');
   });
 
+  // FAQ toggles
+  function storeAnswerHeights() {
+    $('.faq-a').each(function (i) {
+      $(this).attr('data-h', $(this).height());
+    });
+  }
 
+  storeAnswerHeights();
+
+  $(window).on("debouncedresize", function (event) {
+    storeAnswerHeights();
+  });
+
+  $('.faq-q').click(function() {
+    var $q = $(this);
+    var $a = $q.next();
+    if ($q.hasClass('active')) {
+      $a.animate({
+        height: 0
+      });
+      $q.removeClass('active');
+    } else {
+      console.log($a.attr('data-h'));
+      $a.animate({
+        height: $a.attr('data-h') + "px"
+      });
+      $q.addClass('active');
+    }
+    // $(this).toggleClass('active').siblings('.faq-q').removeClass('active');
+  });
+
+  $('.faq-q.active').siblings('.faq-q').next('.faq-a').css('height', 0);
+
+  // Closer look carousel
   var closerLookCarousel = new Swiper('.carousel', {
     slidesPerView: 'auto',
     spaceBetween: 30,

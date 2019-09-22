@@ -24,13 +24,13 @@ content:
       headline: Developers
       subhead: Everything you need to know to start building on DeFi Blockchain.
     featured-video:
-      name: building-on
+      name: featured-video
       fast_track_name: Start with DeFi
       video: f7Dv4MymtO0
-      headline: "Building on DeFi Blockchain"
+      headline: "On Cake, crypto, engineering and security"
       subject_name: with U-Zyn Chua
       subject_title: CTO, Cake
-      quote: We’ve built a system that is super easy and intuitive for new developers. I’ll show you how you can start building with DFI.
+      quote: Doesn't matter if you are front-end of back-end. If you're a JavaScript developer, and a good one, drop me a note, and we can talk.
     # resources in /
     #subscribe in /
     #closer_look in /
@@ -51,10 +51,10 @@ content:
           label: Company
           placeholder: Your company name
         linkedin:
-          label: LinkedIn
+          label: LinkedIn profile
           placeholder: https://www.linkedin.com/in/EXAMPLE
         github:
-          label: GitHub
+          label: GitHub profile
           placeholder: https://github.com/EXAMPLE
         comment:
           label: Why would you like to become a contributor?

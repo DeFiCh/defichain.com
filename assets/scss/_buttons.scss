@@ -55,7 +55,7 @@
   }
 
   &[disabled] {
-    color: $color-ui-black60;
+    background-color: $color-ui-black40;
 
     &:hover  {
       text-decoration: none;

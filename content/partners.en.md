@@ -17,6 +17,7 @@ meta:
     locale: en_US
 theme:
   hero: dark green
+  partnering: white
 content:
   sections:
     hero:
@@ -29,7 +30,7 @@ content:
       name: partnering
       fast_track_name: Partnering
       headline: "For more information on partnering with the DeFi Blockchain, please fill in the form:"
-      form_fields:
+      form:
         name:
           label: Name
           placeholder: Full Name
@@ -39,12 +40,11 @@ content:
         company:
           label: Company
           placeholder: Your company name
-        title:
-          label: Title
-          placeholder: Chief DeFi Officer
-        comments:
+        comment:
           label: Comments
-          placeholder: Tell us more about your company
+          placeholder: Tell us more
+        button:
+          label: Send
     #subscribe in /
     #closer_look in /
 ---

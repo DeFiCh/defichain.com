@@ -78,6 +78,21 @@ $(function () {
 
 });
 
+$.fn.increment = function (options) {
+  var $this = $(this);
+  var target = options.target;
+  var coef = target / 50;
+  var speed = options.speed;
+  var value = 0;
+  var roll = setInterval(function () {
+    value = value + coef;
+    $this.html(value.toLocaleString());
+    if (value == target) {
+      clearInterval(roll);
+    }
+  }, speed);
+};
+
 document.addEventListener('DOMContentLoaded', function () {
   var scope = {};
   var trigger = new ScrollTrigger({
@@ -93,13 +108,21 @@ document.addEventListener('DOMContentLoaded', function () {
   trigger.callScope = scope;
 
   scope.heroOut = function () {
-    $('body > header').addClass('opaque');
     // pause hero animation
   };
 
   scope.heroIn = function () {
-    $('body > header').removeClass('opaque');
     // play hero animation
+  };
+
+  scope.rollStats = function() {
+    console.log('dsfdsfdfds');
+    $('.stat-value').each(function() {
+      $(this).increment({
+        speed: 30,
+        target: $(this).attr('data-target-value')
+      });
+    });
   };
 
 });

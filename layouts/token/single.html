@@ -23,22 +23,126 @@
   <meta property="og:locale" content="{{ $.Param "meta.og.locale" }}">
 </head>
 
-<body class="home">
+<body class="token">
 
   {{ partial "header.html" . }}
 
   <main>
 
-    <section class="hero{{ with $.Param "theme.hero" }} {{.}}{{ end }}" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
+    <section id="{{ $.Param "content.sections.hero.name" }}" class="hero{{ with $.Param "theme.hero" }} {{.}}{{ end }}"
+      data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
-          <div id="{{ $.Param "content.sections.hero.name" }}" class="col col-lg-6 col-xl-5 offset-xl-1">
-            <h1 data-scroll="once">{{ $.Param "content.sections.hero.headline" }}</h1>
-            
+          <div class="col col-ul-4 offset-ul-1">
+            <div class="hero-start">
+              <h1 data-scroll="once">{{ $.Param "content.sections.hero.headline" }}</h1>
+              <p class="lg" data-scroll="once">{{ $.Param "content.sections.hero.subhead" }}</p>
+            </div>
           </div>
         </div>
       </div>
       <!-- animation hero here -->
+    </section>
+
+    <section class="animation">
+      <div class="container-fluid">
+        <div class="row">
+        </div>
+      </div>
+    </section>
+
+    <section class="dfi-token{{ with $.Param "theme.dfi_token" }} {{.}}{{ end }}">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col col-lg-5 col-ul-4 offset-ul-1">
+            <h2 data-scroll="once">{{ $.Param "content.sections.dfi_token.headline" }}</h2>
+            <p class="lg" data-scroll="once">{{ $.Param "content.sections.dfi_token.subhead" }}</p>
+          </div>
+          <div class="col col-lg-7 col-ul-6 offset-ul-1">
+            image
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats{{ with $.Param "theme.stats" }} {{.}}{{ end }}" data-scroll data-scroll-showCallback="rollStats()">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col offset-ul-1">
+            <div class="stats-list row">
+              <div class="stat col-lg-3">
+                <div class="stat-value" data-target-value="300">0</div>
+                <div class="stat-code">ETH</div>
+                <div class="stat-name">Ethereum</div>
+              </div>
+              <div class="stat col-lg-3">
+                <div class="stat-value" data-target-value="200">0</div>
+                <div class="stat-code">DASH</div>
+                <div class="stat-name">Dash</div>
+              </div>
+              <div class="stat col-lg-3">
+                <div class="stat-value" data-target-value="9000">0</div>
+                <div class="stat-code">BTC</div>
+                <div class="stat-name">Bitcoin</div>
+              </div>
+              <div class="stat col-lg-3">
+                <div class="stat-value" data-target-value="100">0</div>
+                <div class="stat-code">XRP</div>
+                <div class="stat-name">Ripple</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="external-link col col-md-6">
+            <div class="card{{ with $.Param "theme.stats" }} {{.}}{{ end }}">
+              <a href="{{ $.Param "content.sections.stats.links.pool.url" | relLangURL }}">
+                {{ readFile $.Params.content.sections.stats.links.pool.image | safeHTML }}
+                <h3 data-scroll="once">
+                  {{ $.Param "content.sections.stats.links.pool.description" }}
+                </h3>
+                <div class="spacer"></div>
+                <div class="cta-to" data-scroll="once">
+                  {{ $.Param "content.sections.stats.links.pool.name" }}
+                  <span>
+                    {{ readFile "/static/svg/icons/icon-external-link.svg" | safeHTML }}
+                  </span>
+                </div>
+                <div class="bg"></div>
+              </a>
+            </div>
+          </div>
+          <div class="external-link col col-md-6">
+            <div class="card{{ with $.Param "theme.stats" }} {{.}}{{ end }}">
+              <a href="{{ $.Param "content.sections.stats.links.coinmarketcap.url" | relLangURL }}">
+                {{ readFile $.Params.content.sections.stats.links.coinmarketcap.image | safeHTML }}
+                <h3 data-scroll="once">
+                  {{ $.Param "content.sections.stats.links.coinmarketcap.description" }}
+                </h3>
+                <div class="spacer"></div>
+                <div class="cta-to" data-scroll="once">
+                  {{ $.Param "content.sections.stats.links.coinmarketcap.name" }}
+                  <span>
+                    {{ readFile "/static/svg/icons/icon-external-link.svg" | safeHTML }}
+                  </span>
+                </div>
+                <div class="bg"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="emission">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col col-lg-5 col-ul-4 offset-ul-1">
+            <h2 data-scroll="once">{{ $.Param "content.sections.emission.headline" }}</h2>
+            <p class="lg" data-scroll="once">{{ $.Param "content.sections.emission.subhead" }}</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     {{ partial "section-subscribe.html" . }}

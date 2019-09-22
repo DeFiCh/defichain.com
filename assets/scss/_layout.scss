@@ -845,7 +845,7 @@ section.highlights {
 
 
 //
-// Become a conttributor
+// Become a contributor
 //
 
 section.become-contributor {
@@ -854,6 +854,72 @@ section.become-contributor {
     padding-top: $section-padding-top;
     padding-bottom: $section-padding-bottom;
     background-color: $color-ui-white;
+  }
+}
+
+
+//
+// Stats
+//
+
+section.stats {
+  .stats-list {
+    margin-bottom: 90px;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-value {
+    font-size: $body-lg-font-size;
+    line-height: $body-lg-line-height;
+    font-family: $monospace-font-family;
+    margin-bottom: 20px;
+  }
+
+  .stat-name {
+    font-size: $body-sm-font-size;
+    line-height: $body-sm-line-height;
+    color: $color-ui-white60;
+  }
+
+  .external-link {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .card {
+    height: 340px;
+    background-color: map-get($brand-colors, white);
+    position: relative;
+
+    a {
+      @include media(">ul") {
+        padding-top: 50px;
+        padding-left: calc(100% / 6);
+      }
+    }
+
+    svg {
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      margin-bottom: 20px;
+
+      em {
+        font-weight: $font-weight-bold;
+      }
+    }
+
+    .description {
+      max-width: 300px;
+    }
+
+    .cta-to {
+      min-width: 160px;
+    }
   }
 }
 
@@ -903,14 +969,24 @@ body.foundation {
       }
     }
   }
-}
 
-body.foundation {
-  &.dark {
+  .dark {
     .form-field {
       input[type="text"],
       input[type="email"],
       textarea {
+        background-color: map-get($brand-colors, evening);
+      }
+    }
+  }
+}
+
+body.token {
+  .stats {
+    .card {
+      background-color: map-get($brand-colors, evening);
+
+      .bg {
         background-color: map-get($brand-colors, evening);
       }
     }

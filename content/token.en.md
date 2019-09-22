@@ -17,6 +17,8 @@ meta:
     locale: en_US
 theme:
   hero: dark purple
+  dfi_token: white
+  stats: dark night
 content:
   sections:
     hero:
@@ -30,11 +32,17 @@ content:
       fast_track_name: DFI Token
       headline: Meet DFI. The native DeFi Blockchain token.
       subhead: A token to enable Staking, Decentralized Lending, Decentralized Tokenization on a single blockchain.
+      image: ==PENDING==
+    stats:
       links:
-        - name: Pool by Cake
+        pool:
+          image: /static/svg/logos/logo-pool.svg
+          name: Pool by Cake
           description: Buy with crypto and stake DFI at Pool by Cake.
           url: https://pool.cakedefi.com/
-        - name: CoinMarketCap
+        coinmarketcap:
+          image: /static/svg/logos/logo-coinmarketcap.svg
+          name: CoinMarketCap
           description: See available exchanges at CoinMarketCap.
           url: ==PENDING==
     emission:

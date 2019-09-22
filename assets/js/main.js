@@ -5,6 +5,13 @@ $(function () {
     $('body').toggleClass('menu-open');
   });
 
+  // Language switcher
+  $('.lang-switcher > a').click(function (e) {
+    e.preventDefault();
+    $('.lang-menu').toggle();
+    $('.lang-switcher').toggleClass('active');
+  });
+
   // FAQ toggles
   function storeAnswerHeights() {
     $('.faq-a').css({
@@ -69,11 +76,30 @@ $(function () {
     }
   });
 
-
-  $('.lang-switcher > a').click(function(e) {
-    e.preventDefault();
-    $('.lang-menu').toggle();
-    $('.lang-switcher').toggleClass('active');
+  // Chars
+  var ctx = document.getElementById('emission-chart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['DeFi Foundation', 'Development', 'Airdrops'],
+      datasets: [{
+        label: '# of Votes',
+        data: [51, 44, 5],
+        backgroundColor: [
+          'rgba(8, 8, 32, 1)',
+          'rgba(91, 16, 255, 1)',
+          'rgba(2, 179, 27, 1)'
+        ],
+        borderColor: 'rgba(255, 255, 255, 1)',
+        hoverBorderColor: 'rgba(255, 255, 255, 1)',
+        borderWidth: 10
+      }]
+    },
+    options: {
+      legend: false,
+      tooltips: false,
+      cutoutPercentage: 60
+    }
   });
 
 });

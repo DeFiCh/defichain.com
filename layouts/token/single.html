@@ -142,6 +142,13 @@
             <p class="lg" data-scroll="once">{{ $.Param "content.sections.emission.subhead" }}</p>
           </div>
         </div>
+        <div class="row">
+          <div class="col">
+            <div class="emission-chart-wrapper">
+              <canvas id="emission-chart" width="400" height="400"></canvas>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -152,6 +159,7 @@
   {{ partial "footer.html" . }}
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
   {{ $scrolltrigger := resources.Get "js/ScrollTrigger.min.js" }}
   {{ $swiper := resources.Get "js/swiper.min.js" }}
   {{ $debouncedresize := resources.Get "js/jquery.debouncedresize.js" }}

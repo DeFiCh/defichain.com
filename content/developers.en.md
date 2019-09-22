@@ -23,10 +23,10 @@ content:
       name: hero
       headline: Developers
       subhead: Everything you need to know to start building on DeFi Blockchain.
-    building_on:
+    featured-video:
       name: building-on
       fast_track_name: Start with DeFi
-      video: https://www.youtube.com/watch?v=xFeqZXjSCsI
+      video: f7Dv4MymtO0
       headline: "Building on DeFi Blockchain"
       subject_name: with U-Zyn Chua
       subject_title: CTO, Cake
@@ -34,6 +34,38 @@ content:
     # resources in /
     #subscribe in /
     #closer_look in /
+    become_contributor:
+      name: become-contributor
+      fast_track_name: Become a contributor
+      theme: light
+      headline: "Become a contributor:"
+      subhead: Let’s build alternatives to the dinosaur banking services together!
+      form:
+        name:
+          label: Name
+          placeholder: Full Name
+        email:
+          label: Email
+          placeholder: name@example.com
+        company:
+          label: Company
+          placeholder: Your company name
+        linkedin:
+          label: LinkedIn
+          placeholder: https://www.linkedin.com/in/EXAMPLE
+        github:
+          label: GitHub
+          placeholder: https://github.com/EXAMPLE
+        comment:
+          label: Why would you like to become a contributor?
+          placeholder: Share your story
+        button:
+          label: I’m interested
+        messages:
+          success: Thank you for subscribing!
+          error: 
+            general: Oops! That didn't go through.
+            blank_field: This field cannot be left blank.
 
     # apply:
     #   name: apply

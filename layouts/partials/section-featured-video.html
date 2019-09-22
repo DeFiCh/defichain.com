@@ -1,5 +1,4 @@
-{{ $Home := .Site.GetPage "/" }}
-<section class="defi-blockchain featured-video dark" id="{{ $Home.Param "content.sections.featured-video.name" }}">
+<section class="defi-blockchain featured-video dark" id="{{ $.Param "content.sections.featured-video.name" }}">
   <div class="container-flush">
     <div class="row">
       <div class="col col-lg-6">
@@ -15,7 +14,7 @@
               player = new YT.Player('player-embed', {
                 height: '390',
                 width: '640',
-                videoId: '{{ $Home.Param "content.sections.featured-video.video" }}',
+                videoId: '{{ $.Param "content.sections.featured-video.video" }}',
                 events: {
                   'onReady': onPlayerReady,
                   'onStateChange': onPlayerStateChange
@@ -46,13 +45,13 @@
       </div>
       <div class="col col-lg-6">
         <div class="video-info" data-scroll="once">
-          <h2 class="lg">{{ $Home.Param "content.sections.featured-video.headline" }}</h2>
+          <h2 class="lg">{{ $.Param "content.sections.featured-video.headline" }}</h2>
           <div class="subject-name small">
-            {{ $Home.Param "content.sections.featured-video.subject_name" | markdownify }}</div>
+            {{ $.Param "content.sections.featured-video.subject_name" | markdownify }}</div>
           <div class="subject-title small">
-            {{ $Home.Param "content.sections.featured-video.subject_title" }}</div>
+            {{ $.Param "content.sections.featured-video.subject_title" }}</div>
           <div class="quote lg">
-            {{ $Home.Param "content.sections.featured-video.quote" | markdownify }}
+            {{ $.Param "content.sections.featured-video.quote" | markdownify }}
           </div>
         </div>
       </div>

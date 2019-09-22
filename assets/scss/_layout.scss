@@ -318,7 +318,8 @@ main {
         margin-bottom: 30px;
       }
 
-      h2 {
+      h2,
+      h2 + p {
         max-width: 600px;
         text-align: center;
       }
@@ -436,7 +437,6 @@ main {
   }
 }
 
-section.dark .card,
 .card.dark {
   > a {
     color: $color-ui-white60;
@@ -559,6 +559,15 @@ section.featured-video {
       right: -40px;
     }
   }
+}
+
+
+// 
+// Animation
+// 
+
+section.animation {
+  min-height: 600px;
 }
 
 
@@ -835,11 +844,28 @@ section.highlights {
 }
 
 
+//
+// Become a conttributor
+//
+
+section.become-contributor {
+  .contributor-form {
+    margin-top: $section-padding-top;
+    padding-top: $section-padding-top;
+    padding-bottom: $section-padding-bottom;
+    background-color: $color-ui-white;
+  }
+}
+
+
 // 
 // Page-specific layout and colors
 // 
 
 body.home {
+  p a {
+    color: map-get($brand-colors, green);
+  }
   section.hero {
     height: 100vh;
     min-height: 432px;
@@ -903,36 +929,6 @@ section.subscribe {
 
   h2 {
     margin-bottom: 60px;
-  }
-
-  // Send In Blue styles
-  #error-message {
-    color: $color-ui-red;
-    margin-bottom: 30px;
-  }
-  #success-message {
-    color: $color-ui-green;
-    margin-bottom: 30px;
-  }
-  .input--hidden {
-    display: none;
-  }
-  .sib-form-message-panel {
-    display: none;
-  }
-  .sib-form-message-panel--active {
-    display: block;
-  }
-  .entry__error {
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: $note-font-size;
-    line-height: $note-line-height;
-    color: $color-ui-red;
-    margin-top: $form-control-padding-vertical;
-
-    @include text-hide;
   }
 }
 

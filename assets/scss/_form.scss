@@ -5,6 +5,7 @@ form {
 .form-field {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 50px;
 
   input[type="text"],
   input[type="email"],
@@ -40,6 +41,30 @@ form {
       }
     }
   }
+
+  &.has-accessory {
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding-right: $form-control-padding-horizontal + 70px;
+    }
+  }
+
+  .accessory {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+
+    svg {
+      fill: currentColor;
+    }
+  }
 }
 
 .dark .form-field {
@@ -70,12 +95,18 @@ form.integrated {
     border-color: $color-ui-black40;
   }
 
+  .form-field {
+    margin-bottom: 0;
+    flex-wrap: nowrap;
+  }
+
   input[type="text"],
   input[type="email"],
   textarea {
     border: 0;
     box-shadow: none;
     background-color: transparent;
+    width: 0;
   }
 
   .btn-plain {
@@ -113,7 +144,7 @@ form.integrated {
     left: $form-control-padding-horizontal - 10px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: inherit;
+    background-color: $color-ui-white;
     color: inherit;
     top: -16px;
     cursor: text;
@@ -156,13 +187,6 @@ form.integrated {
 
   input, select, textarea {
     @include float-label-input;
-    font-size: inherit;
-    padding-top: 1em;
-    margin-bottom: 2px;
-    border: 0;
-    border-radius: 0;
-    border-bottom: 2px solid rgba(0,0,0,.1);
-
     @include float-label-scaled {
       top: $form-control-padding-vertical - 1px;
     }
@@ -178,4 +202,46 @@ form.integrated {
     background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right .5em bottom .25em;
     background-size: 8px 10px;
   }
+}
+
+.dark {
+  .has-float-label {
+    label, > span {
+      background-color: map-get($brand-colors, evening);
+    }
+  }
+}
+
+
+//
+// Send In Blue
+//
+
+#error-message {
+  color: $color-ui-red;
+  margin-bottom: 30px;
+}
+#success-message {
+  color: $color-ui-green;
+  margin-bottom: 30px;
+}
+.input--hidden {
+  display: none;
+}
+.sib-form-message-panel {
+  display: none;
+}
+.sib-form-message-panel--active {
+  display: block;
+}
+.entry__error {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: $note-font-size;
+  line-height: $note-line-height;
+  color: $color-ui-red;
+  margin-top: $form-control-padding-vertical;
+
+  @include text-hide;
 }

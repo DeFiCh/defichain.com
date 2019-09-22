@@ -16,7 +16,6 @@ meta:
     image_type: image/jpg
     locale: en_US
 theme:
-  base: green
   hero: dark green
 content:
   sections:
@@ -24,7 +23,14 @@ content:
       name: hero
       headline: Vision
       subhead: To allow everyone to truly be their own bank.
-    #featured-video in /
+    featured-video:
+      name: featured-video
+      fast_track_name: DeFi Blockchain
+      video: 2UehwDPc3Tk
+      headline: DeFi Blockchain
+      subject_name: _with_ Dr. Julian Hosp
+      subject_title: CEO, Cake
+      quote: Healthy finances. For someone like me with the background at medicine, sounds like _doing the right thing for the people_.
     highlights:
       name: highlights
       fast_track_name: Highlights

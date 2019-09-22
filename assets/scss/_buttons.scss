@@ -16,6 +16,7 @@
   background-color: $button-primary-bg;
   color: $button-primary-color;
   transition: $form-control-transition;
+  white-space: nowrap;
 
   &:hover {
     background-color: darken($button-primary-bg, 10%);

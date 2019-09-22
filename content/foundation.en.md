@@ -18,6 +18,7 @@ meta:
 theme:
   base: dark night
   hero: dark night
+  animation: dark evening
   contributors: dark
   subscribe: dark evening
   closer_look: dark

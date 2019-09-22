@@ -44,6 +44,13 @@
       <!-- animation hero here -->
     </section>
 
+    <section class="animation{{ with $.Param "theme.animation" }} {{.}}{{ end }}">
+      <div class="container-fluid">
+        <div class="row">
+        </div>
+      </div>
+    </section>
+
     {{ partial "section-contributors.html" . }}
 
     {{ partial "section-subscribe.html" . }}

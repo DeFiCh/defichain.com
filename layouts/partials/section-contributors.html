@@ -24,7 +24,7 @@
       <div class="col">
         <div class="row">
           <div class="contributor-cta col col-md-6">
-            <div class="card">
+            <div class="card{{ with $.Param "theme.contributors" }} {{.}}{{ end }}">
               <a href="{{ $Home.Param "content.sections.contributors.become_contributor.cta.url" | relLangURL }}">
                 <h3 data-scroll="once">{{ $Home.Param "content.sections.contributors.become_contributor.headline" | markdownify }}</h3>
                 <p class="description" data-scroll="once">
@@ -40,7 +40,7 @@
             </div>
           </div>
           <div class="contributor-cta col col-md-6">
-            <div class="card">
+            <div class="card{{ with $.Param "theme.contributors" }} {{.}}{{ end }}">
               <a href="{{ $Home.Param "content.sections.contributors.become_partner.cta.url" | relLangURL }}">
                 <h3 data-scroll="once">{{ $Home.Param "content.sections.contributors.become_partner.headline" | markdownify }}
                 </h3>

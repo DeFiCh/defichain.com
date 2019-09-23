@@ -51,17 +51,20 @@ content:
       headline: "DFI token emission:"
       subhead: The DeFi Foundation will issue DeFi tokens (DFI) with a 1,000,000,000 (1 billion) lifetime cap.
       distribution:
-        - percent: 51
+        defi_foundation:
+          percent: 51
           label: DeFi Foundation
-        - percent: 44
+        development:
+          percent: 44
           label: Development
-        - percent: 5
+        airdrops:
+          percent: 5
           label: Airdrops
     distribution:
       name: distribution
       fast_track_name: Distribution
       headline: "DFI token distribution:"
-      subhead: 49% of DFI emission will be distributed on the Year 1, followed by half of the remaning amount, each year.
+      subhead: 49% of DFI emission will be distributed in Year One, followed by half of the remaining amount, each year.
     utility:
       name: utility
       fast_track_name: Utility

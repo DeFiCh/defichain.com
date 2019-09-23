@@ -145,7 +145,138 @@
         <div class="row">
           <div class="col">
             <div class="emission-chart-wrapper">
-              <canvas id="emission-chart" width="400" height="400"></canvas>
+              <canvas id="emission-chart" width="1" height="1"></canvas>
+              {{ $p1 := $.Param "content.sections.emission.distribution.defi_foundation.percent" }}
+              {{ $p2 := $.Param "content.sections.emission.distribution.development.percent" }}
+              {{ $p3 := $.Param "content.sections.emission.distribution.airdrops.percent" }}
+              <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+              <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0/dist/chartjs-plugin-datalabels.min.js"></script>
+              <script>
+                // Chart
+                  var ctx = document.getElementById('emission-chart').getContext('2d');
+                  var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                      datasets: [{
+                        data: [{{$p1}}, {{$p2}}, {{$p3}}],
+                        backgroundColor: [
+                          '#080820',
+                          '#5B10FF',
+                          '#02B31B'
+                        ],
+                        borderColor: '#fff',
+                        hoverBorderColor: '#fff',
+                        borderWidth: 10
+                      }]
+                    },
+                    options: {
+                      legend: false,
+                      tooltips: false,
+                      cutoutPercentage: 60
+                    }
+                  });
+              </script>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-ul-6 offset-ul-3">
+            <div class="row">
+              <div class="legend col col-4 night">
+                <div class="legend-color"></div>
+                <div class="legend-value">{{ $.Param "content.sections.emission.distribution.defi_foundation.percent" }}%</div>
+                <div class="legend-label">{{ $.Param "content.sections.emission.distribution.defi_foundation.label" }}</div>
+              </div>
+              <div class="legend col col-4 purple">
+                <div class="legend-color"></div>
+                <div class="legend-value">{{ $.Param "content.sections.emission.distribution.development.percent" }}%</div>
+                <div class="legend-label">{{ $.Param "content.sections.emission.distribution.development.label" }}</div>
+              </div>
+              <div class="legend col col-4 green">
+                <div class="legend-color"></div>
+                <div class="legend-value">{{ $.Param "content.sections.emission.distribution.airdrops.percent" }}%</div>
+                <div class="legend-label">{{ $.Param "content.sections.emission.distribution.airdrops.label" }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="distribution">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col col-lg-5 col-ul-4 offset-ul-1">
+            <h2 data-scroll="once">{{ $.Param "content.sections.distribution.headline" }}</h2>
+            <p class="lg" data-scroll="once">{{ $.Param "content.sections.distribution.subhead" }}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="distribution-chart-wrapper">
+              <canvas id="distribution-chart" width="3" height="1"></canvas>
+              <script>
+                // Chart
+                var ctx = document.getElementById('distribution-chart').getContext('2d');
+                var myChart = new Chart(ctx, {
+                  type: 'line',
+                  data: {
+                    labels: ["Y1", "Y2", "Y3", "Y4", "Y5", "Y6", "Y7"],
+                    datasets: [{
+                      data: [49, 74.5, 87.25, 93.625, 96.8125, 98.40625, 99.203125],
+                      lineTension: 0,
+                      borderWidth: 2,
+                      borderColor: "#5B10FF",
+                      backgroundColor: 'rgba(91, 16, 255, 0.05)',
+                      pointBackgroundColor: "#fff",
+                      pointHoverBackgroundColor: "#fff",
+                      pointBorderWidth: 2,
+                      pointHoverBorderWidth: 2,
+                      pointRadius: 8,
+                      pointHoverRadius: 8,
+                      datalabels: {
+                        clamp: true,
+                        color: '#000',
+                        align: 'bottom',
+                        offset: 10,
+                        font: {
+                          size: 24
+                        },
+                        formatter: function (value) {
+                          return value.toFixed(2) + "%";
+                        }
+                      }
+                    }]
+                  },
+                  options: {
+                    legend: false,
+                    scales: {
+                      yAxes: [{
+                        gridLines: {
+                          drawBorder: true,
+                          zeroLineColor: 'rgba(0, 0, 0, 0.1)'
+                        },
+                        ticks: {
+                          labelOffset: 10,
+                          fontFamily: "'IBM Plex Sans', sans-serif",
+                          fontSize: 14
+                        }
+                      }],
+                      xAxes: [{
+                        gridLines: {
+                          drawBorder: true,
+                          drawOnChartArea: false
+                        },
+                        ticks: {
+                          labelOffset: 10,
+                          fontFamily: "'IBM Plex Sans', sans-serif",
+                          fontSize: 14
+                        }
+                      }]
+                    }
+                  }
+                });
+              </script>
             </div>
           </div>
         </div>
@@ -159,7 +290,6 @@
   {{ partial "footer.html" . }}
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
   {{ $scrolltrigger := resources.Get "js/ScrollTrigger.min.js" }}
   {{ $swiper := resources.Get "js/swiper.min.js" }}
   {{ $debouncedresize := resources.Get "js/jquery.debouncedresize.js" }}

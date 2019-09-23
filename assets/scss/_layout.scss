@@ -935,6 +935,73 @@ section.emission {
     margin: 0 auto;
     padding: 30px;
   }
+
+  .legend {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+
+    &.night {
+      .legend-color {
+        background-color: map-get($brand-colors, night);
+      }
+      
+      .legend-value {
+        color: map-get($brand-colors, night);
+      }
+    }
+    &.purple {
+      .legend-color {
+        background-color: map-get($brand-colors, purple);
+      }
+      .legend-value {
+        color: map-get($brand-colors, purple);
+      }
+    }
+    &.green {
+      .legend-color {
+        background-color: map-get($brand-colors, green);
+      }
+      .legend-value {
+        color: map-get($brand-colors, green);
+      }
+    }
+  }
+
+  .legend-color {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+  }
+
+  .legend-value {
+    width: 100%;
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: 30px;
+  }
+
+  .legend-label {
+    font-size: $body-lg-font-size;
+    line-height: $body-lg-line-height;
+    color: $color-ui-black60;
+  }
+}
+
+
+//
+// Distributtion
+//
+
+section.distribution {
+  .distribution-chart-wrapper {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 30px;
+  }
 }
 
 

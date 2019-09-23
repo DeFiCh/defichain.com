@@ -930,10 +930,31 @@ section.stats {
 
 section.emission {
   .emission-chart-wrapper {
-    max-width: 460px;
-    max-height: 460px;
+    max-width: 470px;
+    max-height: 470px;
     margin: 0 auto;
     padding: 30px;
+    position: relative;
+  }
+
+  .chart-center {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    .chart-title {
+      font-size: $h2-font-size;
+      line-height: $h2-line-height;
+      margin-bottom: 10px;
+    }
+
+    .chart-subhead {
+      font-size: $body-lg-font-size;
+      line-height: $body-lg-line-height;
+      color: $color-ui-black40;
+    }
   }
 
   .legend {

@@ -70,32 +70,43 @@ content:
       fast_track_name: Utility
       headline: "DFI is the utility token issued by the DeFi Foundation:"
       utility_list:
-        - title: Fees & contracts
+        - icon: /static/svg/icons/highlights/coolface.svg
+          title: Fees & contracts
           description: Fees for all transactions and smart contracts on the DeFi Blockchain.
-        - title: Staking
+        - icon: /static/svg/icons/highlights/coolface.svg
+          title: Staking
           description: 10,000 DFI is required to run staking a node for DeFI Blockchain.
-        - title: Proposals
+        - icon: /static/svg/icons/highlights/coolface.svg
+          title: Proposals
           description: 500 DFI is required to submit a proposal for DFI community budget.
-        - title: Wrapped tokens
+        - icon: /static/svg/icons/highlights/coolface.svg
+          title: Wrapped tokens
           description: Collateral for wrapped tokens of other blockchain on DFI.
-        - title: Oracles
+        - icon: /static/svg/icons/highlights/coolface.svg
+          title: Oracles
           description: Collateral for pricing oracles.
-        - title: DeFi services
+        - icon: /static/svg/icons/highlights/coolface.svg
+          title: DeFi services
           description: Decentralized Lending, Decentralized Tokenization of assets.
     rewards:
       name: rewards
       fast_track_name: Rewards
       headline: "Ways of acquiring DFI tokens:"
       rewards_list:
-        - title: Airdrops
+        - icon: /static/svg/icons/highlights/coolface.svg
+          title: Airdrops
           description: Issue of airdrop tokens for users of the DeFi blockchain.
-        - title: Developers
+        - icon: /static/svg/icons/highlights/coolface.svg
+          title: Developers
           description: Develop functionality for the DeFi blockchain or DeFi dApps.
-        - title: Institutions
+        - icon: /static/svg/icons/highlights/coolface.svg
+          title: Institutions
           description: Institutional investors, accredited investors and funds.
-        - title: Staking (Pool)
+        - icon: /static/svg/icons/highlights/coolface.svg
+          title: Staking (Pool)
           description: Stake DFI at Pool by Cake and receive DFI rewards.
-        - title: Trade
+        - icon: /static/svg/icons/highlights/coolface.svg
+          title: Trade
           description: Over time, we’re going to introduce other staking platforms and exchanges.
     #subscribe in /
     #closer_look in /

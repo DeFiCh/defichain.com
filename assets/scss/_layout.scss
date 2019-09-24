@@ -811,6 +811,7 @@ section.faq {
 
 // 
 // Highlights
+// Used in Vision, Token pages
 // 
 
 section.highlights {
@@ -832,6 +833,7 @@ section.highlights {
 
   .highlight-icon {
     margin-bottom: 30px;
+    color: map-get($brand-colors, green);
 
     @include media(">md") {
       margin-bottom: 60px;
@@ -1091,6 +1093,12 @@ body.token {
       .bg {
         background-color: map-get($brand-colors, evening);
       }
+    }
+  }
+
+  section.rewards {
+    .highlight-icon {
+      color: $color-ui-black40;
     }
   }
 }

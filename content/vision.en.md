@@ -3,9 +3,9 @@ title: Vision
 type: vision
 long_title: To allow everyone to truly be their own bank.
 cta_to: Enter
-menu:
-  main:
-    weight: 20
+# menu:
+#   main:
+#     weight: 20
 meta:
   description: To allow everyone to truly be their own bank.
   og:
@@ -15,8 +15,7 @@ meta:
     image: 
     image_type: image/jpg
     locale: en_US
-theme:
-  hero: dark green
+theme: dark green
 content:
   sections:
     hero:
@@ -31,29 +30,6 @@ content:
       subject_name: _with_ Dr. Julian Hosp
       subject_title: CEO, Cake
       quote: Healthy finances. For someone like me with the background at medicine, sounds like _doing the right thing for the people_.
-    highlights:
-      name: highlights
-      fast_track_name: Highlights
-      headline: To empower anyone to become their own bank.
-      highlights_list:
-        - icon: /static/svg/icons/highlights/coolface.svg
-          title: Built for DeFi
-          description: No insecure smart contracts with high gas fees.
-        - icon: /static/svg/icons/highlights/thumbsup.svg
-          title: Native
-          description: Financial operations are implemented via native OPCODEs.
-        - icon: /static/svg/icons/highlights/rocket.svg
-          title: Tokenization
-          description: Launch your own secure token on DeFi blockchain with ease.
-        - icon: /static/svg/icons/highlights/links.svg
-          title: Coin peg
-          description: … in any crypto asset, be it Bitcoin, Ethereum or any other.
-        - icon: /static/svg/icons/highlights/ok.svg
-          title: Maximum coverage
-          description: The DeFi chain does not focus on one specific asset (such as Ethereum).
-        - icon: /static/svg/icons/highlights/hearteyes.svg
-          title: User-friendly
-          description: Our GUI allows you to conduct defi in an easy manner.
     #subscribe in /
     #closer_look in /
 ---

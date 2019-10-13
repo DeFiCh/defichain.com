@@ -15,8 +15,7 @@ meta:
     image: 
     image_type: image/jpg
     locale: en_US
-theme:
-  hero: dark purple
+theme: dark purple
 content:
   sections:
     hero:
@@ -31,7 +30,18 @@ content:
       subject_name: with U-Zyn Chua
       subject_title: CTO, Cake
       quote: Doesn't matter if you are front-end of back-end. If you're a JavaScript developer, and a good one, drop me a note, and we can talk.
-    # resources in /
+    resources:
+      headline: "Start building on DeFi Blockchain with developer resources, topics and code:"
+      github:
+        image: /static/svg/icons/icon-octocat.svg
+        headline: Come back to the Source, the chosen one.
+        label: Get started
+        url: ==PENDING==
+      white_paper:
+        image: /static/svg/icons/icon-whitepaper.svg
+        headline: Study DFI Token and the DeFi Blockchain topics.
+        label: Study
+        url: /white-paper
     #subscribe in /
     #closer_look in /
     become_contributor:

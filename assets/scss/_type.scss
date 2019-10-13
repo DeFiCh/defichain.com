@@ -91,11 +91,13 @@ p, .p {
 }
 
 .lg {
-  font-size: $body-lg-font-size;
-  line-height: $body-lg-line-height;
-  font-weight: $body-lg-font-weight;
-  margin-bottom: $body-lg-margin-bottom;
-  letter-spacing: $body-lg-letter-spacing;
+  @include media(">md") {
+    font-size: $body-lg-font-size;
+    line-height: $body-lg-line-height;
+    font-weight: $body-lg-font-weight;
+    margin-bottom: $body-lg-margin-bottom;
+    letter-spacing: $body-lg-letter-spacing;
+  }
 }
 
 small, .small {

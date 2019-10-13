@@ -15,8 +15,7 @@ meta:
     image: 
     image_type: image/jpg
     locale: en_US
-theme:
-  hero: yellow
+theme: yellow
 content:
   sections:
     hero:

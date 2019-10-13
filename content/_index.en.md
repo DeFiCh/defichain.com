@@ -1,85 +1,99 @@
 ---
 title: DeFi Blockchain
-long_title: Making the world a brighter place
+long_title: Enabling decentralized finance applications.
 meta:
-  description: By DeFi providing access to financial markets to people all around the world.
+  description: A blockchain dedicated to fast, intelligent and transparent financial services, accessible by everyone.
   og:
     title: DeFi Blockchain
-    description: By DeFi providing access to financial markets to people all around the world.
+    description: A blockchain dedicated to fast, intelligent and transparent financial services, accessible by everyone.
     site_name: DeFi Blockchain
     image: 
     image_type: image/jpg
     locale: en_US
-theme:
-  hero: dark night
+theme: dark night
 content:
   sections:
     hero:
-      name: hero
-      headline: Making the world a brighter place
-      subhead: By DeFi providing access to financial markets to people all around the world.
-    featured-video:
-      name: featured-video
-      fast_track_name: DeFi Blockchain
-      video: 2UehwDPc3Tk
-      headline: DeFi Blockchain
-      subject_name: _with_ Dr. Julian Hosp
-      subject_title: CEO, Cake
-      quote: Healthy finances. For someone like me with the background at medicine, sounds like _doing the right thing for the people_.
-    contributors:
-      name: contributor
-      fast_track_name: Main contributors
-      headline: "DeFi Blockchain and DFI token main contributor:"
-      contributors_list:
-        - name: Cake
-          logo: /static/svg/logos/logo-cake.svg
-          description: Simple and accessible finance for everyone.
-      become_contributor:
-        headline: Become a _contributor_
-        description: Let’s build a reliable alternative form of digital cash and financial services together.
-        cta:
-          label: How?
-          url: /developers
-      become_partner:
-        headline: Become a _partner_
-        description: Learn how you can build on DeFi Blockchain and use DFI token.
-        cta:
-          label: Learn
-          url: /partners
-    resources:
-      headline: "Start building on DeFi Blockchain with developer resources, topics and code:"
-      fast_track_name: Resources
-      github:
-        image: /static/svg/icons/icon-octocat.svg
-        headline: Come back to the Source, the chosen one.
-        label: Get started
-        url: ==PENDING==
-      white_paper:
-        image: /static/svg/icons/icon-whitepaper.svg
-        headline: Study DFI Token and the DeFi Blockchain topics.
-        label: Study
-        url: /white-paper
-    faq:
-      headline: "FAQ:"
-      fast_track_name: FAQ
-      faq_list:
-        - q: What is DeFi?
-          a: DeFi stands for Decentralized Finance. It describes the idea of not needing a trusted third-party to execute financial services, but with a blockchain in its place to enable people, and in the future, machines to become their own bank for these services, removing counterparty risks.
-        - q: What DeFi Services are there?
-          a: Any service offered by a bank can be decentralized. The first and most common service is issuing money. Bitcoin is a prime example of that. There are many others like consensus verification i.e. mining and staking, lending, exchanging, investing and more.
-        - q: What is the DeFi Chain?
-          a: DeFi services run on blockchain technology. The DeFi Chain was created exactly for DeFi Services, while providing the optimal infrastructure for security, speed, and access, to name a few.
-        - q: Why not use the Bitcoin blockchain?
-          a: The Bitcoin blockchain was created for a single specific financial service – the decentralized and censorship-resistant store of value used as a medium of exchange, and perhaps a unit of account in the future. It does this better than other blockchains. However, beyond that, it lacks technical capabilities necessary for the infrastructure of other DeFi services.
-        - q: Why not use the Ethereum blockchain?
-          a: Ethereum was meant to be a general-purpose platform. In principle, one could do anything with Ethereum, rendering it the jack of all trades but master of none. Problems such as the DAO and parity hack reveal the challenge to keep smart contracts secure, due to their general and universal nature.
-        - q: What is DFI?
-          a: DFI is the DeFi chain native token needed to execute code. It is also used for governance.
-        - q: Where can I learn more about DeFi, the DeFi Chain and DFI?
-          a: We publish informational and educational content on DeFi. Follow us on our social media or join our mailing list to be the first to receive new content.
+      headline: Enabling decentralized finance applications.
+      subhead: A blockchain dedicated to fast, intelligent and transparent financial services, accessible by everyone.
+    problem_solution:
+      headline: The Post-Fintech Revolution
+      subhead: From trust-based to trust-less, decentralized finance overcomes what Fintech could not solve in traditional finance.
+      graph:
+        traditional:
+          label: Traditional Finance
+          top:
+            percent: 75
+            label: Bureacracy
+          bottom:
+            percent: 25
+            label: Trust-based Software
+        fintech:
+          label: Fin-Tech
+          top:
+            percent: 50
+            label: Bureacracy
+          bottom:
+            percent: 50
+            label: Trust-based Software
+        defi:
+          label: DeFi
+          top:
+            percent: 25
+            label: Bureacracy
+          bottom:
+            percent: 75
+            label: Trust-minimized Software
+    benefits:
+      headline: Benefits of the DeFi Blockchain.
+      benefits_list:
+        - icon: /static/svg/icons/benefits/variety.svg
+          title: Variety
+          description: Wide range of crypto-economic financial operations.
+        - icon: /static/svg/icons/benefits/throughput.svg
+          title: Throughput
+          description: Unparalleled high transaction throughput for all transactions
+        - icon: /static/svg/icons/benefits/security.svg
+          title: Security
+          description: Turing-incomplete for reduced attack vectors.
+        - icon: /static/svg/icons/benefits/development.svg
+          title: Development
+          description: Rapidly create a variety of DeFi apps on one chain.
+        - icon: /static/svg/icons/benefits/governance.svg
+          title: Governance
+          description: Reliable decentralized governance, on and off-chain.
+        - icon: /static/svg/icons/benefits/immutability.svg
+          title: Immutability
+          description: Immutable by anchoring to the Bitcoin blockchain.
+    function_set:
+      headline: Designed and engineered for decentralized finance dApps.
+      functions_list:
+        - icon: /static/svg/icons/functions/loan.svg
+          title: Lending
+          description: Borrow and lend through collateralized systems.
+        - icon: /static/svg/icons/functions/wrapping.svg
+          title: Wrapping of Tokens
+          description: Work with a variety of cryptoassets, directly, on-chain. 
+        - icon: /static/svg/icons/functions/oracle.svg
+          title: Pricing Oracles
+          description: Collect data from other chains and non-crypto markets.
+        - icon: /static/svg/icons/functions/exchange.svg
+          title: Exchanges
+          description: Direct peer-to-peer trading between cryptocurrencies.
+        - icon: /static/svg/icons/functions/transfer.svg
+          title: Transferable Debts and Receivables
+          description: Work with transparency not possible with institutions.
+        - icon: /static/svg/icons/functions/debt.svg
+          title: Non-Collateralized Debt
+          description: Loans based on reputation and verifiable credentials.
+        - icon: /static/svg/icons/functions/tokens.svg
+          title: Asset Tokenization
+          description: Tokenize equity, real estate, and other holdings.
+        - icon: /static/svg/icons/functions/dividends.svg
+          title: Distribution of Dividends
+          description: Automatic investment payouts with mart contracts.
     white_paper:
       headline: "Read a comprehensive summary of the official DeFi Blockchain whitepaper:"
-      fast_track_name: White Paper
       subhead: Study DFI Token and the DeFi Blockchain topics.
       link:
         label: Study

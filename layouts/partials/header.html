@@ -1,11 +1,11 @@
-<header class="{{ with $.Param "theme.hero" }}{{.}}{{ end }}">
+<header class="dark night">
  
   <div class="container-fluid">
     <div class="row">
 
       <nav class="col col-ul-10 offset-ul-1">
         <a class="brand" href="/">
-          {{ readFile "/static/svg/logos/logo-defichain.svg" | safeHTML }}
+          {{ readFile "/static/svg/logos/logo-dfi.svg" | safeHTML }}
         </a>
         <ul class="menu">
           {{ $currentPage := . }}

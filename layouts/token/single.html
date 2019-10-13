@@ -29,7 +29,7 @@
 
   <main>
 
-    <section id="{{ $.Param "content.sections.hero.name" }}" class="hero{{ with $.Param "theme.hero" }} {{.}}{{ end }}"
+    <section id="{{ $.Param "content.sections.hero.name" }}" class="hero dark night"
       data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
@@ -44,31 +44,24 @@
       <!-- animation hero here -->
     </section>
 
-    <section class="animation">
+    <section class="dfi-token paper">
       <div class="container-fluid">
         <div class="row">
-        </div>
-      </div>
-    </section>
-
-    <section class="dfi-token{{ with $.Param "theme.dfi_token" }} {{.}}{{ end }}">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col col-lg-5 col-ul-4 offset-ul-1">
+          <div class="col col-lg-5 col-ul-4 offset-ul-1 mbg1">
             <h2 data-scroll="once">{{ $.Param "content.sections.dfi_token.headline" }}</h2>
             <p class="lg" data-scroll="once">{{ $.Param "content.sections.dfi_token.subhead" }}</p>
           </div>
-          <div class="col col-lg-7 col-ul-6 offset-ul-1">
-            image
+          <div class="image col col-lg-7 col-ul-5">
+            {{ readFile $.Params.content.sections.dfi_token.image | safeHTML }}
           </div>
         </div>
       </div>
     </section>
 
-    <section class="stats{{ with $.Param "theme.stats" }} {{.}}{{ end }}" data-scroll data-scroll-showCallback="rollStats()">
+    <!-- <section class="stats{{ with $.Param "theme.stats" }} {{.}}{{ end }}" data-scroll data-scroll-showCallback="rollStats()">
       <div class="container-fluid">
         <div class="row">
-          <div class="col offset-ul-1">
+          <div class="col">
             <div class="stats-list row">
               <div class="stat col-lg-3">
                 <div class="stat-value" data-target-value="300">0</div>
@@ -132,85 +125,36 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="emission">
+    <section class="utility benefits">
       <div class="container-fluid">
         <div class="row">
-          <div class="col col-lg-5 col-ul-4 offset-ul-1">
-            <h2 data-scroll="once">{{ $.Param "content.sections.emission.headline" }}</h2>
-            <p class="lg" data-scroll="once">{{ $.Param "content.sections.emission.subhead" }}</p>
+          <div class="col col-ul-4 offset-ul-1">
+            <h2 data-scroll="once">{{ $.Param "content.sections.utility.headline" }}</h2>
           </div>
         </div>
         <div class="row">
-          <div class="col">
-            <div class="emission-chart-wrapper">
-              <div class="chart-center">
-                <div class="chart-title">1 Billion</div>
-                <div class="chart-subhead">Emission</div>
-              </div>
-              <canvas id="emission-chart" width="1" height="1"></canvas>
-              {{ $p1 := $.Param "content.sections.emission.distribution.defi_foundation.percent" }}
-              {{ $p2 := $.Param "content.sections.emission.distribution.development.percent" }}
-              {{ $p3 := $.Param "content.sections.emission.distribution.airdrops.percent" }}
-              <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
-              <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0/dist/chartjs-plugin-datalabels.min.js"></script>
-              <script>
-                // Chart
-                  var ctx = document.getElementById('emission-chart').getContext('2d');
-                  var emissionChart = new Chart(ctx, {
-                    type: 'doughnut',
-                    data: {
-                      datasets: [{
-                        data: [{{$p1}}, {{$p2}}, {{$p3}}],
-                        backgroundColor: [
-                          '#080820',
-                          '#5B10FF',
-                          '#02B31B'
-                        ],
-                        borderColor: '#fff',
-                        hoverBorderColor: '#fff',
-                        borderWidth: 10,
-                        datalabels: {
-                          display: false
-                        }
-                      }]
-                    },
-                    options: {
-                      legend: false,
-                      tooltips: false,
-                      cutoutPercentage: 75
-                    }
-                  });
-              </script>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col-ul-6 offset-ul-3">
+          <div class="col col-ul-10 offset-ul-1">
             <div class="row">
-              <div class="legend col col-4 night">
-                <div class="legend-color"></div>
-                <div class="legend-value">{{ $.Param "content.sections.emission.distribution.defi_foundation.percent" }}%</div>
-                <div class="legend-label">{{ $.Param "content.sections.emission.distribution.defi_foundation.label" }}</div>
+              {{ range $utility := $.Param "content.sections.utility.utility_list" }}
+              <div class="utility benefit col col-sm-6 col-md-4" data-scroll="once">
+                <div class="wrapper">
+                  <div class="benefit-icon">
+                    {{ readFile $utility.icon  | safeHTML }}
+                  </div>
+                  <h3>{{ $utility.title }}</h3>
+                  <p class="lg">{{ $utility.description }}</p>
+                </div>
               </div>
-              <div class="legend col col-4 purple">
-                <div class="legend-color"></div>
-                <div class="legend-value">{{ $.Param "content.sections.emission.distribution.development.percent" }}%</div>
-                <div class="legend-label">{{ $.Param "content.sections.emission.distribution.development.label" }}</div>
-              </div>
-              <div class="legend col col-4 green">
-                <div class="legend-color"></div>
-                <div class="legend-value">{{ $.Param "content.sections.emission.distribution.airdrops.percent" }}%</div>
-                <div class="legend-label">{{ $.Param "content.sections.emission.distribution.airdrops.label" }}</div>
-              </div>
+              {{ end }}
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="distribution">
+    <section class="distribution white">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-lg-5 col-ul-4 offset-ul-1">
@@ -290,34 +234,7 @@
       </div>
     </section>
 
-    <section class="utility highlights" id="{{ $.Param "content.sections.utility.name" }}">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col col-ul-4 offset-ul-1">
-            <h2 data-scroll="once">{{ $.Param "content.sections.utility.headline" }}</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col-ul-10 offset-ul-1">
-            <div class="row">
-              {{ range $utility := $.Param "content.sections.utility.utility_list" }}
-              <div class="utility highlight col col-sm-6 col-md-4" data-scroll="once">
-                <div class="wrapper">
-                  <div class="highlight-icon">
-                    {{ readFile $utility.icon  | safeHTML }}
-                  </div>
-                  <h3>{{ $utility.title }}</h3>
-                  <p class="lg">{{ $utility.description }}</p>
-                </div>
-              </div>
-              {{ end }}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="rewards highlights" id="{{ $.Param "content.sections.rewards.name" }}">
+    <section class="rewards benefits">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-4 offset-ul-1">
@@ -328,9 +245,9 @@
           <div class="col col-ul-10 offset-ul-1">
             <div class="row">
               {{ range $reward := $.Param "content.sections.rewards.rewards_list" }}
-              <div class="reward highlight col col-sm-6 col-md-4" data-scroll="once">
+              <div class="reward benefit col col-sm-6 col-md-4" data-scroll="once">
                 <div class="wrapper">
-                  <div class="highlight-icon">
+                  <div class="benefit-icon">
                     {{ readFile $reward.icon  | safeHTML }}
                   </div>
                   <h3>{{ $reward.title }}</h3>

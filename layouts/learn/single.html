@@ -23,13 +23,13 @@
   <meta property="og:locale" content="{{ $.Param "meta.og.locale" }}">
 </head>
 
-<body class="home">
+<body class="learn">
 
   {{ partial "header.html" . }}
 
   <main>
 
-    <section class="hero{{ with $.Param "theme.hero" }} {{.}}{{ end }}" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
+    <section class="hero dark night" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
           <div id="{{ $.Param "content.sections.hero.name" }}" class="col col-lg-6 col-xl-5 offset-xl-1">
@@ -40,6 +40,8 @@
       </div>
       <!-- animation hero here -->
     </section>
+
+    {{ partial "section-faq.html" . }}
 
     {{ partial "section-subscribe.html" . }}
 

@@ -1,5 +1,5 @@
 {{ $Home := .Site.GetPage "/" }}
-<section class="closer-look{{ with $.Param "theme.closer_look" }} {{.}}{{ end }}">
+<section class="closer-look">
   <div class="container-fluid">
     <div class="row">
       <div class="col col-lg-6 col-ul-4 offset-ul-1">
@@ -28,7 +28,7 @@
           {{ range .Site.Menus.main }}
           {{ if $currentPage.IsMenuCurrent "main" . }}
           {{ else }}
-          <div class="card swiper-slide{{ with .Page.Params.theme.hero }} {{.}}{{ end }}">
+          <div class="card swiper-slide{{ with .Page.Params.theme }} {{.}}{{ end }}">
             <a href="{{ .URL | relLangURL }}">
               <h3 class="h2">{{ .Name }}</h3>
               <blockquote>

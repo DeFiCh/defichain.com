@@ -126,19 +126,19 @@ body > header {
     z-index: $zindex-sticky;
     box-sizing: content-box;
     display: block;
-    width: 168px;
-    height: 28px;
+    width: 60px;
+    height: 36px;
     margin-right: 40px;
     overflow: hidden;
 
     @include media(">md") {
-      width: 97px;
-      height: 50px;
+      width: 75px;
+      height: 45px;
     }
 
     svg {
-      width: 168px;
-      height: 50px;
+      width: 100%;
+      height: 100%;
       fill: currentColor;
       transition: all 0.5s ease;
     }
@@ -347,6 +347,7 @@ main {
 }
 
 .section-icon {
+  height: 48px;
   margin-bottom: 60px;
 
   svg {
@@ -563,11 +564,55 @@ section.featured-video {
 
 
 // 
-// Animation
+// Problem Solution
 // 
 
-section.animation {
-  min-height: 600px;
+section.problem-solution {
+  .defi-evolution-diagram {
+    display: flex;
+  }
+
+  .diagram-col {
+    flex-grow: 1;
+    padding: 1px;
+    text-align: center;
+  }
+
+  .heading {
+    font-size: $body-md-font-size;
+    line-height: $body-sm-line-height;
+    font-weight: $font-weight-bold;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .defi .heading {
+    color: map-get($brand-colors, purple);
+  }
+
+  .diagram-graph {
+    height: 192px;
+    font-size: $body-sm-font-size;
+    line-height: $body-sm-line-height;
+  }
+
+  .bureaucracy {
+    background-color: rgba(map-get($brand-colors, purple), 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-ui-black60;
+  }
+
+  .trust {
+    background-color: map-get($brand-colors, purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-ui-white;
+  }
 }
 
 
@@ -660,6 +705,19 @@ section.resources {
       margin-bottom: 20px;
       max-width: 300px;
     }
+  }
+}
+
+
+// 
+// Token
+//
+
+section.dfi-token {
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -810,14 +868,13 @@ section.faq {
 
 
 // 
-// Highlights
-// Used in Vision, Token pages
+// Benefits and Function set
 // 
 
-section.highlights {
+section.benefits {
   background-color: map-get($brand-colors, day);
 
-  .highlight {
+  .benefit {
     margin-top: 30px;
     margin-bottom: 30px;
 
@@ -831,9 +888,9 @@ section.highlights {
     }
   }
 
-  .highlight-icon {
+  .benefit-icon {
     margin-bottom: 30px;
-    color: map-get($brand-colors, green);
+    color: map-get($brand-colors, purple);
 
     @include media(">md") {
       margin-bottom: 60px;
@@ -841,6 +898,8 @@ section.highlights {
 
     svg {
       fill: currentColor;
+      transform: scale(2);
+      transform-origin: left top;
     }
   }
 }
@@ -1033,9 +1092,6 @@ section.distribution {
 // 
 
 body.home {
-  p a {
-    color: map-get($brand-colors, green);
-  }
   section.hero {
     height: 100vh;
     min-height: 432px;
@@ -1050,55 +1106,6 @@ body.home {
 
     @include media(">ul") {
       padding-bottom: 200px;
-    }
-  }
-}
-
-body.vision {
-  p a {
-    color: map-get($brand-colors, green);
-  }
-  .highlight-icon {
-    color: map-get($brand-colors, green);
-  }
-}
-
-body.foundation {
-  .contributors {
-    .card {
-      background-color: map-get($brand-colors, evening);
-
-      .bg {
-        background-color: map-get($brand-colors, evening);
-      }
-    }
-  }
-
-  .dark {
-    .form-field {
-      input[type="text"],
-      input[type="email"],
-      textarea {
-        background-color: map-get($brand-colors, evening);
-      }
-    }
-  }
-}
-
-body.token {
-  .stats {
-    .card {
-      background-color: map-get($brand-colors, evening);
-
-      .bg {
-        background-color: map-get($brand-colors, evening);
-      }
-    }
-  }
-
-  section.rewards {
-    .highlight-icon {
-      color: $color-ui-black40;
     }
   }
 }

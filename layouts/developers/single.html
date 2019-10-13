@@ -29,7 +29,7 @@
 
   <main>
 
-    <section id="{{ $.Param "content.sections.hero.name" }}" class="hero{{ with $.Param "theme.hero" }} {{.}}{{ end }}"
+    <section id="{{ $.Param "content.sections.hero.name" }}" class="hero dark night"
       data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
@@ -43,126 +43,60 @@
       </div>
       <!-- animation hero here -->
     </section>
-
-    {{ partial "section-featured-video.html" . }}
     
-    {{ partial "section-resources.html" . }}
-
-    <section class="become-contributor">
+    <section class="resources" id="{{ $.Param "content.sections.resources.name" }}">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-5 offset-ul-1">
-            <h2 data-scroll="once">{{ $.Param "content.sections.become_contributor.headline" }}</h2>
-            <p class="lg" data-scroll="once">{{ $.Param "content.sections.become_contributor.subhead" }}</p>
+            <h2 data-scroll="once">{{ $.Param "content.sections.resources.headline" }}</h2>
           </div>
         </div>
-      </div>
-      <div class="contributor-form container-fluid">
         <div class="row">
-          <div class="col col-lg-6 col-ul-4 offset-ul-1">
-            <!-- Begin Sendinblue Form -->
-            <!-- START - We recommend to place the below code where you want the form in your website html  -->
-            <div class="sib-form" data-scroll="once">
-              <div id="sib-form-container" class="sib-form-container">
-                <div id="error-message" class="sib-form-message-panel">
-                  <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-                    <span class="sib-form-message-panel__inner-text">
-                      {{ $.Param "content.sections.become_contributor.form.messages.error.general" }}
-                    </span>
-                  </div>
+          <div class="col">
+            <div class="row">
+              <div class="resource-cta col col-md-6">
+                <div class="card">
+                  <a href="{{ $.Param "content.sections.resources.github.cta.url" | relLangURL }}">
+                    <div class="resource-image">
+                      {{ readFile $.Params.content.sections.resources.github.image | safeHTML }}
+                    </div>
+                    <h3 data-scroll="once">
+                      {{ $.Param "content.sections.resources.github.headline" | markdownify }}</h3>
+                    <div class="spacer"></div>
+                    <div class="cta-to" data-scroll="once">
+                      {{ $.Param "content.sections.resources.github.label" }}
+                      <span>&#10142;</span>
+                    </div>
+                    <div class="bg"></div>
+                  </a>
                 </div>
-                <div id="success-message" class="sib-form-message-panel">
-                  <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-                    <span class="sib-form-message-panel__inner-text">
-                      {{ $.Param "content.sections.become_contributor.form.messages.success" }}
-                    </span>
-                  </div>
-                </div>
-                <div id="sib-container" class="sib-container--medium sib-container--horizontal">
-                  <form id="sib-form" method="POST" 
-                    action="https://sibforms.com/serve/MUIEAHtFVOsyaflRuDMqFtJSe5duw387iXFzi0bcREa-9SJbMJcynI8ROTWxdp13JOE5hpeaNE5de6fohrB0IpBKqLS8ElTha_oJetOBNDjkaGQ5QHY5HCCmy9iQ5pxafFnaukL2yXvxEgaQSJlbvKidCbLvR7rjd38CqvpolOvZUmmXgkFKm3yFjPla05YPrxXbyROb0C75L7-Q"
-                    data-type="subscription">
-                    <div class="form-field has-float-label form__entry entry_block">
-                      <input class="input" maxlength="200" type="text" id="NAME" name="NAME" autocomplete="off"
-                        placeholder="{{ $.Param "content.sections.become_contributor.form.name.placeholder" }}" data-required="true"
-                        required />
-                      <label for="NAME">{{ $.Param "content.sections.become_contributor.form.name.label" }}</label>
-                      <div class="entry__error entry__error--primary"></div>
+              </div>
+              <div class="resource-cta col col-md-6">
+                <div class="card">
+                  <a href="{{ $.Param "content.sections.resources.white_paper.url" | relLangURL }}">
+                    <div class="resource-image">
+                      {{ readFile $.Params.content.sections.resources.white_paper.image | safeHTML }}
                     </div>
-                    <div class="form-field has-float-label form__entry entry_block">
-                      <input class="input" maxlength="200" type="email" id="EMAIL" name="EMAIL" autocomplete="off"
-                        placeholder="{{ $.Param "content.sections.become_contributor.form.email.placeholder" }}"
-                        data-required="true" required />
-                      <label for="EMAIL">{{ $.Param "content.sections.become_contributor.form.email.label" }}</label>
-                      <div class="entry__error entry__error--primary"></div>
+                    <h3 data-scroll="once">
+                      {{ $.Param "content.sections.resources.white_paper.headline" | markdownify }}</h3>
+                    <div class="spacer"></div>
+                    <div class="cta-to" data-scroll="once">
+                      {{ $.Param "content.sections.resources.white_paper.label" }}
+                      <span>&#10142;</span>
                     </div>
-                    <div class="form-field has-float-label form__entry entry_block">
-                      <input class="input" maxlength="200" type="text" id="COMPANY" name="COMPANY" autocomplete="off"
-                        placeholder="{{ $.Param "content.sections.become_contributor.form.company.placeholder" }}" data-required="true"
-                        required />
-                      <label for="COMPANY">{{ $.Param "content.sections.become_contributor.form.company.label" }}</label>
-                      <div class="entry__error entry__error--primary"></div>
-                    </div>
-                    <div class="form-field has-accessory has-float-label form__entry entry_block">
-                      <input class="input" maxlength="200" type="text" id="LINKEDIN_PROFILE" name="LINKEDIN_PROFILE" autocomplete="off"
-                        placeholder="{{ $.Param "content.sections.become_contributor.form.linkedin.placeholder" }}" required />
-                      <label for="LINKEDIN_PROFILE">{{ $.Param "content.sections.become_contributor.form.linkedin.label" }}</label>
-                      <div class="accessory">
-                        {{ readFile "/static/svg/icons/social/icon-linkedin.svg" | safeHTML }}
-                      </div>
-                      <div class="entry__error entry__error--primary"></div>
-                    </div>
-                    <div class="form-field has-accessory has-float-label form__entry entry_block">
-                      <input class="input" maxlength="200" type="text" id="GITHUB_PROFILE" name="GITHUB_PROFILE" autocomplete="off"
-                        placeholder="{{ $.Param "content.sections.become_contributor.form.github.placeholder" }}" required />
-                      <label for="GITHUB_PROFILE">{{ $.Param "content.sections.become_contributor.form.github.label" }}</label>
-                      <div class="entry__error entry__error--primary"></div>
-                      <div class="accessory">
-                        {{ readFile "/static/svg/icons/social/icon-github.svg" | safeHTML }}
-                      </div>
-                    </div>
-                    <div class="form-field has-float-label form__entry entry_block">
-                      <textarea rows="3" class="input" maxlength="500" id="COMMENT" name="COMMENT" autocomplete="off" placeholder="{{ $.Param "content.sections.become_contributor.form.comment.placeholder" }}"
-                        data-required="true" required></textarea>
-                      <label for="COMMENT">{{ $.Param "content.sections.become_contributor.form.comment.label" }}</label>
-                      <div class="entry__error entry__error--primary"></div>
-                    </div>
-                    <input type="text" name="email_address_check" value="" class="input--hidden">
-                    <input type="hidden" name="locale" value="en">
-                    <button class="btn" form="sib-form" type="submit">
-                      <svg class="d-none"></svg>
-                      {{ $.Param "content.sections.become_contributor.form.button.label" }}
-                    </button>
-                  </form>
+                    <div class="bg"></div>
+                  </a>
                 </div>
               </div>
             </div>
-            <!-- END - We recommend to place the below code where you want the form in your website html  -->
-            <!-- START - We recommend to place the below code in footer or bottom of your website html  -->
-            <script>
-              window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
-              window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-              window.REQUIRED_ERROR_MESSAGE = "{{ $.Param "content.sections.roadmap.subscribe.messages.error.blank_field" }}";
-              window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-              window.translation = {
-                common: {
-                  selectedList: '{quantity} list selected',
-                  selectedLists: '{quantity} lists selected'
-                }
-              };
-              var AUTOHIDE = Boolean(0);
-            </script>
-            <script src="https://sibforms.com/forms/end-form/build/main.js">
-            </script>
-            <script src="https://www.google.com/recaptcha/api.js?hl=en"></script>
-            <!-- END - We recommend to place the above code in footer or bottom of your website html  -->
-            <!-- End Sendinblue Form -->
           </div>
         </div>
       </div>
     </section>
 
     {{ partial "section-subscribe.html" . }}
+
+    {{ partial "section-closer-look.html" . }}
 
   </main>
 

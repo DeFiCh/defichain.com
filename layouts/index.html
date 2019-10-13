@@ -29,7 +29,7 @@
 
   <main>
 
-    <section id="{{ $.Param "content.sections.hero.name" }}" class="hero{{ with $.Param "theme.hero" }} {{.}}{{ end }}" data-scroll data-scroll-showCallback="heroIn()"
+    <section id="{{ $.Param "content.sections.hero.name" }}" class="hero dark night" data-scroll data-scroll-showCallback="heroIn()"
       data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
@@ -44,13 +44,107 @@
       <!-- animation hero here -->
     </section>
 
-    {{ partial "section-featured-video.html" . }}
+    <section class="problem-solution">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col col-lg-5 col-ul-4 offset-ul-1 mbg1">
+            <h2 data-scroll="once">{{ $.Param "content.sections.problem_solution.headline" }}</h2>
+            <p class="lg" data-scroll="once">{{ $.Param "content.sections.problem_solution.subhead" }}</p>
+          </div>
+          <div class="col col-lg-7 col-ul-5 offset-ul-1">
+            <div class="defi-evolution-diagram">
+              <div class="diagram-col">
+                <span class="heading">{{ $.Param "content.sections.problem_solution.graph.traditional.label" }}</span>
+                <div class="diagram-graph">
+                  <div class="bureaucracy" style="height:{{ $.Param "content.sections.problem_solution.graph.traditional.top.percent" }}%">
+                    {{ $.Param "content.sections.problem_solution.graph.traditional.top.label" }}
+                  </div>
+                  <div class="trust" style="height:{{ $.Param "content.sections.problem_solution.graph.traditional.bottom.percent" }}%">
+                    {{ $.Param "content.sections.problem_solution.graph.traditional.bottom.label" }}
+                  </div>
+                </div>
+              </div>
+              <div class="diagram-col">
+                <span class="heading">{{ $.Param "content.sections.problem_solution.graph.fintech.label" }}</span>
+                <div class="diagram-graph">
+                  <div class="bureaucracy" style="height:{{ $.Param "content.sections.problem_solution.graph.fintech.top.percent" }}%">
+                    {{ $.Param "content.sections.problem_solution.graph.fintech.top.label" }}
+                  </div>
+                  <div class="trust" style="height:{{ $.Param "content.sections.problem_solution.graph.fintech.bottom.percent" }}%">
+                    {{ $.Param "content.sections.problem_solution.graph.fintech.bottom.label" }}
+                  </div>
+                </div>
+              </div>
+              <div class="diagram-col defi">
+                <span class="heading">{{ $.Param "content.sections.problem_solution.graph.defi.label" }}</span>
+                <div class="diagram-graph">
+                  <div class="bureaucracy" style="height:{{ $.Param "content.sections.problem_solution.graph.defi.top.percent" }}%">
+                    {{ $.Param "content.sections.problem_solution.graph.defi.top.label" }}
+                  </div>
+                  <div class="trust" style="height:{{ $.Param "content.sections.problem_solution.graph.defi.bottom.percent" }}%">
+                    {{ $.Param "content.sections.problem_solution.graph.defi.bottom.label" }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    {{ partial "section-contributors.html" . }}
+    <section class="benefits white">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col col-ul-4 offset-ul-1">
+            <h2 data-scroll="once">{{ $.Param "content.sections.benefits.headline" }}</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-ul-10 offset-ul-1">
+            <div class="row">
+              {{ range $benefit := $.Param "content.sections.benefits.benefits_list" }}
+              <div class="benefit col col-sm-6 col-md-4" data-scroll="once">
+                <div class="wrapper">
+                  <div class="benefit-icon">
+                    {{ readFile $benefit.icon  | safeHTML }}
+                  </div>
+                  <h3>{{ $benefit.title }}</h3>
+                  <p class="lg">{{ $benefit.description }}</p>
+                </div>
+              </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    {{ partial "section-resources.html" . }}
-
-    {{ partial "section-faq.html" . }}
+    <section class="function-set benefits">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col col-ul-4 offset-ul-1">
+            <h2 data-scroll="once">{{ $.Param "content.sections.function_set.headline" }}</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-ul-10 offset-ul-1">
+            <div class="row">
+              {{ range $function := $.Param "content.sections.function_set.functions_list" }}
+              <div class="benefit col col-sm-6 col-md-4" data-scroll="once">
+                <div class="wrapper">
+                  <div class="benefit-icon">
+                    {{ readFile $function.icon  | safeHTML }}
+                  </div>
+                  <h3>{{ $function.title }}</h3>
+                  <p class="lg">{{ $function.description }}</p>
+                </div>
+              </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     {{ partial "section-subscribe.html" . }}
     

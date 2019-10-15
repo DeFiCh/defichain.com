@@ -1,16 +1,16 @@
 ---
 title: Learn
 type: learn
-long_title: Secure your financial freedom with Decentralized Finance.
+long_title: Understand the DeFi Blockchain
 cta_to: Learn
 menu:
   main:
     weight: 70
 meta:
-  description: Secure your financial freedom with Decentralized Finance.
+  description: Understand the DeFi Blockchain
   og:
     title: Token
-    description: Secure your financial freedom with Decentralized Finance.
+    description: Understand the DeFi Blockchain
     site_name: DeFi Blockchain
     image: 
     image_type: image/jpg
@@ -21,7 +21,7 @@ content:
     hero:
       name: hero
       headline: Learn
-      subhead: Secure your financial freedom with Decentralized Finance.
+      subhead: Understand the DeFi Blockchain.
     animation:
       source: ==PENDING==
     faq:

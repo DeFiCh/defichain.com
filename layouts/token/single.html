@@ -6,7 +6,7 @@
   <meta name="description" content="{{ $.Param "meta.description" }}">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
-  <title>{{ $.Param "long_title" }}: {{ $.Param "long_title" }} &ndash; {{ .Site.Params.title }}</title>
+  <title>{{ $.Param "long_title" }} &ndash; {{ .Site.Params.title }}</title>
   {{ $style := resources.Get "scss/main.scss" | toCSS | postCSS | minify | fingerprint }}
   <link href="{{ $style.RelPermalink }}" rel="stylesheet">
   {{ if .IsTranslated }}
@@ -157,101 +157,90 @@
     <section class="distribution white">
       <div class="container-fluid">
         <div class="row">
-          <div class="col col-lg-5 col-ul-4 offset-ul-1">
+          <div class="col col-lg-5 offset-ul-1">
             <h2 data-scroll="once">{{ $.Param "content.sections.distribution.headline" }}</h2>
             <p class="lg" data-scroll="once">{{ $.Param "content.sections.distribution.subhead" }}</p>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <div class="distribution-chart-wrapper">
-              <canvas id="distribution-chart" width="3" height="1"></canvas>
-              <script>
-                // Chart
-                var ctx = document.getElementById('distribution-chart').getContext('2d');
-                var distributionChart = new Chart(ctx, {
-                  type: 'line',
-                  data: {
-                    labels: ["Y1", "Y2", "Y3", "Y4", "Y5", "Y6", "Y7"],
-                    datasets: [{
-                      data: [49, 74.5, 87.25, 93.625, 96.8125, 98.40625, 99.203125],
-                      lineTension: 0,
-                      borderWidth: 2,
-                      borderColor: "#5B10FF",
-                      backgroundColor: 'rgba(91, 16, 255, 0.05)',
-                      pointBackgroundColor: "#fff",
-                      pointHoverBackgroundColor: "#fff",
-                      pointBorderWidth: 2,
-                      pointHoverBorderWidth: 2,
-                      pointRadius: 8,
-                      pointHoverRadius: 8,
-                      datalabels: {
-                        clamp: true,
-                        color: '#000',
-                        align: 'bottom',
-                        offset: 10,
-                        font: {
-                          size: 24
-                        },
-                        formatter: function (value) {
-                          return value.toFixed(2) + "%";
-                        }
-                      }
-                    }]
-                  },
-                  options: {
-                    legend: false,
-                    scales: {
-                      yAxes: [{
-                        gridLines: {
-                          drawBorder: true,
-                          zeroLineColor: 'rgba(0, 0, 0, 0.1)'
-                        },
-                        ticks: {
-                          labelOffset: 10,
-                          fontFamily: "'IBM Plex Sans', sans-serif",
-                          fontSize: 14
-                        }
-                      }],
-                      xAxes: [{
-                        gridLines: {
-                          drawBorder: true,
-                          drawOnChartArea: false
-                        },
-                        ticks: {
-                          labelOffset: 10,
-                          fontFamily: "'IBM Plex Sans', sans-serif",
-                          fontSize: 14
-                        }
-                      }]
-                    }
-                  }
-                });
-              </script>
+            <div class="distribution-figure-wrapper">
+              <div class="distribution-figure">
+                <div class="distribution-part-a">
+                  <div class="chart-label">
+                    <div class="label-initial-supply">
+                      <span class="value">49%</span>
+                      <span class="line"></span>
+                      <span class="edge left-edge"></span>
+                      <span class="edge right-edge"></span>
+                    </div>
+                    <div class="label-masternodes">
+                      <span class="value">51%</span>
+                      <span class="line"></span>
+                      <span class="edge left-edge"></span>
+                      <span class="edge right-edge"></span>
+                    </div>
+                  </div>
+                  <div class="chart">
+                    <div class="portion-initial-supply">
+                      {{ $.Param "content.sections.distribution.chart.initial_supply" }}
+                    </div>
+                    <div class="portion-masternodes">
+                      {{ $.Param "content.sections.distribution.chart.masternodes" }}
+                    </div>
+                  </div>
+                </div>
+                <p>{{ $.Param "content.sections.distribution.chart.caption" }}</p>
+                <div class="distribution-part-b">
+                  <div class="chart-label">
+                    <div class="label-defi-foundation">
+                      <span class="value">49%</span>
+                      <span class="line"></span>
+                      <span class="edge left-edge"></span>
+                      <span class="edge right-edge"></span>
+                    </div>
+                    <div class="label-external-partners">
+                      <span class="value">51%</span>
+                      <span class="line"></span>
+                      <span class="edge left-edge"></span>
+                      <span class="edge right-edge"></span>
+                    </div>
+                  </div>
+                  <div class="chart">
+                    <div class="portion-defi-foundation">
+                      {{ $.Param "content.sections.distribution.chart.defi_foundation" }}
+                    </div>
+                    <div class="portion-external-partners">
+                      {{ $.Param "content.sections.distribution.chart.external_partners" }}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="rewards benefits">
+    <section class="acquiring benefits">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-4 offset-ul-1">
-            <h2 data-scroll="once">{{ $.Param "content.sections.rewards.headline" }}</h2>
+            <h2 data-scroll="once">{{ $.Param "content.sections.acquiring.headline" }}</h2>
+            <p class="lg" data-scroll="once">{{ $.Param "content.sections.acquiring.subhead" }}</p>
           </div>
         </div>
         <div class="row">
           <div class="col col-ul-10 offset-ul-1">
             <div class="row">
-              {{ range $reward := $.Param "content.sections.rewards.rewards_list" }}
-              <div class="reward benefit col col-sm-6 col-md-4" data-scroll="once">
+              {{ range $way := $.Param "content.sections.acquiring.ways_to_acquire" }}
+              <div class="way-to-acquire benefit col col-sm-6" data-scroll="once">
                 <div class="wrapper">
                   <div class="benefit-icon">
-                    {{ readFile $reward.icon  | safeHTML }}
+                    {{ readFile $way.icon  | safeHTML }}
                   </div>
-                  <h3>{{ $reward.title }}</h3>
-                  <p class="lg">{{ $reward.description }}</p>
+                  <h3>{{ $way.title }}</h3>
+                  <p class="lg">{{ $way.description }}</p>
                 </div>
               </div>
               {{ end }}

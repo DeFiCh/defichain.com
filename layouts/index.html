@@ -6,7 +6,7 @@
   <meta name="description" content="{{ $.Param "meta.description" }}">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
-  <title>{{ .Site.Params.title }} &ndash; {{ $.Param "long_title" }}: {{ $.Param "long_title" }}</title>
+  <title>{{ .Site.Params.title }} &ndash; {{ $.Param "long_title" }}</title>
   {{ $style := resources.Get "scss/main.scss" | toCSS | postCSS | minify | fingerprint }}
   <link href="{{ $style.RelPermalink }}" rel="stylesheet">
   {{ if .IsTranslated }}

@@ -1,6 +1,6 @@
 ---
 title: DeFi Blockchain
-long_title: Enabling decentralized finance applications.
+long_title: Decentralized finance enabled
 meta:
   description: A blockchain dedicated to fast, intelligent and transparent financial services, accessible by everyone.
   og:
@@ -14,7 +14,7 @@ theme: dark night
 content:
   sections:
     hero:
-      headline: Enabling decentralized finance applications.
+      headline: Decentralized finance enabled.
       subhead: A blockchain dedicated to fast, intelligent and transparent financial services, accessible by everyone.
     problem_solution:
       headline: The Post-Fintech Revolution
@@ -106,14 +106,14 @@ content:
           placeholder: name@example.com
         button:
           label: Join now
-        helper: We’ll send you the most important updates. We won’t spam your mailbox. By joining our mailing list you agree to our [Privacy Policy](/privacy-policy/).
+        helper: We hate spam too, so only occasional updates.
         messages:
           success: Thank you for subscribing!
           error: 
             general: Oops! That didn't go through.
             blank_field: This field cannot be left blank.
     closer_look:
-      headline: A closer look
-      subhead: Discover DeFi Blockchain. See your financial hurdles turning into a breeze.
+      headline: Learn more
+      subhead: Discover DeFi Blockchain.
 
 ---

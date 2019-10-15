@@ -5,7 +5,7 @@
 
       <nav class="col col-ul-10 offset-ul-1">
         <a class="brand" href="/">
-          {{ readFile "/static/svg/logos/logo-dfi.svg" | safeHTML }}
+          {{ readFile "/static/svg/logos/logo-defi.svg" | safeHTML }}
         </a>
         <ul class="menu">
           {{ $currentPage := . }}
@@ -16,18 +16,24 @@
           {{ end }}
           {{ range .Site.Menus.white_paper }}
           <li class="white-paper-list-link {{ if $currentPage.IsMenuCurrent "white_paper" . }}active{{ end }}">
-            <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+            <a href="{{ .URL | relLangURL }}">
+              {{ .Name }}
+            </a>
           </li>
           {{ end }}
         </ul>
         <div class="spacer"></div>
-        <a href="#" class="btn btn-pill white-paper-link">White Paper</a>
-        <div class="lang-switcher">
+        {{ range .Site.Menus.white_paper }}
+        <a href="/downloads/DeFi_Blockchain_Whitepaper.pdf" target="_blank" class="btn btn-pill white-paper-link">
+          {{ .Name }}
+        </a>
+        {{ end }}
+        <!-- <div class="lang-switcher">
           <a href="#lang-menu" class="btn">
             {{ .Language }}
             {{ readFile "/static/svg/icons/icon-globe.svg" | safeHTML }}
           </a>
-          <!-- <div class="lang-menu current-{{ .Language }}" id="lang-switcher">
+          <div class="lang-menu current-{{ .Language }}" id="lang-switcher">
             <ul>
               {{ range $.Site.Home.AllTranslations }}
               <li class="option-{{ .Language }}">
@@ -35,8 +41,8 @@
               </li>
               {{ end }}
             </ul>
-          </div> -->
-        </div>
+          </div>
+        </div> -->
         <div class="hbg">
           <span class="line"></span>
           <span class="line"></span>

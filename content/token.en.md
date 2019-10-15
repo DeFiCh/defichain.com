@@ -1,16 +1,16 @@
 ---
 title: Token
 type: token
-long_title: All about the DFI token that powers up the DeFi Blockchain.
+long_title: Information about and how to acquire DFI
 cta_to: More
 menu:
   main:
     weight: 60
 meta:
-  description: All about the DFI token that powers up the DeFi Blockchain.
+  description: Information about and how to acquire DFI
   og:
     title: Token
-    description: All about the DFI token that powers up the DeFi Blockchain.
+    description: Information about and how to acquire DFI
     site_name: DeFi Blockchain
     image: 
     image_type: image/jpg
@@ -21,7 +21,7 @@ content:
     hero:
       name: hero
       headline: Token
-      subhead: All about the DFI token that powers up the DeFi Blockchain.
+      subhead: Information about and how to acquire DFI.
     dfi_token:
       name: dfi-token
       headline: DFI Token
@@ -59,27 +59,30 @@ content:
           description: Submit a community budget proposal for 500 DFI (non-refundable).
     distribution:
       headline: Initial Token Distribution
-      subhead: 49% of DFI emission will be distributed in Year One, followed by half of the remaining amount, each year.
-    rewards:
-      name: rewards
-      fast_track_name: Rewards
-      headline: "Ways of acquiring DFI tokens:"
-      rewards_list:
-        - icon: /static/svg/icons/highlights/coolface.svg
-          title: Airdrops
-          description: Issue of airdrop tokens for users of the DeFi blockchain.
-        - icon: /static/svg/icons/highlights/coolface.svg
+      subhead: Of the 1.2 billion DFI tokens, 49% will be in the initial supply, with the rest issued to masternode holders over time.
+      chart:
+        initial_supply: Initial supply
+        masternodes: Masternodes
+        defi_foundation: DeFi Foundation
+        external_partners: External Partners
+        caption: Of the initial supply, 49% will be kept by the DeFi Foundation. The rest may be distributed or sold to external partners, to fund the initial development.
+      image: /static/svg/initial-token-distribution.svg
+    acquiring:
+      headline: Acquiring DFI tokens
+      subhead: DFI tokens will be issued to users and partners with an interest in utilizing and participating in the ecosystem.
+      ways_to_acquire:
+        - icon: /static/svg/icons/way-to-acquire/investors.svg
+          title: Investors
+          description: Institutional investors, accredited investors and funds may invest in exchange for DFI.
+        - icon: /static/svg/icons/way-to-acquire/staking.svg
+          title: Staking platforms
+          description: DFI will be available in future, on staking platforms such as Pool by Cake and selected ecxchanges.
+        - icon: /static/svg/icons/way-to-acquire/airdrop.svg
+          title: Airdrop
+          description: The DeFi Foundation will airdrop DFI to hodlers, market makers and other users of the DeFi Blockchain.
+        - icon: /static/svg/icons/way-to-acquire/developers.svg
           title: Developers
-          description: Develop functionality for the DeFi blockchain or DeFi dApps.
-        - icon: /static/svg/icons/highlights/coolface.svg
-          title: Institutions
-          description: Institutional investors, accredited investors and funds.
-        - icon: /static/svg/icons/highlights/coolface.svg
-          title: Staking (Pool)
-          description: Stake DFI at Pool by Cake and receive DFI rewards.
-        - icon: /static/svg/icons/highlights/coolface.svg
-          title: Trade
-          description: Over time, we’re going to introduce other staking platforms and exchanges.
+          description: The DeFi Foundation gives grants to developers building functionality and dApps on the DeFi Blockchain.
     #subscribe in /
     #closer_look in /
 ---

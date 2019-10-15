@@ -6,7 +6,7 @@
   <meta name="description" content="{{ $.Param "meta.description" }}">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
-  <title>{{ $.Param "long_title" }}: {{ $.Param "long_title" }} &ndash; {{ .Site.Params.title }}</title>
+  <title>{{ $.Param "long_title" }} &ndash; {{ .Site.Params.title }}</title>
   {{ $style := resources.Get "scss/main.scss" | toCSS | postCSS | minify | fingerprint }}
   <link href="{{ $style.RelPermalink }}" rel="stylesheet">
   {{ if .IsTranslated }}
@@ -70,15 +70,15 @@
             <div class="row">
               <div class="contributor-cta col col-md-6">
                 <div class="card">
-                  <a href="{{ $.Param "content.sections.contributors.become_contributor.cta.url" | relLangURL }}">
+                  <a href="{{ $.Param "content.sections.contributors.become_developer.cta.url" | relLangURL }}">
                     <h3 data-scroll="once">
-                      {{ $.Param "content.sections.contributors.become_contributor.headline" | markdownify }}</h3>
+                      {{ $.Param "content.sections.contributors.become_developer.headline" | markdownify }}</h3>
                     <p class="description" data-scroll="once">
-                      {{ $.Param "content.sections.contributors.become_contributor.description" }}
+                      {{ $.Param "content.sections.contributors.become_developer.description" }}
                     </p>
                     <div class="spacer"></div>
                     <div class="cta-to" data-scroll="once">
-                      {{ $.Param "content.sections.contributors.become_contributor.cta.label" }}
+                      {{ $.Param "content.sections.contributors.become_developer.cta.label" }}
                       <span>&#10142;</span>
                     </div>
                     <div class="bg"></div>
@@ -87,7 +87,7 @@
               </div>
               <div class="contributor-cta col col-md-6">
                 <div class="card">
-                  <a href="{{ $.Param "content.sections.contributors.become_partner.cta.url" | relLangURL }}">
+                  <a href="#partnering">
                     <h3 data-scroll="once">
                       {{ $.Param "content.sections.contributors.become_partner.headline" | markdownify }}
                     </h3>
@@ -170,7 +170,7 @@
       </div>
     </section>
 
-    <section class="partnering{{ with $.Param "theme.partnering" }} {{.}}{{ end }}">
+    <section id="partnering" class="partnering day">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-5 offset-ul-1">
@@ -247,7 +247,7 @@
             <script>
               window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
               window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-              window.REQUIRED_ERROR_MESSAGE = "{{ $.Param "content.sections.roadmap.subscribe.messages.error.blank_field" }}";
+              window.REQUIRED_ERROR_MESSAGE = "{{ $.Params.content.sections.roadmap.subscribe.messages.error.blank_field }}";
               window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
               window.translation = {
                 common: {

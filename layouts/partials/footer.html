@@ -3,7 +3,7 @@
     <div class="footer-logo row">
       <div class="col col-ul-7 offset-ul-1">
         <a class="brand" href="/" data-scroll="once">
-          {{ readFile "/static/svg/logos/logo-defichain.svg" | safeHTML }}
+          {{ readFile "/static/svg/logos/logo-defi.svg" | safeHTML }}
         </a>
         <h3 data-scroll="once">{{ $.Site.Params.description | markdownify }}</h3>
       </div>
@@ -19,7 +19,7 @@
           {{ end }}
           {{ range .Site.Menus.white_paper }}
           <li class="{{ if $currentPage.IsMenuCurrent "white_paper" . }}active{{ end }}">
-            <a href="{{ .URL | relLangURL }}">
+            <a href="/downloads/DeFi_Blockchain_Whitepaper.pdf">
               {{ readFile "/static/svg/icons/icon-cloud-download.svg" | safeHTML }}
               {{ .Name }}
             </a>

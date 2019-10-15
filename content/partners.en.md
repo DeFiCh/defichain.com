@@ -1,16 +1,16 @@
 ---
 title: Partners
 type: partners
-long_title: Discover companies that build their services on DeFi Blockchain.
+long_title: Be part of the DeFi Blockchain ecosystem
 cta_to: Join
 menu:
   main:
     weight: 50
 meta:
-  description: Discover companies that build their services on DeFi Blockchain.
+  description: Be part of the DeFi Blockchain ecosystem
   og:
     title: Partners
-    description: Discover companies that build their services on DeFi Blockchain.
+    description: Be part of the DeFi Blockchain ecosystem
     site_name: DeFi Blockchain
     image: 
     image_type: image/jpg
@@ -21,38 +21,33 @@ content:
     hero:
       name: hero
       headline: Partners
-      subhead: Discover companies that build their services on DeFi Blockchain.
+      subhead: Be part of the DeFi Blockchain ecosystem.
     contributors:
       name: contributor
-      headline: "DeFi Blockchain and DFI token main contributor:"
+      headline: DeFi Blockchain and DFI token main contributor
       contributors_list:
         - name: Cake
           logo: /static/svg/logos/logo-cake.svg
           description: Simple and accessible finance for everyone.
-      become_contributor:
-        headline: Become a _contributor_
-        description: Let’s build a reliable alternative form of digital cash and financial services together.
+      become_developer:
+        headline: Become a _developer_
+        description: Learn how you can build on DeFi Blockchain and use DFI token.
         cta:
-          label: How?
+          label: Developers
           url: /developers
       become_partner:
         headline: Become a _partner_
-        description: Learn how you can build on DeFi Blockchain and use DFI token.
+        description: Tell us how you would like to contribute to the ecosystem.
         cta:
-          label: Learn
-          url: /partners
+          label: Contact us
     featured-video:
-      name: featured-video
-      fast_track_name: DeFi Blockchain
       video: 2UehwDPc3Tk
       headline: DeFi Blockchain
       subject_name: _with_ Dr. Julian Hosp
       subject_title: CEO, Cake
       quote: Healthy finances. For someone like me with the background at medicine, sounds like _doing the right thing for the people_.
     partnering:
-      name: partnering
-      fast_track_name: Partnering
-      headline: "For more information on partnering with the DeFi Blockchain, please fill in the form:"
+      headline: Tell us how you would like to contribute to the DeFi Blockchain ecosystem.
       form:
         name:
           label: Name

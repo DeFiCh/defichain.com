@@ -1,16 +1,16 @@
 ---
-title: Whitepaper
-type: whitepaper
-long_title: The official DeFi Blockchain whitepaper comprehensive summary.
+title: White paper
+type: white-paper
+long_title: Read the white paper
 cta_to: Read
 menu:
   white_paper:
     weight: 10
 meta:
-  description: The official DeFi Blockchain whitepaper comprehensive summary.
+  description: Read the white paper
   og:
-    title: Whitepaper
-    description: The official DeFi Blockchain whitepaper comprehensive summary.
+    title: White paper
+    description: Read the white paper
     site_name: DeFi Blockchain
     image: 
     image_type: image/jpg
@@ -20,7 +20,7 @@ content:
     hero:
       name: hero
       headline: Whitepaper
-      subhead: The official DeFi Blockchain whitepaper comprehensive summary.
+      subhead: Read the white paper.
     white-paper:
       fast_track_name: Whitepaper
       sections:

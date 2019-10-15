@@ -1,16 +1,16 @@
 ---
 title: Developers
 type: developers
-long_title: Everything you need to know to start building on DeFi Blockchain.
+long_title: Build on DeFi Blockchain
 cta_to: Study
 menu:
   main:
     weight: 40
 meta:
-  description: Everything you need to know to start building on DeFi Blockchain.
+  description: Build on DeFi Blockchain
   og:
     title: Developers
-    description: Everything you need to know to start building on DeFi Blockchain.
+    description: Build on DeFi Blockchain
     site_name: DeFi Blockchain
     image: 
     image_type: image/jpg
@@ -21,25 +21,23 @@ content:
     hero:
       name: hero
       headline: Developers
-      subhead: Everything you need to know to start building on DeFi Blockchain.
+      subhead: Build on DeFi Blockchain.
     featured-video:
-      name: featured-video
-      fast_track_name: Start with DeFi
       video: f7Dv4MymtO0
-      headline: "On Cake, crypto, engineering and security"
+      headline: On Cake, crypto, engineering and security
       subject_name: with U-Zyn Chua
       subject_title: CTO, Cake
       quote: Doesn't matter if you are front-end of back-end. If you're a JavaScript developer, and a good one, drop me a note, and we can talk.
     resources:
-      headline: "Start building on DeFi Blockchain with developer resources, topics and code:"
+      headline: Start building on DeFi Blockchain with developer resources and code
       github:
         image: /static/svg/icons/icon-octocat.svg
-        headline: Come back to the Source, the chosen one.
-        label: Get started
+        headline: Get developer resources and getting started guides.
+        label: Coming soon…
         url: ==PENDING==
       white_paper:
         image: /static/svg/icons/icon-whitepaper.svg
-        headline: Study DFI Token and the DeFi Blockchain topics.
+        headline: Read the DeFi Blockchain technical paper.
         label: Study
         url: /white-paper
     #subscribe in /
@@ -48,7 +46,7 @@ content:
       name: become-contributor
       fast_track_name: Become a contributor
       theme: light
-      headline: "Become a contributor:"
+      headline: Become a contributor
       subhead: Let’s build alternatives to the dinosaur banking services together!
       form:
         name:

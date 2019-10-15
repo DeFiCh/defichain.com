@@ -47,12 +47,6 @@ $(function () {
     // $(this).toggleClass('active').siblings('.faq-q').removeClass('active');
   });
 
-  // FAQ show more
-  $('.faq-more button').click(function() {
-    $('.faq-add').show();
-    $(this).hide();
-  });
-
   // Closer look carousel
   var closerLookCarousel = new Swiper('.carousel', {
     slidesPerView: 'auto',
@@ -115,14 +109,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // play hero animation
   };
 
-  scope.rollStats = function() {
-    console.log('dsfdsfdfds');
-    $('.stat-value').each(function() {
-      $(this).increment({
-        speed: 30,
-        target: $(this).attr('data-target-value')
-      });
-    });
-  };
+  // scope.rollStats = function() {
+  //   $('.stat-value').each(function() {
+  //     $(this).increment({
+  //       speed: 30,
+  //       target: $(this).attr('data-target-value')
+  //     });
+  //   });
+  // };
 
 });

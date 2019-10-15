@@ -126,13 +126,13 @@ body > header {
     z-index: $zindex-sticky;
     box-sizing: content-box;
     display: block;
-    width: 60px;
+    width: 78px;
     height: 36px;
     margin-right: 40px;
     overflow: hidden;
 
     @include media(">md") {
-      width: 75px;
+      width: 97.5px;
       height: 45px;
     }
 
@@ -218,6 +218,7 @@ body > header {
     right: -16px;
     top: $header-height;
     height: 100vh;
+    background-color: map-get($brand-colors, night);
 
     @include media(">md") {
       top: $header-height-md;
@@ -364,7 +365,7 @@ main {
   color: $color-ui-default;
   border-radius: 2px;
 
-  > a {
+  > a, > div {
     text-decoration: none;
     color: $color-ui-black60;
     height: 100%;
@@ -435,6 +436,10 @@ main {
     border-bottom: 1px solid currentColor;
     display: flex;
     justify-content: space-between;
+  }
+
+  > div .cta-to {
+    border-bottom-color: transparent;
   }
 }
 
@@ -694,7 +699,7 @@ section.resources {
     background-color: map-get($brand-colors, white);
     position: relative;
 
-    a {
+    > a, > div {
       @include media(">ul") {
         padding-top: 30px;
         padding-left: calc(100% / 6);
@@ -985,104 +990,143 @@ section.stats {
 }
 
 
-// 
-// Emissions
-// 
-
-section.emission {
-  .emission-chart-wrapper {
-    max-width: 470px;
-    max-height: 470px;
-    margin: 0 auto;
-    padding: 30px;
-    position: relative;
-  }
-
-  .chart-center {
-    position: absolute;
-    text-align: center;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
-    .chart-title {
-      font-size: $h2-font-size;
-      line-height: $h2-line-height;
-      margin-bottom: 10px;
-    }
-
-    .chart-subhead {
-      font-size: $body-lg-font-size;
-      line-height: $body-lg-line-height;
-      color: $color-ui-black40;
-    }
-  }
-
-  .legend {
-    margin-top: 60px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-
-    &.night {
-      .legend-color {
-        background-color: map-get($brand-colors, night);
-      }
-      
-      .legend-value {
-        color: map-get($brand-colors, night);
-      }
-    }
-    &.purple {
-      .legend-color {
-        background-color: map-get($brand-colors, purple);
-      }
-      .legend-value {
-        color: map-get($brand-colors, purple);
-      }
-    }
-    &.green {
-      .legend-color {
-        background-color: map-get($brand-colors, green);
-      }
-      .legend-value {
-        color: map-get($brand-colors, green);
-      }
-    }
-  }
-
-  .legend-color {
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
-    margin-bottom: 30px;
-  }
-
-  .legend-value {
-    width: 100%;
-    font-size: 4rem;
-    line-height: 1;
-    margin-bottom: 30px;
-  }
-
-  .legend-label {
-    font-size: $body-lg-font-size;
-    line-height: $body-lg-line-height;
-    color: $color-ui-black60;
-  }
-}
-
-
 //
 // Distributtion
 //
 
 section.distribution {
-  .distribution-chart-wrapper {
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 30px;
+  .distribution-figure-wrapper {
+    padding-top: $section-padding-top;
+    padding-bottom: $section-padding-bottom;
+    display: flex;
+    justify-content: center;
+  }
+
+  .distribution-figure {
+    max-width: 800px;
+    flex-grow: 1;
+
+    .chart-label {
+      width: 100%;
+      height: 32px;
+      position: relative;
+      color: $color-ui-black60;
+      font-size: $body-sm-font-size;
+      line-height: $body-sm-line-height;
+    }
+
+    .value {
+      display: inline-block;
+      padding: 0 8px;
+      background-color: white;
+      position: relative;
+      z-index: $zindex-sticky;
+    }
+
+    .line {
+      display: block;
+      width: calc(100% - 2px);
+      height: 1px;
+      background-color: $color-ui-black40;
+      position: absolute;
+      left: 1px;
+      top: 12px;
+    }
+
+    .edge {
+      display: block;
+      width: 1px;
+      height: 16px;
+      background-color: $color-ui-black40;
+      position: absolute;
+      top: 4px;
+    }
+
+    .left-edge {
+      left: 0;
+    }
+
+    .right-edge {
+      right: 0;
+    }
+
+    .distribution-part-a {
+      margin-bottom: $grid-gutter * 1.5;
+    }
+
+    .distribution-part-b {
+      margin-top: $grid-gutter;
+    }
+
+    .label-initial-supply,
+    .label-defi-foundation {
+      width: 49%;
+      position: absolute;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .label-masternodes,
+    .label-external-partners {
+      width: 51%;
+      position: absolute;
+      left: 49%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .chart {
+      width: 100%;
+      height: 64px;
+      position: relative;
+      font-size: $body-sm-font-size;
+      line-height: $body-sm-line-height;
+    }
+
+    .portion-initial-supply,
+    .portion-defi-foundation {
+      width: 49%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top-left-radius: $base-border-radius;
+      border-bottom-left-radius: $base-border-radius;
+    }
+
+    .portion-masternodes,
+    .portion-external-partners {
+      width: 51%;
+      height: 100%;
+      position: absolute;
+      left: 49%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top-right-radius: $base-border-radius;
+      border-bottom-right-radius: $base-border-radius;
+    }
+
+    .portion-masternodes {
+      background-color: map-get($brand-colors, paper);
+      color: $color-ui-black60;
+    }
+
+    .portion-initial-supply,
+    .portion-defi-foundation,
+    .portion-external-partners {
+      background-color: map-get($brand-colors, purple);
+      color: $color-ui-white;
+    }
+
+    .portion-external-partners {
+      border-left: 1px solid $color-ui-white40;
+    }
   }
 }
 
@@ -1247,19 +1291,20 @@ section.closer-look {
   .brand {
     display: block;
     color: inherit;
-    width: 168px;
-    height: 28px;
+    width: 78px;
+    height: 36px;
     margin-bottom: 60px;
     overflow: hidden;
+    color: map-get($brand-colors, purple);
 
     @include media(">md") {
-      width: 97px;
-      height: 50px;
+      width: 97.5px;
+      height: 46px;
     }
 
     svg {
-      width: 168px;
-      height: 50px;
+      width: 100%;
+      height: 100%;
       fill: currentColor;
       transition: all 0.5s ease;
     }

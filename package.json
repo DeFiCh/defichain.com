@@ -1,6 +1,6 @@
 {
-  "name": "cakedefi-website",
-  "repository": "https://github.com/cakedefi/cakedefi-website.git",
+  "name": "defichain.io",
+  "repository": "https://github.com/cakedefi/defichain.io.git",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -19,6 +19,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Cake DeFi",
+  "author": "DeFi Blockchain",
   "license": "UNLICENSED"
 }

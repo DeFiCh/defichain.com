@@ -428,16 +428,6 @@ main {
     flex-grow: 999;
   }
 
-  .cta-to {
-    opacity: 0.6;
-    width: 140px;
-    height: 32px;
-    line-height: 1;
-    border-bottom: 1px solid currentColor;
-    display: flex;
-    justify-content: space-between;
-  }
-
   > div .cta-to {
     border-bottom-color: transparent;
   }
@@ -991,7 +981,7 @@ section.stats {
 
 
 //
-// Distributtion
+// Distribution
 //
 
 section.distribution {
@@ -1127,6 +1117,17 @@ section.distribution {
     .portion-external-partners {
       border-left: 1px solid $color-ui-white40;
     }
+  }
+}
+
+
+//
+// White paper
+//
+
+section.white-paper {
+  .cta-to {
+    margin-top: $section-padding-top;
   }
 }
 

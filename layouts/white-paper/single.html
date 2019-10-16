@@ -32,13 +32,34 @@
     <section class="hero dark night" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
-          <div id="{{ $.Param "content.sections.hero.name" }}" class="col col-lg-6 col-xl-5 offset-xl-1">
+          <div class="col col-lg-6 col-xl-5 offset-xl-1">
             <h1 data-scroll="once">{{ $.Param "content.sections.hero.headline" }}</h1>
             <p class="lg" data-scroll="once">{{ $.Param "content.sections.hero.subhead" }}</p>
           </div>
         </div>
       </div>
       <!-- animation hero here -->
+    </section>
+
+    <section class="white-paper paper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col col-ul-5 offset-ul-1">
+            <div class="section-icon" data-scroll="once">
+              {{ readFile "/static/svg/icons/icon-whitepaper.svg" | safeHTML }}
+            </div>
+            <h2 data-scroll="once">{{ $.Param "content.sections.white_paper.headline" }}</h2>
+            <p class="lg" data-scroll="once">{{ $.Param "content.sections.white_paper.subhead" }}</p>
+            <a href="{{ $.Params.content.sections.white_paper.cta.url }}" class="cta-to" data-scroll="once">
+              {{ $.Param "content.sections.white_paper.cta.label" }}
+              <span>{{ readFile "/static/svg/icons/icon-google-drive.svg" | safeHTML }}</span>
+            </a>
+          </div>
+          <div class="col col-ul-5 offset-ul-1">
+
+          </div>
+        </div>
+      </div>
     </section>
 
     {{ partial "section-subscribe.html" . }}

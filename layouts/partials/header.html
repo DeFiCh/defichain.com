@@ -24,7 +24,7 @@
         </ul>
         <div class="spacer"></div>
         {{ range .Site.Menus.white_paper }}
-        <a href="/downloads/DeFi_Blockchain_Whitepaper.pdf" target="_blank" class="btn btn-pill white-paper-link">
+        <a href="{{ .URL | relLangURL }}" class="btn btn-pill white-paper-link">
           {{ .Name }}
         </a>
         {{ end }}

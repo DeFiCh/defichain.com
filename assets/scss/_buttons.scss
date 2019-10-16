@@ -71,3 +71,29 @@
     color: $color-ui-white;
   }
 }
+
+.cta-to {
+  opacity: 0.6;
+  min-width: 140px;
+  height: 32px;
+  line-height: 1;
+  border-bottom: 1px solid currentColor;
+  display: inline-flex;
+  justify-content: space-between;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  span {
+    margin-left: 16px;
+  }
+
+  svg {
+    fill: currentColor;
+  }
+}
+
+div.cta-to {
+  width: 140px;
+}

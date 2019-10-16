@@ -19,7 +19,7 @@
           {{ end }}
           {{ range .Site.Menus.white_paper }}
           <li class="{{ if $currentPage.IsMenuCurrent "white_paper" . }}active{{ end }}">
-            <a href="/downloads/DeFi_Blockchain_Whitepaper.pdf">
+            <a href="{{ .URL | relLangURL }}">
               {{ readFile "/static/svg/icons/icon-cloud-download.svg" | safeHTML }}
               {{ .Name }}
             </a>

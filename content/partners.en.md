@@ -12,8 +12,8 @@ meta:
     title: Partners
     description: Be part of the DeFi Blockchain ecosystem
     site_name: DeFi Blockchain
-    image: 
-    image_type: image/jpg
+    image: /img/og/ogimage-partners.png
+    image_type: image/png
     locale: en_US
 theme: dark green
 content:

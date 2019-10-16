@@ -21,10 +21,9 @@ DefaultContentLanguage = "en"
   [languages.en]
     languageName = "English"
     title = "DeFi Blockchain"
-    description = "Decentralized finance. _Different finance._"
+    description = "Decentralized finance enabled."
     company_name = "DeFi Blockchain"
     copyright = "All Rights Reserved"
-    fast_track = "Fast-track"
     weight = 20
   # [languages.de]
   #   languageName = "Deutsch"

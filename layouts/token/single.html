@@ -14,13 +14,13 @@
   <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
   {{ end }}
   {{ end }}
-  <meta property="og:title" content="{{ $.Param "meta.og.title" }}">
-  <meta property="og:description" content="{{ $.Param "meta.og.description" }}">
-  <meta property="og:site_name" content="{{ $.Param "meta.og.site_name" }}">
-  <meta property="og:url" content="{{ $.Param "meta.og.url" }}">
-  <meta property="og:image" content="{{ $.Param "meta.og.image" }}">
-  <meta property="og:image:type" content="{{ $.Param "meta.og.image_type" }}">
-  <meta property="og:locale" content="{{ $.Param "meta.og.locale" }}">
+  <meta property="og:title" content="{{ $.Params.meta.og.title }}">
+  <meta property="og:description" content="{{ $.Params.meta.og.description }}">
+  <meta property="og:site_name" content="{{ $.Params.meta.og.site_name }}">
+  <meta property="og:url" content="{{ .Permalink | absURL }}">
+  <meta property="og:image" content="{{ $.Params.meta.og.image | absURL }}">
+  <meta property="og:image:type" content="{{ $.Params.meta.og.image_type }}">
+  <meta property="og:locale" content="{{ $.Params.meta.og.locale }}">
 </head>
 
 <body class="token">

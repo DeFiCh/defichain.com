@@ -12,8 +12,8 @@ meta:
     title: Token
     description: Information about and how to acquire DFI
     site_name: DeFi Blockchain
-    image: 
-    image_type: image/jpg
+    image: /img/og/ogimage-token.png
+    image_type: image/png
     locale: en_US
 theme: dark purple
 content:

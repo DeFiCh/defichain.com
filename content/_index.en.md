@@ -7,8 +7,8 @@ meta:
     title: DeFi Blockchain
     description: A blockchain dedicated to fast, intelligent and transparent financial services, accessible by everyone.
     site_name: DeFi Blockchain
-    image: 
-    image_type: image/jpg
+    image: /img/og/ogimage-home.png
+    image_type: image/png
     locale: en_US
 theme: dark night
 content:
@@ -94,7 +94,7 @@ content:
           description: Automatic investment payouts with mart contracts.
     built_on_bitcoin:
       headline: Built on Bitcoin
-      subhead: The DeFi Blockchain marries the best of Proof-of-Stake, and the security and immutability of Bitcoin.
+      subhead: The DeFi Blockchain marries the best of Proof-of-Stake, with the security and immutability of Bitcoin.
       link:
         label: Learn more
         url: /white-paper

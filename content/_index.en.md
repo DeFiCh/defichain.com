@@ -92,12 +92,13 @@ content:
         - icon: /static/svg/icons/functions/dividends.svg
           title: Distribution of Dividends
           description: Automatic investment payouts with mart contracts.
-    white_paper:
-      headline: "Read a comprehensive summary of the official DeFi Blockchain whitepaper:"
-      subhead: Study DFI Token and the DeFi Blockchain topics.
+    built_on_bitcoin:
+      headline: Built on Bitcoin
+      subhead: The DeFi Blockchain marries the best of Proof-of-Stake, and the security and immutability of Bitcoin.
       link:
-        label: Study
+        label: Learn more
         url: /white-paper
+      image: /static/svg/built-on-bitcoin.svg
     subscribe:
       headline: "Join our mailing list to get the latest DeFi Blockchain announcements:"
       form:

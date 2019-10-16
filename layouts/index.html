@@ -29,7 +29,7 @@
 
   <main>
 
-    <section id="{{ $.Param "content.sections.hero.name" }}" class="hero dark night" data-scroll data-scroll-showCallback="heroIn()"
+    <section class="hero dark night" data-scroll data-scroll-showCallback="heroIn()"
       data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
@@ -141,6 +141,24 @@
               </div>
               {{ end }}
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="built-on-bitcoin paper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col col-lg-5 col-ul-4 offset-ul-1 mbg1">
+            <h2 data-scroll="once">{{ $.Param "content.sections.built_on_bitcoin.headline" }}</h2>
+            <p class="lg" data-scroll="once">{{ $.Param "content.sections.built_on_bitcoin.subhead" }}</p>
+            <a href="{{ $.Param "content.sections.built_on_bitcoin.link.url" }}" class="cta-to" data-scroll="once">
+              {{ $.Param "content.sections.built_on_bitcoin.link.label" }}
+              <span>&#10142;</span>
+            </a>
+          </div>
+          <div class="image col col-lg-7 col-ul-5">
+            {{ readFile $.Params.content.sections.built_on_bitcoin.image | safeHTML }}
           </div>
         </div>
       </div>

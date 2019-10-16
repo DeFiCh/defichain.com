@@ -901,6 +901,23 @@ section.benefits {
 
 
 //
+// Built on Bittcoin
+//
+
+section.built-on-bitcoin {
+  .cta-to {
+    margin-top: $section-padding-top;
+  }
+
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+//
 // Become a contributor
 //
 

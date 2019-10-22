@@ -76,7 +76,7 @@ content:
           description: Institutional investors, accredited investors and funds may invest in exchange for DFI.
         - icon: /static/svg/icons/way-to-acquire/staking.svg
           title: Staking platforms
-          description: DFI will be available in future, on staking platforms such as Pool by Cake and selected ecxchanges.
+          description: DFI will be available in future, on staking platforms such as Pool by Cake and selected exchanges.
         - icon: /static/svg/icons/way-to-acquire/airdrop.svg
           title: Airdrop
           description: The DeFi Foundation will airdrop DFI to hodlers, market makers and other users of the DeFi Blockchain.

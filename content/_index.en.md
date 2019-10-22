@@ -91,7 +91,7 @@ content:
           description: Tokenize equity, real estate, and other holdings.
         - icon: /static/svg/icons/functions/dividends.svg
           title: Distribution of Dividends
-          description: Automatic investment payouts with mart contracts.
+          description: Automatic investment payouts with smart contracts.
     built_on_bitcoin:
       headline: Built on Bitcoin
       subhead: The DeFi Blockchain marries the best of Proof-of-Stake, with the security and immutability of Bitcoin.

@@ -50,6 +50,7 @@
           <div class="col col-lg-5 col-ul-4 offset-ul-1 mbg1">
             <h2 data-scroll="once">{{ $.Param "content.sections.dfi_token.headline" }}</h2>
             <p class="lg" data-scroll="once">{{ $.Param "content.sections.dfi_token.subhead" }}</p>
+            <p data-scroll="once"><em>{{ $.Param "content.sections.dfi_token.note" }}</em></p>
           </div>
           <div class="image col col-lg-7 col-ul-5">
             {{ readFile $.Params.content.sections.dfi_token.image | safeHTML }}

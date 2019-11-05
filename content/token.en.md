@@ -26,6 +26,7 @@ content:
       name: dfi-token
       headline: DFI Token
       subhead: The DFI token is an integral unit of account in the DeFi blockchain. The DeFi Foundation in Singapore will issue 1.2 billion DFI over its lifetime.
+      note: "Important: DeFi chain is a community project. There will be no public Initial Coin Offering. "
       image: /static/svg/physical-coin.svg
     stats:
       links:

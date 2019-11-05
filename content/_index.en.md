@@ -1,6 +1,6 @@
 ---
 title: DeFi Blockchain
-long_title: Decentralized finance enabled
+long_title: Decentralized finance enabled on Bitcoin
 meta:
   description: A blockchain dedicated to fast, intelligent and transparent financial services, accessible by everyone.
   og:
@@ -14,7 +14,7 @@ theme: dark night
 content:
   sections:
     hero:
-      headline: Decentralized finance enabled.
+      headline: Decentralized finance enabled on Bitcoin.
       subhead: A blockchain dedicated to fast, intelligent and transparent financial services, accessible by everyone.
     problem_solution:
       headline: The Post-Fintech Revolution

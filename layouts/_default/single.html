@@ -25,7 +25,6 @@
     <section class="content">
       <div class="container">
         {{ .Content }}
-        hhhhh
       </div>
     </section>
 
@@ -34,6 +33,8 @@
   {{ partial "footer.html" . }}
 
   {{ template "_internal/google_analytics_async.html" . }}
+  {{ partial "pixels/facebook.html" . }}
+  {{ partial "pixels/linkedin.html" . }}
 </body>
 
 </html>

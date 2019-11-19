@@ -41,6 +41,8 @@
   {{ $js := slice $main | resources.Concat "js/bundle-all.js" | resources.Minify | resources.Fingerprint }}
   <script src="{{ $js.RelPermalink }}" type="text/javascript"></script>
   {{ template "_internal/google_analytics_async.html" . }}
+  {{ partial "pixels/facebook.html" . }}
+  {{ partial "pixels/linkedin.html" . }}
 </body>
 
 </html>

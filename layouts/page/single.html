@@ -49,6 +49,8 @@
   {{ $js := slice $scrolltrigger $main | resources.Concat "js/bundle-single.js" | resources.Fingerprint }}
   <script src="{{ $js.RelPermalink }}" type="text/javascript"></script>
   {{ template "_internal/google_analytics_async.html" . }}
+  {{ partial "pixels/facebook.html" . }}
+  {{ partial "pixels/linkedin.html" . }}
 </body>
 
 </html>

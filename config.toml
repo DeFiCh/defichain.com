@@ -12,6 +12,12 @@ title = "DeFi Blockchain"
     youtube = "https://www.youtube.com/channel/UCkRa0RHkJ9Udd_mVWl8fa8A"
     telegram = "https://t.me/CakeDeFi_EN"
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+      hardWraps = true
+
 [blackfriday]
   extensions = ["hardLineBreak"]
 

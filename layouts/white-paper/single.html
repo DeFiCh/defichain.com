@@ -44,19 +44,11 @@
     <section class="white-paper paper">
       <div class="container-fluid">
         <div class="row">
-          <div class="col col-ul-5 offset-ul-1">
-            <div class="section-icon" data-scroll="once">
-              {{ readFile "/static/svg/icons/icon-whitepaper.svg" | safeHTML }}
-            </div>
-            <h2 data-scroll="once">{{ $.Param "content.sections.white_paper.headline" }}</h2>
-            <p class="lg" data-scroll="once">{{ $.Param "content.sections.white_paper.subhead" }}</p>
-            <a href="{{ $.Params.content.sections.white_paper.cta.url }}" class="cta-to" data-scroll="once">
-              {{ $.Param "content.sections.white_paper.cta.label" }}
-              <span>{{ readFile "/static/svg/icons/icon-google-drive.svg" | safeHTML }}</span>
-            </a>
+          <div class="col col-ul-3 offset-ul-1">
+            {{ .TableOfContents }}
           </div>
-          <div class="col col-ul-5 offset-ul-1">
-
+          <div class="col col-ul-6">
+            {{ .Content }}
           </div>
         </div>
       </div>
@@ -69,11 +61,12 @@
   {{ partial "footer.html" . }}
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>
   {{ $scrolltrigger := resources.Get "js/ScrollTrigger.min.js" }}
-  {{ $swiper := resources.Get "js/swiper.min.js" }}
-  {{ $debouncedresize := resources.Get "js/jquery.debouncedresize.js" }}
+  {{ $sticky := resources.Get "js/jquery.sticky-kit.js" }}
   {{ $main := resources.Get "js/main.js" }}
-  {{ $js := slice $scrolltrigger $swiper $debouncedresize $main | resources.Concat "js/bundle.js" | resources.Fingerprint }}
+  {{ $js := slice $scrolltrigger $sticky $main | resources.Concat "js/bundle-white-paper.js" | resources.Fingerprint }}
   <script src="{{ $js.RelPermalink }}" type="text/javascript"></script>
   {{ template "_internal/google_analytics_async.html" . }}
   {{ partial "pixels/facebook.html" . }}

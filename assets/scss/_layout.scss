@@ -1209,6 +1209,26 @@ section.white-paper {
   .cta-to {
     margin-top: $section-padding-top;
   }
+
+  #TableOfContents {
+    padding-bottom: $section-padding-bottom;
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: $body-sm-margin-bottom;
+        ul {
+          display: none;
+        }
+      }
+
+      a {
+        color: $color-ui-black60;
+      }
+    }
+  }
 }
 
 

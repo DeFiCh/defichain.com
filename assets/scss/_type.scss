@@ -120,6 +120,25 @@ em {
   font-style: italic;
 }
 
+sup {
+  font-size: $note-font-size;
+  font-weight: $font-weight-medium;
+  vertical-align: 4px;
+
+  .footnote-ref {
+    padding: 2px;
+    display: inline-block;
+
+    &:before {
+      content: "[";
+    }
+
+    &:after {
+      content: "]";
+    }
+  }
+}
+
 
 //
 // Blockquote
@@ -279,5 +298,34 @@ hr {
 
   &.scroll-visible {
     opacity: 1;
+  }
+}
+
+
+//
+// Whitepaper typography
+// 
+
+.white-paper {
+  p, .p {
+    margin-bottom: $body-md-line-height;
+
+    &:last-of-type {
+      margin-bottom: inherit;
+    }
+  }
+
+  ul, ol {
+    margin-bottom: $body-md-line-height;
+  }
+
+  hr {
+    margin-top: $section-padding-top / 2;
+    margin-bottom: $section-padding-bottom / 2;
+
+    @include media(">lg") {
+      margin-top: $section-padding-top-lg / 2;
+      margin-bottom: $section-padding-bottom-lg / 2;
+    }
   }
 }

@@ -109,13 +109,18 @@ document.addEventListener('DOMContentLoaded', function () {
     // play hero animation
   };
 
-  // scope.rollStats = function() {
-  //   $('.stat-value').each(function() {
-  //     $(this).increment({
-  //       speed: 30,
-  //       target: $(this).attr('data-target-value')
-  //     });
-  //   });
-  // };
+
+  $("#TableOfContents").stick_in_parent({
+    offset_top: 160,
+    recalc_every: 500
+  });
+
+  $("#TableOfContents").localScroll({
+    duration: 500,
+    hash: true,
+    offset: {
+      top: -160
+    }
+  });
 
 });

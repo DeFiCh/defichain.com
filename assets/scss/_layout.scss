@@ -451,6 +451,48 @@ main {
 
 
 //
+// Tables
+//
+
+.table-responsive {
+  width: 100%;
+  overflow: auto;
+  display: block;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    font-size: $body-sm-font-size;
+    line-height: 1.2;
+  }
+
+  th, td {
+    border: none;
+    text-align: right;
+    padding: 8px;
+  }
+
+  thead {
+    border-bottom: $base-border-style;
+  }
+
+  .highlight {
+    color: map-get($brand-colors, purple);
+    font-weight: $font-weight-bold;
+  }
+}
+
+.table-plain {
+  th, td {
+    padding: 8px 0;
+    border-collapse: collapse;
+    border: none;
+  }
+}
+
+
+//
 // Hero section
 // 
 
@@ -1226,7 +1268,41 @@ section.white-paper {
 
       a {
         color: $color-ui-black60;
+        text-decoration: none;
+
+        &:hover {
+          color: $color-ui-black40;
+        }
       }
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .members {
+    table-layout: auto;
+
+    th, td {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    td {
+      vertical-align: top;
+
+      &:first-child {
+        width: 96px;
+      }
+    }
+
+    img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: block;
     }
   }
 }

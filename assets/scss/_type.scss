@@ -71,7 +71,14 @@ h2, .h2 {
   }
 }
 
-h3, .h3 { font-size: $h3-font-size; line-height: $h3-line-height; font-weight: $h3-font-weight; margin-bottom: $h3-margin-bottom; letter-spacing: $h3-letter-spacing; }
+h3, .h3,
+h4, .h4 {
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+  font-weight: $h3-font-weight;
+  margin-bottom: $h3-margin-bottom;
+  letter-spacing: $h3-letter-spacing;
+}
 
 
 //
@@ -123,10 +130,11 @@ em {
 sup {
   font-size: $note-font-size;
   font-weight: $font-weight-medium;
+  line-height: 1;
   vertical-align: 4px;
 
   .footnote-ref {
-    padding: 2px;
+    padding: 0 2px;
     display: inline-block;
 
     &:before {
@@ -307,6 +315,15 @@ hr {
 // 
 
 section.white-paper {
+  h2, .h2 {
+    margin-bottom: $h2-margin-bottom / 2;
+  }
+
+  h3, .h3,
+  h4, .h4 {
+    margin-bottom: $h3-margin-bottom / 2;
+  }
+
   p, .p {
     margin-bottom: $body-md-line-height;
 
@@ -316,6 +333,8 @@ section.white-paper {
   }
 
   ul, ol {
+    padding-left: $grid-gutter * 1.5;
+    padding-right: $grid-gutter * 1.5;
     margin-bottom: $body-md-line-height;
   }
 
@@ -326,6 +345,30 @@ section.white-paper {
     @include media(">lg") {
       margin-top: $section-padding-top-lg / 2;
       margin-bottom: $section-padding-bottom-lg / 2;
+    }
+  }
+
+  code {
+    font-size: $body-sm-font-size;
+    font-family: $monospace-font-family;
+    background-color: map-get($brand-colors, paper);
+    border-radius: $base-border-radius;
+    border: $base-border-style;
+    padding: 2px 4px;
+  }
+
+  pre {
+    margin-bottom: $body-md-line-height;
+    white-space: pre-wrap;
+    background-color: map-get($brand-colors, paper);
+    border-radius: $base-border-radius;
+    border: $base-border-style;
+    padding: 4px 8px;
+
+    code {
+      padding: 0;
+      border: none;
+      background-color: transparent;
     }
   }
 }

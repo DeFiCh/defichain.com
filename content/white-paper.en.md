@@ -63,6 +63,7 @@ Cryptocurrency and Decentralized Finance (DeFi) offer a way to start with a new 
 ### The Solution
 
 The DeFi Blockchain is designed for investors in the cryptocurrency market who are looking to make their cryptocurrency work just like any other form of capital, such that they can ensure a return on investment in any market. The DeFi Blockchain is a dedicated non-Turing-complete blockchain, designed specifically for the decentralized finance (DeFi) industry. DeFi provides full functionality for this specific segment of the DLT community, sacrificing other types of functionality for simplicity, rapid throughput, and security.
+
 The function set includes among others:
 
 - Decentralized lending
@@ -78,21 +79,48 @@ The function set includes among others:
 
 The DeFi Foundation is incorporated as a company limited by guarantee in Singapore which resembles a foundation structure.
 
-Dr. Julian Hosp, Chairman
-https://www.linkedin.com/in/julianhosp/
-
-U-Zyn Chua, Tech
-https://www.linkedin.com/in/uzynchua/
-
-John Rost, Finance
-https://www.linkedin.com/in/john-rost-b70b0628/
-
-Kenneth Oh, Legal
-https://www.linkedin.com/in/kenneth-oh-840117158/
+<table class="table-plain members">
+  <tr>
+    <td>
+      <img src="/img/members/julian-hosp.jpg" alt="Dr. Julian Hosp" srcset="/img/members/julian-hosp.jpg 1x, /img/members/julian-hosp@2x.jpg 2x">
+    </td>
+    <td>
+      <p><strong>Dr. Julian Hosp, Chairman</strong><br>
+      <a href="https://www.linkedin.com/in/julianhosp/" class="social">LinkedIn</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="/img/members/u-zyn-chua.jpg" alt="U-Zyn Chua" srcset="/img/members/u-zyn-chua.jpg 1x, /img/members/u-zyn-chua@2x.jpg 2x">
+    </td>
+    <td>
+      <p><strong>U-Zyn Chua, Tech</strong><br>
+      <a href="https://www.linkedin.com/in/uzynchua/" class="social">LinkedIn</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="/img/members/john-rost.jpg" alt="John Rost" srcset="/img/members/john-rost.jpg 1x, /img/members/john-rost@2x.jpg 2x">
+    </td>
+    <td>
+      <p><strong>John Rost, Finance</strong><br>
+      <a href="https://www.linkedin.com/in/john-rost-b70b0628/" class="social">LinkedIn</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="/img/members/kenneth-oh.jpg" alt="Kenneth Oh" srcset="/img/members/kenneth-oh.jpg 1x, /img/members/kenneth-oh@2x.jpg 2x">
+    </td>
+    <td>
+      <p><strong>Kenneth Oh, Legal</strong><br>
+      <a href="https://www.linkedin.com/in/kenneth-oh-840117158/" class="social">LinkedIn</a></p>
+    </td>
+  </tr>
+</table>
 
 ### Timeline
 
-++++++ image of timeline
+![Roadmap](/img/white-paper/roadmap.png)
 
 ---
 
@@ -114,7 +142,7 @@ Financial services today are providing an important service, but at a very high 
 
 Fintech has been attempting to address these problems, with some success. Fintech solutions such as online international transfer services, savings, and investment apps, and mobile money for underserved markets have begun to improve the situation. However, the change is incremental, and is still built on top of a system that fundamentally requires the overhead of agents to provide trust. While some of the costs can be reduced, fundamentally, fintech can’t address the underlying issues of lack of transparency because it is dealing in the same financial instruments and going through the same major institutions as traditional finance.
 
-++++++ defi diagram
+![2019: DeFi](/img/white-paper/2019-defi.png)
 
 For this reason, many investors have begun moving parts of their investments into cryptocurrency. Cryptocurrency, by definition has full transparency that traditional systems simply cannot provide. Furthermore, the amount of administration and bureaucracy required is minimal. Most of the activities that were carried out by agents can be written into the code in decentralized financial systems. Of course, there is still some overhead in creating and maintaining the code, as well as maintenance of the networks, but the amount of bureaucracy is minimal, eliminating much of the cost of transacting on these systems.
 
@@ -122,7 +150,7 @@ Despite the promise of decentralized finance, the technology is still nascent, a
 
 Today, almost universally, cryptocurrency investors have only one way to earn money on their capital: rise of the cryptocurrency asset. While in the short term, this may be a good investment, it’s not how currency is designed to work. The investment of capital should provide a return on investment, and cryptocurrency is designed to be like any other form of currency. Investors today want the possibility to lend, invest, and receive returns on their cryptocurrency investments. Well-designed DeFi platforms should allow the development of a variety of safe and secure financial instruments for the investment of cryptocurrency.
 
-++++++ byob
+![Be your own bank](/img/white-paper/be-your-own-bank.png)
 
 ### The state of DeFi
 
@@ -177,7 +205,7 @@ The second problem stays mostly within Ethereum, which is the network’s usage 
 
 [^3]: https://arxiv.org/pdf/1802.06038.pdf
 
-++++++ graph image
+![Be your own bank](/img/white-paper/graph.png)
 
 ---
 
@@ -374,7 +402,102 @@ These improvements provide a transaction rate of over 2,200 transactions per sec
 
 The following table compares Bitcoin and its forks, as well as Ethereum, to the DeFi Blockchain performance:
 
-+++++ table
+<div class="table-responsive">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Block time (s)</th>
+        <th scope="col">Block size (MB)</th>
+        <th scope="col">Tx block space (% of block size)</th>
+        <th scope="col">Min tx size (B)</th>
+        <th scope="col">Avg tx size (B)</th>
+        <th scope="col">Txs in a block (max)</th>
+        <th scope="col">Txs in a block (avg)</th>
+        <th scope="col">Max tps</th>
+        <th scope="col">Average tps</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Bitcoin Core</th>
+        <td>600</td>
+        <td>1</td>
+        <td>98%</td>
+        <td>220</td>
+        <td>500</td>
+        <td>4,561.45</td>
+        <td>20,07.04</td>
+        <td>7.6</td>
+        <td>3.35</td>
+      </tr>
+      <tr>
+        <th>Bitcoin Cash</th>
+        <td>600</td>
+        <td>10</td>
+        <td>98%</td>
+        <td>220</td>
+        <td>500</td>
+        <td>45,614.55</td>
+        <td>20,070.40</td>
+        <td>76</td>
+        <td>33.45</td>
+      </tr>
+      <tr>
+        <th>Bitcoin SV</th>
+        <td>600</td>
+        <td>32</td>
+        <td>98%</td>
+        <td>220</td>
+        <td>500</td>
+        <td>145,966.55</td>
+        <td>64,225.28</td>
+        <td>243.28</td>
+        <td>107.04</td>
+      </tr>
+      <tr class="highlight">
+        <th>DeFi Chain</th>
+        <td>30</td>
+        <td>16</td>
+        <td>98%</td>
+        <td>220</td>
+        <td>500</td>
+        <td>72,983.27</td>
+        <td>32,112.64</td>
+        <td>2432.78</td>
+        <td>1,070.42</td>
+      </tr>
+    </tbody>
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Block time (s)</th>
+        <th scope="col">Gas limit</th>
+        <th scope="col">Tx block space (% of block size)</th>
+        <th scope="col">Min tx size (gas)</th>
+        <th scope="col">Avg tx size (gas)</th>
+        <th scope="col">Txs in a block (max)</th>
+        <th scope="col">Txs in a block (avg)</th>
+        <th scope="col">Max tps</th>
+        <th scope="col">Average tps</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Ethereum</th>
+        <td>13.5</td>
+        <td>10m0</td>
+        <td>100%</td>
+        <td>21k</td>
+        <td>60k</td>
+        <td>476.19</td>
+        <td>166.67</td>
+        <td>35.27</td>
+        <td>12.35</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
 
 #### 3. Decentralized Consensus Mechanism
 
@@ -386,7 +509,7 @@ Decentralized financial transactions are implemented through smart contracts. Fo
 
 The DeFi scripting language is called Recipe, denoting the language’s role in describing and allowing for decentralized financial contracts.
 
-Bitcoin Script instruction words usually start with the prefix OP_*. Recipe instruction words carry the prefix DF_*.
+Bitcoin Script instruction words usually start with the prefix `OP_*`. Recipe instruction words carry the prefix `DF_*`.
 
 #### 5. Immutable through Block Anchoring
 
@@ -409,9 +532,7 @@ To run a masternode (staking node), stakers must hold a fixed amount of DFI, ini
 Each staking node can perform only 1 hash per second, with the nonce from Bitcoin Core PoW algorithm replaced by a staker’s UTXO.
 A new block is mined if it satisfies the following condition:
 
-```
-SHA256({staker’s UTXO}, {current timestamp, in seconds}, {stake modifier}) < {target}
-```
+`SHA256({staker’s UTXO}, {current timestamp, in seconds}, {stake modifier}) < {target}`
 
 The stakers check this requirement each second. If the block condition is less than the current target, then the stakers assemble and sign a new block. 
 Staker’s UTXO require 20 confirmations before it can be accepted as a stake.
@@ -420,7 +541,7 @@ Staker’s UTXO require 20 confirmations before it can be accepted as a stake.
 
 A stake modifier is a collective source of random entropy. Without a stake modifier, the future PoS kernel would be completely predictable. A good stake modifier needs to be neither predictable nor influance-able by stakers.
 
-The DeFi Blockchain’s staker modifier is set to be SHA256({previous stake modifier}, {masternode ID}).
+The DeFi Blockchain’s staker modifier is set to be `SHA256({previous stake modifier}, {masternode ID})`.
 
 #### Validation of Future and Past Headers
 
@@ -455,7 +576,7 @@ DeFi Blockchain stakers publish blockchain block hashes periodically to the Bitc
 
 Every 60 blocks (approximately 30 minutes), a staker gets the right to write the Merkle root of the previous block onto the Bitcoin blockchain. The information written is, specifically, the txid of the Bitcoin transaction, Bitcoin block header and Merkle proof containing the Merkle root onto the newly mined block. By doing so, the staker will be rewarded an extra block reward in DFI, incentivising nodes to regularly anchor all records to the Bitcoin blockchain.
 
-+++ merkle root graphic
+![Bitcoin Ancoring](/img/white-paper/every-60-blocks.png)
 
 The DeFi Blockchain node will include a built-in Bitcoin Simplified Payment Verification (SPV) client. SPV clients sync the Bitcoin blockchain by downloading only block headers which is sufficient information for nodes to add and validate the anchors.
 
@@ -469,7 +590,7 @@ DeFi Blockchain uses token standards to bring in external tokens to DeFi Blockch
 
 On the DeFi Blockchain the standardized tokens are called DeFi Standard Token (DST). DST tokens are of two different types: DCT, created by users of the system, and DAT, which are asset-backed tokens created with the backing of cryptoassets. 
 
-++++ DCT DST DAT graphic
+![Custom token](/img/white-paper/custom-token.png)
 
 ### DeFi Custom Token (DCT)
 
@@ -511,7 +632,7 @@ New DATs are introduced to the system through voting by masternodes. This ensure
 4. XCX - Cross-chain Exchange
 5. Pricing contract
 
-+++++++ wavy graphic
+![DAT overview](/img/white-paper/dat-overview.png)
 
 #### Personalized Debt Contract (PDC)
 
@@ -545,7 +666,7 @@ While this concept is not new to the DeFi system, what is novel is the possibili
 5. Over-collateralization allows for some room for price movements of DBTC. If the BTC price increases to $15,000, Alice’s loan of 0.5 DBTC would now be worth $7,500. Her PDC now has a collateralization ratio of: 15000/7500 = 200%, still above 150%, so liquidation would not be triggered even in the case of this type of price shift.
 6. The interest rate for each DAT loan differs. Assuming the DBTC loan rate is 5% annually, taking out a loan for a year, in order to close her PDC and to fully redeem her initial 150k DFI, Alice has to pay back 0.5 DBTC * 1.05 = 0.525 DBTC by the end of the year.
 
-+++++ alice pdc gfc
+![PDC](/img/white-paper/alice-pdc.png)
 
 #### Asset Peg Depository (APD)
 
@@ -571,7 +692,7 @@ If DBTC and/or DETH are sold to an APD, the APD would list the following, as lon
 
 Regardless of buys or sells, APD trades are always feeless on DEX to APD, as the non-APD party has to pay the fees.
 
-++++++ apd grc
+![APD](/img/white-paper/apd.png)
 
 Depending on the holdings, an APD will always list buy and sell orders on the DEX autonomously using the following logic:
 
@@ -634,7 +755,7 @@ Should Alice wish not to redeem the XCX before the expiry, Bob gets to keep Alic
 
 Alice gets to keep the 1 BTC (minus 8000 DFI interest) and Bob now gets 1 DBTC (plus 8000 DFI interest). Additionally Bob received the Guarantee of 0.1 DBTC providing him with an extra 10%.
 
-++++++ XCX gfc
+![XCX](/img/white-paper/alice-bob-xcx.png)
 
 ##### Second Example:
 
@@ -723,7 +844,7 @@ Fees from DeFi activities on the DeFi Blockchain are burned and redistributed th
 
 The burned token redistribution schedule is determined automatically every 259,200 blocks (approx. every 90 days) and works as follows:
 
-++++++++ burned token gfc
+![Burned token distribution](/img/white-paper/burn.png)
 
 Burned token redistribution for the next 259,200 blocks = 
 
@@ -748,7 +869,7 @@ The DeFi Foundation located in Singapore is responsible for issuance of tokens a
 
 The DeFi Foundation awards tokens to users and groups to speed up adoption (see the section on initial token distribution and marketing). The Foundation is tasked with boosting the ecosystem, bringing in ecosystem partners, directing the development of the tools for ecosystem partners, and other activities to increase the number of ecosystem partners.
 
-++++++ governance gffc
+![Governance](/img/white-paper/governance.png)
 
 For clarification and transparency, Cake Pte Ltd is a private company located in Singapore. Cake Pte Ltd is an initial contributor as part of the ecosystem’s partners to creating services on the DeFi Blockchain.
 
@@ -769,7 +890,7 @@ Of the 49% initially issued DFI tokens, 49% will be kept by the DeFi Foundation.
 
 For any avoidance of doubt, there will NOT be a public ICO.
 
-+++++++ ITD gfc
+![Initial Token Distribution](/img/white-paper/initial-token-distribution.png)
 
 Further tokens will only ever be received through staking, which is described in the next chapter.
 
@@ -781,7 +902,179 @@ Subsequently, block rewards will be adjusted through governance vote. The Founda
 
 The proposed staking schedule for the first 10 years is according to the following table:
 
-++++++ staking schedule table
+<div class="table-responsive">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">
+          Year
+        </th>
+        <th scope="col">
+          Start of year token in circulation
+        </th>
+        <th scope="col">
+          % of supply staked
+        </th>
+        <th scope="col">
+          Block reward
+        </th>
+        <th scope="col">
+          Targeted new token %
+        </th>
+        <th scope="col">
+          Targeted new token
+        </th>
+        <th scope="col">
+          Staking return %
+        </th>
+        <th scope="col">
+          Actual new token
+        </th>
+        <th scope="col">
+          End of year token in circulation
+        </th>
+        <th scope="col">
+          % of cap
+        </th>
+        <th scope="col">
+          New token for year
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>490,000,000</td>
+        <td>95%</td>
+        <td>200</td>
+        <td>20.00%</td>
+        <td>98,000,000</td>
+        <td>42.91%</td>
+        <td>210,240,000</td>
+        <td>700,240,000</td>
+        <td>58.35%</td>
+        <td>210,240,000</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>700,240,000</td>
+        <td>85%</td>
+        <td>150</td>
+        <td>13.33%</td>
+        <td>93,365,333</td>
+        <td>22.52%</td>
+        <td>157,680,000</td>
+        <td>857,920,000</td>
+        <td>71.49%</td>
+        <td>157,680,000</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>857,920,000</td>
+        <td>75%</td>
+        <td>100</td>
+        <td>8.89%</td>
+        <td>76,259,556</td>
+        <td>12.25%</td>
+        <td>105,120,000</td>
+        <td>963,040,000</td>
+        <td>80.25%</td>
+        <td>105,120,000</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>963,040,000</td>
+        <td>70%</td>
+        <td>70</td>
+        <td>5.93%</td>
+        <td>57,069,037</td>
+        <td>7.64%</td>
+        <td>73,584,000</td>
+        <td>1,036,624,000</td>
+        <td>86.39%</td>
+        <td>73,584,000</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>1,036,624,000</td>
+        <td>70%</td>
+        <td>50</td>
+        <td>3.95%</td>
+        <td>40,953,047</td>
+        <td>5.07%</td>
+        <td>52,560,000</td>
+        <td>1,089,184,000</td>
+        <td>90.77%</td>
+        <td>52,560,000</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>1,089,184,000</td>
+        <td>70%</td>
+        <td>40</td>
+        <td>2.63%</td>
+        <td>28,686,328</td>
+        <td>3.86%</td>
+        <td>42,048,000</td>
+        <td>1,131,232,000</td>
+        <td>94.27%</td>
+        <td>42,048,000</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>1,131,232,000</td>
+        <td>70%</td>
+        <td>25</td>
+        <td>1.76%</td>
+        <td>19,862,510</td>
+        <td>2.32%</td>
+        <td>26,280,000</td>
+        <td>1,157,512,000</td>
+        <td>96.46%</td>
+        <td>26,280,000</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>1,157,512,000</td>
+        <td>70%</td>
+        <td>20</td>
+        <td>1.17%</td>
+        <td>13,549,295</td>
+        <td>1.82%</td>
+        <td>21,024,000</td>
+        <td>1,178,536,000</td>
+        <td>98.21%</td>
+        <td>21,024,000</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>1,178,536,000</td>
+        <td>70%</td>
+        <td>10</td>
+        <td>0.78%</td>
+        <td>9,196,928</td>
+        <td>0.89%</td>
+        <td>10,512,000</td>
+        <td>1,189,048,000</td>
+        <td>99.09%</td>
+        <td>10,512,000</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>1,189,048,000</td>
+        <td>70%</td>
+        <td>5</td>
+        <td>0.52%</td>
+        <td>6,185,973</td>
+        <td>0.44%</td>
+        <td>5,256,000</td>
+        <td>1,194,304,000</td>
+        <td>99.53%</td>
+        <td>5,256,000</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ### Acquiring DFI Tokens
 
@@ -798,26 +1091,62 @@ DFI tokens will be issued only to the users of the DeFi Blockchain or partners w
 
 The DeFi Foundation is incorporated as a company limited by guarantee in Singapore, resembling a foundation structure.
 
-**Dr. Julian Hosp - Chairman**
-https://www.linkedin.com/in/julianhosp/
-Serial entrepreneur, author and international blockchain expert
-European Union Blockchain Workgroup Advisor
-Raised close to 100M USD in the cryptocurrency space
-Led teams of over 100 employees
+<table class="table-plain members">
+  <tr>
+    <td>
+      <img src="/img/members/julian-hosp.jpg" alt="Dr. Julian Hosp" srcset="/img/members/julian-hosp.jpg 1x, /img/members/julian-hosp@2x.jpg 2x">
+    </td>
+    <td>
+      <p>
+        <strong>Dr. Julian Hosp, Chairman</strong><br>
+        <a href="https://www.linkedin.com/in/julianhosp/" class="social">LinkedIn</a><br>
+        Serial entrepreneur, author and international blockchain expert<br>
+        European Union Blockchain Workgroup Advisor<br>
+        Raised close to 100M USD in the cryptocurrency space<br>
+        Led teams of over 100 employees
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="/img/members/u-zyn-chua.jpg" alt="U-Zyn Chua" srcset="/img/members/u-zyn-chua.jpg 1x, /img/members/u-zyn-chua@2x.jpg 2x">
+    </td>
+    <td>
+      <p>
+        <strong>U-Zyn Chua, Tech</strong><br>
+        <a href="https://www.linkedin.com/in/uzynchua/" class="social">LinkedIn</a><br>
+        Experienced blockchain engineer<br>
+        Singapore Smart Nation Fellow – blockchain research for government<br>
+        Successfully launched dozens of blockchain projects
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="/img/members/john-rost.jpg" alt="John Rost" srcset="/img/members/john-rost.jpg 1x, /img/members/john-rost@2x.jpg 2x">
+    </td>
+    <td>
+      <p>
+        <strong>John Rost, Finance</strong><br>
+        <a href="https://www.linkedin.com/in/john-rost-b70b0628/" class="social">LinkedIn</a><br>
+        Vast financial knowledge and exit from large insurance company in the US
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="/img/members/kenneth-oh.jpg" alt="Kenneth Oh" srcset="/img/members/kenneth-oh.jpg 1x, /img/members/kenneth-oh@2x.jpg 2x">
+    </td>
+    <td>
+      <p>
+        <strong>Kenneth Oh, Legal</strong><br>
+        <a href="https://www.linkedin.com/in/kenneth-oh-840117158/" class="social">LinkedIn</a><br>
+        Helped to setup 100s of crypto projects in Singapore
+      </p>
+    </td>
+  </tr>
+</table>
 
-**U-Zyn Chua - Technical Advisor**
-https://www.linkedin.com/in/uzynchua/
-Experienced blockchain engineer
-Singapore Smart Nation Fellow – blockchain research for government
-Successfully launched dozens of blockchain projects
-
-**John Rost - Financial Advisor**
-https://www.linkedin.com/in/john-rost-b70b0628/
-Vast financial knowledge and exit from large insurance company in the US
-
-**Kenneth Oh - Legal Advisor**
-https://www.linkedin.com/in/kenneth-oh-840117158/
-Helped to setup 100s of crypto projects in Singapore
 
 ---
 
@@ -853,7 +1182,7 @@ Every project on the DeFi Blockchain will naturally bring it its own users and p
 
 ## Roadmap and Milestones
 
-++++++ milestones gfc
+![Roadmap](/img/white-paper/roadmap.png)
 
 ## A Glimpse into the Future
 

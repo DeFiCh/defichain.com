@@ -185,7 +185,7 @@ One of the many results is that that the high risks get priced in to the underly
 
 The points described above are simply unacceptable for any type of financial transaction or investor. For that reason, it’s important to build dedicated services that will prevent such breaches, lower risks and thus cost. In the Blockchain world, having proper programming rules and reducing the attack vectors prevents this kind of attack.
 
-[^2]: https://blog.zeppelin.solutions/on-the-parity-wallet-multisig-hack-405a8c12e8f7
+[^2]: [https://blog.zeppelin.solutions/on-the-parity-wallet-multisig-hack-405a8c12e8f7](https://blog.zeppelin.solutions/on-the-parity-wallet-multisig-hack-405a8c12e8f7)
 
 ---
 

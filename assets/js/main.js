@@ -111,13 +111,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   $("#TableOfContents").stick_in_parent({
-    offset_top: 160
+    offset_top: 144
   });
 
-  $("#TableOfContents").localScroll({
+  $.localScroll({
     duration: 500,
     offset: {
-      top: -160
+      top: -144
     }
   });
 

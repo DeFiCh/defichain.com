@@ -33,8 +33,8 @@ content:
       github:
         image: /static/svg/icons/icon-octocat.svg
         headline: Get developer resources and getting started guides.
-        label: Coming soon…
-        url: ==PENDING==
+        label: GitHub
+        url: https://github.com/DeFiCh/ain
       white_paper:
         image: /static/svg/icons/icon-whitepaper.svg
         headline: Read the DeFi Blockchain technical paper.

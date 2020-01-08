@@ -1247,6 +1247,10 @@ section.distribution {
 // White paper
 //
 
+body {
+  position: relative; // required for scrollspy
+}
+
 section.white-paper {
   .cta-to {
     margin-top: $section-padding-top;
@@ -1259,13 +1263,6 @@ section.white-paper {
       list-style: none;
       padding: 0;
 
-      li {
-        margin-bottom: $body-sm-margin-bottom;
-        ul {
-          display: none;
-        }
-      }
-
       a {
         color: $color-ui-black60;
         text-decoration: none;
@@ -1274,6 +1271,33 @@ section.white-paper {
           color: $color-ui-black40;
         }
       }
+    }
+
+    > ul > li {
+      margin-bottom: $body-sm-margin-bottom / 2;
+    }
+
+    > ul ul li,
+    .nav {
+      margin-bottom: 0;
+    }
+
+    > .nav .nav {
+      display: none;
+      margin-left: $grid-gutter / 2;
+    }
+
+    > .nav .active .nav {
+      display: block;
+    }
+
+    > .nav > .active > a {
+      font-weight: $font-weight-bold;
+      color: $color-ui-black;
+    }
+
+    > .nav .active .active a {
+      color: $color-ui-black;
     }
   }
 

@@ -17,6 +17,10 @@ title = "DeFi Blockchain"
     [markup.goldmark.renderer]
       unsafe = true
       hardWraps = true
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
 
 [blackfriday]
   extensions = ["hardLineBreak"]

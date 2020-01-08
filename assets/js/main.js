@@ -48,44 +48,44 @@ $(function () {
   });
 
   // Closer look carousel
-  var closerLookCarousel = new Swiper('.carousel', {
-    slidesPerView: 'auto',
-    spaceBetween: 30,
-    watchOverflow: true,
-    mousewheel: {
-      forceToAxis: true,
-      invert: true
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      812: {
-        spaceBetween: 60
+  if ($(".closer-look").length) {
+    var closerLookCarousel = new Swiper('.carousel', {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      watchOverflow: true,
+      mousewheel: {
+        forceToAxis: true,
+        invert: true
       },
-      992: {
-        spaceBetween: 90
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        812: {
+          spaceBetween: 60
+        },
+        992: {
+          spaceBetween: 90
+        }
       }
+    });
+  }
+
+  $('body').scrollspy({ target: '#TableOfContents' });
+
+  $("#TableOfContents").stick_in_parent({
+    offset_top: 144
+  });
+
+  $.localScroll({
+    duration: 500,
+    offset: {
+      top: -144
     }
   });
 
 });
-
-$.fn.increment = function (options) {
-  var $this = $(this);
-  var target = options.target;
-  var coef = target / 50;
-  var speed = options.speed;
-  var value = 0;
-  var roll = setInterval(function () {
-    value = value + coef;
-    $this.html(value.toLocaleString());
-    if (value == target) {
-      clearInterval(roll);
-    }
-  }, speed);
-};
 
 document.addEventListener('DOMContentLoaded', function () {
   var scope = {};
@@ -108,17 +108,4 @@ document.addEventListener('DOMContentLoaded', function () {
   scope.heroIn = function () {
     // play hero animation
   };
-
-
-  $("#TableOfContents").stick_in_parent({
-    offset_top: 144
-  });
-
-  $.localScroll({
-    duration: 500,
-    offset: {
-      top: -144
-    }
-  });
-
 });

@@ -31,8 +31,12 @@
                 action="https://sibforms.com/serve/MUIEAGyZKryyZrFrkQx_JV4wK7j8Cc5FFu5GkcR9tSa80SKyf1NP-RiHo2UEAroSjWxNe5YXYS7EznZ-bpkWfnky5wDNk8JzbQMiSASahIkout0gUTBZNz710-YhsRKidQnLJ_G1BEzR9KH2hAatGLRgsfbvGD_bl6sNgadEAQWDbKY4Kaa-Dn_IMf5hHxNqvcZqVAlOHDvtwkZ0"
                 data-type="subscription">
                 <div class="form-field has-float-label form__entry entry_block">
-                  <input class="input" maxlength="200" type="email" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="{{ $Home.Param "content.sections.subscribe.form.textfield.placeholder" }}" data-required="true" required />
-                  <label for="EMAIL">{{ $Home.Param "content.sections.subscribe.form.textfield.label" }}</label>
+                  <input class="input" maxlength="200" type="text" id="FIRSTNAME" name="FIRSTNAME" autocomplete="off" placeholder="{{ $Home.Param "content.sections.subscribe.form.textfield.first_name.placeholder" }}" data-required="true" required />
+                  <label for="EMAIL">{{ $Home.Params.content.sections.subscribe.form.textfield.first_name.label }}</label>
+                </div>
+                <div class="form-field has-float-label form__entry entry_block">
+                  <input class="input" maxlength="200" type="email" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="{{ $Home.Params.content.sections.subscribe.form.textfield.email.placeholder }}" data-required="true" required />
+                  <label for="EMAIL">{{ $Home.Params.content.sections.subscribe.form.textfield.email.label }}</label>
                   <button class="btn btn-plain" form="sib-form" type="submit">
                     <svg class="d-none"></svg>
                     {{ $Home.Param "content.sections.subscribe.form.button.label" }}
@@ -51,7 +55,7 @@
         <script>
           window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
           window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-          window.REQUIRED_ERROR_MESSAGE = "{{ $.Param "content.sections.roadmap.subscribe.messages.error.blank_field" }}";
+          window.REQUIRED_ERROR_MESSAGE = "{{ $.Params.content.sections.roadmap.subscribe.messages.error.blank_field }}";
           window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
           window.translation = {
             common: {

@@ -103,8 +103,12 @@ content:
       headline: "Join our mailing list to get the latest DeFi Blockchain announcements:"
       form:
         textfield:
-          label: Email address
-          placeholder: name@example.com
+          first_name:
+            label: First name
+            placeholder: John
+          email:
+            label: Email address
+            placeholder: name@example.com
         button:
           label: Join now
         helper: We hate spam too, so only occasional updates.

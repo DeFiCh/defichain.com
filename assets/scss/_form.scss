@@ -98,6 +98,10 @@ form.integrated {
   .form-field {
     margin-bottom: 0;
     flex-wrap: nowrap;
+
+    &:nth-child(n+2) {
+      border-top: $form-control-border;;
+    }
   }
 
   input[type="text"],

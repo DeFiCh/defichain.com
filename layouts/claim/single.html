@@ -23,7 +23,7 @@
   <meta property="og:locale" content="{{ $.Params.meta.og.locale }}">
 </head>
 
-<body class="learn">
+<body class="claim">
 
   {{ partial "header.html" . }}
 
@@ -41,34 +41,79 @@
       <!-- animation hero here -->
     </section>
 
-    <section class="faq" id="{{ $.Param "content.sections.contributors.name" }}">
+    <section class="how-much white">
       <div class="container-fluid">
         <div class="row">
-          <div class="col col-ul-5 offset-ul-1">
-            <h2 data-scroll="once">{{ $.Param "content.sections.faq.headline" }}</h2>
+          <div class="col col-ul-4 offset-ul-1">
+            <h2 data-scroll="once">{{ $.Param "content.sections.how_much.headline" }}</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-ul-10 offset-ul-1">
+            <div class="row">
+              {{ range $example := $.Param "content.sections.how_much.examples" }}
+              <div class="example col col-sm-6 col-md-4" data-scroll="once">
+                <div class="example-icon">
+                    {{ readFile $example.icon  | safeHTML }}
+                  </div>
+                <div class="owned">{{ $.Param "content.sections.how_much.prefix" }} <strong class="text-purple">{{ $example.btc }}</strong></div>
+                <div class="will-get">{{ $example.dfi }}</div>
+              </div>
+              {{ end }}
+            </div>
           </div>
         </div>
       </div>
-      {{ range $index, $faq := $.Param "content.sections.faq.faq_list" }}
-      <div class="collapsible-head{{ with eq $index 0 }} active{{ end }} container-fluid">
+    </section>
+
+    <section class="claim-wizard day">
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col col-ul-4 offset-ul-1">
+            <h2 data-scroll="once">{{ $.Params.content.sections.claim_wizard.headline }}</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapsible-head active container-fluid">
         <div class="row">
           <div class="col col-ul-6 offset-ul-1">
             <div class="toggle">
               <div class="bar"></div>
               <div class="bar"></div>
             </div>
-            <h3>{{ $faq.q }}</h3>
+            <h3>{{ $.Params.content.sections.claim_wizard.step1.headline }}</h3>
           </div>
         </div>
       </div>
       <div class="collapsible-content container-flushed">
         <div class="row">
           <div class="col col-ul-6 offset-ul-1">
-            {{ $faq.a }}
+            form 1
           </div>
         </div>
       </div>
-      {{ end }}
+
+      <div class="collapsible-head container-fluid">
+        <div class="row">
+          <div class="col col-ul-6 offset-ul-1">
+            <div class="toggle">
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <h3>{{ $.Params.content.sections.claim_wizard.step2.headline }}</h3>
+          </div>
+        </div>
+      </div>
+      <div class="collapsible-content container-flushed">
+        <div class="row">
+          <div class="col col-ul-6 offset-ul-1">
+            form 2
+          </div>
+        </div>
+      </div>
+
     </section>
 
     {{ partial "section-subscribe.html" . }}

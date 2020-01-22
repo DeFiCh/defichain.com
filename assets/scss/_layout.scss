@@ -493,6 +493,110 @@ main {
 
 
 //
+// Collapsible / Accordion
+//
+
+.collapsible-head {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  cursor: pointer;
+  color: $color-ui-black60;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &.active {
+    color: $color-ui-black;
+  }
+
+  .col {
+    padding-left: 40px;
+
+    @include media(">lg") {
+      padding-left: 60px;
+    }
+  }
+
+  .toggle {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    transform: scale(0.75);
+
+    .bar {
+      position: absolute;
+      width: 15px;
+      height: 3px;
+      border-radius: 1px;
+      background-color: currentColor;
+      top: 50%;
+      transition: all 0.3s ease;
+
+      &:first-child {
+        transform: rotate(30deg);
+        left: 1.5px;
+      }
+      &:nth-child(2) {
+        transform: rotate(-30deg);
+        left: 14px;
+      }
+    }
+
+    @include media(">lg") {
+      left: $grid-gutter / 2;
+
+      .toggle {
+        transform: scale(1);
+
+        .bar {
+          height: 2px;
+        }
+      }
+    }
+  }
+
+  &.active {
+    .toggle .bar {
+      &:first-child {
+        transform: rotate(-30deg);
+      }
+      &:nth-child(2) {
+        transform: rotate(30deg);
+      }
+    }
+  }
+
+  h3 {
+    font-weight: $font-weight-regular;
+    margin-bottom: 0;
+  }
+}
+
+.collapsible-content {
+  background-color: $color-ui-white;
+  margin-bottom: 0;
+  overflow: hidden;
+
+  .col {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 65px;
+    padding-right: 30px;
+
+    @include media(">lg") {
+      padding-left: 85px;
+    }
+  }
+}
+
+.collapsible-head.active + .collapsible-content {
+  margin-bottom: 70px;
+  height: auto;
+}
+
+
+//
 // Hero section
 // 
 
@@ -764,109 +868,6 @@ section.dfi-token {
 //
 
 section.faq {
-  .faq-q {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    cursor: pointer;
-    color: $color-ui-black60;
-    transition: all 0.3s ease;
-
-    &:hover,
-    &.active {
-      color: $color-ui-black;
-    }
-
-    .col {
-      padding-left: 40px;
-
-      @include media(">lg") {
-        padding-left: 60px;
-      }
-    }
-
-    .toggle {
-      width: 30px;
-      height: 30px;
-      position: absolute;
-      left: 0;
-      top: 5px;
-      transform: scale(0.75);
-
-      .bar {
-        position: absolute;
-        width: 15px;
-        height: 3px;
-        border-radius: 1px;
-        background-color: currentColor;
-        top: 50%;
-        transition: all 0.3s ease;
-
-        &:first-child {
-          transform: rotate(30deg);
-          left: 1.5px;
-        }
-        &:nth-child(2) {
-          transform: rotate(-30deg);
-          left: 14px;
-        }
-      }
-
-      @include media(">lg") {
-        left: $grid-gutter / 2;
-
-        .toggle {
-          transform: scale(1);
-
-          .bar {
-            height: 2px;
-          }
-        }
-      }
-    }
-
-    &.active {
-      .toggle .bar {
-        &:first-child {
-          transform: rotate(-30deg);
-        }
-        &:nth-child(2) {
-          transform: rotate(30deg);
-        }
-      }
-    }
-
-    h3 {
-      font-weight: $font-weight-regular;
-      margin-bottom: 0;
-    }
-  }
-
-  .faq-a {
-    background-color: $color-ui-white;
-    margin-bottom: 0;
-    overflow: hidden;
-
-    .col {
-      padding-top: 30px;
-      padding-bottom: 30px;
-      padding-left: 65px;
-      padding-right: 30px;
-
-      @include media(">lg") {
-        padding-left: 85px;
-      }
-    }
-  }
-
-  .faq-q.active + .faq-a {
-    margin-bottom: 70px;
-    height: auto;
-  }
-
-  .faq-add {
-    display: none;
-  }
-
   .faq-more {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -1240,6 +1241,41 @@ section.distribution {
       border-left: 1px solid $color-ui-white40;
     }
   }
+}
+
+
+//
+// Claim
+//
+
+section.how-much {
+  .owned {
+    font-size: $body-md-font-size;
+    margin-bottom: $body-md-margin-bottom;
+  }
+
+  .will-get {
+    font-size: $h3-font-size;
+  }
+
+  .example-icon {
+    margin-bottom: 30px;
+    color: map-get($brand-colors, purple);
+
+    @include media(">md") {
+      margin-bottom: 60px;
+    }
+
+    svg {
+      fill: currentColor;
+      transform: scale(2);
+      transform-origin: left top;
+    }
+  }
+}
+
+section.claim-wizard {
+
 }
 
 

@@ -13,38 +13,40 @@ $(function () {
   });
 
   // FAQ toggles
-  function storeAnswerHeights() {
-    $('.faq-a').css({
+  function storeCollapsibleHeights() {
+    $('.collapsible-content').css({
       'height': 'auto'
     }).each(function (i) {
       $(this).attr('data-h', $(this).height());
     });
-
-    $('.faq-q').not('.active').next('.faq-a').css('height', 0).removeClass('active');
+    $('.collapsible-head').not('.active').next('.collapsible-content').css('height', 0).removeClass('active');
   }
 
-  storeAnswerHeights();
+  storeCollapsibleHeights();
 
   $(window).on("debouncedresize", function (event) {
-    storeAnswerHeights();
+    storeCollapsibleHeights();
   });
 
-  $('.faq-q').click(function() {
-    var $q = $(this);
-    var $a = $q.next();
-    if ($q.hasClass('active')) {
-      $a.animate({
+  // Handle collapsiblee toggles
+  $('.collapsible-head').click(function() {
+    var $ch = $(this);
+    var $cc = $ch.next();
+    if ($ch.hasClass('active')) {
+      $cc.animate({
         height: 0
       });
-      $q.removeClass('active');
+      $ch.removeClass('active');
     } else {
-      console.log($a.attr('data-h'));
-      $a.animate({
-        height: $a.attr('data-h') + "px"
+      $cc.animate({
+        height: $cc.attr('data-h') + "px"
       });
-      $q.addClass('active');
+      $ch.addClass('active');
+      $ch.siblings('.collapsible-head').removeClass('active');
+      $cc.siblings('.collapsible-content').animate({
+        height: 0
+      });
     }
-    // $(this).toggleClass('active').siblings('.faq-q').removeClass('active');
   });
 
   // Closer look carousel

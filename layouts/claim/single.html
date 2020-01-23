@@ -129,15 +129,15 @@
             <p class="lead">{{ $.Params.content.sections.claim_wizard.step2.body }}</p>
             <div class="form-field has-float-label mtg1">
               <input type="text" id="dfi_add" name="dfi_add" autocomplete="off" autocorrect="off"
-                placeholder="{{ replace $.Params.content.sections.claim_wizard.step2.form.dfi_field.hint "address" "ad&#8203;dress" | safeHTML }}"
+                placeholder="{{ $.Params.content.sections.claim_wizard.step2.form.dfi_field.hint }}"
                 required="required" />
-              <label for="dfi_add">{{ replace $.Params.content.sections.claim_wizard.step2.form.dfi_field.label "address" "ad&#8203;dress" | safeHTML }}</label>
+              <label for="dfi_add">{{ $.Params.content.sections.claim_wizard.step2.form.dfi_field.label }}</label>
             </div>
             <div class="form-field has-float-label">
               <input type="text" id="btc_add" name="btc_add" autocomplete="off" autocorrect="off"
-                placeholder="{{ replace $.Params.content.sections.claim_wizard.step2.form.btc_field.hint "address" "ad&#8203;dress" | safeHTML }}"
+                placeholder="{{ $.Params.content.sections.claim_wizard.step2.form.btc_field.hint }}"
                 required="required" />
-              <label for="btc_add">{{ replace $.Params.content.sections.claim_wizard.step2.form.btc_field.label "address" "ad&#8203;dress" | safeHTML }}</label>
+              <label for="btc_add">{{ $.Params.content.sections.claim_wizard.step2.form.btc_field.label }}</label>
             </div>
             <button class="claim-wizard-next btn" disabled="disabled">
               {{ $.Params.content.sections.claim_wizard.step2.next_button.label }}

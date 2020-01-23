@@ -42,6 +42,10 @@ form {
     }
   }
 
+  [autocomplete="off"]::-webkit-contacts-auto-fill-button {
+    display: none !important;
+  }
+
   &.has-accessory {
     input[type="text"],
     input[type="email"],

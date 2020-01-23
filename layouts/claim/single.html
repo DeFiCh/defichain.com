@@ -126,14 +126,12 @@
       <div class="collapsible-content container-flushed">
         <div class="row">
           <div class="col col-ul-6 offset-ul-1">
-            <div class="form-field has-float-label">
+            <p class="lead">{{ $.Params.content.sections.claim_wizard.step2.body }}</p>
+            <div class="form-field has-float-label mtg1">
               <input type="text" id="dfi_add" name="dfi_add" autocomplete="off" autocorrect="off"
                 placeholder="{{ replace $.Params.content.sections.claim_wizard.step2.form.dfi_field.hint "address" "ad&#8203;dress" | safeHTML }}"
                 required="required" />
               <label for="dfi_add">{{ replace $.Params.content.sections.claim_wizard.step2.form.dfi_field.label "address" "ad&#8203;dress" | safeHTML }}</label>
-            </div>
-            <div class="form-field">
-              <p>{{ $.Params.content.sections.claim_wizard.step2.body }}</p>
             </div>
             <div class="form-field has-float-label">
               <input type="text" id="btc_add" name="btc_add" autocomplete="off" autocorrect="off"

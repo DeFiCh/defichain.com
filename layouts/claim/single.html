@@ -89,8 +89,25 @@
       </div>
       <div class="collapsible-content container-flushed">
         <div class="row">
-          <div class="col col-ul-6 offset-ul-1">
-            form 1
+          {{ range $index, $option := $.Params.content.sections.claim_wizard.step1.options }}
+          <div class="col col-ul-5 {{ with eq $index 0 }} offset-ul-1{{ end }}">
+            <div class="resource-image">
+              {{ readFile $option.image | safeHTML }}
+            </div>
+            <h4 data-scroll="once">{{ $option.headline | markdownify }}</h4>
+            <a href="{{ $option.cta.url | relLangURL }}" target="_blank" class="cta-to" data-scroll="once">
+              {{ $option.cta.label }}
+              <span>&#10142;</span>
+            </a>
+          </div>
+          {{ end }}
+        </div>
+        <div class="row">
+          <div class="col col-ul-6 offset-ul-1 mbg1">
+            <p>{{ $.Params.content.sections.claim_wizard.step1.body }}</p>
+            <button class="claim-wizard-next btn mtg1">
+              {{ $.Params.content.sections.claim_wizard.step1.next_button.label }}
+            </button>
           </div>
         </div>
       </div>
@@ -109,7 +126,99 @@
       <div class="collapsible-content container-flushed">
         <div class="row">
           <div class="col col-ul-6 offset-ul-1">
-            form 2
+            <div class="form-field has-float-label">
+              <input type="text" id="dfi_add" name="dfi_add" autocomplete="off" autocorrect="off"
+                placeholder="{{ replace $.Params.content.sections.claim_wizard.step2.form.dfi_field.hint "address" "ad&#8203;dress" | safeHTML }}"
+                required="required" />
+              <label for="dfi_add">{{ replace $.Params.content.sections.claim_wizard.step2.form.dfi_field.label "address" "ad&#8203;dress" | safeHTML }}</label>
+            </div>
+            <div class="form-field">
+              <p>{{ $.Params.content.sections.claim_wizard.step2.body }}</p>
+            </div>
+            <div class="form-field has-float-label">
+              <input type="text" id="btc_add" name="btc_add" autocomplete="off" autocorrect="off"
+                placeholder="{{ replace $.Params.content.sections.claim_wizard.step2.form.btc_field.hint "address" "ad&#8203;dress" | safeHTML }}"
+                required="required" />
+              <label for="btc_add">{{ replace $.Params.content.sections.claim_wizard.step2.form.btc_field.label "address" "ad&#8203;dress" | safeHTML }}</label>
+            </div>
+            <button class="claim-wizard-next btn" disabled="disabled">
+              {{ $.Params.content.sections.claim_wizard.step2.next_button.label }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapsible-head container-fluid">
+        <div class="row">
+          <div class="col col-ul-6 offset-ul-1">
+            <div class="toggle">
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <h3>{{ $.Params.content.sections.claim_wizard.step3.headline }}</h3>
+          </div>
+        </div>
+      </div>
+      <div class="collapsible-content container-flushed">
+        <div class="row">
+          <div class="col col-ul-6 offset-ul-1">
+            <div class="alert info">
+              {{ $.Params.content.sections.claim_wizard.step3.alert.default }}
+            </div>
+            <p class="lead">{{ $.Params.content.sections.claim_wizard.step3.subhead1 | markdownify }}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-ul-6 offset-ul-1">
+            <table class="table-plain mbg0">
+              <tr>
+                <th>{{ $.Params.content.sections.claim_wizard.step3.table.bitcoin_address.label }}</th>
+                <td>{{ $.Params.content.sections.claim_wizard.step3.table.bitcoin_address.value }}</td>
+              </tr>
+              <tr>
+                <th>{{ $.Params.content.sections.claim_wizard.step3.table.message.label }}</th>
+                <td>
+                  <span class="claim-wizard-btc-message">Message</span>
+                  <button class="copy-btn btn btn-small btn-plain">Copy to clipboard</button>
+                </td>
+              </tr>
+            </table>
+            <p>{{ $.Params.content.sections.claim_wizard.step3.subhead2 | markdownify }}</p>
+            <button class="claim-wizard-next btn mtg1">
+              {{ $.Params.content.sections.claim_wizard.step3.next_button.label }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapsible-head container-fluid">
+        <div class="row">
+          <div class="col col-ul-6 offset-ul-1">
+            <div class="toggle">
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <h3>{{ $.Params.content.sections.claim_wizard.step4.headline }}</h3>
+          </div>
+        </div>
+      </div>
+      <div class="collapsible-content container-flushed">
+        <div class="row">
+          <div class="col col-ul-6 offset-ul-1">
+            <p class="lead">{{ $.Params.content.sections.claim_wizard.step4.subhead | markdownify }}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-ul-6 offset-ul-1">
+            <div class="form-field has-float-label">
+              <input type="text" id="btc_add" name="btc_add" autocomplete="off" autocorrect="off"
+                placeholder="{{ $.Params.content.sections.claim_wizard.step4.form.signature.hint }}"
+                required="required" />
+              <label for="btc_add">{{ $.Params.content.sections.claim_wizard.step4.form.signature.label }}</label>
+            </div>
+            <button class="claim-wizard-next btn" disabled="disabled">
+              {{ $.Params.content.sections.claim_wizard.step4.next_button.label }}
+            </button>
           </div>
         </div>
       </div>

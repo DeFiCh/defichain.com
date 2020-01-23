@@ -28,15 +28,15 @@ $(function () {
     storeCollapsibleHeights();
   });
 
-  // Handle collapsiblee toggles
+  // Handle collapsible toggles
   $('.collapsible-head').click(function() {
     var $ch = $(this);
     var $cc = $ch.next();
     if ($ch.hasClass('active')) {
-      $cc.animate({
-        height: 0
-      });
-      $ch.removeClass('active');
+      // $cc.animate({
+      //   height: 0
+      // });
+      // $ch.removeClass('active');
     } else {
       $cc.animate({
         height: $cc.attr('data-h') + "px"
@@ -46,6 +46,44 @@ $(function () {
       $cc.siblings('.collapsible-content').animate({
         height: 0
       });
+    }
+  });
+
+  // Handle wizard next buttons
+  function wizardNextStep() {
+    var $ccc = $('.collapsible-head.active').next();
+    var $crf = $ccc.find('[required]');
+    var $nch = $ccc.next();
+    var $ncc = $nch.next();
+
+    if (!$crf.length || $crf.val()) {
+      $ncc.animate({
+        height: $ncc.attr('data-h') + "px"
+      });
+      $nch.addClass('active');
+      $nch.siblings('.collapsible-head').removeClass('active');
+      $ncc.siblings('.collapsible-content').animate({
+        height: 0
+      });
+    }
+  }
+
+  $('.claim-wizard-next').click(function (e) {
+    wizardNextStep();
+    e.preventDefault();
+  });
+
+  // Enable disabled next buttons
+  $('[required]').keyup(function() {
+    var $ccc = $(this).parents('.collapsible-content');
+    var $cerf = $ccc.find('[required]').filter(function () {
+      return !this.value;
+    });
+    var $cbtn = $ccc.find('.btn');
+    if ($cerf.length) {
+      $cbtn.attr('disabled', 'disabled');
+    } else {
+      $cbtn.removeAttr('disabled');
     }
   });
 

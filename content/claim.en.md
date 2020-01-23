@@ -42,28 +42,38 @@ content:
         headline: "Step 1: Get a DFI Wallet"
         options:
           - headline: DeFi Blockchain client
+            image: /static/svg/wallets/defi.svg
             cta:
               label: Download
               url: http://blah
           - headline: Pool by Cake DFI wallet
+            image: /static/svg/wallets/pool.svg
             cta:
               label: Sign up
               url: https://pool.cakedefi.com/
+        body: Make a note of the address of the DFI wallet you obtained, as you will need it in step 2.
+        next_button:
+            label: I’ve obtained a DFI wallet
       step2:
         headline: "Step 2: Enter details of your DFI and BTC wallets"
-        dfi_field:
-          label: DFI address
-          hint: 12-digit DFI address
-          helper: Address of DFI wallet obtained in step 1
-        btc_field:
-          label: BTC address
-          helper: Address of BTC wallet
-        button:
-          label: Continue
+        form:
+          dfi_field:
+            label: DFI address
+            hint: DFI address
+            helper: Address of DFI wallet obtained in step 1
+          btc_field:
+            label: BTC address
+            hint: BTC address
+            helper: Address of BTC wallet
+        body: Enter your BTC wallet address to determine the amount of DFI you will receive, based on the amount of Bitcoins you have.
+        next_button:
+            label: Continue to step 3
       step3:
         headline: "Step 3: Signing mesage"
-        subhead1: "From your Bitcoin client, Sign a Message using the following values:"
-        values:
+        alert:
+          default: Please complete all previous steps.
+        subhead1: "From your Bitcoin client, _Sign a Message_ using the following values:"
+        table:
           bitcoin_address: 
             label: Bitcoin address
             value: Your bitcoin wallet private key
@@ -71,8 +81,8 @@ content:
             label: Message
             copy_button:
               label: Copy to clipboard
-        subhead2: A Signature will be generated upon signing.
-        button:
+        subhead2: Signing the message will generate a _Signature_, which you will need for the next step. If you need help, please refer to this [help article](#).
+        next_button:
           label: I've done these steps
       step4:
         headline: "Step 4: Signature"
@@ -80,7 +90,9 @@ content:
         form:
           signature:
             label: Signature
-          button: Complete Claiming My DFI
+            hint: Signature
+        next_button:
+          label: Complete Claiming My DFI
     #white paper in /
     #subscribe in /
     #closer_look in /

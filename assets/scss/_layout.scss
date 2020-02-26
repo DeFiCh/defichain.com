@@ -508,6 +508,11 @@ main {
     background-color: rgba(map-get($brand-colors, green), 0.1);
     color: map-get($brand-colors, green);
   }
+
+  &.error {
+    background-color: rgba(map-get($brand-colors, red), 0.1);
+    color: map-get($brand-colors, red);
+  }
 }
 
 
@@ -1302,6 +1307,26 @@ section.how-much {
 section.claim-wizard {
   .copy-btn {
     float: right;
+    outline: none;
+  }
+}
+
+.claim-wizard-next + .spinner {
+  display: none;
+  margin-left: 30px;
+
+  &.show {
+    display: flex;
+  }
+}
+
+.claim-response {
+  margin-top: $form-control-padding-vertical;
+  margin-bottom: 0;
+
+  td, th {
+    border: 0;
+    padding: 0;
   }
 }
 
@@ -1399,7 +1424,8 @@ section.white-paper {
 // Page-specific layout and colors
 // 
 
-body.home {
+body.home,
+body.claim {
   section.hero {
     height: 100vh;
     min-height: 432px;

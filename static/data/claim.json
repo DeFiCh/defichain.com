@@ -1,0 +1,9 @@
+{
+  "dfiValue": "999",
+  "transactionInfo": {
+    "status": "success",
+    "requestedTs": "1582083489399",
+    "hash": "584a741f7f660e74f07bacff082fafab",
+    "initiatedTs": "1582083489492"
+  }
+}

@@ -82,7 +82,8 @@
   {{ $swiper := resources.Get "js/swiper.min.js" }}
   {{ $debouncedresize := resources.Get "js/jquery.debouncedresize.js" }}
   {{ $main := resources.Get "js/main.js" }}
-  {{ $js := slice $scrolltrigger $swiper $debouncedresize $main | resources.Concat "js/bundle.js" | resources.Fingerprint }}
+  {{ $collapsible := resources.Get "js/collapsible.js" }}
+  {{ $js := slice $scrolltrigger $swiper $debouncedresize $main $collapsible | resources.Concat "js/bundle-faq.js" | resources.Fingerprint }}
   <script src="{{ $js.RelPermalink }}" type="text/javascript"></script>
   {{ template "_internal/google_analytics_async.html" . }}
   {{ partial "pixels/facebook.html" . }}

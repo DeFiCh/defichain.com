@@ -35,6 +35,9 @@
           <div id="{{ $.Param "content.sections.hero.name" }}" class="col col-lg-6 col-xl-5 offset-xl-1">
             <h1 data-scroll="once">{{ $.Param "content.sections.hero.headline" }}</h1>
             <p class="lg" data-scroll="once">{{ $.Param "content.sections.hero.subhead" }}</p>
+            <a href="#claim-my-dfi" class="btn mtg1">
+              {{ $.Params.content.sections.hero.cta.label }}
+            </a>
           </div>
         </div>
       </div>
@@ -66,7 +69,7 @@
       </div>
     </section>
 
-    <section class="claim-wizard day">
+    <section id="claim-my-dfi" class="claim-wizard day">
 
       <div class="container-fluid">
         <div class="row">
@@ -87,7 +90,7 @@
           </div>
         </div>
       </div>
-      <div class="collapsible-content container-flushed">
+      <div class="collapsible-content container-flushed" id="claim-step1">
         <div class="row">
           {{ range $index, $option := $.Params.content.sections.claim_wizard.step1.options }}
           <div class="col col-ul-5 {{ with eq $index 0 }} offset-ul-1{{ end }}">
@@ -123,27 +126,41 @@
           </div>
         </div>
       </div>
-      <div class="collapsible-content container-flushed">
-        <div class="row">
+      <div class="collapsible-content container-flushed" id="claim-step2">
+        <form action="/" class="row" data-parsley-validate>
           <div class="col col-ul-6 offset-ul-1">
             <p class="lead">{{ $.Params.content.sections.claim_wizard.step2.body }}</p>
             <div class="form-field has-float-label mtg1">
               <input type="text" id="dfi_add" name="dfi_add" autocomplete="off" autocorrect="off"
                 placeholder="{{ $.Params.content.sections.claim_wizard.step2.form.dfi_field.hint }}"
-                required="required" />
+                required="required"
+                data-parsley-type="alphanum"
+                data-parsley-length="[26, 35]" />
               <label for="dfi_add">{{ $.Params.content.sections.claim_wizard.step2.form.dfi_field.label }}</label>
             </div>
             <div class="form-field has-float-label">
               <input type="text" id="btc_add" name="btc_add" autocomplete="off" autocorrect="off"
                 placeholder="{{ $.Params.content.sections.claim_wizard.step2.form.btc_field.hint }}"
-                required="required" />
+                required="required"
+                data-parsley-type="alphanum"
+                data-parsley-length="[26, 35]" />
               <label for="btc_add">{{ $.Params.content.sections.claim_wizard.step2.form.btc_field.label }}</label>
             </div>
-            <button class="claim-wizard-next btn" disabled="disabled">
-              {{ $.Params.content.sections.claim_wizard.step2.next_button.label }}
-            </button>
+            <div class="form-field">
+              <button class="claim-wizard-next btn" type="submit">
+                {{ $.Params.content.sections.claim_wizard.step2.next_button.label }}
+              </button>
+              <div class="spinner">
+                <div class="b1"></div>
+                <div class="b2"></div>
+                <div class="b3"></div>
+              </div>
+            </div>
+            <div class="d-none" id="step2-error-alert">
+              <div class="alert error"></div>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
 
       <div class="collapsible-head container-fluid">
@@ -157,10 +174,10 @@
           </div>
         </div>
       </div>
-      <div class="collapsible-content container-flushed">
+      <div class="collapsible-content container-flushed" id="claim-step3">
         <div class="row">
           <div class="col col-ul-6 offset-ul-1">
-            <div class="alert info">
+            <div class="alert info" id="prev-incomplete-alert">
               {{ $.Params.content.sections.claim_wizard.step3.alert.default }}
             </div>
             <p class="lead">{{ $.Params.content.sections.claim_wizard.step3.subhead1 | markdownify }}</p>
@@ -171,20 +188,22 @@
             <table class="table-plain mbg0">
               <tr>
                 <th>{{ $.Params.content.sections.claim_wizard.step3.table.bitcoin_address.label }}</th>
-                <td>{{ $.Params.content.sections.claim_wizard.step3.table.bitcoin_address.value }}</td>
+                <td><em>{{ $.Params.content.sections.claim_wizard.step3.table.bitcoin_address.value }}</em></td>
               </tr>
               <tr>
                 <th>{{ $.Params.content.sections.claim_wizard.step3.table.message.label }}</th>
                 <td>
                   <span class="claim-wizard-btc-message">Message</span>
-                  <button class="copy-btn btn btn-small btn-plain">Copy to clipboard</button>
+                  <button class="copy-btn btn btn-small btn-plain" data-clipboard-target=".claim-wizard-btc-message">Copy to clipboard</button>
                 </td>
               </tr>
             </table>
             <p>{{ $.Params.content.sections.claim_wizard.step3.subhead2 | markdownify }}</p>
-            <button class="claim-wizard-next btn mtg1">
-              {{ $.Params.content.sections.claim_wizard.step3.next_button.label }}
-            </button>
+            <div class="form-field">
+              <button class="claim-wizard-next btn mtg1">
+                {{ $.Params.content.sections.claim_wizard.step3.next_button.label }}
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -200,25 +219,61 @@
           </div>
         </div>
       </div>
-      <div class="collapsible-content container-flushed">
-        <div class="row">
+      <div class="collapsible-content container-flushed" id="claim-step4">
+        <form action="/" class="row" data-parsley-validate>
           <div class="col col-ul-6 offset-ul-1">
             <p class="lead">{{ $.Params.content.sections.claim_wizard.step4.subhead | markdownify }}</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col-ul-6 offset-ul-1">
             <div class="form-field has-float-label">
-              <input type="text" id="btc_add" name="btc_add" autocomplete="off" autocorrect="off"
+              <input type="text" id="message_signature" name="message_signature" autocomplete="off" autocorrect="off"
                 placeholder="{{ $.Params.content.sections.claim_wizard.step4.form.signature.hint }}"
                 required="required" />
-              <label for="btc_add">{{ $.Params.content.sections.claim_wizard.step4.form.signature.label }}</label>
+              <label for="message_signature">{{ $.Params.content.sections.claim_wizard.step4.form.signature.label }}</label>
             </div>
-            <button class="claim-wizard-next btn" disabled="disabled">
-              {{ $.Params.content.sections.claim_wizard.step4.next_button.label }}
-            </button>
+            <p>{{ $.Params.content.sections.claim_wizard.step4.form.email.instructions }}</p>
+            <div class="form-field has-float-label">
+              <input type="email" id="claim_email" name="claim_email" autocomplete="off" autocorrect="off"
+                placeholder="{{ $.Params.content.sections.claim_wizard.step4.form.email.hint }}"
+                required="required" />
+              <label for="claim_email">{{ $.Params.content.sections.claim_wizard.step4.form.email.label }}</label>
+            </div>
+            <div class="form-field">
+              <button type="submit" class="claim-wizard-next btn">
+                {{ $.Params.content.sections.claim_wizard.step4.next_button.label }}
+              </button>
+              <div class="spinner">
+                <div class="b1"></div>
+                <div class="b2"></div>
+                <div class="b3"></div>
+              </div>
+            </div>
+            <div class="d-none" id="step4-error-alert">
+              <div class="alert error"></div>
+            </div>
+            <div class="d-none" id="step4-success-alert">
+              <div class="alert info">
+                {{ $.Params.content.sections.claim_wizard.step4.response.message }}
+                <table class="claim-response">
+                  <tr>
+                    <th>{{ $.Params.content.sections.claim_wizard.step4.response.dfi_value }}</th>
+                    <td id="dfi-value-value"></td>
+                  </tr>
+                  <tr>
+                    <th>{{ $.Params.content.sections.claim_wizard.step4.response.transaction_info.requested_ts }}</th>
+                    <td id="requested-ts-value"></td>
+                  </tr>
+                  <tr>
+                    <th>{{ $.Params.content.sections.claim_wizard.step4.response.transaction_info.initiated_ts }}</th>
+                    <td id="initiated-ts-value"></td>
+                  </tr>
+                  <tr>
+                    <th>{{ $.Params.content.sections.claim_wizard.step4.response.transaction_info.hash }}</th>
+                    <td id="hash-value"></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
 
     </section>
@@ -230,11 +285,17 @@
   {{ partial "footer.html" . }}
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
   {{ $scrolltrigger := resources.Get "js/ScrollTrigger.min.js" }}
-  {{ $swiper := resources.Get "js/swiper.min.js" }}
   {{ $debouncedresize := resources.Get "js/jquery.debouncedresize.js" }}
+  {{ $parsley := resources.Get "js/parsley.min.js" }}
   {{ $main := resources.Get "js/main.js" }}
-  {{ $js := slice $scrolltrigger $swiper $debouncedresize $main | resources.Concat "js/bundle.js" | resources.Fingerprint }}
+  {{ $claim := resources.Get "js/claim.js" }}
+  {{ $collapsible := resources.Get "js/collapsible.js" }}
+  {{ $js := slice $scrolltrigger $debouncedresize $parsley $main $collapsible $claim | resources.Concat "js/bundle-claim.js" | resources.Fingerprint }}
   <script src="{{ $js.RelPermalink }}" type="text/javascript"></script>
   {{ template "_internal/google_analytics_async.html" . }}
   {{ partial "pixels/facebook.html" . }}

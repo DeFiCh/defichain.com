@@ -173,6 +173,8 @@
   {{ partial "footer.html" . }}
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>
   {{ $scrolltrigger := resources.Get "js/ScrollTrigger.min.js" }}
   {{ $swiper := resources.Get "js/swiper.min.js" }}
   {{ $debouncedresize := resources.Get "js/jquery.debouncedresize.js" }}

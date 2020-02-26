@@ -1,0 +1,39 @@
+.form-field {
+  // input.parsley-success,
+  // select.parsley-success,
+  // textarea.parsley-success {
+  //   color: map-get($brand-colors, green);
+  //   border-color: map-get($brand-colors, green);
+
+  //   & ~ label {
+  //     color: map-get($brand-colors, green);
+  //   }
+  // }
+
+  input.parsley-error,
+  select.parsley-error,
+  textarea.parsley-error {
+    color: map-get($brand-colors, red);
+    border-color: map-get($brand-colors, red);
+
+    // & ~ label {
+    //   color: map-get($brand-colors, red);
+    // }
+  }
+}
+
+.parsley-errors-list {
+  flex-basis: 100%;
+  margin: 0;
+  padding: 0;
+  margin-top: $form-control-padding-vertical / 2;
+  list-style-type: none;
+  opacity: 0;
+  color: map-get($brand-colors, red);
+
+  transition: $form-control-transition;
+}
+
+.parsley-errors-list.filled {
+  opacity: 1;
+}

@@ -17,6 +17,12 @@
             <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
           </li>
           {{ end }}
+          <li>
+            <a href="https://github.com/DeFiCh/ain" target="_blank">
+              {{ readFile "/static/svg/icons/icon-github.svg" | safeHTML }}
+              GitHub
+            </a>
+          </li>
           {{ range .Site.Menus.white_paper }}
           <li class="{{ if $currentPage.IsMenuCurrent "white_paper" . }}active{{ end }}">
             <a href="{{ .URL | relLangURL }}">
@@ -31,26 +37,6 @@
     <div class="row" data-scroll="once">
       <div class="mbg1 col col-lg-3 offset-ul-1">
         <p>&copy; {{ $.Site.Params.company_name }}</p>
-      </div>
-      <div class="mbg1 col col-lg-3">
-        <p>Language</p>
-      </div>
-      <div class="mbg1 social-links col col-lg-6 col-ul-4">
-        <a href="{{ $.Site.Params.social.facebook }}" class="social-link facebook" target="_blank">
-          {{ readFile "/static/svg/icons/social/icon-facebook.svg" | safeHTML }}
-        </a>
-        <a href="{{ $.Site.Params.social.twitter }}" class="social-link twitter" target="_blank">
-          {{ readFile "/static/svg/icons/social/icon-twitter.svg" | safeHTML }}
-        </a>
-        <a href="{{ $.Site.Params.social.reddit }}" class="social-link reddit" target="_blank">
-          {{ readFile "/static/svg/icons/social/icon-reddit.svg" | safeHTML }}
-        </a>
-        <a href="{{ $.Site.Params.social.youtube }}" class="social-link youtube" target="_blank">
-          {{ readFile "/static/svg/icons/social/icon-youtube.svg" | safeHTML }}
-        </a>
-        <a href="{{ $.Site.Params.social.telegram }}" class="social-link telegram" target="_blank">
-          {{ readFile "/static/svg/icons/social/icon-telegram.svg" | safeHTML }}
-        </a>
       </div>
     </div>
   </div>

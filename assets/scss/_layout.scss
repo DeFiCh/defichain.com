@@ -1544,17 +1544,23 @@ section.closer-look {
     }
 
     a {
-      display: block;
+      display: flex;
+      align-items: center;
       text-decoration: none;
-      color: $color-ui-black40;
 
-      &:hover {
+      &,
+      &:visited {
+        color: $color-ui-black40;
+      }
+      
+      &:hover,
+      &:active {
         color: $color-ui-default;
       }
 
       svg {
         fill: currentColor;
-        margin-right: 5px;
+        margin-right: 8px;
       }
     }
   }

@@ -35,6 +35,12 @@ content:
         headline: Get developer resources and getting started guides.
         label: GitHub
         url: https://github.com/DeFiCh/ain
+      download:
+        image: /static/svg/icons/icon-dfi.svg
+        headline: Get the latest release.
+        subhead: CLI only. Linux, Mac and Windows GUI client coming soon.
+        label: Download
+        url: https://github.com/DeFiCh/ain/releases
       white_paper:
         image: /static/svg/icons/icon-whitepaper.svg
         headline: Read the DeFi Blockchain technical paper.

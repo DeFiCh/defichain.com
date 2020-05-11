@@ -5,6 +5,9 @@ title = "DeFi Blockchain"
 
 [params]
   uen = "201918368M"
+  [params.release]
+    version = "v1.0.0-beta2"
+    url = "https://github.com/DeFiCh/ain/releases"
   [params.social]
     facebook = "https://facebook.com/cakedefi/"
     twitter = "https://twitter.com/cakedefi"

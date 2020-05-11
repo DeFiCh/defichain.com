@@ -37,6 +37,10 @@
             <div class="hero-start">
               <h1 data-scroll="once">{{ $.Param "content.sections.hero.headline" }}</h1>
               <p class="lg" data-scroll="once">{{ $.Param "content.sections.hero.subhead" }}</p>
+              <a href="{{ $.Param "content.sections.resources.download.url" | relLangURL }}" target="_blank" class="cta-to">
+                {{ $.Param "content.sections.hero.cta.label" }} {{ .Site.Params.release.version }}
+                <span>&#10142;</span>
+              </a>
             </div>
           </div>
         </div>

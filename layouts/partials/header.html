@@ -14,9 +14,9 @@
             <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
           </li>
           {{ end }}
-          <li class="release-list-link">
-            <a href="{{ .Site.Params.release.url }}">
-              {{ .Site.Params.release.version }}
+          <li class="github-list-link">
+            <a href="{{ .Site.Params.github.url }}" target="_blank">
+              {{ .Site.Params.github.label }}
             </a>
           </li>
           {{ range .Site.Menus.white_paper }}
@@ -28,8 +28,8 @@
           {{ end }}
         </ul>
         <div class="spacer"></div>
-        <a href="{{ .Site.Params.release.url }}" class="release-link">
-          {{ .Site.Params.release.version }}
+        <a href="{{ .Site.Params.github.url }}" class="github-link" target="_blank">
+          {{ .Site.Params.github.label }}
         </a>
         {{ range .Site.Menus.white_paper }}
         <a href="{{ .URL | relLangURL }}" class="btn btn-pill white-paper-link">

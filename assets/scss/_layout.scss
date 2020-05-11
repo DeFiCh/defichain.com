@@ -92,7 +92,7 @@ body > header {
       }
 
       .white-paper-list-link,
-      .release-list-link {
+      .github-list-link {
         display: none;
       }
     }
@@ -151,7 +151,7 @@ body > header {
 
   .white-paper-link,
   .lang-switcher,
-  .release-link {
+  .github-link {
     display: none;
     margin-right: 10px;
 
@@ -160,7 +160,7 @@ body > header {
     }
   }
 
-  .release-link {
+  .github-link {
     margin-right: $grid-gutter;
     color: $color-ui-white60 !important;
   }
@@ -256,7 +256,7 @@ body > header {
   }
 
   header nav .menu {
-    .release-list-link {
+    .github-list-link {
       display: block;
       margin-top: 30px;
       width: 100%;

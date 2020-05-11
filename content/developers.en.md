@@ -36,11 +36,16 @@ content:
         label: GitHub
         url: https://github.com/DeFiCh/ain
       download:
-        image: /static/svg/icons/icon-dfi.svg
-        headline: Get the latest release.
-        subhead: CLI only. Linux, Mac and Windows GUI client coming soon.
+        image: /static/svg/icons/icon-cli.svg
+        headline: Get the CLI.
+        subhead: Linux, Mac and Windows GUI client coming soon.
         label: Download
         url: https://github.com/DeFiCh/ain/releases
+      explorer:
+        image: /static/svg/icons/icon-dfi.svg
+        headline: Explore the blockchain in Block Explorer.
+        label: Explore
+        url: http://explorer.defichain.io/
       white_paper:
         image: /static/svg/icons/icon-whitepaper.svg
         headline: Read the DeFi Blockchain technical paper.

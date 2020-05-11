@@ -93,6 +93,24 @@
               </div>
               <div class="resource-cta col col-md-6">
                 <div class="card">
+                  <a href="{{ $.Param "content.sections.resources.explorer.url" | relLangURL }}" target="_blank">
+                    <div class="resource-image">
+                      {{ readFile $.Params.content.sections.resources.explorer.image | safeHTML }}
+                    </div>
+                    <h3 data-scroll="once">
+                      {{ $.Param "content.sections.resources.explorer.headline" | markdownify }}
+                    </h3>
+                    <div class="spacer"></div>
+                    <div class="cta-to" data-scroll="once">
+                      {{ $.Param "content.sections.resources.explorer.label" }}
+                      <span>&#10142;</span>
+                    </div>
+                    <div class="bg"></div>
+                  </a>
+                </div>
+              </div>
+              <div class="resource-cta col col-md-6">
+                <div class="card">
                   <a href="{{ $.Param "content.sections.resources.white_paper.url" | relLangURL }}">
                     <div class="resource-image">
                       {{ readFile $.Params.content.sections.resources.white_paper.image | safeHTML }}

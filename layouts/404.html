@@ -2,18 +2,19 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="description" content="{{ $.Param "meta.description" }}">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+  <title>{{ .Site.Params.title }} &ndash; This page is missing</title>
+  {{ $style := resources.Get "scss/main.scss" | toCSS | postCSS | minify | fingerprint }}
+  <link href="{{ $style.RelPermalink }}" rel="stylesheet">
+  <link rel="canonical" href="{{ .Permalink }}">
   {{ if .IsTranslated }}
   {{ range .Translations }}
   <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
   {{ end }}
   {{ end }}
-  <title>{{ .Site.Params.title }} &ndash; This page is missing</title>
-  {{ $style := resources.Get "scss/main.scss" | toCSS | postCSS | minify | fingerprint }}
-  <link href="{{ $style.RelPermalink }}" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="description" content="{{ $.Param "meta.description" }}">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
 </head>
 
 <body class="lang-{{.Language}}">

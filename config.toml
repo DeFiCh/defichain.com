@@ -7,7 +7,6 @@ title = "DeFi Blockchain"
   uen = "201918368M"
   [params.github]
     label = "GitHub"
-    latest_version = "v1.0.0-beta2"
     url = "https://github.com/DeFiCh/ain"
     releases_url = "https://github.com/DeFiCh/ain/releases"
   [params.social]

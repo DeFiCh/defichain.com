@@ -39,14 +39,16 @@
               <h1 data-scroll="once">{{ $.Param "content.sections.hero.headline" }}</h1>
               <p class="lg" data-scroll="once">{{ $.Param "content.sections.hero.subhead" }}</p>
               <a href="{{ $.Param "content.sections.hero.cta.url" }}" target="_blank" class="cta-to">
-                {{ $.Param "content.sections.hero.cta.label" }} {{ .Site.Params.github.latest_version }}
+                <div>
+                  {{ $.Param "content.sections.hero.cta.label" }}
+                  <span class="latest-release-version">latest version</span>
+                </div>
                 <span>&#10142;</span>
               </a>
             </div>
           </div>
         </div>
       </div>
-      <!-- animation hero here -->
     </section>
 
     <section class="problem-solution">

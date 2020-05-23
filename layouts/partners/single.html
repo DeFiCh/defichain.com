@@ -58,7 +58,9 @@
               {{ range $contributor := $.Param "content.sections.contributors.contributors_list" }}
               <div class="contributor col col-sm-6 col-md-4" data-scroll="once">
                 <div class="contributor-logo">
-                  {{ readFile $contributor.logo  | safeHTML }}
+                  <a href="{{ $contributor.url }}" target="_blank">
+                    {{ readFile $contributor.logo  | safeHTML }}
+                  </a>
                 </div>
                 <p>{{ $contributor.description }}</p>
               </div>

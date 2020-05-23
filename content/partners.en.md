@@ -28,7 +28,8 @@ content:
       contributors_list:
         - name: Cake
           logo: /static/svg/logos/logo-cake.svg
-          description: Simple and accessible finance for everyone.
+          description: The most transparent way to put your crypto to work.
+          url: https://cakedefi.com
       become_developer:
         headline: Become a _developer_
         description: Learn how you can build on DeFi Blockchain and use DFI token.

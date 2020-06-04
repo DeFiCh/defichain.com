@@ -195,7 +195,7 @@ The points described above are simply unacceptable for any type of financial tra
 
 Given our optimism on Bitcoin, the first question one might ask is why not develop DeFi using the Bitcoin Blockchain. While Bitcoin allows only basic smart contracts, some projects have begun developing workarounds. However, the transaction costs are restrictive on the Bitcoin chain, and we don’t believe it is going to be appropriate for the speed required for financial transactions. The Bitcoin chain is currently working as designed as a store of value. In our opinion, sticking to that single purpose is the best use of the chain and it is proven over the last decade. Adding financial services into the main chain adds unnecessary complexity and may cause side effects both for DeFi and for Bitcoin that are undesirable. Furthermore, it is not something we think that the Bitcoin governance is prepared to handle, and at some point, if the DeFi Blockchain requirements differed from those of the miners or developers on the Bitcoin chain, we would be subject to their decisions.
 
-### Turing-complete Solutions: Ethereum, EOS, Tron…
+### Turing-complete Solutions: Ethereum, EOS, Tron… {#turing-complete-solutions}
 
 To date, a number of DeFi applications have been built on Ethereum, Tron, EOS and many other turing-complete chains. Since Ethereum has the biggest adoption it allowed the surfacing of issues that come with using a turing-complete blockchain for DeFi applications the fastest. The DAO hack was one of the first and most dramatic exposures of the vulnerability of using such a complex language. Anyone issuing a token on the network knows how difficult it is. Just to create and issue an ERC20 token can easily cost over 100,000 USD, considering the cost of smart contract auditing that is necessary for innovative solutions. Simply the fact that there’s an entire industry built around “smart contract audits” should be enough to illustrate the problem. Despite the fact that ERC20 is the industry standard, it’s still so easy to hack that it’s impossible to issue even a simple token without getting a high-cost professional auditor as well as a programmer. 
 
@@ -209,7 +209,7 @@ The second problem stays mostly within Ethereum, which is the network’s usage 
 
 ---
 
-## Solution
+## The DeFi Blockchain Solution
 
 ### Staying in the Bitcoin Ecosystem
 
@@ -580,11 +580,15 @@ Every 60 blocks (approximately 30 minutes), a staker gets the right to write the
 
 The DeFi Blockchain node will include a built-in Bitcoin Simplified Payment Verification (SPV) client. SPV clients sync the Bitcoin blockchain by downloading only block headers which is sufficient information for nodes to add and validate the anchors.
 
+## DeFi Building Blocks
+
+To achieve our goals of enabling decentralized finance transactions on DeFi Blockchain, the following build blocks will be included as a base **native** components on DeFi Blockchain.
+
 ### Tokenization as a DeFi Standard Token (DST)
 
 The implementation of the features described in this whitepaper is performed with the use of standardized tokens. This chapter describes the mechanics of the tokens, interaction with other cryptoassets (tokens), and how they are used in the DeFi Blockchain.
 
-#### Cross-chain Mechanics
+### Cross-chain Mechanics
 
 DeFi Blockchain uses token standards to bring in external tokens to DeFi Blockchain in a trustless manner and allow trustless financial contracts and trading of all major cryptoasset tokens. The token standards are similar to ERC20 on Ethereum and Omni on Bitcoin blockchain. Through this standard, DeFi Blockchain allows tokenization of any assets.
 
@@ -624,51 +628,65 @@ DeFi Asset Tokens (DATs) are backed in a decentralized manner. DATs on the DeFi 
 
 New DATs are introduced to the system through voting by masternodes. This ensures that only assets that gather the most interest amongst DeFi Blockchain users get introduced.
 
-#### Mechanism of DATs
+### Economic Pegging of DATs
 
-1. PDC - Personalized Debt Contract
-2. PD - Asset Peg Depository
+The goal of DAT is to have it represent the native asset on the other blockchains, e.g. 1 DBTC should represent 1 BTC. 
+
+There are two approaches to this:
+
+1. Stablecoin approach
+    - For every single issued 1 DBTC, 1 BTC has to be locked up in an address or a smart contract. 
+    - While this would help to build a guarantee to DBTC, it introduces some other issues – country-party risks and affect the decentralized nature of DeFi. 
+
+2. Economic pegging
+    - By providing a strong guarantee that the DAT representing an asset has its price closely tracking the native asset, i.e. by holding DBTC, one can have a good confidence that the value of DBTC will track that of BTC.
+
+
+In order for us to achieve economic pegging, the following building blocks are built natively on DeFi Blockchain:
+
+1. Loan Contract
+2. APD - Asset Peg Depository
 3. DEX - Decentralized Exchange
 4. XCX - Cross-chain Exchange
 5. Pricing contract
 
 ![DAT overview](/img/white-paper/dat-overview.png)
 
-#### Personalized Debt Contract (PDC)
+### Loan Contract
 
-A Personalized Debt Contract (PDC) is designed to allow the owner of the PDC to take a collateralized loan against collateral locked in the PDC. Each PDC is unique to every owner (address) on the DeFi Blockchain. 
+Loan Contract is designed to allow the owner of the contract to take a collateralized loan against collateral locked in the contract. Each loan contract is unique to every owner (address) on the DeFi Blockchain. 
 
-Any user can open a PDC on DeFi Blockchain, free of charge. The user who opens a PDC owns a specific PDC. This ownership is transferable.
+Any user can open a loan contract on DeFi Blockchain, free of charge. The user who opens a loan contract owns the specific contract. This ownership, however, is transferable.
 
-Once a PDC is opened, DFI can be sent to fund the PDC collateral. Once a PDC is funded, it allows the owner to take out a loan by minting DATs up to a certain collateralization ratio. The minimum collateralization ratio can be adjusted by the DeFi Blockchain DAO and starts at 150%. In other words, $1,500 worth of collateral (in DFI), allows the PDC owner to take out a maximum of $1,000 in loans.
+Once a loan contract is opened, DFI can be sent to fund the loan collateral. Once a loan contract is funded, it allows the owner to take out a loan by minting DATs up to a certain collateralization ratio. The minimum collateralization ratio can be adjusted by the DeFi Blockchain DAO and starts at 150%. In other words, $1,500 worth of collateral (in DFI), allows the loan contract owner to take out a maximum of $1,000 in loans.
 
-Minted DATs are subject to a floating borrowing rate. A PDC has no expiry date. The owner is able to take out a loan for as long as they desire, as long as the collateralization ratio stays above 150% at all times.
+Minted DATs are subject to a floating borrowing rate. A loan contract has no expiry date. The owner is able to take out a loan for as long as they desire, as long as the collateralization ratio stays above 150% at all times.
 
 ```
 Collateralization ratio = Collateral / (Loan + accrued interest)
 ```
 
-If a PDC falls below the 150% collateralization ratio at any point in time, a PDC’s collateral is liquidated via Decentralized Exchange (DEX) to pay off accrued interest. There will be an additional 15% liquidation penalty to discourage PDCs from having to be liquidated. It is the responsibility of the PDC owners to monitor the collateralization ratio to prevent an unwanted liquidation. 
+If a loan contract falls below the 150% collateralization ratio at any point in time, its collateral is liquidated via Decentralized Exchange (DEX) to pay off accrued interest. There will be an additional 15% liquidation penalty to discourage loan contracts from having to be liquidated. It is the responsibility of the loan contract owners to monitor the collateralization ratio to prevent an unwanted liquidation. 
 
-If a PDC is close to minimum collateralization ratio, the owner must take one of the following steps to prevent liquidation and having to incur 15% liquidation penalty:
+If a loan contract is close to minimum collateralization ratio, the owner must take one of the following steps to prevent liquidation and having to incur 15% liquidation penalty:
 
-1. Deposit more DFI into the PDC, thereby increasing its collateral and collateralization ratio.
-2. Pay back some of the loan (or accrued interest), thereby decreasing the PDC’s loan amount and increasing its collateralization ratio.
+1. Deposit more DFI into the loan contract, thereby increasing its collateral and collateralization ratio.
+2. Pay back some of the loan (or accrued interest), thereby decreasing the loan contract’s loan amount and increasing its collateralization ratio.
 
-Closing a PDC entitles its owner to get back all 100% of its collateral. To close a PDC, the owner has to pay back the loan in full, plus the accrued interest in its entity in the DAT (e.g. DBTC). Upon liquidation of the loan, the minted DAT is burned, and the initial minted DAT and the interest will be converted into DFI via the DeFi DEX described in this paper.
+Closing a loan contract entitles its owner to get back all 100% of its collateral. To close a loan contract, the owner has to pay back the loan in full, plus the accrued interest in its entity in the DAT (e.g. DBTC). Upon liquidation of the loan, the minted DAT is burned, and the initial minted DAT and the interest will be converted into DFI via the DeFi DEX described in this paper.
 
 While this concept is not new to the DeFi system, what is novel is the possibility to collateralize any asset due to the DeFi Blockchain’s nature.
 
-1. Alice opens a PDC and funds it with 150k DFI.
-2. With DFI at $0.10 spot rate, Alice’s PDC now has $15,000 worth of collateral.
+1. Alice opens a loan contract and funds it with 150k DFI.
+2. With DFI at $0.10 spot rate, Alice’s loan contract now has $15,000 worth of collateral.
 3. At the minimum collateralization ratio of 150% she can take out a maximum of $10,000 worth of DBTC, which is pegged to BTC spot price via the later described APD.
-4. Since the DBTC loan via PDC accrues interest, and DBTC and the DFI price fluctuate, Alice decides to only take out $5,000 worth of DBTC, i.e. 0.5 DBTC, giving her PDC a collateralization ratio of: 15000/5000 = 300%, well above 150%.
-5. Over-collateralization allows for some room for price movements of DBTC. If the BTC price increases to $15,000, Alice’s loan of 0.5 DBTC would now be worth $7,500. Her PDC now has a collateralization ratio of: 15000/7500 = 200%, still above 150%, so liquidation would not be triggered even in the case of this type of price shift.
-6. The interest rate for each DAT loan differs. Assuming the DBTC loan rate is 5% annually, taking out a loan for a year, in order to close her PDC and to fully redeem her initial 150k DFI, Alice has to pay back 0.5 DBTC * 1.05 = 0.525 DBTC by the end of the year.
+4. Since the DBTC loan via loan contract accrues interest, and DBTC and the DFI price fluctuate, Alice decides to only take out $5,000 worth of DBTC, i.e. 0.5 DBTC, giving her loan contract a collateralization ratio of: 15000/5000 = 300%, well above 150%.
+5. Over-collateralization allows for some room for price movements of DBTC. If the BTC price increases to $15,000, Alice’s loan of 0.5 DBTC would now be worth $7,500. Her loan contract now has a collateralization ratio of: 15000/7500 = 200%, still above 150%, so liquidation would not be triggered even in the case of this type of price shift.
+6. The interest rate for each DAT loan differs. Assuming the DBTC loan rate is 5% annually, taking out a loan for a year, in order to close her loan contract and to fully redeem her initial 150k DFI, Alice has to pay back 0.5 DBTC * 1.05 = 0.525 DBTC by the end of the year.
 
-![PDC](/img/white-paper/alice-pdc.png)
+![loan contract](/img/white-paper/alice-pdc.png)
 
-#### Asset Peg Depository (APD)
+### Asset Peg Depository (APD)
 
 The Asset Peg Depository’s (APD) role is to maintain the price guarantee of a DAT to its actual asset, e.g. DBTC to BTC, DETH to ETH, etc.
 
@@ -700,13 +718,13 @@ Depending on the holdings, an APD will always list buy and sell orders on the DE
 2. If there are any non-DFI holdings, an APD would list a SELL of DBTC at the same price as its BUY.
 3. DEX will not match APD orders with its own, i.e. an APD’s BUY and SELL orders will not be fulfilled with each other, but only with a 3rd-party, e.g. a user.
 
-#### Decentralized Exchange (DEX)
+### Decentralized Exchange (DEX)
 
 The DeFi internal DEX provides decentralized trading for all DeFi tokens and DFI itself, which means that all tokens: DFI and DCT (DAT and DCT) can be listed on the DeFi Blockchain DEX. DEX will initially launch with DFI as the base trading pair, providing markets such as DBTC/DFI, DETH/DFI, DUSDT/DFI, etc. With increasing volume, other base trading pairs can be introduced, subject to a DAO approval, providing markets such as DETH/DBTC, DFI/DUSDT, etc.
 
 Asset Peg Depositories also participate on DEX automatically as described above, setting a base price for DATs.
 
-#### Cross-chain Exchange (XCX)
+### Cross-chain Exchange (XCX)
 
 A user holding DBTC might be interested in holding of actual BTC instead of a DeFi pegged BTC token (DBTC).
 
@@ -727,7 +745,7 @@ XCX orders contain several parameters that can be freely decided by the market m
 - Expiry: Time when the contract expires. Unlike a PDC, a XCX has a mandatory expiry date. If the Guarantee is not paid up, the XCX expires as soon as it matched on the DEX.
 - Native token address: Address to send BTC to for executing the contract.
 
-##### First Example:
+#### First Example:
 
 Alice has 1 DBTC and wants 1 BTC so she can trade on a centralized exchange.
 
@@ -757,7 +775,7 @@ Alice gets to keep the 1 BTC (minus 8000 DFI interest) and Bob now gets 1 DBTC (
 
 ![XCX](/img/white-paper/alice-bob-xcx.png)
 
-##### Second Example:
+#### Second Example:
 
 In a second scenario Charlie has 1 DBTC and wants 1 BTC. He has no intention of paying it back and getting his DBTC back. He also does not want to include an additional guarantee, so he adds a higher Premium and an immediate Expiry. Charlie would list the following XCX order:
 
@@ -770,7 +788,7 @@ Dave, notices the order has no guarantee and an immediate expiry and knows that 
 
 A Guarantee is therefore not a must, but a potential incentive for the lender to know whether he/she has to exchange the received funds afterwards or whether he/she will get the original native coins back.
 
-#### Pricing Contract/Oracle
+### Pricing Oracles
 
 A Pricing Contract is a smart contract on DeFi Blockchain allowing multiple trusted and appointed parties to submit periodic price feeds of DATs and DFI. 
 

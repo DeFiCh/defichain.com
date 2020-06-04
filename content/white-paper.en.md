@@ -645,10 +645,9 @@ There are two approaches to this:
 In order for us to achieve economic pegging, the following building blocks are built natively on DeFi Blockchain:
 
 1. Loan Contract
-2. APD - Asset Peg Depository
-3. DEX - Decentralized Exchange
-4. XCX - Cross-chain Exchange
-5. Pricing contract
+2. DEX - Decentralized Exchange
+3. XCX - Cross-chain Exchange
+4. Pricing contract
 
 ![DAT overview](/img/white-paper/dat-overview.png)
 
@@ -679,44 +678,12 @@ While this concept is not new to the DeFi system, what is novel is the possibili
 
 1. Alice opens a loan contract and funds it with 150k DFI.
 2. With DFI at $0.10 spot rate, Alice’s loan contract now has $15,000 worth of collateral.
-3. At the minimum collateralization ratio of 150% she can take out a maximum of $10,000 worth of DBTC, which is pegged to BTC spot price via the later described APD.
+3. At the minimum collateralization ratio of 150% she can take out a maximum of $10,000 worth of DBTC, which is pegged to BTC spot price.
 4. Since the DBTC loan via loan contract accrues interest, and DBTC and the DFI price fluctuate, Alice decides to only take out $5,000 worth of DBTC, i.e. 0.5 DBTC, giving her loan contract a collateralization ratio of: 15000/5000 = 300%, well above 150%.
 5. Over-collateralization allows for some room for price movements of DBTC. If the BTC price increases to $15,000, Alice’s loan of 0.5 DBTC would now be worth $7,500. Her loan contract now has a collateralization ratio of: 15000/7500 = 200%, still above 150%, so liquidation would not be triggered even in the case of this type of price shift.
 6. The interest rate for each DAT loan differs. Assuming the DBTC loan rate is 5% annually, taking out a loan for a year, in order to close her loan contract and to fully redeem her initial 150k DFI, Alice has to pay back 0.5 DBTC * 1.05 = 0.525 DBTC by the end of the year.
 
 ![loan contract](/img/white-paper/alice-pdc.png)
-
-### Asset Peg Depository (APD)
-
-The Asset Peg Depository’s (APD) role is to maintain the price guarantee of a DAT to its actual asset, e.g. DBTC to BTC, DETH to ETH, etc.
-
-APDs are not personalized and act as depositories that collectively hold all collaterals from PDCs.
-
-An APD sets the base buy and sell price of a DAT on the DEX at spot rate aggregated from pricing oracle contracts, as long as the APD has enough collateral/DAT in its depository to cover it.
-
-- DFI: $0.10
-- BTC: $10,000
-- ETH: $200
-
-An APD starts out with no DATs but DFIs as collateral for PDCs. As long as there are enough DFIs in APD, and that DATs holding at APD are less than total issued, the APD would be listing the following buy orders on the DEX:
-
-- Buy DBTC at 100,000 DFI (i.e. $10k worth)
-- Buy DETH at 2,000 DFI (i.e. $200 worth)
-
-If DBTC and/or DETH are sold to an APD, the APD would list the following, as long as there are DATs in its holding:
-
-- Sell DBTC for 100,000 DFI (i.e. $10k worth)
-- Sell DETH for 2,000 DFI (i.e. $200 worth)
-
-Regardless of buys or sells, APD trades are always feeless on DEX to APD, as the non-APD party has to pay the fees.
-
-![APD](/img/white-paper/apd.png)
-
-Depending on the holdings, an APD will always list buy and sell orders on the DEX autonomously using the following logic:
-
-1. As long as any non-DFI holding is less than the maximum amount held, the APD would list a BUY order on the DEX for that asset at spot price.
-2. If there are any non-DFI holdings, an APD would list a SELL of DBTC at the same price as its BUY.
-3. DEX will not match APD orders with its own, i.e. an APD’s BUY and SELL orders will not be fulfilled with each other, but only with a 3rd-party, e.g. a user.
 
 ### Decentralized Exchange (DEX)
 

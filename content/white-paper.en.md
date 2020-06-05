@@ -365,7 +365,7 @@ The examples above seem logical and straightforward, but today are extremely tim
 
 ---
 
-## The Blockchain
+## DeFi Blockchain Design
 
 ### Design Parameters
 
@@ -645,9 +645,9 @@ There are two approaches to this:
 In order for us to achieve economic pegging, the following building blocks are built natively on DeFi Blockchain:
 
 1. Loan Contract
-2. DEX - Decentralized Exchange
-3. XCX - Cross-chain Exchange
-4. Pricing contract
+2. Decentralized Exchange (DEX)
+3. Cross-chain Exchange (XCX)
+4. Pricing Oracles
 
 ![DAT overview](/img/white-paper/dat-overview.png)
 
@@ -689,23 +689,23 @@ While this concept is not new to the DeFi system, what is novel is the possibili
 
 The DeFi internal DEX provides decentralized trading for all DeFi tokens and DFI itself, which means that all tokens: DFI and DCT (DAT and DCT) can be listed on the DeFi Blockchain DEX. DEX will initially launch with DFI as the base trading pair, providing markets such as DBTC/DFI, DETH/DFI, DUSDT/DFI, etc. With increasing volume, other base trading pairs can be introduced, subject to a DAO approval, providing markets such as DETH/DBTC, DFI/DUSDT, etc.
 
-Asset Peg Depositories also participate on DEX automatically as described above, setting a base price for DATs.
+DEX on DeFi Blockchain operates without the need to pass custody to any intermediaries. Users are able to trade on their own in a trustless manner. One of the key differentiator about DeFi Blockchain as compared to many other decentralized financial solutions is that DeFi Blockchain is not only a consensus protocol facilitating DeFi, it is also comes with a very simple to use client user interface (UI) that allows users to interact directly on the blockchain without any intermediaries.
 
 ### Cross-chain Exchange (XCX)
 
 A user holding DBTC might be interested in holding of actual BTC instead of a DeFi pegged BTC token (DBTC).
 
-The DeFi Cross-chain Exchange (XCX) allows anyone to do exactly that. XCX allows listing of DATs with its native tokens, e.g. DBTC for BTC, DETH for ETH, DXRP for XRP.
+The DeFi Cross-chain Exchange (XCX) allows anyone to do exactly that. XCX allows listing of DATs with its native tokens, e.g. DBTC for BTC, DETH for ETH, DXRP for XRP. Actual transaction is carried out through the trustless swap of both tokens commonly known as atomic swap. Atomic swap guarantees that either both parties receive their exchanged coins, or neither transactions go through – providing a strong cryptographic guarantee that no one party is able to cheat the other.
 
 We use the following terms to describe the parties in the XCX:
 
-- Borrower: a person owning a DAT and wanting to get the actual asset, e.g, a person who has DBTC and wanting to obtain BTC through the XCX.
+- Borrower: a person owning a DAT and wanting to get a native coin, e.g, a person who has DBTC and wanting to obtain BTC through the XCX.
 - Lender: a person owning BTC and receiving a DAT through the XCX, either temporarily for the duration of the XCX, or permanently, if the XCX expires.
 
 XCX orders contain several parameters that can be freely decided by the market marker (first lister of an order). For selling of DBTC for BTC (i.e. someone who’s interested in receiving actual BTC), the parameters are:
 
-- Amount: Amount of BTC a borrower is looking for and how much DBTC is locked up.
-- Premium: Amount a lender stands to make from this trade (Premium is listed per unit amount, thus allowing for partial fulfillment of trade orders). Together with expiry, it can also be considered as lending interest to the buyer. The Premium is paid the moment an XCX is mathed, so before expiry.
+- Amount: Amount of coin/DAT a seller is looking for and how much DAT is locked up.
+- Premium: Amount of additional fee a coin seller stands to make from this trade (Premium is listed per unit amount, thus allowing for partial fulfillment of trade orders). Together with expiry, it can also be considered as lending interest to the buyer. The Premium is paid instantly once an XCX is matched, before expiry of the lending contract. Premium can be positive (+) or negative (-) depending on supply and demand.
 - Guarantee: An optional additional amount in DBTC and/or DFI that is locked in the XCX that will provide an extra incentive for a lender as it resolves in either of the following  two outcomes:
   a. Released back to the borrower should the BTC amount be paid up before expiry.
   b. Release to the lender should the contract expire without the borrower making a payment thereby constituting an extra incentive.
@@ -732,7 +732,7 @@ Bob has 1 BTC that he does not need for 1 month, hoping to generate some lending
 
 Now, Alice has 1 BTC and Bob has 8000 DFI. Alice also has 1 DBTC locked up on XCX order and Bob is the beneficiary of that BTC. Note that the beneficiary of an XCX is transferable, i.e. Bob is able to sell the XCX with Alice to a third party (this allows for decentralized debt selling and tokenization of receivables).
 
-Should Alice wish to redeem her 1 DBTC from the XCX before the time is up, Alice will send Bob the 1 BTC she borrowed earlier to Bob’s address specified in the XCX and send the acknowledgement on the DeFi Blockchain. Upon confirmation by stakers with a BTC bridge, the XCX contract now closes and Alice gets her 1 DBTC back, having paid 8,000 DFIs as interest.
+Should Alice wish to redeem her 1 DBTC from the XCX before the time is up, Alice will send Bob the 1 BTC she borrowed earlier to Bob’s address specified in the XCX and send the acknowledgment on the DeFi Blockchain. Upon confirmation by stakers with a BTC bridge, the XCX contract now closes and Alice gets her 1 DBTC back, having paid 8,000 DFIs as interest.
 
 Bob gets his 1 BTC back (keeping his 8000 DFI as lending interest).
 

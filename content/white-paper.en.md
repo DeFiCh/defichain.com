@@ -527,7 +527,7 @@ DeFi Blockchain utilizes a Proof-of-Stake (PoS) algorithm similar to Bitcoin Cor
 
 #### Masternodes for Staking
 
-To run a masternode (staking node), stakers must hold a fixed amount of DFI, initially set at 100,000. Masternodes on the DeFi Blockchain participate in active transaction validations and block creations.
+To run a masternode (staking node), stakers must hold a fixed amount of DFI, initially set at 1,000,000. Masternodes on the DeFi Blockchain participate in active transaction validations and block creations. The staking amount is intended to be lowered with the stability and maturity of blockchain to encourage further decentralization.
 
 Each staking node can perform only 1 hash per second, with the nonce from Bitcoin Core PoW algorithm replaced by a staker’s UTXO.
 A new block is mined if it satisfies the following condition:
@@ -564,7 +564,7 @@ During a block’s generation, a staker has the right to include the double-sign
 
 To be able to apply a penalty to stakers who double-sign, the DeFi Blockchain has to disallow immediate withdrawing of stake. Thus, when a deactivation transaction is confirmed, the DeFi Blockchain requires 3000 blocks to pass. At a block time of 30 seconds, 3000 blocks is equivalent to 25 hours.
 
-The double-sign penalty is 10 times the block rewards, deducted from the collateral. This also disqualifies the stakers from further staking immediately. The staker wanting to get back to staking has to re-put in fresh stake UTXO of 100,000 DFI. Running the official DeFi Blockchain node does not cause any unintentional or accidental double-sign. Double-sign happens only in cases of malicious intent.
+The double-sign penalty is 10 times the block rewards, deducted from the collateral. This also disqualifies the stakers from further staking immediately. The staker wanting to get back to staking has to re-put in fresh stake UTXO of 1,000,000 DFI. Running the official DeFi Blockchain node does not cause any unintentional or accidental double-sign. Double-sign happens only in cases of malicious intent.
 
 #### Time Drift Attack
 
@@ -709,7 +709,7 @@ XCX orders contain several parameters that can be freely decided by the market m
 - Guarantee: An optional additional amount in DBTC and/or DFI that is locked in the XCX that will provide an extra incentive for a lender as it resolves in either of the following  two outcomes:
   a. Released back to the borrower should the BTC amount be paid up before expiry.
   b. Release to the lender should the contract expire without the borrower making a payment thereby constituting an extra incentive.
-- Expiry: Time when the contract expires. Unlike a PDC, a XCX has a mandatory expiry date. If the Guarantee is not paid up, the XCX expires as soon as it matched on the DEX.
+- Expiry: Time when the contract expires, it can be set as a date in the past for immediate settlement, i.e. no lending, but straight-out swap.
 - Native token address: Address to send BTC to for executing the contract.
 
 #### First Example:
@@ -768,7 +768,7 @@ Following are examples of how the technical implementations of the DeFi Blockcha
 #### Leveraging a Long Position
 
 1. Alice has 100k DFI. She likes the prospects of DFI and wants to leverage her position.
-2. Alice opens a PDC on the DeFi Blockchain and takes out a loan in DUSDT.
+2. Alice opens a loan contract on the DeFi Blockchain and takes out a loan in DUSDT.
 3. Alice sells DUSDT for more DFI.
 
 Thus Alice can obtain a compounded long position on DFI without putting in extra money.
@@ -776,15 +776,15 @@ Thus Alice can obtain a compounded long position on DFI without putting in extra
 #### Shorting a Coin
 
 1. Bob wishes to short coin XXX. Bob has DFI.
-2. Bob opens PDC on DeFi Blockchain, takes out a loan in DXXX.
+2. Bob opens a loan contract on DeFi Blockchain, takes out a loan in DXXX.
 3. Bob can now either sell DXXX for DFI or DUSDT on DeFi DEX, or convert DXXX via XCX to sell XXX on a non-DeFi-internal exchange.
-4. Once Bob wishes to close his short position, Bob buys back XXX (or DXRP) from the market, hopefully at a lower rate, closes his PDC and thus completes his short of XXX.
+4. Once Bob wishes to close his short position, Bob buys back XXX (or DXRP) from the market, hopefully at a lower rate, closes his loan contract and thus completes his short of XXX.
 
 #### Getting a Loan (Borrowing)
 
 1. Charlie has DFI, but he needs short-term cashflow of another coin XXX. Charlies does not want to sell DFI for it nor does he want to spend fiat money to buy this coin.
-2. Charlie takes a loan via PDC on DeFi Blockchain for DXXX and converts it to XXX.
-3. Once he wishes to settle his loan, Charlie simply purchases XXX/DXXX and close his PDC.
+2. Charlie takes a loan via loan contract on DeFi Blockchain for DXXX and converts it to XXX.
+3. Once he wishes to settle his loan, Charlie simply purchases XXX/DXXX and close his loan contract.
 
 #### Lending a Coin for Cashflow
 
@@ -811,10 +811,10 @@ DFI is divisible up to 18 decimal places.
 - Fees payment for DeFi activities:
   - DEX fees
   - XCX fees
-  - PDC interests payment
+  - Lending loan interests payment
   - etc.
 - Collateral for borrowing of other cryptoassets on the DeFi Blockchain.
-- 100,000 DFI is required to run a staking node for the DeFI Blockchain.
+- 1,000,000 DFI is required to run a staking node for the DeFI Blockchain.
 - 1,000 DFI is required to create a DCT. This is refundable upon destruction of the DCT.
 - 500 DFI is required to submit a proposal for DFI the community budget. This is non-refundable.
 
@@ -840,7 +840,7 @@ Burned token redistribution for the next 259,200 blocks =
 
 ### Masternodes
 
-DeFi is a Proof of Stake blockchain. Initially, 100,000 DFI allow the owner to own a staking node. The returns for staking will decrease over time, as the volume and number of transactions compensates for the reduction in per-transaction staking rewards.
+DeFi is a Proof of Stake blockchain. Initially, 1,000,000 DFI allow the owner to own a staking node. The returns for staking will decrease over time, as the volume and number of transactions compensates for the reduction in per-transaction staking rewards.
 
 Nodes are entitled to:
 

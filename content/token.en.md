@@ -51,7 +51,7 @@ content:
           description: Fund collaterals for loans of other cryptoassets.
         - icon: /static/svg/icons/utility/staking.svg
           title: Staking Nodes
-          description: Fund a new staking node for 100,000 DFI.
+          description: Fund a new staking node for 1,000,000 DFI.
         - icon: /static/svg/icons/utility/dct.svg
           title: DeFi Custom Token
           description: Create new DCT for 1,000 DFI (refundable).

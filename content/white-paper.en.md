@@ -801,7 +801,7 @@ The DFI token will be the integral unit of account in the DeFi Blockchain ecosys
 
 The DeFi Foundation located in Singapore will be issuing the DeFi utility token, DFI, capped at 1,200,000,000 (1.2 billion) for throughout its lifetime. There will only ever be 1.2 billion DFIs created.
 
-DFI is divisible up to 18 decimal places.
+DFI is divisible up to 8 decimal places.
 
 ### DFI Token Utility
 

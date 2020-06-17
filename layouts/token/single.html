@@ -243,6 +243,15 @@
                   </div>
                   <h3>{{ $way.title }}</h3>
                   <p class="lg">{{ $way.description }}</p>
+                  {{ with $way.sources }}
+                  <div class="benefit-sources">
+                    {{ range $source := $way.sources }}
+                      <a href="$source.url" target="_blank" class="benefit-source" title="{{ $source.label }}">
+                        {{ readFile $source.logo | safeHTML }}
+                      </a>
+                    {{ end }}
+                  </div>
+                  {{ end }}
                 </div>
               </div>
               {{ end }}

@@ -72,12 +72,20 @@ content:
       headline: Acquiring DFI tokens
       subhead: DFI tokens will be issued to users and partners with an interest in utilizing and participating in the ecosystem.
       ways_to_acquire:
-        - icon: /static/svg/icons/way-to-acquire/investors.svg
-          title: Investors
-          description: Institutional investors, accredited investors and funds may invest in exchange for DFI.
+        - icon: /static/svg/icons/way-to-acquire/exchanges.svg
+          title: Exchanges
+          description: DFI is now available at these selected exchanges.
+          sources:
+            - label: LATOKEN
+              logo: /static/svg/sources/logo-latoken.svg
+              url: https://exchange.latoken.com/exchange/DFI-BTC
         - icon: /static/svg/icons/way-to-acquire/staking.svg
           title: Staking platforms
-          description: DFI will be available in future, on staking platforms such as Pool by Cake and selected exchanges.
+          description: DFI is now available at these selected staking platforms.
+          sources:
+            - label: Cake DeFi
+              logo: /static/svg/sources/logo-cake.svg
+              url: https://pool.cakedefi.com
         - icon: /static/svg/icons/way-to-acquire/airdrop.svg
           title: Airdrop
           description: The DeFi Foundation will airdrop DFI to hodlers, market makers and other users of the DeFi Blockchain.

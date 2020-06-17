@@ -962,6 +962,19 @@ section.benefits {
       transform-origin: left top;
     }
   }
+
+  .benefit-sources {
+    margin-top: 15px;
+    margin-left: -15px;
+    margin-right: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .benefit-source {
+      margin: 15px;
+    }
+  }
 }
 
 

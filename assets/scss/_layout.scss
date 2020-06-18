@@ -680,8 +680,10 @@ section.problem-solution {
 // Contributors
 // 
 
-section.contributors {
-  .contributor {
+section.contributors,
+section.downloads {
+  .contributor,
+  .download {
     margin-top: 30px;
     margin-bottom: 30px;
     color: $color-ui-black60;
@@ -692,11 +694,13 @@ section.contributors {
     }
   }
 
-  .contributor-logo {
+  .contributor-logo,
+  .download-image {
     margin-bottom: 30px;
   }
 
-  .contributor-cta {
+  .contributor-cta,
+  .download-cta {
     margin-top: 15px;
     margin-bottom: 15px;
   }

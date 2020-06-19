@@ -292,25 +292,6 @@ hr {
 
 
 //
-// Reveal effects
-//
-
-[data-scroll]:not(section) {
-  transition: opacity 1s ease;
-  transition-delay: 0.2s;
-  opacity: 0;
-
-  &.scroll-hidden {
-    opacity: 0;
-  }
-
-  &.scroll-visible {
-    opacity: 1;
-  }
-}
-
-
-//
 // Whitepaper typography
 // 
 

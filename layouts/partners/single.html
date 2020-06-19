@@ -30,14 +30,13 @@
 
   <main>
 
-    <section class="hero dark night"
-      data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
+    <section class="hero dark night">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-4 offset-ul-1">
             <div class="hero-start">
-              <h1 data-scroll="once">{{ $.Param "content.sections.hero.headline" }}</h1>
-              <p class="lg" data-scroll="once">{{ $.Param "content.sections.hero.subhead" }}</p>
+              <h1>{{ $.Param "content.sections.hero.headline" }}</h1>
+              <p class="lg">{{ $.Param "content.sections.hero.subhead" }}</p>
             </div>
           </div>
         </div>
@@ -49,14 +48,14 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-5 offset-ul-1">
-            <h2 data-scroll="once">{{ $.Param "content.sections.contributors.headline" }}</h2>
+            <h2>{{ $.Param "content.sections.contributors.headline" }}</h2>
           </div>
         </div>
         <div class="row">
           <div class="col col-ul-10 offset-ul-1">
             <div class="row">
               {{ range $contributor := $.Param "content.sections.contributors.contributors_list" }}
-              <div class="contributor col col-sm-6 col-md-4" data-scroll="once">
+              <div class="contributor col col-sm-6 col-md-4">
                 <div class="contributor-logo">
                   <a href="{{ $contributor.url }}" target="_blank">
                     {{ readFile $contributor.logo  | safeHTML }}
@@ -74,13 +73,13 @@
               <div class="contributor-cta col col-md-6">
                 <div class="card">
                   <a href="{{ $.Param "content.sections.contributors.become_developer.cta.url" | relLangURL }}">
-                    <h3 data-scroll="once">
+                    <h3>
                       {{ $.Param "content.sections.contributors.become_developer.headline" | markdownify }}</h3>
-                    <p class="description" data-scroll="once">
+                    <p class="description">
                       {{ $.Param "content.sections.contributors.become_developer.description" }}
                     </p>
                     <div class="spacer"></div>
-                    <div class="cta-to" data-scroll="once">
+                    <div class="cta-to">
                       {{ $.Param "content.sections.contributors.become_developer.cta.label" }}
                       <span>&#10142;</span>
                     </div>
@@ -91,14 +90,14 @@
               <div class="contributor-cta col col-md-6">
                 <div class="card">
                   <a href="#partnering">
-                    <h3 data-scroll="once">
+                    <h3>
                       {{ $.Param "content.sections.contributors.become_partner.headline" | markdownify }}
                     </h3>
-                    <p class="description" data-scroll="once">
+                    <p class="description">
                       {{ $.Param "content.sections.contributors.become_partner.description" }}
                     </p>
                     <div class="spacer"></div>
-                    <div class="cta-to" data-scroll="once">
+                    <div class="cta-to">
                       {{ $.Param "content.sections.contributors.become_partner.cta.label" }}
                       <span>&#10142;</span>
                     </div>
@@ -116,7 +115,7 @@
       <div class="container-flush">
         <div class="row">
           <div class="col col-lg-6">
-            <div class="video-player" data-scroll="once">
+            <div class="video-player">
               <div id="player-embed"></div>
               <script>
                 var tag = document.createElement('script');
@@ -158,7 +157,7 @@
             </div>
           </div>
           <div class="col col-lg-6">
-            <div class="video-info" data-scroll="once">
+            <div class="video-info">
               <h2 class="lg">{{ $.Param "content.sections.featured-video.headline" }}</h2>
               <div class="subject-name small">
                 {{ $.Param "content.sections.featured-video.subject_name" | markdownify }}</div>
@@ -177,8 +176,8 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-5 offset-ul-1">
-            <h2 data-scroll="once">{{ $.Param "content.sections.partnering.headline" }}</h2>
-            <p class="lg" data-scroll="once">{{ $.Param "content.sections.partnering.subhead" }}</p>
+            <h2>{{ $.Param "content.sections.partnering.headline" }}</h2>
+            <p class="lg">{{ $.Param "content.sections.partnering.subhead" }}</p>
           </div>
         </div>
       </div>
@@ -187,7 +186,7 @@
           <div class="col col-lg-6 col-ul-4 offset-ul-1">
             <!-- Begin Sendinblue Form -->
             <!-- START - We recommend to place the below code where you want the form in your website html  -->
-            <div class="sib-form" data-scroll="once">
+            <div class="sib-form">
               <div id="sib-form-container" class="sib-form-container">
                 <div id="error-message" class="sib-form-message-panel">
                   <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
@@ -267,7 +266,7 @@
             <!-- End Sendinblue Form -->
           </div>
           <div class="col col-lg-6 col-ul-4 offset-ul-1">
-            <p class="lg" data-scroll="once">{{ $.Param "content.sections.partnering.or" | markdownify }}</p>
+            <p class="lg">{{ $.Param "content.sections.partnering.or" | markdownify }}</p>
           </div>
         </div>
       </div>

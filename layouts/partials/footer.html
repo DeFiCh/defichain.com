@@ -2,13 +2,13 @@
   <div class="container-fluid">
     <div class="footer-logo row">
       <div class="col col-ul-7 offset-ul-1">
-        <a class="brand" href="/" data-scroll="once">
+        <a class="brand" href="/">
           {{ readFile "/static/svg/logos/logo-defi.svg" | safeHTML }}
         </a>
-        <h3 data-scroll="once">{{ $.Site.Params.description | markdownify }}</h3>
+        <h3>{{ $.Site.Params.description | markdownify }}</h3>
       </div>
     </div>
-    <div class="footer-menu row" data-scroll="once">
+    <div class="footer-menu row">
       <div class="col col-md-6 offset-ul-1">
         <ul class="menu">
           {{ $currentPage := . }}
@@ -34,7 +34,7 @@
         </ul>
       </div>
     </div>
-    <div class="row" data-scroll="once">
+    <div class="row">
       <div class="mbg1 col col-lg-3 offset-ul-1">
         <p>&copy; {{ $.Site.Params.company_name }}</p>
       </div>

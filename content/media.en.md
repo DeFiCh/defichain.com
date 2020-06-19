@@ -29,27 +29,43 @@ content:
         - title: DeFi Blockchain logo
           description: The official and default logo.
           image: /static/downloads/logo-defi-blockchain.svg
-          link:
-            label: Download
-            url: /downloads/logo-defi-blockchain.zip
+          links:
+            - label: SVG
+              url: /downloads/logo-defi-blockchain.svg
+            - label: PNG
+              url: /downloads/logo-defi-blockchain.png
+            - label: Zip
+              url: /downloads/logo-defi-blockchain.zip
         - title: The DeFi jellyfish
           description: Useful when space is constrained.
           image: /static/downloads/symbol-defi-blockchain.svg
-          link:
-            label: Download
-            url: /downloads/symbol-defi-blockchain.zip
+          links:
+            - label: SVG
+              url: /downloads/symbol-defi-blockchain.svg
+            - label: PNG
+              url: /downloads/symbol-defi-blockchain.png
+            - label: Zip
+              url: /downloads/symbol-defi-blockchain.zip
         - title: DFI 3D coin
           description: Available as SVG and PNG. 3D-printable file coming soon.
           image: /static/downloads/coin-defi-blockchain.svg
-          link:
-            label: Download
-            url: /downloads/coin-defi-blockchain.zip
+          links:
+            - label: SVG
+              url: /downloads/coin-defi-blockchain.svg
+            - label: PNG
+              url: /downloads/coin-defi-blockchain.png
+            - label: Zip
+              url: /downloads/coin-defi-blockchain.zip
         - title: Built-on-Bitcoin
           description: Available as SVG and PNG.
           image: /static/downloads/built-on-bitcoin.svg
-          link:
-            label: Download
-            url: /downloads/built-on-bitcoin.zip
+          links:
+            - label: SVG
+              url: /downloads/built-on-bitcoin.svg
+            - label: PNG
+              url: /downloads/built-on-bitcoin.png
+            - label: Zip
+              url: /downloads/built-on-bitcoin.zip
     #subscribe in /
     #closer_look in /
 ---

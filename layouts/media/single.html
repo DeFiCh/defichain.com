@@ -53,21 +53,22 @@
           <div class="col">
             <div class="row">
               {{ range $download := $.Param "content.sections.downloads.downloads_list" }}
-              <div class="download-cta col col-md-6">
+              <div class="download col col-md-6">
                 <div class="card">
-                  <a href="{{ $download.link.url | relLangURL }}">
+                  <div>
                     <h3 data-scroll="once">{{ $download.title }}</h3>
                     <div class="spacer"></div>
                     <div class="download-image">
                       {{ readFile $download.image | safeHTML }}
                     </div>
                     <div class="spacer"></div>
-                    <div class="cta-to" data-scroll="once">
-                      {{ $download.link.label }}
-                      <span>{{ readFile "/static/svg/icons/icon-cloud-download.svg" | safeHTML }}</span>
+                    <div class="download-links">
+                      {{ range $link := $download.links }}
+                        <a href="{{ $link.url }}" target="_blank">{{ $link.label }}</a>
+                      {{ end }}
                     </div>
                     <div class="bg"></div>
-                  </a>
+                  </div>
                 </div>
               </div>
               {{ end }}

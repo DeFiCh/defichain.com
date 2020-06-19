@@ -680,10 +680,8 @@ section.problem-solution {
 // Contributors
 // 
 
-section.contributors,
-section.downloads {
-  .contributor,
-  .download {
+section.contributors {
+  .contributor {
     margin-top: 30px;
     margin-bottom: 30px;
     color: $color-ui-black60;
@@ -694,13 +692,11 @@ section.downloads {
     }
   }
 
-  .contributor-logo,
-  .download-image {
+  .contributor-logo {
     margin-bottom: 30px;
   }
 
-  .contributor-cta,
-  .download-cta {
+  .contributor-cta {
     margin-top: 15px;
     margin-bottom: 15px;
   }
@@ -710,7 +706,7 @@ section.downloads {
     background-color: map-get($brand-colors, white);
     position: relative;
 
-    a {
+    > a, > div {
       @include media(">ul") {
         padding-top: 30px;
         padding-left: calc(100% / 6);
@@ -1367,6 +1363,57 @@ section.white-paper {
       height: 64px;
       border-radius: 50%;
       display: block;
+    }
+  }
+}
+
+
+//
+// Media assets
+//
+
+section.downloads {
+  .download {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .download-image {
+    margin-bottom: 30px;
+  }
+
+  .download-links {
+    display: flex;
+
+    a {
+      border-bottom: 1px solid $color-ui-black60;
+      margin-right: 15px;
+      color: $color-ui-black60;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .card {
+    height: 340px;
+    background-color: map-get($brand-colors, white);
+    position: relative;
+
+    > a, > div {
+      @include media(">ul") {
+        padding-top: 30px;
+        padding-left: calc(100% / 6);
+      }
+    }
+
+    h3 {
+      margin-bottom: 20px;
+
+      em {
+        font-weight: $font-weight-bold;
+      }
     }
   }
 }

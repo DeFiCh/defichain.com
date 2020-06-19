@@ -78,7 +78,7 @@ content:
           sources:
             - label: LATOKEN
               logo: /static/svg/sources/logo-latoken.svg
-              url: https://exchange.latoken.com/exchange/DFI-BTC
+              url: https://go.latoken.com/1gd
         - icon: /static/svg/icons/way-to-acquire/staking.svg
           title: Staking platforms
           description: DFI is now available at these selected staking platforms.

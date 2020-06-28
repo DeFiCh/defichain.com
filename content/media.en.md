@@ -22,20 +22,44 @@ content:
       name: hero
       headline: Media
       subhead: Media resources and assets.
-    press:
-      headline: Press mentions
-      subhead: DeFi Blockchain covered by the press and media.
-      mentions_list:
-        - title: Article title
-          source: XYZ News
-          logo: /img/press/logo.png
-          url: https://news.com/dfi
-        - title: Article title
-          source: XYZ News
-          logo: /img/press/logo.png
-          url: https://news.com/dfi
     mentions:
       headline: DeFi Blockchain covered in the press and media.
+      mentions_list:
+        - title: 200% pro Jahr durch Compound Liquidity Mining & Yield Farming
+          source: BTC-ECHO
+          date: 27 Jun, 2020
+          image: /svg/press/btc-echo.svg
+          url: https://www.btc-echo.de/200-prozent-mit-compound-defi/
+        - title: The DFI token starts the exchange on LAToken!
+          source: BitConio
+          date: 18 Jun, 2020
+          image: /img/press/bitconio.png
+          url: https://www.bitconio.net/en/cryptoeconomy/bitcoin/the-dfi-token-starts-the-exchange-on-latoken/
+        - title: Bitcoin bekommt auf der DeFi-Chain eine neue Bleibe
+          source: BTC-ECHO
+          date: 16 Jun, 2020
+          image: /svg/press/btc-echo.svg
+          url: https://www.btc-echo.de/bitcoin-bekommt-auf-der-defi-chain-eine-neue-bleibe/
+        - title: Is DeFi Now Dead? Inside the dForce / LendfMe 25 Million USD Hack!
+          source: Hacker Noon
+          date: 21 Apr, 2020
+          image: /img/press/hackernoon.png
+          url: https://hackernoon.com/is-defi-now-dead-inside-the-dforce-lendfme-25-million-usd-hack-sf5332j3
+        - title: "Bitcoin Lending: Vergleich der 5 besten Crypto Plattformen"
+          source: wallstreet:online
+          date: 9 Apr, 2020
+          image: /svg/press/wallstreetonline.svg
+          url: https://www.wallstreet-online.de/nachricht/12392059-bitcoin-lending-vergleich-5-besten-crypto-plattformen/all
+        - title: "After Raising $ 80 Million for TenX ICO, Founder Is Seeking $ 7.5M for New Project DeFiChain (Bitcoin Exchange Guide), Rated: B"
+          source: BitcoinExchangeGuide
+          date: 17 Nov, 2019
+          image: 
+          url: https://bitcoinexchangeguide.com/after-raising-80-million-for-tenx-ico-founder-is-seeking-7-5m-for-new-project-defichain/
+        - title: Dr. Julian Hosp im Interview – DeFi, CAKE, DeFi Blockchain
+          source: Kryptomagazin
+          date: 28 Oct, 2019
+          image: /svg/press/kryptomagazin.svg
+          url: https://www.krypto-magazin.de/dr-julian-hosp-im-interview-defi-cake-defi-blockchain/
     downloads:
       headline: "Downloads"
       description: Download official DeFi Blockchain brand assets and learn about usage guidelines.

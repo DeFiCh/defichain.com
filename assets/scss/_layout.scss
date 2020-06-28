@@ -1400,6 +1400,53 @@ section.white-paper {
 }
 
 
+// Media-mentions
+
+section.mentions {
+  .mention {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-decoration: none;
+  }
+
+  .mention-image {
+    min-height: 24px;
+
+    img {
+      max-height: 24px;
+      width: auto;
+    }
+  }
+
+  .card {
+    height: 340px;
+    background-color: map-get($brand-colors, white);
+    position: relative;
+
+    > a, > div {
+      padding-bottom: 30px;
+      justify-content: space-between;
+
+      @include media(">ul") {
+        padding-top: 30px;
+        // padding-left: calc(100% / 6);
+      }
+    }
+
+    h3 {
+      flex-grow: 1;
+      margin-bottom: 20px;
+      max-height: 160px;
+      overflow: hidden;
+
+      em {
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+}
+
+
 //
 // Media assets
 //

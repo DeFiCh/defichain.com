@@ -5,7 +5,7 @@ long_title: Be part of the DeFi Blockchain ecosystem
 cta_to: Join
 menu:
   main:
-    weight: 50
+    weight: 60
 meta:
   description: Be part of the DeFi Blockchain ecosystem
   og:

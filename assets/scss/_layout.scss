@@ -781,6 +781,38 @@ section.dfi-token {
   }
 }
 
+ul.insiders-benefits {
+  list-style: none;
+  padding: 0;
+  margin-top:  $grid-gutter;
+}
+
+li.insiders-benefit {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.insiders-benefit-icon {
+  width: 48px;
+  height: 48px;
+  margin-right: 24px;
+  color: $color-ui-action;
+
+  svg {
+    fill: currentColor;
+    transform: scale(2);
+    transform-origin: left top;
+  }
+}
+
+.insiders-benefit-label {
+  flex-grow: 1;
+  font-weight: $font-weight-bold;
+}
+
+
 
 // 
 // FAQ

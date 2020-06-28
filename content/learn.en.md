@@ -5,7 +5,7 @@ long_title: Understand the DeFi Blockchain
 cta_to: Learn
 menu:
   main:
-    weight: 70
+    weight: 80
 meta:
   description: Understand the DeFi Blockchain
   og:

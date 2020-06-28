@@ -127,13 +127,31 @@
                   </a>
                 </div>
               </div>
+              <div class="resource-cta col col-md-6">
+                <div class="card">
+                  <a href="{{ $.Param "content.sections.resources.reddit.url" | relLangURL }}">
+                    <div class="resource-image">
+                      {{ readFile $.Params.content.sections.resources.reddit.image | safeHTML }}
+                    </div>
+                    <h3>
+                      {{ $.Param "content.sections.resources.reddit.headline" | markdownify }}
+                    </h3>
+                    <div class="spacer"></div>
+                    <div class="cta-to">
+                      {{ $.Param "content.sections.resources.reddit.label" }}
+                      <span>&#10142;</span>
+                    </div>
+                    <div class="bg"></div>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    {{ partial "section-subscribe.html" . }}
+    {{ partial "section-developers-subscribe.html" . }}
 
     {{ partial "section-closer-look.html" . }}
 

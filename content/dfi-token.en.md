@@ -81,6 +81,9 @@ content:
             - label: LATOKEN
               logo: /static/svg/sources/logo-latoken.svg
               url: https://go.latoken.com/1gd
+            - label: Coinpaprika
+              logo: /static/svg/sources/logo-coinpaprika.svg
+              url: https://coinpaprika.com/coin/dfi-defi-chain/
         - icon: /static/svg/icons/way-to-acquire/staking.svg
           title: Staking platforms
           description: DFI is now available at these selected staking platforms.

@@ -245,7 +245,7 @@
                   {{ with $way.sources }}
                   <div class="benefit-sources">
                     {{ range $source := $way.sources }}
-                      <a href="$source.url" target="_blank" class="benefit-source" title="{{ $source.label }}">
+                      <a href="{{ $source.url }}" target="_blank" class="benefit-source" title="{{ $source.label }}">
                         {{ readFile $source.logo | safeHTML }}
                       </a>
                     {{ end }}

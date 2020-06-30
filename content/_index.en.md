@@ -16,6 +16,9 @@ content:
     hero:
       headline: Decentralized finance enabled on Bitcoin.
       subhead: A blockchain dedicated to fast, intelligent and transparent financial services, accessible by everyone.
+      cta:
+        label: Download
+        url: https://github.com/DeFiCh/ain/releases
     problem_solution:
       headline: The Post-Fintech Revolution
       subhead: From trust-based to trust-less, decentralized finance overcomes what Fintech could not solve in traditional finance.

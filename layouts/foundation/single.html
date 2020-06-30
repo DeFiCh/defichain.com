@@ -9,6 +9,7 @@
   <title>{{ $.Param "long_title" }} &ndash; {{ .Site.Params.title }}</title>
   {{ $style := resources.Get "scss/main.scss" | toCSS | postCSS | minify | fingerprint }}
   <link href="{{ $style.RelPermalink }}" rel="stylesheet">
+  <link rel="canonical" href="{{ .Permalink }}">
   {{ if .IsTranslated }}
   {{ range .Translations }}
   <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
@@ -29,14 +30,13 @@
 
   <main>
 
-    <section id="{{ $.Param "content.sections.hero.name" }}" class="hero dark night"
-      data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
+    <section id="{{ $.Param "content.sections.hero.name" }}" class="hero dark night">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-4 offset-ul-1">
             <div class="hero-start">
-              <h1 data-scroll="once">{{ $.Param "content.sections.hero.headline" }}</h1>
-              <p class="lg" data-scroll="once">{{ $.Param "content.sections.hero.subhead" }}</p>
+              <h1>{{ $.Param "content.sections.hero.headline" }}</h1>
+              <p class="lg">{{ $.Param "content.sections.hero.subhead" }}</p>
             </div>
           </div>
         </div>
@@ -48,8 +48,8 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-5 offset-ul-1">
-            <h2 data-scroll="once">{{ $.Param "content.sections.governance.headline" }}</h2>
-            <p class="lg" data-scroll="once">{{ $.Param "content.sections.governance.subhead" }}</p>
+            <h2>{{ $.Param "content.sections.governance.headline" }}</h2>
+            <p class="lg">{{ $.Param "content.sections.governance.subhead" }}</p>
           </div>
           <div class="col col-ul-5">
             <div class="governance-diagram-wrapper">
@@ -64,15 +64,15 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-5 offset-ul-1">
-            <h2 data-scroll="once">{{ $.Param "content.sections.members.headline" }}</h2>
-            <p class="lg" data-scroll="once">{{ $.Param "content.sections.members.subhead" }}</p>
+            <h2>{{ $.Param "content.sections.members.headline" }}</h2>
+            <p class="lg">{{ $.Param "content.sections.members.subhead" }}</p>
           </div>
         </div>
         <div class="row">
           <div class="col col-ul-10 offset-ul-1">
             <div class="members-list row">
               {{ range $member := $.Param "content.sections.members.members_list" }}
-              <div class="member col col-md-6" data-scroll="once">
+              <div class="member col col-md-6">
                 <div class="wrapper">
                   <div class="member-image">
                     <img src="/img/members/{{ $member.image }}.jpg" srcset="/img/members/{{ $member.image }}.jpg 1x, /img/members/{{ $member.image }}@2x.jpg 2x" alt="{{ $member.name }}">
@@ -114,6 +114,7 @@
   {{ template "_internal/google_analytics_async.html" . }}
   {{ partial "pixels/facebook.html" . }}
   {{ partial "pixels/linkedin.html" . }}
+  {{ partial "pixels/twitter.html" . }}
 </body>
 
 </html>

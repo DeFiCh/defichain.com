@@ -1,10 +1,14 @@
-baseURL = "https://defichain.io/"
+baseURL = "https://www.defichain.io/"
 googleAnalytics = ""
 languageCode = "en-us"
 title = "DeFi Blockchain"
 
 [params]
   uen = "201918368M"
+  [params.github]
+    label = "GitHub"
+    url = "https://github.com/DeFiCh/ain"
+    releases_url = "https://github.com/DeFiCh/ain/releases"
   [params.social]
     facebook = "https://facebook.com/cakedefi/"
     twitter = "https://twitter.com/cakedefi"

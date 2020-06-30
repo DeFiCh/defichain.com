@@ -13,6 +13,17 @@ $(function () {
   });
 
   // Closer look carousel
+  if ($(".latest-release-version").length) {
+    $.ajax({
+      type: 'GET',
+      url: 'https://api.github.com/repos/DeFiCh/ain/releases/latest',
+      success: function (data) {
+        $(".latest-release-version").html(data.tag_name);
+      }
+    });
+  }
+
+  // Closer look carousel
   if ($(".closer-look").length) {
     var closerLookCarousel = new Swiper('.carousel', {
       slidesPerView: 'auto',
@@ -41,7 +52,8 @@ $(function () {
     duration: 500,
     offset: {
       top: -144
-    }
+    },
+    hash: true,
   });
 
 });

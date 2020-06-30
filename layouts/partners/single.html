@@ -9,6 +9,7 @@
   <title>{{ $.Param "long_title" }} &ndash; {{ .Site.Params.title }}</title>
   {{ $style := resources.Get "scss/main.scss" | toCSS | postCSS | minify | fingerprint }}
   <link href="{{ $style.RelPermalink }}" rel="stylesheet">
+  <link rel="canonical" href="{{ .Permalink }}">
   {{ if .IsTranslated }}
   {{ range .Translations }}
   <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
@@ -29,14 +30,13 @@
 
   <main>
 
-    <section class="hero dark night"
-      data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
+    <section class="hero dark night">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-4 offset-ul-1">
             <div class="hero-start">
-              <h1 data-scroll="once">{{ $.Param "content.sections.hero.headline" }}</h1>
-              <p class="lg" data-scroll="once">{{ $.Param "content.sections.hero.subhead" }}</p>
+              <h1>{{ $.Param "content.sections.hero.headline" }}</h1>
+              <p class="lg">{{ $.Param "content.sections.hero.subhead" }}</p>
             </div>
           </div>
         </div>
@@ -48,16 +48,18 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-5 offset-ul-1">
-            <h2 data-scroll="once">{{ $.Param "content.sections.contributors.headline" }}</h2>
+            <h2>{{ $.Param "content.sections.contributors.headline" }}</h2>
           </div>
         </div>
         <div class="row">
           <div class="col col-ul-10 offset-ul-1">
             <div class="row">
               {{ range $contributor := $.Param "content.sections.contributors.contributors_list" }}
-              <div class="contributor col col-sm-6 col-md-4" data-scroll="once">
+              <div class="contributor col col-sm-6 col-md-4">
                 <div class="contributor-logo">
-                  {{ readFile $contributor.logo  | safeHTML }}
+                  <a href="{{ $contributor.url }}" target="_blank">
+                    {{ readFile $contributor.logo  | safeHTML }}
+                  </a>
                 </div>
                 <p>{{ $contributor.description }}</p>
               </div>
@@ -71,13 +73,13 @@
               <div class="contributor-cta col col-md-6">
                 <div class="card">
                   <a href="{{ $.Param "content.sections.contributors.become_developer.cta.url" | relLangURL }}">
-                    <h3 data-scroll="once">
+                    <h3>
                       {{ $.Param "content.sections.contributors.become_developer.headline" | markdownify }}</h3>
-                    <p class="description" data-scroll="once">
+                    <p class="description">
                       {{ $.Param "content.sections.contributors.become_developer.description" }}
                     </p>
                     <div class="spacer"></div>
-                    <div class="cta-to" data-scroll="once">
+                    <div class="cta-to">
                       {{ $.Param "content.sections.contributors.become_developer.cta.label" }}
                       <span>&#10142;</span>
                     </div>
@@ -88,14 +90,14 @@
               <div class="contributor-cta col col-md-6">
                 <div class="card">
                   <a href="#partnering">
-                    <h3 data-scroll="once">
+                    <h3>
                       {{ $.Param "content.sections.contributors.become_partner.headline" | markdownify }}
                     </h3>
-                    <p class="description" data-scroll="once">
+                    <p class="description">
                       {{ $.Param "content.sections.contributors.become_partner.description" }}
                     </p>
                     <div class="spacer"></div>
-                    <div class="cta-to" data-scroll="once">
+                    <div class="cta-to">
                       {{ $.Param "content.sections.contributors.become_partner.cta.label" }}
                       <span>&#10142;</span>
                     </div>
@@ -113,7 +115,7 @@
       <div class="container-flush">
         <div class="row">
           <div class="col col-lg-6">
-            <div class="video-player" data-scroll="once">
+            <div class="video-player">
               <div id="player-embed"></div>
               <script>
                 var tag = document.createElement('script');
@@ -155,7 +157,7 @@
             </div>
           </div>
           <div class="col col-lg-6">
-            <div class="video-info" data-scroll="once">
+            <div class="video-info">
               <h2 class="lg">{{ $.Param "content.sections.featured-video.headline" }}</h2>
               <div class="subject-name small">
                 {{ $.Param "content.sections.featured-video.subject_name" | markdownify }}</div>
@@ -170,107 +172,7 @@
       </div>
     </section>
 
-    <section id="partnering" class="partnering day">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col col-ul-5 offset-ul-1">
-            <h2 data-scroll="once">{{ $.Param "content.sections.partnering.headline" }}</h2>
-            <p class="lg" data-scroll="once">{{ $.Param "content.sections.partnering.subhead" }}</p>
-          </div>
-        </div>
-      </div>
-      <div class="contributor-form container-fluid">
-        <div class="row">
-          <div class="col col-lg-6 col-ul-4 offset-ul-1">
-            <!-- Begin Sendinblue Form -->
-            <!-- START - We recommend to place the below code where you want the form in your website html  -->
-            <div class="sib-form" data-scroll="once">
-              <div id="sib-form-container" class="sib-form-container">
-                <div id="error-message" class="sib-form-message-panel">
-                  <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-                    <span class="sib-form-message-panel__inner-text">
-                      {{ $.Param "content.sections.partnering.form.messages.error.general" }}
-                    </span>
-                  </div>
-                </div>
-                <div id="success-message" class="sib-form-message-panel">
-                  <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-                    <span class="sib-form-message-panel__inner-text">
-                      {{ $.Param "content.sections.partnering.form.messages.success" }}
-                    </span>
-                  </div>
-                </div>
-                <div id="sib-container" class="sib-container--medium sib-container--horizontal">
-                  <form id="sib-form" method="POST"
-                    action="https://sibforms.com/serve/MUIEAE0x1jniU33OoR58BaTGHQYAGydSFvUjiSDfpmnsSFHue9L3HsAyZlwziCzdNKS-2kW_xeRVHgaxY75pM8YaHTXOUVtvjDhrjTGrtxNAnOmRwmp5PxxEySBHUgXDTZ2OrRJkO9785qgDWaonjRFfLhmr3z-rPRxzpbaXLIwIA7TA9orOBahP1ebRoeGoCHhl51aWHVSnvCfI"
-                    data-type="subscription">
-                    <div class="form-field has-float-label form__entry entry_block">
-                      <input class="input" maxlength="200" type="text" id="NAME" name="NAME" autocomplete="off"
-                        placeholder="{{ $.Param "content.sections.partnering.form.name.placeholder" }}"
-                        data-required="true" required />
-                      <label for="NAME">{{ $.Param "content.sections.partnering.form.name.label" }}</label>
-                      <div class="entry__error entry__error--primary"></div>
-                    </div>
-                    <div class="form-field has-float-label form__entry entry_block">
-                      <input class="input" maxlength="200" type="email" id="EMAIL" name="EMAIL" autocomplete="off"
-                        placeholder="{{ $.Param "content.sections.partnering.form.email.placeholder" }}"
-                        data-required="true" required />
-                      <label for="EMAIL">{{ $.Param "content.sections.partnering.form.email.label" }}</label>
-                      <div class="entry__error entry__error--primary"></div>
-                    </div>
-                    <div class="form-field has-float-label form__entry entry_block">
-                      <input class="input" maxlength="200" type="text" id="COMPANY" name="COMPANY" autocomplete="off"
-                        placeholder="{{ $.Param "content.sections.partnering.form.company.placeholder" }}"
-                        data-required="true" required />
-                      <label for="COMPANY">{{ $.Param "content.sections.partnering.form.company.label" }}</label>
-                      <div class="entry__error entry__error--primary"></div>
-                    </div>
-                    <div class="form-field has-float-label form__entry entry_block">
-                      <textarea rows="3" class="input" maxlength="500" id="COMMENT" name="COMMENT" autocomplete="off"
-                        placeholder="{{ $.Param "content.sections.partnering.form.comment.placeholder" }}"
-                        data-required="true" required></textarea>
-                      <label for="COMMENT">{{ $.Param "content.sections.partnering.form.comment.label" }}</label>
-                      <div class="entry__error entry__error--primary"></div>
-                    </div>
-                    <input type="text" name="email_address_check" value="" class="input--hidden">
-                    <input type="hidden" name="locale" value="en">
-                    <button class="btn" form="sib-form" type="submit">
-                      <svg class="d-none"></svg>
-                      {{ $.Param "content.sections.partnering.form.button.label" }}
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <!-- END - We recommend to place the below code where you want the form in your website html  -->
-            <!-- START - We recommend to place the below code in footer or bottom of your website html  -->
-            <script>
-              window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
-              window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-              window.REQUIRED_ERROR_MESSAGE = "{{ $.Params.content.sections.roadmap.subscribe.messages.error.blank_field }}";
-              window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-              window.translation = {
-                common: {
-                  selectedList: '{quantity} list selected',
-                  selectedLists: '{quantity} lists selected'
-                }
-              };
-              var AUTOHIDE = Boolean(0);
-            </script>
-            <script src="https://sibforms.com/forms/end-form/build/main.js">
-            </script>
-            <script src="https://www.google.com/recaptcha/api.js?hl=en"></script>
-            <!-- END - We recommend to place the above code in footer or bottom of your website html  -->
-            <!-- End Sendinblue Form -->
-          </div>
-          <div class="col col-lg-6 col-ul-4 offset-ul-1">
-            <p class="lg" data-scroll="once">{{ $.Param "content.sections.partnering.or" | markdownify }}</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {{ partial "section-subscribe.html" . }}
+    {{ partial "section-partners-subscribe.html" . }}
 
     {{ partial "section-closer-look.html" . }}
 
@@ -288,6 +190,7 @@
   {{ template "_internal/google_analytics_async.html" . }}
   {{ partial "pixels/facebook.html" . }}
   {{ partial "pixels/linkedin.html" . }}
+  {{ partial "pixels/twitter.html" . }}
 </body>
 
 </html>

@@ -9,6 +9,7 @@
   <title>{{ .Site.Params.title }} &ndash; {{ $.Param "long_title" }}</title>
   {{ $style := resources.Get "scss/main.scss" | toCSS | postCSS | minify | fingerprint }}
   <link href="{{ $style.RelPermalink }}" rel="stylesheet">
+  <link rel="canonical" href="{{ .Permalink }}">
   {{ if .IsTranslated }}
   {{ range .Translations }}
   <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
@@ -29,27 +30,32 @@
 
   <main>
 
-    <section class="hero dark night" data-scroll data-scroll-showCallback="heroIn()"
-      data-scroll-hideCallback="heroOut()">
+    <section class="hero dark night">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-xl-7 offset-ul-1">
             <div class="hero-start">
-              <h1 data-scroll="once">{{ $.Param "content.sections.hero.headline" }}</h1>
-              <p class="lg" data-scroll="once">{{ $.Param "content.sections.hero.subhead" }}</p>
+              <h1>{{ $.Param "content.sections.hero.headline" }}</h1>
+              <p class="lg">{{ $.Param "content.sections.hero.subhead" }}</p>
+              <a href="{{ $.Param "content.sections.hero.cta.url" }}" target="_blank" class="cta-to">
+                <div>
+                  {{ $.Param "content.sections.hero.cta.label" }}
+                  <span class="latest-release-version">latest version</span>
+                </div>
+                <span>&#10142;</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
-      <!-- animation hero here -->
     </section>
 
     <section class="problem-solution">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-lg-5 col-ul-4 offset-ul-1 mbg1">
-            <h2 data-scroll="once">{{ $.Param "content.sections.problem_solution.headline" }}</h2>
-            <p class="lg" data-scroll="once">{{ $.Param "content.sections.problem_solution.subhead" }}</p>
+            <h2>{{ $.Param "content.sections.problem_solution.headline" }}</h2>
+            <p class="lg">{{ $.Param "content.sections.problem_solution.subhead" }}</p>
           </div>
           <div class="col col-lg-7 col-ul-5 offset-ul-1">
             <div class="defi-evolution-diagram">
@@ -96,14 +102,14 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-4 offset-ul-1">
-            <h2 data-scroll="once">{{ $.Param "content.sections.benefits.headline" }}</h2>
+            <h2>{{ $.Param "content.sections.benefits.headline" }}</h2>
           </div>
         </div>
         <div class="row">
           <div class="col col-ul-10 offset-ul-1">
             <div class="row">
               {{ range $benefit := $.Param "content.sections.benefits.benefits_list" }}
-              <div class="benefit col col-sm-6 col-md-4" data-scroll="once">
+              <div class="benefit col col-sm-6 col-md-4">
                 <div class="wrapper">
                   <div class="benefit-icon">
                     {{ readFile $benefit.icon  | safeHTML }}
@@ -123,14 +129,14 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-4 offset-ul-1">
-            <h2 data-scroll="once">{{ $.Param "content.sections.function_set.headline" }}</h2>
+            <h2>{{ $.Param "content.sections.function_set.headline" }}</h2>
           </div>
         </div>
         <div class="row">
           <div class="col col-ul-10 offset-ul-1">
             <div class="row">
               {{ range $function := $.Param "content.sections.function_set.functions_list" }}
-              <div class="benefit col col-sm-6 col-md-4" data-scroll="once">
+              <div class="benefit col col-sm-6 col-md-4">
                 <div class="wrapper">
                   <div class="benefit-icon">
                     {{ readFile $function.icon  | safeHTML }}
@@ -150,9 +156,9 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col col-lg-5 col-ul-4 offset-ul-1 mbg1">
-            <h2 data-scroll="once">{{ $.Param "content.sections.built_on_bitcoin.headline" }}</h2>
-            <p class="lg" data-scroll="once">{{ $.Param "content.sections.built_on_bitcoin.subhead" }}</p>
-            <a href="{{ $.Param "content.sections.built_on_bitcoin.link.url" }}" class="cta-to" data-scroll="once">
+            <h2>{{ $.Param "content.sections.built_on_bitcoin.headline" }}</h2>
+            <p class="lg">{{ $.Param "content.sections.built_on_bitcoin.subhead" }}</p>
+            <a href="{{ $.Param "content.sections.built_on_bitcoin.link.url" }}" class="cta-to">
               {{ $.Param "content.sections.built_on_bitcoin.link.label" }}
               <span>&#10142;</span>
             </a>
@@ -184,6 +190,7 @@
   {{ template "_internal/google_analytics_async.html" . }}
   {{ partial "pixels/facebook.html" . }}
   {{ partial "pixels/linkedin.html" . }}
+  {{ partial "pixels/twitter.html" . }}
 </body>
 
 </html>

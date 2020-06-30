@@ -9,6 +9,7 @@
   <title>{{ $.Param "long_title" }} &ndash; {{ .Site.Params.title }}</title>
   {{ $style := resources.Get "scss/main.scss" | toCSS | postCSS | minify | fingerprint }}
   <link href="{{ $style.RelPermalink }}" rel="stylesheet">
+  <link rel="canonical" href="{{ .Permalink }}">
   {{ if .IsTranslated }}
   {{ range .Translations }}
   <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
@@ -29,14 +30,13 @@
 
   <main>
 
-    <section id="{{ $.Param "content.sections.hero.name" }}" class="hero dark night"
-      data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
+    <section id="{{ $.Param "content.sections.hero.name" }}" class="hero dark night">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-4 offset-ul-1">
             <div class="hero-start">
-              <h1 data-scroll="once">{{ $.Param "content.sections.hero.headline" }}</h1>
-              <p class="lg" data-scroll="once">{{ $.Param "content.sections.hero.subhead" }}</p>
+              <h1>{{ $.Param "content.sections.hero.headline" }}</h1>
+              <p class="lg">{{ $.Param "content.sections.hero.subhead" }}</p>
             </div>
           </div>
         </div>
@@ -48,9 +48,9 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col col-lg-5 col-ul-4 offset-ul-1 mbg1">
-            <h2 data-scroll="once">{{ $.Param "content.sections.dfi_token.headline" }}</h2>
-            <p class="lg" data-scroll="once">{{ $.Param "content.sections.dfi_token.subhead" }}</p>
-            <p data-scroll="once"><em>{{ $.Param "content.sections.dfi_token.note" }}</em></p>
+            <h2>{{ $.Param "content.sections.dfi_token.headline" }}</h2>
+            <p class="lg">{{ $.Param "content.sections.dfi_token.subhead" }}</p>
+            <p><em>{{ $.Param "content.sections.dfi_token.note" }}</em></p>
           </div>
           <div class="image col col-lg-7 col-ul-5">
             {{ readFile $.Params.content.sections.dfi_token.image | safeHTML }}
@@ -59,7 +59,7 @@
       </div>
     </section>
 
-    <!-- <section class="stats{{ with $.Param "theme.stats" }} {{.}}{{ end }}" data-scroll data-scroll-showCallback="rollStats()">
+    <!-- <section class="stats{{ with $.Param "theme.stats" }} {{.}}{{ end }}">
       <div class="container-fluid">
         <div class="row">
           <div class="col">
@@ -92,11 +92,11 @@
             <div class="card{{ with $.Param "theme.stats" }} {{.}}{{ end }}">
               <a href="{{ $.Param "content.sections.stats.links.pool.url" | relLangURL }}">
                 {{ readFile $.Params.content.sections.stats.links.pool.image | safeHTML }}
-                <h3 data-scroll="once">
+                <h3>
                   {{ $.Param "content.sections.stats.links.pool.description" }}
                 </h3>
                 <div class="spacer"></div>
-                <div class="cta-to" data-scroll="once">
+                <div class="cta-to">
                   {{ $.Param "content.sections.stats.links.pool.name" }}
                   <span>
                     {{ readFile "/static/svg/icons/icon-external-link.svg" | safeHTML }}
@@ -110,11 +110,11 @@
             <div class="card{{ with $.Param "theme.stats" }} {{.}}{{ end }}">
               <a href="{{ $.Param "content.sections.stats.links.coinmarketcap.url" | relLangURL }}">
                 {{ readFile $.Params.content.sections.stats.links.coinmarketcap.image | safeHTML }}
-                <h3 data-scroll="once">
+                <h3>
                   {{ $.Param "content.sections.stats.links.coinmarketcap.description" }}
                 </h3>
                 <div class="spacer"></div>
-                <div class="cta-to" data-scroll="once">
+                <div class="cta-to">
                   {{ $.Param "content.sections.stats.links.coinmarketcap.name" }}
                   <span>
                     {{ readFile "/static/svg/icons/icon-external-link.svg" | safeHTML }}
@@ -132,14 +132,14 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-4 offset-ul-1">
-            <h2 data-scroll="once">{{ $.Param "content.sections.utility.headline" }}</h2>
+            <h2>{{ $.Param "content.sections.utility.headline" }}</h2>
           </div>
         </div>
         <div class="row">
           <div class="col col-ul-10 offset-ul-1">
             <div class="row">
               {{ range $utility := $.Param "content.sections.utility.utility_list" }}
-              <div class="utility benefit col col-sm-6 col-md-4" data-scroll="once">
+              <div class="utility benefit col col-sm-6 col-md-4">
                 <div class="wrapper">
                   <div class="benefit-icon">
                     {{ readFile $utility.icon  | safeHTML }}
@@ -159,8 +159,8 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col col-lg-5 offset-ul-1">
-            <h2 data-scroll="once">{{ $.Param "content.sections.distribution.headline" }}</h2>
-            <p class="lg" data-scroll="once">{{ $.Param "content.sections.distribution.subhead" }}</p>
+            <h2>{{ $.Param "content.sections.distribution.headline" }}</h2>
+            <p class="lg">{{ $.Param "content.sections.distribution.subhead" }}</p>
           </div>
         </div>
         <div class="row">
@@ -227,21 +227,30 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-4 offset-ul-1">
-            <h2 data-scroll="once">{{ $.Param "content.sections.acquiring.headline" }}</h2>
-            <p class="lg" data-scroll="once">{{ $.Param "content.sections.acquiring.subhead" }}</p>
+            <h2>{{ $.Param "content.sections.acquiring.headline" }}</h2>
+            <p class="lg">{{ $.Param "content.sections.acquiring.subhead" }}</p>
           </div>
         </div>
         <div class="row">
           <div class="col col-ul-10 offset-ul-1">
             <div class="row">
               {{ range $way := $.Param "content.sections.acquiring.ways_to_acquire" }}
-              <div class="way-to-acquire benefit col col-sm-6" data-scroll="once">
+              <div class="way-to-acquire benefit col col-sm-6">
                 <div class="wrapper">
                   <div class="benefit-icon">
                     {{ readFile $way.icon  | safeHTML }}
                   </div>
                   <h3>{{ $way.title }}</h3>
                   <p class="lg">{{ $way.description }}</p>
+                  {{ with $way.sources }}
+                  <div class="benefit-sources">
+                    {{ range $source := $way.sources }}
+                      <a href="{{ $source.url }}" target="_blank" class="benefit-source" title="{{ $source.label }}">
+                        {{ readFile $source.logo | safeHTML }}
+                      </a>
+                    {{ end }}
+                  </div>
+                  {{ end }}
                 </div>
               </div>
               {{ end }}
@@ -250,13 +259,13 @@
         </div>
         <div class="row mtg1">
           <div class="col col-ul-4 offset-ul-1">
-            <p class="lg" data-scroll="once">{{ $.Param "content.sections.acquiring.cta" | markdownify }}</p>
+            <p class="lg">{{ $.Param "content.sections.acquiring.cta" | markdownify }}</p>
           </div>
         </div>
       </div>
     </section>
 
-    {{ partial "section-subscribe.html" . }}
+    {{ partial "section-insiders-subscribe.html" . }}
 
     {{ partial "section-closer-look.html" . }}
 
@@ -274,6 +283,7 @@
   {{ template "_internal/google_analytics_async.html" . }}
   {{ partial "pixels/facebook.html" . }}
   {{ partial "pixels/linkedin.html" . }}
+  {{ partial "pixels/twitter.html" . }}
 </body>
 
 </html>

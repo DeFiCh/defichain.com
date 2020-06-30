@@ -91,7 +91,8 @@ body > header {
         color: $color-ui-black;
       }
 
-      .white-paper-list-link {
+      .white-paper-list-link,
+      .github-list-link {
         display: none;
       }
     }
@@ -149,13 +150,19 @@ body > header {
   }
 
   .white-paper-link,
-  .lang-switcher {
+  .lang-switcher,
+  .github-link {
     display: none;
     margin-right: 10px;
 
     @include media(">xl") {
       display: block;
     }
+  }
+
+  .github-link {
+    margin-right: $grid-gutter;
+    color: $color-ui-white60 !important;
   }
 
   .lang-switcher {
@@ -248,18 +255,25 @@ body > header {
     }
   }
 
-  header nav .menu .white-paper-list-link {
-    display: block;
-    margin-top: 30px;
-    width: 100%;
-    
-    &:before {
-      content: "";
-      position: absolute;
-      top: -15px;
+  header nav .menu {
+    .github-list-link {
+      display: block;
+      margin-top: 30px;
       width: 100%;
-      height: 1px;
-      background-color: $color-ui-black10;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: -15px;
+        width: 100%;
+        height: 1px;
+        background-color: $color-ui-black10;
+      }
+    }
+
+    .white-paper-list-link {
+      display: block;
+      width: 100%;
     }
   }
 
@@ -647,6 +661,15 @@ section.hero {
       // max-width: 450px;
     }
   }
+
+  .cta-to {
+    margin-top: $section-padding-bottom;
+    color: $color-ui-white;
+  }
+
+  .latest-release-version {
+    margin-left: 0;
+  }
 }
 
 
@@ -811,7 +834,7 @@ section.contributors {
     background-color: map-get($brand-colors, white);
     position: relative;
 
-    a {
+    > a, > div {
       @include media(">ul") {
         padding-top: 30px;
         padding-left: calc(100% / 6);
@@ -887,6 +910,38 @@ section.dfi-token {
     align-items: center;
   }
 }
+
+ul.insiders-benefits {
+  list-style: none;
+  padding: 0;
+  margin-top:  $grid-gutter;
+}
+
+li.insiders-benefit {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.insiders-benefit-icon {
+  width: 48px;
+  height: 48px;
+  margin-right: 24px;
+  color: $color-ui-action;
+
+  svg {
+    fill: currentColor;
+    transform: scale(2);
+    transform-origin: left top;
+  }
+}
+
+.insiders-benefit-label {
+  flex-grow: 1;
+  font-weight: $font-weight-bold;
+}
+
 
 
 // 
@@ -964,6 +1019,19 @@ section.benefits {
       fill: currentColor;
       transform: scale(2);
       transform-origin: left top;
+    }
+  }
+
+  .benefit-sources {
+    margin-top: 15px;
+    margin-left: -15px;
+    margin-right: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .benefit-source {
+      margin: 15px;
     }
   }
 }
@@ -1415,6 +1483,104 @@ section.white-paper {
       height: 64px;
       border-radius: 50%;
       display: block;
+    }
+  }
+}
+
+
+// Media-mentions
+
+section.mentions {
+  .mention {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-decoration: none;
+  }
+
+  .mention-image {
+    min-height: 24px;
+
+    img {
+      max-height: 24px;
+      width: auto;
+    }
+  }
+
+  .card {
+    height: 340px;
+    background-color: map-get($brand-colors, white);
+    position: relative;
+
+    > a, > div {
+      padding-bottom: 30px;
+      justify-content: space-between;
+
+      @include media(">ul") {
+        padding-top: 30px;
+        // padding-left: calc(100% / 6);
+      }
+    }
+
+    h3 {
+      flex-grow: 1;
+      margin-bottom: 20px;
+      max-height: 160px;
+      overflow: hidden;
+
+      em {
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+}
+
+
+//
+// Media assets
+//
+
+section.downloads {
+  .download {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .download-image {
+    margin-bottom: 30px;
+  }
+
+  .download-links {
+    display: flex;
+
+    a {
+      border-bottom: 1px solid $color-ui-black60;
+      margin-right: 15px;
+      color: $color-ui-black60;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .card {
+    height: 340px;
+    background-color: map-get($brand-colors, white);
+    position: relative;
+
+    > a, > div {
+      @include media(">ul") {
+        padding-top: 30px;
+        padding-left: calc(100% / 6);
+      }
+    }
+
+    h3 {
+      margin-bottom: 20px;
+
+      em {
+        font-weight: $font-weight-bold;
+      }
     }
   }
 }

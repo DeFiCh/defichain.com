@@ -3,14 +3,14 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col col-lg-6 col-ul-4 offset-ul-1">
-        <div class="section-icon" data-scroll="once">
+        <div class="section-icon">
           {{ readFile "/static/svg/icons/icon-email.svg" | safeHTML }}
         </div>
-        <h2 data-scroll="once">{{ $Home.Param "content.sections.subscribe.headline" }}</h2>
+        <h2>{{ $Home.Param "content.sections.subscribe.headline" }}</h2>
 
         <!-- Begin Sendinblue Form -->
         <!-- START - We recommend to place the below code where you want the form in your website html  -->
-        <div class="sib-form" data-scroll="once">
+        <div class="sib-form">
           <div id="sib-form-container" class="sib-form-container">
             <div id="error-message" class="sib-form-message-panel">
               <div class="sib-form-message-panel__text sib-form-message-panel__text--center">

@@ -14,6 +14,11 @@
             <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
           </li>
           {{ end }}
+          <li class="github-list-link">
+            <a href="{{ .Site.Params.github.url }}" target="_blank">
+              {{ .Site.Params.github.label }}
+            </a>
+          </li>
           {{ range .Site.Menus.white_paper }}
           <li class="white-paper-list-link {{ if $currentPage.IsMenuCurrent "white_paper" . }}active{{ end }}">
             <a href="{{ .URL | relLangURL }}">
@@ -23,6 +28,9 @@
           {{ end }}
         </ul>
         <div class="spacer"></div>
+        <a href="{{ .Site.Params.github.url }}" class="github-link" target="_blank">
+          {{ .Site.Params.github.label }}
+        </a>
         {{ range .Site.Menus.white_paper }}
         <a href="{{ .URL | relLangURL }}" class="btn btn-pill white-paper-link">
           {{ .Name }}

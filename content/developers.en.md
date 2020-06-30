@@ -5,7 +5,7 @@ long_title: Build on DeFi Blockchain
 cta_to: Study
 menu:
   main:
-    weight: 40
+    weight: 50
 meta:
   description: Build on DeFi Blockchain
   og:
@@ -31,15 +31,31 @@ content:
     resources:
       headline: Start building on DeFi Blockchain with developer resources and code
       github:
-        image: /static/svg/icons/icon-octocat.svg
+        image: /static/svg/icons/developers/icon-octocat.svg
         headline: Get developer resources and getting started guides.
         label: GitHub
         url: https://github.com/DeFiCh/ain
+      download:
+        image: /static/svg/icons/developers/icon-cli.svg
+        headline: Get the CLI.
+        subhead: Linux, Mac and Windows GUI client coming soon.
+        label: Download
+        url: https://github.com/DeFiCh/ain/releases
+      explorer:
+        image: /static/svg/icons/developers/icon-dfi.svg
+        headline: Explore the blockchain in Block Explorer.
+        label: Explore
+        url: http://explorer.defichain.io/
       white_paper:
         image: /static/svg/icons/icon-whitepaper.svg
         headline: Read the DeFi Blockchain technical paper.
         label: Study
         url: /white-paper
+      reddit:
+        image: /static/svg/icons/developers/icon-reddit.svg
+        headline: Participate in our Reddit developer community.
+        label: Discuss
+        url: https://www.reddit.com/r/defiblockchain/
     #subscribe in /
     #closer_look in /
     become_contributor:
@@ -74,34 +90,22 @@ content:
           error: 
             general: Oops! That didn't go through.
             blank_field: This field cannot be left blank.
-
-    # apply:
-    #   name: apply
-    #   fast_track_name: Apply
-    #   theme: light
-    #   headline: "Apply early to get hands on DeFi Blockchain among the first:"
-    #   form_fields:
-    #     name:
-    #       label: Name
-    #       placeholder: Full Name
-    #     email:
-    #       label: Email
-    #       placeholder: name@example.com
-    #     company:
-    #       label: Company
-    #       placeholder: Your company name
-    #     use_case:
-    #       label: Your primary use-case for DeFi Blockchain:
-    #       options:
-    #         - value: general-dapps
-    #           label: General DApps
-    #         - value: decentralized-financial-apps
-    #           label: Decentralized finance applications
-    #         - value: banking-dapps
-    #           label: Banking DApps
-    #         - value: other
-    #           label: Other
-    #     other_use_case:
-    #       label: Use case
-    #       placeholder: If _Other_, please explain your use-case
+    subscribe:
+      name: subscribe
+      headline: Subscribe for updates on developer resources and releases.
+      form:
+        name:
+          label: Name
+          placeholder: Full Name
+        email:
+          label: Email
+          placeholder: name@example.com
+        company:
+          label: Company (optional)
+          placeholder: Your company name
+        comment:
+          label: How will you contribute?
+          placeholder: What do you intend to, or are building on top of BeFi Blockchain? What resources and support can DeFi Blockchain provide you with?
+        button:
+          label: Subscribe
 ---

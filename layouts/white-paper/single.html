@@ -9,6 +9,7 @@
   <title>{{ $.Param "long_title" }} &ndash; {{ .Site.Params.title }}</title>
   {{ $style := resources.Get "scss/main.scss" | toCSS | postCSS | minify | fingerprint }}
   <link href="{{ $style.RelPermalink }}" rel="stylesheet">
+  <link rel="canonical" href="{{ .Permalink }}">
   {{ if .IsTranslated }}
   {{ range .Translations }}
   <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
@@ -29,12 +30,12 @@
 
   <main>
 
-    <section class="hero dark night" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
+    <section class="hero dark night">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-lg-6 col-xl-5 offset-xl-1">
-            <h1 data-scroll="once">{{ $.Param "content.sections.hero.headline" }}</h1>
-            <p class="lg" data-scroll="once">{{ $.Param "content.sections.hero.subhead" }}</p>
+            <h1>{{ $.Param "content.sections.hero.headline" }}</h1>
+            <p class="lg">{{ $.Param "content.sections.hero.subhead" }}</p>
           </div>
         </div>
       </div>
@@ -73,6 +74,7 @@
   {{ template "_internal/google_analytics_async.html" . }}
   {{ partial "pixels/facebook.html" . }}
   {{ partial "pixels/linkedin.html" . }}
+  {{ partial "pixels/twitter.html" . }}
 </body>
 
 </html>

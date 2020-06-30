@@ -3,9 +3,9 @@ title: Foundation
 type: foundation
 long_title: Understand how the DeFi Foundation operates and how to get involved
 cta_to: Explore
-menu:
-  main:
-    weight: 30
+# menu:
+#   main:
+#     weight: 30
 meta:
   description: Understand how the DeFi Foundation operates and how to get involved
   og:

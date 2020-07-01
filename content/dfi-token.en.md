@@ -84,6 +84,9 @@ content:
             - label: Coinpaprika
               logo: /static/svg/sources/logo-coinpaprika.svg
               url: https://coinpaprika.com/coin/dfi-defi-chain/
+            - label: CoinGecko
+              logo: /static/svg/sources/logo-coingecko.svg
+              url: https://www.coingecko.com/en/coins/defichain
         - icon: /static/svg/icons/way-to-acquire/staking.svg
           title: Staking platforms
           description: DFI is now available at these selected staking platforms.

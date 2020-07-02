@@ -87,6 +87,9 @@ content:
             - label: CoinGecko
               logo: /static/svg/sources/logo-coingecko.svg
               url: https://www.coingecko.com/en/coins/defichain
+            - label: Indoex
+              logo: /static/svg/sources/logo-indoex.svg
+              url: https://international.indoex.io/trade/DFI_USDT
         - icon: /static/svg/icons/way-to-acquire/staking.svg
           title: Staking platforms
           description: DFI is now available at these selected staking platforms.

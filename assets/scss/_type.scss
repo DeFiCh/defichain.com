@@ -330,21 +330,23 @@ section.white-paper {
   }
 
   code {
+    color: map-get($brand-colors, day);
     font-size: $body-sm-font-size;
     font-family: $monospace-font-family;
-    background-color: map-get($brand-colors, paper);
+    background-color: map-get($brand-colors, smoke);
     border-radius: $base-border-radius;
     border: $base-border-style;
     padding: 2px 4px;
   }
 
   pre {
+    color: map-get($brand-colors, day);
     margin-bottom: $body-md-line-height;
     white-space: pre-wrap;
-    background-color: map-get($brand-colors, paper);
+    background-color: map-get($brand-colors, smoke);
     border-radius: $base-border-radius;
     border: $base-border-style;
-    padding: 4px 8px;
+    padding: 4px 12px;
 
     code {
       padding: 0;

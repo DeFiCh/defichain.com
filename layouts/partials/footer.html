@@ -12,7 +12,7 @@
       <div class="col col-md-6 offset-ul-1">
         <ul class="menu">
           {{ $currentPage := . }}
-          {{ range .Site.Menus.main }}
+          {{ range .Site.Menus.footer }}
           <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
             <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
           </li>

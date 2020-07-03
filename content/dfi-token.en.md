@@ -8,6 +8,8 @@ aliases:
 menu:
   main:
     weight: 40
+  footer:
+    weight: 40
 meta:
   description: Learn about and acquire the DFI token. Join the DeFiChain Insiders.
   og:

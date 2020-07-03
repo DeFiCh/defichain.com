@@ -6,6 +6,8 @@ cta_to: Read
 menu:
   main:
     weight: 70
+  footer:
+    weight: 70
 meta:
   description: DeFi Blockchain and DeFi Token in the news and media.
   og:

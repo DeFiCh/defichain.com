@@ -6,6 +6,8 @@ cta_to: Study
 menu:
   main:
     weight: 50
+  footer:
+    weight: 50
 meta:
   description: Build on DeFi Blockchain
   og:

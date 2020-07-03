@@ -1703,7 +1703,8 @@ section.closer-look {
     }
 
     li {
-      display: block;
+      display: inline-block;
+      width: 100%;
       font-size: $body-lg-font-size;
       line-height: $body-lg-line-height;
       margin-bottom: 24px;

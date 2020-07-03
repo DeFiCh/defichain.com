@@ -6,6 +6,8 @@ cta_to: Learn
 menu:
   main:
     weight: 80
+  footer:
+    weight: 80
 meta:
   description: Understand the DeFi Blockchain
   og:

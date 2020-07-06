@@ -17,7 +17,7 @@ content:
     hero:
       name: hero
       headline: Run a DeFiChain masternode
-      subhead: How to run a Defichain masternode on Linux/Mac OS
+      subhead: How to run a Defichain masternode on Linux/Mac OS.
 ---
 
 ## Introduction

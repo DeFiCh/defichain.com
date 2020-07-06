@@ -83,6 +83,15 @@ $(function () {
     });
   }
 
+  if ($(".featured-video").length) {
+
+    $('.video-link').each(function () {
+      $(this).click(function () {
+        player.cueVideoById($(this).data('video'));
+      });
+    });
+  }
+
   $('body').scrollspy({
     target: '#TableOfContents',
     offset: 154

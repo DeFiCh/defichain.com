@@ -42,6 +42,72 @@
       <!-- animation hero here -->
     </section>
 
+    <section class="defi-blockchain featured-video dark" id="{{ $.Param "content.sections.featured_video.name" }}">
+      <div class="container-flush">
+        <div class="row">
+          <div class="col col-lg-6">
+            <div class="video-player">
+              <div id="player-embed"></div>
+              <script>
+                var tag = document.createElement('script');
+                tag.src = "https://www.youtube.com/iframe_api";
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                var player;
+                function onYouTubeIframeAPIReady() {
+                  player = new YT.Player('player-embed', {
+                    height: '390',
+                    width: '640',
+                    videoId: '{{ (index $.Params.content.sections.featured_video.playlist 0).id }}',
+                    events: {
+                      'onReady': onPlayerReady,
+                      'onStateChange': onPlayerStateChange
+                    },
+                    playerVars: {
+                      controls: 1,
+                      iv_load_policy: 3,
+                      modestbranding: 1,
+                      showinfo: 0
+                    }
+                  });
+                }
+                function onPlayerReady(event) {
+                  // play and pause
+                }
+                var done = false;
+                function onPlayerStateChange(event) {
+                  if (event.data == YT.PlayerState.PLAYING && !done) {
+                    setTimeout(stopVideo, 6000);
+                    done = true;
+                  }
+                }
+                function stopVideo() {
+                  player.stopVideo();
+                }
+
+
+              </script>
+            </div>
+          </div>
+          <div class="col col-lg-6">
+            <div class="video-info">
+              <h2 class="lg">{{ $.Param "content.sections.featured_video.headline" }}</h2>
+              <div class="video-playlist">
+              {{ range $video := $.Params.content.sections.featured_video.playlist }}
+                <div class="video-link" data-video="{{ $video.id }}">
+                  <div class="video-thumbnail">
+                    <img src="https://img.youtube.com/vi/{{ $video.id }}/hqdefault.jpg" alt="{{ $video.title }}">
+                  </div>
+                  <div class="video-link-title">{{ $video.title }}</div>
+                </div>
+              {{ end }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="faq" id="{{ $.Param "content.sections.contributors.name" }}">
       <div class="container-fluid">
         <div class="row">

@@ -3,6 +3,8 @@ title: White paper
 type: white-paper
 long_title: DeFi Blockchain white paper
 cta_to: Read
+theme:
+  subscribe: white
 menu:
   white_paper:
     weight: 10

@@ -511,7 +511,7 @@ main {
 // 
 
 section.hero {
-  height: 432px;
+  min-height: 432px;
   display: flex;
   align-items: flex-end;
   text-align: center;
@@ -519,12 +519,12 @@ section.hero {
   padding-bottom: $section-padding-bottom * 1.25;
 
   @include media("<md", "landscape") {
-    height: 352px;
+    min-height: 352px;
   }
 
   @include media(">lg") {
     text-align: left;
-    height: 592px;
+    min-height: 592px;
     padding-bottom: $section-padding-bottom;
   }
 

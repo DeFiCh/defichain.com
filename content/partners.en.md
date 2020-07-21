@@ -41,7 +41,7 @@ content:
         description: Tell us how you would like to contribute to the ecosystem.
         cta:
           label: Contact us
-    featured-video:
+    featured_video:
       video: 2UehwDPc3Tk
       headline: DeFi Blockchain
       subject_name: _with_ Dr. Julian Hosp

@@ -8,6 +8,8 @@ aliases:
 menu:
   main:
     weight: 40
+  footer:
+    weight: 40
 meta:
   description: Learn about and acquire the DFI token. Join the DeFiChain Insiders.
   og:
@@ -84,6 +86,12 @@ content:
             - label: Coinpaprika
               logo: /static/svg/sources/logo-coinpaprika.svg
               url: https://coinpaprika.com/coin/dfi-defi-chain/
+            - label: CoinGecko
+              logo: /static/svg/sources/logo-coingecko.svg
+              url: https://www.coingecko.com/en/coins/defichain
+            - label: Indoex
+              logo: /static/svg/sources/logo-indoex.svg
+              url: https://international.indoex.io/trade/DFI_USDT
         - icon: /static/svg/icons/way-to-acquire/staking.svg
           title: Staking platforms
           description: DFI is now available at these selected staking platforms.

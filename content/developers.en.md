@@ -6,6 +6,8 @@ cta_to: Study
 menu:
   main:
     weight: 50
+  footer:
+    weight: 50
 meta:
   description: Build on DeFi Blockchain
   og:
@@ -22,7 +24,7 @@ content:
       name: hero
       headline: Developers
       subhead: Build on DeFi Blockchain.
-    featured-video:
+    featured_video:
       video: f7Dv4MymtO0
       headline: On Cake, crypto, engineering and security
       subject_name: with U-Zyn Chua

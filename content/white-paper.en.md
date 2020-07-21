@@ -3,6 +3,8 @@ title: White paper
 type: white-paper
 long_title: DeFi Blockchain white paper
 cta_to: Read
+theme:
+  subscribe: white
 menu:
   white_paper:
     weight: 10
@@ -181,7 +183,7 @@ Functionalities that are basic requirements for financial services, such as mult
 - As a result of the complexity of the code required for multisig, in 2017, more than 150,000 ETH was lost to a hack in the Parity multisig wallet, due to an error in the code[^2]. The referenced article notes ways in which this code bug could have been avoided, but it emphasizes the point that these complexities in coding cause many different attack vectors. An entire industry has sprouted up around smart contract auditing, because the situation is so vulnerable.
 - In the largest industry hack (or bug?!), The DAO was drained of 3.6 million ETH due to a coding error in the smart contract holding all of the funds of The DAO. 
 
-One of the many results is that that the high risks get priced in to the underlying contracts leading to excessive costs for users, as can be seen when comparing rates from DeFi and non-DeFi examples. (For example 8% with decentralized DAI to 1.75% with centralized USDC (dated at the beginning of October 2019): https://deficompare.com/) Both coins represent 1 USD but the decentralized version ist 6.25% more expensive due to a priced in risk from the Ethereum contract.
+One of the many results is that the high risks get priced in to the underlying contracts leading to excessive costs for users, as can be seen when comparing rates from DeFi and non-DeFi examples. (For example 8% with decentralized DAI to 1.75% with centralized USDC (dated at the beginning of October 2019): https://deficompare.com/) Both coins represent 1 USD but the decentralized version ist 6.25% more expensive due to a priced in risk from the Ethereum contract.
 
 The points described above are simply unacceptable for any type of financial transaction or investor. For that reason, it’s important to build dedicated services that will prevent such breaches, lower risks and thus cost. In the Blockchain world, having proper programming rules and reducing the attack vectors prevents this kind of attack.
 
@@ -344,7 +346,7 @@ Examples of assets people can now tokenize using the blockchain:
 - Shares in privately held companies.
 - Energy and income generating devices, such as wind turbines, solar farms, satellites.
 - Ownership in food means of production (new forms of cooperative farms where non-farmers could own food supply instead of commodities traded on exchanges)
-- Self-driving cars, vending machines, ATMs pinball machines, and other types of revenue-generating self-regulating devices.
+- Self-driving cars, vending machines, ATMs, pinball machines, and other types of revenue-generating self-regulating devices.
 - DAOs (Distributed Autonomous Organizations).
 - Small real estate investments (time shares, short-term rental apartments, etc.)
 - Large real estate investments (airports, amusement parks, apartment complexes, business parks)
@@ -381,7 +383,7 @@ Each of these design principles is described in detail below.
 
 #### 1. Robust and Secure
 
-Bitcoin Core is the most robust and longest running blockchain in the world. It has been operating with no disruptions since the genesis block in January 2009. Furthermore, from a security standpoint, Bitcoin core is has proven itself to be most secure blockchain with no security incidents, while securing the crypto asset with the highest valuation in the world, that is, Bitcoin (BTC). As of this writing, Bitcoin Core successfully secures $150 billion worth of crypto assets, or 68% of the crypto asset market capitalization.
+Bitcoin Core is the most robust and longest running blockchain in the world. It has been operating with no disruptions since the genesis block in January 2009. Furthermore, from a security standpoint, Bitcoin core has proven itself to be most secure blockchain with no security incidents, while securing the crypto asset with the highest valuation in the world, that is, Bitcoin (BTC). As of this writing, Bitcoin Core successfully secures $150 billion worth of crypto assets, or 68% of the crypto asset market capitalization.
 
 The proven security and robustness of the Bitcoin Core made it the blockchain of choice for DeFi Blockchain base for extension. DeFi Blockchain is built based on a fork of Bitcoin Core 0.18, specifically v0.18.1.
 
@@ -778,7 +780,7 @@ Thus Alice can obtain a compounded long position on DFI without putting in extra
 1. Bob wishes to short coin XXX. Bob has DFI.
 2. Bob opens a loan contract on DeFi Blockchain, takes out a loan in DXXX.
 3. Bob can now either sell DXXX for DFI or DUSDT on DeFi DEX, or convert DXXX via XCX to sell XXX on a non-DeFi-internal exchange.
-4. Once Bob wishes to close his short position, Bob buys back XXX (or DXRP) from the market, hopefully at a lower rate, closes his loan contract and thus completes his short of XXX.
+4. Once Bob wishes to close his short position, Bob buys back XXX (or DXXX) from the market, hopefully at a lower rate, closes his loan contract and thus completes his short of XXX.
 
 #### Getting a Loan (Borrowing)
 

@@ -48,6 +48,24 @@ $(function () {
     });
   }
 
+  if ($(".featured-video").length) {
+
+    $('.video-link').each(function () {
+      $(this).click(function () {
+        player.cueVideoById($(this).data('video'));
+      });
+    });
+  }
+
+  $('body').scrollspy({
+    target: '#TableOfContents',
+    offset: 154
+  });
+
+  $("#TableOfContents").stick_in_parent({
+    offset_top: 144
+  });
+
   $.localScroll({
     duration: 500,
     offset: {

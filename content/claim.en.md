@@ -102,6 +102,7 @@ content:
         response:
           message: "Great! You’re all set! Your transaction details are as follows:"
           dfi_value: DFI value
+          status: Status
           transaction_info:
             requested_ts: Start date
             initiated_ts: Transaction date

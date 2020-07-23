@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  var base_url = "https://defichain.com/";
 
   // Handle wizard next buttons
   function wizardNextStep() {
@@ -6,8 +7,6 @@ $(document).ready(function () {
     var $crf = $ccc.find('[required]');
     var $nch = $ccc.next();
     var $ncc = $nch.next();
-
-    console.log($nch);
 
     if (!$crf.length || $crf.val()) {
       $ncc.animate({
@@ -17,10 +16,10 @@ $(document).ready(function () {
       $nch.siblings('.collapsible-head').removeClass('active');
       $ncc.siblings('.collapsible-content').animate({
         height: 0
-      }, function() {
-          $('body').scrollTo($nch, 500, {
-            offset: -$('body > header').height()
-          });
+      }, function () {
+        $('body').scrollTo($nch, 500, {
+          offset: -$('body > header').height()
+        });
       });
     }
   }
@@ -35,30 +34,30 @@ $(document).ready(function () {
     wizardNextStep();
   });
 
-  $('#claim-step2 form').submit(function(e) {
+  $('#claim-step2 form').submit(function (e) {
     e.preventDefault();
     $.ajax({
-      data: {
+      data: JSON.stringify({
         btcAddress: $('#btc_add').val(),
         dfiAddress: $('#dfi_add').val(),
-        messageSignature: $('#message_signature').val()
-      },
-      url: "/data/message.json",
+      }),
+      url: base_url + "/claim/message",
       dataType: "json",
-      beforeSend: function() {
+      type: 'POST',
+      beforeSend: function () {
         $('#claim-step2 .claim-wizard-next + .spinner').addClass('show');
       },
-      success: function(response) {
+      success: function (response) {
         $('.claim-wizard-btc-message').html(response.message);
         $('#prev-incomplete-alert').hide();
         $('#step2-error-alert').hide();
-        setTimeout(function() {
-          $('#claim-step2 .claim-wizard-next + .spinner').removeClass('show');
-          wizardNextStep();
-        }, 1000);
+        $('#claim-step2 .claim-wizard-next + .spinner').removeClass('show');
+        wizardNextStep();
       },
-      error: function(response) {
-        $('#step2-error-alert .alert').html(response.error.message).show();
+      error: function (response) {
+        $('#claim-step2 .claim-wizard-next + .spinner').removeClass('show');
+        $('.alert').html(response.responseJSON.error.message);
+        $('#step2-error-alert').show();
       }
     });
   });
@@ -82,15 +81,20 @@ $(document).ready(function () {
 
   $('#claim-step4 form').submit(function (e) {
     e.preventDefault();
+    var data = {
+      btcAddress: $('#btc_add').val(),
+      dfiAddress: $('#dfi_add').val(),
+      messageSignature: $('#message_signature').val(),
+      email: $('#claim_email').val()
+    }
+    if (!data.email) {
+      delete data['email'];
+    }
     $.ajax({
-      data: {
-        btcAddress: $('#btc_add').val(),
-        dfiAddress: $('#dfi_add').val(),
-        messageSignature: $('#message_signature').val(),
-        email: $('#claim_email').val()
-      },
-      url: "/data/claim.json",
+      data: JSON.stringify(data),
+      url: base_url + "/claim",
       dataType: "json",
+      type: 'POST',
       beforeSend: function () {
         $('#claim-step4 .claim-wizard-next + .spinner').addClass('show');
       },
@@ -100,19 +104,16 @@ $(document).ready(function () {
           'height': 'auto'
         });
         var rTF = moment(parseInt(response.transactionInfo.requestedTs)).format("ddd, MMM D YYYY, h:mm a");
-        var iTF = moment(parseInt(response.transactionInfo.initiatedTs)).format("ddd, MMM D YYYY, h:mm a");
-        setTimeout(function () {
-          $('#claim-step4 .claim-wizard-next + .spinner').removeClass('show');
-          $('#dfi-value-value').html(response.dfiValue);
-          $('#requested-ts-value').html(rTF);
-          $('#initiated-ts-value').html(iTF);
-          $('#hash-value').html(response.transactionInfo.hash);
-          $('#step4-success-alert').show();
-          $('body').scrollTo('+=272', 500);
-        }, 1000);
+        $('#claim-step4 .claim-wizard-next + .spinner').removeClass('show');
+        $('#dfi-status-value').html(response.transactionInfo.status);
+        $('#requested-ts-value').html(rTF);
+        $('#step4-success-alert').show();
+        $('body').scrollTo('+=272', 500);
       },
       error: function (response) {
-        $('#step4-error-alert .alert').html(response.error.message).show();
+        $('#claim-step4 .claim-wizard-next + .spinner').removeClass('show');
+        $('.alert').html(response.responseJSON.error.message);
+        $('#step4-error-alert').show();
       }
     });
   });

@@ -233,7 +233,7 @@
             <div class="form-field has-float-label">
               <input type="email" id="claim_email" name="claim_email" autocomplete="off" autocorrect="off"
                 placeholder="{{ $.Params.content.sections.claim_wizard.step4.form.email.hint }}"
-                required="required" />
+              />
               <label for="claim_email">{{ $.Params.content.sections.claim_wizard.step4.form.email.label }}</label>
             </div>
             <div class="form-field">
@@ -254,20 +254,12 @@
                 {{ $.Params.content.sections.claim_wizard.step4.response.message }}
                 <table class="claim-response">
                   <tr>
-                    <th>{{ $.Params.content.sections.claim_wizard.step4.response.dfi_value }}</th>
-                    <td id="dfi-value-value"></td>
+                    <th>{{ $.Params.content.sections.claim_wizard.step4.response.status }}</th>
+                    <td id="dfi-status-value"></td>
                   </tr>
                   <tr>
                     <th>{{ $.Params.content.sections.claim_wizard.step4.response.transaction_info.requested_ts }}</th>
                     <td id="requested-ts-value"></td>
-                  </tr>
-                  <tr>
-                    <th>{{ $.Params.content.sections.claim_wizard.step4.response.transaction_info.initiated_ts }}</th>
-                    <td id="initiated-ts-value"></td>
-                  </tr>
-                  <tr>
-                    <th>{{ $.Params.content.sections.claim_wizard.step4.response.transaction_info.hash }}</th>
-                    <td id="hash-value"></td>
                   </tr>
                 </table>
               </div>

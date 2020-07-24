@@ -236,6 +236,8 @@
               />
               <label for="claim_email">{{ $.Params.content.sections.claim_wizard.step4.form.email.label }}</label>
             </div>
+            <div class="form-field has-float-label" id="google_recaptcha">
+            </div>
             <div class="form-field">
               <button type="submit" class="claim-wizard-next btn">
                 {{ $.Params.content.sections.claim_wizard.step4.next_button.label }}
@@ -275,7 +277,7 @@
   </main>
 
   {{ partial "footer.html" . }}
-
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>

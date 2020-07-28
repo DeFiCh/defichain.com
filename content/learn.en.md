@@ -39,6 +39,18 @@ content:
           title: Difference between Ethereum and DeFiChain
         - id: f3d_6OUewis
           title: Tech Details of the New DeFiChain
+    guides:
+      name: guides
+      headline: How-to guides
+      guides_list:
+        - image: /static/svg/icons/icon-whitepaper.svg
+          headline: How to run a masternode.
+          label: Read guide
+          url: /learn/run-a-masternode
+        - image: /static/svg/icons/icon-whitepaper.svg
+          headline: Installing and using DeFi app.
+          label: Read guide
+          url: /learn/defi-app-how-to
     faq:
       headline: FAQ
       faq_list:

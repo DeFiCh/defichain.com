@@ -4,6 +4,12 @@ DIR=$(dirname "$0")
 
 cd $DIR/..
 
+if [[ $(git symbolic-ref --short HEAD) != "master" ]]
+then
+    echo "Not on master branch!"
+    exit 1;
+fi
+
 if [[ $(git status -s) ]]
 then
     echo "The working directory is dirty. Please commit any pending changes."

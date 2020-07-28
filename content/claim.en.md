@@ -76,7 +76,7 @@ content:
           default: Please complete all previous steps before continuing.
         subhead1: "From your Bitcoin client, _Sign a Message_ using the following values:"
         table:
-          bitcoin_address: 
+          bitcoin_address:
             label: Bitcoin address
             value: Your bitcoin wallet private key
           message:
@@ -107,6 +107,19 @@ content:
             requested_ts: Start date
             initiated_ts: Transaction date
             hash: Transaction hash
+    claim_status:
+      headline: Check Claim Status
+      form:
+        body: Enter your BTC wallet address to check status of your claim process.
+        check_status_button: Check Status
+        btc_field:
+          label: BTC address
+          hint: BTC address
+          helper: Address of BTC wallet
+        response:
+          message: "Your Claim status is as follows:"
+          dfi_value: DFI value
+          status: Status
     #white paper in /
     #subscribe in /
     #closer_look in /

@@ -131,4 +131,29 @@ $(document).ready(function () {
     }
   });
 
+  $('#claim-status-form form').submit(function (e) {
+    e.preventDefault();
+    $.ajax({
+      data: JSON.stringify({
+        btcAddress: $('#btc_address').val(),
+      }),
+      url: base_url + "/claim/status",
+      dataType: "json",
+      type: 'POST',
+      beforeSend: function () {
+        $('#claim-status-form .claim-wizard-next + .spinner').addClass('show');
+      },
+      success: function (response) {
+        $('#claim-status-value').html(response.status);
+        $('#claim-status-error-alert').hide();
+        $('#claim-status-form .claim-wizard-next + .spinner').removeClass('show');
+        wizardNextStep();
+      },
+      error: function (response) {
+        $('#claim-status-form .claim-wizard-next + .spinner').removeClass('show');
+        $('.alert').html(response.responseJSON.error.message);
+        $('#claim-status-error-alert').show();
+      }
+    });
+  });
 })

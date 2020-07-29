@@ -28,9 +28,9 @@
           {{ range .Site.Menus.main }}
           {{ if $currentPage.IsMenuCurrent "main" . }}
           {{ else }}
-          <div class="card swiper-slide{{ with .Page.Params.theme }} {{.}}{{ end }}">
+          <div class="card swiper-slide paper">
             <a href="{{ .URL | relLangURL }}">
-              <h3 class="h2">{{ .Name }}</h3>
+              <h3>{{ .Name }}</h3>
               <blockquote>
                 {{ .Page.Params.long_title }}
               </blockquote>

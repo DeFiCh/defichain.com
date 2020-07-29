@@ -1,5 +1,5 @@
 # DeFiChain Website
-Source for defichain.io
+Source for defichain.com
 
 ## You need
 
@@ -21,4 +21,4 @@ See `_scripts/deploy-gh.sh` for details.
 
 ## Hosting
 
-Make sure custom domain is configured to `defichain.io`. `./_scripts/deploy-gh.sh` does it automatically. You can also comment it away and configure it within the repository settings.
+Make sure custom domain is configured to `defichain.com`. `./_scripts/deploy-gh.sh` does it automatically. You can also comment it away and configure it within the repository settings.

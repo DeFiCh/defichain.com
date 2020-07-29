@@ -64,7 +64,7 @@ content:
           placeholder: Tell us more
         button:
           label: Send
-      or: You can also email us for further information at [partners@defichain.io](mailto:partners@defichain.io).
+      or: You can also email us for further information at [partners@defichain.com](mailto:partners@defichain.com).
     #subscribe in /
     #closer_look in /
 ---

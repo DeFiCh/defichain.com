@@ -27,7 +27,7 @@ $color-ui-white20:              rgba(255,255,255,0.2);
 $color-ui-white10:              rgba(255,255,255,0.1);
 
 $color-ui-default:              $color-ui-black;
-$color-ui-action:               map-get($brand-colors, purple);
+$color-ui-action:               map-get($brand-colors, green);
 
 $color-ui-red:                  red;
 $color-ui-green:                map-get($brand-colors, green);
@@ -50,23 +50,23 @@ $font-weight-semibold:          600;
 $font-weight-bold:              700;
 $font-weight-extrabold:         800;
 
-$h1-font-size:                  8.0rem;
-$h1-line-height:                11.2rem;
+$h1-font-size:                  6.4rem;
+$h1-line-height:                8.0rem;
 $h1-letter-spacing:             0;
-$h1-font-weight:                $font-weight-regular;
+$h1-font-weight:                $font-weight-medium;
 $h1-margin-bottom:              6.0rem;
 
-$h2-font-size:                  4.0rem;
-$h2-line-height:                7.0rem;
+$h2-font-size:                  4.8rem;
+$h2-line-height:                6.4rem;
 $h2-letter-spacing:             0;
-$h2-font-weight:                $font-weight-regular;
+$h2-font-weight:                $font-weight-medium;
 $h2-margin-bottom:              4.0rem;
 
 $h3-font-size:                  2.4rem;
-$h3-line-height:                4.0rem;
+$h3-line-height:                3.2rem;
 $h3-letter-spacing:             0;
-$h3-font-weight:                $font-weight-bold;
-$h3-margin-bottom:              4.0rem;
+$h3-font-weight:                $font-weight-medium;
+$h3-margin-bottom:              3.2rem;
 
 // No h4 to h6
 

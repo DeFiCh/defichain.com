@@ -42,13 +42,13 @@ This document does not constitute nor imply a prospectus of any sort. No wording
 
 **This Document is not a final technical specification**
 
-This document does not constitute nor imply a final technical specification of the DeFi Blockchain. Information presented on this whitepaper, technical or otherwise, is meant to outline the general idea of DeFi Blockchain, its design and its use-cases and is subject to change with or without notice. For the latest up-to-date technical specification, check out the updates and documentations on the official website [https://defichain.io](https://defichain.io).
+This document does not constitute nor imply a final technical specification of the DeFi Blockchain. Information presented on this whitepaper, technical or otherwise, is meant to outline the general idea of DeFi Blockchain, its design and its use-cases and is subject to change with or without notice. For the latest up-to-date technical specification, check out the updates and documentations on the official website [https://defichain.com](https://defichain.com).
 
 ## Executive summary
 
 The cryptocurrency industry is based on a simple premise: people should be fully in control of their finances. While it seems like a simple and obvious statement, the current systems are far from providing financial services that are truly under the control of the people who use them. The mission of the DeFi Blockchain is to give people (and in the future, machines, and devices) seamless access to decentralized financial services.
 
-For that purpose, we are introducing the DeFi Blockchain, a dedicated blockchain specifically for decentralized finance (DeFi) [www.DeFiChain.io](https://defichain.io).
+For that purpose, we are introducing the DeFi Blockchain, a dedicated blockchain specifically for decentralized finance (DeFi) [www.DeFichain.com](https://defichain.com).
 
 By dedicating the functionality of a blockchain specifically to decentralized finance, the DeFi Blockchain provides high transaction throughput, reduced risk of errors, and intelligent feature development specifically for the fulfillment of Satoshi’s original intent: To create a reliable alternative form of financial services built on top of Bitcoin.
 
@@ -1067,7 +1067,7 @@ The proposed staking schedule for the first 10 years is according to the followi
 
 DFI tokens will be issued only to the users of the DeFi Blockchain or partners with an interest in utilizing and participating in the ecosystem. There will be NO public sale or public token offering. Following are the only ways to get DFI tokens:
 
-- Institutional investors, accredited investors and funds who are interested in the use of the DeFi Blockchain can contact the DeFi founders at (partners@defichain.io).
+- Institutional investors, accredited investors and funds who are interested in the use of the DeFi Blockchain can contact the DeFi founders at (partners@defichain.com).
 - Over time, DFI will be available on staking platforms (such as www.CakeDeFi.com) and on selected exchanges.
 - The DeFi foundation will issue airdrop tokens for users of the DeFi Blockchain. (Hodlers and other market makers).
 - The DeFi foundation gives grants to developers who are developing functionality for the DeFi Blockchain or dApps to run on the blockchain.
@@ -1163,7 +1163,7 @@ The DeFi Foundation will undertake a variety of efforts to choose the best proje
 
 Every project on the DeFi Blockchain will naturally bring it its own users and put effort towards marketing of the project, adding users and hodlers to the DeFi Blockchain.
 
-[partners@defichain.io](mailto:partners@defichain.io)
+[partners@defichain.com](mailto:partners@defichain.com)
 
 ---
 

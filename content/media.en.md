@@ -123,7 +123,7 @@ content:
           placeholder: Want to submit an article or request for press content and resources? Tell us more.
         button:
           label: Send
-      or: You can also email us for further information at [media@defichain.io](mailto:media@defichain.io).
+      or: You can also email us for further information at [media@defichain.com](mailto:media@defichain.com).
     #subscribe in /
     #closer_look in /
 ---

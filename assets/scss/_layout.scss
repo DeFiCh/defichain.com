@@ -108,7 +108,7 @@ body > header {
     nav {
       .menu {
         a {
-          color: $color-ui-white60;
+          color: $color-ui-white;
 
           &:hover {
             color: $color-ui-white;
@@ -131,6 +131,7 @@ body > header {
     height: 36px;
     margin-right: 40px;
     overflow: hidden;
+    color: map-get($brand-colors, green) !important;
 
     @include media(">md") {
       width: 97.5px;
@@ -162,7 +163,6 @@ body > header {
 
   .github-link {
     margin-right: $grid-gutter;
-    color: $color-ui-white60 !important;
   }
 
   .lang-switcher {
@@ -314,6 +314,10 @@ main {
 
     &.dark {
       color: $color-ui-white;
+
+      .cta-to {
+        color: $color-ui-white;
+      }
     }
 
     .scroll-detector {
@@ -364,6 +368,7 @@ main {
 .section-icon {
   height: 48px;
   margin-bottom: 60px;
+  color: map-get($brand-colors, green);
 
   svg {
     fill: currentColor;
@@ -416,11 +421,6 @@ main {
       top: -15px;
       left: -15px;
     }
-  }
-
-  h3 {
-    font-weight: $font-weight-regular;
-    color: $color-ui-default;
   }
 
   blockquote,
@@ -492,7 +492,7 @@ main {
   }
 
   .highlight {
-    color: map-get($brand-colors, purple);
+    color: map-get($brand-colors, green);
     font-weight: $font-weight-bold;
   }
 }
@@ -640,7 +640,6 @@ section.hero {
 
   .cta-to {
     margin-top: $section-padding-bottom;
-    color: $color-ui-white;
   }
 
   .latest-release-version {
@@ -782,7 +781,7 @@ section.problem-solution {
   }
 
   .defi .heading {
-    color: map-get($brand-colors, purple);
+    color: map-get($brand-colors, green);
   }
 
   .diagram-graph {
@@ -792,7 +791,7 @@ section.problem-solution {
   }
 
   .bureaucracy {
-    background-color: rgba(map-get($brand-colors, purple), 0.1);
+    background-color: map-get($brand-colors, paper);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -800,7 +799,7 @@ section.problem-solution {
   }
 
   .trust {
-    background-color: map-get($brand-colors, purple);
+    background-color: map-get($brand-colors, green);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -880,6 +879,7 @@ section.resources {
   .resource-image {
     margin-top: 20px;
     margin-bottom: 20px;
+    color: map-get($brand-colors, green);
   }
 
   .card {
@@ -911,6 +911,7 @@ section.dfi-token {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: map-get($brand-colors, green);
   }
 }
 
@@ -1115,7 +1116,7 @@ section.benefits {
 
   .benefit-icon {
     margin-bottom: 30px;
-    color: map-get($brand-colors, purple);
+    color: map-get($brand-colors, green);
 
     @include media(">md") {
       margin-bottom: 60px;
@@ -1156,6 +1157,7 @@ section.built-on-bitcoin {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: map-get($brand-colors, green);
   }
 }
 
@@ -1433,7 +1435,7 @@ section.distribution {
     .portion-initial-supply,
     .portion-defi-foundation,
     .portion-external-partners {
-      background-color: map-get($brand-colors, purple);
+      background-color: map-get($brand-colors, green);
       color: $color-ui-white;
     }
 
@@ -1795,7 +1797,7 @@ section.closer-look {
     height: 36px;
     margin-bottom: 60px;
     overflow: hidden;
-    color: map-get($brand-colors, purple);
+    color: map-get($brand-colors, green);
 
     @include media(">md") {
       width: 97.5px;

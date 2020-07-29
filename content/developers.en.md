@@ -47,7 +47,7 @@ content:
         image: /static/svg/icons/developers/icon-dfi.svg
         headline: Explore the blockchain in Block Explorer.
         label: Explore
-        url: http://explorer.defichain.io/
+        url: http://explorer.defichain.com/
       white_paper:
         image: /static/svg/icons/icon-whitepaper.svg
         headline: Read the DeFi Blockchain technical paper.

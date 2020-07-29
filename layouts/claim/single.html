@@ -29,7 +29,8 @@
 
   <main>
 
-    <section class="hero dark night" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
+    <section class="hero dark night" data-scroll data-scroll-showCallback="heroIn()"
+      data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
           <div id="{{ $.Param "content.sections.hero.name" }}" class="col col-lg-6 col-xl-5 offset-xl-1">
@@ -57,9 +58,10 @@
               {{ range $example := $.Param "content.sections.how_much.examples" }}
               <div class="example col col-sm-6 col-md-4" data-scroll="once">
                 <div class="example-icon">
-                    {{ readFile $example.icon  | safeHTML }}
-                  </div>
-                <div class="owned">{{ $.Param "content.sections.how_much.prefix" }} <strong class="text-purple">{{ $example.btc }}</strong></div>
+                  {{ readFile $example.icon  | safeHTML }}
+                </div>
+                <div class="owned">{{ $.Param "content.sections.how_much.prefix" }} <strong
+                    class="text-purple">{{ $example.btc }}</strong></div>
                 <div class="will-get">{{ $example.dfi }}</div>
               </div>
               {{ end }}
@@ -132,18 +134,14 @@
             <p class="lead">{{ $.Params.content.sections.claim_wizard.step2.body }}</p>
             <div class="form-field has-float-label mtg1">
               <input type="text" id="dfi_add" name="dfi_add" autocomplete="off" autocorrect="off"
-                placeholder="{{ $.Params.content.sections.claim_wizard.step2.form.dfi_field.hint }}"
-                required="required"
-                data-parsley-type="alphanum"
-                data-parsley-length="[26, 35]" />
+                placeholder="{{ $.Params.content.sections.claim_wizard.step2.form.dfi_field.hint }}" required="required"
+                data-parsley-type="alphanum" data-parsley-length="[26, 35]" />
               <label for="dfi_add">{{ $.Params.content.sections.claim_wizard.step2.form.dfi_field.label }}</label>
             </div>
             <div class="form-field has-float-label">
               <input type="text" id="btc_add" name="btc_add" autocomplete="off" autocorrect="off"
-                placeholder="{{ $.Params.content.sections.claim_wizard.step2.form.btc_field.hint }}"
-                required="required"
-                data-parsley-type="alphanum"
-                data-parsley-length="[26, 35]" />
+                placeholder="{{ $.Params.content.sections.claim_wizard.step2.form.btc_field.hint }}" required="required"
+                data-parsley-type="alphanum" data-parsley-length="[26, 35]" />
               <label for="btc_add">{{ $.Params.content.sections.claim_wizard.step2.form.btc_field.label }}</label>
             </div>
             <div class="form-field">
@@ -194,7 +192,8 @@
                 <th>{{ $.Params.content.sections.claim_wizard.step3.table.message.label }}</th>
                 <td>
                   <span class="claim-wizard-btc-message">Message</span>
-                  <button class="copy-btn btn btn-small btn-plain" data-clipboard-target=".claim-wizard-btc-message">Copy to clipboard</button>
+                  <button class="copy-btn btn btn-small btn-plain"
+                    data-clipboard-target=".claim-wizard-btc-message">Copy to clipboard</button>
                 </td>
               </tr>
             </table>
@@ -227,13 +226,13 @@
               <input type="text" id="message_signature" name="message_signature" autocomplete="off" autocorrect="off"
                 placeholder="{{ $.Params.content.sections.claim_wizard.step4.form.signature.hint }}"
                 required="required" />
-              <label for="message_signature">{{ $.Params.content.sections.claim_wizard.step4.form.signature.label }}</label>
+              <label
+                for="message_signature">{{ $.Params.content.sections.claim_wizard.step4.form.signature.label }}</label>
             </div>
             <p>{{ $.Params.content.sections.claim_wizard.step4.form.email.instructions }}</p>
             <div class="form-field has-float-label">
               <input type="email" id="claim_email" name="claim_email" autocomplete="off" autocorrect="off"
-                placeholder="{{ $.Params.content.sections.claim_wizard.step4.form.email.hint }}"
-              />
+                placeholder="{{ $.Params.content.sections.claim_wizard.step4.form.email.hint }}" />
               <label for="claim_email">{{ $.Params.content.sections.claim_wizard.step4.form.email.label }}</label>
             </div>
             <div class="form-field has-float-label" id="google_recaptcha">
@@ -276,51 +275,49 @@
 
       <div class="container-fluid">
         <div class="row">
-          <div class="col col-ul-4 offset-ul-1">
-            <h2 data-scroll="once">{{ $.Params.content.sections.claim_status.headline }}</h2>
+          <div class="col col-lg-6 col-ul-4 offset-ul-1">
+            <h2>{{ $.Params.content.sections.claim_status.headline }}</h2>
+            <div id="claim-status-form">
+              <form action="/" class="row" data-parsley-validate>
+                <div class="col  col-ul-4">
+                  <p class="lead">{{ $.Params.content.sections.claim_status.form.body }}</p>
+                  <div class="form-field has-float-label">
+                    <input type="text" id="btc_address" name="btc_address" autocomplete="off" autocorrect="off"
+                      placeholder="{{ $.Params.content.sections.claim_status.form.btc_field.hint }}" required="required"
+                      data-parsley-type="alphanum" data-parsley-length="[26, 35]" />
+                    <label for="btc_address">{{ $.Params.content.sections.claim_status.form.btc_field.label }}</label>
+                  </div>
+                  <div class="form-field">
+                    <button class="claim-wizard-next btn" type="submit">
+                      {{ $.Params.content.sections.claim_status.form.check_status_button }}
+                    </button>
+                    <div class="spinner">
+                      <div class="b1"></div>
+                      <div class="b2"></div>
+                      <div class="b3"></div>
+                    </div>
+                  </div>
+                  <div class="d-none" id="claim-status-error-alert">
+                    <div class="alert error"></div>
+                  </div>
+                  <div class="d-none" id="claim-status-success-alert">
+                    <div class="alert info">
+                      {{ $.Params.content.sections.claim_status.form.response.message }}
+                      <table class="claim-response">
+                        <tr>
+                          <th>{{ $.Params.content.sections.claim_status.form.response.status }}</th>
+                          <td id="claim-status-value"></td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="collapsible-content container-flushed" id="claim-status-form">
-        <form action="/" class="row" data-parsley-validate>
-          <div class="col col-lg-6 col-ul-4 offset-ul-1">
-            <p class="lead">{{ $.Params.content.sections.claim_status.form.body }}</p>
-            <div class="form-field has-float-label">
-              <input type="text" id="btc_address" name="btc_address" autocomplete="off" autocorrect="off"
-                placeholder="{{ $.Params.content.sections.claim_status.form.btc_field.hint }}"
-                required="required"
-                data-parsley-type="alphanum"
-                data-parsley-length="[26, 35]" />
-              <label for="btc_address">{{ $.Params.content.sections.claim_status.form.btc_field.label }}</label>
-            </div>
-            <div class="form-field">
-              <button class="claim-wizard-next btn" type="submit">
-                {{ $.Params.content.sections.claim_status.form.check_status_button }}
-              </button>
-              <div class="spinner">
-                <div class="b1"></div>
-                <div class="b2"></div>
-                <div class="b3"></div>
-              </div>
-            </div>
-            <div class="d-none" id="claim-status-error-alert">
-              <div class="alert error"></div>
-            </div>
-            <div  class="d-none" id="claim-status-success-alert">
-              <div class="alert info">
-                {{ $.Params.content.sections.claim_status.form.response.message }}
-                <table class="claim-response">
-                  <tr>
-                    <th>{{ $.Params.content.sections.claim_status.form.response.status }}</th>
-                    <td id="claim-status-value"></td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
     </section>
 
     {{ partial "section-subscribe.html" . }}

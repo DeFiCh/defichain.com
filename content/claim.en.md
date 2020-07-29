@@ -120,6 +120,8 @@ content:
           message: "Your Claim status is as follows:"
           dfi_value: DFI value
           status: Status
+          transaction_id: TransactionId
+          claim_dfi_amount: Claimed DFI Amount
     #white paper in /
     #subscribe in /
     #closer_look in /

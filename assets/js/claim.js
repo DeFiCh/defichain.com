@@ -141,16 +141,21 @@ $(document).ready(function () {
       dataType: "json",
       type: 'POST',
       beforeSend: function () {
-        $('#claim-status-form .claim-wizard-next + .spinner').addClass('show');
+        $('#claim-status-form .spinner').addClass('show');
       },
       success: function (response) {
-        $('#claim-status-value').html(response.status);
+        $('#claim-status-form .spinner').removeClass('show');
         $('#claim-status-error-alert').hide();
-        $('#claim-status-form .claim-wizard-next + .spinner').removeClass('show');
-        wizardNextStep();
+        $('#claim-status-value').html(response.status);
+        if(response.status === 'COMPLETED'){
+          $('#claim-status-txId').html(response.txId);
+          $('#claim-status-claimDfiAmount').html(response.claimDfiAmount);
+        }
+        $('#claim-status-success-alert').show()
       },
       error: function (response) {
-        $('#claim-status-form .claim-wizard-next + .spinner').removeClass('show');
+        $('#claim-status-form .spinner').removeClass('show');
+        $('#claim-status-success-alert').hide()
         $('.alert').html(response.responseJSON.error.message);
         $('#claim-status-error-alert').show();
       }

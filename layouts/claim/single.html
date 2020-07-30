@@ -39,6 +39,9 @@
             <a href="#claim-my-dfi" class="btn mtg1">
               {{ $.Params.content.sections.hero.cta.label }}
             </a>
+            <a href="#claim-status" class="btn mtg1 mlg1">
+              {{ $.Params.content.sections.hero.sub_cta.label }}
+            </a>
           </div>
         </div>
       </div>
@@ -271,53 +274,51 @@
 
     </section>
 
-    <section id="claim-status" class="claim-status white">
+    <section id="claim-status" class="claim-status paper">
 
       <div class="container-fluid">
         <div class="row">
-          <div class="col col-lg-6 col-ul-4 offset-ul-1">
+          <div class="col col-ul-6 offset-ul-1">
             <h2>{{ $.Params.content.sections.claim_status.headline }}</h2>
             <div id="claim-status-form">
-              <form action="/" class="row" data-parsley-validate>
-                <div class="col  col-ul-4">
-                  <p class="lead">{{ $.Params.content.sections.claim_status.form.body }}</p>
-                  <div class="form-field has-float-label">
-                    <input type="text" id="btc_address" name="btc_address" autocomplete="off" autocorrect="off"
-                      placeholder="{{ $.Params.content.sections.claim_status.form.btc_field.hint }}" required="required"
-                      data-parsley-type="alphanum" data-parsley-length="[26, 35]" />
-                    <label for="btc_address">{{ $.Params.content.sections.claim_status.form.btc_field.label }}</label>
+              <form action="/" data-parsley-validate>
+                <p class="lead">{{ $.Params.content.sections.claim_status.form.body }}</p>
+                <div class="form-field has-float-label">
+                  <input type="text" id="btc_address" name="btc_address" autocomplete="off" autocorrect="off"
+                    placeholder="{{ $.Params.content.sections.claim_status.form.btc_field.hint }}" required="required"
+                    data-parsley-type="alphanum" data-parsley-length="[26, 35]" />
+                  <label for="btc_address">{{ $.Params.content.sections.claim_status.form.btc_field.label }}</label>
+                </div>
+                <div class="form-field">
+                  <button class="claim-wizard-next btn" type="submit">
+                    {{ $.Params.content.sections.claim_status.form.check_status_button }}
+                  </button>
+                  <div class="spinner">
+                    <div class="b1"></div>
+                    <div class="b2"></div>
+                    <div class="b3"></div>
                   </div>
-                  <div class="form-field">
-                    <button class="claim-wizard-next btn" type="submit">
-                      {{ $.Params.content.sections.claim_status.form.check_status_button }}
-                    </button>
-                    <div class="spinner">
-                      <div class="b1"></div>
-                      <div class="b2"></div>
-                      <div class="b3"></div>
-                    </div>
-                  </div>
-                  <div class="d-none" id="claim-status-error-alert">
-                    <div class="alert error"></div>
-                  </div>
-                  <div class="d-none" id="claim-status-success-alert">
-                    <div class="alert info">
-                      {{ $.Params.content.sections.claim_status.form.response.message }}
-                      <table class="claim-response">
-                        <tr>
-                          <th>{{ $.Params.content.sections.claim_status.form.response.status }}</th>
-                          <td id="claim-status-value"></td>
-                        </tr>
-                        <tr>
-                          <th>{{ $.Params.content.sections.claim_status.form.response.transaction_id }}</th>
-                          <td id="claim-status-txId"></td>
-                        </tr>
-                        <tr>
-                          <th>{{ $.Params.content.sections.claim_status.form.response.claim_dfi_amount }}</th>
-                          <td id="claim-status-claimDfiAmount"></td>
-                        </tr>
-                      </table>
-                    </div>
+                </div>
+                <div class="d-none" id="claim-status-error-alert">
+                  <div class="alert error"></div>
+                </div>
+                <div class="d-none" id="claim-status-success-alert">
+                  <div class="alert info">
+                    {{ $.Params.content.sections.claim_status.form.response.message }}
+                    <table class="claim-response">
+                      <tr>
+                        <th>{{ $.Params.content.sections.claim_status.form.response.status }}</th>
+                        <td id="claim-status-value"></td>
+                      </tr>
+                      <tr>
+                        <th>{{ $.Params.content.sections.claim_status.form.response.transaction_id }}</th>
+                        <td id="claim-status-txId"></td>
+                      </tr>
+                      <tr>
+                        <th>{{ $.Params.content.sections.claim_status.form.response.claim_dfi_amount }}</th>
+                        <td id="claim-status-claimDfiAmount"></td>
+                      </tr>
+                    </table>
                   </div>
                 </div>
               </form>

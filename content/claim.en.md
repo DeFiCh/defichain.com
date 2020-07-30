@@ -24,6 +24,8 @@ content:
       subhead: Receive 500 DFI for every BTC you own, absolutely free.
       cta:
         label: Claim My DFI
+      sub_cta:
+        label: Check claim status
     how_much:
       name: how-much
       headline: How much will I get?
@@ -108,10 +110,10 @@ content:
             initiated_ts: Transaction date
             hash: Transaction hash
     claim_status:
-      headline: Check Claim Status
+      headline: Check claim status
       form:
-        body: Enter your BTC wallet address to check status of your claim process.
-        check_status_button: Check Status
+        body: Enter your BTC wallet address to check the status of your claim.
+        check_status_button: Check status
         btc_field:
           label: BTC address
           hint: BTC address

@@ -873,7 +873,7 @@ For governance decisions, only the Foundation may submit proposals. Proposals ar
 ### Initial Token Distribution
 
 Of the roughly 1.2 billion DFI tokens 49% will be issued to the DeFi Foundation at the start. The rest will be issued to Masternode holders over time.
-Of the 49% initially issued DFI tokens, 49% will be kept by the DeFi Foundation. The rest may be distributed or sold to accredited investors, large funds and institutions, collectively known as external partners, to fund the initial development of the DeFi Blockchain. In order to decentralize the holdings of DFIs as much as possible the DeFi foundation may not keep more than 49% of all initially issued tokens. The use of potential proceedings of the tokens will be decided by the DeFi Foundation board but will exclusively be directed towards the adoption and development of the DeFi Blockchain.
+Of the 49% initially issued DFI tokens, 49% will be kept by the DeFi Foundation. The rest may be distributed to accredited investors, large funds and institutions, collectively known as external partners, to fund the initial development of the DeFi Blockchain. In order to decentralize the holdings of DFIs as much as possible the DeFi foundation may not keep more than 49% of all initially issued tokens. The use of potential proceedings of the tokens will be decided by the DeFi Foundation board but will exclusively be directed towards the adoption and development of the DeFi Blockchain.
 
 For any avoidance of doubt, there will NOT be a public ICO.
 

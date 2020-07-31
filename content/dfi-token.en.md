@@ -70,7 +70,7 @@ content:
         masternodes: Masternodes
         defi_foundation: DeFi Foundation
         external_partners: External Partners
-        caption: Of the initial supply, 49% will be kept by the DeFi Foundation. The rest may be distributed or sold to external partners, to fund the initial development.
+        caption: Of the initial supply, 49% will be kept by the DeFi Foundation. The rest may be distributed to external partners, to fund the initial development.
       image: /static/svg/initial-token-distribution.svg
     acquiring:
       headline: Acquiring DFI tokens

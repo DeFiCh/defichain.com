@@ -160,8 +160,11 @@ $section-padding-bottom-lg:     124px;
 
 // Components
 
-$header-height:                 80px;
-$header-height-md:              112px;
+$header-height:                 96px;
+$header-height-sticky:          64px;
+
+$header-height-md:              192px;
+$header-height-sticky-md:       96px;
 
 $form-control-border-radius:    $base-border-radius;
 $form-control-border:           $base-border-style;

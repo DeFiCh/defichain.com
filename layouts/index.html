@@ -37,10 +37,15 @@
             <div class="hero-start">
               <h1>{{ $.Param "content.sections.hero.headline" }}</h1>
               <p class="lg">{{ $.Param "content.sections.hero.subhead" }}</p>
-              <a href="{{ $.Param "content.sections.hero.cta.url" }}" target="_blank" class="btn">
-                {{ $.Param "content.sections.hero.cta.label" }}
-                <span class="latest-release-version">latest version</span>
-              </a>
+              <div class="hero-ctas">
+                {{ range $cta := $.Params.content.sections.hero.ctas }}
+                  <a href="{{ $cta.url }}" target="_blank" class="btn">
+                    <span class="cta-download">Download</span>
+                    {{ $cta.label }}
+                    <span class="latest-{{ $cta.type }}">{{ $cta.version }}</span>
+                  </a>
+                {{ end }}
+              </div>
             </div>
           </div>
         </div>

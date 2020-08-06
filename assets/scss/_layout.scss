@@ -62,7 +62,11 @@ body > header {
     background-color: map-get($brand-colors, paper);
 
     .row {
-      height: $header-height;
+      height: $header-height-sticky;
+
+      @include media(">md") {
+        height: $header-height-sticky-md;
+      }
     }
   }
 
@@ -119,7 +123,7 @@ body > header {
     overflow: hidden;
     color: map-get($brand-colors, pink) !important;
 
-    @include media(">md") {
+    @include media(">lg") {
       width: 104px;
       height: 48px;
     }
@@ -136,21 +140,15 @@ body > header {
     flex-grow: 999;
   }
 
-  .white-paper-link,
-  .lang-switcher,
-  .github-link {
-    display: none;
-    margin-right: 8px;
-
-    @include media(">xl") {
-      display: block;
-    }
-  }
-
   .ext-menu {
-    display: flex;
+    display: none;
     align-items: center;
     font-weight: $font-weight-medium;
+    margin-right: $grid-gutter;
+
+    @include media(">md") {
+      display: flex;
+    }
 
     a {
       color: $color-ui-black60;
@@ -661,8 +659,22 @@ section.hero {
     }
   }
 
-  .latest-release-version {
-    margin-left: 0;
+  .hero-ctas {
+    margin-top: $grid-gutter;
+
+    .btn {
+      margin-right: $grid-gutter / 2;
+    }
+
+    .cta-download {
+      display: block;
+      font-size: $body-sm-font-size;
+      margin-top: -4px;
+    }
+
+    [class^="latest-"] {
+      color: $color-ui-white60;
+    }
   }
 }
 
@@ -1703,8 +1715,8 @@ section.downloads {
 
 body.home {
   section.hero {
-    height: 100vh;
-    min-height: 432px;
+    // height: 100vh;
+    // min-height: 432px;
     align-items: stretch;
     align-content: space-between;
     text-align: left;
@@ -2060,14 +2072,6 @@ section.closer-look {
     }
   }
 
-  h3 {
-    font-weight: $font-weight-light;
-
-    em {
-      display: block;
-    }
-  }
-
   .footer-menu {
     margin-bottom: 48px;
 
@@ -2100,7 +2104,7 @@ section.closer-look {
 
       &,
       &:visited {
-        color: $color-ui-black40;
+        color: $color-ui-black60;
       }
       
       &:hover,

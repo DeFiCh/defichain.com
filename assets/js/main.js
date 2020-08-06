@@ -47,14 +47,21 @@ $(function () {
   });
 
   // Closer look carousel
-  if ($(".latest-release-version").length) {
+  if ($("body.home").length) {
     $.ajax({
       type: 'GET',
       url: 'https://api.github.com/repos/DeFiCh/ain/releases/latest',
       success: function (data) {
-        $(".latest-release-version").html(data.tag_name);
+        $(".latest-cli").html(data.tag_name);
       }
     });
+    // $.ajax({
+    //   type: 'GET',
+    //   url: 'https://api.github.com/repos/DeFiCh/defi-app/releases/latest',
+    //   success: function (data) {
+    //     $(".latest-app").html(data.tag_name);
+    //   }
+    // });
   }
 
   // Closer look carousel

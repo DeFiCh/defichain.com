@@ -1,4 +1,11 @@
+var onloadCallback = function () {
+  grecaptcha.render('google_recaptcha', {
+    'sitekey': '6LcSh7UZAAAAAK2s75MiBrNlmzq1BGyI4PI4KD60'
+  });
+};
+
 $(document).ready(function () {
+  var base_url = "https://defichain.com";
 
   // Handle wizard next buttons
   function wizardNextStep() {
@@ -6,8 +13,6 @@ $(document).ready(function () {
     var $crf = $ccc.find('[required]');
     var $nch = $ccc.next();
     var $ncc = $nch.next();
-
-    console.log($nch);
 
     if (!$crf.length || $crf.val()) {
       $ncc.animate({
@@ -17,10 +22,10 @@ $(document).ready(function () {
       $nch.siblings('.collapsible-head').removeClass('active');
       $ncc.siblings('.collapsible-content').animate({
         height: 0
-      }, function() {
-          $('body').scrollTo($nch, 500, {
-            offset: -$('body > header').height()
-          });
+      }, function () {
+        $('body').scrollTo($nch, 500, {
+          offset: -$('body > header').height()
+        });
       });
     }
   }
@@ -35,30 +40,30 @@ $(document).ready(function () {
     wizardNextStep();
   });
 
-  $('#claim-step2 form').submit(function(e) {
+  $('#claim-step2 form').submit(function (e) {
     e.preventDefault();
     $.ajax({
-      data: {
+      data: JSON.stringify({
         btcAddress: $('#btc_add').val(),
         dfiAddress: $('#dfi_add').val(),
-        messageSignature: $('#message_signature').val()
-      },
-      url: "/data/message.json",
+      }),
+      url: base_url + "/claim/message",
       dataType: "json",
-      beforeSend: function() {
+      type: 'POST',
+      beforeSend: function () {
         $('#claim-step2 .claim-wizard-next + .spinner').addClass('show');
       },
-      success: function(response) {
+      success: function (response) {
         $('.claim-wizard-btc-message').html(response.message);
         $('#prev-incomplete-alert').hide();
         $('#step2-error-alert').hide();
-        setTimeout(function() {
-          $('#claim-step2 .claim-wizard-next + .spinner').removeClass('show');
-          wizardNextStep();
-        }, 1000);
+        $('#claim-step2 .claim-wizard-next + .spinner').removeClass('show');
+        wizardNextStep();
       },
-      error: function(response) {
-        $('#step2-error-alert .alert').html(response.error.message).show();
+      error: function (response) {
+        $('#claim-step2 .claim-wizard-next + .spinner').removeClass('show');
+        $('.claim-message-alert-error').html(response.responseJSON.error.message);
+        $('#step2-error-alert').show();
       }
     });
   });
@@ -82,39 +87,78 @@ $(document).ready(function () {
 
   $('#claim-step4 form').submit(function (e) {
     e.preventDefault();
-    $.ajax({
-      data: {
-        btcAddress: $('#btc_add').val(),
-        dfiAddress: $('#dfi_add').val(),
-        messageSignature: $('#message_signature').val(),
-        email: $('#claim_email').val()
-      },
-      url: "/data/claim.json",
-      dataType: "json",
-      beforeSend: function () {
-        $('#claim-step4 .claim-wizard-next + .spinner').addClass('show');
-      },
-      success: function (response) {
-        $('#step4-error-alert').hide();
-        $('#claim-step4').css({
-          'height': 'auto'
-        });
-        var rTF = moment(parseInt(response.transactionInfo.requestedTs)).format("ddd, MMM D YYYY, h:mm a");
-        var iTF = moment(parseInt(response.transactionInfo.initiatedTs)).format("ddd, MMM D YYYY, h:mm a");
-        setTimeout(function () {
+    var data = {
+      btcAddress: $('#btc_add').val(),
+      dfiAddress: $('#dfi_add').val(),
+      messageSignature: $('#message_signature').val(),
+      email: $('#claim_email').val()
+    }
+    if (!data.email) {
+      delete data['email'];
+    }
+    var rcres = grecaptcha.getResponse();
+    if (!rcres.length) {
+      $('#claim-step4 .claim-wizard-next + .spinner').removeClass('show');
+      $('.claim-error-alert').html("Please select recaptcha before proceed");
+      $('#step4-error-alert').show();
+    } else {
+      $.ajax({
+        data: JSON.stringify(data),
+        url: base_url + "/claim",
+        dataType: "json",
+        type: 'POST',
+        beforeSend: function () {
+          $('#claim-step4 .claim-wizard-next + .spinner').addClass('show');
+        },
+        success: function (response) {
+          $('#step4-error-alert').hide();
+          $('#claim-step4').css({
+            'height': 'auto'
+          });
+          var rTF = moment(parseInt(response.transactionInfo.requestedTs)).format("ddd, MMM D YYYY, h:mm a");
           $('#claim-step4 .claim-wizard-next + .spinner').removeClass('show');
-          $('#dfi-value-value').html(response.dfiValue);
+          $('#dfi-status-value').html(response.transactionInfo.status);
           $('#requested-ts-value').html(rTF);
-          $('#initiated-ts-value').html(iTF);
-          $('#hash-value').html(response.transactionInfo.hash);
           $('#step4-success-alert').show();
           $('body').scrollTo('+=272', 500);
-        }, 1000);
+        },
+        error: function (response) {
+          $('#claim-step4 .claim-wizard-next + .spinner').removeClass('show');
+          $('.claim-error-alert').html(response.responseJSON.error.message);
+          $('#step4-error-alert').show();
+        }
+      });
+    }
+  });
+
+  $('#claim-status-form form').submit(function (e) {
+    e.preventDefault();
+    $.ajax({
+      data: JSON.stringify({
+        btcAddress: $('#btc_address').val(),
+      }),
+      url: base_url + "/claim/status",
+      dataType: "json",
+      type: 'POST',
+      beforeSend: function () {
+        $('#claim-status-form .spinner').addClass('show');
+      },
+      success: function (response) {
+        $('#claim-status-form .spinner').removeClass('show');
+        $('#claim-status-error-alert').hide();
+        $('#claim-status-value').html(response.status);
+        if(response.status === 'COMPLETED'){
+          $('#claim-status-txId').html(response.txId);
+          $('#claim-status-claimDfiAmount').html(response.claimDfiAmount);
+        }
+        $('#claim-status-success-alert').show()
       },
       error: function (response) {
-        $('#step4-error-alert .alert').html(response.error.message).show();
+        $('#claim-status-form .spinner').removeClass('show');
+        $('#claim-status-success-alert').hide()
+        $('.status-alert-error').html(response.responseJSON.error.message);
+        $('#claim-status-error-alert').show();
       }
     });
   });
-
 })

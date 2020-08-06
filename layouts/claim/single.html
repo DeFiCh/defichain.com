@@ -29,7 +29,8 @@
 
   <main>
 
-    <section class="hero dark night" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
+    <section class="hero dark night" data-scroll data-scroll-showCallback="heroIn()"
+      data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
           <div id="{{ $.Param "content.sections.hero.name" }}" class="col col-lg-6 col-xl-5 offset-xl-1">
@@ -37,6 +38,9 @@
             <p class="lg" data-scroll="once">{{ $.Param "content.sections.hero.subhead" }}</p>
             <a href="#claim-my-dfi" class="btn mtg1">
               {{ $.Params.content.sections.hero.cta.label }}
+            </a>
+            <a href="#claim-status" class="btn mtg1 mlg1">
+              {{ $.Params.content.sections.hero.sub_cta.label }}
             </a>
           </div>
         </div>
@@ -57,9 +61,10 @@
               {{ range $example := $.Param "content.sections.how_much.examples" }}
               <div class="example col col-sm-6 col-md-4" data-scroll="once">
                 <div class="example-icon">
-                    {{ readFile $example.icon  | safeHTML }}
-                  </div>
-                <div class="owned">{{ $.Param "content.sections.how_much.prefix" }} <strong class="text-purple">{{ $example.btc }}</strong></div>
+                  {{ readFile $example.icon  | safeHTML }}
+                </div>
+                <div class="owned">{{ $.Param "content.sections.how_much.prefix" }} <strong
+                    class="text-purple">{{ $example.btc }}</strong></div>
                 <div class="will-get">{{ $example.dfi }}</div>
               </div>
               {{ end }}
@@ -132,18 +137,14 @@
             <p class="lead">{{ $.Params.content.sections.claim_wizard.step2.body }}</p>
             <div class="form-field has-float-label mtg1">
               <input type="text" id="dfi_add" name="dfi_add" autocomplete="off" autocorrect="off"
-                placeholder="{{ $.Params.content.sections.claim_wizard.step2.form.dfi_field.hint }}"
-                required="required"
-                data-parsley-type="alphanum"
-                data-parsley-length="[26, 35]" />
+                placeholder="{{ $.Params.content.sections.claim_wizard.step2.form.dfi_field.hint }}" required="required"
+                data-parsley-type="alphanum" data-parsley-length="[26, 35]" />
               <label for="dfi_add">{{ $.Params.content.sections.claim_wizard.step2.form.dfi_field.label }}</label>
             </div>
             <div class="form-field has-float-label">
               <input type="text" id="btc_add" name="btc_add" autocomplete="off" autocorrect="off"
-                placeholder="{{ $.Params.content.sections.claim_wizard.step2.form.btc_field.hint }}"
-                required="required"
-                data-parsley-type="alphanum"
-                data-parsley-length="[26, 35]" />
+                placeholder="{{ $.Params.content.sections.claim_wizard.step2.form.btc_field.hint }}" required="required"
+                data-parsley-type="alphanum" data-parsley-length="[26, 35]" />
               <label for="btc_add">{{ $.Params.content.sections.claim_wizard.step2.form.btc_field.label }}</label>
             </div>
             <div class="form-field">
@@ -157,7 +158,7 @@
               </div>
             </div>
             <div class="d-none" id="step2-error-alert">
-              <div class="alert error"></div>
+              <div class="claim-message-alert-error alert error"></div>
             </div>
           </div>
         </form>
@@ -194,7 +195,8 @@
                 <th>{{ $.Params.content.sections.claim_wizard.step3.table.message.label }}</th>
                 <td>
                   <span class="claim-wizard-btc-message">Message</span>
-                  <button class="copy-btn btn btn-small btn-plain" data-clipboard-target=".claim-wizard-btc-message">Copy to clipboard</button>
+                  <button class="copy-btn btn btn-small btn-plain"
+                    data-clipboard-target=".claim-wizard-btc-message">Copy to clipboard</button>
                 </td>
               </tr>
             </table>
@@ -227,14 +229,16 @@
               <input type="text" id="message_signature" name="message_signature" autocomplete="off" autocorrect="off"
                 placeholder="{{ $.Params.content.sections.claim_wizard.step4.form.signature.hint }}"
                 required="required" />
-              <label for="message_signature">{{ $.Params.content.sections.claim_wizard.step4.form.signature.label }}</label>
+              <label
+                for="message_signature">{{ $.Params.content.sections.claim_wizard.step4.form.signature.label }}</label>
             </div>
             <p>{{ $.Params.content.sections.claim_wizard.step4.form.email.instructions }}</p>
             <div class="form-field has-float-label">
               <input type="email" id="claim_email" name="claim_email" autocomplete="off" autocorrect="off"
-                placeholder="{{ $.Params.content.sections.claim_wizard.step4.form.email.hint }}"
-                required="required" />
+                placeholder="{{ $.Params.content.sections.claim_wizard.step4.form.email.hint }}" />
               <label for="claim_email">{{ $.Params.content.sections.claim_wizard.step4.form.email.label }}</label>
+            </div>
+            <div class="form-field has-float-label" id="google_recaptcha">
             </div>
             <div class="form-field">
               <button type="submit" class="claim-wizard-next btn">
@@ -247,27 +251,19 @@
               </div>
             </div>
             <div class="d-none" id="step4-error-alert">
-              <div class="alert error"></div>
+              <div class="claim-alert-error alert error"></div>
             </div>
             <div class="d-none" id="step4-success-alert">
-              <div class="alert info">
+              <div class="claim-alert-success alert info">
                 {{ $.Params.content.sections.claim_wizard.step4.response.message }}
                 <table class="claim-response">
                   <tr>
-                    <th>{{ $.Params.content.sections.claim_wizard.step4.response.dfi_value }}</th>
-                    <td id="dfi-value-value"></td>
+                    <th>{{ $.Params.content.sections.claim_wizard.step4.response.status }}</th>
+                    <td id="dfi-status-value"></td>
                   </tr>
                   <tr>
                     <th>{{ $.Params.content.sections.claim_wizard.step4.response.transaction_info.requested_ts }}</th>
                     <td id="requested-ts-value"></td>
-                  </tr>
-                  <tr>
-                    <th>{{ $.Params.content.sections.claim_wizard.step4.response.transaction_info.initiated_ts }}</th>
-                    <td id="initiated-ts-value"></td>
-                  </tr>
-                  <tr>
-                    <th>{{ $.Params.content.sections.claim_wizard.step4.response.transaction_info.hash }}</th>
-                    <td id="hash-value"></td>
                   </tr>
                 </table>
               </div>
@@ -278,12 +274,67 @@
 
     </section>
 
+    <section id="claim-status" class="claim-status paper">
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col col-ul-6 offset-ul-1">
+            <h2>{{ $.Params.content.sections.claim_status.headline }}</h2>
+            <div id="claim-status-form">
+              <form action="/" data-parsley-validate>
+                <p class="lead">{{ $.Params.content.sections.claim_status.form.body }}</p>
+                <div class="form-field has-float-label">
+                  <input type="text" id="btc_address" name="btc_address" autocomplete="off" autocorrect="off"
+                    placeholder="{{ $.Params.content.sections.claim_status.form.btc_field.hint }}" required="required"
+                    data-parsley-type="alphanum" data-parsley-length="[26, 35]" />
+                  <label for="btc_address">{{ $.Params.content.sections.claim_status.form.btc_field.label }}</label>
+                </div>
+                <div class="form-field">
+                  <button class="claim-wizard-next btn" type="submit">
+                    {{ $.Params.content.sections.claim_status.form.check_status_button }}
+                  </button>
+                  <div class="spinner">
+                    <div class="b1"></div>
+                    <div class="b2"></div>
+                    <div class="b3"></div>
+                  </div>
+                </div>
+                <div class="d-none" id="claim-status-error-alert">
+                  <div class="status-alert-error alert error"></div>
+                </div>
+                <div class="d-none" id="claim-status-success-alert">
+                  <div class="status-alert-success alert info">
+                    {{ $.Params.content.sections.claim_status.form.response.message }}
+                    <table class="claim-response">
+                      <tr>
+                        <th>{{ $.Params.content.sections.claim_status.form.response.status }}</th>
+                        <td id="claim-status-value"></td>
+                      </tr>
+                      <tr>
+                        <th>{{ $.Params.content.sections.claim_status.form.response.transaction_id }}</th>
+                        <td id="claim-status-txId"></td>
+                      </tr>
+                      <tr>
+                        <th>{{ $.Params.content.sections.claim_status.form.response.claim_dfi_amount }}</th>
+                        <td id="claim-status-claimDfiAmount"></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
     {{ partial "section-subscribe.html" . }}
 
   </main>
 
   {{ partial "footer.html" . }}
-
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>

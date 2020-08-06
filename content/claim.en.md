@@ -24,6 +24,8 @@ content:
       subhead: Receive 500 DFI for every BTC you own, absolutely free.
       cta:
         label: Claim My DFI
+      sub_cta:
+        label: Check claim status
     how_much:
       name: how-much
       headline: How much will I get?
@@ -47,7 +49,7 @@ content:
             image: /static/svg/wallets/defi.svg
             cta:
               label: Download
-              url: http://blah
+              url: https://github.com/DeFiCh/defi-app/releases
           - headline: Pool by Cake DFI wallet
             image: /static/svg/wallets/pool.svg
             cta:
@@ -76,7 +78,7 @@ content:
           default: Please complete all previous steps before continuing.
         subhead1: "From your Bitcoin client, _Sign a Message_ using the following values:"
         table:
-          bitcoin_address: 
+          bitcoin_address:
             label: Bitcoin address
             value: Your bitcoin wallet private key
           message:
@@ -102,10 +104,26 @@ content:
         response:
           message: "Great! You’re all set! Your transaction details are as follows:"
           dfi_value: DFI value
+          status: Status
           transaction_info:
             requested_ts: Start date
             initiated_ts: Transaction date
             hash: Transaction hash
+    claim_status:
+      headline: Check claim status
+      form:
+        body: Enter your BTC wallet address to check the status of your claim.
+        check_status_button: Check status
+        btc_field:
+          label: BTC address
+          hint: BTC address
+          helper: Address of BTC wallet
+        response:
+          message: "Your Claim status is as follows:"
+          dfi_value: DFI value
+          status: Status
+          transaction_id: TransactionId
+          claim_dfi_amount: Claimed DFI Amount
     #white paper in /
     #subscribe in /
     #closer_look in /

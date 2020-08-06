@@ -30,7 +30,7 @@
 
   <main>
 
-    <section class="hero dark night">
+    <section class="hero" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-lg-6 col-xl-5 offset-xl-1">
@@ -53,9 +53,14 @@
           </div>
         </div>
       </div>
+      <div class="section-slope white reverse">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
+      </div>
     </section>
 
     {{ partial "section-subscribe.html" . }}
+
+    {{ partial "section-closer-look.html" . }}
 
   </main>
 
@@ -66,9 +71,10 @@
   <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>
   {{ $scrolltrigger := resources.Get "js/ScrollTrigger.min.js" }}
+  {{ $swiper := resources.Get "js/swiper.min.js" }}
   {{ $sticky := resources.Get "js/jquery.sticky-kit.js" }}
   {{ $main := resources.Get "js/main.js" }}
-  {{ $js := slice $scrolltrigger $sticky $main | resources.Concat "js/bundle-white-paper.js" | resources.Fingerprint }}
+  {{ $js := slice $scrolltrigger $swiper $sticky $main | resources.Concat "js/bundle-white-paper.js" | resources.Fingerprint }}
   <script src="{{ $js.RelPermalink }}" type="text/javascript"></script>
   {{ template "_internal/google_analytics_async.html" . }}
   {{ partial "pixels/facebook.html" . }}

@@ -25,6 +25,14 @@
   }
 }
 
+@mixin brand-currentcolor-variations() {
+  @each $name, $value in $brand-colors {
+    &.#{$name} { 
+      color: $value;
+    }
+  }
+}
+
 @mixin menu-themes() {
   @each $name, $value in $brand-colors {
     .#{$name}.menu-open .menu { 

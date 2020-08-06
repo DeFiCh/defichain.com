@@ -25,11 +25,7 @@
   }
 
   &.btn-pill {
-    border-radius: 30px;
-    border: 1px solid currentColor;
-    background: transparent;
-    padding-top: 9px;
-    padding-bottom: 9px;
+    border-radius: 24px;
   }
 
   &.btn-plain {
@@ -39,6 +35,10 @@
     &:hover {
       color: lighten($button-plain-color, 10%);
     }
+  }
+
+  &.btn-lg {
+
   }
 
   .icon-wrapper {

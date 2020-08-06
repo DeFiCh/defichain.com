@@ -30,7 +30,7 @@
 
   <main>
 
-    <section class="hero dark night">
+    <section class="hero paper" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
           <div id="{{ $.Param "content.sections.hero.name" }}" class="col col-lg-6 col-xl-5 offset-xl-1">
@@ -39,10 +39,10 @@
           </div>
         </div>
       </div>
-      <!-- animation hero here -->
+      {{ partial "hero-art.html" . }}
     </section>
 
-    <section class="mentions paper">
+    <section class="mentions day">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-5 offset-ul-1">
@@ -57,7 +57,7 @@
                 <div class="card">
                   <div>
                     <small>{{ $mention.source }}</small>
-                    <h3>{{ $mention.title }}</h3>
+                    <h3 class="h4">{{ $mention.title }}</h3>
                     <div class="mention-image">
                       {{ with $mention.image }}
                       <img src="{{ . }}" alt="{{ $mention.source }}">
@@ -71,6 +71,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="section-slope day reverse">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
       </div>
     </section>
 
@@ -88,7 +91,7 @@
               <div class="download col col-md-6">
                 <div class="card">
                   <div>
-                    <h3>{{ $download.title }}</h3>
+                    <h3 class="h4">{{ $download.title }}</h3>
                     <div class="spacer"></div>
                     <div class="download-image">
                       {{ readFile $download.image | safeHTML }}
@@ -107,6 +110,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="section-slope paper">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
       </div>
     </section>
 

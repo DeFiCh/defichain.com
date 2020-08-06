@@ -105,7 +105,7 @@ content:
         - icon: /static/svg/icons/way-to-acquire/developers.svg
           title: Developers
           description: The DeFi Foundation gives grants to developers building functionality and dApps on the DeFi Blockchain.
-      cta: For further information, contact us at [partners@defichain.io](mailto:partners@defichain.io).
+      cta: For further information, contact us at [partners@defichain.com](mailto:partners@defichain.com).
     insiders:
       headline: Join the DeFiChain Insiders Community.
       subhead: The DeFi Blockchain movement is looking for those with the passion and reach to spread the movement — register below.

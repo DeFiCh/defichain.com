@@ -38,7 +38,6 @@ $(function () {
       });
       $q.removeClass('active');
     } else {
-      console.log($a.attr('data-h'));
       $a.animate({
         height: $a.attr('data-h') + "px"
       });
@@ -92,22 +91,24 @@ $(function () {
     });
   }
 
-  $('body').scrollspy({
-    target: '#TableOfContents',
-    offset: 154
-  });
+  if ($("#TableOfContents").length) {
+    $('body').scrollspy({
+      target: '#TableOfContents',
+      offset: 154
+    });
 
-  $("#TableOfContents").stick_in_parent({
-    offset_top: 144
-  });
+    $("#TableOfContents").stick_in_parent({
+      offset_top: 144
+    });
 
-  $.localScroll({
-    duration: 500,
-    offset: {
-      top: -144
-    },
-    hash: true,
-  });
+    $.localScroll({
+      duration: 500,
+      offset: {
+        top: -144
+      },
+      hash: true,
+    });
+  }
 
 });
 
@@ -122,14 +123,17 @@ document.addEventListener('DOMContentLoaded', function () {
     centerVertical: false,
     once: false,
   }, document.body, window);
-
   trigger.callScope = scope;
 
   scope.heroOut = function () {
+    $('body > header').addClass('sticky');
     // pause hero animation
+    console.log('hero out');
   };
 
   scope.heroIn = function () {
+    $('body > header').removeClass('sticky');
+    console.log("hero in");
     // play hero animation
   };
 });

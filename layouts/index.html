@@ -30,27 +30,25 @@
 
   <main>
 
-    <section class="hero dark night">
+    <section class="hero paper" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
-          <div class="col col-xl-7 offset-ul-1">
+          <div class="col col-lg-6 offset-ul-1">
             <div class="hero-start">
               <h1>{{ $.Param "content.sections.hero.headline" }}</h1>
               <p class="lg">{{ $.Param "content.sections.hero.subhead" }}</p>
-              <a href="{{ $.Param "content.sections.hero.cta.url" }}" target="_blank" class="cta-to">
-                <div>
-                  {{ $.Param "content.sections.hero.cta.label" }}
-                  <span class="latest-release-version">latest version</span>
-                </div>
-                <span>&#10142;</span>
+              <a href="{{ $.Param "content.sections.hero.cta.url" }}" target="_blank" class="btn">
+                {{ $.Param "content.sections.hero.cta.label" }}
+                <span class="latest-release-version">latest version</span>
               </a>
             </div>
           </div>
         </div>
       </div>
+      {{ partial "hero-art.html" . }}
     </section>
 
-    <section class="problem-solution">
+    <section class="problem-solution white">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-lg-5 col-ul-4 offset-ul-1 mbg1">
@@ -96,9 +94,12 @@
           </div>
         </div>
       </div>
+      <div class="section-slope white">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
+      </div>
     </section>
 
-    <section class="benefits white">
+    <section class="benefits day">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-4 offset-ul-1">
@@ -115,7 +116,7 @@
                     {{ readFile $benefit.icon  | safeHTML }}
                   </div>
                   <h3>{{ $benefit.title }}</h3>
-                  <p class="lg">{{ $benefit.description }}</p>
+                  <p>{{ $benefit.description }}</p>
                 </div>
               </div>
               {{ end }}
@@ -123,9 +124,12 @@
           </div>
         </div>
       </div>
+      <div class="section-slope day">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
+      </div>
     </section>
 
-    <section class="function-set benefits">
+    <section class="function-set benefits day">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-4 offset-ul-1">
@@ -142,7 +146,7 @@
                     {{ readFile $function.icon  | safeHTML }}
                   </div>
                   <h3>{{ $function.title }}</h3>
-                  <p class="lg">{{ $function.description }}</p>
+                  <p>{{ $function.description }}</p>
                 </div>
               </div>
               {{ end }}
@@ -158,15 +162,17 @@
           <div class="col col-lg-5 col-ul-4 offset-ul-1 mbg1">
             <h2>{{ $.Param "content.sections.built_on_bitcoin.headline" }}</h2>
             <p class="lg">{{ $.Param "content.sections.built_on_bitcoin.subhead" }}</p>
-            <a href="{{ $.Param "content.sections.built_on_bitcoin.link.url" }}" class="cta-to">
+            <a href="{{ $.Param "content.sections.built_on_bitcoin.link.url" }}" class="btn">
               {{ $.Param "content.sections.built_on_bitcoin.link.label" }}
-              <span>&#10142;</span>
             </a>
           </div>
           <div class="image col col-lg-7 col-ul-5">
             {{ readFile $.Params.content.sections.built_on_bitcoin.image | safeHTML }}
           </div>
         </div>
+      </div>
+      <div class="section-slope paper reverse">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
       </div>
     </section>
 

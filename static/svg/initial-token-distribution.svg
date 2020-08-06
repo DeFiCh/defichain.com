@@ -15,7 +15,7 @@
             <use fill="#F4F3F6" xlink:href="#path-1"></use>
             <use fill="url(#pattern-2)" style="mix-blend-mode: color-dodge;" xlink:href="#path-1"></use>
         </g>
-        <path d="M13,34 L230,34 L230,34 L230,82 L13,82 C10.790861,82 9,80.209139 9,78 L9,38 C9,35.790861 10.790861,34 13,34 Z" id="Rectangle" fill="#5B10FF"></path>
+        <path d="M13,34 L230,34 L230,34 L230,82 L13,82 C10.790861,82 9,80.209139 9,78 L9,38 C9,35.790861 10.790861,34 13,34 Z" id="Rectangle" fill="currentColor"></path>
         <rect id="Rectangle" fill="#B3B0BB" x="118" y="34" width="113" height="48"></rect>
         <g id="#width-top-13952E73-D09C-419B-AC9D-C1FCBF313467" transform="translate(8.000000, 8.000000)">
             <rect id="line" fill-opacity="0.604895105" fill="#000000" x="0" y="11" width="221" height="1"></rect>

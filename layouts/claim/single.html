@@ -158,7 +158,7 @@
               </div>
             </div>
             <div class="d-none" id="step2-error-alert">
-              <div class="alert error"></div>
+              <div class="claim-message-alert-error alert error"></div>
             </div>
           </div>
         </form>
@@ -251,10 +251,10 @@
               </div>
             </div>
             <div class="d-none" id="step4-error-alert">
-              <div class="alert error"></div>
+              <div class="claim-alert-error alert error"></div>
             </div>
             <div class="d-none" id="step4-success-alert">
-              <div class="alert info">
+              <div class="claim-alert-success alert info">
                 {{ $.Params.content.sections.claim_wizard.step4.response.message }}
                 <table class="claim-response">
                   <tr>
@@ -300,10 +300,10 @@
                   </div>
                 </div>
                 <div class="d-none" id="claim-status-error-alert">
-                  <div class="alert error"></div>
+                  <div class="status-alert-error alert error"></div>
                 </div>
                 <div class="d-none" id="claim-status-success-alert">
-                  <div class="alert info">
+                  <div class="status-alert-success alert info">
                     {{ $.Params.content.sections.claim_status.form.response.message }}
                     <table class="claim-response">
                       <tr>

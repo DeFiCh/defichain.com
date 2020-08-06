@@ -62,7 +62,7 @@ $(document).ready(function () {
       },
       error: function (response) {
         $('#claim-step2 .claim-wizard-next + .spinner').removeClass('show');
-        $('.alert').html(response.responseJSON.error.message);
+        $('.claim-message-alert-error').html(response.responseJSON.error.message);
         $('#step2-error-alert').show();
       }
     });
@@ -99,7 +99,7 @@ $(document).ready(function () {
     var rcres = grecaptcha.getResponse();
     if (!rcres.length) {
       $('#claim-step4 .claim-wizard-next + .spinner').removeClass('show');
-      $('.alert').html("Please select recaptcha before proceed");
+      $('.claim-error-alert').html("Please select recaptcha before proceed");
       $('#step4-error-alert').show();
     } else {
       $.ajax({
@@ -124,7 +124,7 @@ $(document).ready(function () {
         },
         error: function (response) {
           $('#claim-step4 .claim-wizard-next + .spinner').removeClass('show');
-          $('.alert').html(response.responseJSON.error.message);
+          $('.claim-error-alert').html(response.responseJSON.error.message);
           $('#step4-error-alert').show();
         }
       });
@@ -156,7 +156,7 @@ $(document).ready(function () {
       error: function (response) {
         $('#claim-status-form .spinner').removeClass('show');
         $('#claim-status-success-alert').hide()
-        $('.alert').html(response.responseJSON.error.message);
+        $('.status-alert-error').html(response.responseJSON.error.message);
         $('#claim-status-error-alert').show();
       }
     });

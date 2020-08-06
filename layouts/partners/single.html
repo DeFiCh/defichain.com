@@ -30,7 +30,7 @@
 
   <main>
 
-    <section class="hero dark night">
+    <section class="hero" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-4 offset-ul-1">
@@ -41,10 +41,10 @@
           </div>
         </div>
       </div>
-      <!-- animation hero here -->
+      {{ partial "hero-art.html" . }}
     </section>
 
-    <section class="contributors">
+    <section class="contributors paper">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-5 offset-ul-1">
@@ -79,9 +79,8 @@
                       {{ $.Param "content.sections.contributors.become_developer.description" }}
                     </p>
                     <div class="spacer"></div>
-                    <div class="cta-to">
+                    <div class="btn">
                       {{ $.Param "content.sections.contributors.become_developer.cta.label" }}
-                      <span>&#10142;</span>
                     </div>
                     <div class="bg"></div>
                   </a>
@@ -97,9 +96,8 @@
                       {{ $.Param "content.sections.contributors.become_partner.description" }}
                     </p>
                     <div class="spacer"></div>
-                    <div class="cta-to">
+                    <div class="btn">
                       {{ $.Param "content.sections.contributors.become_partner.cta.label" }}
-                      <span>&#10142;</span>
                     </div>
                     <div class="bg"></div>
                   </a>
@@ -109,9 +107,12 @@
           </div>
         </div>
       </div>
+      <div class="section-slope paper">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
+      </div>
     </section>
     
-    <section class="defi-blockchain featured-video dark" id="{{ $.Param "content.sections.featured_video.name" }}">
+    <section class="defi-blockchain featured-video">
       <div class="container-flush">
         <div class="row">
           <div class="col col-lg-6">
@@ -169,6 +170,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="section-slope day">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
       </div>
     </section>
 

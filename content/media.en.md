@@ -74,8 +74,6 @@ content:
               url: /downloads/logo-defi-blockchain.svg
             - label: PNG
               url: /downloads/logo-defi-blockchain.png
-            - label: Zip
-              url: /downloads/logo-defi-blockchain.zip
         - title: The DeFi jellyfish
           description: Useful when space is constrained.
           image: /static/downloads/symbol-defi-blockchain.svg
@@ -84,8 +82,6 @@ content:
               url: /downloads/symbol-defi-blockchain.svg
             - label: PNG
               url: /downloads/symbol-defi-blockchain.png
-            - label: Zip
-              url: /downloads/symbol-defi-blockchain.zip
         - title: DFI 3D coin
           description: Available as SVG and PNG. 3D-printable file coming soon.
           image: /static/downloads/coin-defi-blockchain.svg
@@ -94,8 +90,6 @@ content:
               url: /downloads/coin-defi-blockchain.svg
             - label: PNG
               url: /downloads/coin-defi-blockchain.png
-            - label: Zip
-              url: /downloads/coin-defi-blockchain.zip
         - title: Built-on-Bitcoin
           description: Available as SVG and PNG.
           image: /static/downloads/built-on-bitcoin.svg
@@ -104,8 +98,6 @@ content:
               url: /downloads/built-on-bitcoin.svg
             - label: PNG
               url: /downloads/built-on-bitcoin.png
-            - label: Zip
-              url: /downloads/built-on-bitcoin.zip
     submission:
       headline: Get in touch with media relations.
       form:

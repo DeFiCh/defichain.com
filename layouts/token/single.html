@@ -30,7 +30,7 @@
 
   <main>
 
-    <section id="{{ $.Param "content.sections.hero.name" }}" class="hero dark night">
+    <section class="hero paper" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-4 offset-ul-1">
@@ -41,10 +41,10 @@
           </div>
         </div>
       </div>
-      <!-- animation hero here -->
+      {{ partial "hero-art.html" . }}
     </section>
 
-    <section class="dfi-token paper">
+    <section class="dfi-token white">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-lg-5 col-ul-4 offset-ul-1 mbg1">
@@ -56,6 +56,9 @@
             {{ readFile $.Params.content.sections.dfi_token.image | safeHTML }}
           </div>
         </div>
+      </div>
+      <div class="section-slope white reverse">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
       </div>
     </section>
 
@@ -96,7 +99,7 @@
                   {{ $.Param "content.sections.stats.links.pool.description" }}
                 </h3>
                 <div class="spacer"></div>
-                <div class="cta-to">
+                <div class="btn">
                   {{ $.Param "content.sections.stats.links.pool.name" }}
                   <span>
                     {{ readFile "/static/svg/icons/icon-external-link.svg" | safeHTML }}
@@ -114,7 +117,7 @@
                   {{ $.Param "content.sections.stats.links.coinmarketcap.description" }}
                 </h3>
                 <div class="spacer"></div>
-                <div class="cta-to">
+                <div class="btn">
                   {{ $.Param "content.sections.stats.links.coinmarketcap.name" }}
                   <span>
                     {{ readFile "/static/svg/icons/icon-external-link.svg" | safeHTML }}
@@ -152,6 +155,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="section-slope day">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
       </div>
     </section>
 
@@ -221,6 +227,9 @@
           </div>
         </div>
       </div>
+      <div class="section-slope white">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
+      </div>
     </section>
 
     <section class="acquiring benefits">
@@ -262,6 +271,9 @@
             <p class="lg">{{ $.Param "content.sections.acquiring.cta" | markdownify }}</p>
           </div>
         </div>
+      </div>
+      <div class="section-slope day">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
       </div>
     </section>
 

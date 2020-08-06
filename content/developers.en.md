@@ -31,7 +31,7 @@ content:
       subject_title: CTO, Cake
       quote: Doesn't matter if you are front-end of back-end. If you're a JavaScript developer, and a good one, drop me a note, and we can talk.
     resources:
-      headline: Start building on DeFi Blockchain with developer resources and code
+      headline: Start building on DeFi Blockchain with developer resources and code.
       github:
         image: /static/svg/icons/developers/icon-octocat.svg
         headline: Get developer resources and getting started guides.

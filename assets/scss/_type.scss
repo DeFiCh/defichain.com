@@ -22,7 +22,7 @@ a {
   transition: $form-control-transition;
 
   &:hover {
-    color: darken($color-ui-action, 20%);
+    color: lighten($color-ui-action, 20%);
     text-decoration: underline;
   }
 }
@@ -32,8 +32,8 @@ strong, bold {
 }
 
 ::selection {
-  background: map-get($brand-colors, green);
-  color: $color-ui-white;
+  background: map-get($brand-colors, cyan);
+  color: map-get($brand-colors, night);
 }
 
 //
@@ -46,6 +46,7 @@ h1, .h1 {
   font-weight: $h1-font-weight;
   margin-bottom: $h1-margin-bottom;
   letter-spacing: $h1-letter-spacing;
+  font-family: $heading-font-family;
 
   @include media("<md") {
     font-size: $h2-font-size;
@@ -61,7 +62,8 @@ h2, .h2 {
   line-height: $h2-line-height; 
   font-weight: $h2-font-weight; 
   margin-bottom: $h2-margin-bottom; 
-  letter-spacing: $h2-letter-spacing; 
+  letter-spacing: $h2-letter-spacing;
+  font-family: $heading-font-family;
 
   @include media("<md") {
     font-size: $h3-font-size;
@@ -71,13 +73,22 @@ h2, .h2 {
   }
 }
 
-h3, .h3,
-h4, .h4 {
+h3, .h3 {
   font-size: $h3-font-size;
   line-height: $h3-line-height;
   font-weight: $h3-font-weight;
   margin-bottom: $h3-margin-bottom;
   letter-spacing: $h3-letter-spacing;
+  font-family: $heading-font-family;
+}
+
+h4, .h4 {
+  font-size: $h4-font-size;
+  line-height: $h4-line-height;
+  font-weight: $h4-font-weight;
+  margin-bottom: $h4-margin-bottom;
+  letter-spacing: $h4-letter-spacing;
+  font-family: $heading-font-family;
 }
 
 
@@ -91,10 +102,6 @@ p, .p {
   font-weight: $body-md-font-weight;
   margin-bottom: $body-md-margin-bottom;
   letter-spacing: $body-md-letter-spacing;
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
 }
 
 .lg {
@@ -157,7 +164,7 @@ blockquote,
   font-size: $h3-font-size;
   line-height: $h3-line-height;
   position: relative;
-  max-width: 360px;
+  max-width: 348px;
 
   @include media(">md") {
     padding-left: 32px;

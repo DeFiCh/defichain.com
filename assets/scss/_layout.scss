@@ -39,6 +39,7 @@ body > header {
   position: fixed;
   width: 100%;
   z-index: $zindex-sticky;
+  transition: background-color 0.5s ease;
 
   @include brand-background-variations;
 
@@ -50,9 +51,18 @@ body > header {
     align-items: center;
     height: $header-height;
     align-items: stretch;
+    transition: height 0.5s ease;
 
     @include media(">md") {
       height: $header-height-md;
+    }
+  }
+
+  &.sticky {
+    background-color: map-get($brand-colors, paper);
+
+    .row {
+      height: $header-height;
     }
   }
 
@@ -63,6 +73,7 @@ body > header {
 
     .menu {
       list-style: none;
+      font-weight: $font-weight-medium;
       display: none;
       padding: 0;
       transition: all 0.5s ease;
@@ -77,13 +88,12 @@ body > header {
 
       a {
         display: block;
-        padding: 20px;
-        color: $color-ui-black60;
+        padding: 24px;
         text-decoration: none;
+        color: $color-ui-black60;
 
         &:hover {
-          color: $color-ui-black;
-          text-decoration: none;
+          color: $color-ui-action;
         }
       }
 
@@ -98,30 +108,6 @@ body > header {
     }
   }
 
-  &.dark {
-    color: $color-ui-white;
-
-    a {
-      color: $color-ui-white;
-    }
-
-    nav {
-      .menu {
-        a {
-          color: $color-ui-white;
-
-          &:hover {
-            color: $color-ui-white;
-          }
-        }
-
-        li.active a {
-          color: $color-ui-white;
-        }
-      }
-    }
-  }
-
   .brand {
     position: relative;
     z-index: $zindex-sticky;
@@ -129,13 +115,13 @@ body > header {
     display: block;
     width: 78px;
     height: 36px;
-    margin-right: 40px;
+    margin-right: 48px;
     overflow: hidden;
-    color: map-get($brand-colors, green) !important;
+    color: map-get($brand-colors, pink) !important;
 
     @include media(">md") {
-      width: 97.5px;
-      height: 45px;
+      width: 104px;
+      height: 48px;
     }
 
     svg {
@@ -154,10 +140,32 @@ body > header {
   .lang-switcher,
   .github-link {
     display: none;
-    margin-right: 10px;
+    margin-right: 8px;
 
     @include media(">xl") {
       display: block;
+    }
+  }
+
+  .ext-menu {
+    display: flex;
+    align-items: center;
+    font-weight: $font-weight-medium;
+
+    a {
+      color: $color-ui-black60;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        color: $color-ui-action;
+      }
+
+      svg {
+        fill: currentColor;
+        margin-right: 8px;
+      }
     }
   }
 
@@ -167,7 +175,7 @@ body > header {
 
   .lang-switcher {
     @include media(">ul") {
-      margin-right: -20px;
+      margin-right: -24px;
     }
 
     > a {
@@ -223,9 +231,10 @@ body > header {
     z-index: 0;
     left: -16px;  
     right: -16px;
-    top: $header-height;
+    top: 0;
+    padding-top: $header-height;
     height: 100vh;
-    background-color: map-get($brand-colors, night);
+    background-color: map-get($brand-colors, paper);
 
     @include media(">md") {
       top: $header-height-md;
@@ -243,14 +252,14 @@ body > header {
     }
 
     a {
-      padding-left: 30px;
-      padding-right: 30px;
-      padding-top: 8px;
-      padding-bottom: 8px;
-      font-size: $body-lg-font-size;
+      padding-left: 32px;
+      padding-right: 32px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      font-size: $body-md-font-size;
 
       &:hover {
-        background-color: $color-ui-white10;
+        background-color: map-get($brand-colors, white);
       }
     }
   }
@@ -258,13 +267,13 @@ body > header {
   header nav .menu {
     .github-list-link {
       display: block;
-      margin-top: 30px;
+      margin-top: 32px;
       width: 100%;
 
       &:before {
         content: "";
         position: absolute;
-        top: -15px;
+        top: -16px;
         width: 100%;
         height: 1px;
         background-color: $color-ui-black10;
@@ -320,21 +329,10 @@ main {
       }
     }
 
-    .scroll-detector {
-      width: 1px;
-      height: 1px;
-      position: absolute;
-      left: 50vw;
-      top: 50vh;
-      right: 50vw;
-      bottom: 50vh;
-      z-index: 999;
-    }
-
     @include media("<sm") {
       .section-icon {
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 32px;
       }
 
       h2,
@@ -367,11 +365,36 @@ main {
 
 .section-icon {
   height: 48px;
-  margin-bottom: 60px;
-  color: map-get($brand-colors, green);
+  margin-bottom: 48px;
+  color: map-get($brand-colors, pink);
 
   svg {
     fill: currentColor;
+  }
+}
+
+
+//
+// Slope effects
+//
+
+.section-slope {
+  @include brand-currentcolor-variations;
+
+  position: absolute;
+  top: -24px;
+  left: 0;
+  width: 100%;
+  height: 24px;
+  color: $color-ui-white;
+
+  &.reverse {
+    transform: scaleX(-1);
+  }
+
+  @include media(">lg") {
+    top: -48px;
+    height: 48px;
   }
 }
 
@@ -386,19 +409,19 @@ main {
 
   > a, > div {
     text-decoration: none;
-    color: $color-ui-black60;
     height: 100%;
-    padding: 15px 30px 30px;
+    padding: 32px;
     display: flex;
     align-content: flex-start;
     flex-direction: column;
+    color: $color-ui-default;
 
     @include media(">md") {
-      padding-bottom: 55px;
+      padding-bottom: 32px;
     }
 
     @include media(">lg") {
-      padding-bottom: 60px;
+      padding-bottom: 48px;
     }
 
     .bg {
@@ -416,10 +439,10 @@ main {
     }
 
     &:hover .bg {
-      width: calc(100% + 30px);
-      height:  calc(100% + 30px);
-      top: -15px;
-      left: -15px;
+      width: calc(100% + 32px);
+      height:  calc(100% + 32px);
+      top: -16px;
+      left: -16px;
     }
   }
 
@@ -430,11 +453,11 @@ main {
   }
 
   blockquote {
-    padding-left: 20px;
+    padding-left: 24px;
 
     &:before {
-      width: 1px;
-      background-color: $color-ui-black40;
+      width: 4px;
+      background-color: map-get($brand-colors, cyan);
     }
   }
 
@@ -442,8 +465,8 @@ main {
     flex-grow: 999;
   }
 
-  > div .cta-to {
-    border-bottom-color: transparent;
+  .btn {
+    align-self: flex-start;
   }
 }
 
@@ -492,7 +515,7 @@ main {
   }
 
   .highlight {
-    color: map-get($brand-colors, green);
+    color: map-get($brand-colors, pink);
     font-weight: $font-weight-bold;
   }
 }
@@ -526,13 +549,13 @@ main {
     padding-left: 40px;
 
     @include media(">lg") {
-      padding-left: 60px;
+      padding-left: 64px;
     }
   }
 
   .toggle {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     position: absolute;
     left: 0;
     top: 5px;
@@ -540,7 +563,7 @@ main {
 
     .bar {
       position: absolute;
-      width: 15px;
+      width: 16px;
       height: 3px;
       border-radius: 1px;
       background-color: currentColor;
@@ -593,10 +616,10 @@ main {
   overflow: hidden;
 
   .col {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 32px;
+    padding-bottom: 32px;
     padding-left: 65px;
-    padding-right: 30px;
+    padding-right: 32px;
 
     @include media(">lg") {
       padding-left: 85px;
@@ -619,7 +642,7 @@ section.hero {
   display: flex;
   align-items: flex-end;
   text-align: center;
-  padding-top: $header-height + 30px;
+  padding-top: $header-height + 32px;
   padding-bottom: $section-padding-bottom * 1.25;
 
   @include media("<md", "landscape") {
@@ -638,12 +661,49 @@ section.hero {
     }
   }
 
-  .cta-to {
-    margin-top: $section-padding-bottom;
-  }
-
   .latest-release-version {
     margin-left: 0;
+  }
+}
+
+.hero-art {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  > * {
+    position: absolute;
+  }
+
+  .dfi-branches {
+    color: $color-ui-white;
+    z-index: -3;
+  }
+
+  .dfi-pot {
+    color: map-get($brand-colors, cyan);
+    z-index: -2;
+  }
+
+  .dfi-image {
+    width: 438px;
+    height: 790px;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: repeat;
+    background-blend-mode: screen;
+    background-color: map-get($brand-colors, cyan);
+
+    @include media(">lg") {
+      background-blend-mode: normal;
+    }
+  }
+
+  #branchesClip svg {
+    fill: map-get($brand-colors, pink);
   }
 }
 
@@ -653,14 +713,15 @@ section.hero {
 // 
 
 section.featured-video {
-  background-color: map-get($brand-colors, night);
-
   .video-player {
     width: 100%;
     position: relative;
     overflow: hidden;
     padding-top: 56.25%;
-    background-color: map-get($brand-colors, evening);
+    border-left: 0;
+    border-top-right-radius: $base-border-radius;
+    border-bottom-right-radius: $base-border-radius;
+    overflow: hidden;
 
     iframe {
       position: absolute;
@@ -669,11 +730,12 @@ section.featured-video {
       width: 100%;
       height: 100%;
       border: 0;
+      object-fit: cover;
     }
   }
 
   .video-info {
-    padding: 60px 30px 0;
+    padding: 48px 32px 0;
     text-align: center;
 
     @include media(">lg") {
@@ -698,16 +760,18 @@ section.featured-video {
 
   .video-thumbnail {
     width: 240px;
-    height: 136px;
+    height: 135px;
     position: relative;
     margin-bottom: 16px;
+    border-radius: $base-border-radius;
+    overflow: hidden;
 
     img {
-      position: absolute;
-      top: -22px;
-      clip-path: inset(22px 0);
-      width: 240px;
-      height: 180px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      margin-top: -1px;
+      margin-bottom: -1px;
     }
   }
 
@@ -737,7 +801,7 @@ section.featured-video {
     &:before {
       content: "“";
       font-size: 8.0rem;
-      color: $color-ui-white20;
+      color: map-get($brand-colors, cyan);
       position: absolute;
       top: -40px;
       left: -40px;
@@ -746,9 +810,9 @@ section.featured-video {
     &:after {
       content: "”";
       font-size: 8.0rem;
-      color: $color-ui-white20;
+      color: map-get($brand-colors, cyan);
       position: absolute;
-      bottom: -60px;
+      bottom: -48px;
       right: -40px;
     }
   }
@@ -781,7 +845,7 @@ section.problem-solution {
   }
 
   .defi .heading {
-    color: map-get($brand-colors, green);
+    color: map-get($brand-colors, pink);
   }
 
   .diagram-graph {
@@ -799,7 +863,7 @@ section.problem-solution {
   }
 
   .trust {
-    background-color: map-get($brand-colors, green);
+    background-color: map-get($brand-colors, pink);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -814,39 +878,39 @@ section.problem-solution {
 
 section.contributors {
   .contributor {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 32px;
+    margin-bottom: 32px;
     color: $color-ui-black60;
 
     @include media(">md") {
-      margin-top: 60px;
-      margin-bottom: 60px;
+      margin-top: 48px;
+      margin-bottom: 48px;
     }
   }
 
   .contributor-logo {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
   }
 
   .contributor-cta {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 16px;
+    margin-bottom: 16px;
   }
 
   .card {
-    height: 340px;
+    height: 324px;
     background-color: map-get($brand-colors, white);
     position: relative;
 
     > a, > div {
       @include media(">ul") {
-        padding-top: 30px;
+        padding-top: 32px;
         padding-left: calc(100% / 6);
       }
     }
 
     h3 {
-      margin-bottom: 20px;
+      margin-bottom: 24px;
 
       em {
         font-weight: $font-weight-bold;
@@ -872,31 +936,31 @@ section.contributors {
 
 section.resources {
   .resource-cta {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 16px;
+    margin-bottom: 16px;
   }
 
   .resource-image {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: map-get($brand-colors, green);
+    margin-top: 24px;
+    margin-bottom: 24px;
+    color: map-get($brand-colors, pink);
   }
 
   .card {
-    height: 340px;
+    height: 352px;
     background-color: map-get($brand-colors, white);
     position: relative;
 
     > a, > div {
       @include media(">ul") {
-        padding-top: 30px;
+        padding-top: 32px;
         padding-left: calc(100% / 6);
       }
     }
 
     h3 {
-      margin-bottom: 20px;
-      max-width: 300px;
+      margin-bottom: 24px;
+      max-width: 320px;
     }
   }
 }
@@ -911,7 +975,7 @@ section.dfi-token {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: map-get($brand-colors, green);
+    color: map-get($brand-colors, pink);
   }
 }
 
@@ -969,13 +1033,13 @@ section.faq {
       padding-left: 40px;
 
       @include media(">lg") {
-        padding-left: 60px;
+        padding-left: 48px;
       }
     }
 
     .toggle {
-      width: 30px;
-      height: 30px;
+      width: 32px;
+      height: 32px;
       position: absolute;
       left: 0;
       top: 5px;
@@ -983,7 +1047,7 @@ section.faq {
 
       .bar {
         position: absolute;
-        width: 15px;
+        width: 16px;
         height: 3px;
         border-radius: 1px;
         background-color: currentColor;
@@ -1036,10 +1100,10 @@ section.faq {
     overflow: hidden;
 
     .col {
-      padding-top: 30px;
-      padding-bottom: 30px;
+      padding-top: 32px;
+      padding-bottom: 32px;
       padding-left: 65px;
-      padding-right: 30px;
+      padding-right: 32px;
 
       @include media(">lg") {
         padding-left: 85px;
@@ -1057,14 +1121,14 @@ section.faq {
   }
 
   .faq-more {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 32px;
+    margin-bottom: 32px;
 
     .col {
       padding-left: 10px;
 
       @include media(">lg") {
-        padding-left: 30px;
+        padding-left: 32px;
       }
     }
 
@@ -1077,7 +1141,7 @@ section.faq {
       line-height: $body-md-line-height;
       border: none;
       background: transparent;
-      padding: 30px;
+      padding: 32px;
       color: $color-ui-black60;
       cursor: pointer;
 
@@ -1101,12 +1165,12 @@ section.benefits {
   background-color: map-get($brand-colors, day);
 
   .benefit {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 32px;
+    margin-bottom: 32px;
 
     @include media(">md") {
-      margin-top: 60px;
-      margin-bottom: 60px;
+      margin-top: 48px;
+      margin-bottom: 48px;
     }
 
     .wrapper {
@@ -1115,11 +1179,11 @@ section.benefits {
   }
 
   .benefit-icon {
-    margin-bottom: 30px;
-    color: map-get($brand-colors, green);
+    margin-bottom: 32px;
+    color: map-get($brand-colors, pink);
 
     @include media(">md") {
-      margin-bottom: 60px;
+      margin-bottom: 48px;
     }
 
     svg {
@@ -1130,15 +1194,15 @@ section.benefits {
   }
 
   .benefit-sources {
-    margin-top: 15px;
-    margin-left: -15px;
-    margin-right: -15px;
+    margin-top: 16px;
+    margin-left: -16px;
+    margin-right: -16px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 
     .benefit-source {
-      margin: 15px;
+      margin: 16px;
     }
   }
 }
@@ -1149,15 +1213,11 @@ section.benefits {
 //
 
 section.built-on-bitcoin {
-  .cta-to {
-    margin-top: $section-padding-top;
-  }
-
   .image {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: map-get($brand-colors, green);
+    color: map-get($brand-colors, pink);
   }
 }
 
@@ -1172,6 +1232,7 @@ section.governance {
     padding-bottom: $section-padding-bottom;
     display: flex;
     justify-content: center;
+    color: map-get($brand-colors, pink);
   }
 }
 
@@ -1215,14 +1276,16 @@ section.members {
       bottom: -4px;
       right: -4px;
       border-radius: $base-border-radius;
-      background-color: $color-ui-white;
+      background-color: $color-ui-action;
       display: flex;
       justify-content: center;
       align-items: center;
       box-shadow: $base-box-shadow;
+      color: $color-ui-white;
     }
   }
 }
+
 
 
 //
@@ -1256,7 +1319,7 @@ section.stats {
     font-size: $body-lg-font-size;
     line-height: $body-lg-line-height;
     font-family: $monospace-font-family;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
 
   .stat-name {
@@ -1266,28 +1329,28 @@ section.stats {
   }
 
   .external-link {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 16px;
+    margin-bottom: 16px;
   }
 
   .card {
-    height: 340px;
+    min-height: 320px;
     background-color: map-get($brand-colors, white);
     position: relative;
 
     a {
       @include media(">ul") {
-        padding-top: 50px;
+        padding-top: 48px;
         padding-left: calc(100% / 6);
       }
     }
 
     svg {
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
 
     h3 {
-      margin-bottom: 20px;
+      margin-bottom: 24px;
 
       em {
         font-weight: $font-weight-bold;
@@ -1298,8 +1361,8 @@ section.stats {
       max-width: 300px;
     }
 
-    .cta-to {
-      min-width: 160px;
+    .btn {
+      min-width: 148px;
     }
   }
 }
@@ -1435,7 +1498,7 @@ section.distribution {
     .portion-initial-supply,
     .portion-defi-foundation,
     .portion-external-partners {
-      background-color: map-get($brand-colors, green);
+      background-color: map-get($brand-colors, pink);
       color: $color-ui-white;
     }
 
@@ -1455,7 +1518,7 @@ body {
 }
 
 section.white-paper {
-  .cta-to {
+  .btn {
     margin-top: $section-padding-top;
   }
 
@@ -1539,8 +1602,8 @@ section.white-paper {
 
 section.mentions {
   .mention {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 16px;
+    margin-bottom: 16px;
     text-decoration: none;
   }
 
@@ -1554,24 +1617,24 @@ section.mentions {
   }
 
   .card {
-    height: 340px;
+    min-height: 320px;
     background-color: map-get($brand-colors, white);
     position: relative;
 
     > a, > div {
-      padding-bottom: 30px;
+      padding-bottom: 32px;
       justify-content: space-between;
 
       @include media(">ul") {
-        padding-top: 30px;
+        padding-top: 32px;
         // padding-left: calc(100% / 6);
       }
     }
 
     h3 {
       flex-grow: 1;
-      margin-bottom: 20px;
-      max-height: 160px;
+      margin-bottom: 24px;
+      max-height: 192px;
       overflow: hidden;
 
       em {
@@ -1588,21 +1651,19 @@ section.mentions {
 
 section.downloads {
   .download {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 16px;
+    margin-bottom: 16px;
   }
 
   .download-image {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
   }
 
   .download-links {
     display: flex;
 
     a {
-      border-bottom: 1px solid $color-ui-black60;
-      margin-right: 15px;
-      color: $color-ui-black60;
+      margin-right: 16px;
 
       &:hover {
         text-decoration: none;
@@ -1611,19 +1672,18 @@ section.downloads {
   }
 
   .card {
-    height: 340px;
+    min-height: 288px;
     background-color: map-get($brand-colors, white);
     position: relative;
 
     > a, > div {
       @include media(">ul") {
-        padding-top: 30px;
         padding-left: calc(100% / 6);
       }
     }
 
     h3 {
-      margin-bottom: 20px;
+      margin-bottom: 24px;
 
       em {
         font-weight: $font-weight-bold;
@@ -1654,6 +1714,184 @@ body.home {
       padding-bottom: 200px;
     }
   }
+
+  .hero-art {
+    .dfi-branches {
+      top: -352px;
+      left: 40%;
+      transform: rotate(-83deg);
+    }
+
+    .dfi-pot {
+      right: 16%;
+      bottom: -148px;
+      transform: rotate(105deg);
+    }
+
+    .dfi-image {
+      right: 2%;
+      bottom: -244px;
+      transform: rotate(33deg);
+      background-image: url(/img/hero/singapore.jpg);
+      clip-path: url(#branchesClip);
+    }
+  }
+}
+
+body.token {
+  .hero-art {
+    .dfi-branches {
+      top: -304px;
+      left: -2%;
+      transform: rotate(-150deg);
+      color: map-get($brand-colors, cyan);
+    }
+
+    .dfi-pot {
+      left: 50%;
+      top: -120px;
+      transform: rotate(30deg);
+      color: $color-ui-white;
+    }
+
+    .dfi-image {
+      right: -4%;
+      bottom: -244px;
+      transform: rotate(-33deg);
+      background-image: url(/img/hero/tokyo2.jpg);
+      clip-path: url(#branchesClip);
+    }
+  }
+}
+
+body.developers {
+  .hero-art {
+    .dfi-branches {
+      bottom: -420px;
+      left: 7%;
+      transform: rotate(150deg);
+      color: map-get($brand-colors, paper);
+    }
+
+    .dfi-pot {
+      right: 9%;
+      top: -240px;
+      transform: rotate(140deg);
+      color: map-get($brand-colors, cyan);
+    }
+
+    .dfi-image {
+      right: 19%;
+      bottom: -188px;
+      transform: rotate(111deg);
+      background-image: url(/img/hero/hongkong.jpg);
+      clip-path: url(#branchesClip);
+    }
+  }
+}
+
+body.partners {
+  .hero-art {
+    .dfi-branches {
+      top: -304px;
+      left: 62%;
+      transform: rotate(-120deg);
+      color: $color-ui-white;
+    }
+
+    .dfi-pot {
+      left: 28%;
+      bottom: -201px;
+      transform: rotate(-47deg);
+      color: map-get($brand-colors, cyan);
+    }
+
+    .dfi-image {
+      right: -4%;
+      bottom: -288px;
+      transform: rotate(-33deg);
+      background-image: url(/img/hero/seoul.jpg);
+      clip-path: url(#branchesClip);
+    }
+  }
+}
+
+body.media {
+  .hero-art {
+    .dfi-branches {
+      top: -304px;
+      left: 12%;
+      transform: rotate(-140deg);
+      color: $color-ui-white;
+    }
+
+    .dfi-pot {
+      right: 11%;
+      top: -245px;
+      transform: rotate(27deg);
+      color: map-get($brand-colors, cyan);
+    }
+
+    .dfi-image {
+      left: 51%;
+      bottom: -234px;
+      transform: rotate(128deg);
+      background-image: url(/img/hero/newyork.jpg);
+      clip-path: url(#branchesClip);
+    }
+  }
+}
+
+body.learn {
+  .hero-art {
+    .dfi-branches {
+      top: -304px;
+      left: 12%;
+      transform: rotate(-140deg);
+      color: map-get($brand-colors, paper);
+    }
+
+    .dfi-pot {
+      right: 19%;
+      top: -245px;
+      transform: rotate(27deg);
+      color: map-get($brand-colors, cyan);
+    }
+
+    .dfi-image {
+      right: 8%;
+      bottom: -220px;
+      transform: rotate(128deg);
+      background-image: url(/img/hero/shanghai.jpg);
+      clip-path: url(#branchesClip);
+    }
+  }
+}
+
+body.foundation {
+  .hero-art {
+    .dfi-branches {
+      top: -304px;
+      right: 12%;
+      transform: rotate(-50deg);
+      color: map-get($brand-colors, cyan);
+    }
+
+    .dfi-pot {
+      left: -2%;
+      bottom: -15px;
+      transform: rotate(-67deg);
+      color: map-get($brand-colors, paper);
+    }
+
+    .dfi-image {
+      left: 61%;
+      bottom: -278px;
+      transform: rotate(102deg);
+      background-image: url(/img/hero/tokyo.jpg);
+      clip-path: url(#branchesClip);
+    }
+  }
 }
 
 
@@ -1667,7 +1905,7 @@ section.subscribe {
   @include brand-background-variations;
 
   h2 {
-    margin-bottom: 60px;
+    margin-bottom: 48px;
   }
 }
 
@@ -1695,8 +1933,8 @@ section.closer-look {
 
   .swiper-button-prev,
   .swiper-button-next {
-    width: 60px;
-    height: 60px;
+    width: 64px;
+    height: 64px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1714,7 +1952,7 @@ section.closer-look {
   }
 
   .swiper-button-prev {
-    margin-right: 30px;
+    margin-right: 32px;
     svg {
       transform: rotate(180deg);
       transform-origin: center;
@@ -1731,38 +1969,42 @@ section.closer-look {
   }
 
   .carousel {
-    margin-top: 60px;
-    padding-left: 45px;
-    padding-right: 45px;
+    margin-top: 64px;
+    padding-left: 48px;
+    padding-right: 48px;
 
     @include media(">ul") {
-      padding-left: calc((100% - 30px) / 12 + 45px);
-      padding-right: calc((100% - 30px) / 12 + 45px);
+      padding-left: calc((100% - 32px) / 12 + 48px);
+      padding-right: calc((100% - 32px) / 12 + 48px);
     }
   }
 
   .card {
-    width: 200px;
-    height: 265px;
+    width: 192px;
+    height: 256px;
     @include brand-background-variations;
 
     @include media(">md") {
-      width: 300px;
-      height: 370px;
+      width: 288px;
+      height: 324px;
     }
 
     @include media(">lg") {
-      width: 400px;
-      height: 475px;
+      width: 384px;
+      height: 448px;
     }
 
     blockquote {
-      max-width: 230px;
+      max-width: 240px;
 
       @include media("<md") {
         display: none;
       }
     }
+  }
+
+  .btn {
+    align-self: flex-end;
   }
 }
 
@@ -1772,6 +2014,8 @@ section.closer-look {
 // 
 
 .footer {
+  position: relative;
+  z-index: 10;
   background-color: $color-ui-white;
   color: $color-ui-default;
   padding-top: $section-padding-top;
@@ -1783,7 +2027,7 @@ section.closer-look {
   }
 
   .footer-logo {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 
     @include media(">md") {
       margin-bottom: 50px;
@@ -1795,9 +2039,9 @@ section.closer-look {
     color: inherit;
     width: 78px;
     height: 36px;
-    margin-bottom: 60px;
+    margin-bottom: 48px;
     overflow: hidden;
-    color: map-get($brand-colors, green);
+    color: map-get($brand-colors, pink);
 
     @include media(">md") {
       width: 97.5px;
@@ -1821,7 +2065,7 @@ section.closer-look {
   }
 
   .footer-menu {
-    margin-bottom: 60px;
+    margin-bottom: 48px;
 
     @include media(">md") {
       margin-bottom: 90px;

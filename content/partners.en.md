@@ -15,7 +15,6 @@ meta:
     image: /img/og/ogimage-partners.png
     image_type: image/png
     locale: en_US
-theme: dark green
 content:
   sections:
     hero:
@@ -42,7 +41,7 @@ content:
         cta:
           label: Contact us
     featured_video:
-      video: 2UehwDPc3Tk
+      video: IGCgUSdiDF0
       headline: DeFi Blockchain
       subject_name: _with_ Dr. Julian Hosp
       subject_title: CEO, Cake

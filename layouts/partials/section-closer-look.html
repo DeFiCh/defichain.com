@@ -1,5 +1,5 @@
 {{ $Home := .Site.GetPage "/" }}
-<section class="closer-look">
+<section class="closer-look paper">
   <div class="container-fluid">
     <div class="row">
       <div class="col col-lg-6 col-ul-4 offset-ul-1">
@@ -8,7 +8,7 @@
     </div>
     <div class="row">
       <div class="col col-sm-8 col-md-6 col-ul-4 offset-ul-1">
-        <blockquote>{{ $Home.Param "content.sections.closer_look.subhead" }}</blockquote>
+        <p class="lg">{{ $Home.Param "content.sections.closer_look.subhead" }}</p>
       </div>
       <div class="carousel-nav col col-sm-4 col-md-6">
         <div class="swiper-button-prev">
@@ -28,16 +28,15 @@
           {{ range .Site.Menus.main }}
           {{ if $currentPage.IsMenuCurrent "main" . }}
           {{ else }}
-          <div class="card swiper-slide paper">
+          <div class="card swiper-slide paper white">
             <a href="{{ .URL | relLangURL }}">
-              <h3>{{ .Name }}</h3>
+              <h3 class="h4">{{ .Name }}</h3>
               <blockquote>
                 {{ .Page.Params.long_title }}
               </blockquote>
               <div class="spacer"></div>
-              <div class="cta-to">
+              <div class="btn">
                 {{ .Page.Params.cta_to }}
-                <span>&#10142;</span>
               </div>
             </a>
           </div>
@@ -46,5 +45,8 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="section-slope paper reverse">
+    {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
   </div>
 </section>

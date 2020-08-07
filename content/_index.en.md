@@ -17,14 +17,14 @@ content:
       headline: Decentralized finance enabled on Bitcoin.
       subhead: A blockchain dedicated to fast, intelligent and transparent financial services, accessible by everyone.
       ctas:
+        - label: Desktop App (GUI)
+          type: app
+          version: v1.0.0-alpha4
+          url: https://github.com/DeFiCh/defi-app/releases
         - label: CLI
           type: cli
           version: latest
-          url: https://github.com/DeFiCh/ain/releases
-        - label: Wallet app
-          type: app
-          version: Pre-release
-          url: https://github.com/DeFiCh/defi-app/releases
+          url: https://github.com/DeFiCh/ain/releases          
     problem_solution:
       headline: The Post-Fintech Revolution
       subhead: From trust-based to trust-less, decentralized finance overcomes what Fintech could not solve in traditional finance.

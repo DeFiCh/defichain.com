@@ -5,7 +5,7 @@ var onloadCallback = function () {
 };
 
 $(document).ready(function () {
-  var base_url = "https://defichain.com";
+  var base_url = "http://localhost:8000";
 
   // Handle wizard next buttons
   function wizardNextStep() {
@@ -99,7 +99,7 @@ $(document).ready(function () {
     var rcres = grecaptcha.getResponse();
     if (!rcres.length) {
       $('#claim-step4 .claim-wizard-next + .spinner').removeClass('show');
-      $('.claim-error-alert').html("Please select recaptcha before proceed");
+      $('.alert').html("Please select recaptcha before proceed");
       $('#step4-error-alert').show();
     } else {
       $.ajax({
@@ -123,8 +123,9 @@ $(document).ready(function () {
           $('body').scrollTo('+=272', 500);
         },
         error: function (response) {
+          $('#step4-success-alert').hide();
           $('#claim-step4 .claim-wizard-next + .spinner').removeClass('show');
-          $('.claim-error-alert').html(response.responseJSON.error.message);
+          $('.alert').html(response.responseJSON.error.message);
           $('#step4-error-alert').show();
         }
       });

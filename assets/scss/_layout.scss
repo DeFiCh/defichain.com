@@ -760,14 +760,15 @@ section.featured-video {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .video-link {
     display: block;
     cursor: pointer;
     width: 240px;
-    margin-bottom: 32px;
+    margin-bottom: $grid-gutter;
+    margin-right: $grid-gutter;
   }
 
   .video-thumbnail {
@@ -775,6 +776,7 @@ section.featured-video {
     height: 135px;
     position: relative;
     margin-bottom: 16px;
+    border: $base-border-style;
     border-radius: $base-border-radius;
     overflow: hidden;
 
@@ -785,6 +787,11 @@ section.featured-video {
       margin-top: -1px;
       margin-bottom: -1px;
     }
+  }
+
+  .video-link-title {
+    line-height: 2.4rem;
+    font-weight: $font-weight-medium;
   }
 
   h2.lg {
@@ -1812,7 +1819,7 @@ body.partners {
       top: -304px;
       left: 62%;
       transform: rotate(-120deg);
-      color: $color-ui-white;
+      color: map-get($brand-colors, paper);
     }
 
     .dfi-pot {
@@ -1838,7 +1845,7 @@ body.media {
       top: -304px;
       left: 12%;
       transform: rotate(-140deg);
-      color: $color-ui-white;
+      color: map-get($brand-colors, paper);
     }
 
     .dfi-pot {
@@ -1861,23 +1868,23 @@ body.media {
 body.learn {
   .hero-art {
     .dfi-branches {
-      top: -304px;
-      left: 12%;
-      transform: rotate(-140deg);
+      bottom: -294px;
+      left: -2%;
+      transform: rotate(-213deg);
       color: map-get($brand-colors, paper);
     }
 
     .dfi-pot {
       right: 19%;
-      top: -245px;
-      transform: rotate(27deg);
+      bottom: -245px;
+      transform: rotate(77deg);
       color: map-get($brand-colors, cyan);
     }
 
     .dfi-image {
-      right: 8%;
-      bottom: -220px;
-      transform: rotate(128deg);
+      right: 31%;
+      top: -270px;
+      transform: rotate(-78deg);
       background-image: url(/img/hero/shanghai.jpg);
       clip-path: url(#branchesClip);
     }

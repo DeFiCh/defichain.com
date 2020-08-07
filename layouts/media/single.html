@@ -30,7 +30,7 @@
 
   <main>
 
-    <section class="hero paper" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
+    <section class="hero white" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
           <div id="{{ $.Param "content.sections.hero.name" }}" class="col col-lg-6 col-xl-5 offset-xl-1">
@@ -42,7 +42,7 @@
       {{ partial "hero-art.html" . }}
     </section>
 
-    <section class="mentions day">
+    <section class="mentions paper">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-5 offset-ul-1">
@@ -72,7 +72,7 @@
           </div>
         </div>
       </div>
-      <div class="section-slope day reverse">
+      <div class="section-slope paper reverse">
         {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
       </div>
     </section>

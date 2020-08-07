@@ -33,15 +33,15 @@ content:
           label: Traditional Finance
           top:
             percent: 75
-            label: Bureacracy
+            label: Bureaucracy
           bottom:
             percent: 25
             label: Trust-based Software
         fintech:
-          label: Fin-Tech
+          label: Fintech
           top:
             percent: 50
-            label: Bureacracy
+            label: Bureaucracy
           bottom:
             percent: 50
             label: Trust-based Software
@@ -49,7 +49,7 @@ content:
           label: DeFi
           top:
             percent: 25
-            label: Bureacracy
+            label: Bureaucracy
           bottom:
             percent: 75
             label: Trust-minimized Software

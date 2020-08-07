@@ -9,10 +9,10 @@ menu:
   footer:
     weight: 70
 meta:
-  description: DeFi Blockchain and DeFi Token in the news and media.
+  description: DeFi Blockchain and DeFi Token in the news and media. Download media resources and assets.
   og:
     title: Media
-    description: DeFi Blockchain and DeFi Token in the news and media.
+    description: DeFi Blockchain and DeFi Token in the news and media. Download media resources and assets.
     site_name: DeFi Blockchain
     image: /img/og/ogimage_en.png
     image_type: image/png

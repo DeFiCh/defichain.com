@@ -4,10 +4,10 @@ type: white-paper
 long_title: How to run a Defichain masternode on Linux/Mac OS
 cta_to: Read
 meta:
-  description: How to run a DeFiChain masternode on Linux/Mac OS
+  description: How to run a DeFiChain masternode on Linux/Mac OS.
   og:
     title: Run a DeFiChain masternode
-    description: How to run a DeFiChain masternode on Linux/Mac OS
+    description: How to run a DeFiChain masternode on Linux/Mac OS.
     site_name: DeFi Blockchain
     image: /img/og/ogimage_en.png
     image_type: image/png

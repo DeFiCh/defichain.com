@@ -1,16 +1,16 @@
 ---
 title: Foundation
 type: foundation
-long_title: Understand how the DeFi Foundation operates and how to get involved
+long_title: Understand how the DeFi Foundation operates and how to get involved.
 cta_to: Explore
 menu:
   footer:
     weight: 30
 meta:
-  description: Understand how the DeFi Foundation operates and how to get involved
+  description: Understand how the DeFi Foundation operates and how to get involved.
   og:
     title: Foundation
-    description: Understand how the DeFi Foundation operates and how to get involved
+    description: Understand how the DeFi Foundation operates and how to get involved.
     site_name: DeFi Blockchain
     image: /img/og/ogimage_en.png
     image_type: image/png

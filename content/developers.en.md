@@ -9,10 +9,10 @@ menu:
   footer:
     weight: 50
 meta:
-  description: Build on DeFi Blockchain
+  description: Start building on DeFi Blockchain with developer resources and code.
   og:
     title: Developers
-    description: Build on DeFi Blockchain
+    description: Start building on DeFi Blockchain with developer resources and code.
     site_name: DeFi Blockchain
     image: /img/og/ogimage_en.png
     image_type: image/png

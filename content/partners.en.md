@@ -1,16 +1,16 @@
 ---
 title: Partners
 type: partners
-long_title: Be part of the DeFi Blockchain ecosystem
+long_title: Be part of the DeFi Blockchain ecosystem.
 cta_to: Join
 menu:
   main:
     weight: 60
 meta:
-  description: Be part of the DeFi Blockchain ecosystem
+  description: Be part of the DeFi Blockchain ecosystem.
   og:
     title: Partners
-    description: Be part of the DeFi Blockchain ecosystem
+    description: Be part of the DeFi Blockchain ecosystem.
     site_name: DeFi Blockchain
     image: /img/og/ogimage_en.png
     image_type: image/png

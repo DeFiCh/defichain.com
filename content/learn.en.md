@@ -1,7 +1,7 @@
 ---
 title: Learn
 type: learn
-long_title: Learn more and understand the DeFi Blockchain with videos and how-to guides
+long_title: Learn more and understand the DeFi Blockchain with videos and how-to guides.
 cta_to: Learn
 menu:
   main:
@@ -9,10 +9,10 @@ menu:
   footer:
     weight: 80
 meta:
-  description: Learn more and understand the DeFi Blockchain with videos and how-to guides
+  description: Learn more and understand the DeFi Blockchain with videos and how-to guides.
   og:
     title: Token
-    description: Learn more and understand the DeFi Blockchain with videos and how-to guides
+    description: Learn more and understand the DeFi Blockchain with videos and how-to guides.
     site_name: DeFi Blockchain
     image: /img/og/ogimage_en.png
     image_type: image/png
@@ -22,7 +22,7 @@ content:
     hero:
       name: hero
       headline: Learn
-      subhead: Learn more and understand the DeFi Blockchain with videos and how-to guides.
+      subhead: Learn more and understand the DeFi Blockchain.
     featured_video:
       headline: Videos on DeFi Blockchain
       playlist:
@@ -47,7 +47,7 @@ content:
           label: Read guide
           url: /learn/run-a-masternode
         - image: /static/svg/icons/icon-whitepaper.svg
-          headline: Installing and using DeFi app.
+          headline: Installing and using DeFi desktop app (GUI).
           label: Read guide
           url: /learn/defi-app-how-to
     faq:

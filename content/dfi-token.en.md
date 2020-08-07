@@ -11,10 +11,10 @@ menu:
   footer:
     weight: 40
 meta:
-  description: Learn about and acquire the DFI token. Join the DeFiChain Insiders.
+  description: Learn about the DFI token and its utility, distribution, airdrops and how to acquire DFI. Join the DeFiChain Insiders.
   og:
     title: Token
-    description: Learn about and acquire the DFI token. Join the DeFiChain Insiders.
+    description: Learn about the DFI token and its utility, distribution, airdrops and how to acquire DFI. Join the DeFiChain Insiders.
     site_name: DeFi Blockchain
     image: /img/og/ogimage_en.png
     image_type: image/png
@@ -45,22 +45,22 @@ content:
           description: See available exchanges at CoinMarketCap.
           url: ==PENDING==
     utility:
-      headline: DFI Token Utility
+      headline: DFI Token utility
       utility_list:
         - icon: /static/svg/icons/utility/fees.svg
           title: Fees
           description: Pay fees for transactions, smart contracts and other DeFi activities.
         - icon: /static/svg/icons/utility/collateral.svg
-          title: Loan Collaterals
+          title: Loan collaterals
           description: Fund collaterals for loans of other cryptoassets.
         - icon: /static/svg/icons/utility/staking.svg
-          title: Staking Nodes
+          title: Staking nodes
           description: Fund a new staking node for 1,000,000 DFI.
         - icon: /static/svg/icons/utility/dct.svg
           title: DeFi Custom Token
           description: Create new DCT for 1,000 DFI (refundable).
         - icon: /static/svg/icons/utility/budget.svg
-          title: Budget Proposal
+          title: Budget proposal
           description: Submit a community budget proposal for 500 DFI (non-refundable).
     distribution:
       headline: Initial Token Distribution
@@ -107,12 +107,12 @@ content:
           description: The DeFi Foundation gives grants to developers building functionality and dApps on the DeFi Blockchain.
       cta: For further information, contact us at [partners@defichain.com](mailto:partners@defichain.com).
     insiders:
-      headline: Join the DeFiChain Insiders Community.
+      headline: Join the DeFiChain Insiders community.
       subhead: The DeFi Blockchain movement is looking for those with the passion and reach to spread the movement — register below.
       form:
         name:
           label: Name
-          placeholder: Full Name
+          placeholder: Full name
         email:
           label: Email
           placeholder: name@example.com

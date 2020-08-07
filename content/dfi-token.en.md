@@ -16,7 +16,7 @@ meta:
     title: Token
     description: Learn about and acquire the DFI token. Join the DeFiChain Insiders.
     site_name: DeFi Blockchain
-    image: /img/og/ogimage_en_.png
+    image: /img/og/ogimage_en.png
     image_type: image/png
     locale: en_US
 theme: dark purple

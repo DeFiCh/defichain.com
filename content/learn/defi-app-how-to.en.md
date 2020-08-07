@@ -9,7 +9,7 @@ meta:
     title: DeFi Blockchain app how-to
     description: A step-by-step guide to using and installing the DeFi Blockchain app.
     site_name: DeFi Blockchain
-    image: /img/og/ogimage-white-paper.png
+    image: /img/og/ogimage_en.png
     image_type: image/png
     locale: en_US
 content:

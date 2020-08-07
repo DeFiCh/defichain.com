@@ -14,7 +14,7 @@ meta:
     title: Media
     description: DeFi Blockchain and DeFi Token in the news and media.
     site_name: DeFi Blockchain
-    image: /img/og/ogimage-media.png
+    image: /img/og/ogimage_en.png
     image_type: image/png
     locale: en_US
 theme: yellow

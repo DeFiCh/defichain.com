@@ -7,7 +7,7 @@ meta:
     title: DeFi Blockchain
     description: A blockchain dedicated to fast, intelligent and transparent financial services, accessible by everyone.
     site_name: DeFi Blockchain
-    image: /img/og/ogimage-home.png
+    image: /img/og/ogimage_en.png
     image_type: image/png
     locale: en_US
 theme: dark night

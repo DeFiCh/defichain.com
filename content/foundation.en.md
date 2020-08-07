@@ -12,7 +12,7 @@ meta:
     title: Foundation
     description: Understand how the DeFi Foundation operates and how to get involved
     site_name: DeFi Blockchain
-    image: /img/og/ogimage-foundation.png
+    image: /img/og/ogimage_en.png
     image_type: image/png
     locale: en_US
 theme: dark night

@@ -14,7 +14,7 @@ meta:
     title: White paper
     description: DeFi Blockchain white paper
     site_name: DeFi Blockchain
-    image: /img/og/ogimage-white-paper.png
+    image: /img/og/ogimage_en.png
     image_type: image/png
     locale: en_US
 content:

@@ -14,7 +14,7 @@ meta:
     title: Token
     description: Learn more and understand the DeFi Blockchain with videos and how-to guides
     site_name: DeFi Blockchain
-    image: /img/og/ogimage-learn.png
+    image: /img/og/ogimage_en.png
     image_type: image/png
     locale: en_US
 content:

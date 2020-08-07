@@ -14,7 +14,7 @@ meta:
     title: Developers
     description: Build on DeFi Blockchain
     site_name: DeFi Blockchain
-    image: /img/og/ogimage-developers.png
+    image: /img/og/ogimage_en_.png
     image_type: image/png
     locale: en_US
 theme: dark purple

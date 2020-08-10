@@ -255,7 +255,13 @@
                   <div class="benefit-sources">
                     {{ range $source := $way.sources }}
                       <a href="{{ $source.url }}" target="_blank" class="benefit-source" title="{{ $source.label }}">
-                        {{ readFile $source.logo | safeHTML }}
+                        <img 
+                          src="{{ $source.file }}.{{ $source.type }}"
+                          alt="{{ $source.label }}"
+                          {{ with eq $source.type "png" }}
+                            srcset="{{ $source.file }}.{{ $source.type }} 1x, {{ $source.file }}@2x.{{ $source.type }} 2x"
+                          {{ end }}
+                        >
                       </a>
                     {{ end }}
                   </div>

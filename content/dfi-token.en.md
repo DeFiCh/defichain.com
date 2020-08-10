@@ -81,24 +81,33 @@ content:
           description: DFI is now available at these selected exchanges.
           sources:
             - label: LATOKEN
-              logo: /static/svg/sources/logo-latoken.svg
               url: https://go.latoken.com/1gd
+              file: /svg/sources/logo-latoken
+              type: svg
             - label: Coinpaprika
-              logo: /static/svg/sources/logo-coinpaprika.svg
               url: https://coinpaprika.com/coin/dfi-defi-chain/
+              file: /svg/sources/logo-coinpaprika
+              type: svg
             - label: CoinGecko
-              logo: /static/svg/sources/logo-coingecko.svg
               url: https://www.coingecko.com/en/coins/defichain
+              file: /svg/sources/logo-coingecko
+              type: svg
             - label: Indoex
-              logo: /static/svg/sources/logo-indoex.svg
               url: https://international.indoex.io/trade/DFI_USDT
+              file: /svg/sources/logo-indoex
+              type: svg
+            - label: Hotbit
+              url: https://www.hotbit.io/exchange?symbol=DFI_USDT
+              file: /img/sources/logo-hotbit
+              type: png
         - icon: /static/svg/icons/way-to-acquire/staking.svg
           title: Staking platforms
           description: DFI is now available at these selected staking platforms.
           sources:
             - label: Cake DeFi
-              logo: /static/svg/sources/logo-cake.svg
               url: https://pool.cakedefi.com
+              file: /svg/sources/logo-cake
+              type: svg
         - icon: /static/svg/icons/way-to-acquire/airdrop.svg
           title: Airdrop
           description: The DeFi Foundation will airdrop DFI to hodlers, market makers and other users of the DeFi Blockchain.

@@ -664,6 +664,7 @@ section.hero {
 
     .btn {
       margin-right: $grid-gutter / 2;
+      margin-bottom: $grid-gutter / 2;
     }
 
     .cta-download {
@@ -937,7 +938,7 @@ section.contributors {
     }
 
     .description {
-      max-width: 300px;
+      max-width: 320px;
     }
   }
 
@@ -1193,7 +1194,7 @@ section.benefits {
     }
 
     .wrapper {
-      max-width: 300px;
+      max-width: 480px;
     }
   }
 
@@ -1377,7 +1378,7 @@ section.stats {
     }
 
     .description {
-      max-width: 300px;
+      max-width: 320px;
     }
 
     .btn {

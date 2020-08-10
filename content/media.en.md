@@ -32,6 +32,11 @@ content:
           date: 10 Aug, 2020
           image: /img/press/cryptopotato.png
           url: https://cryptopotato.com/defichain-the-story-from-the-co-founders/
+        - title: DeFi Chain – An in-depth Analysis of Decentralized Finance on Bitcoin
+          source: DeFi World
+          date: 26 Jul, 2020
+          image: /img/press/defiworld.png
+          url: https://defiworld.substack.com/p/defi-chain-an-in-depth-analysis-of
         - title: 200% pro Jahr durch Compound Liquidity Mining & Yield Farming
           source: BTC-ECHO
           date: 27 Jun, 2020

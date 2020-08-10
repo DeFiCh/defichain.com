@@ -165,19 +165,16 @@ blockquote,
   line-height: $h3-line-height;
   position: relative;
   max-width: 348px;
+  padding-left: 32px;
 
-  @include media(">md") {
-    padding-left: 32px;
-
-    &:before {
-      content: "";
-      width: 2px;
-      height: 100%;
-      background-color: $color-ui-black10;
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
+  &:before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background-color: $color-ui-black10;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 }
 

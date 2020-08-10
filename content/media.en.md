@@ -27,6 +27,11 @@ content:
     mentions:
       headline: DeFi Blockchain covered in the press and media.
       mentions_list:
+        - title: "DeFiChain: The Story From the Co-Founders"
+          source: CryptoPotato
+          date: 10 Aug, 2020
+          image: /img/press/cryptopotato.png
+          url: https://cryptopotato.com/defichain-the-story-from-the-co-founders/
         - title: 200% pro Jahr durch Compound Liquidity Mining & Yield Farming
           source: BTC-ECHO
           date: 27 Jun, 2020

@@ -1635,8 +1635,10 @@ section.mentions {
     min-height: 24px;
 
     img {
-      max-height: 24px;
+      max-height: 48px;
       width: auto;
+      max-width: 128px;
+      height: auto;
     }
   }
 

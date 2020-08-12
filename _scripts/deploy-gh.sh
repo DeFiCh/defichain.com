@@ -28,8 +28,8 @@ git worktree add -B gh-pages public origin/gh-pages
 echo "Removing existing files"
 rm -rf public/*
 
-echo "Generating site"
-hugo
+echo "Generating site (minified)"
+hugo --minify
 
 echo "Updating gh-pages branch"
 cd public

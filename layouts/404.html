@@ -11,6 +11,7 @@
   <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
   {{ end }}
   {{ end }}
+  {{ partial "favicons.html" . }}
   <meta charset="utf-8">
   <meta name="description" content="{{ $.Param "meta.description" }}">
   <meta http-equiv="x-ua-compatible" content="ie=edge">

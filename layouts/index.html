@@ -15,6 +15,7 @@
   <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
   {{ end }}
   {{ end }}
+  {{ partial "favicons.html" . }}
   <meta property="og:title" content="{{ $.Params.meta.og.title }}">
   <meta property="og:description" content="{{ $.Params.meta.og.description }}">
   <meta property="og:site_name" content="{{ $.Params.meta.og.site_name }}">

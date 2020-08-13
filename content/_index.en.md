@@ -20,11 +20,11 @@ content:
         - label: Desktop app (GUI)
           type: app
           version: v1.0.0-alpha4
-          url: https://github.com/DeFiCh/defi-app/releases
+          url: https://github.com/DeFiCh/defi-app/releases/tag/v1.0.0-alpha4
         - label: CLI
           type: cli
-          version: latest
-          url: https://github.com/DeFiCh/ain/releases          
+          version: v1.0.1
+          url: https://github.com/DeFiCh/ain/releases/tag/v1.0.1      
     problem_solution:
       headline: The Post-Fintech Revolution
       subhead: From trust-based to trust-less, decentralized finance overcomes what Fintech could not solve in traditional finance.

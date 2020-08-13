@@ -5,7 +5,7 @@ var onloadCallback = function () {
 };
 
 $(document).ready(function () {
-  var base_url = "http://localhost:8000";
+  var base_url = "http://defi-airdrop-1517175103.ap-southeast-1.elb.amazonaws.com";
 
   // Handle wizard next buttons
   function wizardNextStep() {

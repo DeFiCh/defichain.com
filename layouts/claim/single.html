@@ -228,7 +228,7 @@
             <div class="form-field has-float-label">
               <input type="text" id="message_signature" name="message_signature" autocomplete="off" autocorrect="off"
                 placeholder="{{ $.Params.content.sections.claim_wizard.step4.form.signature.hint }}"
-                required="required" />
+                required="required" onkeyup="removeBtnDisable()"/>
               <label
                 for="message_signature">{{ $.Params.content.sections.claim_wizard.step4.form.signature.label }}</label>
             </div>

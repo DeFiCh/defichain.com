@@ -4,6 +4,10 @@ var onloadCallback = function () {
   });
 };
 
+function removeBtnDisable(){
+  $('#claim-step4 .claim-wizard-next').removeClass('btn-disable');
+}
+
 $(document).ready(function () {
   var base_url = "http://defi-airdrop-1517175103.ap-southeast-1.elb.amazonaws.com";
 
@@ -120,12 +124,16 @@ $(document).ready(function () {
           $('#dfi-status-value').html(response.transactionInfo.status);
           $('#requested-ts-value').html(rTF);
           $('#step4-success-alert').show();
+          $('#claim-step4 .claim-wizard-next').addClass('btn-disable');
           $('body').scrollTo('+=272', 500);
         },
         error: function (response) {
           $('#step4-success-alert').hide();
+          $('#claim-step4').css({
+            'height': 'auto'
+          });
           $('#claim-step4 .claim-wizard-next + .spinner').removeClass('show');
-          $('.alert').html(response.responseJSON.error.message);
+          $('.claim-alert-error').html(response.responseJSON.error.message);
           $('#step4-error-alert').show();
         }
       });
@@ -156,7 +164,7 @@ $(document).ready(function () {
       },
       error: function (response) {
         $('#claim-status-form .spinner').removeClass('show');
-        $('#claim-status-success-alert').hide()
+        $('#claim-status-success-alert').hide();
         $('.status-alert-error').html(response.responseJSON.error.message);
         $('#claim-status-error-alert').show();
       }

@@ -157,6 +157,7 @@ $(document).ready(function () {
         $('#claim-status-error-alert').hide();
         $('#claim-status-value').html(response.status);
         if(response.status === 'COMPLETED'){
+          $('#claim-status-btcBalance').html(response.btcBalance);
           $('#claim-status-txId').html(response.txId);
           $('#claim-status-claimDfiAmount').html(response.claimDfiAmount);
         }

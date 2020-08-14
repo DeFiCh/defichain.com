@@ -227,8 +227,8 @@
             <p class="lead">{{ $.Params.content.sections.claim_wizard.step4.subhead | markdownify }}</p>
             <div class="form-field has-float-label">
               <input type="text" id="message_signature" name="message_signature" autocomplete="off" autocorrect="off"
-                placeholder="{{ $.Params.content.sections.claim_wizard.step4.form.signature.hint }}"
-                required="required" onkeyup="removeBtnDisable()"/>
+                placeholder="{{ $.Params.content.sections.claim_wizard.step4.form.signature.hint }}" required="required"
+                onkeyup="removeBtnDisable()" />
               <label
                 for="message_signature">{{ $.Params.content.sections.claim_wizard.step4.form.signature.label }}</label>
             </div>
@@ -309,6 +309,10 @@
                       <tr>
                         <th>{{ $.Params.content.sections.claim_status.form.response.status }}</th>
                         <td id="claim-status-value"></td>
+                      </tr>
+                      <tr>
+                        <th>{{ $.Params.content.sections.claim_status.form.response.btc_balance }}</th>
+                        <td id="claim-status-btcBalance"></td>
                       </tr>
                       <tr style="word-break: break-all;">
                         <th>{{ $.Params.content.sections.claim_status.form.response.transaction_id }}</th>

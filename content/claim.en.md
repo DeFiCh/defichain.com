@@ -122,8 +122,9 @@ content:
           message: "Your Claim status is as follows:"
           dfi_value: DFI value
           status: Status
-          transaction_id: TransactionId
-          claim_dfi_amount: Claimed DFI Amount
+          btc_balance: BTC balance at block 213145
+          transaction_id: DFI payment transaction
+          claim_dfi_amount: DFI claimed (@500 DFI per BTC)
     #white paper in /
     #subscribe in /
     #closer_look in /

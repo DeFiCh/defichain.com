@@ -64,26 +64,54 @@ $(function () {
   //   });
   // }
 
-  // Closer look carousel
-  if ($(".closer-look").length) {
-    var closerLookCarousel = new Swiper('.carousel', {
+  // Carousel for timeline
+  if ($(".roadmap").length > 0) {
+    var roadmapCarousel = new Swiper('.roadmap .carousel', {
       slidesPerView: 'auto',
-      spaceBetween: 30,
+      initialSlide: 8,
+      roundLengths: true,
+      centeredSlides: true,
+      spaceBetween: 32,
       watchOverflow: true,
       mousewheel: {
         forceToAxis: true,
         invert: true
       },
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.roadmap .swiper-button-next',
+        prevEl: '.roadmap .swiper-button-prev',
       },
       breakpoints: {
         812: {
-          spaceBetween: 60
+          spaceBetween: 64
         },
         992: {
-          spaceBetween: 90
+          spaceBetween: 80
+        }
+      }
+    });
+  }
+
+  // Closer look carousel
+  if ($(".closer-look").length) {
+    var closerLookCarousel = new Swiper('.closer-look .carousel', {
+      slidesPerView: 'auto',
+      spaceBetween: 32,
+      watchOverflow: true,
+      mousewheel: {
+        forceToAxis: true,
+        invert: true
+      },
+      navigation: {
+        nextEl: '.closer-look .swiper-button-next',
+        prevEl: '.closer-look .swiper-button-prev',
+      },
+      breakpoints: {
+        812: {
+          spaceBetween: 64
+        },
+        992: {
+          spaceBetween: 80
         }
       }
     });

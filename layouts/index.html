@@ -162,7 +162,7 @@
       </div>
     </section>
 
-    <section class="built-on-bitcoin paper">
+    <section class="built-on-bitcoin white">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-lg-5 col-ul-4 offset-ul-1 mbg1">
@@ -177,7 +177,52 @@
           </div>
         </div>
       </div>
-      <div class="section-slope paper reverse">
+      <div class="section-slope white reverse">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
+      </div>
+    </section>
+
+    <section class="roadmap paper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col col-lg-6 col-ul-4 offset-ul-1">
+            <h2>{{ $.Param "content.sections.roadmap.headline" }}</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-sm-8 col-md-6 col-ul-4 offset-ul-1">
+            <p class="lg">{{ $.Param "content.sections.roadmap.subhead" }}</p>
+          </div>
+          <div class="carousel-nav col col-sm-4 col-md-6">
+            <div class="swiper-button-prev">
+              {{ readFile "/static/svg/icons/icon-arrow-big.svg" | safeHTML }}
+            </div>
+            <div class="swiper-button-next">
+              {{ readFile "/static/svg/icons/icon-arrow-big.svg" | safeHTML }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel swiper-container col">
+        <div class="swiper-wrapper">
+          {{ range $year := $.Param "content.sections.roadmap.timeline" }}
+          {{ range $eventindex, $event := $year.events }}
+          <div class="timeline-event {{ $event.status }} swiper-slide">
+            <div class="card white">
+              <div class="event-content">
+                <h4 class="h5">{{ $event.month }} {{ if eq $eventindex 0 }}{{ $year.year }}{{ end }}</h4>
+                <p>{{ $event.title }}</p>
+              </div>
+              <div class="event-image">
+                <img src="{{ $event.image.x1 }}" srcset="{{ $event.image.x1 }} 1x, {{ $event.image.x2 }} 2x" alt="{{ $event.image.alt }}">
+              </div>
+            </div>
+          </div>
+          {{ end }}
+          {{ end }}
+        </div>
+      </div>
+      <div class="section-slope paper">
         {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
       </div>
     </section>

@@ -108,6 +108,77 @@ content:
         label: Learn more
         url: /white-paper
       image: /static/svg/built-on-bitcoin.svg
+    roadmap:
+      headline: Roadmap
+      subhead: Achievements and what to look forward to.
+      timeline:
+        - year: 2019
+          events:
+            - month: Sep
+              status: past
+              title: Conceptualization of DeFi blockchain.
+              image:
+                x1: /img/timeline/2019/concept.jpg
+                x2: /img/timeline/2019/concept@2x.jpg
+                alt: Conceptualization of DeFi blockchain
+            - month: Oct
+              status: past
+              title: DeFi White paper released.
+              image:
+                x1: /img/timeline/2019/white-paper.png
+                x2: /img/timeline/2019/white-paper@2x.png
+                alt: DeFi logo
+        - year: 2020
+          events:
+            - month: May
+              status: past
+              title: DeFi Blockchain launch and DFI airdrops.
+              image:
+                x1: /img/timeline/2020/blockchain-launch.png
+                x2: /img/timeline/2020/blockchain-launch@2x.png
+                alt: DeFi logo
+            - month: Jun
+              status: past
+              title: DFI token started trading on LATOKEN.
+              image:
+                x1: /img/timeline/2020/dfi-latoken.png
+                x2: /img/timeline/2020/dfi-latoken@2x.png
+                alt: DFI on LATOKEN
+            - month: Jun
+              status: past
+              title: DFI is listted on CoinPaprika.
+              image:
+                x1: /img/timeline/2019/dfi-coinpaprika.png
+                x2: /img/timeline/2019/dfi-coinpaprika@2x.png
+                alt: DFI on CoinPaprika
+            - month: Jul
+              status: past
+              title: CoinGecko lists DFI.
+              image:
+                x1: /img/timeline/2020/dfi-coingecko.png
+                x2: /img/timeline/2020/dfi-coingecko@2x.png
+                alt: DFI on CoinGecko
+            - month: Jul
+              status: past
+              title: Indoex lists DFI.
+              image:
+                x1: /img/timeline/2020/dfi-indoex.png
+                x2: /img/timeline/2020/dfi-indoex@2x.png
+                alt: DFI on Indoex
+            - month: Jul
+              status: past
+              title: DeFi Blockchain client app launch.
+              image:
+                x1: /img/timeline/2020/defi-app.png
+                x2: /img/timeline/2020/defi-app@2x.png
+                alt: DeFi Blockchain client app
+            - month: Jul
+              status: past
+              title: DFI officially listed on HotBit.
+              image:
+                x1: /img/timeline/2020/dfi-hotbit.png
+                x2: /img/timeline/2020/dfi-hotbit@2x.png
+                alt: DFI on HotBit
     subscribe:
       headline: "Join our mailing list to get the latest DeFi Blockchain announcements:"
       form:

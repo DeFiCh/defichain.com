@@ -219,6 +219,22 @@ content:
                 x1: /img/timeline/2020/dex.png
                 x2: /img/timeline/2020/dex@2x.png
                 alt: DEX
+        - year: 2021
+          events:
+            - month:
+              status: future
+              title: Complete decentralized and trustless lending.
+              image:
+                x1: /img/timeline/2021/complete-trustless.png
+                x2: /img/timeline/2021/complete-trustless@2x.png
+                alt: DeFi logo
+            - month: 2021
+              status: future
+              title: Feature parity with DeFi on Ethereum.
+              image:
+                x1: /img/timeline/2021/eth-parity.png
+                x2: /img/timeline/2021/eth-parity@2x.png
+                alt: DeFi logo
     subscribe:
       headline: "Join our mailing list to get the latest DeFi Blockchain announcements:"
       form:

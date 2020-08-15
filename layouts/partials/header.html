@@ -10,7 +10,10 @@
         <ul class="menu">
           {{ $currentPage := . }}
           {{ range .Site.Menus.main }}
-          <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+          <li
+            class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}"
+            {{- with .Page -}} id="nav-{{- .Type -}}"{{ end }}
+          >
             <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
           </li>
           {{ end }}

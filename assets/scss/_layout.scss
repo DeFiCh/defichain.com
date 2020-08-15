@@ -167,6 +167,17 @@ body > header {
     }
   }
 
+  .dfi-price {
+    font-size: $body-sm-font-size;
+    font-weight: $font-weight-bold;
+    color: $color-ui-white;
+    margin-left: 8px;
+    padding: 3px 8px;
+    border-radius: 12px;
+    background-color: $color-ui-black40;
+    vertical-align: 1px;
+  }
+
   .github-link {
     margin-right: $grid-gutter;
   }

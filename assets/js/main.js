@@ -12,6 +12,21 @@ $(function () {
     $('.lang-switcher').toggleClass('active');
   });
 
+  // Fetch DFI price
+  if ($("#nav-token").length > 0) {
+    $.ajax({
+      url: "https://poolapi.cakedefi.com/home",
+      success: function (data) {
+        for (i = 0; i < data.coinPrices.length; i++) {
+          if (data.coinPrices[i].CoinId == "DFI") {
+            var DFIPrice = data.coinPrices[i].priceUSD.avg;
+          }
+        }
+        $("#nav-token a").append('<span class="dfi-price">$' + parseFloat(DFIPrice).toFixed(2) + '</span>');
+      }
+    });
+  }
+
   // FAQ toggles
   function storeAnswerHeights() {
     $('.faq-a').css({

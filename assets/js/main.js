@@ -68,7 +68,7 @@ $(function () {
   if ($(".roadmap").length > 0) {
     var roadmapCarousel = new Swiper('.roadmap .carousel', {
       slidesPerView: 'auto',
-      initialSlide: 8,
+      initialSlide: 10,
       roundLengths: true,
       centeredSlides: true,
       spaceBetween: 32,

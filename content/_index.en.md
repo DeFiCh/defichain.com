@@ -117,13 +117,15 @@ content:
             - month: Sep
               status: past
               title: Conceptualization of DeFi blockchain.
+              url: https://cryptopotato.com/defichain-the-story-from-the-co-founders/
               image:
                 x1: /img/timeline/2019/concept.jpg
                 x2: /img/timeline/2019/concept@2x.jpg
                 alt: Conceptualization of DeFi blockchain
             - month: Oct
               status: past
-              title: DeFi White paper released.
+              title: DeFiChain White paper released.
+              url: /white-paper/
               image:
                 x1: /img/timeline/2019/white-paper.png
                 x2: /img/timeline/2019/white-paper@2x.png
@@ -132,7 +134,8 @@ content:
           events:
             - month: May
               status: past
-              title: DeFi Blockchain launch and DFI airdrops.
+              title: DeFiChain launch and DFI airdrops.
+              url: https://github.com/DeFiCh/ain
               image:
                 x1: /img/timeline/2020/blockchain-launch.png
                 x2: /img/timeline/2020/blockchain-launch@2x.png
@@ -140,6 +143,7 @@ content:
             - month: Jun
               status: past
               title: DFI token started trading on LATOKEN.
+              url: https://exchange.latoken.com/exchange/DFI-USDT
               image:
                 x1: /img/timeline/2020/dfi-latoken.png
                 x2: /img/timeline/2020/dfi-latoken@2x.png
@@ -147,6 +151,7 @@ content:
             - month: Jun
               status: past
               title: DFI is listted on CoinPaprika.
+              url: https://coinpaprika.com/coin/dfi-defi-chain/
               image:
                 x1: /img/timeline/2019/dfi-coinpaprika.png
                 x2: /img/timeline/2019/dfi-coinpaprika@2x.png
@@ -154,6 +159,7 @@ content:
             - month: Jul
               status: past
               title: CoinGecko lists DFI.
+              url: https://www.coingecko.com/en/coins/defichain
               image:
                 x1: /img/timeline/2020/dfi-coingecko.png
                 x2: /img/timeline/2020/dfi-coingecko@2x.png
@@ -161,24 +167,58 @@ content:
             - month: Jul
               status: past
               title: Indoex lists DFI.
+              url: https://international.indoex.io/trade/DFI_USDT
               image:
                 x1: /img/timeline/2020/dfi-indoex.png
                 x2: /img/timeline/2020/dfi-indoex@2x.png
                 alt: DFI on Indoex
             - month: Jul
               status: past
-              title: DeFi Blockchain client app launch.
+              title: DeFiChain desktop app (GUI) launch.
+              url: https://github.com/DeFiCh/defi-app
               image:
                 x1: /img/timeline/2020/defi-app.png
                 x2: /img/timeline/2020/defi-app@2x.png
                 alt: DeFi Blockchain client app
-            - month: Jul
+            - month: Aug
               status: past
               title: DFI officially listed on HotBit.
+              url: https://www.hotbit.io/exchange?symbol=DFI_USDT
               image:
                 x1: /img/timeline/2020/dfi-hotbit.png
                 x2: /img/timeline/2020/dfi-hotbit@2x.png
                 alt: DFI on HotBit
+            - month: Aug
+              status: past
+              title: DeFiChain brand refresh.
+              image:
+                x1: /img/timeline/2020/dechain-site-redesign.png
+                x2: /img/timeline/2020/dechain-site-redesign@2x.png
+                alt: DeFiChain.com redesign
+            - month: Aug
+              status: past
+              title: DeFiChain listed on CoinMarketCap.
+              url: https://coinmarketcap.com/currencies/defichain/markets/
+              image:
+                x1: /img/timeline/2020/dfi-coinmarketcap.png
+                x2: /img/timeline/2020/dfi-coinmarketcap@2x.png
+                alt: DeFiChain.com redesign
+            - month: Q3 2020
+              status: future
+              title: Tokenization ready with DSTs.
+              url: https://www.youtube.com/watch?v=0uBwWK85BLU
+              image:
+                x1: /img/timeline/2020/tokenization.png
+                x2: /img/timeline/2020/tokenization@2x.png
+                alt: Tokenization ready with DSTs
+            - month: Q4
+              status: future
+              title: Trustless and fully Decentralized EXchange (DEX).
+              url: https://www.youtube.com/watch?v=0uBwWK85BLU
+              image:
+                x1: /img/timeline/2020/dex.png
+                x2: /img/timeline/2020/dex@2x.png
+                alt: DEX
     subscribe:
       headline: "Join our mailing list to get the latest DeFi Blockchain announcements:"
       form:

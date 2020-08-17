@@ -2162,16 +2162,10 @@ section.closer-look {
     list-style: none;
     padding: 0;
 
-    @include media(">sm") {
-      columns: 2;
-    }
-
     li {
       display: inline-block;
       width: 100%;
-      font-size: $body-lg-font-size;
       line-height: $body-lg-line-height;
-      margin-bottom: 24px;
     }
 
     a {
@@ -2192,6 +2186,14 @@ section.closer-look {
       svg {
         fill: currentColor;
         margin-right: 8px;
+      }
+    }
+  }
+
+  .col-md-3 {
+    .menu {
+      @include media(">sm") {
+        columns: 2;
       }
     }
   }

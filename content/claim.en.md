@@ -42,6 +42,12 @@ content:
           dfi: 50,000 DFI
     claim_wizard:
       headline: Claim your DFI now.
+      reward_eligibility:
+        headline: "Enter BTC address to check your reward eligibility"
+        body: "Enter your BTC address to check your reward eligibility"
+        reward_eligibility_button: "Check Reward Eligibility"
+        next_button: 
+          label: "I've checked reward eligibility"
       step1:
         headline: "Step 1: Get a DFI Wallet"
         options:
@@ -124,7 +130,7 @@ content:
           status: Status
           btc_balance: BTC balance at block 213145
           transaction_id: DFI payment transaction
-          claim_dfi_amount: DFI claimed (@500 DFI per BTC)
+          claim_dfi_amount: DFI claim amount (@500 DFI per BTC)
     #white paper in /
     #subscribe in /
     #closer_look in /

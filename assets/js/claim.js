@@ -4,7 +4,7 @@ var onloadCallback = function () {
   });
 };
 
-function removeBtnDisable(){
+function removeBtnDisable() {
   $('#claim-step4 .claim-wizard-next').removeClass('btn-disable');
 }
 
@@ -38,6 +38,54 @@ $(document).ready(function () {
   //   wizardNextStep();
   //    e.preventDefault();
   // });
+  $('#reward-eligibility-form form').submit(function (e) {
+    e.preventDefault();
+    $.ajax({
+      data: JSON.stringify({
+        btcAddress: $('#btc_address').val(),
+      }),
+      url: base_url + "/claim/status",
+      dataType: "json",
+      type: 'POST',
+      beforeSend: function () {
+        $('#reward-eligibility-form .spinner').addClass('show');
+      },
+      success: function (response) {
+        $('#reward-eligibility-form .spinner').removeClass('show');
+        $('#reward-eligibility-error-alert').hide();
+        $('#reward-eligibility').css({
+          'height': 'auto'
+        });
+        $('#reward-eligibility-value').html(response.status);
+        if (response.status === 'NOT_STARTED') {
+          $('#reward-eligibility-value').html('No Claim process has been started for ' + $('#btc_address').val() + ' Btc Address');
+          $('#reward-eligibility-claimDfiAmount').html(response.claimDfiAmount);
+          $('#reward-eligibility-btcBalance').html(response.btcBalance);
+          $('#reward-eligibility-txId').html(response.txId);
+        }
+        if (response.status === 'COMPLETED') {
+          $('#reward-eligibility-btcBalance').html(response.btcBalance);
+          $('#reward-eligibility-txId').html(response.txId);
+          $('#reward-eligibility-claimDfiAmount').html(response.claimDfiAmount);
+        }
+        $('#reward-eligibility-success-alert').show();
+      },
+      error: function (response) {
+        $('#reward-eligibility-form .spinner').removeClass('show');
+        $('#reward-eligibility-success-alert').hide();
+        $('#reward-eligibility').css({
+          'height': 'auto'
+        });
+        $('.reward-alert-error').html(response.responseJSON.error.message);
+        $('#reward-eligibility-error-alert').show();
+      }
+    });
+  });
+
+  $('#reward-eligibility .claim-wizard-next-button').click(function (e) {
+    e.preventDefault();
+    wizardNextStep();
+  });
 
   $('#claim-step1 .claim-wizard-next').click(function (e) {
     e.preventDefault();
@@ -156,7 +204,13 @@ $(document).ready(function () {
         $('#claim-status-form .spinner').removeClass('show');
         $('#claim-status-error-alert').hide();
         $('#claim-status-value').html(response.status);
-        if(response.status === 'COMPLETED'){
+        if (response.status === 'NOT_STARTED') {
+          $('#claim-status-value').html('No Claim process has been started for ' + $('#btc_address').val() + ' Btc Address');
+          $('#claim-status-claimDfiAmount').html(response.claimDfiAmount);
+          $('#claim-status-btcBalance').html(response.btcBalance);
+          $('#claim-status-txId').html(response.txId);
+        }
+        if (response.status === 'COMPLETED') {
           $('#claim-status-btcBalance').html(response.btcBalance);
           $('#claim-status-txId').html(response.txId);
           $('#claim-status-claimDfiAmount').html(response.claimDfiAmount);

@@ -91,6 +91,70 @@
               <div class="bar"></div>
               <div class="bar"></div>
             </div>
+            <h3>{{ $.Params.content.sections.claim_wizard.reward_eligibility.headline }}</h3>
+          </div>
+        </div>
+      </div>
+      <div class="collapsible-content container-flushed" id="reward-eligibility">
+        <div class="row">
+          <div class="col col-ul-6 offset-ul-1">
+            <div id="reward-eligibility-form">
+              <form action="/" data-parsley-validate>
+                <p class="lead">{{ $.Params.content.sections.claim_wizard.reward_eligibility.body }}</p>
+                <div class="form-field has-float-label">
+                  <input type="text" id="btc_address" name="btc_address" autocomplete="off" autocorrect="off"
+                    placeholder="{{ $.Params.content.sections.claim_status.form.btc_field.hint }}"
+                    data-parsley-type="alphanum" data-parsley-length="[14, 74]" />
+                  <label for="btc_address">{{ $.Params.content.sections.claim_status.form.btc_field.label }}</label>
+                </div>
+                <div class="form-field">
+                  <button class="claim-wizard-next-button btn ">
+                    {{ $.Params.content.sections.claim_wizard.reward_eligibility.next_button.label }}
+                  </button>
+                  <button class="claim-wizard-next btn mlg1" type="submit">
+                    {{ $.Params.content.sections.claim_wizard.reward_eligibility.reward_eligibility_button }}
+                  </button>
+                  <div class="spinner">
+                    <div class="b1"></div>
+                    <div class="b2"></div>
+                    <div class="b3"></div>
+                  </div>
+                </div>
+                <div class="d-none" id="reward-eligibility-error-alert">
+                  <div class="reward-alert-error alert error"></div>
+                </div>
+                <div class="d-none" id="reward-eligibility-success-alert">
+                  <div class="reward-alert-success alert info">
+                    {{ $.Params.content.sections.claim_status.form.response.message }}
+                    <table class="reward-response">
+                      <tr style="word-break: break-all;">
+                        <th>{{ $.Params.content.sections.claim_status.form.response.status }}</th>
+                        <td id="reward-eligibility-value"></td>
+                      </tr>
+                      <tr>
+                        <th>{{ $.Params.content.sections.claim_status.form.response.btc_balance }}</th>
+                        <td id="reward-eligibility-btcBalance"></td>
+                      </tr>
+                      <tr>
+                        <th>{{ $.Params.content.sections.claim_status.form.response.claim_dfi_amount }}</th>
+                        <td id="reward-eligibility-claimDfiAmount"></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapsible-head container-fluid">
+        <div class="row">
+          <div class="col col-ul-6 offset-ul-1">
+            <div class="toggle">
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
             <h3>{{ $.Params.content.sections.claim_wizard.step1.headline }}</h3>
           </div>
         </div>
@@ -306,7 +370,7 @@
                   <div class="status-alert-success alert info">
                     {{ $.Params.content.sections.claim_status.form.response.message }}
                     <table class="claim-response">
-                      <tr>
+                      <tr style="word-break: break-all;">
                         <th>{{ $.Params.content.sections.claim_status.form.response.status }}</th>
                         <td id="claim-status-value"></td>
                       </tr>
@@ -314,13 +378,13 @@
                         <th>{{ $.Params.content.sections.claim_status.form.response.btc_balance }}</th>
                         <td id="claim-status-btcBalance"></td>
                       </tr>
-                      <tr style="word-break: break-all;">
-                        <th>{{ $.Params.content.sections.claim_status.form.response.transaction_id }}</th>
-                        <td id="claim-status-txId"></td>
-                      </tr>
                       <tr>
                         <th>{{ $.Params.content.sections.claim_status.form.response.claim_dfi_amount }}</th>
                         <td id="claim-status-claimDfiAmount"></td>
+                      </tr>
+                      <tr style="word-break: break-all;">
+                        <th>{{ $.Params.content.sections.claim_status.form.response.transaction_id }}</th>
+                        <td id="claim-status-txId"></td>
                       </tr>
                     </table>
                   </div>

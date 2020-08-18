@@ -45,7 +45,7 @@ content:
       reward_eligibility:
         headline: "Enter BTC address to check your reward eligibility"
         body: "Enter your BTC address to check your reward eligibility"
-        reward_eligibility_button: "Check Reward Eligibility"
+        reward_eligibility_button: "Check Eligibility"
         next_button: 
           label: "I've checked reward eligibility"
       step1:

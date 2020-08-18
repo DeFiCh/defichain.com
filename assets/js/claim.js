@@ -192,7 +192,7 @@ $(document).ready(function () {
     e.preventDefault();
     $.ajax({
       data: JSON.stringify({
-        btcAddress: $('#btc_address').val(),
+        btcAddress: $('#btc_address_input').val(),
       }),
       url: base_url + "/claim/status",
       dataType: "json",

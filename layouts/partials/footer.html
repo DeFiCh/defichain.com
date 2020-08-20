@@ -9,7 +9,8 @@
       </div>
     </div>
     <div class="footer-menu row">
-      <div class="col col-md-6 offset-ul-1">
+      <div class="col col-md-3 offset-ul-1">
+        <h4>DeFi Blockchain</h4>
         <ul class="menu">
           {{ $currentPage := . }}
           {{ range .Site.Menus.footer }}
@@ -17,21 +18,55 @@
             <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
           </li>
           {{ end }}
-          <li>
-            <a href="https://github.com/DeFiCh/ain" target="_blank">
-              {{ readFile "/static/svg/icons/icon-github.svg" | safeHTML }}
-              GitHub
-            </a>
-          </li>
           {{ range .Site.Menus.white_paper }}
           <li class="{{ if $currentPage.IsMenuCurrent "white_paper" . }}active{{ end }}">
             <a href="{{ .URL | relLangURL }}">
-              {{ readFile "/static/svg/icons/icon-cloud-download.svg" | safeHTML }}
               {{ .Name }}
             </a>
           </li>
           {{ end }}
         </ul>
+      </div>
+      <div class="col col-md-2">
+        <h4>Legal</h4>
+        <ul class="menu">
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.legal }}
+          <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+            <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="col col-md-3">
+        <h4>Social</h4>
+        <ul class="menu">
+          <li>
+            <a href="https://twitter.com/defichain" target="_blank">Twitter</a>
+          </li>
+          <li>
+            <a href="https://youtube.com/DeFiChain" target="_blank">YouTube</a>
+          </li>
+          <li>
+            <a href="https://reddit.com/r/defiblockchain" target="_blank">Reddit</a>
+          </li>
+          <li>
+            <a href="https://t.me/defiblockchain" target="_blank">Telegram</a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/defichain" target="_blank">LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/defichain.foundation" target="_blank">Facebook</a>
+          </li>
+          <li>
+            <a href="https://github.com/DeFiCh/ain" target="_blank">GitHub</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col col-md-2">
+        <h4>Market</h4>
+        <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div class="coinmarketcap-currency-widget" data-currencyid="5804" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="false" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
       </div>
     </div>
     <div class="row">
@@ -39,5 +74,8 @@
         <p>&copy; {{ $.Site.Params.company_name }}</p>
       </div>
     </div>
+  </div>
+  <div class="section-slope{{ with $.Param "theme.footer" }} {{.}}{{ end }}">
+    {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
   </div>
 </footer>

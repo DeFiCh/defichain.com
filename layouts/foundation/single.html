@@ -15,6 +15,7 @@
   <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
   {{ end }}
   {{ end }}
+  {{ partial "favicons.html" . }}
   <meta property="og:title" content="{{ $.Params.meta.og.title }}">
   <meta property="og:description" content="{{ $.Params.meta.og.description }}">
   <meta property="og:site_name" content="{{ $.Params.meta.og.site_name }}">
@@ -30,7 +31,7 @@
 
   <main>
 
-    <section id="{{ $.Param "content.sections.hero.name" }}" class="hero dark night">
+    <section class="hero" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-4 offset-ul-1">
@@ -41,7 +42,7 @@
           </div>
         </div>
       </div>
-      <!-- animation hero here -->
+      {{ partial "hero-art.html" . }}
     </section>
 
     <section class="governance paper">
@@ -57,6 +58,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="section-slope paper reverse">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
       </div>
     </section>
 
@@ -93,6 +97,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="section-slope day">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
       </div>
     </section>
 

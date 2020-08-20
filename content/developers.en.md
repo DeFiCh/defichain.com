@@ -9,12 +9,12 @@ menu:
   footer:
     weight: 50
 meta:
-  description: Build on DeFi Blockchain
+  description: Start building on DeFi Blockchain with developer resources and code.
   og:
     title: Developers
-    description: Build on DeFi Blockchain
+    description: Start building on DeFi Blockchain with developer resources and code.
     site_name: DeFi Blockchain
-    image: /img/og/ogimage-developers.png
+    image: /img/og/ogimage_en.png
     image_type: image/png
     locale: en_US
 theme: dark purple
@@ -31,7 +31,7 @@ content:
       subject_title: CTO, Cake
       quote: Doesn't matter if you are front-end of back-end. If you're a JavaScript developer, and a good one, drop me a note, and we can talk.
     resources:
-      headline: Start building on DeFi Blockchain with developer resources and code
+      headline: Start building on DeFi Blockchain with developer resources and code.
       github:
         image: /static/svg/icons/developers/icon-octocat.svg
         headline: Get developer resources and getting started guides.
@@ -47,7 +47,7 @@ content:
         image: /static/svg/icons/developers/icon-dfi.svg
         headline: Explore the blockchain in Block Explorer.
         label: Explore
-        url: http://explorer.defichain.io/
+        url: http://explorer.defichain.com/
       white_paper:
         image: /static/svg/icons/icon-whitepaper.svg
         headline: Read the DeFi Blockchain technical paper.

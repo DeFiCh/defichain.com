@@ -27,7 +27,15 @@
 
 @mixin brand-text-variations() {
   @each $name, $value in $brand-colors {
-    .text-#{$name} { 
+    &.text-#{$name} { 
+      color: $value;
+    }
+  }
+}
+
+@mixin brand-currentcolor-variations() {
+  @each $name, $value in $brand-colors {
+    &.#{$name} { 
       color: $value;
     }
   }

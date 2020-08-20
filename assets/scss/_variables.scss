@@ -1,6 +1,8 @@
 // Colors
 
 $brand-colors: (
+  pink:     #FF00AF,
+  cyan:     #00F3FF,
   purple:   #5B10FF,
   green:    #02B31B,
   yellow:   #F1EE05,
@@ -9,7 +11,7 @@ $brand-colors: (
   evening:  #16162B,
   day:      #FAFAFA,
   smoke:    #404040,
-  paper:    #F5F5F5,
+  paper:    #F4F3F6,
   white:    #FFFFFF
 );
 
@@ -28,19 +30,23 @@ $color-ui-white20:              rgba(255,255,255,0.2);
 $color-ui-white10:              rgba(255,255,255,0.1);
 
 $color-ui-default:              $color-ui-black;
-$color-ui-action:               map-get($brand-colors, purple);
+$color-ui-action:               map-get($brand-colors, pink);
 
-$color-ui-red:                  red;
+$color-ui-red:                  map-get($brand-colors, red);
 $color-ui-green:                map-get($brand-colors, green);
 
 $color-linkedin:                #0077B5;
 
 
 // Typography
+// aalt case dnom frac kern liga numr onum pnum sinf sups tnum
 
 $base-font-family:              'IBM Plex Sans', sans-serif;
 $base-font-features:            "liga" 1, "kern" 1, "salt" 1;
-// aalt case dnom frac kern liga numr onum pnum sinf sups tnum
+
+$heading-font-family:           'IBM Plex Sans', sans-serif;
+$heading-font-features:         "liga" 1, "kern" 1, "salt" 1;
+
 $monospace-font-family:         'IBM Plex Mono', sans-serif;
 $monospace-font-features:       "tnum" 1;
 
@@ -51,23 +57,29 @@ $font-weight-semibold:          600;
 $font-weight-bold:              700;
 $font-weight-extrabold:         800;
 
-$h1-font-size:                  8.0rem;
-$h1-line-height:                11.2rem;
+$h1-font-size:                  5.6rem;
+$h1-line-height:                7.2rem;
 $h1-letter-spacing:             0;
-$h1-font-weight:                $font-weight-regular;
-$h1-margin-bottom:              6.0rem;
+$h1-font-weight:                $font-weight-semibold;
+$h1-margin-bottom:              5.6rem;
 
 $h2-font-size:                  4.0rem;
-$h2-line-height:                7.0rem;
+$h2-line-height:                5.6rem;
 $h2-letter-spacing:             0;
-$h2-font-weight:                $font-weight-regular;
+$h2-font-weight:                $font-weight-semibold;
 $h2-margin-bottom:              4.0rem;
 
-$h3-font-size:                  2.4rem;
-$h3-line-height:                4.0rem;
+$h3-font-size:                  3.2rem;
+$h3-line-height:                4.8rem;
 $h3-letter-spacing:             0;
-$h3-font-weight:                $font-weight-bold;
-$h3-margin-bottom:              4.0rem;
+$h3-font-weight:                $font-weight-semibold;
+$h3-margin-bottom:              3.2rem;
+
+$h4-font-size:                  2.4rem;
+$h4-line-height:                3.2rem;
+$h4-letter-spacing:             -.0em;
+$h4-font-weight:                $font-weight-medium;
+$h4-margin-bottom:              3.2rem;
 
 // No h4 to h6
 
@@ -98,14 +110,14 @@ $note-margin-bottom:            2.0rem;
 $button-font-size:              1.8rem;
 $button-line-height:            2.4rem;
 $button-letter-spacing:         0;
-$button-font-weight:            $font-weight-regular;
+$button-font-weight:            $font-weight-medium;
 
 
 // UI knick knacks
 
 $base-border-radius:            4px;
 $base-border-style:             1px solid $color-ui-black10;
-$base-box-shadow:               0 10px 20px 0 rgba(0,0,0,0.1);
+$base-box-shadow:               0 10px 24px 0 rgba(0,0,0,0.1);
 $dark-box-shadow:               0 4px 8px 0 rgba(91,16,255,0.16), 0 8px 16px 0 rgba(0,0,0,0.32);
 
 
@@ -131,7 +143,7 @@ $breakpoints: (
 );
 
 $grid-max-columns:              12;
-$grid-gutter:                   30px;
+$grid-gutter:                   32px;
 
 $container-max-width:           1408px;
 
@@ -139,22 +151,25 @@ $container-max-width:           1408px;
 
 // Sections
 
-$section-padding-top:           60px;
-$section-padding-bottom:        60px;
+$section-padding-top:           48px;
+$section-padding-bottom:        48px;
 
-$section-padding-top-lg:        120px;
-$section-padding-bottom-lg:     120px;
+$section-padding-top-lg:        124px;
+$section-padding-bottom-lg:     124px;
 
 
 // Components
 
-$header-height:                 80px;
-$header-height-md:              112px;
+$header-height:                 96px;
+$header-height-sticky:          64px;
+
+$header-height-md:              192px;
+$header-height-sticky-md:       96px;
 
 $form-control-border-radius:    $base-border-radius;
 $form-control-border:           $base-border-style;
-$form-control-padding-horizontal: 20px;
-$form-control-padding-vertical: 18px;
+$form-control-padding-horizontal: 24px;
+$form-control-padding-vertical: 12px;
 $form-control-color:            inherit;
 $form-control-bg:               inherit;
 $form-control-font-size:        $body-md-font-size;
@@ -167,7 +182,7 @@ $button-padding-horizontal:     $form-control-padding-horizontal;
 $button-padding-vertical:       $form-control-padding-vertical;
 
 $button-primary-color:          $color-ui-white;
-$button-primary-bg:             map-get($brand-colors, purple);
+$button-primary-bg:             map-get($brand-colors, pink);
 
-$button-plain-color:            map-get($brand-colors, purple);
+$button-plain-color:            map-get($brand-colors, pink);
 $button-plain-bg:               transparent;

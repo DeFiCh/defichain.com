@@ -1,4 +1,4 @@
-<header class="dark night">
+<header>
  
   <div class="container-fluid">
     <div class="row">
@@ -10,7 +10,10 @@
         <ul class="menu">
           {{ $currentPage := . }}
           {{ range .Site.Menus.main }}
-          <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+          <li
+            class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}"
+            {{- with .Page -}} id="nav-{{- .Type -}}"{{ end }}
+          >
             <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
           </li>
           {{ end }}
@@ -28,14 +31,17 @@
           {{ end }}
         </ul>
         <div class="spacer"></div>
-        <a href="{{ .Site.Params.github.url }}" class="github-link" target="_blank">
-          {{ .Site.Params.github.label }}
-        </a>
-        {{ range .Site.Menus.white_paper }}
-        <a href="{{ .URL | relLangURL }}" class="btn btn-pill white-paper-link">
-          {{ .Name }}
-        </a>
-        {{ end }}
+        <div class="ext-menu">
+          <a href="{{ .Site.Params.github.url }}" class="github-link" target="_blank">
+            {{ readFile "/static/svg/icons/icon-github.svg" | safeHTML }}
+            {{ .Site.Params.github.label }}
+          </a>
+          {{ range .Site.Menus.white_paper }}
+          <a href="{{ .URL | relLangURL }}" class="white-paper-link">
+            {{ .Name }}
+          </a>
+          {{ end }}
+        </div>
         <!-- <div class="lang-switcher">
           <a href="#lang-menu" class="btn">
             {{ .Language }}

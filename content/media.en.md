@@ -9,12 +9,12 @@ menu:
   footer:
     weight: 70
 meta:
-  description: DeFi Blockchain and DeFi Token in the news and media.
+  description: DeFi Blockchain and DeFi Token in the news and media. Download media resources and assets.
   og:
     title: Media
-    description: DeFi Blockchain and DeFi Token in the news and media.
+    description: DeFi Blockchain and DeFi Token in the news and media. Download media resources and assets.
     site_name: DeFi Blockchain
-    image: /img/og/ogimage-media.png
+    image: /img/og/ogimage_en.png
     image_type: image/png
     locale: en_US
 theme: yellow
@@ -27,6 +27,16 @@ content:
     mentions:
       headline: DeFi Blockchain covered in the press and media.
       mentions_list:
+        - title: "DeFiChain: The Story From the Co-Founders"
+          source: CryptoPotato
+          date: 10 Aug, 2020
+          image: /img/press/cryptopotato.png
+          url: https://cryptopotato.com/defichain-the-story-from-the-co-founders/
+        - title: DeFi Chain – An in-depth Analysis of Decentralized Finance on Bitcoin
+          source: DeFi World
+          date: 26 Jul, 2020
+          image: /img/press/defiworld.png
+          url: https://defiworld.substack.com/p/defi-chain-an-in-depth-analysis-of
         - title: 200% pro Jahr durch Compound Liquidity Mining & Yield Farming
           source: BTC-ECHO
           date: 27 Jun, 2020
@@ -74,8 +84,6 @@ content:
               url: /downloads/logo-defi-blockchain.svg
             - label: PNG
               url: /downloads/logo-defi-blockchain.png
-            - label: Zip
-              url: /downloads/logo-defi-blockchain.zip
         - title: The DeFi jellyfish
           description: Useful when space is constrained.
           image: /static/downloads/symbol-defi-blockchain.svg
@@ -84,8 +92,6 @@ content:
               url: /downloads/symbol-defi-blockchain.svg
             - label: PNG
               url: /downloads/symbol-defi-blockchain.png
-            - label: Zip
-              url: /downloads/symbol-defi-blockchain.zip
         - title: DFI 3D coin
           description: Available as SVG and PNG. 3D-printable file coming soon.
           image: /static/downloads/coin-defi-blockchain.svg
@@ -94,8 +100,6 @@ content:
               url: /downloads/coin-defi-blockchain.svg
             - label: PNG
               url: /downloads/coin-defi-blockchain.png
-            - label: Zip
-              url: /downloads/coin-defi-blockchain.zip
         - title: Built-on-Bitcoin
           description: Available as SVG and PNG.
           image: /static/downloads/built-on-bitcoin.svg
@@ -104,8 +108,6 @@ content:
               url: /downloads/built-on-bitcoin.svg
             - label: PNG
               url: /downloads/built-on-bitcoin.png
-            - label: Zip
-              url: /downloads/built-on-bitcoin.zip
     submission:
       headline: Get in touch with media relations.
       form:
@@ -123,7 +125,7 @@ content:
           placeholder: Want to submit an article or request for press content and resources? Tell us more.
         button:
           label: Send
-      or: You can also email us for further information at [media@defichain.io](mailto:media@defichain.io).
+      or: You can also email us for further information at [media@defichain.com](mailto:media@defichain.com).
     #subscribe in /
     #closer_look in /
 ---

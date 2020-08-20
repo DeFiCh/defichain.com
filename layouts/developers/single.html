@@ -15,6 +15,7 @@
   <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
   {{ end }}
   {{ end }}
+  {{ partial "favicons.html" . }}
   <meta property="og:title" content="{{ $.Params.meta.og.title }}">
   <meta property="og:description" content="{{ $.Params.meta.og.description }}">
   <meta property="og:site_name" content="{{ $.Params.meta.og.site_name }}">
@@ -30,7 +31,7 @@
 
   <main>
 
-    <section id="{{ $.Param "content.sections.hero.name" }}" class="hero dark night">
+    <section class="hero white" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-4 offset-ul-1">
@@ -41,10 +42,10 @@
           </div>
         </div>
       </div>
-      <!-- animation hero here -->
+      {{ partial "hero-art.html" . }}
     </section>
     
-    <section class="resources" id="{{ $.Param "content.sections.resources.name" }}">
+    <section class="resources paper" id="{{ $.Param "content.sections.resources.name" }}">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-5 offset-ul-1">
@@ -60,14 +61,13 @@
                     <div class="resource-image">
                       {{ readFile $.Params.content.sections.resources.download.image | safeHTML }}
                     </div>
-                    <h3>
+                    <h3 class="h4">
                       {{ $.Param "content.sections.resources.download.headline" | markdownify }}
                     </h3>
                     <small>{{ $.Param "content.sections.resources.download.subhead" }}</small>
                     <div class="spacer"></div>
-                    <div class="cta-to">
+                    <div class="btn">
                       {{ $.Param "content.sections.resources.download.label" }}
-                      <span>&#10142;</span>
                     </div>
                     <div class="bg"></div>
                   </a>
@@ -79,13 +79,12 @@
                     <div class="resource-image">
                       {{ readFile $.Params.content.sections.resources.github.image | safeHTML }}
                     </div>
-                    <h3>
+                    <h3 class="h4">
                       {{ $.Param "content.sections.resources.github.headline" | markdownify }}
                     </h3>
                     <div class="spacer"></div>
-                    <div class="cta-to">
+                    <div class="btn">
                       {{ $.Param "content.sections.resources.github.label" }}
-                      <span>&#10142;</span>
                     </div>
                     <div class="bg"></div>
                   </a>
@@ -97,13 +96,12 @@
                     <div class="resource-image">
                       {{ readFile $.Params.content.sections.resources.explorer.image | safeHTML }}
                     </div>
-                    <h3>
+                    <h3 class="h4">
                       {{ $.Param "content.sections.resources.explorer.headline" | markdownify }}
                     </h3>
                     <div class="spacer"></div>
-                    <div class="cta-to">
+                    <div class="btn">
                       {{ $.Param "content.sections.resources.explorer.label" }}
-                      <span>&#10142;</span>
                     </div>
                     <div class="bg"></div>
                   </a>
@@ -115,13 +113,12 @@
                     <div class="resource-image">
                       {{ readFile $.Params.content.sections.resources.white_paper.image | safeHTML }}
                     </div>
-                    <h3>
+                    <h3 class="h4">
                       {{ $.Param "content.sections.resources.white_paper.headline" | markdownify }}
                     </h3>
                     <div class="spacer"></div>
-                    <div class="cta-to">
+                    <div class="btn">
                       {{ $.Param "content.sections.resources.white_paper.label" }}
-                      <span>&#10142;</span>
                     </div>
                     <div class="bg"></div>
                   </a>
@@ -133,13 +130,12 @@
                     <div class="resource-image">
                       {{ readFile $.Params.content.sections.resources.reddit.image | safeHTML }}
                     </div>
-                    <h3>
+                    <h3 class="h4">
                       {{ $.Param "content.sections.resources.reddit.headline" | markdownify }}
                     </h3>
                     <div class="spacer"></div>
-                    <div class="cta-to">
+                    <div class="btn">
                       {{ $.Param "content.sections.resources.reddit.label" }}
-                      <span>&#10142;</span>
                     </div>
                     <div class="bg"></div>
                   </a>
@@ -148,6 +144,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="section-slope paper reverse">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
       </div>
     </section>
 

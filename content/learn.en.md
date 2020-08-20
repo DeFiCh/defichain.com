@@ -1,7 +1,7 @@
 ---
 title: Learn
 type: learn
-long_title: Learn more and understand the DeFi Blockchain with videos and how-to guides
+long_title: Learn more and understand the DeFi Blockchain with videos and how-to guides.
 cta_to: Learn
 menu:
   main:
@@ -9,36 +9,47 @@ menu:
   footer:
     weight: 80
 meta:
-  description: Learn more and understand the DeFi Blockchain with videos and how-to guides
+  description: Learn more and understand the DeFi Blockchain with videos and how-to guides.
   og:
     title: Token
-    description: Learn more and understand the DeFi Blockchain with videos and how-to guides
+    description: Learn more and understand the DeFi Blockchain with videos and how-to guides.
     site_name: DeFi Blockchain
-    image: /img/og/ogimage-learn.png
+    image: /img/og/ogimage_en.png
     image_type: image/png
     locale: en_US
-theme: dark smoke
 content:
   sections:
     hero:
       name: hero
       headline: Learn
-      subhead: Learn more and understand the DeFi Blockchain with videos and how-to guides.
+      subhead: Learn more and understand the DeFi Blockchain.
     featured_video:
       headline: Videos on DeFi Blockchain
       playlist:
-        - id: "qLW-vJd8mpk"
+        - id: ky0_3Brv-eI
           title: DeFiChain and DFI token explained in 2 minutes
-        - id: "Mn3sRQm4JvA"
+        - id: IGCgUSdiDF0
           title: DeFi Chain and DFI token explained in detail
-        - id: "YuBR8bipazg"
+        - id: v113FEzhWqw
           title: Decentralized Finance (DeFi) explained simply
-        - id: "sb-EnsxMh78"
+        - id: mUa29qe6Png
           title: DeFi Blockchain White Paper Walkthrough
-        - id: NH4bKfYEiSE
+        - id: mukcJjGQcMM
           title: Difference between Ethereum and DeFiChain
-        - id: f3d_6OUewis
+        - id: pwfduPilvkE
           title: Tech Details of the New DeFiChain
+    guides:
+      name: guides
+      headline: How-to guides
+      guides_list:
+        - image: /static/svg/icons/icon-whitepaper.svg
+          headline: How to run a masternode.
+          label: Read guide
+          url: /learn/run-a-masternode
+        - image: /static/svg/icons/icon-whitepaper.svg
+          headline: Installing and using DeFi desktop app (GUI).
+          label: Read guide
+          url: /learn/defi-app-how-to
     faq:
       headline: FAQ
       faq_list:

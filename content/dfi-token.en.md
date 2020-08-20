@@ -11,12 +11,12 @@ menu:
   footer:
     weight: 40
 meta:
-  description: Learn about and acquire the DFI token. Join the DeFiChain Insiders.
+  description: Learn about the DFI token and its utility, distribution, airdrops and how to acquire DFI. Join the DeFiChain Insiders.
   og:
     title: Token
-    description: Learn about and acquire the DFI token. Join the DeFiChain Insiders.
+    description: Learn about the DFI token and its utility, distribution, airdrops and how to acquire DFI. Join the DeFiChain Insiders.
     site_name: DeFi Blockchain
-    image: /img/og/ogimage-token.png
+    image: /img/og/ogimage_en.png
     image_type: image/png
     locale: en_US
 theme: dark purple
@@ -45,22 +45,22 @@ content:
           description: See available exchanges at CoinMarketCap.
           url: ==PENDING==
     utility:
-      headline: DFI Token Utility
+      headline: DFI Token utility
       utility_list:
         - icon: /static/svg/icons/utility/fees.svg
           title: Fees
           description: Pay fees for transactions, smart contracts and other DeFi activities.
         - icon: /static/svg/icons/utility/collateral.svg
-          title: Loan Collaterals
+          title: Loan collaterals
           description: Fund collaterals for loans of other cryptoassets.
         - icon: /static/svg/icons/utility/staking.svg
-          title: Staking Nodes
+          title: Staking nodes
           description: Fund a new staking node for 1,000,000 DFI.
         - icon: /static/svg/icons/utility/dct.svg
           title: DeFi Custom Token
           description: Create new DCT for 1,000 DFI (refundable).
         - icon: /static/svg/icons/utility/budget.svg
-          title: Budget Proposal
+          title: Budget proposal
           description: Submit a community budget proposal for 500 DFI (non-refundable).
     distribution:
       headline: Initial Token Distribution
@@ -81,38 +81,47 @@ content:
           description: DFI is now available at these selected exchanges.
           sources:
             - label: LATOKEN
-              logo: /static/svg/sources/logo-latoken.svg
               url: https://go.latoken.com/1gd
+              file: /svg/sources/logo-latoken
+              type: svg
             - label: Coinpaprika
-              logo: /static/svg/sources/logo-coinpaprika.svg
               url: https://coinpaprika.com/coin/dfi-defi-chain/
+              file: /svg/sources/logo-coinpaprika
+              type: svg
             - label: CoinGecko
-              logo: /static/svg/sources/logo-coingecko.svg
               url: https://www.coingecko.com/en/coins/defichain
+              file: /svg/sources/logo-coingecko
+              type: svg
             - label: Indoex
-              logo: /static/svg/sources/logo-indoex.svg
               url: https://international.indoex.io/trade/DFI_USDT
+              file: /svg/sources/logo-indoex
+              type: svg
+            - label: Hotbit
+              url: https://www.hotbit.io/exchange?symbol=DFI_USDT
+              file: /img/sources/logo-hotbit
+              type: png
         - icon: /static/svg/icons/way-to-acquire/staking.svg
           title: Staking platforms
           description: DFI is now available at these selected staking platforms.
           sources:
             - label: Cake DeFi
-              logo: /static/svg/sources/logo-cake.svg
               url: https://pool.cakedefi.com
+              file: /svg/sources/logo-cake
+              type: svg
         - icon: /static/svg/icons/way-to-acquire/airdrop.svg
           title: Airdrop
           description: The DeFi Foundation will airdrop DFI to hodlers, market makers and other users of the DeFi Blockchain.
         - icon: /static/svg/icons/way-to-acquire/developers.svg
           title: Developers
           description: The DeFi Foundation gives grants to developers building functionality and dApps on the DeFi Blockchain.
-      cta: For further information, contact us at [partners@defichain.io](mailto:partners@defichain.io).
+      cta: For further information, contact us at [partners@defichain.com](mailto:partners@defichain.com).
     insiders:
-      headline: Join the DeFiChain Insiders Community.
+      headline: Join the DeFiChain Insiders community.
       subhead: The DeFi Blockchain movement is looking for those with the passion and reach to spread the movement — register below.
       form:
         name:
           label: Name
-          placeholder: Full Name
+          placeholder: Full name
         email:
           label: Email
           placeholder: name@example.com

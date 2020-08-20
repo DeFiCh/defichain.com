@@ -73,4 +73,7 @@
       </div>
     </div>
   </div>
+  <div class="section-slope{{ with $.Param "theme.subscribe" }} {{.}}{{ end }}">
+    {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
+  </div>
 </section>

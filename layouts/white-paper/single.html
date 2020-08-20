@@ -15,6 +15,7 @@
   <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
   {{ end }}
   {{ end }}
+  {{ partial "favicons.html" . }}
   <meta property="og:title" content="{{ $.Params.meta.og.title }}">
   <meta property="og:description" content="{{ $.Params.meta.og.description }}">
   <meta property="og:site_name" content="{{ $.Params.meta.og.site_name }}">
@@ -30,7 +31,7 @@
 
   <main>
 
-    <section class="hero dark night">
+    <section class="hero" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-lg-6 col-xl-5 offset-xl-1">
@@ -39,7 +40,6 @@
           </div>
         </div>
       </div>
-      <!-- animation hero here -->
     </section>
 
     <section class="white-paper white">
@@ -53,9 +53,14 @@
           </div>
         </div>
       </div>
+      <div class="section-slope white reverse">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
+      </div>
     </section>
 
     {{ partial "section-subscribe.html" . }}
+
+    {{ partial "section-closer-look.html" . }}
 
   </main>
 
@@ -66,10 +71,10 @@
   <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>
   {{ $scrolltrigger := resources.Get "js/ScrollTrigger.min.js" }}
+  {{ $swiper := resources.Get "js/swiper.min.js" }}
   {{ $sticky := resources.Get "js/jquery.sticky-kit.js" }}
   {{ $main := resources.Get "js/main.js" }}
-  {{ $whitepaper := resources.Get "js/whitepaper.js" }}
-  {{ $js := slice $scrolltrigger $sticky $main $whitepaper | resources.Concat "js/bundle-white-paper.js" | resources.Fingerprint }}
+  {{ $js := slice $scrolltrigger $swiper $sticky $main | resources.Concat "js/bundle-white-paper.js" | resources.Fingerprint }}
   <script src="{{ $js.RelPermalink }}" type="text/javascript"></script>
   {{ template "_internal/google_analytics_async.html" . }}
   {{ partial "pixels/facebook.html" . }}

@@ -29,7 +29,7 @@
 
   <main>
 
-    <section class="hero dark night" data-scroll data-scroll-showCallback="heroIn()"
+    <section class="hero paper" data-scroll data-scroll-showCallback="heroIn()"
       data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
@@ -45,7 +45,6 @@
           </div>
         </div>
       </div>
-      <!-- animation hero here -->
     </section>
 
     <section class="how-much white">
@@ -64,13 +63,16 @@
                   {{ readFile $example.icon  | safeHTML }}
                 </div>
                 <div class="owned">{{ $.Param "content.sections.how_much.prefix" }} <strong
-                    class="text-purple">{{ $example.btc }}</strong></div>
+                    class="text-pink">{{ $example.btc }}</strong></div>
                 <div class="will-get">{{ $example.dfi }}</div>
               </div>
               {{ end }}
             </div>
           </div>
         </div>
+      </div>
+      <div class="section-slope white reverse">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
       </div>
     </section>
 
@@ -336,6 +338,9 @@
         </form>
       </div>
 
+      <div class="section-slope day reverse">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
+      </div>
     </section>
 
     <section id="claim-status" class="claim-status paper">
@@ -393,6 +398,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="section-slope paper reverse">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
       </div>
 
     </section>

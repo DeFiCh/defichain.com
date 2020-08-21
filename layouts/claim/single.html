@@ -113,10 +113,7 @@
                   <label for="btc_address">{{ $.Params.content.sections.claim_status.form.btc_field.label }}</label>
                 </div>
                 <div class="form-field">
-                  <button class="claim-wizard-next-button btn ">
-                    {{ $.Params.content.sections.claim_wizard.reward_eligibility.next_button.label }}
-                  </button>
-                  <button class="claim-wizard-next btn mlg1" type="submit">
+                  <button class="claim-wizard-next btn" type="submit">
                     {{ $.Params.content.sections.claim_wizard.reward_eligibility.reward_eligibility_button }}
                   </button>
                   <div class="spinner">
@@ -124,6 +121,9 @@
                     <div class="b2"></div>
                     <div class="b3"></div>
                   </div>
+                  <button class="claim-wizard-next-button btn mlg1">
+                    {{ $.Params.content.sections.claim_wizard.reward_eligibility.next_button.label }}
+                  </button>
                 </div>
                 <div class="d-none" id="reward-eligibility-error-alert">
                   <div class="reward-alert-error alert error"></div>

@@ -178,8 +178,12 @@ body > header {
     margin-left: 8px;
     padding: 3px 8px;
     border-radius: 12px;
-    background-color: $color-ui-black40;
+    background-color: $color-ui-black60;
     vertical-align: 1px;
+  }
+
+  a:hover .dfi-price {
+    background-color: $color-ui-action;
   }
 
   .github-link {
@@ -1941,7 +1945,8 @@ section.downloads {
 // Page-specific layout and colors
 // 
 
-body.home {
+body.home,
+body.claim {
   section.hero {
     // height: 100vh;
     // min-height: 432px;
@@ -1950,8 +1955,8 @@ body.home {
     text-align: left;
 
     @include media(">lg") {
-      align-items: flex-end;
-      min-height: 768px;
+      align-items: center;
+      min-height: 800px;
     }
 
     @include media(">ul") {
@@ -1974,7 +1979,7 @@ body.home {
 
     .dfi-image {
       right: 2%;
-      bottom: -244px;
+      bottom: -288px;
       transform: rotate(33deg);
       background-image: url(/img/hero/singapore.jpg);
       clip-path: url(#branchesClip);

@@ -36,15 +36,18 @@
           <div id="{{ $.Param "content.sections.hero.name" }}" class="col col-lg-6 col-xl-5 offset-xl-1">
             <h1 data-scroll="once">{{ $.Param "content.sections.hero.headline" }}</h1>
             <p class="lg" data-scroll="once">{{ $.Param "content.sections.hero.subhead" }}</p>
-            <a href="#claim-my-dfi" class="btn mtg1">
-              {{ $.Params.content.sections.hero.cta.label }}
-            </a>
-            <a href="#claim-status" class="btn mtg1 mlg1">
-              {{ $.Params.content.sections.hero.sub_cta.label }}
-            </a>
+            <div class="hero-ctas">
+              <a href="#claim-my-dfi" class="btn">
+                {{ $.Params.content.sections.hero.cta.label }}
+              </a>
+              <a href="#claim-status" class="btn">
+                {{ $.Params.content.sections.hero.sub_cta.label }}
+              </a>
+            </div>
           </div>
         </div>
       </div>
+      {{ partial "hero-art.html" . }}
     </section>
 
     <section class="how-much white">
@@ -169,9 +172,8 @@
               {{ readFile $option.image | safeHTML }}
             </div>
             <h4 data-scroll="once">{{ $option.headline | markdownify }}</h4>
-            <a href="{{ $option.cta.url | relLangURL }}" target="_blank" class="cta-to" data-scroll="once">
+            <a href="{{ $option.cta.url | relLangURL }}" target="_blank" class="btn" data-scroll="once">
               {{ $option.cta.label }}
-              <span>&#10142;</span>
             </a>
           </div>
           {{ end }}

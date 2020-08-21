@@ -1,15 +1,17 @@
 ---
-title: Claim My DFI
+title: Claim DFI
 type: claim
 long_title: Claim your DFI in the DFI Airdrop
-cta_to: Claim My DFI
+cta_to: Claim DFI
 menu:
   main:
-    weight: 80
+    weight: 45
+  footer:
+    weight: 45
 meta:
   description: Claim your DFI in the DFI Airdrop
   og:
-    title: Claim My DFI
+    title: Claim DFI
     description: Claim your DFI in the DFI Airdrop
     site_name: DeFi Blockchain
     image: /img/og/ogimage-claim.png
@@ -20,10 +22,10 @@ content:
   sections:
     hero:
       name: hero
-      headline: DFI Airdrop is happening now.
+      headline: DFI Airdrop for Bitcoin holders.
       subhead: Receive 500 DFI for every BTC you own, absolutely free.
       cta:
-        label: Claim My DFI
+        label: Claim DFI
       sub_cta:
         label: Check claim status
     how_much:
@@ -43,11 +45,11 @@ content:
     claim_wizard:
       headline: Claim your DFI now.
       reward_eligibility:
-        headline: "Enter BTC address to check your reward eligibility"
-        body: "Enter your BTC address to check your reward eligibility"
+        headline: "Enter BTC address to check your airdrop eligibility"
+        body: "Enter your BTC address to check your airdrop eligibility"
         reward_eligibility_button: "Check Eligibility"
         next_button: 
-          label: "I've checked reward eligibility"
+          label: "I’ve checked my airdrop eligibility"
       step1:
         headline: "Step 1: Get a DFI Wallet"
         options:

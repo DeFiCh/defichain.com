@@ -116,6 +116,9 @@ $(document).ready(function () {
         $('#claim-step2 .claim-wizard-next + .spinner').removeClass('show');
         $('.claim-message-alert-error').html(response.responseJSON.error.message);
         $('#step2-error-alert').show();
+        $('#claim-step2').css({
+          'height': 'auto'
+        });
       }
     });
   });
@@ -183,6 +186,9 @@ $(document).ready(function () {
           $('#claim-step4 .claim-wizard-next + .spinner').removeClass('show');
           $('.claim-alert-error').html(response.responseJSON.error.message);
           $('#step4-error-alert').show();
+          $('#claim-step4').css({
+            'height': 'auto'
+          });
         }
       });
     }

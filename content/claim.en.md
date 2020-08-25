@@ -132,7 +132,7 @@ content:
           status: Status
           btc_balance: BTC balance at block 213145
           transaction_id: DFI payment transaction
-          claim_dfi_amount: DFI claim amount (@500 DFI per BTC)
+          claim_dfi_amount: DFI claim amount (@500 DFI per BTC & Max 100 BTC can be claimed)
     #white paper in /
     #subscribe in /
     #closer_look in /

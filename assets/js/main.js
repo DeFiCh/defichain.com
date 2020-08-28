@@ -14,6 +14,7 @@ $(function () {
 
   // Fetch DFI price
   if ($("#nav-token").length > 0) {
+    $("#nav-token a").append('<span class="dfi-price loading"><span class="spinner"><span class="b1"></span><span class="b2"></span><span class="b3"></span></span></span>');
     $.ajax({
       url: "https://poolapi.cakedefi.com/home",
       success: function (data) {
@@ -22,7 +23,7 @@ $(function () {
             var DFIPrice = data.coinPrices[i].priceUSD.avg;
           }
         }
-        $("#nav-token a").append('<span class="dfi-price">$' + parseFloat(DFIPrice).toFixed(2) + '</span>');
+        $(".dfi-price").removeClass("loading").empty().html('$' + parseFloat(DFIPrice).toFixed(2));
       }
     });
   }

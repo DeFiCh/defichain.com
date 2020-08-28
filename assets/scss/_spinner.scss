@@ -1,0 +1,50 @@
+//
+// Loading indicator
+//
+
+.spinner {
+  text-align: center;
+}
+
+.spinner > div {
+  width: 12px;
+  height: 12px;
+  background-color: map-get($brand-colors, purple);
+  margin: 0 2px;
+  border-radius: 100%;
+  display: inline-block;
+  animation: sk-bouncedelay 1s infinite ease-in-out both;
+}
+
+.spinner > span {
+  width: 6px;
+  height: 6px;
+  background-color: $color-ui-white80;
+  margin: 0 2px 2px;
+  border-radius: 100%;
+  display: inline-block;
+  animation: sk-bouncedelay 1s infinite ease-in-out both;
+}
+
+.spinner .b1 {
+  animation-delay: -0.32s;
+}
+
+.spinner .b2 {
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}

@@ -172,10 +172,22 @@ body > header {
     font-weight: $font-weight-bold;
     color: $color-ui-white;
     margin-left: 8px;
-    padding: 3px 8px;
+    padding: 5px 8px;
     border-radius: 12px;
-    background-color: $color-ui-black40;
-    vertical-align: 1px;
+    background-color: $color-ui-default;
+    vertical-align: middle;
+    min-width: 55px;
+    height: 24px;
+    line-height: 1;
+    display: inline-block;
+
+    &.loading {
+      background-color: $color-ui-black40;
+    }
+
+    .spinner {
+      display: block;
+    }
   }
 
   .github-link {

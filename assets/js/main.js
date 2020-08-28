@@ -74,7 +74,8 @@ $(function () {
       type: 'GET',
       url: 'https://api.github.com/repos/DeFiCh/defi-app/releases/latest',
       success: function (data) {
-        $(".latest-app").html(data.tag_name);
+        $(".latest-app-url").attr('href', data.html_url);
+        $(".latest-app-label").html(data.tag_name);
       }
     });
   }

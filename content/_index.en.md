@@ -19,8 +19,8 @@ content:
       ctas:
         - label: Desktop app (GUI)
           type: app
-          version: v1.0.0-alpha4
-          url: https://github.com/DeFiCh/defi-app/releases/tag/v1.0.0-alpha4
+          version: Latest
+          url: https://github.com/DeFiCh/defi-app/releases/
         - label: CLI
           type: cli
           version: v1.0.1

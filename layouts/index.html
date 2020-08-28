@@ -40,10 +40,10 @@
               <p class="lg">{{ $.Param "content.sections.hero.subhead" }}</p>
               <div class="hero-ctas">
                 {{ range $cta := $.Params.content.sections.hero.ctas }}
-                  <a href="{{ $cta.url }}" target="_blank" class="btn">
+                  <a href="{{ $cta.url }}" target="_blank" class="btn latest-{{ $cta.type }}-url">
                     <span class="cta-download">Download</span>
                     {{ $cta.label }}
-                    <span class="latest-{{ $cta.type }}">{{ $cta.version }}</span>
+                    <span class="latest-{{ $cta.type }}-label">{{ $cta.version }}</span>
                   </a>
                 {{ end }}
               </div>

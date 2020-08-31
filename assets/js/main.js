@@ -64,13 +64,14 @@ $(function () {
 
   // Fetch latest releases
   if ($("body.home").length) {
-    // $.ajax({
-    //   type: 'GET',
-    //   url: 'https://api.github.com/repos/DeFiCh/ain/releases/latest',
-    //   success: function (data) {
-    //     $(".latest-cli").html(data.tag_name);
-    //   }
-    // });
+    $.ajax({
+      type: 'GET',
+      url: 'https://api.github.com/repos/DeFiCh/ain/releases/latest',
+      success: function (data) {
+        $(".latest-cli-url").attr('href', data.html_url);
+        $(".latest-cli-label").html(data.tag_name);
+      }
+    });
     $.ajax({
       type: 'GET',
       url: 'https://api.github.com/repos/DeFiCh/defi-app/releases/latest',

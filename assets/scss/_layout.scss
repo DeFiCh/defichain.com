@@ -2275,3 +2275,54 @@ section.closer-look {
   }
 }
 
+
+/* CMC Widget */
+
+.coinmarketcap-currency-widget {
+  a {
+    color: $color-ui-action !important;
+  }
+
+  > div {
+    padding-top: 8px !important;
+    border-width: 1px !important;
+    border: $base-border-style !important;
+    font-family: inherit !important;
+  }
+
+  > div > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > a {
+    font-size: 16px !important;
+    font-weight: $font-weight-bold;
+    padding-bottom: 4px;
+    display: inline-block;
+  }
+
+  > div > div:nth-child(1) > div:nth-child(1) {
+    padding-bottom: 12px !important;
+  }
+
+  > div > div:nth-child(2) > div {
+    br:nth-child(1) {
+      display: none;
+    }
+  }
+
+  > div > div:nth-child(3) {
+    padding: 0 !important;
+  }
+
+  > div > div:nth-child(3) > a {
+    font-size: 13px;
+    font-style: normal;
+    color: $color-ui-black60 !important;
+  }
+
+  > div > div:nth-child(1) > div:nth-child(1) {
+    line-height: 1 !important;
+  }
+
+  > div > div:nth-child(1) > div:nth-child(2) > img {
+    width: 48px !important;
+    height: 48px !important;
+  }
+}

@@ -86,6 +86,19 @@ $(function () {
   if ($("body.downloads").length) {
     $.ajax({
       type: 'GET',
+      url: 'https://api.github.com/repos/DeFiCh/ain/releases/latest',
+      success: function (data) {
+        var version = data.name.substring(1);
+        var mac_link = "https://github.com/DeFiCh/ain/releases/download/v" + version + "/defichain-" + version + "-x86_64-apple-darwin11.tar.gz";
+        var win_link = "https://github.com/DeFiCh/ain/releases/download/v" + version + "/defichain-" + version + "-x86_64-w64-mingw32.zip";
+        var linux_link = "https://github.com/DeFiCh/ain/releases/download/v" + version + "/defichain-" + version + "-x86_64-pc-linux-gnu.tar.gz";
+        $('.download-cli-mac').attr('href', mac_link);
+        $('.download-cli-win').attr('href', win_link);
+        $('.download-cli-linux').attr('href', linux_link);
+      }
+    });
+    $.ajax({
+      type: 'GET',
       url: 'https://api.github.com/repos/DeFiCh/defi-app/releases/latest',
       success: function (data) {
         var version = data.name;

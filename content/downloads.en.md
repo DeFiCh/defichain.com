@@ -32,7 +32,14 @@ content:
             path: /static/svg/icons/developers/icon-cli.svg
             type: svg
           links:
-            - label: Download on GitHub
+            - label: Mac
+              type: mac
+              url: https://github.com/DeFiCh/ain/releases
+            - label: Windows
+              type: win
+              url: https://github.com/DeFiCh/ain/releases
+            - label: Linux
+              type: linux
               url: https://github.com/DeFiCh/ain/releases
         - title: Desktop app
           type: desktop-app

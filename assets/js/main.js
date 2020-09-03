@@ -63,24 +63,24 @@ $(function () {
   });
 
   // Fetch latest releases
-  if ($("body.home").length) {
-    $.ajax({
-      type: 'GET',
-      url: 'https://api.github.com/repos/DeFiCh/ain/releases/latest',
-      success: function (data) {
-        $(".latest-cli-url").attr('href', data.html_url);
-        $(".latest-cli-label").html(data.tag_name);
-      }
-    });
-    $.ajax({
-      type: 'GET',
-      url: 'https://api.github.com/repos/DeFiCh/defi-app/releases/latest',
-      success: function (data) {
-        $(".latest-app-url").attr('href', data.html_url);
-        $(".latest-app-label").html(data.tag_name);
-      }
-    });
-  }
+  // if ($("body.home").length) {
+  //   $.ajax({
+  //     type: 'GET',
+  //     url: 'https://api.github.com/repos/DeFiCh/ain/releases/latest',
+  //     success: function (data) {
+  //       $(".latest-cli-url").attr('href', data.html_url);
+  //       $(".latest-cli-label").html(data.tag_name);
+  //     }
+  //   });
+  //   $.ajax({
+  //     type: 'GET',
+  //     url: 'https://api.github.com/repos/DeFiCh/defi-app/releases/latest',
+  //     success: function (data) {
+  //       $(".latest-app-url").attr('href', data.html_url);
+  //       $(".latest-app-label").html(data.tag_name);
+  //     }
+  //   });
+  // }
 
   // Fetch latest software download links
   if ($("body.downloads").length) {

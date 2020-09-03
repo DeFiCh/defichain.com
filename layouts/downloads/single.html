@@ -25,7 +25,7 @@
   <meta property="og:locale" content="{{ $.Params.meta.og.locale }}">
 </head>
 
-<body class="media">
+<body class="downloads">
 
   {{ partial "header.html" . }}
 
@@ -43,41 +43,6 @@
       {{ partial "hero-art.html" . }}
     </section>
 
-    <section class="mentions paper">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col col-ul-5 offset-ul-1">
-            <h2>{{ $.Param "content.sections.mentions.headline" }}</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="row">
-              {{ range $mention := $.Params.content.sections.mentions.mentions_list }}
-              <a href="{{ $mention.url }}" target="_blank" class="mention col col-md-4 col-lg-3">
-                <div class="card">
-                  <div>
-                    <small>{{ $mention.source }}</small>
-                    <h3 class="h4">{{ $mention.title }}</h3>
-                    <div class="mention-image">
-                      {{ with $mention.image }}
-                      <img src="{{ . }}" alt="{{ $mention.source }}">
-                      {{ end }}
-                    </div>
-                    <div class="bg"></div>
-                  </div>
-                </div>
-              </a>
-              {{ end }}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section-slope paper reverse">
-        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
-      </div>
-    </section>
-
     <section class="downloads paper">
       <div class="container-fluid">
         <div class="row">
@@ -93,14 +58,24 @@
                 <div class="card">
                   <div>
                     <div class="resource-image">
-                      {{ readFile $download.image | safeHTML }}
+                      {{ with eq $download.image.type "svg" }}
+                      {{ readFile $download.image.path | safeHTML }}
+                      {{ else }}
+                      <img
+                        src="{{ $download.image.path }}" alt="{{ $download.title }}"
+                        {{ with $download.image.dimensions }}
+                          width="{{ index $download.image.dimensions 0 }}"
+                          height="{{ index $download.image.dimensions 1 }}"
+                        {{ end }}
+                      >
+                      {{ end }}
                     </div>
                     <h3 class="h4">{{ $download.title }}</h3>
-                    <div class="mbg1">{{ $download.description }}</div>
+                    <div class="mbg1">{{ $download.description | markdownify }}</div>
                     <div class="spacer"></div>
                     <div class="resource-links">
                       {{ range $link := $download.links }}
-                        <a href="{{ $link.url }}" target="_blank">{{ $link.label }}</a>
+                        <a href="{{ $link.url }}" class="download-{{ lower $download.type }}-{{ $link.type }}" target="_blank">{{ $link.label }}</a>
                       {{ end }}
                     </div>
                     <div class="bg"></div>
@@ -112,12 +87,12 @@
           </div>
         </div>
       </div>
-      <div class="section-slope paper">
+      <div class="section-slope paper reverse">
         {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
       </div>
     </section>
 
-    {{ partial "section-media-subscribe.html" . }}
+    {{ partial "section-subscribe.html" . }}
 
     {{ partial "section-closer-look.html" . }}
 

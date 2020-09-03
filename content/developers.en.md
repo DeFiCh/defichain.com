@@ -39,10 +39,10 @@ content:
         url: https://github.com/DeFiCh/ain
       download:
         image: /static/svg/icons/developers/icon-cli.svg
-        headline: Get the CLI.
-        subhead: Linux, Mac and Windows GUI client coming soon.
-        label: Download
-        url: https://github.com/DeFiCh/ain/releases
+        headline: Get the CLI and desktop app.
+        subhead: The latest releases for Mac, Windows and Linux.
+        label: Go to Downloads
+        url: /downloads
       explorer:
         image: /static/svg/icons/developers/icon-dfi.svg
         headline: Explore the blockchain in Block Explorer.
@@ -51,7 +51,7 @@ content:
       white_paper:
         image: /static/svg/icons/icon-whitepaper.svg
         headline: Read the DeFi Blockchain technical paper.
-        label: Study
+        label: Read the white paper
         url: /white-paper
       reddit:
         image: /static/svg/icons/developers/icon-reddit.svg

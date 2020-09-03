@@ -1,7 +1,7 @@
 ---
 title: Media
 type: media
-long_title: DeFi Blockchain and DeFi Token in the news and media.
+long_title: DeFi Blockchain and DFI Token in the news and media.
 cta_to: Read
 menu:
   main:
@@ -9,10 +9,10 @@ menu:
   footer:
     weight: 70
 meta:
-  description: DeFi Blockchain and DeFi Token in the news and media. Download media resources and assets.
+  description: DeFi Blockchain and DFI Token in the news and media. Download media resources and assets.
   og:
     title: Media
-    description: DeFi Blockchain and DeFi Token in the news and media. Download media resources and assets.
+    description: DeFi Blockchain and DFI Token in the news and media. Download media resources and assets.
     site_name: DeFi Blockchain
     image: /img/og/ogimage_en.png
     image_type: image/png

@@ -190,7 +190,7 @@ body > header {
     }
   }
 
-  .github-link {
+  .downloads-link {
     margin-right: $grid-gutter;
   }
 
@@ -1817,16 +1817,22 @@ section.mentions {
 //
 
 section.downloads {
-  .download {
+  .resource-cta {
     margin-top: 16px;
     margin-bottom: 16px;
   }
 
-  .download-image {
-    margin-bottom: 32px;
+  .resource-image {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    color: map-get($brand-colors, pink);
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    object-fit: contain;
   }
 
-  .download-links {
+  .resource-links {
     display: flex;
 
     a {
@@ -1984,6 +1990,32 @@ body.partners {
 }
 
 body.media {
+  .hero-art {
+    .dfi-branches {
+      top: -304px;
+      left: 12%;
+      transform: rotate(-140deg);
+      color: map-get($brand-colors, paper);
+    }
+
+    .dfi-pot {
+      right: 11%;
+      top: -245px;
+      transform: rotate(27deg);
+      color: map-get($brand-colors, cyan);
+    }
+
+    .dfi-image {
+      left: 51%;
+      bottom: -234px;
+      transform: rotate(128deg);
+      background-image: url(/img/hero/newyork.jpg);
+      clip-path: url(#branchesClip);
+    }
+  }
+}
+
+body.downloads {
   .hero-art {
     .dfi-branches {
       top: -304px;

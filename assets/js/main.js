@@ -82,6 +82,25 @@ $(function () {
     });
   }
 
+  // Fetch latest software download links
+  if ($("body.downloads").length) {
+    $.ajax({
+      type: 'GET',
+      url: 'https://api.github.com/repos/DeFiCh/defi-app/releases/latest',
+      success: function (data) {
+        var version = data.name;
+        var mac_link = "https://github.com/DeFiCh/defi-app/releases/download/v"+version+"/defi-app-"+version+".dmg";
+        var win_link = "https://github.com/DeFiCh/defi-app/releases/download/v" + version + "/defi-app-Setup-" + version + ".exe";
+        var appimg_link = "https://github.com/DeFiCh/defi-app/releases/download/v" + version + "/defi-app-" + version + ".AppImage";
+        var deb_link = "https://github.com/DeFiCh/defi-app/releases/download/v" + version + "/defi-app_" + version + "_amd64.deb";
+        $('.download-desktop-app-mac').attr('href', mac_link);
+        $('.download-desktop-app-win').attr('href', win_link);
+        $('.download-desktop-app-appimg').attr('href', appimg_link);
+        $('.download-desktop-app-deb').attr('href', deb_link);
+      }
+    });
+  }
+
   // Carousel for timeline
   if ($(".roadmap").length > 0) {
     var roadmapCarousel = new Swiper('.roadmap .carousel', {

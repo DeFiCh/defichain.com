@@ -22,11 +22,7 @@ content:
 
 ## Download the app
 
-| Platform | Download links |
-|-|-|
-| macOS | [Download](https://github.com/DeFiCh/defi-app/releases/download/v1.0.0-alpha4/defi-app-1.0.0-alpha4.dmg "Download") |
-| Windows | [Download](https://github.com/DeFiCh/defi-app/releases/download/v1.0.0-alpha4/defi-app-Setup-1.0.0-alpha4.exe "Download") |
-| Linux | [Download](https://github.com/DeFiCh/defi-app/releases/download/v1.0.0-alpha4/defi-app-1.0.0-alpha4.AppImage "Download") (AppImage), [Download](https://github.com/DeFiCh/defi-app/releases/download/v1.0.0-alpha4/defi-app_1.0.0-alpha4_amd64.deb "Download") (Debian) |
+Download the latest app from the [downloads](/downloads) page.
 
 ## Minimum requirements
 

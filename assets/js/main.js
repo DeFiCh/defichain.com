@@ -14,6 +14,7 @@ $(function () {
 
   // Fetch DFI price
   if ($("#nav-token").length > 0) {
+    $("#nav-token a").append('<span class="dfi-price loading"><span class="spinner"><span class="b1"></span><span class="b2"></span><span class="b3"></span></span></span>');
     $.ajax({
       url: "https://poolapi.cakedefi.com/home",
       success: function (data) {
@@ -22,7 +23,7 @@ $(function () {
             var DFIPrice = data.coinPrices[i].priceUSD.avg;
           }
         }
-        $("#nav-token a").append('<span class="dfi-price">$' + parseFloat(DFIPrice).toFixed(2) + '</span>');
+        $(".dfi-price").removeClass("loading").empty().html('$' + parseFloat(DFIPrice).toFixed(2));
       }
     });
   }
@@ -62,23 +63,57 @@ $(function () {
   });
 
   // Fetch latest releases
-  if ($("body.home").length) {
-    // $.ajax({
-    //   type: 'GET',
-    //   url: 'https://api.github.com/repos/DeFiCh/ain/releases/latest',
-    //   success: function (data) {
-    //     $(".latest-cli").html(data.tag_name);
-    //   }
-    // });
+  // if ($("body.home").length) {
+  //   $.ajax({
+  //     type: 'GET',
+  //     url: 'https://api.github.com/repos/DeFiCh/ain/releases/latest',
+  //     success: function (data) {
+  //       $(".latest-cli-url").attr('href', data.html_url);
+  //       $(".latest-cli-label").html(data.tag_name);
+  //     }
+  //   });
+  //   $.ajax({
+  //     type: 'GET',
+  //     url: 'https://api.github.com/repos/DeFiCh/defi-app/releases/latest',
+  //     success: function (data) {
+  //       $(".latest-app-url").attr('href', data.html_url);
+  //       $(".latest-app-label").html(data.tag_name);
+  //     }
+  //   });
+  // }
+
+  // Fetch latest software download links
+  if ($("body.downloads").length) {
+    $.ajax({
+      type: 'GET',
+      url: 'https://api.github.com/repos/DeFiCh/ain/releases/latest',
+      success: function (data) {
+        var version = data.name.substring(1);
+        var mac_link = "https://github.com/DeFiCh/ain/releases/download/v" + version + "/defichain-" + version + "-x86_64-apple-darwin11.tar.gz";
+        var win_link = "https://github.com/DeFiCh/ain/releases/download/v" + version + "/defichain-" + version + "-x86_64-w64-mingw32.zip";
+        var linux_link = "https://github.com/DeFiCh/ain/releases/download/v" + version + "/defichain-" + version + "-x86_64-pc-linux-gnu.tar.gz";
+        $('.download-cli-mac').attr('href', mac_link);
+        $('.download-cli-win').attr('href', win_link);
+        $('.download-cli-linux').attr('href', linux_link);
+      }
+    });
     $.ajax({
       type: 'GET',
       url: 'https://api.github.com/repos/DeFiCh/defi-app/releases/latest',
       success: function (data) {
-        $(".latest-app-url").attr('href', data.html_url);
-        $(".latest-app-label").html(data.tag_name);
+        var version = data.name.substring(1);
+        var mac_link = "https://github.com/DeFiCh/defi-app/releases/download/v"+version+"/defi-app-"+version+".dmg";
+        var win_link = "https://github.com/DeFiCh/defi-app/releases/download/v" + version + "/defi-app-Setup-" + version + ".exe";
+        var appimg_link = "https://github.com/DeFiCh/defi-app/releases/download/v" + version + "/defi-app-" + version + ".AppImage";
+        var deb_link = "https://github.com/DeFiCh/defi-app/releases/download/v" + version + "/defi-app_" + version + "_amd64.deb";
+        $('.download-desktop-app-mac').attr('href', mac_link);
+        $('.download-desktop-app-win').attr('href', win_link);
+        $('.download-desktop-app-appimg').attr('href', appimg_link);
+        $('.download-desktop-app-deb').attr('href', deb_link);
       }
     });
   }
+
 
   // Carousel for timeline
   if ($(".roadmap").length > 0) {

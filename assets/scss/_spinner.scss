@@ -16,6 +16,16 @@
   animation: sk-bouncedelay 1s infinite ease-in-out both;
 }
 
+.spinner > span {
+  width: 6px;
+  height: 6px;
+  background-color: $color-ui-white80;
+  margin: 0 2px 2px;
+  border-radius: 100%;
+  display: inline-block;
+  animation: sk-bouncedelay 1s infinite ease-in-out both;
+}
+
 .spinner .b1 {
   animation-delay: -0.32s;
 }

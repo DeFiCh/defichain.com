@@ -32,10 +32,7 @@
         </ul>
         <div class="spacer"></div>
         <div class="ext-menu">
-          <a href="{{ .Site.Params.github.url }}" class="github-link" target="_blank">
-            {{ readFile "/static/svg/icons/icon-github.svg" | safeHTML }}
-            {{ .Site.Params.github.label }}
-          </a>
+          <a href="/downloads" class="downloads-link">Downloads</a>
           {{ range .Site.Menus.white_paper }}
           <a href="{{ .URL | relLangURL }}" class="white-paper-link">
             {{ .Name }}

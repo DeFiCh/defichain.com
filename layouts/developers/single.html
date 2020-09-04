@@ -57,6 +57,23 @@
             <div class="row">
               <div class="resource-cta col col-md-6">
                 <div class="card">
+                  <a href="{{ $.Param "content.sections.resources.github.url" | relLangURL }}" target="_blank">
+                    <div class="resource-image">
+                      {{ readFile $.Params.content.sections.resources.github.image | safeHTML }}
+                    </div>
+                    <h3 class="h4">
+                      {{ $.Param "content.sections.resources.github.headline" | markdownify }}
+                    </h3>
+                    <div class="spacer"></div>
+                    <div class="btn">
+                      {{ $.Param "content.sections.resources.github.label" }}
+                    </div>
+                    <div class="bg"></div>
+                  </a>
+                </div>
+              </div>
+              <div class="resource-cta col col-md-6">
+                <div class="card">
                   <a href="{{ $.Param "content.sections.resources.download.url" | relLangURL }}" target="_blank">
                     <div class="resource-image">
                       {{ readFile $.Params.content.sections.resources.download.image | safeHTML }}
@@ -68,23 +85,6 @@
                     <div class="spacer"></div>
                     <div class="btn">
                       {{ $.Param "content.sections.resources.download.label" }}
-                    </div>
-                    <div class="bg"></div>
-                  </a>
-                </div>
-              </div>
-              <div class="resource-cta col col-md-6">
-                <div class="card">
-                  <a href="{{ $.Param "content.sections.resources.github.url" | relLangURL }}" target="_blank">
-                    <div class="resource-image">
-                      {{ readFile $.Params.content.sections.resources.github.image | safeHTML }}
-                    </div>
-                    <h3 class="h4">
-                      {{ $.Param "content.sections.resources.github.headline" | markdownify }}
-                    </h3>
-                    <div class="spacer"></div>
-                    <div class="btn">
-                      {{ $.Param "content.sections.resources.github.label" }}
                     </div>
                     <div class="bg"></div>
                   </a>

@@ -180,17 +180,25 @@ body > header {
     font-weight: $font-weight-bold;
     color: $color-ui-white;
     margin-left: 8px;
-    padding: 3px 8px;
+    padding: 5px 8px;
     border-radius: 12px;
-    background-color: $color-ui-black60;
-    vertical-align: 1px;
+    background-color: $color-ui-default;
+    vertical-align: middle;
+    min-width: 55px;
+    height: 24px;
+    line-height: 1;
+    display: inline-block;
+
+    &.loading {
+      background-color: $color-ui-black40;
+    }
+
+    .spinner {
+      display: block;
+    }
   }
 
-  a:hover .dfi-price {
-    background-color: $color-ui-action;
-  }
-
-  .github-link {
+  .downloads-link {
     margin-right: $grid-gutter;
   }
 
@@ -1902,16 +1910,22 @@ section.mentions {
 //
 
 section.downloads {
-  .download {
+  .resource-cta {
     margin-top: 16px;
     margin-bottom: 16px;
   }
 
-  .download-image {
-    margin-bottom: 32px;
+  .resource-image {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    color: map-get($brand-colors, pink);
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    object-fit: contain;
   }
 
-  .download-links {
+  .resource-links {
     display: flex;
 
     a {
@@ -2070,6 +2084,32 @@ body.partners {
 }
 
 body.media {
+  .hero-art {
+    .dfi-branches {
+      top: -304px;
+      left: 12%;
+      transform: rotate(-140deg);
+      color: map-get($brand-colors, paper);
+    }
+
+    .dfi-pot {
+      right: 11%;
+      top: -245px;
+      transform: rotate(27deg);
+      color: map-get($brand-colors, cyan);
+    }
+
+    .dfi-image {
+      left: 51%;
+      bottom: -234px;
+      transform: rotate(128deg);
+      background-image: url(/img/hero/newyork.jpg);
+      clip-path: url(#branchesClip);
+    }
+  }
+}
+
+body.downloads {
   .hero-art {
     .dfi-branches {
       top: -304px;
@@ -2361,3 +2401,54 @@ section.closer-look {
   }
 }
 
+
+/* CMC Widget */
+
+.coinmarketcap-currency-widget {
+  a {
+    color: $color-ui-action !important;
+  }
+
+  > div {
+    padding-top: 8px !important;
+    border-width: 1px !important;
+    border: $base-border-style !important;
+    font-family: inherit !important;
+  }
+
+  > div > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > a {
+    font-size: 16px !important;
+    font-weight: $font-weight-bold;
+    padding-bottom: 4px;
+    display: inline-block;
+  }
+
+  > div > div:nth-child(1) > div:nth-child(1) {
+    padding-bottom: 12px !important;
+  }
+
+  > div > div:nth-child(2) > div {
+    br:nth-child(1) {
+      display: none;
+    }
+  }
+
+  > div > div:nth-child(3) {
+    padding: 0 !important;
+  }
+
+  > div > div:nth-child(3) > a {
+    font-size: 13px;
+    font-style: normal;
+    color: $color-ui-black60 !important;
+  }
+
+  > div > div:nth-child(1) > div:nth-child(1) {
+    line-height: 1 !important;
+  }
+
+  > div > div:nth-child(1) > div:nth-child(2) > img {
+    width: 48px !important;
+    height: 48px !important;
+  }
+}

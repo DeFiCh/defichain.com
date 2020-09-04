@@ -1,8 +1,8 @@
 ---
-title: Claim DFI
-type: claim
+title: DFI Airdrop
+type: airdrop-coming-soon
 long_title: Claim your DFI in the DFI Airdrop
-cta_to: Claim DFI
+cta_to: DFI Airdrop
 menu:
   main:
     weight: 45
@@ -11,7 +11,7 @@ menu:
 meta:
   description: Claim your DFI in the DFI Airdrop
   og:
-    title: Claim DFI
+    title: DFI Airdrop
     description: Claim your DFI in the DFI Airdrop
     site_name: DeFi Blockchain
     image: /img/og/ogimage-claim.png
@@ -22,12 +22,25 @@ content:
   sections:
     hero:
       name: hero
-      headline: DFI Airdrop for Bitcoin holders.
-      subhead: Receive 500 DFI for every BTC you own, absolutely free.
+      headline: 500 DFI/BTC Airdrop for Bitcoin hodlers.
+      subhead: Claim 500 DFI for every BTC you are hodling, absolutely free.
       cta:
         label: Claim DFI
       sub_cta:
         label: Check claim status
+    airdrop_coming_soon:
+      headline: 500 DFI/BTC Airdrop for Bitcoin hodlers.
+      subhead: You will be able to claim 500 DFI for every BTC you are hodling, absolutely free on 10 September. Follow and subscribe to us to be updated when it happens.
+      cta:
+        label: Watch a video
+      sub_cta:
+        label: View details
+      video:
+        headline: The DFI–BTC Airdrop explained
+        id: ezf_ziEniUo
+        cta:
+          url: https://www.youtube.com/DeFiChain
+          label: More videos at DeFiChain YouTube
     how_much:
       name: how-much
       headline: How much will I get?
@@ -42,6 +55,8 @@ content:
         - icon: /static/svg/icons/amount/amount-high.svg
           btc: 100 BTC
           dfi: 50,000 DFI
+      snapshot: The amount of DFI you will be eligible to claim will be determined by a snapshot of your BTC hodlings at Bitcoin block 647,500 which is estimated to be mined on 9 September, 2020 22:00 UTC. 
+      max: The maximum amount of DFI you can claim is capped at 50,000, for 100 BTC.
     claim_wizard:
       headline: Claim your DFI now.
       reward_eligibility:

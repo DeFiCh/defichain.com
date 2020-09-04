@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="{{ $.Param "meta.description" }}">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+  <title>{{ $.Param "long_title" }} &ndash; {{ .Site.Params.title }}</title>
+  {{ $style := resources.Get "scss/main.scss" | toCSS | postCSS | minify | fingerprint }}
+  <link href="{{ $style.RelPermalink }}" rel="stylesheet">
+  {{ if .IsTranslated }}
+  {{ range .Translations }}
+  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+  {{ end }}
+  {{ end }}
+  <meta property="og:title" content="{{ $.Params.meta.og.title }}">
+  <meta property="og:description" content="{{ $.Params.meta.og.description }}">
+  <meta property="og:site_name" content="{{ $.Params.meta.og.site_name }}">
+  <meta property="og:url" content="{{ .Permalink | absURL }}">
+  <meta property="og:image" content="{{ $.Params.meta.og.image | absURL }}">
+  <meta property="og:image:type" content="{{ $.Params.meta.og.image_type }}">
+  <meta property="og:locale" content="{{ $.Params.meta.og.locale }}">
+</head>
+
+<body class="claim">
+
+  {{ partial "header.html" . }}
+
+  <main>
+
+    <section class="hero paper" data-scroll data-scroll-showCallback="heroIn()"
+      data-scroll-hideCallback="heroOut()">
+      <div class="container-fluid">
+        <div class="row">
+          <div id="{{ $.Param "content.sections.hero.name" }}" class="col col-lg-6 col-xl-5 offset-xl-1">
+            <h1 data-scroll="once">{{ $.Param "content.sections.airdrop_coming_soon.headline" }}</h1>
+            <p class="lg" data-scroll="once">{{ $.Params.content.sections.airdrop_coming_soon.subhead }}</p>
+            <div class="hero-ctas">
+              <a href="#video" class="btn">
+                {{ $.Params.content.sections.airdrop_coming_soon.cta.label }}
+              </a>
+              <a href="#details" class="btn">
+                {{ $.Params.content.sections.airdrop_coming_soon.sub_cta.label }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ partial "hero-art.html" . }}
+    </section>
+
+    <section id="video" class="featured-video white">
+      <div class="container-flush">
+        <div class="row">
+          <div class="col col-lg-6 offset-lg-3">
+            <h2 data-scroll="once" class="text-center">{{ $.Param "content.sections.airdrop_coming_soon.video.headline" }}</h2>
+            <div class="video-player">
+              <div id="player-embed"></div>
+              <script>
+                var tag = document.createElement('script');
+                tag.src = "https://www.youtube.com/iframe_api";
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                var player;
+                function onYouTubeIframeAPIReady() {
+                  player = new YT.Player('player-embed', {
+                    height: '390',
+                    width: '640',
+                    videoId: '{{ $.Params.content.sections.airdrop_coming_soon.video.id }}',
+                    events: {
+                      'onReady': onPlayerReady,
+                      'onStateChange': onPlayerStateChange
+                    },
+                    playerVars: {
+                      controls: 1,
+                      iv_load_policy: 3,
+                      modestbranding: 1,
+                      showinfo: 0
+                    }
+                  });
+                }
+                function onPlayerReady(event) {
+                  // play and pause
+                }
+                var done = false;
+                function onPlayerStateChange(event) {
+                  if (event.data == YT.PlayerState.PLAYING && !done) {
+                    setTimeout(stopVideo, 6000);
+                    done = true;
+                  }
+                }
+                function stopVideo() {
+                  player.stopVideo();
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+        <div class="row mtg1">
+          <div class="col text-center">
+            <a href="{{ $.Params.content.sections.airdrop_coming_soon.video.cta.url }}" class="btn" target="_blank">
+              {{ $.Params.content.sections.airdrop_coming_soon.video.cta.label }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="section-slope white reverse">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
+      </div>
+    </section>
+
+    <section id="details" class="how-much day">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col col-ul-4 offset-ul-1">
+            <h2 data-scroll="once">{{ $.Param "content.sections.how_much.headline" }}</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-ul-10 offset-ul-1">
+            <div class="row">
+              {{ range $example := $.Param "content.sections.how_much.examples" }}
+              <div class="example col col-sm-6 col-md-4" data-scroll="once">
+                <div class="example-icon">
+                  {{ readFile $example.icon  | safeHTML }}
+                </div>
+                <div class="owned">{{ $.Param "content.sections.how_much.prefix" }} <strong
+                    class="text-pink">{{ $example.btc }}</strong></div>
+                <div class="will-get">{{ $example.dfi }}</div>
+              </div>
+              {{ end }}
+            </div>
+          </div>
+          <div class="col col-ul-5 offset-ul-1 mtg1">
+            <p>{{ $.Param "content.sections.how_much.snapshot" }}</p>
+            <p>{{ $.Param "content.sections.how_much.max" }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="section-slope day reverse">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
+      </div>
+    </section>
+
+    {{ partial "section-subscribe.html" . }}
+
+  </main>
+
+  {{ partial "footer.html" . }}
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+  {{ $scrolltrigger := resources.Get "js/ScrollTrigger.min.js" }}
+  {{ $debouncedresize := resources.Get "js/jquery.debouncedresize.js" }}
+  {{ $parsley := resources.Get "js/parsley.min.js" }}
+  {{ $main := resources.Get "js/main.js" }}
+  {{ $claim := resources.Get "js/claim.js" }}
+  {{ $collapsible := resources.Get "js/collapsible.js" }}
+  {{ $js := slice $scrolltrigger $debouncedresize $parsley $main $collapsible $claim | resources.Concat "js/bundle-claim.js" | resources.Fingerprint }}
+  <script src="{{ $js.RelPermalink }}" type="text/javascript"></script>
+  {{ template "_internal/google_analytics_async.html" . }}
+  {{ partial "pixels/facebook.html" . }}
+  {{ partial "pixels/linkedin.html" . }}
+</body>
+
+</html>

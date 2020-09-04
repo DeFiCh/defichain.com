@@ -37,6 +37,13 @@ strong, bold {
 }
 
 //
+// Brand text colors
+//
+
+@include brand-text-variations;
+
+
+//
 // Headings
 //
 
@@ -102,6 +109,16 @@ p, .p {
   font-weight: $body-md-font-weight;
   margin-bottom: $body-md-margin-bottom;
   letter-spacing: $body-md-letter-spacing;
+}
+
+form {
+  p, .p {
+    margin-bottom: $body-md-line-height;
+
+    &:last-of-type {
+      margin-bottom: $body-md-line-height;
+    }
+  }
 }
 
 .lg {

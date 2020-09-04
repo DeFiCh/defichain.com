@@ -5,6 +5,7 @@ form {
 .form-field {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   margin-bottom: 50px;
 
   input[type="text"],
@@ -40,6 +41,10 @@ form {
         color: $color-ui-black40;
       }
     }
+  }
+
+  [autocomplete="off"]::-webkit-contacts-auto-fill-button {
+    display: none !important;
   }
 
   &.has-accessory {
@@ -170,7 +175,7 @@ form.integrated {
 }
 
 @mixin float-label-scaled {
-  &:placeholder-shown:not(:focus) + * {
+  &:placeholder-shown:not(:focus) ~ * {
       font-size: $form-control-font-size;
       @content;
   }

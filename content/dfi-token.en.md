@@ -19,7 +19,6 @@ meta:
     image: /img/og/ogimage_en.png
     image_type: image/png
     locale: en_US
-theme: dark purple
 content:
   sections:
     hero:

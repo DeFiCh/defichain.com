@@ -1,0 +1,436 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="{{ $.Param "meta.description" }}">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+  <title>{{ $.Param "long_title" }} &ndash; {{ .Site.Params.title }}</title>
+  {{ $style := resources.Get "scss/main.scss" | toCSS | postCSS | minify | fingerprint }}
+  <link href="{{ $style.RelPermalink }}" rel="stylesheet">
+  {{ if .IsTranslated }}
+  {{ range .Translations }}
+  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+  {{ end }}
+  {{ end }}
+  <meta property="og:title" content="{{ $.Params.meta.og.title }}">
+  <meta property="og:description" content="{{ $.Params.meta.og.description }}">
+  <meta property="og:site_name" content="{{ $.Params.meta.og.site_name }}">
+  <meta property="og:url" content="{{ .Permalink | absURL }}">
+  <meta property="og:image" content="{{ $.Params.meta.og.image | absURL }}">
+  <meta property="og:image:type" content="{{ $.Params.meta.og.image_type }}">
+  <meta property="og:locale" content="{{ $.Params.meta.og.locale }}">
+</head>
+
+<body class="claim">
+
+  {{ partial "header.html" . }}
+
+  <main>
+
+    <section class="hero paper" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
+      <div class="container-fluid">
+        <div class="row">
+          <div id="{{ $.Param "content.sections.hero.name" }}" class="col col-lg-6 col-xl-5 offset-xl-1">
+            <h1 data-scroll="once">{{ $.Param "content.sections.hero.headline" }}</h1>
+            <p class="lg" data-scroll="once">{{ $.Param "content.sections.hero.subhead" }}</p>
+            <div class="hero-ctas">
+              <a href="#claim-my-dfi" class="btn">
+                {{ $.Params.content.sections.hero.cta.label }}
+              </a>
+              <a href="#claim-status" class="btn">
+                {{ $.Params.content.sections.hero.sub_cta.label }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ partial "hero-art.html" . }}
+    </section>
+
+    <section class="how-much white">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col col-ul-4 offset-ul-1">
+            <h2 data-scroll="once">{{ $.Param "content.sections.how_much.headline" }}</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-ul-10 offset-ul-1">
+            <div class="row">
+              {{ range $example := $.Param "content.sections.how_much.examples" }}
+              <div class="example col col-sm-6 col-md-4" data-scroll="once">
+                <div class="example-icon">
+                  {{ readFile $example.icon  | safeHTML }}
+                </div>
+                <div class="owned">{{ $.Param "content.sections.how_much.prefix" }} <strong
+                    class="text-pink">{{ $example.btc }}</strong></div>
+                <div class="will-get">{{ $example.dfi }}</div>
+              </div>
+              {{ end }}
+            </div>
+            <div class="mtg1">
+              <p>{{ $.Param "content.sections.how_much.max" }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-slope white reverse">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
+      </div>
+    </section>
+
+    <section id="claim-my-dfi" class="claim-wizard day">
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col col-ul-4 offset-ul-1">
+            <h2 data-scroll="once">{{ $.Params.content.sections.claim_wizard.headline }}</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapsible-head active container-fluid">
+        <div class="row">
+          <div class="col col-ul-6 offset-ul-1">
+            <div class="toggle">
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <h3>{{ $.Params.content.sections.claim_wizard.reward_eligibility.headline }}</h3>
+          </div>
+        </div>
+      </div>
+      <div class="collapsible-content container-flushed" id="reward-eligibility">
+        <div class="row">
+          <div class="col col-ul-6 offset-ul-1">
+            <div id="reward-eligibility-form">
+              <form action="/" data-parsley-validate>
+                <p class="lead">{{ $.Params.content.sections.claim_wizard.reward_eligibility.body }}</p>
+                <div class="form-field has-float-label">
+                  <input type="text" id="btc_address" name="btc_address" autocomplete="off" autocorrect="off"
+                    placeholder="{{ $.Params.content.sections.claim_status.form.btc_field.hint }}"
+                    data-parsley-type="alphanum" data-parsley-length="[14, 74]" />
+                  <label for="btc_address">{{ $.Params.content.sections.claim_status.form.btc_field.label }}</label>
+                </div>
+                <div class="form-field">
+                  <button class="claim-wizard-next btn mbg1 mrg1" type="submit">
+                    {{ $.Params.content.sections.claim_wizard.reward_eligibility.reward_eligibility_button }}
+                  </button>
+                  <div class="spinner">
+                    <div class="b1"></div>
+                    <div class="b2"></div>
+                    <div class="b3"></div>
+                  </div>
+                  <button class="claim-wizard-next-button btn mbg1">
+                    {{ $.Params.content.sections.claim_wizard.reward_eligibility.next_button.label }}
+                  </button>
+                </div>
+                <div class="d-none" id="reward-eligibility-error-alert">
+                  <div class="reward-alert-error alert error"></div>
+                </div>
+                <div class="d-none" id="reward-eligibility-success-alert">
+                  <div class="reward-alert-success alert info">
+                    {{ $.Params.content.sections.claim_status.form.response.message }}
+                    <table class="claim-response">
+                      <tr style="word-break: break-all;">
+                        <th>{{ $.Params.content.sections.claim_status.form.response.status }}</th>
+                        <td id="reward-eligibility-value"></td>
+                      </tr>
+                      <tr>
+                        <th>{{ $.Params.content.sections.claim_status.form.response.btc_balance }}</th>
+                        <td id="reward-eligibility-btcBalance"></td>
+                      </tr>
+                      <tr>
+                        <th>{{ $.Params.content.sections.claim_status.form.response.claim_dfi_amount }}</th>
+                        <td id="reward-eligibility-claimDfiAmount"></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapsible-head container-fluid">
+        <div class="row">
+          <div class="col col-ul-6 offset-ul-1">
+            <div class="toggle">
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <h3>{{ $.Params.content.sections.claim_wizard.step1.headline }}</h3>
+          </div>
+        </div>
+      </div>
+      <div class="collapsible-content container-flushed" id="claim-step1">
+        <div class="row">
+          {{ range $index, $option := $.Params.content.sections.claim_wizard.step1.options }}
+          <div class="col col-ul-5 {{ with eq $index 0 }} offset-ul-1{{ end }}">
+            <div class="resource-image">
+              {{ readFile $option.image | safeHTML }}
+            </div>
+            <h4 data-scroll="once">{{ $option.headline | markdownify }}</h4>
+            <a href="{{ $option.cta.url | relLangURL }}" target="_blank" class="btn" data-scroll="once">
+              {{ $option.cta.label }}
+            </a>
+          </div>
+          {{ end }}
+        </div>
+        <div class="row">
+          <div class="col col-ul-6 offset-ul-1 mbg1">
+            <p>{{ $.Params.content.sections.claim_wizard.step1.body }}</p>
+            <button class="claim-wizard-next btn mtg1">
+              {{ $.Params.content.sections.claim_wizard.step1.next_button.label }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapsible-head container-fluid">
+        <div class="row">
+          <div class="col col-ul-6 offset-ul-1">
+            <div class="toggle">
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <h3>{{ $.Params.content.sections.claim_wizard.step2.headline }}</h3>
+          </div>
+        </div>
+      </div>
+      <div class="collapsible-content container-flushed" id="claim-step2">
+        <form action="/" class="row" data-parsley-validate>
+          <div class="col col-ul-6 offset-ul-1">
+            <p class="lead">{{ $.Params.content.sections.claim_wizard.step2.body }}</p>
+            <div class="form-field has-float-label">
+              <input type="text" id="btc_add" name="btc_add" autocomplete="off" autocorrect="off"
+                placeholder="{{ $.Params.content.sections.claim_wizard.step2.form.btc_field.hint }}" required="required"
+                data-parsley-type="alphanum" data-parsley-length="[14, 74]" />
+              <label for="btc_add">{{ $.Params.content.sections.claim_wizard.step2.form.btc_field.label }}</label>
+            </div>
+            <div class="form-field has-float-label">
+              <input type="text" id="dfi_add" name="dfi_add" autocomplete="off" autocorrect="off"
+                placeholder="{{ $.Params.content.sections.claim_wizard.step2.form.dfi_field.hint }}" required="required"
+                data-parsley-type="alphanum" data-parsley-length="[14, 74]" />
+              <label for="dfi_add">{{ $.Params.content.sections.claim_wizard.step2.form.dfi_field.label }}</label>
+            </div>
+            <div class="form-field">
+              <button class="claim-wizard-next btn" type="submit">
+                {{ $.Params.content.sections.claim_wizard.step2.next_button.label }}
+              </button>
+              <div class="spinner">
+                <div class="b1"></div>
+                <div class="b2"></div>
+                <div class="b3"></div>
+              </div>
+            </div>
+            <div class="d-none" id="step2-error-alert">
+              <div class="claim-message-alert-error alert error"></div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="collapsible-head container-fluid">
+        <div class="row">
+          <div class="col col-ul-6 offset-ul-1">
+            <div class="toggle">
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <h3>{{ $.Params.content.sections.claim_wizard.step3.headline }}</h3>
+          </div>
+        </div>
+      </div>
+      <div class="collapsible-content container-flushed" id="claim-step3">
+        <div class="row">
+          <div class="col col-ul-6 offset-ul-1">
+            <div class="alert info" id="prev-incomplete-alert">
+              {{ $.Params.content.sections.claim_wizard.step3.alert.default }}
+            </div>
+            <p class="lead">{{ $.Params.content.sections.claim_wizard.step3.subhead1 | markdownify }}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-ul-6 offset-ul-1">
+            <table class="table-plain mbg0">
+              <tr>
+                <th>{{ $.Params.content.sections.claim_wizard.step3.table.bitcoin_address.label }}</th>
+                <td><em>{{ $.Params.content.sections.claim_wizard.step3.table.bitcoin_address.value }}</em></td>
+              </tr>
+              <tr>
+                <th>{{ $.Params.content.sections.claim_wizard.step3.table.message.label }}</th>
+                <td>
+                  <span class="claim-wizard-btc-message">Message</span>
+                  <button class="copy-btn btn btn-small btn-plain"
+                    data-clipboard-target=".claim-wizard-btc-message">Copy to clipboard</button>
+                </td>
+              </tr>
+            </table>
+            <p>{{ $.Params.content.sections.claim_wizard.step3.subhead2 | markdownify }}</p>
+            <div class="form-field">
+              <button class="claim-wizard-next btn mtg1">
+                {{ $.Params.content.sections.claim_wizard.step3.next_button.label }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapsible-head container-fluid">
+        <div class="row">
+          <div class="col col-ul-6 offset-ul-1">
+            <div class="toggle">
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <h3>{{ $.Params.content.sections.claim_wizard.step4.headline }}</h3>
+          </div>
+        </div>
+      </div>
+      <div class="collapsible-content container-flushed" id="claim-step4">
+        <form action="/" class="row" data-parsley-validate>
+          <div class="col col-ul-6 offset-ul-1">
+            <p class="lead">{{ $.Params.content.sections.claim_wizard.step4.subhead | markdownify }}</p>
+            <div class="form-field has-float-label">
+              <input type="text" id="message_signature" name="message_signature" autocomplete="off" autocorrect="off"
+                placeholder="{{ $.Params.content.sections.claim_wizard.step4.form.signature.hint }}" required="required"
+                onkeyup="removeBtnDisable()" />
+              <label
+                for="message_signature">{{ $.Params.content.sections.claim_wizard.step4.form.signature.label }}</label>
+            </div>
+            <p>{{ $.Params.content.sections.claim_wizard.step4.form.email.instructions }}</p>
+            <div class="form-field has-float-label">
+              <input type="email" id="claim_email" name="claim_email" autocomplete="off" autocorrect="off"
+                placeholder="{{ $.Params.content.sections.claim_wizard.step4.form.email.hint }}" />
+              <label for="claim_email">{{ $.Params.content.sections.claim_wizard.step4.form.email.label }}</label>
+            </div>
+            <div class="form-field has-float-label" id="google_recaptcha">
+            </div>
+            <div class="form-field">
+              <button type="submit" class="claim-wizard-next btn">
+                {{ $.Params.content.sections.claim_wizard.step4.next_button.label }}
+              </button>
+              <div class="spinner">
+                <div class="b1"></div>
+                <div class="b2"></div>
+                <div class="b3"></div>
+              </div>
+            </div>
+            <div class="d-none" id="step4-error-alert">
+              <div class="claim-alert-error alert error"></div>
+            </div>
+            <div class="d-none" id="step4-success-alert">
+              <div class="claim-alert-success alert info">
+                {{ $.Params.content.sections.claim_wizard.step4.response.message }}
+                <table class="claim-response">
+                  <tr>
+                    <th>{{ $.Params.content.sections.claim_wizard.step4.response.status }}</th>
+                    <td id="dfi-status-value"></td>
+                  </tr>
+                  <tr>
+                    <th>{{ $.Params.content.sections.claim_wizard.step4.response.transaction_info.requested_ts }}</th>
+                    <td id="requested-ts-value"></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="section-slope day reverse">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
+      </div>
+    </section>
+
+    <section id="claim-status" class="claim-status paper">
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col col-ul-6 offset-ul-1">
+            <h2>{{ $.Params.content.sections.claim_status.headline }}</h2>
+            <div id="claim-status-form">
+              <form action="/" data-parsley-validate>
+                <p class="lead">{{ $.Params.content.sections.claim_status.form.body }}</p>
+                <div class="form-field has-float-label">
+                  <input type="text" id="btc_address_input" name="btc_address" autocomplete="off" autocorrect="off"
+                    placeholder="{{ $.Params.content.sections.claim_status.form.btc_field.hint }}" required="required"
+                    data-parsley-type="alphanum" data-parsley-length="[14, 74]" />
+                  <label for="btc_address">{{ $.Params.content.sections.claim_status.form.btc_field.label }}</label>
+                </div>
+                <div class="form-field">
+                  <button class="claim-wizard-next btn" type="submit">
+                    {{ $.Params.content.sections.claim_status.form.check_status_button }}
+                  </button>
+                  <div class="spinner">
+                    <div class="b1"></div>
+                    <div class="b2"></div>
+                    <div class="b3"></div>
+                  </div>
+                </div>
+                <div class="d-none" id="claim-status-error-alert">
+                  <div class="status-alert-error alert error"></div>
+                </div>
+                <div class="d-none" id="claim-status-success-alert">
+                  <div class="status-alert-success alert info">
+                    {{ $.Params.content.sections.claim_status.form.response.message }}
+                    <table class="claim-response">
+                      <tr style="word-break: break-all;">
+                        <th>{{ $.Params.content.sections.claim_status.form.response.status }}</th>
+                        <td id="claim-status-value"></td>
+                      </tr>
+                      <tr>
+                        <th>{{ $.Params.content.sections.claim_status.form.response.btc_balance }}</th>
+                        <td id="claim-status-btcBalance"></td>
+                      </tr>
+                      <tr>
+                        <th>{{ $.Params.content.sections.claim_status.form.response.claim_dfi_amount }}</th>
+                        <td id="claim-status-claimDfiAmount"></td>
+                      </tr>
+                      <tr style="word-break: break-all;">
+                        <th>{{ $.Params.content.sections.claim_status.form.response.transaction_id }}</th>
+                        <td id="claim-status-txId"></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-slope paper reverse">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
+      </div>
+
+    </section>
+
+    {{ partial "section-subscribe.html" . }}
+
+  </main>
+
+  {{ partial "footer.html" . }}
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+  {{ $scrolltrigger := resources.Get "js/ScrollTrigger.min.js" }}
+  {{ $debouncedresize := resources.Get "js/jquery.debouncedresize.js" }}
+  {{ $parsley := resources.Get "js/parsley.min.js" }}
+  {{ $main := resources.Get "js/main.js" }}
+  {{ $claim := resources.Get "js/claim.js" }}
+  {{ $collapsible := resources.Get "js/collapsible.js" }}
+  {{ $js := slice $scrolltrigger $debouncedresize $parsley $main $collapsible $claim | resources.Concat "js/bundle-claim.js" | resources.Fingerprint }}
+  <script src="{{ $js.RelPermalink }}" type="text/javascript"></script>
+  {{ template "_internal/google_analytics_async.html" . }}
+  {{ partial "pixels/facebook.html" . }}
+  {{ partial "pixels/linkedin.html" . }}
+</body>
+
+</html>

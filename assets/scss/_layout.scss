@@ -30,6 +30,14 @@ body {
   margin-bottom: $grid-gutter;
 }
 
+.mlg1 {
+  margin-left: $grid-gutter;
+}
+
+.mrg1 {
+  margin-right: $grid-gutter;
+}
+
 
 //
 // Header
@@ -551,6 +559,30 @@ main {
     padding: 8px 0;
     border-collapse: collapse;
     border: none;
+  }
+}
+
+
+//
+// Alert
+//
+
+.alert {
+  padding-left: $form-control-padding-horizontal;
+  padding-right: $form-control-padding-horizontal;
+  padding-top: $form-control-padding-vertical;
+  padding-bottom: $form-control-padding-vertical;
+  border-radius: $base-border-radius;
+  margin-bottom: 50px;
+
+  &.info {
+    background-color: rgba(map-get($brand-colors, green), 0.1);
+    color: map-get($brand-colors, green);
+  }
+
+  &.error {
+    background-color: rgba(map-get($brand-colors, red), 0.1);
+    color: map-get($brand-colors, red);
   }
 }
 
@@ -1671,6 +1703,67 @@ section.distribution {
 
 
 //
+// Claim
+//
+
+section.how-much {
+  .owned {
+    font-size: $body-md-font-size;
+    margin-bottom: $body-md-margin-bottom;
+  }
+
+  .will-get {
+    font-size: $h3-font-size;
+  }
+
+  .example {
+    margin-bottom: 30px;
+  }
+
+  .example-icon {
+    margin-bottom: 30px;
+    color: map-get($brand-colors, pink);
+
+    @include media(">md") {
+      margin-bottom: 60px;
+    }
+
+    svg {
+      fill: currentColor;
+      transform: scale(2);
+      transform-origin: left top;
+    }
+  }
+}
+
+section.claim-wizard {
+  .copy-btn {
+    float: right;
+    outline: none;
+  }
+}
+
+.claim-wizard-next + .spinner {
+  display: none;
+  margin-left: 30px;
+
+  &.show {
+    display: flex;
+  }
+}
+
+.claim-response {
+  margin-top: $form-control-padding-vertical;
+  margin-bottom: 0;
+
+  td, th {
+    border: 0;
+    padding: 0;
+  }
+}
+
+
+//
 // White paper
 //
 
@@ -1870,7 +1963,8 @@ section.downloads {
 // Page-specific layout and colors
 // 
 
-body.home {
+body.home,
+body.claim {
   section.hero {
     // height: 100vh;
     // min-height: 432px;
@@ -1879,12 +1973,12 @@ body.home {
     text-align: left;
 
     @include media(">lg") {
-      align-items: flex-end;
-      min-height: 768px;
+      align-items: center;
+      min-height: 800px;
     }
 
     @include media(">ul") {
-      padding-bottom: 200px;
+      // padding-bottom: 200px;
     }
   }
 
@@ -1903,7 +1997,7 @@ body.home {
 
     .dfi-image {
       right: 2%;
-      bottom: -244px;
+      bottom: -288px;
       transform: rotate(33deg);
       background-image: url(/img/hero/singapore.jpg);
       clip-path: url(#branchesClip);

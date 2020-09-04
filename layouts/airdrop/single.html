@@ -29,8 +29,7 @@
 
   <main>
 
-    <section class="hero paper" data-scroll data-scroll-showCallback="heroIn()"
-      data-scroll-hideCallback="heroOut()">
+    <section class="hero paper" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
           <div id="{{ $.Param "content.sections.hero.name" }}" class="col col-lg-6 col-xl-5 offset-xl-1">
@@ -206,17 +205,17 @@
         <form action="/" class="row" data-parsley-validate>
           <div class="col col-ul-6 offset-ul-1">
             <p class="lead">{{ $.Params.content.sections.claim_wizard.step2.body }}</p>
-            <div class="form-field has-float-label mtg1">
-              <input type="text" id="dfi_add" name="dfi_add" autocomplete="off" autocorrect="off"
-                placeholder="{{ $.Params.content.sections.claim_wizard.step2.form.dfi_field.hint }}" required="required"
-                data-parsley-type="alphanum" data-parsley-length="[14, 74]" />
-              <label for="dfi_add">{{ $.Params.content.sections.claim_wizard.step2.form.dfi_field.label }}</label>
-            </div>
             <div class="form-field has-float-label">
               <input type="text" id="btc_add" name="btc_add" autocomplete="off" autocorrect="off"
                 placeholder="{{ $.Params.content.sections.claim_wizard.step2.form.btc_field.hint }}" required="required"
                 data-parsley-type="alphanum" data-parsley-length="[14, 74]" />
               <label for="btc_add">{{ $.Params.content.sections.claim_wizard.step2.form.btc_field.label }}</label>
+            </div>
+            <div class="form-field has-float-label">
+              <input type="text" id="dfi_add" name="dfi_add" autocomplete="off" autocorrect="off"
+                placeholder="{{ $.Params.content.sections.claim_wizard.step2.form.dfi_field.hint }}" required="required"
+                data-parsley-type="alphanum" data-parsley-length="[14, 74]" />
+              <label for="dfi_add">{{ $.Params.content.sections.claim_wizard.step2.form.dfi_field.label }}</label>
             </div>
             <div class="form-field">
               <button class="claim-wizard-next btn" type="submit">

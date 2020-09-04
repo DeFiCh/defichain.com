@@ -9,7 +9,7 @@ function removeBtnDisable() {
 }
 
 $(document).ready(function () {
-  var base_url = "http://defi-airdrop-1517175103.ap-southeast-1.elb.amazonaws.com";
+  var base_url = "https://airdrop-api-test.defichain.io";
 
   // Handle wizard next buttons
   function wizardNextStep() {
@@ -57,11 +57,22 @@ $(document).ready(function () {
           'height': 'auto'
         });
         $('#reward-eligibility-value').html(response.status);
-        if (response.status === 'NOT_STARTED') {
+        if (
+          response.status === 'NOT_STARTED'
+        ) {
           $('#reward-eligibility-value').html('No Claim process has been started for ' + $('#btc_address').val() + ' Btc Address');
           $('#reward-eligibility-claimDfiAmount').html(response.claimDfiAmount);
           $('#reward-eligibility-btcBalance').html(response.btcBalance);
           $('#reward-eligibility-txId').html(response.txId);
+        }
+        if (
+          response.status === 'PENDING'
+          || response.status === 'INPROGRESS'
+        ) {
+          $('#claim-status-value').html(response.status);
+          $('#claim-status-claimDfiAmount').html(response.claimDfiAmount);
+          $('#claim-status-btcBalance').html(response.btcBalance);
+          $('#claim-status-txId').html(response.txId);
         }
         if (response.status === 'COMPLETED') {
           $('#reward-eligibility-btcBalance').html(response.btcBalance);
@@ -212,6 +223,15 @@ $(document).ready(function () {
         $('#claim-status-value').html(response.status);
         if (response.status === 'NOT_STARTED') {
           $('#claim-status-value').html('No Claim process has been started for ' + $('#btc_address').val() + ' Btc Address');
+          $('#claim-status-claimDfiAmount').html(response.claimDfiAmount);
+          $('#claim-status-btcBalance').html(response.btcBalance);
+          $('#claim-status-txId').html(response.txId);
+        }
+        if (
+          response.status === 'PENDING'
+          || response.status === 'INPROGRESS'
+        ) {
+          $('#claim-status-value').html(response.status);
           $('#claim-status-claimDfiAmount').html(response.claimDfiAmount);
           $('#claim-status-btcBalance').html(response.btcBalance);
           $('#claim-status-txId').html(response.txId);

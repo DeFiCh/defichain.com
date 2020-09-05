@@ -1,8 +1,9 @@
 ---
-title: DFI Airdrop
-type: airdrop-coming-soon
+title: DFI-BTC Airdrop
+type: airdrop
+# type: airdrop-coming-soon
 long_title: Claim your DFI in the DFI Airdrop
-cta_to: DFI Airdrop
+cta_to: DFI-BTC Airdrop
 menu:
   main:
     weight: 45
@@ -11,7 +12,7 @@ menu:
 meta:
   description: Claim your DFI in the DFI Airdrop
   og:
-    title: DFI Airdrop
+    title: DFI-BTC Airdrop
     description: Claim your DFI in the DFI Airdrop
     site_name: DeFi Blockchain
     image: /img/og/ogimage-claim.png
@@ -22,7 +23,7 @@ content:
   sections:
     hero:
       name: hero
-      headline: 500 DFI/BTC Airdrop for Bitcoin hodlers.
+      headline: 500 DFI per BTC Airdrop for Bitcoin hodlers.
       subhead: Claim 500 DFI for every BTC you are hodling, absolutely free.
       cta:
         label: Claim DFI
@@ -30,7 +31,7 @@ content:
         label: Check claim status
     airdrop_coming_soon:
       headline: 500 DFI/BTC Airdrop for Bitcoin hodlers.
-      subhead: You will be able to claim 500 DFI for every BTC you are hodling, absolutely free on 10 September. Follow and subscribe to us to be updated when it happens.
+      subhead: Claim 500 DFI for every BTC you are hodling, absolutely free on 10 September. Read on for instructions on how to claim your DFI.
       cta:
         label: Watch a video
       sub_cta:
@@ -43,7 +44,7 @@ content:
           label: More videos at DeFiChain YouTube
     how_much:
       name: how-much
-      headline: How much will I get?
+      headline: How much will I get and how to claim?
       prefix: If I own
       examples:
         - icon: /static/svg/icons/amount/amount-low.svg
@@ -57,12 +58,28 @@ content:
           dfi: 50,000 DFI
       snapshot: The amount of DFI you will be eligible to claim will be determined by a snapshot of your BTC hodlings at Bitcoin block 647,500 which is estimated to be mined on 9 September, 2020 22:00 UTC. 
       max: The maximum amount of DFI you can claim is capped at 50,000, for 100 BTC.
+      claim_methods:
+        - title: Claim it here
+          icon: /static/svg/icons/way-to-acquire/airdrop.svg
+          description: Claim will open up here on Sep 10. Have a DFI wallet, as well as a BTC wallet ready.
+          cta:
+            type: local
+            label: Prepare for your claim
+            url: '#claim-my-dfi'
+        - title: Cake Lapis services
+          icon: /static/svg/logos/logo-pool.svg
+          description: Automatically get the airdrop while entered in BTC Lapis – Cake’s unique zero-risk lending service.
+          cta:
+            type: external
+            label: Sign Up for Cake
+            url: https://pool.cakedefi.com/?utm_source=defichain-airdrop-claim&utm_medium=btn&utm_campaign=web
     claim_wizard:
       headline: Claim your DFI now.
+      coming_soon_headline: Prepare for your claim
       reward_eligibility:
         headline: "Enter BTC address to check your airdrop eligibility"
         body: "Enter your BTC address to check your airdrop eligibility"
-        reward_eligibility_button: "Check Eligibility"
+        reward_eligibility_button: "Check eligibility"
         next_button: 
           label: "I’ve checked my airdrop eligibility"
       step1:
@@ -79,6 +96,7 @@ content:
               label: Sign up
               url: https://pool.cakedefi.com/
         body: Make a note of the address of the DFI wallet you obtained, as you will need it in step 2.
+        body_coming_soon: Further steps to claim your airdrop will open up on September 10.
         next_button:
             label: I’ve obtained a DFI wallet
       step2:

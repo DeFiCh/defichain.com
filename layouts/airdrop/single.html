@@ -57,6 +57,12 @@
           </div>
         </div>
         <div class="row">
+          <div class="col col-ul-5 offset-ul-1 mbg1">
+            <p>{{ $.Param "content.sections.how_much.snapshot" }}</p>
+            <p>{{ $.Param "content.sections.how_much.max" }}</p>
+          </div>
+        </div>
+        <div class="row">
           <div class="col col-ul-10 offset-ul-1">
             <div class="row">
               {{ range $example := $.Param "content.sections.how_much.examples" }}
@@ -69,9 +75,6 @@
                 <div class="will-get">{{ $example.dfi }}</div>
               </div>
               {{ end }}
-            </div>
-            <div class="mtg1">
-              <p>{{ $.Param "content.sections.how_much.max" }}</p>
             </div>
           </div>
         </div>

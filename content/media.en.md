@@ -27,6 +27,11 @@ content:
     mentions:
       headline: DeFi Blockchain covered in the press and media.
       mentions_list:
+        - title: DeFiChain – A Glimpse into the Future of Decentralized Finance (DeFi)
+          source: Crypto Adventure
+          date: 5 Sep, 2020
+          image: /svg/press/cryptoadventure.svg
+          url: https://cryptoadventure.org/defichain-a-glimpse-into-the-future-of-decentralized-finance-defi/
         - title: "DeFiChain: The Story From the Co-Founders"
           source: CryptoPotato
           date: 10 Aug, 2020

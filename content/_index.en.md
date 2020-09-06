@@ -210,12 +210,12 @@ content:
                 alt: Tokenization ready with DSTs
             - month: Q4
               status: future
-              title: Trustless and fully Decentralized EXchange (DEX).
+              title: DEX – Liquidity Pool and Yield Farming.
               url: https://www.youtube.com/watch?v=0uBwWK85BLU
               image:
-                x1: /img/timeline/2020/dex.png
-                x2: /img/timeline/2020/dex@2x.png
-                alt: DEX
+                x1: /img/timeline/2020/liquidity-pool.png
+                x2: /img/timeline/2020/liquidity-pool@2x.png
+                alt: Liquidity Pool
         - year: 2021
           events:
             - month:

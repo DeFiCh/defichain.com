@@ -2453,3 +2453,23 @@ section.closer-look {
     height: 48px !important;
   }
 }
+
+
+// Member Links
+.member-of {
+  display: flex;
+  align-items: center;
+
+  .caption {
+    width: 96px;
+    font-size: $note-font-size;
+    line-height: $note-line-height;
+    color: $color-ui-black60;
+  }
+
+  .logos {
+    img {
+      margin-right: 24px;
+    }
+  }
+}

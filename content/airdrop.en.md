@@ -1,7 +1,7 @@
 ---
 title: DFI-BTC Airdrop
-# type: airdrop
-type: airdrop-coming-soon
+type: airdrop
+# type: airdrop-coming-soon
 long_title: Claim your DFI in the DFI Airdrop
 cta_to: DFI-BTC Airdrop
 menu:
@@ -18,7 +18,8 @@ meta:
     image: /img/og/ogimage-claim.png
     image_type: image/png
     locale: en_US
-theme: dark smoke
+theme:
+  footer: day
 content:
   sections:
     hero:

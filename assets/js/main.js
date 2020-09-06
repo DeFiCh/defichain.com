@@ -143,6 +143,34 @@ $(function () {
     });
   }
 
+  // Carousel for Airdrop timeline
+  if ($(".why-dfi").length > 0) {
+    var roadmapCarousel = new Swiper('.why-dfi .carousel', {
+      slidesPerView: 'auto',
+      initialSlide: 10,
+      roundLengths: true,
+      centeredSlides: true,
+      spaceBetween: 32,
+      watchOverflow: true,
+      mousewheel: {
+        forceToAxis: true,
+        invert: true
+      },
+      navigation: {
+        nextEl: '.why-dfi .swiper-button-next',
+        prevEl: '.why-dfi .swiper-button-prev',
+      },
+      breakpoints: {
+        812: {
+          spaceBetween: 64
+        },
+        992: {
+          spaceBetween: 80
+        }
+      }
+    });
+  }
+
   // Closer look carousel
   if ($(".closer-look").length) {
     var closerLookCarousel = new Swiper('.closer-look .carousel', {

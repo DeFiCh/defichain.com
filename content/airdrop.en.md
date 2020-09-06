@@ -73,6 +73,115 @@ content:
             type: external
             label: Sign Up for Cake
             url: https://pool.cakedefi.com/?utm_source=defichain-airdrop-claim&utm_medium=btn&utm_campaign=web
+    why_dfi:
+      headline: Why DFI?
+      subhead: Tokenization is ready on Testnet. Liquidity Pool is scheduled for Q4 2020. Yield farming is on the horizon. More to come. The time is now to ride the DFI wave.
+      roadmap:
+        - year: 2020
+          events:
+            - month: May
+              status: past
+              title: DeFiChain launch and DFI airdrops.
+              url: https://github.com/DeFiCh/ain
+              image:
+                x1: /img/timeline/2020/blockchain-launch.png
+                x2: /img/timeline/2020/blockchain-launch@2x.png
+                alt: DeFi logo
+            - month: Jun
+              status: past
+              title: DFI token started trading on LATOKEN.
+              url: https://exchange.latoken.com/exchange/DFI-USDT
+              image:
+                x1: /img/timeline/2020/dfi-latoken.png
+                x2: /img/timeline/2020/dfi-latoken@2x.png
+                alt: DFI on LATOKEN
+            - month: Jun
+              status: past
+              title: DFI is listted on CoinPaprika.
+              url: https://coinpaprika.com/coin/dfi-defi-chain/
+              image:
+                x1: /img/timeline/2019/dfi-coinpaprika.png
+                x2: /img/timeline/2019/dfi-coinpaprika@2x.png
+                alt: DFI on CoinPaprika
+            - month: Jul
+              status: past
+              title: CoinGecko lists DFI.
+              url: https://www.coingecko.com/en/coins/defichain
+              image:
+                x1: /img/timeline/2020/dfi-coingecko.png
+                x2: /img/timeline/2020/dfi-coingecko@2x.png
+                alt: DFI on CoinGecko
+            - month: Jul
+              status: past
+              title: Indoex lists DFI.
+              url: https://international.indoex.io/trade/DFI_USDT
+              image:
+                x1: /img/timeline/2020/dfi-indoex.png
+                x2: /img/timeline/2020/dfi-indoex@2x.png
+                alt: DFI on Indoex
+            - month: Jul
+              status: past
+              title: DeFiChain desktop app (GUI) launch.
+              url: https://github.com/DeFiCh/defi-app
+              image:
+                x1: /img/timeline/2020/defi-app.png
+                x2: /img/timeline/2020/defi-app@2x.png
+                alt: DeFi Blockchain client app
+            - month: Aug
+              status: past
+              title: DFI officially listed on HotBit.
+              url: https://www.hotbit.io/exchange?symbol=DFI_USDT
+              image:
+                x1: /img/timeline/2020/dfi-hotbit.png
+                x2: /img/timeline/2020/dfi-hotbit@2x.png
+                alt: DFI on HotBit
+            - month: Aug
+              status: past
+              title: DeFiChain brand refresh.
+              image:
+                x1: /img/timeline/2020/dechain-site-redesign.png
+                x2: /img/timeline/2020/dechain-site-redesign@2x.png
+                alt: DeFiChain.com redesign
+            - month: Aug
+              status: past
+              title: DeFiChain listed on CoinMarketCap.
+              url: https://coinmarketcap.com/currencies/defichain/markets/
+              image:
+                x1: /img/timeline/2020/dfi-coinmarketcap.png
+                x2: /img/timeline/2020/dfi-coinmarketcap@2x.png
+                alt: DeFiChain.com redesign
+            - month: Q3 2020
+              status: future
+              title: Tokenization ready with DSTs.
+              url: https://www.youtube.com/watch?v=0uBwWK85BLU
+              image:
+                x1: /img/timeline/2020/tokenization.png
+                x2: /img/timeline/2020/tokenization@2x.png
+                alt: Tokenization ready with DSTs
+            - month: Q4
+              status: future
+              title: Trustless and fully Decentralized EXchange (DEX).
+              url: https://www.youtube.com/watch?v=0uBwWK85BLU
+              image:
+                x1: /img/timeline/2020/dex.png
+                x2: /img/timeline/2020/dex@2x.png
+                alt: DEX
+        - year: 2021
+          events:
+            - month:
+              status: future
+              title: Complete decentralized and trustless lending.
+              image:
+                x1: /img/timeline/2021/complete-trustless.png
+                x2: /img/timeline/2021/complete-trustless@2x.png
+                alt: DeFi logo
+            - month: 2021
+              status: future
+              title: Feature parity with DeFi on Ethereum.
+              image:
+                x1: /img/timeline/2021/eth-parity.png
+                x2: /img/timeline/2021/eth-parity@2x.png
+                alt: DeFi logo
     claim_wizard:
       headline: Claim your DFI now.
       coming_soon_headline: Prepare for your claim
@@ -121,12 +230,12 @@ content:
         table:
           bitcoin_address:
             label: Bitcoin key
-            value: Your bitcoin wallet private key
+            value: Your Bitcoin wallet private key
           message:
             label: Message
             copy_button:
               label: Copy to clipboard
-        subhead2: Your Bitcoin client will generate a _Signature_ after you sign the message. You will need this signature for the next step. If you need help, please refer to this [help article](#).
+        subhead2: Your Bitcoin client will generate a _Signature_ after you sign the message. You will need this signature for the next step. Need help with signing? Here's <a href="https://julianhosp.com/how-to-sign-a-bitcoin-message-with-ledger-or-trezor-step-by-step-guide/" target="_blank">a guide for Trezor/Ledger wallets</a>.
         next_button:
           label: I've done these steps
       step4:

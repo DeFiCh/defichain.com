@@ -24,14 +24,14 @@ content:
   sections:
     hero:
       name: hero
-      headline: 500 DFI per BTC Airdrop for Bitcoin hodlers.
+      headline: 500 DFI per BTC Airdrop for Bitcoin holders.
       subhead: Claim 500 DFI for every BTC you are hodling, absolutely free.
       cta:
         label: Claim DFI
       sub_cta:
         label: Check claim status
     airdrop_coming_soon:
-      headline: 500 DFI/BTC Airdrop for Bitcoin hodlers.
+      headline: 500 DFI/BTC Airdrop for Bitcoin holders.
       subhead: Claim 500 DFI for every BTC you are hodling, absolutely free on 10 September. Read on for instructions on how to claim your DFI.
       cta:
         label: Watch a video

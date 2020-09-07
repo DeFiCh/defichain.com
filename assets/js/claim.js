@@ -64,6 +64,8 @@ $(document).ready(function () {
           $('#reward-eligibility-claimDfiAmount').html(response.claimDfiAmount);
           $('#reward-eligibility-btcBalance').html(response.btcBalance);
           $('#reward-eligibility-txId').html(response.txId);
+          $('#reward-eligibility-next-button').show();
+          $('#btc_add').val($('#btc_address').val())
         }
         if (
           response.status === 'PENDING'

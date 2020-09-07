@@ -57,7 +57,7 @@ content:
         - icon: /static/svg/icons/amount/amount-high.svg
           btc: 100 BTC
           dfi: 50,000 DFI
-      snapshot: The amount of DFI you will be eligible to claim will be determined by a snapshot of your BTC hodlings at Bitcoin block 647,500 which is estimated to be mined on 9 September, 2020 22:00 UTC. 
+      snapshot: 5% of the DeFi Blockchain Foundation wallet (total 14.4 million DFI) has been pledge in the Airdrop. The amount of DFI you are eligible to claim is determined by a snapshot of your BTC hodlings at Bitcoin block 647,500 (estimated to be mined on 9 September, 2020 22:00 UTC). 
       max: The maximum amount of DFI you can claim is capped at 50,000, for 100 BTC.
       claim_methods:
         - title: Claim it here
@@ -65,15 +65,16 @@ content:
           description: Claim will open up here on Sep 10. Have a DFI wallet, as well as a BTC wallet ready.
           cta:
             type: local
-            label: Prepare for your claim
+            label: Claim DFI
             url: '#claim-my-dfi'
         - title: Cake Lapis services
           icon: /static/svg/logos/logo-pool.svg
-          description: Automatically get the airdrop while entered in BTC Lapis – Cake’s unique zero-risk lending service.
+          description: Automatically get the airdrop while entered in BTC Lapis – Cake’s unique zero-risk lending service<strong>*</strong>.
           cta:
             type: external
             label: Sign Up for Cake
             url: https://pool.cakedefi.com/?utm_source=defichain-airdrop-claim&utm_medium=btn&utm_campaign=web
+      disclaimer: <strong>*</strong> Eligible BTC Lapis users will receive their DFI airdrop on when BTC Lapis batch 35 closes. Cake reserves the right to deny the airdrop to users who drop out of BTC Lapis batch 35 after the snapshot.
     why_dfi:
       headline: Why DFI?
       subhead: Tokenization is ready on Testnet. Liquidity Pool is scheduled for Q4 2020. Yield farming is on the horizon + more to come. The time is now to ride the DFI wave.
@@ -236,7 +237,8 @@ content:
             label: Message
             copy_button:
               label: Copy to clipboard
-        subhead2: Your Bitcoin client will generate a _Signature_ after you sign the message. You will need this signature for the next step. Need help with signing? Here's <a href="https://julianhosp.com/how-to-sign-a-bitcoin-message-with-ledger-or-trezor-step-by-step-guide/" target="_blank">a guide for Trezor/Ledger wallets</a>.
+        subhead2: Your Bitcoin client will generate a _Signature_ after you sign the message. You will need this signature for the next step. Need help with signing? Here's a <a href="https://julianhosp.com/how-to-sign-a-bitcoin-message-with-ledger-or-trezor-step-by-step-guide/" target="_blank">video guide for Trezor/Ledger wallets</a>. You can also reach out the the <a href="https://t.me/defiblockchain" target="_blank">DeFiChain Telegram community</a> for help<strong>*</strong>.
+        disclaimer: <strong>*</strong> Please seek support only from the <a href="https://t.me/defiblockchain" target="_blank">DeFiChain Telegram community</a>. Cake support will not be able to assist with signing-related issues.
         next_button:
           label: I've done these steps
       step4:

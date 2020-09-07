@@ -49,7 +49,7 @@
       {{ partial "hero-art.html" . }}
     </section>
 
-    <section class="how-much white">
+    <section id="details" class="how-much resources paper">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-4 offset-ul-1">
@@ -78,9 +78,30 @@
             </div>
           </div>
         </div>
+        <div class="row mtg1">
+          {{ range $method := $.Params.content.sections.how_much.claim_methods }}
+          <div class="way-to-acquire resource-cta col col-sm-6">
+            <div class="card">
+              <div>
+                <h4>{{ $method.title }}</h4>
+                <p>{{ $method.description | markdownify }}</p>
+                <div class="resource-links mtg1">
+                  <a href="{{ $method.cta.url }}" class="btn"{{ with eq $method.cta.type "external" }} target="_blank"{{ end }}>{{ $method.cta.label }}</a>
+                </div>
+                <div class="bg"></div>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+        <div class="row mtg1">
+          <div class="col col-ul-5 offset-ul-1 mbg1">
+            {{ $.Params.content.sections.how_much.disclaimer | markdownify }}
+          </div>
+        </div>
       </div>
-      <div class="section-slope white reverse">
-        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
+      <div class="section-slope paper reverse">
+        {{ readFile "/static/svg/section-slope-line.svg" | safeHTML }}
       </div>
     </section>
 
@@ -326,6 +347,7 @@
                 {{ $.Params.content.sections.claim_wizard.step3.next_button.label }}
               </button>
             </div>
+            <p class="text-smoke mbg1">{{ $.Params.content.sections.claim_wizard.step3.disclaimer | markdownify }}</p>
           </div>
         </div>
       </div>

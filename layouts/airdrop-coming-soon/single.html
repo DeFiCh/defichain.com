@@ -145,7 +145,7 @@
             <div class="card">
               <div>
                 <h4>{{ $method.title }}</h4>
-                <p>{{ $method.description }}</p>
+                <p>{{ $method.description | markdownify }}</p>
                 <div class="resource-links mtg1">
                   <a href="{{ $method.cta.url }}" class="btn"{{ with eq $method.cta.type "external" }} target="_blank"{{ end }}>{{ $method.cta.label }}</a>
                 </div>
@@ -154,6 +154,11 @@
             </div>
           </div>
           {{ end }}
+        </div>
+        <div class="row mtg1">
+          <div class="col col-ul-5 offset-ul-1 mbg1">
+            {{ $.Params.content.sections.how_much.disclaimer | markdownify }}
+          </div>
         </div>
       </div>
       <div class="section-slope paper reverse">

@@ -218,16 +218,16 @@ content:
                 alt: Liquidity Pool
         - year: 2021
           events:
-            - month:
+            - month: Q1
               status: future
-              title: Complete decentralized and trustless lending.
+              title: More DeFi building blocks for DApp integration.
               image:
                 x1: /img/timeline/2021/complete-trustless.png
                 x2: /img/timeline/2021/complete-trustless@2x.png
                 alt: DeFi logo
-            - month: 2021
+            - month: Q2
               status: future
-              title: Feature parity with DeFi on Ethereum.
+              title: Decentralized sross-chain asset bridge via atomic swap.
               image:
                 x1: /img/timeline/2021/eth-parity.png
                 x2: /img/timeline/2021/eth-parity@2x.png

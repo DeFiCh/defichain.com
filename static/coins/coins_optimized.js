@@ -277,7 +277,7 @@ function render() {
             coin.rotation.z += rollFactor * coin.custom.zRotationFactor; // roll
 
             if (coin.position.y < endY - 300) {
-                coin.position.y = startY;
+                coin.position.y = startY + Math.floor(Math.random() * coinSpawnRangeY - (coinSpawnRangeY / 2));
                 coin.position.x = Math.floor(Math.random() * coinSpawnRangeX - (coinSpawnRangeX / 2));
                 coin.position.z = Math.floor(Math.random() * coinSpawnRangeZ - (coinSpawnRangeZ / 2));
             }

@@ -8,25 +8,29 @@ function removeBtnDisable() {
   $('#claim-step4 .claim-wizard-next').removeClass('btn-disable');
 }
 
+function cycleBalance(total, balance) {
+  var total = total;
+  var balance = balance;
+  var cycleBalance = total;
+  var nfObject = new Intl.NumberFormat('en-US');
+  var countdown = setInterval(function () {
+    var amountToCycle = 1 + ((cycleBalance - balance) / 10);
+    cycleBalance -= amountToCycle;
+    shownBalance = nfObject.format((cycleBalance / 100000000));
+    $(".balance-value").html(shownBalance);
+    if (cycleBalance < balance) {
+      cycleBalance = balance;
+      clearInterval(countdown);
+    }
+  }, 10);
+}
+
 $(document).ready(function () {
   // DFI Balance
   $.ajax({
     url: "https://mainnet-api.defichain.io/api/DFI/mainnet/address/dMysnhSbg8VbJJjdj273bNQi6i69z4WL6Z/balance",
     success: function (data) {
-      var total = 1440600000000000;
-      var balance = data.balance;
-      var cycleBalance = total;
-      var nfObject = new Intl.NumberFormat('en-US');
-      var countdown = setInterval(function() {
-        var amountToCycle = 1 + ((cycleBalance - balance) / 10);
-        cycleBalance -= amountToCycle;
-        shownBalance = nfObject.format((cycleBalance / 100000000));
-        $(".balance-value").html(shownBalance);
-        if (cycleBalance < balance) {
-          cycleBalance = balance;
-          clearInterval(countdown);
-        }
-      }, 10);
+      cycleBalance(1440600000000000, data.balance);
     }
   });
 

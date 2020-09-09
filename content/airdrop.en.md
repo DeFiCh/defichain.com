@@ -33,7 +33,7 @@ content:
       balance:
         headline: DFI remaining
         proof:
-          label: View on Mainnet
+          label: Verify on Explorer
           url: https://explorer.defichain.io/#/DFI/mainnet/address/dMysnhSbg8VbJJjdj273bNQi6i69z4WL6Z
     airdrop_coming_soon:
       headline: 500 DFI/BTC Airdrop for Bitcoin hodlers.

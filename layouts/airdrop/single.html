@@ -39,14 +39,23 @@
               <a href="#claim-my-dfi" class="btn">
                 {{ $.Params.content.sections.hero.cta.label }}
               </a>
-              <a href="#claim-status" class="btn">
+              <a href="#claim-status" class="btn btn-plain">
                 {{ $.Params.content.sections.hero.sub_cta.label }}
               </a>
             </div>
           </div>
+          <div class="airdrop-balance col col-lg-5 col-xl-4 offset-xl-1">
+            <div class="balance-wrapper">
+              <h2>{{ $.Params.content.sections.hero.balance.headline }}</h2>
+              <div class="balance-counter">
+                <span class="balance-value">14,406,000</span>
+                <span class="balance-unit">DFI</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      {{ partial "hero-art.html" . }}
+      {{ partial "hero-coins.html" . }}
     </section>
 
     <section id="details" class="how-much resources paper">

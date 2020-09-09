@@ -789,6 +789,35 @@ section.hero {
   height: 100%;
 }
 
+.airdrop-balance {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .balance-wrapper {
+    text-align: center;
+    padding-bottom: $grid-gutter;
+  }
+  
+  h2 {
+    font-size: $body-md-font-size;
+    line-height: $body-md-line-height;
+    margin: 0;
+  }
+
+  .balance-value {
+    font-size: $h3-font-size;
+    font-family: $monospace-font-family;
+  }
+
+  .balance-unit {
+    font-size: $body-md-font-size;
+    font-weight: $font-weight-semibold;
+    vertical-align: 10px;
+    margin-left: .2em;
+  }
+}
+
 
 // 
 // Featured video sections

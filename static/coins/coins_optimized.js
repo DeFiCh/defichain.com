@@ -278,6 +278,8 @@ function render() {
 
             if (coin.position.y < endY - 300) {
                 coin.position.y = startY;
+                coin.position.x = Math.floor(Math.random() * coinSpawnRangeX - (coinSpawnRangeX / 2));
+                coin.position.z = Math.floor(Math.random() * coinSpawnRangeZ - (coinSpawnRangeZ / 2));
             }
         }
     });

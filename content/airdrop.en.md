@@ -31,7 +31,7 @@ content:
       sub_cta:
         label: Check claim status
       balance:
-        headline: Airdrop balance
+        headline: DFI remaining
         proof:
           label: View on Mainnet
           url: https://explorer.defichain.io/#/DFI/mainnet/address/dMysnhSbg8VbJJjdj273bNQi6i69z4WL6Z

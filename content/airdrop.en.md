@@ -32,6 +32,9 @@ content:
         label: Check claim status
       balance:
         headline: Airdrop balance
+        proof:
+          label: View on Mainnet
+          url: https://explorer.defichain.io/#/DFI/mainnet/address/dMysnhSbg8VbJJjdj273bNQi6i69z4WL6Z
     airdrop_coming_soon:
       headline: 500 DFI/BTC Airdrop for Bitcoin hodlers.
       subhead: Claim 500 DFI for every BTC you are hodling, absolutely free on 10 September. Read on for instructions on how to claim your DFI.

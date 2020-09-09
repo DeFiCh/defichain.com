@@ -816,6 +816,15 @@ section.hero {
     vertical-align: 10px;
     margin-left: .2em;
   }
+
+  .proof-link {
+    margin-top: 8px;
+
+    a {
+      font-size: $body-sm-font-size;
+      color: $color-ui-black60;
+    }
+  }
 }
 
 

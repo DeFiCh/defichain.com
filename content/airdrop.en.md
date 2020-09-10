@@ -1,7 +1,7 @@
 ---
 title: DFI-BTC Airdrop
-type: airdrop
-# type: airdrop-coming-soon
+# type: airdrop
+type: airdrop-coming-soon
 long_title: Claim your DFI in the DFI Airdrop
 cta_to: DFI-BTC Airdrop
 menu:

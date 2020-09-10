@@ -43,8 +43,8 @@ content:
       sub_cta:
         label: View details
       video:
-        headline: The DFI–BTC Airdrop explained
-        id: ezf_ziEniUo
+        headline: Step-by-step guide to claim your free DFI.
+        id: fDfaqx5gKCQ
         cta:
           url: https://www.youtube.com/DeFiChain
           label: More videos at DeFiChain YouTube

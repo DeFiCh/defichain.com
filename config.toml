@@ -1,5 +1,5 @@
 baseURL = "https://www.defichain.com/"
-googleAnalytics = ""
+googleAnalytics = "UA-145606297-3"
 languageCode = "en-us"
 title = "DeFi Blockchain"
 

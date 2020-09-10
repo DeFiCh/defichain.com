@@ -13,6 +13,7 @@ function cycleBalance(total, balance) {
   var balance = balance;
   var cycleBalance = total;
   var nfObject = new Intl.NumberFormat('en-US');
+  $(".balance-value").data('fivalue', balance);
   var countdown = setInterval(function () {
     var amountToCycle = 1 + ((cycleBalance - balance) / 10);
     cycleBalance -= amountToCycle;
@@ -27,12 +28,20 @@ function cycleBalance(total, balance) {
 
 $(document).ready(function () {
   // DFI Balance
-  $.ajax({
-    url: "https://mainnet-api.defichain.io/api/DFI/mainnet/address/dMysnhSbg8VbJJjdj273bNQi6i69z4WL6Z/balance",
-    success: function (data) {
-      cycleBalance(1440600000000000, data.balance);
-    }
-  });
+  function refreshBalance() {
+    var rand = Math.random() * (14406000000000 - 0);
+    $.ajax({
+      url: "https://mainnet-api.defichain.io/api/DFI/mainnet/address/dMysnhSbg8VbJJjdj273bNQi6i69z4WL6Z/balance",
+      success: function (data) {
+        cycleBalance($(".balance-value").data('fivalue'), rand);
+      }
+    });
+  }
+
+  refreshBalance();
+  setInterval(function() {
+    refreshBalance();
+  }, 60 * 1000);
 
   var base_url = "https://airdrop-api-test.defichain.io";
 

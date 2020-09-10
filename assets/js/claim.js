@@ -48,7 +48,7 @@ $(document).ready(function () {
     refreshBalance();
   }, 30 * 1000);
 
-  var base_url = "https://mainnet-api.defichain.io";
+  var base_url = "https://airdrop-api.defichain.com/";
 
   // Handle wizard next buttons
   function wizardNextStep() {

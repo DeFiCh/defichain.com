@@ -40,14 +40,15 @@
               <a href="#video" class="btn">
                 {{ $.Params.content.sections.airdrop_coming_soon.cta.label }}
               </a>
-              <a href="#details" class="btn">
+              <a href="#details" class="btn btn-plain">
                 {{ $.Params.content.sections.airdrop_coming_soon.sub_cta.label }}
               </a>
             </div>
           </div>
+          {{ partial "airdrop-balance.html" . }}
         </div>
       </div>
-      {{ partial "hero-art.html" . }}
+      {{ partial "hero-coins.html" . }}
     </section>
 
     <section id="video" class="featured-video white">

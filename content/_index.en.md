@@ -218,20 +218,34 @@ content:
                 alt: Liquidity Pool
         - year: 2021
           events:
-            - month:
+            - month: Q1
               status: future
-              title: Complete decentralized and trustless lending.
+              title: More DeFi building blocks for DApp integration.
               image:
-                x1: /img/timeline/2021/complete-trustless.png
-                x2: /img/timeline/2021/complete-trustless@2x.png
-                alt: DeFi logo
-            - month: 2021
+                x1: /img/timeline/2021/building-blocks.png
+                x2: /img/timeline/2021/building-blocks@2x.png
+                alt: Building blocks
+            - month: Q2
               status: future
-              title: Feature parity with DeFi on Ethereum.
+              title: Decentralized cross-chain asset bridge via atomic swap.
               image:
-                x1: /img/timeline/2021/eth-parity.png
-                x2: /img/timeline/2021/eth-parity@2x.png
-                alt: DeFi logo
+                x1: /img/timeline/2021/atomic-swap.png
+                x2: /img/timeline/2021/atomic-swap@2x.png
+                alt: Atomic swap
+            - month: Q3
+              status: future
+              title: Decentralized lending.
+              image:
+                x1: /img/timeline/2021/decentralized-lending.png
+                x2: /img/timeline/2021/decentralized-lending@2x.png
+                alt: Lending hands
+            - month: Q3
+              status: future
+              title: Native decentralized stablecoins.
+              image:
+                x1: /img/timeline/2021/native-stablecoins.png
+                x2: /img/timeline/2021/native-stablecoins@2x.png
+                alt: Native stablecoins
     subscribe:
       headline: "Join our mailing list to get the latest DeFi Blockchain announcements:"
       form:

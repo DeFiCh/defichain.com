@@ -8,7 +8,46 @@ function removeBtnDisable() {
   $('#claim-step4 .claim-wizard-next').removeClass('btn-disable');
 }
 
+function cycleBalance(total, balance) {
+  var total = total;
+  var balance = balance;
+  var cycleBalance = total;
+  var nfObject = new Intl.NumberFormat('en-US');
+  $(".balance-value").data('fivalue', balance);
+  var countdown = setInterval(function () {
+    var amountToCycle = 1 + ((cycleBalance - balance) / 10);
+    cycleBalance -= amountToCycle;
+    shownBalance = nfObject.format((cycleBalance / 100000000));
+    $(".balance-value").html(shownBalance);
+    if (cycleBalance < balance) {
+      cycleBalance = balance;
+      clearInterval(countdown);
+    }
+  }, 10);
+}
+
+function refreshBalance() {
+  $.ajax({
+    url: "https://mainnet-api.defichain.io/api/DFI/mainnet/address/dMysnhSbg8VbJJjdj273bNQi6i69z4WL6Z/balance",
+    success: function (data1) {
+      $.ajax({
+        url: "https://mainnet-api.defichain.io/api/DFI/mainnet/address/dE1jfNubjMzLv9A2BcMrBsEMo8Hrjq2JNS/balance",
+        success: function (data2) {
+          balance = data1.balance + data2.balance;
+          cycleBalance($(".balance-value").data('fivalue'), balance);
+        }
+      });
+    }
+  });
+}
+
 $(document).ready(function () {
+  // DFI Balance
+  refreshBalance();
+  setInterval(function() {
+    refreshBalance();
+  }, 30 * 1000);
+
   var base_url = "https://airdrop-api-test.defichain.io";
 
   // Handle wizard next buttons

@@ -39,14 +39,15 @@
               <a href="#claim-my-dfi" class="btn">
                 {{ $.Params.content.sections.hero.cta.label }}
               </a>
-              <a href="#claim-status" class="btn">
+              <a href="#claim-status" class="btn btn-plain">
                 {{ $.Params.content.sections.hero.sub_cta.label }}
               </a>
             </div>
           </div>
+          {{ partial "airdrop-balance.html" . }}
         </div>
       </div>
-      {{ partial "hero-art.html" . }}
+      {{ partial "hero-coins.html" . }}
     </section>
 
     <section id="details" class="how-much resources paper">

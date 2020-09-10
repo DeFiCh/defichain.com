@@ -26,22 +26,27 @@ function cycleBalance(total, balance) {
   }, 10);
 }
 
+function refreshBalance() {
+  $.ajax({
+    url: "https://mainnet-api.defichain.io/api/DFI/mainnet/address/dMysnhSbg8VbJJjdj273bNQi6i69z4WL6Z/balance",
+    success: function (data1) {
+      $.ajax({
+        url: "https://mainnet-api.defichain.io/api/DFI/mainnet/address/dE1jfNubjMzLv9A2BcMrBsEMo8Hrjq2JNS/balance",
+        success: function (data2) {
+          balance = data1.balance + data2.balance;
+          cycleBalance($(".balance-value").data('fivalue'), balance);
+        }
+      });
+    }
+  });
+}
+
 $(document).ready(function () {
   // DFI Balance
-  function refreshBalance() {
-    var rand = Math.random() * (14406000000000 - 0);
-    $.ajax({
-      url: "https://mainnet-api.defichain.io/api/DFI/mainnet/address/dMysnhSbg8VbJJjdj273bNQi6i69z4WL6Z/balance",
-      success: function (data) {
-        cycleBalance($(".balance-value").data('fivalue'), rand);
-      }
-    });
-  }
-
   refreshBalance();
   setInterval(function() {
     refreshBalance();
-  }, 60 * 1000);
+  }, 30 * 1000);
 
   var base_url = "https://airdrop-api-test.defichain.io";
 

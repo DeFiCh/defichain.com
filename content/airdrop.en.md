@@ -37,7 +37,7 @@ content:
           url: https://explorer.defichain.io/#/DFI/mainnet/address/dMysnhSbg8VbJJjdj273bNQi6i69z4WL6Z
     airdrop_coming_soon:
       headline: 500 DFI/BTC Airdrop for Bitcoin holders.
-      subhead: Claim 500 DFI for every BTC you are hodling, absolutely free on 10 September. Read on for instructions on how to claim your DFI.
+      subhead: Claim 500 DFI for every BTC you are hodling, absolutely free on 11 September, 2020 8:00 UTC. Read on for instructions on how to claim your DFI.
       cta:
         label: Watch a video
       sub_cta:
@@ -226,7 +226,7 @@ content:
               label: Sign up
               url: https://pool.cakedefi.com/
         body: Make a note of the address of the DFI wallet you obtained, as you will need it in step 2.
-        body_coming_soon: Further steps to claim your airdrop will open up on September 10.
+        body_coming_soon: Further steps to claim your airdrop will open up on 11 September, 2020 8:00 UTC.
         next_button:
             label: I’ve obtained a DFI wallet
       step2:

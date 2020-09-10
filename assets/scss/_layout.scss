@@ -827,6 +827,18 @@ section.hero {
   }
 }
 
+.airdrop-maintenance {
+  background-color: rgba(map-get($brand-colors, pink), 0.1);
+  border: 1px solid rgba(map-get($brand-colors, pink), 0.1);
+  padding: 16px 24px;
+  text-align: left;
+  border-radius: $base-border-radius;
+
+  h2 {
+    text-transform: uppercase;
+  }
+}
+
 
 // 
 // Featured video sections

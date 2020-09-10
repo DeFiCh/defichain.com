@@ -1,14 +1,9 @@
 ---
-title: DFI-BTC Airdrop
+title: DFI-BTC Airdrop Test
 type: airdrop
 # type: airdrop-coming-soon
 long_title: Claim your DFI in the DFI Airdrop
 cta_to: DFI-BTC Airdrop
-menu:
-  main:
-    weight: 45
-  footer:
-    weight: 45
 meta:
   description: Claim your DFI in the DFI Airdrop
   og:

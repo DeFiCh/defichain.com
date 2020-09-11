@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="{{ $.Param "meta.description" }}">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+  <title>{{ $.Param "long_title" }} &ndash; {{ .Site.Params.title }}</title>
+  {{ $style := resources.Get "scss/main.scss" | toCSS | postCSS | minify | fingerprint }}
+  <link href="{{ $style.RelPermalink }}" rel="stylesheet">
+  {{ if .IsTranslated }}
+  {{ range .Translations }}
+  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+  {{ end }}
+  {{ end }}
+  <meta property="og:title" content="{{ $.Params.meta.og.title }}">
+  <meta property="og:description" content="{{ $.Params.meta.og.description }}">
+  <meta property="og:site_name" content="{{ $.Params.meta.og.site_name }}">
+  <meta property="og:url" content="{{ .Permalink | absURL }}">
+  <meta property="og:image" content="{{ $.Params.meta.og.image | absURL }}">
+  <meta property="og:image:type" content="{{ $.Params.meta.og.image_type }}">
+  <meta property="og:locale" content="{{ $.Params.meta.og.locale }}">
+</head>
+
+<body class="claim">
+
+  {{ partial "header.html" . }}
+
+  <main>
+
+    <section class="hero paper" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
+      <div class="container-fluid">
+        <div class="row">
+          <div id="{{ $.Param "content.sections.hero.name" }}" class="col col-lg-6 col-xl-5 offset-xl-1">
+            <h1 data-scroll="once">{{ $.Param "content.sections.airdrop_closed.headline" }}</h1>
+            <p class="lg" data-scroll="once">{{ $.Param "content.sections.airdrop_closed.subhead" }}</p>
+            <div class="hero-ctas">
+              <a href="#claim-status" class="btn">
+                {{ $.Params.content.sections.hero.sub_cta.label }}
+              </a>
+            </div>
+          </div>
+          {{ partial "airdrop-balance.html" . }}
+        </div>
+      </div>
+      {{ partial "hero-coins.html" . }}
+    </section>
+
+    <section id="claim-status" class="claim-status white">
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col col-ul-6 offset-ul-1">
+            <h2>{{ $.Params.content.sections.claim_status.headline }}</h2>
+            <div id="claim-status-form">
+              <form action="/" data-parsley-validate>
+                <p class="lead">{{ $.Params.content.sections.claim_status.form.body }}</p>
+                <div class="form-field has-float-label">
+                  <input type="text" id="btc_address_input" name="btc_address" autocomplete="off" autocorrect="off"
+                    placeholder="{{ $.Params.content.sections.claim_status.form.btc_field.hint }}" required="required"
+                    data-parsley-type="alphanum" data-parsley-length="[14, 74]" />
+                  <label for="btc_address">{{ $.Params.content.sections.claim_status.form.btc_field.label }}</label>
+                </div>
+                <div class="form-field">
+                  <button class="claim-wizard-next btn" type="submit">
+                    {{ $.Params.content.sections.claim_status.form.check_status_button }}
+                  </button>
+                  <div class="spinner">
+                    <div class="b1"></div>
+                    <div class="b2"></div>
+                    <div class="b3"></div>
+                  </div>
+                </div>
+                <div class="d-none" id="claim-status-error-alert">
+                  <div class="status-alert-error alert error"></div>
+                </div>
+                <div class="d-none" id="claim-status-success-alert">
+                  <div class="status-alert-success alert info">
+                    {{ $.Params.content.sections.claim_status.form.response.message }}
+                    <table class="claim-response">
+                      <tr style="word-break: break-all;">
+                        <th>{{ $.Params.content.sections.claim_status.form.response.status }}</th>
+                        <td id="claim-status-value"></td>
+                      </tr>
+                      <tr>
+                        <th>{{ $.Params.content.sections.claim_status.form.response.btc_balance }}</th>
+                        <td id="claim-status-btcBalance"></td>
+                      </tr>
+                      <tr>
+                        <th>{{ $.Params.content.sections.claim_status.form.response.claim_dfi_amount }}</th>
+                        <td id="claim-status-claimDfiAmount"></td>
+                      </tr>
+                      <tr style="word-break: break-all;">
+                        <th>{{ $.Params.content.sections.claim_status.form.response.transaction_id }}</th>
+                        <td id="claim-status-txId"></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-slope white reverse">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
+      </div>
+
+    </section>
+
+    {{ partial "section-subscribe.html" . }}
+
+  </main>
+
+  {{ partial "footer.html" . }}
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+  {{ $scrolltrigger := resources.Get "js/ScrollTrigger.min.js" }}
+  {{ $swiper := resources.Get "js/swiper.min.js" }}
+  {{ $debouncedresize := resources.Get "js/jquery.debouncedresize.js" }}
+  {{ $parsley := resources.Get "js/parsley.min.js" }}
+  {{ $main := resources.Get "js/main.js" }}
+  {{ $claim := resources.Get "js/claim.js" }}
+  {{ $collapsible := resources.Get "js/collapsible.js" }}
+  {{ $js := slice $scrolltrigger $swiper $debouncedresize $parsley $main $collapsible $claim | resources.Concat "js/bundle-claim.js" | resources.Fingerprint }}
+  <script src="{{ $js.RelPermalink }}" type="text/javascript"></script>
+  {{ template "_internal/google_analytics_async.html" . }}
+  {{ partial "pixels/facebook.html" . }}
+  {{ partial "pixels/linkedin.html" . }}
+</body>
+
+</html>

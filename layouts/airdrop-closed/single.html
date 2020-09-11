@@ -35,77 +35,12 @@
           <div id="{{ $.Param "content.sections.hero.name" }}" class="col col-lg-6 col-xl-5 offset-xl-1">
             <h1 data-scroll="once">{{ $.Param "content.sections.airdrop_closed.headline" }}</h1>
             <p class="lg" data-scroll="once">{{ $.Param "content.sections.airdrop_closed.subhead" }}</p>
-            <div class="hero-ctas">
-              <a href="#claim-status" class="btn">
-                {{ $.Params.content.sections.hero.sub_cta.label }}
-              </a>
-            </div>
           </div>
           {{ partial "airdrop-balance.html" . }}
         </div>
       </div>
       {{ partial "hero-coins.html" . }}
     </section>
-
-    <section id="claim-status" class="claim-status white">
-
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col col-ul-6 offset-ul-1">
-            <h2>{{ $.Params.content.sections.claim_status.headline }}</h2>
-            <div id="claim-status-form">
-              <form action="/" data-parsley-validate>
-                <p class="lead">{{ $.Params.content.sections.claim_status.form.body }}</p>
-                <div class="form-field has-float-label">
-                  <input type="text" id="btc_address_input" name="btc_address" autocomplete="off" autocorrect="off"
-                    placeholder="{{ $.Params.content.sections.claim_status.form.btc_field.hint }}" required="required"
-                    data-parsley-type="alphanum" data-parsley-length="[14, 74]" />
-                  <label for="btc_address">{{ $.Params.content.sections.claim_status.form.btc_field.label }}</label>
-                </div>
-                <div class="form-field">
-                  <button class="claim-wizard-next btn" type="submit">
-                    {{ $.Params.content.sections.claim_status.form.check_status_button }}
-                  </button>
-                  <div class="spinner">
-                    <div class="b1"></div>
-                    <div class="b2"></div>
-                    <div class="b3"></div>
-                  </div>
-                </div>
-                <div class="d-none" id="claim-status-error-alert">
-                  <div class="status-alert-error alert error"></div>
-                </div>
-                <div class="d-none" id="claim-status-success-alert">
-                  <div class="status-alert-success alert info">
-                    {{ $.Params.content.sections.claim_status.form.response.message }}
-                    <table class="claim-response">
-                      <tr style="word-break: break-all;">
-                        <th>{{ $.Params.content.sections.claim_status.form.response.status }}</th>
-                        <td id="claim-status-value"></td>
-                      </tr>
-                      <tr>
-                        <th>{{ $.Params.content.sections.claim_status.form.response.btc_balance }}</th>
-                        <td id="claim-status-btcBalance"></td>
-                      </tr>
-                      <tr>
-                        <th>{{ $.Params.content.sections.claim_status.form.response.claim_dfi_amount }}</th>
-                        <td id="claim-status-claimDfiAmount"></td>
-                      </tr>
-                      <tr style="word-break: break-all;">
-                        <th>{{ $.Params.content.sections.claim_status.form.response.transaction_id }}</th>
-                        <td id="claim-status-txId"></td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section-slope white reverse">
-        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
-      </div>
 
     </section>
 

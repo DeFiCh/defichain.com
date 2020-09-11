@@ -17,7 +17,7 @@ function cycleBalance(total, balance) {
   var countdown = setInterval(function () {
     var amountToCycle = 1 + ((cycleBalance - balance) / 10);
     cycleBalance -= amountToCycle;
-    shownBalance = nfObject.format((cycleBalance / 100000000));
+    shownBalance = nfObject.format((Math.round(cycleBalance / 100000000)));
     $(".balance-value").html(shownBalance);
     if (cycleBalance < balance) {
       cycleBalance = balance;

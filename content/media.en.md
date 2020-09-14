@@ -27,6 +27,11 @@ content:
     mentions:
       headline: DeFi Blockchain covered in the press and media.
       mentions_list:
+        - title: The DFI Token - A Financial Tool for the Digital Economy
+          source: Crypto Folds
+          date: 12 Sep, 2020
+          image: /img/press/cryptofolds.png
+          url: https://www.cryptofolds.com/the-dfi-token-a-financial-tool-for-the-digital-economy
         - title: DeFiChain – A Glimpse into the Future of Decentralized Finance (DeFi)
           source: Crypto Adventure
           date: 5 Sep, 2020

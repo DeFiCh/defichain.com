@@ -22,7 +22,7 @@ content:
 
 ## Introduction
 
-Setting up a masternode on Defichain allows you to participate in the consensus protocol and receive staking awards. One thing to note is that in order to set up a masternode, you must have a minimum of 1 million DFI tokens.
+Setting up a masternode on DefiChain allows you to participate in the consensus protocol and receive staking awards. One thing to note is that in order to set up a masternode, you must have a minimum of 1 million DFI tokens.
 
 > NOTE: This how-to expects some basic familiarity with the Linux terminal
 
@@ -36,18 +36,18 @@ In this scenario, operator's address will be equal to the owner's (collateral) a
 
 The first step is to download the binaries. Here are links to binaries for Linux and Macosx:
 
-[Linux v1.0.0-rc1](https://github.com/DeFiCh/ain/releases/download/v1.0.0-rc1/defichain-1.0.0-rc1-x86_64-pc-linux-gnu.tar.gz)
-[Mac OSX v1.0.0-rc1](https://github.com/DeFiCh/ain/releases/download/v1.0.0-rc1/defichain-1.0.0-rc1-x86_64-apple-darwin11.tar.gz)
+[Linux v1.0.1](https://github.com/DeFiCh/ain/releases/download/v1.0.1/defichain-1.0.1-x86_64-pc-linux-gnu.tar.gz)
+[Mac OSX v1.0.1](https://github.com/DeFiCh/ain/releases/download/v1.0.1/defichain-1.0.1-x86_64-apple-darwin11.tar.gz)
 
 We can download this on Linux using the command:
 
 ```
-wget https://github.com/DeFiCh/ain/releases/download/v1.0.0-rc1/defichain-1.0.0-rc1-x86_64-pc-linux-gnu.tar.gz
+wget https://github.com/DeFiCh/ain/releases/download/v1.0.1/defichain-1.0.1-x86_64-pc-linux-gnu.tar.gz
 ```
 
 Following that we can extract the tar file by running:
 ```
-tar -xvzf defichain-1.0.0-rc1-x86_64-pc-linux-gnu.tar.gz
+tar -xvzf defichain-1.0.1-x86_64-pc-linux-gnu.tar.gz
 ```
 
 ### Step 2 - Copy binaries to user directory
@@ -60,7 +60,7 @@ mkdir ~/.defi
 
 Now copy the binaries by running:
 ```
-cp ./defichain-1.0.0-beta4/bin/* ~/.defi
+cp ./defichain-1.0.1/bin/* ~/.defi
 ```
 
 ### Step 3 - Setting up crontab to keep our node running in the background
@@ -77,7 +77,7 @@ into the file and hit `Ctrl-X` then enter to save the file.
 
 ### Step 4 - Setting up owner address with sufficient funds
 
-In order to run a masternode, you must own atleast 1 million DFI tokens. Let's set up an address with sufficient funds to use as an owner. Masternodes currently only support legacy addresses, so create a masternode address using:
+In order to run a masternode, you must own at least 1 million DFI tokens. Let's set up an address with sufficient funds to use as an owner. Masternodes currently only support legacy addresses, so create a masternode address using:
 
 ```
 ~/.defi/defi-cli getnewaddress "<label>" legacy
@@ -98,10 +98,10 @@ where address is the new owner address you have created.
 In order to participate in the staking algorithm, you must broadcast to the network that you intend to participate, this can be done by running a command using the Defi CLI, the command is:
 
 ```
-defi-cli createmasternode "[]" "{\"operatorAuthAddress\":\"address\",\"collateralAddress\":\"address\"}"
+~/.defi/defi-cli createmasternode address
 ```
 
-where "address" for both operator and collateral address should be the new legacy address you created.
+where `address` for both operator and collateral address should be the new legacy address you created. Please note that it costs 10 DFI to run this command.
 
 ### Step 6 - Configure the masternode and restart
 
@@ -113,7 +113,7 @@ masternode_operator=OPERATOR_ADDRESS
 masternode_owner=OWNER_ADDRESS
 ```
 
-Because we have decided to run owner and operator on the same address, just substitue the same legacy address you created for `OPERATOR_ADDRESS` and `OWNER_ADDRESS`.
+Because we have decided to run owner and operator on the same address, just substitute the same legacy address you created for `OPERATOR_ADDRESS` and `OWNER_ADDRESS`.
 
 Now the final step is to restart the node. Since we have crontab running, we just have to kill the process and crontab will start it again for us after one minute. We can do this final step by running `killall defi-init`. One minute later, we should have our masternode running and minting coins.
 
@@ -137,10 +137,10 @@ Perform steps 1-4 the same as the above section for operating your own masternod
 In order to participate in the staking algorithm, you must broadcast to the network that you intend to participate, this can be done by running a command using the Defi CLI, the command is:
 
 ```
-defi-cli createmasternode "[]" "{\"operatorAuthAddress\":\"OPERATOR_ADDRESS\",\"collateralAddress\":\"OWNER_ADDRESS\"}"
+~/.defi/defi-cli createmasternode OWNER_ADDRESS OPERATOR_ADDRESS
 ``` 
 
-where `OPERATOR_ADDRESS` is the address for the operator and `OWNER_ADDRESS` is the address for the collateral/owner node.
+where `OWNER_ADDRESS` is the address for the collateral/owner node and `OPERATOR_ADDRESS` is the address for the operator. Please note that it costs 10 DFI to run this command.
 
 ### Step 6 - Configure the masternode and restart
 
@@ -190,6 +190,5 @@ Masternodes can exist in these states:
 - `ENABLED` - masternode is in fully operable state, can mint blocks and sign anchors
 - `PRE_RESIGNED` - masternode is still operable, but have received a 'resign' transaction and will wait for a special delay to get resigned
 - `RESIGNED` - masternode resigned, collateral unlocked and is available to be reclaimed
-- `PRE_BANNED` - masternode was caught as a 'criminal' (signing two blocks from parrallel forks on close heights and we got special proofing tx on chain) but still operable (waiting, as in the case of PRE_RESIGNED)
+- `PRE_BANNED` - masternode was caught as a 'criminal' (signing two blocks from parallel forks on close heights and we got special proofing tx on chain) but still operable (waiting, as in the case of PRE_RESIGNED)
 - `BANNED` - masternode deactivated, collateral unlocked and can be reclaimed (same as RESIGNED, but forced through deactivation)
-

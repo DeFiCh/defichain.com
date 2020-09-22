@@ -2510,20 +2510,25 @@ section.closer-look {
 
 
 // Member Links
-.member-of {
+.cert-links {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
 
-  .caption {
-    width: 96px;
-    font-size: $note-font-size;
-    line-height: $note-line-height;
-    color: $color-ui-black60;
-  }
-
-  .logos {
-    img {
-      margin-right: 24px;
+  .cert-link {
+    display: flex;
+    align-items: center;
+  
+    .caption {
+      width: 96px;
+      font-size: $note-font-size;
+      line-height: $note-line-height;
+      color: $color-ui-black60;
+    }
+  
+    .logos {
+      img {
+        margin-right: 24px;
+      }
     }
   }
 }

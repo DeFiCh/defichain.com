@@ -243,6 +243,36 @@
         </div>
         <div class="row">
           <div class="col col-ul-10 offset-ul-1">
+            <div class="way-to-acquire row">
+              <div class="benefit col">
+                <div class="benefit-icon">
+                  {{ readFile $.Params.content.sections.acquiring.exchanges.icon  | safeHTML }}
+                </div>
+                <div class="row">
+                  <div class="col col-sm-4">
+                    <div class="wrapper">
+                      <h3>{{ $.Params.content.sections.acquiring.exchanges.title }}</h3>
+                      <p class="lg">{{ $.Params.content.sections.acquiring.exchanges.description }}</p>
+                    </div>
+                  </div>
+                  <div class="col col-sm-5 offset-sm-1">
+                    <div class="benefit-sources">
+                    {{ range $exchange := $.Params.content.sections.acquiring.exchanges.exchanges_list }}
+                      <a href="{{ $exchange.url }}" target="_blank" class="benefit-source" title="{{ $exchange.label }}">
+                        <img 
+                          src="{{ $exchange.file }}.{{ $exchange.type }}"
+                          alt="{{ $exchange.label }}"
+                          {{ with eq $exchange.type "png" }}
+                            srcset="{{ $exchange.file }}.{{ $exchange.type }} 1x, {{ $exchange.file }}@2x.{{ $exchange.type }} 2x"
+                          {{ end }}
+                        >
+                      </a>
+                    {{ end }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="row">
               {{ range $way := $.Param "content.sections.acquiring.ways_to_acquire" }}
               <div class="way-to-acquire benefit col col-sm-6">

@@ -74,34 +74,39 @@ content:
     acquiring:
       headline: Acquiring DFI tokens
       subhead: DFI tokens will be issued to users and partners with an interest in utilizing and participating in the ecosystem.
+      exchanges:
+        icon: /static/svg/icons/way-to-acquire/exchanges.svg
+        title: Exchanges
+        description: You can now purchase DFI at these select exchanges, with more exchanges to follow.
+        exchanges_list:
+          - label: LATOKEN
+            url: https://go.latoken.com/1gd
+            file: /svg/sources/logo-latoken
+            type: svg
+          - label: Coinpaprika
+            url: https://coinpaprika.com/coin/dfi-defi-chain/
+            file: /svg/sources/logo-coinpaprika
+            type: svg
+          - label: CoinGecko
+            url: https://www.coingecko.com/en/coins/defichain
+            file: /svg/sources/logo-coingecko
+            type: svg
+          - label: Indoex
+            url: https://international.indoex.io/trade/DFI_USDT
+            file: /svg/sources/logo-indoex
+            type: svg
+          - label: Hotbit
+            url: https://www.hotbit.io/exchange?symbol=DFI_USDT
+            file: /img/sources/logo-hotbit
+            type: png
+          - label: Bittrue
+            url: https://www.bitrue.com/trade/dfi_btc
+            file: /svg/sources/logo-bittrue
+            type: svg
       ways_to_acquire:
-        - icon: /static/svg/icons/way-to-acquire/exchanges.svg
-          title: Exchanges
-          description: DFI is now available at these selected exchanges.
-          sources:
-            - label: LATOKEN
-              url: https://go.latoken.com/1gd
-              file: /svg/sources/logo-latoken
-              type: svg
-            - label: Coinpaprika
-              url: https://coinpaprika.com/coin/dfi-defi-chain/
-              file: /svg/sources/logo-coinpaprika
-              type: svg
-            - label: CoinGecko
-              url: https://www.coingecko.com/en/coins/defichain
-              file: /svg/sources/logo-coingecko
-              type: svg
-            - label: Indoex
-              url: https://international.indoex.io/trade/DFI_USDT
-              file: /svg/sources/logo-indoex
-              type: svg
-            - label: Hotbit
-              url: https://www.hotbit.io/exchange?symbol=DFI_USDT
-              file: /img/sources/logo-hotbit
-              type: png
         - icon: /static/svg/icons/way-to-acquire/staking.svg
           title: Staking platforms
-          description: DFI is now available at these selected staking platforms.
+          description: DFI is now available at these select staking platforms.
           sources:
             - label: Cake DeFi
               url: https://pool.cakedefi.com

@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="footer-menu row">
-      <div class="col col-md-3 offset-ul-1">
+      <div class="col col-md-3 offset-ul-1 mbg1">
         <h4>DeFi Blockchain</h4>
         <ul class="menu">
           {{ $currentPage := . }}
@@ -27,7 +27,7 @@
           {{ end }}
         </ul>
       </div>
-      <div class="col col-md-2">
+      <div class="col col-md-2 mbg1">
         <h4>Legal</h4>
         <ul class="menu">
           {{ $currentPage := . }}
@@ -38,7 +38,7 @@
           {{ end }}
         </ul>
       </div>
-      <div class="col col-md-3">
+      <div class="col col-md-3 mbg1">
         <h4>Social</h4>
         <ul class="menu">
           <li>
@@ -80,24 +80,26 @@
         <p>&copy; {{ $.Site.Params.company_name }}</p>
       </div>
       <div class="cert-links mbg1 col col-lg-5 offset-ul-2">
-        <div class="cert-link">
-          <div class="caption">
-            Certified member of
+        <div class="row">
+          <div class="col col-md-6 cert-link">
+            <div class="caption">
+              Certified member of
+            </div>
+            <div class="logos">
+              <a href="/downloads/defichain-sfa-fintech.pdf" target="_blank">
+                <img src="/img/external/logo-sfa.png" srcset="/img/external/logo-sfa.png 1x, /img/external/logo-sfa@2x.png 2x" alt="Singapore Fintech Association">
+              </a>
+            </div>
           </div>
-          <div class="logos">
-            <a href="/downloads/defichain-sfa-fintech.pdf" target="_blank">
-              <img src="/img/external/logo-sfa.png" srcset="/img/external/logo-sfa.png 1x, /img/external/logo-sfa@2x.png 2x" alt="Singapore Fintech Association">
-            </a>
-          </div>
-        </div>
-        <div class="cert-link">
-          <div class="caption">
-            Security audited by
-          </div>
-          <div class="logos">
-            <a href="/downloads/defichain-security-audit-slowmist.pdf" target="_blank">
-              <img src="/img/external/logo-slowmist.png" srcset="/img/external/logo-slowmist.png 1x, /img/external/logo-slowmist@2x.png 2x" alt="Slow Mist">
-            </a>
+          <div class="col col-md-6 cert-link">
+            <div class="caption">
+              Security audited by
+            </div>
+            <div class="logos">
+              <a href="/downloads/defichain-security-audit-slowmist.pdf" target="_blank">
+                <img src="/img/external/logo-slowmist.png" srcset="/img/external/logo-slowmist.png 1x, /img/external/logo-slowmist@2x.png 2x" alt="Slow Mist">
+              </a>
+            </div>
           </div>
         </div>
       </div>

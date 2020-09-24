@@ -2525,24 +2525,26 @@ section.closer-look {
 
 // Member Links
 .cert-links {
-  display: flex;
-  justify-content: space-between;
 
   .cert-link {
     margin-bottom: $grid-gutter;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
   
     .caption {
-      width: 96px;
+      max-width: 104px;
+      padding-right: 8px;
       font-size: $note-font-size;
       line-height: $note-line-height;
       color: $color-ui-black60;
     }
   
     .logos {
+      justify-self: flex-start;
+
       img {
-        margin-right: 24px;
+        display: block;
       }
     }
   }

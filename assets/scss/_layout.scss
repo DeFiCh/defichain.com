@@ -562,6 +562,20 @@ main {
   }
 }
 
+.security-audit table {
+  background-color: map-get($brand-colors, white);
+
+  th, td {
+    vertical-align: middle;
+    border: 1px solid $color-ui-black60;
+    padding: $form-control-padding-vertical/2 $form-control-padding-horizontal/2;
+  }
+
+  img {
+    display: block;
+  }
+}
+
 
 //
 // Alert

@@ -57,6 +57,24 @@ content:
         headline: Participate in our Reddit developer community.
         label: Discuss
         url: https://www.reddit.com/r/defiblockchain/
+    security_audit:
+      headline: DeFiChain Security
+      subhead: DeFiChain conducts security audits from time to time to ensure code compliance, authentication robustness and invulnerability against attacks. Our latest audit was performed by SlowMist, whose customers include Huobi, Binance and Crypto.com.
+      audit_by: Audit by
+      audit_report:
+        label: Audit report
+        link:
+          label: Download report
+          url: /downloads/defichain-security-audit-slowmist.pdf
+      audit_info:
+        - label: Audit result
+          value: PASS
+        - label: Audit no.
+          value: BCA002009180001
+        - label: Audit date
+          value: September 18, 2020
+        - label: Audit team
+          value: SlowMist security team
     #subscribe in /
     #closer_look in /
     become_contributor:

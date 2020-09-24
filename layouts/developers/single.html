@@ -45,7 +45,7 @@
       {{ partial "hero-art.html" . }}
     </section>
     
-    <section class="resources paper" id="{{ $.Param "content.sections.resources.name" }}">
+    <section class="resources paper">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-5 offset-ul-1">
@@ -146,6 +146,41 @@
         </div>
       </div>
       <div class="section-slope paper reverse">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
+      </div>
+    </section>
+
+    <section class="security-audit day">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col col-ul-5 offset-ul-1">
+            <h2>{{ $.Params.content.sections.security_audit.headline }}</h2>
+            <p class="lg">{{ $.Params.content.sections.security_audit.subhead }}</p>
+          </div>
+          <div class="col col-ul-4 offset-ul-1">
+            <table class="mtg1">
+              <tr>
+                <th>
+                  {{ $.Params.content.sections.security_audit.audit_by }}
+                </th>
+                <td>
+                  <img src="/img/external/logo-slowmist.png" srcset="/img/external/logo-slowmist.png 1x, /img/external/logo-slowmist@2x.png 2x" alt="Slow Mist">
+                </td>
+              </tr>
+              {{ range $item := $.Params.content.sections.security_audit.audit_info }}
+              <tr>
+                <th>{{ $item.label }}</th>
+                <td>{{ $item.value }}</td>
+              </tr>
+              {{ end }}
+            </table>
+            <a href="{{ $.Params.content.sections.security_audit.audit_report.link.url }}" class="btn btn-primary" target="_blank">
+              {{ $.Params.content.sections.security_audit.audit_report.link.label}}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="section-slope day reverse">
         {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
       </div>
     </section>

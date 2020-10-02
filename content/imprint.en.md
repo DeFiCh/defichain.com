@@ -47,7 +47,7 @@ content:
 <table>
   <tr>
     <th>Email address</th>
-    <td><a href="mailtto:partners@defichain.com">partners@defichain.com</a></td>
+    <td><a href="mailto:partners@defichain.com">partners@defichain.com</a></td>
   </tr>
 </table>
 

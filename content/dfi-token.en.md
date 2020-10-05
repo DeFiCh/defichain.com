@@ -103,15 +103,20 @@ content:
             url: https://www.bitrue.com/trade/dfi_btc
             file: /svg/sources/logo-bittrue
             type: svg
+      staking_platforms:
+        icon: /static/svg/icons/way-to-acquire/staking.svg
+        title: Staking platforms
+        description: DFI is now available at these select staking platforms.
+        staking_platforms_list:
+          - label: Cake DeFi
+            url: https://pool.cakedefi.com
+            file: /svg/sources/logo-cake
+            type: svg
+          - label: Hotbit
+            url: https://www.hotbit.io/invest/detail/304
+            file: /img/sources/logo-hotbit
+            type: png
       ways_to_acquire:
-        - icon: /static/svg/icons/way-to-acquire/staking.svg
-          title: Staking platforms
-          description: DFI is now available at these select staking platforms.
-          sources:
-            - label: Cake DeFi
-              url: https://pool.cakedefi.com
-              file: /svg/sources/logo-cake
-              type: svg
         - icon: /static/svg/icons/way-to-acquire/airdrop.svg
           title: Airdrop
           description: The DeFi Foundation will airdrop DFI to hodlers, market makers and other users of the DeFi Blockchain.

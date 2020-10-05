@@ -273,6 +273,36 @@
                 </div>
               </div>
             </div>
+            <div class="way-to-acquire row">
+              <div class="benefit col">
+                <div class="benefit-icon">
+                  {{ readFile $.Params.content.sections.acquiring.staking_platforms.icon  | safeHTML }}
+                </div>
+                <div class="row">
+                  <div class="col col-sm-4">
+                    <div class="wrapper">
+                      <h3>{{ $.Params.content.sections.acquiring.staking_platforms.title }}</h3>
+                      <p class="lg">{{ $.Params.content.sections.acquiring.staking_platforms.description }}</p>
+                    </div>
+                  </div>
+                  <div class="col col-sm-5 offset-sm-1">
+                    <div class="benefit-sources">
+                    {{ range $staking_platform := $.Params.content.sections.acquiring.staking_platforms.staking_platforms_list }}
+                      <a href="{{ $staking_platform.url }}" target="_blank" class="benefit-source" title="{{ $staking_platform.label }}">
+                        <img 
+                          src="{{ $staking_platform.file }}.{{ $staking_platform.type }}"
+                          alt="{{ $staking_platform.label }}"
+                          {{ with eq $staking_platform.type "png" }}
+                            srcset="{{ $staking_platform.file }}.{{ $staking_platform.type }} 1x, {{ $staking_platform.file }}@2x.{{ $staking_platform.type }} 2x"
+                          {{ end }}
+                        >
+                      </a>
+                    {{ end }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="row">
               {{ range $way := $.Param "content.sections.acquiring.ways_to_acquire" }}
               <div class="way-to-acquire benefit col col-sm-6">

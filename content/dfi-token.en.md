@@ -79,6 +79,10 @@ content:
         title: Exchanges
         description: You can now purchase DFI at these select exchanges, with more exchanges to follow.
         exchanges_list:
+          - label: Bittrex
+            url: https://global.bittrex.com/Market/Index?MarketName=BTC-DFI
+            file: /svg/sources/logo-bittrex
+            type: svg
           - label: LATOKEN
             url: https://go.latoken.com/1gd
             file: /svg/sources/logo-latoken

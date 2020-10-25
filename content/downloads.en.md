@@ -58,9 +58,6 @@ content:
             - label: Linux (AppImage)
               type: appimg
               url: https://github.com/DeFiCh/defi-app/releases
-            - label: Linux (Debian)
-              type: deb
-              url: https://github.com/DeFiCh/defi-app/releases
     #subscribe in /
     #closer_look in /
 ---

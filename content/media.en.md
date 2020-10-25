@@ -27,6 +27,26 @@ content:
     mentions:
       headline: DeFi Blockchain covered in the press and media.
       mentions_list:
+        - title: DeFiChain Announces Successful Hard Fork and New Listing on Bittrex Global Exchange
+          source: Yahoo
+          date: 20 Oct, 2020
+          image: /svg/press/yahoo.svg
+          url: https://finance.yahoo.com/news/defichain-announces-successful-hard-fork-114941334.html
+        - title: DeFiChain (DFI) listing on Bittrex!
+          source: CoinMarketCap
+          date: 16 Oct, 2020
+          image: /svg/press/coinmarketcap.svg
+          url: https://coinmarketcap.com/headlines/signals/defichain-dfi-listing-on-bittrex-defichain/
+        - title: "DeFi coins list: decentralised finance builds"
+          source: The Shift
+          date: 13 Oct, 2020
+          image: /img/press/theshift.png
+          url: https://theshift.media/defi-coins-list-defichain/
+        - title: "Bringing DeFi to CeFi: DeFiChain Announces Listing of DFI on Bitrue"
+          source: Yahoo
+          date: 21 Sep, 2020
+          image: /svg/press/yahoo.svg
+          url: https://finance.yahoo.com/news/bringing-defi-cefi-defichain-announces-221500922.html
         - title: The DFI Token - A Financial Tool for the Digital Economy
           source: Crypto Folds
           date: 12 Sep, 2020

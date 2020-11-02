@@ -200,17 +200,49 @@ content:
                 x1: /img/timeline/2020/dfi-coinmarketcap.png
                 x2: /img/timeline/2020/dfi-coinmarketcap@2x.png
                 alt: DeFiChain.com redesign
-            - month: Q3 2020
-              status: future
-              title: Tokenization ready with DSTs.
-              url: https://www.youtube.com/watch?v=0uBwWK85BLU
+            - month: Sep
+              status: past
+              title: DFIP 1 & 2 are approved by the DeFiChain community.
+              url: https://defiblockchain.medium.com/dfip-1-2-voting-results-29bfc8c7a608
               image:
-                x1: /img/timeline/2020/tokenization.png
-                x2: /img/timeline/2020/tokenization@2x.png
-                alt: Tokenization ready with DSTs
+                x1: /img/timeline/2020/dfips-approved.png
+                x2: /img/timeline/2020/dfips-approved@2x.png
+                alt: DFIP 1 & 2 approved
+            - month: Oct
+              status: past
+              title: DeFiChain listed on Bittrue.
+              url: https://www.bitrue.com/trade/dfi_btc
+              image:
+                x1: /img/timeline/2020/bittrue.png
+                x2: /img/timeline/2020/bittrue@2x.png
+                alt: DeFiChain listed on Bittrue
+            - month: Oct
+              status: past
+              title: Ang Mo Kio hardfork with asset tokenization support.
+              url: https://defiblockchain.medium.com/defichain-hardfork-successful-everything-you-need-to-know-5aa4ea92438b
+              image:
+                x1: /img/timeline/2020/amk-hardfork.png
+                x2: /img/timeline/2020/amk-hardfork@2x.png
+                alt: Ang Mo Kio hardfork with asset tokenization support
+            - month: Oct
+              status: past
+              title: DeFiChain listed on Bittrex.
+              url: https://global.bittrex.com/Market/Index?MarketName=BTC-DFI
+              image:
+                x1: /img/timeline/2020/bittrex.png
+                x2: /img/timeline/2020/bittrex@2x.png
+                alt: DeFiChain listed on Bittrex
+            - month: Nov
+              status: future
+              title: Bayfront hard fork with liquidity pool support.
+              url: https://www.reddit.com/r/defiblockchain/comments/jem20f/defichain_version_130_for_bayfront_with_liquidity/
+              image:
+                x1: /img/timeline/2020/bayfront-hardfork.png
+                x2: /img/timeline/2020/bayfront-hardfork@2x.png
+                alt: Bayfront hard fork
             - month: Q4
               status: future
-              title: DEX – Liquidity Pool and Yield Farming.
+              title: Swap, Liquidity Pool and Yield Farming.
               url: https://www.youtube.com/watch?v=0uBwWK85BLU
               image:
                 x1: /img/timeline/2020/liquidity-pool.png

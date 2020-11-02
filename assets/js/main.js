@@ -119,7 +119,7 @@ $(function () {
   if ($(".roadmap").length > 0) {
     var roadmapCarousel = new Swiper('.roadmap .carousel', {
       slidesPerView: 'auto',
-      initialSlide: 10,
+      initialSlide: 14,
       roundLengths: true,
       centeredSlides: true,
       spaceBetween: 32,

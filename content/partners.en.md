@@ -40,6 +40,33 @@ content:
         description: Tell us how you would like to contribute to the ecosystem.
         cta:
           label: Contact us
+    partners:
+      headline: Partners
+      partners_list:
+        - name: Staking Rewards
+          description: DeFiChain (DFI) interest calculator and current rates.
+          logo:
+            file: /svg/external/logo-stakingrewards
+            type: svg
+          cta:
+            label: Go to
+            url: https://www.stakingrewards.com/earn/defichain
+        - name: Blockspot.io
+          description: DeFiChain (DFI) price, graph, data and info on Blockspot.io.
+          logo:
+            file: /img/external/logo-blockspot
+            type: png
+          cta:
+            label: Go to
+            url: https://blockspot.io/coin/defichain/
+        - name: Blockfolio
+          description: Watch DFI on the Blockfolio Signal platform.
+          logo:
+            file: /svg/external/logo-blockfolio
+            type: svg
+          cta:
+            label: Go to
+            url: https://blockfolio.com/coin/DFI
     featured_video:
       video: IGCgUSdiDF0
       headline: DeFi Blockchain

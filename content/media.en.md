@@ -27,6 +27,11 @@ content:
     mentions:
       headline: DeFi Blockchain covered in the press and media.
       mentions_list:
+        - title: DeFiChain is now on Blockfolio Signal!
+          source: CoinMarketCap
+          date: 31 Oct, 2020
+          image: /svg/press/coinmarketcap.svg
+          url: https://coinmarketcap.com/headlines/signals/defichain-is-now-on-blockfolio-signal-defichain/
         - title: DeFiChain Announces Successful Hard Fork and New Listing on Bittrex Global Exchange
           source: Yahoo
           date: 20 Oct, 2020

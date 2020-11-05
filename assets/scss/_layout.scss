@@ -93,6 +93,7 @@ body > header {
       @include media(">ul") {
         display: flex;
         align-items: center;
+        justify-content: flex-start;
       }
 
       li {
@@ -101,6 +102,7 @@ body > header {
 
       a {
         display: block;
+        text-align: center;
         padding: 24px;
         text-decoration: none;
         color: $color-ui-black60;
@@ -128,7 +130,7 @@ body > header {
     display: block;
     width: 78px;
     height: 36px;
-    margin-right: 48px;
+    margin-right: 32px;
     overflow: hidden;
     color: map-get($brand-colors, pink) !important;
 
@@ -153,7 +155,7 @@ body > header {
     display: none;
     align-items: center;
     font-weight: $font-weight-medium;
-    margin-right: $grid-gutter;
+    margin-left: $grid-gutter;
 
     @include media(">md") {
       display: flex;

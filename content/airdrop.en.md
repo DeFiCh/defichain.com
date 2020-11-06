@@ -4,11 +4,11 @@ title: DFI-BTC Airdrop
 type: airdrop-closed
 long_title: Claim your DFI in the DFI Airdrop
 cta_to: DFI-BTC Airdrop
-menu:
-  main:
-    weight: 45
-  footer:
-    weight: 45
+# menu:
+#   main:
+#     weight: 45
+#   footer:
+#     weight: 45
 meta:
   description: Claim your DFI in the DFI Airdrop
   og:

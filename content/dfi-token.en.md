@@ -28,8 +28,8 @@ content:
     dfi_token:
       name: dfi-token
       headline: DFI Token
-      subhead: The DFI token is an integral unit of account in the DeFi blockchain. The DeFi Foundation in Singapore will issue 1.2 billion DFI over its lifetime.
-      note: "Important: DeFi chain is a community project. There will be no public Initial Coin Offering. "
+      subhead: "The DFI token is an integral unit of account in the DeFi blockchain. The DeFi Foundation in Singapore issued roughly 600 million DFI on May 11<sup>th</sup>, 2020. The current circulating supply (with staking and liquidity mining) is available at [DeFiChain Explorer](http://explorer.defichain.io/)."
+      note: "Important: DeFi chain is a community project. There was/is no Initial Coin Offering, only free airdrops."
       image: /static/svg/physical-coin.svg
     stats:
       links:
@@ -57,7 +57,7 @@ content:
           description: Fund a new staking node for 1,000,000 DFI.
         - icon: /static/svg/icons/utility/dct.svg
           title: DeFi Custom Token
-          description: Create new DCT for 1,000 DFI (refundable).
+          description: Create new DCT with 100 DFI (refundable).
         - icon: /static/svg/icons/utility/budget.svg
           title: Budget proposal
           description: Submit a community budget proposal for 500 DFI (non-refundable).

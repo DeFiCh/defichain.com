@@ -50,7 +50,7 @@
         <div class="row">
           <div class="col col-lg-5 col-ul-4 offset-ul-1 mbg1">
             <h2>{{ $.Param "content.sections.dfi_token.headline" }}</h2>
-            <p class="lg">{{ $.Param "content.sections.dfi_token.subhead" }}</p>
+            <p class="lg">{{ $.Param "content.sections.dfi_token.subhead" | markdownify }}</p>
             <p><em>{{ $.Param "content.sections.dfi_token.note" }}</em></p>
           </div>
           <div class="image col col-lg-7 col-ul-5">

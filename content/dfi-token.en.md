@@ -57,7 +57,7 @@ content:
           description: Fund a new staking node for 1,000,000 DFI.
         - icon: /static/svg/icons/utility/dct.svg
           title: DeFi Custom Token
-          description: Create new DCT with 100 DFI (refundable).
+          description: Create new DCT with 100 DFI (non-refundable).
         - icon: /static/svg/icons/utility/budget.svg
           title: Budget proposal
           description: Submit a community budget proposal for 500 DFI (non-refundable).

@@ -98,36 +98,39 @@ content:
         - name: monstrobishi
           github: https://github.com/monstrobishi
           username: monstrobishi
+          city: Singapore
         - name: U-Zyn Chua
           github: https://github.com/uzyn
           username: uzyn
+          city: Singapore
         - name: Harsh R
           github: https://github.com/fullstackninja864
           username: fullstackninja864
+          city: Pune, India
         - name: saurabh391
           github: https://github.com/saurabh391
           username: saurabh391
+          city: Indore, India
         - name: Sumit570
           github: https://github.com/Sumit570
           username: Sumit570
+          city: Indore, India
         - name: Peter Bushnell
           github: https://github.com/Bushstar
           username: Bushstar
-        - name: Anthoniy Shumanov
-          github: 
-          username: 
+          city: Oxford, UK
         - name: Anthony Fieroni
           github: https://github.com/bvbfan
           username: bvbfan
-        - name: Prasanna Loganathar
-          github: https://github.com/prasannavl
-          username: prasannavl
-        - name: MarcoFalke
-          github: https://github.com/MarcoFalke
-          username: MarcoFalke
-        - name: Hennadii Stepanov
-          github: https://github.com/hebasto
-          username: hebasto
+          city: Poldiv, Bulgaria
+        - name: MarcoGuardian
+          github: https://github.com/marc0Gua4dian
+          username: marc0Gua4dian
+          city: Arkhangelsk, Russia
+        - name: RapidCoder33
+          github: https://github.com/raaapld
+          username: raaapld
+          city: Saint Petersburg, Russia
     subscribe:
       name: subscribe
       headline: Subscribe for updates on developer resources and releases.

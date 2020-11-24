@@ -27,7 +27,7 @@ content:
       image: /static/svg/foundation-diagram.svg
     members:
       headline: Foundation members
-      subhead: "The DeFi Foundation is incorporated as a company limited by guarantee in Singapore. The founding members of the foundation are:"
+      subhead: "The DeFi Foundation is incorporated as a company limited by guarantee. The founding members of the foundation are:"
       members_list:
         - name: Dr. Julian Hosp
           title: Chairman
@@ -57,7 +57,7 @@ content:
           linkedin: https://www.linkedin.com/in/kenneth-oh-840117158/
           image: kenneth-oh
           resume:
-            - Helped to setup 100s of crypto projects in Singapore
+            - Helped to setup hundreds of cryptocurrency projects
     # subscribe in /
     # closer_look in /
 ---

@@ -28,7 +28,7 @@ content:
     dfi_token:
       name: dfi-token
       headline: DFI Token
-      subhead: "The DFI token is an integral unit of account in the DeFi blockchain. The DeFi Foundation in Singapore issued roughly 600 million DFI on May 11<sup>th</sup>, 2020. The current circulating supply (with staking and liquidity mining) is available at [DeFiChain Explorer](http://explorer.defichain.io/)."
+      subhead: "The DFI token is an integral unit of account in the DeFi blockchain. The DeFi Foundation issued roughly 600 million DFI on May 11<sup>th</sup>, 2020. The current circulating supply (with staking and liquidity mining) is available at [DeFiChain Explorer](http://explorer.defichain.io/)."
       note: "Important: DeFi chain is a community project. There was/is no Initial Coin Offering, only free airdrops."
       image: /static/svg/physical-coin.svg
     stats:

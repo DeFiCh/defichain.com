@@ -34,7 +34,7 @@ content:
     #closer_look in /
 ---
 
-**Abstract**: The DeFi Foundation, registered in Singapore, is developing the DeFi Blockchain, a blockchain specifically dedicated to decentralized financial applications. By focusing on the functionality of the blockchain and dedicating it specifically to decentralized finance, the DeFi Blockchain provides unparalleled high transaction throughput, reduced risk of errors, and intelligent feature development specifically for the fulfillment of financial services on the blockchain.
+**Abstract**: The DeFi Foundation is developing the DeFi Blockchain, a blockchain specifically dedicated to decentralized financial applications. By focusing on the functionality of the blockchain and dedicating it specifically to decentralized finance, the DeFi Blockchain provides unparalleled high transaction throughput, reduced risk of errors, and intelligent feature development specifically for the fulfillment of financial services on the blockchain.
 
 **This Document is not a Prospectus**
 
@@ -79,7 +79,7 @@ The function set includes among others:
 
 ### Team
 
-The DeFi Foundation is incorporated as a company limited by guarantee in Singapore which resembles a foundation structure.
+The DeFi Foundation is incorporated as a company limited by guarantee which resembles a foundation structure.
 
 <table class="table-plain members">
   <tr>
@@ -801,7 +801,7 @@ Thus Alice can obtain a compounded long position on DFI without putting in extra
 
 The DFI token will be the integral unit of account in the DeFi Blockchain ecosystem.
 
-The DeFi Foundation located in Singapore will be issuing the DeFi utility token, DFI, capped at 1,200,000,000 (1.2 billion) for throughout its lifetime. There will only ever be 1.2 billion DFIs created.
+The DeFi Foundation will be issuing the DeFi utility token, DFI, capped at 1,200,000,000 (1.2 billion) for throughout its lifetime. There will only ever be 1.2 billion DFIs created.
 
 DFI is divisible up to 8 decimal places.
 
@@ -852,7 +852,7 @@ Nodes are entitled to:
 
 ### Governance
 
-The DeFi Foundation located in Singapore is responsible for issuance of tokens and is governed by an independent board. This board will be governed by the DeFi masternodes voting on its members and also by giving directives on key decisions.
+The DeFi Foundation is responsible for issuance of tokens and is governed by an independent board. This board will be governed by the DeFi masternodes voting on its members and also by giving directives on key decisions.
 
 The DeFi Foundation awards tokens to users and groups to speed up adoption (see the section on initial token distribution and marketing). The Foundation is tasked with boosting the ecosystem, bringing in ecosystem partners, directing the development of the tools for ecosystem partners, and other activities to increase the number of ecosystem partners.
 
@@ -1076,7 +1076,7 @@ DFI tokens will be issued only to the users of the DeFi Blockchain or partners w
 
 ## DeFi-Foundation
 
-The DeFi Foundation is incorporated as a company limited by guarantee in Singapore, resembling a foundation structure.
+The DeFi Foundation is incorporated as a company limited by guarantee, resembling a foundation structure.
 
 <table class="table-plain members">
   <tr>
@@ -1128,7 +1128,7 @@ The DeFi Foundation is incorporated as a company limited by guarantee in Singapo
       <p>
         <strong>Kenneth Oh, Legal</strong><br>
         <a href="https://www.linkedin.com/in/kenneth-oh-840117158/" class="social">LinkedIn</a><br>
-        Helped to setup 100s of crypto projects in Singapore
+        Helped to setup hundreds of cryptocurrency projects
       </p>
     </td>
   </tr>

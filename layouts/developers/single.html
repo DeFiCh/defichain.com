@@ -165,7 +165,14 @@
               <div class="member col col-md-4">
                 <div class="wrapper">
                   <h3 class="h4">{{ $member.name }}</h3>
-                  <p><a href="{{ $member.github }}" target="_blank">{{ $member.username }}</a></p>
+                  <p>
+                    {{ with $member.github }}
+                    <a href="{{ . }}" target="_blank">{{ $member.username }}</a>
+                    {{ end }}
+                    {{ with $member.city }}
+                    <div class="small">{{ . }}</div>
+                    {{ end }}
+                  </p>
                 </div>
               </div>
               {{ end }}

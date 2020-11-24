@@ -21,7 +21,7 @@ content:
       headline: Imprint
 ---
 
-## DEFICHAIN FOUNDATION LIMITED
+<!-- ## DeFiChain Foundation
 
 <table>
   <tr>
@@ -40,7 +40,7 @@ content:
       Singapore 038987
     </td>
   </tr>
-</table>
+</table> -->
 
 ## Contact
 

@@ -23,12 +23,7 @@ content:
       subhead: Be part of the DeFi Blockchain ecosystem.
     contributors:
       name: contributor
-      headline: DeFi Blockchain and DFI token main contributor
-      contributors_list:
-        - name: Cake
-          logo: /static/svg/logos/logo-cake.svg
-          description: The most transparent way to put your crypto to work.
-          url: https://cakedefi.com
+      headline: Contribute to DeFiChain
       become_developer:
         headline: Become a _developer_
         description: Learn how you can build on DeFi Blockchain and use DFI token.
@@ -43,6 +38,14 @@ content:
     partners:
       headline: Partners
       partners_list:
+        - name: Cake DeFi
+          description: Stake DFI and receive DFI as rewards when using Cake Lapis.
+          logo:
+            file: /svg/external/logo-cake
+            type: svg
+          cta:
+            label: Go to
+            url: https://cakedefi.com
         - name: Staking Rewards
           description: DeFiChain (DFI) interest calculator and current rates.
           logo:

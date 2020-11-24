@@ -84,7 +84,7 @@
                       {{ readFile "/static/svg/icons/social/icon-linkedin.svg"  | safeHTML }}
                     </a>
                   </div>
-                  <h3>{{ $member.name }}</h3>
+                  <h3 class="h4">{{ $member.name }}</h3>
                   <p class="lg">{{ $member.title }}</p>
                   <ul>
                     {{ range $item := $member.resume }}

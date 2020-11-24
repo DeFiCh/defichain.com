@@ -150,6 +150,34 @@
       </div>
     </section>
 
+    <section class="members day">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col col-ul-5 offset-ul-1">
+            <h2>{{ $.Param "content.sections.core_contributors.headline" }}</h2>
+            <p class="lg">{{ $.Param "content.sections.core_contributors.subhead" | markdownify }}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-ul-10 offset-ul-1">
+            <div class="members-list row">
+              {{ range $member := $.Param "content.sections.core_contributors.contributors_list" }}
+              <div class="member col col-md-4">
+                <div class="wrapper">
+                  <h3 class="h4">{{ $member.name }}</h3>
+                  <p><a href="{{ $member.github }}" target="_blank">{{ $member.username }}</a></p>
+                </div>
+              </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-slope day">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
+      </div>
+    </section>
+
     {{ partial "section-developers-subscribe.html" . }}
 
     {{ partial "section-closer-look.html" . }}

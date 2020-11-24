@@ -91,6 +91,43 @@ content:
           error: 
             general: Oops! That didn't go through.
             blank_field: This field cannot be left blank.
+    core_contributors:
+      headline: Core contributors
+      subhead: DeFiChain is an open-source project with a global team of core contributors, supported by a community of developers. The full list of projects and contributors can be found on [GitHub](https://github.com/DeFiCh).
+      contributors_list:
+        - name: monstrobishi
+          github: https://github.com/monstrobishi
+          username: monstrobishi
+        - name: U-Zyn Chua
+          github: https://github.com/uzyn
+          username: uzyn
+        - name: Harsh R
+          github: https://github.com/fullstackninja864
+          username: fullstackninja864
+        - name: saurabh391
+          github: https://github.com/saurabh391
+          username: saurabh391
+        - name: Sumit570
+          github: https://github.com/Sumit570
+          username: Sumit570
+        - name: Peter Bushnell
+          github: https://github.com/Bushstar
+          username: Bushstar
+        - name: Anthoniy Shumanov
+          github: 
+          username: 
+        - name: Anthony Fieroni
+          github: https://github.com/bvbfan
+          username: bvbfan
+        - name: Prasanna Loganathar
+          github: https://github.com/prasannavl
+          username: prasannavl
+        - name: MarcoFalke
+          github: https://github.com/MarcoFalke
+          username: MarcoFalke
+        - name: Hennadii Stepanov
+          github: https://github.com/hebasto
+          username: hebasto
     subscribe:
       name: subscribe
       headline: Subscribe for updates on developer resources and releases.

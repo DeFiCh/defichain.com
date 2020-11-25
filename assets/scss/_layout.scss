@@ -1509,10 +1509,14 @@ section.decentralized-nodes {
     }
 
     @include media(">lg") {
-      height: 640px;
+      height: 480px;
     }
 
     @include media(">xl") {
+      height: 640px;
+    }
+
+    @include media(">ul") {
       height: 880px;
     }
   }
@@ -1539,6 +1543,10 @@ section.decentralized-nodes {
 
     @include media(">xl") {
       top: -144px;
+    }
+
+    @include media(">ul") {
+      top: -192px;
     }
   }
 }

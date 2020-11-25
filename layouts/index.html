@@ -180,6 +180,25 @@
       </div>
     </section>
 
+    <section class="decentralized-nodes white">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col col-lg-7 col-ul-6 offset-ul-1 mbg1">
+            <h2>{{ $.Param "content.sections.decentralized_nodes.headline" }}</h2>
+            <p class="lg">{{ $.Param "content.sections.decentralized_nodes.subhead" }}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col nodes-map">
+            {{ readFile $.Params.content.sections.decentralized_nodes.map.image | safeHTML }}
+          </div>
+        </div>
+      </div>
+      <div class="section-slope white reverse">
+        {{ readFile "/static/svg/section-slope-line.svg" | safeHTML }}
+      </div>
+    </section>
+
     <section class="roadmap paper">
       <div class="container-fluid">
         <div class="row">

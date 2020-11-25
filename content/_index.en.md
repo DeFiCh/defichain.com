@@ -105,6 +105,11 @@ content:
         label: Learn more
         url: /white-paper
       image: /static/svg/built-on-bitcoin.svg
+    decentralized_nodes:
+      headline: Decentralized and distributed
+      subhead: DeFiChain nodes are distributed globally across datacenters in the US, Canada, Europe, India, Singapore and Australia.
+      map:
+        image: /static/svg/nodes-map.svg
     roadmap:
       headline: Roadmap
       subhead: Achievements and what to look forward to.

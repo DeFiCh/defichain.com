@@ -1488,6 +1488,63 @@ section.built-on-bitcoin {
 
 
 //
+// Decentralized Nodes
+//
+
+section.decentralized-nodes {
+  .nodes-map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 144px;
+    position: relative;
+
+    @include media(">sm") {
+      height: 352px;
+    }
+
+    @include media(">md") {
+      height: 384px;
+    }
+
+    @include media(">lg") {
+      height: 640px;
+    }
+
+    @include media(">xl") {
+      height: 880px;
+    }
+  }
+
+  .nodes-map > svg {
+    position: absolute;
+    left: -32px;
+    top: -32px;
+    width: calc(100% + 64px);
+
+    @include media(">sm") {
+      top: -64px;
+    }
+
+    @include media(">md") {
+      top: -80px;
+      left: 32px;
+      width: calc(100% - 64px);
+    }
+
+    @include media(">lg") {
+      top: -96px;
+    }
+
+    @include media(">xl") {
+      top: -144px;
+    }
+  }
+}
+
+
+//
 // Foundation
 //
 

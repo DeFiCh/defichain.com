@@ -15,7 +15,7 @@ meta:
   og:
     title: Token
     description: Learn about the DFI token and its utility, distribution, airdrops and how to acquire DFI. Join the DeFiChain Insiders.
-    site_name: DeFi Blockchain
+    site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
     locale: en_US
@@ -28,7 +28,7 @@ content:
     dfi_token:
       name: dfi-token
       headline: DFI Token
-      subhead: "The DFI token is an integral unit of account in the DeFi blockchain. The DeFi Foundation issued roughly 600 million DFI on May 11<sup>th</sup>, 2020. The current circulating supply (with staking and liquidity mining) is available at [DeFiChain Explorer](http://explorer.defichain.io/)."
+      subhead: "The DFI token is an integral unit of account in DeFiChain. The DeFi Foundation issued roughly 600 million DFI on May 11<sup>th</sup>, 2020. The current circulating supply (with staking and liquidity mining) is available at [DeFiChain Explorer](http://explorer.defichain.io/)."
       note: "Important: DeFi chain is a community project. There was/is no Initial Coin Offering, only free airdrops."
       image: /static/svg/physical-coin.svg
     stats:
@@ -123,14 +123,14 @@ content:
       ways_to_acquire:
         - icon: /static/svg/icons/way-to-acquire/airdrop.svg
           title: Airdrop
-          description: The DeFi Foundation will airdrop DFI to hodlers, market makers and other users of the DeFi Blockchain.
+          description: The DeFi Foundation will airdrop DFI to hodlers, market makers and other users of DeFiChain.
         - icon: /static/svg/icons/way-to-acquire/developers.svg
           title: Developers
-          description: The DeFi Foundation gives grants to developers building functionality and dApps on the DeFi Blockchain.
+          description: The DeFi Foundation gives grants to developers building functionality and dApps on DeFiChain.
       cta: For further information, contact us at [partners@defichain.com](mailto:partners@defichain.com).
     insiders:
       headline: Join the DeFiChain Insiders community.
-      subhead: The DeFi Blockchain movement is looking for those with the passion and reach to spread the movement — register below.
+      subhead: The DeFiChain movement is looking for those with the passion and reach to spread the movement — register below.
       form:
         name:
           label: Name

@@ -1,7 +1,7 @@
 baseURL = "https://www.defichain.com/"
 googleAnalytics = "UA-145606297-3"
 languageCode = "en-us"
-title = "DeFi Blockchain"
+title = "DeFiChain"
 
 [params]
   uen = "201918368M"
@@ -34,14 +34,14 @@ DefaultContentLanguage = "en"
 [languages]
   [languages.en]
     languageName = "English"
-    title = "DeFi Blockchain"
+    title = "DeFiChain"
     description = "Decentralized finance enabled."
-    company_name = "DeFi Blockchain"
+    company_name = "DeFiChain"
     copyright = "All Rights Reserved"
     weight = 20
   # [languages.de]
   #   languageName = "Deutsch"
-  #   title = "DeFi Blockchain"
+  #   title = "DeFiChain"
   #   description = "Making the world a brighter place"
   #   company_name = "Cake Pte. Ltd."
   #   copyright = "Alle Rechte vorbehalten"

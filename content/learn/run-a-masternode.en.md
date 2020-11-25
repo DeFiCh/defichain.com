@@ -8,7 +8,7 @@ meta:
   og:
     title: Run a DeFiChain masternode
     description: How to run a DeFiChain masternode on Linux/Mac OS.
-    site_name: DeFi Blockchain
+    site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
     locale: en_US

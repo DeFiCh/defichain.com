@@ -1,7 +1,7 @@
 ---
 title: Learn
 type: learn
-long_title: Learn more and understand the DeFi Blockchain with videos and how-to guides.
+long_title: Learn more and understand DeFiChain with videos and how-to guides.
 cta_to: Learn
 menu:
   main:
@@ -9,11 +9,11 @@ menu:
   footer:
     weight: 80
 meta:
-  description: Learn more and understand the DeFi Blockchain with videos and how-to guides.
+  description: Learn more and understand DeFiChain with videos and how-to guides.
   og:
     title: Token
-    description: Learn more and understand the DeFi Blockchain with videos and how-to guides.
-    site_name: DeFi Blockchain
+    description: Learn more and understand DeFiChain with videos and how-to guides.
+    site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
     locale: en_US
@@ -22,9 +22,9 @@ content:
     hero:
       name: hero
       headline: Learn
-      subhead: Learn more and understand the DeFi Blockchain.
+      subhead: Learn more and understand DeFiChain.
     featured_video:
-      headline: Videos on DeFi Blockchain
+      headline: Videos on DeFiChain
       playlist:
         - id: ky0_3Brv-eI
           title: DeFiChain and DFI token explained in 2 minutes
@@ -33,7 +33,7 @@ content:
         - id: v113FEzhWqw
           title: Decentralized Finance (DeFi) explained simply
         - id: mUa29qe6Png
-          title: DeFi Blockchain White Paper Walkthrough
+          title: DeFiChain White Paper Walkthrough
         - id: mukcJjGQcMM
           title: Difference between Ethereum and DeFiChain
         - id: pwfduPilvkE

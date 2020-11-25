@@ -7,7 +7,7 @@ meta:
   og:
     title: Privacy Policy
     description: Privacy Policy
-    site_name: DeFi Blockchain
+    site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
     locale: en_US

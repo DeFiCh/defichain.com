@@ -1,12 +1,12 @@
 ---
-title: DeFi Blockchain
+title: DeFiChain
 long_title: Decentralized finance enabled on Bitcoin
 meta:
   description: A blockchain dedicated to fast, intelligent and transparent financial services, accessible by everyone.
   og:
-    title: DeFi Blockchain
+    title: DeFiChain
     description: A blockchain dedicated to fast, intelligent and transparent financial services, accessible by everyone, and enabled on Bitcoin.
-    site_name: DeFi Blockchain
+    site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
     locale: en_US
@@ -51,7 +51,7 @@ content:
             percent: 75
             label: Trust-minimized software
     benefits:
-      headline: Benefits of the DeFi Blockchain.
+      headline: Benefits of DeFiChain.
       benefits_list:
         - icon: /static/svg/icons/benefits/variety.svg
           title: Variety
@@ -100,7 +100,7 @@ content:
           description: Automatic investment payouts with smart contracts.
     built_on_bitcoin:
       headline: Built-on-Bitcoin
-      subhead: The DeFi Blockchain marries the best of Proof-of-Stake, with the security and immutability of Bitcoin.
+      subhead: DeFiChain marries the best of Proof-of-Stake, with the security and immutability of Bitcoin.
       link:
         label: Learn more
         url: /white-paper
@@ -118,12 +118,12 @@ content:
           events:
             - month: Sep
               status: past
-              title: Conceptualization of DeFi blockchain.
+              title: Conceptualization of DeFiChain.
               url: https://cryptopotato.com/defichain-the-story-from-the-co-founders/
               image:
                 x1: /img/timeline/2019/concept.jpg
                 x2: /img/timeline/2019/concept@2x.jpg
-                alt: Conceptualization of DeFi blockchain
+                alt: Conceptualization of DeFiChain
             - month: Oct
               status: past
               title: DeFiChain White paper released.
@@ -181,7 +181,7 @@ content:
               image:
                 x1: /img/timeline/2020/defi-app.png
                 x2: /img/timeline/2020/defi-app@2x.png
-                alt: DeFi Blockchain client app
+                alt: DeFiChain client app
             - month: Aug
               status: past
               title: DFI officially listed on HotBit.
@@ -284,7 +284,7 @@ content:
                 x2: /img/timeline/2021/native-stablecoins@2x.png
                 alt: Native stablecoins
     subscribe:
-      headline: "Join our mailing list to get the latest DeFi Blockchain announcements:"
+      headline: "Join our mailing list to get the latest DeFiChain announcements:"
       form:
         textfield:
           first_name:
@@ -303,6 +303,6 @@ content:
             blank_field: This field cannot be left blank.
     closer_look:
       headline: Learn more
-      subhead: Discover DeFi Blockchain.
+      subhead: Discover DeFiChain.
 
 ---

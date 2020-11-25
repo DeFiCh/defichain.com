@@ -1,7 +1,7 @@
 ---
 title: Media
 type: media
-long_title: DeFi Blockchain and DFI Token in the news and media.
+long_title: DeFiChain and DFI Token in the news and media.
 cta_to: Read
 menu:
   main:
@@ -9,11 +9,11 @@ menu:
   footer:
     weight: 70
 meta:
-  description: DeFi Blockchain and DFI Token in the news and media. Download media resources and assets.
+  description: DeFiChain and DFI Token in the news and media. Download media resources and assets.
   og:
     title: Media
-    description: DeFi Blockchain and DFI Token in the news and media. Download media resources and assets.
-    site_name: DeFi Blockchain
+    description: DeFiChain and DFI Token in the news and media. Download media resources and assets.
+    site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
     locale: en_US
@@ -25,7 +25,7 @@ content:
       headline: Media
       subhead: Media resources and assets.
     mentions:
-      headline: DeFi Blockchain covered in the press and media.
+      headline: DeFiChain covered in the press and media.
       mentions_list:
         - title: DeFiChain is now on Blockfolio Signal!
           source: CoinMarketCap
@@ -102,16 +102,16 @@ content:
           date: 17 Nov, 2019
           image: 
           url: https://bitcoinexchangeguide.com/after-raising-80-million-for-tenx-ico-founder-is-seeking-7-5m-for-new-project-defichain/
-        - title: Dr. Julian Hosp im Interview – DeFi, CAKE, DeFi Blockchain
+        - title: Dr. Julian Hosp im Interview – DeFi, CAKE, DeFiChain
           source: Kryptomagazin
           date: 28 Oct, 2019
           image: /svg/press/kryptomagazin.svg
           url: https://www.krypto-magazin.de/dr-julian-hosp-im-interview-defi-cake-defi-blockchain/
     downloads:
       headline: "Downloads"
-      description: Download official DeFi Blockchain brand assets and learn about usage guidelines.
+      description: Download official DeFiChain brand assets and learn about usage guidelines.
       downloads_list:
-        - title: DeFi Blockchain logo
+        - title: DeFiChain logo
           description: The official and default logo.
           image: /static/downloads/logo-defi-blockchain.svg
           links:

@@ -14,7 +14,7 @@ meta:
   og:
     title: DFI-BTC Airdrop
     description: Claim your DFI in the DFI Airdrop
-    site_name: DeFi Blockchain
+    site_name: DeFiChain
     image: /img/og/ogimage-claim.png
     image_type: image/png
     locale: en_US
@@ -66,7 +66,7 @@ content:
         - icon: /static/svg/icons/amount/amount-high.svg
           btc: 100 BTC
           dfi: 50,000 DFI
-      snapshot: 5% of the DeFi Blockchain Foundation wallet (total 14.4 million DFI) has been pledge in the Airdrop. The amount of DFI you are eligible to claim is determined by a snapshot of your BTC hodlings at Bitcoin block 647,500 (estimated to be mined on 9 September, 2020 22:00 UTC). 
+      snapshot: 5% of DeFiChain Foundation wallet (total 14.4 million DFI) has been pledge in the Airdrop. The amount of DFI you are eligible to claim is determined by a snapshot of your BTC hodlings at Bitcoin block 647,500 (estimated to be mined on 9 September, 2020 22:00 UTC). 
       max: The maximum amount of DFI you can claim is capped at 50,000, for 100 BTC.
       claim_methods:
         - title: Claim it here
@@ -137,7 +137,7 @@ content:
               image:
                 x1: /img/timeline/2020/defi-app.png
                 x2: /img/timeline/2020/defi-app@2x.png
-                alt: DeFi Blockchain client app
+                alt: DeFiChain client app
             - month: Aug
               status: past
               title: DFI officially listed on HotBit.
@@ -219,7 +219,7 @@ content:
       step1:
         headline: "Step 1: Get a DFI Wallet"
         options:
-          - headline: DeFi Blockchain client
+          - headline: DeFiChain client
             image: /static/svg/wallets/defi.svg
             cta:
               label: Download

@@ -1,16 +1,16 @@
 ---
 title: Downloads
 type: downloads
-long_title: DeFi Blockchain CLI and desktop app downloads for Mac, WIndows and Linux.
+long_title: DeFiChain CLI and desktop app downloads for Mac, WIndows and Linux.
 menu:
   footer:
     weight: 60
 meta:
-  description: DeFi Blockchain CLI and desktop app downloads for Mac, WIndows and Linux.
+  description: DeFiChain CLI and desktop app downloads for Mac, WIndows and Linux.
   og:
     title: Downloads
-    description: DeFi Blockchain CLI and desktop app downloads for Mac, WIndows and Linux.
-    site_name: DeFi Blockchain
+    description: DeFiChain CLI and desktop app downloads for Mac, WIndows and Linux.
+    site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
     locale: en_US
@@ -23,11 +23,11 @@ content:
       subhead: Download applications for Mac, WIndows and Linux.
     downloads:
       headline: Get the CLI and desktop app
-      description: Download official DeFi Blockchain brand assets and learn about usage guidelines.
+      description: Download official DeFiChain brand assets and learn about usage guidelines.
       downloads_list:
         - title: CLI
           type: cli
-          description: Interact with DeFi Blockchain through a command line interface.
+          description: Interact with DeFiChain through a command line interface.
           image:
             path: /static/svg/icons/developers/icon-cli.svg
             type: svg

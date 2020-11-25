@@ -1,7 +1,7 @@
 ---
 title: Developers
 type: developers
-long_title: Build on DeFi Blockchain
+long_title: Build on DeFiChain
 cta_to: Study
 menu:
   main:
@@ -9,11 +9,11 @@ menu:
   footer:
     weight: 50
 meta:
-  description: Start building on DeFi Blockchain with developer resources and code.
+  description: Start building on DeFiChain with developer resources and code.
   og:
     title: Developers
-    description: Start building on DeFi Blockchain with developer resources and code.
-    site_name: DeFi Blockchain
+    description: Start building on DeFiChain with developer resources and code.
+    site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
     locale: en_US
@@ -22,7 +22,7 @@ content:
     hero:
       name: hero
       headline: Developers
-      subhead: Build on DeFi Blockchain.
+      subhead: Build on DeFiChain.
     featured_video:
       video: f7Dv4MymtO0
       headline: On Cake, crypto, engineering and security
@@ -30,7 +30,7 @@ content:
       subject_title: CTO, Cake
       quote: Doesn't matter if you are front-end of back-end. If you're a JavaScript developer, and a good one, drop me a note, and we can talk.
     resources:
-      headline: Start building on DeFi Blockchain with developer resources and code.
+      headline: Start building on DeFiChain with developer resources and code.
       github:
         image: /static/svg/icons/developers/icon-octocat.svg
         headline: Get developer resources and getting started guides.
@@ -49,7 +49,7 @@ content:
         url: http://explorer.defichain.com/
       white_paper:
         image: /static/svg/icons/icon-whitepaper.svg
-        headline: Read the DeFi Blockchain technical paper.
+        headline: Read the DeFiChain technical paper.
         label: Read the white paper
         url: /white-paper
       reddit:
@@ -146,7 +146,7 @@ content:
           placeholder: Your company name
         comment:
           label: How will you contribute?
-          placeholder: What do you intend to, or are building on top of BeFi Blockchain? What resources and support can DeFi Blockchain provide you with?
+          placeholder: What do you intend to, or are building on top of BeFi Blockchain? What resources and support can DeFiChain provide you with?
         button:
           label: Subscribe
 ---

@@ -7,7 +7,7 @@ meta:
   og:
     title: Imprint
     description: Imprint
-    site_name: DeFi Blockchain
+    site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
     locale: en_US

@@ -1,17 +1,17 @@
 ---
 title: Partners
 type: partners
-long_title: Be part of the DeFi Blockchain ecosystem.
+long_title: Be part of DeFiChain ecosystem.
 cta_to: Join
 menu:
   main:
     weight: 60
 meta:
-  description: Be part of the DeFi Blockchain ecosystem.
+  description: Be part of DeFiChain ecosystem.
   og:
     title: Partners
-    description: Be part of the DeFi Blockchain ecosystem.
-    site_name: DeFi Blockchain
+    description: Be part of DeFiChain ecosystem.
+    site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
     locale: en_US
@@ -20,13 +20,13 @@ content:
     hero:
       name: hero
       headline: Partners
-      subhead: Be part of the DeFi Blockchain ecosystem.
+      subhead: Be part of DeFiChain ecosystem.
     contributors:
       name: contributor
       headline: Contribute to DeFiChain
       become_developer:
         headline: Become a _developer_
-        description: Learn how you can build on DeFi Blockchain and use DFI token.
+        description: Learn how you can build on DeFiChain and use DFI token.
         cta:
           label: Developers
           url: /developers
@@ -72,12 +72,12 @@ content:
             url: https://blockfolio.com/coin/DFI
     featured_video:
       video: IGCgUSdiDF0
-      headline: DeFi Blockchain
+      headline: DeFiChain
       subject_name: _with_ Dr. Julian Hosp
       subject_title: CEO, Cake
       quote: Healthy finances. For someone like me with the background at medicine, sounds like _doing the right thing for the people_.
     partnering:
-      headline: Tell us how you would like to contribute to the DeFi Blockchain ecosystem.
+      headline: Tell us how you would like to contribute to DeFiChain ecosystem.
       form:
         name:
           label: Name

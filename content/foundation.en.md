@@ -23,7 +23,7 @@ content:
       subhead: Understand how the DeFi Foundation operates and how to get involved.
     governance:
       headline: Governance
-      subhead: The DeFi Foundation located in Singapore is responsible for issuance of tokens to users and groups to speed up adoption. The Foundation is tasked with boosting the ecosystem, bringing in ecosystem partners, directing the development of the tools for ecosystem partners, and other activities to increase the number of ecosystem partners.
+      subhead: The DeFi Foundation is responsible for issuance of tokens to users and groups to speed up adoption. The Foundation is tasked with boosting the ecosystem, bringing in ecosystem partners, directing the development of the tools for ecosystem partners, and other activities to increase the number of ecosystem partners.
       image: /static/svg/foundation-diagram.svg
     members:
       headline: Foundation members

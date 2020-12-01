@@ -1103,7 +1103,7 @@ The DeFi Foundation is incorporated as a company limited by guarantee, resemblin
         <strong>U-Zyn Chua, Tech</strong><br>
         <a href="https://www.linkedin.com/in/uzynchua/" class="social">LinkedIn</a><br>
         Experienced blockchain engineer<br>
-        Singapore Smart Nation Fellow – blockchain research for government<br>
+        Developing digital currencies for central banks around the world<br>
         Successfully launched dozens of blockchain projects
       </p>
     </td>

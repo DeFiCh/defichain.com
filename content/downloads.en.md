@@ -1,15 +1,15 @@
 ---
 title: Downloads
 type: downloads
-long_title: DeFiChain CLI and desktop app downloads for Mac, WIndows and Linux.
+long_title: DeFiChain CLI and desktop app downloads for Mac, Windows and Linux.
 menu:
   footer:
     weight: 60
 meta:
-  description: DeFiChain CLI and desktop app downloads for Mac, WIndows and Linux.
+  description: DeFiChain CLI and desktop app downloads for Mac, Windows and Linux.
   og:
     title: Downloads
-    description: DeFiChain CLI and desktop app downloads for Mac, WIndows and Linux.
+    description: DeFiChain CLI and desktop app downloads for Mac, Windows and Linux.
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
@@ -20,7 +20,7 @@ content:
     hero:
       name: hero
       headline: Downloads
-      subhead: Download applications for Mac, WIndows and Linux.
+      subhead: Download applications for Mac, Windows and Linux.
     downloads:
       headline: Get the CLI and desktop app
       description: Download official DeFiChain brand assets and learn about usage guidelines.

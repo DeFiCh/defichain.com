@@ -4,8 +4,6 @@ type: media
 long_title: DeFiChain and DFI Token in the news and media.
 cta_to: Read
 menu:
-  main:
-    weight: 70
   footer:
     weight: 70
 meta:

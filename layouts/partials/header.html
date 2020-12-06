@@ -1,4 +1,11 @@
 <header>
+
+  <div class="featured">
+    <p>{{ .Site.Params.featured.headline | markdownify }}</p>
+    <a href="{{ .Site.Params.featured.cta.url }}" class="btn btn-small">
+      {{ .Site.Params.featured.cta.label }}
+    </a>
+  </div>
  
   <div class="container-fluid">
     <div class="row">

@@ -43,6 +43,20 @@ body {
 // Header
 //
 
+body > header > .featured {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 64px;
+  padding-left: $grid-gutter;
+  padding-right: $grid-gutter;
+  background-color: rgba(map-get($brand-colors, cyan), 0.5);
+
+  .btn {
+    margin-left: 24px;
+  }
+}
+
 body > header {
   position: fixed;
   width: 100%;
@@ -1137,6 +1151,37 @@ section.problem-solution {
 }
 
 
+//
+// App sections
+//
+
+body.app {
+  section.hero {
+    min-height: 720px;
+  }
+}
+
+section.intro {
+  .screenshot {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+section.intro2 {
+  padding-top: 0;
+
+  .screenshot {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+
 // 
 // Contributors
 // 
@@ -2180,6 +2225,32 @@ body.token {
   }
 }
 
+body.app {
+  .hero-art {
+    .dfi-branches {
+      top: -334px;
+      left: 10%;
+      transform: rotate(-50deg);
+      color: map-get($brand-colors, cyan);
+    }
+
+    .dfi-pot {
+      left: 27%;
+      bottom: -330px;
+      transform: rotate(-30deg);
+      color: $color-ui-white;
+    }
+
+    .dfi-image {
+      right: 1%;
+      bottom: -334px;
+      transform: rotate(133deg);
+      background-image: url(/img/hero/singapore2.jpg);
+      clip-path: url(#branchesClip);
+    }
+  }
+}
+
 body.developers {
   .hero-art {
     .dfi-branches {
@@ -2201,6 +2272,7 @@ body.developers {
       bottom: -188px;
       transform: rotate(111deg);
       background-image: url(/img/hero/hongkong.jpg);
+      background-position: -100%;
       clip-path: url(#branchesClip);
     }
   }

@@ -19,9 +19,9 @@ content:
       ctas:
         - label: Go to downloads
           url: /downloads
-        - label: Read the white paper
+        - label: Buy $DFI
           type: plain
-          url: /white-paper   
+          url: /dfi-token
     problem_solution:
       headline: The Post-Fintech Revolution
       subhead: From trust-based to trust-less, decentralized finance overcomes what Fintech could not solve in traditional finance.
@@ -238,15 +238,15 @@ content:
                 x2: /img/timeline/2020/bittrex@2x.png
                 alt: DeFiChain listed on Bittrex
             - month: Nov
-              status: future
+              status: past
               title: Bayfront hard fork with liquidity pool support.
               url: https://www.reddit.com/r/defiblockchain/comments/jem20f/defichain_version_130_for_bayfront_with_liquidity/
               image:
                 x1: /img/timeline/2020/bayfront-hardfork.png
                 x2: /img/timeline/2020/bayfront-hardfork@2x.png
                 alt: Bayfront hard fork
-            - month: Q4
-              status: future
+            - month: Dec
+              status: past
               title: Swap, Liquidity Pool and Yield Farming.
               url: https://www.youtube.com/watch?v=0uBwWK85BLU
               image:

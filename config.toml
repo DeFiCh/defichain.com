@@ -5,6 +5,11 @@ title = "DeFiChain"
 
 [params]
   uen = "201918368M"
+  [params.featured]
+    headline = "_DeFiChain DEX_ and _Liquidity Mining_ are live. Download the desktop app to get started"
+  [params.featured.cta]
+    label = "Learn more"
+    url = "/app"
   [params.github]
     label = "GitHub"
     url = "https://github.com/DeFiCh/ain"

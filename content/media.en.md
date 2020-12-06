@@ -27,6 +27,16 @@ content:
     mentions:
       headline: DeFiChain covered in the press and media.
       mentions_list:
+        - title: Stock Up DFI for Yield Farming! No Trading Fees on Bittrex Global!
+          source: CoinMarketCap
+          date: 2 Dec, 2020
+          image: /svg/press/coinmarketcap.svg
+          url: https://coinmarketcap.com/headlines/signals/stock-up-dfi-for-yield-farming-no-trading-fees-on-bittrex-global-defichain/
+        - title: "DeFiChain DEX: A Truly Decentralized Exchange Has Just Launched"
+          source: CryptoCompare
+          date: 30 Nov, 2020
+          image: /img/press/cryptocompare.png
+          url: https://www.cryptocompare.com/exchanges/guides/defichain-dex-a-truly-decentralized-exchange-has-just-launched/
         - title: DeFiChain is now on Blockfolio Signal!
           source: CoinMarketCap
           date: 31 Oct, 2020

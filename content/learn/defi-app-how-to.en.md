@@ -35,29 +35,33 @@ Download the latest app from the [downloads](/downloads) page.
 
 ### Step 1: Installation
 
-Open the downloaded image `defi-app-<version>.dmg`, then drag `defi-app` into the Applications directory.
+Open the downloaded image **defi-app-<version>.dmg**. In the Finder window that pops up, drag the defi-app on the left, on to the Applications directory shortcut on the right.
 
-### Step 2: macOS security prompt
+<p><img src="/img/guides/installing-defi-app/drag-to-install.png" srcset="/img/guides/installing-defi-app/drag-to-install.png 1x, /img/guides/installing-defi-app/drag-to-install@2x.png 2x"></p>
 
-Open the app.
+### Step 2: Dealing with macOS security prompt when opening the app
 
-If this is the first time you are opening the DeFi app, macOS will present you with a security warning shown below. Press OK to dismiss it.
+Open the app. The first time you open the DeFi app, you will be presented with a security prompt. Press OK to dismiss it.
 
-\**You are seeing this security prompt because this is an unsigned pre-release version of the app. Future releases will be signed, which will supress the warning. For now, please follow step 3 for a workaround.*
+<p><img src="/img/guides/installing-defi-app/macos-security-prompt.png" srcset="/img/guides/installing-defi-app/macos-security-prompt.png 1x, /img/guides/installing-defi-app/macos-security-prompt@2x.png 2x"></p>
 
-![Image](https://i.imgur.com/5t5nZy0.png)
+\**You will see this security prompt with early unsigned releases of the app. In future releases signed with Apple, you will not see security prompts. For now, please follow step 3 for a workaround.*
 
 ### Step 3: Bypass security prompt
 
-\**Only follow the next steps if you are sure you've downloaded DeFi app from a legitimate source.*
+\**Only open the app this way if you are sure you have downloaded DeFi app from an official source. DeFi app is currently only available on the [official website](https://defichain.com/) and [DeFiChain’s GitHub](https://github.com/DeFiCh/app/releases).*
 
-Go to **System Preferences ▸ Security & Privacy**. Click on the **Open Anyway** button as shown.
+Go to **System Preferences** and click on **Security & Privacy**.
 
-![Image](https://i.imgur.com/gD5aZzU.png)
+<p><img src="/img/guides/installing-defi-app/system-preferences.png" srcset="/img/guides/installing-defi-app/system-preferences.png 1x, /img/guides/installing-defi-app/system-preferences@2x.png 2x"></p>
 
-A popup will appear. Click on the **Open** button.
+Then click on the **Open Anyway**.
 
-![Image](https://i.imgur.com/nXXuEhV.png)
+<p><img src="/img/guides/installing-defi-app/open-anyway-a.png" srcset="/img/guides/installing-defi-app/open-anyway-a.png 1x, /img/guides/installing-defi-app/open-anyway-a@2x.png 2x"></p>
+
+Click **Open** on the confirmation popup.
+
+<p><img src="/img/guides/installing-defi-app/open-anyway-b.png" srcset="/img/guides/installing-defi-app/open-anyway-b.png 1x, /img/guides/installing-defi-app/open-anyway-b@2x.png 2x"></p>
 
 DeFi app will launch automatically when the installation is complete.
 
@@ -99,9 +103,9 @@ You can choose to either install DeFi app as a GUI tool or command line tool.
 
 The simplest method is to use Software Center in Ubuntu. Simply navigate to the folder (usually *Downloads* folder)  containing the downloaded **.deb** file and open it.
 
-### Install .deb files in command line using `dpkg`
+### Install .deb files in command line using dpkg
 
-If you want to install `deb` packages using the command line, you can use either the `apt` command or the `dpkg` command.
+If you want to install **deb** packages using the command line, you can use either the `apt` command or the `dpkg` command.
 
 ```
 sudo apt install PATH_TO_DEB_FILE
@@ -120,74 +124,93 @@ You can now open DeFi app.
 
 ## Using the wallet
 
-![Image](https://i.imgur.com/esKfcAx.png)
+### The wallet interface
 
-**Available Balance**: It shows the available balance in your wallet.
-**Pending Balance**: Unconfirmed transactions on the blockchain. 
-**Pending Requests**: List of receive requests. [Pending Requests]
-**Transactions**: List of previous Defi Transactions.
-**Send**: Send funds to an address.
-**Receive**: Create a request for receiving funds. 
-**Network**: Information about the network, whether you are using Mainnet, Testnet or Regttest
+<p><img src="/img/guides/installing-defi-app/wallets.png" srcset="/img/guides/installing-defi-app/wallets.png 1x, /img/guides/installing-defi-app/wallets@2x.png 2x"></p>
+
+#### Sidebar main navigation
+
+- **Wallets** tab: Send and receive funds, and view transactions
+- **Liquidity** tab: Add and remove liquidity, and viewing APY of your liquidity
+- **DEX** tab: Swap between wrapped BTC/ETH/USDT and DFI
+- **Tokens** tab: View community-verified DST (DeFi Standard tokens) and create your own
+- **Blockchain** tab: A built-in mini block explorer to examine the blockchain
+- **Masternodes** tab: View a list of masternodes and create your own
+
+#### Sidebar sub navigation
+
+- **Console**: Run DeFiChain CLI commands
+- **Help**: Help options
+- **Settings**: Switch between Main and Test net, language and other settings
+
+### Opening a wallet
+
+Switch to the **Wallets** tab, choose a wallet e.g. DFI.
+
+<p><img src="/img/guides/installing-defi-app/wallets-choose.png" srcset="/img/guides/installing-defi-app/wallets-choose.png 1x, /img/guides/installing-defi-app/wallets-choose@2x.png 2x"></p>
 
 ### Sending funds
 
 #### Step 1
 
-While in the **Wallet** tab, press the **SEND** button.
+Within a wallet, click on **Send**.
 
-![Image](https://i.imgur.com/55boez6.png)
+<p><img src="/img/guides/installing-defi-app/wallet-send.png" srcset="/img/guides/installing-defi-app/wallet-send.png 1x, /img/guides/installing-defi-app/wallet-send@2x.png 2x"></p>
 
 #### Step 2
 
-Enter the **Amount** to send and the **To address** to send to, then press **CONTINUE**.
+Enter the **Amount** and, the **To address** to send to. Yu can also enter an address using QR code scanner feature next to the address field. Press **CONTINUE** when you are ready.
 
-![Image](https://i.imgur.com/3gu264s.png)
-
-\**You can use your webcam to scan a QR code, for the **To address**.*
-
-![Image](https://i.imgur.com/DDMTlxD.png)
+<p><img src="/img/guides/installing-defi-app/wallet-send1.png" srcset="/img/guides/installing-defi-app/wallet-send1.png 1x, /img/guides/installing-defi-app/wallet-send1@2x.png 2x"></p>
 
 #### Step 3
 
-Review the **Amount** and **To address** and verify they are correct, then press **COMPLETE SEND**.
+Review the **Amount** and **To address** and verify they are correct. The **COMPLETE SEND** button is disabled for a few seconds to protect you from accidental sending.
 
-![Image](https://i.imgur.com/tyCgjJR.png)
+<p><img src="/img/guides/installing-defi-app/wallet-send2.png" srcset="/img/guides/installing-defi-app/wallet-send2.png 1x, /img/guides/installing-defi-app/wallet-send2@2x.png 2x"></p>
+
+Click **COMPLETE SEND** to confirm sending.
+
+<p><img src="/img/guides/installing-defi-app/wallet-send3.png" srcset="/img/guides/installing-defi-app/wallet-send3.png 1x, /img/guides/installing-defi-app/wallet-send3@2x.png 2x"></p>
 
 #### Step 4
 
-After the transaction is complete, press `BACK TO WALLET` to return to the wallet.
+After the transaction is complete, press **BACK TO WALLET** to return to the wallet.
 
-![Image](https://i.imgur.com/01mTGBu.png)
+<p><img src="/img/guides/installing-defi-app/wallet-send4.png" srcset="/img/guides/installing-defi-app/wallet-send4.png 1x, /img/guides/installing-defi-app/wallet-send4@2x.png 2x"></p>
 
-#### Step 5
-
-You should see your latest transaction in the list of **Transactions** in the **Wallet**, as well as any other transactions.
-
-![Image](https://i.imgur.com/Uu1Daom.png)
+You should see your latest transaction in the list of **Transactions** in your wallet.
 
 ---
 
 ### Receiving funds
 
 #### Step 1
-In order to receive coins, choose the `Wallet` tab and then the `RECEIVE` option.
 
-![Image](https://i.imgur.com/GC8CHeE.png)
+Within a selected wallet, click **RECEIVE**.
 
-#### Step 2:
-Then fill out the information according to the desired payment request.
+<p><img src="/img/guides/installing-defi-app/wallet-receive.png" srcset="/img/guides/installing-defi-app/wallet-receive.png 1x, /img/guides/installing-defi-app/wallet-receive@2x.png 2x"></p>
 
-![Image](https://i.imgur.com/ZnlTYoe.png)
+Then click **NEW ADDRESS** to create a new receiving address.
 
-#### Step 3:
+<p><img src="/img/guides/installing-defi-app/wallet-receive1.png" srcset="/img/guides/installing-defi-app/wallet-receive1.png 1x, /img/guides/installing-defi-app/wallet-receive1@2x.png 2x"></p>
 
-Click `CONTINUE` to create a payment request as follow and select the `Wallet` option to go back to the wallet.
+#### Step 2
 
-![Image](https://i.imgur.com/iHxo1D2.png)
+Fill out the information and give your address a meaningful label. Then click **CREATE**.
 
-#### Step 4:
+<p><img src="/img/guides/installing-defi-app/wallet-receive2.png" srcset="/img/guides/installing-defi-app/wallet-receive2.png 1x, /img/guides/installing-defi-app/wallet-receive2@2x.png 2x"></p>
 
-After your receive payment request is created successfully. You can see the list of payment requests as below:
+#### Step 3
 
-![Image](https://i.imgur.com/ogVe0lA.png)
+The new receive address you have just created will appear in your list of recive addresses.
+
+<p><img src="/img/guides/installing-defi-app/wallet-receive3.png" srcset="/img/guides/installing-defi-app/wallet-receive3.png 1x, /img/guides/installing-defi-app/wallet-receive3@2x.png 2x"></p>
+
+Click the **QR code** button to bring up a QR code of the address.
+
+<p><img src="/img/guides/installing-defi-app/wallet-receive4.png" srcset="/img/guides/installing-defi-app/wallet-receive4.png 1x, /img/guides/installing-defi-app/wallet-receive4@2x.png 2x"></p>
+
+Click the **copy address** button to copy the address to your system clipboard.
+
+<p><img src="/img/guides/installing-defi-app/wallet-receive5.png" srcset="/img/guides/installing-defi-app/wallet-receive5.png 1x, /img/guides/installing-defi-app/wallet-receive5@2x.png 2x"></p>

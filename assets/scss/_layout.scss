@@ -1152,33 +1152,55 @@ section.problem-solution {
 
 
 //
-// App sections
+// DEX sections
 //
 
-body.app {
+body.dex {
   section.hero {
-    min-height: 720px;
+    min-height: auto;
+    align-items: center;
+    text-align: center;
+    padding-top: 256px;
+
+    h1 {
+      margin-bottom: 32px;
+    }
+  }
+
+  .hero-image {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    img {
+      max-width: 150%;
+      max-height: 800px;
+      width: auto;
+      margin-bottom: -112px;
+
+      @include media(">md") {
+        margin-bottom: -192px;
+      }
+    }
   }
 }
 
-section.intro {
+section.liquidity_mining {
   .screenshot {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
     img {
       width: 100%;
+      max-width: 800px;
       height: auto;
     }
   }
 }
 
-section.intro2 {
+section.risks {
   padding-top: 0;
-
-  .screenshot {
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
 }
 
 
@@ -2022,6 +2044,12 @@ section.white-paper {
     margin: 0 auto;
     display: block;
     border: $base-border-style;
+  }
+
+  p > img {
+    width: auto;
+    max-width: auto;
+    border: none;
   }
 
   .members {

@@ -25,7 +25,7 @@
   <meta property="og:locale" content="{{ $.Params.meta.og.locale }}">
 </head>
 
-<body class="app">
+<body class="dex">
 
   {{ partial "header.html" . }}
 
@@ -34,8 +34,8 @@
     <section class="hero paper" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
-          <div class="col col-ul-4 offset-ul-1">
-            <div class="hero-start">
+          <div class="col col-ul-10 offset-ul-1">
+            <div class="hero-intro">
               <h1>{{ $.Params.content.sections.hero.headline }}</h1>
               <p class="lg">{{ $.Params.content.sections.hero.subhead }}</p>
               <div class="hero-ctas">
@@ -44,49 +44,81 @@
                   </a>
               </div>
             </div>
+            <div class="hero-image">
+              <img
+                src="{{ $.Params.content.sections.hero.image }}.png"
+                srcset="{{ $.Params.content.sections.hero.image }}.png 1x, {{ $.Params.content.sections.hero.image }}@2x.png 2x"
+                alt="DeFi app screenshot">
+            </div>
           </div>
         </div>
       </div>
-      {{ partial "hero-art.html" . }}
     </section>
 
-    <section class="intro white">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col col-lg-5 col-ul-4 offset-ul-1 mbg1">
-            <h2>{{ $.Param "content.sections.intro.headline" }}</h2>
-            <p class="lg">{{ $.Param "content.sections.intro.subhead" | markdownify }}</p>
-          </div>
-          <div class="image col col-lg-8 col-ul-7 screenshot">
-            <img
-              src="{{ $.Params.content.sections.intro.image }}.png"
-              srcset="{{ $.Params.content.sections.intro.image }}.png 1x, {{ $.Params.content.sections.intro.image }}@2x.png 2x"
-              alt="DeFi app screenshot">
-          </div>
-        </div>
-      </div>
-      <div class="section-slope white reverse">
-        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
-      </div>
-    </section>
-
-    <section class="intro2 white">
+    <section class="liquidity_mining white">
       <div class="container-fluid">
         <div class="row">
           <div class="image col col-lg-8 col-ul-7 screenshot">
             <img
-              src="{{ $.Params.content.sections.intro2.image }}.png"
-              srcset="{{ $.Params.content.sections.intro2.image }}.png 1x, {{ $.Params.content.sections.intro2.image }}@2x.png 2x"
+              src="{{ $.Params.content.sections.liquidity_mining.image }}.png"
+              srcset="{{ $.Params.content.sections.liquidity_mining.image }}.png 1x, {{ $.Params.content.sections.liquidity_mining.image }}@2x.png 2x"
               alt="DeFi app screenshot">
           </div>
           <div class="col col-lg-5 col-ul-4 mbg1">
-            <h2>{{ $.Param "content.sections.intro2.headline" }}</h2>
-            <p class="lg">{{ $.Param "content.sections.intro2.subhead" | markdownify }}</p>
+            <h2>{{ $.Param "content.sections.liquidity_mining.headline" }}</h2>
+            <p class="lg">{{ $.Param "content.sections.liquidity_mining.subhead" | markdownify }}</p>
           </div>
         </div>
       </div>
       <div class="section-slope white">
         {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
+      </div>
+    </section>
+
+    <section class="resources paper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col col-ul-5 offset-ul-1">
+            <h2>{{ $.Param "content.sections.guides.headline" }}</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="row">
+              {{ range $guide := $.Params.content.sections.guides.guides_list }}
+              <div class="resource-cta col col-md-6">
+                <div class="card">
+                  {{ with $guide.url }}
+                  <a href="{{ . | relLangURL }}">
+                  {{ else }}
+                  <div>
+                  {{ end }}
+                    <div class="resource-image">
+                      {{ readFile $guide.image | safeHTML }}
+                    </div>
+                    <h3 class="h4">
+                      {{ $guide.headline | markdownify }}
+                    </h3>
+                    <div class="spacer"></div>
+                    {{ if $guide.url }}
+                    <div class="btn">
+                      {{ $guide.label }}
+                    </div>
+                    {{ else }}
+                    <div>Coming soon…</div>
+                    {{ end }}
+                    <div class="bg"></div>
+                  {{ with $guide.url }}
+                  </a>
+                  {{ else }}
+                  </div>
+                  {{ end }}
+                </div>
+              </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -112,6 +144,20 @@
               </div>
               {{ end }}
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-slope day">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
+      </div>
+    </section>
+
+    <section class="risks day">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col col-ul-5 offset-ul-1">
+            <h2>{{ $.Param "content.sections.risks.headline" }}</h2>
+            <p class="lg">{{ $.Param "content.sections.risks.subhead" | markdownify }}</p>
           </div>
         </div>
       </div>

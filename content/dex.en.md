@@ -1,17 +1,19 @@
 ---
-title: App
-type: app
-long_title: Send and receive DFI and tokens, swap on the DEX, mine liquidity and more from the DeFiChain wallet app. Available for Windows, macOS and Linux.
+title: DEX
+type: dex
+long_title: Swap on the DEX, mine liquidity and more, with the DeFiChain wallet app. Available for Windows, macOS and Linux.
+aliases:
+  - /app/
 menu:
   main:
-    weight: 50
+    weight: 45
   footer:
-    weight: 50
+    weight: 45
 meta:
-  description: Send and receive DFI and tokens, swap on the DEX, mine liquidity and more from the DeFiChain wallet app. Available for Windows, macOS and Linux.
+  description: Swap on the DEX, mine liquidity and more, with the DeFiChain wallet app. Available for Windows, macOS and Linux.
   og:
-    title: DeFiChain wallet app
-    description: Send and receive DFI and tokens, swap on the DEX, mine liquidity and more from the DeFiChain wallet app. Available for Windows, macOS and Linux.
+    title: DeFiChain DEX
+    description: Swap on the DEX, mine liquidity and more, with the DeFiChain wallet app. Available for Windows, macOS and Linux.
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
@@ -20,21 +22,38 @@ content:
   sections:
     hero:
       name: hero
-      headline: App
-      subhead: Send and receive DFI and tokens, swap on the DEX, mine liquidity and more from the DeFiChain wallet app. Available for Windows, macOS and Linux.
+      headline: Decentralized Exchange
+      subhead: Swap and arbitrage on the DEX, mine liquidity for up to 100x high yields, and more, with the DeFiChain wallet app. Available for Windows, macOS and Linux.
       cta:
         label: Download now
         url: /downloads
-    intro:
-      headline: New! Swap using the Decentralize Exchange
-      subhead: Swap DFI, BTC, ETH, USDT and soon other tokens in DeFiChain’s non-custodial and truly Decentralized Exchange (DEX), from right within the app. Transact using the built-in HD wallet. Control your own private key easily with recovery seed phrase support.
       image: /img/app/dex
-    intro2:
+    liquidity_mining:
       headline: New! Liquidity mining
       subhead: Liquidity mine for potentially high yields, from right within the app. Supply liquidity to the ETH, BTC and USDT pool pairs to power the DEX, and earn fees and returns at high annual yields. Withdraw your liquidity at any time.
       image: /img/app/liquidity
+    guides:
+      name: guides
+      headline: How-to guides
+      guides_list:
+        - image: /static/svg/icons/icon-whitepaper.svg
+          headline: Installing and using DeFi desktop app (GUI).
+          label: Read guide
+          url: /learn/defi-app-how-to
+        - image: /static/svg/icons/icon-whitepaper.svg
+          headline: Swap and arbitrage on the DeFi app DEX
+          label: Read guide
+          # url: /learn/using-the-dex
+        - image: /static/svg/icons/icon-whitepaper.svg
+          headline: Obtaining wrapped BTH/ETH/USDT
+          label: Read guide
+          # url: /learn/liquidity-mining
+        - image: /static/svg/icons/icon-whitepaper.svg
+          headline: How to liquidity mine with DeFi app
+          label: Read guide
+          # url: /learn/obtaining-wrapped-tokens
     features:
-      headline: Features
+      headline: Other wallet features
       features_list:
         - icon: /static/svg/icons/feature/wallet.svg
           title: HD wallet
@@ -63,6 +82,9 @@ content:
         - icon: /static/svg/icons/feature/network.svg
           title: Network selection
           description: The app supports easy connecting and switching between Mainnet and Testnet.
+    risks:
+      headline: A note about risks
+      subhead: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     insiders:
       headline: Join the DeFiChain Insiders community.
       subhead: The DeFiChain movement is looking for those with the passion and reach to spread the movement — register below.

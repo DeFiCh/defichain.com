@@ -47,11 +47,11 @@ content:
         - image: /static/svg/icons/icon-whitepaper.svg
           headline: Obtaining wrapped BTH/ETH/USDT
           label: Read guide
-          # url: /learn/liquidity-mining
+          url: /learn/obtaining-wrapped-tokens
         - image: /static/svg/icons/icon-whitepaper.svg
           headline: How to liquidity mine with DeFi app
           label: Read guide
-          # url: /learn/obtaining-wrapped-tokens
+          # url: /learn/liquidity-mining
     features:
       headline: Other wallet features
       features_list:

@@ -1186,6 +1186,79 @@ body.dex {
 }
 
 section.liquidity_mining {
+  .lm-apys {
+    padding-bottom: $section-padding-bottom;
+
+    @include media(">lg") {
+      padding-bottom: $section-padding-bottom-lg;
+    }
+  }
+
+  .lm-apy {
+    text-align: center;
+  }
+
+  .apy-coin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .apy-coin-icons {
+    position: relative;
+    width: 56px;
+    height: 32px;
+    margin-right: 8px;
+
+    svg {
+      position: absolute;
+      top: 0;
+
+      &:nth-child(1) {
+        left: 0;
+        z-index: 1;
+      }
+
+      &:nth-child(2) {
+        z-index: 0;
+        left: 24px;
+      }
+    }
+  }
+
+  .apy-value {
+    font-size: $h2-font-size;
+    line-height: $h2-line-height;
+    font-weight: $h2-font-weight;
+    height: $h2-line-height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .spinner {
+      display: none;
+    }
+
+    &.loading {
+      .spinner {
+        display: block;
+        height: 12px;
+        line-height: 12px;
+
+        > span {
+          vertical-align: text-top;
+          background-color: $color-ui-black40;
+        }
+      }
+    }
+  }
+
+  .apy-label {
+    color: $color-ui-black60;
+    font-weight: $font-weight-medium;
+  }
+
   .screenshot {
     display: flex;
     justify-content: center;

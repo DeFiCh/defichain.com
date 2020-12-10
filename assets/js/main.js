@@ -28,6 +28,30 @@ $(function () {
     });
   }
 
+  // Fetch LM APYs
+  if ($(".apy-eth-dfi").length > 0) {
+    var lpDailyReward;
+    var lpRewardPct;
+    var lpETHDFIRewardOct;
+    var lpBTCDFIRewardOct;
+    var lpUSDTDFIRewardOct;
+    $.ajax({
+      url: "https://api.defichain.io/v1/getgov?name=LP_DAILY_DFI_REWARD&network=mainnet",
+      success: function (data) {
+        lpDailyReward = data.LP_DAILY_DFI_REWARD;
+
+        $.ajax({
+          url: "https://api.defichain.io/v1/listpoolpairs?start=0&limit=500&network=mainnet&including_start=true",
+          success: function (data) {
+            lpETHDFIRewardOct = data[4].rewardPct;
+            lpBTCDFIRewardOct = data[5].rewardPct;
+            lpUSDTDFIRewardOct = data[6].rewardPct;
+          }
+        });
+      }
+    });
+  }
+
   // FAQ toggles
   function storeAnswerHeights() {
     $('.faq-a').css({
@@ -210,13 +234,13 @@ $(function () {
     });
 
     $("#TableOfContents").stick_in_parent({
-      offset_top: 144
+      offset_top: 192
     });
 
     $.localScroll({
       duration: 500,
       offset: {
-        top: -144
+        top: -192
       },
       hash: true,
     });

@@ -58,6 +58,51 @@
     <section class="liquidity_mining white">
       <div class="container-fluid">
         <div class="row">
+          <div class="col col-ul-10 offset-ul-1">
+            <div class="row lm-apys">
+              <div class="col col-md-4 lm-apy">
+                <div class="apy-coin apy-eth-dfi">
+                  <div class="apy-coin-icons">
+                    {{ readFile "/static/svg/coins/icon-coin-eth.svg" | safeHTML }}
+                    {{ readFile "/static/svg/coins/icon-coin-dfi.svg" | safeHTML }}
+                  </div>
+                  <div>ETH-DFI</div>
+                </div>
+                <div class="apy-value loading">
+                  <span class="spinner"><span class="b1"></span><span class="b2"></span><span class="b3"></span></span>
+                </div>
+                <div class="apy-label">APY</div>
+              </div>
+              <div class="col col-md-4 lm-apy">
+                <div class="apy-coin apy-btc-dfi">
+                  <div class="apy-coin-icons">
+                    {{ readFile "/static/svg/coins/icon-coin-btc.svg" | safeHTML }}
+                    {{ readFile "/static/svg/coins/icon-coin-dfi.svg" | safeHTML }}
+                  </div>
+                  <div>BTC-DFI</div>
+                </div>
+                <div class="apy-value loading">
+                  <span class="spinner"><span class="b1"></span><span class="b2"></span><span class="b3"></span></span>
+                </div>
+                <div class="apy-label">APY</div>
+              </div>
+              <div class="col col-md-4 lm-apy">
+                <div class="apy-coin apy-usdt-dfi">
+                  <div class="apy-coin-icons">
+                    {{ readFile "/static/svg/coins/icon-coin-usdt.svg" | safeHTML }}
+                    {{ readFile "/static/svg/coins/icon-coin-dfi.svg" | safeHTML }}
+                  </div>
+                  <div>USDT-DFI</div>
+                </div>
+                <div class="apy-value loading">
+                  <span class="spinner"><span class="b1"></span><span class="b2"></span><span class="b3"></span></span>
+                </div>
+                <div class="apy-label">APY</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
           <div class="image col col-lg-8 col-ul-7 screenshot">
             <img
               src="{{ $.Params.content.sections.liquidity_mining.image }}.png"

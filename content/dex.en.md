@@ -51,7 +51,7 @@ content:
         - image: /static/svg/icons/icon-whitepaper.svg
           headline: How to liquidity mine with DeFi app
           label: Read guide
-          # url: /learn/liquidity-mining
+          url: /learn/liquidity-mining-how-to
     features:
       headline: Other wallet features
       features_list:

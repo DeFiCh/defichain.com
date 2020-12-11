@@ -6,7 +6,7 @@ cta_to: Read
 meta:
   description: Step-by-step on how to liquidity mine with DeFi app
   og:
-    title: Obtaining wrapped tokens
+    title: Liquidity mining with DeFi app
     description: Step-by-step on how to liquidity mine with DeFi app
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
@@ -105,5 +105,11 @@ Enter the amount of liquidity you wish to remove, either by typing the percentag
 Then click **CONTINUE**.
 
 ### Step 3: Confirmation
+
+Verify the amount of liquidity to remove and receive address, then press **CONFIRM**.
+
+<p><img src="/img/guides/liquidity-mining/liquidity-remove-confirm.png" srcset="/img/guides/liquidity-mining/liquidity-remove-confirm.png 1x, /img/guides/liquidity-mining/liquidity-remove-confirm@2x.png 2x"></p>
+
+Wait for the removal transaction to be prepared and processed.
 
 <p><img src="/img/guides/liquidity-mining/liquidity-remove-confirm.png" srcset="/img/guides/liquidity-mining/liquidity-remove-confirm.png 1x, /img/guides/liquidity-mining/liquidity-remove-confirm@2x.png 2x"></p>

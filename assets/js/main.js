@@ -30,11 +30,29 @@ $(function () {
 
   // Fetch LM APYs
   if ($(".apy-eth-dfi").length > 0) {
+    var apyAjustment = 30/37;
     var lpDailyReward;
-    var lpRewardPct;
-    var lpETHDFIRewardOct;
-    var lpBTCDFIRewardOct;
-    var lpUSDTDFIRewardOct;
+    var lpETHDFIRewardPct;
+    var lpBTCDFIRewardPct;
+    var lpUSDTDFIRewardPct;
+    var lpETHDFIReserveA;
+    var lpBTCDFIReserveA;
+    var lpUSDTDFIReserveA;
+    var lpETHDFIReserveB;
+    var lpBTCDFIReserveB;
+    var lpUSDTDFIReserveB;
+    var lpETHDFITotalLiquidity;
+    var lpBTCDFITotalLiquidity;
+    var lpUSDTDFITotalLiquidity;
+    var lpETHPrice;
+    var lpBTCPrice;
+    var lpUSDTPrice;
+    var lpETHDFIYearlyReward;
+    var lpBTCDFIYearlyReward;
+    var lpUSDTDFIYearlyReward;
+    var lpETHDFIAPY;
+    var lpBTCDFIAPY;
+    var lpUSDTDFIAPY;
     $.ajax({
       url: "https://api.defichain.io/v1/getgov?name=LP_DAILY_DFI_REWARD&network=mainnet",
       success: function (data) {
@@ -43,9 +61,50 @@ $(function () {
         $.ajax({
           url: "https://api.defichain.io/v1/listpoolpairs?start=0&limit=500&network=mainnet&including_start=true",
           success: function (data) {
-            lpETHDFIRewardOct = data[4].rewardPct;
-            lpBTCDFIRewardOct = data[5].rewardPct;
-            lpUSDTDFIRewardOct = data[6].rewardPct;
+            // Reward Percentage
+            lpETHDFIRewardPct = data[4].rewardPct;
+            lpBTCDFIRewardPct = data[5].rewardPct;
+            lpUSDTDFIRewardPct = data[6].rewardPct;
+            // Reserve A
+            lpETHDFIReserveA = data[4].reserveA;
+            lpBTCDFIReserveA = data[5].reserveA;
+            lpUSDTDFIReserveA = data[6].reserveA;
+            // Reserve B
+            lpETHDFIReserveB = data[4].reserveB;
+            lpBTCDFIReserveB = data[5].reserveB;
+            lpUSDTDFIReserveB = data[6].reserveB;
+            $.ajax({
+              url: "https://api.coingecko.com/api/v3/simple/price?vs_currencies=usd&ids=,ethereum,defichain,bitcoin,tether",
+              success: function (data) {
+                lpETHPrice = data.ethereum.usd;
+                lpBTCPrice = data.bitcoin.usd;
+                lpUSDTPrice = data.tether.usd;
+                lpDFIPrice = data.defichain.usd;
+                // Liquidity Reserve
+                lpETHDFILiquidityReserveA = lpETHDFIReserveA * lpETHPrice;
+                lpETHDFILiquidityReserveB = lpETHDFIReserveB * lpDFIPrice;
+                lpBTCDFILiquidityReserveA = lpBTCDFIReserveA * lpBTCPrice;
+                lpBTCDFILiquidityReserveB = lpBTCDFIReserveB * lpDFIPrice;
+                lpUSDTDFILiquidityReserveA = lpUSDTDFIReserveA * lpUSDTPrice;
+                lpUSDTDFILiquidityReserveB = lpUSDTDFIReserveB * lpDFIPrice;
+                // Total Liquidity
+                lpETHDFITotalLiquidity = lpETHDFILiquidityReserveA + lpETHDFILiquidityReserveB;
+                lpBTCDFITotalLiquidity = lpBTCDFILiquidityReserveA + lpBTCDFILiquidityReserveB;
+                lpUSDTDFITotalLiquidity = lpUSDTDFILiquidityReserveA + lpUSDTDFILiquidityReserveB;
+                // Yearly rewards
+                lpETHDFIYearlyReward = lpDailyReward * lpETHDFIRewardPct * 365 * lpDFIPrice;
+                lpBTCDFIYearlyReward = lpDailyReward * lpBTCDFIRewardPct * 365 * lpDFIPrice;
+                lpUSDTDFIYearlyReward = lpDailyReward * lpUSDTDFIRewardPct * 365 * lpDFIPrice;
+                // APY
+                lpETHDFIAPY = Math.round((((lpETHDFIYearlyReward * 100) / lpETHDFITotalLiquidity) * apyAjustment) * 100) / 100;
+                lpBTCDFIAPY = Math.round((((lpBTCDFIYearlyReward * 100) / lpBTCDFITotalLiquidity) * apyAjustment) * 100) / 100;
+                lpUSDTDFIAPY = Math.round((((lpUSDTDFIYearlyReward * 100) / lpUSDTDFITotalLiquidity) * apyAjustment) * 100) / 100;
+                // DOM
+                $('.apy-eth-dfi .apy-value').removeClass('loading').append(lpETHDFIAPY + "%");
+                $('.apy-btc-dfi .apy-value').removeClass('loading').append(lpBTCDFIAPY + "%");
+                $('.apy-usdt-dfi .apy-value').removeClass('loading').append(lpUSDTDFIAPY + "%");
+              }
+            });
           }
         });
       }

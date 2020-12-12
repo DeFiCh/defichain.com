@@ -43,7 +43,7 @@ content:
         - image: /static/svg/icons/icon-whitepaper.svg
           headline: Swap and arbitrage on the DeFi app DEX
           label: Read guide
-          # url: /learn/using-the-dex
+          url: /learn/swap-and-arbitrage
         - image: /static/svg/icons/icon-whitepaper.svg
           headline: Obtaining wrapped BTH/ETH/USDT
           label: Read guide

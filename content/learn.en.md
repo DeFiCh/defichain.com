@@ -50,6 +50,18 @@ content:
           headline: Installing and using DeFi desktop app (GUI).
           label: Read guide
           url: /learn/defi-app-how-to
+        - image: /static/svg/icons/icon-whitepaper.svg
+          headline: Swap and arbitrage on the DeFi app DEX
+          label: Read guide
+          url: /learn/swap-and-arbitrage
+        - image: /static/svg/icons/icon-whitepaper.svg
+          headline: Obtaining wrapped BTH/ETH/USDT
+          label: Read guide
+          url: /learn/obtaining-wrapped-tokens
+        - image: /static/svg/icons/icon-whitepaper.svg
+          headline: How to liquidity mine with DeFi app
+          label: Read guide
+          url: /learn/liquidity-mining-how-to
     faq:
       headline: FAQ
       faq_list:

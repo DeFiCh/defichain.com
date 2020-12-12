@@ -20,25 +20,31 @@ content:
       subhead: A step-by-step guide.
 ---
 
+To supply liquidity to the DEX and to liquidity mine, you will need not just DFI but tokens for the other side of the pool pair you wish to supply liquidity to. DeFiChain currently only support wrapped tokens, namely wrapped ETH, BTC and USDT.
+
+If you also need DFI, you can watch our guide on [where and how to buy DFI](https://www.youtube.com/watch?v=vtM-k7E-HPA).
+
 ## Method 1: Using the DEX
 
-## Step 1: Launch the DeFiChain app
+The first method is right within the DeFi app. Using the DEX, and depending on the balance and ratio of the pool pairs, you may end up swapping the tokens at a lower price than if you would have done it via the second method – using CakeDeFi.
 
-Don't have the app installed yet? [Click here for a step-by-step guide on how to do so.](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
+### Step 1: Launch the DeFiChain app
 
-## Step 2: Make sure you have DFI in your wallet
+Don’t have the app installed yet? [Click here for a step-by-step guide on how to do so.](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
+
+### Step 2: Make sure you have DFI in your wallet
 
 After opening the DeFiChain App, click **Wallets** in the sidebar. Make sure you have funds (DFI) in wallet, as DFI is needed for transaction fees. If you don't yet have DFI, [here is a step-by-step tutorial on how and where you can buy DFI.](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)
 
 <p><img src="/img/guides/installing-defi-app/wallets-choose.png" srcset="/img/guides/installing-defi-app/wallets-choose.png 1x, /img/guides/installing-defi-app/wallets-choose@2x.png 2x"></p>
 
-## Step 3: Navigate to the DEX (Decentralized Exchange)
+### Step 3: Navigate to the DEX (Decentralized Exchange)
 
 Click on **DEX** in the sidebar to access the Decentralized Exchange.
 
 <p><img src="/img/guides/obtaining-tokens/go-to-dex.png" srcset="/img/guides/obtaining-tokens/go-to-dex.png 1x, /img/guides/obtaining-tokens/go-to-dex@2x.png 2x"></p>
 
-## Step 4: Perform a swap
+### Step 4: Perform a swap
 
 The DEX provides a way for you to swap one coin for another. In this case, select DFI in the left **From** field.
 
@@ -62,13 +68,13 @@ Review the transaction amounts and fees. Then click **SWAP** to confirm.
 
 ## Method 2: Using CakeDeFi
 
-## Step 1: Login to your CakeDeFi account
+### Step 1: Login to your CakeDeFi account
 
 Login to your [CakeDeFi account](https://www.cakedefi.com/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch). If you don't have one yet, [click here to register.](https://www.cakedefi.com/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch).
 
 _Note: If you are registering a new account, you will need to complete identity verification (KYC)._
 
-## Step 2: Funds in CakeDeFi
+### Step 2: Funds in CakeDeFi
 
 From your [CakeDeFi Assets page](https://pool.cakedefi.com/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch#/wallets), you can withdraw ETH, BTC or USDT to DeFiChain. If you don't currently have these coins, or you'd like to obtain more, you can either:
 
@@ -77,7 +83,7 @@ From your [CakeDeFi Assets page](https://pool.cakedefi.com/?utm_source=defichain
 
 <div class="mbg1"><img src="/img/guides/obtaining-tokens/cake-assets.png" srcset="/img/guides/obtaining-tokens/cake-assets.png 1x, /img/guides/obtaining-tokens/cake-assets@2x.png 2x"></div>
 
-## Step 3: Withdrawal
+### Step 3: Withdrawal
 
 Once your ETH, BTC or USDT is in your CakeDeFi Assets, you can withdraw them. Click the corresponding **WITHDRAW** button for the token you want to withdraw.
 

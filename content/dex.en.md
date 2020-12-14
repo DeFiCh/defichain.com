@@ -45,7 +45,7 @@ content:
           label: Read guide
           url: /learn/swap-and-arbitrage
         - image: /static/svg/icons/icon-whitepaper.svg
-          headline: Obtaining wrapped BTH/ETH/USDT
+          headline: Obtaining wrapped ETH/BTC/USDT
           label: Read guide
           url: /learn/obtaining-wrapped-tokens
         - image: /static/svg/icons/icon-whitepaper.svg

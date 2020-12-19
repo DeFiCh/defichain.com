@@ -6,7 +6,7 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "^9.8.0",
+    "autoprefixer": "^9.8.6",
     "gulp": "^4.0.2",
     "gulp-cheerio": "^1.0.0",
     "gulp-inject": "^5.0.5",
@@ -14,7 +14,7 @@
     "gulp-svgmin": "^2.2.0",
     "gulp-svgstore": "^7.0.1",
     "include-media": "^1.4.9",
-    "postcss-cli": "^7.1.1"
+    "postcss-cli": "^7.1.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

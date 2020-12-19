@@ -1,6 +1,6 @@
 ---
 title: Imprint
-type: white-paper
+type: article
 long_title: Imprint
 meta:
   description: Imprint

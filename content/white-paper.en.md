@@ -1,6 +1,6 @@
 ---
 title: White paper
-type: white-paper
+type: article
 long_title: DeFiChain white paper
 cta_to: Read
 theme:

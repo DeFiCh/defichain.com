@@ -1,6 +1,6 @@
 ---
 title: Swap and arbitrage
-type: white-paper
+type: article
 long_title: A step-by-step guide to swapping and arbitraging on the DEX
 cta_to: Read
 meta:

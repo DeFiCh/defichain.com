@@ -1,6 +1,6 @@
 ---
 title: DeFiChain app how-to
-type: white-paper
+type: article
 long_title: A step-by-step guide to using and installing the DeFiChain app.
 cta_to: Read
 meta:

@@ -1,6 +1,6 @@
 ---
 title: Obtaining wrapped tokens
-type: white-paper
+type: article
 long_title: A step-by-step guide to obtaining wrapped BTC/ETH/USDT via the DEX or CakeDefi
 cta_to: Read
 meta:

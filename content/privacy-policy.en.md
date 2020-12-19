@@ -1,6 +1,6 @@
 ---
 title: Privacy Policy
-type: white-paper
+type: article
 long_title: Privacy Policy
 meta:
   description: Privacy Policy

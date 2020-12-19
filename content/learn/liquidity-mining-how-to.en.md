@@ -1,6 +1,6 @@
 ---
 title: Liquidity mining with DeFi app
-type: white-paper
+type: article
 long_title: Step-by-step on how to liquidity mine with DeFi app
 cta_to: Read
 meta:

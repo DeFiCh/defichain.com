@@ -1,6 +1,6 @@
 ---
 title: Run a masternode
-type: white-paper
+type: article
 long_title: How to run a Defichain masternode on Linux/Mac OS
 cta_to: Read
 meta:

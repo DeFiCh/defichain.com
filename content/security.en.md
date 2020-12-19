@@ -1,6 +1,6 @@
 ---
 title: Security
-type: white-paper
+type: article
 long_title: Security
 meta:
   description: Security audits

@@ -2111,18 +2111,16 @@ section.white-paper {
   }
 
   img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-    border: $base-border-style;
-  }
-
-  p > img {
     width: auto;
-    max-width: auto;
-    border: none;
+    max-width: calc(100% + 2 * #{$grid-gutter});
+    height: auto;
+    margin: 0 #{-$grid-gutter $grid-gutter};
+    display: block;
+
+    @include media(">lg") {
+      max-width: 100%;
+      margin: 0 auto #{$grid-gutter};
+    }
   }
 
   .members {

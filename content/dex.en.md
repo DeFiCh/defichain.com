@@ -52,6 +52,10 @@ content:
           headline: How to liquidity mine with DeFi app
           label: Read guide
           url: /learn/liquidity-mining-how-to
+        - image: /static/svg/icons/icon-whitepaper.svg
+          headline: "Step-by-Step: Changing DFI-Token to DFI-Coin"
+          label: Read on Reddit
+          url: https://www.reddit.com/r/defiblockchain/comments/kb10d3/stepbystep_changing_dfitoken_to_dficoin/
     features:
       headline: Other wallet features
       features_list:

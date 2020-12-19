@@ -144,7 +144,7 @@ content:
                 alt: DeFi logo
             - month: Jun
               status: past
-              title: DFI token started trading on LATOKEN.
+              title: $DFI coin started trading on LATOKEN.
               url: https://exchange.latoken.com/exchange/DFI-USDT
               image:
                 x1: /img/timeline/2020/dfi-latoken.png

@@ -26,7 +26,7 @@ content:
       headline: Contribute to DeFiChain
       become_developer:
         headline: Become a _developer_
-        description: Learn how you can build on DeFiChain and use DFI token.
+        description: Learn how you can build on DeFiChain and use $DFI coin.
         cta:
           label: Developers
           url: /developers

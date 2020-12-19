@@ -1,20 +1,21 @@
 ---
-title: DFI Token
-type: token
-long_title: Learn about and acquire the DFI token. Join the DeFiChain Insiders.
+title: $DFI
+type: dfi
+long_title: Learn about and acquire the $DFI coin. Join the DeFiChain Insiders.
 cta_to: More
 aliases:
   - /token/
+  - /dfi-token/
 menu:
   main:
     weight: 40
   footer:
     weight: 40
 meta:
-  description: Learn about the DFI token and its utility, distribution, airdrops and how to acquire DFI. Join the DeFiChain Insiders.
+  description: Learn about the $DFI coin nd its utility, distribution, airdrops and how to acquire DFI. Join the DeFiChain Insiders.
   og:
-    title: Token
-    description: Learn about the DFI token and its utility, distribution, airdrops and how to acquire DFI. Join the DeFiChain Insiders.
+    title: $DFI
+    description: Learn about the $DFI coin and its utility, distribution, airdrops and how to acquire DFI. Join the DeFiChain Insiders.
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
@@ -23,12 +24,12 @@ content:
   sections:
     hero:
       name: hero
-      headline: Token
-      subhead: Learn about and acquire the DFI token. Join the DeFiChain Insiders.
+      headline: $DFI
+      subhead: Learn about and acquire the $DFI coin. Join the DeFiChain Insiders.
     dfi_token:
       name: dfi-token
-      headline: DFI Token
-      subhead: "The DFI token is an integral unit of account in DeFiChain. The DeFi Foundation issued roughly 600 million DFI on May 11<sup>th</sup>, 2020. The current circulating supply (with staking and liquidity mining) is available at [DeFiChain Explorer](http://explorer.defichain.io/)."
+      headline: $DFI coin
+      subhead: "The $DFI coin is an integral unit of account in DeFiChain. The DeFi Foundation issued roughly 600 million DFI on May 11<sup>th</sup>, 2020. The current circulating supply (with staking and liquidity mining) is available at [DeFiChain Explorer](http://explorer.defichain.io/)."
       note: "Important: DeFi chain is a community project. There was/is no Initial Coin Offering, only free airdrops."
       image: /static/svg/physical-coin.svg
     stats:
@@ -44,7 +45,7 @@ content:
           description: See available exchanges at CoinMarketCap.
           url: ==PENDING==
     utility:
-      headline: DFI Token utility
+      headline: $DFI coin utility
       utility_list:
         - icon: /static/svg/icons/utility/fees.svg
           title: Fees
@@ -63,7 +64,7 @@ content:
           description: Submit a community budget proposal for 500 DFI (non-refundable).
     distribution:
       headline: Initial Token Distribution
-      subhead: Of the 1.2 billion DFI tokens, 49% will be in the initial supply, with the rest issued to masternode holders over time.
+      subhead: Of the 1.2 billion $DFI coins, 49% will be in the initial supply, with the rest issued to masternode holders over time.
       chart:
         initial_supply: Initial supply
         masternodes: Masternodes
@@ -72,8 +73,8 @@ content:
         caption: Of the initial supply, 49% will be kept by the DeFi Foundation. The rest may be distributed to external partners, to fund the initial development.
       image: /static/svg/initial-token-distribution.svg
     acquiring:
-      headline: Acquiring DFI tokens
-      subhead: DFI tokens will be issued to users and partners with an interest in utilizing and participating in the ecosystem.
+      headline: Acquiring $DFI coins
+      subhead: $DFI coins will be issued to users and partners with an interest in utilizing and participating in the ecosystem.
       exchanges:
         icon: /static/svg/icons/way-to-acquire/exchanges.svg
         title: Exchanges

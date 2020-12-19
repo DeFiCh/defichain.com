@@ -22,7 +22,7 @@ content:
 
 ## Introduction
 
-Setting up a masternode on DefiChain allows you to participate in the consensus protocol and receive staking awards. One thing to note is that in order to set up a masternode, you must have a minimum of 1 million DFI tokens.
+Setting up a masternode on DefiChain allows you to participate in the consensus protocol and receive staking awards. One thing to note is that in order to set up a masternode, you must have a minimum of 1 million $DFI coins.
 
 > NOTE: This how-to expects some basic familiarity with the Linux terminal
 
@@ -77,7 +77,7 @@ into the file and hit `Ctrl-X` then enter to save the file.
 
 ### Step 4 - Setting up owner address with sufficient funds
 
-In order to run a masternode, you must own at least 1 million DFI tokens. Let's set up an address with sufficient funds to use as an owner. Masternodes currently only support legacy addresses, so create a masternode address using:
+In order to run a masternode, you must own at least 1 million $DFI coins. Let's set up an address with sufficient funds to use as an owner. Masternodes currently only support legacy addresses, so create a masternode address using:
 
 ```
 ~/.defi/defi-cli getnewaddress "<label>" legacy

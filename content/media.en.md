@@ -1,16 +1,16 @@
 ---
 title: Media
 type: media
-long_title: DeFiChain and DFI Token in the news and media.
+long_title: DeFiChain and $DFI coin in the news and media.
 cta_to: Read
 menu:
   footer:
     weight: 70
 meta:
-  description: DeFiChain and DFI Token in the news and media. Download media resources and assets.
+  description: DeFiChain and $DFI coin in the news and media. Download media resources and assets.
   og:
     title: Media
-    description: DeFiChain and DFI Token in the news and media. Download media resources and assets.
+    description: DeFiChain and $DFI coin in the news and media. Download media resources and assets.
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
@@ -60,7 +60,7 @@ content:
           date: 21 Sep, 2020
           image: /svg/press/yahoo.svg
           url: https://finance.yahoo.com/news/bringing-defi-cefi-defichain-announces-221500922.html
-        - title: The DFI Token - A Financial Tool for the Digital Economy
+        - title: The $DFI coin - A Financial Tool for the Digital Economy
           source: Crypto Folds
           date: 12 Sep, 2020
           image: /img/press/cryptofolds.png
@@ -85,7 +85,7 @@ content:
           date: 27 Jun, 2020
           image: /svg/press/btc-echo.svg
           url: https://www.btc-echo.de/200-prozent-mit-compound-defi/
-        - title: The DFI token starts the exchange on LAToken!
+        - title: The $DFI coin starts the exchange on LAToken!
           source: BitConio
           date: 18 Jun, 2020
           image: /img/press/bitconio.png

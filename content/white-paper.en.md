@@ -281,7 +281,7 @@ Initial implementations of decentralized lending are fully collateralized, and b
 
 ### Decentralized Wrapping of Tokens
 
-An important issue for DeFi is the ability to work with a variety of cryptoassets, directly, on-chain. While the transaction on the chain is done via the native DFI token, DeFiChain can use Bitcoin, Ethereum, ERC-20, or any other cryptoasset through wrapping.
+An important issue for DeFi is the ability to work with a variety of cryptoassets, directly, on-chain. While the transaction on the chain is done via the native $DFI coin, DeFiChain can use Bitcoin, Ethereum, ERC-20, or any other cryptoasset through wrapping.
 
 Wrapping allows the utilization of any digital asset such that the underlying asset is maintained, but it can transact on a different blockchain. DeFiChain provides a decentralized wrapping mechanism which allows the owner of the crytpoasset to maintain pegging to the asset and utilize a trustless wrapping mechanism that does not rely on any third party as a guarantor of the wrapping or asset. The wrapped tokens can be easily exchanged for their original value on their respective blockchain. 
 Creating a wrapped token on DeFiChain is a rewarded activity, such that there is incentive for cryptocurrency holders to create wrapped tokens on the DeFi network as a form of rewarded decentralized financial investment.
@@ -797,15 +797,15 @@ Thus Alice can obtain a compounded long position on DFI without putting in extra
 
 ---
 
-## DFI token
+## $DFI coin
 
-The DFI token will be the integral unit of account in DeFiChain ecosystem.
+The $DFI coin will be the integral unit of account in DeFiChain ecosystem.
 
 The DeFi Foundation will be issuing the DeFi utility token, DFI, capped at 1,200,000,000 (1.2 billion) for throughout its lifetime. There will only ever be 1.2 billion DFIs created.
 
 DFI is divisible up to 8 decimal places.
 
-### DFI Token Utility
+### $DFI coin Utility
 
 - DFI is used for fee payment for all transactions and smart contracts on DeFiChain.
   - Fee payment for decentralized exchange transactions
@@ -872,8 +872,8 @@ For governance decisions, only the Foundation may submit proposals. Proposals ar
 
 ### Initial Token Distribution
 
-Of the roughly 1.2 billion DFI tokens 49% will be issued to the DeFi Foundation at the start. The rest will be issued to Masternode holders over time.
-Of the 49% initially issued DFI tokens, 49% will be kept by the DeFi Foundation. The rest may be distributed to accredited investors, large funds and institutions, collectively known as external partners, to fund the initial development of DeFiChain. In order to decentralize the holdings of DFIs as much as possible the DeFi foundation may not keep more than 49% of all initially issued tokens. The use of potential proceedings of the tokens will be decided by the DeFi Foundation board but will exclusively be directed towards the adoption and development of DeFiChain.
+Of the roughly 1.2 billion $DFI coins 49% will be issued to the DeFi Foundation at the start. The rest will be issued to Masternode holders over time.
+Of the 49% initially issued $DFI coins, 49% will be kept by the DeFi Foundation. The rest may be distributed to accredited investors, large funds and institutions, collectively known as external partners, to fund the initial development of DeFiChain. In order to decentralize the holdings of DFIs as much as possible the DeFi foundation may not keep more than 49% of all initially issued tokens. The use of potential proceedings of the tokens will be decided by the DeFi Foundation board but will exclusively be directed towards the adoption and development of DeFiChain.
 
 For any avoidance of doubt, there will NOT be a public ICO.
 
@@ -1063,9 +1063,9 @@ The proposed staking schedule for the first 10 years is according to the followi
   </table>
 </div>
 
-### Acquiring DFI Tokens
+### Acquiring $DFI coins
 
-DFI tokens will be issued only to the users of DeFiChain or partners with an interest in utilizing and participating in the ecosystem. There will be NO public sale or public token offering. Following are the only ways to get DFI tokens:
+$DFI coins will be issued only to the users of DeFiChain or partners with an interest in utilizing and participating in the ecosystem. There will be NO public sale or public token offering. Following are the only ways to get $DFI coins:
 
 - Institutional investors, accredited investors and funds who are interested in the use of DeFiChain can contact the DeFi founders at (partners@defichain.com).
 - Over time, DFI will be available on staking platforms (such as www.CakeDeFi.com) and on selected exchanges.
@@ -1153,7 +1153,7 @@ Unlike other blockchains, DeFiChain will be balanced between marketing and techn
 
 ### Partnerships
 
-The DeFi Foundation will be tasked with assessing applications from ecosystem partners and providing foundation grants in the form of DFI tokens to developers and contributors to DeFiChain. Many open source projects and blockchain developers today are looking for the right blockchain project in order to develop their DeFi applications, and the prospect of a dedicated DeFiChain, backed by industry leaders is appealing.
+The DeFi Foundation will be tasked with assessing applications from ecosystem partners and providing foundation grants in the form of $DFI coins to developers and contributors to DeFiChain. Many open source projects and blockchain developers today are looking for the right blockchain project in order to develop their DeFi applications, and the prospect of a dedicated DeFiChain, backed by industry leaders is appealing.
 
 The DeFi Foundation will undertake a variety of efforts to choose the best projects for the expansion of DeFiChain:
 

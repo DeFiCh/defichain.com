@@ -27,9 +27,9 @@ content:
       headline: Videos on DeFiChain
       playlist:
         - id: ky0_3Brv-eI
-          title: DeFiChain and DFI token explained in 2 minutes
+          title: DeFiChain and $DFI coin explained in 2 minutes
         - id: IGCgUSdiDF0
-          title: DeFi Chain and DFI token explained in detail
+          title: DeFi Chain and $DFI coin explained in detail
         - id: v113FEzhWqw
           title: Decentralized Finance (DeFi) explained simply
         - id: mUa29qe6Png

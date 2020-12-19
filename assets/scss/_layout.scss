@@ -2727,21 +2727,21 @@ section.closer-look {
   }
 
   > div {
-    padding-top: 8px !important;
+    padding-top: 0 !important;
     border-width: 1px !important;
     border: $base-border-style !important;
     font-family: inherit !important;
   }
 
-  > div > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > a {
+  div > div:nth-child(1) > div:nth-child(2) > span:nth-child(1) > a {
     font-size: 16px !important;
     font-weight: $font-weight-bold;
-    padding-bottom: 4px;
+    padding-bottom: 0;
     display: inline-block;
   }
 
-  > div > div:nth-child(1) > div:nth-child(1) {
-    padding-bottom: 12px !important;
+  div > div:nth-child(1) > div:nth-child(2) > span:nth-child(3) > span:nth-child(3) > span:nth-child(3) {
+    display: none;
   }
 
   > div > div:nth-child(2) > div {
@@ -2762,6 +2762,7 @@ section.closer-look {
 
   > div > div:nth-child(1) > div:nth-child(1) {
     line-height: 1 !important;
+    padding-bottom: 12px !important;
   }
 
   > div > div:nth-child(1) > div:nth-child(2) > img {

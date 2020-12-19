@@ -246,6 +246,7 @@ body > header {
     display: none;
     color: currentColor;
     position: relative;
+    margin-left: $grid-gutter;
 
     @include media("<ul") {
       display: block;
@@ -281,10 +282,6 @@ body > header {
     padding-top: $header-height;
     height: 100vh;
     background-color: map-get($brand-colors, paper);
-
-    @include media(">md") {
-      top: $header-height-md;
-    }
 
     @include media("<md", "landscape") {
       display: flex;

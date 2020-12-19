@@ -25,6 +25,16 @@ content:
     mentions:
       headline: DeFiChain covered in the press and media.
       mentions_list:
+        - title: DeFiChain – The Launch of Yield Farming
+          source: Altcoin Buzz
+          date: 16 Dec, 2020
+          image: 
+          url: https://www.altcoinbuzz.io/cryptocurrency-news/blockchain-technology/defichain-the-launch-of-yield-farming/
+        - title: DeFiChain Announces Yield Farming Launch and DEXember 100X Promotion
+          source: Cryptonews.com
+          date: 9 Dec, 2020
+          image: /svg/press/cryptonews.svg
+          url: https://cryptonews.com/news/defichain-announces-yield-farming-launch-and-dexember-100x-p-8558.htm
         - title: Stock Up DFI for Yield Farming! No Trading Fees on Bittrex Global!
           source: CoinMarketCap
           date: 2 Dec, 2020

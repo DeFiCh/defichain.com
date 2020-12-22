@@ -123,13 +123,13 @@ content:
           github: https://github.com/bvbfan
           username: bvbfan
           city: Poldiv, Bulgaria
-        - name: MarcoGuardian
-          github: https://github.com/marc0Gua4dian
-          username: marc0Gua4dian
-          city: Arkhangelsk, Russia
+        - name: Prasanna Loganathar
+          github: https://github.com/prasannavl
+          username: prasannavl
+          city: Chennai, India
         - name: RapidCoder33
-          github: https://github.com/raaapld
-          username: raaapld
+          github: https://github.com/DeFiDev
+          username: DeFiDev
           city: Saint Petersburg, Russia
     subscribe:
       name: subscribe

@@ -25,6 +25,11 @@ content:
     mentions:
       headline: DeFiChain covered in the press and media.
       mentions_list:
+        - title: The future of DeFi with DeFiChain’s U-Zyn-Chua
+          source: The Bit
+          date: 21 Dec, 2020
+          image: /svg/sources/logo-bittrex.svg
+          url: https://bittrexglobal.libsyn.com/the-future-of-defi-with-defichains-u-zyn-chua
         - title: DeFiChain – The Launch of Yield Farming
           source: Altcoin Buzz
           date: 16 Dec, 2020

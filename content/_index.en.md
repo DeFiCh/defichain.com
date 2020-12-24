@@ -21,7 +21,7 @@ content:
           url: /downloads
         - label: Buy $DFI
           type: plain
-          url: /dfi-token
+          url: https://global.bittrex.com/Market/Index?MarketName=BTC-DFI
     problem_solution:
       headline: The Post-Fintech Revolution
       subhead: From trust-based to trust-less, decentralized finance overcomes what Fintech could not solve in traditional finance.

@@ -120,11 +120,6 @@ content:
           date: 9 Apr, 2020
           image: /svg/press/wallstreetonline.svg
           url: https://www.wallstreet-online.de/nachricht/12392059-bitcoin-lending-vergleich-5-besten-crypto-plattformen/all
-        - title: "After Raising $ 80 Million for TenX ICO, Founder Is Seeking $ 7.5M for New Project DeFiChain (Bitcoin Exchange Guide), Rated: B"
-          source: BitcoinExchangeGuide
-          date: 17 Nov, 2019
-          image: 
-          url: https://bitcoinexchangeguide.com/after-raising-80-million-for-tenx-ico-founder-is-seeking-7-5m-for-new-project-defichain/
         - title: Dr. Julian Hosp im Interview – DeFi, CAKE, DeFiChain
           source: Kryptomagazin
           date: 28 Oct, 2019

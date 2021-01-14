@@ -96,10 +96,6 @@ content:
             url: https://www.coingecko.com/en/coins/defichain
             file: /svg/sources/logo-coingecko
             type: svg
-          - label: Indoex
-            url: https://international.indoex.io/trade/DFI_USDT
-            file: /svg/sources/logo-indoex
-            type: svg
           - label: Hotbit
             url: https://www.hotbit.io/exchange?symbol=DFI_USDT
             file: /img/sources/logo-hotbit

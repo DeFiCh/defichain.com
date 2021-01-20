@@ -116,34 +116,101 @@ content:
       timeline:
         - year: 2021
           events:
+            - month: Jan
+              status: past
+              title: DFIP 3, 4, 5 and 6 are approved by the community.
+              url: https://defiblockchain.medium.com/voting-results-defichain-improvement-community-proposals-45f5e81436b1
+              image:
+                x1: /img/timeline/2021/dfips3456.png
+                x2: /img/timeline/2021/dfips3456@2x.png
+                alt: DFIP 3, 4, 5, 6
+            - month: Jan
+              status: past
+              title: Q4 2020 transparency report released.
+              url: https://defichain.ghost.io/defichain-transparency-report-q4-2020/
+              image:
+                x1: /img/timeline/2021/transparency-report.png
+                x2: /img/timeline/2021/transparency-report@2x.png
+                alt: Q1 transparency report
+            - month: Jan
+              status: past
+              title: DeFiChain listed on Messari.
+              url: https://messari.io/asset/defi
+              image:
+                x1: /img/timeline/2021/messari.png
+                x2: /img/timeline/2021/messari@2x.png
+                alt: Messari listing
+            - month: Jan
+              status: future
+              title: DeFiChain listed on KuCoin.
+              url: https://www.kucoin.com/news/en-defichain-gets-listed-on-kucoin?utm_source=DFI
+              image:
+                x1: /img/timeline/2021/kucoin.png
+                x2: /img/timeline/2021/kucoin@2x.png
+                alt: KuCoin listing
             - month: Q1
               status: future
-              title: More DeFi building blocks for DApp integration.
+              title: Bitcoin anchoring implemented.
               image:
-                x1: /img/timeline/2021/building-blocks.png
-                x2: /img/timeline/2021/building-blocks@2x.png
-                alt: Building blocks
-            - month: Q2
+                x1: /img/timeline/2021/bitcoin-anchoring.png
+                x2: /img/timeline/2021/bitcoin-anchoring@2x.png
+                alt: Bitcoin anchoring
+            - month: Q1
+              status: future
+              title: Liquidity mining bonus rewards extended via airdrop funds.
+              image:
+                x1: /img/timeline/2021/lm-bonus.png
+                x2: /img/timeline/2021/lm-bonus@2x.png
+                alt: Liquidity mining bonus extended
+            - month: Q1
+              status: future
+              title: Collateral required to start a masternode lowered to 20k DFI
+              image:
+                x1: /img/timeline/2021/lower-masternode-collateral.png
+                x2: /img/timeline/2021/lower-masternode-collateral@2x.png
+                alt: Lower masternode collateral
+            - month: Q1
+              status: future
+              title: New BCH and LTC pool pairs added to DEX
+              image:
+                x1: /img/timeline/2021/bch-ltc-pairs.png
+                x2: /img/timeline/2021/bch-ltc-pairs@2x.png
+                alt: New BCH and LTC pool pairs
+            - month: Q1
+              status: future
+              title: Pink paper published on stocks trading, loan and decentralized BTC.
+              image:
+                x1: /img/timeline/2021/pink-paper-q1.png
+                x2: /img/timeline/2021/pink-paper-q1@2x.png
+                alt: Q1 pink paper
+            - month: Q1
               status: future
               title: Decentralized cross-chain asset bridge via atomic swap.
               image:
                 x1: /img/timeline/2021/atomic-swap.png
                 x2: /img/timeline/2021/atomic-swap@2x.png
                 alt: Atomic swap
+            - month: Q2
+              status: future
+              title: Futures trading in stocks, commodities and currencies.
+              image:
+                x1: /img/timeline/2021/futures-trading.png
+                x2: /img/timeline/2021/futures-trading@2x.png
+                alt: Futures trading
+            - month: Q2
+              status: future
+              title: Release of open-source DeFiChain JS library.
+              image:
+                x1: /img/timeline/2021/js-library.png
+                x2: /img/timeline/2021/js-library@2x.png
+                alt: JS library
             - month: Q3
               status: future
-              title: Decentralized lending.
+              title: Mobile app.
               image:
-                x1: /img/timeline/2021/decentralized-lending.png
-                x2: /img/timeline/2021/decentralized-lending@2x.png
-                alt: Lending hands
-            - month: Q3
-              status: future
-              title: Native decentralized stablecoins.
-              image:
-                x1: /img/timeline/2021/native-stablecoins.png
-                x2: /img/timeline/2021/native-stablecoins@2x.png
-                alt: Native stablecoins
+                x1: /img/timeline/2021/mobile-app.png
+                x2: /img/timeline/2021/mobile-app@2x.png
+                alt: Mobile app
         - year: 2020
           events:
             - month: May

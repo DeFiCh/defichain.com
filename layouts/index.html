@@ -206,11 +206,14 @@
             <h2>{{ $.Param "content.sections.roadmap.headline" }}</h2>
           </div>
         </div>
+      </div>
+      {{ range $year := $.Param "content.sections.roadmap.timeline" }}
+      <div class="container-fluid">
         <div class="row">
           <div class="col col-sm-8 col-md-6 col-ul-4 offset-ul-1">
-            <p class="lg">{{ $.Param "content.sections.roadmap.subhead" }}</p>
+            <p class="lg">{{ $year.year }}</p>
           </div>
-          <div class="carousel-nav col col-sm-4 col-md-6">
+          <div class="carousel-{{ $year.year }}-nav carousel-nav col col-sm-4 col-md-6">
             <div class="swiper-button-prev">
               {{ readFile "/static/svg/icons/icon-arrow-big.svg" | safeHTML }}
             </div>
@@ -220,14 +223,13 @@
           </div>
         </div>
       </div>
-      <div class="carousel swiper-container col">
+      <div class="carousel-{{ $year.year }} swiper-container col">
         <div class="swiper-wrapper">
-          {{ range $year := $.Param "content.sections.roadmap.timeline" }}
           {{ range $eventindex, $event := $year.events }}
           <div class="timeline-event {{ $event.status }} swiper-slide">
             <div class="card white">
               <div class="event-content">
-                <h4 class="h5">{{ $event.month }} {{ if eq $eventindex 0 }}{{ $year.year }}{{ end }}</h4>
+                <h4 class="h5">{{ $event.month }}</h4>
                 {{ with $event.url }}<a href="{{ . }}" target="_blank">{{ end }}
                   {{ $event.title }}
                 {{ with $event.url }}</a>{{ end }}
@@ -238,9 +240,9 @@
             </div>
           </div>
           {{ end }}
-          {{ end }}
         </div>
       </div>
+      {{ end }}
       <div class="section-slope paper">
         {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
       </div>

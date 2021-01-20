@@ -114,24 +114,36 @@ content:
       headline: Roadmap
       subhead: Achievements and what to look forward to.
       timeline:
-        - year: 2019
+        - year: 2021
           events:
-            - month: Sep
-              status: past
-              title: Conceptualization of DeFiChain.
-              url: https://cryptopotato.com/defichain-the-story-from-the-co-founders/
+            - month: Q1
+              status: future
+              title: More DeFi building blocks for DApp integration.
               image:
-                x1: /img/timeline/2019/concept.jpg
-                x2: /img/timeline/2019/concept@2x.jpg
-                alt: Conceptualization of DeFiChain
-            - month: Oct
-              status: past
-              title: DeFiChain White paper released.
-              url: /white-paper/
+                x1: /img/timeline/2021/building-blocks.png
+                x2: /img/timeline/2021/building-blocks@2x.png
+                alt: Building blocks
+            - month: Q2
+              status: future
+              title: Decentralized cross-chain asset bridge via atomic swap.
               image:
-                x1: /img/timeline/2019/white-paper.png
-                x2: /img/timeline/2019/white-paper@2x.png
-                alt: DeFi logo
+                x1: /img/timeline/2021/atomic-swap.png
+                x2: /img/timeline/2021/atomic-swap@2x.png
+                alt: Atomic swap
+            - month: Q3
+              status: future
+              title: Decentralized lending.
+              image:
+                x1: /img/timeline/2021/decentralized-lending.png
+                x2: /img/timeline/2021/decentralized-lending@2x.png
+                alt: Lending hands
+            - month: Q3
+              status: future
+              title: Native decentralized stablecoins.
+              image:
+                x1: /img/timeline/2021/native-stablecoins.png
+                x2: /img/timeline/2021/native-stablecoins@2x.png
+                alt: Native stablecoins
         - year: 2020
           events:
             - month: May
@@ -253,36 +265,24 @@ content:
                 x1: /img/timeline/2020/liquidity-pool.png
                 x2: /img/timeline/2020/liquidity-pool@2x.png
                 alt: Liquidity Pool
-        - year: 2021
+        - year: 2019
           events:
-            - month: Q1
-              status: future
-              title: More DeFi building blocks for DApp integration.
+            - month: Sep
+              status: past
+              title: Conceptualization of DeFiChain.
+              url: https://cryptopotato.com/defichain-the-story-from-the-co-founders/
               image:
-                x1: /img/timeline/2021/building-blocks.png
-                x2: /img/timeline/2021/building-blocks@2x.png
-                alt: Building blocks
-            - month: Q2
-              status: future
-              title: Decentralized cross-chain asset bridge via atomic swap.
+                x1: /img/timeline/2019/concept.jpg
+                x2: /img/timeline/2019/concept@2x.jpg
+                alt: Conceptualization of DeFiChain
+            - month: Oct
+              status: past
+              title: DeFiChain White paper released.
+              url: /white-paper/
               image:
-                x1: /img/timeline/2021/atomic-swap.png
-                x2: /img/timeline/2021/atomic-swap@2x.png
-                alt: Atomic swap
-            - month: Q3
-              status: future
-              title: Decentralized lending.
-              image:
-                x1: /img/timeline/2021/decentralized-lending.png
-                x2: /img/timeline/2021/decentralized-lending@2x.png
-                alt: Lending hands
-            - month: Q3
-              status: future
-              title: Native decentralized stablecoins.
-              image:
-                x1: /img/timeline/2021/native-stablecoins.png
-                x2: /img/timeline/2021/native-stablecoins@2x.png
-                alt: Native stablecoins
+                x1: /img/timeline/2019/white-paper.png
+                x2: /img/timeline/2019/white-paper@2x.png
+                alt: DeFi logo
     subscribe:
       headline: "Join our mailing list to get the latest DeFiChain announcements:"
       form:

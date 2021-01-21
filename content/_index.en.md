@@ -185,6 +185,13 @@ content:
                 alt: Q1 pink paper
             - month: Q1
               status: future
+              title: Ledger hardware wallet integration
+              image:
+                x1: /img/timeline/2021/ledger.png
+                x2: /img/timeline/2021/ledger@2x.png
+                alt: Ledger integration
+            - month: Q1
+              status: future
               title: Decentralized cross-chain asset bridge via atomic swap.
               image:
                 x1: /img/timeline/2021/atomic-swap.png

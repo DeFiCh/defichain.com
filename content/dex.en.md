@@ -4,6 +4,7 @@ type: dex
 long_title: Swap on the DEX, mine liquidity and more, with the DeFiChain wallet app. Available for Windows, macOS and Linux.
 aliases:
   - /app/
+cta_to: More
 menu:
   main:
     weight: 45

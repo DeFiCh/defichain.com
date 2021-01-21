@@ -118,37 +118,28 @@
           <div class="col col-sm-8 col-md-6 col-ul-4 offset-ul-1">
             <p class="lg">{{ $.Param "content.sections.why_dfi.subhead" }}</p>
           </div>
-          <div class="carousel-nav col col-sm-4 col-md-6">
-            <div class="swiper-button-prev">
-              {{ readFile "/static/svg/icons/icon-arrow-big.svg" | safeHTML }}
-            </div>
-            <div class="swiper-button-next">
-              {{ readFile "/static/svg/icons/icon-arrow-big.svg" | safeHTML }}
-            </div>
-          </div>
+          <div class="carousel-nav col col-sm-4 col-md-6"></div>
         </div>
       </div>
-      <div class="carousel swiper-container col">
-        <div class="swiper-wrapper">
-          {{ range $year := $.Param "content.sections.why_dfi.roadmap" }}
-          {{ range $eventindex, $event := $year.events }}
-          <div class="timeline-event {{ $event.status }} swiper-slide">
-            <div class="card white">
-              <div class="event-content">
-                <h4 class="h5">{{ $event.month }} {{ if eq $eventindex 0 }}{{ $year.year }}{{ end }}</h4>
-                {{ with $event.url }}<a href="{{ . }}" target="_blank">{{ end }}
-                  {{ $event.title }}
-                  {{ with $event.url }}</a>{{ end }}
-              </div>
-              <div class="event-image">
-                <img src="{{ $event.image.x1 }}" srcset="{{ $event.image.x1 }} 1x, {{ $event.image.x2 }} 2x"
-                  alt="{{ $event.image.alt }}">
-              </div>
+      <div class="carousel">
+        {{ range $year := $.Param "content.sections.why_dfi.roadmap" }}
+        {{ range $eventindex, $event := $year.events }}
+        <div class="timeline-event {{ $event.status }} swiper-slide">
+          <div class="card white">
+            <div class="event-content">
+              <h4 class="h5">{{ $event.month }} {{ if eq $eventindex 0 }}{{ $year.year }}{{ end }}</h4>
+              {{ with $event.url }}<a href="{{ . }}" target="_blank">{{ end }}
+                {{ $event.title }}
+                {{ with $event.url }}</a>{{ end }}
+            </div>
+            <div class="event-image">
+              <img src="{{ $event.image.x1 }}" srcset="{{ $event.image.x1 }} 1x, {{ $event.image.x2 }} 2x"
+                alt="{{ $event.image.alt }}">
             </div>
           </div>
-          {{ end }}
-          {{ end }}
         </div>
+        {{ end }}
+        {{ end }}
       </div>
       <div class="section-slope day">
         {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
@@ -558,13 +549,13 @@
   <script src="//cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
   {{ $scrolltrigger := resources.Get "js/ScrollTrigger.min.js" }}
-  {{ $swiper := resources.Get "js/swiper.min.js" }}
+  {{ $slick := resources.Get "js/slick.min.js" }}
   {{ $debouncedresize := resources.Get "js/jquery.debouncedresize.js" }}
   {{ $parsley := resources.Get "js/parsley.min.js" }}
   {{ $main := resources.Get "js/main.js" }}
   {{ $claim := resources.Get "js/claim.js" }}
   {{ $collapsible := resources.Get "js/collapsible.js" }}
-  {{ $js := slice $scrolltrigger $swiper $debouncedresize $parsley $main $collapsible $claim | resources.Concat "js/bundle-claim.js" | resources.Fingerprint }}
+  {{ $js := slice $scrolltrigger $slick $debouncedresize $parsley $main $collapsible $claim | resources.Concat "js/bundle-claim.js" | resources.Fingerprint }}
   <script src="{{ $js.RelPermalink }}" type="text/javascript"></script>
   {{ template "_internal/google_analytics_async.html" . }}
   {{ partial "pixels/facebook.html" . }}

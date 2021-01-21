@@ -56,13 +56,13 @@
   <script src="//cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
   {{ $scrolltrigger := resources.Get "js/ScrollTrigger.min.js" }}
-  {{ $swiper := resources.Get "js/swiper.min.js" }}
+  {{ $slick := resources.Get "js/slick.min.js" }}
   {{ $debouncedresize := resources.Get "js/jquery.debouncedresize.js" }}
   {{ $parsley := resources.Get "js/parsley.min.js" }}
   {{ $main := resources.Get "js/main.js" }}
   {{ $claim := resources.Get "js/claim.js" }}
   {{ $collapsible := resources.Get "js/collapsible.js" }}
-  {{ $js := slice $scrolltrigger $swiper $debouncedresize $parsley $main $collapsible $claim | resources.Concat "js/bundle-claim.js" | resources.Fingerprint }}
+  {{ $js := slice $scrolltrigger $slick $debouncedresize $parsley $main $collapsible $claim | resources.Concat "js/bundle-claim.js" | resources.Fingerprint }}
   <script src="{{ $js.RelPermalink }}" type="text/javascript"></script>
   {{ template "_internal/google_analytics_async.html" . }}
   {{ partial "pixels/facebook.html" . }}

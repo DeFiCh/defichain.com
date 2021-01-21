@@ -178,7 +178,7 @@ content:
                 alt: New BCH and LTC pool pairs
             - month: Q1
               status: future
-              title: Pink paper published on stocks trading, loan and decentralized BTC.
+              title: Pink paper on stocks trading, loan and decentralized BTC.
               image:
                 x1: /img/timeline/2021/pink-paper-q1.png
                 x2: /img/timeline/2021/pink-paper-q1@2x.png

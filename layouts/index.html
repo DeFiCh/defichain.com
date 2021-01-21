@@ -210,37 +210,28 @@
       {{ range $year := $.Param "content.sections.roadmap.timeline" }}
       <div class="container-fluid">
         <div class="row">
-          <div class="col col-sm-8 col-md-6 col-ul-4 offset-ul-1">
+          <div class="col col-6 col-sm-8 col-md-6 col-ul-4 offset-ul-1">
             <p class="lg">{{ $year.year }}</p>
           </div>
-          <div class="carousel-{{ $year.year }}-nav carousel-nav col col-sm-4 col-md-6">
-            <div class="swiper-button-prev">
-              {{ readFile "/static/svg/icons/icon-arrow-big.svg" | safeHTML }}
-            </div>
-            <div class="swiper-button-next">
-              {{ readFile "/static/svg/icons/icon-arrow-big.svg" | safeHTML }}
-            </div>
-          </div>
+          <div class="carousel-{{ $year.year }}-nav carousel-nav col col-6 col-sm-4 col-md-6"></div>
         </div>
       </div>
-      <div class="carousel-{{ $year.year }} swiper-container col">
-        <div class="swiper-wrapper">
-          {{ range $eventindex, $event := $year.events }}
-          <div class="timeline-event {{ $event.status }} swiper-slide">
-            <div class="card white">
-              <div class="event-content">
-                <h4 class="h5">{{ $event.month }}</h4>
-                {{ with $event.url }}<a href="{{ . }}" target="_blank">{{ end }}
-                  {{ $event.title }}
-                {{ with $event.url }}</a>{{ end }}
-              </div>
-              <div class="event-image">
-                <img src="{{ $event.image.x1 }}" srcset="{{ $event.image.x1 }} 1x, {{ $event.image.x2 }} 2x" alt="{{ $event.image.alt }}">
-              </div>
+      <div class="carousel carousel-{{ $year.year }}">
+        {{ range $eventindex, $event := $year.events }}
+        <div class="timeline-event {{ $event.status }}">
+          <div class="card white">
+            <div class="event-content">
+              <h4 class="h5">{{ $event.month }}</h4>
+              {{ with $event.url }}<a href="{{ . }}" target="_blank">{{ end }}
+                {{ $event.title }}
+              {{ with $event.url }}</a>{{ end }}
+            </div>
+            <div class="event-image">
+              <img src="{{ $event.image.x1 }}" srcset="{{ $event.image.x1 }} 1x, {{ $event.image.x2 }} 2x" alt="{{ $event.image.alt }}">
             </div>
           </div>
-          {{ end }}
         </div>
+        {{ end }}
       </div>
       {{ end }}
       <div class="section-slope paper">
@@ -260,10 +251,10 @@
   <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>
   {{ $scrolltrigger := resources.Get "js/ScrollTrigger.min.js" }}
-  {{ $swiper := resources.Get "js/swiper.min.js" }}
+  {{ $slick := resources.Get "js/slick.min.js" }}
   {{ $debouncedresize := resources.Get "js/jquery.debouncedresize.js" }}
   {{ $main := resources.Get "js/main.js" }}
-  {{ $js := slice $scrolltrigger $swiper $debouncedresize $main | resources.Concat "js/bundle.js" | resources.Fingerprint }}
+  {{ $js := slice $scrolltrigger $slick $debouncedresize $main | resources.Concat "js/bundle.js" | resources.Fingerprint }}
   <script src="{{ $js.RelPermalink }}" type="text/javascript"></script>
   {{ template "_internal/google_analytics_async.html" . }}
   {{ partial "pixels/facebook.html" . }}

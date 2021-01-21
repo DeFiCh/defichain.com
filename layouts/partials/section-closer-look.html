@@ -10,39 +10,30 @@
       <div class="col col-sm-8 col-md-6 col-ul-4 offset-ul-1">
         <p class="lg">{{ $Home.Param "content.sections.closer_look.subhead" }}</p>
       </div>
-      <div class="carousel-nav col col-sm-4 col-md-6">
-        <div class="swiper-button-prev">
-          {{ readFile "/static/svg/icons/icon-arrow-big.svg" | safeHTML }}
-        </div>
-        <div class="swiper-button-next">
-          {{ readFile "/static/svg/icons/icon-arrow-big.svg" | safeHTML }}
-        </div>
-      </div>
+      <div class="carousel-nav col col-sm-4 col-md-6"></div>
     </div>
   </div>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-      <div class="carousel swiper-container col">
-        <div class="swiper-wrapper">
-          {{ $currentPage := . }}
-          {{ range .Site.Menus.main }}
-          {{ if $currentPage.IsMenuCurrent "main" . }}
-          {{ else }}
-          <div class="card swiper-slide paper white">
-            <a href="{{ .URL | relLangURL }}">
-              <h3 class="h4">{{ .Name }}</h3>
-              <blockquote>
-                {{ .Page.Params.long_title }}
-              </blockquote>
-              <div class="spacer"></div>
-              <div class="btn">
-                {{ .Page.Params.cta_to }}
-              </div>
-            </a>
-          </div>
-          {{ end }}
-          {{ end }}
+      <div class="carousel col col-ul-10 offset-ul-1">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        {{ if $currentPage.IsMenuCurrent "main" . }}
+        {{ else }}
+        <div class="card paper white">
+          <a href="{{ .URL | relLangURL }}">
+            <h3 class="h4">{{ .Name }}</h3>
+            <blockquote>
+              {{ .Page.Params.long_title }}
+            </blockquote>
+            <div class="spacer"></div>
+            <div class="btn">
+              {{ .Page.Params.cta_to }}
+            </div>
+          </a>
         </div>
+        {{ end }}
+        {{ end }}
       </div>
     </div>
   </div>

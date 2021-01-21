@@ -989,10 +989,6 @@ section.featured-video {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-
-  @include media("<sm") {
-    display: none;
-  }
 }
 
 .swiper-button-prev,
@@ -1034,13 +1030,6 @@ section.featured-video {
 
 .carousel {
   margin-top: 64px;
-  padding-left: 48px;
-  padding-right: 48px;
-
-  @include media(">ul") {
-    padding-left: calc((100% - 32px) / 12 + 48px);
-    padding-right: calc((100% - 32px) / 12 + 48px);
-  }
 }
 
 
@@ -1051,12 +1040,18 @@ section.featured-video {
 section.roadmap,
 section.why-dfi {
   .carousel {
-    padding-left: $grid-gutter;
+    width: 100%;
+  }
+
+  .slick-slide {
+    width: 384px;
+
+    @include media(">lg") {
+      width: 400px;
+    }
   }
 
   .timeline-event {
-    width: 320px;
-
     &.future {
       color: $color-ui-black60;
     }
@@ -1064,6 +1059,15 @@ section.why-dfi {
 
   .card {
     @include brand-background-variations;
+    margin: 8px;
+
+    @include media(">sm") {
+      margin: 32px;
+    }
+
+    @include media(">lg") {
+      margin: 40px;
+    }
   }
 
   .event-content {
@@ -1092,9 +1096,30 @@ section.why-dfi {
       margin-top: $grid-gutter;
     }
   }
+
+  .slick-arrow {
+    width: 48px;
+    height: 48px;
+    @include text-hide;
+    border: 0;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: $grid-gutter / 2;
+    margin-right: $grid-gutter / 2;
+  }
+
+  .slick-next {
+    background-image: url(/svg/icons/icon-arrow-big.svg);
+  }
+
+  .slick-prev {
+    background-image: url(/svg/icons/icon-arrow-big.svg);
+    transform: rotate(180deg);
+  }
 }
 
-.roadmap .swiper-container {
+.roadmap .carousel {
   padding-bottom: 48px;
   border-bottom: $base-border-style;
   margin-top: 16px;
@@ -2538,14 +2563,33 @@ section.closer-look {
     }
   }
 
-  .swiper-container {
+  .slick-list {
     overflow: visible;
   }
 
+  .slick-slide {
+    width: 304px;
+    margin: 8px;
+
+    @include media(">sm") {
+      width: 352px;
+      margin: 32px;
+    }
+
+    @include media(">md") {
+      width: 352px;
+    }
+
+    @include media(">lg") {
+      width: 464px;
+      margin: 40px;
+    }
+  }
+
   .card {
+    @include brand-background-variations;
     width: 288px;
     height: 324px;
-    @include brand-background-variations;
 
     @include media(">md") {
       width: 288px;
@@ -2564,6 +2608,35 @@ section.closer-look {
 
   .btn {
     align-self: flex-end;
+  }
+
+  .timeline-nav {
+    text-align: center;
+
+    @include media(">lg") {
+      margin-top: $grid-gutter;
+    }
+  }
+
+  .slick-arrow {
+    width: 48px;
+    height: 48px;
+    @include text-hide;
+    border: 0;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: $grid-gutter / 2;
+    margin-right: $grid-gutter / 2;
+  }
+
+  .slick-next {
+    background-image: url(/svg/icons/icon-arrow-big.svg);
+  }
+
+  .slick-prev {
+    background-image: url(/svg/icons/icon-arrow-big.svg);
+    transform: rotate(180deg);
   }
 }
 

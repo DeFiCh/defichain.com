@@ -193,11 +193,11 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   {{ $scrolltrigger := resources.Get "js/ScrollTrigger.min.js" }}
-  {{ $swiper := resources.Get "js/swiper.min.js" }}
+  {{ $slick := resources.Get "js/slick.min.js" }}
   {{ $debouncedresize := resources.Get "js/jquery.debouncedresize.js" }}
   {{ $main := resources.Get "js/main.js" }}
   {{ $collapsible := resources.Get "js/collapsible.js" }}
-  {{ $js := slice $scrolltrigger $swiper $debouncedresize $main $collapsible | resources.Concat "js/bundle-faq.js" | resources.Fingerprint }}
+  {{ $js := slice $scrolltrigger $slick $debouncedresize $main $collapsible | resources.Concat "js/bundle-faq.js" | resources.Fingerprint }}
   <script src="{{ $js.RelPermalink }}" type="text/javascript"></script>
   {{ template "_internal/google_analytics_async.html" . }}
   {{ partial "pixels/facebook.html" . }}

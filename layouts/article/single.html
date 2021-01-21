@@ -71,10 +71,10 @@
   <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>
   {{ $scrolltrigger := resources.Get "js/ScrollTrigger.min.js" }}
-  {{ $swiper := resources.Get "js/swiper.min.js" }}
+  {{ $slick := resources.Get "js/slick.min.js" }}
   {{ $sticky := resources.Get "js/jquery.sticky-kit.js" }}
   {{ $main := resources.Get "js/main.js" }}
-  {{ $js := slice $scrolltrigger $swiper $sticky $main | resources.Concat "js/bundle-white-paper.js" | resources.Fingerprint }}
+  {{ $js := slice $scrolltrigger $slick $sticky $main | resources.Concat "js/bundle-white-paper.js" | resources.Fingerprint }}
   <script src="{{ $js.RelPermalink }}" type="text/javascript"></script>
   {{ template "_internal/google_analytics_async.html" . }}
   {{ partial "pixels/facebook.html" . }}

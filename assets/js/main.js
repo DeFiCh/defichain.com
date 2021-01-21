@@ -199,136 +199,100 @@ $(function () {
   // Carousel for timeline
   if ($(".roadmap").length > 0) {
 
-    // 2021
-    var roadmap2021Carousel = new Swiper('.carousel-2021', {
-      slidesPerView: 'auto',
+    $(".carousel-2021").slick({
+      appendArrows: '.carousel-2021-nav',
+      arrows: true,
+      autoplay: false,
+      autoplaySpeed: 5000,
+      centerMode: true,
+      dots: false,
+      draggable: false,
+      infinite: false,
       initialSlide: 2,
-      roundLengths: true,
-      centeredSlides: true,
-      spaceBetween: 32,
-      watchOverflow: true,
-      mousewheel: {
-        forceToAxis: true,
-        invert: true
-      },
-      navigation: {
-        nextEl: '.carousel-2021-nav .swiper-button-next',
-        prevEl: '.carousel-2021-nav .swiper-button-prev',
-      },
-      breakpoints: {
-        812: {
-          spaceBetween: 64
-        },
-        992: {
-          spaceBetween: 80
-        }
-      }
+      mobileFirst: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      speed: 500,
+      variableWidth: true,
+      waitForAnimate: true
     });
     
     // 2020
-    var roadmap2020Carousel = new Swiper('.carousel-2020', {
-      slidesPerView: 'auto',
+    $(".carousel-2020").slick({
+      appendArrows: '.carousel-2020-nav',
+      arrows: true,
+      autoplay: false,
+      autoplaySpeed: 5000,
+      centerMode: true,
+      dots: false,
+      draggable: false,
+      infinite: false,
       initialSlide: 14,
-      roundLengths: true,
-      centeredSlides: true,
-      spaceBetween: 32,
-      watchOverflow: true,
-      mousewheel: {
-        forceToAxis: true,
-        invert: true
-      },
-      navigation: {
-        nextEl: '.carousel-2020-nav .swiper-button-next',
-        prevEl: '.carousel-2020-nav .swiper-button-prev',
-      },
-      breakpoints: {
-        812: {
-          spaceBetween: 64
-        },
-        992: {
-          spaceBetween: 80
-        }
-      }
+      mobileFirst: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      speed: 500,
+      variableWidth: true,
+      waitForAnimate: true
     });
 
     // 2019
-    var roadmap2019Carousel = new Swiper('.carousel-2019', {
-      slidesPerView: 'auto',
+    $(".carousel-2019").slick({
+      appendArrows: '.carousel-2019-nav',
+      arrows: true,
+      autoplay: false,
+      autoplaySpeed: 5000,
+      centerMode: true,
+      dots: false,
+      draggable: false,
+      infinite: false,
       initialSlide: 1,
-      roundLengths: true,
-      centeredSlides: true,
-      spaceBetween: 32,
-      watchOverflow: true,
-      mousewheel: {
-        forceToAxis: true,
-        invert: true
-      },
-      navigation: {
-        nextEl: '.carousel-2019-nav .swiper-button-next',
-        prevEl: '.carousel-2019-nav .swiper-button-prev',
-      },
-      breakpoints: {
-        812: {
-          spaceBetween: 64
-        },
-        992: {
-          spaceBetween: 80
-        }
-      }
+      mobileFirst: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      speed: 500,
+      variableWidth: true,
+      waitForAnimate: true
     });
     
   }
 
   // Carousel for Airdrop timeline
   if ($(".why-dfi").length > 0) {
-    var roadmapCarousel = new Swiper('.why-dfi .carousel', {
-      slidesPerView: 'auto',
+    $(".why-dfi .carousel").slick({
+      appendArrows: '.why-dfi .carousel-nav',
+      arrows: true,
+      autoplay: false,
+      autoplaySpeed: 5000,
+      centerMode: true,
+      dots: false,
+      draggable: false,
+      infinite: false,
       initialSlide: 10,
-      roundLengths: true,
-      centeredSlides: true,
-      spaceBetween: 32,
-      watchOverflow: true,
-      mousewheel: {
-        forceToAxis: true,
-        invert: true
-      },
-      navigation: {
-        nextEl: '.why-dfi .swiper-button-next',
-        prevEl: '.why-dfi .swiper-button-prev',
-      },
-      breakpoints: {
-        812: {
-          spaceBetween: 64
-        },
-        992: {
-          spaceBetween: 80
-        }
-      }
+      mobileFirst: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      speed: 500,
+      variableWidth: true,
+      waitForAnimate: true
     });
   }
 
   // Closer look carousel
   if ($(".closer-look").length) {
-    var closerLookCarousel = new Swiper('.closer-look .carousel', {
-      slidesPerView: 'auto',
-      spaceBetween: 32,
-      watchOverflow: true,
-      mousewheel: {
-        forceToAxis: true,
-        invert: true
-      },
-      navigation: {
-        nextEl: '.closer-look .swiper-button-next',
-        prevEl: '.closer-look .swiper-button-prev',
-      },
-      breakpoints: {
-        812: {
-          spaceBetween: 64
-        },
-        992: {
-          spaceBetween: 80
-        }
-      }
+    $(".closer-look .carousel").slick({
+      appendArrows: '.closer-look .carousel-nav',
+      arrows: true,
+      autoplay: false,
+      dots: false,
+      draggable: false,
+      infinite: false,
+      mobileFirst: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      speed: 500,
+      variableWidth: true,
+      waitForAnimate: true
     });
   }
 

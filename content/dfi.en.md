@@ -80,6 +80,10 @@ content:
         title: Exchanges
         description: You can now purchase DFI at these select exchanges, with more exchanges to follow.
         exchanges_list:
+          - label: KuCoin
+            url: https://trade.kucoin.com/DFI-BTC
+            file: /svg/sources/logo-kucoin
+            type: svg
           - label: Bittrex
             url: https://global.bittrex.com/Market/Index?MarketName=BTC-DFI
             file: /svg/sources/logo-bittrex

@@ -2,6 +2,8 @@
 title: Foundation
 type: foundation
 long_title: Understand how the DeFi Foundation operates and how to get involved.
+aliases:
+    - /imprint/
 cta_to: Explore
 menu:
   footer:

@@ -25,6 +25,41 @@ content:
     mentions:
       headline: DeFiChain covered in the press and media.
       mentions_list:
+        - title: 库币新币观察：将DeFi带入比特币生态，DeFiChain有何特别之处？
+          source: IT专家网
+          date: 25 Jan, 2021
+          image: /img/press/ctocio.png
+          url: http://roll.ctocio.com.cn/gundong/2021/0125/62549.html
+        - title: "KuCoin Crypto Gem Observer: Integrating DeFi with Bitcoin, Why Is DeFiChain So Special?"
+          source: KuCoin Blog
+          date: 23 Jan, 2021
+          image: /svg/sources/logo-kucoin.svg
+          url: https://medium.com/kucoinexchange/kucoin-crypto-gem-observer-integrating-defi-with-bitcoin-why-is-defichain-so-special-b72eeebc398b
+        - title: "DFI’ying Expectations: DeFiChain, the Largest DeFi Protocol on the Bitcoin Ecosystem Lists its DFI Coin on KuCoin"
+          source: Crypto Mode
+          date: 21 Jan, 2021
+          image: 
+          url: https://cryptomode.com/dfiying-expectations-defichain-the-largest-defi-protocol-on-the-bitcoin-ecosystem-lists-its-dfi-coin-on-kucoin/
+        - title: DeFiChain Listing on KuCoin Exchange!
+          source: CoinMarketCap
+          date: 20 Jan, 2021
+          image: /svg/press/coinmarketcap.svg
+          url: https://coinmarketcap.com/headlines/signals/defichain-listing-on-kucoin-exchange-defichain/
+        - title: DeFiChain (DFI) Gets Listed on KuCoin!
+          source: Cryptohopper
+          date: 20 Jan, 2021
+          image: /svg/press/cryptohopper.svg
+          url: https://www.cryptohopper.com/news/65-exchanges/kucoin/2452-defichain-dfi-gets-listed-on-kucoin
+        - title: DeFiChain (DFI) Gets Listed on KuCoin!
+          source: KuCoin
+          date: 20 Jan, 2021
+          image: /svg/sources/logo-kucoin.svg
+          url: https://www.kucoin.com/news/en-defichain-gets-listed-on-kucoin
+        - title: Four Crypto Assets Surge More Than 400% in Just One Month As Alt Season Roars
+          source: The Daily Hodl
+          date: 17 Jan, 2021
+          image: /svg/press/dailyhodl.svg
+          url: https://dailyhodl.com/2021/01/17/four-crypto-assets-surge-more-than-400-in-just-one-month-as-alt-season-roars/
         - title: The future of DeFi with DeFiChain’s U-Zyn-Chua
           source: The Bit
           date: 21 Dec, 2020
@@ -50,6 +85,11 @@ content:
           date: 30 Nov, 2020
           image: /img/press/cryptocompare.png
           url: https://www.cryptocompare.com/exchanges/guides/defichain-dex-a-truly-decentralized-exchange-has-just-launched/
+        - title: Looking to Invest in a DeFi Project? Here are 5 Ideas Worth Considering
+          source: Hacker Noon
+          date: 6 Nov, 2020
+          image: /img/press/hackernoon.png
+          url: https://hackernoon.com/looking-to-invest-in-a-defi-project-here-are-5-ideas-worth-considering-dv363w6d
         - title: DeFiChain is now on Blockfolio Signal!
           source: CoinMarketCap
           date: 31 Oct, 2020

@@ -40,7 +40,7 @@ DefaultContentLanguage = "en"
   [languages.en]
     languageName = "English"
     title = "DeFiChain"
-    description = "Decentralized finance enabled."
+    description = "Decentralized finance enabled on Bitcoin."
     company_name = "DeFiChain"
     copyright = "All Rights Reserved"
     weight = 20

@@ -34,7 +34,7 @@ Don’t have the app installed yet? [Click here for a step-by-step guide on how 
 
 ### Step 2: Make sure you have DFI in your wallet
 
-After opening the DeFiChain App, click **Wallets** in the sidebar. Make sure you have funds (DFI) in wallet, as DFI is needed for transaction fees. If you don't yet have DFI, [here is a step-by-step tutorial on how and where you can buy DFI.](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)
+After opening the DeFiChain App, click **Wallets** in the sidebar. Make sure you have funds (DFI) in your wallet, as DFI is needed for transaction fees. If you don't yet have DFI, [here is a step-by-step tutorial on how and where you can buy DFI.](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)
 
 <img src="/img/guides/installing-defi-app/wallets-choose.png" srcset="/img/guides/installing-defi-app/wallets-choose.png 1x, /img/guides/installing-defi-app/wallets-choose@2x.png 2x">
 
@@ -54,7 +54,7 @@ Then select the coin you want to buy in right **To** field.
 
 <img src="/img/guides/obtaining-tokens/dex-to.png" srcset="/img/guides/obtaining-tokens/dex-to.png 1x, /img/guides/obtaining-tokens/dex-to@2x.png 2x">
 
-Yu can either specify how much you DFI wish to sell in the **To** field, or how much of the other coin you wish to buy, in the **To** field. You can also click the **MAX** button to enter the maximum amount of DFI.
+You can either specify how much you DFI wish to sell in the **To** field, or how much of the other coin you wish to buy, in the **To** field. You can also click the **MAX** button to enter the maximum amount of DFI.
 
 Click **CONTINUE** when you are ready to swap.
 

@@ -1217,6 +1217,7 @@ body.dex {
 section.liquidity_mining {
   .lm-apys {
     padding-bottom: $section-padding-bottom;
+    justify-content: center;
 
     @include media(">lg") {
       padding-bottom: $section-padding-bottom-lg;
@@ -1225,6 +1226,7 @@ section.liquidity_mining {
 
   .lm-apy {
     text-align: center;
+    margin-bottom: $grid-gutter;
   }
 
   .apy-coin {
@@ -1286,6 +1288,9 @@ section.liquidity_mining {
   .apy-label {
     color: $color-ui-black60;
     font-weight: $font-weight-medium;
+    font-size: $body-md-font-size;
+    margin-left: 0.75rem;
+    margin-bottom: 1rem;
   }
 
   .screenshot {

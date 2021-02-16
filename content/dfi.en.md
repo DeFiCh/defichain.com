@@ -108,6 +108,14 @@ content:
             url: https://www.bitrue.com/trade/dfi_btc
             file: /svg/sources/logo-bittrue
             type: svg
+          - label: EasyCrypto (AU)
+            url: https://easycrypto.ai/au/buy-sell/dfi-defichain
+            file: /img/sources/logo-easycrypto-au
+            type: png
+          - label: EasyCrypto (NZ)
+            url: https://easycrypto.ai/nz/buy-sell/dfi-defichain
+            file: /img/sources/logo-easycrypto-nz
+            type: png
       staking_platforms:
         icon: /static/svg/icons/way-to-acquire/staking.svg
         title: Staking platforms

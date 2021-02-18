@@ -2663,6 +2663,25 @@ section.closer-look {
     padding-bottom: $section-padding-bottom-lg;
   }
 
+  a {
+    text-decoration: none;
+
+    &,
+    &:visited {
+      color: $color-ui-black60;
+    }
+    
+    &:hover,
+    &:active {
+      color: $color-ui-default;
+    }
+
+    svg {
+      fill: currentColor;
+      margin-right: 8px;
+    }
+  }
+
   .footer-logo {
     margin-bottom: 24px;
 
@@ -2715,26 +2734,10 @@ section.closer-look {
     a {
       display: flex;
       align-items: center;
-      text-decoration: none;
-
-      &,
-      &:visited {
-        color: $color-ui-black60;
-      }
-      
-      &:hover,
-      &:active {
-        color: $color-ui-default;
-      }
-
-      svg {
-        fill: currentColor;
-        margin-right: 8px;
-      }
     }
   }
 
-  .col-md-3 {
+  .col {
     .menu {
       @include media(">sm") {
         columns: 2;

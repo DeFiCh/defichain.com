@@ -103,6 +103,10 @@ content:
           github: https://github.com/uzyn
           username: uzyn
           city: Singapore
+        - name: Aen
+          github: https://github.com/aentan
+          username: aentan
+          city: Singapore
         - name: Harsh R
           github: https://github.com/fullstackninja864
           username: fullstackninja864
@@ -123,11 +127,19 @@ content:
           github: https://github.com/bvbfan
           username: bvbfan
           city: Poldiv, Bulgaria
+        - name: Mihailo Milenkovic
+          github: https://github.com/Mixa84
+          username: Mixa84
+          city: Belgrade, Serbia
+        - name: Fuxing Loh
+          github: https://github.com/fuxingloh
+          username: fuxingloh
+          city: Singapore
         - name: Prasanna Loganathar
           github: https://github.com/prasannavl
           username: prasannavl
           city: Chennai, India
-        - name: RapidCoder33
+        - name: DeFiDev
           github: https://github.com/DeFiDev
           username: DeFiDev
           city: Saint Petersburg, Russia

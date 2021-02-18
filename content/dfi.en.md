@@ -29,7 +29,7 @@ content:
     dfi_token:
       name: dfi-token
       headline: $DFI coin
-      subhead: "The $DFI coin is an integral unit of account in DeFiChain. The DeFi Foundation issued roughly 600 million DFI on May 11<sup>th</sup>, 2020. The current circulating supply (with staking and liquidity mining) is available at [DeFiChain Explorer](http://explorer.defichain.io/)."
+      subhead: "The $DFI coin is an integral unit of account in DeFiChain. The DeFiChain Foundation issued roughly 600 million DFI on May 11<sup>th</sup>, 2020. The current circulating supply (with staking and liquidity mining) is available at [DeFiChain Explorer](http://explorer.defichain.io/)."
       note: "Important: DeFi chain is a community project. There was/is no Initial Coin Offering, only free airdrops."
       image: /static/svg/physical-coin.svg
     stats:
@@ -68,9 +68,9 @@ content:
       chart:
         initial_supply: Initial supply
         masternodes: Masternodes
-        defi_foundation: DeFi Foundation
+        defi_foundation: DeFiChain Foundation
         external_partners: External Partners
-        caption: Of the initial supply, 49% will be kept by the DeFi Foundation. The rest may be distributed to external partners, to fund the initial development.
+        caption: Of the initial supply, 49% will be kept by the DeFiChain Foundation. The rest may be distributed to external partners, to fund the initial development.
       image: /static/svg/initial-token-distribution.svg
     acquiring:
       headline: Acquiring $DFI coins
@@ -132,10 +132,10 @@ content:
       ways_to_acquire:
         - icon: /static/svg/icons/way-to-acquire/airdrop.svg
           title: Airdrop
-          description: The DeFi Foundation will airdrop DFI to hodlers, market makers and other users of DeFiChain.
+          description: The DeFiChain Foundation will airdrop DFI to hodlers, market makers and other users of DeFiChain.
         - icon: /static/svg/icons/way-to-acquire/developers.svg
           title: Developers
-          description: The DeFi Foundation gives grants to developers building functionality and dApps on DeFiChain.
+          description: The DeFiChain Foundation gives grants to developers building functionality and dApps on DeFiChain.
       cta: For further information, contact us at [partners@defichain.com](mailto:partners@defichain.com).
     insiders:
       headline: Join the DeFiChain Insiders community.

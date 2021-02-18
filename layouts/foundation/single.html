@@ -64,45 +64,6 @@
       </div>
     </section>
 
-    <section class="members day">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col col-ul-5 offset-ul-1">
-            <h2>{{ $.Param "content.sections.members.headline" }}</h2>
-            <p class="lg">{{ $.Param "content.sections.members.subhead" }}</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col-ul-10 offset-ul-1">
-            <div class="members-list row">
-              {{ range $member := $.Param "content.sections.members.members_list" }}
-              <div class="member col col-md-6">
-                <div class="wrapper">
-                  <div class="member-image">
-                    <img src="/img/members/{{ $member.image }}.jpg" srcset="/img/members/{{ $member.image }}.jpg 1x, /img/members/{{ $member.image }}@2x.jpg 2x" alt="{{ $member.name }}">
-                    <a href="{{ $member.linkedin }}" target="_blank" class="social">
-                      {{ readFile "/static/svg/icons/social/icon-linkedin.svg"  | safeHTML }}
-                    </a>
-                  </div>
-                  <h3 class="h4">{{ $member.name }}</h3>
-                  <p class="lg">{{ $member.title }}</p>
-                  <ul>
-                    {{ range $item := $member.resume }}
-                    <li>{{ $item }}</li>
-                    {{ end }}
-                  </ul>
-                </div>
-              </div>
-              {{ end }}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section-slope day">
-        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
-      </div>
-    </section>
-
     {{ partial "section-subscribe.html" . }}
 
     {{ partial "section-closer-look.html" . }}

@@ -34,7 +34,7 @@ content:
     #closer_look in /
 ---
 
-**Abstract**: The DeFi Foundation is developing DeFiChain, a blockchain specifically dedicated to decentralized financial applications. By focusing on the functionality of the blockchain and dedicating it specifically to decentralized finance, DeFiChain provides unparalleled high transaction throughput, reduced risk of errors, and intelligent feature development specifically for the fulfillment of financial services on the blockchain.
+**Abstract**: The DeFiChain Foundation is developing DeFiChain, a blockchain specifically dedicated to decentralized financial applications. By focusing on the functionality of the blockchain and dedicating it specifically to decentralized finance, DeFiChain provides unparalleled high transaction throughput, reduced risk of errors, and intelligent feature development specifically for the fulfillment of financial services on the blockchain.
 
 **This Document is not a Prospectus**
 
@@ -76,49 +76,6 @@ The function set includes among others:
 - Decentralized Non-collateralized debt
 - Asset tokenization
 - Distribution of Dividends
-
-### Team
-
-The DeFi Foundation is incorporated as a company limited by guarantee which resembles a foundation structure.
-
-<table class="table-plain members">
-  <tr>
-    <td>
-      <img src="/img/members/julian-hosp.jpg" alt="Dr. Julian Hosp" srcset="/img/members/julian-hosp.jpg 1x, /img/members/julian-hosp@2x.jpg 2x">
-    </td>
-    <td>
-      <p><strong>Dr. Julian Hosp, Chairman</strong><br>
-      <a href="https://www.linkedin.com/in/julianhosp/" class="social">LinkedIn</a></p>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="/img/members/u-zyn-chua.jpg" alt="U-Zyn Chua" srcset="/img/members/u-zyn-chua.jpg 1x, /img/members/u-zyn-chua@2x.jpg 2x">
-    </td>
-    <td>
-      <p><strong>U-Zyn Chua, Tech</strong><br>
-      <a href="https://www.linkedin.com/in/uzynchua/" class="social">LinkedIn</a></p>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="/img/members/john-rost.jpg" alt="John Rost" srcset="/img/members/john-rost.jpg 1x, /img/members/john-rost@2x.jpg 2x">
-    </td>
-    <td>
-      <p><strong>John Rost, Finance</strong><br>
-      <a href="https://www.linkedin.com/in/john-rost-b70b0628/" class="social">LinkedIn</a></p>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="/img/members/kenneth-oh.jpg" alt="Kenneth Oh" srcset="/img/members/kenneth-oh.jpg 1x, /img/members/kenneth-oh@2x.jpg 2x">
-    </td>
-    <td>
-      <p><strong>Kenneth Oh, Legal</strong><br>
-      <a href="https://www.linkedin.com/in/kenneth-oh-840117158/" class="social">LinkedIn</a></p>
-    </td>
-  </tr>
-</table>
 
 ### Timeline
 
@@ -801,7 +758,7 @@ Thus Alice can obtain a compounded long position on DFI without putting in extra
 
 The $DFI coin will be the integral unit of account in DeFiChain ecosystem.
 
-The DeFi Foundation will be issuing the DeFi utility token, DFI, capped at 1,200,000,000 (1.2 billion) for throughout its lifetime. There will only ever be 1.2 billion DFIs created.
+The DeFiChain Foundation will be issuing the DeFi utility token, DFI, capped at 1,200,000,000 (1.2 billion) for throughout its lifetime. There will only ever be 1.2 billion DFIs created.
 
 DFI is divisible up to 8 decimal places.
 
@@ -852,9 +809,9 @@ Nodes are entitled to:
 
 ### Governance
 
-The DeFi Foundation is responsible for issuance of tokens and is governed by an independent board. This board will be governed by the DeFi masternodes voting on its members and also by giving directives on key decisions.
+The DeFiChain Foundation is responsible for issuance of tokens and is governed by an independent board. This board will be governed by the DeFi masternodes voting on its members and also by giving directives on key decisions.
 
-The DeFi Foundation awards tokens to users and groups to speed up adoption (see the section on initial token distribution and marketing). The Foundation is tasked with boosting the ecosystem, bringing in ecosystem partners, directing the development of the tools for ecosystem partners, and other activities to increase the number of ecosystem partners.
+The DeFiChain Foundation awards tokens to users and groups to speed up adoption (see the section on initial token distribution and marketing). The Foundation is tasked with boosting the ecosystem, bringing in ecosystem partners, directing the development of the tools for ecosystem partners, and other activities to increase the number of ecosystem partners.
 
 ![Governance](/img/white-paper/governance.png)
 
@@ -862,7 +819,7 @@ For clarification and transparency, Cake Pte Ltd is a private company located in
 
 ### Community Development Fund
 
-The DeFi Foundation will create a community development fund with up to 10% of the block rewards under management. This percentage can be updated by submitting a DAO proposal that will be voted on by all masternodes. Community development funds were popularized by DASH[^10] and are used in some selective DAOs today. The community will determine the use of these funds for development, marketing, or research that forwards the DeFi community. DFI masternodes vote for projects they like and the highest voted proposals every month will be funded.
+The DeFiChain Foundation will create a community development fund with up to 10% of the block rewards under management. This percentage can be updated by submitting a DAO proposal that will be voted on by all masternodes. Community development funds were popularized by DASH[^10] and are used in some selective DAOs today. The community will determine the use of these funds for development, marketing, or research that forwards the DeFi community. DFI masternodes vote for projects they like and the highest voted proposals every month will be funded.
 
 It costs 500 DFI to submit a budget proposal and a proposal can be submitted by anyone. This fee is burned and non-refundable regardless of whether the budget is approved. Budgets are proposals which receive a net total of yes votes equal to or greater than 10% of the total possible votes (for example over 448 out of 4480). Budgets can be nullified at any time if vote totals (cast or re-cast) fall below the approval threshold. Budgets are processed (paid) in order of yes minus no votes. More popular budgets get payment priority. Voting happens on a monthly basis but can be changed by a masternode vote.
 
@@ -872,8 +829,8 @@ For governance decisions, only the Foundation may submit proposals. Proposals ar
 
 ### Initial Token Distribution
 
-Of the roughly 1.2 billion $DFI coins 49% will be issued to the DeFi Foundation at the start. The rest will be issued to Masternode holders over time.
-Of the 49% initially issued $DFI coins, 49% will be kept by the DeFi Foundation. The rest may be distributed to accredited investors, large funds and institutions, collectively known as external partners, to fund the initial development of DeFiChain. In order to decentralize the holdings of DFIs as much as possible the DeFi foundation may not keep more than 49% of all initially issued tokens. The use of potential proceedings of the tokens will be decided by the DeFi Foundation board but will exclusively be directed towards the adoption and development of DeFiChain.
+Of the roughly 1.2 billion $DFI coins 49% will be issued to the DeFiChain Foundation at the start. The rest will be issued to Masternode holders over time.
+Of the 49% initially issued $DFI coins, 49% will be kept by the DeFiChain Foundation. The rest may be distributed to accredited investors, large funds and institutions, collectively known as external partners, to fund the initial development of DeFiChain. In order to decentralize the holdings of DFIs as much as possible the DeFiChain Foundation may not keep more than 49% of all initially issued tokens. The use of potential proceedings of the tokens will be decided by the DeFiChain Foundation board but will exclusively be directed towards the adoption and development of DeFiChain.
 
 For any avoidance of doubt, there will NOT be a public ICO.
 
@@ -1069,71 +1026,14 @@ $DFI coins will be issued only to the users of DeFiChain or partners with an int
 
 - Institutional investors, accredited investors and funds who are interested in the use of DeFiChain can contact the DeFi founders at (partners@defichain.com).
 - Over time, DFI will be available on staking platforms (such as www.CakeDeFi.com) and on selected exchanges.
-- The DeFi foundation will issue airdrop tokens for users of DeFiChain. (Hodlers and other market makers).
-- The DeFi foundation gives grants to developers who are developing functionality for DeFiChain or dApps to run on the blockchain.
+- The DeFiChain Foundation will issue airdrop tokens for users of DeFiChain. (Hodlers and other market makers).
+- The DeFiChain Foundation gives grants to developers who are developing functionality for DeFiChain or dApps to run on the blockchain.
 
 ---
 
-## DeFi-Foundation
+## DeFiChain Foundation
 
-The DeFi Foundation is incorporated as a company limited by guarantee, resembling a foundation structure.
-
-<table class="table-plain members">
-  <tr>
-    <td>
-      <img src="/img/members/julian-hosp.jpg" alt="Dr. Julian Hosp" srcset="/img/members/julian-hosp.jpg 1x, /img/members/julian-hosp@2x.jpg 2x">
-    </td>
-    <td>
-      <p>
-        <strong>Dr. Julian Hosp, Chairman</strong><br>
-        <a href="https://www.linkedin.com/in/julianhosp/" class="social">LinkedIn</a><br>
-        Serial entrepreneur, author and international blockchain expert<br>
-        European Union Blockchain Workgroup Advisor<br>
-        Raised close to 100M USD in the cryptocurrency space<br>
-        Led teams of over 100 employees
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="/img/members/u-zyn-chua.jpg" alt="U-Zyn Chua" srcset="/img/members/u-zyn-chua.jpg 1x, /img/members/u-zyn-chua@2x.jpg 2x">
-    </td>
-    <td>
-      <p>
-        <strong>U-Zyn Chua, Tech</strong><br>
-        <a href="https://www.linkedin.com/in/uzynchua/" class="social">LinkedIn</a><br>
-        Experienced blockchain engineer<br>
-        Developing digital currencies for central banks around the world<br>
-        Successfully launched dozens of blockchain projects
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="/img/members/john-rost.jpg" alt="John Rost" srcset="/img/members/john-rost.jpg 1x, /img/members/john-rost@2x.jpg 2x">
-    </td>
-    <td>
-      <p>
-        <strong>John Rost, Finance</strong><br>
-        <a href="https://www.linkedin.com/in/john-rost-b70b0628/" class="social">LinkedIn</a><br>
-        Vast financial knowledge and exit from large insurance company in the US
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="/img/members/kenneth-oh.jpg" alt="Kenneth Oh" srcset="/img/members/kenneth-oh.jpg 1x, /img/members/kenneth-oh@2x.jpg 2x">
-    </td>
-    <td>
-      <p>
-        <strong>Kenneth Oh, Legal</strong><br>
-        <a href="https://www.linkedin.com/in/kenneth-oh-840117158/" class="social">LinkedIn</a><br>
-        Helped to setup hundreds of cryptocurrency projects
-      </p>
-    </td>
-  </tr>
-</table>
-
+The DeFiChain Foundation is incorporated as a company limited by guarantee, resembling a foundation structure which holds the DeFiChain Trademarks, Domains and makes sure the DFI foundation funds are used as instructed by the masternodes.
 
 ---
 
@@ -1153,13 +1053,13 @@ Unlike other blockchains, DeFiChain will be balanced between marketing and techn
 
 ### Partnerships
 
-The DeFi Foundation will be tasked with assessing applications from ecosystem partners and providing foundation grants in the form of $DFI coins to developers and contributors to DeFiChain. Many open source projects and blockchain developers today are looking for the right blockchain project in order to develop their DeFi applications, and the prospect of a dedicated DeFiChain, backed by industry leaders is appealing.
+The DeFiChain Foundation will be tasked with assessing applications from ecosystem partners and providing foundation grants in the form of $DFI coins to developers and contributors to DeFiChain. Many open source projects and blockchain developers today are looking for the right blockchain project in order to develop their DeFi applications, and the prospect of a dedicated DeFiChain, backed by industry leaders is appealing.
 
-The DeFi Foundation will undertake a variety of efforts to choose the best projects for the expansion of DeFiChain:
+The DeFiChain Foundation will undertake a variety of efforts to choose the best projects for the expansion of DeFiChain:
 
 - Creation of a formal application process so that worthy projects can apply for airdrop or foundation grants for their development
 - Approaching developers in the ecosystem who are doing DeFi dApps on other blockchains, and providing grants for them to develop their dApps on DeFi.
-- General marketing to get the word out about the availability of DeFi foundation grants to fund worthy projects.
+- General marketing to get the word out about the availability of DeFiChain Foundation grants to fund worthy projects.
 
 Every project on DeFiChain will naturally bring it its own users and put effort towards marketing of the project, adding users and hodlers to DeFiChain.
 

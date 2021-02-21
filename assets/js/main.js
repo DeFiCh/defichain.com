@@ -111,7 +111,7 @@ $(function () {
       type: 'GET',
       url: 'https://api.github.com/repos/DeFiCh/ain/releases/latest',
       success: function (data) {
-        var version = data.name.substring(1);
+        var version = data.tag_name.substring(1);
         var mac_link = "https://github.com/DeFiCh/ain/releases/download/v" + version + "/defichain-" + version + "-x86_64-apple-darwin11.tar.gz";
         var win_link = "https://github.com/DeFiCh/ain/releases/download/v" + version + "/defichain-" + version + "-x86_64-w64-mingw32.zip";
         var linux_link = "https://github.com/DeFiCh/ain/releases/download/v" + version + "/defichain-" + version + "-x86_64-pc-linux-gnu.tar.gz";

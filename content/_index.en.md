@@ -141,28 +141,38 @@ content:
                 x2: /img/timeline/2021/messari@2x.png
                 alt: Messari listing
             - month: Jan
-              status: future
+              status: past
               title: DeFiChain listed on KuCoin.
               url: https://www.kucoin.com/news/en-defichain-gets-listed-on-kucoin?utm_source=DFI
               image:
                 x1: /img/timeline/2021/kucoin.png
                 x2: /img/timeline/2021/kucoin@2x.png
                 alt: KuCoin listing
-            - month: Q1
-              status: future
-              title: Bitcoin anchoring implemented.
-              image:
-                x1: /img/timeline/2021/bitcoin-anchoring.png
-                x2: /img/timeline/2021/bitcoin-anchoring@2x.png
-                alt: Bitcoin anchoring
-            - month: Q1
-              status: future
-              title: Liquidity mining bonus rewards extended via airdrop funds.
+            - month: Jan
+              status: past
+              title: DFIP 3 (liquidity mining bonus rewards extended) in Clarke Quay hard fork.
+              url: https://defichain.ghost.io/voting-results-defichain-improvement-community-proposals/
               image:
                 x1: /img/timeline/2021/lm-bonus.png
                 x2: /img/timeline/2021/lm-bonus@2x.png
                 alt: Liquidity mining bonus extended
-            - month: Q1
+            - month: Jan
+              status: past
+              title: LTC-DFI pool pair added to DEX
+              url: https://defichain.ghost.io/litecoin-liquidity-mining-on-defichain/
+              image:
+                x1: /img/timeline/2021/bch-ltc-pairs.png
+                x2: /img/timeline/2021/bch-ltc-pairs@2x.png
+                alt: New LTC-DFI pool pair
+            - month: Jan
+              status: past
+              title: DOGE-DFI pool pair added to DEX
+              url: https://defichain.ghost.io/doge-420-liquidity-mining/
+              image:
+                x1: /img/timeline/2021/doge-pair.png
+                x2: /img/timeline/2021/doge-pair@2x.png
+                alt: New DOGE-DFI pool pair
+            - month: Feb
               status: future
               title: Collateral required to start a masternode lowered to 20k DFI
               image:
@@ -171,11 +181,18 @@ content:
                 alt: Lower masternode collateral
             - month: Q1
               status: future
-              title: New BCH and LTC pool pairs added to DEX
+              title: BCH-DFI pool pair added to DEX
               image:
                 x1: /img/timeline/2021/bch-ltc-pairs.png
                 x2: /img/timeline/2021/bch-ltc-pairs@2x.png
-                alt: New BCH and LTC pool pairs
+                alt: New BCH-DFI pool pair
+            - month: Q1
+              status: future
+              title: Bitcoin anchoring implemented.
+              image:
+                x1: /img/timeline/2021/bitcoin-anchoring.png
+                x2: /img/timeline/2021/bitcoin-anchoring@2x.png
+                alt: Bitcoin anchoring
             - month: Q1
               status: future
               title: Pink paper on stocks trading, loan and decentralized BTC.

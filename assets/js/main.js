@@ -148,7 +148,7 @@ $(function () {
       dots: false,
       draggable: false,
       infinite: false,
-      initialSlide: 2,
+      initialSlide: 6,
       mobileFirst: true,
       slidesToShow: 1,
       slidesToScroll: 1,

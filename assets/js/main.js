@@ -139,6 +139,42 @@ $(function () {
   // Carousel for timeline
   if ($(".roadmap").length > 0) {
 
+    $(".carousel-5y").slick({
+      appendArrows: '.carousel-5y-nav',
+      arrows: true,
+      autoplay: false,
+      autoplaySpeed: 5000,
+      centerMode: true,
+      dots: false,
+      draggable: false,
+      infinite: false,
+      initialSlide: 0,
+      mobileFirst: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      speed: 500,
+      variableWidth: true,
+      waitForAnimate: true
+    });
+
+    $(".carousel-3y").slick({
+      appendArrows: '.carousel-3y-nav',
+      arrows: true,
+      autoplay: false,
+      autoplaySpeed: 5000,
+      centerMode: true,
+      dots: false,
+      draggable: false,
+      infinite: false,
+      initialSlide: 0,
+      mobileFirst: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      speed: 500,
+      variableWidth: true,
+      waitForAnimate: true
+    });
+
     $(".carousel-2021").slick({
       appendArrows: '.carousel-2021-nav',
       arrows: true,

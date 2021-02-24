@@ -1126,6 +1126,16 @@ section.why-dfi {
   margin-bottom: 32px;
 }
 
+.roadmap .carousel:nth-last-child(2) {
+  border-bottom: 0;
+}
+
+.roadmap-year-status {
+  font-size: $body-md-font-size;
+  color: $color-ui-black60;
+  font-weight: $font-weight-medium;
+}
+
 
 // 
 // Problem Solution

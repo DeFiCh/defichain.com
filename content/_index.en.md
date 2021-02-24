@@ -114,7 +114,68 @@ content:
       headline: Roadmap
       subhead: Achievements and what to look forward to.
       timeline:
+        - year: 3y
+          title: Within the next 3, 5 and 10 years
+          events:
+            - month: 3 years
+              status: future
+              title: Decentralized leveraged trading (10x or 50x leverage of collateral).
+              image:
+                x1: /img/timeline/3y/decentralized-leverage.png
+                x2: /img/timeline/3y/decentralized-leverage@2x.png
+                alt: Decentralized leveraged trading
+            - month: 3 years
+              status: future
+              title: Decentralized Options.
+              image:
+                x1: /img/timeline/3y/options.png
+                x2: /img/timeline/3y/options@2x.png
+                alt: Decentralized Options
+            - month: 3 years
+              status: future
+              title: Secondary market.
+              image:
+                x1: /img/timeline/3y/secondary-market.png
+                x2: /img/timeline/3y/secondary-market@2x.png
+                alt: Secondary market
+            - month: 3 years
+              status: future
+              title: Financial derivatives implemented as native onchain transactions.
+              image:
+                x1: /img/timeline/3y/derivatives.png
+                x2: /img/timeline/3y/derivatives@2x.png
+                alt: Financial derivatives
+            - month: 3 years
+              status: future
+              title: The de-facto blockchain for peer-to-peer financial transactions.
+              image:
+                x1: /img/timeline/3y/p2p.png
+                x2: /img/timeline/3y/p2p@2x.png
+                alt: De-facto blockchain for peer-to-peer financial transactions
+            - month: 5 years
+              status: future
+              title: On-chain Automated Clearing House (ACH) and Real-time Gross Settlement (RTGS).
+              image:
+                x1: /img/timeline/5y/ach.png
+                x2: /img/timeline/5y/ach@2x.png
+                alt: ACH and RTGS
+            - month: 5 years
+              status: future
+              title: The de-facto blockchain for transactions across financial institutions.
+              image:
+                x1: /img/timeline/5y/xfi-txns.png
+                x2: /img/timeline/5y/xfi-txns@2x.png
+                alt: De-facto blockchain for cross-financial institutional transactions
+            - month: 10 years
+              status: future
+              title: The de-facto blockchain for transactions between countries and sovereign states.
+              image:
+                x1: /img/timeline/10y/x-border-txns.png
+                x2: /img/timeline/10y/x-border-txns@2x.png
+                alt: De-facto blockchain for international financial transactions between countries and sovereign states
         - year: 2021
+          title: 2021
+          status: On track
           events:
             - month: Jan
               status: past
@@ -216,11 +277,11 @@ content:
                 alt: Atomic swap
             - month: Q2
               status: future
-              title: Futures trading in stocks, commodities and currencies.
+              title: Trustless on-chain stocks, commodities and currencies.
               image:
-                x1: /img/timeline/2021/futures-trading.png
-                x2: /img/timeline/2021/futures-trading@2x.png
-                alt: Futures trading
+                x1: /img/timeline/2021/trustless-things.png
+                x2: /img/timeline/2021/trustless-things@2x.png
+                alt: Trustless on-chain stocks, commodities and currencies
             - month: Q2
               status: future
               title: Release of open-source DeFiChain JS library.
@@ -235,7 +296,37 @@ content:
                 x1: /img/timeline/2021/mobile-app.png
                 x2: /img/timeline/2021/mobile-app@2x.png
                 alt: Mobile app
+            - month: 2021
+              status: future
+              title: Decentralized Tokenization.
+              image:
+                x1: /img/timeline/2021/decentralized-tokenization.png
+                x2: /img/timeline/2021/decentralized-tokenization@2x.png
+                alt: Decentralized Tokenization
+            - month: 2021
+              status: future
+              title: Decentralized Lending.
+              image:
+                x1: /img/timeline/2021/decentralized-lending.png
+                x2: /img/timeline/2021/decentralized-lending@2x.png
+                alt: Decentralized Lending
+            - month: 2021
+              status: future
+              title: "Futures: expirable futures & perpetual swaps."
+              image:
+                x1: /img/timeline/2021/futures-trading.png
+                x2: /img/timeline/2021/futures-trading@2x.png
+                alt: Futures
+            - month: 2021
+              status: future
+              title: Developer community and toolchain to allow for more integrations.
+              image:
+                x1: /img/timeline/2021/dev-toolchain.png
+                x2: /img/timeline/2021/dev-toolchain@2x.png
+                alt: Developer toolchain
         - year: 2020
+          title: 2020
+          status: Achieved
           events:
             - month: May
               status: past
@@ -357,6 +448,8 @@ content:
                 x2: /img/timeline/2020/liquidity-pool@2x.png
                 alt: Liquidity Pool
         - year: 2019
+          title: 2019
+          status: Achieved
           events:
             - month: Sep
               status: past

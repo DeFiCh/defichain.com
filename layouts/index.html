@@ -212,7 +212,10 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col col-6 col-sm-8 col-md-6 col-ul-4 offset-ul-1">
-            <p class="lg">{{ $year.year }}</p>
+            <p class="lg">
+              {{ $year.title}}
+              <span class="roadmap-year-status">{{ $year.status}}</span>
+            </p>
           </div>
           <div class="carousel-{{ $year.year }}-nav carousel-nav col col-6 col-sm-4 col-md-6"></div>
         </div>

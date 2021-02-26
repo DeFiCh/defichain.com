@@ -126,7 +126,7 @@ content:
                 alt: Decentralized leveraged trading
             - month: 3 years
               status: future
-              title: Decentralized Options.
+              title: Decentralized options.
               image:
                 x1: /img/timeline/3y/options.png
                 x2: /img/timeline/3y/options@2x.png
@@ -219,7 +219,7 @@ content:
                 alt: Liquidity mining bonus extended
             - month: Jan
               status: past
-              title: LTC-DFI pool pair added to DEX
+              title: LTC-DFI pool pair added to DEX.
               url: https://defichain.ghost.io/litecoin-liquidity-mining-on-defichain/
               image:
                 x1: /img/timeline/2021/bch-ltc-pairs.png
@@ -227,7 +227,7 @@ content:
                 alt: New LTC-DFI pool pair
             - month: Jan
               status: past
-              title: DOGE-DFI pool pair added to DEX
+              title: DOGE-DFI pool pair added to DEX.
               url: https://defichain.ghost.io/doge-420-liquidity-mining/
               image:
                 x1: /img/timeline/2021/doge-pair.png
@@ -235,14 +235,14 @@ content:
                 alt: New DOGE-DFI pool pair
             - month: Feb
               status: future
-              title: Collateral required to start a masternode lowered to 20k DFI
+              title: Collateral required to start a masternode lowered to 20k DFI.
               image:
                 x1: /img/timeline/2021/lower-masternode-collateral.png
                 x2: /img/timeline/2021/lower-masternode-collateral@2x.png
                 alt: Lower masternode collateral
             - month: Q1
               status: future
-              title: BCH-DFI pool pair added to DEX
+              title: BCH-DFI pool pair added to DEX.
               image:
                 x1: /img/timeline/2021/bch-ltc-pairs.png
                 x2: /img/timeline/2021/bch-ltc-pairs@2x.png
@@ -263,7 +263,7 @@ content:
                 alt: Q1 pink paper
             - month: Q1
               status: future
-              title: Ledger hardware wallet integration
+              title: Ledger hardware wallet integration.
               image:
                 x1: /img/timeline/2021/ledger.png
                 x2: /img/timeline/2021/ledger@2x.png
@@ -346,7 +346,7 @@ content:
                 alt: DFI on LATOKEN
             - month: Jun
               status: past
-              title: DFI is listted on CoinPaprika.
+              title: $DFI is listed on CoinPaprika.
               url: https://coinpaprika.com/coin/dfi-defi-chain/
               image:
                 x1: /img/timeline/2019/dfi-coinpaprika.png

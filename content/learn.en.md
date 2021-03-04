@@ -51,6 +51,10 @@ content:
           label: Read guide
           url: /learn/defi-app-how-to
         - image: /static/svg/icons/icon-whitepaper.svg
+          headline: How to encrypt your wallet via the console
+          label: Read guide
+          url: /learn/wallet-encryption
+        - image: /static/svg/icons/icon-whitepaper.svg
           headline: Swap and arbitrage on the DeFi app DEX
           label: Read guide
           url: /learn/swap-and-arbitrage

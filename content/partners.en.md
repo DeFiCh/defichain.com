@@ -70,6 +70,14 @@ content:
           cta:
             label: Go to
             url: https://blockfolio.com/coin/DFI
+        - name: CoinPedia
+          description: Trusted Crypto Agency for Information related to Decentralized World.
+          logo:
+            file: /img/external/logo-coinpedia
+            type: png
+          cta:
+            label: Go to
+            url: https://pro.coinpedia.org/companies/defichain
     featured_video:
       video: IGCgUSdiDF0
       headline: DeFiChain

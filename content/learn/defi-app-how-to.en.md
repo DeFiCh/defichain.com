@@ -28,7 +28,7 @@ Download the latest app from the [downloads](/downloads) page.
 
 | Requirement | Minimum Required |
 |-|-|
-| Memory | 2GB |
+| Memory | 4GB |
 | OS | macOS 10.14, Windows 10, Ubuntu LTS 18 and above |
 
 ## Installing on macOS

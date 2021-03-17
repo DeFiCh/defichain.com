@@ -35,7 +35,7 @@ Download the latest app from the [downloads](/downloads) page.
 
 ### Step 1: Installation
 
-Open the downloaded image **DeFi-<version>.dmg**. In the Finder window that pops up, drag the DeFi on the left, on to the Applications directory shortcut on the right.
+Open the downloaded image **DeFi-<version>.dmg**. In the Finder window that pops up, drag the DeFi Wallet on the left, on to the Applications directory shortcut on the right.
 
 <p><img src="/img/guides/installing-defi-app/drag-to-install.png" srcset="/img/guides/installing-defi-app/drag-to-install.png 1x, /img/guides/installing-defi-app/drag-to-install@2x.png 2x"></p>
 

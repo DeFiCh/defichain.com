@@ -29,22 +29,26 @@
               {{ .Site.Params.github.label }}
             </a>
           </li>
-          {{ range .Site.Menus.white_paper }}
-          <li class="white-paper-list-link {{ if $currentPage.IsMenuCurrent "white_paper" . }}active{{ end }}">
-            <a href="{{ .URL | relLangURL }}">
-              {{ .Name }}
-            </a>
-          </li>
-          {{ end }}
         </ul>
         <div class="spacer"></div>
         <div class="ext-menu">
           <a href="/downloads" class="downloads-link">Downloads</a>
-          {{ range .Site.Menus.white_paper }}
-          <a href="{{ .URL | relLangURL }}" class="white-paper-link">
-            {{ .Name }}
-          </a>
-          {{ end }}
+          <div class="buy-dfi">
+            <a href="#" class="btn btn-primary buy-dfi-link">Buy $DFI</a>
+            <div class="buy-dfi-popover">
+              {{ range $exchange := .Site.Params.exchanges.list }}
+                <a href="{{ $exchange.url }}" target="_blank" class="source" title="{{ $exchange.label }}">
+                  <img 
+                    src="{{ $exchange.file }}.{{ $exchange.type }}"
+                    alt="{{ $exchange.label }}"
+                    {{ with eq $exchange.type "png" }}
+                      srcset="{{ $exchange.file }}.{{ $exchange.type }} 1x, {{ $exchange.file }}@2x.{{ $exchange.type }} 2x"
+                    {{ end }}
+                  >
+                </a>
+              {{ end }}
+            </div>
+          </div>
         </div>
         <!-- <div class="lang-switcher">
           <a href="#lang-menu" class="btn">

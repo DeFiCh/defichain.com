@@ -12,21 +12,25 @@ $(function () {
     $('.lang-switcher').toggleClass('active');
   });
 
+  // Buy DFI popover
+  $('.buy-dfi-link').click(function (e) {
+    e.preventDefault();
+    $('.buy-dfi').toggleClass('active');
+  });
+
   // Fetch DFI price
-  if ($("#nav-dfi").length > 0) {
-    $("#nav-dfi a").append('<span class="dfi-price loading"><span class="spinner"><span class="b1"></span><span class="b2"></span><span class="b3"></span></span></span>');
-    $.ajax({
-      url: "https://poolapi.cakedefi.com/home",
-      success: function (data) {
-        for (i = 0; i < data.coinPrices.length; i++) {
-          if (data.coinPrices[i].CoinId == "DFI") {
-            var DFIPrice = data.coinPrices[i].priceUSD.avg;
-          }
+  $(".buy-dfi-link").append('<span class="dfi-price loading"><span class="spinner"><span class="b1"></span><span class="b2"></span><span class="b3"></span></span></span>');
+  $.ajax({
+    url: "https://poolapi.cakedefi.com/home",
+    success: function (data) {
+      for (i = 0; i < data.coinPrices.length; i++) {
+        if (data.coinPrices[i].CoinId == "DFI") {
+          var DFIPrice = data.coinPrices[i].priceUSD.avg;
         }
-        $(".dfi-price").removeClass("loading").empty().html('$' + parseFloat(DFIPrice).toFixed(2));
       }
-    });
-  }
+      $(".dfi-price").removeClass("loading").empty().html('$' + parseFloat(DFIPrice).toFixed(2));
+    }
+  });
 
   // Fetch LM APYs
   if ($(".apy-eth-dfi").length > 0) {

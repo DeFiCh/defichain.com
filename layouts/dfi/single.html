@@ -257,7 +257,7 @@
                   </div>
                   <div class="col col-sm-5 offset-sm-1">
                     <div class="benefit-sources">
-                    {{ range $exchange := $.Params.content.sections.acquiring.exchanges.exchanges_list }}
+                    {{ range $exchange := .Site.Params.exchanges.list }}
                       <a href="{{ $exchange.url }}" target="_blank" class="benefit-source" title="{{ $exchange.label }}">
                         <img 
                           src="{{ $exchange.file }}.{{ $exchange.type }}"

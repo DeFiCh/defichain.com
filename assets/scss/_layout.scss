@@ -192,26 +192,54 @@ body > header {
     }
   }
 
-  .dfi-price {
-    font-size: $body-sm-font-size;
-    font-weight: $font-weight-bold;
-    color: $color-ui-white;
-    margin-left: 8px;
-    padding: 5px 8px;
-    border-radius: 12px;
-    background-color: $color-ui-default;
-    vertical-align: middle;
-    min-width: 55px;
-    height: 24px;
-    line-height: 1;
-    display: inline-block;
+  .buy-dfi {
+    position: relative;
 
-    &.loading {
-      background-color: $color-ui-black40;
+    .buy-dfi-link {
+      color: $color-ui-white;
+
+      &:hover {
+        color: $color-ui-white;
+      }
     }
 
-    .spinner {
-      display: block;
+    .buy-dfi-popover {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 48px;
+      padding: $button-padding-vertical 0;
+      background-color: $color-ui-white;
+      border-radius: $base-border-radius;
+      box-shadow: $base-box-shadow;
+    }
+
+    .source {
+      padding: $button-padding-vertical $button-padding-horizontal;
+
+      &:hover {
+        background-color: map-get($brand-colors, paper);
+      }
+    }
+
+    &.active {
+      .buy-dfi-popover {
+        display: block;
+      }
+    }
+
+    .dfi-price {
+      font-size: $body-sm-font-size;
+      font-weight: $font-weight-bold;
+      color: $color-ui-white80;
+      margin-left: 8px;
+      vertical-align: middle;
+      line-height: 1;
+      display: inline-block;
+
+      .spinner {
+        display: block;
+      }
     }
   }
 

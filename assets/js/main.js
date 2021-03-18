@@ -13,9 +13,14 @@ $(function () {
   });
 
   // Buy DFI popover
-  $('.buy-dfi-link').click(function (e) {
+  $('.buy-dfi .buy-dfi-link').click(function (e) {
     e.preventDefault();
     $('.buy-dfi').toggleClass('active');
+  });
+
+  $('.buy-dfi-list-link .buy-dfi-link').click(function (e) {
+    e.preventDefault();
+    $('.buy-dfi-list-link').toggleClass('active');
   });
 
   // Fetch DFI price

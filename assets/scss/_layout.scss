@@ -131,7 +131,8 @@ body > header {
       }
 
       .white-paper-list-link,
-      .github-list-link {
+      .github-list-link,
+      .buy-dfi-list-link {
         display: none;
       }
     }
@@ -192,6 +193,25 @@ body > header {
     }
   }
 
+  .buy-dfi-popover {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 48px;
+    padding: $button-padding-vertical 0;
+    background-color: $color-ui-white;
+    border-radius: $base-border-radius;
+    box-shadow: $base-box-shadow;
+
+    .source {
+      padding: $button-padding-vertical $button-padding-horizontal;
+
+      &:hover {
+        background-color: map-get($brand-colors, paper);
+      }
+    }
+  }
+
   .buy-dfi {
     position: relative;
 
@@ -203,43 +223,24 @@ body > header {
       }
     }
 
-    .buy-dfi-popover {
-      display: none;
-      position: absolute;
-      right: 0;
-      top: 48px;
-      padding: $button-padding-vertical 0;
-      background-color: $color-ui-white;
-      border-radius: $base-border-radius;
-      box-shadow: $base-box-shadow;
-    }
-
-    .source {
-      padding: $button-padding-vertical $button-padding-horizontal;
-
-      &:hover {
-        background-color: map-get($brand-colors, paper);
-      }
-    }
-
     &.active {
       .buy-dfi-popover {
         display: block;
       }
     }
+  }
 
-    .dfi-price {
-      font-size: $body-sm-font-size;
-      font-weight: $font-weight-bold;
-      color: $color-ui-white80;
-      margin-left: 8px;
-      vertical-align: middle;
-      line-height: 1;
-      display: inline-block;
+  .dfi-price {
+    font-size: $body-sm-font-size;
+    font-weight: $font-weight-bold;
+    color: $color-ui-white80;
+    margin-left: 8px;
+    vertical-align: middle;
+    line-height: 1;
+    display: inline-block;
 
-      .spinner {
-        display: block;
-      }
+    .spinner {
+      display: block;
     }
   }
 
@@ -301,6 +302,7 @@ body > header {
   overflow: hidden;
 
   nav .menu {
+    overflow: auto;
     position: absolute;
     display: block;
     z-index: 0;
@@ -354,6 +356,40 @@ body > header {
     .white-paper-list-link {
       display: block;
       width: 100%;
+    }
+
+    .buy-dfi-list-link {
+      display: block;
+      width: 100%;
+      position: relative;
+      padding-bottom: $section-padding-bottom;
+
+      &.active {
+        .buy-dfi-popover {
+          position: static;
+          display: block;
+          width: 100%;
+          padding-bottom: 64px;
+
+          .source:hover {
+            background-color: map-get($brand-colors, paper);
+          }
+
+          img {
+            display: block;
+            margin: 0 auto;
+          }
+        }
+      }
+
+      a {
+        color: $color-ui-white;
+        border-radius: 0;
+
+        &:hover {
+          background-color: darken($button-primary-bg, 10%);
+        }
+      }
     }
   }
 

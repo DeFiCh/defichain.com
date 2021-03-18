@@ -29,12 +29,28 @@
               {{ .Site.Params.github.label }}
             </a>
           </li>
+          <li class="buy-dfi-list-link">
+            <a href="#" class="btn buy-dfi-link">Buy $DFI</a>
+            <div class="buy-dfi-popover">
+              {{ range $exchange := .Site.Params.exchanges.list }}
+                <a href="{{ $exchange.url }}" target="_blank" class="source" title="{{ $exchange.label }}">
+                  <img 
+                    src="{{ $exchange.file }}.{{ $exchange.type }}"
+                    alt="{{ $exchange.label }}"
+                    {{ with eq $exchange.type "png" }}
+                      srcset="{{ $exchange.file }}.{{ $exchange.type }} 1x, {{ $exchange.file }}@2x.{{ $exchange.type }} 2x"
+                    {{ end }}
+                  >
+                </a>
+              {{ end }}
+            </div>
+          </li>
         </ul>
         <div class="spacer"></div>
         <div class="ext-menu">
           <a href="/downloads" class="downloads-link">Downloads</a>
           <div class="buy-dfi">
-            <a href="#" class="btn btn-primary buy-dfi-link">Buy $DFI</a>
+            <a href="#" class="btn buy-dfi-link">Buy $DFI</a>
             <div class="buy-dfi-popover">
               {{ range $exchange := .Site.Params.exchanges.list }}
                 <a href="{{ $exchange.url }}" target="_blank" class="source" title="{{ $exchange.label }}">

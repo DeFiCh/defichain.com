@@ -79,43 +79,6 @@ content:
         icon: /static/svg/icons/way-to-acquire/exchanges.svg
         title: Exchanges
         description: You can now purchase DFI at these select exchanges, with more exchanges to follow.
-        exchanges_list:
-          - label: KuCoin
-            url: https://trade.kucoin.com/DFI-BTC
-            file: /svg/sources/logo-kucoin
-            type: svg
-          - label: Bittrex
-            url: https://global.bittrex.com/Market/Index?MarketName=BTC-DFI
-            file: /svg/sources/logo-bittrex
-            type: svg
-          - label: LATOKEN
-            url: https://go.latoken.com/1gd
-            file: /svg/sources/logo-latoken
-            type: svg
-          - label: Coinpaprika
-            url: https://coinpaprika.com/coin/dfi-defi-chain/
-            file: /svg/sources/logo-coinpaprika
-            type: svg
-          - label: CoinGecko
-            url: https://www.coingecko.com/en/coins/defichain
-            file: /svg/sources/logo-coingecko
-            type: svg
-          - label: Hotbit
-            url: https://www.hotbit.io/exchange?symbol=DFI_USDT
-            file: /img/sources/logo-hotbit
-            type: png
-          - label: Bittrue
-            url: https://www.bitrue.com/trade/dfi_btc
-            file: /svg/sources/logo-bittrue
-            type: svg
-          - label: EasyCrypto (AU)
-            url: https://easycrypto.ai/au/buy-sell/dfi-defichain
-            file: /img/sources/logo-easycrypto-au
-            type: png
-          - label: EasyCrypto (NZ)
-            url: https://easycrypto.ai/nz/buy-sell/dfi-defichain
-            file: /img/sources/logo-easycrypto-nz
-            type: png
       staking_platforms:
         icon: /static/svg/icons/way-to-acquire/staking.svg
         title: Staking platforms

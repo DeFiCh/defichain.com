@@ -234,41 +234,52 @@ content:
                 x2: /img/timeline/2021/doge-pair@2x.png
                 alt: New DOGE-DFI pool pair
             - month: Feb
-              status: future
+              status: past
+              title: Further decentralization via Dakota upgrade.
+              url: https://defichain.ghost.io/dakota-upgrade/
+              image:
+                x1: /img/timeline/2021/dakota-upgrade.png
+                x2: /img/timeline/2021/dakota-upgrade@2x.png
+                alt: Dakota upgrade
+            - month: Feb
+              status: past
               title: Collateral required to start a masternode lowered to 20k DFI.
+              url: https://defichain.ghost.io/dakota-upgrade/
               image:
                 x1: /img/timeline/2021/lower-masternode-collateral.png
                 x2: /img/timeline/2021/lower-masternode-collateral@2x.png
                 alt: Lower masternode collateral
-            - month: Q1
-              status: future
+            - month: Mar
+              status: past
               title: BCH-DFI pool pair added to DEX.
+              url: https://defichain.ghost.io/new-liquidity-mining-pool-pair-bitcoin-cash-dfi/
               image:
                 x1: /img/timeline/2021/bch-ltc-pairs.png
                 x2: /img/timeline/2021/bch-ltc-pairs@2x.png
                 alt: New BCH-DFI pool pair
-            - month: Q1
-              status: future
+            - month: Mar
+              status: past
               title: Bitcoin anchoring implemented.
+              url: https://defichain.ghost.io/100-grand-in-less-than-100-seconds/
               image:
                 x1: /img/timeline/2021/bitcoin-anchoring.png
                 x2: /img/timeline/2021/bitcoin-anchoring@2x.png
                 alt: Bitcoin anchoring
-            - month: Q1
+            - month: Q2
               status: future
               title: Pink paper on stocks trading, loan and decentralized BTC.
               image:
                 x1: /img/timeline/2021/pink-paper-q1.png
                 x2: /img/timeline/2021/pink-paper-q1@2x.png
                 alt: Q1 pink paper
-            - month: Q1
+            - month: Q2
               status: future
               title: Ledger hardware wallet integration.
               image:
                 x1: /img/timeline/2021/ledger.png
                 x2: /img/timeline/2021/ledger@2x.png
                 alt: Ledger integration
-            - month: Q1
+            - month: Q2
               status: future
               title: Decentralized cross-chain asset bridge via atomic swap.
               image:

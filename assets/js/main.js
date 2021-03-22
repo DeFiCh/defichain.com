@@ -193,7 +193,7 @@ $(function () {
       dots: false,
       draggable: false,
       infinite: false,
-      initialSlide: 6,
+      initialSlide: 10,
       mobileFirst: true,
       slidesToShow: 1,
       slidesToScroll: 1,

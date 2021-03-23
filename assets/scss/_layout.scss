@@ -2365,7 +2365,8 @@ section.downloads {
 // 
 
 body.home,
-body.claim {
+body.claim,
+body.bounty {
   section.hero {
     // height: 100vh;
     // min-height: 432px;
@@ -2402,6 +2403,33 @@ body.claim {
       transform: rotate(33deg);
       background-image: url(/img/hero/singapore.jpg);
       clip-path: url(#branchesClip);
+    }
+  }
+}
+
+body.bounty {
+  section.hero {
+    @include media("<lg") {
+      padding-bottom: 320px;
+    }
+  }
+  .hero-art {
+    svg {
+      right: -112px;
+      bottom: -32px;
+      transform: scale(.8);
+
+      @include media(">lg") {
+        right: 32px;
+        bottom: 16%;
+        transform: scale(1.25);
+        transform-origin: right bottom;
+      }
+
+      @include media(">xl") {
+        right: 80px;
+        bottom: 12%;
+      }
     }
   }
 }

@@ -134,9 +134,9 @@ $(function () {
       url: 'https://api.github.com/repos/DeFiCh/app/releases/latest',
       success: function (data) {
         var version = data.name.substring(1);
-        var mac_link = "https://github.com/DeFiCh/app/releases/download/v"+version+"/defi-app-"+version+".dmg";
-        var win_link = "https://github.com/DeFiCh/app/releases/download/v" + version + "/defi-app-Setup-" + version + ".exe";
-        var appimg_link = "https://github.com/DeFiCh/app/releases/download/v" + version + "/defi-app-" + version + ".AppImage";
+        var mac_link = "https://github.com/DeFiCh/app/releases/download/v"+version+"/DeFi-Wallet-"+version+".dmg";
+        var win_link = "https://github.com/DeFiCh/app/releases/download/v" + version + "/DeFi-Wallet-Setup-" + version + ".exe";
+        var appimg_link = "https://github.com/DeFiCh/app/releases/download/v" + version + "/DeFi-Wallet-" + version + ".AppImage";
         $('.download-desktop-app-mac').attr('href', mac_link);
         $('.download-desktop-app-win').attr('href', win_link);
         $('.download-desktop-app-appimg').attr('href', appimg_link);

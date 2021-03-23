@@ -6,7 +6,7 @@ title = "DeFiChain"
 [params]
   uen = "201918368M"
   [params.featured]
-    headline = "_Liquidity mine_ at more than 100% APY, _DEX_ is live."
+    headline = "_Liquidity mine_ at more than 100% APR, _DEX_ is live."
   [params.featured.cta]
     label = "Learn more"
     url = "/dex"

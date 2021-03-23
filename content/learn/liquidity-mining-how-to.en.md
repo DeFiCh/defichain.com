@@ -42,7 +42,7 @@ When you first land on **Liquidity**, you will be presented with videos you can 
 
 <img src="/img/guides/liquidity-mining/liquidity-welcome.png" srcset="/img/guides/liquidity-mining/liquidity-welcome.png 1x, /img/guides/liquidity-mining/liquidity-welcome@2x.png 2x">
 
-Below the videos, you'd find a list of _pool pairs_. Within each pool pair the total liquidity in it and APY is displayed.
+Below the videos, you'd find a list of _pool pairs_. Within each pool pair the total liquidity in it and APR is displayed.
 
 ### Step 4: Decide which pool pair to supply liquidity to
 

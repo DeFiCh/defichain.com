@@ -37,28 +37,28 @@ $(function () {
     }
   });
 
-  // Fetch LM APYs
-  if ($(".apy-eth-dfi").length > 0) {
-    var lpETHDFIAPY;
-    var lpBTCDFIAPY;
-    var lpUSDTDFIAPY;
-    var lpBCHDFIAPY;
-    var lpDOGEDFIAPY;
+  // Fetch LM APRs
+  if ($(".apr-eth-dfi").length > 0) {
+    var lpETHDFIAPR;
+    var lpBTCDFIAPR;
+    var lpUSDTDFIAPR;
+    var lpBCHDFIAPR;
+    var lpDOGEDFIAPR;
     $.ajax({
       url: "https://api.defichain.io/v1/listyieldfarming?network=mainnet",
       success: function (data) {
-        lpBTCDFIAPY = data.pools[0].apy.toFixed(2);
-        lpETHDFIAPY = data.pools[1].apy.toFixed(2);
-        lpUSDTDFIAPY = data.pools[2].apy.toFixed(2);
-        lpLTCDFIAPY = data.pools[3].apy.toFixed(2);
-        lpBCHDFIAPY = data.pools[4].apy.toFixed(2);
-        lpDOGEDFIAPY = data.pools[5].apy.toFixed(2);
-        $('.apy-btc-dfi .apy-value').removeClass('loading').prepend(lpBTCDFIAPY + "%");
-        $('.apy-eth-dfi .apy-value').removeClass('loading').prepend(lpETHDFIAPY + "%");
-        $('.apy-usdt-dfi .apy-value').removeClass('loading').prepend(lpUSDTDFIAPY + "%");
-        $('.apy-ltc-dfi .apy-value').removeClass('loading').prepend(lpLTCDFIAPY + "%");
-        $('.apy-bch-dfi .apy-value').removeClass('loading').prepend(lpBCHDFIAPY + "%");
-        $('.apy-doge-dfi .apy-value').removeClass('loading').prepend(lpDOGEDFIAPY + "%");
+        lpBTCDFIAPR = data.pools[0].apy.toFixed(2);
+        lpETHDFIAPR = data.pools[1].apy.toFixed(2);
+        lpUSDTDFIAPR = data.pools[2].apy.toFixed(2);
+        lpLTCDFIAPR = data.pools[3].apy.toFixed(2);
+        lpBCHDFIAPR = data.pools[4].apy.toFixed(2);
+        lpDOGEDFIAPR = data.pools[5].apy.toFixed(2);
+        $('.apr-btc-dfi .apr-value').removeClass('loading').prepend(lpBTCDFIAPR + "%");
+        $('.apr-eth-dfi .apr-value').removeClass('loading').prepend(lpETHDFIAPR + "%");
+        $('.apr-usdt-dfi .apr-value').removeClass('loading').prepend(lpUSDTDFIAPR + "%");
+        $('.apr-ltc-dfi .apr-value').removeClass('loading').prepend(lpLTCDFIAPR + "%");
+        $('.apr-bch-dfi .apr-value').removeClass('loading').prepend(lpBCHDFIAPR + "%");
+        $('.apr-doge-dfi .apr-value').removeClass('loading').prepend(lpDOGEDFIAPR + "%");
       }
     });
   }

@@ -1289,7 +1289,7 @@ body.dex {
 }
 
 section.liquidity_mining {
-  .lm-apys {
+  .lm-aprs {
     padding-bottom: $section-padding-bottom;
     justify-content: center;
 
@@ -1298,19 +1298,19 @@ section.liquidity_mining {
     }
   }
 
-  .lm-apy {
+  .lm-apr {
     text-align: center;
     margin-bottom: $grid-gutter;
   }
 
-  .apy-coin {
+  .apr-coin {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 16px;
   }
 
-  .apy-coin-icons {
+  .apr-coin-icons {
     position: relative;
     width: 56px;
     height: 32px;
@@ -1332,7 +1332,7 @@ section.liquidity_mining {
     }
   }
 
-  .apy-value {
+  .apr-value {
     font-size: $h2-font-size;
     line-height: $h2-line-height;
     font-weight: $h2-font-weight;
@@ -1359,7 +1359,7 @@ section.liquidity_mining {
     }
   }
 
-  .apy-label {
+  .apr-label {
     color: $color-ui-black60;
     font-weight: $font-weight-medium;
     font-size: $body-md-font-size;

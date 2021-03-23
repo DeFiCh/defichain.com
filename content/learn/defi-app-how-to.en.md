@@ -131,7 +131,7 @@ You can now open DeFi app.
 #### Sidebar main navigation
 
 - **Wallets** tab: Send and receive funds, and view transactions
-- **Liquidity** tab: Add and remove liquidity, and viewing APY of your liquidity
+- **Liquidity** tab: Add and remove liquidity, and viewing APR of your liquidity
 - **DEX** tab: Swap between wrapped BTC/ETH/USDT and DFI
 - **Tokens** tab: View community-verified DST (DeFi Standard tokens) and create your own
 - **Blockchain** tab: A built-in mini block explorer to examine the blockchain

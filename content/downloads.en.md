@@ -22,28 +22,11 @@ content:
       headline: Downloads
       subhead: Download applications for Mac, Windows and Linux.
     downloads:
-      headline: Get the CLI and desktop app
-      description: Download official DeFiChain brand assets and learn about usage guidelines.
+      headline: Get the wallet app and CLI.
       downloads_list:
-        - title: CLI
-          type: cli
-          description: Interact with DeFiChain through a command line interface.
-          image:
-            path: /static/svg/icons/developers/icon-cli.svg
-            type: svg
-          links:
-            - label: Mac
-              type: mac
-              url: https://github.com/DeFiCh/ain/releases
-            - label: Windows
-              type: win
-              url: https://github.com/DeFiCh/ain/releases
-            - label: Linux
-              type: linux
-              url: https://github.com/DeFiCh/ain/releases
-        - title: Desktop app
+        - title: DeFi Wallet app
           type: desktop-app
-          description: Need help installing? Read the [installation guide](/learn/defi-app-how-to).
+          description: Transact, liquidity mine, swap and more with the full-featured and fully-decentralized wallet app. Full node included.
           image:
             path: /img/downloads/defichain-icon-128.png
             type: png
@@ -58,6 +41,24 @@ content:
             - label: Linux (AppImage)
               type: appimg
               url: https://github.com/DeFiCh/defi-app/releases
+            - label: Installation guide
+              url: /learn/defi-app-how-to
+        - title: CLI
+          type: cli
+          description: Transact and interact with DeFiChain through a command line interface. Full node included.
+          image:
+            path: /static/svg/icons/developers/icon-cli.svg
+            type: svg
+          links:
+            - label: Mac
+              type: mac
+              url: https://github.com/DeFiCh/ain/releases
+            - label: Windows
+              type: win
+              url: https://github.com/DeFiCh/ain/releases
+            - label: Linux
+              type: linux
+              url: https://github.com/DeFiCh/ain/releases
     #subscribe in /
     #closer_look in /
 ---

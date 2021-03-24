@@ -2432,6 +2432,46 @@ body.bounty {
       }
     }
   }
+
+  .hunter {
+    > div {
+      flex-direction: row;
+      padding-bottom: 32px;
+    }
+
+    .hunter-rank {
+      text-align: right;
+      margin-right: $grid-gutter;
+    }
+
+    .hunter-pic {
+      width: 48px;
+      height: 48px;
+      margin-right: $grid-gutter;
+    }
+
+    .hunter-info {
+      flex-grow: 1;
+
+      .h4 {
+        margin-bottom: 0;
+      }
+    }
+
+    .hunter-bounties {
+      flex-grow: 1;
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
 }
 
 body.token {

@@ -29,7 +29,7 @@
 
   <main>
 
-    <section class="hero paper" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
+    <section class="hero day" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
           <div id="{{ $.Param "content.sections.hero.name" }}" class="col col-lg-6 col-xl-5 offset-xl-1">
@@ -51,7 +51,7 @@
       </div>
     </section>
 
-    <section class="leaderboard white">
+    <section class="leaderboard paper">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-lg-9 col-ul-8 offset-ul-1 mbg1">
@@ -59,13 +59,44 @@
             <p class="lg">{{ $.Params.content.sections.leaderboard.subhead }}</p>
           </div>
         </div>
+        <div class="row">
+          <div class="col col-lg-10 col-ul-10 offset-ul-1">
+            {{ range $i, $hunter := $.Params.content.sections.leaderboard.hunters }}
+              <div class="hunter card">
+                <div>
+                  <div class="hunter-rank h4">{{ add $i 1 }}</div>
+                  <div class="hunter-pic">
+                    <img alt="{{ $hunter.name }}" width="40" height="40" src="https://avatars2.githubusercontent.com/{{ $hunter.github }}?v=3&amp;s=48" srcset="https://avatars2.githubusercontent.com/{{ $hunter.github }}?v=3&amp;s=48 1x, https://avatars2.githubusercontent.com/{{ $hunter.github }}?v=3&amp;s=96 2x, https://avatars2.githubusercontent.com/{{ $hunter.github }}?v=3&amp;s=144 3x">
+                  </div>
+                  <div class="hunter-info">
+                    <h3 class="h4">{{ $hunter.name }}</h3>
+                    <div class="hunter-github">
+                      <a href="https://github.com/{{ $hunter.github }}" target="_blank">{{ $hunter.github }}</a>
+                    </div>
+                  </div>
+                  <div class="hunter-bounties">
+                    <ul>
+                    {{ range $bounty := $hunter.bounties }}
+                      <li>
+                        <div class="bounty-title">{{ $bounty.title }}</div>
+                        <div class="bounty-value">{{ lang.NumFmt 2 $bounty.value }} DFI</div>
+                      </li>
+                    {{ end }}
+                    </ul>
+                  </div>
+                  <div class="bg"></div>
+                </div>
+              </div>
+            {{ end }}
+          </div>
+        </div>
       </div>
-      <div class="section-slope white">
+      <div class="section-slope paper">
         {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
       </div>
     </section>
 
-    <section id="participation" class="participation paper">
+    <section id="participation" class="participation day">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-lg-9 col-ul-8 offset-ul-1 mbg1">
@@ -76,12 +107,12 @@
           </div>
         </div>
       </div>
-      <div class="section-slope paper">
+      <div class="section-slope day">
         {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
       </div>
     </section>
 
-    <section id="submission" class="submission day">
+    <section id="submission" class="submission white">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-lg-9 col-ul-8 offset-ul-1 mbg1">
@@ -96,7 +127,7 @@
           </div>
         </div>
       </div>
-      <div class="section-slope reverse day">
+      <div class="section-slope reverse white">
         {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
       </div>
     </section>

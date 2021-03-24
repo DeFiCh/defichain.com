@@ -34,7 +34,14 @@ content:
         label: How to participate
     leaderboard:
       headline: Leaderboard
-      subhead: A list of bounties awarded is coming soon.
+      subhead: DeFiChain thanks the following bounty hunters in their efforts to keep DeFiChain secure.
+      hunters:
+        - name: Dr. Daniel Cagara
+          github: muirglacier
+          address: dYY5wLEmiawTAzTp2CP5qfrYyjmCVcwPv4
+          bounties:
+            - title: Masternode mining efficiency exploit
+              value: 5000
     participation:
       headline: How to participate
       description:

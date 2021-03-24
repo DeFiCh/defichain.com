@@ -76,12 +76,18 @@
                   </div>
                   <div class="hunter-bounties">
                     <ul>
-                    {{ range $bounty := $hunter.bounties }}
+                      {{ $bountiesValue := 0 }}
+                      {{ range $bounty := $hunter.bounties }}
+                      {{ $bountiesValue = add $bountiesValue $bounty.value }}
                       <li>
                         <div class="bounty-title">{{ $bounty.title }}</div>
                         <div class="bounty-value">{{ lang.NumFmt 2 $bounty.value }} DFI</div>
                       </li>
-                    {{ end }}
+                      {{ end }}
+                      <li>
+                        <div class="bounty-title">Total value</div>
+                        <div class="bounty-value">{{ lang.NumFmt 2 $bountiesValue }} DFI</div>
+                      </li>
                     </ul>
                   </div>
                   <div class="bg"></div>

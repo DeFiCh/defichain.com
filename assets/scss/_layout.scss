@@ -2475,6 +2475,10 @@ body.bounty {
           border-bottom: 0;
         }
       }
+
+      .bounty-value {
+        font-family: $monospace-font-family;
+      }
     }
   }
 }

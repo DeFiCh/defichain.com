@@ -24,16 +24,32 @@ $(function () {
   });
 
   // Fetch DFI price
+  var DFIPrice;
+  
   $(".buy-dfi-link").append('<span class="dfi-price loading"><span class="spinner"><span class="b1"></span><span class="b2"></span><span class="b3"></span></span></span>');
+  $(".bounty-value-usd").append('<span class="loading"><span class="spinner"><span class="b1"></span><span class="b2"></span><span class="b3"></span></span></span>');
+
   $.ajax({
     url: "https://poolapi.cakedefi.com/home",
     success: function (data) {
       for (i = 0; i < data.coinPrices.length; i++) {
         if (data.coinPrices[i].CoinId == "DFI") {
-          var DFIPrice = data.coinPrices[i].priceUSD.avg;
+          DFIPrice = data.coinPrices[i].priceUSD.avg;
         }
       }
       $(".dfi-price").removeClass("loading").empty().html('$' + parseFloat(DFIPrice).toFixed(2));
+
+      // USD value of bounty
+      if ($('.bounty').length > 0) {
+        $('.bounty-value-usd').each(function () {
+          $(this).empty().html(
+            parseFloat(
+              ($(this).data('dfi-value') * DFIPrice).toFixed(2)
+            )
+            .toLocaleString() + " USD"
+          );
+        });
+      }
     }
   });
 
@@ -96,26 +112,6 @@ $(function () {
     }
     // $(this).toggleClass('active').siblings('.faq-q').removeClass('active');
   });
-
-  // Fetch latest releases
-  // if ($("body.home").length) {
-  //   $.ajax({
-  //     type: 'GET',
-  //     url: 'https://api.github.com/repos/DeFiCh/ain/releases/latest',
-  //     success: function (data) {
-  //       $(".latest-cli-url").attr('href', data.html_url);
-  //       $(".latest-cli-label").html(data.tag_name);
-  //     }
-  //   });
-  //   $.ajax({
-  //     type: 'GET',
-  //     url: 'https://api.github.com/repos/DeFiCh/defi-app/releases/latest',
-  //     success: function (data) {
-  //       $(".latest-app-url").attr('href', data.html_url);
-  //       $(".latest-app-label").html(data.tag_name);
-  //     }
-  //   });
-  // }
 
   // Fetch latest software download links
   if ($("body.downloads").length) {

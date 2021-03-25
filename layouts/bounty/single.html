@@ -81,12 +81,17 @@
                       {{ $bountiesValue = add $bountiesValue $bounty.value }}
                       <li>
                         <div class="bounty-title">{{ $bounty.title }}</div>
-                        <div class="bounty-value">{{ lang.NumFmt 2 $bounty.value }} DFI</div>
+                        <div class="bounty-value">{{ lang.NumFmt 2 $bounty.value }} DFI <span class="bounty-value-usd" data-dfi-value="{{ $bounty.value }}"></span></div>
+                        {{ with $bounty.txid }}
+                        <a href="https://explorer.defichain.com/#/DFI/mainnet/tx/{{ $bounty.txid }}" class="bounty-txid">
+                          {{ readFile "/static/svg/icons/icon-txid.svg" | safeHTML }}
+                        </a>
+                        {{ end }}
                       </li>
                       {{ end }}
                       <li>
                         <div class="bounty-title">Total value</div>
-                        <div class="bounty-value">{{ lang.NumFmt 2 $bountiesValue }} DFI</div>
+                        <div class="bounty-value">{{ lang.NumFmt 2 $bountiesValue }} DFI <span class="bounty-value-usd" data-dfi-value="{{ $bountiesValue }}"></span></div>
                       </li>
                     </ul>
                   </div>

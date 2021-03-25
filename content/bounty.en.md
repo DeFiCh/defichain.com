@@ -42,6 +42,7 @@ content:
           bounties:
             - title: Masternode mining efficiency exploit
               value: 5000
+              txid: 
     participation:
       headline: How to participate
       description:

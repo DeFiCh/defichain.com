@@ -2470,14 +2470,33 @@ body.bounty {
         display: flex;
         justify-content: space-between;
         border-bottom: $base-border-style;
+        padding-right: 32px;
+        position: relative;
 
         &:last-child {
           border-bottom: 0;
         }
       }
 
+      .bounty-txid {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 0;
+        top: 4px;
+      }
+
       .bounty-value {
-        font-family: $monospace-font-family;
+        .loading {
+          .spinner > span {
+            background-color: $color-ui-black40;
+          }
+        }
+      }
+
+      .bounty-value-usd {
+        color: $color-ui-black40;
+        padding-left: 8px;
       }
     }
   }

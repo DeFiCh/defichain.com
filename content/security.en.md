@@ -13,7 +13,7 @@ meta:
     locale: en_US
 menu:
   footer:
-    weight: 100
+    weight: 900
 content:
   sections:
     hero:

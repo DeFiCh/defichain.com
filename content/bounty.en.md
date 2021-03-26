@@ -10,7 +10,7 @@ menu:
   # main:
   #   weight: 45
   footer:
-    weight: 110
+    weight: 1000
 meta:
   description: DeFiChain Bug Bounty Program
   og:
@@ -41,8 +41,10 @@ content:
           address: dYY5wLEmiawTAzTp2CP5qfrYyjmCVcwPv4
           bounties:
             - title: Masternode mining efficiency exploit
-              value: 5000
+              value_dfi: 5000
+              value_usd: 16000
               txid: 
+      total_bounty: Total bounty
     participation:
       headline: How to participate
       description:

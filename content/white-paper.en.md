@@ -6,8 +6,8 @@ cta_to: Read
 theme:
   subscribe: white
 menu:
-  white_paper:
-    weight: 10
+  footer:
+    weight: 1100
 meta:
   description: DeFiChain white paper
   og:

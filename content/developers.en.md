@@ -5,9 +5,9 @@ long_title: Build on DeFiChain
 cta_to: Study
 menu:
   main:
-    weight: 50
+    weight: 400
   footer:
-    weight: 50
+    weight: 400
 meta:
   description: Start building on DeFiChain with developer resources and code.
   og:

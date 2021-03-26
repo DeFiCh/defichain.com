@@ -5,7 +5,9 @@ long_title: Be part of DeFiChain ecosystem.
 cta_to: Join
 menu:
   main:
-    weight: 60
+    weight: 500
+  footer:
+    weight: 500
 meta:
   description: Be part of DeFiChain ecosystem.
   og:

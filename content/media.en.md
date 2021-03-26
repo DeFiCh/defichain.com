@@ -5,7 +5,7 @@ long_title: DeFiChain and $DFI coin in the news and media.
 cta_to: Read
 menu:
   footer:
-    weight: 70
+    weight: 700
 meta:
   description: DeFiChain and $DFI coin in the news and media. Download media resources and assets.
   og:

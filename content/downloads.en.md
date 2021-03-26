@@ -4,7 +4,7 @@ type: downloads
 long_title: DeFiChain CLI and desktop app downloads for Mac, Windows and Linux.
 menu:
   footer:
-    weight: 60
+    weight: 600
 meta:
   description: DeFiChain CLI and desktop app downloads for Mac, Windows and Linux.
   og:

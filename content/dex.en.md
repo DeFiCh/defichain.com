@@ -7,9 +7,9 @@ aliases:
 cta_to: More
 menu:
   main:
-    weight: 45
+    weight: 300
   footer:
-    weight: 45
+    weight: 300
 meta:
   description: Swap on the DEX, mine liquidity and more, with the DeFiChain wallet app. Available for Windows, macOS and Linux.
   og:

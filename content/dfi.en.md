@@ -8,9 +8,9 @@ aliases:
   - /dfi-token/
 menu:
   main:
-    weight: 40
+    weight: 200
   footer:
-    weight: 40
+    weight: 200
 meta:
   description: Learn about the $DFI coin nd its utility, distribution, airdrops and how to acquire DFI. Join the DeFiChain Insiders.
   og:

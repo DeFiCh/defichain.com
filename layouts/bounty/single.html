@@ -76,12 +76,14 @@
                   </div>
                   <div class="hunter-bounties">
                     <ul>
-                      {{ $bountiesValue := 0 }}
+                      {{ $bountiesValueDFI := 0 }}
+                      {{ $bountiesValueUSD := 0 }}
                       {{ range $bounty := $hunter.bounties }}
-                      {{ $bountiesValue = add $bountiesValue $bounty.value }}
+                      {{ $bountiesValueDFI = add $bountiesValueDFI $bounty.value_dfi }}
+                      {{ $bountiesValueUSD = add $bountiesValueUSD $bounty.value_usd }}
                       <li>
                         <div class="bounty-title">{{ $bounty.title }}</div>
-                        <div class="bounty-value">{{ lang.NumFmt 2 $bounty.value }} DFI <span class="bounty-value-usd" data-dfi-value="{{ $bounty.value }}"></span></div>
+                        <div class="bounty-value">{{ lang.NumFmt 0 $bounty.value_dfi }} DFI <span class="bounty-value-usd">{{ lang.NumFmt 0 $bounty.value_usd }} USD</span></div>
                         {{ with $bounty.txid }}
                         <a href="https://explorer.defichain.com/#/DFI/mainnet/tx/{{ $bounty.txid }}" class="bounty-txid">
                           {{ readFile "/static/svg/icons/icon-txid.svg" | safeHTML }}
@@ -90,8 +92,8 @@
                       </li>
                       {{ end }}
                       <li>
-                        <div class="bounty-title">Total value</div>
-                        <div class="bounty-value">{{ lang.NumFmt 2 $bountiesValue }} DFI <span class="bounty-value-usd" data-dfi-value="{{ $bountiesValue }}"></span></div>
+                        <div class="bounty-title">{{ $.Params.content.sections.leaderboard.total_bounty }}</div>
+                        <div class="bounty-value">{{ lang.NumFmt 0 $bountiesValueDFI }} DFI <span class="bounty-value-usd">{{ lang.NumFmt 0 $bountiesValueUSD }} USD</span></div>
                       </li>
                     </ul>
                   </div>

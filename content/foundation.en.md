@@ -7,7 +7,7 @@ aliases:
 cta_to: Explore
 menu:
   footer:
-    weight: 30
+    weight: 100
 meta:
   description: Understand how the DeFiChain Foundation operates and how to get involved.
   og:

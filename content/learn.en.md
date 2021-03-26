@@ -5,9 +5,9 @@ long_title: Learn more and understand DeFiChain with videos and how-to guides.
 cta_to: Learn
 menu:
   main:
-    weight: 80
+    weight: 800
   footer:
-    weight: 80
+    weight: 800
 meta:
   description: Learn more and understand DeFiChain with videos and how-to guides.
   og:

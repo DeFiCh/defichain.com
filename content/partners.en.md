@@ -80,6 +80,14 @@ content:
           cta:
             label: Go to
             url: https://pro.coinpedia.org/companies/defichain
+        - name: Messari
+          description: Data tools that bring transparency to the cryptoeconomy.
+          logo:
+            file: /svg/external/logo-messari
+            type: svg
+          cta:
+            label: Go to
+            url: https://messari.io/asset/defichain
     featured_video:
       video: IGCgUSdiDF0
       headline: DeFiChain

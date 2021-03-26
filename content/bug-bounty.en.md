@@ -1,6 +1,6 @@
 ---
-title: Bounty
-type: bounty
+title: Bug bounty
+type: bug-bounty
 long_title: DeFiChain Bug Bounty Program
 aliases:
     - /bounty

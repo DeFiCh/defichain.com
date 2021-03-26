@@ -3,7 +3,7 @@ title: Bounty
 type: bounty
 long_title: DeFiChain Bug Bounty Program
 aliases:
-    - /bug-bounty
+    - /bounty
     - /bounty-program
     - /bug-bounty-program
 menu:
@@ -43,7 +43,7 @@ content:
             - title: Masternode mining efficiency exploit
               value_dfi: 5000
               value_usd: 16000
-              txid: 
+              txid: 3855e22b35f26cc962d154639d3ce1ac14a40286182b0c897cd5dbe8c0b60503
       total_bounty: Total bounty
     participation:
       headline: How to participate

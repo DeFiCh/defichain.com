@@ -2437,17 +2437,12 @@ body.bounty {
     > div {
       flex-direction: row;
       padding-bottom: 32px;
-    }
-
-    .hunter-rank {
-      text-align: right;
-      margin-right: $grid-gutter;
+      flex-wrap: wrap;
     }
 
     .hunter-pic {
       width: 48px;
       height: 48px;
-      margin-right: $grid-gutter;
     }
 
     .hunter-info {
@@ -2464,6 +2459,10 @@ body.bounty {
       ul {
         list-style: none;
         padding: 0;
+
+        @include media("<lg") {
+          margin-top: 16px;
+        }
       }
 
       li {
@@ -2472,6 +2471,10 @@ body.bounty {
         border-bottom: $base-border-style;
         padding-right: 32px;
         position: relative;
+
+        @include media("<lg") {
+          padding: 8px 0;
+        }
 
         &:last-child {
           border-bottom: 0;
@@ -2486,7 +2489,17 @@ body.bounty {
         top: 4px;
       }
 
+      .bounty-title {
+        padding-left: 0;
+      }
+
       .bounty-value {
+        padding-left: 0;
+
+        @include media(">lg") {
+          text-align: right;
+        }
+
         .loading {
           .spinner > span {
             background-color: $color-ui-black40;

@@ -50,18 +50,18 @@ $(function () {
     $.ajax({
       url: "https://api.defichain.io/v1/listyieldfarming?network=mainnet",
       success: function (data) {
-        lpBTCDFIAPR = data.pools[0].apy.toFixed(2);
-        lpETHDFIAPR = data.pools[1].apy.toFixed(2);
-        lpUSDTDFIAPR = data.pools[2].apy.toFixed(2);
-        lpLTCDFIAPR = data.pools[3].apy.toFixed(2);
-        lpBCHDFIAPR = data.pools[4].apy.toFixed(2);
-        lpDOGEDFIAPR = data.pools[5].apy.toFixed(2);
-        $('.apr-btc-dfi .apr-value').removeClass('loading').prepend(lpBTCDFIAPR + "%");
-        $('.apr-eth-dfi .apr-value').removeClass('loading').prepend(lpETHDFIAPR + "%");
-        $('.apr-usdt-dfi .apr-value').removeClass('loading').prepend(lpUSDTDFIAPR + "%");
-        $('.apr-ltc-dfi .apr-value').removeClass('loading').prepend(lpLTCDFIAPR + "%");
-        $('.apr-bch-dfi .apr-value').removeClass('loading').prepend(lpBCHDFIAPR + "%");
-        $('.apr-doge-dfi .apr-value').removeClass('loading').prepend(lpDOGEDFIAPR + "%");
+        lpBTCDFIAPR = (typeof data.pools[0] != 'undefined') ? data.pools[0].apy.toFixed(2) + "%" : 'Error';
+        lpETHDFIAPR = (typeof data.pools[1] != 'undefined') ? data.pools[1].apy.toFixed(2) + "%" : 'Error';
+        lpUSDTDFIAPR = (typeof data.pools[2] != 'undefined') ? data.pools[2].apy.toFixed(2) + "%" : 'Error';
+        lpLTCDFIAPR = (typeof data.pools[3] != 'undefined') ? data.pools[3].apy.toFixed(2) + "%" : 'Error';
+        lpBCHDFIAPR = (typeof data.pools[4] != 'undefined') ? data.pools[4].apy.toFixed(2) + "%" : 'Error';
+        lpDOGEDFIAPR = (typeof data.pools[5] != 'undefined') ? data.pools[5].apy.toFixed(2) + "%" : 'Error';
+        $('.apr-btc-dfi .apr-value').removeClass('loading').prepend(lpBTCDFIAPR);
+        $('.apr-eth-dfi .apr-value').removeClass('loading').prepend(lpETHDFIAPR);
+        $('.apr-usdt-dfi .apr-value').removeClass('loading').prepend(lpUSDTDFIAPR);
+        $('.apr-ltc-dfi .apr-value').removeClass('loading').prepend(lpLTCDFIAPR);
+        $('.apr-bch-dfi .apr-value').removeClass('loading').prepend(lpBCHDFIAPR);
+        $('.apr-doge-dfi .apr-value').removeClass('loading').prepend(lpDOGEDFIAPR);
       }
     });
   }

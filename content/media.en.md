@@ -25,11 +25,32 @@ content:
     mentions:
       headline: DeFiChain covered in the press and media.
       mentions_list:
+        
+        - title: To Secure a Sustainable Future for DeFi, We Need to Look Beyond Ethereum
+          source: Nasdaq
+          date: 14 Apr, 2021
+          image: /svg/press/nasdaq.svg
+          url: https://www.nasdaq.com/articles/to-secure-a-sustainable-future-for-defi-we-need-to-look-beyond-ethereum-2021-04-14
+        - title: DeFiChain, a Blockchain Platform on the Bitcoin Network, Introduces ERC-20 Token Standard DFI on Ethereum
+          source: Crowdfund Insider
+          date: 30 Mar, 2021
+          image: /img/press/crowdfundinsider.png
+          url: https://www.crowdfundinsider.com/2021/03/173734-defichain-a-blockchain-platform-on-the-bitcoin-network-introduces-erc-20-token-standard-dfi-on-ethereum/
+        - title: 3 Best DEXs For Liquidity Mining and Swapping in 2021
+          source: Hacker Noon
+          date: 13 Feb, 2021
+          image: /img/press/hackernoon.png
+          url: https://hackernoon.com/3-best-dexs-for-liquidity-mining-and-swapping-in-2021-p62t33uh
+        - title: "Shifting into ‘Lite’speed: DeFiChain Launches Litecoin Liquidity Mining"
+          source: Crypto Mode
+          date: 11 Feb, 2021
+          image: /img/press/cryptomode.png
+          url: https://cryptomode.com/shifting-into-litespeed-defichain-launches-litecoin-liquidity-mining/
         - title: 库币新币观察：将DeFi带入比特币生态，DeFiChain有何特别之处？
           source: IT专家网
-          date: 25 Jan, 2021
-          image: /img/press/ctocio.png
-          url: http://roll.ctocio.com.cn/gundong/2021/0125/62549.html
+          date: 22 Jan, 2021
+          image: /svg/press/jinse.svg
+          url: https://www.jinse.com/news/blockchain/986014.html
         - title: "KuCoin Crypto Gem Observer: Integrating DeFi with Bitcoin, Why Is DeFiChain So Special?"
           source: KuCoin Blog
           date: 23 Jan, 2021
@@ -55,6 +76,11 @@ content:
           date: 20 Jan, 2021
           image: /svg/sources/logo-kucoin.svg
           url: https://www.kucoin.com/news/en-defichain-gets-listed-on-kucoin
+        - title: 4 cryptos gain over 400% in a month, far outperforming Bitcoin
+          source: Nairametrics
+          date: 18 Jan, 2021
+          image: /img/press/nairametrics.png
+          url: https://nairametrics.com/2021/01/18/4-cryptos-gain-over-400-in-a-month-far-outperforming-bitcoin/
         - title: Four Crypto Assets Surge More Than 400% in Just One Month As Alt Season Roars
           source: The Daily Hodl
           date: 17 Jan, 2021

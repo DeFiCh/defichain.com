@@ -139,6 +139,14 @@ content:
           github: https://github.com/prasannavl
           username: prasannavl
           city: Chennai, India
+        - name: JJ Adonis
+          github: https://github.com/thedoublejay
+          username: thedoublejay
+          city: Singapore
+        - name: Bella Chew
+          github: https://github.com/izzycsy
+          username: izzycsy
+          city: Singapore
         - name: DeFiDev
           github: https://github.com/DeFiDev
           username: DeFiDev

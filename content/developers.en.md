@@ -115,10 +115,6 @@ content:
           github: https://github.com/saurabh391
           username: saurabh391
           city: Indore, India
-        - name: Sumit570
-          github: https://github.com/Sumit570
-          username: Sumit570
-          city: Indore, India
         - name: Peter Bushnell
           github: https://github.com/Bushstar
           username: Bushstar
@@ -135,10 +131,6 @@ content:
           github: https://github.com/fuxingloh
           username: fuxingloh
           city: Singapore
-        - name: Prasanna Loganathar
-          github: https://github.com/prasannavl
-          username: prasannavl
-          city: Chennai, India
         - name: JJ Adonis
           github: https://github.com/thedoublejay
           username: thedoublejay

@@ -139,10 +139,6 @@ content:
           github: https://github.com/izzycsy
           username: izzycsy
           city: Singapore
-        - name: DeFiDev
-          github: https://github.com/DeFiDev
-          username: DeFiDev
-          city: Saint Petersburg, Russia
     subscribe:
       name: subscribe
       headline: Subscribe for updates on developer resources and releases.

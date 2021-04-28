@@ -420,7 +420,7 @@ content:
                 alt: DFIP 1 & 2 approved
             - month: Oct
               status: past
-              title: DeFiChain listed on Bittrue.
+              title: DeFiChain listed on Bitrue.
               url: https://www.bitrue.com/trade/dfi_btc
               image:
                 x1: /img/timeline/2020/bittrue.png

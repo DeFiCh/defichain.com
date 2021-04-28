@@ -65,7 +65,11 @@ title = "DeFiChain"
       label = "EasyCrypto (NZ)"
       url = "https://easycrypto.ai/nz/buy-sell/dfi-defichain"
       file = "/img/sources/logo-easycrypto-nz"
-      type = "png"    
+      type = "png"
+  [params.menu]
+    social = "Social"
+    buy_dfi = "Buy $DFI"
+    downloads = "Downloads"
 
 [markup]
   [markup.goldmark]
@@ -84,12 +88,84 @@ DefaultContentLanguage = "en"
 
 [languages]
   [languages.en]
+    contentDir = "content/en"
     languageName = "English"
     title = "DeFiChain"
     description = "Decentralized finance enabled on Bitcoin."
     company_name = "DeFiChain"
     copyright = "All Rights Reserved"
     weight = 20
+  [languages.zh-hans]
+    contentDir = "content/zh-hans"
+    languageName = "简体中文"
+    title = "DeFiChain"
+    description = "官方中文网递飞链"
+    company_name = "DeFiChain"
+    copyright = "All Rights Reserved"
+    weight = 30
+    [languages.zh-hans.params.featured]
+      headline = "_DEX_ 已启动并开放超过100％年利率的 _流动性矿池_"
+    [languages.zh-hans.params.featured.cta]
+      label = "了解更多"
+      url = "/dex"
+    [languages.zh-hans.params.github]
+      label = "GitHub源代码"
+      url = "https://github.com/DeFiCh/ain"
+      releases_url = "https://github.com/DeFiCh/ain/releases"
+    [languages.zh-hans.params.social]
+      facebook = "https://facebook.com/cakedefi/"
+      twitter = "https://twitter.com/cakedefi"
+      reddit = "https://reddit.com/r/cakedefi/"
+      youtube = "https://www.youtube.com/channel/UCkRa0RHkJ9Udd_mVWl8fa8A"
+      telegram = "https://t.me/CakeDeFi_EN"
+    [languages.zh-hans.params.exchanges]
+      [[languages.zh-hans.params.exchanges.list]]
+        label = "KuCoin"
+        url = "https://trade.kucoin.com/DFI-BTC"
+        file = "/svg/sources/logo-kucoin"
+        type = "svg"
+      [[languages.zh-hans.params.exchanges.list]]
+        label = "Bittrex"
+        url = "https://global.bittrex.com/Market/Index?MarketName=BTC-DFI"
+        file = "/svg/sources/logo-bittrex"
+        type = "svg"
+      [[languages.zh-hans.params.exchanges.list]]
+        label = "LATOKEN"
+        url = "https://go.latoken.com/1gd"
+        file = "/svg/sources/logo-latoken"
+        type = "svg"
+      [[languages.zh-hans.params.exchanges.list]]
+        label = "Hotbit"
+        url = "https://www.hotbit.io/exchange?symbol=DFI_USDT"
+        file = "/img/sources/logo-hotbit"
+        type = "png"
+      [[languages.zh-hans.params.exchanges.list]]
+        label = "Bittrue"
+        url = "https://www.bitrue.com/trade/dfi_btc"
+        file = "/svg/sources/logo-bittrue"
+        type = "svg"
+      [[languages.zh-hans.params.exchanges.list]]
+        label = "EasyCrypto (AU)"
+        url = "https://easycrypto.ai/au/buy-sell/dfi-defichain"
+        file = "/img/sources/logo-easycrypto-au"
+        type = "png"
+      [[languages.zh-hans.params.exchanges.list]]
+        label = "EasyCrypto (NZ)"
+        url = "https://easycrypto.ai/nz/buy-sell/dfi-defichain"
+        file = "/img/sources/logo-easycrypto-nz"
+        type = "png"
+    [languages.zh-hans.params.menu]
+      social = "社区"
+      buy_dfi = "購買 $DFI"
+      downloads = "下载中心"
+  [languages.zh-hant]
+    contentDir = "content/zh-hant"
+    languageName = "繁體中文"
+    title = "DeFiChain"
+    description = "官方中文網遞飛鏈"
+    company_name = "DeFiChain"
+    copyright = "All Rights Reserved"
+    weight = 40
   # [languages.de]
   #   languageName = "Deutsch"
   #   title = "DeFiChain"

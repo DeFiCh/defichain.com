@@ -248,23 +248,102 @@ body > header {
     margin-right: $grid-gutter;
   }
 
+  // .lang-switcher {
+  //   @include media(">ul") {
+  //     margin-right: -24px;
+  //   }
+
+  //   > a {
+  //     display: flex;
+  //     align-items: center;
+  //     text-transform: capitalize;
+  //     background-color: transparent;
+  //   }
+
+  //   svg {
+  //     margin-left: 10px;
+  //     width: 18px;
+  //     height: 18px;
+  //     fill: currentColor;
+  //   }
+  // }
+
   .lang-switcher {
-    @include media(">ul") {
-      margin-right: -24px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+
+    &.active {
+      .lang-menu {
+        display: block;
+        border: $base-border-style;
+        border-radius: $base-border-radius;
+      }
+
+      a[href="#lang-menu"] svg {
+        transform: rotate(180deg);
+      }
     }
 
-    > a {
+    > a[href="#lang-menu"] {
+      color: $color-ui-black60;
+      text-decoration: none;
       display: flex;
       align-items: center;
-      text-transform: capitalize;
-      background-color: transparent;
     }
 
-    svg {
-      margin-left: 10px;
-      width: 18px;
-      height: 18px;
-      fill: currentColor;
+    .lang-menu {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      width: 100%;
+      min-width: 128px;
+      box-shadow: $base-box-shadow;
+
+      a {
+        color: $color-ui-default;
+        display: block;
+        text-decoration: none;
+
+        @include media(">xl") {
+          padding-bottom: $button-padding-vertical;
+          padding-top: $button-padding-vertical;
+        }
+
+        &:hover {
+          background-color: $color-ui-scent;
+        }
+      }
+    }
+
+    ul {
+      text-align: left;
+      margin: 0;
+      padding: 0;
+      background-color: $color-ui-white;
+
+      @include media(">xl") {
+        border-radius: $base-border-radius;
+        overflow: hidden;
+      }
+    }
+
+    li {
+      display: block;
+      border-bottom: $base-border-style;
+
+      &:last-child {
+        border: 0;
+      }
+    }
+
+    a {
+      padding-right: $button-padding-horizontal;
+      padding-left: $button-padding-horizontal;
+      padding-bottom: $button-padding-vertical;
+      padding-top: $button-padding-vertical;
     }
   }
 

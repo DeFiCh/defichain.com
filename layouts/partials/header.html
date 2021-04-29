@@ -56,7 +56,7 @@
             <ul>
               {{ range $.Translations }}
               <li class="option-{{ .Language }}">
-                <a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+                <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
               </li>
               {{ end }}
             </ul>

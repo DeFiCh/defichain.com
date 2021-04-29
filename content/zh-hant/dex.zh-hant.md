@@ -1,20 +1,20 @@
 ---
 title: DEX
 type: dex
-long_title: DEX上互换，流动性挖矿，钱包。适用于Windows，macOS和Linux
+long_title: Swap on the DEX, mine liquidity and more, with the DeFiChain wallet app. Available for Windows, macOS and Linux.
 aliases:
-  - /zh-hans/app/
-cta_to: 更多
+  - /app/
+cta_to: More
 menu:
   main:
     weight: 300
   footer:
     weight: 300
 meta:
-  description: DEX上互换，流动性挖矿，钱包。适用于Windows，macOS和Linux
+  description: Swap on the DEX, mine liquidity and more, with the DeFiChain wallet app. Available for Windows, macOS and Linux.
   og:
     title: DeFiChain DEX
-    description: DEX上互换，流动性挖矿，钱包。适用于Windows，macOS和Linux
+    description: Swap on the DEX, mine liquidity and more, with the DeFiChain wallet app. Available for Windows, macOS and Linux.
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
@@ -23,72 +23,72 @@ content:
   sections:
     hero:
       name: hero
-      headline: 去中心化交易所
-      subhead: 在DEX上做互换和套利，流动性挖矿100x高获利，和许多功能都在桌面板钱包程序内部操作。 适用于Windows，macOS和Linux
+      headline: Decentralized Exchange
+      subhead: Swap and arbitrage on the DEX, mine liquidity for up to 100x high yields, and more, with the DeFiChain wallet app. Available for Windows, macOS and Linux.
       cta:
-        label: 下载
+        label: Download now
         url: /downloads
       image: /img/app/dex
     coins_apr:
-      label: 年利率
+      label: APR
     liquidity_mining:
-      headline: 流动性挖矿池
-      subhead: 程序上直接做高年利率的流动性挖矿。向ETH, BTC, USDT DEX市场堤共流动资产，换得交易费和高利润年收益。随时欢迎您提出资产。
+      headline: New! Liquidity mining
+      subhead: Liquidity mine for potentially high yields, from right within the app. Supply liquidity to the ETH, BTC and USDT pool pairs to power the DEX, and earn fees and returns at high annual yields. Withdraw your liquidity at any time.
       image: /img/app/liquidity
     guides:
       name: guides
-      headline: 入门指南
+      headline: How-to guides
       guides_list:
         - image: /static/svg/icons/icon-whitepaper.svg
-          headline: 入门安装和使用递飞链桌面板程序 (GUI)
-          label: 前往入门
+          headline: Installing and using DeFi desktop app (GUI).
+          label: Read guide
           url: /learn/defi-app-how-to
         - image: /static/svg/icons/icon-whitepaper.svg
-          headline: 程序内使用DEX做互换和套利
-          label: 前往入门
+          headline: Swap and arbitrage on the DeFi app DEX
+          label: Read guide
           url: /learn/swap-and-arbitrage
         - image: /static/svg/icons/icon-whitepaper.svg
-          headline: 换取ETH/BTC/USDT挂钩的代币
-          label: 前往入门
+          headline: Obtaining wrapped ETH/BTC/USDT
+          label: Read guide
           url: /learn/obtaining-wrapped-tokens
         - image: /static/svg/icons/icon-whitepaper.svg
-          headline: 程序內做流动性挖矿入门
-          label: 前往入门
+          headline: How to liquidity mine with DeFi app
+          label: Read guide
           url: /learn/liquidity-mining-how-to
         - image: /static/svg/icons/icon-whitepaper.svg
-          headline: 逐步转换DFI代币到DFI货币
-          label: 前往Reddit阅读
+          headline: "Step-by-Step: Changing DFI-Token to DFI-Coin"
+          label: Read on Reddit
           url: https://www.reddit.com/r/defiblockchain/comments/kb10d3/stepbystep_changing_dfitoken_to_dficoin/
     features:
-      headline: 钱包特点
+      headline: Other wallet features
       features_list:
         - icon: /static/svg/icons/feature/wallet.svg
-          title: 分层确定性钱包
-          description: 使用BIP39标准拓展分层确定性钱包
+          title: HD wallet
+          description: A Hierarchical Deterministic (HD) wallet based on the leading BIP39 standard.
         - icon: /static/svg/icons/feature/restore.svg
-          title: 备份还原
-          description: 使用二十四组助记词随时备份和恢复您的资产钱包
+          title: Backup and restore
+          description: Backup and restore your wallet and funds any time with your 24-word seed phrase.
         - icon: /static/svg/icons/feature/dex.svg
-          title: 去中心化交易所
-          description: 在去中心化交易所上随时互换DFI和挂钩的代币
+          title: Decentralized Exchange
+          description: Swap between DFI and wrapped tokens in a completely decentralized, exchange.
         - icon: /static/svg/icons/feature/mine.svg
-          title: 流动性挖矿
-          description: 在流动性挖矿池提供非常火的货币并获得高年利率的收获
+          title: Liquidity mining
+          description: Supply and mine liquidity in popular pool pairs for potentially high yields.
         - icon: /static/svg/icons/functions/tokens.svg
-          title: 代幣支持
-          description: 在DFI和递飞链生态中的代币进行存储和交易
+          title: Tokens support
+          description: Store and transact in DFI, as well as all tokens in the DeFiChain ecosystem.
         - icon: /static/svg/icons/feature/explore.svg
-          title: 迷你浏览器
-          description: 浏览整个区块链和查看交易
+          title: Mini explorer
+          description: Explore the blockchain and examine transactions.
         - icon: /static/svg/icons/utility/staking.svg
-          title: 主节点
-          description: 创建您的主节点和查看所有主节点
+          title: Masternodes
+          description: View the full list of masternodes, and create your own masternodes.
         - icon: /static/svg/icons/feature/console.svg
-          title: 控制台
-          description: 控制台上运用帐号，区块链，主节点，挖矿池，网络，钱包指令等功能
+          title: Console
+          description: Run account, blockchain, masternode, mining, network, wallet commands, and more.
         - icon: /static/svg/icons/feature/network.svg
-          title: 网络选项
-          description: 轻易在程序上转换主网和测试网
+          title: Network selection
+          description: The app supports easy connecting and switching between Mainnet and Testnet.
     risks:
       headline: A note about risks
       subhead: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

@@ -96,7 +96,7 @@ DefaultContentLanguage = "en"
 
 [languages]
   [languages.en]
-    baseURL = "https://www.defichain.com/"
+    # baseURL = "https://www.defichain.com/"
     # staticDir2 = "static_en"
     contentDir = "content/en"
     languageName = "English"
@@ -106,7 +106,7 @@ DefaultContentLanguage = "en"
     copyright = "All Rights Reserved"
     weight = 20
   [languages.zh-hans]
-    baseURL = "https://www.zh.defichain.com/"
+    # baseURL = "https://www.zh.defichain.com/"
     # staticDir = ["staticDir_override", "static_zh-hans"]
     contentDir = "content/zh-hans"
     languageName = "简体中文"

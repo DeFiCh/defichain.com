@@ -43,7 +43,7 @@ cd ..
 
 echo "Updating gh-pages branch"
 cd public/zh-hans
-echo defichain.com >> CNAME
+echo zh.defichain.com >> CNAME
 git add --all
 git commit -m "Publishing to gh-pages (deploy.sh)"
 

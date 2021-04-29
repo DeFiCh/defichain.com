@@ -32,21 +32,10 @@ echo "Generating site (minified)"
 hugo --minify
 
 echo "Updating gh-pages branch"
-cd public/en
+cd public
 echo defichain.com >> CNAME
 git add --all
 git commit -m "Publishing to gh-pages (deploy.sh)"
 
 git push origin gh-pages
-cd ..
-cd ..
-
-echo "Updating gh-pages branch"
-cd public/zh-hans
-echo zh.defichain.com >> CNAME
-git add --all
-git commit -m "Publishing to gh-pages (deploy.sh)"
-
-git push origin gh-pages
-cd ..
 cd ..

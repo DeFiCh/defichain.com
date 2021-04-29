@@ -1,5 +1,5 @@
 ---
-title: Learn
+title: Learn Title PR Test
 type: learn
 long_title: Learn more and understand DeFiChain with videos and how-to guides.
 cta_to: Learn

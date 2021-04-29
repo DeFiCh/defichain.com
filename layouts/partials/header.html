@@ -30,7 +30,7 @@
             </a>
           </li>
           <li class="buy-dfi-list-link">
-            <a href="#" class="btn buy-dfi-link">Buy $DFI</a>
+            <a href="#" class="btn buy-dfi-link">{{ .Site.Params.menu.buy_dfi }}</a>
             <div class="buy-dfi-popover">
               {{ range $exchange := .Site.Params.exchanges.list }}
                 <a href="{{ $exchange.url }}" target="_blank" class="source" title="{{ $exchange.label }}">
@@ -47,10 +47,25 @@
           </li>
         </ul>
         <div class="spacer"></div>
+        <div class="lang-switcher">
+          <a href="#lang-menu">
+            <span>{{ .Language.LanguageName }}</span>
+            {{ readFile "/static/svg/icons/icon-dropdown.svg" | safeHTML }}
+          </a>
+          <div class="lang-menu current-{{ .Language }}" id="lang-switcher">
+            <ul>
+              {{ range $.Translations }}
+              <li class="option-{{ .Language }}">
+                <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
         <div class="ext-menu">
-          <a href="/downloads" class="downloads-link">Downloads</a>
+          <a href="/downloads" class="downloads-link">{{ .Site.Params.menu.downloads }}</a>
           <div class="buy-dfi">
-            <a href="#" class="btn buy-dfi-link">Buy $DFI</a>
+            <a href="#" class="btn buy-dfi-link">{{ .Site.Params.menu.buy_dfi }}</a>
             <div class="buy-dfi-popover">
               {{ range $exchange := .Site.Params.exchanges.list }}
                 <a href="{{ $exchange.url }}" target="_blank" class="source" title="{{ $exchange.label }}">

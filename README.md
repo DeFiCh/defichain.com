@@ -3,7 +3,9 @@ Source for defichain.com
 
 ## You need
 
-- [Hugo](https://gohugo.io/) `brew install hugo`
+[Hugo](https://gohugo.io/) `brew install hugo`
+
+[Not on macOS?](https://gohugo.io/getting-started/installing). Note that you'll the "extended" version.
 
 ## Running
 

@@ -95,7 +95,7 @@ content:
       subject_title: CEO, Cake
       quote: Healthy finances. For someone like me with the background at medicine, sounds like _doing the right thing for the people_.
     partnering:
-      headline: Tell us how you would like to contribute to DeFiChain ecosystem.
+      headline: Tell us how you would like to contribute to the DeFiChain ecosystem.
       form:
         name:
           label: Name

@@ -156,70 +156,71 @@
         {{ readFile "/static/svg/section-slope-line.svg" | safeHTML }}
       </div>
     </section>
-    
-    <section class="defi-blockchain featured-video">
-      <div class="container-flush">
-        <div class="row">
-          <div class="col col-lg-6">
-            <div class="video-player">
-              <div id="player-embed"></div>
-              <script>
-                var tag = document.createElement('script');
-                tag.src = "https://www.youtube.com/iframe_api";
-                var firstScriptTag = document.getElementsByTagName('script')[0];
-                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-                var player;
-                function onYouTubeIframeAPIReady() {
-                  player = new YT.Player('player-embed', {
-                    height: '390',
-                    width: '640',
-                    videoId: '{{ $.Param "content.sections.featured_video.video" }}',
-                    events: {
-                      'onReady': onPlayerReady,
-                      'onStateChange': onPlayerStateChange
-                    },
-                    playerVars: {
-                      controls: 0,
-                      iv_load_policy: 3,
-                      modestbranding: 1,
-                      showinfo: 0
-                    }
-                  });
-                }
-                function onPlayerReady(event) {
-                  // play and pause
-                }
-                var done = false;
-                function onPlayerStateChange(event) {
-                  if (event.data == YT.PlayerState.PLAYING && !done) {
-                    setTimeout(stopVideo, 6000);
-                    done = true;
+    {{ if $.Param "content.sections.featured_video.video" }}
+      <section class="defi-blockchain featured-video">
+        <div class="container-flush">
+          <div class="row">
+            <div class="col col-lg-6">
+              <div class="video-player">
+                <div id="player-embed"></div>
+                <script>
+                  var tag = document.createElement('script');
+                  tag.src = "https://www.youtube.com/iframe_api";
+                  var firstScriptTag = document.getElementsByTagName('script')[0];
+                  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                  var player;
+                  function onYouTubeIframeAPIReady() {
+                    player = new YT.Player('player-embed', {
+                      height: '390',
+                      width: '640',
+                      videoId: '{{ $.Param "content.sections.featured_video.video" }}',
+                      events: {
+                        'onReady': onPlayerReady,
+                        'onStateChange': onPlayerStateChange
+                      },
+                      playerVars: {
+                        controls: 0,
+                        iv_load_policy: 3,
+                        modestbranding: 1,
+                        showinfo: 0
+                      }
+                    });
                   }
-                }
-                function stopVideo() {
-                  player.stopVideo();
-                }
-              </script>
+                  function onPlayerReady(event) {
+                    // play and pause
+                  }
+                  var done = false;
+                  function onPlayerStateChange(event) {
+                    if (event.data == YT.PlayerState.PLAYING && !done) {
+                      setTimeout(stopVideo, 6000);
+                      done = true;
+                    }
+                  }
+                  function stopVideo() {
+                    player.stopVideo();
+                  }
+                </script>
+              </div>
             </div>
-          </div>
-          <div class="col col-lg-6">
-            <div class="video-info">
-              <h2 class="lg">{{ $.Param "content.sections.featured_video.headline" }}</h2>
-              <div class="subject-name small">
-                {{ $.Param "content.sections.featured_video.subject_name" | markdownify }}</div>
-              <div class="subject-title small">
-                {{ $.Param "content.sections.featured_video.subject_title" }}</div>
-              <div class="quote lg">
-                {{ $.Param "content.sections.featured_video.quote" | markdownify }}
+            <div class="col col-lg-6">
+              <div class="video-info">
+                <h2 class="lg">{{ $.Param "content.sections.featured_video.headline" }}</h2>
+                <div class="subject-name small">
+                  {{ $.Param "content.sections.featured_video.subject_name" | markdownify }}</div>
+                <div class="subject-title small">
+                  {{ $.Param "content.sections.featured_video.subject_title" }}</div>
+                <div class="quote lg">
+                  {{ $.Param "content.sections.featured_video.quote" | markdownify }}
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="section-slope day">
-        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
-      </div>
-    </section>
+        <div class="section-slope day">
+          {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
+        </div>
+      </section>
+    {{ end }}
 
     {{ partial "section-partners-subscribe.html" . }}
 

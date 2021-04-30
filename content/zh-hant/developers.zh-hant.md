@@ -1,18 +1,18 @@
 ---
-title: Developers
+title: 開發者
 type: developers
-long_title: Build on DeFiChain
-cta_to: Study
+long_title: 在遞飛鏈上創建
+cta_to: 了解
 menu:
   main:
     weight: 400
   footer:
     weight: 400
 meta:
-  description: Start building on DeFiChain with developer resources and code.
+  description: 入門遞飛鏈開發者資源和代碼
   og:
-    title: Developers
-    description: Start building on DeFiChain with developer resources and code.
+    title: 開發者
+    description: 入門遞飛鏈開發者資源和代碼
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
@@ -21,8 +21,8 @@ content:
   sections:
     hero:
       name: hero
-      headline: Developers
-      subhead: Build on DeFiChain.
+      headline: 開發者
+      subhead: 在遞飛鏈上創建
     featured_video:
       video: f7Dv4MymtO0
       headline: On Cake, crypto, engineering and security
@@ -30,32 +30,32 @@ content:
       subject_title: CTO, Cake
       quote: Doesn't matter if you are front-end of back-end. If you're a JavaScript developer, and a good one, drop me a note, and we can talk.
     resources:
-      headline: Start building on DeFiChain with developer resources and code.
+      headline: 入門遞飛鏈開發者資源和代碼
       github:
         image: /static/svg/icons/developers/icon-octocat.svg
-        headline: Get developer resources and getting started guides.
-        label: GitHub
+        headline: 開發者資源和入門指南
+        label: GitHub源代碼
         url: https://github.com/DeFiCh/ain
       download:
         image: /static/svg/icons/developers/icon-cli.svg
-        headline: Get the CLI and desktop app.
-        subhead: The latest releases for Mac, Windows and Linux.
-        label: Go to Downloads
+        headline: 入門命令行界面桌面版程序
+        subhead: 最新版本適用于Mac,Windows和Linux
+        label: 前往下載中心
         url: /downloads
       explorer:
         image: /static/svg/icons/developers/icon-dfi.svg
-        headline: Explore the blockchain in Block Explorer.
-        label: Explore
+        headline: 在區塊鏈浏覽器中查詢區塊鏈交易細節
+        label: 探索
         url: http://explorer.defichain.com/
       white_paper:
         image: /static/svg/icons/icon-whitepaper.svg
-        headline: Read the DeFiChain technical paper.
-        label: Read the white paper
+        headline: 前往閱讀技術概述粉紅書和白皮書
+        label: 閱讀白皮書
         url: /white-paper
       reddit:
         image: /static/svg/icons/developers/icon-reddit.svg
-        headline: Participate in our Reddit developer community.
-        label: Discuss
+        headline: 參與開發者Reddit討論區
+        label: 討論
         url: https://www.reddit.com/r/defiblockchain/
     #subscribe in /
     #closer_look in /
@@ -92,73 +92,73 @@ content:
             general: Oops! That didn't go through.
             blank_field: This field cannot be left blank.
     core_contributors:
-      headline: Core contributors
-      subhead: DeFiChain is an open-source project with a global team of core contributors, supported by a community of developers. The full list of projects and contributors can be found on [GitHub](https://github.com/DeFiCh).
+      headline: 主要貢獻者
+      subhead: 遞飛鏈是個開放源碼項目，由主貢獻者組成的全球團隊，並由開發者社區支持此項目。[GitHub](https://github.com/DeFiCh)源代碼網列出主要貢獻者和項目中細節
       contributors_list:
         - name: monstrobishi
           github: https://github.com/monstrobishi
           username: monstrobishi
-          city: Singapore
+          city: 新加坡
         - name: U-Zyn Chua
           github: https://github.com/uzyn
           username: uzyn
-          city: Singapore
+          city: 新加坡
         - name: Aen
           github: https://github.com/aentan
           username: aentan
-          city: Singapore
+          city: 新加坡
         - name: Harsh R
           github: https://github.com/fullstackninja864
           username: fullstackninja864
-          city: Pune, India
+          city: 印度浦那
         - name: saurabh391
           github: https://github.com/saurabh391
           username: saurabh391
-          city: Indore, India
+          city: 印度印多爾
         - name: Sumit570
           github: https://github.com/Sumit570
           username: Sumit570
-          city: Indore, India
+          city: 印度印多爾
         - name: Peter Bushnell
           github: https://github.com/Bushstar
           username: Bushstar
-          city: Oxford, UK
+          city: 英國牛津
         - name: Anthony Fieroni
           github: https://github.com/bvbfan
           username: bvbfan
-          city: Poldiv, Bulgaria
+          city: 保加利亞普羅夫迪夫
         - name: Mihailo Milenkovic
           github: https://github.com/Mixa84
           username: Mixa84
-          city: Belgrade, Serbia
+          city: 塞爾維亞貝爾格萊德
         - name: Fuxing Loh
           github: https://github.com/fuxingloh
           username: fuxingloh
-          city: Singapore
+          city: 新加坡
         - name: Prasanna Loganathar
           github: https://github.com/prasannavl
           username: prasannavl
-          city: Chennai, India
+          city: 印度金奈(真奈)
         - name: DeFiDev
           github: https://github.com/DeFiDev
           username: DeFiDev
-          city: Saint Petersburg, Russia
+          city: 俄羅斯聖彼得堡
     subscribe:
-      name: subscribe
-      headline: Subscribe for updates on developer resources and releases.
+      name: 訂閱
+      headline: 訂閱開發者資源和更新版資訊。
       form:
         name:
-          label: Name
-          placeholder: Full Name
+          label: 姓名
+          placeholder: 姓名
         email:
-          label: Email
+          label: 電郵地址
           placeholder: name@example.com
         company:
-          label: Company (optional)
-          placeholder: Your company name
+          label: 遞飛鏈基金會 (可選)
+          placeholder: 遞飛鏈基金會
         comment:
-          label: How will you contribute?
-          placeholder: What do you intend to, or are building on top of DeFi Blockchain? What resources and support can DeFiChain provide you with?
+          label: 您想如何貢獻?
+          placeholder: 您打算在遞飛鏈上構建什麽？遞飛鏈可以為您提供哪些資源?
         button:
-          label: Subscribe
+          label: 訂閱
 ---

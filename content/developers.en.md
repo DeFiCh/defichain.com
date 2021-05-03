@@ -150,7 +150,7 @@ content:
           placeholder: Your company name
         comment:
           label: How will you contribute?
-          placeholder: What do you intend to, or are building on top of DeFi Blockchain? What resources and support can DeFiChain provide you with?
+          placeholder: What do you intend to, or are building on top of BeFi Blockchain? What resources and support can DeFiChain provide you with?
         button:
           label: Subscribe
 ---

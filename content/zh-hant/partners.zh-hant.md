@@ -1,18 +1,18 @@
 ---
-title: Partners
+title: 合作夥伴
 type: partners
-long_title: Be part of DeFiChain ecosystem.
-cta_to: Join
+long_title: 加入友情鏈接
+cta_to: 加入
 menu:
   main:
     weight: 500
   footer:
     weight: 500
 meta:
-  description: Be part of DeFiChain ecosystem.
+  description: 加入友情鏈接
   og:
-    title: Partners
-    description: Be part of DeFiChain ecosystem.
+    title: 合作夥伴
+    description: 加入友情鏈接
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
@@ -21,97 +21,97 @@ content:
   sections:
     hero:
       name: hero
-      headline: Partners
-      subhead: Be part of DeFiChain ecosystem.
+      headline: 合作夥伴
+      subhead: 加入友情鏈接
     contributors:
       name: contributor
-      headline: Contribute to DeFiChain
+      headline: 在遞飛鏈上貢獻
       become_developer:
-        headline: Become a _developer_
-        description: Learn how you can build on DeFiChain and use $DFI coin.
+        headline: 入門開發者
+        description: 入門遞飛鏈創建和使用$DFI幣
         cta:
-          label: Developers
+          label: 開發者
           url: /developers
       become_partner:
-        headline: Become a _partner_
-        description: Tell us how you would like to contribute to the ecosystem.
+        headline: 加入合作夥伴
+        description: 遞飛鏈生態中貢獻投稿
         cta:
-          label: Contact us
+          label: 聯系我們
     partners:
-      headline: Partners
+      headline: 合作夥伴
       partners_list:
-        - name: Cake DeFi
-          description: Stake DFI and receive DFI as rewards when using Cake Lapis.
+        - name: CakeDeFi
+          description: 在CakeDefi上做DFI權益質押來收獲DFI
           logo:
             file: /svg/external/logo-cake
             type: svg
           cta:
-            label: Go to
+            label: 前往
             url: https://cakedefi.com
-        - name: Staking Rewards
-          description: DeFiChain (DFI) interest calculator and current rates.
+        - name: 權益質押獲利
+          description: 遞飛鏈(DFI)利息計算機和當前彙率
           logo:
             file: /svg/external/logo-stakingrewards
             type: svg
           cta:
-            label: Go to
+            label: 前往
             url: https://www.stakingrewards.com/earn/defichain
         - name: Blockspot.io
-          description: DeFiChain (DFI) price, graph, data and info on Blockspot.io.
+          description: 遞飛鏈（DFI）的價格，圖表，數據及資訊
           logo:
             file: /img/external/logo-blockspot
             type: png
           cta:
-            label: Go to
+            label: 前往
             url: https://blockspot.io/coin/defichain/
         - name: Blockfolio
-          description: Watch DFI on the Blockfolio Signal platform.
+          description: 在Blockfolio資產追中APP上關注DFI
           logo:
             file: /svg/external/logo-blockfolio
             type: svg
           cta:
-            label: Go to
+            label: 前往
             url: https://blockfolio.com/coin/DFI
         - name: CoinPedia
-          description: Trusted Crypto Agency for Information related to Decentralized World.
+          description: 去中心化圈的加密貨幣資訊來源
           logo:
             file: /img/external/logo-coinpedia
             type: png
           cta:
-            label: Go to
+            label: 前往
             url: https://pro.coinpedia.org/companies/defichain
-        - name: Messari
-          description: Data tools that bring transparency to the cryptoeconomy.
+        - name: Messari數據分析
+          description: 加密經濟透明化的數據工具
           logo:
             file: /svg/external/logo-messari
             type: svg
           cta:
-            label: Go to
+            label: 前往
             url: https://messari.io/asset/defichain
-    featured_video:
-      video: IGCgUSdiDF0
-      headline: DeFiChain
-      subject_name: _with_ Dr. Julian Hosp
-      subject_title: CEO, Cake
-      quote: Healthy finances. For someone like me with the background at medicine, sounds like _doing the right thing for the people_.
+    # featured_video:
+    #   video: IGCgUSdiDF0
+    #   headline: DeFiChain
+    #   subject_name: _with_ Dr. Julian Hosp
+    #   subject_title: CEO, Cake
+    #   quote: Healthy finances. For someone like me with the background at medicine, sounds like _doing the right thing for the people_.
     partnering:
-      headline: Tell us how you would like to contribute to the DeFiChain ecosystem.
+      headline: 遞飛鏈生態中貢獻投稿
       form:
         name:
-          label: Name
-          placeholder: Full Name
+          label: 姓名
+          placeholder: 姓名
         email:
-          label: Email
+          label: 電郵地址
           placeholder: name@example.com
         company:
-          label: Company
-          placeholder: Your company name
+          label: 遞飛鏈基金會 (可選)
+          placeholder: 遞飛鏈基金會
         comment:
-          label: Comments
-          placeholder: Tell us more
+          label: 意見
+          placeholder: 請告訴我們更多
         button:
-          label: Send
-      or: You can also email us for further information at [partners@defichain.com](mailto:partners@defichain.com).
+          label: 發送
+      or: 發送郵件至 [partners@defichain.com](mailto:partners@defichain.com)
     #subscribe in /
     #closer_look in /
 ---

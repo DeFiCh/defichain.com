@@ -23,7 +23,7 @@ git worktree prune
 rm -rf .git/worktrees/public/
 
 echo "Checking out gh-pages branch into public"
-git worktree add -B gh-pages public/en origin/gh-pages
+git worktree add -B gh-pages public origin/gh-pages
 
 echo "Removing existing files"
 rm -rf public/*
@@ -32,11 +32,10 @@ echo "Generating site (minified)"
 hugo --minify
 
 echo "Updating gh-pages branch"
-cd public/en
+cd public
 echo defichain.com >> CNAME
 git add --all
 git commit -m "Publishing to gh-pages (deploy.sh)"
 
 git push origin gh-pages
-cd ..
 cd ..

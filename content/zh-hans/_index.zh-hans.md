@@ -19,7 +19,7 @@ content:
       ctas:
         - label: 前往下载中心
           url: /downloads
-        - label: 购买 $DFI
+        - label: 购买 递飞币（$DFI）
           type: plain
           url: https://trade.kucoin.com/DFI-BTC
     problem_solution:
@@ -91,7 +91,7 @@ content:
           description: 金融机构无法透明化运作
         - icon: /static/svg/icons/functions/debt.svg
           title: 非抵押债务
-          description: 貸款基於聲譽和可验证凭证
+          description: 贷款基于声誉和可验证凭证
         - icon: /static/svg/icons/functions/tokens.svg
           title: 资产代币化
           description: 代币化股票，房地产和其他持股

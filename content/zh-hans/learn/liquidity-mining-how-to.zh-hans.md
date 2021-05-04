@@ -20,39 +20,39 @@ content:
       subhead: A step-by-step guide.
 ---
 
-## What is liquidity mining?
+## 流动性挖矿是什么?
 
-Liquidity mining is a DeFi (decentralized finance) mechanism in which participants supply cryptocurrencies into liquidity pools, and being rewarded with fees and tokens based on their share of the total pool liquidity. Liquidity pools in DeFiChain consist of liquidity in pairs of coins, used by the DeFiChain DEX (Decentralized Exchange).
+流动性挖矿是去中心化金融内的机制，参与者可将自己的加密货币提供到流动性池中，并依据池中流动性总额中所占的比例获得交换费用和代币奖励。递飞链的流动性池是DEX中的成对货币流动池。
 
-## Adding liquidity
+## 入流动性池
 
-### Step 1: Launch the DeFiChain app
+### 步骤一：开启递飞链程序
 
-Don't have the app installed yet? [Click here for a step-by-step guide on how to do so.](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
+还没安装程序的小伙伴们[请按入门指南](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
 
-### Step 2: Navigate to Liquidity
+### 步骤二：流动性池指南
 
-Click on **Liquidity** in the sidebar to access the liquidity pools.
+请按测拦中的**流动池**进入。
 
 <img src="/img/guides/liquidity-mining/go-to-liquidity.png" srcset="/img/guides/liquidity-mining/go-to-liquidity.png 1x, /img/guides/liquidity-mining/go-to-liquidity@2x.png 2x">
 
-### Step 3: Learn more
+### 步骤三：了解更多
 
-When you first land on **Liquidity**, you will be presented with videos you can watch to learn more about liquidity mining on DeFiChain and how the DEX works. The video on _impermanent loss_ is also helpful. 
+当您先开启**流动页**，会看见流动性挖矿和DEX的入门指南视频。关于流动性池最重要的 _无常损失_ 视频也在这区。
 
 <img src="/img/guides/liquidity-mining/liquidity-welcome.png" srcset="/img/guides/liquidity-mining/liquidity-welcome.png 1x, /img/guides/liquidity-mining/liquidity-welcome@2x.png 2x">
 
-Below the videos, you'd find a list of _pool pairs_. Within each pool pair the total liquidity in it and APR is displayed.
+在视频下方，您会看见 _池对列表_。每个成对池中有显示池中的总流动量和实际年利率。
 
-### Step 4: Decide which pool pair to supply liquidity to
+### 步骤四：选择您想参与的流动性配对池
 
-You can supply liquidity to the ETH-DFI, BTH-DFI and USDT-DFI pool. Whichever pool pair you decide to supply to, you will need the corresponding coins in your wallet. For example, if you wish to supply liquidity to the BTC-DFI pool, you need to have sufficient BTC (wrapped BTC) and DFI in your wallet. The current version of DeFiChain only accepts wrapped tokens (wrapped ETH/BTH/USDT). If you do not currently have any wrapped tokens, [check out this guide](/learn/obtaining-wrapped-tokens).
+您可以选择向ETH-DFI，BTC-DFI，LTC-DFI, 狗狗币-DFI，或USDT-DFI等池堤共流动。无论您想堤共到哪个池，您钱包要有足够货币的额度。目前递飞链桌面版程序只提共挂钩的代币。如果您没有任何挂钩的代币，[请查阅挂钩代币指南](/learn/obtaining-wrapped-tokens)。
 
-Once you are ready to supply liquidity to any of the pool pairs, click **ADD LIQUIDITY**. You can also click the **+** button for any of the pool pairs to specifically add liquidity to that pool pair.
+当您准备好进入流动性池，请按 **「增加」** 流动。您也可以直接按 **「+」** 进入流动池。
 
 <img src="/img/guides/liquidity-mining/liquidity-add-buttons.png" srcset="/img/guides/liquidity-mining/liquidity-add-buttons.png 1x, /img/guides/liquidity-mining/liquidity-add-buttons@2x.png 2x">
 
-### Step 5: Adding liquidity
+### 步骤五：增加流动
 
 In this example, we will add liquidity to the BTC-DFI pool pair. Enter the input amounts for both the BTC side and DFI side. You can make use of the **MAX** buttons to add the maximum amount for each coin, available in your wallet. When you enter an amount on one side of the pair, the app automatically balances the amount of the other side, based on the ratio of current liquidity in the pool.
 

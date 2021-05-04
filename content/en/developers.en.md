@@ -111,14 +111,6 @@ content:
           github: https://github.com/fullstackninja864
           username: fullstackninja864
           city: Pune, India
-        - name: saurabh391
-          github: https://github.com/saurabh391
-          username: saurabh391
-          city: Indore, India
-        - name: Sumit570
-          github: https://github.com/Sumit570
-          username: Sumit570
-          city: Indore, India
         - name: Peter Bushnell
           github: https://github.com/Bushstar
           username: Bushstar
@@ -135,14 +127,14 @@ content:
           github: https://github.com/fuxingloh
           username: fuxingloh
           city: Singapore
-        - name: Prasanna Loganathar
-          github: https://github.com/prasannavl
-          username: prasannavl
-          city: Chennai, India
-        - name: DeFiDev
-          github: https://github.com/DeFiDev
-          username: DeFiDev
-          city: Saint Petersburg, Russia
+        - name: JJ Adonis
+          github: https://github.com/thedoublejay
+          username: thedoublejay
+          city: Philippines
+        - name: Bella Chew
+          github: https://github.com/izzycsy
+          username: izzycsy
+          city: Singapore
     subscribe:
       name: subscribe
       headline: Subscribe for updates on developer resources and releases.

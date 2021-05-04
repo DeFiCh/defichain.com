@@ -111,14 +111,6 @@ content:
           github: https://github.com/fullstackninja864
           username: fullstackninja864
           city: 印度浦那
-        - name: saurabh391
-          github: https://github.com/saurabh391
-          username: saurabh391
-          city: 印度印多爾
-        - name: Sumit570
-          github: https://github.com/Sumit570
-          username: Sumit570
-          city: 印度印多爾
         - name: Peter Bushnell
           github: https://github.com/Bushstar
           username: Bushstar
@@ -135,14 +127,14 @@ content:
           github: https://github.com/fuxingloh
           username: fuxingloh
           city: 新加坡
-        - name: Prasanna Loganathar
-          github: https://github.com/prasannavl
-          username: prasannavl
-          city: 印度金奈(真奈)
-        - name: DeFiDev
-          github: https://github.com/DeFiDev
-          username: DeFiDev
-          city: 俄羅斯聖彼得堡
+        - name: JJ Adonis
+          github: https://github.com/thedoublejay
+          username: thedoublejay
+          city: 菲律宾
+        - name: Bella Chew
+          github: https://github.com/izzycsy
+          username: izzycsy
+          city: 新加坡
     subscribe:
       name: 訂閱
       headline: 訂閱開發者資源和更新版資訊。

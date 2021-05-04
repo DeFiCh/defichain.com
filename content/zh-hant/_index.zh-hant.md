@@ -107,7 +107,7 @@ content:
       image: /static/svg/built-on-bitcoin.svg
     decentralized_nodes:
       headline: 去中心化與分散式
-      subhead: 遞飛鏈節點遍布全球，數據中心地理位置包含美國，加拿大，歐洲，印度，新加坡和澳大利亞
+      subhead: 遞飛鏈節點遍布全球，數據中心地理位置包含中國, 美國，加拿大，歐洲，印度，新加坡和澳大利亞
       map:
         image: /static/svg/nodes-map.svg
     roadmap:
@@ -115,7 +115,7 @@ content:
       subhead: Achievements and what to look forward to.
       timeline:
         - year: 3y
-          title: 將三、五、十年內
+          title: 三、五、十年內
           events:
             - month: 三年內
               status: future

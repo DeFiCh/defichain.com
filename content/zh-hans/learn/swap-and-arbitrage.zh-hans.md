@@ -1,12 +1,12 @@
 ---
-title: Swap and arbitrage
+title: 做互换和套利
 type: article
 long_title: A step-by-step guide to swapping and arbitraging on the DEX
 cta_to: Read
 meta:
   description: A step-by-step guide to swapping and arbitraging on the DEX
   og:
-    title: Swap and arbitrage
+    title: 做互换和套利
     description: A step-by-step guide to swapping and arbitraging on the DEX
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
@@ -16,74 +16,75 @@ content:
   sections:
     hero:
       name: hero
-      headline: Swap and arbitrage
-      subhead: A step-by-step guide.
+      headline: 做互换和套利
+      subhead: 分步指南。
 ---
 
-## Swap using the DEX
+## 在DEX上交换
 
-Swapping tokens on the DeFiChain DEX (Decentralized Exchange) is easy. At the time of writing, the DEX offers swap for the following pairs:
+在递飞链 DEX（去中心化交易所）上交换代币很容易。
+目前可交换的配对:
 
-1. Ethereum–DeFiChain (ETH–DFI)
-2. Bitcoin–DeFiChain (BTC–DFI)
-3. Tether–DeFiChain (USDT–DFI)
+1. ETH–DFI
+2. BTC–DFI
+3. USDT–DFI
 
-The DeFiChain DEX does not suffer the high gas fees of Ethereum-based DEX, due to network congestion. Afterall, Ethereum being a general purpose blockchain, isn't specifically designed for decentralized finance. DeFiChain on the other hand, is born and made for DeFi, and DeFi only.
+递飞链 DEX并不会经历以太坊因网络拥塞的高矿费。以太坊毕竟是个大通用区块链，并不是专门为去中心化金融而设计的。相对的，递飞链是为去中心化金融和中心化金融所产生的。
 
-### Step 1: Launch the DeFiChain app
+### 步骤一：开启递飞链程序
 
-Don’t have the app installed yet? [Click here for a step-by-step guide on how to do so.](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
+还没安装程序的小伙伴们 [请按入门指南](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
 
-### Step 2: Make sure you have DFI in your wallet
+### 步骤二: 确认您的钱包以有DFI
 
-After opening the DeFiChain App, click **Wallets** in the sidebar. Make sure you have funds (DFI) in wallet, as DFI is needed for transaction fees. If you don't yet have DFI, [here is a step-by-step tutorial on how and where you can buy DFI.](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)
+启动递飞链程序后，请按侧边拦的 **钱包** 选项。先确认您有没有足够的DFI，交易中必要用的。若还没购买DFI，请查看[入门购买DFI](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)。
 
 <img src="/img/guides/installing-defi-app/wallets-choose.png" srcset="/img/guides/installing-defi-app/wallets-choose.png 1x, /img/guides/installing-defi-app/wallets-choose@2x.png 2x">
 
-### Step 3: Navigate to the DEX (Decentralized Exchange)
+### 步骤三: 进入去中心化交易所
 
-Click on **DEX** in the sidebar to access the Decentralized Exchange.
+按侧栏中的 **DEX**。
 
 <img src="/img/guides/obtaining-tokens/go-to-dex.png" srcset="/img/guides/obtaining-tokens/go-to-dex.png 1x, /img/guides/obtaining-tokens/go-to-dex@2x.png 2x">
 
-### Step 4: Perform a swap
+### 步骤四: 进行交换
 
-The DEX provides a way for you to swap one coin for another. In this case, select DFI in the left **From** field.
+DEX(去中心化交易所)为您提共代币交换。请在左侧 **「From」** 按DFI。
 
 <img src="/img/guides/obtaining-tokens/dex-from.png" srcset="/img/guides/obtaining-tokens/dex-from.png 1x, /img/guides/obtaining-tokens/dex-from@2x.png 2x">
 
-Then select the coin you want to buy in right **To** field.
+请在右侧 **「到」** 按您想交换的代币。
 
 <img src="/img/guides/obtaining-tokens/dex-to.png" srcset="/img/guides/obtaining-tokens/dex-to.png 1x, /img/guides/obtaining-tokens/dex-to@2x.png 2x">
 
-Yu can either specify how much you DFI wish to sell in the **To** field, or how much of the other coin you wish to buy, in the **To** field. You can also click the **MAX** button to enter the maximum amount of DFI.
+您可以在 **「到」** 中指定DFI想卖的数量，或在 **「到」** 中指定要购买其他代币的数量。您也可以点 **MAX** 按钮输入最大DFI数量。
 
-Click **CONTINUE** when you are ready to swap.
+按 **「继续」** 进下一步。
 
 <img src="/img/guides/obtaining-tokens/ready-to-swap.png" srcset="/img/guides/obtaining-tokens/ready-to-swap.png 1x, /img/guides/obtaining-tokens/ready-to-swap@2x.png 2x">
 
-Review the transaction amounts and fees. Then click **SWAP** to confirm.
+再次确认交换数量和费用后，请按 **「Swap」** 进行交换。
 
 <img src="/img/guides/obtaining-tokens/dex-verify.png" srcset="/img/guides/obtaining-tokens/dex-verify.png 1x, /img/guides/obtaining-tokens/dex-verify@2x.png 2x">
 
 ---
 
-## Wanna be an Arbitrageur?
+## 想成为套利者么?
 
-As liquidity gets swapped from a DEX (Decentralized Exchange), the ratio of the coins in any of the liquidity pool pairs becomes unbalanced. Because the price of tokens in a liquidity pool does not depend on market prices like in CEXs (centralized exchanges) based on the order book model, one of the coins in a pair can become cheaper or more expensive than the external prices in centralized exchanges. You can either buy low on DeFiChain and sell high on a CEX, or buy low from a CEX and sell high on DeFiChain). This is what we call _arbitrage opportunities_.
+随着 DEX（去中心化交易所）的交换流动性，任何流动性池配对中的代币比率会变得不平衡。流动性池中代币的价格模式不像普遍交易所(CEX) 具有的订单簿型态来决定市场价格。在流动性池DEX模式，配对代币中的一方有可能会比CEX来的贵或便宜。您可以选择在递飞链 DEX上买低价，转至CEX上卖高价，或在CEX上买低价，转至递飞链卖高价。这就是所谓的 _套利商机_。
 
-Here's an example:
+以下举例:
 
-Look for price differences between the DEX and CEXs. For example, at the time of writing, the BTC price of DFI at an exchange like [Bittrex](https://global.bittrex.com/Market/Index?MarketName=BTC-DFI) is `0.00002643 BTC per DFI`. Compared to Bittrex, the price of BTC in the DEX is `0.00002522 BTC per DFI`. BTC is more expensive at the DEX than Bittrex.
+先查看DEX和CEX的价差。举例来说，在写本文时，DFI在类似 [Bittrex](https://global.bittrex.com/Market/Index?MarketName=BTC-DFI)的BTC价格为 `0.00002643 BTC per DFI` 比较下，DEX中的BTC价格为 `0.00002522 BTC per DFI` DEX上的BTC比 Bittrex 价格更高。
 
-### Swapping DFI for BTC
+### DFI交换至BTC
 
-All we need to do is buy 1 BTC at Biitrex with `38,587.61607637 DFI`.
+先在Bittrex上购买一个BTC = `38,587.61607637 DFI`。
 
 <img src="/img/guides/arbitrage/arbitrage-cex.png" srcset="/img/guides/arbitrage/arbitrage-cex.png 1x, /img/guides/arbitrage/arbitrage-cex@2x.png 2x">
 
-Then sell the `1 BTC` for `39,355.98845598 DFI` on the DEX, for a profit of `768.37237961 DFI` – about 2% for a single day. When the prices vary more, the arbitrage opportunities can get way higher.
+接着在DEX上卖掉 `1 BTC = 39,355.98845598 DFI` 您的利润是 `768.37237961 DFI` 也就是当天套利约2%。 当价格差的越多，套利的利润就越大。
 
 <img src="/img/guides/arbitrage/arbitrage1.png" srcset="/img/guides/arbitrage/arbitrage1.png 1x, /img/guides/arbitrage/arbitrage1@2x.png 2x">
 
-[Download the DeFiChain desktop app](/downloads) available for macOS, Windows and Linux, to use the DEX. You too, can be an arbitrageur.
+[按下载递飞链桌面版程序](/downloads)，适用于Windows，macOS和Linux。您也可成为套利者。

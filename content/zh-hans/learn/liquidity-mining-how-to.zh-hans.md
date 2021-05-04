@@ -1,13 +1,13 @@
 ---
-title: Liquidity mining with DeFi app
+title: 程序內做流动性挖矿
 type: article
-long_title: Step-by-step on how to liquidity mine with DeFi app
+long_title: 程序內做流动性挖矿的分步指南
 cta_to: Read
 meta:
-  description: Step-by-step on how to liquidity mine with DeFi app
+  description: 程序內做流动性挖矿的分步指南。
   og:
-    title: Liquidity mining with DeFi app
-    description: Step-by-step on how to liquidity mine with DeFi app
+    title: 程序內做流动性挖矿
+    description: 程序內做流动性挖矿的分步指南。
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
@@ -16,8 +16,8 @@ content:
   sections:
     hero:
       name: hero
-      headline: Liquidity mining with DeFi app
-      subhead: A step-by-step guide.
+      headline: 程序內做流动性挖矿
+      subhead: 分步指南。
 ---
 
 ## 流动性挖矿是什么?
@@ -54,62 +54,62 @@ content:
 
 ### 步骤五：增加流动
 
-In this example, we will add liquidity to the BTC-DFI pool pair. Enter the input amounts for both the BTC side and DFI side. You can make use of the **MAX** buttons to add the maximum amount for each coin, available in your wallet. When you enter an amount on one side of the pair, the app automatically balances the amount of the other side, based on the ratio of current liquidity in the pool.
+我们用BTC-DFI配对池做例子。输入BTC端和DFI端的数量。您也可以使用 **「最多」** 按钮添加您钱包中最大额度。当您在货币对的一端输入金额时，程序会根据池中当前流动性的比率自动平衡另一端的金额。
 
 <img src="/img/guides/liquidity-mining/liquidity-adding.png" srcset="/img/guides/liquidity-mining/liquidity-adding.png 1x, /img/guides/liquidity-mining/liquidity-adding@2x.png 2x">
 
-_TIP: If clicking **MAX** on a side causes an "Insufficient balance" warning, simply click **MAX** on the other side of the pair._
+_提示：如果按 **「最多」** 弹出「余额不足」显示，请换另一端的货币按 **「最多」**。_
 
-Next, select the address you want to receive shares and rewards at. Unless you want to receive rewards at a specific address, you can usually leave this field unchanged.
+下一步，选择您要接收获利的地址。除非您希望在特定地址获得奖励，否则通常可以保持不变。
 
 <img src="/img/guides/liquidity-mining/liquidity-receive-at.png" srcset="/img/guides/liquidity-mining/liquidity-receive-at.png 1x, /img/guides/liquidity-mining/liquidity-receive-at@2x.png 2x">
 
-When you are ready to add, click **CONTINUE**.
+准备添加时，请按一下 **「继续」**。
 
 <img src="/img/guides/liquidity-mining/liquidity-add-continue.png" srcset="/img/guides/liquidity-mining/liquidity-add-continue.png 1x, /img/guides/liquidity-mining/liquidity-add-continue@2x.png 2x">
 
-Verify the deposits, rates and pool share, then click **SUPPLY** to confirm.
+验证存款、利率和池份额，然后按一下 **「供应」** 进行确认。
 
 <img src="/img/guides/liquidity-mining/liquidity-add-confirm.png" srcset="/img/guides/liquidity-mining/liquidity-add-confirm.png 1x, /img/guides/liquidity-mining/liquidity-add-confirm@2x.png 2x">
 
-The app will then prepare the transaction, followed by adding your liquidity to the blockchain. Do not navigate away from this screen or close the app while the transaction is being prepared.
+程序将准备交易，然后将您的流动添加到区块链中。在准备交易时，不要离开此荧幕或关闭程序。
 
 <img src="/img/guides/liquidity-mining/liquidity-loading.png" srcset="/img/guides/liquidity-mining/liquidity-loading.png 1x, /img/guides/liquidity-mining/liquidity-loading@2x.png 2x">
 
-Once the transaction has gone through. You will see the transaction hash. You can click **VIEW ON CHAIN** to view the transaction on the DeFiChain Explorer, or click **BACK TO POOL** to see your added liquidity in the app.
+一旦交易完成，您将看到交易哈希。您可以按一下 **「链上查看」** 在链上浏览器查看交易，或按一下 **「返回流动池」** 在程序中查看您添加的流动性。
 
 <img src="/img/guides/liquidity-mining/liquidity-complete.png" srcset="/img/guides/liquidity-mining/liquidity-complete.png 1x, /img/guides/liquidity-mining/liquidity-complete@2x.png 2x">
 
-### Step 6: Check your liquidity
+### 步骤六：检查你的流动
 
-You will now see your added liquidity above the **Available pool pairs** table.
+您现在可以在 **「参与成对池」** 上到您刚新增的流动性。
 
 <img src="/img/guides/liquidity-mining/liquidity-mine.png" srcset="/img/guides/liquidity-mining/liquidity-mine.png 1x, /img/guides/liquidity-mining/liquidity-mine@2x.png 2x">
 
 ---
 
-## Removing liquidity
+## 移出流动
 
-### Step 1: Removing
+### 步骤一：移出
 
-Click on the **-** button in the pool pair that you have supplied liquidity to.
+按一下您已提供流动的池配对中的 **「-」** 按钮。
 
 <img src="/img/guides/liquidity-mining/liquidity-remove-button.png" srcset="/img/guides/liquidity-mining/liquidity-remove-button.png 1x, /img/guides/liquidity-mining/liquidity-remove-button@2x.png 2x">
 
-### Step 2: How much to remove
+### 步骤二：要移出多少
 
-Enter the amount of liquidity you wish to remove, either by typing the percentage value or using the slider. Next, select the address you want the removed liquidity to go back to. Unless you want to remove to a specific address, you can usually leave this field unchanged.
+您可使用回车键或滑块输入要移出的百分比。接着选要从哪个地址接收交易。除非您要删除某个地址，通常可以保持栏位内的地址。
 
 <img src="/img/guides/liquidity-mining/liquidity-removing.png" srcset="/img/guides/liquidity-mining/liquidity-removing.png 1x, /img/guides/liquidity-mining/liquidity-removing@2x.png 2x">
 
-Then click **CONTINUE**.
+然后按一下 **「继续」** 。
 
-### Step 3: Confirmation
+### 步骤三：确认
 
-Verify the amount of liquidity to remove and receive address, then press **CONFIRM**.
+验证要移出和接收地址的流动量，然后按 **「确认」** 。
 
 <img src="/img/guides/liquidity-mining/liquidity-remove-confirm.png" srcset="/img/guides/liquidity-mining/liquidity-remove-confirm.png 1x, /img/guides/liquidity-mining/liquidity-remove-confirm@2x.png 2x">
 
-Wait for the removal transaction to be prepared and processed.
+等待移出交易完毕。
 
 <img src="/img/guides/liquidity-mining/liquidity-remove-confirm.png" srcset="/img/guides/liquidity-mining/liquidity-remove-confirm.png 1x, /img/guides/liquidity-mining/liquidity-remove-confirm@2x.png 2x">

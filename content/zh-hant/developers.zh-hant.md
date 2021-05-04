@@ -130,7 +130,7 @@ content:
         - name: JJ Adonis
           github: https://github.com/thedoublejay
           username: thedoublejay
-          city: 菲律宾
+          city: 菲律賓
         - name: Bella Chew
           github: https://github.com/izzycsy
           username: izzycsy

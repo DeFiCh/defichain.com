@@ -1,12 +1,12 @@
 ---
-title: Obtaining wrapped tokens
+title: 获取挂钩的代币
 type: article
 long_title: A step-by-step guide to obtaining wrapped BTC/ETH/USDT via the DEX or CakeDefi
 cta_to: Read
 meta:
   description: A step-by-step guide to obtaining wrapped BTC/ETH/USDT via the DEX or CakeDefi
   og:
-    title: Obtaining wrapped tokens
+    title: 获取挂钩的代币
     description: A step-by-step guide to obtaining wrapped BTC/ETH/USDT via the DEX or CakeDefi
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
@@ -16,83 +16,83 @@ content:
   sections:
     hero:
       name: hero
-      headline: Obtaining wrapped tokens
-      subhead: A step-by-step guide.
+      headline: 获取挂钩的代币
+      subhead: 分步指南。
 ---
 
-To supply liquidity to the DEX and to liquidity mine, you will need not just DFI but tokens for the other side of the pool pair you wish to supply liquidity to. DeFiChain currently only support wrapped tokens, namely wrapped ETH, BTC and USDT.
+为了向DEX和流动性挖矿提供流动，您需要同时进入配对中个端的货币，价值要同等。递飞链现时只支持挂钩的代币 （包含ETH、BTC和USDT）。
 
-If you also need DFI, you can watch our guide on [where and how to buy DFI](https://www.youtube.com/watch?v=vtM-k7E-HPA).
+如果您还需要DFI，您可以查看购买[DFI入门指南](https://www.youtube.com/watch?v=vtM-k7E-HPA)。
 
-## Method 1: Using the DEX
+## 方法一：使用DEX
 
-The first method is right within the DeFi app. Using the DEX, and depending on the balance and ratio of the pool pairs, you may end up swapping the tokens at a lower price than if you would have done it via the second method – using CakeDeFi.
+第一种方法就在递飞链程序中使用DEX，并依据池中配对的比率来换出DFI。用这个方式交换可能会换来价格比较高的比率。使用第二种方法，如CakeDeFi更优。
 
-### Step 1: Launch the DeFiChain app
+### 步骤一：启动递飞链程序
 
-Don’t have the app installed yet? [Click here for a step-by-step guide on how to do so.](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
+还没有安装应用程序吗？[单击此处获取有关如何执行此操作的分步指南。](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
 
-### Step 2: Make sure you have DFI in your wallet
+### 步骤二：确认钱包里有DFI
 
-After opening the DeFiChain App, click **Wallets** in the sidebar. Make sure you have funds (DFI) in your wallet, as DFI is needed for transaction fees. If you don't yet have DFI, [here is a step-by-step tutorial on how and where you can buy DFI.](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)
+打开递飞链程序后，请按侧边栏中的 **「钱包」** 。确任您的钱包中有足够的DFI做交易。如果您还需要DFI，您可以查看[购买DFI入门指南。](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)
 
 <img src="/img/guides/installing-defi-app/wallets-choose.png" srcset="/img/guides/installing-defi-app/wallets-choose.png 1x, /img/guides/installing-defi-app/wallets-choose@2x.png 2x">
 
-### Step 3: Navigate to the DEX (Decentralized Exchange)
+### 步骤三: 进入DEX（去中心化交易所）
 
-Click on **DEX** in the sidebar to access the Decentralized Exchange.
+请按侧边栏中的 **DEX** 。
 
 <img src="/img/guides/obtaining-tokens/go-to-dex.png" srcset="/img/guides/obtaining-tokens/go-to-dex.png 1x, /img/guides/obtaining-tokens/go-to-dex@2x.png 2x">
 
-### Step 4: Perform a swap
+### 步骤四：进行交换
 
-The DEX provides a way for you to swap one coin for another. In this case, select DFI in the left **From** field.
+DEX为您提供替换货币的方式。请在左边 **「从」** 选择DFI。
 
 <img src="/img/guides/obtaining-tokens/dex-from.png" srcset="/img/guides/obtaining-tokens/dex-from.png 1x, /img/guides/obtaining-tokens/dex-from@2x.png 2x">
 
-Then select the coin you want to buy in right **To** field.
+接着请在 **「到」** 栏选择您想买的货币。
 
 <img src="/img/guides/obtaining-tokens/dex-to.png" srcset="/img/guides/obtaining-tokens/dex-to.png 1x, /img/guides/obtaining-tokens/dex-to@2x.png 2x">
 
-You can either specify how much you DFI wish to sell in the **To** field, or how much of the other coin you wish to buy, in the **To** field. You can also click the **MAX** button to enter the maximum amount of DFI.
+您可以在 **「到」** 栏指定DFI或其他货币的数量。您也可以按 **「最大」** 按钮输入最大数量。
 
-Click **CONTINUE** when you are ready to swap.
+准备好交换时，请按 **「继续」**。
 
 <img src="/img/guides/obtaining-tokens/ready-to-swap.png" srcset="/img/guides/obtaining-tokens/ready-to-swap.png 1x, /img/guides/obtaining-tokens/ready-to-swap@2x.png 2x">
 
-Review the transaction amounts and fees. Then click **SWAP** to confirm.
+审核交易金额和费用。然后请按 **「交换」** 确认交换。
 
 <img src="/img/guides/obtaining-tokens/dex-verify.png" srcset="/img/guides/obtaining-tokens/dex-verify.png 1x, /img/guides/obtaining-tokens/dex-verify@2x.png 2x">
 
 ---
 
-## Method 2: Using CakeDeFi
+## 方法二：使用CakeDeFi
 
-### Step 1: Login to your CakeDeFi account
+### 步骤一：登录您的CakeDeFi帐户
 
-Login to your [CakeDeFi account](https://www.cakedefi.com/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch). If you don't have one yet, [click here to register.](https://www.cakedefi.com/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch).
+登录您的 [CakeDeFi帐户](https://www.cakedefi.com/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)。如果您还没有注册, [请按这注册。](https://www.cakedefi.com/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
 
-_Note: If you are registering a new account, you will need to complete identity verification (KYC)._
+_注意：如果您注册一个新帐户，您需要完成身份验证（KYC）。_
 
-### Step 2: Funds in CakeDeFi
+### 步骤二：存入CakeDeFi
 
-From your [CakeDeFi Assets page](https://pool.cakedefi.com/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch#/wallets), you can withdraw ETH, BTC or USDT to DeFiChain. If you don't currently have these coins, or you'd like to obtain more, you can either:
+从您的 [CakeDeFi资产页面](https://pool.cakedefi.com/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch#/wallets), 您可以领出ETH、BTC或USDT到递飞链。如果您目前没有这些货币，或者想增加余额，您可以：
 
-1. Deposit ETH, BTC or USDT from an external wallet into CakeDeFi
-2. Buy ETH, BTC or USDT using the fiat on-ramp, which accepts payment methods like credit cards, Apple Pay and transfers, depending on your country
+1. 从其他钱包将ETH、BTC或USDT存入CakeDeFi
+2. 用现金购买ETH，BTC或USDT，CakeDeFi平台目前接受信用卡，苹果支付和银行转帐方式 （不同国家有不同购买方式）
 
 <div class="mbg1"><img src="/img/guides/obtaining-tokens/cake-assets.png" srcset="/img/guides/obtaining-tokens/cake-assets.png 1x, /img/guides/obtaining-tokens/cake-assets@2x.png 2x"></div>
 
-### Step 3: Withdrawal
+### 步骤三：领出
 
-Once your ETH, BTC or USDT is in your CakeDeFi Assets, you can withdraw them. Click the corresponding **WITHDRAW** button for the token you want to withdraw.
+当您的CakeDeFi有余额就可领出。选择您想领出的货币并按 **「领出」**。
 
-In the withdrawal pop-up, select DeFi Blockchain as the **Transfer Network**. Enter your DeFiChain receive address in the **To DeFi Blockchain address** field. Information on how to get your DeFiChain app receiving address can be found in [this guide](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch).
+在领出窗口弹出后，选择DeFi递飞链区块链作为 **「发送网络」**。在 **「到递飞链地址」** 输入您的递飞链接收地址。请参阅[递飞链程序接收指南](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)。
 
 <img src="/img/guides/obtaining-tokens/cake-withdraw.png" srcset="/img/guides/obtaining-tokens/cake-withdraw.png 1x, /img/guides/obtaining-tokens/cake-withdraw@2x.png 2x">
 
-Enter your **two-factor authentication code** and complete the rest of the form, then press **WITHDRAW**.
+输入您的 **双重认证码** 并完成填写表单的资料，然后按 **「领取」**。
 
 
 
-_Note: For security reasons, withdrawals on CakeDeFi can take up to 24 hours (weekdays) and 72 hours (weekends) to be processed._
+_注：出于安全性的原因，在CakeDeFi领出货币要24小时（工作日）至72小时（周末）才能完成。_

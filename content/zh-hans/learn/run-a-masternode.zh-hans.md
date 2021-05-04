@@ -1,13 +1,13 @@
 ---
-title: Run a masternode
+title: 运作递飞链主节点
 type: article
-long_title: How to run a Defichain masternode on Linux/Mac OS
+long_title: 入门Linux/Mac OS运作递飞链主节点。
 cta_to: Read
 meta:
-  description: How to run a DeFiChain masternode on Linux/Mac OS.
+  description: 入门Linux/Mac OS运作递飞链主节点。
   og:
-    title: Run a DeFiChain masternode
-    description: How to run a DeFiChain masternode on Linux/Mac OS.
+    title: 运作递飞链主节点
+    description: 入门Linux/Mac OS运作递飞链主节点。
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
@@ -16,89 +16,92 @@ content:
   sections:
     hero:
       name: hero
-      headline: Run a DeFiChain masternode
-      subhead: How to run a Defichain masternode on Linux/Mac OS.
+      headline: 运作递飞链主节点
+      subhead: 入门Linux/Mac OS运作递飞链主节点。
 ---
 
-## Introduction
+## 简介
 
-Setting up a masternode on DefiChain allows you to participate in the consensus protocol and receive staking awards. One thing to note is that in order to set up a masternode, you must have a minimum of 20,000 DFI.
+在递飞链上设置主节点可让您参与共识协议并运作权益质押获得奖励。要注意的事，您必须至少拥有20,000个DFI来设置一个主节点。
 
-_NOTE: This how-to expects some basic familiarity with the Linux terminal_
+_注意：此入门操作需要对Linux系统有一些基本的了解_
 
-## Masternode roles
-There are two distinct roles: 'masternode owner' and 'masternode operator'. The owner holds the collateral and the primary activity (minting new coins, voting for anchors) is performed by operator. In general, a node can play both roles.
+## 主节点角色
+有两个不同的角色: 「主节点的主人」和「主节点操作者」。主节点的主人持有所有抵押的DFI和主要活动，操作者可操作主要运作（含铸造新硬币，投票给锚定）。一般状况中，节点可同时进行做这两个角色。
 
-## For owners who operate their own masternodes
-In this scenario, operator's address will be equal to the owner's (collateral) address.
+## 如果主人想操作自己的主节点
+同时运作两者角色时，操作者的地址也是主人的地址（抵押DFI)
 
-### Step 1 - Download and extract node software
+### 步骤一：下载并解压缩节点软件
 
-The first step is to download the binaries. Here are links to binaries for Windows, Linux and Macosx (Please download the latest release):
+第一步是下载二进制文件。以下连结可下载Windows, Linux和macOSX的二进制文件 (请记得下载最新版本):
 
-[Downloads](https://defichain.com/downloads/)
+[下载二进制文件](/downloads/)
 
-Following that we can extract the tar file by running (Replace 1.x.x with your version number):
+接着进行tar文件压缩和以下tar行 (更换 1.x.x 至您下载的最新版本):
 ```
 tar -xvzf defichain-1.x.x-x86_64-pc-linux-gnu.tar.gz
 ```
 
-### Step 2 - Copy binaries to user directory
+### 步骤二: 将二进制文件复制到用户目录
 
-We would like the node software to be stored in a consistent and easily accessible directory, so let's create one in our home folder. This can be done by running:
+若想方便又一致性可进入节点软件存储的地方，创建一个主文件夹就行了。可以通过以下命令来完成：
 
 ```
 mkdir ~/.defi
 ```
 
-Now copy the binaries by running:
+现在，通过以下命令复制二进制文件：
 ```
 cp ./defichain-1.x.x/bin/* ~/.defi
 ```
 
-### Step 3 - Setting up crontab to keep our node running in the background
+### 步骤三: 设置crontab(任务时间表)可让您的节点在背景运作
 
-Now we may directly run our node by running `~/.defi/defid` , but this would not be very convenient, as we would have to keep the terminal session open the whole time, and run this command every time we restart our computer or SSH session. 
+您也可以通过 `〜/.defi/defid` 直接运行例程，但这并不方便，因为必须持续运作终端，并在每次重新启动计算机或SSH会话控制时要重新运行命令。
 
-Instead, we'll use crontab to keep the process running. Run `crontab -e`, and select an editor (I recommend Nano if you are unsure which to pick), afterwards paste:
-
+相对的，您可以使用crontab维持运行。請運行 `crontab -e`，接著選擇一個編輯器（建議使用Nano），然後貼上：
 ```
 * * * * * pidof defid || ~/.defi/defid
 ```
 
-into the file and hit `Ctrl-X` then enter to save the file.
+至文件后请按 `Ctrl-X` 在按回车键储存。
 
-### Step 4 - Setting up owner address with sufficient funds
+### 步骤四: 建立主人的地址 (需足够的资金)
 
-In order to run a masternode, you must own at least 20,000 DFI. Let's set up an address with sufficient funds to use as an owner. Masternodes currently only support legacy addresses, so create a masternode address using:
+您必须至少拥有20,000个DFI来设置一个主节点。请先建设足够资金的地址来运作所主人的角色。主节点目前只支持以设立地址，按照以下的命令行前往建设地址:
 
 ```
 ~/.defi/defi-cli getnewaddress "<label>" legacy
 ```
 
-where "label" is any label you would like to give the address.
+您可在「标签」栏让地址有个标签
 
-Now in order to transfer the funds to this address, you may use: 
+接着请用以下命令行进行资金转移到刚创建的地址
 
 ```
 ~/.defi/defi-cli sendtoaddress address
 ```
 
-where address is the new owner address you have created.
+命令行中的 `address` 代表了刚创建的新地址
 
-### Step 5 - Register as a masternode on the network
+### 步骤五: 在网络上注册为主节点
 
-In order to participate in the staking algorithm, you must broadcast to the network that you intend to participate, this can be done by running a command using the Defi CLI, the command is:
+如果您想运作权益质押，您必须向整个网路发广播，可使用以下DFI CLI命令行:
 
 ```
 ~/.defi/defi-cli createmasternode address
 ```
 
-where `address` for both operator and collateral address should be the new legacy address you created. Please note that it costs 10 DFI to run this command.
+命令行中的 `address` 该是刚创建的地址。请注意:您必须付出10 DFI来进行此命令
 
-### Step 6 - Configure the masternode and restart
+### 步骤六: 配置主节点并重新启动
 
-We're almost done, in order for the master node to operate correctly, we must make a couple of configuration changes. The configuration file will sit in `~/.defi/defi.conf`. Let's make sure the configuration file exists by running `touch ~/.defi/defi.conf`. Now open this configuration file in the editor of your choice and add the following:
+我们快到主节点建设指南尾端了，但先必须做一些配置更改才能确认运作。配置文件在 `~/.defi/defi.conf`
+请先确认这文件是否存在，运作命令行touch `~/.defi/defi.conf`
+
+接着请在编辑器增加以下命令行:
+
 
 ```
 gen=1
@@ -106,58 +109,61 @@ spv=1
 masternode_operator=OPERATOR_ADDRESS
 ```
 
-Because we have decided to run owner and operator on the same address, just substitute the same legacy address you created for `OPERATOR_ADDRESS`. There is no need to specify owner address in this case.
+当您想在同个地址上扮演主人和操作者时，可直在 `OPERATOR_ADDRESS` 接输入同个地址。这个情况下就不必区分主节点角色。
 
-Now the final step is to restart the node. Since we have crontab running, we just have to kill the process and crontab will start it again for us after one minute. We can do this final step by running `killall defi-init`. One minute later, we should have our masternode running and minting coins.
+最后一步是重新启动主节点。您已经在运行crontab，现在终止进程crontab，一分钟後将重启。
+请使用终止进程命令行 `killall defi-init` 一分钟后，您的主节点应该是在正常运作状态。
 
-We can confirm the masternode is running by running:
+您可以输入以下命令行确认主节点正常运作:
 
 ```
 ~/.defi/defi-cli listmasternodes
 ```
 
-look for your masternode address in the list of masternodes to confirm that you have successfully set everything up.
+请在主节点列单中找出您的主节点来确认您是否成功设置主节点。
 
-You may run the command `getmasternodeblocks OPERATOR_ADDRESS` to see how many blocks your masternode has minted so far.
+您可以运行命令行 `getmasternodeblocks OPERATOR_ADDRESS` 观察您的主节点以铸造的区块。
 
-## For owners who would like to delegate the masternode duties to another node
-In this scenario, operator's address will be different to the owner's (collateral) address.
+## 如果主人想将主节点操作派给另一个节点
+在这种情况下，操作者的地址和主人的地址会不同。
 
-### Step 1-4 - Same as above
+### 步骤一到四: 如同以上
 
-Perform steps 1-4 the same as the above section for operating your own masternodes. If you are also setting up the operator node yourself, then repeat steps 1-4 again for the operator node on a different machine.
+请按照以上步骤一到四
+来设置主节点。如果您也想自行操作者节点，请在另一个电脑重复步骤一到四。
 
-### Step 5 - Register as a masternode on the network
 
-In order to participate in the staking algorithm, you must broadcast to the network that you intend to participate, this can be done by running a command using the Defi CLI, the command is:
+### 步骤五: 在递飞链网络上注册为主节点
+
+如果您想运作权益质押，您必须向整个网路发广播，可使用以下DFI CLI命令行:
 
 ```
 ~/.defi/defi-cli createmasternode OWNER_ADDRESS OPERATOR_ADDRESS
 ``` 
 
-where `OWNER_ADDRESS` is the address for the collateral/owner node and `OPERATOR_ADDRESS` is the address for the operator. Please note that it costs 10 DFI to run this command.
+命令行 `OWNER_ADDRESS` 中的 address 该是刚创建的地址 `OPERATOR_ADDRESS`。请注意:您必须付出10 DFI来进行此命令。
 
-There is nothing to do after this, you may simply ensure that your masternode operator is correctly running the masternode on their side by passing them the operator address.
+接着不需要执行任何操作，您可以发送操作者地址到操作者节点来确认正常运作。
 
-We can confirm the masternode is running by running: 
+您可运行以下命令行来确认:
 
 ```
 ~/.defi/defi-cli listmasternodes
 ```
 
-Look for your masternode address in the list of masternodes to confirm that you have successfully set everything up.
+请在主节点列单中找出您的主节点来确认您是否成功设置主节点。
 
-You may run the command `getmasternodeblocks OPERATOR_ADDRESS` to see how many blocks your masternode has minted so far.
+您可以运行命令行 `getmasternodeblocks OPERATOR_ADDRESS` 观察您的主节点以挖的区块。
 
-## Creating via the DeFiChain Desktop Wallet
+## 在递飞链桌面版钱包直接创建主节点
 
-It's easy to set up your masternode through the DeFiChain Desktop Wallet, simply browse to the Masternodes tab and click on "Create +" in the upper right corner of the screen. The process is automated and seamless.
+在程序钱包内可以直接设置主节点。请先点选主节点侧栏，接着按右上角的「创建＋」。这过程是自动化和无缝接轨的。
 
 ![Masternode1](https://user-images.githubusercontent.com/3271586/112108417-2472a280-8beb-11eb-91f1-896904d46a85.png)
 
-## Running multiple masternodes on the same machine
+## 同时在同个电脑上运作多个主节点
 
-If you would like to run multiple masternodes on the same machine, you simply need to specify multiple `masternode_operator` entries in your `defi.conf`:
+如果您要在同一台电脑上运行多个主节点，您需在 `defi.conf` 中指定所有 `masternode_operator`:
 
 ```
 gen=1
@@ -167,19 +173,19 @@ masternode_operator=OPERATOR_ADDRESS_2
 masternode_operator=OPERATOR_ADDRESS_3
 ```
 
-On the next run, the node will begin minting for all the specified masternodes. There is no hard limit to how many masternodes a single machine can run.
+下次运行时，该节点将为所有指定的主节点铸造。同个电脑确实可运作多数个主节点，也没有硬性限制。
 
-## Resigning masternodes
+## 退出主节点
 
-If you decide to resign your masternode, you may run 
+如果您想退出主节点，请使用以下命令行。
 
 ```
 ~/.defi/defi-cli resignmasternode
 ```
-## Masternode states
-Sending `createmasternode` (or 'resignmasternode') transaction doesn't mean that it acts immediately after submitting to the blockchain. There are special delays for each state.
+## 主节点状态
+发送 `createmasternode` 或 `resignmasternode` 命令行并不表示命令会直接入区块链。是会有些延迟的。
 
-Masternodes can exist in these states:
+主节点会在这三种状态中:
 ```
         PRE_ENABLED,
         ENABLED,
@@ -188,9 +194,9 @@ Masternodes can exist in these states:
         PRE_BANNED,
         BANNED
 ```
-- `PRE_ENABLED` - masternode was created, but waits for enough blocks after creation to get activated.
-- `ENABLED` - masternode is in fully operable state, can mint blocks and sign anchors
-- `PRE_RESIGNED` - masternode is still operable, but have received a 'resign' transaction and will wait for a special delay to get resigned
-- `RESIGNED` - masternode resigned, collateral unlocked and is available to be reclaimed
-- `PRE_BANNED` - masternode was caught as a 'criminal' (signing two blocks from parallel forks on close heights and we got special proofing tx on chain) but still operable (waiting, as in the case of PRE_RESIGNED)
-- `BANNED` - masternode deactivated, collateral unlocked and can be reclaimed (same as RESIGNED, but forced through deactivation)
+- `PRE_ENABLED` - 主节点以创建，正在等足够的区块链来激活。
+- `ENABLED` - 主节点处于完全可操作状态，可以铸造块并标记锚点。
+- `PRE_RESIGNED` - 主节点可操作的状态，但收到「退出」交易并等待延迟过后才能正式退出。
+- `RESIGNED` - 主节点已退出，抵押品解锁可收回的状态。
+- `PRE_BANNED` - 主节点被列为「犯罪行为」（在高度接近的平行叉上签了两个区块，此行为可用tx作为证据），但仍可操作（如PRE_RESIGNED那样等待）
+- `BANNED` - 主节点以封杀，抵押品已解锁，可以收回（如同RESIGNED行, 但是强迫性失活退出。

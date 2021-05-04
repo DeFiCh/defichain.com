@@ -30,13 +30,13 @@ _NOTE: This how-to expects some basic familiarity with the Linux terminal_
 There are two distinct roles: 'masternode owner' and 'masternode operator'. The owner holds the collateral and the primary activity (minting new coins, voting for anchors) is performed by operator. In general, a node can play both roles.
 
 ## For owners who operate their own masternodes
-In this scenario, operator's address will be equal to the owner's (collateral) address.
+In this scenario, the operator's address will be equal to the owner's (collateral) address.
 
 ### Step 1 - Download and extract node software
 
 The first step is to download the binaries. Here are links to binaries for Windows, Linux and Macosx (Please download the latest release):
 
-[Downloads](https://defichain.com/downloads/)
+[Downloads](/downloads/)
 
 Following that we can extract the tar file by running (Replace 1.x.x with your version number):
 ```
@@ -121,7 +121,7 @@ look for your masternode address in the list of masternodes to confirm that you 
 You may run the command `getmasternodeblocks OPERATOR_ADDRESS` to see how many blocks your masternode has minted so far.
 
 ## For owners who would like to delegate the masternode duties to another node
-In this scenario, operator's address will be different to the owner's (collateral) address.
+In this scenario, the operator's address will be different to the owner's (collateral) address.
 
 ### Step 1-4 - Same as above
 

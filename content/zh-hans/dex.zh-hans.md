@@ -33,7 +33,7 @@ content:
       label: 年利率
     liquidity_mining:
       headline: 流动性挖矿池
-      subhead: 程序上直接做高年利率的流动性挖矿。向ETH, BTC, USDT DEX市场堤共流动资产，换得交易费和高利润年收益。随时欢迎您提出资产。
+      subhead: 程序上直接做高年利率的流动性挖矿。向以太坊 (ETH), 比特币 (BTC), USDT DEX市场堤共流动资产，换得交易费和高利润年收益。随时欢迎您提出资产。
       image: /img/app/liquidity
     guides:
       name: guides

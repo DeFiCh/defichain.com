@@ -17,10 +17,18 @@ No need for Gulp. Hugo has asset pipeline built-in.
 
 ## Deploying
 
-Run the included script `./_scripts/deploy-gh.sh` to build the site and push to `gh-pages` (GitHub pages) branch.
+Create a new release on Github and bump the version.
 
-See `_scripts/deploy-gh.sh` for details.
+[Create Release Guide](https://docs.github.com/en/github/administering-a-repository/managing-releases-in-a-repository)
+
+After that, check on the `Action` tab for the CI information and details.
+
+<!--- Run the included script `./_scripts/deploy-gh.sh` to build the site and push to `gh-pages` (GitHub pages) branch. --->
+
+<!--- See `_scripts/deploy-gh.sh` for details. --->
 
 ## Hosting
 
-Make sure custom domain is configured to `defichain.com`. `./_scripts/deploy-gh.sh` does it automatically. You can also comment it away and configure it within the repository settings.
+<!--- # Make sure custom domain is configured to `defichain.com`. `./_scripts/deploy-gh.sh` does it automatically. You can also comment it away and configure it within the repository settings. --->
+
+Make the `baseUrl` in `config.toml` is correct.

@@ -56,7 +56,7 @@ Then select the coin you want to buy in right **To** field.
 
 <img src="/img/guides/obtaining-tokens/dex-to.png" srcset="/img/guides/obtaining-tokens/dex-to.png 1x, /img/guides/obtaining-tokens/dex-to@2x.png 2x">
 
-Yu can either specify how much you DFI wish to sell in the **To** field, or how much of the other coin you wish to buy, in the **To** field. You can also click the **MAX** button to enter the maximum amount of DFI.
+You can either specify how much you DFI wish to sell in the **To** field, or how much of the other coin you wish to buy, in the **To** field. You can also click the **MAX** button to enter the maximum amount of DFI.
 
 Click **CONTINUE** when you are ready to swap.
 
@@ -78,7 +78,7 @@ Look for price differences between the DEX and CEXs. For example, at the time of
 
 ### Swapping DFI for BTC
 
-All we need to do is buy 1 BTC at Biitrex with `38,587.61607637 DFI`.
+All we need to do is buy 1 BTC at Bittrex with `38,587.61607637 DFI`.
 
 <img src="/img/guides/arbitrage/arbitrage-cex.png" srcset="/img/guides/arbitrage/arbitrage-cex.png 1x, /img/guides/arbitrage/arbitrage-cex@2x.png 2x">
 

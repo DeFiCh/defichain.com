@@ -203,7 +203,7 @@ Fill out the information and give your address a meaningful label. Then click **
 
 #### Step 3
 
-The new receive address you have just created will appear in your list of recive addresses.
+The new receive address you have just created will appear in your list of receive addresses.
 
 <img src="/img/guides/installing-defi-app/wallet-receive3.png" srcset="/img/guides/installing-defi-app/wallet-receive3.png 1x, /img/guides/installing-defi-app/wallet-receive3@2x.png 2x">
 

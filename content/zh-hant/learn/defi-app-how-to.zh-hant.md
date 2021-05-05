@@ -49,7 +49,7 @@ content:
 
 ### 步驟三：繞過安全提示
 
-\**請再次確認您下載的程序是來自[遞飛鏈官網](https://defichain.com/)或[GitHub的遞飛鏈程序](https://github.com/DeFiCh/app/releases)，免遭惡意軟件侵害。只有這兩個來源才是正版。*
+\**請再次確認您下載的程序是來自[遞飛鏈官網](/)或[GitHub的遞飛鏈程序](https://github.com/DeFiCh/app/releases)，免遭惡意軟件侵害。只有這兩個來源才是正版。*
 
 到**系統偏**好設定內選**安全性與隱私**。
 

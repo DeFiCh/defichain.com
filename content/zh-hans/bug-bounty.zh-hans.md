@@ -1,7 +1,7 @@
 ---
 title: 漏洞悬赏
 type: bug-bounty
-long_title: DeFiChain Bug Bounty Program
+long_title: 递飞链漏洞悬赏计画
 aliases:
     - /bounty
     - /bounty-program
@@ -12,9 +12,9 @@ menu:
   footer:
     weight: 1000
 meta:
-  description: DeFiChain Bug Bounty Program
+  description: 递飞链漏洞悬赏计画
   og:
-    title: DeFiChain Bug Bounty Program
+    title: 递飞链漏洞悬赏计画
     description: Bounty hunters wanted for wanted bugs
     site_name: DeFiChain
     image: /img/og/ogimage_bounty_en.png
@@ -26,40 +26,40 @@ content:
   sections:
     hero:
       name: hero
-      headline: DeFiChain Bug Bounty Program
-      subhead: DeFiChain is engaging with security experts as well as the community to hunt down vulnerabilities. Our bounty program rewards up to USD 50,000.
+      headline: 递飞链漏洞悬赏计画
+      subhead: 递飞链正与安全专家以及社区合作寻找漏洞。赏金计画奖励高达五万美元。
       cta:
-        label: Submit vulnerability
+        label: 提交漏洞
       sub_cta:
-        label: How to participate
+        label: 如何参与
     leaderboard:
-      headline: Leaderboard
-      subhead: DeFiChain thanks the following bounty hunters in their efforts to keep DeFiChain secure.
+      headline: 排行榜
+      subhead: 递飞链感谢以下的赏金猎人们努力保持将递飞链更安全。
       hunters:
         - name: Dr. Daniel Cagara
           github: muirglacier
           address: dYY5wLEmiawTAzTp2CP5qfrYyjmCVcwPv4
           bounties:
-            - title: Masternode mining efficiency exploit
+            - title: 主节点挖矿效率开发
               value_dfi: 5000
               value_usd: 15000
               txid: 3855e22b35f26cc962d154639d3ce1ac14a40286182b0c897cd5dbe8c0b60503
-      total_bounty: Total bounty
+      total_bounty: 赏金总额
     participation:
-      headline: How to participate
+      headline: 如何参与
       description:
-        p1: There are many ways to get started finding a bug bounty. You can start by connecting to the DeFiChain testnet by running `defid -testnet`. Alternatively, you could study our source code at [GitHub](https://github.com/defich/ain).
-        p2: If you find a bug through interacting with our program and/or studying our source code, we can offer a bug bounty of up to _USD 50,000 worth of DFI_ provided that we find the bug significant, and you are able to provide useful info in regards to fixing or reproducing the issue.
-        p3: "**Be sure to study the code that is tagged for official releases, not the master branch or other code that is still currently under development.**"
+        p1: 有很多方法可以开始寻找漏洞悬赏。您可以通过运行defid-testnet连接到递飞链测试网开始。或者，您可以在[GitHub](https://github.com/defich/ain)学习初始程式码。
+        p2: 如果您通过与程式互动或研究初始程式码发现一个漏洞，递飞链可以提供高达 _五万美元DFI_ 的漏洞赏金，前提是要发现缺陷的严重性，和您能够提供关于修复或复制等有用的资讯。
+        p3: "**请注意要研究和确认标记的是正式发布的程式码，而不是主分支或其他仍在开发中的程式码。**"
     submission:
-      headline: Submission process
+      headline: 提交过程
       description:
-        p1: As security is a sensitive issue, we encourage users not to submit public issues regarding the security of the blockchain. We encourage using your own descretion, if you feel the issue is not something the public can easily exploit, then feel free to create an issue at the repo over at [GitHub](https://github.com/defich/ain). If the issue presents some critical exploit, then please email us instead at [security@defichain.com](mailto:security@defichain.com).
-        p2: "In your submission please include:"
+        p1: 基于安全有一定的敏感性，我们鼓励抓漏洞者不要公开提交有关区块链安全性等议题。递飞链鼓励您自行决定，如果您觉得这个问题不是公众可以轻易利用的，那么可以在[GitHub](https://github.com/defich/ain)的回购中创建议题。如果议题有可能会被他人利用并是个关键，那么请给我们发邮件[security@defichain.com](mailto:security@defichain.com)。
+        p2: "在您提交的文件中，请包含："
         list: 
-          - A clear description of the issue
-          - A fix for the issue, preferably as a pull request
-          - If unable to provide a fix, then please provide clear directions on how to reproduce the issue
-          - Your email address or other relevant contact details (e.g. Telegram ID)
-          - Your DFI address for receiving the bounty if your submission is approved
+          - 对于问题的清楚描述。
+          - 对于问题的修复，最好是以请求代码合并。
+          - 如果无法提供修复程式，请提供有关如何重现问题的明确说明。
+          - "您的邮件地址或其他相关联系方式（如: 电报群 ID)。"
+          - 如果您的申请获得批准，您的DFI地址将用于接收赏金。
 ---

@@ -12,10 +12,10 @@ menu:
   footer:
     weight: 200
 meta:
-  description: Learn about the $DFI coin nd its utility, distribution, airdrops and how to acquire DFI. Join the DeFiChain Insiders.
+  description: 了解$DFI代币及其效用，分配，空投以及如何获取DFI。加入递飞链内线消息。
   og:
     title: $DFI
-    description: Learn about the $DFI coin and its utility, distribution, airdrops and how to acquire DFI. Join the DeFiChain Insiders.
+    description: 了解$DFI代币及其效用，分配，空投以及如何获取DFI。加入递飞链内线消息。
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
@@ -25,12 +25,12 @@ content:
     hero:
       name: hero
       headline: $DFI
-      subhead: Learn about and acquire the $DFI coin. Join the DeFiChain Insiders.
+      subhead: 了解并获得$DFI代币。加入递飞链内线消息。
     dfi_token:
       name: dfi-token
-      headline: $DFI coin
-      subhead: "The $DFI coin is an integral unit of account in DeFiChain. The DeFiChain Foundation issued roughly 600 million DFI on May 11<sup>th</sup>, 2020. The current circulating supply (with staking and liquidity mining) is available at [DeFiChain Explorer](http://explorer.defichain.io/)."
-      note: "Important: DeFi chain is a community project. There was/is no Initial Coin Offering, only free airdrops."
+      headline: $DFI货币
+      subhead: DFI货币是递飞链中不可分割的单位。递飞链基金会在2020年5月11日发行了大约6亿个DFI。现时的流通供应（权益质押和流动性挖矿）可在[递飞链浏览器查询](http://explorer.defichain.io/)。
+      note: 重要提示：递飞链是个社区项目。没有最初的代币发行 (ICO)，只有免费的空投。
       image: /static/svg/physical-coin.svg
     stats:
       links:
@@ -45,44 +45,44 @@ content:
           description: See available exchanges at CoinMarketCap.
           url: ==PENDING==
     utility:
-      headline: $DFI coin utility
+      headline: $DFI货币效用
       utility_list:
         - icon: /static/svg/icons/utility/fees.svg
-          title: Fees
-          description: Pay fees for transactions, smart contracts and other DeFi activities.
+          title: 费用
+          description: 支付交易、智能合约和其他递飞链运作的费用。
         - icon: /static/svg/icons/utility/collateral.svg
-          title: Loan collaterals
-          description: Fund collaterals for loans of other cryptoassets.
+          title: 借贷抵押
+          description: 其他加密资产贷款的资金抵押。
         - icon: /static/svg/icons/utility/staking.svg
-          title: Staking nodes
-          description: Fund a new staking node for 20,000 DFI.
+          title: 权益质押节点
+          description: 创建新的权益质押节点的要提供两万个DFI。
         - icon: /static/svg/icons/utility/dct.svg
-          title: DeFi Custom Token
-          description: Create new DCT with 100 DFI (non-refundable).
+          title: 递飞链自定代币
+          description: 以一百个DFI创建自定代币 (不能退还)。
         - icon: /static/svg/icons/utility/budget.svg
-          title: Budget proposal
-          description: Submit a community budget proposal for 500 DFI (non-refundable).
+          title: 概算提议
+          description: 以500 DFI提交社区预算建议（不可退还。
     distribution:
-      headline: Initial Token Distribution
-      subhead: Of the 1.2 billion $DFI coins, 49% will be in the initial supply, with the rest issued to masternode holders over time.
+      headline: 初始代币分配
+      subhead: 在12亿$DFI货币中，49%是最初供应的，其余的将随着时间推移发行给主节点持有者。
       chart:
-        initial_supply: Initial supply
-        masternodes: Masternodes
-        defi_foundation: DeFiChain Foundation
-        external_partners: External Partners
-        caption: Of the initial supply, 49% will be kept by the DeFiChain Foundation. The rest may be distributed to external partners, to fund the initial development.
+        initial_supply: 初始代币供应
+        masternodes: 随着时间的推移主节点
+        defi_foundation: 递飞链基金会
+        external_partners: 外部合作伙伴
+        caption: 在初始代币供应中，有49％将由递飞链基金会保留。其余的可以分发给外部合作伙伴，以资助最初的开发。
       image: /static/svg/initial-token-distribution.svg
     acquiring:
-      headline: Acquiring $DFI coins
-      subhead: $DFI coins will be issued to users and partners with an interest in utilizing and participating in the ecosystem.
+      headline: 获取$DFI货币
+      subhead: $DFI 货币将发给有兴趣利用和参与生态系统的用户和合作伙伴。
       exchanges:
         icon: /static/svg/icons/way-to-acquire/exchanges.svg
-        title: Exchanges
-        description: You can now purchase DFI at these select exchanges, with more exchanges to follow.
+        title: 交易所
+        description: 您现在可以在这些交易所购买DFI，接下来还会有更多的交易所上币。
       staking_platforms:
         icon: /static/svg/icons/way-to-acquire/staking.svg
-        title: Staking platforms
-        description: DFI is now available at these select staking platforms.
+        title: 权益质押平台
+        description: DFI可在这些平台上运作权益质押。
         staking_platforms_list:
           - label: Cake DeFi
             url: https://pool.cakedefi.com
@@ -94,38 +94,38 @@ content:
             type: png
       ways_to_acquire:
         - icon: /static/svg/icons/way-to-acquire/airdrop.svg
-          title: Airdrop
-          description: The DeFiChain Foundation will airdrop DFI to hodlers, market makers and other users of DeFiChain.
+          title: 空投
+          description: 递飞链基金会将向hodlers、做市商和递飞链的其他用户提共空投DFI。
         - icon: /static/svg/icons/way-to-acquire/developers.svg
-          title: Developers
-          description: The DeFiChain Foundation gives grants to developers building functionality and dApps on DeFiChain.
-      cta: For further information, contact us at [partners@defichain.com](mailto:partners@defichain.com).
+          title: 开发者
+          description: 递飞链基金会授予开发者在递飞链上创建功能和dApp的权利。
+      cta: 若想了解更多资讯，请用邮件联系我们 [partners@defichain.com](mailto:partners@defichain.com).
     insiders:
-      headline: Join the DeFiChain Insiders community.
-      subhead: The DeFiChain movement is looking for those with the passion and reach to spread the movement — register below.
+      headline: 加入递飞链内线消息
+      subhead: 递飞链正在寻找那些有热情想一起宣传去中心化金融的小伙伴 - 请在下面注册。
       form:
         name:
-          label: Name
-          placeholder: Full name
+          label: 姓名
+          placeholder: 姓名
         email:
-          label: Email
+          label: 电邮地址
           placeholder: name@example.com
         reach:
-          label: Reach
-          placeholder: Your level of reach in general
+          label: 触及
+          placeholder: 您的触及率
         comment:
-          label: How will you contribute?
-          placeholder: Are you an influencer, YouTuber or blogger? What can you do for the movement, and what can the movement do for you? Tell us more.
+          label: 您想如何贡献?
+          placeholder: 您是网红，YouTuber还是博客？您可以为这运动做些什么，这运动可以为您做些什么？请告诉我们更多。
         button:
           label: Let me in
       benefits:
-        description: Enjoy these exclusive perks when you become an Insider.
+        description: 跟踪内线消息可享受独家优惠。
         benefits_list:
-          - label: Access to our Insider-only Telegram group
+          - label: 内线电报群
             icon: /static/svg/icons/insiders/benefits/telegram.svg
-          - label: Exclusive Insider swag and collectibles
+          - label: 独家资讯交换和收藏品
             icon: /static/svg/icons/insiders/benefits/swag.svg
-          - label: Early access to announcements and products
+          - label: 提早获得最新消息和产品
             icon: /static/svg/icons/insiders/benefits/early-access.svg
     #subscribe in /
     #closer_look in /

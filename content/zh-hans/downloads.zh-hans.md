@@ -1,15 +1,15 @@
 ---
-title: 下载中心
+title: 下载区
 type: downloads
-long_title: DeFiChain CLI and desktop app downloads for Mac, Windows and Linux.
+long_title: 用于Mac、Windows和Linux的递飞链CLI和钱包程序的下载区。
 menu:
   footer:
     weight: 600
 meta:
-  description: DeFiChain CLI and desktop app downloads for Mac, Windows and Linux.
+  description: 用于Mac、Windows和Linux的递飞链CLI和钱包程序的下载区。
   og:
-    title: Downloads
-    description: DeFiChain CLI and desktop app downloads for Mac, Windows and Linux.
+    title: 下载区
+    description: 用于Mac、Windows和Linux的递飞链CLI和钱包程序的下载区。
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
@@ -19,14 +19,14 @@ content:
   sections:
     hero:
       name: hero
-      headline: Downloads
-      subhead: Download applications for Mac, Windows and Linux.
+      headline: 下载区
+      subhead: 下载适用于Mac、Windows和Linux的程序。
     downloads:
-      headline: Get the wallet app and CLI.
+      headline: 下载钱包程序和CLI (命令行介面控制台)。
       downloads_list:
-        - title: DeFi Wallet app
+        - title: 递飞链钱包程序
           type: desktop-app
-          description: Transact, liquidity mine, swap and more with the full-featured and fully-decentralized wallet app. Full node included.
+          description: 使用全功能和递飞链钱包程序进行交易、流动性挖矿、交换等。包含完整节点。
           image:
             path: /img/downloads/defichain-icon-128.png
             type: png
@@ -41,11 +41,11 @@ content:
             - label: Linux (AppImage)
               type: appimg
               url: https://github.com/DeFiCh/defi-app/releases
-            - label: Installation guide
+            - label: 安装入门指南
               url: /learn/defi-app-how-to
-        - title: CLI
+        - title: 命令行介面控制台
           type: cli
-          description: Transact and interact with DeFiChain through a command line interface. Full node included.
+          description: 通过命令行介面与递飞链进行交易和其他功能。包含完整节点。
           image:
             path: /static/svg/icons/developers/icon-cli.svg
             type: svg

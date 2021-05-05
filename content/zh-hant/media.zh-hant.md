@@ -1,16 +1,16 @@
 ---
-title: Media
+title: 媒體素材
 type: media
-long_title: DeFiChain and $DFI coin in the news and media.
+long_title: 遞飛鏈和$DFI貨幣的新聞和媒體素材。
 cta_to: Read
 menu:
   footer:
     weight: 700
 meta:
-  description: DeFiChain and $DFI coin in the news and media. Download media resources and assets.
+  description: 遞飛鏈和$DFI貨幣的新聞和媒體素材。下載媒體資源和素材。
   og:
-    title: Media
-    description: DeFiChain and $DFI coin in the news and media. Download media resources and assets.
+    title: 媒體素材
+    description: 遞飛鏈和$DFI貨幣的新聞和媒體素材。下載媒體資源和素材。
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
@@ -20,10 +20,10 @@ content:
   sections:
     hero:
       name: hero
-      headline: Media
-      subhead: Media resources and assets.
+      headline: 媒體素材
+      subhead: 媒體資源和素材。
     mentions:
-      headline: DeFiChain covered in the press and media.
+      headline: 遞飛鏈媒體報導
       mentions_list:
         
         - title: To Secure a Sustainable Future for DeFi, We Need to Look Beyond Ethereum
@@ -46,8 +46,8 @@ content:
           date: 11 Feb, 2021
           image: /img/press/cryptomode.png
           url: https://cryptomode.com/shifting-into-litespeed-defichain-launches-litecoin-liquidity-mining/
-        - title: 库币新币观察：将DeFi带入比特币生态，DeFiChain有何特别之处？
-          source: IT专家网
+        - title: 庫幣新幣觀察：將DeFi帶入比特幣生態，DeFiChain有何特別之處？
+          source: IT專家網
           date: 22 Jan, 2021
           image: /svg/press/jinse.svg
           url: https://www.jinse.com/news/blockchain/986014.html
@@ -192,35 +192,35 @@ content:
           image: /svg/press/kryptomagazin.svg
           url: https://www.krypto-magazin.de/dr-julian-hosp-im-interview-defi-cake-defi-blockchain/
     downloads:
-      headline: "Downloads"
+      headline: "下載"
       description: Download official DeFiChain brand assets and learn about usage guidelines.
       downloads_list:
-        - title: DeFiChain logo
-          description: The official and default logo.
+        - title: 遞飛鏈標志
+          description: 官方和預設標志
           image: /static/downloads/logo-defi-blockchain.svg
           links:
             - label: SVG
               url: /downloads/logo-defi-blockchain.svg
             - label: PNG
               url: /downloads/logo-defi-blockchain.png
-        - title: The DeFi jellyfish
-          description: Useful when space is constrained.
+        - title: 遞飛鏈水母
+          description: 空間受限時可用。
           image: /static/downloads/symbol-defi-blockchain.svg
           links:
             - label: SVG
               url: /downloads/symbol-defi-blockchain.svg
             - label: PNG
               url: /downloads/symbol-defi-blockchain.png
-        - title: DFI 3D coin
-          description: Available as SVG and PNG. 3D-printable file coming soon.
+        - title: DFI 3D 貨幣標志
+          description: 提供SVG和PNG格式。立體列印文件即將推出。
           image: /static/downloads/coin-defi-blockchain.svg
           links:
             - label: SVG
               url: /downloads/coin-defi-blockchain.svg
             - label: PNG
               url: /downloads/coin-defi-blockchain.png
-        - title: Built-on-Bitcoin
-          description: Available as SVG and PNG.
+        - title: 比特幣上建構
+          description: 提供SVG和PNG格式。
           image: /static/downloads/built-on-bitcoin.svg
           links:
             - label: SVG
@@ -228,23 +228,23 @@ content:
             - label: PNG
               url: /downloads/built-on-bitcoin.png
     submission:
-      headline: Get in touch with media relations.
+      headline: 與媒體聯系
       form:
         name:
-          label: Name
-          placeholder: Full Name
+          label: 姓名
+          placeholder: 姓名
         email:
-          label: Email
+          label: 電郵地址
           placeholder: name@example.com
         company:
-          label: Company (optional)
-          placeholder: Your company name
+          label: 公司
+          placeholder: 公司
         comment:
-          label: Comments
-          placeholder: Want to submit an article or request for press content and resources? Tell us more.
+          label: 您想說什麽
+          placeholder: 是否要提交文章或請求新聞內容和資源？請告訴我們更多。
         button:
-          label: Send
-      or: You can also email us for further information at [media@defichain.com](mailto:media@defichain.com).
+          label: 發送
+      or: 您也可以通過郵件和我們聯系 [media@defichain.com](mailto:media@defichain.com).
     #subscribe in /
     #closer_look in /
 ---

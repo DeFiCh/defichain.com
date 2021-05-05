@@ -40,7 +40,7 @@ content:
         image: /static/svg/icons/developers/icon-cli.svg
         headline: 入門命令行界面桌面版程序
         subhead: 最新版本適用于Mac,Windows和Linux
-        label: 前往下載中心
+        label: 前往下載區
         url: /downloads
       explorer:
         image: /static/svg/icons/developers/icon-dfi.svg

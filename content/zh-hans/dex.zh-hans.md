@@ -111,13 +111,13 @@ content:
         button:
           label: Let me in
       benefits:
-        description: Enjoy these exclusive perks when you become an Insider.
+        description: 跟踪内线消息可享受独家优惠。
         benefits_list:
-          - label: Access to our Insider-only Telegram group
+          - label: 内线电报群
             icon: /static/svg/icons/insiders/benefits/telegram.svg
-          - label: Exclusive Insider swag and collectibles
+          - label: 独家资讯交换和收藏品
             icon: /static/svg/icons/insiders/benefits/swag.svg
-          - label: Early access to announcements and products
+          - label: 提早获得最新消息和产品
             icon: /static/svg/icons/insiders/benefits/early-access.svg
     #subscribe in /
     #closer_look in /

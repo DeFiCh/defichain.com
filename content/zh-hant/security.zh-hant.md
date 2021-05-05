@@ -1,12 +1,12 @@
 ---
-title: Security
+title: 安全性
 type: article
-long_title: Security
+long_title: 安全性
 meta:
-  description: Security audits
+  description: 安全審計
   og:
-    title: Security
-    description: Security audits
+    title: 安全性
+    description: 安全審計
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
@@ -18,67 +18,67 @@ content:
   sections:
     hero:
       name: hero
-      headline: Security audits
+      headline: 安全審計
 ---
 
-## Audit 2: KnownSec
+## 審核二: 知道創宇
 
 <table>
   <tr>
-    <th>Result</th>
+    <th>結果</th>
     <td>
-      <span style="color:#02B31B;">PASS</span>
+      <span style="color:#02B31B;">通過</span>
     </td>
   </tr>
   <tr>
-    <th>Number</th>
+    <th>序號</th>
     <td>DeFiChain-GLSJ-20201020</td>
   </tr>
   <tr>
-    <th>Date</th>
-    <td>October 20, 2020</td>
+    <th>日期</th>
+    <td>2020年10月20日</td>
   </tr>
   <tr>
-    <th>Auditor</th>
+    <th>審核員</th>
     <td>
       <img class="cert-link" src="/img/external/logo-knownsec.png" srcset="/img/external/logo-knownsec.png 1x, /img/external/logo-knownsec@2x.png 2x" alt="Knownsec">
     </td>
   </tr>
   <tr>
-    <th>Audit report</th>
+    <th>審核報告</th>
     <td>
-      <a href="/downloads/DeFiChain-Security-Audit-Report-V1.pdf" target="_blank">Download</a>
+      <a href="/downloads/DeFiChain-Security-Audit-Report-V1.pdf" target="_blank">下載</a>
     </td>
   </tr>
 </table>
 
-## Audit 1: Slow Mist
+## 審核一: 慢霧科技
 
 <table>
   <tr>
-    <th>Result</th>
+    <th>結果</th>
     <td>
-      <span style="color:#02B31B;">PASS</span>
+      <span style="color:#02B31B;">通過</span>
     </td>
   </tr>
   <tr>
-    <th>Number</th>
+    <th>序號</th>
     <td>BCA002009180001</td>
   </tr>
   <tr>
-    <th>Date</th>
-    <td>September 18, 2020</td>
+    <th>日期</th>
+    <td>2020年9月18日</td>
   </tr>
   <tr>
-    <th>Auditor</th>
+    <th>審核員</th>
     <td>
       <img class="cert-link" src="/img/external/logo-slowmist.png" srcset="/img/external/logo-slowmist.png 1x, /img/external/logo-slowmist@2x.png 2x" alt="Slow Mist">
     </td>
   </tr>
   <tr>
-    <th>Audit report</th>
+    <th>審核報告</th>
     <td>
-      <a href="/downloads/defichain-security-audit-slowmist.pdf" target="_blank">Download</a>
+      <a href="/downloads/defichain-security-audit-slowmist.pdf" target="_blank">下載</a>
     </td>
   </tr>
 </table>

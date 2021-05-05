@@ -1,16 +1,16 @@
 ---
 title: 媒体素材
 type: media
-long_title: DeFiChain and $DFI coin in the news and media.
+long_title: 递飞链和$DFI货币的新闻和媒体素材。
 cta_to: Read
 menu:
   footer:
     weight: 700
 meta:
-  description: DeFiChain and $DFI coin in the news and media. Download media resources and assets.
+  description: 递飞链和$DFI货币的新闻和媒体素材。下载媒体资源和素材。
   og:
-    title: Media
-    description: DeFiChain and $DFI coin in the news and media. Download media resources and assets.
+    title: 媒体素材
+    description: 递飞链和$DFI货币的新闻和媒体素材。下载媒体资源和素材。
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
@@ -20,10 +20,10 @@ content:
   sections:
     hero:
       name: hero
-      headline: Media
-      subhead: Media resources and assets.
+      headline: 媒体素材
+      subhead: 媒体资源和素材。
     mentions:
-      headline: DeFiChain covered in the press and media.
+      headline: 递飞链媒体报导
       mentions_list:
         
         - title: To Secure a Sustainable Future for DeFi, We Need to Look Beyond Ethereum
@@ -192,35 +192,35 @@ content:
           image: /svg/press/kryptomagazin.svg
           url: https://www.krypto-magazin.de/dr-julian-hosp-im-interview-defi-cake-defi-blockchain/
     downloads:
-      headline: "Downloads"
+      headline: "下载"
       description: Download official DeFiChain brand assets and learn about usage guidelines.
       downloads_list:
-        - title: DeFiChain logo
-          description: The official and default logo.
+        - title: 递飞链标志
+          description: 官方和预设标志
           image: /static/downloads/logo-defi-blockchain.svg
           links:
             - label: SVG
               url: /downloads/logo-defi-blockchain.svg
             - label: PNG
               url: /downloads/logo-defi-blockchain.png
-        - title: The DeFi jellyfish
-          description: Useful when space is constrained.
+        - title: 递飞链水母
+          description: 空间受限时可用。
           image: /static/downloads/symbol-defi-blockchain.svg
           links:
             - label: SVG
               url: /downloads/symbol-defi-blockchain.svg
             - label: PNG
               url: /downloads/symbol-defi-blockchain.png
-        - title: DFI 3D coin
-          description: Available as SVG and PNG. 3D-printable file coming soon.
+        - title: DFI 3D 货币标志
+          description: 提供SVG和PNG格式。立体列印文件即将推出。
           image: /static/downloads/coin-defi-blockchain.svg
           links:
             - label: SVG
               url: /downloads/coin-defi-blockchain.svg
             - label: PNG
               url: /downloads/coin-defi-blockchain.png
-        - title: Built-on-Bitcoin
-          description: Available as SVG and PNG.
+        - title: 比特币上建构
+          description: 提供SVG和PNG格式。
           image: /static/downloads/built-on-bitcoin.svg
           links:
             - label: SVG
@@ -228,23 +228,23 @@ content:
             - label: PNG
               url: /downloads/built-on-bitcoin.png
     submission:
-      headline: Get in touch with media relations.
+      headline: 与媒体联系
       form:
         name:
-          label: Name
-          placeholder: Full Name
+          label: 姓名
+          placeholder: 姓名
         email:
-          label: Email
+          label: 电邮地址
           placeholder: name@example.com
         company:
-          label: Company (optional)
-          placeholder: Your company name
+          label: 公司
+          placeholder: 公司
         comment:
-          label: Comments
-          placeholder: Want to submit an article or request for press content and resources? Tell us more.
+          label: 您想说什么
+          placeholder: 是否要提交文章或请求新闻内容和资源？请告诉我们更多。
         button:
-          label: Send
-      or: You can also email us for further information at [media@defichain.com](mailto:media@defichain.com).
+          label: 发送
+      or: 您也可以通过邮件和我们联系 [media@defichain.com](mailto:media@defichain.com).
     #subscribe in /
     #closer_look in /
 ---

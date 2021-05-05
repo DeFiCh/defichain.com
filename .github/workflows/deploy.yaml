@@ -1,78 +1,74 @@
 name: Deploy Website
 
-# on:
-#   release:
-#     types: [published]
-
 on:
-  push:
-    branch: feature/deployment-workflow
+  release:
+    types: [published]
 
 jobs:
   deploy-website:
     name: "Deploy minified website"
     runs-on: ubuntu-latest
     steps:
-      # - name: Checkout
-      #   uses: actions/checkout@v2
-      #   with:
-      #     submodules: true # Fetch Hugo themes (true OR recursive)
-      #     fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
 
-      # - name: Cache node modules
-      #   uses: actions/cache@v2
-      #   with:
-      #     path: ~/.npm
-      #     key: ${{ runner.os }}-build-${{ hashFiles('**/package-lock.json') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-build-
-      #       ${{ runner.os }}-
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
 
-      # - name: Install Dependencies
-      #   run: npm ci
+      - name: Install Dependencies
+        run: npm ci
 
-      # - name: Setup Hugo
-      #   uses: peaceiris/actions-hugo@v2
-      #   with:
-      #     hugo-version: "0.81.0"
-      #     extended: true
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.81.0"
+          extended: true
 
-      # - name: Build
-      #   run: hugo --minify
+      - name: Build
+        run: hugo --minify
 
-      # - name: Deploy en build
-      #   uses: JamesIves/github-pages-deploy-action@4.1.1
-      #   with:
-      #     branch: gh-pages
-      #     folder: ./public/en
+      - name: Deploy en build
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: gh-pages
+          folder: ./public/en
 
-      # - name: Configure AWS credentials
-      #   uses: aws-actions/configure-aws-credentials@v1
-      #   with:
-      #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #     aws-region: ap-southeast-1
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-southeast-1
 
-      # - name: Login to Amazon ECR
-      #   id: login-ecr
-      #   uses: aws-actions/amazon-ecr-login@v1
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
 
-      # - name: Build, tag, and push image to Amazon ECR
-      #   env:
-      #     ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-      #     ECR_REPO_HANS: ${{ secrets.ZH_HANS_REPO }}
-      #     ECR_REPO_HANT: ${{ secrets.ZH_HANT_REPO }}
-      #   run: |
-      #     # Build hans
-      #     docker build -t $ECR_REGISTRY/$ECR_REPO_HANS:latest --build-arg PUBLIC_PATH=./public/zh-hans .
-      #     docker tag $ECR_REGISTRY/$ECR_REPO_HANS:latest $ECR_REGISTRY/$ECR_REPO_HANS:${GITHUB_REF##*/}
-      #     docker push $ECR_REGISTRY/$ECR_REPO_HANS:latest
-      #     docker push $ECR_REGISTRY/$ECR_REPO_HANS:${GITHUB_REF##*/}
-      #     # Build hant
-      #     docker build -t $ECR_REGISTRY/$ECR_REPO_HANT:latest --build-arg PUBLIC_PATH=./public/zh-hant .
-      #     docker tag $ECR_REGISTRY/$ECR_REPO_HANT:latest $ECR_REGISTRY/$ECR_REPO_HANT:${GITHUB_REF##*/}
-      #     docker push $ECR_REGISTRY/$ECR_REPO_HANT:latest
-      #     docker push $ECR_REGISTRY/$ECR_REPO_HANT:${GITHUB_REF##*/}
+      - name: Build, tag, and push image to Amazon ECR
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPO_HANS: ${{ secrets.ZH_HANS_REPO }}
+          ECR_REPO_HANT: ${{ secrets.ZH_HANT_REPO }}
+        run: |
+          # Build hans
+          docker build -t $ECR_REGISTRY/$ECR_REPO_HANS:latest --build-arg PUBLIC_PATH=./public/zh-hans .
+          docker tag $ECR_REGISTRY/$ECR_REPO_HANS:latest $ECR_REGISTRY/$ECR_REPO_HANS:${GITHUB_REF##*/}
+          docker push $ECR_REGISTRY/$ECR_REPO_HANS:latest
+          docker push $ECR_REGISTRY/$ECR_REPO_HANS:${GITHUB_REF##*/}
+          # Build hant
+          docker build -t $ECR_REGISTRY/$ECR_REPO_HANT:latest --build-arg PUBLIC_PATH=./public/zh-hant .
+          docker tag $ECR_REGISTRY/$ECR_REPO_HANT:latest $ECR_REGISTRY/$ECR_REPO_HANT:${GITHUB_REF##*/}
+          docker push $ECR_REGISTRY/$ECR_REPO_HANT:latest
+          docker push $ECR_REGISTRY/$ECR_REPO_HANT:${GITHUB_REF##*/}
 
       - name: Update image
         uses: appleboy/ssh-action@master

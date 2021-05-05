@@ -29,7 +29,7 @@ $(function () {
   $(".buy-dfi-link").append('<span class="dfi-price loading"><span class="spinner"><span class="b1"></span><span class="b2"></span><span class="b3"></span></span></span>');
 
   $.ajax({
-    url: "https://poolapi.cakedefi.com/home",
+    url: "https://api.cakedefi.com/home",
     success: function (data) {
       for (i = 0; i < data.coinPrices.length; i++) {
         if (data.coinPrices[i].CoinId == "DFI") {

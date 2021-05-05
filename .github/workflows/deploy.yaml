@@ -36,11 +36,14 @@ jobs:
       - name: Build
         run: hugo --minify
 
-      - name: Upload build
+      - name: Tar web build
+        run: tar -czvf web-build.tar.gz ./public Dockerfile
+
+      - name: Upload web build
         uses: actions/upload-artifact@v2
         with:
           name: web-build
-          path: ./public
+          path: web-build.tar.gz
 
   deploy-website:
     name: "Deploy minified website"
@@ -51,6 +54,9 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: web-build
+
+      - name: Unarchive web build
+        run: tar -xzvf web-build.tar.gz
 
       # - name: Deploy en build
       #   uses: JamesIves/github-pages-deploy-action@4.1.1

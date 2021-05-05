@@ -17,7 +17,7 @@ content:
       headline: 比特幣上的去中心化金融
       subhead: 全民都能使用快速，智能與透明化的金融區塊鏈
       ctas:
-        - label: 前往下載中心
+        - label: 前往下載區
           url: /downloads
         - label: 購買 遞飛幣（$DFI）
           type: plain

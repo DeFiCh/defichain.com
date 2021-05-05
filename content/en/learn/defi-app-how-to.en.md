@@ -49,7 +49,7 @@ Open the app. The first time you open the DeFi app, you will be presented with a
 
 ### Step 3: Bypass security prompt
 
-\**Only open the app this way if you are sure you have downloaded DeFi app from an official source. DeFi app is currently only available on the [official website](https://defichain.com/) and [DeFiChain’s GitHub](https://github.com/DeFiCh/app/releases).*
+\**Only open the app this way if you are sure you have downloaded DeFi app from an official source. DeFi app is currently only available on the [official website](/) and [DeFiChain’s GitHub](https://github.com/DeFiCh/app/releases).*
 
 Go to **System Preferences** and click on **Security & Privacy**.
 

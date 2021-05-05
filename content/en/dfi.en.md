@@ -12,7 +12,7 @@ menu:
   footer:
     weight: 200
 meta:
-  description: Learn about the $DFI coin nd its utility, distribution, airdrops and how to acquire DFI. Join the DeFiChain Insiders.
+  description: Learn about the $DFI coin and its utility, distribution, airdrops and how to acquire DFI. Join the DeFiChain Insiders.
   og:
     title: $DFI
     description: Learn about the $DFI coin and its utility, distribution, airdrops and how to acquire DFI. Join the DeFiChain Insiders.
@@ -67,7 +67,7 @@ content:
       subhead: Of the 1.2 billion $DFI coins, 49% will be in the initial supply, with the rest issued to masternode holders over time.
       chart:
         initial_supply: Initial supply
-        masternodes: Masternodes
+        masternodes: To masternodes over time
         defi_foundation: DeFiChain Foundation
         external_partners: External Partners
         caption: Of the initial supply, 49% will be kept by the DeFiChain Foundation. The rest may be distributed to external partners, to fund the initial development.

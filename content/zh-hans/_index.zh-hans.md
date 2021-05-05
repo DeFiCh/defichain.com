@@ -17,7 +17,7 @@ content:
       headline: 比特币上的去中心化金融
       subhead: 全民都能使用快速，智能与透明化的金融区块链
       ctas:
-        - label: 前往下载中心
+        - label: 前往下载区
           url: /downloads
         - label: 购买 递飞币（$DFI）
           type: plain

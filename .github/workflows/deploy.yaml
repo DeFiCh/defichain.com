@@ -59,8 +59,7 @@ jobs:
       #     folder: ./public/en
 
       - name: Check files
-        shell: |
-          ls -l
+        run: ls -l
 
       # - name: Configure AWS credentials
       #   uses: aws-actions/configure-aws-credentials@v1

@@ -1,12 +1,8 @@
 name: Deploy Website
 
-# on:
-#   release:
-#     types: [published]
-
 on:
-  push:
-    branch: feature/deploy-s3
+  release:
+    types: [published]
 
 jobs:
   deploy-website:
@@ -40,11 +36,11 @@ jobs:
       - name: Build
         run: hugo --minify
 
-      # - name: Deploy en build
-      #   uses: JamesIves/github-pages-deploy-action@4.1.1
-      #   with:
-      #     branch: gh-pages
-      #     folder: ./public/en
+      - name: Deploy en build
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: gh-pages
+          folder: ./public/en
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -74,32 +70,3 @@ jobs:
           invalidation: /*
           delete-removed: true
           private: true
-
-      # - name: Login to Amazon ECR
-      #   id: login-ecr
-      #   uses: aws-actions/amazon-ecr-login@v1
-
-      # - name: Build, tag, and push image to Amazon ECR
-      #   env:
-      #     ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-      #     ECR_REPO_HANS: ${{ secrets.ZH_HANS_REPO }}
-      #     ECR_REPO_HANT: ${{ secrets.ZH_HANT_REPO }}
-      #   run: |
-      #     # Build hans
-      #     docker build -t $ECR_REGISTRY/$ECR_REPO_HANS:latest --build-arg PUBLIC_PATH=./public/zh-hans .
-      #     docker tag $ECR_REGISTRY/$ECR_REPO_HANS:latest $ECR_REGISTRY/$ECR_REPO_HANS:${GITHUB_REF##*/}
-      #     docker push $ECR_REGISTRY/$ECR_REPO_HANS:latest
-      #     docker push $ECR_REGISTRY/$ECR_REPO_HANS:${GITHUB_REF##*/}
-      #     # Build hant
-      #     docker build -t $ECR_REGISTRY/$ECR_REPO_HANT:latest --build-arg PUBLIC_PATH=./public/zh-hant .
-      #     docker tag $ECR_REGISTRY/$ECR_REPO_HANT:latest $ECR_REGISTRY/$ECR_REPO_HANT:${GITHUB_REF##*/}
-      #     docker push $ECR_REGISTRY/$ECR_REPO_HANT:latest
-      #     docker push $ECR_REGISTRY/$ECR_REPO_HANT:${GITHUB_REF##*/}
-
-      # - name: Update image
-      #   uses: appleboy/ssh-action@master
-      #   with:
-      #     host: ${{ secrets.HOST }}
-      #     username: ${{ secrets.USERNAME }}
-      #     key: ${{ secrets.SSH_KEY }}
-      #     script: deploy-web

@@ -92,12 +92,10 @@ title = "DeFiChain"
   extensions = ["hardLineBreak"]
 
 DefaultContentLanguage = "en"
-# staticDir = ["static1", "static2"]
 
 [languages]
   [languages.en]
     baseURL = "https://defichain.com/"
-    # staticDir2 = "static_en"
     contentDir = "content/en"
     languageName = "English"
     title = "DeFiChain"
@@ -106,8 +104,7 @@ DefaultContentLanguage = "en"
     copyright = "All Rights Reserved"
     weight = 20
   [languages.zh-hans]
-    baseURL = "https://zh.defichain.com/"
-    # staticDir = ["staticDir_override", "static_zh-hans"]
+    baseURL = "https://zhs.defichain.com/"
     contentDir = "content/zh-hans"
     languageName = "简体中文"
     title = "DeFiChain"
@@ -136,7 +133,7 @@ DefaultContentLanguage = "en"
       facebook = "脸书"
       github = "GitHub源代码"
   [languages.zh-hant]
-    baseURL = "https://hk.defichain.com/"
+    baseURL = "https://zht.defichain.com/"
     contentDir = "content/zh-hant"
     languageName = "繁體中文"
     title = "DeFiChain"

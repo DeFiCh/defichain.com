@@ -106,18 +106,18 @@ content:
       form:
         name:
           label: 姓名
-          placeholder: 姓名
+          placeholder: 电邮地址
         email:
           label: 电邮地址
           placeholder: name@example.com
         reach:
-          label: 触及
-          placeholder: 您的触及率
+          label: 您的观众群
+          placeholder: 您目前的观众和追踪量
         comment:
           label: 您想如何贡献?
-          placeholder: 您是网红，YouTuber还是博客？您可以为这运动做些什么，这运动可以为您做些什么？请告诉我们更多。
+          placeholder: 您是意见领袖，网红，UP主? 请告诉咱们您想如何用您现有的媒体平台推广递飞链?
         button:
-          label: Let me in
+          label: 发送
       benefits:
         description: 跟踪内线消息可享受独家优惠。
         benefits_list:

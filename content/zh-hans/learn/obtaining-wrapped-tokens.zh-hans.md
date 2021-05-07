@@ -30,7 +30,7 @@ content:
 
 ### 步骤一：启动递飞链程序
 
-还没有安装应用程序吗？[单击此处获取有关如何执行此操作的分步指南。](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
+还没有安装应用程序吗？[单击此处获取有关如何执行此操作的分步指南。](/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
 
 ### 步骤二：确认钱包里有DFI
 
@@ -87,7 +87,7 @@ _注意：如果您注册一个新帐户，您需要完成身份验证（KYC）�
 
 当您的CakeDeFi有余额就可领出。选择您想领出的货币并按 **「领出」**。
 
-在领出窗口弹出后，选择DeFi递飞链区块链作为 **「发送网络」**。在 **「到递飞链地址」** 输入您的递飞链接收地址。请参阅[递飞链程序接收指南](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)。
+在领出窗口弹出后，选择DeFi递飞链区块链作为 **「发送网络」**。在 **「到递飞链地址」** 输入您的递飞链接收地址。请参阅[递飞链程序接收指南](/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)。
 
 <img src="/img/guides/obtaining-tokens/cake-withdraw.png" srcset="/img/guides/obtaining-tokens/cake-withdraw.png 1x, /img/guides/obtaining-tokens/cake-withdraw@2x.png 2x">
 

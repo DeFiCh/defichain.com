@@ -11,7 +11,7 @@ menu:
 meta:
   description: 了解递飞链基金会如何运作以及如何参与
   og:
-    title: F递飞链基金会
+    title: 递飞链基金会
     description: 了解递飞链基金会如何运作以及如何参与
     site_name: DeFiChain
     image: /img/og/ogimage_en.png

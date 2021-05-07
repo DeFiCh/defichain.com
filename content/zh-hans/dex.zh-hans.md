@@ -93,23 +93,23 @@ content:
       headline: A note about risks
       subhead: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     insiders:
-      headline: Join the DeFiChain Insiders community.
-      subhead: The DeFiChain movement is looking for those with the passion and reach to spread the movement — register below.
+      headline: 加入递飞链内线消息
+      subhead: 递飞链正在寻找那些有热情想一起宣传去中心化金融的小伙伴 - 请在下面注册。
       form:
         name:
-          label: Name
-          placeholder: Full name
+          label: 电邮地址
+          placeholder: 电邮地址
         email:
-          label: Email
+          label: 电邮地址
           placeholder: name@example.com
         reach:
-          label: Reach
-          placeholder: Your level of reach in general
+          label: 您的观众群
+          placeholder: 您目前的观众和追踪量
         comment:
-          label: How will you contribute?
-          placeholder: Are you an influencer, YouTuber or blogger? What can you do for the movement, and what can the movement do for you? Tell us more.
+          label: 您想如何贡献?
+          placeholder: 您是意见领袖，网红，UP主? 请告诉咱们您想如何用您现有的媒体平台推广递飞链?
         button:
-          label: Let me in
+          label: 发送
       benefits:
         description: 跟踪内线消息可享受独家优惠。
         benefits_list:

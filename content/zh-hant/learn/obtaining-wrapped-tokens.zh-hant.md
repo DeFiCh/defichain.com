@@ -30,7 +30,7 @@ content:
 
 ### 步驟一：啓動遞飛鏈程序
 
-還沒有安裝應用程序嗎？[單擊此處獲取有關如何執行此操作的分步指南。](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
+還沒有安裝應用程序嗎？[單擊此處獲取有關如何執行此操作的分步指南。](/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
 
 ### 步驟二：確認錢包裏有DFI
 
@@ -87,7 +87,7 @@ _注意：如果您注冊一個新帳戶，您需要完成身份驗證（KYC）�
 
 當您的CakeDeFi有余額就可領出。選擇您想領出的貨幣並按 **「領出」**。
 
-在領出窗口彈出後，選擇DeFi遞飛鏈區塊鏈作為 **「發送網絡」**。在 **「到遞飛鏈地址」** 輸入您的遞飛鏈接收地址。請參閱[遞飛鏈程序接收指南](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)。
+在領出窗口彈出後，選擇DeFi遞飛鏈區塊鏈作為 **「發送網絡」**。在 **「到遞飛鏈地址」** 輸入您的遞飛鏈接收地址。請參閱[遞飛鏈程序接收指南](/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)。
 
 <img src="/img/guides/obtaining-tokens/cake-withdraw.png" srcset="/img/guides/obtaining-tokens/cake-withdraw.png 1x, /img/guides/obtaining-tokens/cake-withdraw@2x.png 2x">
 

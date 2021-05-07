@@ -33,7 +33,7 @@ content:
 
 ### 步驟一：開啓遞飛鏈程序
 
-還沒安裝程序的小夥伴們 [請按入門指南](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
+還沒安裝程序的小夥伴們 [請按入門指南](/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
 
 ### 步驟二: 確認您的錢包以有DFI
 

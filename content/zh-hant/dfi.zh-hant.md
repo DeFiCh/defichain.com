@@ -111,13 +111,13 @@ content:
           label: 電郵地址
           placeholder: name@example.com
         reach:
-          label: 觸及
-          placeholder: 您的觸及率
+          label: 您的觀眾群
+          placeholder: 您目前的觀眾和追蹤量
         comment:
           label: 您想如何貢獻?
-          placeholder: 您是網紅，YouTuber還是博客？您可以為這運動做些什麽，這運動可以為您做些什麽？請告訴我們更多。
+          placeholder: 您是意見領袖，網紅，UP主? 請告訴咱們您想如何用您現有的媒體平台推廣遞飛鏈?
         button:
-          label: Let me in
+          label: 發送
       benefits:
         description: 跟蹤內線消息可享受獨家優惠。
         benefits_list:

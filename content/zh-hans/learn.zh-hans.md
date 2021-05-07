@@ -9,10 +9,10 @@ menu:
   footer:
     weight: 800
 meta:
-  description: Learn more and understand DeFiChain with videos and how-to guides.
+  description: 递飞链教学
   og:
-    title: Token
-    description: Learn more and understand DeFiChain with videos and how-to guides.
+    title: 学习中心
+    description: 递飞链教学
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png

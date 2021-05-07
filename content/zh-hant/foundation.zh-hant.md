@@ -11,7 +11,7 @@ menu:
 meta:
   description: 了解遞飛鏈基金會如何運作以及如何參與
   og:
-    title: F遞飛鏈基金會
+    title: 遞飛鏈基金會
     description: 了解遞飛鏈基金會如何運作以及如何參與
     site_name: DeFiChain
     image: /img/og/ogimage_en.png

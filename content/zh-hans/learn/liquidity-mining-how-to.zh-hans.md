@@ -28,7 +28,7 @@ content:
 
 ### 步骤一：开启递飞链程序
 
-还没安装程序的小伙伴们[请按入门指南](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
+还没安装程序的小伙伴们[请按入门指南](/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
 
 ### 步骤二：流动性池指南
 

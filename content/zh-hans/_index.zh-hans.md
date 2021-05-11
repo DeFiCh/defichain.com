@@ -235,7 +235,7 @@ content:
                 alt: New DOGE-DFI pool pair
             - month: 二月
               status: past
-              title: 達科他硬分叉為鏈帶來更加去中心化
+              title: 达科他硬分叉为链带来更加去中心化
               url: https://defichain.ghost.io/dakota-upgrade/
               image:
                 x1: /img/timeline/2021/dakota-upgrade.png

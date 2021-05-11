@@ -31,4 +31,4 @@ After that, check on the `Action` tab for the CI information and details.
 
 <!--- # Make sure custom domain is configured to `defichain.com`. `./_scripts/deploy-gh.sh` does it automatically. You can also comment it away and configure it within the repository settings. --->
 
-Make the `baseUrl` in `config.toml` is correct.
+Make sure the `baseUrl` in `config.toml` is correct.

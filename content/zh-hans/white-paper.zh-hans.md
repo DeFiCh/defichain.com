@@ -541,349 +541,394 @@ DeFi的一个重要问题是直接在链上处理各种加密资产的能力。�
 
 递飞链节点将包含一个内置的比特币简化支付验证（SPV）客户机。 SPV客户只需下载区块头即可同步比特币区块链，而区块头资讯足以让节点添加并验证锚定。
 
-## DeFi Building Blocks
+## 递飞链构建区块
 
-To achieve our goals of enabling decentralized finance transactions on DeFiChain, the following build blocks will be included as a base **native** components on DeFiChain.
+为了实现我们在递飞链上实现去中心化财务交易的目标，以下构建块将作为递飞链上的**基本本地**组件包括在内。
 
-### Tokenization as a DeFi Standard Token (DST)
+### 递飞链标准代币（DST）
 
-The implementation of the features described in this whitepaper is performed with the use of standardized tokens. This chapter describes the mechanics of the tokens, interaction with other cryptoassets (tokens), and how they are used in DeFiChain.
+本白皮书所述的功能是使用标准化的代币进行。本章描述标准代币的机制、与其他密码资产（代币）的互动以及如何在递飞链上使用它们。
 
-### Cross-chain Mechanics
+### 跨链技术
 
-DeFiChain uses token standards to bring in external tokens to DeFiChain in a trustless manner and allow trustless financial contracts and trading of all major cryptoasset tokens. The token standards are similar to ERC20 on Ethereum and Omni on Bitcoin blockchain. Through this standard, DeFiChain allows tokenization of any assets.
+递飞链使用代币标准以无信任的方式将外部代币引入递飞链，并允许无信任的金融合约和所有主要加密资产代币的交易。代币标准类似于以太坊的ERC20和比特币区块链的Omni。通过这个标准，递飞链允许对任何资产进行代币化。
 
-On DeFiChain the standardized tokens are called DeFi Standard Token (DST). DST tokens are of two different types: DCT, created by users of the system, and DAT, which are asset-backed tokens created with the backing of cryptoassets. 
+在递飞链上，标准化的代币称为DeFi-Standard Token（DST）。 DST代币有二种不同类型：由递飞链生态用户创建的DCT和由加密资产支持创建的资产支持的代币DAT。
 
-![Custom token](/img/white-paper/custom-token.png)
+![Custom token](/img/white-paper/zhs/custom-token.png)
 
-### DeFi Custom Token (DCT)
+### 递飞链自定代币（DCT）
 
-DCTs are custom tokens that can be created by any user to represent any project or set of smart contracts implemented on DeFiChain. Any user can create such a DCT. To prevent abuse, creation of any proprietary DCT requires the user to lock up 1,000 DFI for the time that the tokens are issued. The DFI is returned when the tokens are revoked and the DCT is cancelled.
+DCT是任何用户都可以创建的自定代币，可用于表示在递飞链上实现的任何项目或一组智能合约。任何递飞链用户都可以创建DCT。为了防止滥用，创建任何专有的DCT都需要用户在颁发代币时锁定1,000个DFI。当撤销代币并取消DCT时，锁定的DFI将返回。
 
-DCT tokens are not backed intrinsically by DeFiChain. They may be backed through an external mechanism, but it’s essential to note that DeFiChain does not intrinsically back them. An example on the Ethereum blockchain would be DGX, which is an ERC20 token backed by gold. Ethereum does not back DGX, although the token is created through ERC20. The Digix Foundation is accountable for the value of that token. Similarly, DCT is the DeFi parallel to ERC20 on Ethereum. Creation and issuance of tokens on DeFi is simplified and the potential for errors in the smart contract is eliminated, because creators of DCT can set only the parameters below, using an easy to use scripting interface.
+DCT代币本质上不是由递飞链支持的。 DCT代币可以通过外部机制支持，但需要注意递飞链并不能从本质上支持DCT。以太坊区块链上的例子之一是DGX，它是一个由黄金支持的ERC20代币。以太坊本身不支持DGX，尽管DGX代币是ERC20所创建的。 Digix基金会对DGX代币的价值开发负责。 DCT自定代币如以太坊上的ERC20。由于DCT的创建者可以用易于使用的脚本接口仅设置以下参数，因此简化了在DeFi上创建和发行代币，并消除了智能合约中出现错误的可能性。
 
 #### DCT Parameters:
 
-- DCT ID: <UDID> Unique blockchain identifier for the token.
-- Name: <Token name> Name of the tokens.
-- Symbol: The ticker symbol for the tokens. The DCT protocol will provide a reference for ensuring the choice will be a unique symbol.
-- Decimal places: Divisible number of decimal places for the tokens. This cannot be changed once it is set. 
-- Total initial supply: Initial issue of tokens during the event generated.
-- Initial distribution list: List of addresses for distribution of tokens. 
-- Minting support: yes/no
-- Final supply limit (optional): Immutable total supply limit. If minting is supporting this will define the ceiling on how many tokens the token owner can mint in total (some may be reserved at this time). If this parameter is left blank, this is an unlimited supply token. This cannot be changed after the initial definition of the token. 
-- Tradeability: yes/no. This is a one-way switch allowing the token owner to transfer tokens during initial distribution period and also to decide when a token is tradeable/movable. To ensure the decentralized nature of DCT, once “tradeability” is set to yes, the owner is no longer able to reverse the tradability of a token. Typically, when creating a token, this should be turned to “no” until the initial distribution is confirmed to be accurate.
+- DCT ID: <UDID> 代币的唯一区块链标识。
+- 名称： <Token name> 代币的名称。
+- 符号：代币的股票代号。 DCT协议将提供一个参考，以确保选择将是唯一的符号。
+- 小数位数：代币的小数位数。设置后不能更改。
+- 初始供应总额：在产生代币中初始发行的数量。
+- 初始分发列表：用于分发代币的地址列表。
+- 支持：是/否
+- 最终供应限额（可选择的）：不可变总供应限额。如果支持铸造，这将递飞链代币所有者总共可以铸造代币数量的上限（可在此选择保留一些代币）。如果该参数不填入，表示这是一个无限制的供应代币。在设立DCT代币记后，这不能更改。
+- 可交易性：是/否。这是一个单向开关，允许代币所有者在初始分发期间转让代币，并决定何时可交易/可移动代币。为确保DCT的去中心化性质，一旦「可交易」设置为「是」，所有者不再能够逆转DCT代币的可交易性。在创建一个新的DCT代币时，可先设为「否」来确认初始分发。
 
-Using this interface, there is no need to have a smart contract developer, and there is no need for a security audit.
+使用此界面，无需智能合约开发人者，且无需进行安全审核。
 
-### DeFi Asset Token (DAT)
+### 递飞链资产代币（DAT）
 
-DeFi Asset Tokens (DATs) are backed in a decentralized manner. DATs on DeFiChain are tokens and crypto assets external of DeFiChain, such as:
+DeFi Asset Tokens（DAT）递飞链资产代币以去中心化式支持。递飞链上的数据是递飞链外部的代币和加密资产，例如：
 
-- DBTC, backed by BTC
-- DETH, backed by ETH
-- DXRP, backed by XRP
-- DUSDT, backed by USDT
-- DBCH, backed by BCH, etc.
+- DBTC, 由BTC支持
+- DETH, 由ETH支持
+- DXRP, 由XRP支持
+- DUSDT, 由USDT支持
+- DBCH, 由BCH支持...等。
 
-New DATs are introduced to the system through voting by masternodes. This ensures that only assets that gather the most interest amongst DeFiChain users get introduced.
+主节点通过投票向系统引入新的资产代币。这能确保只有在递飞链用户中最感兴趣的资产才会被引入递飞链。
 
-### Economic Pegging of DATs
+### DAT的经济挂钩
 
-The goal of DAT is to have it represent the native asset on the other blockchains, e.g. 1 DBTC should represent 1 BTC. 
+DAT的目标是代表其他递飞链上的资产，例如一个DBTC代表一个BTC。
 
-There are two approaches to this:
+有二种方法：
 
-1. Stablecoin approach
-    - For every single issued 1 DBTC, 1 BTC has to be locked up in an address or a smart contract. 
-    - While this would help to build a guarantee to DBTC, it introduces some other issues – country-party risks and affect the decentralized nature of DeFi. 
+1. 稳定币法
+    - 每发出一个DBTC，一个BTC必须锁定在一个地址或一个智能合约中。
+    - 虽然这将有助于建立对DBTC的担保，但也引入了一些国家间的浅在风险，并影响到递飞链的去中心化性质。
 
-2. Economic pegging
-    - By providing a strong guarantee that the DAT representing an asset has its price closely tracking the native asset, i.e. by holding DBTC, one can have a good confidence that the value of DBTC will track that of BTC.
+2. 经济挂钩
+    - 经济挂钩方式提供一个强有力的保证，也代表一项资产的DAT价格能够密切跟随链下资产。通过持有DBTC，可以让DBTC的价值能够对等并确认BTC的价值。
 
 
-In order for us to achieve economic pegging, the following building blocks are built natively on DeFiChain:
+在递飞链上构建以下区域能实现经济挂钩：
 
-1. Loan Contract
-2. Decentralized Exchange (DEX)
-3. Cross-chain Exchange (XCX)
-4. Pricing Oracles
+1. 贷款合同
+2. 去中心化交易所
+3. 跨链交易所
+4. 定价预言
 
-![DAT overview](/img/white-paper/dat-overview.png)
+![DAT overview](/img/white-paper/zhs/dat-overview.png)
 
-### Loan Contract
+### 贷款合同
 
-Loan Contract is designed to allow the owner of the contract to take a collateralized loan against collateral locked in the contract. Each loan contract is unique to every owner (address) on DeFiChain. 
+贷款合同的目的是让合同的所有者以合同中锁定的抵押物取得抵押贷款。每个贷款合同对递飞链上的各个所有者地址都是唯一的。
 
-Any user can open a loan contract on DeFiChain, free of charge. The user who opens a loan contract owns the specific contract. This ownership, however, is transferable.
+任何用户都可以免费在递飞链上建立贷款合同。建立贷款合同的用户拥有特定合同。所有权可转让。
 
-Once a loan contract is opened, DFI can be sent to fund the loan collateral. Once a loan contract is funded, it allows the owner to take out a loan by minting DATs up to a certain collateralization ratio. The minimum collateralization ratio can be adjusted by DeFiChain DAO and starts at 150%. In other words, $1,500 worth of collateral (in DFI), allows the loan contract owner to take out a maximum of $1,000 in loans.
+一旦贷款合同建立，可发送DFI为贷款抵押提供资金。贷款合同获得资金后，可允许所有者以一定的抵押比率通过铸造DAT资产代币获得一笔贷款。最低抵押率可由递飞链DAO调整，并从150%开始。换言之，价值1,500美元的抵押品（在DFI中）允许贷款合同所有人最多获得1,000美元的贷款。
 
-Minted DATs are subject to a floating borrowing rate. A loan contract has no expiry date. The owner is able to take out a loan for as long as they desire, as long as the collateralization ratio stays above 150% at all times.
+一旦贷款合同打开，可发送DFI为贷款抵押品提供资金。一旦贷款合同获得资金，其允许所有人通过将基准利率设定为某一抵押比率来获得贷款。最低抵押率可由递飞链DAO调整，并从150%抵押率开始。换言之，价值1,500美元的DFI抵押品允许贷款合同所有者最多获得1,000美元的贷款。
+
+铸造基准须遵守浮动借贷利率。贷款合同没有到期日。只要抵押率一直保持在150%以上，所有者都可以按自己的意愿贷款。
 
 ```
-Collateralization ratio = Collateral / (Loan + accrued interest)
+抵押率 = 抵押品 / (贷款 + 应计利息)
 ```
 
-If a loan contract falls below the 150% collateralization ratio at any point in time, its collateral is liquidated via Decentralized Exchange (DEX) to pay off accrued interest. There will be an additional 15% liquidation penalty to discourage loan contracts from having to be liquidated. It is the responsibility of the loan contract owners to monitor the collateralization ratio to prevent an unwanted liquidation. 
+如果贷款合同在任何时间点低于150%的抵押率，其抵押品将通过去中心化交易所（ DEX）进行清算，以支付应计利息。另外将有15%的清算罚款，以阻止贷款合同不得不清算。贷款合同所有者有责任监控抵押比率，以防止不必要的清算。
 
-If a loan contract is close to minimum collateralization ratio, the owner must take one of the following steps to prevent liquidation and having to incur 15% liquidation penalty:
+如果贷款合同接近最低抵押率，所有者必须采取以下措施之一防止清算，并须招致15%的清算罚款：
 
-1. Deposit more DFI into the loan contract, thereby increasing its collateral and collateralization ratio.
-2. Pay back some of the loan (or accrued interest), thereby decreasing the loan contract’s loan amount and increasing its collateralization ratio.
+1. 在贷款合同中存入更多的DFI，从而提高其抵押品和抵押率。
+2. 偿还部分贷款或应计利息，从而降低贷款合同的贷款金额并提高其抵押率。
 
-Closing a loan contract entitles its owner to get back all 100% of its collateral. To close a loan contract, the owner has to pay back the loan in full, plus the accrued interest in its entity in the DAT (e.g. DBTC). Upon liquidation of the loan, the minted DAT is burned, and the initial minted DAT and the interest will be converted into DFI via the DeFi DEX described in this paper.
+完成签订贷款合同后，其所有者可收回100%的抵押品。所有者必须全额偿还贷款，加上递飞链资产代币（如DBTC）中其实体的应计利息，来完成贷款合同。贷款清算时，将燃烧铸造的递飞链资产代币，并利用本文所述的去中心化交易所DEX将初始铸造的DAT和利息转换为DFI。
 
-While this concept is not new to the DeFi system, what is novel is the possibility to collateralize any asset due to DeFiChain’s nature.
+尽管这概念对DeFi生态并不陌生，但由于递飞链的设计性质，将任何资产抵押的可能性是新的。
 
-1. Alice opens a loan contract and funds it with 150k DFI.
-2. With DFI at $0.10 spot rate, Alice’s loan contract now has $15,000 worth of collateral.
-3. At the minimum collateralization ratio of 150% she can take out a maximum of $10,000 worth of DBTC, which is pegged to BTC spot price.
-4. Since the DBTC loan via loan contract accrues interest, and DBTC and the DFI price fluctuate, Alice decides to only take out $5,000 worth of DBTC, i.e. 0.5 DBTC, giving her loan contract a collateralization ratio of: 15000/5000 = 300%, well above 150%.
-5. Over-collateralization allows for some room for price movements of DBTC. If the BTC price increases to $15,000, Alice’s loan of 0.5 DBTC would now be worth $7,500. Her loan contract now has a collateralization ratio of: 15000/7500 = 200%, still above 150%, so liquidation would not be triggered even in the case of this type of price shift.
-6. The interest rate for each DAT loan differs. Assuming the DBTC loan rate is 5% annually, taking out a loan for a year, in order to close her loan contract and to fully redeem her initial 150k DFI, Alice has to pay back 0.5 DBTC * 1.05 = 0.525 DBTC by the end of the year.
+1. 爱丽丝签订了一份贷款合同，并用15万DFI为其提供资金。
+2. 如果DFI的即期利率为0.10美元，爱丽丝的贷款合同现在有价值15,000美元的抵押品。
+3. 在最低抵押率为150%的情况下，她最多可以提取价值10,000美元的DBTC，与BTC现价挂钩。
+4. 由于通过贷款合同获得的DBTC贷款产生利息，且DBTC和DFI市场价格波动，爱丽丝决定仅提取价值5,000美元的DBTC，也就是0.5 DBTC，使其贷款合同的抵押率为：15,000/5,000=300% ，远高于150%。
+5. 过度抵押为DBTC的价格变动提供了一些空间。如果BTC价格上升至15,000美元，爱丽丝0.5 DBTC的贷款将价值7,500美元。她的贷款合同现在的抵押率为：15,000/7,500=200%，仍然高于150%，因此即使在这种价格变动的情况下也不需要直接清算。
+6. 各项DAT贷款的利率不同。假设DBTC贷款利率为每年5%，贷款期限为一年，为了完成贷款合同并完全赎回最初的15万DFI，爱丽丝必须在年底前偿还0.5 DBTC*1.05=0.525 DBTC。
 
-![loan contract](/img/white-paper/alice-pdc.png)
+![loan contract](/img/white-paper/zhs/alice-pdc.png)
 
-### Decentralized Exchange (DEX)
+### DEX去中心化交易所
 
-The DeFi internal DEX provides decentralized trading for all DeFi tokens and DFI itself, which means that all tokens: DFI and DCT (DAT and DCT) can be listed on DeFiChain DEX. DEX will initially launch with DFI as the base trading pair, providing markets such as DBTC/DFI, DETH/DFI, DUSDT/DFI, etc. With increasing volume, other base trading pairs can be introduced, subject to a DAO approval, providing markets such as DETH/DBTC, DFI/DUSDT, etc.
+递飞链的DEX为所有递飞链代币和DFI本身提供去中心化交易，也包含所有代币：DFI和DCT（DAT和DCT）可以在递飞链DEX上币。 DEX最初推出并以DFI为基础交易，提供DBTC/DFI、DETH/DFI、DUSDT/DFI等货币市场。随着交易量的增加，经一DAO批准，可引入其他交易成对，提供DETH/DBTC、DFI/DUSDT等市场。
 
-DEX on DeFiChain operates without the need to pass custody to any intermediaries. Users are able to trade on their own in a trustless manner. One of the key differentiator about DeFiChain as compared to many other decentralized financial solutions is that DeFiChain is not only a consensus protocol facilitating DeFi, it is also comes with a very simple to use client user interface (UI) that allows users to interact directly on the blockchain without any intermediaries.
+递飞链上的DEX无需向任何中介机构转移托管。用户可以利用无信任的方式自行交易。与许多其他去中心化金融项目相比，递飞链的关键区别在于递飞链不仅是一个促进DeFi的一致协议，它还附带一个非常简单的用户界面（UI），允许用户直接在区块链上进行交互，而无需任何中介。
 
-### Cross-chain Exchange (XCX)
+### 跨链交易所 
 
-A user holding DBTC might be interested in holding of actual BTC instead of a DeFi pegged BTC token (DBTC).
+持有DBTC的用户可能对持有实际的BTC感兴趣，而不是持有与递飞链挂钩的BTC代币（DBTC）。
 
-The DeFi Cross-chain Exchange (XCX) allows anyone to do exactly that. XCX allows listing of DATs with its native tokens, e.g. DBTC for BTC, DETH for ETH, DXRP for XRP. Actual transaction is carried out through the trustless swap of both tokens commonly known as atomic swap. Atomic swap guarantees that either both parties receive their exchanged coins, or neither transactions go through – providing a strong cryptographic guarantee that no one party is able to cheat the other.
+递飞链的跨链交易所（XCX）能允许任何人准确地做到这一点。 XCX允许将递飞链资产代币与市场货币一起上市（如BTC的DBTC、ETH的DETH、用于XRP的DXRP）。实际交易是通过两种代币的无信任的原子交换进行的。原子交换保证了双方都能收到想交换的货币，否则交易不会进行。这提供强大又稳固的加密保证，任何一方都不能欺骗另一方。
 
-We use the following terms to describe the parties in the XCX:
+我们使用以下术语描述XCX中的各方：
 
-- Borrower: a person owning a DAT and wanting to get a native coin, e.g, a person who has DBTC and wanting to obtain BTC through the XCX.
-- Lender: a person owning BTC and receiving a DAT through the XCX, either temporarily for the duration of the XCX, or permanently, if the XCX expires.
+- 借款人：拥有DAT并希望获得货币的人，例如，拥有DBTC并希望通过XCX获得BTC的人。
+- 贷方：拥有BTC并通过XCX接收DAT的人，在XCX期间暂时或永久（如果XCX到期）。
 
-XCX orders contain several parameters that can be freely decided by the market marker (first lister of an order). For selling of DBTC for BTC (i.e. someone who’s interested in receiving actual BTC), the parameters are:
+XCX订单包含多个参数，可由市场标记自由决定（订单的第一个上市者）。用于销售BTC的DBTC（即有兴趣接收实际BTC的人），参数为：
 
-- Amount: Amount of coin/DAT a seller is looking for and how much DAT is locked up.
-- Premium: Amount of additional fee a coin seller stands to make from this trade (Premium is listed per unit amount, thus allowing for partial fulfillment of trade orders). Together with expiry, it can also be considered as lending interest to the buyer. The Premium is paid instantly once an XCX is matched, before expiry of the lending contract. Premium can be positive (+) or negative (-) depending on supply and demand.
-- Guarantee: An optional additional amount in DBTC and/or DFI that is locked in the XCX that will provide an extra incentive for a lender as it resolves in either of the following  two outcomes:
-  a. Released back to the borrower should the BTC amount be paid up before expiry.
-  b. Release to the lender should the contract expire without the borrower making a payment thereby constituting an extra incentive.
-- Expiry: Time when the contract expires, it can be set as a date in the past for immediate settlement, i.e. no lending, but straight-out swap.
-- Native token address: Address to send BTC to for executing the contract.
+- 数量：卖方寻找货币币或DAT数量和DAT被锁定的数量。
+- 溢价：一个货币销售商从交易中可以获得的额外费用金额（溢价按每单位金额列示，因此允许部分完成交易订单）。连同到期日，也可被视为向买方借出利息。在借贷合同到期之前，一旦一对XCX成对，将立即支付溢价。溢价可为正（+）或负（-），以供求而定。
+- 担保：在DBTC和/或DFI中，锁定在XCX中的可选额外金额可为贷款人提供额外奖励，也解决以下两个结果之一：
+  a. 如果在到期前付清贷款总额，则归还给借款人。
+  b. 如果合同到期而借款人未付款，则向贷款人发放贷款，从而构成额外奖励。
+- 到期日：指合同到期的时间。可以设定为过去的一个日期，即时结算，即不放贷，但直接兑换。
+- 链上代币地址：发送BTC以执行合约的地址。
 
-#### First Example:
+#### 第一个例子：
 
-Alice has 1 DBTC and wants 1 BTC so she can trade on a centralized exchange.
+爱丽丝有1个DBTC，并希望有1个BTC，以便可以在交易所进行交易。
 
-Bob has 1 BTC that he does not need for 1 month, hoping to generate some lending interest during that period of time.
+罗伯特有1个BTC在一个月内不需要用到，也希望在这段时间内产生一些贷款利息。
 
-1. Alice lists the following XCX order:
-- Amount: 1 DBTC/BTC
-- Premium: 8,000 DFI
-- Guarantee: 0.1 DBTC
-- Expiry: December 31, 2019 – approx. 1 month.
-- Address: Alice lists her BTC deposit address
-2. Bob accepts the offer by sending a transaction on DeFiChain.
-3. Bob receives a confirmation on DeFiChain that his order is accepted. In case there are multiple order acceptance transactions.
-4. Bob sends 1 BTC to Alice’s BTC deposit address as listed in the XCX order and sends a transaction on DeFiChain with the BTC txid as receipt. Bob also specifies a receiving BTC address on the same transaction for Alice to repay the 1 BTC later on. 
-5. Multiple DeFiChain stakers with BTC bridges confirm that Bob has indeed sent the amount as agreed and the that the txid is valid.
-6. XCX’s premium of 8000 DFI is instantly released to Bob. Bob can do what he wants with the DFI straight away with no strings attached. It is Bob’s to keep for this trade.
+1. 爱丽丝列出以下XCX顺序：
+- 数量：1个DBTC或BTC
+- 溢价：8,000 DFI
+- 担保：0.1 DBTC
+- 有效期：2019年12月31日（约1个月有效）。
+- 地址：爱丽丝列出其BTC存款地址
+2. 罗伯特通过递飞链上发送的一个交易来接受合同。
+3. 罗伯特收到递飞链确认这个订单已被接受。并确认和避免有多个订单接受交易。
+4. 罗伯特将1个BTC发送到XCX订单中所列爱丽丝的BTC存款地址，并以BTC txid作为发送递飞链上的一个交易收据。罗伯特还指定同一交易中的一个接收BTC地址，以便爱丽丝稍后还1个BTC。
+5. 多数递飞链链权益质押者与比特币桥梁确认罗伯特确实已按约定发送金额和确认txid有效。
+6. XCX的8,000 DFI溢价立即发送给罗伯特。罗伯特可以直接使用DFI做他想做的事情，而无需附加任何条件。这项交易由罗伯特保管。
 
-Now, Alice has 1 BTC and Bob has 8000 DFI. Alice also has 1 DBTC locked up on XCX order and Bob is the beneficiary of that BTC. Note that the beneficiary of an XCX is transferable, i.e. Bob is able to sell the XCX with Alice to a third party (this allows for decentralized debt selling and tokenization of receivables).
+现在爱丽丝有1个BTC，罗伯特有8,000个DFI。爱丽丝还有1个DBTC锁定在XCX订单上，罗伯特是这笔BTC交易的受益人。注意，XCX的受益人是可转让的，罗伯特能够与爱丽丝将XCX出售给第三方（这允许去中心化的债务出售和应收款的代币化）。
 
-Should Alice wish to redeem her 1 DBTC from the XCX before the time is up, Alice will send Bob the 1 BTC she borrowed earlier to Bob’s address specified in the XCX and send the acknowledgment on DeFiChain. Upon confirmation by stakers with a BTC bridge, the XCX contract now closes and Alice gets her 1 DBTC back, having paid 8,000 DFIs as interest.
+如果爱丽丝希望在时间结束前从XCX赎回这个DBTC，爱丽丝将向罗伯特发送之前借贷的1个BTC到XCX中罗伯特的指定地址，并在递飞链上确认发送。在一个BTC桥中的权益质押者确认后，XCX合同进行结束，爱丽丝收回1个DBTC，并支付8,000个DFI作为利息。
 
-Bob gets his 1 BTC back (keeping his 8000 DFI as lending interest).
+罗伯特收回其1个BTC并保留8,000个DFI作为贷款利息。
 
-Should Alice wish not to redeem the XCX before the expiry, Bob gets to keep Alice’s 1 DBTC.
+如果爱丽丝不希望在合同到期前赎回XCX，罗伯特将保留爱丽丝的1个DBTC。
 
-Alice gets to keep the 1 BTC (minus 8000 DFI interest) and Bob now gets 1 DBTC (plus 8000 DFI interest). Additionally Bob received the Guarantee of 0.1 DBTC providing him with an extra 10%.
+爱丽丝保留1个BTC和减去8,000个DFI利息，罗伯特现在获得1个DBTC（加8,000个DFI利息）。此外，罗伯特获得0.1 DBTC的担保，提供额外的10%获利。
 
-![XCX](/img/white-paper/alice-bob-xcx.png)
+![XCX](/img/white-paper/zhs/alice-bob-xcx.png)
 
-#### Second Example:
+#### 第二个例子：
 
-In a second scenario Charlie has 1 DBTC and wants 1 BTC. He has no intention of paying it back and getting his DBTC back. He also does not want to include an additional guarantee, so he adds a higher Premium and an immediate Expiry. Charlie would list the following XCX order:
+在第二个情况下，查利有1个DBTC并希望拥有1个BTC。他无意偿还BTC债务，也无意收回DBTC。他也不想增入额外的担保费，因此他增加了更高的保费并立即到期。查利会列出以下XCX订单：
 
-- Amount: 1 DBTC/BTC
-- Premium: 12000 DFI
-- Guarantee: None
-- Expiry: Immediate
+- 数量：1个DBTC/BTC
+- 溢价：12,000 DFI
+- 担保：无
+- 到期日：立即
 
-Dave, notices the order has no guarantee and an immediate expiry and knows that this XCX order expires instantly. He happily provides the counter-trade to Charlie, giving him 1 BTC and receiving immediately 1 DBTC + 12000 DFI.
+戴夫注意到这个订单没有担保而且立即到期，也知道此XCX订单即时到期。他愉快地向查利提供1个BTC并立即接收1个DBTC+12,000个DFI。
 
-A Guarantee is therefore not a must, but a potential incentive for the lender to know whether he/she has to exchange the received funds afterwards or whether he/she will get the original native coins back.
+担保并不一定要存在，他是个能激动交易浅在潜在因素。担保能让资产借出人能了解他是否需要行交易内容或最终能保持拥有交易代币中的权益。
 
-### Pricing Oracles
+### 定价预言机
 
-A Pricing Contract is a smart contract on DeFiChain allowing multiple trusted and appointed parties to submit periodic price feeds of DATs and DFI. 
+定价预言合同是递飞链上的一个智能合同，允许多个受信任和指定的各方定期提交DAT递飞链资产代币和DFI定期价格资讯。
 
-Multiple Pricing Contract oracles are chosen by the DeFi DAO (explained in the next chapter).
+DeFi DAO内含多方的定价预言，能更准确做初预言机价格（下一章中解释）。
 
-### Use Case Examples
+### 使用案例
 
-Following are examples of how the technical implementations of DeFiChain can be used. This is just a list of examples. Many other applications can be implemented as well. 
+以下是如何使用递飞链的技术实现的示例。这只是一个其中之一的例子。预言机能实现实现许多其他应用过程。
 
-#### Leveraging a Long Position
+#### 利用长仓获利
 
-1. Alice has 100k DFI. She likes the prospects of DFI and wants to leverage her position.
-2. Alice opens a loan contract on DeFiChain and takes out a loan in DUSDT.
-3. Alice sells DUSDT for more DFI.
+1. 爱丽丝有十万个DFI。她喜欢DFI的发展前景，并希望增加自己的DFI持有量。
+2. 爱丽丝在递飞链签订了一份贷款合同，并获得一笔DUSDT贷款。
+3. 爱丽丝出售DUSDT以获取更多DFI。
 
-Thus Alice can obtain a compounded long position on DFI without putting in extra money.
+爱丽丝可以在无需投入额外资金的情况下获得DFI上的复合长仓。
 
-#### Shorting a Coin
+#### 货币做空
 
-1. Bob wishes to short coin XXX. Bob has DFI.
-2. Bob opens a loan contract on DeFiChain, takes out a loan in DXXX.
-3. Bob can now either sell DXXX for DFI or DUSDT on DeFi DEX, or convert DXXX via XCX to sell XXX on a non-DeFi-internal exchange.
-4. Once Bob wishes to close his short position, Bob buys back XXX (or DXXX) from the market, hopefully at a lower rate, closes his loan contract and thus completes his short of XXX.
+1. 罗伯特希望空头投资XXX。罗伯特有许多DFI。
+2. 罗伯特在递飞链上签订了一份贷款合同，提取一笔DXXX贷款。
+3. 罗伯特现在可以在递飞链的DEX上销售DXXX以换取DFI或DUSDT，或通过XCX将DXXX转换为在非递飞恋内部交易所上销售XXX。
+4. 当罗伯特想平仓，它能从市场上回购XXX（或DXXX）。并同时希望以较低的利率完成贷款合同，从而完成对XXX的做空。
 
-#### Getting a Loan (Borrowing)
+#### 借款:获得贷款
 
-1. Charlie has DFI, but he needs short-term cashflow of another coin XXX. Charlies does not want to sell DFI for it nor does he want to spend fiat money to buy this coin.
-2. Charlie takes a loan via loan contract on DeFiChain for DXXX and converts it to XXX.
-3. Once he wishes to settle his loan, Charlie simply purchases XXX/DXXX and close his loan contract.
+1. 查利有DFI，但他需要另一个XXX货币的短期现金流。查理不想为其出售DFI，也不想用现金购买这枚货币。
+2. 查利通过递飞链的贷款合同为DXXX取得一笔贷款，并转换为XXX。
+3. 当他想偿还贷款，查利只需购买XXX/DXXX来结束贷款合同。
 
-#### Lending a Coin for Cashflow
+#### 借出一枚货币换取现金流
 
-1. Dave has BTC that he does not need in the short-term. Dave wishes to generate some interest (cashflow) by lending BTC.
-2. Dave lists BTC on XCX specifying his BTC amount, desired premium (interest rate) and expiry (period that he does not need his BTC).
-3. Once a counterparty takes up Dave’s listing, Dave receives an instant premium in DFI.
-4. Upon expiry, Dave would either receive his BTC back, or receive DFI with an additional Guarantee thereby netting more than his original BTC.
+1. 戴夫拥有短期内不需要用到的BTC。戴夫希望借BTC产生利息（现金流）。
+2. 戴夫在XCX上列出拥有的BTC数量，溢价（利率）和到期日（通常是以他不需要其BTC的期间）。
+3. 当合同另一方接受戴夫的交易，戴夫能即时获得DFI的溢价。
+4. 合同到期后，戴夫将收回BTC，或获得DFI和额外担保利润，并从而获得比最初更多BTC的净额。
 
 ---
 
-## $DFI coin
+## $DFI货币
 
-The $DFI coin will be the integral unit of account in DeFiChain ecosystem.
+DFI代币是递飞链生态系统中不可或缺的单位。
 
-The DeFiChain Foundation will be issuing the DeFi utility token, DFI, capped at 1,200,000,000 (1.2 billion) for throughout its lifetime. There will only ever be 1.2 billion DFIs created.
+递飞链基金会将发行DeFi实用代币DFI，在整个DFI生命周期上限为1,200,000,000（12亿）。
+只会产生12亿个DFI。
 
-DFI is divisible up to 8 decimal places.
+DFI最多可分割八个小数位。
 
-### $DFI coin Utility
+### $DFI硬币实用工具
 
-- DFI is used for fee payment for all transactions and smart contracts on DeFiChain.
-  - Fee payment for decentralized exchange transactions
-  - Fee payment for token transfers
-- Fees payment for DeFi activities:
-  - DEX fees
-  - XCX fees
-  - Lending loan interests payment
-  - etc.
-- Collateral for borrowing of other cryptoassets on DeFiChain.
-- 1,000,000 DFI is required to run a staking node for DeFiChain.
-- 1,000 DFI is required to create a DCT. This is refundable upon destruction of the DCT.
-- 500 DFI is required to submit a proposal for DFI the community budget. This is non-refundable.
+- DFI用于支付递飞链上所有交易和智能合约的费用。
+  - 去中心化交易所的交易费用
+  - 支付代币转让费用
+- DeFi操作的费用支付：
+  - DEX费用
+  - XCX费用
+  - 贷款利息支付
 
-### Fees from DeFi Activities
+- 借入递飞链上的其他加密资产的抵押品。
+- 需要两万DFI运行一个权益质押节点。
+- 创建DCT需要1,000 DFI。在销毁DCT后可退还。
+- 需要500DFI提交一份DFI社区基金提议案。此款不可退还。
 
-Fees from DeFi activities on DeFiChain are burned and redistributed through new token minting over a period of time as laid out below. This ensures that DeFi stakers enjoy the benefits of earning rewards from facilitating trustless DeFi trades on DeFiChain in a fair manner.
+### DeFi操作活动费用
 
-**Rewards from minting a block on DeFiChain are calculated as**:
+递飞链的使用通常包括以下费用：
+1. 挖矿费
+2. 操作者费
+3. DeFi费
 
-1. Underlying block reward schedule (see distribution schedule) +
-2. Burned token redistribution schedule
+#### 挖矿费
 
-The burned token redistribution schedule is determined automatically every 259,200 blocks (approx. every 90 days) and works as follows:
+挖矿费是以UTXO DFI向主节点（也称为挖矿者）支付的小额费用，用于验证交易并将其包含在区块中。
 
-![Burned token distribution](/img/white-paper/burn.png)
+这与比特币区块链的原理相同，以数据大小计量（如每byte的价格）。
 
-Burned token redistribution for the next 259,200 blocks = 
+#### 操作者费用
 
-1. (Total token burned from the last 259,200 blocks [Quarter -1]) / 4 + 
-2. (Total token burned from block -518,400th to -259,200th block [Quarter -2]) / 4 + 
-3. (Total token burned from block -777,600th to -518,400th block [Quarter -3]) / 4 + 
-4. (Total token burned from block -1,036,800th to -777,600th block [Quarter -4]) / 4
+作为递飞链推广的一部分，许多服务将很快由操作者运行。
 
-### Masternodes
+对于提供递飞链上的服务和应用程序，运营商能够确定其将免费收取的服务费用。费用可以是任何形式的代币、DFI或运营商自己的代币或多个代币的组合。运营商选择如何处理运营商费用由运营商酌情决定。
 
-DeFi is a Proof of Stake blockchain. Initially, 1,000,000 DFI allow the owner to own a staking node. The returns for staking will decrease over time, as the volume and number of transactions compensates for the reduction in per-transaction staking rewards.
 
-Nodes are entitled to:
+#### DeFi费用
 
-- Periodic staking rewards as described later in this chapter.
-- Submission of votes to key decisions that govern DeFiChain in the governance system.
-- Submission of votes on how the DFI community budget is being allocated and distributed. 
+DeFi费是为递飞链上的所有DeFi交易收取的，包含操作方。
 
-### Governance
+#### 费用表
 
-The DeFiChain Foundation is responsible for issuance of tokens and is governed by an independent board. This board will be governed by the DeFi masternodes voting on its members and also by giving directives on key decisions.
+所有费用均以可追踪及透明的方式燃烧。
 
-The DeFiChain Foundation awards tokens to users and groups to speed up adoption (see the section on initial token distribution and marketing). The Foundation is tasked with boosting the ecosystem, bringing in ecosystem partners, directing the development of the tools for ecosystem partners, and other activities to increase the number of ecosystem partners.
+以下费用仅供说明，尚未完全确定。
 
-![Governance](/img/white-paper/governance.png)
+| 操作行动    | 销毁数量(DFI)
+| ------------- |-------------:|
+| **主节点** |
+| 主节点注册 | 10 |
+| **操作员** |
+| 操作员注册 | 1000 |
+| **代币化** |
+| 创建新代币 | 100 |
+| **流动性资金池** |
+| 创建池 | 300 |
+| 交换（非DFI成对）| 0.01 |
+| **治理** |
+| 社区基金提议案申请 | 5 |
+| 启动信任投票 | 25 |
+| 提交区块区块奖励分配案 | 250 |
+| **链间交换** |
+| 原子交换 | 0.01 |
+| **预言机** |
+| 创建价格馈入 | 100 |
+| 指定预言机 | 20 |
+| **贷款** |
+| 贷款利息 | 待定 |
+| 清算费 | 待定 |
+| **期权池** |
+| 创建池 | 300 |
+| 期权合约创建 | 0.01 |
+| 奖金支付费| 待定 |
+| **期货** |
+| 创造期货市场 | 300 |
+| 交易费 | 待定 |
 
-For clarification and transparency, Cake Pte Ltd is a private company located in Singapore. Cake Pte Ltd is an initial contributor as part of the ecosystem’s partners to creating services on DeFiChain.
+### 主节点
 
-### Community Development Fund
+递飞链是权益证明的区块链。初起需要一百万DFI来创立一个主节点，目前以主节点投票赞成改为两万DFI。权益质押回报将随时间减少。由于交易量及交易次数抵销减少的权益质押奖励。
 
-The DeFiChain Foundation will create a community development fund with up to 10% of the block rewards under management. This percentage can be updated by submitting a DAO proposal that will be voted on by all masternodes. Community development funds were popularized by DASH[^10] and are used in some selective DAOs today. The community will determine the use of these funds for development, marketing, or research that forwards the DeFi community. DFI masternodes vote for projects they like and the highest voted proposals every month will be funded.
+主节点权力：
 
-It costs 500 DFI to submit a budget proposal and a proposal can be submitted by anyone. This fee is burned and non-refundable regardless of whether the budget is approved. Budgets are proposals which receive a net total of yes votes equal to or greater than 10% of the total possible votes (for example over 448 out of 4480). Budgets can be nullified at any time if vote totals (cast or re-cast) fall below the approval threshold. Budgets are processed (paid) in order of yes minus no votes. More popular budgets get payment priority. Voting happens on a monthly basis but can be changed by a masternode vote.
+- 本章下文所述的定期权益质押奖励。
+- 向治理系统中管理递飞链的关键决策提交投票。
+- 提交有关如何分配DFI社区基金的投票。
 
-For governance decisions, only the Foundation may submit proposals. Proposals are voted in similar way as DAO budget proposals except that decisions will be honored via simple majority vote.
+### 治理
+
+递飞链基金会负责发行代币，并由独立董事会管理。董事会成员将由递飞链主节点进行表决，并对关键决策作出指示。
+
+递飞链基金会将代币奖励给用户和群组，以增加区块链快采用速度（请参阅有关初始代币发布和营销的章节）。基金会的任务是促进生态系统，引入生态系统合作伙伴，指导生态系统合作伙伴工具的开发，以及开展其他活动以增加生态系统合作伙伴量。
+
+![Governance](/img/white-paper/zhs/governance.svg)
+
+为澄清及透明起见，Cake Pte Ltd是一家位于新加坡注册的私人公司。作为生态系统合作伙伴之一，Cake Pte Ltd是在递飞链上创建服务的最初贡献者。
+
+### 社区发展基金
+
+递飞链基金会将设立一个社区发展基金，在管理下可获得10%以内的奖励。这百分比可通过社区发展基金提议并由所有主节点表决的DAO建议进行更新。社区发展基金由DASH[^10]项目大众化，并在一些DAO中使用。社区将决定将这些资金该如何使用，如发展、营销或研究，以推动递飞链社区。 DFI的主节点所有者可投票给他们喜欢的项目，每个月票选最高的提议案将得到资助。
+
+任何人都可以提交提议案，但需要自费500 DFI。无论提案是否获得批准，此费用将被销毁且不可退还。预算是指获得净赞成票总数等于或大于可能投票总数10%的提案（例如，在4,480份提案中，超过448份）。如果投票总数（投票或改选）低于批准门槛，预算可随时取消。预算按照赞成票减反对票的顺序处理（支付）。最受欢迎的预算优先进款。投票每月进行一次，但可以通过主节点投票进行更改。
+
+只有基金会可以提交治理决策的提议案。提案的表决方式与DAO预算提案相似，惟决策将以简单多数票方式执行。
 
 [^10]: https://docs.dash.org/en/stable/governance/understanding.html
 
-### Initial Token Distribution
+### 初始代币分配
 
-Of the roughly 1.2 billion $DFI coins 49% will be issued to the DeFiChain Foundation at the start. The rest will be issued to Masternode holders over time.
-Of the 49% initially issued $DFI coins, 49% will be kept by the DeFiChain Foundation. The rest may be distributed to accredited investors, large funds and institutions, collectively known as external partners, to fund the initial development of DeFiChain. In order to decentralize the holdings of DFIs as much as possible the DeFiChain Foundation may not keep more than 49% of all initially issued tokens. The use of potential proceedings of the tokens will be decided by the DeFiChain Foundation board but will exclusively be directed towards the adoption and development of DeFiChain.
+在约12亿美元的DFI代币中，49%将于一开始发行给递飞链基金会。其余部分将随时间发放给主节点持有人。2021年以通过治理投票销毁所有基金会的代币。
+在最初发行的49%DFI代币中，49%由递飞链基金会保管。其余部分可分配给合格投资者、大型基金和机构（统称为外部合作伙伴），为递飞链的初始开发提供资金。为了完全去中心化的目标，递飞链基金会不得持有超过所有初始发行代币的49%。
+代币的潜在程序将由递飞链基金会决定，但将专门针对递飞链的采用和开发。
 
-For any avoidance of doubt, there will NOT be a public ICO.
+为免生疑问，不会举办ICO。
 
-![Initial Token Distribution](/img/white-paper/initial-token-distribution.png)
+![Initial Token Distribution](/img/white-paper/zhs/initial-token-distribution.png)
 
-Further tokens will only ever be received through staking, which is described in the next chapter.
+只有通过权益质押才能获得更多代币，在下章所述。
 
-### Token Issuance Schedule via Staking
+### 权益质押代币发行计划
 
-DeFiChain is initially launched with a 200 DFI block reward, of which 10% goes to the community fund. The Foundation pledges to guarantee this 200 DFI block reward for at least 1,050,000 blocks since the the first genesis block, so approximately 1 year.
+递飞链最初将每个区块奖励设为200 DFI，其中10%用于社区基金。自第一号区块以来，基金会承诺并保证维持每个区块获利200 DFI，到1,050,000个区块(约一年)。
 
-Subsequently, block rewards will be adjusted through governance vote. The Foundation also further pledges that there will never be more than 1,200,000,000 (1.2 billion) DFI in circulation, unless until the DAO governance votes to change this limit. Therefore DFI is a deflationary utility token.
+随后，区块奖励将通过治理投票进行调整。基金会还进一步承诺，除非DAO管治投票改变该限额，否则流通的DFI将永远不会超过1,200,000,000（12亿）份。因此，DFI是一种通缩性公用设施代币。因此，DFI是一种通货紧缩的效用代币。
 
-The proposed staking schedule for the first 10 years is according to the following table:
+第一年的建议权益质押时间表如下表所示：
 
 <div class="table-responsive">
   <table>
     <thead>
       <tr>
         <th scope="col">
-          Year
+          年度
         </th>
         <th scope="col">
-          Start of year token in circulation
+          年初流通代币
         </th>
         <th scope="col">
-          % of supply staked
+          %供应权益质押
         </th>
         <th scope="col">
-          Block reward
+          区块奖励
         </th>
         <th scope="col">
-          Targeted new token %
+          目标新代币%
         </th>
         <th scope="col">
-          Targeted new token
+          目标新代币
         </th>
         <th scope="col">
-          Staking return %
+          权益质押回报率%
         </th>
         <th scope="col">
-          Actual new token
+          实际新代币数量
         </th>
         <th scope="col">
-          End of year token in circulation
+          年末流通代币
         </th>
         <th scope="col">
-          % of cap
+          %上限
         </th>
         <th scope="col">
-          New token for year
+          年度新代币
         </th>
       </tr>
     </thead>
@@ -1022,64 +1067,68 @@ The proposed staking schedule for the first 10 years is according to the followi
   </table>
 </div>
 
-### Acquiring $DFI coins
+### 购买DFI货币
 
-$DFI coins will be issued only to the users of DeFiChain or partners with an interest in utilizing and participating in the ecosystem. There will be NO public sale or public token offering. Following are the only ways to get $DFI coins:
+$DFI货币将仅向递飞链的用户或有意利用并参与生态系统的合作伙伴发行。不会有公开销售或公开代币发售。以下是获得$DFI货币的唯一方法：
 
-- Institutional investors, accredited investors and funds who are interested in the use of DeFiChain can contact the DeFi founders at (partners@defichain.com).
-- Over time, DFI will be available on staking platforms (such as www.CakeDeFi.com) and on selected exchanges.
-- The DeFiChain Foundation will issue airdrop tokens for users of DeFiChain. (Hodlers and other market makers).
-- The DeFiChain Foundation gives grants to developers who are developing functionality for DeFiChain or dApps to run on the blockchain.
-
----
-
-## DeFiChain Foundation
-
-The DeFiChain Foundation is incorporated as a company limited by guarantee, resembling a foundation structure which holds the DeFiChain Trademarks, Domains and makes sure the DFI foundation funds are used as instructed by the masternodes.
+- 专业机构投资者、已被验证可投资者及对使用递飞链感兴趣的基金可通过邮件方式联系递飞链创办团队：(partners@defichain.com)。
+- 随着区块链成长，DFI将可用于支撑平台（如www.CakeDeFi.com)和交易所上币。
+- 递飞链基金会将为递飞链的用户发行空投代币(Hodler及其他开发）。
+- 递飞链基金会向开发在区块链生态上运行递飞链的dApp或功能开发方提供适当的补助。
 
 ---
 
-## Marketing
+## 递飞链基金会
 
-### Target Market
+递飞链基金会注册成立为担保有限公司，类似于持有递飞链商标、域名并确保DFI基金会资金按主节点指示使用的基金会结构。
 
-Unlike most other DeFi-focused initiatives, DeFiChain being built on top of Bitcoin can harness almost the entire crypto market without being limited to “smaller” chains like Ethereum etc. Thus, as of publication, the target market for DeFiChain are over 60-80 million cryptocurrency owners and we can expect that hundreds of millions of other users will join in the future. This group of investors is investing and holding cryptocurrency due to the returns as well as their belief in the future of the industry. As investors, they have widely done well with the rise in many of the cryptoassets, however, they are not able to use their holdings in order to get better returns. Providing DeFi services will allow these investors to hold the coins they believe in, and increase their holdings over time based on investments that go deeper than just currency trading.
+---
 
-### Go-to-market Strategy
+## 行销
 
-The initial DeFiChain team is made up of some of the top names in the cryptocurrency industry, people who have made a name for themselves not just by delivering on their promises, but by creating a following. The team has built up a variety of marketing channels and has an established following on social media, wide distribution of books in the area of cryptocurrency, and deep contacts within the cryptocurrency industry.
+### 市场目标
 
-With the experience of building up social media followings of hundreds of thousands of users in the course of just a few years, the team plans to leverage their current followers and bring them onto specific channels that will be the domain of DeFiChain. The team will build up a complete marketing engine and staff, using the same proven competence they displayed in the past.
+与大多数其他DeFi项目不同，基于比特币构建的递飞链可以利用几乎整个加密市场，而不限于以太坊等「较小」的区块链。递飞链的目标市场是超过6,000万至8,000万的加密货币所有者，我们预计未来将有数亿其他用户加入加密市场。由于回报以及他们对行业未来的信心，这群投资者正在投资并持有加密货币。但作为投资者，他们在众多加密资产的增长中的获利良好，然而，他们无法利用所持股份获得更好的回报。能提供DeFi服务使这些投资者能够持有他们所挺的货币，并根据深度超过货币交易的投资随时间增加其持有数量。
 
-Unlike other blockchains, DeFiChain will be balanced between marketing and technology expertise. Building the best network is only half of the job. DFI holders can rest assured that the marketing team has the proven experience in building up a marketing engine that is required for product success and that the tech team will be able to deliver on the roadmap.
+### 进入市场策略
 
-### Partnerships
+最初的递飞链团队是由一些区块链和加密货币行业的顶尖人物所组成。这些人不仅通过履行承诺，还用了以下所解说的方式为自己获得优良声誉。该团队已建立了多种营销渠道，并在社交媒体上拥有稳固的跟踪群，在加密货币领域拥有广泛的书籍分销，以及在加密货币行业拥有深厚的人脉。
 
-The DeFiChain Foundation will be tasked with assessing applications from ecosystem partners and providing foundation grants in the form of $DFI coins to developers and contributors to DeFiChain. Many open source projects and blockchain developers today are looking for the right blockchain project in order to develop their DeFi applications, and the prospect of a dedicated DeFiChain, backed by industry leaders is appealing.
+凭借在短短几年内建立数十万用户的社区媒体关注度的经验，递飞链团队计画利用他们目前的关注者带入为递飞链生态的特定渠道。该团队将建立一个完整的营销系统，使用以往相同的操作和成功证明。
 
-The DeFiChain Foundation will undertake a variety of efforts to choose the best projects for the expansion of DeFiChain:
+递飞链将在营销和技术专长之间取得平衡。建立最好的区块链只是运作的一半部分。营销团队拥有丰富的经验，尤其是在建立产品成功所需的市场营销引擎方面。另一方的技术团队将能够按照路线图向DFI持有人交代，以透明化的方式让DFI支持者更安心。
 
-- Creation of a formal application process so that worthy projects can apply for airdrop or foundation grants for their development
-- Approaching developers in the ecosystem who are doing DeFi dApps on other blockchains, and providing grants for them to develop their dApps on DeFi.
-- General marketing to get the word out about the availability of DeFiChain Foundation grants to fund worthy projects.
+### 合作伙伴
 
-Every project on DeFiChain will naturally bring it its own users and put effort towards marketing of the project, adding users and hodlers to DeFiChain.
+递飞链基金会将负责评估来自生态系统合作伙伴的应用程序，并向递飞链的开发团队和贡献者提供$DFI货币的基金资助。如今，许多开源项目和区块链开发者正在寻找合适的区块链项目来开发DeFi应用程序。由行业领导者支持的专用递飞链的社区对开发者是很有吸引力的。
+
+递飞链基金会将采取各种措施，以选择最佳项目扩展递飞链：
+
+- 建立一个正式的申请程序，以便有价值的项目可以申请发展空投或基金会资助。
+- 与生态系统中正在其他区块链上进行DeFi dApp的开发人员接洽，并为其提供补助以开发DeFi dApp。
+- 市场推广，以了解可获得的递飞链基金会补助金，以资助有价值意义的项目。
+
+递飞链上的每个项目自然会带来自己的用户，并致力于项目的营销为递飞链添加用户和持有人。
 
 [partners@defichain.com](mailto:partners@defichain.com)
 
 ---
 
-## Roadmap and Milestones
+## 路线图和里程碑
 
-![Roadmap](/img/white-paper/roadmap.png)
+![Roadmap](/img/white-paper/zhs/roadmap.png)
 
-## A Glimpse into the Future
+## 展望未来
 
-Building on top of DeFiChain will lead to some of the most exciting benefits not only for first-world areas, but moreover also all those that need decentralized finance the most. For example, imagine Anna, who owns a small business in a developing economy, but who doesn’t have a traditional bank account. She uses mobile money and digital currencies to run her business, accepting payments through mobile--which makes perfect sense, because nobody in her province uses cash or credit cards. Anna uses DeFiChain to take out a loan when one of her suppliers pays late, saving her business. In the old days, she would have simply gone out of business, because no bank would loan money to her. Anna also invests wisely. When she is paid by the supplier, she immediately moves the cash into various tokenized assets to avoid the hyperinflation and instability of her national government’s currency, and on top of that, she is able to earn interest.
+安娜使用递飞链在其一个供应商延迟付款时申请贷款，从而节省了业务。在旧时代，她只会倒闭，因为没有银行会贷款给她。安娜投资也很明智。当供应商向她付款时，她立即将现金转移至各种标记化资产，以避免其国家政府货币的恶性通胀和不稳定，除此之外，她能够赚取利息。
 
-Anna creates a group of local businesspeople, and together they pool funds to help other entrepreneurs in their village. They purchase office space, solar panels, and a satellite to create a business center. The group uses DeFi to eliminate the overhead of complex legal contracts between them. They receive automatic dividends when the business center profits. Some of them reinvest in a delivery drone which charges for its services, and distributes the income to the investors. Others invest in sensor equipment that test local soil conditions, and sell the data to commodity markets. All of the sensors work independently and charge independently, and the investors simply reap the profits, all calculated automatically on DeFiChain.
+建立在递飞链之上将带来一些人最令兴奋的优势，而不仅仅是对第一世界地区市场，而是拓展现有金融市场到最需要金融服务的国家地区。例如，假设安娜在发展中经济市场拥有一家小本企业，但没有传统的银行账户。她使用支付宝和数字货币来经营自己的业务，通过手机接受支付，所住的区域也没有人用现金和信用卡。安娜能使用递飞链在某个供应商延迟付款时申请贷款，从而节省了业务。以往，她有可能面临生意倒闭，因为有可能没有银行信托会贷款给她。安娜投资也有所研究和经验。当供应商向她付款时，她立即将现金转移至各种代币化资产，以避免国家政府货币的恶性通胀和不稳定，除此之外，她能够赚取利息。
 
-Now, 5 years after her initial use of DeFi, Anna is able to take out a loan with no collateral, based on her long-term record of smart investments and returning loans on time, as well as assessment of her industry from trusted oracles. It’s a win-win situation. The lenders come from all over the globe, from people who want to diversify their investment portfolio to developing economies. The lenders don’t have to worry about the complexity of cross-border transactions or legal requirements. They escape the banking systems of their own countries, which moved to zero and negative-interest rates on savings. Now, these regular investors can be assured of returns on investments based on Anna and people like her, who run great businesses and can provide returns on people’s investments.
+安娜集合了一群当地商人，他们共同筹集资金帮助他们村里的其他小企业。他们集体购买办公空间、太阳能电池板和一颗卫星以建立一个商业中心。这群商人能使用DeFi消除他们之间复杂法律合同的开销。当业务中心盈利时，他们会自动收利股息。其中有些商人再投资一架交付无人机收取服务费，并将收入分配给投资者。另一些商人则投资于测试当地土壤状况的传感器设备，并将数据出售给商品市场。所有传感器独立工作，独立收费。投资者只需获取利润，所有利润均按递飞链自动计算。
 
-**This is what DeFiChain is all about - To make the world a better place!**
+
+现在，安娜在首次使用递飞链的五年后，根据她长期的智能投资记录和按时归还贷款，可以在没有抵押品的情况下获得一笔贷款，以及对她所从事行业的评估。这是双赢的现象。借款人来自全球各地，能投资回报在组合多元化人士和发展中经济市场。贷款人不必担心跨境交易的复杂性或法律要求。他们脱离了国家的传统银行系统，也脱离了储蓄利率低和和负利率。这些一般投资者可以保证基于安娜和商业群的投资回报，他们能直接经营业务，也同时能提供给他人的投资回报。
+
+
+**这就是递飞链的宗旨—让世界变得更美好！**
 

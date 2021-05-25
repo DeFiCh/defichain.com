@@ -1,7 +1,7 @@
 ---
-title: White paper
+title: 白皮書
 type: article
-long_title: DeFiChain white paper
+long_title: 遞飛鏈的白皮書
 cta_to: Read
 theme:
   subscribe: white
@@ -9,10 +9,10 @@ menu:
   footer:
     weight: 1100
 meta:
-  description: DeFiChain white paper
+  description: 遞飛鏈的白皮書
   og:
-    title: White paper
-    description: DeFiChain white paper
+    title: 白皮書
+    description: 遞飛鏈的白皮書
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
@@ -21,8 +21,8 @@ content:
   sections:
     hero:
       name: hero
-      headline: White paper
-      subhead: Everything about DeFiChain.
+      headline: 白皮書
+      subhead: 所有關于遞飛鏈
     white_paper:
       headline: White Paper Public Draft
       subhead: Our white paper is ready for public review. We are also enlisting comments from our community and the public. Follow the Google Drive link to read or comment on the paper.
@@ -34,133 +34,134 @@ content:
     #closer_look in /
 ---
 
-**Abstract**: The DeFiChain Foundation is developing DeFiChain, a blockchain specifically dedicated to decentralized financial applications. By focusing on the functionality of the blockchain and dedicating it specifically to decentralized finance, DeFiChain provides unparalleled high transaction throughput, reduced risk of errors, and intelligent feature development specifically for the fulfillment of financial services on the blockchain.
+**摘要**：遞飛鏈基金會正在開發遞飛鏈，這是專門為去中心化金融開發和應用的區塊鏈。專注于去中心化金融開發和服務，遞飛鏈提供了無與倫比的高交易吞吐量、降低錯誤風險和智能化功能開發，特別是用于實現區塊鏈上的金融服務。
 
-**This Document is not a Prospectus**
+**本文件並非招股章程**
 
-This document does not constitute nor imply a prospectus of any sort. No wording contained herein should be construed as a solicitation for investment. Accordingly, this whitepaper does not pertain in any way to an offering of securities in any jurisdiction worldwide whatsoever. Rather, this whitepaper constitutes a technical description of the functionality of the Cake products and the development and distribution of DeFiChain.
+本文件並不構成或暗示任何種類的招股章程。本文件所載任何文字均不應被解釋為招商引資。因此，本白皮書在任何方面均不適用于全球任何司法管轄區的證券發售。本白皮書構成對合作夥伴CakeDeFi産品功能以及遞飛鏈的開發進行了技術描述。
 
-**This Document is not a final technical specification**
+**本文件並非最終技術規範**
 
-This document does not constitute nor imply a final technical specification of DeFiChain. Information presented on this whitepaper, technical or otherwise, is meant to outline the general idea of DeFiChain, its design and its use-cases and is subject to change with or without notice. For the latest up-to-date technical specification, check out the updates and documentations on the official website [https://defichain.com](https://defichain.com).
+本文件並不構成或暗示遞飛鏈的最終技術規範。白皮書中提供的資訊，無論是科技或其他方面，旨在概述遞飛鏈的總體思路、其設計和其使用案例，如有更改，恕不另行通知。有關最新技術規格，請參閱官方網站的更新及文件 [https://defichain.com](https://defichain.com).
 
-## Executive summary
+## 執行摘要
 
-The cryptocurrency industry is based on a simple premise: people should be fully in control of their finances. While it seems like a simple and obvious statement, the current systems are far from providing financial services that are truly under the control of the people who use them. The mission of DeFiChain is to give people (and in the future, machines, and devices) seamless access to decentralized financial services.
+加密貨幣行業基于一個前提：人們應該要完全控制自己的財務。盡管這似乎是一個簡單而明顯的說法，但目前的金融系統遠不能提供真正由自己控制的金融服務。遞飛鏈的使命是讓人們（以及未來的機器和設備）無縫地從去中心化金融服務中獲利。
 
-For that purpose, we are introducing DeFiChain, a dedicated blockchain specifically for decentralized finance (DeFi) [www.DeFichain.com](https://defichain.com).
+為此，我們將引入了遞飛鏈，一種專門用于去中心化金融（DeFi）等服務的區塊鏈 [www.zht.DeFichain.com](https://zht.defichain.com)。
 
-By dedicating the functionality of a blockchain specifically to decentralized finance, DeFiChain provides high transaction throughput, reduced risk of errors, and intelligent feature development specifically for the fulfillment of Satoshi’s original intent: To create a reliable alternative form of financial services built on top of Bitcoin.
+運用區塊鏈的功能專門建構去中心化金融，提供了高交易吞吐量、降低錯誤風險和智能開發，特別是為了實現Satoshi的初衷：創建了在比特幣之上的可靠又能替代傳統金融服務形式。
 
-Bitcoin, as described in the original Satoshi whitepaper, is designed as a form of digital cash, as a store and exchange of value. The evolution to Ethereum and smart contracts has allowed for tremendous new functionalities to be built on top of a blockchain, yet this development has come at a cost. The concept of one global operating system for everything has created a system that requires a complex codebase for smart contracts, slow throughput, and difficulty around the governance of the system.
+正如最初Satoshi在比特幣白皮書中所述，比特幣被設計為數字現金功能，也同時作為價值存儲和交換。乙太坊和智能合約的發展允許在區塊鏈上構建巨大的新代功能，但這種發展是有代價的。一個全球操作系統的概念創造了許多困難，它需要一組複雜代碼庫來實現智能合約、緩慢的吞吐量和難以控制的系統治理。
 
-DeFiChain approaches decentralized finance as a specific and critical segment of the blockchain community. DeFi is a dedicated blockchain that is optimized specifically for DeFi applications. DeFiChain is intentionally non-Turing-Complete and does not support any function, other than those needed for Decentralized Finance, resulting in a blockchain that provides higher throughput and better functionality specifically for dApps related to finance. The advantage of a non-Turing complete command set is that there is a much lower potential for coding errors of the type that have plagued Ethereum smart contracts such as with the DAO hack or the locked funds with Parity. While it is important that we have some smart contract languages that are Turing complete, in the area of finance, it is appropriate to restrict the capabilities of the language in favor of a more secure system with greatly-reduced attack vectors.
+遞飛鏈將去中心化金融作為區塊鏈社區的一個特定和關鍵部分。遞飛鏈是專門為DeFi程序優化的專用區塊鏈。遞飛鏈是有意地非圖靈完備，不支持去中心化金融除外所需的任何功能，因此形成了一個專門為與金融相關的dApp提供更高吞吐量和更好的功能。非圖靈完備命令集的優勢在于，困擾乙太坊智能合約（如DAO駭客攻擊或Parity鎖定資金）等編碼錯誤的可能性要低得多。盡管有一些圖靈完備的智能合約語言很重要，但在金融領域，適當限制語言的能力，以支持安全性高、攻擊載體大大減少的系統。
 
-### The Problem
+### DeFi目前的問題
 
-Today, almost all financial services are run by banks. Investments, for example, by definition, is the use of capital to earn more capital. Investors use a bank to put their money into interest or dividend-making instruments in order to grow their wealth. The problems with financial services are increasingly becoming obvious to everyone: compounded costs due to middle(wo)men, slow transactions, delays for cross-border transactions, and inaccessibility to many sectors of the population. A myriad of fintech solutions have been brought in to improve the system, but fundamentally the underlying banking system is still in control, so fintech has brought only limited improvements.
+如今，幾乎所有的金融服務都由銀行經營。例如，投資，顧名思義，投資是利用資本賺取更多資本。投資者利用銀行將資金投入利息或股息工具，以增加財富。金融服務的問題對每個人都越來越明顯：需要中間人操作所造成的複合成本、交易緩慢、跨境交易延誤以及許多人民無法使用。無數金融科技解決方案已經改善了金融系統，但基本上金融和銀行系統仍然處于控制之中，因此金融科技帶來的改善很有限。
 
-Cryptocurrency and Decentralized Finance (DeFi) offer a way to start with a new system, circumventing the difficulties faced in changing the finance industry. While crypto has attracted billions in investments, decentralized financial services are lagging. When it comes to investment in cryptocurrency, crypto investors can buy and sell, but that’s it. The cryptocurrency itself cannot be invested in the same way fiat currency can be. Initial attempts to create peer-to-peer lending and asset tokenization so far have proven partial and unreliable, so investors have extremely limited options when it comes to an investment of their cryptoassets. The potential is enormous to provide financial services in crypto, the same way they are offered in fiat currency.
+加密貨幣和去中心金融（DeFi）提供了新系統的開發，規避了金融業變革所面臨的困難。盡管加密技術吸引了數十億美元的投資，但去中心化金融服務卻相對滯後。在加密貨幣投資方面，加密投資者可以買賣，但僅此而已。加密貨幣本身不能以與法定貨幣相同的方式進行投資。到目前為止，創建點對點貸款和資産標記化的初步嘗試已被證明是部分且不可靠的。因此投資者在投資加密資産時的選擇極其有限。以加密方式提供金融​​服務的潛力巨大，與以法定貨幣提供的方式相同。
 
-### The Solution
+### DeFi解決方案
 
-DeFiChain is designed for investors in the cryptocurrency market who are looking to make their cryptocurrency work just like any other form of capital, such that they can ensure a return on investment in any market. DeFiChain is a dedicated non-Turing-complete blockchain, designed specifically for the decentralized finance (DeFi) industry. DeFi provides full functionality for this specific segment of the DLT community, sacrificing other types of functionality for simplicity, rapid throughput, and security.
+遞飛鏈是為加密貨幣市場投資者設計的，他們希望自己的加密貨幣像其他形式的資本一樣運作，這樣能確保在任何市場的投資回報。遞飛鏈是專用非圖靈完備的區塊鏈，專門為去中心化金融（DeFi）行業設計。遞飛鏈為DLT社區的特定部分提供完整的功能，為了簡單、快速吞吐量和安全性而犧牲了其他類型的功能。
 
-The function set includes among others:
+其中主要金融功能包括
 
-- Decentralized lending
-- Decentralized wrapping of tokens
-- Decentralized Pricing oracles
-- Decentralized exchanges
-- Transferable debts and receivables 
-- Decentralized Non-collateralized debt
-- Asset tokenization
-- Distribution of Dividends
+- 去中心化貸款
+- 去中心化挂鈎的代幣
+- 去中心化定價預言
+- 去中心化交易所
+- 可轉讓債務和應收款
+- 去中心化的非抵押債務
+- 資産標記化
+- 股息分配
 
-### Timeline
+### 背景/産業
 
-![Roadmap](/img/white-paper/roadmap.png)
+![Roadmap](/img/white-paper/zht/roadmap.png)
 
 ---
 
-## Background/Industry
+## 背景/産業
 
-### DeFi’s promises and challenges
+### 去中心化金融的承諾和挑戰
 
-Decentralized Finance promises to provide a variety of financial instruments without the need for middle(wo)men to ensure that the services are trusted. According to the OECD, financial services typically make up 20–30% of total service market revenue and about [20% of the total gross domestic product](https://www.investopedia.com/terms/g/gdp.asp) in [developed economies](https://www.investopedia.com/terms/d/developed-economy.asp)[^1]. This is an enormous industry dedicated to one thing: making sure that financial transactions are trusted. With the advent of blockchain, trustless systems and smart contracts can be used to replace much of the functionality of this industry, dramatically increasing the return on investment for the individual investor.
+去中心化金融承諾提供多種金融工具，而無需中間人來確保服務的可靠性。根據經合組織(OECD)的數據，金融服務占了金融業總收入的20-30%，占[經濟發達](https://www.investopedia.com/terms/d/developed-economy.asp)[^1]的[各國內生産總值約20%](https://www.investopedia.com/terms/g/gdp.asp)。金融服務在金融産業中是為了確保金融交易是可信的。隨著區塊鏈的開發，無信任系統和智能合約可用于取代金融服務大部分的功能，大幅增加個人投資者的投資回報。
 
-Financial services today are providing an important service, but at a very high cost, and despite many fintech developments, the following underlying issues persist:
+如今，金融服務是一項重要的服務，但成本非常高，盡管金融科技發展日新月異，但以下潛在問題依然存在：
 
-- High transaction costs. Due to regulatory requirements, legacy systems with complex interoperability issues, and control by large institutions, transaction fees are high for the average user of banking and financial services. Services that require a broker are even more expensive, as agents and other types of middlemen are involved.
-- Slow transactions, particularly for international transactions. Although theoretically, it should only take minutes for computers to transact, moving money from one institution to another can take hours within a country, and it can take days between countries.
-- Lack of transparency and unfair advantages to large players. Financial instruments are complex and most people do not have access to the information that would allow them to make optimal decisions. Lack of transparency is one of the major factors that led to the 2008 financial crisis and in the short term, it always leaves smaller investors (the average person) at a disadvantage compared to institutional investors.
-- Inaccessibility and/or higher cost to lower-income people. Financial services are simply not available in many geographies, and when they are, lower-income people are hit with even higher fees (percentage-wise) than average. 
-- Despite legislation to reduce money laundering and related crimes, there is almost no evidence to suggest the current system or AML is, in fact, reducing money laundering.
+- 交易成本高。由于監管需求、傳統系統複雜的互操作性等困難，以及大型機構的控制，銀行和金融服務的平均用戶的交易費用很高。由于涉及代理和其他類型的中間人，需要經紀的服務甚至更為昂貴。
+- 緩慢的交易，特別是國際交易。雖然理論上電腦交易只需幾分鍾，但將資金從一個機構轉移到另一個機構在一國內可能需要數小時，而在不同國家之間可能需要數天。
+- 缺乏透明度和大機構有不公平優勢。金融工具是複雜的，大多數人無法獲得能使他們作出最佳決定的資訊。缺乏透明度是導致2008年金融危機的主要因素之一，在短期內，與機構投資者相比，往往使規模較小的投資者（即普通人）處于不利地位。
+- 低收入家庭往往無法獲得，成本也較高。金融服務在許多地區根本無法提供，當這些地區提供金融服務時，較低收入的人會遭受比平均水平更高的費用（按百分比計算）。 
+- 盡管有減少洗錢及相關犯罪的立法，但幾乎沒有證據表明現行制度或反洗錢實際上是在減少洗錢。
 
 [^1]: https://www.investopedia.com/ask/answers/030515/what-percentage-global-economy-comprised-financial-services-sector.asp
 
-Fintech has been attempting to address these problems, with some success. Fintech solutions such as online international transfer services, savings, and investment apps, and mobile money for underserved markets have begun to improve the situation. However, the change is incremental, and is still built on top of a system that fundamentally requires the overhead of agents to provide trust. While some of the costs can be reduced, fundamentally, fintech can’t address the underlying issues of lack of transparency because it is dealing in the same financial instruments and going through the same major institutions as traditional finance.
+金融科技一直試圖解決這些問題，也改善了行業許多難題。金融科技解決方式，如線上國際轉帳服務、儲蓄和投資應用程序，以及針對服務不足市場的移動資金，已經開始改善許多狀況。這種轉變是漸進的，仍然構建在一個基本上需要代理提供信任的開銷的系統之上。 。雖然部分成本可以降低，但金融科技還是無法解決缺乏透明度的問題。它還是與傳統金融業使用相同的金融工具，並通過相同的主要機構進行交易。
 
-![2019: DeFi](/img/white-paper/2019-defi.png)
+![2019: DeFi](/img/white-paper/zht/2019-defi.png)
 
-For this reason, many investors have begun moving parts of their investments into cryptocurrency. Cryptocurrency, by definition has full transparency that traditional systems simply cannot provide. Furthermore, the amount of administration and bureaucracy required is minimal. Most of the activities that were carried out by agents can be written into the code in decentralized financial systems. Of course, there is still some overhead in creating and maintaining the code, as well as maintenance of the networks, but the amount of bureaucracy is minimal, eliminating much of the cost of transacting on these systems.
+因此，許多投資者已開始部將分投資轉移至加密貨幣。根據區塊鏈的定義，加密貨幣具有傳統系統無法提供的完全透明性。此外，所需的行政管理和官僚機構數量極少。在去中心化金融系統中，大部分由代理執行的活動都可以寫入代碼。在創建和維護程式碼以及維護網絡方面仍然有一些開銷，但繁瑣的程序已是最小化的，從而消除了在這些系統上進行交易的大部分成本。
 
-Despite the promise of decentralized finance, the technology is still nascent, and there are many opportunities to create a richer and more robust decentralized finance environment. To date, investors in cryptocurrency have extremely limited investment options. Promises of peer-to-peer lending platforms, asset tokenization and other types of blockchains have either failed to deliver, been hacked, or delivered a pared-down version of the original promise.
+盡管有去中心化金融的承諾，這項科技仍處于初級階段，有許多空間能創造一個更豐富、更健全的去中心化金融生態。迄今為止，加密貨幣的投資者擁有極為有限的投資選擇。點對點借貸平台、資産標記化和其他類型的區塊鏈的承諾要麽沒有兌現，要麽被黑客入侵，要麽兌現了原承諾的縮減版。
 
-Today, almost universally, cryptocurrency investors have only one way to earn money on their capital: rise of the cryptocurrency asset. While in the short term, this may be a good investment, it’s not how currency is designed to work. The investment of capital should provide a return on investment, and cryptocurrency is designed to be like any other form of currency. Investors today want the possibility to lend, invest, and receive returns on their cryptocurrency investments. Well-designed DeFi platforms should allow the development of a variety of safe and secure financial instruments for the investment of cryptocurrency.
+如今，大多的加密貨幣投資者都依賴加密貨幣資産的崛起來賺回資本。在短期內是一項好的投資，但加密貨幣的設計並非如此。資本投資應提供投資回報，而加密貨幣的設計與任何其他貨幣形式類似。現今的投資者希望通過加密貨幣投資獲得貸款、投資和回報的可能性。精心設計的DeFi平台應允許開發各種安全可靠的金融工具，用于投資加密貨幣。
 
-![Be your own bank](/img/white-paper/be-your-own-bank.png)
+![Be your own bank](/img/white-paper/zht/be-your-own-bank.png)
 
-### The state of DeFi
+### 去中心化金融的狀態
 
-The current state of Decentralized Finance (DeFi) is populated by general purpose blockchains, most of which provide Turing-complete command sets for the development of smart contracts on the chain. While appropriate for many programming languages, this dogmatic pursuit of Turing-complete smart contracts languages has resulted in a variety of problems when it comes to scalability, security and robustness of the blockchains.
+目前的去中心化金融（DeFi）由通用區塊鏈組成，其中大部分為鏈上智能合約的開發提供圖靈完備的命令集。盡管適用于許多編程語言，但對圖靈完備智能合約語言的教條追求在區塊鏈的可擴展性、安全性和健壯性方面造成了各種問題。
 
-- The sheer mass of dApps on networks such as Ethereum, EOS and TRON have potential (or proven) impact on other dApps on the network. The most obvious example was when CryptoKitties ground the Ethereum network practically to a halt. While some of the faster-throughput networks say this can’t happen, it will be some time before any other network reaches the critical mass of apps on Ethereum so that we can prove whether this is or isn’t the case.
-- For serious financial type dApps, it’s important to know that the network is being maintained and managed in a responsible and secure manner. Having a blockchain that is swamped with games, gambling and other types of less “mission critical” apps will ultimately influence the development and direction of the blockchains. With governance models that allocate power to masternodes, dev groups, and token-holders, the core development team will ultimately be influenced by the biggest players. Decentralized Finance apps can’t afford the potential consequences of sharing a blockchain with anyone who chooses to use that operating system. 
-- Using Turing-complete command sets requires programmers to create complex programs to develop any kind of app. For example, to create a peer-to-peer lending contract on top of MakerDAO, a programmer requires approximately 2000 lines of code. Any bug in that code can cause loss of the funds, or some other consequence. Maintaining such a large code base intrinsically means larger chances for mistakes and a large attack surface for even simple apps. 
+- 以太坊（Ethereum）、EOS和坡場(Tron)等網絡上的大量dApp有潛在（或已證實）影響。最明顯的例子是當CryptoKitties將以太坊網絡幾乎完全停止。盡管一些吞吐量較快的網絡表示這不可能發生，但任何其他網絡要達到以太坊應用程序的臨界數量還需要一段時間，以便我們能夠證明情況是否如此。
+- 對于被重視的金融財務類型dApp，重要的是要知道網絡是以負責任和安全的方式維護和管理的。當一個充斥著遊戲、博彩和其他不完全符合金融業的區塊鏈，將最終影響區塊鏈的發展和方向。通過將權力分配給主節點、開發組和代幣持有人的治理模型，核心開發團隊最終將受到最大參與者的影響。去中心化金融程序無法承受通用區塊鏈作業系統和環境。
+- 使用圖靈完備的命令集需要創建複雜的程式來開發任何類型的應用程序。例如，要在MakerDAO上創建一個點對點的借貸合同，程序師需要大約2000行代碼。該代碼中的任何錯誤都可能導致資金損失或其他後果。維持如此龐大的代碼基礎本質上意味著出錯的機會更大，即使是簡單的應用程序也會面臨巨大的攻擊。 
 
-The limitations of general-purpose blockchains for DeFi apps has opened up a market opportunity to serve this market. While cryptocurrency momentum has continued to rise, most of the current applications are still on Ethereum. Concerns about the network have already led some of the major projects to consider porting or working with alternative or additional blockchains.
+去中心化金融程序的通用區塊鏈的局限性為服務該市場提供了一個市場機會。雖然加密貨幣的勢頭持續上升，但目前大部分應用程序仍在以太坊。對于以太坊網絡的擔憂已經導致一些主要項目考慮移植或使用替代或額外的區塊鏈。
 
-### DeFi’s current problems
+### DeFi現今的問題
 
-- Finance dApps require reliability and do not want to be associated with blockchains that host apps such as betting, entertainment or other apps that may tarnish the reputation of a blockchain at any time.
-- Sudden increases in volume of any dApp on a blockchain can potentially impact all the other dApps on that blockchain, either in terms of throughput, transaction price, or additional impacts, as seen with CryptoKitties on Ethereum.
-- General-purpose blockchains require a large amount of coding to provide financial services, increasing the risk of hackability or bugs in the code. 
-Functionalities that are basic requirements for financial services, such as multisig, are often difficult to implement or missing on general-purpose blockchains.
-- Maintenance of a Turing-complete blockchain means that resources are not focusing on the areas valued by DeFi apps.
-- Governance models of most of today’s blockchains are immature and showing signs of politicization, centralization and uncertainty. Without formal governance structures, the future of these blockchains is uncertain. Recent discussions of upgrades and forks in both Ethereum and Bitcoin have revealed the immaturity of these systems, and even the leader in governance, Aragon, showed the vulnerability of its on-chain governance system in the summer 2019 vote, where one large “whale” token-holder changed the outcome of several proposal votes at the last minute. Such vulnerabilities are unacceptable on blockchains dealing with finance.
-- Regulatory standards and regulatory bodies that appropriately address the needs of natively cross-border currencies and financial instruments. Jurisdiction-based regulation, and regulation based on legacy technology is falling short of the needs of the DeFi industry. It is clear that a new legal and regulatory framework is needed to protect the rights of people using these systems. 
-- The blockchain industry itself has not shown the maturity to put in place its own standards bodies that will provide best practices or self-regulation in a way that would demonstrate the industry’s reliability for decentralized finance applications. To date, attempts at creating interoperability or self-regulation have been immature and have not resulted in leadership or standards that could be adopted by international bodies or serious regulators. The lack of self-regulation leaves the industry even more vulnerable to regulation from outside, making the environment risky for serious investors.
+- 金融dApp需要可靠性，且不希望與托管博彩、娛樂或其他程序的區塊鏈相關聯（有可能隨時損害區塊鏈聲譽的程序）。
+- 區塊鏈上任何dApp數量的突然增加可能會對該區塊鏈上的所有其他dApp造成潛在影響，無論是吞吐量、交易價格，還是額外影響，如以太坊上的加密貓所見。
+- 通用區塊鏈需要大量編碼來提供金融服務，增加了代碼的可黑客性或漏洞的風險。
+金融服務的基本要求功能（如多重簽名）通常難以在通用區塊鏈上實現或缺失。
+- 維護一個圖靈完備的區塊鏈意味著資源不再集中于DeFi程序所估值的領域。
+- 目前大部分區塊鏈的治理模式還不成熟，存在政治化、集中化和不確定性的迹象。沒有正式的治理結構，某些區塊鏈的未來缺乏了確認性。最近對以太坊和比特幣的升級和分叉的討論揭示了這些系統的不成熟。治理領域的領導者Aragon在2019年夏季的投票中也暴露了其鏈上治理系統的脆弱性，其中舉例，一名大型代幣持有人在最後一刻更改了數張提案投票的結果。此類漏洞在處理金融的區塊鏈上是不能被接受的。
+- 適當滿足本地跨境貨幣和金融工具需求的監管標准和監管機構。以司法管轄權為基礎的監管，以及傳統技術為基礎的監管，均未能滿足DeFi行業的需求。顯然需要一個新的法律和監管框架來保護使用這些系統的人的權利。
+- 區塊鏈行業本身尚未顯示出建立自己的標准機構的成熟程度，這些標准機構將提供最佳實踐或自律，以證明區塊鏈在去中心化金融應用方面的可靠性。迄今為止，建立互操作性或自我監管的嘗試還不成熟，尚未形成國際機構或認真的監管機構可采納的領導或標准。缺乏自我監管使該行業更容易受到外部監管，使環境對嚴肅投資者構成風險。
 
-### Consequences in the DeFi Market
+### DeFi市場的後果
 
-- Multisig wallets are the best the industry has to provide when it comes to joint management of funds, and the solutions for multi-sig are, to some degree, kludges. Multisig tends to be leger-specific and not flexible for different scenarios. For example, in traditional finance, multi-signature accounts can assign signatories different levels of authority, or require different signatures for different transaction types and levels. Different chains take different approaches to adding multisig capabilities to their existing blockchains.
-  - The BIP 11: M-of-N Standard Transactions is a Bitcoin Improvement Proposal (BIP)designed to add multisig support to Bitcoin blockchain.
-  - Ethereum provides a Turing-complete command set for development of multisig on chain, leading to multiple entities providing multisig smart contracts. Bugs such as those in the Parity multisig (discussed below) have resulted in untold sums in lost funds. 
-- As a result of the complexity of the code required for multisig, in 2017, more than 150,000 ETH was lost to a hack in the Parity multisig wallet, due to an error in the code[^2]. The referenced article notes ways in which this code bug could have been avoided, but it emphasizes the point that these complexities in coding cause many different attack vectors. An entire industry has sprouted up around smart contract auditing, because the situation is so vulnerable.
-- In the largest industry hack (or bug?!), The DAO was drained of 3.6 million ETH due to a coding error in the smart contract holding all of the funds of The DAO. 
+- 當涉及到資金的聯合管理時，多重簽名錢包是行業所能提供的最好的，而多重簽名的解決方式在一定程度上是不完整的。多重簽名往往更具針對性，在不同的情況下並不靈活。例如，在傳統金融中，多重簽名賬戶可為簽名人分配不同級別的權限，或要求不同交易類型和級別的簽名。不同的區塊鏈采取不同的方法為其現有的區塊鏈添加多重簽名功能。
+  - BIP 11：M-of-N標准交易是一項比特幣改進建議（BIP），旨在為比特幣區塊鏈添加多重簽名支持。
+  - 以太坊提供一套圖靈完備的命令集，用于開發鏈上多數智能體，讓項目提供智能體合約。如下文討論的Parity多重簽名中的漏洞已導致無法計算的資金損失。
+- 由于多重簽名所需代碼的複雜性，在2017年，由于代碼中的錯誤，Parity多重簽名錢包中的一次黑客入侵導致超過150,000 ETH丟失。參考文章指出了可以避免這種代碼錯誤的方法，但強調了編碼中的這些複雜性會導致許多不同的攻擊載體。由于智能合約審計的情況非常脆弱，整個行業都圍繞著智能合約審計而出現。
+- 在最大的行業黑客（或漏洞），由于持有DAO全部資金的智能合約中的一個編碼錯誤，被耗盡360萬個ETH。
 
-One of the many results is that the high risks get priced in to the underlying contracts leading to excessive costs for users, as can be seen when comparing rates from DeFi and non-DeFi examples. (For example 8% with decentralized DAI to 1.75% with centralized USDC (dated at the beginning of October 2019): https://deficompare.com/) Both coins represent 1 USD but the decentralized version ist 6.25% more expensive due to a priced in risk from the Ethereum contract.
+衆多結果之一是，高風險被基礎合約定價，導致用戶成本過高。這在比較DeFi和非DeFi示例的費率時可以看到，(例如，8%的DAI分散至1.75%的USDC集中（日期為2019年10月初）： https://deficompare.com/) 兩種硬幣均為1美元，但去中心化版本因以太坊合約的一個定價風險而貴6.25%。
 
-The points described above are simply unacceptable for any type of financial transaction or investor. For that reason, it’s important to build dedicated services that will prevent such breaches, lower risks and thus cost. In the Blockchain world, having proper programming rules and reducing the attack vectors prevents this kind of attack.
+上述要點對于任何類型的金融交易或投資者而言都是不可接受的。因此，重要的是建立專門為金融服務，以防止此類損失，降低風險，也降低成本。在區塊鏈行業中，擁有適當的編程規則和減少攻擊載體可以防止此類攻擊。
 
 [^2]: [https://blog.zeppelin.solutions/on-the-parity-wallet-multisig-hack-405a8c12e8f7](https://blog.zeppelin.solutions/on-the-parity-wallet-multisig-hack-405a8c12e8f7)
 
 ---
 
-## Comparing existing DeFi alternatives
+## 比較現有的去中心化金融區塊鏈方式
 
-### Bitcoin: Why Not?
+### 為什麽不用比特幣？
 
-Given our optimism on Bitcoin, the first question one might ask is why not develop DeFi using the Bitcoin Blockchain. While Bitcoin allows only basic smart contracts, some projects have begun developing workarounds. However, the transaction costs are restrictive on the Bitcoin chain, and we don’t believe it is going to be appropriate for the speed required for financial transactions. The Bitcoin chain is currently working as designed as a store of value. In our opinion, sticking to that single purpose is the best use of the chain and it is proven over the last decade. Adding financial services into the main chain adds unnecessary complexity and may cause side effects both for DeFi and for Bitcoin that are undesirable. Furthermore, it is not something we think that the Bitcoin governance is prepared to handle, and at some point, if DeFiChain requirements differed from those of the miners or developers on the Bitcoin chain, we would be subject to their decisions.
+鑒于我們對比特幣持樂觀態度，一人可能會問的第一個問題是，為何不使用比特幣區塊鏈開發DeFi。雖然比特幣僅允許基本智能合約，但一些項目已開始開發變通方案。然而，交易成本對比特幣區塊鏈是有限制的，我們認為它不適合金融交易所需的速度。目前，比特幣的設計是以最初設計並有價值儲存的作用。我們認為，堅持這一單一目的是比特幣鏈的最佳用途，這在過去十年中已被證明。將金融服務添加到主鏈中會增加不必要的複雜性，並可能對DeFi和比特幣産生不受歡迎的副作用。此外，我們認為比特幣管治並沒有准備好處理這些問題，而且在某一點上，如果遞飛鏈的要求與比特幣鏈上的礦工或開發方的要求不同，我們將受制于他們的決定。
 
-### Turing-complete Solutions: Ethereum, EOS, Tron… {#turing-complete-solutions}
 
-To date, a number of DeFi applications have been built on Ethereum, Tron, EOS and many other turing-complete chains. Since Ethereum has the biggest adoption it allowed the surfacing of issues that come with using a turing-complete blockchain for DeFi applications the fastest. The DAO hack was one of the first and most dramatic exposures of the vulnerability of using such a complex language. Anyone issuing a token on the network knows how difficult it is. Just to create and issue an ERC20 token can easily cost over 100,000 USD, considering the cost of smart contract auditing that is necessary for innovative solutions. Simply the fact that there’s an entire industry built around “smart contract audits” should be enough to illustrate the problem. Despite the fact that ERC20 is the industry standard, it’s still so easy to hack that it’s impossible to issue even a simple token without getting a high-cost professional auditor as well as a programmer. 
+### 使用圖靈完備區塊鏈：以太坊、EOS、波場 {#turing-complete-solutions}
 
-On an even more stark note, it’s now possible to scan for exploitable code using automation, and a 2018 study managed to scan a million smart contracts, finding over 34,000 hackable smart contracts[^3]. It’s unfathomable that 3.4% of financial transactions would be vulnerable. While this at the moment seems to be a problem mainly centered around Ethereum, we believe most other turing-complete chains will experience the same issues once more use cases get adopted on top of them.
+如今，許多DeFi應用已經建立在以太坊、波場、EOS和其他圖靈完備的區塊鏈上。以太坊的采用率是最高的，它允許以最快的速度為DeFi應用程序使用圖靈完備區塊鏈來解決問題。 DAO黑客是第一次也是最具戲劇性地暴露出使用這種複雜語言的弱點之一。任何在網上發行代幣的人都知道這有多困難。考慮到創新解決方案所需的智能合約審計成本，僅創建和發行一個ERC20代幣至少要花超過100,000美元的費用。事實上，整個行業都圍繞著「智能合約審計」而建立，這足以說明問題所在。盡管ERC20是區塊鏈行業中的標准，但它仍然非常容易被黑客入侵。如果沒有一個高成本的專業審計師和程序員就不可能發行一個最基本的代幣。
 
-The second problem stays mostly within Ethereum, which is the network’s usage being already close to maximum capacity. It simply does not seem feasible to use the network for all of the decentralized finance applications. Ethereum’s market cap is a tenth of that of Bitcoin. If the system is already near capacity, it’s hard to see how it can manage the capacity of becoming a true DeFi network for the rest of the ecosystem. Something Vitalik Buterin has acknowledged in an interview: https://beincrypto.com/ethereum-founders-admit-never-designed-scalability/.
+更明顯的是，現在可以使用自動化掃描可利用的代碼，在2018年的一項研究成功掃描了一百萬份智能合約，發現了超過34,000份可入侵的智能合約。 3.4%的金融交易容易受到影響，在金融行業內這是絕對不能被接受的。盡管目前這似乎是一個主要圍繞以太坊的問題，一旦更多的去中心化金融項目開始運作交易服務，大多數圖靈完備區塊鏈將面臨相同的問題。
+
+第二個問題主要存在于以太坊內，即網絡使用已接近最大容量。將網絡用于所有去中心化金融應用程序似乎並不可行。以太坊的總是場只是比特幣的一半。如果系統已經接近最大容量，我們很難想像以太防能如何管理整個DeFi的網路容量。 V神巴特林在接受采訪時也承認這一點： https://beincrypto.com/ethereum-founders-admit-never-designed-scalability/.
 
 [^3]: https://arxiv.org/pdf/1802.06038.pdf
 
@@ -168,218 +169,219 @@ The second problem stays mostly within Ethereum, which is the network’s usage 
 
 ---
 
-## DeFiChain Solution
+## 遞飛鏈解決DeFi的方式
 
-### Staying in the Bitcoin Ecosystem
+### 在比特幣生態系統中發展
 
-The cryptocurrency market as a whole is difficult to predict. Most of the coins have become valueless, and it remains to be seen how the system will sustain itself after cash runs out from many of the major ICOs.
+加密貨幣市場整體難以預測。大部分的貨幣已變得毫無價值，在許多主要的ICO的現金流耗盡後，該系統將如何維持其自身仍有待觀察。
 
-Despite this, our outlook on Bitcoin specifically is extremely optimistic. Over the last year, through market volatility, including instability in traditional financial markets, Bitcoin has retained its value, demonstrated its impermeability to attack and hackers, and gained increasing respect from traditional financial players. 
+盡管如此，我們對比特幣的前景還是非常樂觀的。在過去一年中，通過市場波動，包括傳統金融市場的不穩定性，比特幣保持了它的價值，展示了它對不可滲透的攻擊和黑客能力，並在傳統金融業得到越來越多的尊重。
 
-Bitcoin is increasingly being seen as a store of value, and it is perceived as the standard by which other cryptocurrencies are measured. While people’s portfolios vary widely, Bitcoin remains the standard currency that almost every crypto investor holds as a major part of their holdings. The tremendous community and ecosystem around Bitcoin bode well for its long-term viability as a store of value.
+比特幣越來越被視為一種價值儲存，並被視為衡量其他加密貨幣的標准。盡管人們的投資組合千差萬別，但比特幣仍然是幾乎每個加密投資者持有的標准貨幣，也有可能是他們持有的主要貨幣。比特幣周圍龐大的社區和生態系統預示著其作為價值儲存的長期可行性。
 
-For that reason, creating decentralized financial services around Bitcoin represents a tremendous opportunity that has yet been untapped, partially because of the difficulty of creating smart contracts that work with the Bitcoin network, and partially because of the fractalization of the development community to many side projects. We believe this tendency of the development community to jump on the newest developments has drawn attention away from the real story: Bitcoin is here to stay. 
-Thus, we believe, building a DeFi Blockchain on top of Bitcoin would bring the best out of both worlds: Bitcoin’s stability and immutability and DeFi-chain’s scalability and functionality.
+因此，圍繞比特幣創建去中心化金融服務是一個巨大的機會，但尚未被利用。部分原因是難以創建與比特幣網絡合作的智能合約，部分原因是開發社區對多個項目的細分。我們相信發展界對最新發展的關注已偏離了真實故事：比特幣將繼續存在。
+我們相信，在比特幣之上構建一個DeFi區塊鏈將帶來兩個世界的最佳結果：比特幣的穩定性和不變性以及DeFi鏈的可擴展性和功能性。
 
-### Building on Top of Bitcoin
+### 建立在比特幣之上
 
-One of the major challenges in new blockchains is creating the robust immutability available after a critical mass of users and blocks secure the chain. To provide immediate security and immutability of the blockchain, DeFiChain will be anchoring itself to the bitcoin blockchain. Every few minutes, DeFiChain saves its most recent Merkle tree to the Bitcoin blockchain, similar to how Rootstock (Turing Complete Smart contracts secured by Bitcoin https://www.rsk.co/) is planning on connecting to Bitcoin. In this fashion, the most recent chain is always fully secure and immutable, and can be checked against the most recent record anchored to Bitcoin. Over time, DeFiChain will space out the anchors at larger intervals. This anchoring mechanism ensures provably immutable records from day one and defends against attacks, hackers and vulnerabilities that can cause concern in emerging chains.
+新代區塊鏈的主要挑戰之一是在大量用戶和區塊保護了鏈之後創建強大的不變性。為了提供區塊鏈的即時安全性和不變性，遞飛鏈將自身錨定至比特幣區塊鏈。每隔幾分鍾，遞飛鏈將其最新的Merkle樹保存到比特幣區塊鏈，類似于Rootstock（圖靈完備智能合約由比特幣保護 https://www.rsk.co/)。以這種方式，最新的區塊號始終是完全安全和不可變動的，並且可以對照錨定在比特幣上的最新記錄進行檢查。隨著時間的推移，遞飛鏈將以更大的間隔將區塊錨定分開。該錨定機制確保從第一天起記錄可證實為不可變，並抵禦可能引起新興鏈關注的攻擊、黑客和漏洞。
 
-At the same time DeFiChain keeps its own consensus mechanism and function set, allowing for all those characteristics that Bitcoin does not inherently have. This is achieved by DeFiChain being a dedicated non-Turing-complete blockchain, designed specifically for the decentralized finance (DeFi) industry built on top of Bitcoin. DeFiChain provides full functionality for this specific segment of the DLT community, sacrificing other types of functionality for simplicity, rapid throughput and security.
-DeFiChain utilizes a completely decentralized Proof-of-Stake mechanism allowing for:
+遞飛鏈也同時保留了自己的一致性機制和功能集，是比特幣本身不具備的優勢。這是通過遞飛鏈作為一個專用的非圖靈完備區塊鏈來實現的，該區塊鏈是專為建立在比特幣之上的去中心化金融（DeFi）行業而設計的。遞飛鏈為DLT社區的這一特定部分提供了完整的功能，為簡單性、快速吞吐量和安全性犧牲了其他類型的功能。
+遞飛鏈采用完全去中心化股權證明機制，允許：
 
-- a massive scalable and energy conserving consensus.
-- fast transactions and high security
-- ability to create a variety of DeFi apps based on one chain, rapidly and with very low attack surface
-- multi-token support on one chain through decentralized wrapped token technology. 
-- decentralized governance
-- independence of other financial systems and financial instruments.
-- fully liquid investments with no minimum size of investments, and no minimum lock-up periods
+- 大規模的可擴展和節能共識。
+- 交易速度快，安全性高
+- 能夠創建基于一鏈的各種DeFi應用，速度快且攻擊面極低
+- 通過去中心化包裝代幣技術實現一鏈多代幣支持。
+- 分權的治理
+- 其他金融體系和金融工具的獨立性。
+- 無最低投資規模及無最低禁售期的全流通投資
 
-Unlike Ethereum or other turing-complete blockchains, DeFiChain is not a general-purpose blockchain, and commands outside the basic set of functions are not allowed. Limiting the allowed commands on purpose provides a dramatically reduced attack surface for smart contracts, eliminating the obvious breaches that are made possible when programmers need to design complex coding for these functions. The details of these will be described in the next section.
+與以太坊或其他圖靈完備區塊鏈不同，遞飛鏈不是一個通用區塊鏈，不允許在基本功能集之外執行命令。故意限制允許的命令可大幅減少智能合約的攻擊面，消除程序員需要為這些功能設計複雜編碼時可能出現的明顯漏洞。這些細節將在下一節中描述。
 
-### Benefits of DeFiChain: Summary
+### 總結遞飛鏈的優勢
 
-- Development of a variety of financial operations & vehicles for cryptocurrency economy.
-- High throughput for all transactions
-- Safer, more secure blockchain specifically for decentralized finance..
-- Rapid development of dApps for decentralized finance.
-- Peace of mind that the blockchain is not used for any types of non-financial dApps, thus decisions of Foundation and core developers are focused 100% on decentralized financial use-cases and nothing else.
-- Rapid development of dApps with dedicated calls specifically for finance applications.
-- Minimal attack surface of financial smart contracts developed on the platform.
-- Reliable governance (off-chain and on-chain).
-- Highly immutable – by periodic anchoring to Bitcoin blockchain.
+- 為加密貨幣經濟開發各種金融業務和工具。
+- 所有交易的高吞吐量
+- 更安全的區塊鏈，專門用于去中心化式金融。
+- 去中心化金融的DAPP快速發展。
+- 放心吧，區塊鏈不用于任何類型的非金融DAPP，因此基金會和核心開發商的決策100%集中于分散的金融使用案例，而不是其他不對金融實用的dApp。
+- 快速開發專用于金融應用程序的DAPP。
+- 基于該平台開發的金融智能合約的最小攻擊面。
+- 可靠的治理（鏈外和鏈上）。
+- 高度不可變-通過定期錨定比特幣區塊鏈。
 
-### Initial dAppSets
+### 初始dApp集合
 
-- The initial function set includes:
-- Decentralized lending
-- Decentralized wrapping of tokens
-- Decentralized pricing oracles
-- Decentralized exchanges
-- Transferable debts and receivables 
-- Decentralized non-collateralized debt
-- Asset tokenization
-- Distribution of dividends
+初始應用集包括：
+- 去中心化貸款
+- 去中心化挂勾的代幣代幣
+- 去中心化定價預言
+- 去中心化化交易所
+- 可轉讓債務和應收款
+- 非抵押去中心化債務
+- 資産標記代幣化
+- 股息分配
 
-This chapter provides an overview of each of these functions and the following chapter covers the technical details in how this is achieved.
+本章概述這些功能，下一章將介紹如何實現這些功能的技術細節。
 
-### Decentralized Lending
+### 去中心化貸款
 
-Decentralized lending allows individuals and groups to borrow and lend without the intervention of a bank. Through collateralized systems, decentralized lending on Ethereum reached over a quarter of a billion dollars in 2018.
+去中心化借貸允許個人和團體在沒有銀行幹預的情況下借貸。在2018年通過抵押系統，對以太坊的去中心化借貸達到25億美元以上。
 
-All of these systems are based on Ethereum, meaning they are addressing only 15% of the market based on market capitalization. The DeFi platform will be addressing the entire 100% of the market by leading with Bitcoin, but also including the entire market through wrapping and pooling as described below.
+所有這些系統都是基于以太坊的，這意味著根據市值計算，它們只占市場的15%。 DeFi平台將以比特幣為主導，面向整個100%的市場，也將通過挂勾和彙集（如下文所述）覆蓋整個市場。
 
-The major decentralized lending platforms (Compound, Dharma, dYdX, and Maker) provide lending at rates ranging from 0.5% through 6%. Because everything is managed through smart contracts, the overhead of banks is eliminated, and the platforms are able to provide much better rates than banks. As these types of decentralized lending services become safer, it’s likely the market will also see an increase in peer-to-peer lending opportunities through dedicated applications.
+主要的去中心化貸款平台（Compound、Dharma、dYdX和Maker）提供的貸款利率介乎0.5%至6%。由于一切都是通過智能合約進行管理，因此銀行的管理費用得以消除，而且這些平台能夠提供比銀行更好的利率。隨著這些類型的去中心化貸款服務變得更安全，市場很可能也會通過專用應用程序看到點對點貸款機會的增加。
 
-The power of decentralized lending lies in the market efficiencies available by eliminating the middlemen and administration involved in lending. Furthermore, with investors concerned about minimal or even negative interest rates, decentralized lending protects the investors from that potentiality, providing market rate interest while giving borrowers better rates than they can get in the existing financial markets. Given the magnitude of credit and the role it plays in the economy as a whole, decentralized lending offers the potential for many more initiatives to borrow money based on open markets and favorable conditions. Easier access to lending translates into a faster-growing economy.
+去中心化借貸的權力在于通過消除參與借貸的中間人和管理層而獲得的市場效率。此外，由于投資者關注最低甚至負利率，去中心化借貸可保護投資者不受這種潛力的影響。在提供市場利率，也同時給予借款人比現有金融市場更高的利率。鑒于信貸規模及其在整體經濟中所扮演的角色，去中心化借貸有可能在公開市場和有利條件的基礎上提出更多的借貸計劃。更容易獲得貸款轉化為更快增長的經濟。
 
-Initial implementations of decentralized lending are fully collateralized, and because of the volatility of cryptocurrency, most platforms require double or more collateral on loans. This allows people to take loans based on cryptocurrency they hold. They can manage their cash flow problems without having to sell their crypto holdings, and meanwhile get favorable conditions on the loan. 
+去中心化借貸的初始實施是需要完全抵押值。但加密貨幣的波動性，大多數平台需要貸款的兩倍或更多抵押值。這允許人們根據所持有的加密貨幣貸款。他們可以管理自己現金流動，而無需出售所持有的加密資産，同時獲得有利的貸款條件。
 
-### Decentralized Wrapping of Tokens
 
-An important issue for DeFi is the ability to work with a variety of cryptoassets, directly, on-chain. While the transaction on the chain is done via the native $DFI coin, DeFiChain can use Bitcoin, Ethereum, ERC-20, or any other cryptoasset through wrapping.
+### 去中心化挂勾的代幣
 
-Wrapping allows the utilization of any digital asset such that the underlying asset is maintained, but it can transact on a different blockchain. DeFiChain provides a decentralized wrapping mechanism which allows the owner of the crytpoasset to maintain pegging to the asset and utilize a trustless wrapping mechanism that does not rely on any third party as a guarantor of the wrapping or asset. The wrapped tokens can be easily exchanged for their original value on their respective blockchain. 
-Creating a wrapped token on DeFiChain is a rewarded activity, such that there is incentive for cryptocurrency holders to create wrapped tokens on the DeFi network as a form of rewarded decentralized financial investment.
+DeFi的一個重要問題是直接在鏈上處理各種加密資産的能力。雖然鏈上的交易是通過原生的$DFI貨幣完成的，但遞飛鏈可以通過挂勾使用比特幣、以太坊、ERC-20或任何其他加密資産。
 
-Wrapping is a key capability of DeFi due to the need for interoperability of different types of cryptocurrencies and assets. To date, there are no interoperability standards between different currencies, and the only way to interoperate between currencies is by using wrapping or collateralization, which has to be provided by a third party. The entire point of decentralization is that people do not need to trust an authority, yet, today that is the main way that investors can interoperate between Bitcoin and Ethereum without converting from one coin to the other. The Polkadot protocol provides a platform for the development of interoperable apps, but not specifically for DeFi. As a new protocol, it is yet to be seen how it will be leveraged.
+挂勾制允許使用任何數字資産，以便維護基礎資産，但可以在不同的區塊鏈上進行交易。遞飛鏈提供一種去中心化挂勾機制，允許加密資産的所有者保持與資産的挂勾，並使用不依賴任何第三方作為挂勾或資産擔保人的不可信任挂勾機制。挂勾後的代幣可以很容易地在各種區塊鏈上兌換為其原始價值。
+在遞飛鏈上創建挂勾的代幣是有價值回報的，因此，加密貨幣持有人有動機在遞飛鏈網絡上創建挂勾的代幣，作為一種有回報的去中心化金融投資服務。
 
-Without wrapping, holders would need to convert their cryptoasset to the DeFi currency in order to use the services offered. Obviously, for most investors, that’s unacceptable. The investor has put their money into Bitcoin, or Ethereum, or whatever else, because that is the currency they want to hold. The main purpose of DeFiChain is to enable financial transactions in any type of crypto asset, such that people can use the assets and coins they hold, as currency for investment in other types of financial vehicles. 
-The decentralized wrapping function is crucial in allowing people to hold any asset and perform investments in another currency. So, for example, someone holding Bitcoin could make a loan to someone who wants to borrow ETH, or someone who wants to hedge against the cryptocurrency they have could do so using a wrapping function to use some of their assets to purchase options in other types of assets.
+由于不同類型的加密貨幣和資産需要互操作性，包裝是DeFi的一項關鍵功能。到目前為止，不同貨幣之間沒有互操作性標准，而貨幣之間互操作的唯一方法是使用挂勾制或抵押必須由某一方提供。去中心化的關鍵是人們不需要先信任某個金融機構。如今這是投資者在比特幣轉換成以太坊之間進行互操作的主要方式。 Polkadot協議為開發可互操作的應用程序提供了一個平台，但並非專門為DeFi設計。作為一項新的項目，它將如何發揮作用尚待觀察。
 
-### Decentralized Pricing Oracles
+在不進行挂勾的情況下，持有人將需要將其加密資産轉換為貨幣以使用DeFi所提供的服務。顯然，對大多數加密投資者而言，這是不可接受的。投資者將資金投入到比特幣、以太坊或其他任何地方，是因為他們希望持有這些貨幣。遞飛鏈的主要目的是實現任何類型的加密資産的金融交易，以便人們可以使用所持有的資産和硬幣作為貨幣投資于其他類型的金融工具。
+去中心化挂勾功能對于允許人們持有任何資産並以另一種貨幣進行投資至關重要。因此，例如，持有比特幣的人可以向希望借貸以太防，或向希望對沖其擁有加密貨幣的人提供貸款，都可使用挂勾功能將其部分資産購買其他資産的期權。
 
-DeFiChain will include pricing oracles to collect data from outside blockchains. Oracles are used to collect data such as pricing of other cryptoassets[^4]. Oracles are an important way for blockchains to collect accurate information from both other blockchains and from non-crypto markets[^5].
+### 去中心化定價預言
 
-Participating as an oracle allows earning of tokens based on the accuracy of the oracles. The built-in oracle function will allow smart contracts to determine the number of oracles, consensus percentage, and the parameters for rewarding oracles for the data they provide.
+遞飛鏈將包括從外部區塊鏈收集數據的定價預言。預言用于收集數據，例如其他加密資産的定價[^4]。預言是區塊鏈從其他區塊鏈和非加密市場收集准確信息的重要方式[^5]。
 
-Oracles are eventually meant to be decentralized. However, DeFiChain will be launched with a few appointed trusted pricing oracles that periodically submit pricing data from trusted source onto DeFiChain.
+作為一名預言參與者，可根據預言的准確性獲得代幣。內置的預言功能將允許智能合約確定預言的數量、共識百分比，以及獎勵預言所提供數據的參數。
 
-### Decentralized Exchanges
+預言最終會被去中心化。然而，遞飛鏈將會推出一些指定可信的預言定價專家，定期將可信來源的定價數據提交到遞飛鏈上。
 
-The decentralized exchange function will allow atomic swap of cryptocurrencies in a peer-to-peer fashion[^6]. The decentralized exchange function matches people for trading directly, without the need to buy and sell currency through an exchange. Using decentralized exchange reduces the risks associated with using exchanges, and ensures that the cryptoasset doesn’t leave the custodianship of the token-holders. It also removes the risk of custodianship from the exchange itself, because the mechanism is peer-to-peer based on an agreed-upon price or on the market price at the time of the exchange.
+### 去中心化交易所
 
-While a number of decentralized exchanges are available on the market today[^7], DeFiChain solution allows integration of atomic swap capabilities in third-party applications by creating a decentralized exchange as a service.
+去中心化交換功能將允許以點對點方式進行加密貨幣的原子交換。去中心化的交換功能使人直接進行交易，而無需通過交換買賣貨幣。使用去中心化交換降低了使用交換的相關風險，並確保加密資産不會離開代幣持有人的托管。這也消除了交易所本身的托管風險，因為該機制是基于交易時商定價格或市場價格的對等機制。
+
+雖然目前市場上有許多去中心化交換，但遞飛鏈解決方案通過創建一個去中心化交換即服務，允許在第三方應用程序中集成原子交換功能。
 
 [^4]: https://cointelegraph.com/explained/blockchain-oracles-explained
 [^5]: https://hackernoon.com/oracles-help-smart-contracts-resolve-subjective-events-d81639d8291c
 [^6]: https://en.wikipedia.org/wiki/Decentralized_exchange
 [^7]: https://coinsutra.com/best-decentralized-exchanges-dex/
 
-### Transferable Debts and Receivables
+### 可轉讓債務和應收款
 
-DeFiChain will offer a set of calls to work with transferable debts and receivables. In the centralized finance world, debts and accounts receivable can only be managed through financial institutions that handle loans. The lack of transparency of these transferable debts was one of the factors leading to the financial crisis of 2008.
+遞飛鏈將提供一組催繳股款，用于處理可轉讓債務和應收賬款。在中心化金融世界中，債務和應收賬款只能通過處理貸款的金融機構進行管理。這些可轉讓債務缺乏透明度是導致2008年金融危機的因素之一。
 
-For small and medium enterprises, this can be a particularly powerful tool. For example, Jane’s widget factory supplies widgets to a large car manufacturer, but the car manufacturer pays for those widgets on a basis of invoice +60. Meanwhile, Jane has to pay for the materials to produce the widgets, and, of course, regular salaries to her workers on a monthly or weekly basis. The car manufacturer will pay the invoice, but not in time for Jane to pay all of her expenses. Without Defi, Jane needs to go to the bank and pay whatever interest rates they demand, because she has no alternatives. The transferable receivables function would allow anyone to offer Jane a loan based on the receivables. Since many people would be able to see that the car manufacturer is a low-risk customer, and that they will pay their invoices, anyone who wants can make an offer to Jane for a better rate than the bank, creating a competitive market for debts and receivables based on the real risk and market assessment of that risk. Jane now can get a loan with great rates, and the lenders, likewise get excellent returns on their loans, despite the fact that they are loaning the money for only 30-60 days.
+對于中小型企業而言，這可能是一個特別強大的優勢。例如，小祯的小部件工廠向一家大型汽車制造商供應小部件，但汽車制造商按發票金額加60美元支付這些小部件。同時，小祯必須每月或每周為生産這些小部件的材料支付費用，當然還必須定期向工人支付工資。汽車制造商將支付發票，但小祯未能及時支付所有費用。沒有Defi，小祯需要去銀行支付他們要求的任何利率，因為她別無選擇。可轉讓應收賬款功能將允許任何人根據應收賬款向小祯提供貸款。許多人能夠看到汽車制造商是一個低風險商業，而且他們會支付發票，任何人都可向小祯提供一個比銀行更好的利率。這種方式創造一個有競爭力的市場債務和應收賬款，也同時提共了真實的風險和市場評估價。小祯可以獲得價錢優的貸款，而借款人也同樣可以從小祯的貸款中獲得好的投資回報，即使他們只貸款了一兩個月的時間。
 
-Blockchain adds transparency to the exchange of debts and loans based on receivables or other types of financial promises. DeFiChain will include the capability for organizations to create smart contracts that allow straightforward investment in such assets, so that peer-to-peer loans can be made without the need for a financial institution to guarantee these types of financial assets. 
+區塊鏈為基于應收賬款或其他類型財務承諾的債務和貸款交換增加透明度。遞飛鏈將包括組織創建智能合約的能力，也允許直接投資于此類資産，以便在無需金融機構擔保此類金融資産的情況下提供點對點貸款。
 
-### Decentralized Non-Collateralized Debt
+### 去中心化式的非抵押債務
 
-In the future, it will be possible to provide non-collateralized loans based on the reputation and other factors about borrowers. Through different forms of verifiable credentials, and records of an individual’s borrowing and repayment history, non-collateralized systems can be developed. Many of the identity solutions being developed today are looking at anonymous and pseudonymous reputation-reporting systems, based on a Decentralized Identifier (DID) issued by the individual, and Verifiable Credentials (VC) issued by known authorities who are reputable to provide information about the individual’s credit history.
+基于借款人的信譽及其他因素，未來將有可能提供無抵押貸款。運作不同形式的可核實憑證以及個人借款和還款記錄可開發非抵押系統。目前正在開發的許多身份識別解決方案均基于個人發布的去中心化身份識別（DID）和知名機構發布的可驗證憑證（VC），以提供有關個人信用曆史的信息來研究匿名和冒名的聲譽報告系統。
 
-The appropriate reputation based systems and risk assessment systems will need to be built out. While this will take time, perhaps years, it is foreseeable that this kind of system could supplement or replace today’s credit ratings scores.
+這需要建立適當的以聲譽為基礎的系統和風險評估系統。雖然這需要時間開發，也許需要數年，但可以預期此類系統可以補充或取代今天的信用評級分數。
 
-Another potential application of this feature would be the ability to create non-collateralized decentralized stablecoins. The success of DAI and MakerDAO show the desirability of pegged stablecoins, yet the high level of collateralization is a deterrent to creating more such projects. It is feasible that through market mechanisms and staking, decentralized non-collateralized stablecoins can be created.
+此功能的另一個潛在應用將是創建非抵押去中心化穩定資産的能力。 DAI和MakerDAO的成功表明了釘住穩定資産的可取性，但高水平的抵押對創建更多此類項目具有威懾作用。通過市場機制和下注，可以創造分散的無抵押穩定資産。
 
-### Asset Tokenization
+### 資産代幣化
 
-Asset tokenization is the representation of an asset, such as real estate or company equity, in immutable tokens on the blockchain[^8]. This particular area of decentralized finance has tremendous potential and is one of the most exciting areas of investment for holders of cryptocurrency[^9].
+資産代幣化是資産（如房地産或公司股權）在區塊鏈上以不可變標記表示[^8]。去中心化金融的這一特定領域具有巨大潛力，是加密貨幣持有人最令人興奮的投資領域之一[^9]。
 
-While several attempts have been made at asset tokenization in the blockchain space, most of them have pivoted and now provide services not directly related to asset tokenization (LAtoken, Etherparty). Tokeny and Tokenize-IT advertise themselves as tokenization platforms, but as of the writing of this paper, their processes are still fairly manual, and are heavily reliant on specific localities and regulatory requirements for those specific jurisdictions. Other blockchains, such as Tezos, have been mentioned as good platforms for asset tokenization, but, as with other multi-use blockchains, the Turing-complete set of commands will create complex smart contracts that are unnecessary when using DeFiChain.
-DeFiChain will provide a module specifically designed for asset tokenization, and will be particularly easy to use to tokenize assets such as company equity, real estate, and other valued holdings.
+雖然在區塊鏈空間對資産代幣化進行了多次嘗試，但大多數嘗試都是以數據為中心，目前提供與資産代幣化無關的服務（LAtoken，Etherparty）。 Tokeny和Tokenize-IT將宣傳為代幣化平台，但截至本白皮書撰寫時，它們的流程仍相當是手動的，並嚴重依賴于特定司法管轄區和特定地區的監管要求。其他區塊鏈（如Tezos）被認為是資産代幣化的良好平台，但與其他通用區塊鏈一樣有圖靈完備命令集不必要的複雜智能合約。
+遞飛鏈將提供專門為資産代幣化而設計的模塊，並將特別易于用于代幣化資産，如公司股權、房地産和其他有價值的資産。
 
-Recently (October 2019), the Lichtenstein Blockchain law created the legal basis upon which any asset can be tokenized and legally bound to tokens or “containers” that represent the right to the asset. The law is precise in its wording, describing how a container issued by a trusted party now can hold the legal rights to the disposal over the asset. Disposal over the asset is distinct from ownership or rights to the asset, or even control as a specific concept. The careful wording of this law is a breakthrough for everyone in the world of asset tokenization, because it will now allow someone to go to a court of law with a token and expect to have legal legitimacy for assets that are tokenized (as long as the authority granting the token is recognized as a trusted authority to do so). It also opens up a space for DeFiChain to apply for this trusted status, such that the Asset Tokenization capability described here can be offered as a decentralized, legal and authorized capability that people can trust, without having to depend on any centralized authority.
+在2019年10月，利希滕斯坦區塊鏈法建立了一個法律基礎，根據該法律基礎，任何資産都可以被代幣化，並合法地與代表資産權利的標記或“內容”綁定。該法律的用詞准確，描述了由受信方發行的內容如何能夠持有出售資産的合法權利。作為一個特定的概念，對資産的處置有別于對資産的所有權或權利，甚至控制權。這項法律的謹慎表述對資産代幣化領域的每個人來說都是一個突破，因為它現在將允許某人帶著一代幣進入法庭，並期望對代幣化的資産擁有合法性（只要授予代幣的權力被確認為可信賴的權力）。它還為遞飛鏈申請這種受信任的狀態開辟了一個空間，因此，本文所述的資産代幣化能力可以作為一種去中心化、合法和授權的能力提供，人們可以直接信任，而不必依賴任何中央授權。
 
 [^8]: https://www2.deloitte.com/lu/en/pages/technology/articles/tokenization-assets-disrupting-financial-industry.html
 [^9]: https://www.forbes.com/sites/laurencoleman/2019/04/25/heres-why-interest-in-tokenizing-assets-is-starting-to-surge/#2ddeec4640a5
 
-For more information on this law, please see Liechtenstein’s website at https://liechtensteinusa.org/article/liechtensteins-parliament-approves-blockchain-act-unanimously 
+有關這項法律的更多信息，請訪問利希滕斯坦的網站 https://liechtensteinusa.org/article/liechtensteins-parliament-approves-blockchain-act-unanimously 
 
-Examples of assets people can now tokenize using the blockchain:
+大衆現在可以使用區塊鏈進行代幣化的資産示例：
 
-- Securities, such as ETF investing, stocks and shares.
-- Shares in privately held companies.
-- Energy and income generating devices, such as wind turbines, solar farms, satellites.
-- Ownership in food means of production (new forms of cooperative farms where non-farmers could own food supply instead of commodities traded on exchanges)
-- Self-driving cars, vending machines, ATMs, pinball machines, and other types of revenue-generating self-regulating devices.
-- DAOs (Distributed Autonomous Organizations).
-- Small real estate investments (time shares, short-term rental apartments, etc.)
-- Large real estate investments (airports, amusement parks, apartment complexes, business parks)
+- 證券，如ETF投資、股票和股份。
+- 私人控股公司的股份。
+- 能源和創收設備，如風力發電機組、太陽能發電場、衛星。
+- 擁有糧食生産資料（新型合作農場，非農民可擁有糧食供應而非在交易所買賣的商品）
+- 自動駕駛汽車、自動售貨機、自動取款機、彈球機和其他産生收入的自動調節裝置。
+- 去中心化自治組織。
+- 小型房地産投資（分時股、短期租賃公寓等）
+- 大型房地産投資（機場、遊樂園、公寓、商業園）
 
-### Distribution of Dividends
+### 股息分配
 
-Any tokenized asset with return on investment can use the dividends distribution module to create smart contracts that pay out returns on the investment automatically. Using DeFiChain will allow a leap in the functionality of dividends distribution. It will be possible to implement models similar to today, where payouts are performed on a weekly, monthly, or quarterly basis, or models where payouts are on a daily, hourly or even minute-by-minute basis.
+任何具有投資回報的代幣化資産都可以使用股息分配模塊創建智能合約並自動支付投資回報。使用遞飛鏈將允許股息分配功能的飛躍。我們將有可能實施與類似于今天的模型，即每周、每月或每季度進行支付，或采用每天、每小時甚至每分鍾進行支付的模式。
 
-Distribution of dividends would be relevant in any type of tokenized asset, as described above. For example, today, a municipal government might do a bond issue to invest in a wind turbine to supply electricity. The government would take care of everything, and repay that bond according to the schedule. With distribution of dividends, the community could purchase the wind turbine directly, and distribute the dividends to the investors in the wind turbine. Instead of going through the administration required through the centralized authority (government), every citizen who wanted to could invest in that wind turbine, and dividends would be paid according to each person’s contribution to that investment. Eliminating overhead and fair distribution of profits would be major benefits for the community owning the wind turbine. In this case, the wind turbine is a public good, but it could also simply be a private investment.
+如上文所述，股息分配將與任何類型的代幣化資産有關。例如，一個市政府可能會發行債券，投資于風力發電機組以提供電力。政府會處理好一切，並按計劃償還債券。通過分紅，社區可以直接購買風電機組，並將分紅分配給風電機組的投資者。每一個想投資于風電機組的公民將根據每個人對這投資的貢獻支付股息，而不是通過中央機構（政府）進行所需的管理。消除間接費用和公平分配利潤將是擁有風電機組的社區的主要利益。在這種情況下，風力發電機組是一種公共産品，但也可能只是一種私人投資。
 
-Any private investment could be run this way: a pinball machine, self-driving taxi, real estate investment, etc. Automatic distribution of dividends reduces the need for administration and overhead, as well as eliminating uncertainty about payouts and control by a centralized authority.
+任何私人投資都可以這樣運作：彈珠機、自動駕駛出租車、房地産投資等。股息的自動分配減少了管理和間接費用的需要，並消除了由中央機構支付和控制的不確定性。
 
-The need for joint dividend investing is becoming increasingly relevant with IoT. Devices are able to create tremendous value. A self-driving car will be able to provide taxi services. Vending machines, sensors, satellites, etc., are all potentially revenue-generating devices that people can own together and share in the profit of together, yet until now the legal and financial complexity of doing so has been prohibitive. DeFi can simplify those processes.
+聯合股息投資的需求與物聯網越來越相關。設備能夠創造巨大的價值。自動駕駛汽車可以提供出租車服務。自動售貨機、傳感器、衛星等都是潛在的利潤，人們可以共同一起擁有，一起分享利潤。但迄今為止，這樣做的法律和財務複雜性令人望而卻步。 DeFi可以簡化這些過程。
 
-Similarly, distribution of profits for a private company can be implemented. One of the first experiments in this area is a DAO (Distributed Autonomous Organization) called dOrg. dOrg is a collection of programmers (as well as a sales/operations team) who co-own their software house. Distribution of salaries is through a DAO that functions as a multi-sig, such that every 2 weeks, the whole organization submits their payment requests for work contracted, and the team votes to pass one anothers’ salary requests. Inside dOrg, each person holds a “reputation” that represents the percentage of ownership each person has earned (they earn ownership according to the amount of work done since the inception of the company). But what will happen to the profit at the end of the year? Presumably, each individual will have to submit a request for their percentage of the profits, and everyone will have to vote on that, too, because the DAO does not allow for automated distribution of profits. Using DeFiChain, the team could easily implement a quarterly or annual function that would automatically distribute the profits of the company to each person, according to their holdings in the company. This scheme would work even for people who were active in the past, but are no longer active, so they aren’t in the DAO any longer, but they still hold a percentage based on their past contributions. Other contributors might be an investor who puts money into the company, but does not participate.
+同樣地，也可以為私人公司分配利潤。這個領域的第一個實驗之一是名為dOrg的DAO（分布式自治組織）。 dOrg是一組共同擁有軟件公司的程序員（以及一個銷售/運營團隊）。工資的分配是通過一個DAO來實現的，具有多重簽名的功能。因此每兩周，整個組織提交其合同工作的付款請求，而團隊投票通過另一個團隊的一個工資請求。在dOrg內部，每個人都擁有一個代表每個人已獲得所有權百分比的「聲譽」（他們根據自公司成立以來完成的工作數量獲得所有權）。但年底的利潤會如何？假設每個人都必須提交一份利潤百分比申請，每個人也必須投票，因為DAO不允許自動分配利潤。使用遞飛鏈，團隊可以很容易地實現季度或年度功能，根據每個人在公司的持股情況自動將公司的利潤分配給每個人。這個計劃甚至適用于過去活躍但不再活躍的人，因此他們不再在DAO中，但他們仍然根據過去的貢獻持有一個百分比。其他出資者可能是向公司注資但不參與的投資者。
 
-The examples above seem logical and straightforward, but today are extremely time-consuming and complex. People who want to make an investment together in companies, real estate, or other income-deriving assets type of dividend distribution today is complex and requires a lot of manual calculations. Through the DeFi Distribution of Dividends functionality, it becomes not just simple, but automatic for companies to distribute dividends to equity owners.
+上面的例子似乎合乎邏輯且簡單，但今天非常耗時且複雜。如今想共同投資于公司、房地産或其他由資産産生的收入的人士（股息分配類型）非常複雜，也需要大量人工計算。通過DeFi的股息分配功能，公司向股東分配股息不僅變得簡單，而且自動化。
 
 ---
 
-## DeFiChain Design
+## 遞飛鏈的設計
 
-### Design Parameters
+### 設計參數
 
-Looking at the business requirements from the chapter before, DeFiChain needs to meet the following requirements:
+從前面章節的業務需求來看，遞飛鏈需要滿足以下要求：
 
-1. Robust and secure: built on a proven and secure blockchain.
-2. Fast and scalable.
-3. Includes decentralized consensus mechanism.
-4. Provides extensible smart contract support, without a Turing-complete instruction set.
-5. As immutable as possible (Block anchoring enabled.) .
+1. 穩健安全：基于可靠安全的區塊鏈。
+2. 快速且可擴展。
+3. 包括去中心化共識機制。
+4. 提供可擴展的智能合約支持，無需圖靈完備的指令集。
+5. 盡可能不可變（使用區塊鏈錨定）。
 
-Each of these design principles is described in detail below.
+這些設計原則在下文詳細描述。
 
-#### 1. Robust and Secure
+#### 1. 穩健安全
 
-Bitcoin Core is the most robust and longest running blockchain in the world. It has been operating with no disruptions since the genesis block in January 2009. Furthermore, from a security standpoint, Bitcoin core has proven itself to be most secure blockchain with no security incidents, while securing the crypto asset with the highest valuation in the world, that is, Bitcoin (BTC). As of this writing, Bitcoin Core successfully secures $150 billion worth of crypto assets, or 68% of the crypto asset market capitalization.
+比特幣核心是世界上最強大、運行時間最長的區塊鏈。自2009年1月初始區塊以來，它一直在無中斷運行。從安全的角度來看，比特幣核心已經證明自己是最安全的區塊鏈，沒有破安全事件，同時保護了全球估值最高的加密資産比特幣（BTC）。截至本文撰寫之時，比特幣核心成功獲得價值1500億美元的加密資産，占加密資産市值的68%。
 
-The proven security and robustness of the Bitcoin Core made it the blockchain of choice for DeFiChain base for extension. DeFiChain is built based on a fork of Bitcoin Core 0.18, specifically v0.18.1.
+比特幣核心經驗證的安全性和健壯性使其成為擴展遞飛鏈基礎的首選區塊鏈。遞飛鏈基于比特幣核心0.18的一個分叉構建(特別是v0.18.1)。
 
-DeFiChain will be written in C++, and the plan is to use other languages, such as Rust, in the future.
+遞飛鏈將使用C++編寫，計劃在未來使用Rust等其他語言。
 
-While DeFiChain is a new blockchain, basing it on a Bitcoin Core fork results in a chain that is easy to integrate with for exchanges and apps that support Bitcoin.
+雖然遞飛鏈是一個新的區塊鏈，但基于比特幣核心分叉的區塊鏈很容易與支持比特幣的交易所和應用程序。
 
-#### 2. Fast and Scalable
+#### 2. 快速且可擴展
 
-One of the proven disadvantages of the Bitcoin blockchain has been the slowness of transactions on the chain. Furthermore, scalability has become an issue as the number of blocks on the chain increase.
+比特幣區塊鏈的一個公認缺點是鏈上交易緩慢。此外，隨著鏈上區塊的數量增加，可擴展性已成為一個問題。
 
-In order to implement a blockchain with the required speed and scalability, DeFiChain fork of Bitcoin Core will include the following improvements:
+為了實現具有所需速度和可擴展性的區塊鏈，比特幣核心的遞飛鏈分叉將包括以下改進：
 
-- Block time: 30 seconds
-- Block size: 16 MB
+- 封鎖時間：30秒
+- 區塊大小：16 MB
 
-These improvements provide a transaction rate of over 2,200 transactions per second (tps) while maintaining manageable compute and bandwidth requirements to allow for decentralized operations of DeFiChain.
+這些改進提供了每秒超過2,200個交易（tps）的交易率，同時維持可管理的計算和帶寬需求，以允許遞飛鏈的去中心化操作。
 
-The following table compares Bitcoin and its forks, as well as Ethereum, to DeFiChain performance:
+下表將比特幣及其分叉以及以太坊與遞飛鏈性能進行比較：
 
 <div class="table-responsive">
   <table>
     <thead>
       <tr>
         <th scope="col"></th>
-        <th scope="col">Block time (s)</th>
-        <th scope="col">Block size (MB)</th>
-        <th scope="col">Tx block space (% of block size)</th>
-        <th scope="col">Min tx size (B)</th>
-        <th scope="col">Avg tx size (B)</th>
-        <th scope="col">Txs in a block (max)</th>
-        <th scope="col">Txs in a block (avg)</th>
-        <th scope="col">Max tps</th>
-        <th scope="col">Average tps</th>
+        <th scope="col">區塊時間(秒)</th>
+        <th scope="col">區塊大小(MB)</th>
+        <th scope="col">交易區塊空間(%區塊大小比例)</th>
+        <th scope="col">最小交易大小（B）</th>
+        <th scope="col">平均交易大小（B）</th>
+        <th scope="col">每區塊的交易量(最大值)</th>
+        <th scope="col">每區塊的交易量(平均值)</th>
+        <th scope="col">最高每秒傳輸交易量</th>
+        <th scope="col">平均每秒傳輸交易量</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <th>Bitcoin Core</th>
+        <th>比特幣</th>
         <td>600</td>
         <td>1</td>
         <td>98%</td>
@@ -391,7 +393,7 @@ The following table compares Bitcoin and its forks, as well as Ethereum, to DeFi
         <td>3.35</td>
       </tr>
       <tr>
-        <th>Bitcoin Cash</th>
+        <th>比特幣現金</th>
         <td>600</td>
         <td>10</td>
         <td>98%</td>
@@ -403,7 +405,7 @@ The following table compares Bitcoin and its forks, as well as Ethereum, to DeFi
         <td>33.45</td>
       </tr>
       <tr>
-        <th>Bitcoin SV</th>
+        <th>BSV</th>
         <td>600</td>
         <td>32</td>
         <td>98%</td>
@@ -415,7 +417,7 @@ The following table compares Bitcoin and its forks, as well as Ethereum, to DeFi
         <td>107.04</td>
       </tr>
       <tr class="highlight">
-        <th>DeFi Chain</th>
+        <th>遞飛鏈</th>
         <td>30</td>
         <td>16</td>
         <td>98%</td>
@@ -430,20 +432,20 @@ The following table compares Bitcoin and its forks, as well as Ethereum, to DeFi
     <thead>
       <tr>
         <th scope="col"></th>
-        <th scope="col">Block time (s)</th>
-        <th scope="col">Gas limit</th>
-        <th scope="col">Tx block space (% of block size)</th>
-        <th scope="col">Min tx size (gas)</th>
-        <th scope="col">Avg tx size (gas)</th>
-        <th scope="col">Txs in a block (max)</th>
-        <th scope="col">Txs in a block (avg)</th>
-        <th scope="col">Max tps</th>
-        <th scope="col">Average tps</th>
+        <th scope="col">區塊時間(秒)</th>
+        <th scope="col">燃料限制 </th>
+        <th scope="col">交易區塊空間(%區塊大小比例)</th>
+        <th scope="col">最低交易大小(燃料)</th>
+        <th scope="col">平均交易大小(燃料)</th>
+        <th scope="col">每區塊的交易量(最大值)</th>
+        <th scope="col">每區塊的交易量(平均值)</th>
+        <th scope="col">最高每秒傳輸交易量</th>
+        <th scope="col">平均每秒傳輸交易量</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <th>Ethereum</th>
+        <th>以太坊</th>
         <td>13.5</td>
         <td>10m0</td>
         <td>100%</td>
@@ -458,430 +460,475 @@ The following table compares Bitcoin and its forks, as well as Ethereum, to DeFi
   </table>
 </div>
 
-#### 3. Decentralized Consensus Mechanism
+#### 3. 去中心化共識機制
 
-Bitcoin Core is using Proof-of-Work (PoW) as the consensus mechanism. DeFiChain leverages the best aspects of PoW, that is, using hashing of the staking node’s ID for block creation while focusing the majority of the consensus on Proof-of-Stake (PoS). The major improvement in the PoW mechanism for DeFiChain is that staking nodes can run without investing in high-end servers and ultra-fast bandwidth connections. Thus, DeFiChain is creating the potential for easier and faster decentralization of the mode ownership and infrastructure.
+比特幣核心使用工作證明（PoW）作為共識機制。 遞飛鏈充分利用了PoW的最佳方面，即對鎖緊節點的ID進行散列以創建塊，同時將大多數共識集中在鎖緊證明（PoS）上。 遞飛鏈的PoW機制的主要改進是鎖定節點可以在不投資高端服務器和超高速帶寬連接的情況下運行。因此，遞飛鏈正在創造更容易和更快地去中心化模式所有權和基礎設施的潛力。
 
-#### 4. Non-Turing-complete Smart Contracts
+#### 4. 非圖靈完備智能合約
 
-Decentralized financial transactions are implemented through smart contracts. For example to ensure that borrowers repay lenders, smart contracts implement the conditions of lending in the code. For smart contract development, DeFiChain will be adding opcode support for decentralized financial instruction sets. The DeFi opcode complements and works in tangent with the Script scripting language of the existing Bitcoin Core protocol.
+去中心化金融交易通過智能合約實現。例如，為確保借款人償還貸款人，智能合約實施守則中的貸款條件。對于智能合約開發，遞飛鏈將為去中心化財務指令集添加操作碼支持。 DeFi操作碼補充並與現有比特幣核心協議的腳本語言保持一致。
 
-The DeFi scripting language is called Recipe, denoting the language’s role in describing and allowing for decentralized financial contracts.
+遞飛鏈腳本語言稱為Recipe，表示該語言在描述和允許去中心化的金融合約方面的作用。
 
-Bitcoin Script instruction words usually start with the prefix `OP_*`. Recipe instruction words carry the prefix `DF_*`.
+比特幣腳本指令詞通常以前綴開頭 `OP_*`。 遞飛鏈Recipe腳本指令詞帶有前綴 `DF_*`。
 
-#### 5. Immutable through Block Anchoring
+#### 5. 通過區塊錨定達成不可變性
 
-While the common discussion of immutability is a binary conversation (a blockchain is either immutable or not), in fact, immutability is on a spectrum. The level of immutability of a blockchain is related to the cost of a rollback or “fork out” of mined blocks, also known as a 51% attack.
+盡管不變性的常見討論是一個二元對話（一區塊鏈是不可變的還是不可變的），但事實上，不變性在一個方面。區塊鏈的不變性水平與礦區回退或「分叉」的成本有關，也稱為51%攻擊。
 
-It takes time to amass significant miners or minters to make 51% attack costly enough that it is generally regarded as immutable, meaning that a new blockchain is automatically at a disadvantage when it comes to the immutability of the records. Some newer blockchains have been taking shortcuts to increase its immutability quality, typically by compromising on decentralization. For example, the chains may allow only delegated stakers chosen by the founders, or by making the blockchain permissioned instead of permissionless. 
+聚集大量的采礦者或采礦者需要時間，使51%的攻擊成本足以使其通常被視為不可變，這意味著新的區塊鏈在記錄的不可變性方面會自動處于不利地位。一些較新的區塊鏈已經向捷徑以增加其不可變的質量，通常是在分權上作出妥協。例如，鏈可能僅允許創辦人選擇授權的權益質押者，或通過使區塊鏈獲得許可而非無許可。
 
-DeFiChain aims to maintain decentralization quality while maintaining immutability. To do so, DeFiChain will anchor its block to Bitcoin blockchain every few blocks. This further enhances the immutability of DeFiChain without any compromise to the decentralized nature of the chain.
+遞飛鏈旨在保持去中心化質量的同時保持不變。為此，遞飛鏈將每隔幾個區塊將其區塊錨定至比特幣區塊鏈。這進一步增強了遞飛鏈的不變性，而不影響鏈的中心化性。
 
-### Consensus Algorithm
+### 一致性算法
 
-#### Proof-of-Stake
+#### 權益證明
 
-DeFiChain utilizes a Proof-of-Stake (PoS) algorithm similar to Bitcoin Core’s original Proof-of-Work (PoW) mining algorithm. While DeFiChain is choosing PoS over PoW, at the same time, DeFi technology retains the best of the tested and proven technologies that were developed in the Bitcoin Core blockchain.
+遞飛鏈采用了一種類似于比特幣核心的原始工作證明（PoW）挖掘算法的權益證明（PoS）。盡管遞飛鏈選擇PoS而不是PoW，但與此同時DeFi技術保留了在比特幣核心區塊鏈中開發的經測試和證明的最佳技術。
 
-#### Masternodes for Staking
+#### 主節點權益質押
 
-To run a masternode (staking node), stakers must hold a fixed amount of DFI, initially set at 1,000,000. Masternodes on DeFiChain participate in active transaction validations and block creations. The staking amount is intended to be lowered with the stability and maturity of blockchain to encourage further decentralization.
+要運行主節點（權益質押節點），權益質押者必須持有固定數量的DFI，初始設置為1,000,000，DFIP #4 (遞飛鏈改進提議)後降低為20,000 DFI 。遞飛鏈上的主節點參與活動交易驗證和區塊創建。下注金額擬隨區塊鏈的穩定和成長而降低，以鼓勵進一步的去中心化。
 
-Each staking node can perform only 1 hash per second, with the nonce from Bitcoin Core PoW algorithm replaced by a staker’s UTXO.
-A new block is mined if it satisfies the following condition:
+每一個下注節點每第二只能執行1個散列，而比特幣核心PoW算法中的非重複的隨機數值將被權益質押者的UTXO所取代。
+滿足下列條件的新礦塊開采：
 
 `SHA256({staker’s UTXO}, {current timestamp, in seconds}, {stake modifier}) < {target}`
 
-The stakers check this requirement each second. If the block condition is less than the current target, then the stakers assemble and sign a new block. 
-Staker’s UTXO require 20 confirmations before it can be accepted as a stake.
+權益質押者每秒檢查這個條件。如果區塊條件小于當前目標，則權益質押者集合並簽署一個新的區塊。
+權益質押者的UTXO在被接受為一股權益之前需要20次確認。
 
-#### Stake Modifier
+#### 權益質押編輯器
 
-A stake modifier is a collective source of random entropy. Without a stake modifier, the future PoS kernel would be completely predictable. A good stake modifier needs to be neither predictable nor influance-able by stakers.
+權益質押編輯器是隨機信息的集體來源。如果沒有權益質押編輯器，未來的PoS內核將是完全可預測的。一個好的權益質押編輯器需要不能隨意被預測，也不可被權益質押者影響。
 
-DeFiChain’s staker modifier is set to be `SHA256({previous stake modifier}, {masternode ID})`.
+遞飛鏈的權益質押編輯器設置為 `SHA256({previous stake modifier}, {masternode ID})`。
 
-#### Validation of Future and Past Headers
+#### 未來和過去區塊頭的驗證
 
-Unlike PoW, block header validation requires a stakes table. Headers get verified in batches before full blocks are downloaded, so the stakes table is used to verify future stakes.
-To be able to verify future headers, the blockchain needs to apply an additional rule, so any change of the stakes database gets written right away, but takes effect only after 300 blocks. As a result, any node will be able to verify any block header against its current stake, if a block header isn’t further in the future (or in the past) than 300 blocks.
+與工作證明PoW不同，區塊頭驗證需要一個權益質押表。在下載完整區塊之前，會分批驗證區塊頭，因此會使用權益質押表來驗證未來的權益質押。
+為了能夠驗證未來的區塊頭，區塊鏈需要加入一個新的規則，這樣任何對權益質押數據庫有的更改都會被立即寫入，但只有在300個區塊之後才會生效。如果一個區塊頭在過去或未來不超過300個區塊，任何節點將能夠根據其當前權益質押來驗證任何區塊頭。
 
-#### Nothing at Stake Protection
+#### 無利害關系保護
 
-For PoS blockchains, there’s no limit to how many conflicting blocks a staker may sign. As a result, stakers may stake for every possible fork or branch, which weakens the finality of a PoS blockchain. This problem is known as a double-sign and is not possible in PoW blockchains, where a miner cannot mine all the possible branches without splitting mining capability. In PoW, this represents an intrinsic economic penalty. However, PoS blockchains cannot apply an inherent economic penalty for signing conflicting blocks on different branches.
+在PoS區塊鏈上，權益質押者可以簽署的沖突區塊數量沒有限制。因此，權益質押者可能會在每一個分叉都進行權益質押，這削弱了PoS區塊鏈的終結性。這個問題被稱為雙號，在PoW區塊鏈中是不可能發生的，因為在PoW區塊鏈中，如果不分離采礦能力，采礦者無法開采所有可能的分支。在PoW中，這是一種內在的經濟處罰。然而，PoS區塊鏈不能針對在不同分支簽署沖區塊應用固有的經濟處罰。
 
-Therefore, in order to enhance the finality of DeFiChain, in PoS, it’s necessary to detect double-signs and penalize them through an explicit mechanism.
+為了提高遞飛鏈的終結性，在PoS中，有必要對雙號進行檢測並通過明確的機制進行處罰。
 
-#### Detection of Double-sign
+#### 雙號檢測
 
-Each block header has a sequence number as a number of blocks that a particular staker has minted before a particular block. If two blocks are minted with the same sequence number, it means that a staker has double-signed, even if the blocks have different ancestors, i.e. across branches.
+每一個區塊頭都有一個序列號，一個特定的權益質押者在一個特定的區塊之前鑄造的一系列區塊。如果兩個區塊的鑄造順序號相同，這表示一個權益質押者有雙重序號，即使區塊有不同的祖先，如跨分支。
 
-During a block’s generation, a staker has the right to include the double-sign proofs into his block header in exchange for only half of the penalty.
+在一個區塊的生成過程中，一個權益質押者有全力在自己的區塊頭中加入雙號證明，減去一半的處罰。
 
-#### Double-sign Penalty
+#### 雙號罰款
 
-To be able to apply a penalty to stakers who double-sign, DeFiChain has to disallow immediate withdrawing of stake. Thus, when a deactivation transaction is confirmed, DeFiChain requires 3000 blocks to pass. At a block time of 30 seconds, 3000 blocks is equivalent to 25 hours.
+為了對雙號的權益質押者施加懲罰，遞飛鏈必須禁止立即收回權益質押。當確認停用交易時，遞飛鏈需要3,000個區塊號通過。在30秒的輪擋時間內，3,000個輪擋相當于25小時。
 
-The double-sign penalty is 10 times the block rewards, deducted from the collateral. This also disqualifies the stakers from further staking immediately. The staker wanting to get back to staking has to re-put in fresh stake UTXO of 1,000,000 DFI. Running the official DeFiChain node does not cause any unintentional or accidental double-sign. Double-sign happens only in cases of malicious intent.
+雙號罰款是從抵押品中扣除的集體獎勵的10倍。這也使權益質押者立即失去進一步下注的資格。要重新開始進行權益質押必須重新投入兩萬DFI的UTXO新股份。運行遞飛鏈主節點不會導致任何無意或意外的雙號。雙號僅在惡意情況下發生。
 
-#### Time Drift Attack
+#### 時間偏差攻擊
 
-The chain uses a maximum future block time of only approx. 5 seconds, to protect the chain from time drift attacks, where stakers set a block time too far ahead in the future, in order to claim a reward for themselves. DeFi also uses NTP time synchronization to allow for ongoing adjustment to the block time.
+遞飛鏈使用未來最長格擋時間約五秒，以保護鏈免受時間漂攻擊，其中，權益質押者為了為自己爭取回報，在未來設置了太遠的禁區時間。遞飛鏈還使用NTP時間同步以允許持續調整區塊時間。
 
-### Bitcoin Anchoring
+### 比特幣錨定
 
-DeFiChain stakers publish blockchain block hashes periodically to the Bitcoin blockchain, providing public audit and block anchoring of DeFiChain to the strongest, most secure blockchain in the world.
+遞飛鏈權益質押者定期向比特幣區塊鏈發布區塊鏈塊哈希，提供公共審計，並將遞飛鏈區塊錨定至全球最強大、最安全的區塊鏈。
 
-Every 60 blocks (approximately 30 minutes), a staker gets the right to write the Merkle root of the previous block onto the Bitcoin blockchain. The information written is, specifically, the txid of the Bitcoin transaction, Bitcoin block header and Merkle proof containing the Merkle root onto the newly mined block. By doing so, the staker will be rewarded an extra block reward in DFI, incentivising nodes to regularly anchor all records to the Bitcoin blockchain.
+每60個區塊（約30分鍾），一個權益質押者有權將前一個區塊的Merkle根寫入比特幣區塊鏈。所編寫的資訊是比特幣交易的txid、比特幣區塊頭和新開采區塊上Merkle根的Merkle證明。利用這個做法，權益質押者將獲得更多DFI的區塊獎勵，也同時激勵主節點定期錨定到比特幣區塊鏈。
 
-![Bitcoin Ancoring](/img/white-paper/every-60-blocks.png)
+![Bitcoin Ancoring](/img/white-paper/zht/every-60-blocks.png)
 
-DeFiChain node will include a built-in Bitcoin Simplified Payment Verification (SPV) client. SPV clients sync the Bitcoin blockchain by downloading only block headers which is sufficient information for nodes to add and validate the anchors.
+遞飛鏈節點將包含一個內置的比特幣簡化支付驗證（SPV）客戶機。 SPV客戶只需下載區塊頭即可同步比特幣區塊鏈，而區塊頭資訊足以讓節點添加並驗證錨定。
 
-## DeFi Building Blocks
+## 遞飛鏈構建區塊
 
-To achieve our goals of enabling decentralized finance transactions on DeFiChain, the following build blocks will be included as a base **native** components on DeFiChain.
+為了實現我們在遞飛鏈上實現去中心化財務交易的目標，以下構建塊將作為遞飛鏈上的**基本本地**組件包括在內。
 
-### Tokenization as a DeFi Standard Token (DST)
+### 遞飛鏈標准代幣（DST）
 
-The implementation of the features described in this whitepaper is performed with the use of standardized tokens. This chapter describes the mechanics of the tokens, interaction with other cryptoassets (tokens), and how they are used in DeFiChain.
+本白皮書所述的功能是使用標准化的代幣進行。本章描述標准代幣的機制、與其他密碼資産（代幣）的互動以及如何在遞飛鏈上使用它們。
 
-### Cross-chain Mechanics
+### 跨鏈技術
 
-DeFiChain uses token standards to bring in external tokens to DeFiChain in a trustless manner and allow trustless financial contracts and trading of all major cryptoasset tokens. The token standards are similar to ERC20 on Ethereum and Omni on Bitcoin blockchain. Through this standard, DeFiChain allows tokenization of any assets.
+遞飛鏈使用代幣標准以無信任的方式將外部代幣引入遞飛鏈，並允許無信任的金融合約和所有主要加密資産代幣的交易。代幣標准類似于以太坊的ERC20和比特幣區塊鏈的Omni。通過這個標准，遞飛鏈允許對任何資産進行代幣化。
 
-On DeFiChain the standardized tokens are called DeFi Standard Token (DST). DST tokens are of two different types: DCT, created by users of the system, and DAT, which are asset-backed tokens created with the backing of cryptoassets. 
+在遞飛鏈上，標准化的代幣稱為DeFi-Standard Token（DST）。 DST代幣有二種不同類型：由遞飛鏈生態用戶創建的DCT和由加密資産支持創建的資産支持的代幣DAT。
 
-![Custom token](/img/white-paper/custom-token.png)
+![Custom token](/img/white-paper/zht/custom-token.png)
 
-### DeFi Custom Token (DCT)
+### 遞飛鏈自定代幣（DCT）
 
-DCTs are custom tokens that can be created by any user to represent any project or set of smart contracts implemented on DeFiChain. Any user can create such a DCT. To prevent abuse, creation of any proprietary DCT requires the user to lock up 1,000 DFI for the time that the tokens are issued. The DFI is returned when the tokens are revoked and the DCT is cancelled.
+DCT是任何用戶都可以創建的自定代幣，可用于表示在遞飛鏈上實現的任何項目或一組智能合約。任何遞飛鏈用戶都可以創建DCT。為了防止濫用，創建任何專有的DCT都需要用戶在頒發代幣時鎖定1,000個DFI。當撤銷代幣並取消DCT時，鎖定的DFI將返回。
 
-DCT tokens are not backed intrinsically by DeFiChain. They may be backed through an external mechanism, but it’s essential to note that DeFiChain does not intrinsically back them. An example on the Ethereum blockchain would be DGX, which is an ERC20 token backed by gold. Ethereum does not back DGX, although the token is created through ERC20. The Digix Foundation is accountable for the value of that token. Similarly, DCT is the DeFi parallel to ERC20 on Ethereum. Creation and issuance of tokens on DeFi is simplified and the potential for errors in the smart contract is eliminated, because creators of DCT can set only the parameters below, using an easy to use scripting interface.
+DCT代幣本質上不是由遞飛鏈支持的。 DCT代幣可以通過外部機制支持，但需要注意遞飛鏈並不能從本質上支持DCT。以太坊區塊鏈上的例子之一是DGX，它是一個由黃金支持的ERC20代幣。以太坊本身不支持DGX，盡管DGX代幣是ERC20所創建的。 Digix基金會對DGX代幣的價值開發負責。 DCT自定代幣如以太坊上的ERC20。由于DCT的創建者可以用易于使用的腳本接口僅設置以下參數，因此簡化了在DeFi上創建和發行代幣，並消除了智能合約中出現錯誤的可能性。
 
 #### DCT Parameters:
 
-- DCT ID: <UDID> Unique blockchain identifier for the token.
-- Name: <Token name> Name of the tokens.
-- Symbol: The ticker symbol for the tokens. The DCT protocol will provide a reference for ensuring the choice will be a unique symbol.
-- Decimal places: Divisible number of decimal places for the tokens. This cannot be changed once it is set. 
-- Total initial supply: Initial issue of tokens during the event generated.
-- Initial distribution list: List of addresses for distribution of tokens. 
-- Minting support: yes/no
-- Final supply limit (optional): Immutable total supply limit. If minting is supporting this will define the ceiling on how many tokens the token owner can mint in total (some may be reserved at this time). If this parameter is left blank, this is an unlimited supply token. This cannot be changed after the initial definition of the token. 
-- Tradeability: yes/no. This is a one-way switch allowing the token owner to transfer tokens during initial distribution period and also to decide when a token is tradeable/movable. To ensure the decentralized nature of DCT, once “tradeability” is set to yes, the owner is no longer able to reverse the tradability of a token. Typically, when creating a token, this should be turned to “no” until the initial distribution is confirmed to be accurate.
+- DCT ID: <UDID> 代幣的唯一區塊鏈標識。
+- 名稱： <Token name> 代幣的名稱。
+- 符號：代幣的股票代號。 DCT協議將提供一個參考，以確保選擇將是唯一的符號。
+- 小數位數：代幣的小數位數。設置後不能更改。
+- 初始供應總額：在産生代幣中初始發行的數量。
+- 初始分發列表：用于分發代幣的地址列表。
+- 支持：是/否
+- 最終供應限額（可選擇的）：不可變總供應限額。如果支持鑄造，這將遞飛鏈代幣所有者總共可以鑄造代幣數量的上限（可在此選擇保留一些代幣）。如果該參數不填入，表示這是一個無限制的供應代幣。在設立DCT代幣記後，這不能更改。
+- 可交易性：是/否。這是一個單向開關，允許代幣所有者在初始分發期間轉讓代幣，並決定何時可交易/可移動代幣。為確保DCT的去中心化性質，一旦「可交易」設置為「是」，所有者不再能夠逆轉DCT代幣的可交易性。在創建一個新的DCT代幣時，可先設為「否」來確認初始分發。
 
-Using this interface, there is no need to have a smart contract developer, and there is no need for a security audit.
+使用此界面，無需智能合約開發人者，且無需進行安全審核。
 
-### DeFi Asset Token (DAT)
+### 遞飛鏈資産代幣（DAT）
 
-DeFi Asset Tokens (DATs) are backed in a decentralized manner. DATs on DeFiChain are tokens and crypto assets external of DeFiChain, such as:
+DeFi Asset Tokens（DAT）遞飛鏈資産代幣以去中心化式支持。遞飛鏈上的數據是遞飛鏈外部的代幣和加密資産，例如：
 
-- DBTC, backed by BTC
-- DETH, backed by ETH
-- DXRP, backed by XRP
-- DUSDT, backed by USDT
-- DBCH, backed by BCH, etc.
+- DBTC, 由BTC支持
+- DETH, 由ETH支持
+- DXRP, 由XRP支持
+- DUSDT, 由USDT支持
+- DBCH, 由BCH支持...等。
 
-New DATs are introduced to the system through voting by masternodes. This ensures that only assets that gather the most interest amongst DeFiChain users get introduced.
+主節點通過投票向系統引入新的資産代幣。這能確保只有在遞飛鏈用戶中最感興趣的資産才會被引入遞飛鏈。
 
-### Economic Pegging of DATs
+### DAT的經濟挂鈎
 
-The goal of DAT is to have it represent the native asset on the other blockchains, e.g. 1 DBTC should represent 1 BTC. 
+DAT的目標是代表其他遞飛鏈上的資産，例如一個DBTC代表一個BTC。
 
-There are two approaches to this:
+有二種方法：
 
-1. Stablecoin approach
-    - For every single issued 1 DBTC, 1 BTC has to be locked up in an address or a smart contract. 
-    - While this would help to build a guarantee to DBTC, it introduces some other issues – country-party risks and affect the decentralized nature of DeFi. 
+1. 穩定幣法
+    - 每發出一個DBTC，一個BTC必須鎖定在一個地址或一個智能合約中。
+    - 雖然這將有助于建立對DBTC的擔保，但也引入了一些國家間的淺在風險，並影響到遞飛鏈的去中心化性質。
 
-2. Economic pegging
-    - By providing a strong guarantee that the DAT representing an asset has its price closely tracking the native asset, i.e. by holding DBTC, one can have a good confidence that the value of DBTC will track that of BTC.
+2. 經濟挂鈎
+    - 經濟挂鈎方式提供一個強有力的保證，也代表一項資産的DAT價格能夠密切跟隨鏈下資産。通過持有DBTC，可以讓DBTC的價值能夠對等並確認BTC的價值。
 
 
-In order for us to achieve economic pegging, the following building blocks are built natively on DeFiChain:
+在遞飛鏈上構建以下區域能實現經濟挂鈎：
 
-1. Loan Contract
-2. Decentralized Exchange (DEX)
-3. Cross-chain Exchange (XCX)
-4. Pricing Oracles
+1. 貸款合同
+2. 去中心化交易所
+3. 跨鏈交易所
+4. 定價預言
 
-![DAT overview](/img/white-paper/dat-overview.png)
+![DAT overview](/img/white-paper/zht/dat-overview.png)
 
-### Loan Contract
+### 貸款合同
 
-Loan Contract is designed to allow the owner of the contract to take a collateralized loan against collateral locked in the contract. Each loan contract is unique to every owner (address) on DeFiChain. 
+貸款合同的目的是讓合同的所有者以合同中鎖定的抵押物取得抵押貸款。每個貸款合同對遞飛鏈上的各個所有者地址都是唯一的。
 
-Any user can open a loan contract on DeFiChain, free of charge. The user who opens a loan contract owns the specific contract. This ownership, however, is transferable.
+任何用戶都可以免費在遞飛鏈上建立貸款合同。建立貸款合同的用戶擁有特定合同。所有權可轉讓。
 
-Once a loan contract is opened, DFI can be sent to fund the loan collateral. Once a loan contract is funded, it allows the owner to take out a loan by minting DATs up to a certain collateralization ratio. The minimum collateralization ratio can be adjusted by DeFiChain DAO and starts at 150%. In other words, $1,500 worth of collateral (in DFI), allows the loan contract owner to take out a maximum of $1,000 in loans.
+一旦貸款合同建立，可發送DFI為貸款抵押提供資金。貸款合同獲得資金後，可允許所有者以一定的抵押比率通過鑄造DAT資産代幣獲得一筆貸款。最低抵押率可由遞飛鏈DAO調整，並從150%開始。換言之，價值1,500美元的抵押品（在DFI中）允許貸款合同所有人最多獲得1,000美元的貸款。
 
-Minted DATs are subject to a floating borrowing rate. A loan contract has no expiry date. The owner is able to take out a loan for as long as they desire, as long as the collateralization ratio stays above 150% at all times.
+一旦貸款合同打開，可發送DFI為貸款抵押品提供資金。一旦貸款合同獲得資金，其允許所有人通過將基准利率設定為某一抵押比率來獲得貸款。最低抵押率可由遞飛鏈DAO調整，並從150%抵押率開始。換言之，價值1,500美元的DFI抵押品允許貸款合同所有者最多獲得1,000美元的貸款。
+
+鑄造基准須遵守浮動借貸利率。貸款合同沒有到期日。只要抵押率一直保持在150%以上，所有者都可以按自己的意願貸款。
 
 ```
-Collateralization ratio = Collateral / (Loan + accrued interest)
+抵押率 = 抵押品 / (貸款 + 應計利息)
 ```
 
-If a loan contract falls below the 150% collateralization ratio at any point in time, its collateral is liquidated via Decentralized Exchange (DEX) to pay off accrued interest. There will be an additional 15% liquidation penalty to discourage loan contracts from having to be liquidated. It is the responsibility of the loan contract owners to monitor the collateralization ratio to prevent an unwanted liquidation. 
+如果貸款合同在任何時間點低于150%的抵押率，其抵押品將通過去中心化交易所（ DEX）進行清算，以支付應計利息。另外將有15%的清算罰款，以阻止貸款合同不得不清算。貸款合同所有者有責任監控抵押比率，以防止不必要的清算。
 
-If a loan contract is close to minimum collateralization ratio, the owner must take one of the following steps to prevent liquidation and having to incur 15% liquidation penalty:
+如果貸款合同接近最低抵押率，所有者必須采取以下措施之一防止清算，並須招致15%的清算罰款：
 
-1. Deposit more DFI into the loan contract, thereby increasing its collateral and collateralization ratio.
-2. Pay back some of the loan (or accrued interest), thereby decreasing the loan contract’s loan amount and increasing its collateralization ratio.
+1. 在貸款合同中存入更多的DFI，從而提高其抵押品和抵押率。
+2. 償還部分貸款或應計利息，從而降低貸款合同的貸款金額並提高其抵押率。
 
-Closing a loan contract entitles its owner to get back all 100% of its collateral. To close a loan contract, the owner has to pay back the loan in full, plus the accrued interest in its entity in the DAT (e.g. DBTC). Upon liquidation of the loan, the minted DAT is burned, and the initial minted DAT and the interest will be converted into DFI via the DeFi DEX described in this paper.
+完成簽訂貸款合同後，其所有者可收回100%的抵押品。所有者必須全額償還貸款，加上遞飛鏈資産代幣（如DBTC）中其實體的應計利息，來完成貸款合同。貸款清算時，將燃燒鑄造的遞飛鏈資産代幣，並利用本文所述的去中心化交易所DEX將初始鑄造的DAT和利息轉換為DFI。
 
-While this concept is not new to the DeFi system, what is novel is the possibility to collateralize any asset due to DeFiChain’s nature.
+盡管這概念對DeFi生態並不陌生，但由于遞飛鏈的設計性質，將任何資産抵押的可能性是新的。
 
-1. Alice opens a loan contract and funds it with 150k DFI.
-2. With DFI at $0.10 spot rate, Alice’s loan contract now has $15,000 worth of collateral.
-3. At the minimum collateralization ratio of 150% she can take out a maximum of $10,000 worth of DBTC, which is pegged to BTC spot price.
-4. Since the DBTC loan via loan contract accrues interest, and DBTC and the DFI price fluctuate, Alice decides to only take out $5,000 worth of DBTC, i.e. 0.5 DBTC, giving her loan contract a collateralization ratio of: 15000/5000 = 300%, well above 150%.
-5. Over-collateralization allows for some room for price movements of DBTC. If the BTC price increases to $15,000, Alice’s loan of 0.5 DBTC would now be worth $7,500. Her loan contract now has a collateralization ratio of: 15000/7500 = 200%, still above 150%, so liquidation would not be triggered even in the case of this type of price shift.
-6. The interest rate for each DAT loan differs. Assuming the DBTC loan rate is 5% annually, taking out a loan for a year, in order to close her loan contract and to fully redeem her initial 150k DFI, Alice has to pay back 0.5 DBTC * 1.05 = 0.525 DBTC by the end of the year.
+1. 愛麗絲簽訂了一份貸款合同，並用15萬DFI為其提供資金。
+2. 如果DFI的即期利率為0.10美元，愛麗絲的貸款合同現在有價值15,000美元的抵押品。
+3. 在最低抵押率為150%的情況下，她最多可以提取價值10,000美元的DBTC，與BTC現價挂鈎。
+4. 由于通過貸款合同獲得的DBTC貸款産生利息，且DBTC和DFI市場價格波動，愛麗絲決定僅提取價值5,000美元的DBTC，也就是0.5 DBTC，使其貸款合同的抵押率為：15,000/5,000=300% ，遠高于150%。
+5. 過度抵押為DBTC的價格變動提供了一些空間。如果BTC價格上升至15,000美元，愛麗絲0.5 DBTC的貸款將價值7,500美元。她的貸款合同現在的抵押率為：15,000/7,500=200%，仍然高于150%，因此即使在這種價格變動的情況下也不需要直接清算。
+6. 各項DAT貸款的利率不同。假設DBTC貸款利率為每年5%，貸款期限為一年，為了完成貸款合同並完全贖回最初的15萬DFI，愛麗絲必須在年底前償還0.5 DBTC*1.05=0.525 DBTC。
 
-![loan contract](/img/white-paper/alice-pdc.png)
+![loan contract](/img/white-paper/zht/alice-pdc.png)
 
-### Decentralized Exchange (DEX)
+### DEX去中心化交易所
 
-The DeFi internal DEX provides decentralized trading for all DeFi tokens and DFI itself, which means that all tokens: DFI and DCT (DAT and DCT) can be listed on DeFiChain DEX. DEX will initially launch with DFI as the base trading pair, providing markets such as DBTC/DFI, DETH/DFI, DUSDT/DFI, etc. With increasing volume, other base trading pairs can be introduced, subject to a DAO approval, providing markets such as DETH/DBTC, DFI/DUSDT, etc.
+遞飛鏈的DEX為所有遞飛鏈代幣和DFI本身提供去中心化交易，也包含所有代幣：DFI和DCT（DAT和DCT）可以在遞飛鏈DEX上幣。 DEX最初推出並以DFI為基礎交易，提供DBTC/DFI、DETH/DFI、DUSDT/DFI等貨幣市場。隨著交易量的增加，經一DAO批准，可引入其他交易成對，提供DETH/DBTC、DFI/DUSDT等市場。
 
-DEX on DeFiChain operates without the need to pass custody to any intermediaries. Users are able to trade on their own in a trustless manner. One of the key differentiator about DeFiChain as compared to many other decentralized financial solutions is that DeFiChain is not only a consensus protocol facilitating DeFi, it is also comes with a very simple to use client user interface (UI) that allows users to interact directly on the blockchain without any intermediaries.
+遞飛鏈上的DEX無需向任何中介機構轉移托管。用戶可以利用無信任的方式自行交易。與許多其他去中心化金融項目相比，遞飛鏈的關鍵區別在于遞飛鏈不僅是一個促進DeFi的一致協議，它還附帶一個非常簡單的用戶界面（UI），允許用戶直接在區塊鏈上進行交互，而無需任何中介。
 
-### Cross-chain Exchange (XCX)
+### 跨鏈交易所 
 
-A user holding DBTC might be interested in holding of actual BTC instead of a DeFi pegged BTC token (DBTC).
+持有DBTC的用戶可能對持有實際的BTC感興趣，而不是持有與遞飛鏈挂鈎的BTC代幣（DBTC）。
 
-The DeFi Cross-chain Exchange (XCX) allows anyone to do exactly that. XCX allows listing of DATs with its native tokens, e.g. DBTC for BTC, DETH for ETH, DXRP for XRP. Actual transaction is carried out through the trustless swap of both tokens commonly known as atomic swap. Atomic swap guarantees that either both parties receive their exchanged coins, or neither transactions go through – providing a strong cryptographic guarantee that no one party is able to cheat the other.
+遞飛鏈的跨鏈交易所（XCX）能允許任何人准確地做到這一點。 XCX允許將遞飛鏈資産代幣與市場貨幣一起上市（如BTC的DBTC、ETH的DETH、用于XRP的DXRP）。實際交易是通過兩種代幣的無信任的原子交換進行的。原子交換保證了雙方都能收到想交換的貨幣，否則交易不會進行。這提供強大又穩固的加密保證，任何一方都不能欺騙另一方。
 
-We use the following terms to describe the parties in the XCX:
+我們使用以下術語描述XCX中的各方：
 
-- Borrower: a person owning a DAT and wanting to get a native coin, e.g, a person who has DBTC and wanting to obtain BTC through the XCX.
-- Lender: a person owning BTC and receiving a DAT through the XCX, either temporarily for the duration of the XCX, or permanently, if the XCX expires.
+- 借款人：擁有DAT並希望獲得貨幣的人，例如，擁有DBTC並希望通過XCX獲得BTC的人。
+- 貸方：擁有BTC並通過XCX接收DAT的人，在XCX期間暫時或永久（如果XCX到期）。
 
-XCX orders contain several parameters that can be freely decided by the market marker (first lister of an order). For selling of DBTC for BTC (i.e. someone who’s interested in receiving actual BTC), the parameters are:
+XCX訂單包含多個參數，可由市場標記自由決定（訂單的第一個上市者）。用于銷售BTC的DBTC（即有興趣接收實際BTC的人），參數為：
 
-- Amount: Amount of coin/DAT a seller is looking for and how much DAT is locked up.
-- Premium: Amount of additional fee a coin seller stands to make from this trade (Premium is listed per unit amount, thus allowing for partial fulfillment of trade orders). Together with expiry, it can also be considered as lending interest to the buyer. The Premium is paid instantly once an XCX is matched, before expiry of the lending contract. Premium can be positive (+) or negative (-) depending on supply and demand.
-- Guarantee: An optional additional amount in DBTC and/or DFI that is locked in the XCX that will provide an extra incentive for a lender as it resolves in either of the following  two outcomes:
-  a. Released back to the borrower should the BTC amount be paid up before expiry.
-  b. Release to the lender should the contract expire without the borrower making a payment thereby constituting an extra incentive.
-- Expiry: Time when the contract expires, it can be set as a date in the past for immediate settlement, i.e. no lending, but straight-out swap.
-- Native token address: Address to send BTC to for executing the contract.
+- 數量：賣方尋找貨幣幣或DAT數量和DAT被鎖定的數量。
+- 溢價：一個貨幣銷售商從交易中可以獲得的額外費用金額（溢價按每單位金額列示，因此允許部分完成交易訂單）。連同到期日，也可被視為向買方借出利息。在借貸合同到期之前，一旦一對XCX成對，將立即支付溢價。溢價可為正（+）或負（-），以供求而定。
+- 擔保：在DBTC和/或DFI中，鎖定在XCX中的可選額外金額可為貸款人提供額外獎勵，也解決以下兩個結果之一：
+  a. 如果在到期前付清貸款總額，則歸還給借款人。
+  b. 如果合同到期而借款人未付款，則向貸款人發放貸款，從而構成額外獎勵。
+- 到期日：指合同到期的時間。可以設定為過去的一個日期，即時結算，即不放貸，但直接兌換。
+- 鏈上代幣地址：發送BTC以執行合約的地址。
 
-#### First Example:
+#### 第一個例子：
 
-Alice has 1 DBTC and wants 1 BTC so she can trade on a centralized exchange.
+愛麗絲有1個DBTC，並希望有1個BTC，以便可以在交易所進行交易。
 
-Bob has 1 BTC that he does not need for 1 month, hoping to generate some lending interest during that period of time.
+羅伯特有1個BTC在一個月內不需要用到，也希望在這段時間內産生一些貸款利息。
 
-1. Alice lists the following XCX order:
-- Amount: 1 DBTC/BTC
-- Premium: 8,000 DFI
-- Guarantee: 0.1 DBTC
-- Expiry: December 31, 2019 – approx. 1 month.
-- Address: Alice lists her BTC deposit address
-2. Bob accepts the offer by sending a transaction on DeFiChain.
-3. Bob receives a confirmation on DeFiChain that his order is accepted. In case there are multiple order acceptance transactions.
-4. Bob sends 1 BTC to Alice’s BTC deposit address as listed in the XCX order and sends a transaction on DeFiChain with the BTC txid as receipt. Bob also specifies a receiving BTC address on the same transaction for Alice to repay the 1 BTC later on. 
-5. Multiple DeFiChain stakers with BTC bridges confirm that Bob has indeed sent the amount as agreed and the that the txid is valid.
-6. XCX’s premium of 8000 DFI is instantly released to Bob. Bob can do what he wants with the DFI straight away with no strings attached. It is Bob’s to keep for this trade.
+1. 愛麗絲列出以下XCX順序：
+- 數量：1個DBTC或BTC
+- 溢價：8,000 DFI
+- 擔保：0.1 DBTC
+- 有效期：2019年12月31日（約1個月有效）。
+- 地址：愛麗絲列出其BTC存款地址
+2. 羅伯特通過遞飛鏈上發送的一個交易來接受合同。
+3. 羅伯特收到遞飛鏈確認這個訂單已被接受。並確認和避免有多個訂單接受交易。
+4. 羅伯特將1個BTC發送到XCX訂單中所列愛麗絲的BTC存款地址，並以BTC txid作為發送遞飛鏈上的一個交易收據。羅伯特還指定同一交易中的一個接收BTC地址，以便愛麗絲稍後還1個BTC。
+5. 多數遞飛鏈鏈權益質押者與比特幣橋梁確認羅伯特確實已按約定發送金額和確認txid有效。
+6. XCX的8,000 DFI溢價立即發送給羅伯特。羅伯特可以直接使用DFI做他想做的事情，而無需附加任何條件。這項交易由羅伯特保管。
 
-Now, Alice has 1 BTC and Bob has 8000 DFI. Alice also has 1 DBTC locked up on XCX order and Bob is the beneficiary of that BTC. Note that the beneficiary of an XCX is transferable, i.e. Bob is able to sell the XCX with Alice to a third party (this allows for decentralized debt selling and tokenization of receivables).
+現在愛麗絲有1個BTC，羅伯特有8,000個DFI。愛麗絲還有1個DBTC鎖定在XCX訂單上，羅伯特是這筆BTC交易的受益人。注意，XCX的受益人是可轉讓的，羅伯特能夠與愛麗絲將XCX出售給第三方（這允許去中心化的債務出售和應收款的代幣化）。
 
-Should Alice wish to redeem her 1 DBTC from the XCX before the time is up, Alice will send Bob the 1 BTC she borrowed earlier to Bob’s address specified in the XCX and send the acknowledgment on DeFiChain. Upon confirmation by stakers with a BTC bridge, the XCX contract now closes and Alice gets her 1 DBTC back, having paid 8,000 DFIs as interest.
+如果愛麗絲希望在時間結束前從XCX贖回這個DBTC，愛麗絲將向羅伯特發送之前借貸的1個BTC到XCX中羅伯特的指定地址，並在遞飛鏈上確認發送。在一個BTC橋中的權益質押者確認後，XCX合同進行結束，愛麗絲收回1個DBTC，並支付8,000個DFI作為利息。
 
-Bob gets his 1 BTC back (keeping his 8000 DFI as lending interest).
+羅伯特收回其1個BTC並保留8,000個DFI作為貸款利息。
 
-Should Alice wish not to redeem the XCX before the expiry, Bob gets to keep Alice’s 1 DBTC.
+如果愛麗絲不希望在合同到期前贖回XCX，羅伯特將保留愛麗絲的1個DBTC。
 
-Alice gets to keep the 1 BTC (minus 8000 DFI interest) and Bob now gets 1 DBTC (plus 8000 DFI interest). Additionally Bob received the Guarantee of 0.1 DBTC providing him with an extra 10%.
+愛麗絲保留1個BTC和減去8,000個DFI利息，羅伯特現在獲得1個DBTC（加8,000個DFI利息）。此外，羅伯特獲得0.1 DBTC的擔保，提供額外的10%獲利。
 
-![XCX](/img/white-paper/alice-bob-xcx.png)
+![XCX](/img/white-paper/zht/alice-bob-xcx.png)
 
-#### Second Example:
+#### 第二個例子：
 
-In a second scenario Charlie has 1 DBTC and wants 1 BTC. He has no intention of paying it back and getting his DBTC back. He also does not want to include an additional guarantee, so he adds a higher Premium and an immediate Expiry. Charlie would list the following XCX order:
+在第二個情況下，查利有1個DBTC並希望擁有1個BTC。他無意償還BTC債務，也無意收回DBTC。他也不想增入額外的擔保費，因此他增加了更高的保費並立即到期。查利會列出以下XCX訂單：
 
-- Amount: 1 DBTC/BTC
-- Premium: 12000 DFI
-- Guarantee: None
-- Expiry: Immediate
+- 數量：1個DBTC/BTC
+- 溢價：12,000 DFI
+- 擔保：無
+- 到期日：立即
 
-Dave, notices the order has no guarantee and an immediate expiry and knows that this XCX order expires instantly. He happily provides the counter-trade to Charlie, giving him 1 BTC and receiving immediately 1 DBTC + 12000 DFI.
+戴夫注意到這個訂單沒有擔保而且立即到期，也知道此XCX訂單即時到期。他愉快地向查利提供1個BTC並立即接收1個DBTC+12,000個DFI。
 
-A Guarantee is therefore not a must, but a potential incentive for the lender to know whether he/she has to exchange the received funds afterwards or whether he/she will get the original native coins back.
+擔保並不一定要存在，他是個能激動交易淺在潛在因素。擔保能讓資産借出人能了解他是否需要行交易內容或最終能保持擁有交易代幣中的權益。
 
-### Pricing Oracles
+### 定價預言機
 
-A Pricing Contract is a smart contract on DeFiChain allowing multiple trusted and appointed parties to submit periodic price feeds of DATs and DFI. 
+定價預言合同是遞飛鏈上的一個智能合同，允許多個受信任和指定的各方定期提交DAT遞飛鏈資産代幣和DFI定期價格資訊。
 
-Multiple Pricing Contract oracles are chosen by the DeFi DAO (explained in the next chapter).
+DeFi DAO內含多方的定價預言，能更准確做初預言機價格（下一章中解釋）。
 
-### Use Case Examples
+### 使用案例
 
-Following are examples of how the technical implementations of DeFiChain can be used. This is just a list of examples. Many other applications can be implemented as well. 
+以下是如何使用遞飛鏈的技術實現的示例。這只是一個其中之一的例子。預言機能實現實現許多其他應用過程。
 
-#### Leveraging a Long Position
+#### 利用長倉獲利
 
-1. Alice has 100k DFI. She likes the prospects of DFI and wants to leverage her position.
-2. Alice opens a loan contract on DeFiChain and takes out a loan in DUSDT.
-3. Alice sells DUSDT for more DFI.
+1. 愛麗絲有十萬個DFI。她喜歡DFI的發展前景，並希望增加自己的DFI持有量。
+2. 愛麗絲在遞飛鏈簽訂了一份貸款合同，並獲得一筆DUSDT貸款。
+3. 愛麗絲出售DUSDT以獲取更多DFI。
 
-Thus Alice can obtain a compounded long position on DFI without putting in extra money.
+愛麗絲可以在無需投入額外資金的情況下獲得DFI上的複合長倉。
 
-#### Shorting a Coin
+#### 貨幣做空
 
-1. Bob wishes to short coin XXX. Bob has DFI.
-2. Bob opens a loan contract on DeFiChain, takes out a loan in DXXX.
-3. Bob can now either sell DXXX for DFI or DUSDT on DeFi DEX, or convert DXXX via XCX to sell XXX on a non-DeFi-internal exchange.
-4. Once Bob wishes to close his short position, Bob buys back XXX (or DXXX) from the market, hopefully at a lower rate, closes his loan contract and thus completes his short of XXX.
+1. 羅伯特希望空頭投資XXX。羅伯特有許多DFI。
+2. 羅伯特在遞飛鏈上簽訂了一份貸款合同，提取一筆DXXX貸款。
+3. 羅伯特現在可以在遞飛鏈的DEX上銷售DXXX以換取DFI或DUSDT，或通過XCX將DXXX轉換為在非遞飛戀內部交易所上銷售XXX。
+4. 當羅伯特想平倉，它能從市場上回購XXX（或DXXX）。並同時希望以較低的利率完成貸款合同，從而完成對XXX的做空。
 
-#### Getting a Loan (Borrowing)
+#### 借款:獲得貸款
 
-1. Charlie has DFI, but he needs short-term cashflow of another coin XXX. Charlies does not want to sell DFI for it nor does he want to spend fiat money to buy this coin.
-2. Charlie takes a loan via loan contract on DeFiChain for DXXX and converts it to XXX.
-3. Once he wishes to settle his loan, Charlie simply purchases XXX/DXXX and close his loan contract.
+1. 查利有DFI，但他需要另一個XXX貨幣的短期現金流。查理不想為其出售DFI，也不想用現金購買這枚貨幣。
+2. 查利通過遞飛鏈的貸款合同為DXXX取得一筆貸款，並轉換為XXX。
+3. 當他想償還貸款，查利只需購買XXX/DXXX來結束貸款合同。
 
-#### Lending a Coin for Cashflow
+#### 借出一枚貨幣換取現金流
 
-1. Dave has BTC that he does not need in the short-term. Dave wishes to generate some interest (cashflow) by lending BTC.
-2. Dave lists BTC on XCX specifying his BTC amount, desired premium (interest rate) and expiry (period that he does not need his BTC).
-3. Once a counterparty takes up Dave’s listing, Dave receives an instant premium in DFI.
-4. Upon expiry, Dave would either receive his BTC back, or receive DFI with an additional Guarantee thereby netting more than his original BTC.
+1. 戴夫擁有短期內不需要用到的BTC。戴夫希望借BTC産生利息（現金流）。
+2. 戴夫在XCX上列出擁有的BTC數量，溢價（利率）和到期日（通常是以他不需要其BTC的期間）。
+3. 當合同另一方接受戴夫的交易，戴夫能即時獲得DFI的溢價。
+4. 合同到期後，戴夫將收回BTC，或獲得DFI和額外擔保利潤，並從而獲得比最初更多BTC的淨額。
 
 ---
 
-## $DFI coin
+## $DFI貨幣
 
-The $DFI coin will be the integral unit of account in DeFiChain ecosystem.
+DFI代幣是遞飛鏈生態系統中不可或缺的單位。
 
-The DeFiChain Foundation will be issuing the DeFi utility token, DFI, capped at 1,200,000,000 (1.2 billion) for throughout its lifetime. There will only ever be 1.2 billion DFIs created.
+遞飛鏈基金會將發行DeFi實用代幣DFI，在整個DFI生命周期上限為1,200,000,000（12億）。
+只會産生12億個DFI。
 
-DFI is divisible up to 8 decimal places.
+DFI最多可分割八個小數位。
 
-### $DFI coin Utility
+### $DFI硬幣實用工具
 
-- DFI is used for fee payment for all transactions and smart contracts on DeFiChain.
-  - Fee payment for decentralized exchange transactions
-  - Fee payment for token transfers
-- Fees payment for DeFi activities:
-  - DEX fees
-  - XCX fees
-  - Lending loan interests payment
-  - etc.
-- Collateral for borrowing of other cryptoassets on DeFiChain.
-- 1,000,000 DFI is required to run a staking node for DeFiChain.
-- 1,000 DFI is required to create a DCT. This is refundable upon destruction of the DCT.
-- 500 DFI is required to submit a proposal for DFI the community budget. This is non-refundable.
+- DFI用于支付遞飛鏈上所有交易和智能合約的費用。
+  - 去中心化交易所的交易費用
+  - 支付代幣轉讓費用
+- DeFi操作的費用支付：
+  - DEX費用
+  - XCX費用
+  - 貸款利息支付
 
-### Fees from DeFi Activities
+- 借入遞飛鏈上的其他加密資産的抵押品。
+- 需要兩萬DFI運行一個權益質押節點。
+- 創建DCT需要1,000 DFI。在銷毀DCT後可退還。
+- 需要500DFI提交一份DFI社區基金提議案。此款不可退還。
 
-Fees from DeFi activities on DeFiChain are burned and redistributed through new token minting over a period of time as laid out below. This ensures that DeFi stakers enjoy the benefits of earning rewards from facilitating trustless DeFi trades on DeFiChain in a fair manner.
+### DeFi操作活動費用
 
-**Rewards from minting a block on DeFiChain are calculated as**:
+遞飛鏈的使用通常包括以下費用：
+1. 挖礦費
+2. 操作者費
+3. DeFi費
 
-1. Underlying block reward schedule (see distribution schedule) +
-2. Burned token redistribution schedule
+#### 挖礦費
 
-The burned token redistribution schedule is determined automatically every 259,200 blocks (approx. every 90 days) and works as follows:
+挖礦費是以UTXO DFI向主節點（也稱為挖礦者）支付的小額費用，用于驗證交易並將其包含在區塊中。
 
-![Burned token distribution](/img/white-paper/burn.png)
+這與比特幣區塊鏈的原理相同，以數據大小計量（如每byte的價格）。
 
-Burned token redistribution for the next 259,200 blocks = 
+#### 操作者費用
 
-1. (Total token burned from the last 259,200 blocks [Quarter -1]) / 4 + 
-2. (Total token burned from block -518,400th to -259,200th block [Quarter -2]) / 4 + 
-3. (Total token burned from block -777,600th to -518,400th block [Quarter -3]) / 4 + 
-4. (Total token burned from block -1,036,800th to -777,600th block [Quarter -4]) / 4
+作為遞飛鏈推廣的一部分，許多服務將很快由操作者運行。
 
-### Masternodes
+對于提供遞飛鏈上的服務和應用程序，運營商能夠確定其將免費收取的服務費用。費用可以是任何形式的代幣、DFI或運營商自己的代幣或多個代幣的組合。運營商選擇如何處理運營商費用由運營商酌情決定。
 
-DeFi is a Proof of Stake blockchain. Initially, 1,000,000 DFI allow the owner to own a staking node. The returns for staking will decrease over time, as the volume and number of transactions compensates for the reduction in per-transaction staking rewards.
 
-Nodes are entitled to:
+#### DeFi費用
 
-- Periodic staking rewards as described later in this chapter.
-- Submission of votes to key decisions that govern DeFiChain in the governance system.
-- Submission of votes on how the DFI community budget is being allocated and distributed. 
+DeFi費是為遞飛鏈上的所有DeFi交易收取的，包含操作方。
 
-### Governance
+#### 費用表
 
-The DeFiChain Foundation is responsible for issuance of tokens and is governed by an independent board. This board will be governed by the DeFi masternodes voting on its members and also by giving directives on key decisions.
+所有費用均以可追蹤及透明的方式燃燒。
 
-The DeFiChain Foundation awards tokens to users and groups to speed up adoption (see the section on initial token distribution and marketing). The Foundation is tasked with boosting the ecosystem, bringing in ecosystem partners, directing the development of the tools for ecosystem partners, and other activities to increase the number of ecosystem partners.
+以下費用僅供說明，尚未完全確定。
 
-![Governance](/img/white-paper/governance.png)
+| 操作行動    | 銷毀數量(DFI)
+| ------------- |-------------:|
+| **主節點** |
+| 主節點注冊 | 10 |
+| **操作員** |
+| 操作員注冊 | 1000 |
+| **代幣化** |
+| 創建新代幣 | 100 |
+| **流動性資金池** |
+| 創建池 | 300 |
+| 交換（非DFI成對）| 0.01 |
+| **治理** |
+| 社區基金提議案申請 | 5 |
+| 啓動信任投票 | 25 |
+| 提交區塊區塊獎勵分配案 | 250 |
+| **鏈間交換** |
+| 原子交換 | 0.01 |
+| **預言機** |
+| 創建價格饋入 | 100 |
+| 指定預言機 | 20 |
+| **貸款** |
+| 貸款利息 | 待定 |
+| 清算費 | 待定 |
+| **期權池** |
+| 創建池 | 300 |
+| 期權合約創建 | 0.01 |
+| 獎金支付費| 待定 |
+| **期貨** |
+| 創造期貨市場 | 300 |
+| 交易費 | 待定 |
 
-For clarification and transparency, Cake Pte Ltd is a private company located in Singapore. Cake Pte Ltd is an initial contributor as part of the ecosystem’s partners to creating services on DeFiChain.
+### 主節點
 
-### Community Development Fund
+遞飛鏈是權益證明的區塊鏈。初起需要一百萬DFI來創立一個主節點，目前以主節點投票贊成改為兩萬DFI。權益質押回報將隨時間減少。由于交易量及交易次數抵銷減少的權益質押獎勵。
 
-The DeFiChain Foundation will create a community development fund with up to 10% of the block rewards under management. This percentage can be updated by submitting a DAO proposal that will be voted on by all masternodes. Community development funds were popularized by DASH[^10] and are used in some selective DAOs today. The community will determine the use of these funds for development, marketing, or research that forwards the DeFi community. DFI masternodes vote for projects they like and the highest voted proposals every month will be funded.
+主節點權力：
 
-It costs 500 DFI to submit a budget proposal and a proposal can be submitted by anyone. This fee is burned and non-refundable regardless of whether the budget is approved. Budgets are proposals which receive a net total of yes votes equal to or greater than 10% of the total possible votes (for example over 448 out of 4480). Budgets can be nullified at any time if vote totals (cast or re-cast) fall below the approval threshold. Budgets are processed (paid) in order of yes minus no votes. More popular budgets get payment priority. Voting happens on a monthly basis but can be changed by a masternode vote.
+- 本章下文所述的定期權益質押獎勵。
+- 向治理系統中管理遞飛鏈的關鍵決策提交投票。
+- 提交有關如何分配DFI社區基金的投票。
 
-For governance decisions, only the Foundation may submit proposals. Proposals are voted in similar way as DAO budget proposals except that decisions will be honored via simple majority vote.
+### 治理
+
+遞飛鏈基金會負責發行代幣，並由獨立董事會管理。董事會成員將由遞飛鏈主節點進行表決，並對關鍵決策作出指示。
+
+遞飛鏈基金會將代幣獎勵給用戶和群組，以增加區塊鏈快采用速度（請參閱有關初始代幣發布和營銷的章節）。基金會的任務是促進生態系統，引入生態系統合作夥伴，指導生態系統合作夥伴工具的開發，以及開展其他活動以增加生態系統合作夥伴量。
+
+![Governance](/img/white-paper/zht/governance.svg)
+
+為澄清及透明起見，Cake Pte Ltd是一家位于新加坡注冊的私人公司。作為生態系統合作夥伴之一，Cake Pte Ltd是在遞飛鏈上創建服務的最初貢獻者。
+
+### 社區發展基金
+
+遞飛鏈基金會將設立一個社區發展基金，在管理下可獲得10%以內的獎勵。這百分比可通過社區發展基金提議並由所有主節點表決的DAO建議進行更新。社區發展基金由DASH[^10]項目大衆化，並在一些DAO中使用。社區將決定將這些資金該如何使用，如發展、營銷或研究，以推動遞飛鏈社區。 DFI的主節點所有者可投票給他們喜歡的項目，每個月票選最高的提議案將得到資助。
+
+任何人都可以提交提議案，但需要自費500 DFI。無論提案是否獲得批准，此費用將被銷毀且不可退還。預算是指獲得淨贊成票總數等于或大于可能投票總數10%的提案（例如，在4,480份提案中，超過448份）。如果投票總數（投票或改選）低于批准門檻，預算可隨時取消。預算按照贊成票減反對票的順序處理（支付）。最受歡迎的預算優先進款。投票每月進行一次，但可以通過主節點投票進行更改。
+
+只有基金會可以提交治理決策的提議案。提案的表決方式與DAO預算提案相似，惟決策將以簡單多數票方式執行。
 
 [^10]: https://docs.dash.org/en/stable/governance/understanding.html
 
-### Initial Token Distribution
+### 初始代幣分配
 
-Of the roughly 1.2 billion $DFI coins 49% will be issued to the DeFiChain Foundation at the start. The rest will be issued to Masternode holders over time.
-Of the 49% initially issued $DFI coins, 49% will be kept by the DeFiChain Foundation. The rest may be distributed to accredited investors, large funds and institutions, collectively known as external partners, to fund the initial development of DeFiChain. In order to decentralize the holdings of DFIs as much as possible the DeFiChain Foundation may not keep more than 49% of all initially issued tokens. The use of potential proceedings of the tokens will be decided by the DeFiChain Foundation board but will exclusively be directed towards the adoption and development of DeFiChain.
+在約12億美元的DFI代幣中，49%將于一開始發行給遞飛鏈基金會。其余部分將隨時間發放給主節點持有人。2021年以通過治理投票銷毀所有基金會的代幣。
+在最初發行的49%DFI代幣中，49%由遞飛鏈基金會保管。其余部分可分配給合格投資者、大型基金和機構（統稱為外部合作夥伴），為遞飛鏈的初始開發提供資金。為了完全去中心化的目標，遞飛鏈基金會不得持有超過所有初始發行代幣的49%。
+代幣的潛在程序將由遞飛鏈基金會決定，但將專門針對遞飛鏈的采用和開發。
 
-For any avoidance of doubt, there will NOT be a public ICO.
+為免生疑問，不會舉辦ICO。
 
-![Initial Token Distribution](/img/white-paper/initial-token-distribution.png)
+![Initial Token Distribution](/img/white-paper/zht/initial-token-distribution.png)
 
-Further tokens will only ever be received through staking, which is described in the next chapter.
+只有通過權益質押才能獲得更多代幣，在下章所述。
 
-### Token Issuance Schedule via Staking
+### 權益質押代幣發行計劃
 
-DeFiChain is initially launched with a 200 DFI block reward, of which 10% goes to the community fund. The Foundation pledges to guarantee this 200 DFI block reward for at least 1,050,000 blocks since the the first genesis block, so approximately 1 year.
+遞飛鏈最初將每個區塊獎勵設為200 DFI，其中10%用于社區基金。自第一號區塊以來，基金會承諾並保證維持每個區塊獲利200 DFI，到1,050,000個區塊(約一年)。
 
-Subsequently, block rewards will be adjusted through governance vote. The Foundation also further pledges that there will never be more than 1,200,000,000 (1.2 billion) DFI in circulation, unless until the DAO governance votes to change this limit. Therefore DFI is a deflationary utility token.
+隨後，區塊獎勵將通過治理投票進行調整。基金會還進一步承諾，除非DAO管治投票改變該限額，否則流通的DFI將永遠不會超過1,200,000,000（12億）份。因此，DFI是一種通縮性公用設施代幣。因此，DFI是一種通貨緊縮的效用代幣。
 
-The proposed staking schedule for the first 10 years is according to the following table:
+第一年的建議權益質押時間表如下表所示：
 
 <div class="table-responsive">
   <table>
     <thead>
       <tr>
         <th scope="col">
-          Year
+          年度
         </th>
         <th scope="col">
-          Start of year token in circulation
+          年初流通代幣
         </th>
         <th scope="col">
-          % of supply staked
+          %供應權益質押
         </th>
         <th scope="col">
-          Block reward
+          區塊獎勵
         </th>
         <th scope="col">
-          Targeted new token %
+          目標新代幣%
         </th>
         <th scope="col">
-          Targeted new token
+          目標新代幣
         </th>
         <th scope="col">
-          Staking return %
+          權益質押回報率%
         </th>
         <th scope="col">
-          Actual new token
+          實際新代幣數量
         </th>
         <th scope="col">
-          End of year token in circulation
+          年末流通代幣
         </th>
         <th scope="col">
-          % of cap
+          %上限
         </th>
         <th scope="col">
-          New token for year
+          年度新代幣
         </th>
       </tr>
     </thead>
@@ -1020,64 +1067,68 @@ The proposed staking schedule for the first 10 years is according to the followi
   </table>
 </div>
 
-### Acquiring $DFI coins
+### 購買DFI貨幣
 
-$DFI coins will be issued only to the users of DeFiChain or partners with an interest in utilizing and participating in the ecosystem. There will be NO public sale or public token offering. Following are the only ways to get $DFI coins:
+$DFI貨幣將僅向遞飛鏈的用戶或有意利用並參與生態系統的合作夥伴發行。不會有公開銷售或公開代幣發售。以下是獲得$DFI貨幣的唯一方法：
 
-- Institutional investors, accredited investors and funds who are interested in the use of DeFiChain can contact the DeFi founders at (partners@defichain.com).
-- Over time, DFI will be available on staking platforms (such as www.CakeDeFi.com) and on selected exchanges.
-- The DeFiChain Foundation will issue airdrop tokens for users of DeFiChain. (Hodlers and other market makers).
-- The DeFiChain Foundation gives grants to developers who are developing functionality for DeFiChain or dApps to run on the blockchain.
-
----
-
-## DeFiChain Foundation
-
-The DeFiChain Foundation is incorporated as a company limited by guarantee, resembling a foundation structure which holds the DeFiChain Trademarks, Domains and makes sure the DFI foundation funds are used as instructed by the masternodes.
+- 專業機構投資者、已被驗證可投資者及對使用遞飛鏈感興趣的基金可通過郵件方式聯系遞飛鏈創辦團隊：(partners@defichain.com)。
+- 隨著區塊鏈成長，DFI將可用于支撐平台（如www.CakeDeFi.com)和交易所上幣。
+- 遞飛鏈基金會將為遞飛鏈的用戶發行空投代幣(Hodler及其他開發）。
+- 遞飛鏈基金會向開發在區塊鏈生態上運行遞飛鏈的dApp或功能開發方提供適當的補助。
 
 ---
 
-## Marketing
+## 遞飛鏈基金會
 
-### Target Market
+遞飛鏈基金會注冊成立為擔保有限公司，類似于持有遞飛鏈商標、域名並確保DFI基金會資金按主節點指示使用的基金會結構。
 
-Unlike most other DeFi-focused initiatives, DeFiChain being built on top of Bitcoin can harness almost the entire crypto market without being limited to “smaller” chains like Ethereum etc. Thus, as of publication, the target market for DeFiChain are over 60-80 million cryptocurrency owners and we can expect that hundreds of millions of other users will join in the future. This group of investors is investing and holding cryptocurrency due to the returns as well as their belief in the future of the industry. As investors, they have widely done well with the rise in many of the cryptoassets, however, they are not able to use their holdings in order to get better returns. Providing DeFi services will allow these investors to hold the coins they believe in, and increase their holdings over time based on investments that go deeper than just currency trading.
+---
 
-### Go-to-market Strategy
+## 行銷
 
-The initial DeFiChain team is made up of some of the top names in the cryptocurrency industry, people who have made a name for themselves not just by delivering on their promises, but by creating a following. The team has built up a variety of marketing channels and has an established following on social media, wide distribution of books in the area of cryptocurrency, and deep contacts within the cryptocurrency industry.
+### 市場目標
 
-With the experience of building up social media followings of hundreds of thousands of users in the course of just a few years, the team plans to leverage their current followers and bring them onto specific channels that will be the domain of DeFiChain. The team will build up a complete marketing engine and staff, using the same proven competence they displayed in the past.
+與大多數其他DeFi項目不同，基于比特幣構建的遞飛鏈可以利用幾乎整個加密市場，而不限于以太坊等「較小」的區塊鏈。遞飛鏈的目標市場是超過6,000萬至8,000萬的加密貨幣所有者，我們預計未來將有數億其他用戶加入加密市場。由于回報以及他們對行業未來的信心，這群投資者正在投資並持有加密貨幣。但作為投資者，他們在衆多加密資産的增長中的獲利良好，然而，他們無法利用所持股份獲得更好的回報。能提供DeFi服務使這些投資者能夠持有他們所挺的貨幣，並根據深度超過貨幣交易的投資隨時間增加其持有數量。
 
-Unlike other blockchains, DeFiChain will be balanced between marketing and technology expertise. Building the best network is only half of the job. DFI holders can rest assured that the marketing team has the proven experience in building up a marketing engine that is required for product success and that the tech team will be able to deliver on the roadmap.
+### 進入市場策略
 
-### Partnerships
+最初的遞飛鏈團隊是由一些區塊鏈和加密貨幣行業的頂尖人物所組成。這些人不僅通過履行承諾，還用了以下所解說的方式為自己獲得優良聲譽。該團隊已建立了多種營銷渠道，並在社交媒體上擁有穩固的跟蹤群，在加密貨幣領域擁有廣泛的書籍分銷，以及在加密貨幣行業擁有深厚的人脈。
 
-The DeFiChain Foundation will be tasked with assessing applications from ecosystem partners and providing foundation grants in the form of $DFI coins to developers and contributors to DeFiChain. Many open source projects and blockchain developers today are looking for the right blockchain project in order to develop their DeFi applications, and the prospect of a dedicated DeFiChain, backed by industry leaders is appealing.
+憑借在短短幾年內建立數十萬用戶的社區媒體關注度的經驗，遞飛鏈團隊計畫利用他們目前的關注者帶入為遞飛鏈生態的特定渠道。該團隊將建立一個完整的營銷系統，使用以往相同的操作和成功證明。
 
-The DeFiChain Foundation will undertake a variety of efforts to choose the best projects for the expansion of DeFiChain:
+遞飛鏈將在營銷和技術專長之間取得平衡。建立最好的區塊鏈只是運作的一半部分。營銷團隊擁有豐富的經驗，尤其是在建立産品成功所需的市場營銷引擎方面。另一方的技術團隊將能夠按照路線圖向DFI持有人交代，以透明化的方式讓DFI支持者更安心。
 
-- Creation of a formal application process so that worthy projects can apply for airdrop or foundation grants for their development
-- Approaching developers in the ecosystem who are doing DeFi dApps on other blockchains, and providing grants for them to develop their dApps on DeFi.
-- General marketing to get the word out about the availability of DeFiChain Foundation grants to fund worthy projects.
+### 合作夥伴
 
-Every project on DeFiChain will naturally bring it its own users and put effort towards marketing of the project, adding users and hodlers to DeFiChain.
+遞飛鏈基金會將負責評估來自生態系統合作夥伴的應用程序，並向遞飛鏈的開發團隊和貢獻者提供$DFI貨幣的基金資助。如今，許多開源項目和區塊鏈開發者正在尋找合適的區塊鏈項目來開發DeFi應用程序。由行業領導者支持的專用遞飛鏈的社區對開發者是很有吸引力的。
+
+遞飛鏈基金會將采取各種措施，以選擇最佳項目擴展遞飛鏈：
+
+- 建立一個正式的申請程序，以便有價值的項目可以申請發展空投或基金會資助。
+- 與生態系統中正在其他區塊鏈上進行DeFi dApp的開發人員接洽，並為其提供補助以開發DeFi dApp。
+- 市場推廣，以了解可獲得的遞飛鏈基金會補助金，以資助有價值意義的項目。
+
+遞飛鏈上的每個項目自然會帶來自己的用戶，並致力于項目的營銷為遞飛鏈添加用戶和持有人。
 
 [partners@defichain.com](mailto:partners@defichain.com)
 
 ---
 
-## Roadmap and Milestones
+## 路線圖和裏程碑
 
-![Roadmap](/img/white-paper/roadmap.png)
+![Roadmap](/img/white-paper/zht/roadmap.png)
 
-## A Glimpse into the Future
+## 展望未來
 
-Building on top of DeFiChain will lead to some of the most exciting benefits not only for first-world areas, but moreover also all those that need decentralized finance the most. For example, imagine Anna, who owns a small business in a developing economy, but who doesn’t have a traditional bank account. She uses mobile money and digital currencies to run her business, accepting payments through mobile--which makes perfect sense, because nobody in her province uses cash or credit cards. Anna uses DeFiChain to take out a loan when one of her suppliers pays late, saving her business. In the old days, she would have simply gone out of business, because no bank would loan money to her. Anna also invests wisely. When she is paid by the supplier, she immediately moves the cash into various tokenized assets to avoid the hyperinflation and instability of her national government’s currency, and on top of that, she is able to earn interest.
+安娜使用遞飛鏈在其一個供應商延遲付款時申請貸款，從而節省了業務。在舊時代，她只會倒閉，因為沒有銀行會貸款給她。安娜投資也很明智。當供應商向她付款時，她立即將現金轉移至各種標記化資産，以避免其國家政府貨幣的惡性通脹和不穩定，除此之外，她能夠賺取利息。
 
-Anna creates a group of local businesspeople, and together they pool funds to help other entrepreneurs in their village. They purchase office space, solar panels, and a satellite to create a business center. The group uses DeFi to eliminate the overhead of complex legal contracts between them. They receive automatic dividends when the business center profits. Some of them reinvest in a delivery drone which charges for its services, and distributes the income to the investors. Others invest in sensor equipment that test local soil conditions, and sell the data to commodity markets. All of the sensors work independently and charge independently, and the investors simply reap the profits, all calculated automatically on DeFiChain.
+建立在遞飛鏈之上將帶來一些人最令興奮的優勢，而不僅僅是對第一世界地區市場，而是拓展現有金融市場到最需要金融服務的國家地區。例如，假設安娜在發展中經濟市場擁有一家小本企業，但沒有傳統的銀行賬戶。她使用支付寶和數字貨幣來經營自己的業務，通過手機接受支付，所住的區域也沒有人用現金和信用卡。安娜能使用遞飛鏈在某個供應商延遲付款時申請貸款，從而節省了業務。以往，她有可能面臨生意倒閉，因為有可能沒有銀行信托會貸款給她。安娜投資也有所研究和經驗。當供應商向她付款時，她立即將現金轉移至各種代幣化資産，以避免國家政府貨幣的惡性通脹和不穩定，除此之外，她能夠賺取利息。
 
-Now, 5 years after her initial use of DeFi, Anna is able to take out a loan with no collateral, based on her long-term record of smart investments and returning loans on time, as well as assessment of her industry from trusted oracles. It’s a win-win situation. The lenders come from all over the globe, from people who want to diversify their investment portfolio to developing economies. The lenders don’t have to worry about the complexity of cross-border transactions or legal requirements. They escape the banking systems of their own countries, which moved to zero and negative-interest rates on savings. Now, these regular investors can be assured of returns on investments based on Anna and people like her, who run great businesses and can provide returns on people’s investments.
+安娜集合了一群當地商人，他們共同籌集資金幫助他們村裏的其他小企業。他們集體購買辦公空間、太陽能電池板和一顆衛星以建立一個商業中心。這群商人能使用DeFi消除他們之間複雜法律合同的開銷。當業務中心盈利時，他們會自動收利股息。其中有些商人再投資一架交付無人機收取服務費，並將收入分配給投資者。另一些商人則投資于測試當地土壤狀況的傳感器設備，並將數據出售給商品市場。所有傳感器獨立工作，獨立收費。投資者只需獲取利潤，所有利潤均按遞飛鏈自動計算。
 
-**This is what DeFiChain is all about - To make the world a better place!**
+
+現在，安娜在首次使用遞飛鏈的五年後，根據她長期的智能投資記錄和按時歸還貸款，可以在沒有抵押品的情況下獲得一筆貸款，以及對她所從事行業的評估。這是雙贏的現象。借款人來自全球各地，能投資回報在組合多元化人士和發展中經濟市場。貸款人不必擔心跨境交易的複雜性或法律要求。他們脫離了國家的傳統銀行系統，也脫離了儲蓄利率低和和負利率。這些一般投資者可以保證基于安娜和商業群的投資回報，他們能直接經營業務，也同時能提供給他人的投資回報。
+
+
+**這就是遞飛鏈的宗旨—讓世界變得更美好！**
 

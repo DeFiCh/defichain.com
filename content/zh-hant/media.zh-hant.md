@@ -197,12 +197,12 @@ content:
       downloads_list:
         - title: 遞飛鏈標志
           description: 官方和預設標志
-          image: /static/downloads/logo-defi-blockchain.svg
+          image: /static/downloads/zh-hant/logo-defi-blockchain.svg
           links:
             - label: SVG
-              url: /downloads/logo-defi-blockchain.svg
+              url: /downloads/zh-hant/logo-defi-blockchain.svg
             - label: PNG
-              url: /downloads/logo-defi-blockchain.png
+              url: /downloads/zh-hant/logo-defi-blockchain.png
         - title: 遞飛鏈水母
           description: 空間受限時可用。
           image: /static/downloads/symbol-defi-blockchain.svg

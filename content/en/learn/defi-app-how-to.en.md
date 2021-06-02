@@ -47,7 +47,7 @@ Open the app. The first time you open the DeFi app, you will be presented with a
 
 \**You will see this security prompt with early unsigned releases of the app. In future releases signed with Apple, you will not see security prompts. For now, please follow step 3 for a workaround.*
 
-### Step 3: Bypass security prompt
+### Step 3: Allow app execution
 
 \**Only open the app this way if you are sure you have downloaded DeFi app from an official source. DeFi app is currently only available on the [official website](/) and [DeFiChain’s GitHub](https://github.com/DeFiCh/app/releases).*
 

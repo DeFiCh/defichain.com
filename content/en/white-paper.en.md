@@ -486,9 +486,9 @@ DeFiChain utilizes a Proof-of-Stake (PoS) algorithm similar to Bitcoin Core’s 
 
 #### Masternodes for Staking
 
-To run a masternode (staking node), stakers must hold a fixed amount of DFI, initially set at 1,000,000. Masternodes on DeFiChain participate in active transaction validations and block creations. The staking amount is intended to be lowered with the stability and maturity of blockchain to encourage further decentralization.
+To run a masternode (staking node), stakers must hold a fixed amount of DFI, initially set at 20,000. Masternodes on DeFiChain participate in active transaction validations and block creations. The staking amount is intended to be lowered with the stability and maturity of blockchain to encourage further decentralization.
 
-Each staking node can perform only 1 hash per second, with the nonce from Bitcoin Core PoW algorithm replaced by a staker’s UTXO.
+Each staking node can perform only 1 hash per second, with the nonce from Bitcoin Core PoW algorithm replaced by a staker’s masternode ID.
 A new block is mined if it satisfies the following condition:
 
 `SHA256({staker’s UTXO}, {current timestamp, in seconds}, {stake modifier}) < {target}`

@@ -44,6 +44,18 @@ content:
               value_dfi: 5000
               value_usd: 15000
               txid: 3855e22b35f26cc962d154639d3ce1ac14a40286182b0c897cd5dbe8c0b60503
+            - title: 3rd-party masternode fund lockup issue
+              value_dfi: 1500
+              value_usd: 4500
+              txid: f715e5ec45ffccbaade5d0de451d18cf00e386b04f0c3d87d8b7a80278e6b709
+            - title: Probabilistic side mining exploit
+              value_dfi: 2500
+              value_usd: 7500
+              txid: e2fa3e133e35458328eded333f32e2c525c66861f37ca0be52f5b7e092c96cde
+            - title: Dropping of masternode through transaction malleability
+              value_dfi: 4000
+              value_usd: 12000
+              txid: ee46a62e455f6aad526d9664022afb4a5014b4031e034f00bdf53dee3d5a6070
       total_bounty: Total bounty
     participation:
       headline: How to participate

@@ -2,7 +2,7 @@
 title: DeFiChain
 long_title: 官方中文网递飞链
 meta:
-  description: 全民都能使用快速，智能与透明化的金融区块链
+  description: 全民都能使用快速，智能与透明去中心化的金融区块链
   og:
     title: DeFiChain
     description: A blockchain dedicated to fast, intelligent and transparent financial services, accessible by everyone, and enabled on Bitcoin.
@@ -15,10 +15,10 @@ content:
   sections:
     hero:
       headline: 比特币上的去中心化金融
-      subhead: 全民都能使用快速，智能与透明化的金融区块链
+      subhead: 全民都能使用快速，智能与透明去中心化的金融区块链
       ctas:
-        - label: 前往下载区
-          url: /downloads
+        - label: 前往去中心化交易所
+          url: /dex
         - label: 购买 递飞币（$DFI）
           type: plain
           url: https://trade.kucoin.com/DFI-BTC
@@ -114,65 +114,6 @@ content:
       headline: 发展路线图
       subhead: Achievements and what to look forward to.
       timeline:
-        - year: 3y
-          title: 三、五、十年内
-          events:
-            - month: 三年內
-              status: future
-              title: 去中心化杠杆交易 (抵押杠杆的十倍或五十倍)
-              image:
-                x1: /img/timeline/3y/decentralized-leverage.png
-                x2: /img/timeline/3y/decentralized-leverage@2x.png
-                alt: Decentralized leveraged trading
-            - month: 三年內
-              status: future
-              title: 去中心化式的期权
-              image:
-                x1: /img/timeline/3y/options.png
-                x2: /img/timeline/3y/options@2x.png
-                alt: Decentralized Options
-            - month: 三年內
-              status: future
-              title: 二级市场
-              image:
-                x1: /img/timeline/3y/secondary-market.png
-                x2: /img/timeline/3y/secondary-market@2x.png
-                alt: Secondary market
-            - month: 三年內
-              status: future
-              title: 实施为本地链上交易的金融衍生品
-              image:
-                x1: /img/timeline/3y/derivatives.png
-                x2: /img/timeline/3y/derivatives@2x.png
-                alt: Financial derivatives
-            - month: 三年內
-              status: future
-              title: 成为点对点金融交易实践中的最佳链
-              image:
-                x1: /img/timeline/3y/p2p.png
-                x2: /img/timeline/3y/p2p@2x.png
-                alt: De-facto blockchain for peer-to-peer financial transactions
-            - month: 五年内
-              status: future
-              title: 链上执行自动清算所和实时全额支付系统
-              image:
-                x1: /img/timeline/5y/ach.png
-                x2: /img/timeline/5y/ach@2x.png
-                alt: ACH and RTGS
-            - month: 五年内
-              status: future
-              title: 横跨金融机构交易实践中的最佳链
-              image:
-                x1: /img/timeline/5y/xfi-txns.png
-                x2: /img/timeline/5y/xfi-txns@2x.png
-                alt: De-facto blockchain for cross-financial institutional transactions
-            - month: 十年内
-              status: future
-              title: 国家与主权国之间交易实践中的最佳链
-              image:
-                x1: /img/timeline/10y/x-border-txns.png
-                x2: /img/timeline/10y/x-border-txns@2x.png
-                alt: De-facto blockchain for international financial transactions between countries and sovereign states
         - year: 2021
           title: 2021年
           status: 正轨
@@ -266,40 +207,36 @@ content:
                 x2: /img/timeline/2021/bitcoin-anchoring@2x.png
                 alt: Bitcoin anchoring
             - month: 第二季度
-              status: future
+              status: past
               title: 股票交易，贷款和去中心化式比特币技术概述粉红书上线
+              url: https://github.com/defich/pinkpaper/
               image:
                 x1: /img/timeline/2021/pink-paper-q1.png
                 x2: /img/timeline/2021/pink-paper-q1@2x.png
                 alt: Q1 pink paper
             - month: 第二季度
-              status: future
-              title: 融合Ledger硬钱包
-              image:
-                x1: /img/timeline/2021/ledger.png
-                x2: /img/timeline/2021/ledger@2x.png
-                alt: Ledger integration
-            - month: 第二季度
-              status: future
+              status: past
               title: 使用原子交换实行去中心化的跨链资产转移
+              url: https://github.com/DeFiCh/ain/wiki/Interchain-Exchange-Tutorial/
               image:
                 x1: /img/timeline/2021/atomic-swap.png
                 x2: /img/timeline/2021/atomic-swap@2x.png
                 alt: Atomic swap
             - month: 第二季度
+              status: past
+              title: 发布递飞链JS库开放源码
+              url: https://github.com/defich/jellyfish/
+              image:
+                x1: /img/timeline/2021/js-library.png
+                x2: /img/timeline/2021/js-library@2x.png
+                alt: JS library
+            - month: 第三季度
               status: future
               title: 链上去信任化股票，商品货物和货币
               image:
                 x1: /img/timeline/2021/trustless-things.png
                 x2: /img/timeline/2021/trustless-things@2x.png
                 alt: Trustless on-chain stocks, commodities and currencies
-            - month: 第二季度
-              status: future
-              title: 发布递飞链JS库开放源码
-              image:
-                x1: /img/timeline/2021/js-library.png
-                x2: /img/timeline/2021/js-library@2x.png
-                alt: JS library
             - month: 第三季度
               status: future
               title: 移动版软件
@@ -307,6 +244,13 @@ content:
                 x1: /img/timeline/2021/mobile-app.png
                 x2: /img/timeline/2021/mobile-app@2x.png
                 alt: Mobile app
+            - month: 第四季度
+              status: future
+              title: 融合Ledger硬钱包
+              image:
+                x1: /img/timeline/2021/ledger.png
+                x2: /img/timeline/2021/ledger@2x.png
+                alt: Ledger integration
             - month: 2021年预计
               status: future
               title: 去中心化代币式
@@ -335,6 +279,65 @@ content:
                 x1: /img/timeline/2021/dev-toolchain.png
                 x2: /img/timeline/2021/dev-toolchain@2x.png
                 alt: Developer toolchain
+        - year: 3y
+          title: 三、五、十年内
+          events:
+            - month: 三年內
+              status: future
+              title: 去中心化杠杆交易 (抵押杠杆的十倍或五十倍)
+              image:
+                x1: /img/timeline/3y/decentralized-leverage.png
+                x2: /img/timeline/3y/decentralized-leverage@2x.png
+                alt: Decentralized leveraged trading
+            - month: 三年內
+              status: future
+              title: 去中心化式的期权
+              image:
+                x1: /img/timeline/3y/options.png
+                x2: /img/timeline/3y/options@2x.png
+                alt: Decentralized Options
+            - month: 三年內
+              status: future
+              title: 二级市场
+              image:
+                x1: /img/timeline/3y/secondary-market.png
+                x2: /img/timeline/3y/secondary-market@2x.png
+                alt: Secondary market
+            - month: 三年內
+              status: future
+              title: 实施为本地链上交易的金融衍生品
+              image:
+                x1: /img/timeline/3y/derivatives.png
+                x2: /img/timeline/3y/derivatives@2x.png
+                alt: Financial derivatives
+            - month: 三年內
+              status: future
+              title: 成为点对点金融交易实践中的最佳链
+              image:
+                x1: /img/timeline/3y/p2p.png
+                x2: /img/timeline/3y/p2p@2x.png
+                alt: De-facto blockchain for peer-to-peer financial transactions
+            - month: 五年内
+              status: future
+              title: 链上执行自动清算所和实时全额支付系统
+              image:
+                x1: /img/timeline/5y/ach.png
+                x2: /img/timeline/5y/ach@2x.png
+                alt: ACH and RTGS
+            - month: 五年内
+              status: future
+              title: 横跨金融机构交易实践中的最佳链
+              image:
+                x1: /img/timeline/5y/xfi-txns.png
+                x2: /img/timeline/5y/xfi-txns@2x.png
+                alt: De-facto blockchain for cross-financial institutional transactions
+            - month: 十年内
+              status: future
+              title: 国家与主权国之间交易实践中的最佳链
+              image:
+                x1: /img/timeline/10y/x-border-txns.png
+                x2: /img/timeline/10y/x-border-txns@2x.png
+                alt: De-facto blockchain for international financial transactions between countries and sovereign states
         - year: 2020
           title: 2020年
           status: 已达成

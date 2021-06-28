@@ -49,19 +49,22 @@ content:
       utility_list:
         - icon: /static/svg/icons/utility/fees.svg
           title: Fees
-          description: Pay fees for transactions, smart contracts and other DeFi activities.
+          description: Pay for transactions, smart contracts and other DeFi activities.
         - icon: /static/svg/icons/utility/collateral.svg
           title: Loan collaterals
-          description: Fund collaterals for loans of other cryptoassets.
+          description: Lend or borrow using crypto assets as collateral.
         - icon: /static/svg/icons/utility/staking.svg
           title: Staking nodes
-          description: Fund a new staking node for 20,000 DFI.
+          description: Fund a new staking node for just 20,000 DFI.
         - icon: /static/svg/icons/utility/dct.svg
           title: DeFi Custom Token
-          description: Create new DCT with 100 DFI (non-refundable).
+          description: Create a non-refundable personalised DCT (DeFi Custom Token).
         - icon: /static/svg/icons/utility/budget.svg
           title: Budget proposal
           description: Submit a community budget proposal for 500 DFI (non-refundable).
+        - icon: /static/svg/icons/utility/liquidity-pools.svg
+          title: Liquidity pools
+          description: Provide liquidity for the decentralized exchange between crypto assets.
     distribution:
       headline: Initial Token Distribution
       subhead: Of the 1.2 billion $DFI coins, 49% will be in the initial supply, with the rest issued to masternode holders over time.
@@ -92,6 +95,10 @@ content:
             url: https://www.hotbit.io/invest/detail/304
             file: /img/sources/logo-hotbit
             type: png
+          - label: KuCoin
+            url: https://pool-x.io/finance/list?type=FLEXIBLE_TERMS
+            file: /svg/sources/logo-kucoin
+            type: svg
       ways_to_acquire:
         - icon: /static/svg/icons/way-to-acquire/airdrop.svg
           title: Airdrop

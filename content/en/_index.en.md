@@ -1,11 +1,11 @@
 ---
 title: DeFiChain
-long_title: Decentralized finance enabled on Bitcoin
+long_title: Native Decentralized Finance for Bitcoin
 meta:
-  description: A blockchain dedicated to fast, intelligent and transparent financial services, accessible by everyone.
+  description: A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone.
   og:
     title: DeFiChain
-    description: A blockchain dedicated to fast, intelligent and transparent financial services, accessible by everyone, and enabled on Bitcoin.
+    description: A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone, and enabled on Bitcoin.
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
@@ -14,11 +14,11 @@ theme: dark night
 content:
   sections:
     hero:
-      headline: Decentralized finance enabled on Bitcoin.
-      subhead: A blockchain dedicated to fast, intelligent and transparent financial services, accessible by everyone.
+      headline: Native Decentralized Finance for Bitcoin.
+      subhead: A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone.
       ctas:
-        - label: Go to downloads
-          url: /downloads
+        - label: Go to Decentralized Exchange
+          url: /dex
         - label: Buy $DFI
           type: plain
           url: https://trade.kucoin.com/DFI-BTC
@@ -114,65 +114,6 @@ content:
       headline: Roadmap
       subhead: Achievements and what to look forward to.
       timeline:
-        - year: 3y
-          title: Within the next 3, 5 and 10 years
-          events:
-            - month: 3 years
-              status: future
-              title: Decentralized leveraged trading (10x or 50x leverage of collateral).
-              image:
-                x1: /img/timeline/3y/decentralized-leverage.png
-                x2: /img/timeline/3y/decentralized-leverage@2x.png
-                alt: Decentralized leveraged trading
-            - month: 3 years
-              status: future
-              title: Decentralized options.
-              image:
-                x1: /img/timeline/3y/options.png
-                x2: /img/timeline/3y/options@2x.png
-                alt: Decentralized Options
-            - month: 3 years
-              status: future
-              title: Secondary market.
-              image:
-                x1: /img/timeline/3y/secondary-market.png
-                x2: /img/timeline/3y/secondary-market@2x.png
-                alt: Secondary market
-            - month: 3 years
-              status: future
-              title: Financial derivatives implemented as native onchain transactions.
-              image:
-                x1: /img/timeline/3y/derivatives.png
-                x2: /img/timeline/3y/derivatives@2x.png
-                alt: Financial derivatives
-            - month: 3 years
-              status: future
-              title: The de-facto blockchain for peer-to-peer financial transactions.
-              image:
-                x1: /img/timeline/3y/p2p.png
-                x2: /img/timeline/3y/p2p@2x.png
-                alt: De-facto blockchain for peer-to-peer financial transactions
-            - month: 5 years
-              status: future
-              title: On-chain Automated Clearing House (ACH) and Real-time Gross Settlement (RTGS).
-              image:
-                x1: /img/timeline/5y/ach.png
-                x2: /img/timeline/5y/ach@2x.png
-                alt: ACH and RTGS
-            - month: 5 years
-              status: future
-              title: The de-facto blockchain for transactions across financial institutions.
-              image:
-                x1: /img/timeline/5y/xfi-txns.png
-                x2: /img/timeline/5y/xfi-txns@2x.png
-                alt: De-facto blockchain for cross-financial institutional transactions
-            - month: 10 years
-              status: future
-              title: The de-facto blockchain for transactions between countries and sovereign states.
-              image:
-                x1: /img/timeline/10y/x-border-txns.png
-                x2: /img/timeline/10y/x-border-txns@2x.png
-                alt: De-facto blockchain for international financial transactions between countries and sovereign states
         - year: 2021
           title: 2021
           status: On track
@@ -266,40 +207,36 @@ content:
                 x2: /img/timeline/2021/bitcoin-anchoring@2x.png
                 alt: Bitcoin anchoring
             - month: Q2
-              status: future
+              status: past
               title: Pink paper on stocks trading, loan and decentralized BTC.
+              url: https://github.com/defich/pinkpaper/
               image:
                 x1: /img/timeline/2021/pink-paper-q1.png
                 x2: /img/timeline/2021/pink-paper-q1@2x.png
                 alt: Q1 pink paper
             - month: Q2
-              status: future
-              title: Ledger hardware wallet integration.
-              image:
-                x1: /img/timeline/2021/ledger.png
-                x2: /img/timeline/2021/ledger@2x.png
-                alt: Ledger integration
-            - month: Q2
-              status: future
+              status: past
               title: Decentralized cross-chain asset bridge via atomic swap.
+              url: https://github.com/DeFiCh/ain/wiki/Interchain-Exchange-Tutorial/
               image:
                 x1: /img/timeline/2021/atomic-swap.png
                 x2: /img/timeline/2021/atomic-swap@2x.png
                 alt: Atomic swap
             - month: Q2
-              status: future
+              status: past
+              title: Release of open-source DeFiChain JS library.
+              url: https://github.com/defich/jellyfish/
+              image:
+                x1: /img/timeline/2021/js-library.png
+                x2: /img/timeline/2021/js-library@2x.png
+                alt: JS library
+            - month: Q3
+              status: past
               title: Trustless on-chain stocks, commodities and currencies.
               image:
                 x1: /img/timeline/2021/trustless-things.png
                 x2: /img/timeline/2021/trustless-things@2x.png
                 alt: Trustless on-chain stocks, commodities and currencies
-            - month: Q2
-              status: future
-              title: Release of open-source DeFiChain JS library.
-              image:
-                x1: /img/timeline/2021/js-library.png
-                x2: /img/timeline/2021/js-library@2x.png
-                alt: JS library
             - month: Q3
               status: future
               title: Mobile app.
@@ -307,6 +244,13 @@ content:
                 x1: /img/timeline/2021/mobile-app.png
                 x2: /img/timeline/2021/mobile-app@2x.png
                 alt: Mobile app
+            - month: Q4
+              status: future
+              title: Ledger support for Light Wallet.
+              image:
+                x1: /img/timeline/2021/ledger.png
+                x2: /img/timeline/2021/ledger@2x.png
+                alt: Ledger integration
             - month: 2021
               status: future
               title: Decentralized Tokenization.
@@ -335,6 +279,65 @@ content:
                 x1: /img/timeline/2021/dev-toolchain.png
                 x2: /img/timeline/2021/dev-toolchain@2x.png
                 alt: Developer toolchain
+        - year: 3y
+          title: Within the next 3, 5 and 10 years
+          events:
+            - month: 3 years
+              status: future
+              title: Decentralized leveraged trading (10x or 50x leverage of collateral).
+              image:
+                x1: /img/timeline/3y/decentralized-leverage.png
+                x2: /img/timeline/3y/decentralized-leverage@2x.png
+                alt: Decentralized leveraged trading
+            - month: 3 years
+              status: future
+              title: Decentralized options.
+              image:
+                x1: /img/timeline/3y/options.png
+                x2: /img/timeline/3y/options@2x.png
+                alt: Decentralized Options
+            - month: 3 years
+              status: future
+              title: Secondary market.
+              image:
+                x1: /img/timeline/3y/secondary-market.png
+                x2: /img/timeline/3y/secondary-market@2x.png
+                alt: Secondary market
+            - month: 3 years
+              status: future
+              title: Financial derivatives implemented as native onchain transactions.
+              image:
+                x1: /img/timeline/3y/derivatives.png
+                x2: /img/timeline/3y/derivatives@2x.png
+                alt: Financial derivatives
+            - month: 3 years
+              status: future
+              title: The de-facto blockchain for peer-to-peer financial transactions.
+              image:
+                x1: /img/timeline/3y/p2p.png
+                x2: /img/timeline/3y/p2p@2x.png
+                alt: De-facto blockchain for peer-to-peer financial transactions
+            - month: 5 years
+              status: future
+              title: On-chain Automated Clearing House (ACH) and Real-time Gross Settlement (RTGS).
+              image:
+                x1: /img/timeline/5y/ach.png
+                x2: /img/timeline/5y/ach@2x.png
+                alt: ACH and RTGS
+            - month: 5 years
+              status: future
+              title: The de-facto blockchain for transactions across financial institutions.
+              image:
+                x1: /img/timeline/5y/xfi-txns.png
+                x2: /img/timeline/5y/xfi-txns@2x.png
+                alt: De-facto blockchain for cross-financial institutional transactions
+            - month: 10 years
+              status: future
+              title: The de-facto blockchain for transactions between countries and sovereign states.
+              image:
+                x1: /img/timeline/10y/x-border-txns.png
+                x2: /img/timeline/10y/x-border-txns@2x.png
+                alt: De-facto blockchain for international financial transactions between countries and sovereign states
         - year: 2020
           title: 2020
           status: Achieved

@@ -24,7 +24,7 @@ content:
     hero:
       name: hero
       headline: Decentralized Exchange
-      subhead: Swap and arbitrage on the DEX, mine liquidity for up to 100x high yields, and more, with the DeFiChain wallet app. Available for Windows, macOS and Linux.
+      subhead: Liquidity mining for up to 100% returns, decentralized swapping, arbitrage and more, with the DeFi Wallet. Available for Windows, macOS and Linux.
       cta:
         label: Download now
         url: /downloads
@@ -32,8 +32,8 @@ content:
     coins_apr:
       label: APR
     liquidity_mining:
-      headline: New! Liquidity mining
-      subhead: Liquidity mine for potentially high yields, from right within the app. Supply liquidity to the ETH, BTC and USDT pool pairs to power the DEX, and earn fees and returns at high annual yields. Withdraw your liquidity at any time.
+      headline: Earn More With Liquidity Mining!
+      subhead: Liquidity mine for incredibly high yields within the app! Supply liquidity to BTC, ETH, USDT and many other pool pairs to power the Decentralized Exchange, and earn fees and high block rewards in return. You can withdraw your liquidity at any time.
       image: /img/app/liquidity
     guides:
       name: guides

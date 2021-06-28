@@ -2,7 +2,7 @@
 title: DeFiChain
 long_title: 官方中文網遞飛鏈
 meta:
-  description: 全民都能使用快速，智能與透明化的金融區塊鏈
+  description: 全民都能使用快速，智能與透明去中心化的金融區塊鏈
   og:
     title: DeFiChain
     description: A blockchain dedicated to fast, intelligent and transparent financial services, accessible by everyone, and enabled on Bitcoin.
@@ -15,16 +15,16 @@ content:
   sections:
     hero:
       headline: 比特幣上的去中心化金融
-      subhead: 全民都能使用快速，智能與透明化的金融區塊鏈
+      subhead: 全民都能使用快速，智能與透明去中心化的金融區塊鏈
       ctas:
-        - label: 前往下載區
-          url: /downloads
+        - label: 前往去中心化交易所
+          url: /dex
         - label: 購買 遞飛幣（$DFI）
           type: plain
           url: https://trade.kucoin.com/DFI-BTC
     problem_solution:
       headline: 金融科技演變與未來發展
-      subhead: 金融科技依然基於傳統金融信任的需求，去中心化系統解決了去信任，不必依賴第三方的協力廠商
+      subhead: 金融科技依然基于傳統金融信任的需求，去中心化系統解決了去信任，不必依賴第三方的協力廠商
       graph:
         traditional:
           label: 傳統金融
@@ -33,7 +33,7 @@ content:
             label: 科層組織
           bottom:
             percent: 25
-            label: 需高信任度軟體
+            label: 需高信任度軟件
         fintech:
           label: 金融科技
           top:
@@ -41,7 +41,7 @@ content:
             label: 科層組織
           bottom:
             percent: 50
-            label: 需高信任度軟體
+            label: 需高信任度軟件
         defi:
           label: DeFi
           top:
@@ -49,7 +49,7 @@ content:
             label: 科層組織
           bottom:
             percent: 75
-            label: 信任最小化應用程式
+            label: 信任最小化應用程序
     benefits:
       headline: 遞飛鏈的金融優勢
       benefits_list:
@@ -64,22 +64,22 @@ content:
           description: 非圖靈完備大量減少攻擊向量
         - icon: /static/svg/icons/benefits/development.svg
           title: 開發
-          description: 同個鏈上能快速創立各種DeFi應用程式
+          description: 同個鏈上能快速創立各種DeFi應用程序
         - icon: /static/svg/icons/benefits/governance.svg
           title: 管治
           description: 鏈上和鏈下有可靠的去中心化治理
         - icon: /static/svg/icons/benefits/immutability.svg
-          title: 永恆性
-          description: 使用錨定技術在比特幣區塊鏈上而維持遞飛鏈永恆性
+          title: 永恒性
+          description: 使用錨定技術在比特幣區塊鏈上而維持遞飛鏈永恒性
     function_set:
-      headline: 專爲去中心化應用程式dApps設計
+      headline: 專為去中心化應用程式dApps設計
       functions_list:
         - icon: /static/svg/icons/functions/loan.svg
           title: 借貸服務
           description: 透過抵押系統進行借
         - icon: /static/svg/icons/functions/wrapping.svg
-          title: 包裝與掛鈎的代幣
-          description: 各種加密資產都可直接在鏈上運用 
+          title: 包裝與挂鈎的代幣
+          description: 各種加密資産都可直接在鏈上運用 
         - icon: /static/svg/icons/functions/oracle.svg
           title: 報價預言機
           description: 從鏈下的真實世界數據和非加密市場收集價格數據
@@ -87,20 +87,20 @@ content:
           title: 交易所
           description: 加密貨幣之間點對點直接交易
         - icon: /static/svg/icons/functions/transfer.svg
-          title: 債務轉讓和應收帳款轉讓
+          title: 債務轉讓和應收賬款轉讓
           description: 金融機構無法透明化運作
         - icon: /static/svg/icons/functions/debt.svg
           title: 非抵押債務
-          description: 貸款基於聲譽和可驗證憑證
+          description: 貸款基于聲譽和可驗證憑證
         - icon: /static/svg/icons/functions/tokens.svg
-          title: 資產代幣化
-          description: 代幣化股票，房地產和其他持股
+          title: 資産代幣化
+          description: 代幣化股票，房地産和其他持股
         - icon: /static/svg/icons/functions/dividends.svg
           title: 股利分配
           description: 帶有智能合約的自動投資支出
     built_on_bitcoin:
       headline: 架構在比特幣上
-      subhead: 遞飛鏈將權益證明的優勢與比特幣的安全性和永恆性結合再一起
+      subhead: 遞飛鏈將權益證明的優勢與比特幣的安全性和永恒性結合再一起
       link:
         label: 了解更多
         url: /white-paper
@@ -114,65 +114,6 @@ content:
       headline: 發展路線圖
       subhead: Achievements and what to look forward to.
       timeline:
-        - year: 3y
-          title: 三、五、十年內
-          events:
-            - month: 三年內
-              status: future
-              title: 去中心化槓桿交易 (抵押槓桿的十倍或五十倍)
-              image:
-                x1: /img/timeline/3y/decentralized-leverage.png
-                x2: /img/timeline/3y/decentralized-leverage@2x.png
-                alt: Decentralized leveraged trading
-            - month: 三年內
-              status: future
-              title: 去中心化式的期權
-              image:
-                x1: /img/timeline/3y/options.png
-                x2: /img/timeline/3y/options@2x.png
-                alt: Decentralized Options
-            - month: 三年內
-              status: future
-              title: 二級市場
-              image:
-                x1: /img/timeline/3y/secondary-market.png
-                x2: /img/timeline/3y/secondary-market@2x.png
-                alt: Secondary market
-            - month: 三年內
-              status: future
-              title: 實施爲本地鏈上交易的金融衍生品
-              image:
-                x1: /img/timeline/3y/derivatives.png
-                x2: /img/timeline/3y/derivatives@2x.png
-                alt: Financial derivatives
-            - month: 三年內
-              status: future
-              title: 成爲點對點金融交易實踐中的最佳鏈
-              image:
-                x1: /img/timeline/3y/p2p.png
-                x2: /img/timeline/3y/p2p@2x.png
-                alt: De-facto blockchain for peer-to-peer financial transactions
-            - month: 五年內
-              status: future
-              title: 鏈上執行自動清算所和實時全額支付系統
-              image:
-                x1: /img/timeline/5y/ach.png
-                x2: /img/timeline/5y/ach@2x.png
-                alt: ACH and RTGS
-            - month: 五年內
-              status: future
-              title: 橫跨金融機構交易實踐中的最佳鏈
-              image:
-                x1: /img/timeline/5y/xfi-txns.png
-                x2: /img/timeline/5y/xfi-txns@2x.png
-                alt: De-facto blockchain for cross-financial institutional transactions
-            - month: 十年內
-              status: future
-              title: 國家與主權國之間交易實踐中的最佳鏈
-              image:
-                x1: /img/timeline/10y/x-border-txns.png
-                x2: /img/timeline/10y/x-border-txns@2x.png
-                alt: De-facto blockchain for international financial transactions between countries and sovereign states
         - year: 2021
           title: 2021年
           status: 正軌
@@ -266,40 +207,36 @@ content:
                 x2: /img/timeline/2021/bitcoin-anchoring@2x.png
                 alt: Bitcoin anchoring
             - month: 第二季度
-              status: future
+              status: past
               title: 股票交易，貸款和去中心化式比特幣技術概述粉紅書上線
+              url: https://github.com/defich/pinkpaper/
               image:
                 x1: /img/timeline/2021/pink-paper-q1.png
                 x2: /img/timeline/2021/pink-paper-q1@2x.png
                 alt: Q1 pink paper
             - month: 第二季度
-              status: future
-              title: 融合Ledger硬錢包
-              image:
-                x1: /img/timeline/2021/ledger.png
-                x2: /img/timeline/2021/ledger@2x.png
-                alt: Ledger integration
-            - month: 第二季度
-              status: future
-              title: 使用原子交換實行去中心化的跨鏈資產轉移
+              status: past
+              title: 使用原子交換實行去中心化的跨鏈資産轉移
+              url: https://github.com/DeFiCh/ain/wiki/Interchain-Exchange-Tutorial/
               image:
                 x1: /img/timeline/2021/atomic-swap.png
                 x2: /img/timeline/2021/atomic-swap@2x.png
                 alt: Atomic swap
             - month: 第二季度
+              status: past
+              title: 發布遞飛鏈JS庫開放源碼
+              url: https://github.com/defich/jellyfish/
+              image:
+                x1: /img/timeline/2021/js-library.png
+                x2: /img/timeline/2021/js-library@2x.png
+                alt: JS library
+            - month: 第三季度
               status: future
               title: 鏈上去信任化股票，商品貨物和貨幣
               image:
                 x1: /img/timeline/2021/trustless-things.png
                 x2: /img/timeline/2021/trustless-things@2x.png
                 alt: Trustless on-chain stocks, commodities and currencies
-            - month: 第二季度
-              status: future
-              title: 發佈遞飛鏈JS庫開放源碼
-              image:
-                x1: /img/timeline/2021/js-library.png
-                x2: /img/timeline/2021/js-library@2x.png
-                alt: JS library
             - month: 第三季度
               status: future
               title: 移動版軟件
@@ -307,6 +244,13 @@ content:
                 x1: /img/timeline/2021/mobile-app.png
                 x2: /img/timeline/2021/mobile-app@2x.png
                 alt: Mobile app
+            - month: 第四季度
+              status: future
+              title: 融合Ledger硬錢包
+              image:
+                x1: /img/timeline/2021/ledger.png
+                x2: /img/timeline/2021/ledger@2x.png
+                alt: Ledger integration
             - month: 2021年預計
               status: future
               title: 去中心化代幣式
@@ -335,6 +279,65 @@ content:
                 x1: /img/timeline/2021/dev-toolchain.png
                 x2: /img/timeline/2021/dev-toolchain@2x.png
                 alt: Developer toolchain
+        - year: 3y
+          title: 三、五、十年內
+          events:
+            - month: 三年內
+              status: future
+              title: 去中心化杠杆交易 (抵押杠杆的十倍或五十倍)
+              image:
+                x1: /img/timeline/3y/decentralized-leverage.png
+                x2: /img/timeline/3y/decentralized-leverage@2x.png
+                alt: Decentralized leveraged trading
+            - month: 三年內
+              status: future
+              title: 去中心化式的期權
+              image:
+                x1: /img/timeline/3y/options.png
+                x2: /img/timeline/3y/options@2x.png
+                alt: Decentralized Options
+            - month: 三年內
+              status: future
+              title: 二級市場
+              image:
+                x1: /img/timeline/3y/secondary-market.png
+                x2: /img/timeline/3y/secondary-market@2x.png
+                alt: Secondary market
+            - month: 三年內
+              status: future
+              title: 實施為本地鏈上交易的金融衍生品
+              image:
+                x1: /img/timeline/3y/derivatives.png
+                x2: /img/timeline/3y/derivatives@2x.png
+                alt: Financial derivatives
+            - month: 三年內
+              status: future
+              title: 成為點對點金融交易實踐中的最佳鏈
+              image:
+                x1: /img/timeline/3y/p2p.png
+                x2: /img/timeline/3y/p2p@2x.png
+                alt: De-facto blockchain for peer-to-peer financial transactions
+            - month: 五年內
+              status: future
+              title: 鏈上執行自動清算所和實時全額支付系統
+              image:
+                x1: /img/timeline/5y/ach.png
+                x2: /img/timeline/5y/ach@2x.png
+                alt: ACH and RTGS
+            - month: 五年內
+              status: future
+              title: 橫跨金融機構交易實踐中的最佳鏈
+              image:
+                x1: /img/timeline/5y/xfi-txns.png
+                x2: /img/timeline/5y/xfi-txns@2x.png
+                alt: De-facto blockchain for cross-financial institutional transactions
+            - month: 十年內
+              status: future
+              title: 國家與主權國之間交易實踐中的最佳鏈
+              image:
+                x1: /img/timeline/10y/x-border-txns.png
+                x2: /img/timeline/10y/x-border-txns@2x.png
+                alt: De-facto blockchain for international financial transactions between countries and sovereign states
         - year: 2020
           title: 2020年
           status: 已達成
@@ -428,12 +431,12 @@ content:
                 alt: DeFiChain listed on Bittrue
             - month: 十月
               status: past
-              title: 宏茂橋硬分叉支持資產代幣化
+              title: 宏茂橋硬分叉支持資産代幣化
               url: https://defiblockchain.medium.com/defichain-hardfork-successful-everything-you-need-to-know-5aa4ea92438b
               image:
                 x1: /img/timeline/2020/amk-hardfork.png
                 x2: /img/timeline/2020/amk-hardfork@2x.png
-                alt: 宏茂橋硬分叉支持資產代幣化
+                alt: 宏茂橋硬分叉支持資産代幣化
             - month: 十月
               status: past
               title: $DFI在Bittrex上幣
@@ -495,9 +498,9 @@ content:
           success: 謝謝您的訂閱！
           error: 
             general: 哎呀! 有錯誤。
-            blank_field: 該字段不能爲空。
+            blank_field: 該字段不能為空。
     closer_look:
-      headline: 瞭解更多
+      headline: 了解更多
       subhead: 探索遞飛鏈
 
 ---

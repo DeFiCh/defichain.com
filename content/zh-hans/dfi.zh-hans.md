@@ -61,7 +61,10 @@ content:
           description: 以一百个DFI创建自定代币 (不能退还)。
         - icon: /static/svg/icons/utility/budget.svg
           title: 概算提议
-          description: 以500 DFI提交社区预算建议（不可退还。
+          description: 以500 DFI提交社区预算建议（不可退还)。
+        - icon: /static/svg/icons/utility/liquidity-pools.svg
+          title: 流动性池
+          description: 为加密资产之间的去中心化交易提供流动性。
     distribution:
       headline: 初始代币分配
       subhead: 在12亿$DFI货币中，49%是最初供应的，其余的将随着时间推移发行给主节点持有者。
@@ -92,6 +95,10 @@ content:
             url: https://www.hotbit.io/invest/detail/304
             file: /img/sources/logo-hotbit
             type: png
+          - label: KuCoin
+            url: https://pool-x.io/finance/list?type=FLEXIBLE_TERMS
+            file: /svg/sources/logo-kucoin
+            type: svg
       ways_to_acquire:
         - icon: /static/svg/icons/way-to-acquire/airdrop.svg
           title: 空投

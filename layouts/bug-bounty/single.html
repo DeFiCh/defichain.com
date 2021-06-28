@@ -83,7 +83,12 @@
                       {{ $bountiesValueUSD = add $bountiesValueUSD $bounty.value_usd }}
                       <li class="row">
                         <div class="col col-md-6 bounty-title">{{ $bounty.title }}</div>
-                        <div class="col col-md-6 bounty-value">{{ lang.NumFmt 0 $bounty.value_dfi }} DFI <span class="bounty-value-usd">{{ lang.NumFmt 0 $bounty.value_usd }} USD</span></div>
+                        <div class="col col-md-3 bounty-value">
+                          {{ lang.NumFmt 0 $bounty.value_dfi }} DFI 
+                        </div>
+                        <div class="col col-md-3 bounty-value">
+                          <span class="bounty-value-usd">{{ lang.NumFmt 0 $bounty.value_usd }} USD</span>
+                        </div>
                         {{ with $bounty.txid }}
                         <a href="https://explorer.defichain.com/#/DFI/mainnet/tx/{{ $bounty.txid }}" class="bounty-txid" target="_blank">
                           {{ readFile "/static/svg/icons/icon-txid.svg" | safeHTML }}
@@ -93,7 +98,12 @@
                       {{ end }}
                       <li class="row">
                         <div class="col col-md-6 bounty-title">{{ $.Params.content.sections.leaderboard.total_bounty }}</div>
-                        <div class="col col-md-6 bounty-value">{{ lang.NumFmt 0 $bountiesValueDFI }} DFI <span class="bounty-value-usd">{{ lang.NumFmt 0 $bountiesValueUSD }} USD</span></div>
+                        <div class="col col-md-3 bounty-value">
+                          {{ lang.NumFmt 0 $bountiesValueDFI }} DFI
+                        </div>
+                        <div class="col col-md-3 bounty-value">
+                          <span class="bounty-value-usd">{{ lang.NumFmt 0 $bountiesValueUSD }} USD</span>
+                        </div>
                       </li>
                     </ul>
                   </div>

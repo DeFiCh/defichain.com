@@ -2588,7 +2588,6 @@ body.bounty {
 
       .bounty-value-usd {
         color: $color-ui-black40;
-        padding-left: 8px;
       }
     }
   }
@@ -3156,4 +3155,54 @@ table .cert-link {
   text-align: left;
   margin-left: 0 !important;
   border: 0 !important;
+}
+
+.wechat-container {
+  display: flex;
+  flex-direction: row;
+  line-height: 4rem;
+  .text {
+    display: flex;
+    align-items: center;
+    padding-right: 12px;
+  }
+}
+
+.tooltip {
+  position: relative;
+  display: flex;
+  
+  .img-qr {
+    width: 180px;
+  }
+  img {
+    vertical-align: middle;
+  }
+}
+
+.tooltip .tooltip-img {
+  visibility: hidden;
+  text-align: center;
+  padding: 2px 2px;
+  background: $color-ui-white;
+  border: $base-border-style;
+  border-radius: $base-border-radius;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -95px;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.4),);
+  position: absolute;
+}
+
+.tooltip .tooltip-img::after {
+  content: "";
+  position: absolute;
+  border: 10px solid;
+  border-color: #fff transparent transparent;
+  bottom: -20px;
+  left: calc(50% - 10px);
+}
+
+.tooltip:hover .tooltip-img {
+  visibility: visible;
 }

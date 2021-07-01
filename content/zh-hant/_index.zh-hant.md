@@ -14,10 +14,10 @@ theme: dark night
 content:
   sections:
     hero:
-      headline: 比特幣上的去中心化金融
-      subhead: 全民都能使用快速，智能與透明去中心化的金融區塊鏈
+      headline: 比特幣生態中的開放式金融
+      subhead: 遞飛鏈：原生區塊鏈專為全民堤共快速，智能和透明化的開放式金融服務
       ctas:
-        - label: 前往去中心化交易所
+        - label: 前往 DEX 交易所
           url: /dex
         - label: 購買 遞飛幣（$DFI）
           type: plain

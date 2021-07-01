@@ -64,7 +64,7 @@ content:
           description: 以500 DFI提交社區預算建議（不可退還)。
         - icon: /static/svg/icons/utility/liquidity-pools.svg
           title: 流動性池
-          description: 為加密資產之間的去中心化交易提供流動性。
+          description: 為 DEX 提供加密資產流動性，並獲得獎勵回報。
     distribution:
       headline: 初始代幣分配
       subhead: 在12億$DFI貨幣中，49%是最初供應的，其余的將隨著時間推移發行給主節點持有者。

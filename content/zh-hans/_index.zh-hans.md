@@ -14,10 +14,10 @@ theme: dark night
 content:
   sections:
     hero:
-      headline: 比特币上的去中心化金融
-      subhead: 全民都能使用快速，智能与透明去中心化的金融区块链
+      headline: 比特币生态中的开放式金融
+      subhead: 递飞链：原生区块链专为全民堤共快速，智能和透明化的开放式金融服务
       ctas:
-        - label: 前往去中心化交易所
+        - label: 前往 DEX 交易所
           url: /dex
         - label: 购买 递飞币（$DFI）
           type: plain

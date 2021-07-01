@@ -24,7 +24,7 @@ content:
     hero:
       name: hero
       headline: 去中心化交易所
-      subhead: 在DEX上做互换和套利，流动性挖矿100x高获利，和许多功能都在桌面板钱包程序内部操作。 适用于Windows，macOS和Linux
+      subhead: 直接在递飞链钱包程序上实现高达三位数百分比的流动性挖矿池回报，进行开放式兑换或套利等。程序适用于Windows，macOS和Linux。
       cta:
         label: 下载
         url: /downloads
@@ -32,8 +32,8 @@ content:
     coins_apr:
       label: 年利率
     liquidity_mining:
-      headline: 流动性挖矿池
-      subhead: 程序上直接做高年利率的流动性挖矿。向以太坊 (ETH), 比特币 (BTC), USDT DEX市场堤共流动资产，换得交易费和高利润年收益。随时欢迎您提出资产。
+      headline: 进入流动性挖矿池能让您获得更多奖励！
+      subhead: 递飞链的流动性挖矿能直接在程序中操作，并获得可观的收益率！当您为DEX提共BTC，ETH，USDT等地加密资产就能获得兑换费用佣金和高额的区块奖励。您可以随时退出流动性池。
       image: /img/app/liquidity
     guides:
       name: guides

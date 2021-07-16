@@ -231,19 +231,19 @@ content:
                 x2: /img/timeline/2021/js-library@2x.png
                 alt: JS library
             - month: Q3
-              status: past
-              title: Trustless on-chain stocks, commodities and currencies.
-              image:
-                x1: /img/timeline/2021/trustless-things.png
-                x2: /img/timeline/2021/trustless-things@2x.png
-                alt: Trustless on-chain stocks, commodities and currencies
-            - month: Q3
               status: future
               title: Mobile app.
               image:
                 x1: /img/timeline/2021/mobile-app.png
                 x2: /img/timeline/2021/mobile-app@2x.png
                 alt: Mobile app
+            - month: Q4
+              status: past
+              title: Trustless on-chain stocks, commodities and currencies.
+              image:
+                x1: /img/timeline/2021/trustless-things.png
+                x2: /img/timeline/2021/trustless-things@2x.png
+                alt: Trustless on-chain stocks, commodities and currencies
             - month: Q4
               status: future
               title: Ledger support for Light Wallet.

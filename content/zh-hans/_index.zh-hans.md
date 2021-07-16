@@ -232,18 +232,18 @@ content:
                 alt: JS library
             - month: 第三季度
               status: future
-              title: 链上去信任化股票，商品货物和货币
-              image:
-                x1: /img/timeline/2021/trustless-things.png
-                x2: /img/timeline/2021/trustless-things@2x.png
-                alt: Trustless on-chain stocks, commodities and currencies
-            - month: 第三季度
-              status: future
               title: 移动版软件
               image:
                 x1: /img/timeline/2021/mobile-app.png
                 x2: /img/timeline/2021/mobile-app@2x.png
                 alt: Mobile app
+            - month: 第四季度
+              status: future
+              title: 链上去信任化股票，商品货物和货币
+              image:
+                x1: /img/timeline/2021/trustless-things.png
+                x2: /img/timeline/2021/trustless-things@2x.png
+                alt: Trustless on-chain stocks, commodities and currencies
             - month: 第四季度
               status: future
               title: 融合Ledger硬钱包

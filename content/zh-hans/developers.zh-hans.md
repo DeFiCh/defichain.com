@@ -95,7 +95,7 @@ content:
       headline: 主要贡献者
       subhead: 递飞链是个开放源码项目，由主贡献者组成的全球团队，并由开发者社区支持此项目。[GitHub](https://github.com/DeFiCh)源代码网列出主要贡献者和项目中细节
       contributors_list:
-        - name: monstrobishi
+        - name: Ahmed Hilali
           github: https://github.com/monstrobishi
           username: monstrobishi
           city: 新加坡
@@ -107,6 +107,34 @@ content:
           github: https://github.com/aentan
           username: aentan
           city: 新加坡
+        - name: Fuxing Loh
+          github: https://github.com/fuxingloh
+          username: fuxingloh
+          city: 新加坡
+        - name: Bella Chew
+          github: https://github.com/izzycsy
+          username: izzycsy
+          city: 新加坡
+        - name: Suranga Pathmakumara
+          github: https://github.com/surangap
+          username: surangap
+          city: 新加坡
+        - name: Aik Chun Sim
+          github: https://github.com/aikchun
+          username: aikchun
+          city: 新加坡
+        - name: Prasanna Loganathar
+          github: https://github.com/prasannavl
+          username: prasannavl
+          city: 新加坡
+        - name: Jeremy d’Esclercs
+          github: https://github.com/Jouzo
+          username: Jouzo
+          city: 法国
+        - name: Diego del Corral Tercero
+          github: https://github.com/hidiego
+          username: hidiego
+          city: 西班牙
         - name: Harsh R
           github: https://github.com/fullstackninja864
           username: fullstackninja864
@@ -122,19 +150,39 @@ content:
         - name: Mihailo Milenkovic
           github: https://github.com/Mixa84
           username: Mixa84
-          city: 塞尔维亚贝尔格莱德
-        - name: Fuxing Loh
-          github: https://github.com/fuxingloh
-          username: fuxingloh
-          city: 新加坡
+          city: 贝尔格莱德，塞尔维亚
+        - name: Suraj Auwal
+          github: https://github.com/siradji
+          username: siradji
+          city: 尼日利亚拉各斯
+        - name: Jonathan Tolentino
+          github: https://github.com/jtlntno-cake
+          username: jtlntno-cake
+          city: 菲律宾
         - name: JJ Adonis
           github: https://github.com/thedoublejay
           username: thedoublejay
           city: 菲律宾
-        - name: Bella Chew
-          github: https://github.com/izzycsy
-          username: izzycsy
-          city: 新加坡
+        - name: Jimmy Lee
+          github: https://github.com/jingyi2811
+          username: jingyi2811
+          city: 马来西亚
+        - name: Keng Ye
+          github: https://github.com/kyleleow
+          username: kyleleow
+          city: 马来西亚
+        - name: Webster Low
+          github: https://github.com/canonbrother
+          username: canonbrother
+          city: 马来西亚
+        - name: Isaac Yong
+          github: https://github.com/Infiniafication
+          username: Infiniafication
+          city: 马来西亚
+        - name: Ivan Lee
+          github: https://github.com/ivan-zynesis
+          username: ivan-zynesis
+          city: 马来西亚
     subscribe:
       name: 订阅
       headline: 订阅开发者资源和更新版资讯。

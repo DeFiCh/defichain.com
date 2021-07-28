@@ -871,7 +871,7 @@ section.hero {
   display: flex;
   align-items: flex-end;
   text-align: center;
-  padding-top: $header-height + 32px;
+  padding-top: $header-height + 52px;
   padding-bottom: $section-padding-bottom * 1.25;
 
   @include media("<md", "landscape") {

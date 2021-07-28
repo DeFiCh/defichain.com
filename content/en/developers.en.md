@@ -95,7 +95,7 @@ content:
       headline: Core contributors
       subhead: DeFiChain is an open-source project with a global team of core contributors, supported by a community of developers. The full list of projects and contributors can be found on [GitHub](https://github.com/DeFiCh).
       contributors_list:
-        - name: monstrobishi
+        - name: Ahmed Hilali
           github: https://github.com/monstrobishi
           username: monstrobishi
           city: Singapore
@@ -107,6 +107,34 @@ content:
           github: https://github.com/aentan
           username: aentan
           city: Singapore
+        - name: Fuxing Loh
+          github: https://github.com/fuxingloh
+          username: fuxingloh
+          city: Singapore
+        - name: Bella Chew
+          github: https://github.com/izzycsy
+          username: izzycsy
+          city: Singapore
+        - name: Suranga Pathmakumara
+          github: https://github.com/surangap
+          username: surangap
+          city: Singapore
+        - name: Aik Chun Sim
+          github: https://github.com/aikchun
+          username: aikchun
+          city: Singapore
+        - name: Prasanna Loganathar
+          github: https://github.com/prasannavl
+          username: prasannavl
+          city: Singapore
+        - name: Jeremy d’Esclercs
+          github: https://github.com/Jouzo
+          username: Jouzo
+          city: France
+        - name: Diego del Corral Tercero
+          github: https://github.com/hidiego
+          username: hidiego
+          city: Spain
         - name: Harsh R
           github: https://github.com/fullstackninja864
           username: fullstackninja864
@@ -123,18 +151,38 @@ content:
           github: https://github.com/Mixa84
           username: Mixa84
           city: Belgrade, Serbia
-        - name: Fuxing Loh
-          github: https://github.com/fuxingloh
-          username: fuxingloh
-          city: Singapore
+        - name: Suraj Auwal
+          github: https://github.com/siradji
+          username: siradji
+          city: Lagos, Nigeria
+        - name: Jonathan Tolentino
+          github: https://github.com/jtlntno-cake
+          username: jtlntno-cake
+          city: Philippines
         - name: JJ Adonis
           github: https://github.com/thedoublejay
           username: thedoublejay
           city: Philippines
-        - name: Bella Chew
-          github: https://github.com/izzycsy
-          username: izzycsy
-          city: Singapore
+        - name: Jimmy Lee
+          github: https://github.com/jingyi2811
+          username: jingyi2811
+          city: Malaysia
+        - name: Keng Ye
+          github: https://github.com/kyleleow
+          username: kyleleow
+          city: Malaysia
+        - name: Webster Low
+          github: https://github.com/canonbrother
+          username: canonbrother
+          city: Malaysia
+        - name: Isaac Yong
+          github: https://github.com/Infiniafication
+          username: Infiniafication
+          city: Malaysia
+        - name: Ivan Lee
+          github: https://github.com/ivan-zynesis
+          username: ivan-zynesis
+          city: Malaysia
     subscribe:
       name: subscribe
       headline: Subscribe for updates on developer resources and releases.

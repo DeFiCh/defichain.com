@@ -66,6 +66,11 @@ title = "DeFiChain"
       url = "https://easycrypto.ai/nz/buy-sell/dfi-defichain"
       file = "/img/sources/logo-easycrypto-nz"
       type = "png"
+    [[params.exchanges.list]]
+      label = "Transak"
+      url = "https://global.transak.com/?apiKey=9cb22c33-f1fc-4ff0-9736-9159bb879568&cryptoCurrencyCode=DFI"
+      file = "/img/sources/logo-transak"
+      type = "png"
   [params.menu]
     social = "Social"
     buy_dfi = "Buy $DFI"

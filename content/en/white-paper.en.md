@@ -48,7 +48,7 @@ This document does not constitute nor imply a final technical specification of D
 
 The cryptocurrency industry is based on a simple premise: people should be fully in control of their finances. While it seems like a simple and obvious statement, the current systems are far from providing financial services that are truly under the control of the people who use them. The mission of DeFiChain is to give people (and in the future, machines, and devices) seamless access to decentralized financial services.
 
-For that purpose, we are introducing DeFiChain, a dedicated blockchain specifically for decentralized finance (DeFi) [www.DeFichain.com](https://defichain.com).
+For that purpose, we are introducing DeFiChain, a dedicated blockchain specifically for decentralized finance (DeFi) [https://defichain.com](https://defichain.com).
 
 By dedicating the functionality of a blockchain specifically to decentralized finance, DeFiChain provides high transaction throughput, reduced risk of errors, and intelligent feature development specifically for the fulfillment of Satoshi’s original intent: To create a reliable alternative form of financial services built on top of Bitcoin.
 

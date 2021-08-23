@@ -24,6 +24,22 @@ content:
     downloads:
       headline: Get the wallet app and CLI.
       downloads_list:
+        - title: Light wallet mobile app
+          type: mobile-app
+          description: Lightweight, instant access to Decentralized Finance for Bitcoin, at your fingertips.
+          image:
+            path: /img/downloads/defichain_icon_60.png
+            type: png
+            dimensions: [64, 64]
+          links:
+            - label: iOS
+              type: ios
+              image: /static/img/downloads/app-store-badge-ios.svg
+              url: https://apps.apple.com/us/app/defichain-wallet/id1572472820
+            - label: Android
+              type: android
+              image: /static/img/downloads/play-badge-android.svg
+              url: https://play.google.com/store/apps/details?id=com.defichain.app
         - title: DeFi Wallet app
           type: desktop-app
           description: Transact, liquidity mine, swap and more with the full-featured and fully-decentralized wallet app. Full node included.

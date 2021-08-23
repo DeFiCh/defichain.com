@@ -24,6 +24,22 @@ content:
     downloads:
       headline: 下载钱包程序和CLI (命令行介面控制台)。
       downloads_list:
+        - title: 轻钱包手机应用程序
+          type: mobile-app
+          description: 轻钱包，立即启动开放式金融理财。
+          image:
+            path: /img/downloads/defichain_icon_60.png
+            type: png
+            dimensions: [64, 64]
+          links:
+            - label: iOS
+              type: ios
+              image: /static/img/downloads/app-store-badge-ios.svg
+              url: https://apps.apple.com/us/app/defichain-wallet/id1572472820
+            - label: Android
+              type: android
+              image: /static/img/downloads/play-badge-android.svg
+              url: https://play.google.com/store/apps/details?id=com.defichain.app
         - title: 递飞链钱包程序
           type: desktop-app
           description: 使用全功能和递飞链钱包程序进行交易、流动性挖矿、交换等。包含完整节点。

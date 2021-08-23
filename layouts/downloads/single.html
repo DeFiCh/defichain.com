@@ -75,7 +75,13 @@
                     <div class="spacer"></div>
                     <div class="resource-links">
                       {{ range $link := $download.links }}
-                        <a href="{{ $link.url }}" class="download-{{ lower $download.type }}-{{ $link.type }}" target="_blank">{{ $link.label }}</a>
+                        <a href="{{ $link.url }}" class="download-{{ lower $download.type }}-{{ $link.type }}" target="_blank">
+                          {{ with $link.image }}
+                          {{ readFile $link.image | safeHTML }}
+                          {{ else }}
+                          {{ $link.label }}
+                          {{ end }}
+                        </a>
                       {{ end }}
                     </div>
                     <div class="bg"></div>

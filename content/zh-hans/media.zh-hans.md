@@ -86,11 +86,11 @@ content:
           date: 17 Jan, 2021
           image: /svg/press/dailyhodl.svg
           url: https://dailyhodl.com/2021/01/17/four-crypto-assets-surge-more-than-400-in-just-one-month-as-alt-season-roars/
-        - title: The future of DeFi with DeFiChain’s U-Zyn-Chua
-          source: The Bit
-          date: 21 Dec, 2020
-          image: /svg/sources/logo-bittrex.svg
-          url: https://bittrexglobal.libsyn.com/the-future-of-defi-with-defichains-u-zyn-chua
+        # - title: The future of DeFi with DeFiChain’s U-Zyn-Chua
+        #   source: The Bit
+        #   date: 21 Dec, 2020
+        #   image: /svg/sources/logo-bittrex.svg
+        #   url: https://bittrexglobal.libsyn.com/the-future-of-defi-with-defichains-u-zyn-chua
         - title: DeFiChain – The Launch of Yield Farming
           source: Altcoin Buzz
           date: 16 Dec, 2020
@@ -186,11 +186,11 @@ content:
           date: 9 Apr, 2020
           image: /svg/press/wallstreetonline.svg
           url: https://www.wallstreet-online.de/nachricht/12392059-bitcoin-lending-vergleich-5-besten-crypto-plattformen/all
-        - title: Dr. Julian Hosp im Interview – DeFi, CAKE, DeFiChain
-          source: Kryptomagazin
-          date: 28 Oct, 2019
-          image: /svg/press/kryptomagazin.svg
-          url: https://www.krypto-magazin.de/dr-julian-hosp-im-interview-defi-cake-defi-blockchain/
+        # - title: Dr. Julian Hosp im Interview – DeFi, CAKE, DeFiChain
+        #   source: Kryptomagazin
+        #   date: 28 Oct, 2019
+        #   image: /svg/press/kryptomagazin.svg
+        #   url: https://www.krypto-magazin.de/dr-julian-hosp-im-interview-defi-cake-defi-blockchain/
     downloads:
       headline: "下载"
       description: Download official DeFiChain brand assets and learn about usage guidelines.

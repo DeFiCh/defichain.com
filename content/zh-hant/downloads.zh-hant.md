@@ -1,15 +1,15 @@
 ---
 title: 下載區
 type: downloads
-long_title: 用于Mac、Windows和Linux的遞飛鏈CLI和錢包程序的下載區。
+long_title: 遞飛鏈錢包手機應用程序, 用于Mac、Windows和Linux的遞飛鏈CLI和錢包程序的下載區。
 menu:
   footer:
     weight: 600
 meta:
-  description: 用于Mac、Windows和Linux的遞飛鏈CLI和錢包程序的下載區。
+  description: 遞飛鏈錢包手機應用程序, 用于Mac、Windows和Linux的遞飛鏈CLI和錢包程序的下載區。
   og:
     title: 下載區
-    description: 用于Mac、Windows和Linux的遞飛鏈CLI和錢包程序的下載區。
+    description: 遞飛鏈錢包手機應用程序, 用于Mac、Windows和Linux的遞飛鏈CLI和錢包程序的下載區。
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
@@ -20,11 +20,11 @@ content:
     hero:
       name: hero
       headline: 下載區
-      subhead: 下載適用于Mac、Windows和Linux的程序。
+      subhead: 下載適用于手機, Mac、Windows和Linux的程序。
     downloads:
       headline: 下載錢包程序和CLI (命令行介面控制台)。
       downloads_list:
-        - title: 輕錢包手機應用程序
+        - title: 遞飛鏈錢包手機應用程序
           type: mobile-app
           description: 輕錢包，立即啓動開放式金融理財。
           image:
@@ -40,7 +40,7 @@ content:
               type: android
               image: /static/img/downloads/play-badge-android.svg
               url: https://play.google.com/store/apps/details?id=com.defichain.app
-        - title: 遞飛鏈錢包程序
+        - title: 遞飛鏈錢包電腦程序
           type: desktop-app
           description: 使用全功能和遞飛鏈錢包程序進行交易、流動性挖礦、交換等。包含完整節點。
           image:

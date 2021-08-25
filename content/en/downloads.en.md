@@ -1,15 +1,15 @@
 ---
 title: Downloads
 type: downloads
-long_title: DeFiChain CLI and desktop app downloads for Mac, Windows and Linux.
+long_title: DeFiChain mobile app, CLI and desktop app downloads for Mac, Windows and Linux.
 menu:
   footer:
     weight: 600
 meta:
-  description: DeFiChain CLI and desktop app downloads for Mac, Windows and Linux.
+  description: DeFiChain mobile app, CLI and desktop app downloads for Mac, Windows and Linux.
   og:
     title: Downloads
-    description: DeFiChain CLI and desktop app downloads for Mac, Windows and Linux.
+    description: DeFiChain mobile app, CLI and desktop app downloads for Mac, Windows and Linux.
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
@@ -22,9 +22,9 @@ content:
       headline: Downloads
       subhead: Download applications for Mac, Windows and Linux.
     downloads:
-      headline: Get the wallet app and CLI.
+      headline: Choose your own wallet. Get the CLI.
       downloads_list:
-        - title: Light wallet mobile app
+        - title: DeFiChain wallet mobile app
           type: mobile-app
           description: Lightweight, instant access to Decentralized Finance for Bitcoin, at your fingertips.
           image:
@@ -40,7 +40,7 @@ content:
               type: android
               image: /static/img/downloads/play-badge-android.svg
               url: https://play.google.com/store/apps/details?id=com.defichain.app
-        - title: DeFi Wallet app
+        - title: DeFi Wallet desktop app
           type: desktop-app
           description: Transact, liquidity mine, swap and more with the full-featured and fully-decentralized wallet app. Full node included.
           image:

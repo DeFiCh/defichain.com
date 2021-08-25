@@ -95,94 +95,94 @@ content:
       headline: 主要貢獻者
       subhead: 遞飛鏈是個開放源碼項目，由主貢獻者組成的全球團隊，並由開發者社區支持此項目。[GitHub](https://github.com/DeFiCh)源代碼網列出主要貢獻者和項目中細節
       contributors_list:
-        - name: Ahmed Hilali
-          github: https://github.com/monstrobishi
-          username: monstrobishi
-          city: 新加坡
-        - name: U-Zyn Chua
-          github: https://github.com/uzyn
-          username: uzyn
-          city: 新加坡
-        - name: Aen
-          github: https://github.com/aentan
-          username: aentan
-          city: 新加坡
-        - name: Fuxing Loh
-          github: https://github.com/fuxingloh
-          username: fuxingloh
-          city: 新加坡
-        - name: Bella Chew
-          github: https://github.com/izzycsy
-          username: izzycsy
-          city: 新加坡
-        - name: Suranga Pathmakumara
-          github: https://github.com/surangap
-          username: surangap
-          city: 新加坡
-        - name: Aik Chun Sim
-          github: https://github.com/aikchun
-          username: aikchun
-          city: 新加坡
-        - name: Prasanna Loganathar
-          github: https://github.com/prasannavl
-          username: prasannavl
-          city: 新加坡
-        - name: Jeremy d’Esclercs
-          github: https://github.com/Jouzo
-          username: Jouzo
-          city: 法國
-        - name: Diego del Corral Tercero
-          github: https://github.com/hidiego
-          username: hidiego
-          city: 西班牙
-        - name: Harsh R
-          github: https://github.com/fullstackninja864
-          username: fullstackninja864
-          city: 印度浦那
-        - name: Peter Bushnell
-          github: https://github.com/Bushstar
-          username: Bushstar
-          city: 英國牛津
-        - name: Anthony Fieroni
-          github: https://github.com/bvbfan
-          username: bvbfan
-          city: 保加利亞普羅夫迪夫
-        - name: Mihailo Milenkovic
-          github: https://github.com/Mixa84
-          username: Mixa84
-          city: 貝爾格萊德，塞爾維亞
-        - name: Suraj Auwal
-          github: https://github.com/siradji
-          username: siradji
-          city: 尼日利亞拉各斯
-        - name: Jonathan Tolentino
-          github: https://github.com/jtlntno-cake
-          username: jtlntno-cake
-          city: 菲律賓
-        - name: JJ Adonis
-          github: https://github.com/thedoublejay
-          username: thedoublejay
-          city: 菲律賓
-        - name: Jimmy Lee
-          github: https://github.com/jingyi2811
-          username: jingyi2811
-          city: 馬來西亞
-        - name: Keng Ye
-          github: https://github.com/kyleleow
-          username: kyleleow
-          city: 馬來西亞
-        - name: Webster Low
-          github: https://github.com/canonbrother
-          username: canonbrother
-          city: 馬來西亞
-        - name: Isaac Yong
-          github: https://github.com/Infiniafication
-          username: Infiniafication
-          city: 馬來西亞
-        - name: Ivan Lee
-          github: https://github.com/ivan-zynesis
-          username: ivan-zynesis
-          city: 馬來西亞
+        # - name: Ahmed Hilali
+        #   github: https://github.com/monstrobishi
+        #   username: monstrobishi
+        #   city: 新加坡
+        # - name: U-Zyn Chua
+        #   github: https://github.com/uzyn
+        #   username: uzyn
+        #   city: 新加坡
+        # - name: Aen
+        #   github: https://github.com/aentan
+        #   username: aentan
+        #   city: 新加坡
+        # - name: Fuxing Loh
+        #   github: https://github.com/fuxingloh
+        #   username: fuxingloh
+        #   city: 新加坡
+        # - name: Bella Chew
+        #   github: https://github.com/izzycsy
+        #   username: izzycsy
+        #   city: 新加坡
+        # - name: Suranga Pathmakumara
+        #   github: https://github.com/surangap
+        #   username: surangap
+        #   city: 新加坡
+        # - name: Aik Chun Sim
+        #   github: https://github.com/aikchun
+        #   username: aikchun
+        #   city: 新加坡
+        # - name: Prasanna Loganathar
+        #   github: https://github.com/prasannavl
+        #   username: prasannavl
+        #   city: 新加坡
+        # - name: Jeremy d’Esclercs
+        #   github: https://github.com/Jouzo
+        #   username: Jouzo
+        #   city: 法國
+        # - name: Diego del Corral Tercero
+        #   github: https://github.com/hidiego
+        #   username: hidiego
+        #   city: 西班牙
+        # - name: Harsh R
+        #   github: https://github.com/fullstackninja864
+        #   username: fullstackninja864
+        #   city: 印度浦那
+        # - name: Peter Bushnell
+        #   github: https://github.com/Bushstar
+        #   username: Bushstar
+        #   city: 英國牛津
+        # - name: Anthony Fieroni
+        #   github: https://github.com/bvbfan
+        #   username: bvbfan
+        #   city: 保加利亞普羅夫迪夫
+        # - name: Mihailo Milenkovic
+        #   github: https://github.com/Mixa84
+        #   username: Mixa84
+        #   city: 貝爾格萊德，塞爾維亞
+        # - name: Suraj Auwal
+        #   github: https://github.com/siradji
+        #   username: siradji
+        #   city: 尼日利亞拉各斯
+        # - name: Jonathan Tolentino
+        #   github: https://github.com/jtlntno-cake
+        #   username: jtlntno-cake
+        #   city: 菲律賓
+        # - name: JJ Adonis
+        #   github: https://github.com/thedoublejay
+        #   username: thedoublejay
+        #   city: 菲律賓
+        # - name: Jimmy Lee
+        #   github: https://github.com/jingyi2811
+        #   username: jingyi2811
+        #   city: 馬來西亞
+        # - name: Keng Ye
+        #   github: https://github.com/kyleleow
+        #   username: kyleleow
+        #   city: 馬來西亞
+        # - name: Webster Low
+        #   github: https://github.com/canonbrother
+        #   username: canonbrother
+        #   city: 馬來西亞
+        # - name: Isaac Yong
+        #   github: https://github.com/Infiniafication
+        #   username: Infiniafication
+        #   city: 馬來西亞
+        # - name: Ivan Lee
+        #   github: https://github.com/ivan-zynesis
+        #   username: ivan-zynesis
+        #   city: 馬來西亞
     subscribe:
       name: 訂閱
       headline: 訂閱開發者資源和更新版資訊。

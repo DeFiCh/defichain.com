@@ -49,14 +49,15 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-5 offset-ul-1">
-            <h2>{{ $.Param "content.sections.governance.headline" }}</h2>
-            <p class="lg">{{ $.Param "content.sections.governance.subhead" }}</p>
+            <h3>{{ $.Param "content.sections.foundation.headline" }}</h3>
+            <!-- <p class="lg">{{ $.Param "content.sections.governance.subhead" }}</p> -->
+            <p>{{ $.Param "content.sections.foundation.subhead" | markdownify }}</p>
           </div>
-          <div class="col col-ul-5">
+          <!-- <div class="col col-ul-5">
             <div class="governance-diagram-wrapper">
               {{ readFile $.Params.content.sections.governance.image | safeHTML }}
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="section-slope paper reverse">

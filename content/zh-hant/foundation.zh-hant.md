@@ -27,6 +27,21 @@ content:
       headline: 治理
       subhead: 遞飛鏈基金會負責向用戶和團體發行代幣，以加速采用。該基金會的任務是促進生態系統，引進生態系統夥伴，指導開發生態系統夥伴工具，以及開展其他活動，新增生態系統夥伴的加入。
       image: /static/img/white-paper/zht/foundation-diagram.svg
+    foundation:
+      headline: 遞飛鏈基金會是一個致力于支持遞飛鏈生態系統和社區的非營利組織。
+      title: DeFiChain Foundation Ltd.
+      company_number:
+      subhead: "**DeFiChain Foundation Ltd.**
+
+      公司編號: 2068902
+
+      地址: Rodus Building, PO Box 3093
+
+      Road Town, Tortola
+
+      VG1110, British Virgin Islands
+
+      社區代表: Daniel Zirkel ([Twitter](https://twitter.com/DanielZirkel))"
     # subscribe in /
     # closer_look in /
 ---

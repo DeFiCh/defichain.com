@@ -27,6 +27,21 @@ content:
       headline: Governance
       subhead: The DeFiChain Foundation is responsible for issuance of tokens to users and groups to speed up adoption. The Foundation is tasked with boosting the ecosystem, bringing in ecosystem partners, directing the development of the tools for ecosystem partners, and other activities to increase the number of ecosystem partners.
       image: /static/svg/foundation-diagram.svg
+    foundation:
+      headline: The DeFiChain Foundation is a non-profit organization dedicated to supporting the DeFiChain ecosystem and community.
+      title: DeFiChain Foundation Ltd.
+      company_number:
+      subhead: "**DeFiChain Foundation Ltd.**
+
+      Company Number: 2068902
+
+      Address: Rodus Building, PO Box 3093
+
+      Road Town, Tortola
+
+      VG1110, British Virgin Islands
+
+      Community representative: Daniel Zirkel ([Twitter](https://twitter.com/DanielZirkel))"
     # subscribe in /
     # closer_look in /
 ---

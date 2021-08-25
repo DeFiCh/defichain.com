@@ -1,15 +1,15 @@
 ---
 title: 下载区
 type: downloads
-long_title: 用于Mac、Windows和Linux的递飞链CLI和钱包程序的下载区。
+long_title: 递飞链钱包手机应用程序, 用于Mac、Windows和Linux的递飞链CLI和钱包程序的下载区。
 menu:
   footer:
     weight: 600
 meta:
-  description: 用于Mac、Windows和Linux的递飞链CLI和钱包程序的下载区。
+  description: 递飞链钱包手机应用程序, 用于Mac、Windows和Linux的递飞链CLI和钱包程序的下载区。
   og:
     title: 下载区
-    description: 用于Mac、Windows和Linux的递飞链CLI和钱包程序的下载区。
+    description: 递飞链钱包手机应用程序, 用于Mac、Windows和Linux的递飞链CLI和钱包程序的下载区。
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
@@ -20,11 +20,11 @@ content:
     hero:
       name: hero
       headline: 下载区
-      subhead: 下载适用于Mac、Windows和Linux的程序。
+      subhead: 下载适用于手机, Mac、Windows和Linux的程序。
     downloads:
       headline: 下载钱包程序和CLI (命令行介面控制台)。
       downloads_list:
-        - title: 轻钱包手机应用程序
+        - title: 递飞链钱包手机应用程序
           type: mobile-app
           description: 轻钱包，立即启动开放式金融理财。
           image:
@@ -40,7 +40,7 @@ content:
               type: android
               image: /static/img/downloads/play-badge-android.svg
               url: https://play.google.com/store/apps/details?id=com.defichain.app
-        - title: 递飞链钱包程序
+        - title: 递飞链钱包电脑程序
           type: desktop-app
           description: 使用全功能和递飞链钱包程序进行交易、流动性挖矿、交换等。包含完整节点。
           image:

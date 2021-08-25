@@ -48,10 +48,12 @@
     <section class="governance paper">
       <div class="container-fluid">
         <div class="row">
-          <div class="col col-ul-5 offset-ul-1">
+          <div class="col col-ul-10 offset-ul-1">
             <h3>{{ $.Param "content.sections.foundation.headline" }}</h3>
+            <p class="lg">{{ $.Param "content.sections.foundation.subhead" }}</p>
+            <br />
             <!-- <p class="lg">{{ $.Param "content.sections.governance.subhead" }}</p> -->
-            <p>{{ $.Param "content.sections.foundation.subhead" | markdownify }}</p>
+            <p class="pt-2">{{ $.Param "content.sections.foundation.content" | markdownify }}</p>
           </div>
           <!-- <div class="col col-ul-5">
             <div class="governance-diagram-wrapper">

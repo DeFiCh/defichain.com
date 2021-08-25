@@ -28,10 +28,9 @@ content:
       subhead: 遞飛鏈基金會負責向用戶和團體發行代幣，以加速采用。該基金會的任務是促進生態系統，引進生態系統夥伴，指導開發生態系統夥伴工具，以及開展其他活動，新增生態系統夥伴的加入。
       image: /static/img/white-paper/zht/foundation-diagram.svg
     foundation:
-      headline: 遞飛鏈基金會是一個致力于支持遞飛鏈生態系統和社區的非營利組織。
-      title: DeFiChain Foundation Ltd.
-      company_number:
-      subhead: "**DeFiChain Foundation Ltd.**
+      headline: 遞飛鏈基金會是一個非營利組織，致力于支持遞飛鏈生態系統和相關技術以及社區。
+      subhead: 遞飛鏈基金會不是營利性公司，甚至不是傳統的非營利性公司。他們的角色不是控制或領導遞飛鏈，也不是唯一為遞飛鏈相關技術的關鍵開發提供資金的組織。 遞飛鏈基金會是更大生態系統的一部分。
+      content: "**DeFiChain Foundation Ltd.**
 
       公司編號: 2068902
 

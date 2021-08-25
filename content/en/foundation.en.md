@@ -28,10 +28,9 @@ content:
       subhead: The DeFiChain Foundation is responsible for issuance of tokens to users and groups to speed up adoption. The Foundation is tasked with boosting the ecosystem, bringing in ecosystem partners, directing the development of the tools for ecosystem partners, and other activities to increase the number of ecosystem partners.
       image: /static/svg/foundation-diagram.svg
     foundation:
-      headline: The DeFiChain Foundation is a non-profit organization dedicated to supporting the DeFiChain ecosystem and community.
-      title: DeFiChain Foundation Ltd.
-      company_number:
-      subhead: "**DeFiChain Foundation Ltd.**
+      headline: The DeFiChain Foundation is a non-profit organization dedicated to supporting DeFiChain ecosystem and related technologies as well as communities.
+      subhead: The DeFiChain Foundation is not a for-profit company, or even a traditional non-profit. Their role is not to control or lead DeFiChain, nor are they the only organization that funds critical development of DeFiChain-related technologies. The DeFiChain Foundation is one part of a much larger ecosystem.
+      content: "**DeFiChain Foundation Ltd.**
 
       Company Number: 2068902
 

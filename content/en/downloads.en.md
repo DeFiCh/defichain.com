@@ -20,7 +20,7 @@ content:
     hero:
       name: hero
       headline: Downloads
-      subhead: Download applications for Mac, Windows and Linux.
+      subhead: Download applications for mobile, Mac, Windows and Linux.
     downloads:
       headline: Choose your own wallet. Get the CLI.
       downloads_list:

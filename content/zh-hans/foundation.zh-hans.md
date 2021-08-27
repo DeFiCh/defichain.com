@@ -30,7 +30,7 @@ content:
     foundation:
       headline: 递飞链基金会是一个非营利组织，致力于支持递飞链生态系统和相关技术以及社区。
       subhead: 递飞链基金会不是营利性公司，甚至不是传统的非营利性公司。他们的角色不是控制或领导递飞链，也不是唯一为递飞链相关技术的关键开发提供资金的组织。 递飞链基金会是更大生态系统的一部分。
-      content: "**DeFiChain Foundation Ltd.**
+      content: "**DeFiChain Foundation**
 
       公司编号: 2068902
 
@@ -39,6 +39,8 @@ content:
       Road Town, Tortola
 
       VG1110, British Virgin Islands
+
+      注册代理: [Carey Olsen](https://www.careyolsen.com/locations/british-virgin-islands)
 
       社区代表: Daniel Zirkel ([Twitter](https://twitter.com/DanielZirkel))"
     # subscribe in /

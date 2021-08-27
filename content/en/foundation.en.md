@@ -30,7 +30,7 @@ content:
     foundation:
       headline: The DeFiChain Foundation is a non-profit organization dedicated to supporting DeFiChain ecosystem and related technologies as well as communities.
       subhead: The DeFiChain Foundation is not a for-profit company, or even a traditional non-profit. Their role is not to control or lead DeFiChain, nor are they the only organization that funds critical development of DeFiChain-related technologies. The DeFiChain Foundation is one part of a much larger ecosystem.
-      content: "**DeFiChain Foundation Ltd.**
+      content: "**DeFiChain Foundation**
 
       Company Number: 2068902
 
@@ -39,6 +39,8 @@ content:
       Road Town, Tortola
 
       VG1110, British Virgin Islands
+
+      Registered Agent: [Carey Olsen](https://www.careyolsen.com/locations/british-virgin-islands)
 
       Community representative: Daniel Zirkel ([Twitter](https://twitter.com/DanielZirkel))"
     # subscribe in /

@@ -30,7 +30,7 @@ content:
     foundation:
       headline: 遞飛鏈基金會是一個非營利組織，致力于支持遞飛鏈生態系統和相關技術以及社區。
       subhead: 遞飛鏈基金會不是營利性公司，甚至不是傳統的非營利性公司。他們的角色不是控制或領導遞飛鏈，也不是唯一為遞飛鏈相關技術的關鍵開發提供資金的組織。 遞飛鏈基金會是更大生態系統的一部分。
-      content: "**DeFiChain Foundation Ltd.**
+      content: "**DeFiChain Foundation**
 
       公司編號: 2068902
 
@@ -39,6 +39,8 @@ content:
       Road Town, Tortola
 
       VG1110, British Virgin Islands
+      
+      注册代理: [Carey Olsen](https://www.careyolsen.com/locations/british-virgin-islands)
 
       社區代表: Daniel Zirkel ([Twitter](https://twitter.com/DanielZirkel))"
     # subscribe in /

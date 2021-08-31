@@ -100,9 +100,9 @@ content:
             file: /svg/sources/logo-kucoin
             type: svg
       ways_to_acquire:
-        - icon: /static/svg/icons/way-to-acquire/airdrop.svg
-          title: 空投
-          description: 递飞链基金会将向hodlers、做市商和递飞链的其他用户提共空投DFI。
+        # - icon: /static/svg/icons/way-to-acquire/airdrop.svg
+        #   title: 空投
+        #   description: 递飞链基金会将向hodlers、做市商和递飞链的其他用户提共空投DFI。
         - icon: /static/svg/icons/way-to-acquire/developers.svg
           title: 开发者
           description: 递飞链基金会授予开发者在递飞链上创建功能和dApp的权利。

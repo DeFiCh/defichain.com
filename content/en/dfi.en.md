@@ -100,9 +100,9 @@ content:
             file: /svg/sources/logo-kucoin
             type: svg
       ways_to_acquire:
-        - icon: /static/svg/icons/way-to-acquire/airdrop.svg
-          title: Airdrop
-          description: The DeFiChain Foundation will airdrop DFI to hodlers, market makers and other users of DeFiChain.
+        # - icon: /static/svg/icons/way-to-acquire/airdrop.svg
+        #   title: Airdrop
+        #   description: The DeFiChain Foundation will airdrop DFI to hodlers, market makers and other users of DeFiChain.
         - icon: /static/svg/icons/way-to-acquire/developers.svg
           title: Developers
           description: The DeFiChain Foundation gives grants to developers building functionality and dApps on DeFiChain.

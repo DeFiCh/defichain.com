@@ -1,7 +1,9 @@
 ---
-title: 合作伙伴
-type: partners
-long_title: 加入友情链接
+title: 生態系統
+type: ecosystem
+long_title: 加入友情鏈接
+aliases:
+    - /partners
 cta_to: 加入
 menu:
   main:
@@ -9,10 +11,10 @@ menu:
   footer:
     weight: 500
 meta:
-  description: 加入友情链接
+  description: 加入友情鏈接
   og:
-    title: 合作伙伴
-    description: 加入友情链接
+    title: 生態系統
+    description: 加入友情鏈接
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
@@ -21,35 +23,35 @@ content:
   sections:
     hero:
       name: hero
-      headline: 合作伙伴
-      subhead: 加入友情链接
+      headline: 生態系統
+      subhead: 加入友情鏈接
     contributors:
       name: contributor
-      headline: 在递飞链上贡献
+      headline: 在遞飛鏈上貢獻
       become_developer:
-        headline: 入门开发者
-        description: 入门递飞链创建和使用$DFI币
+        headline: 入門開發者
+        description: 入門遞飛鏈創建和使用$DFI幣
         cta:
-          label: 开发者
+          label: 開發者
           url: /developers
       become_partner:
-        headline: 加入合作伙伴
-        description: 递飞链生态中贡献投稿
+        headline: 加入合作夥伴
+        description: 遞飛鏈生態中貢獻投稿
         cta:
-          label: 联系我们
+          label: 聯系我們
     partners:
-      headline: 合作伙伴
+      headline: 合作夥伴
       partners_list:
         - name: CakeDeFi
-          description: 在CakeDefi上做DFI权益质押来收获DFI
+          description: 在CakeDefi上做DFI權益質押來收獲DFI
           logo:
             file: /svg/external/logo-cake
             type: svg
           cta:
             label: 前往
             url: https://cakedefi.com
-        - name: 权益质押获利
-          description: 递飞链(DFI)利息计算机和当前汇率
+        - name: 權益質押獲利
+          description: 遞飛鏈(DFI)利息計算機和當前彙率
           logo:
             file: /svg/external/logo-stakingrewards
             type: svg
@@ -57,7 +59,7 @@ content:
             label: 前往
             url: https://www.stakingrewards.com/earn/defichain
         - name: Blockspot.io
-          description: 递飞链（DFI）的价格，图表，数据及资讯
+          description: 遞飛鏈（DFI）的價格，圖表，數據及資訊
           logo:
             file: /img/external/logo-blockspot
             type: png
@@ -73,15 +75,15 @@ content:
             label: 前往
             url: https://blockfolio.com/coin/DFI
         - name: CoinPedia
-          description: 去中心化圈的加密货币资讯来源
+          description: 去中心化圈的加密貨幣資訊來源
           logo:
             file: /img/external/logo-coinpedia
             type: png
           cta:
             label: 前往
             url: https://pro.coinpedia.org/companies/defichain
-        - name: Messari数据分析
-          description: 加密经济透明化的数据工具
+        - name: Messari數據分析
+          description: 加密經濟透明化的數據工具
           logo:
             file: /svg/external/logo-messari
             type: svg
@@ -95,23 +97,23 @@ content:
     #   subject_title: CEO, Cake
     #   quote: Healthy finances. For someone like me with the background at medicine, sounds like _doing the right thing for the people_.
     partnering:
-      headline: 递飞链生态中贡献投稿
+      headline: 遞飛鏈生態中貢獻投稿
       form:
         name:
           label: 姓名
           placeholder: 姓名
         email:
-          label: 电邮地址
+          label: 電郵地址
           placeholder: name@example.com
         company:
-          label: 递飞链基金会 (可选)
-          placeholder: 递飞链基金会
+          label: 遞飛鏈基金會 (可選)
+          placeholder: 遞飛鏈基金會
         comment:
-          label: 意见
-          placeholder: 请告诉我们更多
+          label: 意見
+          placeholder: 請告訴我們更多
         button:
-          label: 发送
-      or: 发送邮件至 [partners@defichain.com](mailto:partners@defichain.com)
+          label: 發送
+      or: 發送郵件至 [partners@defichain.com](mailto:partners@defichain.com)
     #subscribe in /
     #closer_look in /
 ---

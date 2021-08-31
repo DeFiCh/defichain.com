@@ -1,7 +1,9 @@
 ---
-title: Partners
-type: partners
+title: Ecosystem
+type: ecosystem
 long_title: Be part of DeFiChain ecosystem.
+aliases:
+    - /partners
 cta_to: Join
 menu:
   main:
@@ -11,7 +13,7 @@ menu:
 meta:
   description: Be part of DeFiChain ecosystem.
   og:
-    title: Partners
+    title: Ecosystem
     description: Be part of DeFiChain ecosystem.
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
@@ -21,7 +23,7 @@ content:
   sections:
     hero:
       name: hero
-      headline: Partners
+      headline: Ecosystem
       subhead: Be part of DeFiChain ecosystem.
     contributors:
       name: contributor
@@ -33,7 +35,7 @@ content:
           label: Developers
           url: /developers
       become_partner:
-        headline: Become a _partner_
+        headline: Become a _service provider_
         description: Tell us how you would like to contribute to the ecosystem.
         cta:
           label: Contact us
@@ -41,7 +43,7 @@ content:
       headline: Partners
       partners_list:
         - name: Cake DeFi
-          description: Stake DFI and receive DFI as rewards when using Cake Lapis.
+          description: Stake DFI and receive DFI as rewards when using Cake DeFi.
           logo:
             file: /svg/external/logo-cake
             type: svg

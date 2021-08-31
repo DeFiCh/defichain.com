@@ -62,6 +62,7 @@
                       {{ readFile $download.image.path | safeHTML }}
                       {{ else }}
                       <img
+                        class="downloads-icon"
                         src="{{ $download.image.path }}" alt="{{ $download.title }}"
                         {{ with $download.image.dimensions }}
                           width="{{ index $download.image.dimensions 0 }}"

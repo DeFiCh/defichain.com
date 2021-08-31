@@ -59,6 +59,28 @@ content:
               url: https://github.com/DeFiCh/defi-app/releases
             - label: Installation guide
               url: /learn/defi-app-how-to
+        - title: Saiive.live DeFi wallet
+          type: desktop-app
+          description: A non-custodial light wallet for DeFiChain from and for the community. For mobile and desktop.
+          image:
+            path: /img/downloads/saiive.png
+            type: png
+            dimensions: [64, 64]
+          links:
+            - label: Website
+              type: website
+              url: https://saiive.live
+        - title: DeFi wallet for Raspberry Pi
+          type: desktop-app
+          description: A version of the desktop wallet for Raspberry Pi 4B 4GB with official Raspberry Pi OS (32-Bit).
+          image:
+            path: /img/downloads/definode-pi.png
+            type: png
+            dimensions: [64, 64]
+          links:
+            - label: Github
+              type: github
+              url: https://github.com/Martin8617/Defi-Wallet-for-Raspberry-Pi
         - title: CLI
           type: cli
           description: Transact and interact with DeFiChain through a command line interface. Full node included.

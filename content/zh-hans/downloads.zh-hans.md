@@ -59,6 +59,28 @@ content:
               url: https://github.com/DeFiCh/defi-app/releases
             - label: 安装入门指南
               url: /learn/defi-app-how-to
+        - title: Saiive.live 递飞链钱包
+          type: desktop-app
+          description: 来自社区和为社区提供的递飞链的非托管轻钱包。适用于手机设备和电脑设备。
+          image:
+            path: /img/downloads/saiive.png
+            type: png
+            dimensions: [64, 64]
+          links:
+            - label: 网站
+              type: website
+              url: https://saiive.live
+        - title: 递飞链钱包树莓派程序
+          type: desktop-app
+          description: 用于树莓派 4B 4GB 的电脑钱包版本，带有官方 Raspberry Pi OS（32-Bit）。
+          image:
+            path: /img/downloads/definode-pi.png
+            type: png
+            dimensions: [64, 64]
+          links:
+            - label: Github
+              type: github
+              url: https://github.com/Martin8617/Defi-Wallet-for-Raspberry-Pi
         - title: 命令行介面控制台
           type: cli
           description: 通过命令行介面与递飞链进行交易和其他功能。包含完整节点。

@@ -21,11 +21,11 @@ content:
       headline: Privacy Policy
 ---
 
-DEFICHAIN FOUNDATION LIMITED takes the privacy of your information seriously. This Privacy Policy applies to the defichain.com website (the “Website”) and governs data collection, processing and usage in compliance with the Personal Data Protection Act 2012 (No. 26 of 2012) of Singapore (“PDPA”). 
+DEFICHAIN FOUNDATION LTD. (Company Number: 2068902) takes the privacy of your information seriously. This Privacy Policy applies to the defichain.com website (the “Website”) and governs data collection, processing and usage in compliance with the Data Protection Act, 2021 of the British Virgin Islands (“DPA”).
 
 By using the Website, you consent to the data practices described in this statement.
 
-This Privacy Policy has been compiled to better serve those who are concerned with how their ‘Personally identifiable information’ (PII) is being used online. PII, as used in Singapore privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website.
+This Privacy Policy has been compiled to better serve those who are concerned with how their ‘Personally identifiable information’ (PII) is being used online. PII, as used in BVI privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website.
 
 ## Information Collected from All Visitors to our Website or Webapp
 
@@ -33,7 +33,7 @@ When subscribing on our site, as appropriate, you may be asked to enter your nam
 
 Some further information collected may be other personally identifiable information, such as information about your computer hardware and software when you use our Website. The information can include: your IP address, browser type, domain names, access times and referring website addresses.
 
-This information is used by DEFICHAIN FOUNDATION LIMITED for the operation of the services, to maintain quality of the Services, and to provide general statistics regarding use of the defichain.com website.
+This information is used by DEFICHAIN FOUNDATION LTD. for the operation of the services, to maintain quality of the Services, and to provide general statistics regarding use of the defichain.com website.
 
 
 ## When is information collected?
@@ -112,17 +112,15 @@ It’s also important to note that we do not allow third party behavioral tracki
  
 ## Access to, Updating, and Non-Use of Your Personal Information
 
-Subject to the exceptions referred to in section 21(2) of PDPA, you have the right to request a copy of the information that we hold about you. If you would like a copy of some or all of your personal information, please send an email to [partners@defichain.com](mailto:partners@defichain.com). We may make a small charge for this service.
-
-We want to ensure that your Personal Information is accurate and up to date. If any of the information that you have provided to DEFICHAIN FOUNDATION LIMITED changes, for example if you change your email address, name or contact number, please let us know the correct details by sending an email to [partners@defichain.com](mailto:partners@defichain.com). You may ask us, or we may ask you to correct information you or we think is inaccurate, and you may also ask us to remove information which is inaccurate.
+We want to ensure that your Personal Information is accurate and up to date. If any of the information that you have provided to DEFICHAIN FOUNDATION LTD. changes, for example if you change your email address, name or contact number, please let us know the correct details by sending an email to [partners@defichain.com](mailto:partners@defichain.com). You may ask us, or we may ask you to correct information you or we think is inaccurate, and you may also ask us to remove information which is inaccurate.
 
 You have the right to ask us not to collect, use, process, or disclose your Personal Information in any of the manner described herein. We will usually inform you (before collecting your Personal Information) if we intend to use your Personal Information for such purposes or if we intend to disclose your Personal Information to any third party for such purposes. You can give us notice of your intention to halt the collection, use, processing, or disclosure of your Personal Information at any time by contacting us at [partners@defichain.com](mailto:partners@defichain.com).
 
 
 ## Changes To This Statement
 
-Cake Pte Ltd will occasionally update this Privacy Policy to reflect customer feedback. DEFICHAIN FOUNDATION LIMITED encourages you to periodically review this Privacy Policy to be informed of how DEFICHAIN FOUNDATION LIMITED is protecting your information.
+Cake Pte Ltd will occasionally update this Privacy Policy to reflect customer feedback. DEFICHAIN FOUNDATION LTD. encourages you to periodically review this Privacy Policy to be informed of how DEFICHAIN FOUNDATION LTD. is protecting your information.
 
 ## Contact Information
 
-DEFICHAIN FOUNDATION LIMITED welcomes your comments regarding this Privacy Policy. If you believe that defichain.com has not adhered to this Privacy Policy, please contact us at support at [partners@defichain.com](mailto:partners@defichain.com).
+DEFICHAIN FOUNDATION LTD. welcomes your comments regarding this Privacy Policy. If you believe that defichain.com has not adhered to this Privacy Policy, please contact us at support at [partners@defichain.com](mailto:partners@defichain.com).

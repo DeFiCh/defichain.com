@@ -56,6 +56,14 @@ content:
               value_dfi: 4000
               value_usd: 12000
               txid: ee46a62e455f6aad526d9664022afb4a5014b4031e034f00bdf53dee3d5a6070
+            - title: Masternode quorum anchor confirmation bug
+              value_dfi: 3000
+              value_usd: 9000
+              txid: 471c0e3e1c6e06375be6eef63eb51cc068ecf765301366f1d3d82c7446b8c0e3
+            - title: Masternode boost with infinite timelock
+              value_dfi: 4000
+              value_usd: 12000
+              txid: 3e8bef9fc348183d6f7f685d105ced7693dfa6bc5f94431c3abba7d47271eb08
       total_bounty: Total bounty
     participation:
       headline: How to participate

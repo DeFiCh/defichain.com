@@ -22,6 +22,11 @@ title = "DeFiChain"
     telegram = "https://t.me/CakeDeFi_EN"
   [params.exchanges]
     [[params.exchanges.list]]
+      label = "DFX"
+      url = "https://dfx.swiss/en.html"
+      file = "/svg/sources/logo-dfx"
+      type = "svg"
+    [[params.exchanges.list]]
       label = "KuCoin"
       url = "https://trade.kucoin.com/DFI-BTC"
       file = "/svg/sources/logo-kucoin"

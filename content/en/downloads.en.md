@@ -59,6 +59,22 @@ content:
               url: https://github.com/DeFiCh/defi-app/releases
             - label: Installation guide
               url: /learn/defi-app-how-to
+        - title: DFX wallet mobile app
+          type: mobile-app
+          description: Store, receive and send DeFiChain tokens with utmost simplicity and security uncomplicated from your mobile.
+          image:
+            path: /img/downloads/dfx_symbol.png
+            type: png
+            dimensions: [64, 64]
+          links:
+            - label: iOS
+              type: ios
+              image: /static/img/downloads/app-store-badge-ios.svg
+              url: https://apps.apple.com/app/id1582633093
+            - label: Android
+              type: android
+              image: /static/img/downloads/play-badge-android.svg
+              url: https://play.google.com/store/apps/details?id=com.defichain.app.dfx
         - title: Saiive.live DeFi wallet
           type: desktop-app
           description: A non-custodial light wallet for DeFiChain from and for the community. For mobile and desktop.

@@ -59,6 +59,22 @@ content:
               url: https://github.com/DeFiCh/defi-app/releases
             - label: 安装入门指南
               url: /learn/defi-app-how-to
+        - title: DFX 钱包手机应用程序
+          type: mobile-app
+          description: 以最简单和安全的方式存储、接收和发送递飞链代币，无需通过您的手机进行操作。
+          image:
+            path: /img/downloads/dfx_symbol.png
+            type: png
+            dimensions: [64, 64]
+          links:
+            - label: iOS
+              type: ios
+              image: /static/img/downloads/app-store-badge-ios.svg
+              url: https://apps.apple.com/app/id1582633093
+            - label: Android
+              type: android
+              image: /static/img/downloads/play-badge-android.svg
+              url: https://play.google.com/store/apps/details?id=com.defichain.app.dfx
         - title: Saiive.live 递飞链钱包
           type: desktop-app
           description: 来自社区和为社区提供的递飞链的非托管轻钱包。适用于手机设备和电脑设备。

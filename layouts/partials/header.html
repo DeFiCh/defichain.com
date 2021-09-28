@@ -1,11 +1,11 @@
 <header>
 
-  <div class="featured">
+  <!-- <div class="featured">
     <p>{{ .Site.Params.featured.headline | markdownify }}</p>
     <a href="{{ .Site.Params.featured.cta.url }}" class="btn btn-small">
       {{ .Site.Params.featured.cta.label }}
     </a>
-  </div>
+  </div> -->
  
   <div class="container-fluid">
     <div class="row">
@@ -24,6 +24,11 @@
             <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
           </li>
           {{ end }}
+          <li class="nav-developers">
+            <a href="{{ .Site.Params.defiscan.url }}" target="_blank">
+              {{ .Site.Params.defiscan.label }}
+            </a>
+          </li>
           <li class="github-list-link">
             <a href="{{ .Site.Params.github.url }}" target="_blank">
               {{ .Site.Params.github.label }}

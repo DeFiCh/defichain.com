@@ -17,11 +17,14 @@ content:
       headline: Native Decentralized Finance for Bitcoin.
       subhead: A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone.
       ctas:
-        - label: Go to Decentralized Exchange
-          url: /dex
+        - label: Go to downloads
+          url: /downloads
         - label: Buy $DFI
           type: plain
           url: https://trade.kucoin.com/DFI-BTC
+        - label: Explore the DeFiChain ecosystem
+          type: plain
+          url: https://defilinks.io
     problem_solution:
       headline: The Post-Fintech Revolution
       subhead: From trust-based to trust-less, decentralized finance overcomes what Fintech could not solve in traditional finance.

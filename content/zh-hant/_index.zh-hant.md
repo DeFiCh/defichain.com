@@ -17,11 +17,14 @@ content:
       headline: 比特幣生態中的開放式金融
       subhead: 遞飛鏈：原生區塊鏈專為全民堤共快速，智能和透明化的開放式金融服務
       ctas:
-        - label: 前往 DEX 交易所
-          url: /dex
+        - label: 前往下載區
+          url: /downloads
         - label: 購買 遞飛幣（$DFI）
           type: plain
           url: https://trade.kucoin.com/DFI-BTC
+        - label: 探索 遞飛鏈生態系統
+          type: plain
+          url: https://defilinks.io
     problem_solution:
       headline: 金融科技演變與未來發展
       subhead: 金融科技依然基于傳統金融信任的需求，去中心化系統解決了去信任，不必依賴第三方的協力廠商

@@ -31,6 +31,10 @@
   &.btn-plain {
     background-color: $button-plain-bg;
     color: $button-plain-color;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 24px;
+
 
     &:hover {
       color: lighten($button-plain-color, 10%);

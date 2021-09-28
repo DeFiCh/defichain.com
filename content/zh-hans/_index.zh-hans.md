@@ -17,11 +17,14 @@ content:
       headline: 比特币生态中的开放式金融
       subhead: 递飞链：原生区块链专为全民堤共快速，智能和透明化的开放式金融服务
       ctas:
-        - label: 前往 DEX 交易所
-          url: /dex
+        - label: 前往下载区
+          url: /downloads
         - label: 购买 递飞币（$DFI）
           type: plain
           url: https://trade.kucoin.com/DFI-BTC
+        - label: 探索 递飞链生态系统
+          type: plain
+          url: https://defilinks.io
     problem_solution:
       headline: 金融科技演变与未来发展
       subhead: 金融科技依然基于传统金融信任的需求，去中心化系统解决了去信任，不必依赖第三方的协力厂商

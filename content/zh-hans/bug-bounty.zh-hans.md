@@ -19,7 +19,7 @@ meta:
     site_name: DeFiChain
     image: /img/og/ogimage_bounty_en.png
     image_type: image/png
-    locale: en_US
+    locale: zh_Hans
 theme:
   footer: day
 content:

@@ -14,7 +14,7 @@ meta:
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
-    locale: en_US
+    locale: zh_Hant
 theme: yellow
 content:
   sections:

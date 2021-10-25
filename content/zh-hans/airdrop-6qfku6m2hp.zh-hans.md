@@ -17,7 +17,7 @@ meta:
     site_name: DeFiChain
     image: /img/og/ogimage-claim.png
     image_type: image/png
-    locale: en_US
+    locale: zh_Hans
 theme:
   footer: day
 content:

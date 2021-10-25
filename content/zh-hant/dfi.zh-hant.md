@@ -1,7 +1,7 @@
 ---
 title: $DFI
 type: dfi
-long_title: 加入遞飛鏈內線消息
+long_title: 了解$DFI代幣及其效用，分配，空投以及如何獲取DFI。加入遞飛鏈內線消息
 cta_to: 更多
 aliases:
   - /token/
@@ -19,7 +19,7 @@ meta:
     site_name: DeFiChain
     image: /img/og/ogimage_en.png
     image_type: image/png
-    locale: en_US
+    locale: zh_Hant
 content:
   sections:
     hero:

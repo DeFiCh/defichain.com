@@ -75,17 +75,34 @@ content:
               type: android
               image: /static/img/downloads/play-badge-android.svg
               url: https://play.google.com/store/apps/details?id=com.defichain.app.dfx
-        - title: Saiive.live 遞飛鏈錢包
+        - title: Saiive.live 遞飛鏈錢包電腦程序
           type: desktop-app
-          description: 來自社區和為社區提供的遞飛鏈的非托管輕錢包。適用于手機設備和電腦設備。
+          description: 來自社區和為社區提供的遞飛鏈的非托管輕錢包。
           image:
             path: /img/downloads/saiive.png
             type: png
             dimensions: [64, 64]
           links:
-            - label: 網站
-              type: website
-              url: https://saiive.live
+            - label: Mac
+              type: mac
+              image: /static/img/downloads/app-store-badge-mac.svg
+              url: https://apps.apple.com/app/saiive-live-defi-wallet/id1588945201
+        - title: Saiive.live 遞飛鏈錢包手機應用程序
+          type: mobile-app
+          description: 來自社區和為社區提供的遞飛鏈的非托管輕錢包。
+          image:
+            path: /img/downloads/saiive.png
+            type: png
+            dimensions: [64, 64]
+          links:
+            - label: iOS
+              type: ios
+              image: /static/img/downloads/app-store-badge-ios.svg
+              url: https://apps.apple.com/app/saiive-live-defi-wallet/id1588945201
+            - label: Android
+              type: android
+              image: /static/img/downloads/play-badge-android.svg
+              url: https://play.google.com/store/apps/details?id=at.saiive.live
         - title: 遞飛鏈錢包樹莓派程序
           type: desktop-app
           description: 用于樹莓派 4B 4GB 的電腦錢包版本，帶有官方 Raspberry Pi OS（32-Bit）。

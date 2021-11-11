@@ -75,17 +75,34 @@ content:
               type: android
               image: /static/img/downloads/play-badge-android.svg
               url: https://play.google.com/store/apps/details?id=com.defichain.app.dfx
-        - title: Saiive.live DeFi wallet
+        - title: Saiive.live desktop wallet
           type: desktop-app
-          description: A non-custodial light wallet for DeFiChain from and for the community. For mobile and desktop.
+          description: A non-custodial light wallet for DeFiChain from and for the community.
           image:
             path: /img/downloads/saiive.png
             type: png
             dimensions: [64, 64]
           links:
-            - label: Website
-              type: website
-              url: https://saiive.live
+            - label: Mac
+              type: mac
+              image: /static/img/downloads/app-store-badge-mac.svg
+              url: https://apps.apple.com/app/saiive-live-defi-wallet/id1588945201
+        - title: Saiive.live mobile wallet
+          type: mobile-app
+          description: A non-custodial light wallet for DeFiChain from and for the community.
+          image:
+            path: /img/downloads/saiive.png
+            type: png
+            dimensions: [64, 64]
+          links:
+            - label: iOS
+              type: ios
+              image: /static/img/downloads/app-store-badge-ios.svg
+              url: https://apps.apple.com/app/saiive-live-defi-wallet/id1588945201
+            - label: Android
+              type: android
+              image: /static/img/downloads/play-badge-android.svg
+              url: https://play.google.com/store/apps/details?id=at.saiive.live
         - title: DeFi wallet for Raspberry Pi
           type: desktop-app
           description: A version of the desktop wallet for Raspberry Pi 4B 4GB with official Raspberry Pi OS (32-Bit).

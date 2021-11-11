@@ -143,7 +143,7 @@ body > header {
     z-index: $zindex-sticky;
     box-sizing: content-box;
     display: block;
-    width: 78px;
+    min-width: 78px;
     height: 36px;
     margin-right: 32px;
     overflow: hidden;
@@ -356,7 +356,7 @@ body > header {
     position: relative;
     margin-left: $grid-gutter;
 
-    @include media("<ul") {
+    @include media("<md") {
       display: block;
     }
 

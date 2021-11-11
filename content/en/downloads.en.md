@@ -85,8 +85,13 @@ content:
           links:
             - label: Mac
               type: mac
-              image: /static/img/downloads/app-store-badge-mac.svg
-              url: https://apps.apple.com/app/saiive-live-defi-wallet/id1588945201
+              url: https://apps.apple.com/at/app/saiive-live-defi-wallet/id1588945201?l=en
+            - label: Windows
+              type: win
+              url: https://github.com/saiive/saiive.live/releases
+            - label: Linux
+              type: appimg
+              url: https://github.com/saiive/saiive.live/releases
         - title: Saiive.live mobile wallet
           type: mobile-app
           description: A non-custodial light wallet for DeFiChain from and for the community.

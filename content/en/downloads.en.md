@@ -75,7 +75,7 @@ content:
               type: android
               image: /static/img/downloads/play-badge-android.svg
               url: https://play.google.com/store/apps/details?id=com.defichain.app.dfx
-        - title: Saiive.live desktop wallet
+        - title: saiive.live desktop wallet
           type: desktop-app
           description: A non-custodial light wallet for DeFiChain from and for the community.
           image:
@@ -92,7 +92,7 @@ content:
             - label: Linux
               type: appimg
               url: https://github.com/saiive/saiive.live/releases
-        - title: Saiive.live mobile wallet
+        - title: saiive.live mobile wallet
           type: mobile-app
           description: A non-custodial light wallet for DeFiChain from and for the community.
           image:

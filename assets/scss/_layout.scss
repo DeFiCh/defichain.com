@@ -356,7 +356,7 @@ body > header {
     position: relative;
     margin-left: $grid-gutter;
 
-    @include media("<md") {
+    @include media("<ul") {
       display: block;
     }
 

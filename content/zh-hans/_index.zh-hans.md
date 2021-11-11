@@ -20,10 +20,10 @@ content:
         - label: 前往下载区
           url: /downloads
         - label: 购买 递飞币（$DFI）
-          type: plain
+          type: bordered
           url: https://trade.kucoin.com/DFI-BTC
         - label: 探索 递飞链生态系统
-          type: plain
+          type: bordered
           url: https://defilinks.io
     problem_solution:
       headline: 金融科技演变与未来发展

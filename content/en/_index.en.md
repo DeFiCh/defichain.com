@@ -20,10 +20,10 @@ content:
         - label: Go to downloads
           url: /downloads
         - label: Buy $DFI
-          type: plain
+          type: bordered
           url: https://trade.kucoin.com/DFI-BTC
         - label: Explore the DeFiChain ecosystem
-          type: plain
+          type: bordered
           url: https://defilinks.io
     problem_solution:
       headline: The Post-Fintech Revolution

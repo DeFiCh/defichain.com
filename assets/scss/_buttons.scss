@@ -28,6 +28,21 @@
     border-radius: 24px;
   }
 
+  &.btn-bordered {
+    background-color: $button-plain-bg;
+    color: $button-plain-color;
+    padding-left: $button-padding-horizontal;
+    padding-right: $button-padding-horizontal;
+    margin-right: 24px;
+    border: 2px solid $button-plain-color;
+
+
+    &:hover {
+      color: lighten($button-plain-color, 10%);
+      border-color: lighten($button-plain-color, 10%);
+    }
+  }
+
   &.btn-plain {
     background-color: $button-plain-bg;
     color: $button-plain-color;

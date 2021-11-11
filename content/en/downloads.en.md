@@ -83,8 +83,8 @@ content:
             type: png
             dimensions: [64, 64]
           links:
-            - label: Mac
-              type: mac
+            - label: iOS
+              type: ios
               image: /static/img/downloads/app-store-badge-mac.svg
               url: https://apps.apple.com/app/saiive-live-defi-wallet/id1588945201
         - title: Saiive.live mobile wallet

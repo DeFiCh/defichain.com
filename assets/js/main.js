@@ -159,7 +159,27 @@ $(function () {
       }
     });
   }
-  
+  // Carousel for Quick Links
+  if ($(".hero").length > 0) {
+    $(".carousel-quicklinks").slick({
+      appendArrows: '.carousel-quicklinks-nav',
+      arrows: true,
+      autoplay: false,
+      autoplaySpeed: 5000,
+      centerMode: true,
+      dots: false,
+      draggable: false,
+      infinite: false,
+      initialSlide: 0,
+      mobileFirst: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      speed: 500,
+      variableWidth: true,
+      waitForAnimate: true
+    });
+  }
+
   // Carousel for timeline
   if ($(".roadmap").length > 0) {
     $(".carousel-5y").slick({
@@ -349,13 +369,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   scope.heroOut = function () {
     $('body > header').addClass('sticky');
-    // pause hero animation
-    console.log('hero out');
   };
 
   scope.heroIn = function () {
     $('body > header').removeClass('sticky');
-    console.log("hero in");
-    // play hero animation
   };
 });

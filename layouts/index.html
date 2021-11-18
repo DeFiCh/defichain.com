@@ -43,25 +43,25 @@
           </div>
         </div>
         <div class="row">
-          <div class="col col-ul-10 offset-ul-1">
-            <strong>{{ $.Param "content.sections.hero.quick_links.title" }}</strong>
+          <div class="col col-ul-10 offset-ul-1 quicklinks">
+            <div class="title">{{ $.Param "content.sections.hero.quick_links.title" }}</div>
             <div class="carousel-quicklinks-nav carousel-nav"></div>
           </div>
         </div>
-        <div class="row">
-            <div class="carousel carousel-quicklinks">
-              {{ range $card := $.Param "content.sections.hero.quick_links.cards" }}
-                <div class="timeline-event ">
-                  <div class="card white">
-                    <div class="event-content">
-                      <span class="label">{{ $card.label }}</span>
-                      <span class="title">{{ $card.title }}</span>
-                      <span class="desc">{{ $card.desc }}</span>
-                      <div class="btn">{{ $card.button_text }}</div>
-                    </div>
+        <div class="row row-carousel">
+          <div class="carousel carousel-quicklinks">
+            {{ range $card := $.Param "content.sections.hero.quick_links.cards" }}
+              <div class="timeline-event ">
+                <div class="card white">
+                  <div class="event-content">
+                    <span class="label">{{ $card.label }}</span>
+                    <span class="title">{{ $card.title }}</span>
+                    <span class="desc">{{ $card.desc }}</span>
+                    <div class="btn">{{ $card.button_text }}</div>
                   </div>
                 </div>
-              {{ end }}
+              </div>
+            {{ end }}
           </div>
           <div class="section-base-slope day">
             {{ readFile "/static/svg/section-slope.svg" | safeHTML }}

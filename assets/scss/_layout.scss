@@ -921,12 +921,37 @@ section.hero {
     }
   }
 
+  .quicklinks {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+      font-weight: 600;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .carousel-quicklinks-nav {
+      display: inline-block;
+    }
+  }
+
+  .row-carousel {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+
   .carousel-quicklinks {
     margin-top: 20px;
   }
 
   .card {
     @include brand-background-variations;
+
+    display: flex;
+    align-items: center;
 
     width: 318px;
     height: 320px;
@@ -950,13 +975,26 @@ section.hero {
       font-size: 16px;
       line-height: 24px;
       margin-top: 22px;
+      flex-grow: 1;
     }
 
     .btn {
-      background-color: #FF00AF;
       border-radius: 4px;
-      width: 140px;
-      height: 48px;
+      align-self: baseline;
+      margin-bottom: 8px;
+      cursor: pointer;
+
+      padding: 14px 24px;
+
+      .full {
+        background-color: #FF00AF;
+      }
+
+      .outline {
+        border-color: #FF00AF;
+        border-width: 2px;
+        color: white;
+      }
     }
   }
 }
@@ -1240,6 +1278,7 @@ section.featured-video {
 // Roadmap and Timeline
 //
 
+section.hero,
 section.roadmap,
 section.why-dfi {
   .carousel {
@@ -1310,6 +1349,7 @@ section.why-dfi {
     background-repeat: no-repeat;
     margin-left: $grid-gutter / 2;
     margin-right: $grid-gutter / 2;
+    cursor: pointer;
   }
 
   .slick-next {

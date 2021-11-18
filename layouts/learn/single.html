@@ -31,7 +31,7 @@
 
   <main>
 
-    <section class="hero white" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
+    <section class="hero fort-canning day" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
           <div id="{{ $.Param "content.sections.hero.name" }}" class="col col-lg-6 col-xl-5 offset-xl-1">
@@ -40,11 +40,10 @@
           </div>
         </div>
       </div>
-      {{ partial "hero-art.html" . }}
     </section>
     
     {{ if $.Params.content.sections.featured_video }}
-      <section class="defi-blockchain featured-video paper">
+      <section class="defi-blockchain featured-video day">
         <div class="container-flush">
           <div class="row">
             <div class="col col-lg-6">
@@ -108,7 +107,7 @@
             </div>
           </div>
         </div>
-        <div class="section-slope paper reverse">
+        <div class="section-slope day">
           {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
         </div>
       </section>
@@ -146,7 +145,7 @@
           </div>
         </div>
       </div>
-      <div class="section-slope paper">
+      <div class="section-slope reverse paper">
         {{ readFile "/static/svg/section-slope-line.svg" | safeHTML }}
       </div>
     </section>

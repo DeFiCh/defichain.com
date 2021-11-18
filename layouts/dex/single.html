@@ -60,7 +60,7 @@
         <div class="row">
           <div class="col col-ul-10 offset-ul-1">
             <div class="row lm-aprs">
-              <div class="col col-md-4 lm-apr apr-btc-dfi">
+              <div class="col lm-apr apr-btc-dfi">
                 <div class="apr-coin">
                   <div class="apr-coin-icons">
                     {{ readFile "/static/svg/coins/icon-coin-btc.svg" | safeHTML }}
@@ -73,7 +73,7 @@
                   <div class="apr-label">{{ $.Params.content.sections.coins_apr.label }}</div>
                 </div>
               </div>
-              <div class="col col-md-4 lm-apr apr-eth-dfi">
+              <div class="col lm-apr apr-eth-dfi">
                 <div class="apr-coin">
                   <div class="apr-coin-icons">
                     {{ readFile "/static/svg/coins/icon-coin-eth.svg" | safeHTML }}
@@ -86,7 +86,7 @@
                   <div class="apr-label">{{ $.Params.content.sections.coins_apr.label }}</div>
                 </div>
               </div>
-              <div class="col col-md-4 lm-apr apr-usdt-dfi">
+              <div class="col lm-apr apr-usdt-dfi">
                 <div class="apr-coin">
                   <div class="apr-coin-icons">
                     {{ readFile "/static/svg/coins/icon-coin-usdt.svg" | safeHTML }}
@@ -99,7 +99,7 @@
                   <div class="apr-label">{{ $.Params.content.sections.coins_apr.label }}</div>
                 </div>
               </div>
-              <div class="col col-md-4 lm-apr apr-ltc-dfi">
+              <div class="col lm-apr apr-ltc-dfi">
                 <div class="apr-coin">
                   <div class="apr-coin-icons">
                     {{ readFile "/static/svg/coins/icon-coin-ltc.svg" | safeHTML }}
@@ -112,7 +112,20 @@
                   <div class="apr-label">{{ $.Params.content.sections.coins_apr.label }}</div>
                 </div>
               </div>
-              <div class="col col-md-4 lm-apr apr-bch-dfi">
+              <div class="col lm-apr apr-usdc-dfi">
+                <div class="apr-coin">
+                  <div class="apr-coin-icons">
+                    {{ readFile "/static/svg/coins/icon-coin-usdc.svg" | safeHTML }}
+                    {{ readFile "/static/svg/coins/icon-coin-dfi.svg" | safeHTML }}
+                  </div>
+                  <div>USDC-DFI</div>
+                </div>
+                <div class="apr-value loading">
+                  <span class="spinner"><span class="b1"></span><span class="b2"></span><span class="b3"></span></span>
+                  <div class="apr-label">{{ $.Params.content.sections.coins_apr.label }}</div>
+                </div>
+              </div>
+              <div class="col lm-apr apr-bch-dfi">
                 <div class="apr-coin">
                   <div class="apr-coin-icons">
                     {{ readFile "/static/svg/coins/icon-coin-bch.svg" | safeHTML }}
@@ -125,7 +138,7 @@
                   <div class="apr-label">{{ $.Params.content.sections.coins_apr.label }}</div>
                 </div>
               </div>
-              <div class="col col-md-4 lm-apr apr-doge-dfi">
+              <div class="col lm-apr apr-doge-dfi">
                 <div class="apr-coin">
                   <div class="apr-coin-icons">
                     {{ readFile "/static/svg/coins/icon-coin-doge.svg" | safeHTML }}

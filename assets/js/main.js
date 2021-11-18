@@ -32,7 +32,7 @@ $(function () {
     url: "https://api.cakedefi.com/home",
     success: function (data) {
       for (i = 0; i < data.coinPrices.length; i++) {
-        if (data.coinPrices[i].CoinId == "DFI") {
+        if (data.coinPrices[i].CoinId === "DFI") {
           DFIPrice = data.coinPrices[i].priceUSD.avg;
         }
       }
@@ -42,26 +42,56 @@ $(function () {
 
   // Fetch LM APRs
   if ($(".apr-eth-dfi").length > 0) {
-    var lpETHDFIAPR;
-    var lpBTCDFIAPR;
-    var lpUSDTDFIAPR;
-    var lpBCHDFIAPR;
-    var lpDOGEDFIAPR;
+    let lpETHDFIAPR;
+    let lpBTCDFIAPR;
+    let lpUSDTDFIAPR;
+    let lpBCHDFIAPR;
+    let lpDOGEDFIAPR;
+    let lpLTCDFIAPR;
+    let lpUSDCDFIAPR;
+
     $.ajax({
-      url: "https://api.defichain.io/v1/listyieldfarming?network=mainnet",
+      url: "https://ocean.defichain.com/v0/mainnet/poolpairs",
       success: function (data) {
-        lpBTCDFIAPR = (typeof data.pools[0] != 'undefined') ? data.pools[0].apy.toFixed(2) + "%" : 'Error';
-        lpETHDFIAPR = (typeof data.pools[1] != 'undefined') ? data.pools[1].apy.toFixed(2) + "%" : 'Error';
-        lpUSDTDFIAPR = (typeof data.pools[2] != 'undefined') ? data.pools[2].apy.toFixed(2) + "%" : 'Error';
-        lpLTCDFIAPR = (typeof data.pools[3] != 'undefined') ? data.pools[3].apy.toFixed(2) + "%" : 'Error';
-        lpBCHDFIAPR = (typeof data.pools[4] != 'undefined') ? data.pools[4].apy.toFixed(2) + "%" : 'Error';
-        lpDOGEDFIAPR = (typeof data.pools[5] != 'undefined') ? data.pools[5].apy.toFixed(2) + "%" : 'Error';
-        $('.apr-btc-dfi .apr-value').removeClass('loading').prepend(lpBTCDFIAPR);
-        $('.apr-eth-dfi .apr-value').removeClass('loading').prepend(lpETHDFIAPR);
-        $('.apr-usdt-dfi .apr-value').removeClass('loading').prepend(lpUSDTDFIAPR);
-        $('.apr-ltc-dfi .apr-value').removeClass('loading').prepend(lpLTCDFIAPR);
-        $('.apr-bch-dfi .apr-value').removeClass('loading').prepend(lpBCHDFIAPR);
-        $('.apr-doge-dfi .apr-value').removeClass('loading').prepend(lpDOGEDFIAPR);
+        data.data.forEach((lp) => {
+          switch (lp.id) {
+            case '5': {
+              lpBTCDFIAPR = (lp.apr.total * 100).toFixed(2) + "%"
+              $('.apr-btc-dfi .apr-value').removeClass('loading').prepend(lpBTCDFIAPR);
+              break
+            }
+            case '4': {
+              lpETHDFIAPR = (lp.apr.total * 100).toFixed(2) + "%"
+              $('.apr-eth-dfi .apr-value').removeClass('loading').prepend(lpETHDFIAPR);
+              break
+            }
+            case '6': {
+              lpUSDTDFIAPR = (lp.apr.total * 100).toFixed(2) + "%"
+              $('.apr-usdt-dfi .apr-value').removeClass('loading').prepend(lpUSDTDFIAPR);
+              break
+            }
+            case '10': {
+              lpLTCDFIAPR = (lp.apr.total * 100).toFixed(2) + "%"
+              $('.apr-ltc-dfi .apr-value').removeClass('loading').prepend(lpLTCDFIAPR);
+              break
+            }
+            case '12': {
+              lpBCHDFIAPR = (lp.apr.total * 100).toFixed(2) + "%"
+              $('.apr-bch-dfi .apr-value').removeClass('loading').prepend(lpBCHDFIAPR);
+              break
+            }
+            case '8': {
+              lpDOGEDFIAPR = (lp.apr.total * 100).toFixed(2) + "%"
+              $('.apr-doge-dfi .apr-value').removeClass('loading').prepend(lpDOGEDFIAPR);
+              break
+            }
+            case '14': {
+              lpUSDCDFIAPR = (lp.apr.total * 100).toFixed(2) + "%"
+              $('.apr-usdc-dfi .apr-value').removeClass('loading').prepend(lpUSDCDFIAPR);
+              break
+            }
+          }
+        })
       }
     });
   }
@@ -129,11 +159,9 @@ $(function () {
       }
     });
   }
-
-
+  
   // Carousel for timeline
   if ($(".roadmap").length > 0) {
-
     $(".carousel-5y").slick({
       appendArrows: '.carousel-5y-nav',
       arrows: true,
@@ -225,7 +253,6 @@ $(function () {
       variableWidth: true,
       waitForAnimate: true
     });
-    
   }
 
   // Carousel for Airdrop timeline

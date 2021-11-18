@@ -1370,7 +1370,6 @@ body.dex {
 section.liquidity_mining {
   .lm-aprs {
     padding-bottom: $section-padding-bottom;
-    justify-content: center;
 
     @include media(">lg") {
       padding-bottom: $section-padding-bottom-lg;
@@ -1379,14 +1378,26 @@ section.liquidity_mining {
 
   .lm-apr {
     text-align: center;
-    margin-bottom: $grid-gutter;
+    margin-bottom: 48px;
+
+    @include media("<md") {
+      max-width: 100%;
+    }
+
+    @include media(">md") {
+      max-width: 33%;
+    }
+
+    @include media(">lg") {
+      max-width: 25%;
+    }
   }
 
   .apr-coin {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 16px;
+    margin-bottom: 6px;
   }
 
   .apr-coin-icons {
@@ -1464,9 +1475,9 @@ section.risks {
 }
 
 
-// 
+//
 // Contributors
-// 
+//
 
 section.contributors {
   .contributor {

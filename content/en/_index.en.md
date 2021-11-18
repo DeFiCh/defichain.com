@@ -16,15 +16,39 @@ content:
     hero:
       headline: Native Decentralized Finance for Bitcoin.
       subhead: A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone.
-      ctas:
-        - label: Go to downloads
-          url: /downloads
-        - label: Buy $DFI
-          type: bordered
-          url: https://trade.kucoin.com/DFI-BTC
-        - label: Explore the DeFiChain ecosystem
-          type: bordered
-          url: https://defilinks.io
+      quick_links:
+        title: Quick Links
+        cards:
+          - label: LATEST NODE
+            title: 2.2.0 Fort Canning
+            desc: Decentralized tokens (stocks, commodities, etc), loans and liquidity mining.
+            button_text: Learn more
+            url: https://trade.kucoin.com/DFI-BTC
+          - label: LATEST NODE
+            title: 2.2.0 Fort Canning
+            desc: Decentralized tokens (stocks, commodities, etc), loans and liquidity mining.
+            button_text: Learn more
+            url: https://trade.kucoin.com/DFI-BTC
+          - label: LATEST NODE
+            title: 2.2.0 Fort Canning
+            desc: Decentralized tokens (stocks, commodities, etc), loans and liquidity mining.
+            button_text: Learn more
+            url: https://trade.kucoin.com/DFI-BTC
+          - label: LATEST NODE
+            title: 2.2.0 Fort Canning
+            desc: Decentralized tokens (stocks, commodities, etc), loans and liquidity mining.
+            button_text: Learn more
+            url: https://trade.kucoin.com/DFI-BTC
+          - label: LATEST NODE
+            title: 2.2.0 Fort Canning
+            desc: Decentralized tokens (stocks, commodities, etc), loans and liquidity mining.
+            button_text: Learn more
+            url: https://trade.kucoin.com/DFI-BTC
+          - label: LATEST NODE
+            title: 2.2.0 Fort Canning
+            desc: Decentralized tokens (stocks, commodities, etc), loans and liquidity mining.
+            button_text: Learn more
+            url: https://trade.kucoin.com/DFI-BTC  
     problem_solution:
       headline: The Post-Fintech Revolution
       subhead: From trust-based to trust-less, decentralized finance overcomes what Fintech could not solve in traditional finance.

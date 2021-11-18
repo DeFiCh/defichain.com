@@ -32,28 +32,45 @@
 
   <main>
 
-    <section class="hero paper" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
+    <section class="hero paper fort-canning" data-scroll data-scroll-showCallback="heroIn()" data-scroll-hideCallback="heroOut()">
       <div class="container-fluid">
         <div class="row">
-          <div class="col col-lg-6 offset-ul-1">
-            <div class="hero-start">
-              <h1>{{ $.Param "content.sections.hero.headline" }}</h1>
-              <p class="lg">{{ $.Param "content.sections.hero.subhead" }}</p>
-              <div class="hero-ctas">
-                {{ range $cta := $.Params.content.sections.hero.ctas }}
-                  <a href="{{ $cta.url }}" class="btn{{ with $cta.type }} btn-{{ . }}{{ end }}">
-                    {{ $cta.label }}
-                  </a>
-                {{ end }}
-              </div>
-            </div>
+          <div class="col col-ul-6 offset-ul-3">
+             <div class="text-center">
+               <h1>{{ $.Param "content.sections.hero.headline" }}</h1>
+               <p class="lg">{{ $.Param "content.sections.hero.subhead" }}</p>
+             </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-ul-10 offset-ul-1">
+            <strong>{{ $.Param "content.sections.hero.quick_links.title" }}</strong>
+            <div class="carousel-quicklinks-nav carousel-nav"></div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="carousel carousel-quicklinks">
+              {{ range $card := $.Param "content.sections.hero.quick_links.cards" }}
+                <div class="timeline-event ">
+                  <div class="card white">
+                    <div class="event-content">
+                      <span class="label">{{ $card.label }}</span>
+                      <span class="title">{{ $card.title }}</span>
+                      <span class="desc">{{ $card.desc }}</span>
+                      <div class="btn">{{ $card.button_text }}</div>
+                    </div>
+                  </div>
+                </div>
+              {{ end }}
+          </div>
+          <div class="section-base-slope day">
+            {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
           </div>
         </div>
       </div>
-      {{ partial "hero-art.html" . }}
     </section>
 
-    <section id="problem-solution" class="problem-solution white">
+    <section id="problem-solution" class="problem-solution">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-lg-5 col-ul-4 offset-ul-1 mbg1">
@@ -99,12 +116,12 @@
           </div>
         </div>
       </div>
-      <div class="section-slope white">
+      <div class="section-slope day">
         {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
       </div>
     </section>
 
-    <section id="benefits" class="benefits day">
+    <section id="benefits" class="benefits white">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-4 offset-ul-1">
@@ -129,7 +146,7 @@
           </div>
         </div>
       </div>
-      <div class="section-slope day">
+      <div class="section-slope white reverse">
         {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
       </div>
     </section>
@@ -158,6 +175,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="section-slope day">
+        {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
       </div>
     </section>
 

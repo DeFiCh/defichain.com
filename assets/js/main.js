@@ -159,26 +159,7 @@ $(function () {
       }
     });
   }
-
-  // Carousel for Quick Links
-  $(".carousel-quicklinks").slick({
-    appendArrows: '.carousel-quicklinks-nav',
-    arrows: true,
-    autoplay: false,
-    autoplaySpeed: 5000,
-    centerMode: true,
-    dots: false,
-    draggable: false,
-    infinite: false,
-    initialSlide: 13,
-    mobileFirst: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    speed: 500,
-    variableWidth: true,
-    waitForAnimate: true
-  });
-
+  
   // Carousel for timeline
   if ($(".roadmap").length > 0) {
     $(".carousel-5y").slick({

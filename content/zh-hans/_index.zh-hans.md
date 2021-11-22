@@ -19,7 +19,7 @@ content:
       ctas:
         - label: 前往下载区
           url: /downloads
-        - label: 购买 递飞币（$DFI）
+        - label: 购买（$DFI）
           type: bordered
           url: https://trade.kucoin.com/DFI-BTC
         - label: 探索 递飞链生态系统

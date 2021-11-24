@@ -49,13 +49,13 @@ content:
             dimensions: [64, 64]
           links:
             - label: Mac
-              type: mac
+              type: mac-dfc
               url: https://github.com/DeFiCh/defi-app/releases
             - label: Windows
-              type: win
+              type: win-dfc
               url: https://github.com/DeFiCh/defi-app/releases
             - label: Linux (AppImage)
-              type: appimg
+              type: appimg-dfc
               url: https://github.com/DeFiCh/defi-app/releases
             - label: Installation guide
               url: /learn/defi-app-how-to
@@ -127,13 +127,13 @@ content:
             type: svg
           links:
             - label: Mac
-              type: mac
+              type: mac-dfc
               url: https://github.com/DeFiCh/ain/releases
             - label: Windows
-              type: win
+              type: win-dfc
               url: https://github.com/DeFiCh/ain/releases
             - label: Linux
-              type: linux
+              type: linux-dfc
               url: https://github.com/DeFiCh/ain/releases
     #subscribe in /
     #closer_look in /

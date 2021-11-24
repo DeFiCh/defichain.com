@@ -75,7 +75,7 @@ content:
               type: android
               image: /static/img/downloads/play-badge-android.svg
               url: https://play.google.com/store/apps/details?id=com.defichain.app.dfx
-        - title: Saiive.live 遞飛鏈錢包電腦程序
+        - title: saiive.live 遞飛鏈錢包電腦程序
           type: desktop-app
           description: 來自社區和為社區提供的遞飛鏈的非托管輕錢包。
           image:
@@ -85,9 +85,14 @@ content:
           links:
             - label: Mac
               type: mac
-              image: /static/img/downloads/app-store-badge-mac.svg
-              url: https://apps.apple.com/app/saiive-live-defi-wallet/id1588945201
-        - title: Saiive.live 遞飛鏈錢包手機應用程序
+              url: https://apps.apple.com/at/app/saiive-live-defi-wallet/id1588945201
+            - label: Windows
+              type: win
+              url: https://github.com/saiive/saiive.live/releases
+            - label: Linux
+              type: appimg
+              url: https://github.com/saiive/saiive.live/releases
+        - title: saiive.live 遞飛鏈錢包手機應用程序
           type: mobile-app
           description: 來自社區和為社區提供的遞飛鏈的非托管輕錢包。
           image:

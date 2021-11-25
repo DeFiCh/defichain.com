@@ -157,7 +157,7 @@
       </div>
     </section>
     {{ if $.Param "content.sections.featured_video.video" }}
-      <section class="defi-blockchain featured-video">
+      <section class="defi-blockchain featured-video white">
         <div class="container-flush">
           <div class="row">
             <div class="col col-lg-6">
@@ -216,13 +216,11 @@
             </div>
           </div>
         </div>
-        <div class="section-slope day">
+        <div class="section-slope white">
           {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
         </div>
       </section>
     {{ end }}
-
-    {{ partial "section-partners-subscribe.html" . }}
 
     {{ partial "section-closer-look.html" . }}
 

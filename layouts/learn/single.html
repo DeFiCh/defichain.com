@@ -151,7 +151,7 @@
       </div>
     </section>
 
-    <section class="faq" id="faq">
+    <section class="faq white" id="faq">
       <div class="container-fluid">
         <div class="row">
           <div class="col col-ul-5 offset-ul-1">
@@ -179,12 +179,10 @@
         </div>
       </div>
       {{ end }}
-      <div class="section-slope day">
+      <div class="section-slope gray">
         {{ readFile "/static/svg/section-slope.svg" | safeHTML }}
       </div>
     </section>
-
-    {{ partial "section-subscribe.html" . }}
 
     {{ partial "section-closer-look.html" . }}
 

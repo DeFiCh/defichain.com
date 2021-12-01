@@ -927,6 +927,10 @@ section.hero {
     align-items: center;
     justify-content: space-between;
 
+    @include media(">sm") {
+      margin-bottom: -35px;
+    }
+
     .title {
       font-weight: 600;
       display: inline-block;
@@ -985,16 +989,16 @@ section.hero {
       cursor: pointer;
 
       padding: 14px 24px;
+    }
 
-      .full {
-        background-color: #FF00AF;
-      }
+    .full {
+      background-color: #FF00AF;
+    }
 
-      .outline {
-        border-color: #FF00AF;
-        border-width: 2px;
-        color: white;
-      }
+    .outline {
+      border: #FF00AF solid 2px;
+      background-color: white;
+      color: #FF00AF;
     }
   }
 }
@@ -1429,6 +1433,19 @@ section.problem-solution {
     justify-content: center;
     align-items: center;
     color: $color-ui-white;
+  }
+}
+
+//
+// Home section
+//
+
+body.home {
+  section.hero {
+    min-height: auto;
+    align-items: center;
+    text-align: center;
+    padding-top: 220px;
   }
 }
 

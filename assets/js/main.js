@@ -170,7 +170,7 @@ $(function () {
       dots: false,
       draggable: false,
       infinite: false,
-      initialSlide: 0,
+      initialSlide: 1,
       mobileFirst: true,
       slidesToShow: 1,
       slidesToScroll: 1,

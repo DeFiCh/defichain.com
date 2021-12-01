@@ -14,41 +14,35 @@ theme: dark night
 content:
   sections:
     hero:
-      headline: Native Decentralized Finance for Bitcoin.
+      headline: Native Decentralized Finance for Bitcoin
       subhead: A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone.
       quick_links:
         title: Quick Links
         cards:
-          - label: LATEST NODE
-            title: 2.2.0 Fort Canning
-            desc: Decentralized tokens (stocks, commodities, etc), loans and liquidity mining.
+          - label: LATEST FEATURE
+            title: Decentralized Loan
+            desc: Access decentralized assets with collateral in your vault
             button_text: Learn more
-            url: https://trade.kucoin.com/DFI-BTC
-          - label: LATEST NODE
-            title: 2.2.0 Fort Canning
-            desc: Decentralized tokens (stocks, commodities, etc), loans and liquidity mining.
+            button_type: full
+            url: https://blog.defichain.com/what-are-decentralised-stock-tokens-and-how-do-they-work/
+          - label: FEATURED DOWNLOAD
+            title: DeFiChain Wallet
+            desc: Experience DeFiChain with wallet apps built for both desktop and mobile.
+            button_text: Go to Downloads
+            button_type: full
+            url: https://defichain.com/downloads/
+          - label: HOW-TO GUIDE
+            title: Buy $DFI
+            desc: Learn about and acquire the $DFI coin from various crypto exchanges.
             button_text: Learn more
-            url: https://trade.kucoin.com/DFI-BTC
-          - label: LATEST NODE
-            title: 2.2.0 Fort Canning
-            desc: Decentralized tokens (stocks, commodities, etc), loans and liquidity mining.
-            button_text: Learn more
-            url: https://trade.kucoin.com/DFI-BTC
-          - label: LATEST NODE
-            title: 2.2.0 Fort Canning
-            desc: Decentralized tokens (stocks, commodities, etc), loans and liquidity mining.
-            button_text: Learn more
-            url: https://trade.kucoin.com/DFI-BTC
-          - label: LATEST NODE
-            title: 2.2.0 Fort Canning
-            desc: Decentralized tokens (stocks, commodities, etc), loans and liquidity mining.
-            button_text: Learn more
-            url: https://trade.kucoin.com/DFI-BTC
-          - label: LATEST NODE
-            title: 2.2.0 Fort Canning
-            desc: Decentralized tokens (stocks, commodities, etc), loans and liquidity mining.
-            button_text: Learn more
-            url: https://trade.kucoin.com/DFI-BTC  
+            button_type: outline
+            url: https://blog.defichain.com/where-and-how-to-buy-dfi-defichain/
+          - label: ECOSYSTEM
+            title: Explore community projects
+            desc: Comprehensive list of all things DeFiChain
+            button_text: Explore
+            button_type: outline
+            url: https://defilinks.io/
     problem_solution:
       headline: The Post-Fintech Revolution
       subhead: From trust-based to trust-less, decentralized finance overcomes what Fintech could not solve in traditional finance.

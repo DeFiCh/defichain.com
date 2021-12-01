@@ -43,7 +43,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col col-ul-10 offset-ul-1 quicklinks">
+          <div class="col col-ul-8 offset-ul-2 quicklinks">
             <div class="title">{{ $.Param "content.sections.hero.quick_links.title" }}</div>
             <div class="carousel-quicklinks-nav carousel-nav"></div>
           </div>
@@ -57,7 +57,7 @@
                     <span class="label">{{ $card.label }}</span>
                     <span class="title">{{ $card.title }}</span>
                     <span class="desc">{{ $card.desc }}</span>
-                    <div class="btn">{{ $card.button_text }}</div>
+                    <div class="btn {{$card.button_type}}">{{ $card.button_text }}</div>
                   </div>
                 </div>
               </div>

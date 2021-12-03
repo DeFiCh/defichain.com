@@ -17,7 +17,6 @@ content:
       headline: Native Decentralized Finance for Bitcoin
       subhead: A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone.
       quick_links:
-        title: Quick Links
         cards:
           - label: LATEST FEATURE
             title: Decentralized Loan

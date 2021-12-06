@@ -56,7 +56,9 @@
                     <span class="label">{{ $card.label }}</span>
                     <span class="title">{{ $card.title }}</span>
                     <span class="desc">{{ $card.desc }}</span>
-                    <div class="btn {{$card.button_type}}">{{ $card.button_text }}</div>
+                    <a href="{{$card.url}}" target="_blank">
+                      <div class="btn {{$card.button_type}}">{{ $card.button_text }}</div>
+                    </a>
                   </div>
                 </div>
               </div>

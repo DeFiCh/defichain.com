@@ -995,10 +995,20 @@ section.hero {
       background-color: #FF00AF;
     }
 
+    .full:hover {
+      background-color: #D60093;
+    }
+
     .outline {
       border: #FF00AF solid 2px;
       background-color: white;
       color: #FF00AF;
+    }
+
+    .outline:hover {
+      border: #D60093 solid 2px;
+      background-color: white;
+      color: #D60093;
     }
   }
 }

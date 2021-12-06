@@ -60,6 +60,8 @@
         <div class="row">
           <div class="col col-ul-10 offset-ul-1">
             <div class="row lm-aprs">
+              {{ $cryptosTokens := slice "ETH" "BTC" "USDT" "DOGE" "LTC" "BCH" "USDC" }}
+
               {{ $url := "https://ocean.defichain.com/v0/mainnet/poolpairs" }}
               {{ $items := getJSON $url }}
               {{ range $item := $items.data }}
@@ -74,7 +76,11 @@
                     {{ readFile $path_a | safeHTML }}
                     {{ readFile $path_b | safeHTML }}
                   </div>
-                  <div class="apr-coin-displaySymbol">{{ $item.displaySymbol }}</div>
+                  {{ if (in $cryptosTokens $item.tokenA.symbol ) }}
+                  <div class="apr-coin-displaySymbol">{{ printf "%s-%s" ($item.tokenA.symbol) ($item.tokenB.displaySymbol) }}</div>
+                  {{ else }}
+                  <div class="apr-coin-displaySymbol">{{ printf "%s-%s" ($item.tokenA.displaySymbol) ($item.tokenB.displaySymbol) }}</div>
+                  {{ end }}
                 </div>
                 <div class="apr-value loading">
                   <span class="spinner">{{printf "%.2f" ( mul (float $item.apr.total) 100)}}</span>

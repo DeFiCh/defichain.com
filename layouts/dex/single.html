@@ -82,8 +82,8 @@
                   <div class="apr-coin-displaySymbol">{{ printf "%s-%s" ($item.tokenA.displaySymbol) ($item.tokenB.displaySymbol) }}</div>
                   {{ end }}
                 </div>
-                <div class="apr-value loading">
-                  <span class="spinner">{{printf "%.2f" ( mul (float $item.apr.total) 100)}}</span>
+                <div id='{{ printf "apr-%s" $item.displaySymbol }}' class="apr-value loading">
+                  <span class="spinner"><span class="b1"></span><span class="b2"></span><span class="b3"></span></span>
                   <div class="apr-label">{{ $.Params.content.sections.coins_apr.label }}</div>
                 </div>
               </div>

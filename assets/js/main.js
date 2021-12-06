@@ -40,6 +40,16 @@ $(function () {
     }
   });
 
+  // Fetch LM APRs
+  $.ajax({
+    url: "https://ocean.defichain.com/v0/mainnet/poolpairs",
+    success: function (data) {
+      data.data.forEach((lp) => {
+        const apr_value = (lp.apr.total * 100).toFixed(2) + "%"
+        $('#apr-' + lp.displaySymbol).removeClass('loading').prepend(apr_value);
+      })
+    }})
+
   // FAQ toggles
   function storeAnswerHeights() {
     $('.faq-a').css({

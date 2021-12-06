@@ -40,62 +40,6 @@ $(function () {
     }
   });
 
-  // Fetch LM APRs
-  if ($(".apr-eth-dfi").length > 0) {
-    let lpETHDFIAPR;
-    let lpBTCDFIAPR;
-    let lpUSDTDFIAPR;
-    let lpBCHDFIAPR;
-    let lpDOGEDFIAPR;
-    let lpLTCDFIAPR;
-    let lpUSDCDFIAPR;
-
-    $.ajax({
-      url: "https://ocean.defichain.com/v0/mainnet/poolpairs",
-      success: function (data) {
-        data.data.forEach((lp) => {
-          switch (lp.id) {
-            case '5': {
-              lpBTCDFIAPR = (lp.apr.total * 100).toFixed(2) + "%"
-              $('.apr-btc-dfi .apr-value').removeClass('loading').prepend(lpBTCDFIAPR);
-              break
-            }
-            case '4': {
-              lpETHDFIAPR = (lp.apr.total * 100).toFixed(2) + "%"
-              $('.apr-eth-dfi .apr-value').removeClass('loading').prepend(lpETHDFIAPR);
-              break
-            }
-            case '6': {
-              lpUSDTDFIAPR = (lp.apr.total * 100).toFixed(2) + "%"
-              $('.apr-usdt-dfi .apr-value').removeClass('loading').prepend(lpUSDTDFIAPR);
-              break
-            }
-            case '10': {
-              lpLTCDFIAPR = (lp.apr.total * 100).toFixed(2) + "%"
-              $('.apr-ltc-dfi .apr-value').removeClass('loading').prepend(lpLTCDFIAPR);
-              break
-            }
-            case '12': {
-              lpBCHDFIAPR = (lp.apr.total * 100).toFixed(2) + "%"
-              $('.apr-bch-dfi .apr-value').removeClass('loading').prepend(lpBCHDFIAPR);
-              break
-            }
-            case '8': {
-              lpDOGEDFIAPR = (lp.apr.total * 100).toFixed(2) + "%"
-              $('.apr-doge-dfi .apr-value').removeClass('loading').prepend(lpDOGEDFIAPR);
-              break
-            }
-            case '14': {
-              lpUSDCDFIAPR = (lp.apr.total * 100).toFixed(2) + "%"
-              $('.apr-usdc-dfi .apr-value').removeClass('loading').prepend(lpUSDCDFIAPR);
-              break
-            }
-          }
-        })
-      }
-    });
-  }
-
   // FAQ toggles
   function storeAnswerHeights() {
     $('.faq-a').css({

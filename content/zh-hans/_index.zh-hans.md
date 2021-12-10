@@ -35,7 +35,7 @@ content:
             desc: 了解更多关于加密货币交易所购买$DFI
             button_text: 了解更多
             button_type: outline
-            url: https://blog.defichain.com/where-and-how-to-buy-dfi-defichain/
+            url: https://zhs.defichain.com/dfi/
           - label: 社区生态
             title: 社区开发项目
             desc: 有关递飞链一系列的综合资讯

@@ -19,7 +19,7 @@ content:
       quick_links:
         cards:
           - label: LATEST FEATURE
-            title: Decentralized Loan
+            title: Decentralized Assets
             desc: Access decentralized assets with collateral in your vault.
             button_text: Learn more
             button_type: full

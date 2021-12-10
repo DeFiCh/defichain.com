@@ -14,17 +14,34 @@ theme: dark night
 content:
   sections:
     hero:
-      headline: 比特幣生態中的開放式金融
-      subhead: 遞飛鏈：原生區塊鏈專為全民堤共快速，智能和透明化的開放式金融服務
-      ctas:
-        - label: 前往下載區
-          url: /downloads
-        - label: 購買 $DFI
-          type: bordered
-          url: https://trade.kucoin.com/DFI-BTC
-        - label: 探索 遞飛鏈生態系統
-          type: bordered
-          url: https://defilinks.io
+      headline: 比特幣生態中的DeFi
+      subhead: 遞飛鏈：原生區塊鏈專為全民堤共快速，智能和透明化的DeFi金融服務
+      quick_links:
+        cards:
+          - label: 最新功能
+            title: 去中心化資產代幣
+            desc: 運用抵押品去啟動您的去中心化資產。
+            button_text: 了解更多
+            button_type: full
+            url: https://blog.defichain.com/zht/zht-decentralized-assets/
+          - label: 精選下載
+            title: 遞飛鏈錢包
+            desc: 使用專為桌面和手機創建的錢包應用程式體驗遞飛鏈。
+            button_text: 前往下載
+            button_type: full
+            url: https://zht.defichain.com/downloads/
+          - label: 操作指南
+            title: 購買 $DFI
+            desc: 了解更多關於從加密貨幣交易所購買$DFI
+            button_text: 了解更多
+            button_type: outline
+            url: https://blog.defichain.com/where-and-how-to-buy-dfi-defichain/
+          - label: 社區生態
+            title: 社區開發項目
+            desc: 有關遞飛鏈一系列的綜合資訊
+            button_text: 探索更多
+            button_type: outline
+            url: https://defilinks.io/
     problem_solution:
       headline: 金融科技演變與未來發展
       subhead: 金融科技依然基于傳統金融信任的需求，去中心化系統解決了去信任，不必依賴第三方的協力廠商

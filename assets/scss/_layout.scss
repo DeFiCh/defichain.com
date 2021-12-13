@@ -13,7 +13,7 @@ body {
 }
 
 
-// 
+//
 // Margin helpers
 //
 
@@ -155,7 +155,7 @@ body > header {
     }
 
     svg {
-      width: 100%;
+      width: auto;
       height: 100%;
       fill: currentColor;
       transition: all 0.5s ease;
@@ -367,9 +367,11 @@ body > header {
       position: absolute;
       transition: all 0.3s ease;
       transform-origin: center;
+
       &:first-child {
         top: 11px;
       }
+
       &:nth-child(2) {
         top: 21px;
       }
@@ -385,7 +387,7 @@ body > header {
     position: absolute;
     display: block;
     z-index: 0;
-    left: -16px;  
+    left: -16px;
     right: -16px;
     top: 0;
     padding-top: $header-height;
@@ -477,6 +479,7 @@ body > header {
       transform: rotate(-45deg);
       top: 50%;
     }
+
     .line:nth-child(2) {
       top: 50%;
       transform: rotate(45deg);
@@ -487,9 +490,9 @@ body > header {
 @include menu-themes;
 
 
-// 
+//
 // Sections
-// 
+//
 
 main {
   overflow: hidden;
@@ -589,10 +592,36 @@ main {
   }
 }
 
+.section-base-slope {
+  @include brand-currentcolor-variations;
+
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  width: 100%;
+  height: 24px;
+  color: $color-ui-white;
+  z-index: -1;
+
+  &.reverse {
+    transform: scaleX(-1);
+  }
+
+  @include media(">lg") {
+    bottom: 96px;
+    height: 96px;
+  }
+
+  svg {
+    width: 200%;
+    height: 200%;
+  }
+}
+
 
 //
 // Card
-// 
+//
 
 .card {
   color: $color-ui-default;
@@ -631,7 +660,7 @@ main {
 
     &:hover .bg {
       width: calc(100% + 32px);
-      height:  calc(100% + 32px);
+      height: calc(100% + 32px);
       top: -16px;
       left: -16px;
     }
@@ -803,6 +832,7 @@ main {
         transform: rotate(30deg);
         left: 1.5px;
       }
+
       &:nth-child(2) {
         transform: rotate(-30deg);
         left: 14px;
@@ -827,6 +857,7 @@ main {
       &:first-child {
         transform: rotate(-30deg);
       }
+
       &:nth-child(2) {
         transform: rotate(30deg);
       }
@@ -864,7 +895,7 @@ main {
 
 //
 // Hero section
-// 
+//
 
 section.hero {
   min-height: 432px;
@@ -890,24 +921,103 @@ section.hero {
     }
   }
 
-  .hero-ctas {
-    margin-top: $grid-gutter;
+  .quicklinks {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
 
-    .btn {
-      margin-right: 46px;
-      margin-bottom: 24px;
+    @include media(">sm") {
+      margin-bottom: -35px;
     }
 
-    .cta-download {
-      display: block;
-      font-size: $body-sm-font-size;
-      margin-top: -4px;
+    .title {
+      font-weight: 600;
+      display: inline-block;
+      vertical-align: middle;
     }
 
-    [class^="latest-"] {
-      color: $color-ui-white60;
+    .carousel-quicklinks-nav {
+      display: inline-block;
     }
   }
+
+  .row-carousel {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+
+  .carousel-quicklinks {
+    margin-top: 20px;
+  }
+
+  .card {
+    @include brand-background-variations;
+
+    display: flex;
+    align-items: center;
+
+    width: 318px;
+    height: 320px;
+    margin: 24px;
+
+    .label {
+      font-weight: 500;
+      font-size: 12px;
+      opacity: 60%;
+      line-height: 16px;
+      margin-top: 8px;
+    }
+
+    .title {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    .desc {
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 22px;
+      flex-grow: 1;
+    }
+
+    .btn {
+      border-radius: 4px;
+      align-self: baseline;
+      margin-bottom: 8px;
+      cursor: pointer;
+
+      padding: 14px 24px;
+    }
+
+    .full {
+      background-color: #FF00AF;
+    }
+
+    .full:hover {
+      background-color: #D60093;
+    }
+
+    .outline {
+      border: #FF00AF solid 2px;
+      background-color: white;
+      color: #FF00AF;
+    }
+
+    .outline:hover {
+      border: #D60093 solid 2px;
+      background-color: white;
+      color: #D60093;
+    }
+  }
+}
+
+.fort-canning {
+  background-image: url('/svg/hero/fortcanning.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
 }
 
 .hero-art {
@@ -969,7 +1079,7 @@ section.hero {
     text-align: center;
     padding-bottom: $grid-gutter;
   }
-  
+
   h2 {
     font-size: $body-md-font-size;
     line-height: $body-md-line-height;
@@ -1000,15 +1110,16 @@ section.hero {
 
 .airdrop-maintenance {
   text-align: left;
+
   h2 {
     text-transform: uppercase;
   }
 }
 
 
-// 
+//
 // Featured video sections
-// 
+//
 
 section.featured-video {
   .video-player {
@@ -1156,6 +1267,7 @@ section.featured-video {
 
 .swiper-button-prev {
   margin-right: 32px;
+
   svg {
     transform: rotate(180deg);
     transform-origin: center;
@@ -1180,6 +1292,7 @@ section.featured-video {
 // Roadmap and Timeline
 //
 
+section.hero,
 section.roadmap,
 section.why-dfi {
   .carousel {
@@ -1225,7 +1338,7 @@ section.why-dfi {
   .event-image {
     padding: 0;
     overflow: hidden;
-  
+
     img {
       width: 100%;
       height: auto;
@@ -1250,6 +1363,7 @@ section.why-dfi {
     background-repeat: no-repeat;
     margin-left: $grid-gutter / 2;
     margin-right: $grid-gutter / 2;
+    cursor: pointer;
   }
 
   .slick-next {
@@ -1280,9 +1394,9 @@ section.why-dfi {
 }
 
 
-// 
+//
 // Problem Solution
-// 
+//
 
 section.problem-solution {
   .defi-evolution-diagram {
@@ -1332,6 +1446,19 @@ section.problem-solution {
   }
 }
 
+//
+// Home section
+//
+
+body.home {
+  section.hero {
+    min-height: auto;
+    align-items: center;
+    text-align: center;
+    padding-top: 220px;
+  }
+}
+
 
 //
 // DEX sections
@@ -1355,7 +1482,7 @@ body.dex {
     justify-content: center;
 
     img {
-      max-width: 150%;
+      max-width: 100%;
       max-height: 800px;
       width: auto;
       margin-bottom: -112px;
@@ -1537,9 +1664,9 @@ section.contributors {
 }
 
 
-// 
+//
 // Resources
-// 
+//
 
 section.resources {
   .resource-cta {
@@ -1573,7 +1700,7 @@ section.resources {
 }
 
 
-// 
+//
 // Token
 //
 
@@ -1589,7 +1716,7 @@ section.dfi-token {
 ul.insiders-benefits {
   list-style: none;
   padding: 0;
-  margin-top:  $grid-gutter;
+  margin-top: $grid-gutter;
 }
 
 li.insiders-benefit {
@@ -1618,8 +1745,7 @@ li.insiders-benefit {
 }
 
 
-
-// 
+//
 // FAQ
 //
 
@@ -1665,6 +1791,7 @@ section.faq {
           transform: rotate(30deg);
           left: 1.5px;
         }
+
         &:nth-child(2) {
           transform: rotate(-30deg);
           left: 14px;
@@ -1689,6 +1816,7 @@ section.faq {
         &:first-child {
           transform: rotate(-30deg);
         }
+
         &:nth-child(2) {
           transform: rotate(30deg);
         }
@@ -1764,9 +1892,9 @@ section.faq {
 }
 
 
-// 
+//
 // Benefits and Function set
-// 
+//
 
 section.benefits {
   background-color: map-get($brand-colors, day);
@@ -1957,7 +2085,6 @@ section.members {
     }
   }
 }
-
 
 
 //
@@ -2454,9 +2581,9 @@ section.downloads {
 }
 
 
-// 
+//
 // Page-specific layout and colors
-// 
+//
 
 body.home,
 body.claim,
@@ -2507,6 +2634,7 @@ body.bounty {
       padding-bottom: 320px;
     }
   }
+
   .hero-art {
     svg {
       right: -112px;
@@ -2922,9 +3050,9 @@ section.closer-look {
 }
 
 
-// 
+//
 // Footer
-// 
+//
 
 .footer {
   position: relative;
@@ -2946,7 +3074,7 @@ section.closer-look {
     &:visited {
       color: $color-ui-black60;
     }
-    
+
     &:hover,
     &:active {
       color: $color-ui-default;
@@ -3144,7 +3272,7 @@ section.closer-look {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-  
+
     .caption {
       max-width: 104px;
       padding-right: 8px;
@@ -3152,7 +3280,7 @@ section.closer-look {
       line-height: $note-line-height;
       color: $color-ui-black60;
     }
-  
+
     .logos {
       justify-self: flex-start;
 
@@ -3176,21 +3304,23 @@ table .cert-link {
   display: flex;
   flex-direction: row;
   line-height: 4rem;
+
   .text {
     display: flex;
     align-items: center;
     padding-right: 12px;
-    color: rgba(0,0,0,.6);
+    color: rgba(0, 0, 0, .6);
   }
 }
 
 .tooltip {
   position: relative;
   display: flex;
-  
+
   .img-qr {
     width: 180px;
   }
+
   img {
     vertical-align: middle;
   }
@@ -3206,7 +3336,7 @@ table .cert-link {
   bottom: 120%;
   left: 50%;
   margin-left: -55px;
-  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.4),);
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4),);
   position: absolute;
 }
 

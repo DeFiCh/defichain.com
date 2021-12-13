@@ -14,6 +14,7 @@
         <a class="brand" href="/">
           {{ readFile "/static/svg/logos/logo-defi.svg" | safeHTML }}
         </a>
+
         <ul class="menu">
           {{ $currentPage := . }}
           {{ range .Site.Menus.main }}

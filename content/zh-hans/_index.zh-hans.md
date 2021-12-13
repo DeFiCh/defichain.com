@@ -14,17 +14,34 @@ theme: dark night
 content:
   sections:
     hero:
-      headline: 比特币生态中的开放式金融
-      subhead: 递飞链：原生区块链专为全民堤共快速，智能和透明化的开放式金融服务
-      ctas:
-        - label: 前往下载区
-          url: /downloads
-        - label: 购买 $DFI
-          type: bordered
-          url: https://trade.kucoin.com/DFI-BTC
-        - label: 探索 递飞链生态系统
-          type: bordered
-          url: https://defilinks.io
+      headline: 比特币生态中的DeFi
+      subhead: 递飞链：原生区块链专为全民堤共快速，智能和透明化的DeFi金融服务
+      quick_links:
+        cards:
+          - label: 最新功能
+            title: 去中心化资产代币
+            desc: 运用抵押品去啟動您的去中心化资产。
+            button_text: 了解更多
+            button_type: full
+            url: https://blog.defichain.com/zht/zht-decentralized-assets/
+          - label: 精选下载
+            title: 递飞链钱包
+            desc: 使用专为桌面和手机创建的钱包应用程式体验递飞链。
+            button_text: 前往下载
+            button_type: full
+            url: https://zhs.defichain.com/downloads/
+          - label: 操作指南
+            title: 购买 $DFI
+            desc: 了解更多关于加密货币交易所购买$DFI
+            button_text: 了解更多
+            button_type: outline
+            url: https://zhs.defichain.com/dfi/
+          - label: 社区生态
+            title: 社区开发项目
+            desc: 有关递飞链一系列的综合资讯
+            button_text: 探索更多
+            button_type: outline
+            url: https://defilinks.io/
     problem_solution:
       headline: 金融科技演变与未来发展
       subhead: 金融科技依然基于传统金融信任的需求，去中心化系统解决了去信任，不必依赖第三方的协力厂商

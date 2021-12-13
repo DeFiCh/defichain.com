@@ -50,13 +50,13 @@ content:
           links:
             - label: Mac
               type: mac-dfc
-              url: https://github.com/DeFiCh/defi-app/releases
+              url: https://github.com/DeFiCh/app/releases
             - label: Windows
               type: win-dfc
-              url: https://github.com/DeFiCh/defi-app/releases
+              url: https://github.com/DeFiCh/app/releases
             - label: Linux (AppImage)
               type: appimg-dfc
-              url: https://github.com/DeFiCh/defi-app/releases
+              url: https://github.com/DeFiCh/app/releases
             - label: Installation guide
               url: /learn/defi-app-how-to
         - title: DFX wallet mobile app

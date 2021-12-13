@@ -223,7 +223,7 @@ content:
             image: /static/svg/wallets/defi.svg
             cta:
               label: Download
-              url: https://github.com/DeFiCh/defi-app/releases
+              url: https://github.com/DeFiCh/app/releases
           - headline: Pool by Cake DFI wallet
             image: /static/svg/wallets/pool.svg
             cta:

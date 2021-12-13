@@ -50,13 +50,13 @@ content:
           links:
             - label: Mac
               type: mac-dfc
-              url: https://github.com/DeFiCh/defi-app/releases
+              url: https://github.com/DeFiCh/app/releases
             - label: Windows
               type: win-dfc
-              url: https://github.com/DeFiCh/defi-app/releases
+              url: https://github.com/DeFiCh/app/releases
             - label: Linux (AppImage)
               type: appimg-dfc
-              url: https://github.com/DeFiCh/defi-app/releases
+              url: https://github.com/DeFiCh/app/releases
             - label: 安裝入門指南
               url: /learn/defi-app-how-to
         - title: DFX 錢包手機應用程序

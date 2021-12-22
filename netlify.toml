@@ -38,10 +38,11 @@
 
 [[redirects]]
   from = "https://zht.defichain.io/*"
-  to = "https://defichain.io/zh-hant/404.html"
-  status = 404
+  to = "https://defichain.io/zh-hant/:splat"
+  status = 200
 
 [[redirects]]
   from = "https://zht.defichain.io/*"
-  to = "https://defichain.io/zh-hant/:splat"
-  status = 200
+  to = "https://defichain.io/zh-hant/404.html"
+  status = 404
+  force = true

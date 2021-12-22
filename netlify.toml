@@ -8,7 +8,6 @@
   from = "https://defichain.io/*"
   to = "https://defichain.io/en/:splat"
   status = 200
-  force = true
 
 [[redirects]]
   from = "http://zhs.defichain.io/*"
@@ -20,7 +19,6 @@
   from = "https://zhs.defichain.io/*"
   to = "https://defichain.io/zh-hans/:splat"
   status = 200
-  force = true
 
 [[redirects]]
   from = "http://zht.defichain.io/*"
@@ -32,4 +30,3 @@
   from = "https://zht.defichain.io/*"
   to = "https://defichain.io/zh-hant/:splat"
   status = 200
-  force = true

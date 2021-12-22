@@ -10,11 +10,6 @@
   status = 200
 
 [[redirects]]
-  from = "https://defichain.io/*"
-  to = "https://defichain.io/en/404.html"
-  status = 404
-
-[[redirects]]
   from = "http://zhs.defichain.io/*"
   to = "https://zhs.defichain.io/:splat"
   status = 301
@@ -24,11 +19,6 @@
   from = "https://zhs.defichain.io/*"
   to = "https://defichain.io/zh-hans/:splat"
   status = 200
-
-[[redirects]]
-  from = "https://zhs.defichain.io/*"
-  to = "https://defichain.io/zh-hans/404"
-  status = 404
 
 [[redirects]]
   from = "http://zht.defichain.io/*"
@@ -42,6 +32,6 @@
   status = 200
 
 [[redirects]]
-  from = "https://zht.defichain.io/*"
-  to = "https://defichain.io/zh-hant/404"
+  from = "/*"
+  to = "/404.html"
   status = 404

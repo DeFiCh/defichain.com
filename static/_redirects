@@ -1,0 +1,8 @@
+http://defichain.com/* https://defichain.com/:splat 301!
+https://defichain.com/* https://defichain.com/en/:splat 200
+
+http://zhs.defichain.com/* https://zhs.defichain.com/:splat 301!
+https://zhs.defichain.com/* https://defichain.com/zh-hans/:splat 200
+
+http://zht.defichain.com/* https://zht.defichain.com/:splat 301!
+https://zht.defichain.com/* https://defichain.com/zh-hant/:splat 200

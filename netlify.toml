@@ -33,12 +33,11 @@ publish = "public"
   force = true
 
 [[redirects]]
+  from = "https://defichain.io/zh-hant/*"
+  to = "https://defichain.io/zh-hant/404"
+  status = 404
+
+[[redirects]]
   from = "https://zht.defichain.io/*"
   to = "https://defichain.io/zh-hant/:splat"
   status = 200
-
-[[redirects]]
-  from = "https://defichain.io/zh-hant/*"
-  to = "https://defichain.io/zh-hant/404.html"
-  status = 404
-  force = true

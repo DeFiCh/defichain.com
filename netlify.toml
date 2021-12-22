@@ -1,41 +1,35 @@
 [[redirects]]
-  from = "http://defichain.io/"
-  to = "https://defichain.io/"
+  from = "http://defichain.io/*"
+  to = "https://defichain.io/:splat"
   status = 301
   force = true
-  query = {path = ":path"}
 
 [[redirects]]
   from = "https://defichain.io/*"
-  to = "https://defichain.io/en/"
+  to = "https://defichain.io/en/:splat"
   status = 200
-  query = {path = ":path"}
   force = true
 
 [[redirects]]
-  from = "http://zhs.defichain.io/"
-  to = "https://zhs.defichain.io/"
+  from = "http://zhs.defichain.io/*"
+  to = "https://zhs.defichain.io/:splat"
   status = 301
   force = true
-  query = {path = ":path"}
 
 [[redirects]]
   from = "https://zhs.defichain.io/*"
-  to = "https://defichain.io/zh-hans/"
+  to = "https://defichain.io/zh-hans/:splat"
   status = 200
-  query = {path = ":path"}
   force = true
 
 [[redirects]]
-  from = "http://zht.defichain.io/"
-  to = "https://zht.defichain.io/"
+  from = "http://zht.defichain.io/*"
+  to = "https://zht.defichain.io/:splat"
   status = 301
   force = true
-  query = {path = ":path"}
 
 [[redirects]]
   from = "https://zht.defichain.io/*"
-  to = "https://defichain.io/zh-hant/"
+  to = "https://defichain.io/zh-hant/:splat"
   status = 200
-  query = {path = ":path"}
   force = true

@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+[[redirects]]
   from = "http://defichain.io/*"
   to = "https://defichain.io/:splat"
   status = 301
@@ -30,8 +35,3 @@
   from = "https://zht.defichain.io/*"
   to = "https://defichain.io/zh-hant/:splat"
   status = 200
-
-[[redirects]]
-  from = "/*"
-  to = "/404.html"
-  status = 404

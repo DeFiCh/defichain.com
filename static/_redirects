@@ -8,8 +8,8 @@ http://zht.defichain.com/* https://zht.defichain.com/:splat 301!
 https://zht.defichain.com/* https://defichain.com/zh-hant/:splat 200
 
 
-http://zhs.defichain.io/* https://zhs.defichain.io/:splat 301!
-https://zhs.defichain.io/* https://defichain.com/zh-hans/:splat 200
+http://zhs.defichain.io/* https://zhs.defichain.com/:splat 301!
+https://zhs.defichain.io/* https://zhs.defichain.com/:splat 301!
 
-http://zht.defichain.io/* https://zht.defichain.io/:splat 301!
-https://zht.defichain.io/* https://defichain.com/zh-hant/:splat 200
+http://zht.defichain.io/* https://zht.defichain.com/:splat 301!
+https://zht.defichain.io/* https://zht.defichain.com/:splat 301!

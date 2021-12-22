@@ -10,6 +10,7 @@
   to = "https://defichain.io/en/"
   status = 200
   query = {path = ":path"}
+  force = true
 
 [[redirects]]
   from = "http://zhs.defichain.io/"
@@ -23,6 +24,7 @@
   to = "https://defichain.io/zh-hans/"
   status = 200
   query = {path = ":path"}
+  force = true
 
 [[redirects]]
   from = "http://zht.defichain.io/"
@@ -36,3 +38,4 @@
   to = "https://defichain.io/zh-hant/"
   status = 200
   query = {path = ":path"}
+  force = true

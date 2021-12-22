@@ -1,3 +1,7 @@
+[build]
+publish = "public"
+
+
 [[redirects]]
   from = "http://defichain.io/*"
   to = "https://defichain.io/:splat"
@@ -34,7 +38,6 @@
   status = 200
 
 [[redirects]]
-  from = "zht.defichain.io/*"
+  from = "/zh-hant/*"
   to = "/zh-hant/404.html"
   status = 404
-  force = true

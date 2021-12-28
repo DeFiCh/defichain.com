@@ -1,6 +1,14 @@
 [build]
 publish = "public"
 
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Referrer-Policy = "same-origin"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
 
 [[redirects]]
   from = "http://defichain.io/*"
@@ -33,11 +41,11 @@ publish = "public"
   force = true
 
 [[redirects]]
-  from = "https://zht.defichain.io/*"
+  from = "/*"
   to = "https://defichain.io/zh-hant/:splat"
   status = 200
 
 [[redirects]]
-  from = "https://zht.defichain.io/*"
+  from = "/*"
   to = "https://defichain.io/zh-hant/404"
   status = 404

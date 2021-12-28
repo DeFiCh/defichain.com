@@ -4,7 +4,7 @@ publish = "public"
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'none'; base-uri 'none'; child-src 'self' app.netlify.com; form-action 'none'; frame-ancestors 'none'; img-src 'self' data: *.githubusercontent.com; media-src 'self'; object-src 'none'; script-src 'self' app.netlify.com netlify-cdp-loader.netlify.app cdn.jsdelivr.net files.coinmarketcap.com px.ads.linkedin.com 'unsafe-inline' 'script-src-elem'; style-src 'self' fonts.googleapis.com 'unsafe-inline'; font-src fonts.gstatic.com; connect-src 'self' ocean.defichain.com; prefetch-src 'self';"
+    Content-Security-Policy = "default-src 'none'; base-uri 'none'; child-src 'self' app.netlify.com; form-action 'none'; frame-ancestors 'none'; img-src 'self' data: *.githubusercontent.com; media-src 'self'; object-src 'none'; script-src 'self' app.netlify.com netlify-cdp-loader.netlify.app ajax.googleapis.com cdn.jsdelivr.net files.coinmarketcap.com px.ads.linkedin.com 'unsafe-inline'; style-src 'self' fonts.googleapis.com 'unsafe-inline'; font-src fonts.gstatic.com; connect-src 'self' ocean.defichain.com; prefetch-src 'self';"
     Referrer-Policy = "same-origin"
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"

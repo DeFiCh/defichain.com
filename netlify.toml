@@ -4,6 +4,7 @@ publish = "public"
 [[headers]]
   for = "/*"
   [headers.values]
+    Content-Security-Policy = "default-src 'none'; base-uri 'none'; child-src 'self' app.netlify.com; form-action 'none'; frame-ancestors 'none'; img-src 'self' data:; media-src 'self'; object-src 'none'; script-src 'self' app.netlify.com netlify-cdp-loader.netlify.app; style-src 'self' fonts.googleapis.com cdn.jsdelivr.net files.coinmarketcap.com px.ads.linkedin.com; font-src fonts.gstatic.com; connect-src 'self' ocean.defichain.com; prefetch-src 'self';"
     Referrer-Policy = "same-origin"
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"

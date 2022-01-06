@@ -48,6 +48,20 @@ publish = "public"
 
 
 [[redirects]]
+  from = "http://zh.defichain.com/*"
+  to = "https://zh.defichain.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://zh.defichain.com/*"
+  to = "https://defichain.com/zh-hans/:splat"
+  status = 200
+
+
+
+
+[[redirects]]
   from = "http://defichain.io/*"
   to = "https://defichain.com/:splat"
   status = 301
@@ -58,6 +72,7 @@ publish = "public"
   to = "https://defichain.com/:splat"
   status = 301
   force = true
+
 
 [[redirects]]
   from = "http://www.defichain.io/*"
@@ -71,6 +86,7 @@ publish = "public"
   status = 301
   force = true
 
+
 [[redirects]]
   from = "http://zht.defichain.io/*"
   to = "https://zht.defichain.com/:splat"
@@ -83,6 +99,7 @@ publish = "public"
   status = 301
   force = true
 
+
 [[redirects]]
   from = "http://zhs.defichain.io/*"
   to = "https://zhs.defichain.com/:splat"
@@ -92,5 +109,18 @@ publish = "public"
 [[redirects]]
   from = "https://zhs.defichain.io/*"
   to = "https://zhs.defichain.com/:splat"
+  status = 301
+  force = true
+
+
+[[redirects]]
+  from = "https://zh.defichain.io/*"
+  to = "https://zh.defichain.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://zh.defichain.io/*"
+  to = "https://zh.defichain.com/:splat"
   status = 301
   force = true

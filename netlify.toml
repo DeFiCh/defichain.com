@@ -50,3 +50,28 @@ publish = "public"
   from = "/*"
   to = "https://defichain.com/zh-hant/404"
   status = 404
+
+
+[[redirects]]
+  from = "http://defichain.io/*"
+  to = "https://defichain.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://defichain.io/*"
+  to = "https://defichain.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://zht.defichain.io/*"
+  to = "https://zht.defichain.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://zhs.defichain.io/*"
+  to = "https://zhs.defichain.com/:splat"
+  status = 301
+  force = true

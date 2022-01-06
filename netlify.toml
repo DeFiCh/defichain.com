@@ -65,8 +65,32 @@ publish = "public"
   force = true
 
 [[redirects]]
+  from = "http://www.defichain.io/*"
+  to = "https://defichain.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.defichain.io/*"
+  to = "https://defichain.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "http://zht.defichain.io/*"
   to = "https://zht.defichain.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://zht.defichain.io/*"
+  to = "https://zht.defichain.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://zhs.defichain.io/*"
+  to = "https://zhs.defichain.com/:splat"
   status = 301
   force = true
 

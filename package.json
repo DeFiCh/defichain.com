@@ -8,7 +8,7 @@
     "postbuild": "next-sitemap",
     "start": "next start",
     "cypress:open": "TZ=UTC cypress open",
-    "cypress:build": "CYPRESS=true next build",
+    "cypress:build": "npx nyc instrument src instrumented --reporter=lcov && next build",
     "cypress:run": "TZ=UTC cypress run --headless --browser chrome"
   },
   "dependencies": {
@@ -17,12 +17,22 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@types/node": "17.0.8",
-    "@types/react": "17.0.38",
+    "@cypress/code-coverage": "^3.9.12",
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
+    "@netlify/plugin-nextjs": "^4.1.1",
+    "@testing-library/cypress": "^8.0.2",
+    "@types/node": "^17.0.8",
+    "@types/react": "^17.0.38",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
     "cypress": "^9.2.1",
-    "eslint": "8.6.0",
-    "eslint-config-next": "12.0.7",
+    "eslint": "^8.6.0",
+    "eslint-config-next": "^12.0.8",
+    "husky": "^7.0.4",
+    "nyc": "^15.1.0",
     "tailwindcss": "^3.0.13",
-    "typescript": "4.5.4"
+    "typescript": "^4.5.4"
+  },
+  "lint-staged": {
+    "./src/**/*.{ts,tsx,js}": "eslint --fix"
   }
 }

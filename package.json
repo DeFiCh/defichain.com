@@ -2,28 +2,33 @@
   "name": "@defichain/defichain.com",
   "private": true,
   "scripts": {
-    "lint": "eslint src cypress --fix",
+    "prepare": "husky install",
+    "lint": "eslint src content cypress --fix",
     "dev": "next dev",
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
-    "cypress:open": "TZ=UTC cypress open",
+    "cypress:open": "cypress open",
     "cypress:build": "CYPRESS=true next build",
-    "cypress:run": "TZ=UTC cypress run --headless --browser chrome"
+    "cypress:run": "TZ=UTC cypress run --headless --browser chrome",
+    "playground:start": "docker-compose rm -fsv && docker-compose up"
   },
   "dependencies": {
+    "classnames": "^2.3.1",
     "next": "12.0.7",
+    "next-sitemap": "^1.8.7",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.12",
-    "@istanbuljs/nyc-config-typescript": "^1.0.2",
     "@netlify/plugin-nextjs": "^4.1.1",
     "@testing-library/cypress": "^8.0.2",
     "@types/node": "^17.0.8",
     "@types/react": "^17.0.38",
     "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.9.1",
+    "autoprefixer": "^10.4.2",
     "babel-plugin-istanbul": "^6.1.1",
     "babel-plugin-jsx-remove-data-test-id": "^3.0.0",
     "cypress": "^9.2.1",

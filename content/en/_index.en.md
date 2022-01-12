@@ -134,9 +134,63 @@ content:
       headline: Roadmap
       subhead: Achievements and what to look forward to.
       timeline:
+        - year: 2022
+          title: 2022
+          status: On track
+          events:
+            - month: Q1
+              status: future
+              title: On-chain Governance
+              image:
+                x1: /img/timeline/2022/On-Chain-governance2x.png
+                x2: /img/timeline/2022/On-Chain-governance2x.png
+                alt: On-chain Governance
+            - month: Q2
+              status: future
+              title: Desktop Light Wallet
+              image:
+                x1: /img/timeline/2022/Desktop-Light-Wallet2x.png
+                x2: /img/timeline/2022/Desktop-Light-Wallet2x.png
+                alt: Desktop Light Wallet
+            - month: Q2
+              status: future
+              title: Browser Extension Wallet
+              image:
+                x1: /img/timeline/2022/Browser-Extension-Wallet2x.png
+                x2: /img/timeline/2022/Browser-Extension-Wallet2x.png
+                alt: Browser Extension Wallet
+            - month: Q2
+              status: future
+              title: Derivatives (Futures and options)
+              image:
+                x1: /img/timeline/2021/futures-trading.png
+                x2: /img/timeline/2021/futures-trading@2x.png
+                alt: Derivatives (Futures and options)
+            - month: Q3-4
+              status: future
+              title: Ethereum Virtual Machine Support on DeFiChain
+              url: https://github.com/DeFiCh/dfips/issues/96
+              image:
+                x1: /img/timeline/2022/EVM2x.png
+                x2: /img/timeline/2022/EVM2x.png
+                alt: Ethereum Virtual Machine Support on DeFiChain
+            - month: Q3-4
+              status: future
+              title: Non-fungible Token (NFT) Support
+              image:
+                x1: /img/timeline/2022/NFTs2x.png
+                x2: /img/timeline/2022/NFTs2x.png
+                alt: Non-fungible Token (NFT) Support
+            - month: Q4
+              status: future
+              title: Ledger support for Light Wallet.
+              image:
+                x1: /img/timeline/2021/ledger.png
+                x2: /img/timeline/2021/ledger@2x.png
+                alt: Ledger integration
         - year: 2021
           title: 2021
-          status: On track
+          status: Achieved
           events:
             - month: Jan
               status: past
@@ -226,7 +280,14 @@ content:
                 x1: /img/timeline/2021/bitcoin-anchoring.png
                 x2: /img/timeline/2021/bitcoin-anchoring@2x.png
                 alt: Bitcoin anchoring
-            - month: Q2
+            - month: Apr
+              status: past
+              title: DeFiChain listed on Transak.
+              image:
+                x1: /img/timeline/2021/Tranak_April.jpeg
+                x2: /img/timeline/2021/Tranak_April.jpeg
+                alt: DeFiChain listed on Transak
+            - month: Apr
               status: past
               title: Pink paper on stocks trading, loan and decentralized BTC.
               url: https://github.com/defich/pinkpaper/
@@ -234,15 +295,14 @@ content:
                 x1: /img/timeline/2021/pink-paper-q1.png
                 x2: /img/timeline/2021/pink-paper-q1@2x.png
                 alt: Q1 pink paper
-            - month: Q2
+            - month: May
               status: past
-              title: Decentralized cross-chain asset bridge via atomic swap.
-              url: https://github.com/DeFiCh/ain/wiki/Interchain-Exchange-Tutorial/
+              title: Introduced Atomic Swap via Eunos Upgrade
               image:
-                x1: /img/timeline/2021/atomic-swap.png
-                x2: /img/timeline/2021/atomic-swap@2x.png
-                alt: Atomic swap
-            - month: Q2
+                x1: /img/timeline/2021/Eunos-Upgrade.png
+                x2: /img/timeline/2021/Eunos-Upgrade.png
+                alt: Introduced Atomic Swap via Eunos Upgrade
+            - month: June
               status: past
               title: Release of open-source DeFiChain JS library.
               url: https://github.com/defich/jellyfish/
@@ -250,55 +310,52 @@ content:
                 x1: /img/timeline/2021/js-library.png
                 x2: /img/timeline/2021/js-library@2x.png
                 alt: JS library
-            - month: Q3
-              status: future
-              title: Mobile app.
+            - month: June
+              status: past
+              title: Decentralized cross-chain asset bridge via atomic swap.
+              url: https://github.com/DeFiCh/ain/wiki/Interchain-Exchange-Tutorial/
+              image:
+                x1: /img/timeline/2021/atomic-swap.png
+                x2: /img/timeline/2021/atomic-swap@2x.png
+                alt: Atomic swap
+            - month: June
+              status: past
+              title: Struck off the DeFiChain Foundation
+              url: https://blog.defichain.com/we-struck-off-the-foundation-long-live-the-decentralization/
+              image:
+                x1: /img/timeline/2021/DFC-Foundation.png
+                x2: /img/timeline/2021/DFC-Foundation.png
+                alt: Struck off the DeFiChain Foundation
+            - month: Aug
+              status: past
+              title: Release of the DeFiChain Light Wallet Mobile App on iOS and Android.
+              url: https://defichain.com/downloads/
               image:
                 x1: /img/timeline/2021/mobile-app.png
                 x2: /img/timeline/2021/mobile-app@2x.png
                 alt: Mobile app
-            - month: Q4
+            - month: Sep
               status: past
-              title: Trustless on-chain stocks, commodities and currencies.
+              title: Release of DeFi Scan, the block explorer for DeFiChain.
+              url: https://defichain.com/downloads/
               image:
-                x1: /img/timeline/2021/trustless-things.png
-                x2: /img/timeline/2021/trustless-things@2x.png
-                alt: Trustless on-chain stocks, commodities and currencies
-            - month: Q4
-              status: future
-              title: Ledger support for Light Wallet.
+                x1: /img/timeline/2021/DeFi-Scan.png
+                x2: /img/timeline/2021/DeFi-Scan.png
+                alt: Release of DeFi Scan, the block explorer for DeFiChain.
+            - month: Oct
+              status: past
+              title: 100% carbon neutral blockchain.
               image:
-                x1: /img/timeline/2021/ledger.png
-                x2: /img/timeline/2021/ledger@2x.png
-                alt: Ledger integration
-            - month: 2021
-              status: future
-              title: Decentralized Tokenization.
+                x1: /img/timeline/2021/Carbon-neutral.png
+                x2: /img/timeline/2021/Carbon-neutral.png
+                alt: 100% carbon neutral blockchain.
+            - month: Nov
+              status: past
+              title: Decentralized Assets and Liquidity Mining with dTokens via Fort Canning Upgrade.
               image:
-                x1: /img/timeline/2021/decentralized-tokenization.png
-                x2: /img/timeline/2021/decentralized-tokenization@2x.png
-                alt: Decentralized Tokenization
-            - month: 2021
-              status: future
-              title: Decentralized Lending.
-              image:
-                x1: /img/timeline/2021/decentralized-lending.png
-                x2: /img/timeline/2021/decentralized-lending@2x.png
-                alt: Decentralized Lending
-            - month: 2021
-              status: future
-              title: "Futures: expirable futures & perpetual swaps."
-              image:
-                x1: /img/timeline/2021/futures-trading.png
-                x2: /img/timeline/2021/futures-trading@2x.png
-                alt: Futures
-            - month: 2021
-              status: future
-              title: Developer community and toolchain to allow for more integrations.
-              image:
-                x1: /img/timeline/2021/dev-toolchain.png
-                x2: /img/timeline/2021/dev-toolchain@2x.png
-                alt: Developer toolchain
+                x1: /img/timeline/2021/Fort-Canning-Update-blank.png
+                x2: /img/timeline/2021/Fort-Canning-Update-blank.png
+                alt: Decentralized Assets and Liquidity Mining with dTokens via Fort Canning Upgrade.
         - year: 3y
           title: Within the next 3, 5 and 10 years
           events:

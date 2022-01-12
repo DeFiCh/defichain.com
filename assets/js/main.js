@@ -172,6 +172,24 @@ $(function () {
       waitForAnimate: true
     });
 
+    $(".carousel-2022").slick({
+      appendArrows: '.carousel-2022-nav',
+      arrows: true,
+      autoplay: false,
+      autoplaySpeed: 5000,
+      centerMode: true,
+      dots: false,
+      draggable: false,
+      infinite: false,
+      initialSlide: 1,
+      mobileFirst: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      speed: 500,
+      variableWidth: true,
+      waitForAnimate: true
+    });
+
     $(".carousel-2021").slick({
       appendArrows: '.carousel-2021-nav',
       arrows: true,
@@ -181,7 +199,7 @@ $(function () {
       dots: false,
       draggable: false,
       infinite: false,
-      initialSlide: 13,
+      initialSlide: 19,
       mobileFirst: true,
       slidesToShow: 1,
       slidesToScroll: 1,

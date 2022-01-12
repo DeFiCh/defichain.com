@@ -1,0 +1,13 @@
+{
+  "projectId": "nfvd2a",
+  "fixturesFolder": false,
+  "baseUrl": "http://localhost:3000",
+  "viewportWidth": 1200,
+  "viewportHeight": 1000,
+  "requestTimeout": 8000,
+  "defaultCommandTimeout": 8000,
+  "retries": {
+    "runMode": 2,
+    "openMode": 0
+  }
+}

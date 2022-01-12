@@ -1,34 +1,34 @@
-# DeFiChain Website
-Source for defichain.com
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## You need
+## Getting Started
 
-[Hugo](https://gohugo.io/) `brew install hugo`
+First, run the development server:
 
-[Not on macOS?](https://gohugo.io/getting-started/installing). Note that you'll the "extended" version.
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-## Running
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-1. Install packages with `npm i`
-2. Start Hugo with `hugo server`
-3. Navigate to [localhost:1313](localhost:1313)
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-No need for Gulp. Hugo has asset pipeline built-in.
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-## Deploying
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-Create a new release on Github and bump the version.
+## Learn More
 
-[Create Release Guide](https://docs.github.com/en/github/administering-a-repository/managing-releases-in-a-repository)
+To learn more about Next.js, take a look at the following resources:
 
-After that, check on the `Action` tab for the CI information and details.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-<!--- Run the included script `./_scripts/deploy-gh.sh` to build the site and push to `gh-pages` (GitHub pages) branch. --->
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-<!--- See `_scripts/deploy-gh.sh` for details. --->
+## Deploy on Vercel
 
-## Hosting
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-<!--- # Make sure custom domain is configured to `defichain.com`. `./_scripts/deploy-gh.sh` does it automatically. You can also comment it away and configure it within the repository settings. --->
-
-Make sure the `baseUrl` in `config.toml` is correct.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

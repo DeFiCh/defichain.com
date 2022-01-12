@@ -6,6 +6,10 @@ context('/ on macbook-16', () => {
   beforeEach(() => {
     cy.viewport('macbook-16')
   })
+
+  it('should have title is DeFiChain.com', () => {
+    cy.findByTestId('Header.title').should('have.text', 'DeFiChain.com')
+  })
 })
 
 context('/ on iphone-x', () => {
@@ -15,5 +19,9 @@ context('/ on iphone-x', () => {
 
   beforeEach(() => {
     cy.viewport('iphone-x')
+  })
+
+  it('should have title is DeFiChain.com', () => {
+    cy.findByTestId('Header.title').should('have.text', 'DeFiChain.com')
   })
 })

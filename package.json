@@ -2,7 +2,7 @@
   "name": "@defichain/defichain.com",
   "private": true,
   "scripts": {
-    "lint": "eslint src content cypress --fix",
+    "lint": "eslint src cypress --fix",
     "dev": "next dev",
     "build": "next build",
     "postbuild": "next-sitemap",

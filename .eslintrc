@@ -3,7 +3,8 @@
     "project": "./tsconfig.json"
   },
   "extends": [
-    "plugin:@typescript-eslint/recommended",
+    "standard-with-typescript",
+    "standard-jsx",
     "next",
     "next/core-web-vitals"
   ],

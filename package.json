@@ -8,7 +8,7 @@
     "postbuild": "next-sitemap",
     "start": "next start",
     "cypress:open": "TZ=UTC cypress open",
-    "cypress:build": "npx nyc instrument src instrumented --reporter=lcov && next build",
+    "cypress:build": "CYPRESS=true next build",
     "cypress:run": "TZ=UTC cypress run --headless --browser chrome"
   },
   "dependencies": {
@@ -24,11 +24,13 @@
     "@types/node": "^17.0.8",
     "@types/react": "^17.0.38",
     "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "babel-plugin-istanbul": "^6.1.1",
+    "babel-plugin-jsx-remove-data-test-id": "^3.0.0",
     "cypress": "^9.2.1",
     "eslint": "^8.6.0",
     "eslint-config-next": "^12.0.8",
+    "eslint-config-standard-with-typescript": "^21.0.1",
     "husky": "^7.0.4",
-    "nyc": "^15.1.0",
     "tailwindcss": "^3.0.13",
     "typescript": "^4.5.4"
   },

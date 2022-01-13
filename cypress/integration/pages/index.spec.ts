@@ -8,7 +8,7 @@ context('/ on macbook-16', () => {
   })
 
   it('should have title is DeFiChain.com', () => {
-    cy.findByTestId('Header.title').should('have.text', 'DeFiChain.com')
+    cy.findByTestId('Header.title').should('have.text', 'DeFiChain')
   })
 })
 
@@ -22,6 +22,6 @@ context('/ on iphone-x', () => {
   })
 
   it('should have title is DeFiChain.com', () => {
-    cy.findByTestId('Header.title').should('have.text', 'DeFiChain.com')
+    cy.findByTestId('Header.title').should('have.text', 'DeFiChain')
   })
 })

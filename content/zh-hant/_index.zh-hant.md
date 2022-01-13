@@ -134,9 +134,63 @@ content:
       headline: 發展路線圖
       subhead: Achievements and what to look forward to.
       timeline:
+        - year: 2022
+          title: 2022
+          status: 正軌
+          events:
+            - month: 第一季度
+              status: future
+              title: 鏈上治理
+              image:
+                x1: /img/timeline/2022/On-Chain-governance2x.png
+                x2: /img/timeline/2022/On-Chain-governance2x.png
+                alt: 鏈上治理
+            - month: 第二季度
+              status: future
+              title: 桌面版輕錢包
+              image:
+                x1: /img/timeline/2022/Desktop-Light-Wallet2x.png
+                x2: /img/timeline/2022/Desktop-Light-Wallet2x.png
+                alt: 桌面版輕錢包
+            - month: 第二季度
+              status: future
+              title: DFI瀏覽器擴展程序錢包
+              image:
+                x1: /img/timeline/2022/Browser-Extension-Wallet2x.png
+                x2: /img/timeline/2022/Browser-Extension-Wallet2x.png
+                alt: DFI瀏覽器擴展程序錢包
+            - month: 第二季度
+              status: future
+              title: 衍生品(期貨和期權)
+              image:
+                x1: /img/timeline/2021/futures-trading.png
+                x2: /img/timeline/2021/futures-trading@2x.png
+                alt: 衍生品(期貨和期權)
+            - month: 第三至第四季度
+              status: future
+              title: 將升級為 EVM 全兼容的遞飛鏈的去中心化生態
+              url: https://github.com/DeFiCh/dfips/issues/96
+              image:
+                x1: /img/timeline/2022/EVM2x.png
+                x2: /img/timeline/2022/EVM2x.png
+                alt: 將升級為 EVM 全兼容的遞飛鏈的去中心化生態
+            - month: 第三至第四季度
+              status: future
+              title: 支持NFT
+              image:
+                x1: /img/timeline/2022/NFTs2x.png
+                x2: /img/timeline/2022/NFTs2x.png
+                alt: 支持NFT
+            - month: 第三至第四季度
+              status: future
+              title: 支持Ledger錢包
+              image:
+                x1: /img/timeline/2021/ledger.png
+                x2: /img/timeline/2021/ledger@2x.png
+                alt: 支持Ledger錢包
         - year: 2021
           title: 2021年
-          status: 正軌
+          status: 已達成
           events:
             - month: 一月
               status: past
@@ -226,79 +280,82 @@ content:
                 x1: /img/timeline/2021/bitcoin-anchoring.png
                 x2: /img/timeline/2021/bitcoin-anchoring@2x.png
                 alt: Bitcoin anchoring
-            - month: 第二季度
+            - month: 四月
+              status: past
+              title: 遞飛鏈在Transak上線
+              image:
+                x1: /img/timeline/2021/Tranak_April.jpeg
+                x2: /img/timeline/2021/Tranak_April.jpeg
+                alt: 遞飛鏈在Transak上線
+            - month: 四月
               status: past
               title: 股票交易，貸款和去中心化式比特幣技術概述粉紅書上線
               url: https://github.com/defich/pinkpaper/
               image:
                 x1: /img/timeline/2021/pink-paper-q1.png
                 x2: /img/timeline/2021/pink-paper-q1@2x.png
-                alt: Q1 pink paper
-            - month: 第二季度
+                alt: 股票交易，貸款和去中心化式比特幣技術概述粉紅書上線
+            - month: 五月
               status: past
-              title: 使用原子交換實行去中心化的跨鏈資産轉移
-              url: https://github.com/DeFiCh/ain/wiki/Interchain-Exchange-Tutorial/
+              title: 推出比特幣原子交換
               image:
-                x1: /img/timeline/2021/atomic-swap.png
-                x2: /img/timeline/2021/atomic-swap@2x.png
-                alt: Atomic swap
-            - month: 第二季度
+                x1: /img/timeline/2021/Eunos-Upgrade.png
+                x2: /img/timeline/2021/Eunos-Upgrade.png
+                alt: 推出比特幣原子交換
+            - month: 六月
               status: past
               title: 發布遞飛鏈JS庫開放源碼
               url: https://github.com/defich/jellyfish/
               image:
                 x1: /img/timeline/2021/js-library.png
                 x2: /img/timeline/2021/js-library@2x.png
-                alt: JS library
-            - month: 第三季度
-              status: future
-              title: 移動版軟件
+                alt: 發布遞飛鏈JS庫開放源碼
+            - month: 六月
+              status: past
+              title: 使用原子交換實行去中心化的跨鏈資産轉移
+              url: https://github.com/DeFiCh/ain/wiki/Interchain-Exchange-Tutorial/
+              image:
+                x1: /img/timeline/2021/atomic-swap.png
+                x2: /img/timeline/2021/atomic-swap@2x.png
+                alt: 使用原子交換實行去中心化的跨鏈資産轉移
+            - month: 六月
+              status: past
+              title: 原遞飛鏈基金會終結並銷毀所有DFI
+              url: https://blog.defichain.com/we-struck-off-the-foundation-long-live-the-decentralization/
+              image:
+                x1: /img/timeline/2021/DFC-Foundation.png
+                x2: /img/timeline/2021/DFC-Foundation.png
+                alt: 原遞飛鏈基金會終結並銷毀所有DFI
+            - month: 八月
+              status: past
+              title: 推出iOS和安卓手機版輕錢包
+              url: https://defichain.com/downloads/
               image:
                 x1: /img/timeline/2021/mobile-app.png
                 x2: /img/timeline/2021/mobile-app@2x.png
-                alt: Mobile app
-            - month: 第四季度
-              status: future
-              title: 鏈上去信任化股票，商品貨物和貨幣
+                alt: 推出iOS和安卓手機版輕錢包
+            - month: 九月
+              status: past
+              title: 推出DeFi Scan區塊鏈瀏覽器
+              url: https://defichain.com/downloads/
               image:
-                x1: /img/timeline/2021/trustless-things.png
-                x2: /img/timeline/2021/trustless-things@2x.png
-                alt: Trustless on-chain stocks, commodities and currencies
-            - month: 第四季度
-              status: future
-              title: 融合Ledger硬錢包
+                x1: /img/timeline/2021/DeFi-Scan.png
+                x2: /img/timeline/2021/DeFi-Scan.png
+                alt: 推出DeFi Scan區塊鏈瀏覽器
+            - month: 十月
+              status: past
+              title: 達成100%碳中和區塊鏈
               image:
-                x1: /img/timeline/2021/ledger.png
-                x2: /img/timeline/2021/ledger@2x.png
-                alt: Ledger integration
-            - month: 2021年預計
-              status: future
-              title: 去中心化代幣式
+                x1: /img/timeline/2021/Carbon-neutral.png
+                x2: /img/timeline/2021/Carbon-neutral.png
+                alt: 達成100%碳中和區塊鏈
+            - month: 十一月
+              status: past
+              title: Fort Canning更新去中心化資產和相關dToken流動性挖礦
               image:
-                x1: /img/timeline/2021/decentralized-tokenization.png
-                x2: /img/timeline/2021/decentralized-tokenization@2x.png
-                alt: Decentralized Tokenization
-            - month: 2021年預計
-              status: future
-              title: 去中心化借貸協議
-              image:
-                x1: /img/timeline/2021/decentralized-lending.png
-                x2: /img/timeline/2021/decentralized-lending@2x.png
-                alt: Decentralized Lending
-            - month: 2021年預計
-              status: future
-              title: "期貨: 有期限，永續合約交換"
-              image:
-                x1: /img/timeline/2021/futures-trading.png
-                x2: /img/timeline/2021/futures-trading@2x.png
-                alt: Futures
-            - month: 2021年預計
-              status: future
-              title: 開發者社區和工具鏈一起融合
-              image:
-                x1: /img/timeline/2021/dev-toolchain.png
-                x2: /img/timeline/2021/dev-toolchain@2x.png
-                alt: Developer toolchain
+                x1: /img/timeline/2021/Fort-Canning-Update-blank.png
+                x2: /img/timeline/2021/Fort-Canning-Update-blank.png
+                alt: Fort Canning更新去中心化資產和相關dToken流動性挖礦
         - year: 3y
           title: 三、五、十年內
           events:

@@ -6,7 +6,7 @@ export default function HomePage (): JSX.Element {
 
   return (
     <>
-      <h1 data-testid='Header.title'>{t('title')}</h1>
+      <div data-testid='Header.title' className='text-3xl'>{t('title')}</div>
     </>
   )
 }

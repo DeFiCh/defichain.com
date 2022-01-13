@@ -1,3 +1,3 @@
-export function Footer(): JSX.Element {
+export function Footer (): JSX.Element {
   return <></>
 }

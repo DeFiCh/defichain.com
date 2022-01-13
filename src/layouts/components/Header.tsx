@@ -1,3 +1,3 @@
-export function Header(): JSX.Element {
+export function Header (): JSX.Element {
   return <></>
 }

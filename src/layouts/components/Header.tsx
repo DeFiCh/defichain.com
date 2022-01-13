@@ -40,20 +40,20 @@ export function Header (): JSX.Element {
             <div className='flex w-full'>
               <Link href={{ pathname: '/' }} passHref>
                 <a className='flex items-center cursor-pointer hover:text-primary-500'>
-                  <DeFiChainLogo className='w-12 md:hidden lg:block lg:w-16 h-full' />
+                  <DeFiChainLogo className='w-12 lg:block lg:w-16 h-full' />
                 </a>
               </Link>
               <DesktopNavbar />
             </div>
-            <div className='md:hidden'>
+            <div className='lg:hidden'>
               {menu ? (
                 <MdClose
-                  className='h-6 w-6 text-primary-500' onClick={() => setMenu(false)}
+                  className='h-8 w-8 text-primary-500' onClick={() => setMenu(false)}
                   data-testid='Header.CloseMenu'
                 />
               ) : (
                 <MdMenu
-                  className='h-6 w-6 text-primary-500' onClick={() => setMenu(true)}
+                  className='h-8 w-8 text-primary-500' onClick={() => setMenu(true)}
                   data-testid='Header.OpenMenu'
                 />
               )}
@@ -71,8 +71,8 @@ export function Header (): JSX.Element {
 
 function DesktopNavbar (): JSX.Element {
   return (
-    <div className='hidden md:flex ml-2 lg:ml-8 md:w-full md:justify-between items-center text-gray-600'>
-      <div className='hidden md:flex'>
+    <div className='hidden md:flex ml-2 lg:ml-8 md:w-full md:justify-end xl:justify-between items-center text-gray-600'>
+      <div className='hidden lg:flex'>
         <HeaderLink
           className='ml-1 lg:ml-4' text='$DFI' pathname='/dfi'
           testId='Desktop.HeaderLink.DFI'
@@ -98,13 +98,21 @@ function DesktopNavbar (): JSX.Element {
           testId='Desktop.HeaderLink.DeFiScan'
         />
       </div>
+      <div className='hidden md:flex items-center mr-4 xl:mr-0 space-x-4'>
+        <ExternalLink
+          className='p-2 flex justify-center lg:hidden border-b border-gray-100' text='Github' url='https://github.com/defich/ain'
+          testId='Desktop.HeaderLink.DeFiScan'
+        />
+        <HeaderLink text='Downloads' pathname='/downloads' className='ml-1 lg:ml-4 hidden lg:block' />
+        <BuyDfiButton price='2.5' />
+      </div>
     </div>
   )
 }
 
 function MobileMenu (): JSX.Element {
   return (
-    <div className='md:hidden'>
+    <div className='lg:hidden'>
       <Container className='border-b border-gray-100 shadow-sm text-gray-600'>
         <div className='flex flex-col'>
           <HeaderLink
@@ -131,13 +139,18 @@ function MobileMenu (): JSX.Element {
             className='p-2 flex justify-center border-b border-gray-100' text='DeFiScan' url='https://defiscan.live/'
             testId='Desktop.HeaderLink.DeFiScan'
           />
+          <ExternalLink
+            className='p-2 md:hidden flex justify-center border-b border-gray-100' text='Github' url='https://github.com/defich/ain'
+            testId='Desktop.HeaderLink.DeFiScan'
+          />
+          <BuyDfiButton price='2.5' classname='md:hidden' />
         </div>
       </Container>
     </div>
   )
 }
 
-function HeaderLink (props: { text: string, pathname: string, className: string, testId?: string }): JSX.Element {
+function HeaderLink (props: { text: string, pathname: string, className?: string, testId?: string }): JSX.Element {
   const router = useRouter()
   return (
     <Link href={{ pathname: props.pathname }}>
@@ -154,5 +167,13 @@ function HeaderLink (props: { text: string, pathname: string, className: string,
         </div>
       </a>
     </Link>
+  )
+}
+
+function BuyDfiButton ({ price, classname }: {price: string, classname?: string}): JSX.Element {
+  return (
+    <a className={classNames('text-white text-lg bg-primary-500 p-2 xl:px-4 rounded text-center mb-2 md:mb-0 ', classname)}>
+      Buy $DFI <span className='text-gray-200'>${price}</span>
+    </a>
   )
 }

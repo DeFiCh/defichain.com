@@ -1,13 +1,13 @@
-import { DeFiChainLogo } from '@components/icons/DeFiChainLogo'
 import classNames from 'classnames'
-import { useRouter } from 'next/router'
-import React, { useEffect, useState } from 'react'
-import { MdClose, MdMenu, MdArrowDropDown, MdArrowDropUp } from 'react-icons/md'
 import { Container } from '@components/commons/Container'
-import Link from 'next/link'
+import { DeFiChainLogo } from '@components/icons/DeFiChainLogo'
 import { ExternalLink } from '@components/commons/link/ExternalLink'
-import { useSelector } from 'react-redux'
+import Link from 'next/link'
+import { MdArrowDropDown, MdArrowDropUp, MdClose, MdMenu } from 'react-icons/md'
 import { RootState } from '@store/index'
+import { useRouter } from 'next/router'
+import { useSelector } from 'react-redux'
+import { useEffect, useState } from 'react'
 
 export function Header (): JSX.Element {
   const [menu, setMenu] = useState(false)
@@ -184,7 +184,6 @@ function BuyDfiButton ({ classname }: {classname?: string}): JSX.Element {
 
 function LanguageDropdown (): JSX.Element {
   const [dropdown, dropDownToggle] = useState<boolean>(false)
-
   return (
     <div className='relative'>
       <div className='flex items-center cursor-pointer justify-between w-22 p-3' onClick={() => dropDownToggle(prev => !prev)}>

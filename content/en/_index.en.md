@@ -181,7 +181,7 @@ content:
                 x1: /img/timeline/2022/NFTs2x.png
                 x2: /img/timeline/2022/NFTs2x.png
                 alt: Non-fungible Token (NFT) Support
-            - month: Q4
+            - month: Q3-Q4
               status: future
               title: Ledger support for Light Wallet.
               image:

@@ -1,4 +1,5 @@
 [build]
+build = "hugo"
 publish = "public"
 
 [[headers]]

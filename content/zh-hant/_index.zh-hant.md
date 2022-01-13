@@ -136,7 +136,7 @@ content:
       timeline:
         - year: 2022
           title: 2022
-          status: On track
+          status: 正軌
           events:
             - month: 第一季度
               status: future
@@ -190,7 +190,7 @@ content:
                 alt: 支持Ledger錢包
         - year: 2021
           title: 2021年
-          status: 正軌
+          status: 已達成
           events:
             - month: 一月
               status: past

@@ -190,7 +190,7 @@ content:
                 alt: 支持Ledger钱包
         - year: 2021
           title: 2021年
-          status: 正轨
+          status: 已达成
           events:
             - month: 一月
               status: past

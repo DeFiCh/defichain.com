@@ -3,6 +3,8 @@ import Head from 'next/head'
 import { PropsWithChildren } from 'react'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
+import { PriceProvider } from '@store/price'
+import { StoreProvider } from './context/StoreProvider'
 
 const title = 'DeFiChain'
 const description = 'DeFi Blockchain, enabling decentralized finance with Bitcoin-grade security, strength and immutability. A blockchain dedicated to fast, intelligent and transparent financial services, accessible by everyone.'
@@ -30,13 +32,16 @@ export function Default (props: PropsWithChildren<any>): JSX.Element | null {
         <link rel='icon' href='/favicon.ico' />
         <link rel='icon' type='image/png' sizes='48x48' href='/favicon.png' />
       </Head>
+      <StoreProvider state={props.initialReduxState}>
+        <PriceProvider>
+          <Header />
+          <main className='flex-grow'>
+            {props.children}
+          </main>
+          <Footer />
 
-      <Header />
-      <main className='flex-grow'>
-        {props.children}
-      </main>
-      <Footer />
-
+        </PriceProvider>
+      </StoreProvider>
     </div>
   )
 }

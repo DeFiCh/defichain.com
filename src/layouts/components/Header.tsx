@@ -2,10 +2,12 @@ import { DeFiChainLogo } from '@components/icons/DeFiChainLogo'
 import classNames from 'classnames'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
-import { MdClose, MdMenu } from 'react-icons/md'
+import { MdClose, MdMenu, MdArrowDropDown, MdArrowDropUp } from 'react-icons/md'
 import { Container } from '@components/commons/Container'
 import Link from 'next/link'
 import { ExternalLink } from '@components/commons/link/ExternalLink'
+import { useSelector } from 'react-redux'
+import { RootState } from '@store/index'
 
 export function Header (): JSX.Element {
   const [menu, setMenu] = useState(false)
@@ -33,7 +35,7 @@ export function Header (): JSX.Element {
   }, [])
 
   return (
-    <header className={classNames('bg-white z-50 sticky top-0 md:shadow-none md:static', { 'shadow-lg': !atTop })}>
+    <header className={classNames('bg-gray-200 z-50 sticky top-0 md:shadow-none md:static', { 'shadow-lg': !atTop })}>
       <div className='border-b border-gray-100'>
         <Container className='py-4 md:py-8'>
           <div className='flex items-center justify-between'>
@@ -99,12 +101,13 @@ function DesktopNavbar (): JSX.Element {
         />
       </div>
       <div className='hidden md:flex items-center mr-4 xl:mr-0 space-x-4'>
+        <LanguageDropdown />
         <ExternalLink
-          className='p-2 flex justify-center lg:hidden border-b border-gray-100' text='Github' url='https://github.com/defich/ain'
+          className='p-2 flex justify-center lg:hidden' text='Github' url='https://github.com/defich/ain'
           testId='Desktop.HeaderLink.DeFiScan'
         />
         <HeaderLink text='Downloads' pathname='/downloads' className='ml-1 lg:ml-4 hidden lg:block' />
-        <BuyDfiButton price='2.5' />
+        <BuyDfiButton />
       </div>
     </div>
   )
@@ -143,7 +146,7 @@ function MobileMenu (): JSX.Element {
             className='p-2 md:hidden flex justify-center border-b border-gray-100' text='Github' url='https://github.com/defich/ain'
             testId='Desktop.HeaderLink.DeFiScan'
           />
-          <BuyDfiButton price='2.5' classname='md:hidden' />
+          <BuyDfiButton classname='md:hidden' />
         </div>
       </Container>
     </div>
@@ -170,10 +173,34 @@ function HeaderLink (props: { text: string, pathname: string, className?: string
   )
 }
 
-function BuyDfiButton ({ price, classname }: {price: string, classname?: string}): JSX.Element {
+function BuyDfiButton ({ classname }: {classname?: string}): JSX.Element {
+  const { aggregated: { amount } } = useSelector((state: RootState) => state.price)
   return (
-    <a className={classNames('text-white text-lg bg-primary-500 p-2 xl:px-4 rounded text-center mb-2 md:mb-0 ', classname)}>
-      Buy $DFI <span className='text-gray-200'>${price}</span>
+    <a className={classNames('text-white  bg-primary-500 p-2 xl:px-4 rounded text-center mb-2 md:mb-0 ', classname)}>
+      Buy $DFI <span className='text-gray-200'>${Number(amount).toFixed(2)}</span>
     </a>
+  )
+}
+
+function LanguageDropdown (): JSX.Element {
+  const [dropdown, dropDownToggle] = useState<boolean>(false)
+
+  return (
+    <div className='relative'>
+      <div className='flex items-center cursor-pointer justify-between w-22 p-3' onClick={() => dropDownToggle(prev => !prev)}>
+        <span>English</span>
+        {dropdown ? (
+          <MdArrowDropUp className='h-6 w-6' />
+        ) : (
+          <MdArrowDropDown className='h-6 w-6' />
+        )}
+      </div>
+      {dropdown && (
+        <div className='bg-white p-4 w-32 rounded absolute z-50 text-center text-gray-700 flex space-y-4 flex-col text-lg border-2 shadow border-gray-200'>
+          <a className='cursor-pointer hover:text-gray-500'>简体中文</a>
+          <a className='cursor-pointer hover:text-gray-500'>繁體中文</a>
+        </div>
+      )}
+    </div>
   )
 }

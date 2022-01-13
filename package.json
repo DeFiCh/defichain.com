@@ -1,23 +1,51 @@
 {
-  "name": "defichain.com",
-  "repository": "https://github.com/cakedefi/defichain.com.git",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "devDependencies": {
-    "autoprefixer": "^10.4.2",
-    "gulp": "^4.0.2",
-    "gulp-cheerio": "^1.0.0",
-    "gulp-inject": "^5.0.5",
-    "gulp-rename": "^2.0.0",
-    "gulp-svgmin": "^4.1.0",
-    "gulp-svgstore": "^9.0.0",
-    "include-media": "^1.4.10",
-    "postcss-cli": "^9.1.0"
-  },
+  "name": "@defichain/defichain.com",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "husky install",
+    "lint": "eslint src cypress --fix",
+    "dev": "next dev",
+    "build": "next build",
+    "postbuild": "next-sitemap",
+    "start": "next start",
+    "cypress:open": "cypress open",
+    "cypress:build": "CYPRESS=true next build",
+    "cypress:run": "TZ=UTC cypress run --headless --browser chrome",
+    "playground:start": "docker-compose rm -fsv && docker-compose up"
   },
-  "author": "DeFiChain",
-  "license": "UNLICENSED"
+  "dependencies": {
+    "classnames": "^2.3.1",
+    "next": "12.0.7",
+    "next-i18next": "^10.2.0",
+    "next-sitemap": "^1.8.7",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@cypress/code-coverage": "^3.9.12",
+    "@netlify/plugin-nextjs": "^4.1.1",
+    "@testing-library/cypress": "^8.0.2",
+    "@types/node": "^17.0.8",
+    "@types/react": "^17.0.38",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "autoprefixer": "^10.4.2",
+    "babel-plugin-istanbul": "^6.1.1",
+    "babel-plugin-jsx-remove-data-test-id": "^3.0.0",
+    "cypress": "^9.2.1",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^12.0.8",
+    "eslint-config-standard-jsx": "^10.0.0",
+    "eslint-config-standard-with-typescript": "^21.0.1",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-node": "^11.1.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.7",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.13",
+    "typescript": "^4.5.4"
+  },
+  "lint-staged": {
+    "./src/**/*.{ts,tsx,js}": "eslint --fix"
+  }
 }

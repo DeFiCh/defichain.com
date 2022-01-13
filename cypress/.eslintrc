@@ -1,0 +1,13 @@
+{
+  "parserOptions": {
+    "project": "./cypress/tsconfig.json"
+  },
+  "extends": [
+    "standard-with-typescript",
+    "plugin:cypress/recommended"
+  ],
+  "ignorePatterns": [
+    "**/plugins/*.ts",
+    "**/support/*.ts"
+  ]
+}

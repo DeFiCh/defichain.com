@@ -10,11 +10,11 @@ export function Footer (): JSX.Element {
       <Container>
         <div className='flex flex-col space-y-12'>
           <Link href={{ pathname: '/' }} passHref>
-            <a className='flex items-center cursor-pointer hover:text-primary-500'>
+            <a className='flex items-center cursor-pointer hover:text-primary-500' data-testid='Footer.Logo'>
               <DeFiChainLogo className='w-12 lg:block lg:w-32 h-full text-black' />
             </a>
           </Link>
-          <h3 className='md:text-2xl lg:text-5xl font-semibold'>Native Decentralized Finance for Bitcoin.</h3>
+          <h3 className='text-2xl lg:text-5xl font-semibold' data-testid='Footer.Heading'>Native Decentralized Finance for Bitcoin.</h3>
         </div>
         <div className='mt-10 flex flex-wrap lg:flex-nowrap lg:space-x-6'>
           <div className='py-4 flex-grow max-w-sm'>
@@ -39,16 +39,16 @@ function FooterSectionSitemap (): JSX.Element {
   return (
     <FooterSection heading='Defichain'>
       <FooterInternalLink text='Foundation' pathname='/foundation' testId='FooterSectionSitemap.Foundation' />
-      <FooterInternalLink text='$DFI' pathname='/dfi' testId='FooterSectionSitemap.dfi' />
-      <FooterInternalLink text='Dex' pathname='/dex' testId='FooterSectionSitemap.Dex' />
+      <FooterInternalLink text='$DFI' pathname='/dfi' testId='FooterSectionSitemap.DFI' />
+      <FooterInternalLink text='Dex' pathname='/dex' testId='FooterSectionSitemap.DEX' />
       <FooterInternalLink text='Developers' pathname='/developers' testId='FooterSectionSitemap.Developers' />
       <FooterInternalLink text='Ecosystem' pathname='/ecosystem' testId='FooterSectionSitemap.Ecosystem' />
       <FooterInternalLink text='Downloads' pathname='/downloads' testId='FooterSectionSitemap.Downloads' />
-      <FooterInternalLink text='Media' pathname='/media' testId='FooterSectionSitemapMedia' />
-      <FooterInternalLink text='Learn' pathname='/learn' testId='FooterSectionSitemapLearn' />
-      <FooterInternalLink text='Developers' pathname='/security' testId='FooterSectionSitemapSecurity' />
-      <FooterInternalLink text='Ecosystem' pathname='/bug-bounty' testId='FooterSectionSitemapBugBounty' />
-      <FooterInternalLink text='Downloads' pathname='/white-paper' testId='FooterSectionSitemapWhitePaper' />
+      <FooterInternalLink text='Media' pathname='/media' testId='FooterSectionSitemap.Media' />
+      <FooterInternalLink text='Learn' pathname='/learn' testId='FooterSectionSitemap.Learn' />
+      <FooterInternalLink text='Developers' pathname='/security' testId='FooterSectionSitemap.Security' />
+      <FooterInternalLink text='Ecosystem' pathname='/bug-bounty' testId='FooterSectionSitemap.BugBounty' />
+      <FooterInternalLink text='Downloads' pathname='/white-paper' testId='FooterSectionSitemap.WhitePaper' />
     </FooterSection>
   )
 }
@@ -65,7 +65,7 @@ function FooterSectionSocial (): JSX.Element {
       <FooterExternalLink text='WeChat' url='/' testId='FooterExternalLink.WeChat' />
       <FooterExternalLink text='Github' url='https://github.com/DeFiCh/ain' testId='FooterExternalLink.Github' />
       <FooterExternalLink text='Merch(US)' url='https://defichain.myspreadshop.com/' testId='FooterExternalLink.MerchUS' />
-      <FooterExternalLink text='Merch(UK)' url='https://defichain.myspreadshop.co.uk' testId='FooterExternalLink.MerchUK' />
+      <FooterExternalLink text='Merch(UK)' url='https://defichain.myspreadshop.co.uk/' testId='FooterExternalLink.MerchUK' />
       <FooterExternalLink text='Telegram(EN)' url='https://t.me/defiblockchain' testId='FooterExternalLink.TelegramEN' />
       <FooterExternalLink text='Telegram(DE)' url='https://t.me/defiblockchain_DE' testId='FooterExternalLink.TelegramDE' />
       <FooterExternalLink text='Telegram(IT)' url='https://t.me/defiblockchain_IT' testId='FooterExternalLink.TelegramIT' />

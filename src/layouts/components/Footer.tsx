@@ -62,7 +62,6 @@ function FooterSectionSocial (): JSX.Element {
       <FooterExternalLink text='Linkedin' url='https://www.linkedin.com/company/defichain' testId='FooterExternalLink.Linkedin' />
       <FooterExternalLink text='Facebook' url='https://www.facebook.com/defichain.official' testId='FooterExternalLink.Facebook' />
       <FooterExternalLink text='Discord' url='https://discord.com/invite/py55egyaGy' testId='FooterExternalLink.Discord' />
-      <FooterExternalLink text='WeChat' url='/' testId='FooterExternalLink.WeChat' />
       <FooterExternalLink text='Github' url='https://github.com/DeFiCh/ain' testId='FooterExternalLink.Github' />
       <FooterExternalLink text='Merch(US)' url='https://defichain.myspreadshop.com/' testId='FooterExternalLink.MerchUS' />
       <FooterExternalLink text='Merch(UK)' url='https://defichain.myspreadshop.co.uk/' testId='FooterExternalLink.MerchUK' />

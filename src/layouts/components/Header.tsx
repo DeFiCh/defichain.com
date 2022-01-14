@@ -41,7 +41,7 @@ export function Header (): JSX.Element {
           <div className='flex items-center justify-between'>
             <div className='flex w-full'>
               <Link href={{ pathname: '/' }} passHref>
-                <a className='flex items-center cursor-pointer hover:text-primary-500'>
+                <a className='flex items-center cursor-pointer hover:text-primary-500' data-testid='Header.SiteLogo'>
                   <DeFiChainLogo className='w-12 lg:block lg:w-16 h-full' />
                 </a>
               </Link>
@@ -106,7 +106,7 @@ function DesktopNavbar (): JSX.Element {
           className='p-2 flex justify-center lg:hidden' text='Github' url='https://github.com/defich/ain'
           testId='Desktop.HeaderLink.DeFiScan'
         />
-        <HeaderLink text='Downloads' pathname='/downloads' className='ml-1 lg:ml-4 hidden lg:block' />
+        <HeaderLink text='Downloads' pathname='/downloads' className='ml-1 lg:ml-4 hidden lg:block' testId='Desktop.HeaderLink.Downloads' />
         <BuyDfiButton />
       </div>
     </div>
@@ -140,11 +140,11 @@ function MobileMenu (): JSX.Element {
           />
           <ExternalLink
             className='p-2 flex justify-center border-b border-gray-100' text='DeFiScan' url='https://defiscan.live/'
-            testId='Desktop.HeaderLink.DeFiScan'
+            testId='Mobile.HeaderLink.DeFiScan'
           />
           <ExternalLink
             className='p-2 md:hidden flex justify-center border-b border-gray-100' text='Github' url='https://github.com/defich/ain'
-            testId='Desktop.HeaderLink.DeFiScan'
+            testId='Mobile.HeaderLink.Github'
           />
           <BuyDfiButton classname='md:hidden' />
         </div>
@@ -185,7 +185,7 @@ function BuyDfiButton ({ classname }: {classname?: string}): JSX.Element {
 function LanguageDropdown (): JSX.Element {
   const [dropdown, dropDownToggle] = useState<boolean>(false)
   return (
-    <div className='relative'>
+    <div className='relative' data-testid='SiteLangDropdown'>
       <div className='flex items-center cursor-pointer justify-between w-22 p-3' onClick={() => dropDownToggle(prev => !prev)}>
         <span>English</span>
         {dropdown ? (

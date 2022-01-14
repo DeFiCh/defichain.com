@@ -7,7 +7,6 @@ context('<Header/> on desktop', () => {
     cy.viewport('macbook-13')
   })
 
-
   it('should have Defichain Logo', function () {
     cy.findByTestId('Header.SiteLogo').should('be.visible')
   })
@@ -31,8 +30,6 @@ context('<Header/> on desktop', () => {
   })
 })
 
-
-
 context('<Header/> on mobile', () => {
   before(() => {
     cy.visit('/')
@@ -41,7 +38,6 @@ context('<Header/> on mobile', () => {
   beforeEach(() => {
     cy.viewport('iphone-x')
   })
-
 
   it('should have Defichain Logo', function () {
     cy.findByTestId('Header.SiteLogo').should('be.visible')
@@ -56,6 +52,7 @@ context('<Header/> on mobile', () => {
       cy.findByTestId('Header.CloseMenu').should('be.visible').click()
     })
   })
+
   it('should have header nav items', function () {
     cy.findByTestId('Header.OpenMenu').click().then(() => {
       cy.findByTestId('Mobile.HeaderLink.DFI').should('be.visible')

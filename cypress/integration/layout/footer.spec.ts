@@ -7,7 +7,6 @@ context('<Footer/> on desktop', () => {
     cy.viewport('macbook-13')
   })
 
-
   it('should have Defichain Logo', function () {
     cy.findByTestId('Footer.Logo').should('be.visible')
   })
@@ -80,8 +79,6 @@ context('<Footer/> on desktop', () => {
   })
 })
 
-
-
 context('<Footer/> on mobile', () => {
   before(() => {
     cy.visit('/')
@@ -90,7 +87,6 @@ context('<Footer/> on mobile', () => {
   beforeEach(() => {
     cy.viewport('iphone-x')
   })
-
 
   it('should have Defichain Logo', function () {
     cy.findByTestId('Footer.Logo').should('be.visible')

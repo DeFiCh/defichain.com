@@ -337,7 +337,7 @@ content:
             - month: Sep
               status: past
               title: Release of DeFi Scan, the block explorer for DeFiChain.
-              url: https://defichain.com/downloads/
+              url: https://defiscan.live/
               image:
                 x1: /img/timeline/2021/DeFi-Scan.png
                 x2: /img/timeline/2021/DeFi-Scan.png

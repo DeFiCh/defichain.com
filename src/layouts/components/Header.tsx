@@ -4,20 +4,29 @@ import { DeFiChainLogo } from '@components/icons/DeFiChainLogo'
 import { ExternalLink } from '@components/commons/link/ExternalLink'
 import Link from 'next/link'
 import { MdArrowDropDown, MdArrowDropUp, MdClose, MdMenu } from 'react-icons/md'
-import { RootState } from '@store/index'
 import { useRouter } from 'next/router'
-import { useSelector } from 'react-redux'
 import { useEffect, useState } from 'react'
 
 export function Header (): JSX.Element {
   const [menu, setMenu] = useState(false)
   const [atTop, setAtTop] = useState(true)
+  const [dfiPrice, setDfiPrice] = useState<string>('0')
   const router = useRouter()
 
   useEffect(() => {
     function routeChangeStart (): void {
       setMenu(false)
     }
+
+    function fetchPrice (): void {
+      void fetch('https://ocean.defichain.com/v0.18/mainnet/prices/DFI-USD')
+        .then(async res => await res.json())
+        .then(data => {
+          setDfiPrice(data.data.price.aggregated.amount)
+        })
+    }
+
+    fetchPrice()
 
     router.events.on('routeChangeStart', routeChangeStart)
     return () => router.events.off('routeChangeStart', routeChangeStart)
@@ -45,7 +54,7 @@ export function Header (): JSX.Element {
                   <DeFiChainLogo className='w-12 lg:block lg:w-16 h-full' />
                 </a>
               </Link>
-              <DesktopNavbar />
+              <DesktopNavbar price={dfiPrice} />
             </div>
             <div className='lg:hidden'>
               {menu ? (
@@ -65,13 +74,13 @@ export function Header (): JSX.Element {
       </div>
 
       <div>
-        {menu && (<MobileMenu />)}
+        {menu && (<MobileMenu price={dfiPrice} />)}
       </div>
     </header>
   )
 }
 
-function DesktopNavbar (): JSX.Element {
+function DesktopNavbar ({ price }: {price: string}): JSX.Element {
   return (
     <div className='hidden md:flex ml-2 lg:ml-8 md:w-full md:justify-end xl:justify-between items-center text-gray-600'>
       <div className='hidden lg:flex'>
@@ -107,13 +116,13 @@ function DesktopNavbar (): JSX.Element {
           testId='Desktop.HeaderLink.DeFiScan'
         />
         <HeaderLink text='Downloads' pathname='/downloads' className='ml-1 lg:ml-4 hidden lg:block' testId='Desktop.HeaderLink.Downloads' />
-        <BuyDfiButton />
+        <BuyDfiButton price={price} />
       </div>
     </div>
   )
 }
 
-function MobileMenu (): JSX.Element {
+function MobileMenu ({ price }: {price: string}): JSX.Element {
   return (
     <div className='lg:hidden'>
       <Container className='border-b border-gray-100 shadow-sm text-gray-600'>
@@ -146,7 +155,7 @@ function MobileMenu (): JSX.Element {
             className='p-2 md:hidden flex justify-center border-b border-gray-100' text='Github' url='https://github.com/defich/ain'
             testId='Mobile.HeaderLink.Github'
           />
-          <BuyDfiButton classname='md:hidden' />
+          <BuyDfiButton classname='md:hidden' price={price} />
         </div>
       </Container>
     </div>
@@ -173,11 +182,10 @@ function HeaderLink (props: { text: string, pathname: string, className?: string
   )
 }
 
-function BuyDfiButton ({ classname }: {classname?: string}): JSX.Element {
-  const { aggregated: { amount } } = useSelector((state: RootState) => state.price)
+function BuyDfiButton ({ classname, price }: {classname?: string, price: string}): JSX.Element {
   return (
     <a className={classNames('text-white  bg-primary-500 p-2 xl:px-4 rounded text-center mb-2 md:mb-0 ', classname)}>
-      Buy $DFI <span className='text-gray-200'>${Number(amount).toFixed(2)}</span>
+      Buy $DFI <span className='text-gray-200'>${Number(price).toFixed(2)}</span>
     </a>
   )
 }

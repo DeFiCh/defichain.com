@@ -10,4 +10,5 @@ function MyApp ({ Component, pageProps }: AppProps): JSX.Element {
     </Default>
   )
 }
+
 export default appWithTranslation(MyApp)

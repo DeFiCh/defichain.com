@@ -1,8 +1,9 @@
 import { Container } from '@components/commons/Container'
 import { DeFiChainLogo } from '@components/icons/DeFiChainLogo'
 import Link from 'next/link'
-import { PropsWithChildren } from 'react'
+import { PropsWithChildren, useEffect, useState } from 'react'
 import classNames from 'classnames'
+import NumberFormat from 'react-number-format'
 
 export function Footer (): JSX.Element {
   return (
@@ -20,11 +21,14 @@ export function Footer (): JSX.Element {
           <div className='py-4 flex-grow max-w-sm'>
             <FooterSectionSitemap />
           </div>
+          <div className='flex-grow' />
           <div className='py-4 flex-grow max-w-sm'>
             <FooterSectionSocial />
           </div>
           <div className='flex-grow' />
-          <div className='py-4' />
+          <div className='py-4 self-center'>
+            <DefiStats />
+          </div>
         </div>
         <div className='flex flex-row items-center space-x-4'>
           <span className='font-semibold text-sm'>&#169; Defichain</span>
@@ -105,6 +109,106 @@ function FooterInternalLink (props: { text: string, pathname: string, testId: st
         <Link href={{ pathname: props.pathname }}>
           <a data-testid={props.testId}>{props.text}</a>
         </Link>
+      </div>
+    </div>
+  )
+}
+
+interface DefiStatData {
+  price: string
+  market_cap: string
+  volume: string
+  change: string
+}
+
+function DefiStats (): JSX.Element {
+  const [stats, setStats] = useState<DefiStatData | undefined>(undefined)
+
+  useEffect(() => {
+    function getStats (): void {
+      void fetch('https://3rdparty-apis.coinmarketcap.com/v1/cryptocurrency/widget?id=5804&convert_id=1,2781,2781')
+        .then(async res => await res.json())
+        .then(data => {
+          const parsed = data.data[Object.keys(data.data)[0]]
+          const response = parsed.quote[Object.keys(parsed.quote)[1]]
+          setStats({
+            price: Number(response.price).toFixed(2),
+            market_cap: Number(response.market_cap).toFixed(2),
+            volume: Number(response.volume_24h).toFixed(2),
+            change: Number(response.percent_change_24h).toFixed(2)
+          })
+        })
+    }
+    getStats()
+  }, [])
+
+  if (stats === undefined) {
+    return <div />
+  }
+  return (
+    <div className='rounded-xl border-gray-200 border-2'>
+      <div className='flex items-center space-x-6 px-8 py-4'>
+        <svg width={156} height={72} viewBox='0 10 80 50' className='w-16 h-16'>
+          <path
+            fill='#FF00AF'
+            fillRule='evenodd'
+            d='m43.9804 62.836v-53.672c11.554 3.452 20 14.176 20 26.836s-8.446 23.386-20 26.836m-8-62.836v30.342l-4.57-4.57-.584-11.406 4.766-14.346c-3.056.032-6.008.468-8.834 1.218l-2.306 6.934-6.536-3.278c-2.586 1.506-4.978 3.308-7.104 5.39l12.106 6.066.354 6.942-6.94-.356-6.068-12.104c-2.08 2.126-3.884 4.516-5.39 7.104l3.28 6.538-6.938 2.304c-.748 2.826-1.184 5.778-1.216 8.834l14.348-4.766 11.406.582 4.57 4.572-4.57 4.572-11.406.582-14.348-4.766c.032 3.056.468 6.008 1.216 8.834l6.938 2.304-3.28 6.538c1.506 2.588 3.31 4.978 5.39 7.104l6.068-12.104 6.94-.356-.354 6.94-12.106 6.068c2.126 2.08 4.518 3.882 7.104 5.39l6.536-3.278 2.306 6.934c2.826.748 5.778 1.186 8.834 1.218l-4.766-14.346.584-11.406 4.57-4.57v30.342c19.882 0 36-16.118 36-36s-16.118-36-36-36'
+          />
+        </svg>
+        <div className='flex flex-col justify-center space-y-2'>
+          <h3 className='text-primary-500 font-semibold text-xl'>DefiChain (DFI)</h3>
+          {(() => {
+            const isNegative = stats.change.includes('-')
+            return (
+              <div className='text-sm flex items-center space-x-3'>
+                <NumberFormat
+                  value={stats.price}
+                  suffix=' USD'
+                  displayType='text'
+                  className='font-bold text-lg'
+                />
+                <span className={classNames({ 'text-red-500': isNegative }, { 'text-green-500': !isNegative })}>
+                  ( +{stats.change}% )
+                </span>
+              </div>
+            )
+          })()}
+        </div>
+      </div>
+      <div className='flex items-center mt-6'>
+        <div className='w-1/2 border border-gray-200 border-r-0 p-2 flex flex-col items-center'>
+          <span className='text-center'>MARKET CAP</span>
+          <span className='text-sm'>
+            <NumberFormat
+              value={stats.market_cap}
+              displayType='text'
+              prefix='$'
+              thousandSeparator
+            />
+          </span>
+        </div>
+        <div className='w-1/2 border border-gray-200 p-2 flex flex-col items-center'>
+          <span className='text-center'>VOLUME 24H</span>
+          <span className='text-sm'>
+            <NumberFormat
+              value={stats.volume}
+              displayType='text'
+              prefix='$'
+              thousandSeparator
+            />
+          </span>
+        </div>
+      </div>
+      <div className='flex justify-center w-full py-2'>
+        <div className='text-gray-500 hover:text-primary-500 cursor-pointer'>
+          <a
+            href='https://coinmarketcap.com/?utm_medium=widget&utm_campaign=cmcwidget&utm_source=defichain.com&utm_content=defichain'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Powered by CoinMarketCap
+          </a>
+        </div>
       </div>
     </div>
   )

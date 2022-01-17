@@ -30,11 +30,13 @@ export function Default (props: PropsWithChildren<any>): JSX.Element | null {
         <link rel='icon' href='/favicon.ico' />
         <link rel='icon' type='image/png' sizes='48x48' href='/favicon.png' />
       </Head>
+
       <Header />
       <main className='flex-grow'>
         {props.children}
       </main>
       <Footer />
+
     </div>
   )
 }

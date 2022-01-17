@@ -337,7 +337,7 @@ content:
             - month: 九月
               status: past
               title: 推出DeFi Scan区块链浏览器
-              url: https://defichain.com/downloads/
+              url: https://defiscan.live/
               image:
                 x1: /img/timeline/2021/DeFi-Scan.png
                 x2: /img/timeline/2021/DeFi-Scan.png

@@ -148,7 +148,7 @@ function DefiStats (): JSX.Element {
     return <div />
   }
   return (
-    <div className='rounded-xl border-gray-200 border-2'>
+    <div className='rounded-xl border-gray-200 border'>
       <div className='flex items-center space-x-6 px-8 py-4'>
         <svg width={156} height={72} viewBox='0 10 80 50' className='w-16 h-16'>
           <path
@@ -177,8 +177,8 @@ function DefiStats (): JSX.Element {
           })()}
         </div>
       </div>
-      <div className='flex items-center mt-6'>
-        <div className='w-1/2 border border-gray-200 border-r-0 p-2 flex flex-col items-center'>
+      <div className='flex items-center mt-6 divide-gray-200 divide-x'>
+        <div className='w-1/2 border-t border-b border-gray-200  p-2  flex flex-col items-center'>
           <span className='text-center'>MARKET CAP</span>
           <span className='text-sm'>
             <NumberFormat
@@ -189,7 +189,7 @@ function DefiStats (): JSX.Element {
             />
           </span>
         </div>
-        <div className='w-1/2 border border-gray-200 p-2 flex flex-col items-center'>
+        <div className='w-1/2 border-t border-b border-gray-200 p-2  flex flex-col items-center'>
           <span className='text-center'>VOLUME 24H</span>
           <span className='text-sm'>
             <NumberFormat

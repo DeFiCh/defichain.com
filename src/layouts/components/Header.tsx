@@ -6,6 +6,9 @@ import Link from 'next/link'
 import { MdArrowDropDown, MdArrowDropUp, MdClose, MdMenu } from 'react-icons/md'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
+
+const API_URL = 'https://ocean.defichain.com/v0.18/mainnet/prices/DFI-USD'
+
 export function Header (): JSX.Element {
   const [menu, setMenu] = useState(false)
   const [atTop, setAtTop] = useState(true)
@@ -18,7 +21,7 @@ export function Header (): JSX.Element {
     }
 
     function fetchPrice (): void {
-      void fetch('https://ocean.defichain.com/v0.18/mainnet/prices/DFI-USD')
+      void fetch(API_URL)
         .then(async res => await res.json())
         .then(data => {
           setDfiPrice(data.data.price.aggregated.amount)

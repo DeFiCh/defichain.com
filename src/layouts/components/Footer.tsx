@@ -5,6 +5,8 @@ import { PropsWithChildren, useEffect, useState } from 'react'
 import classNames from 'classnames'
 import NumberFormat from 'react-number-format'
 
+const API_URL = 'https://3rdparty-apis.coinmarketcap.com/v1/cryptocurrency/widget?id=5804&convert_id=1,2781,2781'
+
 export function Footer (): JSX.Element {
   return (
     <footer className='bg-white py-48'>
@@ -126,7 +128,7 @@ function DefiStats (): JSX.Element {
 
   useEffect(() => {
     function getStats (): void {
-      void fetch('https://3rdparty-apis.coinmarketcap.com/v1/cryptocurrency/widget?id=5804&convert_id=1,2781,2781')
+      void fetch(API_URL)
         .then(async res => await res.json())
         .then(data => {
           const parsed = data.data[Object.keys(data.data)[0]]
@@ -168,7 +170,7 @@ function DefiStats (): JSX.Element {
                   className='font-bold text-lg'
                 />
                 <span className={classNames({ 'text-red-500': isNegative }, { 'text-green-500': !isNegative })}>
-                  ( +{stats.change}% )
+                  ( {stats.change}% )
                 </span>
               </div>
             )

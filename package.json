@@ -13,6 +13,7 @@
     "gulp-svgmin": "^4.1.0",
     "gulp-svgstore": "^9.0.0",
     "include-media": "^1.4.10",
+    "postcss": "^8.4.5",
     "postcss-cli": "^9.1.0"
   },
   "scripts": {

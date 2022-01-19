@@ -1,6 +1,6 @@
 [build]
 command = "hugo"
-publish = "public/en"
+publish = "public"
 
 [[headers]]
   for = "/*"

@@ -12,11 +12,6 @@ publish = "public"
     X-XSS-Protection = "1; mode=block"
     Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
 
-[[headers]]
-  for = "/keys/security@defichain.com.public.key"
-  [headers.values]
-    Content-Disposition = "inline"
-
 [[redirects]]
   from = "http://defichain.com/*"
   to = "https://defichain.com/:splat"

@@ -141,6 +141,7 @@
           <div class="col col-lg-9 col-ul-8 offset-ul-1 mbg1">
             <h2>{{ $.Params.content.sections.submission.headline }}</h2>
             <p>{{ $.Params.content.sections.submission.description.p1 | markdownify }}</p>
+            <p class="small">[GPG&#58; <a href="/keys/security@defichain.com.public.key">F7CE 1F52 D5ED 7EE3 FC37  4614 E2C1 1358 5F01 B88B</a>]</p>
             <p>{{ $.Params.content.sections.submission.description.p2 | markdownify }}</p>
             <ul>
               {{ range $li := $.Param "content.sections.submission.description.list" }}

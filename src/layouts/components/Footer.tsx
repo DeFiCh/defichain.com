@@ -6,6 +6,8 @@ import classNames from 'classnames'
 import { useTranslation } from 'next-i18next'
 
 export function Footer (): JSX.Element {
+  const { t } = useTranslation('footer')
+
   return (
     <footer className='py-12'>
       <Container>
@@ -15,8 +17,7 @@ export function Footer (): JSX.Element {
               <DeFiChainLogo className='w-12 lg:w-28 mb-2' />
             </a>
           </Link>
-          <h3 className='text-2xl lg:text-3xl font-semibold' data-testid='Footer.Heading'>Native Decentralized Finance
-            for Bitcoin.
+          <h3 className='text-2xl lg:text-3xl font-semibold' data-testid='Footer.Heading'>{t('title')}
           </h3>
         </div>
         <div className='mt-10 flex flex-wrap lg:flex-nowrap lg:space-x-6'>

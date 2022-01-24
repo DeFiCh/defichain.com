@@ -14,7 +14,7 @@ export default function HomePage (): JSX.Element {
 export async function getStaticProps ({ locale }): Promise<{ props: SSRConfig }> {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common']))
+      ...(await serverSideTranslations(locale, ['common', 'footer']))
     }
   }
 }

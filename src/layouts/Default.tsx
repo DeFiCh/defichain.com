@@ -36,7 +36,6 @@ export function Default (props: PropsWithChildren<any>): JSX.Element | null {
         {props.children}
       </main>
       <Footer />
-
     </div>
   )
 }

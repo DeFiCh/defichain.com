@@ -1,39 +1,34 @@
 import { Container } from '@components/commons/Container'
 import { DeFiChainLogo } from '@components/icons/DeFiChainLogo'
 import Link from 'next/link'
-import { PropsWithChildren, useEffect, useState } from 'react'
+import { PropsWithChildren } from 'react'
 import classNames from 'classnames'
-import NumberFormat from 'react-number-format'
-
-const API_URL = 'https://3rdparty-apis.coinmarketcap.com/v1/cryptocurrency/widget?id=5804&convert_id=1,2781,2781'
+import { useTranslation } from 'next-i18next'
 
 export function Footer (): JSX.Element {
   return (
-    <footer className='bg-white py-48'>
+    <footer className='py-12'>
       <Container>
-        <div className='flex flex-col space-y-12'>
+        <div className='flex flex-col'>
           <Link href={{ pathname: '/' }} passHref>
             <a className='flex items-center cursor-pointer hover:text-primary-500' data-testid='Footer.Logo'>
-              <DeFiChainLogo className='w-12 lg:block lg:w-32 h-full text-black' />
+              <DeFiChainLogo className='w-12 lg:w-28 mb-2' />
             </a>
           </Link>
-          <h3 className='text-2xl lg:text-5xl font-semibold' data-testid='Footer.Heading'>Native Decentralized Finance for Bitcoin.</h3>
+          <h3 className='text-2xl lg:text-3xl font-semibold' data-testid='Footer.Heading'>Native Decentralized Finance
+            for Bitcoin.
+          </h3>
         </div>
         <div className='mt-10 flex flex-wrap lg:flex-nowrap lg:space-x-6'>
-          <div className='py-4 flex-grow max-w-sm'>
+          <div className='flex-grow max-w-sm'>
             <FooterSectionSitemap />
           </div>
-          <div className='flex-grow' />
-          <div className='py-4 flex-grow max-w-sm'>
+          <div className='flex-grow max-w-sm'>
             <FooterSectionSocial />
-          </div>
-          <div className='flex-grow' />
-          <div className='py-4 self-center'>
-            <DefiStats />
           </div>
         </div>
         <div className='flex flex-row items-center space-x-4'>
-          <span className='font-semibold text-sm'>&#169; Defichain</span>
+          <span className='font-semibold text-sm'>&#169; DeFiChain</span>
           <FooterInternalLink text='Privacy Policy' pathname='/privacy-policy' testId='Footer.Privacy' tiny />
         </div>
       </Container>
@@ -42,46 +37,106 @@ export function Footer (): JSX.Element {
 }
 
 function FooterSectionSitemap (): JSX.Element {
+  const { t } = useTranslation('footer')
+
   return (
-    <FooterSection heading='Defichain'>
-      <FooterInternalLink text='Foundation' pathname='/foundation' testId='FooterSectionSitemap.Foundation' />
-      <FooterInternalLink text='$DFI' pathname='/dfi' testId='FooterSectionSitemap.DFI' />
-      <FooterInternalLink text='Dex' pathname='/dex' testId='FooterSectionSitemap.DEX' />
-      <FooterInternalLink text='Developers' pathname='/developers' testId='FooterSectionSitemap.Developers' />
-      <FooterInternalLink text='Ecosystem' pathname='/ecosystem' testId='FooterSectionSitemap.Ecosystem' />
-      <FooterInternalLink text='Downloads' pathname='/downloads' testId='FooterSectionSitemap.Downloads' />
-      <FooterInternalLink text='Media' pathname='/media' testId='FooterSectionSitemap.Media' />
-      <FooterInternalLink text='Learn' pathname='/learn' testId='FooterSectionSitemap.Learn' />
-      <FooterInternalLink text='Developers' pathname='/security' testId='FooterSectionSitemap.Security' />
-      <FooterInternalLink text='Ecosystem' pathname='/bug-bounty' testId='FooterSectionSitemap.BugBounty' />
-      <FooterInternalLink text='Downloads' pathname='/white-paper' testId='FooterSectionSitemap.WhitePaper' />
+    <FooterSection heading='DeFiChain'>
+      <FooterInternalLink
+        text={t('sitemap.foundation')} pathname='/foundation'
+        testId='FooterSectionSitemap.Foundation'
+      />
+      <FooterInternalLink text={t('sitemap.dfi')} pathname='/dfi' testId='FooterSectionSitemap.DFI' />
+      <FooterInternalLink text={t('sitemap.dex')} pathname='/dex' testId='FooterSectionSitemap.DEX' />
+      <FooterInternalLink
+        text={t('sitemap.developers')} pathname='/developers'
+        testId='FooterSectionSitemap.Developers'
+      />
+      <FooterInternalLink text={t('sitemap.ecosystem')} pathname='/ecosystem' testId='FooterSectionSitemap.Ecosystem' />
+      <FooterInternalLink text={t('sitemap.downloads')} pathname='/downloads' testId='FooterSectionSitemap.Downloads' />
+      <FooterInternalLink text={t('sitemap.media')} pathname='/media' testId='FooterSectionSitemap.Media' />
+      <FooterInternalLink text={t('sitemap.learn')} pathname='/learn' testId='FooterSectionSitemap.Learn' />
+      <FooterInternalLink text={t('sitemap.developers')} pathname='/security' testId='FooterSectionSitemap.Security' />
+      <FooterInternalLink text={t('sitemap.ecosystem')} pathname='/bug-bounty' testId='FooterSectionSitemap.BugBounty' />
+      <FooterInternalLink text={t('sitemap.security')} pathname='/security' testId='FooterSectionSitemap.Security' />
+      <FooterInternalLink text={t('sitemap.bugbounty')} pathname='/bug-bounty' testId='FooterSectionSitemap.BugBounty' />
+      <FooterInternalLink
+        text={t('sitemap.whitepaper')} pathname='/white-paper'
+        testId='FooterSectionSitemap.WhitePaper'
+      />
     </FooterSection>
   )
 }
 
 function FooterSectionSocial (): JSX.Element {
+  const { t } = useTranslation('footer')
+
   return (
-    <FooterSection heading='Social'>
-      <FooterExternalLink text='Twitter' url='https://twitter.com/defichain' testId='FooterExternalLink.Twitter' />
-      <FooterExternalLink text='Youtube' url='https://www.youtube.com/DeFiChain' testId='FooterExternalLink.Youtube' />
-      <FooterExternalLink text='Reddit' url='https://www.reddit.com/r/defiblockchain/' testId='FooterExternalLink.Reddit' />
-      <FooterExternalLink text='Linkedin' url='https://www.linkedin.com/company/defichain' testId='FooterExternalLink.Linkedin' />
-      <FooterExternalLink text='Facebook' url='https://www.facebook.com/defichain.official' testId='FooterExternalLink.Facebook' />
-      <FooterExternalLink text='Discord' url='https://discord.com/invite/py55egyaGy' testId='FooterExternalLink.Discord' />
-      <FooterExternalLink text='Github' url='https://github.com/DeFiCh/ain' testId='FooterExternalLink.Github' />
-      <FooterExternalLink text='Merch(US)' url='https://defichain.myspreadshop.com/' testId='FooterExternalLink.MerchUS' />
-      <FooterExternalLink text='Merch(UK)' url='https://defichain.myspreadshop.co.uk/' testId='FooterExternalLink.MerchUK' />
-      <FooterExternalLink text='Telegram(EN)' url='https://t.me/defiblockchain' testId='FooterExternalLink.TelegramEN' />
-      <FooterExternalLink text='Telegram(DE)' url='https://t.me/defiblockchain_DE' testId='FooterExternalLink.TelegramDE' />
-      <FooterExternalLink text='Telegram(IT)' url='https://t.me/defiblockchain_IT' testId='FooterExternalLink.TelegramIT' />
-      <FooterExternalLink text='Telegram(ES)' url='https://t.me/defiblockchain_ES' testId='FooterExternalLink.TelegramES' />
-      <FooterExternalLink text='Telegram(FR)' url='https://t.me/defiblockchain_FR' testId='FooterExternalLink.TelegramFR' />
-      <FooterExternalLink text='Telegram(ZH)' url='https://t.me/defiblockchain_ZH' testId='FooterExternalLink.TelegramZH' />
+    <FooterSection heading={t('social.title')}>
+      <FooterExternalLink
+        text={t('social.twitter')} url='https://twitter.com/defichain'
+        testId='FooterExternalLink.Twitter'
+      />
+      <FooterExternalLink
+        text={t('social.youtube')} url='https://www.youtube.com/DeFiChain'
+        testId='FooterExternalLink.Youtube'
+      />
+      <FooterExternalLink
+        text={t('social.reddit')} url='https://www.reddit.com/r/defiblockchain/'
+        testId='FooterExternalLink.Reddit'
+      />
+      <FooterExternalLink
+        text={t('social.linkedin')} url='https://www.linkedin.com/company/defichain'
+        testId='FooterExternalLink.Linkedin'
+      />
+      <FooterExternalLink
+        text={t('social.facebook')} url='https://www.facebook.com/defichain.official'
+        testId='FooterExternalLink.Facebook'
+      />
+      <FooterExternalLink
+        text={t('social.discord')} url='https://discord.com/invite/py55egyaGy'
+        testId='FooterExternalLink.Discord'
+      />
+      <FooterExternalLink
+        text={t('social.github')} url='https://github.com/DeFiCh/ain'
+        testId='FooterExternalLink.Github'
+      />
+      <FooterExternalLink
+        text={`${t('social.merch')} (US)`} url='https://defichain.myspreadshop.com/'
+        testId='FooterExternalLink.MerchUS'
+      />
+      <FooterExternalLink
+        text={`${t('social.merch')} (UK)`} url='https://defichain.myspreadshop.co.uk/'
+        testId='FooterExternalLink.MerchUK'
+      />
+      <FooterExternalLink
+        text={`${t('social.telegram')} (EN)`} url='https://t.me/defiblockchain'
+        testId='FooterExternalLink.TelegramEN'
+      />
+      <FooterExternalLink
+        text={`${t('social.telegram')} (DE)`} url='https://t.me/defiblockchain_DE'
+        testId='FooterExternalLink.TelegramDE'
+      />
+      <FooterExternalLink
+        text={`${t('social.telegram')} (IT)`} url='https://t.me/defiblockchain_IT'
+        testId='FooterExternalLink.TelegramIT'
+      />
+      <FooterExternalLink
+        text={`${t('social.telegram')} (ES)`} url='https://t.me/defiblockchain_ES'
+        testId='FooterExternalLink.TelegramES'
+      />
+      <FooterExternalLink
+        text={`${t('social.telegram')} (FR)`} url='https://t.me/defiblockchain_FR'
+        testId='FooterExternalLink.TelegramFR'
+      />
+      <FooterExternalLink
+        text={`${t('social.telegram')} (ZH)`} url='https://t.me/defiblockchain_ZH'
+        testId='FooterExternalLink.TelegramZH'
+      />
     </FooterSection>
   )
 }
 
-function FooterSection ({ heading, children }: PropsWithChildren<{heading: string}>): JSX.Element {
+function FooterSection ({ heading, children }: PropsWithChildren<{ heading: string }>): JSX.Element {
   return (
     <section>
       <h3 className='text-2xl font-medium mb-6'>{heading}</h3>
@@ -107,110 +162,12 @@ function FooterExternalLink (props: { text: string, url: string, testId: string 
 function FooterInternalLink (props: { text: string, pathname: string, testId: string, tiny?: boolean }): JSX.Element {
   return (
     <div className='space-x-2 py-2 w-1/2'>
-      <div className={classNames('text-gray-500 hover:text-primary-500 cursor-pointer', { 'text-sm': props.tiny }, { 'text-lg': props.tiny === undefined })}>
+      <div
+        className={classNames('text-gray-500 hover:text-primary-500 cursor-pointer', { 'text-sm': props.tiny }, { 'text-lg': props.tiny === undefined })}
+      >
         <Link href={{ pathname: props.pathname }}>
           <a data-testid={props.testId}>{props.text}</a>
         </Link>
-      </div>
-    </div>
-  )
-}
-
-interface DefiStatData {
-  price: string
-  market_cap: string
-  volume: string
-  change: string
-}
-
-function DefiStats (): JSX.Element {
-  const [stats, setStats] = useState<DefiStatData | undefined>(undefined)
-
-  useEffect(() => {
-    function getStats (): void {
-      void fetch(API_URL)
-        .then(async res => await res.json())
-        .then(data => {
-          const parsed = data.data[Object.keys(data.data)[0]]
-          const response = parsed.quote[Object.keys(parsed.quote)[1]]
-          setStats({
-            price: Number(response.price).toFixed(2),
-            market_cap: Number(response.market_cap).toFixed(2),
-            volume: Number(response.volume_24h).toFixed(2),
-            change: Number(response.percent_change_24h).toFixed(2)
-          })
-        })
-    }
-    getStats()
-  }, [])
-
-  if (stats === undefined) {
-    return <div />
-  }
-  return (
-    <div className='rounded-xl border-gray-200 border'>
-      <div className='flex items-center space-x-6 px-8 py-4'>
-        <svg width={156} height={72} viewBox='0 10 80 50' className='w-16 h-16'>
-          <path
-            fill='#FF00AF'
-            fillRule='evenodd'
-            d='m43.9804 62.836v-53.672c11.554 3.452 20 14.176 20 26.836s-8.446 23.386-20 26.836m-8-62.836v30.342l-4.57-4.57-.584-11.406 4.766-14.346c-3.056.032-6.008.468-8.834 1.218l-2.306 6.934-6.536-3.278c-2.586 1.506-4.978 3.308-7.104 5.39l12.106 6.066.354 6.942-6.94-.356-6.068-12.104c-2.08 2.126-3.884 4.516-5.39 7.104l3.28 6.538-6.938 2.304c-.748 2.826-1.184 5.778-1.216 8.834l14.348-4.766 11.406.582 4.57 4.572-4.57 4.572-11.406.582-14.348-4.766c.032 3.056.468 6.008 1.216 8.834l6.938 2.304-3.28 6.538c1.506 2.588 3.31 4.978 5.39 7.104l6.068-12.104 6.94-.356-.354 6.94-12.106 6.068c2.126 2.08 4.518 3.882 7.104 5.39l6.536-3.278 2.306 6.934c2.826.748 5.778 1.186 8.834 1.218l-4.766-14.346.584-11.406 4.57-4.57v30.342c19.882 0 36-16.118 36-36s-16.118-36-36-36'
-          />
-        </svg>
-        <div className='flex flex-col justify-center space-y-2'>
-          <h3 className='text-primary-500 font-semibold text-xl'>DefiChain (DFI)</h3>
-          {(() => {
-            const isNegative = stats.change.includes('-')
-            return (
-              <div className='text-sm flex items-center space-x-3'>
-                <NumberFormat
-                  value={stats.price}
-                  suffix=' USD'
-                  displayType='text'
-                  className='font-bold text-lg'
-                />
-                <span className={classNames({ 'text-red-500': isNegative }, { 'text-green-500': !isNegative })}>
-                  ( {stats.change}% )
-                </span>
-              </div>
-            )
-          })()}
-        </div>
-      </div>
-      <div className='flex items-center mt-6 divide-gray-200 divide-x'>
-        <div className='w-1/2 border-t border-b border-gray-200  p-2  flex flex-col items-center'>
-          <span className='text-center'>MARKET CAP</span>
-          <span className='text-sm'>
-            <NumberFormat
-              value={stats.market_cap}
-              displayType='text'
-              prefix='$'
-              thousandSeparator
-            />
-          </span>
-        </div>
-        <div className='w-1/2 border-t border-b border-gray-200 p-2  flex flex-col items-center'>
-          <span className='text-center'>VOLUME 24H</span>
-          <span className='text-sm'>
-            <NumberFormat
-              value={stats.volume}
-              displayType='text'
-              prefix='$'
-              thousandSeparator
-            />
-          </span>
-        </div>
-      </div>
-      <div className='flex justify-center w-full py-2'>
-        <div className='text-gray-500 hover:text-primary-500 cursor-pointer'>
-          <a
-            href='https://coinmarketcap.com/?utm_medium=widget&utm_campaign=cmcwidget&utm_source=defichain.com&utm_content=defichain'
-            target='_blank'
-            rel='noreferrer'
-          >
-            Powered by CoinMarketCap
-          </a>
-        </div>
       </div>
     </div>
   )

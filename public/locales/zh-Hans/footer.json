@@ -1,0 +1,27 @@
+{
+  "sitemap": {
+    "foundation": "递飞链基金会",
+    "dfi": "$DFI",
+    "dex": "DEX",
+    "developers": "开发者",
+    "ecosystem": "生态系统",
+    "downloads": "下载区",
+    "media": "媒体素材",
+    "learn": "学习中心",
+    "security": "安全性",
+    "bugbounty": "漏洞悬赏",
+    "whitepaper": "白皮书"
+  },
+  "social": {
+    "title": "社区",
+    "twitter": "推特",
+    "youtube": "YouTube",
+    "reddit": "Reddit",
+    "linkedin": "領英",
+    "facebook": "脸书",
+    "discord": "Discord",
+    "github": "GitHub",
+    "telegram": "电报群",
+    "merch": "商品"
+  }
+}

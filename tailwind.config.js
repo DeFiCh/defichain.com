@@ -5,6 +5,9 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
+    fontFamily: {
+      sans: ['"IBM Plex Sans"', 'sans-serif']
+    },
     colors: {
       black: '#000000',
       white: '#FFFFFF',
@@ -72,7 +75,7 @@ module.exports = {
         50: '#F7FBFE',
         100: '#EFF6FD',
         200: '#D6EAF9',
-        500: '#5AA9E6',
+        500: '#5AA9E6'
       }
     }
   }

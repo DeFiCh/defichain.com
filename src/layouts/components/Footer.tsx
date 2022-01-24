@@ -48,22 +48,14 @@ function FooterSectionSitemap (): JSX.Element {
       />
       <FooterInternalLink text={t('sitemap.dfi')} pathname='/dfi' testId='FooterSectionSitemap.DFI' />
       <FooterInternalLink text={t('sitemap.dex')} pathname='/dex' testId='FooterSectionSitemap.DEX' />
-      <FooterInternalLink
-        text={t('sitemap.developers')} pathname='/developers'
-        testId='FooterSectionSitemap.Developers'
-      />
+      <FooterInternalLink text={t('sitemap.developers')} pathname='/developers' testId='FooterSectionSitemap.Developers' />
       <FooterInternalLink text={t('sitemap.ecosystem')} pathname='/ecosystem' testId='FooterSectionSitemap.Ecosystem' />
       <FooterInternalLink text={t('sitemap.downloads')} pathname='/downloads' testId='FooterSectionSitemap.Downloads' />
       <FooterInternalLink text={t('sitemap.media')} pathname='/media' testId='FooterSectionSitemap.Media' />
       <FooterInternalLink text={t('sitemap.learn')} pathname='/learn' testId='FooterSectionSitemap.Learn' />
-      <FooterInternalLink text={t('sitemap.developers')} pathname='/security' testId='FooterSectionSitemap.Developers' />
-      <FooterInternalLink text={t('sitemap.ecosystem')} pathname='/bug-bounty' testId='FooterSectionSitemap.BugBounty' />
       <FooterInternalLink text={t('sitemap.security')} pathname='/security' testId='FooterSectionSitemap.Security' />
       <FooterInternalLink text={t('sitemap.bugbounty')} pathname='/bug-bounty' testId='FooterSectionSitemap.BugBounty' />
-      <FooterInternalLink
-        text={t('sitemap.whitepaper')} pathname='/white-paper'
-        testId='FooterSectionSitemap.WhitePaper'
-      />
+      <FooterInternalLink text={t('sitemap.whitepaper')} pathname='/white-paper' testId='FooterSectionSitemap.WhitePaper' />
     </FooterSection>
   )
 }
@@ -151,7 +143,7 @@ function FooterSection ({ heading, children }: PropsWithChildren<{ heading: stri
 function FooterExternalLink (props: { text: string, url: string, testId: string }): JSX.Element {
   return (
     <div className='space-x-2 py-2 w-1/2'>
-      <div className='text-lg text-gray-500 hover:text-primary-500 cursor-pointer'>
+      <div className='font-light text-lg text-gray-500 hover:text-primary-500 cursor-pointer'>
         <a href={props.url} target='_blank' rel='noreferrer' data-testid={props.testId}>
           {props.text}
         </a>
@@ -164,7 +156,7 @@ function FooterInternalLink (props: { text: string, pathname: string, testId: st
   return (
     <div className='space-x-2 py-2 w-1/2'>
       <div
-        className={classNames('text-gray-500 hover:text-primary-500 cursor-pointer', { 'text-sm': props.tiny }, { 'text-lg': props.tiny === undefined })}
+        className={classNames('font-light text-gray-500 hover:text-primary-500 cursor-pointer', { 'text-sm': props.tiny }, { 'text-lg': props.tiny === undefined })}
       >
         <Link href={{ pathname: props.pathname }}>
           <a data-testid={props.testId}>{props.text}</a>

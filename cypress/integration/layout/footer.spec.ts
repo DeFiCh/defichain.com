@@ -12,7 +12,7 @@ context('<Footer/> on desktop', () => {
   })
 
   it('should Footer Heading', function () {
-    cy.findByTestId('Footer.Heading').should('have.text', 'Native Decentralized Finance for Bitcoin.')
+    cy.findByTestId('Footer.Heading').should('be.visible').should('have.text', 'Native Decentralized Finance for Bitcoin.')
   })
 
   it('should have Footer sitemap links', function () {
@@ -48,8 +48,7 @@ context('<Footer/> on desktop', () => {
   })
 
   it('should tiny footer links', function () {
-    cy.findByTestId('Footer.Privacy').should('be.visible')
-    cy.findByTestId('Footer.Privacy').should('have.attr', 'href', '/privacy-policy')
+    cy.findByTestId('Footer.Privacy').should('be.visible').should('have.attr', 'href', '/privacy-policy')
   })
 })
 
@@ -67,7 +66,7 @@ context('<Footer/> on mobile', () => {
   })
 
   it('should Footer Heading', function () {
-    cy.findByTestId('Footer.Heading').should('have.text', 'Native Decentralized Finance for Bitcoin.')
+    cy.findByTestId('Footer.Heading').should('be.visible').should('have.text', 'Native Decentralized Finance for Bitcoin.')
   })
 
   it('should have Footer sitemap links', function () {
@@ -103,7 +102,6 @@ context('<Footer/> on mobile', () => {
   })
 
   it('should tiny footer links', function () {
-    cy.findByTestId('Footer.Privacy').should('be.visible')
-    cy.findByTestId('Footer.Privacy').should('have.attr', 'href', '/privacy-policy')
+    cy.findByTestId('Footer.Privacy').should('be.visible').should('have.attr', 'href', '/privacy-policy')
   })
 })

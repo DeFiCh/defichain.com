@@ -1,0 +1,57 @@
+{
+  "Header": {
+    "title": "去中心化交易所",
+    "desc": {
+      "main": "直接在递飞链钱包程序上实现高达三位数百分比的流动性挖矿池回报，进行开放式兑换或套利等。",
+      "secondary": "程序适用于Windows，macOS和Linux。"
+    }
+  },
+  "LiquidityMining": {
+    "title": "进入流动性挖矿池能让您获得更多奖励！",
+    "desc": "递飞链的流动性挖矿能直接在程序中操作，并获得可观的收益率！当您为DEX提共BTC，ETH，USDT等地加密资产就能获得兑换费用佣金和高额的区块奖励。您可以随时退出流动性池。"
+  },
+  "LiquidityPools": {
+    "title": "流动性池",
+    "showAll": "显示所有",
+    "hide": "隐藏"
+  },
+  "WalletFeaturesSection": {
+    "title": "钱包特点",
+    "HDWallet": {
+      "title": "分层确定性钱包",
+      "desc": "使用BIP39标准拓展分层确定性钱包"
+    },
+    "BackupAndRestore": {
+      "title": "备份还原",
+      "desc": "使用二十四组助记词随时备份和恢复您的资产钱包"
+    },
+    "DecentralizedExchange": {
+      "title": "去中心化交易所",
+      "desc": "在去中心化交易所上随时互换DFI和挂钩的代币"
+    },
+    "LiquidityMining": {
+      "title": "流动性挖矿",
+      "desc": "在流动性挖矿池提供非常火的货币并获得高年利率的收获"
+    },
+    "TokensSupport": {
+      "title": "代幣支持",
+      "desc": "在DFI和递飞链生态中的代币进行存储和交易"
+    },
+    "MiniExplorer": {
+      "title": "迷你浏览器",
+      "desc": "浏览整个区块链和查看交易"
+    },
+    "Masternodes": {
+      "title": "主节点",
+      "desc": "创建您的主节点和查看所有主节点"
+    },
+    "Console": {
+      "title": "控制台",
+      "desc": "控制台上运用帐号，区块链，主节点，挖矿池，网络，钱包指令等功能"
+    },
+    "NetworkSelection": {
+      "title": "网络选项",
+      "desc": "轻易在程序上转换主网和测试网"
+    }
+  }
+}

@@ -6,10 +6,10 @@ import classNames from 'classnames'
 import { useTranslation } from 'next-i18next'
 
 export function Footer (): JSX.Element {
-  const { t } = useTranslation('footer')
+  const { t } = useTranslation('layout')
 
   return (
-    <footer className='py-12'>
+    <footer className='mt-20 mb-12'>
       <Container>
         <div className='flex flex-col'>
           <Link href={{ pathname: '/' }} passHref>
@@ -17,7 +17,7 @@ export function Footer (): JSX.Element {
               <DeFiChainLogo className='w-12 lg:w-28 mb-2' />
             </a>
           </Link>
-          <h3 className='text-2xl lg:text-3xl font-semibold' data-testid='Footer.Heading'>{t('title')}
+          <h3 className='text-xl lg:text-2xl font-semibold' data-testid='Footer.Heading'>{t('footer.title')}
           </h3>
         </div>
         <div className='mt-10 flex flex-wrap lg:flex-nowrap lg:space-x-6'>
@@ -38,91 +38,91 @@ export function Footer (): JSX.Element {
 }
 
 function FooterSectionSitemap (): JSX.Element {
-  const { t } = useTranslation('footer')
+  const { t } = useTranslation('layout')
 
   return (
     <FooterSection heading='DeFiChain'>
       <FooterInternalLink
-        text={t('sitemap.foundation')} pathname='/foundation'
+        text={t('footer.sitemap.foundation')} pathname='/foundation'
         testId='FooterSectionSitemap.Foundation'
       />
-      <FooterInternalLink text={t('sitemap.dfi')} pathname='/dfi' testId='FooterSectionSitemap.DFI' />
-      <FooterInternalLink text={t('sitemap.dex')} pathname='/dex' testId='FooterSectionSitemap.DEX' />
-      <FooterInternalLink text={t('sitemap.developers')} pathname='/developers' testId='FooterSectionSitemap.Developers' />
-      <FooterInternalLink text={t('sitemap.ecosystem')} pathname='/ecosystem' testId='FooterSectionSitemap.Ecosystem' />
-      <FooterInternalLink text={t('sitemap.downloads')} pathname='/downloads' testId='FooterSectionSitemap.Downloads' />
-      <FooterInternalLink text={t('sitemap.media')} pathname='/media' testId='FooterSectionSitemap.Media' />
-      <FooterInternalLink text={t('sitemap.learn')} pathname='/learn' testId='FooterSectionSitemap.Learn' />
-      <FooterInternalLink text={t('sitemap.security')} pathname='/security' testId='FooterSectionSitemap.Security' />
-      <FooterInternalLink text={t('sitemap.bugbounty')} pathname='/bug-bounty' testId='FooterSectionSitemap.BugBounty' />
-      <FooterInternalLink text={t('sitemap.whitepaper')} pathname='/white-paper' testId='FooterSectionSitemap.WhitePaper' />
+      <FooterInternalLink text={t('footer.sitemap.dfi')} pathname='/dfi' testId='FooterSectionSitemap.DFI' />
+      <FooterInternalLink text={t('footer.sitemap.dex')} pathname='/dex' testId='FooterSectionSitemap.DEX' />
+      <FooterInternalLink text={t('footer.sitemap.developers')} pathname='/developers' testId='FooterSectionSitemap.Developers' />
+      <FooterInternalLink text={t('footer.sitemap.ecosystem')} pathname='/ecosystem' testId='FooterSectionSitemap.Ecosystem' />
+      <FooterInternalLink text={t('footer.sitemap.downloads')} pathname='/downloads' testId='FooterSectionSitemap.Downloads' />
+      <FooterInternalLink text={t('footer.sitemap.media')} pathname='/media' testId='FooterSectionSitemap.Media' />
+      <FooterInternalLink text={t('footer.sitemap.learn')} pathname='/learn' testId='FooterSectionSitemap.Learn' />
+      <FooterInternalLink text={t('footer.sitemap.security')} pathname='/security' testId='FooterSectionSitemap.Security' />
+      <FooterInternalLink text={t('footer.sitemap.bugbounty')} pathname='/bug-bounty' testId='FooterSectionSitemap.BugBounty' />
+      <FooterInternalLink text={t('footer.sitemap.whitepaper')} pathname='/white-paper' testId='FooterSectionSitemap.WhitePaper' />
     </FooterSection>
   )
 }
 
 function FooterSectionSocial (): JSX.Element {
-  const { t } = useTranslation('footer')
+  const { t } = useTranslation('layout')
 
   return (
-    <FooterSection heading={t('social.title')}>
+    <FooterSection heading={t('footer.social.title')}>
       <FooterExternalLink
-        text={t('social.twitter')} url='https://twitter.com/defichain'
+        text={t('footer.social.twitter')} url='https://twitter.com/defichain'
         testId='FooterExternalLink.Twitter'
       />
       <FooterExternalLink
-        text={t('social.youtube')} url='https://www.youtube.com/DeFiChain'
+        text={t('footer.social.youtube')} url='https://www.youtube.com/DeFiChain'
         testId='FooterExternalLink.Youtube'
       />
       <FooterExternalLink
-        text={t('social.reddit')} url='https://www.reddit.com/r/defiblockchain/'
+        text={t('footer.social.reddit')} url='https://www.reddit.com/r/defiblockchain/'
         testId='FooterExternalLink.Reddit'
       />
       <FooterExternalLink
-        text={t('social.linkedin')} url='https://www.linkedin.com/company/defichain'
+        text={t('footer.social.linkedin')} url='https://www.linkedin.com/company/defichain'
         testId='FooterExternalLink.Linkedin'
       />
       <FooterExternalLink
-        text={t('social.facebook')} url='https://www.facebook.com/defichain.official'
+        text={t('footer.social.facebook')} url='https://www.facebook.com/defichain.official'
         testId='FooterExternalLink.Facebook'
       />
       <FooterExternalLink
-        text={t('social.discord')} url='https://discord.com/invite/py55egyaGy'
+        text={t('footer.social.discord')} url='https://discord.com/invite/py55egyaGy'
         testId='FooterExternalLink.Discord'
       />
       <FooterExternalLink
-        text={t('social.github')} url='https://github.com/DeFiCh/ain'
+        text={t('footer.social.github')} url='https://github.com/DeFiCh/ain'
         testId='FooterExternalLink.Github'
       />
       <FooterExternalLink
-        text={`${t('social.merch')} (US)`} url='https://defichain.myspreadshop.com/'
+        text={`${t('footer.social.merch')} (US)`} url='https://defichain.myspreadshop.com/'
         testId='FooterExternalLink.MerchUS'
       />
       <FooterExternalLink
-        text={`${t('social.merch')} (UK)`} url='https://defichain.myspreadshop.co.uk/'
+        text={`${t('footer.social.merch')} (UK)`} url='https://defichain.myspreadshop.co.uk/'
         testId='FooterExternalLink.MerchUK'
       />
       <FooterExternalLink
-        text={`${t('social.telegram')} (EN)`} url='https://t.me/defiblockchain'
+        text={`${t('footer.social.telegram')} (EN)`} url='https://t.me/defiblockchain'
         testId='FooterExternalLink.TelegramEN'
       />
       <FooterExternalLink
-        text={`${t('social.telegram')} (DE)`} url='https://t.me/defiblockchain_DE'
+        text={`${t('footer.social.telegram')} (DE)`} url='https://t.me/defiblockchain_DE'
         testId='FooterExternalLink.TelegramDE'
       />
       <FooterExternalLink
-        text={`${t('social.telegram')} (IT)`} url='https://t.me/defiblockchain_IT'
+        text={`${t('footer.social.telegram')} (IT)`} url='https://t.me/defiblockchain_IT'
         testId='FooterExternalLink.TelegramIT'
       />
       <FooterExternalLink
-        text={`${t('social.telegram')} (ES)`} url='https://t.me/defiblockchain_ES'
+        text={`${t('footer.social.telegram')} (ES)`} url='https://t.me/defiblockchain_ES'
         testId='FooterExternalLink.TelegramES'
       />
       <FooterExternalLink
-        text={`${t('social.telegram')} (FR)`} url='https://t.me/defiblockchain_FR'
+        text={`${t('footer.social.telegram')} (FR)`} url='https://t.me/defiblockchain_FR'
         testId='FooterExternalLink.TelegramFR'
       />
       <FooterExternalLink
-        text={`${t('social.telegram')} (ZH)`} url='https://t.me/defiblockchain_ZH'
+        text={`${t('footer.social.telegram')} (ZH)`} url='https://t.me/defiblockchain_ZH'
         testId='FooterExternalLink.TelegramZH'
       />
     </FooterSection>
@@ -132,7 +132,7 @@ function FooterSectionSocial (): JSX.Element {
 function FooterSection ({ heading, children }: PropsWithChildren<{ heading: string }>): JSX.Element {
   return (
     <section>
-      <h3 className='text-2xl font-medium mb-6'>{heading}</h3>
+      <h3 className='text-xl font-medium mb-4'>{heading}</h3>
       <div className='flex flex-wrap'>
         {children}
       </div>
@@ -142,8 +142,8 @@ function FooterSection ({ heading, children }: PropsWithChildren<{ heading: stri
 
 function FooterExternalLink (props: { text: string, url: string, testId: string }): JSX.Element {
   return (
-    <div className='space-x-2 py-2 w-1/2'>
-      <div className='font-light text-lg text-gray-500 hover:text-primary-500 cursor-pointer'>
+    <div className='space-x-2 py-1.5 w-1/2'>
+      <div className='font-light text-gray-500 hover:text-primary-500 cursor-pointer'>
         <a href={props.url} target='_blank' rel='noreferrer' data-testid={props.testId}>
           {props.text}
         </a>
@@ -154,9 +154,9 @@ function FooterExternalLink (props: { text: string, url: string, testId: string 
 
 function FooterInternalLink (props: { text: string, pathname: string, testId: string, tiny?: boolean }): JSX.Element {
   return (
-    <div className='space-x-2 py-2 w-1/2'>
+    <div className='space-x-2 py-1.5 w-1/2'>
       <div
-        className={classNames('font-light text-gray-500 hover:text-primary-500 cursor-pointer', { 'text-sm': props.tiny }, { 'text-lg': props.tiny === undefined })}
+        className={classNames('font-light text-gray-500 hover:text-primary-500 cursor-pointer', { 'text-sm': props.tiny })}
       >
         <Link href={{ pathname: props.pathname }}>
           <a data-testid={props.testId}>{props.text}</a>

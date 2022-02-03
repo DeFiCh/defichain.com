@@ -15,8 +15,8 @@ context('/dex on macbook-16', () => {
 
   it('should have LiquidityPoolsSection', () => {
     cy.findByTestId('LiquidityPools.title').should('have.text', 'Liquidity Pools')
-    cy.findByTestId('LiquidityPools.showMoreBtn').should('have.text', 'Show More')
-    cy.findByTestId('LiquidityPools.showMoreBtn').click().should('have.text', 'Hide')
+    cy.findByTestId('LiquidityPools.showAllBtn').should('have.text', 'Show All')
+    cy.findByTestId('LiquidityPools.showAllBtn').click().should('have.text', 'Hide')
   })
 
   it('should have LiquidityMiningSection', () => {
@@ -68,7 +68,7 @@ context('/dex on macbook-16', () => {
 
 context('/dex on macbook-16 - zh-hans', () => {
   before(() => {
-    cy.visit('/dex/zh-hans')
+    cy.visit('/zh-hans/dex')
   })
 
   beforeEach(() => {
@@ -83,8 +83,8 @@ context('/dex on macbook-16 - zh-hans', () => {
 
   it('should have LiquidityPoolsSection', () => {
     cy.findByTestId('LiquidityPools.title').should('have.text', '流动性池')
-    cy.findByTestId('LiquidityPools.showMoreBtn').should('have.text', '显示所有')
-    cy.findByTestId('LiquidityPools.showMoreBtn').click().should('have.text', '隐藏')
+    cy.findByTestId('LiquidityPools.showAllBtn').should('have.text', '显示所有')
+    cy.findByTestId('LiquidityPools.showAllBtn').click().should('have.text', '隐藏')
   })
 
   it('should have LiquidityMiningSection', () => {
@@ -136,7 +136,7 @@ context('/dex on macbook-16 - zh-hans', () => {
 
 context('/dex on macbook-16 - zh-hant', () => {
   before(() => {
-    cy.visit('/dex/zh-hant')
+    cy.visit('/zh-hant/dex')
   })
 
   beforeEach(() => {
@@ -151,8 +151,8 @@ context('/dex on macbook-16 - zh-hant', () => {
 
   it('should have LiquidityPoolsSection', () => {
     cy.findByTestId('LiquidityPools.title').should('have.text', '流動性池')
-    cy.findByTestId('LiquidityPools.showMoreBtn').should('have.text', '顯示所有')
-    cy.findByTestId('LiquidityPools.showMoreBtn').click().should('have.text', '隱藏')
+    cy.findByTestId('LiquidityPools.showAllBtn').should('have.text', '顯示所有')
+    cy.findByTestId('LiquidityPools.showAllBtn').click().should('have.text', '隱藏')
   })
 
   it('should have LiquidityMiningSection', () => {
@@ -219,8 +219,8 @@ context('/dex on iphone-x', () => {
 
   it('should have LiquidityPoolsSection', () => {
     cy.findByTestId('LiquidityPools.title').should('have.text', 'Liquidity Pools')
-    cy.findByTestId('LiquidityPools.showMoreBtn').should('have.text', 'Show More')
-    cy.findByTestId('LiquidityPools.showMoreBtn').click().should('have.text', 'Hide')
+    cy.findByTestId('LiquidityPools.showAllBtn').should('have.text', 'Show All')
+    cy.findByTestId('LiquidityPools.showAllBtn').click().should('have.text', 'Hide')
   })
 
   it('should have LiquidityMiningSection', () => {
@@ -272,7 +272,7 @@ context('/dex on iphone-x', () => {
 
 context('/dex on iphone-x - zh-hans', () => {
   before(() => {
-    cy.visit('/dex/zh-hans')
+    cy.visit('/zh-hans/dex')
   })
 
   beforeEach(() => {
@@ -287,8 +287,8 @@ context('/dex on iphone-x - zh-hans', () => {
 
   it('should have LiquidityPoolsSection', () => {
     cy.findByTestId('LiquidityPools.title').should('have.text', '流动性池')
-    cy.findByTestId('LiquidityPools.showMoreBtn').should('have.text', '显示所有')
-    cy.findByTestId('LiquidityPools.showMoreBtn').click().should('have.text', '隐藏')
+    cy.findByTestId('LiquidityPools.showAllBtn').should('have.text', '显示所有')
+    cy.findByTestId('LiquidityPools.showAllBtn').click().should('have.text', '隐藏')
   })
 
   it('should have LiquidityMiningSection', () => {
@@ -340,7 +340,7 @@ context('/dex on iphone-x - zh-hans', () => {
 
 context('/dex on iphone-x - zh-hant', () => {
   before(() => {
-    cy.visit('/dex/zh-hant')
+    cy.visit('/zh-hant/dex')
   })
 
   beforeEach(() => {
@@ -355,8 +355,8 @@ context('/dex on iphone-x - zh-hant', () => {
 
   it('should have LiquidityPoolsSection', () => {
     cy.findByTestId('LiquidityPools.title').should('have.text', '流動性池')
-    cy.findByTestId('LiquidityPools.showMoreBtn').should('have.text', '顯示所有')
-    cy.findByTestId('LiquidityPools.showMoreBtn').click().should('have.text', '隱藏')
+    cy.findByTestId('LiquidityPools.showAllBtn').should('have.text', '顯示所有')
+    cy.findByTestId('LiquidityPools.showAllBtn').click().should('have.text', '隱藏')
   })
 
   it('should have LiquidityMiningSection', () => {

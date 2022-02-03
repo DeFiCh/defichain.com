@@ -38,7 +38,7 @@ export function LiquidityPoolsSection (): JSX.Element {
   return (
     <div className='my-16'>
       <div className='flex justify-between mb-6'>
-        <div className='text-gray-900 font-medium text-2xl'>
+        <div className='text-gray-900 font-medium text-2xl' data-testid='LiquidityPools.title'>
           {t('LiquidityPools.title')}
         </div>
       </div>
@@ -93,11 +93,11 @@ export function LiquidityPoolsSection (): JSX.Element {
       </div>
       <div
         className='flex w-full justify-center mt-4' onClick={() => setShowMore(!showMore)}
-        data-testid='LiquidityPools.showMoreBtn'
       >
         <button
           type='button'
           className='w-full md:w-1/3 py-2.5 text-primary-300 hover:text-primary-500 border border-primary-200 hover:border-primary-500 rounded'
+          data-testid='LiquidityPools.showAllBtn'
         >
           {showMore ? t('LiquidityPools.hide') : t('LiquidityPools.showAll')}
         </button>

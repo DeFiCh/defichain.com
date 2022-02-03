@@ -89,7 +89,7 @@ context('/dex on macbook-16 - zh-hans', () => {
 
   it('should have LiquidityMiningSection', () => {
     cy.findByTestId('LiquidityMiningSection.image').should('be.visible')
-    cy.findByTestId('LiquidityMiningSection.title').should('have.text', '进入流动性挖矿池能让您获得更多奖励')
+    cy.findByTestId('LiquidityMiningSection.title').should('have.text', '进入流动性挖矿池能让您获得更多奖励！')
     cy.findByTestId('LiquidityMiningSection.desc').click().should('have.text', '递飞链的流动性挖矿能直接在程序中操作，并获得可观的收益率！当您为DEX提共BTC，ETH，USDT等地加密资产就能获得兑换费用佣金和高额的区块奖励。您可以随时退出流动性池。')
   })
 
@@ -293,7 +293,7 @@ context('/dex on iphone-x - zh-hans', () => {
 
   it('should have LiquidityMiningSection', () => {
     cy.findByTestId('LiquidityMiningSection.image').should('be.visible')
-    cy.findByTestId('LiquidityMiningSection.title').should('have.text', '进入流动性挖矿池能让您获得更多奖励')
+    cy.findByTestId('LiquidityMiningSection.title').should('have.text', '进入流动性挖矿池能让您获得更多奖励！')
     cy.findByTestId('LiquidityMiningSection.desc').click().should('have.text', '递飞链的流动性挖矿能直接在程序中操作，并获得可观的收益率！当您为DEX提共BTC，ETH，USDT等地加密资产就能获得兑换费用佣金和高额的区块奖励。您可以随时退出流动性池。')
   })
 

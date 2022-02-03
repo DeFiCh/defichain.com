@@ -9,7 +9,7 @@ export function Footer (): JSX.Element {
   const { t } = useTranslation('layout')
 
   return (
-    <footer className='py-12'>
+    <footer className='mt-20 mb-12'>
       <Container>
         <div className='flex flex-col'>
           <Link href={{ pathname: '/' }} passHref>
@@ -17,7 +17,7 @@ export function Footer (): JSX.Element {
               <DeFiChainLogo className='w-12 lg:w-28 mb-2' />
             </a>
           </Link>
-          <h3 className='text-2xl lg:text-3xl font-semibold' data-testid='Footer.Heading'>{t('footer.title')}
+          <h3 className='text-xl lg:text-2xl font-semibold' data-testid='Footer.Heading'>{t('footer.title')}
           </h3>
         </div>
         <div className='mt-10 flex flex-wrap lg:flex-nowrap lg:space-x-6'>
@@ -132,7 +132,7 @@ function FooterSectionSocial (): JSX.Element {
 function FooterSection ({ heading, children }: PropsWithChildren<{ heading: string }>): JSX.Element {
   return (
     <section>
-      <h3 className='text-2xl font-medium mb-6'>{heading}</h3>
+      <h3 className='text-xl font-medium mb-4'>{heading}</h3>
       <div className='flex flex-wrap'>
         {children}
       </div>
@@ -142,8 +142,8 @@ function FooterSection ({ heading, children }: PropsWithChildren<{ heading: stri
 
 function FooterExternalLink (props: { text: string, url: string, testId: string }): JSX.Element {
   return (
-    <div className='space-x-2 py-2 w-1/2'>
-      <div className='font-light text-lg text-gray-500 hover:text-primary-500 cursor-pointer'>
+    <div className='space-x-2 py-1.5 w-1/2'>
+      <div className='font-light text-gray-500 hover:text-primary-500 cursor-pointer'>
         <a href={props.url} target='_blank' rel='noreferrer' data-testid={props.testId}>
           {props.text}
         </a>
@@ -154,9 +154,9 @@ function FooterExternalLink (props: { text: string, url: string, testId: string 
 
 function FooterInternalLink (props: { text: string, pathname: string, testId: string, tiny?: boolean }): JSX.Element {
   return (
-    <div className='space-x-2 py-2 w-1/2'>
+    <div className='space-x-2 py-1.5 w-1/2'>
       <div
-        className={classNames('font-light text-gray-500 hover:text-primary-500 cursor-pointer', { 'text-sm': props.tiny }, { 'text-lg': props.tiny === undefined })}
+        className={classNames('font-light text-gray-500 hover:text-primary-500 cursor-pointer', { 'text-sm': props.tiny })}
       >
         <Link href={{ pathname: props.pathname }}>
           <a data-testid={props.testId}>{props.text}</a>

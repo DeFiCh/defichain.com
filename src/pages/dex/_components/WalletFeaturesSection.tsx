@@ -16,7 +16,7 @@ export function WalletFeaturesSection (): JSX.Element {
   return (
     <div className='my-16'>
       <div className='flex justify-between mb-10'>
-        <div className='text-gray-900 font-medium text-2xl' data-testid='WalletFeaturesSection.title'>
+        <div className='text-gray-900 font-medium text-2xl lg:text-3xl' data-testid='WalletFeaturesSection.title'>
           {t('WalletFeaturesSection.title')}
         </div>
       </div>
@@ -99,7 +99,7 @@ function WalletFeature (props: PropsWithChildren<{ title: string, desc: string, 
       <div className='w-full'>
         {props.children}
       </div>
-      <div className='w-full text-2xl lg:text-2xl font-medium mt-1.5 mb-4' data-testid='title'>{props.title}</div>
+      <div className='w-full text-xl lg:text-2xl font-medium mt-1.5 mb-4' data-testid='title'>{props.title}</div>
       <div className='w-full text-lg min-h-full' data-testid='desc'>{props.desc}</div>
     </div>
   )

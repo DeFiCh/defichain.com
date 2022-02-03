@@ -29,8 +29,8 @@ export default function DexPage (): JSX.Element {
           </div>
           <div className='w-full lg:w-1/2 flex flex-wrap lg:mt-2 xl:mt-4 lg:px-10 xl:px-14'>
             <div className='text-center lg:text-left text-gray-900'>
-              <div className='text-4xl font-medium' data-testid='LiquidityMiningSection.title'>{t('LiquidityMining.title')}</div>
-              <div className='text-xl mt-8' data-testid='LiquidityMiningSection.desc'>{t('LiquidityMining.desc')}</div>
+              <div className='text-2xl lg:text-3xl font-medium' data-testid='LiquidityMiningSection.title'>{t('LiquidityMining.title')}</div>
+              <div className='text-lg lg:text-xl mt-8' data-testid='LiquidityMiningSection.desc'>{t('LiquidityMining.desc')}</div>
             </div>
           </div>
         </div>

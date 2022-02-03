@@ -39,7 +39,7 @@ export function LiquidityPoolsSection (): JSX.Element {
     <div className='my-16'>
       <div className='flex justify-between mb-6'>
         <div className='text-gray-900 font-medium text-2xl'>
-          Liquidity Pools
+          {t('LiquidityPools.title')}
         </div>
       </div>
       <div className='w-full flex flex-wrap -m-2'>
@@ -93,7 +93,7 @@ export function LiquidityPoolsSection (): JSX.Element {
       </div>
       <div
         className='flex w-full justify-center mt-4' onClick={() => setShowMore(!showMore)}
-        data-testid='AddressTransactionTable.showMoreBtn'
+        data-testid='LiquidityPools.showMoreBtn'
       >
         <button
           type='button'

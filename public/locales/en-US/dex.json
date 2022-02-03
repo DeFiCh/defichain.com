@@ -1,5 +1,5 @@
 {
-  "Hero": {
+  "Header": {
     "title": "Decentralized Exchange",
     "desc": {
       "main": "Liquidity mining for up to 100% returns, decentralized swapping, arbitrage and more, with the DeFi Wallet.",
@@ -11,6 +11,7 @@
     "desc": "Liquidity mine for incredibly high yields within the app! Supply liquidity to BTC, ETH, USDT and many other pool pairs to power the Decentralized Exchange, and earn fees and high block rewards in return. You can withdraw your liquidity at any time."
   },
   "LiquidityPools": {
+    "title": "Liquidity Pools",
     "showAll": "Show All",
     "hide": "Hide"
   },

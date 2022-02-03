@@ -12,12 +12,12 @@ export default function DexPage (): JSX.Element {
 
   return (
     <>
-      <Header title={t('Hero.title')}>
+      <Header title={t('Header.title')}>
         <div className='mt-10 flex flex-wrap'>
-          <div className='w-full text-2xl text-gray-900'>{t('Hero.desc.main')}
+          <div className='w-full text-2xl text-gray-900' data-testid='Header.desc.main'>{t('Header.desc.main')}
           </div>
           <br />
-          <div className='w-full mt-1.5 text-gray-600'>{t('Hero.desc.secondary')}</div>
+          <div className='w-full mt-1.5 text-gray-600' data-testid='Header.desc.secondary'>{t('Header.desc.secondary')}</div>
         </div>
       </Header>
       <Container>
@@ -25,12 +25,12 @@ export default function DexPage (): JSX.Element {
 
         <div className='flex flex-wrap items-start p-10'>
           <div className='w-full lg:w-1/2 lg:px-8'>
-            <Image src={liquidityImage} layout='responsive' objectFit='cover' alt={t('LiquidityMining.title')} />
+            <Image src={liquidityImage} layout='responsive' objectFit='cover' alt={t('LiquidityMining.title')} data-testid='LiquidityMiningSection.image' />
           </div>
           <div className='w-full lg:w-1/2 flex flex-wrap lg:mt-2 xl:mt-4 lg:px-10 xl:px-14'>
             <div className='text-center lg:text-left text-gray-900'>
-              <div className='text-4xl font-medium'>{t('LiquidityMining.title')}</div>
-              <div className='text-xl mt-8'>{t('LiquidityMining.desc')}</div>
+              <div className='text-4xl font-medium' data-testid='LiquidityMiningSection.title'>{t('LiquidityMining.title')}</div>
+              <div className='text-xl mt-8' data-testid='LiquidityMiningSection.desc'>{t('LiquidityMining.desc')}</div>
             </div>
           </div>
         </div>

@@ -46,9 +46,9 @@ export function Header (): JSX.Element {
   }, [])
 
   return (
-    <header className={classNames('bg-gray-200 z-50 sticky top-0 md:shadow-none md:static', { 'shadow-lg': !atTop })}>
+    <header className={classNames('bg-white z-50 sticky top-0 md:shadow-none md:static', { 'shadow-lg': !atTop })}>
       <div className='border-b border-gray-100'>
-        <Container className='py-4 md:py-8'>
+        <Container className='py-4'>
           <div className='flex items-center justify-between'>
             <div className='flex w-full'>
               <Link href={{ pathname: '/' }} passHref>

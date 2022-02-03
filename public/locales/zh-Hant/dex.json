@@ -1,0 +1,56 @@
+{
+  "Hero": {
+    "title": "去中心化交易所",
+    "desc": {
+      "main": "直接在遞飛鏈錢包程序上實現高達三位數百分比的流動性挖礦池回報，進行開放式兌換或套利等。",
+      "secondary": "程序適用於Windows，macOS和Linux。"
+    }
+  },
+  "LiquidityMining": {
+    "title": "進入流動性挖礦池能讓您獲得更多獎勵！",
+    "desc": "遞飛鏈的流動性挖礦能直接在程序中操作，並獲得可觀的收益率！當您為DEX提共BTC，ETH，USDT等地加密資產就能獲得兌換費用傭金和高額的區塊獎勵。您可以隨時退出流動性池。"
+  },
+  "LiquidityPools": {
+    "showAll": "顯示所有",
+    "hide": "隱藏"
+  },
+  "WalletFeaturesSection": {
+    "title": "錢包特點",
+    "HDWallet": {
+      "title": "分層確定性錢包",
+      "desc": "使用BIP39標准拓展分層確定性錢包"
+    },
+    "BackupAndRestore": {
+      "title": "備份還原",
+      "desc": "使用二十四組助記詞隨時備份和恢複您的資産錢包"
+    },
+    "DecentralizedExchange": {
+      "title": "去中心化交易所",
+      "desc": "在去中心化交易所上隨時互換DFI和挂鈎的代幣"
+    },
+    "LiquidityMining": {
+      "title": "流動性挖礦",
+      "desc": "在流動性挖礦池提供非常火的貨幣並獲得高年利率的收獲"
+    },
+    "TokensSupport": {
+      "title": "代幣支持",
+      "desc": "在DFI和遞飛鏈生態中的代幣進行存儲和交易"
+    },
+    "MiniExplorer": {
+      "title": "迷你浏覽器",
+      "desc": "浏覽整個區塊鏈和查看交易"
+    },
+    "Masternodes": {
+      "title": "主節點",
+      "desc": "創建您的主節點和查看所有主節點"
+    },
+    "Console": {
+      "title": "控制台",
+      "desc": "控制台上運用帳號，區塊鏈，主節點，挖礦池，網絡，錢包指令等功能"
+    },
+    "NetworkSelection": {
+      "title": "網絡選項",
+      "desc": "輕易在程序上轉換主網和測試網"
+    }
+  }
+}

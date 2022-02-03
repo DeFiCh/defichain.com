@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { PropsWithChildren } from 'react'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
+import { WhaleProvider } from './context/WhaleContext'
 
 const title = 'DeFiChain'
 const description = 'DeFi Blockchain, enabling decentralized finance with Bitcoin-grade security, strength and immutability. A blockchain dedicated to fast, intelligent and transparent financial services, accessible by everyone.'
@@ -31,11 +32,13 @@ export function Default (props: PropsWithChildren<any>): JSX.Element | null {
         <link rel='icon' type='image/png' sizes='48x48' href='/favicon.png' />
       </Head>
 
-      <Header />
-      <main className='flex-grow'>
-        {props.children}
-      </main>
-      <Footer />
+      <WhaleProvider>
+        <Header />
+        <main className='flex-grow'>
+          {props.children}
+        </main>
+        <Footer />
+      </WhaleProvider>
     </div>
   )
 }

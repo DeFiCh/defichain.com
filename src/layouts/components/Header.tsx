@@ -1,13 +1,12 @@
 import classNames from 'classnames'
 import { Container } from '@components/commons/Container'
 import { DeFiChainLogo } from '@components/icons/DeFiChainLogo'
-import { ExternalLink } from '@components/commons/link/ExternalLink'
 import Link from 'next/link'
 import { MdArrowDropDown, MdArrowDropUp, MdClose, MdMenu } from 'react-icons/md'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
-const API_URL = 'https://ocean.defichain.com/v0.18/mainnet/prices/DFI-USD'
+const API_URL = 'https://ocean.defichain.com/v0/mainnet/prices/DFI-USD'
 
 export function Header (): JSX.Element {
   const [menu, setMenu] = useState(false)
@@ -106,14 +105,14 @@ function DesktopNavbar ({ price }: {price: string}): JSX.Element {
           className='ml-1 lg:ml-4' text='Learn' pathname='/learn'
           testId='Desktop.HeaderLink.Learn'
         />
-        <ExternalLink
+        <ExternalHeaderLink
           className='ml-1 lg:ml-4' text='DeFiScan' url='https://defiscan.live/'
           testId='Desktop.HeaderLink.DeFiScan'
         />
       </div>
       <div className='hidden md:flex items-center mr-4 xl:mr-0 space-x-4'>
         <LanguageDropdown />
-        <ExternalLink
+        <ExternalHeaderLink
           className='p-2 flex justify-center lg:hidden' text='Github' url='https://github.com/defich/ain'
           testId='Desktop.HeaderLink.DeFiScan'
         />
@@ -149,11 +148,11 @@ function MobileMenu ({ price }: {price: string}): JSX.Element {
             className='flex justify-center border-b border-gray-100' text='Learn' pathname='/learn'
             testId='Mobile.HeaderLink.Learn'
           />
-          <ExternalLink
+          <ExternalHeaderLink
             className='p-2 flex justify-center border-b border-gray-100' text='DeFiScan' url='https://defiscan.live/'
             testId='Mobile.HeaderLink.DeFiScan'
           />
-          <ExternalLink
+          <ExternalHeaderLink
             className='p-2 md:hidden flex justify-center border-b border-gray-100' text='Github' url='https://github.com/defich/ain'
             testId='Mobile.HeaderLink.Github'
           />
@@ -181,6 +180,16 @@ function HeaderLink (props: { text: string, pathname: string, className?: string
         </div>
       </a>
     </Link>
+  )
+}
+
+export function ExternalHeaderLink (props: { text: string, url: string, className: string, testId?: string }): JSX.Element {
+  return (
+    <div className={classNames('text-lg hover:text-primary-500 cursor-pointer', props.className)}>
+      <a href={props.url} target='_blank' rel='noreferrer' data-testid={props.testId}>
+        {props.text}
+      </a>
+    </div>
   )
 }
 

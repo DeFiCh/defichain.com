@@ -1,4 +1,7 @@
 {
-  "title": "DeFiChain"
+  "title": "DeFiChain",
+  "Punctuation": {
+    "fullStop": "."
+  }
 }
 

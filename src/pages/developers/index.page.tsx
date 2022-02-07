@@ -9,9 +9,9 @@ export default function DevelopersPage (): JSX.Element {
 
   return (
     <>
-      <Header title='Developers'>
+      <Header title={t('Header.title')}>
         <div className='mt-10 flex flex-wrap'>
-          <div className='w-full text-2xl text-gray-900' data-testid='Header.desc.main'>Build on Defichain
+          <div className='w-full text-2xl text-gray-900' data-testid='Header.desc.main'>{t('Header.desc')}
           </div>
         </div>
       </Header>
@@ -21,7 +21,7 @@ export default function DevelopersPage (): JSX.Element {
             className='text-2xl lg:text-3xl font-medium w-full text-center md:text-left'
             data-testid='DevelopersPage.Heading'
           >
-            Start building on DeFiChain with developer resources and code.
+            {t('DeveloperResourcesSection.title')}
           </h1>
         </div>
         <DeveloperResourceSection />

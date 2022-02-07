@@ -1,11 +1,8 @@
 import { PropsWithChildren } from 'react'
-import { Github } from './Github'
-import { Cli } from './Cli'
-import { DefiChain } from './DefiChain'
-import { Whitepaper } from './Whitepaper'
-import { Reddit } from './Reddit'
 import { ExternalLink } from '@components/commons/link/ExternalLink'
 import NextLink from 'next/link'
+import { BsGithub, BsReddit, BsFillTerminalFill, BsSticky } from 'react-icons/bs'
+import { DeFiChainLogoNoText } from '@components/icons/DeFiChainLogoNoText'
 
 export function ResourceSection (): JSX.Element {
   return (
@@ -17,7 +14,7 @@ export function ResourceSection (): JSX.Element {
         testid='ResourceSection.Github'
         external
       >
-        <Github fontSize={50} className='fill-primary-500' />
+        <BsGithub fontSize={50} className='fill-primary-500' />
       </ResourceCard>
       <ResourceCard
         text='Get the CLI and desktop app.'
@@ -26,7 +23,7 @@ export function ResourceSection (): JSX.Element {
         url='/downloads'
         testid='ResourceSection.Cli'
       >
-        <Cli fontSize={50} className='fill-primary-500' />
+        <BsFillTerminalFill fontSize={50} className='fill-primary-500' />
       </ResourceCard>
       <ResourceCard
         text='Explore the blockchain in Block Explorer.'
@@ -35,7 +32,7 @@ export function ResourceSection (): JSX.Element {
         testid='ResourceSection.Explore'
         external
       >
-        <DefiChain fontSize={50} className='fill-primary-500' />
+        <DeFiChainLogoNoText fontSize={50} className='fill-primary-500' />
       </ResourceCard>
       <ResourceCard
         text='Read the DeFiChain technical paper.'
@@ -43,7 +40,7 @@ export function ResourceSection (): JSX.Element {
         testid='ResourceSection.Whitepaper'
         url='/white-paper'
       >
-        <Whitepaper fontSize={50} className='fill-primary-500' />
+        <BsSticky fontSize={50} className='fill-primary-500' />
       </ResourceCard>
       <ResourceCard
         text='Participate in our Reddit developer community.'
@@ -52,7 +49,7 @@ export function ResourceSection (): JSX.Element {
         url='https://www.reddit.com/r/defiblockchain/'
         external
       >
-        <Reddit fontSize={50} className='fill-primary-500' />
+        <BsReddit fontSize={50} className='fill-primary-500' />
       </ResourceCard>
     </section>
   )

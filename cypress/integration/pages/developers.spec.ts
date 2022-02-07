@@ -41,7 +41,7 @@ context('Developers page on mobile', () => {
 
   it('should have Header', () => {
     cy.findByTestId('Header.title').should('contain.text', 'Developers')
-    cy.findByTestId('Header.desc.main').should('have.text', 'Build on Defichain')
+    cy.findByTestId('Header.desc.main').should('have.text', 'Build on Defichain.')
   })
 
   it('should have page heading', function () {

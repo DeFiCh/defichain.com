@@ -5,7 +5,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { DeveloperResourceSection } from './_components/DeveloperResourceSection'
 
 export default function DevelopersPage (): JSX.Element {
-  const { t } = useTranslation('developers')
+  const { t } = useTranslation(['developers', 'common'])
 
   return (
     <>
@@ -40,7 +40,12 @@ export default function DevelopersPage (): JSX.Element {
               data-testid='DevelopersPage.Contributors.Text'
             >
               {t('CoreContributors.desc')}
-              <a className='ml-1.5 text-primary-500' href='https://github.com/defich/ain'>GitHub</a>.
+              <a
+                className='ml-1.5 text-primary-500 hover:text-primary-600'
+                href='https://github.com/defich/ain'
+              >GitHub
+              </a>
+              {t('Punctuation.fullStop', { ns: 'common' })}
             </p>
           </div>
         </div>

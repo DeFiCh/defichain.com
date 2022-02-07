@@ -6,7 +6,7 @@ import { ResourceSection } from './_components/DeveloperResourceSection'
 
 export default function DevelopersPage (): JSX.Element {
   return (
-    <div className='bg-gray-50'>
+    <>
       <Header title='Developers'>
         <div className='mt-10 flex flex-wrap'>
           <div className='w-full text-2xl text-gray-900' data-testid='Header.desc.main'>Build on Defichain
@@ -15,14 +15,17 @@ export default function DevelopersPage (): JSX.Element {
       </Header>
       <Container>
         <div className='flex w-full mt-16 mb-10'>
-          <h1 className='text-2xl lg:text-3xl font-medium w-full text-center md:text-left' data-testid='DevelopersPage.Heading'>
+          <h1
+            className='text-2xl lg:text-3xl font-medium w-full text-center md:text-left'
+            data-testid='DevelopersPage.Heading'
+          >
             Start building on DeFiChain with developer resources and code.
           </h1>
         </div>
         <ResourceSection />
       </Container>
-      <div className='bg-white'>
-        <div className='container mx-auto p-10 md:p-20 lg:p-32'>
+      <Container bgClassName='bg-gray-50'>
+        <div className='container mx-auto py-10 md:py-20 lg:py-32'>
           <div className='w-full md:w-4/5 lg:1/2 space-y-10'>
             <h1
               className='text-5xl font-semibold'
@@ -36,12 +39,13 @@ export default function DevelopersPage (): JSX.Element {
             >
               DeFiChain is an open-source project with a global team of core contributors,
               supported by a community of developers.
-              The full list of projects and contributors can be found on <a className='text-primary-500' href='https://github.com/defich/ain'>GitHub</a>.
+              The full list of projects and contributors can be found on
+              <a className='text-primary-500' href='https://github.com/defich/ain'>GitHub</a>.
             </p>
           </div>
         </div>
-      </div>
-    </div>
+      </Container>
+    </>
   )
 }
 

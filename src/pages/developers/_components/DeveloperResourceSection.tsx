@@ -60,9 +60,9 @@ export function ResourceSection (): JSX.Element {
 
 function ResourceCard (props: PropsWithChildren<{ external?: boolean, text: string, buttonText: string, subtext?: string, url: string, testid: string }>): JSX.Element {
   return (
-    <div className='p-1.5 w-1/2'>
+    <div className='p-1.5 w-full lg:w-1/2'>
       <div
-        className='rounded bg-white py-10 px-16 space-y-10'
+        className='rounded bg-gray-50 py-10 px-16 space-y-10'
         data-testid={props.testid}
       >
         <div className='w-full'>

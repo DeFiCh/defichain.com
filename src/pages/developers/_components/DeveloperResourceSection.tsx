@@ -57,7 +57,7 @@ export function DeveloperResourceSection (): JSX.Element {
   )
 }
 
-function ResourceCard (props: PropsWithChildren<{ external?: boolean, text: string, buttonText: string, url: string, testid: string }>): JSX.Element {
+export function ResourceCard (props: PropsWithChildren<{ external?: boolean, text: string, buttonText: string, url: string, testid: string }>): JSX.Element {
   return (
     <div className='p-1.5 w-full lg:w-1/2'>
       <div

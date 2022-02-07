@@ -9,13 +9,13 @@ export default function DevelopersPage (): JSX.Element {
     <div className='bg-gray-50'>
       <Header title='Developers'>
         <div className='mt-10 flex flex-wrap'>
-          <div className='w-full text-3xl text-gray-900' data-testid='Header.desc.main'>Build on Defichain
+          <div className='w-full text-2xl text-gray-900' data-testid='Header.desc.main'>Build on Defichain
           </div>
         </div>
       </Header>
       <Container>
-        <div className='flex w-full py-20'>
-          <h1 className='text-3xl md:text-5xl font-medium w-full  lg:w-1/2 text-center md:text-left' data-testid='DevelopersPage.Heading'>
+        <div className='flex w-full mt-16 mb-10'>
+          <h1 className='text-2xl lg:text-3xl font-medium w-full text-center md:text-left' data-testid='DevelopersPage.Heading'>
             Start building on DeFiChain with developer resources and code.
           </h1>
         </div>

@@ -63,7 +63,7 @@ function ResourceCard (props: PropsWithChildren<{external: boolean, text: string
   return (
     <SectionLink url={props.url} external={props.external}>
       <div
-        className='border border-gray-100 bg-white py-10 px-16 shadow hover:scale-x-105 ease-in duration-500 cursor-pointer space-y-10'
+        className='border border-gray-100 bg-white py-10 px-16 shadow hover:shadow-lg ease-in duration-200 cursor-pointer space-y-10'
         data-testid={props.testid}
       >
         <div className='w-full'>

@@ -1,10 +1,12 @@
-import { SSRConfig } from 'next-i18next'
+import { SSRConfig, useTranslation } from 'next-i18next'
 import { Header } from '@components/commons/Header'
 import { Container } from '@components/commons/Container'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { ResourceSection } from './_components/DeveloperResourceSection'
+import { DeveloperResourceSection } from './_components/DeveloperResourceSection'
 
 export default function DevelopersPage (): JSX.Element {
+  const { t } = useTranslation('developers')
+
   return (
     <>
       <Header title='Developers'>
@@ -22,7 +24,7 @@ export default function DevelopersPage (): JSX.Element {
             Start building on DeFiChain with developer resources and code.
           </h1>
         </div>
-        <ResourceSection />
+        <DeveloperResourceSection />
       </Container>
       <Container bgClassName='bg-gray-50'>
         <div className='container mx-auto py-10 md:py-20 lg:py-32'>
@@ -31,16 +33,14 @@ export default function DevelopersPage (): JSX.Element {
               className='text-5xl font-semibold'
               data-testid='DevelopersPage.Contributors.Heading'
             >
-              Core contributors
+              {t('CoreContributors.title')}
             </h1>
             <p
-              className='font-light text-3xl leading-10'
+              className='font-light text-2xl leading-10'
               data-testid='DevelopersPage.Contributors.Text'
             >
-              DeFiChain is an open-source project with a global team of core contributors,
-              supported by a community of developers.
-              The full list of projects and contributors can be found on
-              <a className='text-primary-500' href='https://github.com/defich/ain'>GitHub</a>.
+              {t('CoreContributors.desc')}
+              <a className='ml-1.5 text-primary-500' href='https://github.com/defich/ain'>GitHub</a>.
             </p>
           </div>
         </div>
@@ -52,7 +52,7 @@ export default function DevelopersPage (): JSX.Element {
 export async function getStaticProps ({ locale }): Promise<{ props: SSRConfig }> {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'layout']))
+      ...(await serverSideTranslations(locale, ['common', 'layout', 'developers']))
     }
   }
 }

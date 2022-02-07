@@ -1,15 +1,18 @@
 import { PropsWithChildren } from 'react'
 import { ExternalLink } from '@components/commons/link/ExternalLink'
 import NextLink from 'next/link'
-import { BsGithub, BsReddit, BsFillTerminalFill, BsSticky } from 'react-icons/bs'
+import { BsFillTerminalFill, BsGithub, BsReddit, BsSticky } from 'react-icons/bs'
 import { DeFiChainLogoNoText } from '@components/icons/DeFiChainLogoNoText'
+import { useTranslation } from 'next-i18next'
 
-export function ResourceSection (): JSX.Element {
+export function DeveloperResourceSection (): JSX.Element {
+  const { t } = useTranslation('developers')
+
   return (
     <section className='flex flex-wrap -m-3 pb-10'>
       <ResourceCard
-        text='Get developer resources and getting started guides.'
-        buttonText='GitHub'
+        text={t('DeveloperResourcesSection.GitHub.title')}
+        buttonText={t('DeveloperResourcesSection.GitHub.button')}
         url='https://github.com/defich/ain'
         testid='ResourceSection.Github'
         external
@@ -17,17 +20,16 @@ export function ResourceSection (): JSX.Element {
         <BsGithub fontSize={50} className='fill-primary-500' />
       </ResourceCard>
       <ResourceCard
-        text='Get the CLI and desktop app.'
-        subtext='The latest releases for Mac, Windows and Linux.'
-        buttonText='Go to downloads'
+        text={t('DeveloperResourcesSection.Cli.title')}
+        buttonText={t('DeveloperResourcesSection.Cli.button')}
         url='/downloads'
         testid='ResourceSection.Cli'
       >
         <BsFillTerminalFill fontSize={50} className='fill-primary-500' />
       </ResourceCard>
       <ResourceCard
-        text='Explore the blockchain in Block Explorer.'
-        buttonText='Explore'
+        text={t('DeveloperResourcesSection.Scan.title')}
+        buttonText={t('DeveloperResourcesSection.Scan.button')}
         url='https://defiscan.live'
         testid='ResourceSection.Explore'
         external
@@ -35,16 +37,16 @@ export function ResourceSection (): JSX.Element {
         <DeFiChainLogoNoText fontSize={50} className='fill-primary-500' />
       </ResourceCard>
       <ResourceCard
-        text='Read the DeFiChain technical paper.'
-        buttonText='Read the whitepaper'
+        text={t('DeveloperResourcesSection.WhitePaper.title')}
+        buttonText={t('DeveloperResourcesSection.WhitePaper.button')}
         testid='ResourceSection.Whitepaper'
         url='/white-paper'
       >
         <BsSticky fontSize={50} className='fill-primary-500' />
       </ResourceCard>
       <ResourceCard
-        text='Participate in our Reddit developer community.'
-        buttonText='Discuss'
+        text={t('DeveloperResourcesSection.Reddit.title')}
+        buttonText={t('DeveloperResourcesSection.Reddit.button')}
         testid='ResourceSection.Reddit'
         url='https://www.reddit.com/r/defiblockchain/'
         external
@@ -55,7 +57,7 @@ export function ResourceSection (): JSX.Element {
   )
 }
 
-function ResourceCard (props: PropsWithChildren<{ external?: boolean, text: string, buttonText: string, subtext?: string, url: string, testid: string }>): JSX.Element {
+function ResourceCard (props: PropsWithChildren<{ external?: boolean, text: string, buttonText: string, url: string, testid: string }>): JSX.Element {
   return (
     <div className='p-1.5 w-full lg:w-1/2'>
       <div
@@ -67,12 +69,7 @@ function ResourceCard (props: PropsWithChildren<{ external?: boolean, text: stri
         </div>
 
         <div className='flex flex-col space-y-2'>
-          <h3 className='text-lg md:text-2xl lg:w-3/5 text-semibold'>{props.text}</h3>
-          {(() => {
-            if (props.subtext !== undefined) {
-              return <span className='text-gray-500 font-light'>{props.subtext}</span>
-            }
-          })()}
+          <span className='text-lg md:text-xl'>{props.text}</span>
         </div>
 
         <div>

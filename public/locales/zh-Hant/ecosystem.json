@@ -1,0 +1,47 @@
+{
+  "Header": {
+    "title": "生態系統",
+    "desc": "加入友情鏈接"
+  },
+  "ContributeSection": {
+    "title": "在遞飛鏈上貢獻",
+    "Developer": {
+      "title": "入門開發者",
+      "desc": "入門遞飛鏈創建和使用$DFI幣",
+      "button": "開發者"
+    },
+    "ServiceProvider": {
+      "title": "加入合作夥伴",
+      "desc": "遞飛鏈生態中貢獻投稿",
+      "button": "聯系我們"
+    }
+  },
+  "PartnersSection": {
+    "title": "合作夥伴",
+    "CakeDeFi": {
+      "title": "Cake DeFi",
+      "desc": "在Cake Defi上做DFI權益質押來收獲DFI",
+      "button": "前往 Cake DeFi"
+    },
+    "StakingRewards": {
+      "title": "權益質押獲利",
+      "desc": "遞飛鏈(DFI)利息計算機和當前彙率",
+      "button": "前往 權益質押獲利"
+    },
+    "Blockspot": {
+      "title": "Blockspot.io",
+      "desc": "遞飛鏈（DFI）的價格，圖表，數據及資訊",
+      "button": "前往 Blockspot.io"
+    },
+    "Blockfolio": {
+      "title": "Blockfolio",
+      "desc": "Watch DFI on the Blockfolio Signal platform.",
+      "button": "Go to Blockfolio"
+    },
+    "Messari": {
+      "title": "Messari數據分析",
+      "desc": "加密經濟透明化的數據工具",
+      "button": "前往 Messari數據分析"
+    }
+  }
+}

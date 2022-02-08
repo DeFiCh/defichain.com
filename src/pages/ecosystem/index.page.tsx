@@ -1,6 +1,6 @@
 import { Header } from '@components/commons/Header'
 import { Container } from '@components/commons/Container'
-import { SSRConfig } from 'next-i18next'
+import { SSRConfig, useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { PropsWithChildren } from 'react'
 import Image from 'next/image'
@@ -12,66 +12,69 @@ import MessariLogo from '../../../public/assets/svg/ecosystem/messari_logo.svg'
 import { ResourceCard } from '@components/commons/ResourceCard'
 
 export default function EcosystemPage (): JSX.Element {
+  const { t } = useTranslation(['ecosystem'])
+
   return (
     <>
-      <Header title='Ecosystem'>
+      <Header title={t('Header.title')}>
         <div className='mt-10 flex flex-wrap'>
-          <div className='w-full text-2xl text-gray-900' data-testid='Header.desc.main'>Be part of the DefiChain
-            Ecosystem
+          <div className='w-full text-2xl text-gray-900' data-testid='Header.desc.main'>
+            {t('Header.desc')}
           </div>
         </div>
       </Header>
       <Container>
-        <EcosystemSection title='Contribute to DeFiChain' testId='EcosystemSection.Contribute'>
+        <EcosystemSection title={t('ContributeSection.title')} testId='EcosystemSection.Contribute'>
           <ResourceCard
-            text='Learn how you can build on DeFiChain and use $DFI coin.' buttonText='Developers'
-            url='/developers' testid='EcosystemSection.BDeveloper'
+            text={t('ContributeSection.Developer.desc')} buttonText={t('ContributeSection.Developer.button')}
+            url='/developers' testid='EcosystemSection.Developer'
           >
-            <h1 className='text-2xl lg:text-4xl font-medium'>Become a developer</h1>
+            <h1 className='text-2xl lg:text-4xl font-medium'>{t('ContributeSection.Developer.title')}</h1>
           </ResourceCard>
           <ResourceCard
-            text='Tell us how you would like to contribute to the ecosystem.' buttonText='Contact us'
-            url='/developers' testid='EcosystemSection.BPartnering'
+            text={t('ContributeSection.ServiceProvider.desc')}
+            buttonText={t('ContributeSection.ServiceProvider.button')}
+            url='/developers' testid='EcosystemSection.ServiceProvider'
           >
-            <h1 className='text-2xl lg:text-4xl font-medium'>Become a service provider</h1>
+            <h1 className='text-2xl lg:text-4xl font-medium'>{t('ContributeSection.ServiceProvider.title')}</h1>
           </ResourceCard>
         </EcosystemSection>
-        <EcosystemSection title='Partners' testId='EcosystemSection.Partners'>
+        <EcosystemSection title={t('PartnersSection.title')} testId='EcosystemSection.Partners'>
           <ResourceCard
-            text='Stake DFI and receive DFI as rewards when using Cake DeFi.' buttonText='Go to CakeDefi'
+            text={t('PartnersSection.CakeDeFi.desc')} buttonText={t('PartnersSection.CakeDeFi.button')}
             url='https://cakedefi.com' external testid='EcosystemSection.Cakedefi'
           >
             <Image alt='CakeDefi logo' src={CakeDeFiLogo} />
-            <h1 className='text-2xl mt-5 font-medium'>Cake DeFi</h1>
+            <h1 className='text-2xl mt-5 font-medium'>{t('PartnersSection.CakeDeFi.title')}</h1>
           </ResourceCard>
           <ResourceCard
-            text='DeFiChain (DFI) interest calculator and current rates.' buttonText='Go to Staking Rewards'
+            text={t('PartnersSection.StakingRewards.desc')} buttonText={t('PartnersSection.StakingRewards.button')}
             url='https://www.stakingrewards.com/earn/defichain/' external testid='EcosystemSection.Staking'
           >
             <Image alt='staking rewards logo' src={StakingRewardsLogo} />
-            <h1 className='text-2xl mt-5 font-medium'>Staking Rewards</h1>
+            <h1 className='text-2xl mt-5 font-medium'>{t('PartnersSection.StakingRewards.title')}</h1>
           </ResourceCard>
           <ResourceCard
-            text='DeFiChain (DFI) price, graph, data and info on Blockspot.io'
-            buttonText='Go to Blockspot.io' url='https://blockspot.io/coin/defichain/' external
+            text={t('PartnersSection.Blockspot.desc')}
+            buttonText={t('PartnersSection.Blockspot.button')} url='https://blockspot.io/coin/defichain/' external
             testid='EcosystemSection.Blockspot'
           >
             <Image alt='staking rewards logo' src={BlockspotLogo} />
-            <h1 className='text-2xl mt-5 font-medium'>Blockspot.io</h1>
+            <h1 className='text-2xl mt-5 font-medium'>{t('PartnersSection.Blockspot.title')}</h1>
           </ResourceCard>
           <ResourceCard
-            text='Watch DFI on the Blockfolio Signal platform.' buttonText='Go to Blockfolio'
+            text={t('PartnersSection.Blockfolio.desc')} buttonText={t('PartnersSection.Blockfolio.button')}
             url='https://blockfolio.com/coin/DFI' external testid='EcosystemSection.Blockfolio'
           >
             <Image alt='CakeDefi Logo' src={Blockfolio} />
-            <h1 className='text-2xl mt-5 font-medium'>Blockfolio</h1>
+            <h1 className='text-2xl mt-5 font-medium'>{t('PartnersSection.Blockfolio.title')}</h1>
           </ResourceCard>
           <ResourceCard
-            text='Data tools that bring transparency to the cryptoeconomy.' buttonText='Go to Messari'
+            text={t('PartnersSection.Messari.desc')} buttonText={t('PartnersSection.Messari.button')}
             url='https://messari.io/asset/defichain' external testid='EcosystemSection.Messari'
           >
             <Image alt='CakeDefi Logo' src={MessariLogo} />
-            <h1 className='text-2xl mt-5 font-medium'>Messari</h1>
+            <h1 className='text-2xl mt-5 font-medium'>{t('PartnersSection.Messari.title')}</h1>
           </ResourceCard>
         </EcosystemSection>
       </Container>
@@ -93,7 +96,7 @@ function EcosystemSection (props: PropsWithChildren<{ title: string, testId: str
 export async function getStaticProps ({ locale }): Promise<{ props: SSRConfig }> {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'layout']))
+      ...(await serverSideTranslations(locale, ['common', 'layout', 'ecosystem']))
     }
   }
 }

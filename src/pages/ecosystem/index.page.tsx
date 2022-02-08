@@ -42,7 +42,7 @@ export default function EcosystemPage (): JSX.Element {
         <EcosystemSection title={t('PartnersSection.title')} testId='EcosystemSection.Partners'>
           <ResourceCard
             text={t('PartnersSection.CakeDeFi.desc')} buttonText={t('PartnersSection.CakeDeFi.button')}
-            url='https://cakedefi.com' external testid='EcosystemSection.Cakedefi'
+            url='https://cakedefi.com' external testid='EcosystemSection.CakeDeFi'
           >
             <Image alt='CakeDefi logo' src={CakeDeFiLogo} />
             <h1 className='text-2xl mt-5 font-medium'>{t('PartnersSection.CakeDeFi.title')}</h1>

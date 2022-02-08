@@ -5,29 +5,23 @@ import Link from 'next/link'
 import { MdArrowDropDown, MdArrowDropUp, MdClose, MdMenu } from 'react-icons/md'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-
-const API_URL = 'https://ocean.defichain.com/v0/mainnet/prices/DFI-USD'
+import { useWhaleApiClient } from '../context/WhaleContext'
 
 export function Header (): JSX.Element {
   const [menu, setMenu] = useState(false)
   const [atTop, setAtTop] = useState(true)
   const [dfiPrice, setDfiPrice] = useState<string>('0')
   const router = useRouter()
+  const api = useWhaleApiClient()
 
   useEffect(() => {
     function routeChangeStart (): void {
       setMenu(false)
     }
 
-    function fetchPrice (): void {
-      void fetch(API_URL)
-        .then(async res => await res.json())
-        .then(data => {
-          setDfiPrice(data.data.price.aggregated.amount)
-        })
-    }
-
-    fetchPrice()
+    void api.prices.get('DFI', 'USD').then(priceTicker => {
+      setDfiPrice(priceTicker.price.aggregated.amount)
+    })
 
     router.events.on('routeChangeStart', routeChangeStart)
     return () => router.events.off('routeChangeStart', routeChangeStart)
@@ -81,7 +75,7 @@ export function Header (): JSX.Element {
   )
 }
 
-function DesktopNavbar ({ price }: {price: string}): JSX.Element {
+function DesktopNavbar ({ price }: { price: string }): JSX.Element {
   return (
     <div className='hidden md:flex ml-2 lg:ml-8 md:w-full md:justify-end xl:justify-between items-center text-gray-600'>
       <div className='hidden lg:flex'>
@@ -116,14 +110,17 @@ function DesktopNavbar ({ price }: {price: string}): JSX.Element {
           className='p-2 flex justify-center lg:hidden' text='Github' url='https://github.com/defich/ain'
           testId='Desktop.HeaderLink.DeFiScan'
         />
-        <HeaderLink text='Downloads' pathname='/downloads' className='ml-1 lg:ml-4 hidden lg:block' testId='Desktop.HeaderLink.Downloads' />
+        <HeaderLink
+          text='Downloads' pathname='/downloads' className='ml-1 lg:ml-4 hidden lg:block'
+          testId='Desktop.HeaderLink.Downloads'
+        />
         <BuyDfiButton price={price} />
       </div>
     </div>
   )
 }
 
-function MobileMenu ({ price }: {price: string}): JSX.Element {
+function MobileMenu ({ price }: { price: string }): JSX.Element {
   return (
     <div className='lg:hidden'>
       <Container className='border-b border-gray-100 shadow-sm text-gray-600'>
@@ -153,7 +150,8 @@ function MobileMenu ({ price }: {price: string}): JSX.Element {
             testId='Mobile.HeaderLink.DeFiScan'
           />
           <ExternalHeaderLink
-            className='p-2 md:hidden flex justify-center border-b border-gray-100' text='Github' url='https://github.com/defich/ain'
+            className='p-2 md:hidden flex justify-center border-b border-gray-100' text='Github'
+            url='https://github.com/defich/ain'
             testId='Mobile.HeaderLink.Github'
           />
           <BuyDfiButton classname='md:hidden' price={price} />
@@ -193,10 +191,17 @@ export function ExternalHeaderLink (props: { text: string, url: string, classNam
   )
 }
 
-function BuyDfiButton ({ classname, price }: {classname?: string, price: string}): JSX.Element {
+function BuyDfiButton ({ classname, price }: { classname?: string, price: string }): JSX.Element {
   return (
-    <a className={classNames('text-white  bg-primary-500 p-2 xl:px-4 rounded text-center mb-2 md:mb-0 ', classname)}>
-      Buy $DFI <span className='text-gray-200'>${Number(price).toFixed(2)}</span>
+    <a
+      className={classNames('flex text-white bg-primary-500 p-2 xl:px-4 rounded mb-2 md:mb-0 items-center', classname)}
+    >
+      Buy $DFI
+      {
+        price !== '0' && (
+          <span className='ml-1.5 text-gray-200 text-sm'>${Number(price).toFixed(2)}</span>
+        )
+      }
     </a>
   )
 }
@@ -205,7 +210,10 @@ function LanguageDropdown (): JSX.Element {
   const [dropdown, dropDownToggle] = useState<boolean>(false)
   return (
     <div className='relative' data-testid='SiteLangDropdown'>
-      <div className='flex items-center cursor-pointer justify-between w-22 p-3' onClick={() => dropDownToggle(prev => !prev)}>
+      <div
+        className='flex items-center cursor-pointer justify-between w-22 p-3'
+        onClick={() => dropDownToggle(prev => !prev)}
+      >
         <span>English</span>
         {dropdown ? (
           <MdArrowDropUp className='h-6 w-6' />
@@ -214,7 +222,9 @@ function LanguageDropdown (): JSX.Element {
         )}
       </div>
       {dropdown && (
-        <div className='bg-white p-4 w-32 rounded absolute z-50 text-center text-gray-700 flex space-y-4 flex-col text-lg border-2 shadow border-gray-200'>
+        <div
+          className='bg-white p-4 w-32 rounded absolute z-50 text-center text-gray-700 flex space-y-4 flex-col text-lg border-2 shadow border-gray-200'
+        >
           <a className='cursor-pointer hover:text-gray-500'>简体中文</a>
           <a className='cursor-pointer hover:text-gray-500'>繁體中文</a>
         </div>

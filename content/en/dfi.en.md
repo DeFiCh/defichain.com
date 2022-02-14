@@ -30,7 +30,7 @@ content:
       name: dfi-token
       headline: $DFI coin
       subhead: "The $DFI coin is an integral unit of account in DeFiChain. The DeFiChain Foundation issued roughly 600 million DFI on May 11<sup>th</sup>, 2020. The current circulating supply (with staking and liquidity mining) is available at [DeFiChain Explorer](http://explorer.defichain.io/)."
-      note: "Important: DeFi chain is a community project. There was/is no Initial Coin Offering, only free airdrops."
+      note: "Important: DeFiChain is a community project. There was/is no Initial Coin Offering, only free airdrops."
       image: /static/svg/physical-coin.svg
     stats:
       links:

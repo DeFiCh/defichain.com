@@ -1,12 +1,13 @@
-import { SSRConfig, useTranslation } from 'next-i18next'
+import { SSRConfig } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { HomePageHeader } from '@components/home/HomePageHeader'
+import { CardSection } from '@components/home/CardSection'
 
 export default function HomePage (): JSX.Element {
-  const { t } = useTranslation('common')
-
   return (
     <>
-      <div data-testid='Header.title' className='text-3xl'>{t('title')}</div>
+      <HomePageHeader />
+      <CardSection />
     </>
   )
 }

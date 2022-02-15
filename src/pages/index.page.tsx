@@ -8,7 +8,7 @@ export default function HomePage (): JSX.Element {
     <>
       <HomePageHeader />
       <CardSection />
-      <section className='-mt-32 bg-gray-100 py-20' />
+      <section className='md:-mt-32 bg-gray-100 py-20' />
     </>
   )
 }

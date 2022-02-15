@@ -5,9 +5,9 @@ export function CardSection (): JSX.Element {
   return (
     <section className='-mt-56'>
       <Container>
-        <div className='flex item-center'>
+        <div className='flex flex-col space-y-4 md:space-y-0 items-center md:items-start md:flex-row item-center'>
           <Card title='Latest feature' subtitle='Decentralized Assets' desc='Access decentralized assets with collateral in your vault.' testId='CardSection.LatestFeature' url='/' buttonText='Learn more' />
-          <Card title='featured download' subtitle='DefiChain Wallet' desc='Access decentralized assets with collateral in your vault.' testId='CardSection.Downloads' url='/' buttonText='Go to downloads' />
+          <Card title='featured download' subtitle='DefiChain Wallet' desc='Experience DeFiChain with wallet apps built for both desktop and mobile.' testId='CardSection.Downloads' url='/' buttonText='Go to downloads' />
           <Card title='how-to guide' subtitle='Buy $DFI' desc='Learn about and acquire the $DFI coin from various crypto exchanges.' testId='CardSection.HowTo' url='/' buttonText='Learn more' fill />
         </div>
       </Container>

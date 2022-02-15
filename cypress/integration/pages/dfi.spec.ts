@@ -48,7 +48,6 @@ context('/dfi page on desktop', () => {
     cy.findByTestId('DfiPage.Exchange.Hoo').should('be.visible')
     cy.findByTestId('DfiPage.Exchange.Transak').should('be.visible')
     cy.findByTestId('DfiPage.Exchange.Dfx').should('be.visible')
-
   })
   it('should exchange section', function () {
     cy.findByTestId('DfiPage.Staking.Heading').should('have.text', 'Staking')
@@ -63,10 +62,8 @@ context('/dfi page on desktop', () => {
     cy.findByTestId('DfiPage.Developers.Heading').should('have.text', 'Developers')
     cy.findByTestId('DfiPage.Developers.Text').should('be.visible')
     cy.findByTestId('DfiPage.Developers.Desc').should('be.visible')
-
   })
 })
-
 
 context('/dfi page on mobile', () => {
   before(() => {
@@ -118,7 +115,6 @@ context('/dfi page on mobile', () => {
     cy.findByTestId('DfiPage.Exchange.Hoo').should('be.visible')
     cy.findByTestId('DfiPage.Exchange.Transak').should('be.visible')
     cy.findByTestId('DfiPage.Exchange.Dfx').should('be.visible')
-
   })
   it('should exchange section', function () {
     cy.findByTestId('DfiPage.Staking.Heading').should('have.text', 'Staking')
@@ -133,6 +129,5 @@ context('/dfi page on mobile', () => {
     cy.findByTestId('DfiPage.Developers.Heading').should('have.text', 'Developers')
     cy.findByTestId('DfiPage.Developers.Text').should('be.visible')
     cy.findByTestId('DfiPage.Developers.Desc').should('be.visible')
-
   })
 })

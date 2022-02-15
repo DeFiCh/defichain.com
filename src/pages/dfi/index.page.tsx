@@ -79,8 +79,8 @@ export default function DfiPage (): JSX.Element {
       <section className='py-20'>
         <Container>
           <div className='flex flex-col w-full  md:w-1/3 lg:w-1/2 mb-16 space-y-10'>
-            <h1 className='font-medium text-2xl md:text-5xl'>Acquiring $DFI coins</h1>
-            <div className='text-xl md:text-2xl'>$DFI coins will be issued to users and partners with an interest in utilizing and participating in the ecosystem.</div>
+            <h1 className='font-medium text-2xl md:text-5xl' data-testid='DfiPage.Acquiring.Heading'>Acquiring $DFI coins</h1>
+            <div className='text-xl md:text-2xl' data-testid='DfiPage.Acquiring.Text'>$DFI coins will be issued to users and partners with an interest in utilizing and participating in the ecosystem.</div>
           </div>
           <div className='flex flex-col md:flex-row md:space-x-10 mb-20'>
             <div className='flex items-center flex-col w-full space-y-3'>

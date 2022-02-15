@@ -29,10 +29,10 @@ context('/dfi page on desktop', () => {
     cy.findByTestId('DfiPage.Utilities.Pools').should('be.visible')
   })
 
-  it('should have distribution section', function () {
-    cy.findByTestId('DfiPage.Distribution.Heading').should('have.text', 'Initial Token Distribution')
-    cy.findByTestId('DfiPage.Distribution.Heading').should('be.visible')
-    cy.findByTestId('DfiPage.Distribution.Chart').should('be.visible')
+  it('should have Acquiring section', function () {
+    cy.findByTestId('DfiPage.Acquiring.Heading').should('have.text', 'Acquiring $DFI coins')
+    cy.findByTestId('DfiPage.Acquiring.Heading').should('be.visible')
+    cy.findByTestId('DfiPage.Acquiring.Text').should('be.visible')
   })
 
   it('should exchange section', function () {
@@ -100,6 +100,12 @@ context('/dfi page on mobile', () => {
     cy.findByTestId('DfiPage.Distribution.Heading').should('have.text', 'Initial Token Distribution')
     cy.findByTestId('DfiPage.Distribution.Heading').should('be.visible')
     cy.findByTestId('DfiPage.Distribution.Chart').should('be.visible')
+  })
+
+  it('should have Acquiring section', function () {
+    cy.findByTestId('DfiPage.Acquiring.Heading').should('have.text', 'Acquiring $DFI coins')
+    cy.findByTestId('DfiPage.Acquiring.Heading').should('be.visible')
+    cy.findByTestId('DfiPage.Acquiring.Text').should('be.visible')
   })
 
   it('should exchange section', function () {

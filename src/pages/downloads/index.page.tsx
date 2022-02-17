@@ -115,7 +115,7 @@ export default function DownloadsPage (): JSX.Element {
             </div>
           </DownloadCard>
           <DownloadCard
-            title='/assets/img/downloads/dfinode.png'
+            title='DeFi wallet for Raspberry Pi'
             desc='A version of the desktop wallet for Raspberry Pi 4B 4GB with official Raspberry Pi OS (32-Bit).'
             imageSrc='/assets/img/downloads/dfinode.png'
             testid='DownloadsPage.DfiNode'

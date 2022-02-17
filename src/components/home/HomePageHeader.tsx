@@ -10,8 +10,8 @@ export function HomePageHeader (): JSX.Element {
         backgroundPosition: 'right center'
       }}
     >
-      <Container className='h-full mt-36 mb-16 h-screen'>
-        <div className='mx-auto w-[70%] md:w-1/2'>
+      <Container className='h-full mt-36 mb-16 min-h-[560px] lg:min-h-[800px]'>
+        <div className='mx-auto w-full md:w-1/2'>
           <h1 className='text-4xl text-center lg:text-5xl text-gray-900 w-full mb-6 font-semibold' data-testid='Header.title'>
             Native Decentralized Finance for Bitcoin
           </h1>

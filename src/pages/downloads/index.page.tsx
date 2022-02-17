@@ -45,7 +45,7 @@ export default function DownloadsPage (): JSX.Element {
             imageSrc='/assets/img/downloads/dfiwallet.png'
             testid='DownloadsPage.DesktopWallet'
           >
-            <div className='flex items-center space-x-4 text-lg font-medium'>
+            <div className='flex flex-wrap items-center space-x-4 text-lg font-medium'>
               <ExternalLink
                 title='Mac'
                 url='https://github.com/DeFiCh/app/releases/download/v2.9.1/DeFi-Wallet-2.9.1.dmg'

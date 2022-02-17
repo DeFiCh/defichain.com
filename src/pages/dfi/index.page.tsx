@@ -19,8 +19,8 @@ export default function DfiPage (): JSX.Element {
         </div>
       </Header>
       <Container>
-        <section className='flex flex-col md:flex-row space-y-20 md:space-y-0 md:space-x-32 w-full py-32 items-center'>
-          <div className='flex flex-col space-y-10 w-full md:w-1/3'>
+        <section className='flex flex-col lg:flex-row space-y-20 md:space-y-0 md:space-x-32 w-full py-20 lg:py-32 items-center'>
+          <div className='flex flex-col space-y-10 w-full lg:w-1/3'>
             <h1 className='text-2xl md:text-5xl font-medium' data-testid='DfiPage.Section.Heading'>$DFI coin</h1>
             <div className='text-lg md:text-2xl font-light md:!leading-[3rem]' data-testid='DfiPage.Section.Text'>
               The $DFI coin is an integral unit of account in DeFiChain. The DeFiChain Foundation issued roughly 600 million DFI on May 11th, 2020. The current circulating supply (with staking and liquidity mining) is available at <ExternalLink url='https://defiscan.live'>DeFiChain Explorer</ExternalLink>.

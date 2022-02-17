@@ -1,8 +1,29 @@
 import classNames from 'classnames'
+import { Container } from '@components/commons/Container'
 
-export function SupplyChart (props: {fill?: boolean, labelA: string, labelB: string}): JSX.Element {
+export function DistributionSection (): JSX.Element {
   return (
-    <div>
+    <section className='py-20'>
+      <Container>
+        <div className='flex flex-col w-full  md:w-1/3 lg:w-1/2 mb-16 space-y-10'>
+          <h1 className='font-medium text-2xl md:text-5xl' data-testid='DistributionSection.Heading'>Initial Token Distribution</h1>
+          <div className='text-xl md:text-2xl' data-testid='DistributionSection.Text'> Of the 1.2 billion $DFI coins, 49% will be in the initial supply, with the rest issued to masternode holders over time.</div>
+        </div>
+        <div className='mx-auto w-full md:w-[60%] space-y-16' data-testid='DistributionSection.Chart'>
+          <Chart labelA='Initial supply' labelB='To masternodes over time' />
+          <div>
+            Of the initial supply, 49% will be kept by the DeFiChain Foundation. The rest may be distributed to external partners, to fund the initial development.
+          </div>
+          <Chart labelA='DeFiChain Foundation' labelB='External partners' fill />
+        </div>
+      </Container>
+    </section>
+  )
+}
+
+function Chart (props: {fill?: boolean, labelA: string, labelB: string}): JSX.Element {
+  return (
+    <>
       <div className='w-full h-[32px] relative'>
         <div className='w-full h-8 relative text-gray-500 text-2xl leading-[2.4rem]'>
           <div className='w-[49%] left-0 absolute flex justify-center items-center'>
@@ -27,6 +48,6 @@ export function SupplyChart (props: {fill?: boolean, labelA: string, labelB: str
           {props.labelB}
         </div>
       </div>
-    </div>
+    </>
   )
 }

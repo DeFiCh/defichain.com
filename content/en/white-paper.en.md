@@ -304,7 +304,7 @@ Examples of assets people can now tokenize using the blockchain:
 - Energy and income generating devices, such as wind turbines, solar farms, satellites.
 - Ownership in food means of production (new forms of cooperative farms where non-farmers could own food supply instead of commodities traded on exchanges)
 - Self-driving cars, vending machines, ATMs, pinball machines, and other types of revenue-generating self-regulating devices.
-- DAOs (Distributed Autonomous Organizations).
+- DAOs (Decentralized Autonomous Organizations).
 - Small real estate investments (time shares, short-term rental apartments, etc.)
 - Large real estate investments (airports, amusement parks, apartment complexes, business parks)
 

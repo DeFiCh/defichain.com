@@ -2,7 +2,17 @@ import { ExternalLink } from '@components/commons/link/ExternalLink'
 import Image from 'next/image'
 import { Container } from '@components/commons/Container'
 import { BsFileEarmarkCodeFill, BsPieChartFill } from 'react-icons/bs'
-import { Dex } from '@components/icons/assets/wallet-features/Dex'
+import {Dex} from '@components/icons/assets/wallet-features/Dex'
+import KucoinLogo from '../../../../public/assets/svg/dfi/logo-kucoin.svg'
+import HotbitLogo from '../../../../public/assets/img/dfi/logo-hotbit.png'
+import EasyCryptoAULogo from '../../../../public/assets/img/dfi/logo-easycrypto-au.png'
+import EasyCryptoNZLogo from '../../../../public/assets/img/dfi/logo-easycrypto-nz.png'
+import TransakLogo from '../../../../public/assets/img/dfi/logo-transak.png'
+import CakeLogo from '../../../../public/assets/svg/dfi/logo-cake.svg'
+import BittrexLogo from '../../../../public/assets/svg/dfi/logo-bittrex.svg'
+import BittrueLogo from '../../../../public/assets/svg/dfi/logo-bittrue.svg'
+import DFXLogo from '../../../../public/assets/svg/dfi/logo-dfx.svg'
+import LaTokenLogo from '../../../../public/assets/svg/dfi/logo-latoken.svg'```
 
 export function ExchangeSection (): JSX.Element {
   return (

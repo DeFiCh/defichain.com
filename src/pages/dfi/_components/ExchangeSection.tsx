@@ -37,61 +37,61 @@ export function ExchangeSection (): JSX.Element {
           <div className='flex flex-wrap justify-center md:justify-start'>
             <ExchangeCard
               url='https://global.bittrex.com/Market/Index?MarketName=BTC-DFI'
-              imageSrc='/assets/svg/dfi/logo-bittrex.svg'
+              image={BittrexLogo}
               testid='ExchangeSection.Bittrex'
               name='Bittrex'
             />
             <ExchangeCard
               url='https://www.bitrue.com/trade/dfi_btc'
-              imageSrc='/assets/svg/dfi/logo-bittrue.svg'
+              image={BittrueLogo}
               testid='ExchangeSection.Bittrue'
               name='Bittrue'
             />
             <ExchangeCard
               url='https://dfx.swiss/en/'
-              imageSrc='/assets/svg/dfi/logo-dfx.svg'
+              image={DFXLogo}
               testid='ExchangeSection.Dfx'
               name='Dfx'
             />
             <ExchangeCard
-              url=''
-              imageSrc='/assets/svg/dfi/logo-latoken.svg'
+              url='https://latoken.com/exchange/DFI_BTC'
+              image={LaTokenLogo}
               testid='ExchangeSection.Latoken'
               name='Latoken'
             />
             <ExchangeCard
               url='https://trade.kucoin.com/DFI-BTC'
-              imageSrc='/assets/svg/dfi/logo-kucoin.svg'
+              image={KucoinLogo}
               testid='ExchangeSection.Kucoin'
               name='Kucoin'
             />
             <ExchangeCard
               url='https://global.transak.com/?apiKey=9cb22c33-f1fc-4ff0-9736-9159bb879568&cryptoCurrencyCode=DFI'
-              imageSrc='/assets/img/dfi/logo-transak.png'
+              image={TransakLogo}
               testid='ExchangeSection.Transak'
               name='Transak'
             />
             <ExchangeCard
               url='https://www.hotbit.io/exchange?symbol=DFI_USDT'
-              imageSrc='/assets/img/dfi/logo-hotbit.png'
+              image={HotbitLogo}
               testid='ExchangeSection.Hotbit'
               name='Hotbit'
             />
             <ExchangeCard
               url='https://hoo.com/innovation/dfi-usdt'
-              imageSrc='/assets/img/dfi/logo-hoo.png'
+              image={KucoinLogo}
               testid='ExchangeSection.Hoo'
               name='Hoo'
             />
             <ExchangeCard
               url='https://easycrypto.com/au/buy-sell/dfi-defichain'
-              imageSrc='/assets/img/dfi/logo-easycrypto-au.png'
+              image={EasyCryptoAULogo}
               testid='ExchangeSection.EasyAu'
               name='EasyCrypto AU'
             />
             <ExchangeCard
               url='https://easycrypto.com/nz/buy-sell/dfi-defichain'
-              imageSrc='/assets/img/dfi/logo-easycrypto-nz.png'
+              image={EasyCryptoNZLogo}
               testid='ExchangeSection.EasyNz'
               name='EasyCrypto NZ'
             />

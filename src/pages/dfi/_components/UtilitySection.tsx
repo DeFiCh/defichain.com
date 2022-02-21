@@ -9,7 +9,7 @@ export function UtilitySection (): JSX.Element {
     <section className='bg-gray-50 py-20'>
       <Container>
         <h1 className='font-medium text-3xl' data-testid='UtilitySection.Heading'>$DFI coin utility</h1>
-        <div className='flex flex-wrap'>
+        <div className='flex flex-wrap -mx-6 lg:-mx-10'>
           <FeatureCard
             title='Fees'
             desc='Pay for transactions, smart contracts and other DeFi activities.'

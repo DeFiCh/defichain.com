@@ -2,7 +2,7 @@ import { ExternalLink } from '@components/commons/link/ExternalLink'
 import Image from 'next/image'
 import { Container } from '@components/commons/Container'
 import { BsFileEarmarkCodeFill, BsPieChartFill } from 'react-icons/bs'
-import {Dex} from '@components/icons/assets/wallet-features/Dex'
+import { Dex } from '@components/icons/assets/wallet-features/Dex'
 import KucoinLogo from '../../../../public/assets/svg/dfi/logo-kucoin.svg'
 import HotbitLogo from '../../../../public/assets/img/dfi/logo-hotbit.png'
 import EasyCryptoAULogo from '../../../../public/assets/img/dfi/logo-easycrypto-au.png'
@@ -12,7 +12,7 @@ import CakeLogo from '../../../../public/assets/svg/dfi/logo-cake.svg'
 import BittrexLogo from '../../../../public/assets/svg/dfi/logo-bittrex.svg'
 import BittrueLogo from '../../../../public/assets/svg/dfi/logo-bittrue.svg'
 import DFXLogo from '../../../../public/assets/svg/dfi/logo-dfx.svg'
-import LaTokenLogo from '../../../../public/assets/svg/dfi/logo-latoken.svg'```
+import LaTokenLogo from '../../../../public/assets/svg/dfi/logo-latoken.svg'
 
 export function ExchangeSection (): JSX.Element {
   return (
@@ -108,17 +108,17 @@ export function ExchangeSection (): JSX.Element {
           <div className='flex flex-wrap justify-center md:justify-start'>
             <ExchangeCard
               url='https://www.kucoin.com/earn/finance/list'
-              imageSrc='/assets/svg/dfi/logo-kucoin.svg'
+              image={KucoinLogo}
               testid='DfiPage.Staking.Kucoin' name='Kucoin'
             />
             <ExchangeCard
               url='https://www.hotbit.io/invest/detail/304'
-              imageSrc='/assets/img/dfi/logo-hotbit.png'
+              image={HotbitLogo}
               testid='DfiPage.Staking.Hotbit' name='Hotbit'
             />
             <ExchangeCard
               url='https://cakedefi.com/'
-              imageSrc='/assets/svg/dfi/logo-cake.svg'
+              image={CakeLogo}
               testid='DfiPage.Staking.Cakedefi' name='CakeDefi'
             />
           </div>
@@ -141,7 +141,7 @@ function ExchangeCard (props: {image: StaticImageData, url: string, name: string
   return (
     <ExternalLink url={props.url} testId={props.testid} classname='m-5 w-1/2 md:w-1/3 lg:w-1/5'>
       <div className='flex justify-center p-5 bg-gray-50 rounder-sm'>
-        <Image alt={props.name} src={props.image} title={props.name}/>
+        <Image alt={props.name} src={props.image} title={props.name} />
       </div>
     </ExternalLink>
 

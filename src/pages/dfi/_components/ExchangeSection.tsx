@@ -137,7 +137,7 @@ export function ExchangeSection (): JSX.Element {
   )
 }
 
-function ExchangeCard (props: {imageSrc: string, url: string, name: string, testid: string}): JSX.Element {
+function ExchangeCard (props: {image: StaticImageData, url: string, name: string, testid: string}): JSX.Element {
   return (
     <ExternalLink url={props.url} testId={props.testid} classname='m-5 w-1/2 md:w-1/3 lg:w-1/5'>
       <div className='flex justify-center p-5 bg-gray-50 rounder-sm'>

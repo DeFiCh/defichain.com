@@ -1,9 +1,9 @@
 import { PropsWithChildren } from 'react'
 
-export function ExternalLink (props: PropsWithChildren<{ url: string, title?: string, testId?: string, className?: string }>): JSX.Element {
+export function ExternalLink (props: PropsWithChildren<{ url: string, testId?: string, classname?: string }>): JSX.Element {
   return (
-    <a href={props.url} target='_blank' rel='noreferrer' className={props.className ?? ''} data-testid={props.testId}>
-      {props.title ?? props.children}
+    <a href={props.url} className={props.classname} target='_blank' rel='noreferrer' data-testid={props.testId}>
+      {props.children}
     </a>
   )
 }

@@ -21,7 +21,7 @@ export default function DownloadsPage (): JSX.Element {
       <Container>
         <div className='flex w-full my-16 '>
           <h1 className='text-2xl lg:text-3xl font-medium w-full text-center md:text-left' data-testid='DownloadsPage.Heading'>
-            Choose your own wallet. Get the CLI.
+            Choose your own wallet.
           </h1>
         </div>
         <div className='flex flex-row flex-wrap pb-10'>

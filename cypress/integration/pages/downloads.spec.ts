@@ -13,7 +13,7 @@ context('/downloads page on desktop', () => {
   })
 
   it('should have page heading', function () {
-    cy.findByTestId('DownloadsPage.Heading').should('have.text', 'Choose your own wallet. Get the CLI.')
+    cy.findByTestId('DownloadsPage.Heading').should('have.text', 'Choose your own wallet.')
     cy.findByTestId('DownloadsPage.Heading').should('be.visible')
   })
 
@@ -43,7 +43,7 @@ context('/downloads page on mobile', () => {
   })
 
   it('should have page heading', function () {
-    cy.findByTestId('DownloadsPage.Heading').should('have.text', 'Choose your own wallet. Get the CLI.')
+    cy.findByTestId('DownloadsPage.Heading').should('have.text', 'Choose your own wallet.')
     cy.findByTestId('DownloadsPage.Heading').should('be.visible')
   })
 

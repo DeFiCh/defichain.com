@@ -486,7 +486,7 @@ DeFiChain utilizes a Proof-of-Stake (PoS) algorithm similar to Bitcoin Core’s 
 
 #### Masternodes for Staking
 
-To run a masternode (staking node), stakers must hold a fixed amount of DFI, initially set at 20,000. Masternodes on DeFiChain participate in active transaction validations and block creations. The staking amount is intended to be lowered with the stability and maturity of blockchain to encourage further decentralization.
+To run a masternode (staking node), stakers must hold a fixed amount of DFI, 20,000. Masternodes on DeFiChain participate in active transaction validations and block creations. The staking amount is intended to be lowered with the stability and maturity of blockchain to encourage further decentralization.
 
 Each staking node can perform only 1 hash per second, with the nonce from Bitcoin Core PoW algorithm replaced by a staker’s masternode ID.
 A new block is mined if it satisfies the following condition:
@@ -523,7 +523,7 @@ During a block’s generation, a staker has the right to include the double-sign
 
 To be able to apply a penalty to stakers who double-sign, DeFiChain has to disallow immediate withdrawing of stake. Thus, when a deactivation transaction is confirmed, DeFiChain requires 3000 blocks to pass. At a block time of 30 seconds, 3000 blocks is equivalent to 25 hours.
 
-The double-sign penalty is 10 times the block rewards, deducted from the collateral. This also disqualifies the stakers from further staking immediately. The staker wanting to get back to staking has to re-put in fresh stake UTXO of 1,000,000 DFI. Running the official DeFiChain node does not cause any unintentional or accidental double-sign. Double-sign happens only in cases of malicious intent.
+The double-sign penalty is 10 times the block rewards, deducted from the collateral. This also disqualifies the stakers from further staking immediately. The staker wanting to get back to staking has to re-put in fresh stake UTXO of 20,000 DFI. Running the official DeFiChain node does not cause any unintentional or accidental double-sign. Double-sign happens only in cases of malicious intent.
 
 #### Time Drift Attack
 
@@ -773,9 +773,10 @@ DFI is divisible up to 8 decimal places.
   - Lending loan interests payment
   - etc.
 - Collateral for borrowing of other cryptoassets on DeFiChain.
-- 1,000,000 DFI is required to run a staking node for DeFiChain.
+- 20,000 DFI is required to run a staking node for DeFiChain.
 - 1,000 DFI is required to create a DCT. This is refundable upon destruction of the DCT.
-- 500 DFI is required to submit a proposal for DFI the community budget. This is non-refundable.
+- 10 DFI is required to submit a proposal for DFI the community budget. This is non-refundable.
+- 50 DFI for Vote of Confidence. Also non-refundable. Both are to be paid to the burn address 8defichainBurnAddressXXXXXXXdRQkSm
 
 ### Fees from DeFi Activities
 
@@ -799,7 +800,7 @@ Burned token redistribution for the next 259,200 blocks =
 
 ### Masternodes
 
-DeFi is a Proof of Stake blockchain. Initially, 1,000,000 DFI allow the owner to own a staking node. The returns for staking will decrease over time, as the volume and number of transactions compensates for the reduction in per-transaction staking rewards.
+DeFi is a Proof of Stake blockchain. Initially, 20,000 DFI allow the owner to own a staking node. The returns for staking will decrease over time, as the volume and number of transactions compensates for the reduction in per-transaction staking rewards.
 
 Nodes are entitled to:
 

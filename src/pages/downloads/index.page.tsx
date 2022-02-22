@@ -47,17 +47,17 @@ export default function DownloadsPage (): JSX.Element {
           >
             <div className='flex flex-wrap items-center space-x-4 text-lg font-medium'>
               <ExternalLink
-                title='Mac'
+                text='Mac'
                 url='https://github.com/DeFiCh/app/releases/download/v2.9.1/DeFi-Wallet-2.9.1.dmg'
                 className='text-primary-500 hover:text-gray-200-pl-4'
               />
               <ExternalLink
-                title='Windows'
+                text='Windows'
                 url='https://github.com/DeFiCh/app/releases/download/v2.9.1/DeFi-Wallet-2.9.1.AppImage'
                 className='text-primary-500 hover:text-gray-200'
               />
               <ExternalLink
-                title='Linux (App Image)'
+                text='Linux (App Image)'
                 url='https://github.com/DeFiCh/app/releases/download/v2.9.1/DeFi-Wallet-Setup-2.9.1.exe'
                 className='text-primary-500 hover:text-gray-200'
               />
@@ -82,17 +82,17 @@ export default function DownloadsPage (): JSX.Element {
           >
             <div className='flex items-center space-x-4 text-lg font-medium'>
               <ExternalLink
-                title='Mac'
+                text='Mac'
                 url='https://apps.apple.com/at/app/saiive-live-defi-wallet/id1588945201?l=en'
                 className='text-primary-500 hover:text-gray-200-pl-4'
               />
               <ExternalLink
-                title='Windows'
+                text='Windows'
                 url='https://github.com/saiive/saiive.live/releases'
                 className='text-primary-500 hover:text-gray-200'
               />
               <ExternalLink
-                title='Linux'
+                text='Linux'
                 url='https://github.com/saiive/saiive.live/releases'
                 className='text-primary-500 hover:text-gray-200'
               />
@@ -122,7 +122,7 @@ export default function DownloadsPage (): JSX.Element {
           >
             <div className='flex items-center text-lg font-medium'>
               <ExternalLink
-                title='Github'
+                text='Github'
                 url='https://github.com/Martin8617/Defi-Wallet-for-Raspberry-Pi'
                 className='text-primary-500 hover:text-gray-200'
               />
@@ -136,17 +136,17 @@ export default function DownloadsPage (): JSX.Element {
           >
             <div className='flex items-center space-x-2 text-lg font-medium'>
               <ExternalLink
-                title='Mac'
+                text='Mac'
                 url='https://github.com/DeFiCh/ain/releases/download/v2.6.1/defichain-2.6.1-x86_64-apple-darwin11.tar.gz'
                 className='text-primary-500 hover:text-gray-200-pl-2'
               />
               <ExternalLink
-                title='Windows'
+                text='Windows'
                 url='https://github.com/DeFiCh/ain/releases/download/v2.6.1/defichain-2.6.1-x86_64-w64-mingw32.zip'
                 className='text-primary-500 hover:text-gray-200'
               />
               <ExternalLink
-                title='Linux'
+                text='Linux'
                 url='https://github.com/DeFiCh/ain/releases/download/v2.6.1/defichain-2.6.1-x86_64-pc-linux-gnu.tar.gz'
                 className='text-primary-500 hover:text-gray-200'
               />

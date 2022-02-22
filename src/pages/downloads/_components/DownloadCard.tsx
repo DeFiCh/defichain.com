@@ -9,7 +9,7 @@ export function DownloadCard (props: PropsWithChildren<{ testid: string, title: 
         data-testid={props.testid}
       >
         {(typeof props.imageSrc === 'string')
-          ? (<div className='w-full'><NextImage src={props.imageSrc} width='64px' height='64px'/></div>)
+          ? (<div className='w-full'><NextImage src={props.imageSrc} width='64px' height='64px' /></div>)
           : props.imageSrc}
         <h1 className='text-2xl font-semibold'>{props.title}</h1>
         <div className='text-lg flex-1'>{props.desc}</div>

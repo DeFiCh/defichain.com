@@ -24,7 +24,7 @@ export default function DownloadsPage (): JSX.Element {
             Choose your own wallet.
           </h1>
         </div>
-        <div className='flex flex-row flex-wrap pb-10'>
+        <div className='flex flex-wrap pb-10'>
           <DownloadCard
             title='DeFiChain wallet mobile app'
             desc='Lightweight, instant access to Decentralized Finance for Bitcoin, at your fingertips.'

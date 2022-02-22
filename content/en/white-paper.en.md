@@ -386,7 +386,7 @@ The following table compares Bitcoin and its forks, as well as Ethereum, to DeFi
         <td>220</td>
         <td>500</td>
         <td>4,561.45</td>
-        <td>20,07.04</td>
+        <td>2,007.04</td>
         <td>7.6</td>
         <td>3.35</td>
       </tr>

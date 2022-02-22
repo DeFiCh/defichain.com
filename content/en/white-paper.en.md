@@ -800,7 +800,7 @@ Burned token redistribution for the next 259,200 blocks =
 
 ### Masternodes
 
-DeFi is a Proof of Stake blockchain. Initially, 20,000 DFI allow the owner to own a staking node. The returns for staking will decrease over time, as the volume and number of transactions compensates for the reduction in per-transaction staking rewards.
+DeFi is a Proof of Stake blockchain. Status Q1 2022, 20,000 DFI allow the owner to own a staking node. The returns for staking will decrease over time, as the volume and number of transactions compensates for the reduction in per-transaction staking rewards.
 
 Nodes are entitled to:
 

@@ -1,216 +1,180 @@
 ---
-title: DeFiChain app how-to
-type: article
-long_title: A step-by-step guide to using and installing the DeFiChain app.
-cta_to: Read
-locale: en-US
-meta:
-  description: A step-by-step guide to using and installing the DeFiChain app.
-  og:
-    title: DeFiChain app how-to
-    description: A step-by-step guide to using and installing the DeFiChain app.
-    site_name: DeFiChain
-    image: /img/og/ogimage_en.png
-    image_type: image/png
-content:
-  sections:
-    hero:
-      name: hero
-      headline: DeFiChain app how-to.
-      subhead: A step-by-step guide.
+title: Run a DeFiChain masternode
+description: How to run a Defichain masternode on Linux/Mac OS
+locale: en_US
 ---
 
-## Download the app
+## Introduction
 
-Download the latest app from the [downloads](/downloads) page.
+Setting up a masternode on DefiChain allows you to participate in the consensus protocol and receive staking awards. One thing to note is that in order to set up a masternode, you must have a minimum of 20,000 DFI.
 
-## Minimum requirements
+_NOTE: This how-to expects some basic familiarity with the Linux terminal_
 
-| Requirement | Minimum Required |
-|-|-|
-| Memory | 4GB |
-| OS | macOS 10.14, Windows 10, Ubuntu LTS 18 and above |
+## Masternode roles
+There are two distinct roles: 'masternode owner' and 'masternode operator'. The owner holds the collateral and the primary activity (minting new coins, voting for anchors) is performed by operator. In general, a node can play both roles.
 
-## Installing on macOS
+## For owners who operate their own masternodes
+In this scenario, the operator's address will be equal to the owner's (collateral) address.
 
-### Step 1: Installation
+### Step 1 - Download and extract node software
 
-Open the downloaded image **DeFi-Wallet-XX.dmg**. In the Finder window that pops up, drag the DeFi Wallet on the left, on to the Applications directory shortcut on the right.
+The first step is to download the binaries. Here are links to binaries for Windows, Linux and Macosx (Please download the latest release):
 
-<p><img src="./img/drag-to-install.png" /></p>
+[Downloads](/downloads/)
 
-### Step 2: Dealing with macOS security prompt when opening the app
-
-Open the app. The first time you open the DeFi app, you will be presented with a security prompt. Press OK to dismiss it.
-
-<p><img src="/img/guides/installing-defi-app/macos-security-prompt.png" srcset="/img/guides/installing-defi-app/macos-security-prompt.png 1x, /img/guides/installing-defi-app/macos-security-prompt@2x.png 2x" /></p>
-
-\**You will see this security prompt with early unsigned releases of the app. In future releases signed with Apple, you will not see security prompts. For now, please follow step 3 for a workaround.*
-
-### Step 3: Allow app execution
-
-\**Only open the app this way if you are sure you have downloaded DeFi app from an official source. DeFi app is currently only available on the [official website](/) and [DeFiChain’s GitHub](https://github.com/DeFiCh/app/releases).*
-
-Go to **System Preferences** and click on **Security & Privacy**.
-
-<p><img src="/img/guides/installing-defi-app/system-preferences.png" srcset="/img/guides/installing-defi-app/system-preferences.png 1x, /img/guides/installing-defi-app/system-preferences@2x.png 2x" /></p>
-
-Then click on the **Open Anyway**.
-
-<p><img src="/img/guides/installing-defi-app/open-anyway-a.png" srcset="/img/guides/installing-defi-app/open-anyway-a.png 1x, /img/guides/installing-defi-app/open-anyway-a@2x.png 2x" /></p>
-
-Click **Open** on the confirmation popup.
-
-<p><img src="/img/guides/installing-defi-app/open-anyway-b.png" srcset="/img/guides/installing-defi-app/open-anyway-b.png 1x, /img/guides/installing-defi-app/open-anyway-b@2x.png 2x" /></p>
-
-DeFi app will launch automatically when the installation is complete.
-
-## Installing on Windows
-
-### Step 1: Installation
-
-Double click on the downloaded file.
-
-### Step 2: Windows security prompt
-
-If this is the first time you are installing the DeFi app, the installer may present you with a security prompt as shown. Click **More info**.
-
-\**Microsoft Windows SmartScreen may flag newly uploaded files that have not built up a long enough history.*
-
-![Image](https://i.imgur.com/CUmfPMS.png)
-
-### Step 3: Bypass Windows security prompt
-
-Click **Run anyway** to begin installation.
-
-![Image](https://i.imgur.com/S7SFwms.png)
-
-DeFi app will launch automatically when the installation is complete.
-
-## Installing on Linux using AppImage
-
-Please ensure you have enabled the **Allow executing file as program** option for the download file.
-
-![Image](https://i.imgur.com/TU3ggCU.png)
-
-You can now open DeFi app.
-
-## Installing on Linux using Debian
-
-You can choose to either install DeFi app as a GUI tool or command line tool.
-
-### Using Software Center
-
-The simplest method is to use Software Center in Ubuntu. Simply navigate to the folder (usually *Downloads* folder)  containing the downloaded **.deb** file and open it.
-
-### Install .deb files in command line using dpkg
-
-If you want to install **deb** packages using the command line, you can use either the `apt` command or the `dpkg` command.
-
+Following that we can extract the tar file by running (Replace 1.x.x with your version number):
 ```
-sudo apt install PATH_TO_DEB_FILE
+tar -xvzf defichain-1.x.x-x86_64-pc-linux-gnu.tar.gz
 ```
 
-or
+### Step 2 - Copy binaries to user directory
+
+We would like the node software to be stored in a consistent and easily accessible directory, so let's create one in our home folder. This can be done by running:
 
 ```
-sudo dpkg -i PATH_TO_DEB_FILE
+mkdir ~/.defi
 ```
 
+Now copy the binaries by running:
+```
+cp ./defichain-1.x.x/bin/* ~/.defi
+```
 
-You can now open DeFi app.
+### Step 3 - Setting up crontab to keep our node running in the background
 
----
+Now we may directly run our node by running `~/.defi/defid` , but this would not be very convenient, as we would have to keep the terminal session open the whole time, and run this command every time we restart our computer or SSH session.
 
-## Using the wallet
+Instead, we'll use crontab to keep the process running. Run `crontab -e`, and select an editor (I recommend Nano if you are unsure which to pick), afterwards paste:
 
-### The wallet interface
+```
+* * * * * pidof defid || ~/.defi/defid
+```
 
-<p><img src="/img/guides/installing-defi-app/wallets.png" srcset="/img/guides/installing-defi-app/wallets.png 1x, /img/guides/installing-defi-app/wallets@2x.png 2x" /></p>
+into the file and hit `Ctrl-X` then enter to save the file.
 
-#### Sidebar main navigation
+### Step 4 - Setting up owner address with sufficient funds
 
-- **Wallets** tab: Send and receive funds, and view transactions
-- **Liquidity** tab: Add and remove liquidity, and viewing APR of your liquidity
-- **DEX** tab: Swap between wrapped BTC/ETH/USDT and DFI
-- **Tokens** tab: View community-verified DST (DeFi Standard tokens) and create your own
-- **Blockchain** tab: A built-in mini block explorer to examine the blockchain
-- **Masternodes** tab: View a list of masternodes and create your own
+In order to run a masternode, you must own at least 20,000 DFI. Let's set up an address with sufficient funds to use as an owner. Masternodes currently only support legacy addresses, so create a masternode address using:
 
-#### Sidebar sub navigation
+```
+~/.defi/defi-cli getnewaddress "<label>" legacy
+```
 
-- **Console**: Run DeFiChain CLI commands
-- **Help**: Help options
-- **Settings**: Switch between Main and Test net, language and other settings
+where "label" is any label you would like to give the address.
 
-### Opening a wallet
+Now in order to transfer the funds to this address, you may use:
 
-Switch to the **Wallets** tab, choose a wallet e.g. DFI.
+```
+~/.defi/defi-cli sendtoaddress address
+```
 
-<p><img src="/img/guides/installing-defi-app/wallets-choose.png" srcset="/img/guides/installing-defi-app/wallets-choose.png 1x, /img/guides/installing-defi-app/wallets-choose@2x.png 2x" /></p>
+where address is the new owner address you have created.
 
-### Sending funds
+### Step 5 - Register as a masternode on the network
 
-#### Step 1
+In order to participate in the staking algorithm, you must broadcast to the network that you intend to participate, this can be done by running a command using the Defi CLI, the command is:
 
-Within a wallet, click on **Send**.
+```
+~/.defi/defi-cli createmasternode address
+```
 
-<p><img src="/img/guides/installing-defi-app/wallet-send.png" srcset="/img/guides/installing-defi-app/wallet-send.png 1x, /img/guides/installing-defi-app/wallet-send@2x.png 2x" /></p>
+where `address` for both operator and collateral address should be the new legacy address you created. Please note that it costs 10 DFI to run this command.
 
-#### Step 2
+### Step 6 - Configure the masternode and restart
 
-Enter the **Amount** and, the **To address** to send to. Yu can also enter an address using QR code scanner feature next to the address field. Press **CONTINUE** when you are ready.
+We're almost done, in order for the master node to operate correctly, we must make a couple of configuration changes. The configuration file will sit in `~/.defi/defi.conf`. Let's make sure the configuration file exists by running `touch ~/.defi/defi.conf`. Now open this configuration file in the editor of your choice and add the following:
 
-<p><img src="/img/guides/installing-defi-app/wallet-send1.png" srcset="/img/guides/installing-defi-app/wallet-send1.png 1x, /img/guides/installing-defi-app/wallet-send1@2x.png 2x" /></p>
+```
+gen=1
+spv=1
+masternode_operator=OPERATOR_ADDRESS
+```
 
-#### Step 3
+Because we have decided to run owner and operator on the same address, just substitute the same legacy address you created for `OPERATOR_ADDRESS`. There is no need to specify owner address in this case.
 
-Review the **Amount** and **To address** and verify they are correct. The **COMPLETE SEND** button is disabled for a few seconds to protect you from accidental sending.
+Now the final step is to restart the node. Since we have crontab running, we just have to kill the process and crontab will start it again for us after one minute. We can do this final step by running `killall defi-init`. One minute later, we should have our masternode running and minting coins.
 
-<p><img src="/img/guides/installing-defi-app/wallet-send2.png" srcset="/img/guides/installing-defi-app/wallet-send2.png 1x, /img/guides/installing-defi-app/wallet-send2@2x.png 2x" /></p>
+We can confirm the masternode is running by running:
 
-Click **COMPLETE SEND** to confirm sending.
+```
+~/.defi/defi-cli listmasternodes
+```
 
-<p><img src="/img/guides/installing-defi-app/wallet-send3.png" srcset="/img/guides/installing-defi-app/wallet-send3.png 1x, /img/guides/installing-defi-app/wallet-send3@2x.png 2x" /></p>
+look for your masternode address in the list of masternodes to confirm that you have successfully set everything up.
 
-#### Step 4
+You may run the command `getmasternodeblocks OPERATOR_ADDRESS` to see how many blocks your masternode has minted so far.
 
-After the transaction is complete, press **BACK TO WALLET** to return to the wallet.
+## For owners who would like to delegate the masternode duties to another node
+In this scenario, the operator's address will be different to the owner's (collateral) address.
 
-<p><img src="/img/guides/installing-defi-app/wallet-send4.png" srcset="/img/guides/installing-defi-app/wallet-send4.png 1x, /img/guides/installing-defi-app/wallet-send4@2x.png 2x" /></p>
+### Step 1-4 - Same as above
 
-You should see your latest transaction in the list of **Transactions** in your wallet.
+Perform steps 1-4 the same as the above section for operating your own masternodes. If you are also setting up the operator node yourself, then repeat steps 1-4 again for the operator node on a different machine.
 
----
+### Step 5 - Register as a masternode on the network
 
-### Receiving funds
+In order to participate in the staking algorithm, you must broadcast to the network that you intend to participate, this can be done by running a command using the Defi CLI, the command is:
 
-#### Step 1
+```
+~/.defi/defi-cli createmasternode OWNER_ADDRESS OPERATOR_ADDRESS
+```
 
-Within a selected wallet, click **RECEIVE**.
+where `OWNER_ADDRESS` is the address for the collateral/owner node and `OPERATOR_ADDRESS` is the address for the operator. Please note that it costs 10 DFI to run this command.
 
-<img src="/img/guides/installing-defi-app/wallet-receive.png" srcset="/img/guides/installing-defi-app/wallet-receive.png 1x, /img/guides/installing-defi-app/wallet-receive@2x.png 2x" />
+There is nothing to do after this, you may simply ensure that your masternode operator is correctly running the masternode on their side by passing them the operator address.
 
-Then click **NEW ADDRESS** to create a new receiving address.
+We can confirm the masternode is running by running:
 
-<img src="/img/guides/installing-defi-app/wallet-receive1.png" srcset="/img/guides/installing-defi-app/wallet-receive1.png 1x, /img/guides/installing-defi-app/wallet-receive1@2x.png 2x" />
+```
+~/.defi/defi-cli listmasternodes
+```
 
-#### Step 2
+Look for your masternode address in the list of masternodes to confirm that you have successfully set everything up.
 
-Fill out the information and give your address a meaningful label. Then click **CREATE**.
+You may run the command `getmasternodeblocks OPERATOR_ADDRESS` to see how many blocks your masternode has minted so far.
 
-<img src="/img/guides/installing-defi-app/wallet-receive2.png" srcset="/img/guides/installing-defi-app/wallet-receive2.png 1x, /img/guides/installing-defi-app/wallet-receive2@2x.png 2x"/>
+## Creating via the DeFiChain Desktop Wallet
 
-#### Step 3
+It's easy to set up your masternode through the DeFiChain Desktop Wallet, simply browse to the Masternodes tab and click on "Create +" in the upper right corner of the screen. The process is automated and seamless.
 
-The new receive address you have just created will appear in your list of receive addresses.
+![Masternode1](https://user-images.githubusercontent.com/3271586/112108417-2472a280-8beb-11eb-91f1-896904d46a85.png)
 
-<img src="/img/guides/installing-defi-app/wallet-receive3.png" srcset="/img/guides/installing-defi-app/wallet-receive3.png 1x, /img/guides/installing-defi-app/wallet-receive3@2x.png 2x"/>
+## Running multiple masternodes on the same machine
 
-Click the **QR code** button to bring up a QR code of the address.
+If you would like to run multiple masternodes on the same machine, you simply need to specify multiple `masternode_operator` entries in your `defi.conf`:
 
-<img src="/img/guides/installing-defi-app/wallet-receive4.png" srcset="/img/guides/installing-defi-app/wallet-receive4.png 1x, /img/guides/installing-defi-app/wallet-receive4@2x.png 2x"/>
+```
+gen=1
+spv=1
+masternode_operator=OPERATOR_ADDRESS_1
+masternode_operator=OPERATOR_ADDRESS_2
+masternode_operator=OPERATOR_ADDRESS_3
+```
 
-Click the **copy address** button to copy the address to your system clipboard.
+On the next run, the node will begin minting for all the specified masternodes. There is no hard limit to how many masternodes a single machine can run.
 
-<img src="/img/guides/installing-defi-app/wallet-receive5.png" srcset="/img/guides/installing-defi-app/wallet-receive5.png 1x, /img/guides/installing-defi-app/wallet-receive5@2x.png 2x"/>
+## Resigning masternodes
+
+If you decide to resign your masternode, you may run
+
+```
+~/.defi/defi-cli resignmasternode
+```
+## Masternode states
+Sending `createmasternode` (or 'resignmasternode') transaction doesn't mean that it acts immediately after submitting to the blockchain. There are special delays for each state.
+
+Masternodes can exist in these states:
+```
+        PRE_ENABLED,
+        ENABLED,
+        PRE_RESIGNED,
+        RESIGNED,
+        PRE_BANNED,
+        BANNED
+```
+- `PRE_ENABLED` - masternode was created, but waits for enough blocks after creation to get activated.
+- `ENABLED` - masternode is in fully operable state, can mint blocks and sign anchors
+- `PRE_RESIGNED` - masternode is still operable, but have received a 'resign' transaction and will wait for a special delay to get resigned
+- `RESIGNED` - masternode resigned, collateral unlocked and is available to be reclaimed
+- `PRE_BANNED` - masternode was caught as a 'criminal' (signing two blocks from parallel forks on close heights and we got special proofing tx on chain) but still operable (waiting, as in the case of PRE_RESIGNED)
+- `BANNED` - masternode deactivated, collateral unlocked and can be reclaimed (same as RESIGNED, but forced through deactivation)

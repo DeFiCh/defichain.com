@@ -129,7 +129,7 @@ export function ExchangeSection (): JSX.Element {
           <div className='text-xl font-light' data-testid='DfiPage.Developers.Text'>The DeFiChain Foundation gives grants to developers building functionality and dApps on DeFiChain.
           </div>
           <span data-testid='DfiPage.Developers.Desc'>
-            For further information, contact us at <ExternalLink classname='text-primary-500' url='mailto:partners@defichain.com'>partners@defichain.com</ExternalLink>
+            For further information, contact us at <ExternalLink className='text-primary-500' url='mailto:partners@defichain.com'>partners@defichain.com</ExternalLink>
           </span>
         </div>
       </Container>
@@ -139,7 +139,7 @@ export function ExchangeSection (): JSX.Element {
 
 function ExchangeCard (props: {image: StaticImageData, url: string, name: string, testid: string}): JSX.Element {
   return (
-    <ExternalLink url={props.url} testId={props.testid} classname='m-5 w-1/2 md:w-1/3 lg:w-1/5'>
+    <ExternalLink url={props.url} testId={props.testid} className='m-5 w-1/2 md:w-1/3 lg:w-1/5'>
       <div className='flex justify-center p-5 bg-gray-50 rounder-sm'>
         <Image alt={props.name} src={props.image} title={props.name} />
       </div>

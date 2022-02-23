@@ -595,7 +595,7 @@ There are two approaches to this:
 
 1. Stablecoin approach
     - For every single issued 1 DBTC, 1 BTC has to be locked up in an address or a smart contract. 
-    - While this would help to build a guarantee to DBTC, it introduces some other issues – country-party risks and affect the decentralized nature of DeFi. 
+    - While this would help to build a guarantee to DBTC, it introduces some other issues – counterparty risks and affect the decentralized nature of DeFi. 
 
 2. Economic pegging
     - By providing a strong guarantee that the DAT representing an asset has its price closely tracking the native asset, i.e. by holding DBTC, one can have a good confidence that the value of DBTC will track that of BTC.

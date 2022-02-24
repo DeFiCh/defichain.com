@@ -743,7 +743,7 @@ Thus Alice can obtain a compounded long position on DFI without putting in extra
 
 1. Charlie has DFI, but he needs short-term cashflow of another coin XXX. Charlies does not want to sell DFI for it nor does he want to spend fiat money to buy this coin.
 2. Charlie takes a loan via loan contract on DeFiChain for DXXX and converts it to XXX.
-3. Once he wishes to settle his loan, Charlie simply purchases XXX/DXXX and close his loan contract.
+3. Once he wishes to settle his loan, Charlie simply purchases XXX/DXXX and closes his loan contract.
 
 #### Lending a Coin for Cashflow
 

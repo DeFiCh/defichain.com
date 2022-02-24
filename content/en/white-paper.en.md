@@ -775,8 +775,8 @@ DFI is divisible up to 8 decimal places.
 - Collateral for borrowing of other cryptoassets on DeFiChain.
 - 20,000 DFI is required to run a staking node for DeFiChain.
 - 1,000 DFI is required to create a DCT. This is refundable upon destruction of the DCT.
-- 10 DFI is required to submit a proposal for DFI the community budget. This is non-refundable.
-- 50 DFI for Vote of Confidence. Also non-refundable. Both are to be paid to the burn address 8defichainBurnAddressXXXXXXXdRQkSm
+- 10 DFI is required to submit a Community Fund Proposal. This is non-refundable.
+- 50 DFI for submitting a Vote of Confidence. Also non-refundable. Both are to be paid to the burn address 8defichainBurnAddressXXXXXXXdRQkSm
 
 ### Fees from DeFi Activities
 

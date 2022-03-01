@@ -20,26 +20,24 @@ export function ComparisonSection (): JSX.Element {
 
 function ComparisionTable (): JSX.Element {
   return (
-    <div className='flex text-gray-500 items-baseline w-full'>
-      <div className='w-1/3'>
-        <h1 className='text-lg font-medium text-black text-center  mb-5'>Traditional finance</h1>
-        <div className='flex flex-col h-[192px] divide-x'>
-          <div className='bg-gray-100 h-[75%] flex flex-col justify-center items-center'>Bureaucracy </div>
-          <div className='text-white bg-primary-500 h-[25%] flex flex-col justify-center items-center'>Trust-based software </div>
-        </div>
+    <div className='w-full'>
+      <div className='flex flex-row mb-5'>
+        <h1 className='w-1/2 text-sm md:text-lg font-medium text-black text-center'>Traditional finance</h1>
+        <h1 className='w-1/2 text-sm md:text-lg font-medium text-black text-center'>FinTech</h1>
+        <h1 className='w-1/2 text-sm md:text-lg font-medium text-primary-500 text-center'>Defi</h1>
       </div>
-      <div className='w-1/3'>
-        <h1 className='text-lg font-medium text-black text-center  mb-5'>FinTech</h1>
-        <div className='flex flex-col h-[192px] divide-x'>
-          <div className='bg-gray-100 h-[50%] flex flex-col justify-center items-center'>Bureaucracy </div>
-          <div className='text-white bg-primary-500 h-[50%] flex flex-col justify-center items-center'>Trust-based software </div>
+      <div className='flex text-gray-500 items-start w-full'>
+        <div className='flex flex-col h-[192px] divide-x w-1/3'>
+          <div className='text-sm md:text-base bg-gray-100 h-[75%] flex flex-col justify-center items-center'>Bureaucracy </div>
+          <div className='text-sm md:text-base text-white bg-primary-500 h-[25%] flex flex-col justify-center text-center'>Trust-based software </div>
         </div>
-      </div>
-      <div className='w-1/3'>
-        <h1 className='text-lg font-medium text-primary-500 text-center  mb-5'>Defi</h1>
-        <div className='flex flex-col h-[192px] divide-x'>
-          <div className='bg-gray-100 h-[25%] flex flex-col justify-center items-center'>Bureaucracy </div>
-          <div className='text-white bg-primary-500 h-[75%] flex flex-col justify-center items-center'>Trust-minimized software </div>
+        <div className='flex flex-col h-[192px] divide-x w-1/3'>
+          <div className='text-sm md:text-base bg-gray-100 h-[50%] flex flex-col justify-center items-center'>Bureaucracy </div>
+          <div className='text-sm md:text-base text-white bg-primary-500 h-[50%] flex flex-col justify-center text-center'>Trust-based software </div>
+        </div>
+        <div className='flex flex-col h-[192px] divide-x w-1/3'>
+          <div className='text-sm md:text-base bg-gray-100 h-[25%] flex flex-col justify-center items-center'>Bureaucracy </div>
+          <div className='text-sm md:text-base text-white bg-primary-500 h-[75%] flex flex-col text-center justify-center'>Trust-minimized software </div>
         </div>
       </div>
     </div>

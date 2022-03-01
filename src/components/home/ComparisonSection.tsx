@@ -28,15 +28,15 @@ function ComparisionTable (): JSX.Element {
       </div>
       <div className='flex text-gray-500 items-start w-full'>
         <div className='flex flex-col h-[192px] divide-x w-1/3'>
-          <div className='text-sm md:text-base bg-gray-100 h-[75%] flex flex-col justify-center items-center'>Bureaucracy </div>
+          <div className='text-sm md:text-base bg-gray-100 h-[75%] flex flex-col justify-center text-center font-light'>Bureaucracy </div>
           <div className='text-sm md:text-base text-white bg-primary-500 h-[25%] flex flex-col justify-center text-center'>Trust-based software </div>
         </div>
         <div className='flex flex-col h-[192px] divide-x w-1/3'>
-          <div className='text-sm md:text-base bg-gray-100 h-[50%] flex flex-col justify-center items-center'>Bureaucracy </div>
+          <div className='text-sm md:text-base bg-gray-100 h-[50%] flex flex-col justify-center text-center font-light'>Bureaucracy </div>
           <div className='text-sm md:text-base text-white bg-primary-500 h-[50%] flex flex-col justify-center text-center'>Trust-based software </div>
         </div>
         <div className='flex flex-col h-[192px] divide-x w-1/3'>
-          <div className='text-sm md:text-base bg-gray-100 h-[25%] flex flex-col justify-center items-center'>Bureaucracy </div>
+          <div className='text-sm md:text-base bg-gray-100 h-[25%] flex flex-col justify-center font-light text-center'>Bureaucracy </div>
           <div className='text-sm md:text-base text-white bg-primary-500 h-[75%] flex flex-col text-center justify-center'>Trust-minimized software </div>
         </div>
       </div>

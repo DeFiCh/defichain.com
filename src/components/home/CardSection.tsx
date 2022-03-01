@@ -41,11 +41,49 @@ export function CardSection (): JSX.Element {
   return (
     <section className='-mt-80'>
       <Slider {...settings}>
-        <Card title='Latest feature' subtitle='Decentralized Assets' desc='Access decentralized assets with collateral in your vault.' testId='CardSection.LatestFeature' url='/' buttonText='Learn more' />
-        <Card title='featured download' subtitle='DefiChain Wallet' desc='Experience DeFiChain with wallet apps built for both desktop and mobile.' testId='CardSection.Downloads' url='/' buttonText='Go to downloads' />
-        <Card title='how-to guide' subtitle='Buy $DFI' desc='Learn about and acquire the $DFI coin from various crypto exchanges.' testId='CardSection.HowTo' url='/' buttonText='Learn more' fill />
-        <Card title='how-to guide' subtitle='Buy $DFI' desc='Learn about and acquire the $DFI coin from various crypto exchanges.' testId='CardSection.HowTo' url='/' buttonText='Learn more' fill />
-        <Card title='how-to guide' subtitle='Buy $DFI' desc='Learn about and acquire the $DFI coin from various crypto exchanges.' testId='CardSection.HowTo' url='/' buttonText='Learn more' fill />
+        <Card
+          title='Latest feature'
+          subtitle='Decentralized Assets'
+          desc='Access decentralized assets with collateral in your vault.'
+          testId='CardSection.LatestFeature'
+          url='/'
+          buttonText='Learn more'
+        />
+        <Card
+          title='featured download'
+          subtitle='DefiChain Wallet'
+          desc='Experience DeFiChain with wallet apps built for both desktop and mobile.'
+          testId='CardSection.Downloads'
+          url='/'
+          buttonText='Go to downloads'
+        />
+        <Card
+          title='how-to guide'
+          subtitle='Buy $DFI'
+          desc='Learn about and acquire the $DFI coin from various crypto exchanges.'
+          testId='CardSection.HowTo'
+          url='/'
+          buttonText='Learn more'
+          fill
+        />
+        <Card
+          title='how-to guide'
+          subtitle='Buy $DFI'
+          desc='Learn about and acquire the $DFI coin from various crypto exchanges.'
+          testId='CardSection.HowTo'
+          url='/'
+          buttonText='Learn more'
+          fill
+        />
+        <Card
+          title='how-to guide'
+          subtitle='Buy $DFI'
+          desc='Learn about and acquire the $DFI coin from various crypto exchanges.'
+          testId='CardSection.HowTo'
+          url='/'
+          buttonText='Learn more'
+          fill
+        />
       </Slider>
     </section>
   )
@@ -78,16 +116,16 @@ function Card (props: Cardprops): JSX.Element {
 
 function PrevArrow (props: any): JSX.Element {
   return (
-    <button className={classNames(props.className, '-top-[100px] left-[20px] xl:left-[900px] z-50')} style={props.style} onClick={props.onClick}>
-      <BsChevronLeft fontSize={50} fill='fill-black' />
+    <button className={classNames(props.className, '-top-[60px] sm:-top-[100px] left-[50%] md:left-[70%]')} style={props.style} onClick={props.onClick}>
+      <BsChevronLeft fontSize={40} fill='fill-black' />
     </button>
   )
 }
 
 function NextArrow (props: any): JSX.Element {
   return (
-    <button className={classNames(props.className, '-top-[100px] right-[20px] xl:right-[200px] z-50')} style={props.style} onClick={props.onClick}>
-      <BsChevronRight fontSize={50} fill='fill-black' />
+    <button className={classNames(props.className, '-top-[60px] sm:-top-[100px] right-[20%]')} style={props.style} onClick={props.onClick}>
+      <BsChevronRight fontSize={40} fill='fill-black' />
     </button>
   )
 }

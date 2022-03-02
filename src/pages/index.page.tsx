@@ -4,6 +4,7 @@ import { HomePageHeader } from '@components/home/HomePageHeader'
 import { CardSection } from '@components/home/CardSection'
 import { ComparisonSection } from '@components/home/ComparisonSection'
 import { BenefitSection } from '@components/home/BenefitSection'
+
 export default function HomePage (): JSX.Element {
   return (
     <>

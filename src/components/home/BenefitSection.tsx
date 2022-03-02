@@ -131,10 +131,3 @@ export function BenefitSection (): JSX.Element {
     </>
   )
 }
-
-// RiExchangeFundsFill
-// FaShapes
-// IoDiamondSharp
-// MdOutlineDoNotDisturbOn
-// IoMdConstruct
-// FaScroll

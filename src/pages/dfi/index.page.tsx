@@ -32,7 +32,7 @@ export default function DFIPage (): JSX.Element {
             >{t('DFICoinSection.title')}
             </h1>
             <div className='text-lg md:text-2xl font-light md:!leading-[3rem]' data-testid='DfiPage.Section.Text'>
-              {t('DFICoinSection.desc')} <ExternalLink url='https://defiscan.live'>DeFi Scan</ExternalLink>.
+              {t('DFICoinSection.desc')} <ExternalLink url='https://defiscan.live'>DeFiScan</ExternalLink>.
             </div>
             <div className='italic' data-testid='DfiPage.Section.Note'>
               {t('DFICoinSection.disclaimer')}

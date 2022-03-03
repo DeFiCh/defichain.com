@@ -48,7 +48,8 @@ function HowToSection (props: PropsWithChildren<{ posts: PostI[] }>): JSX.Elemen
       <div
         className='text-2xl lg:text-3xl font-medium w-full md:text-left mb-5'
         data-testid='HowToSection.Title'
-      >How To Guides
+      >
+        How To Guides
       </div>
 
       <div className='flex flex-wrap pb-10 -m-1'>
@@ -73,7 +74,8 @@ function FAQSection (): JSX.Element {
       <h1
         className='text-2xl lg:text-3xl font-medium w-full md:text-left mb-5'
         data-testid='FAQSection'
-      >FAQ
+      >
+        FAQ
       </h1>
 
       {

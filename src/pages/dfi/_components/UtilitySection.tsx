@@ -3,49 +3,50 @@ import { FaGlobe, FaPercentage } from 'react-icons/fa'
 import { RiAuctionFill, RiExchangeDollarLine } from 'react-icons/ri'
 import { BsPieChartFill, BsVinylFill } from 'react-icons/bs'
 import { FeatureCard } from '@components/commons/FeatureCard'
+import { useTranslation } from 'next-i18next'
 
 export function UtilitySection (): JSX.Element {
+  const { t } = useTranslation(['dfi'])
+
   return (
-    <section className='bg-gray-50 py-20'>
+    <section className='bg-gray-50 py-16 px-6'>
       <Container>
-        <h1 className='font-medium text-3xl' data-testid='UtilitySection.Heading'>$DFI coin utility</h1>
+        <h1 className='font-medium text-3xl' data-testid='UtilitySection.Heading'>{t('CoinUtility.title')}</h1>
         <div className='flex flex-wrap -mx-6 lg:-mx-10'>
           <FeatureCard
-            title='Fees'
-            desc='Pay for transactions, smart contracts and other DeFi activities.'
-            testid='UtilitySection.Fees'
+            title={t('CoinUtility.entries.Fees.title')}
+            desc={t('CoinUtility.entries.Fees.desc')}
           >
             <FaPercentage className='fill-primary-500' fontSize={50} />
           </FeatureCard>
           <FeatureCard
-            title='Loan collaterals'
-            desc='Lend or borrow using crypto assets as collateral.'
-            testid='UtilitySection.Collateral'
+            title={t('CoinUtility.entries.LoanCollaterals.title')}
+            desc={t('CoinUtility.entries.LoanCollaterals.desc')}
           >
             <RiExchangeDollarLine className='fill-primary-500' fontSize={50} />
           </FeatureCard>
           <FeatureCard
-            title='Staking nodes'
-            desc='Fund a new staking node for just 20,000 DFI.'
-            testid='UtilitySection.Nodes'
+            title={t('CoinUtility.entries.StakingNodes.title')}
+            desc={t('CoinUtility.entries.StakingNodes.desc')}
           >
             <FaGlobe className='fill-primary-500' fontSize={50} />
           </FeatureCard>
           <FeatureCard
-            title='DeFi Custom Token'
-            desc='Create a non-refundable personalised DCT (DeFi Custom Token).'
-            testid='UtilitySection.Token'
+            title={t('CoinUtility.entries.DeFiCustomToken.title')}
+            desc={t('CoinUtility.entries.DeFiCustomToken.desc')}
           >
             <BsVinylFill className='fill-primary-500' fontSize={50} />
           </FeatureCard>
           <FeatureCard
-            title='Budget proposal'
-            desc='Submit a community budget proposal for 500 DFI (non-refundable).'
-            testid='UtilitySection.Proposal'
+            title={t('CoinUtility.entries.BudgetProposal.title')}
+            desc={t('CoinUtility.entries.BudgetProposal.desc')}
           >
             <RiAuctionFill className='fill-primary-500' fontSize={50} />
           </FeatureCard>
-          <FeatureCard title='Liquidity pools' desc='Provide liquidity for the decentralized exchange between crypto assets.' testid='UtilitySection.Pools'>
+          <FeatureCard
+            title={t('CoinUtility.entries.LiquidityPools.title')}
+            desc={t('CoinUtility.entries.LiquidityPools.desc')}
+          >
             <BsPieChartFill className='fill-primary-500' fontSize={50} />
           </FeatureCard>
         </div>

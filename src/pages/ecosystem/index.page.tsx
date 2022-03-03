@@ -23,6 +23,7 @@ export default function EcosystemPage (): JSX.Element {
           </div>
         </div>
       </Header>
+
       <Container>
         <EcosystemSection title={t('ContributeSection.title')} testId='EcosystemSection.Contribute'>
           <ResourceCard

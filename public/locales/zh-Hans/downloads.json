@@ -1,0 +1,46 @@
+{
+  "Header": {
+    "title": "下载区",
+    "desc": "下载适用于手机, macOS、Windows和Linux的程序",
+    "sub": "下载钱包程序和CLI (命令行介面控制台)。"
+  },
+  "LightWallets": {
+    "title": "Light Wallets",
+    "entries": {
+      "DFC": {
+        "title": "递飞链钱包手机应用程序",
+        "desc": "轻钱包，立即启动开放式金融理财。"
+      },
+      "saiive": {
+        "title": "saiive.live 递飞链钱包手机应用程序",
+        "desc": "来自社区和为社区提供的递飞链的非托管轻钱包。"
+      },
+      "DFX": {
+        "title": "DFX 钱包手机应用程序",
+        "desc": "以最简单和安全的方式存储、接收和发送递飞链代币，无需通过您的手机进行操作。"
+      }
+    }
+  },
+  "FullNodeWallets": {
+    "title": "Full Node Wallets",
+    "entries": {
+      "DFC": {
+        "title": "递飞链钱包电脑程序",
+        "desc": "使用全功能和递飞链钱包程序进行交易、流动性挖矿、交换等。包含完整节点。"
+      },
+      "saiive": {
+        "title": "saiive.live 递飞链钱包电脑程序",
+        "desc": "来自社区和为社区提供的递飞链的非托管轻钱包。"
+      },
+      "RPI": {
+        "title": "递飞链钱包树莓派程序",
+        "desc": "用于树莓派 4B 4GB 的电脑钱包版本，带有官方 Raspberry Pi OS（32-Bit）。"
+      },
+      "CLI": {
+        "title": "命令行介面控制台",
+        "desc": "通过命令行介面与递飞链进行交易和其他功能。包含完整节点。"
+      }
+    }
+  }
+}
+

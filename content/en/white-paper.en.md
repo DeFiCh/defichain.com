@@ -525,7 +525,6 @@ To be able to apply a penalty to stakers who double-sign, DeFiChain has to disal
 
 The double-sign penalty is 10 times the block rewards, deducted from the collateral. This also disqualifies the stakers from further staking immediately. The staker who wants to get back to staking has to deposit a fresh stake UTXO of 20,000 DFI. Running the official DeFiChain node does not cause any unintentional or accidental double-sign. Double-sign happens only in cases of malicious intent.
 
-
 #### Time Drift Attack
 
 The chain uses a maximum future block time of only approx. 5 seconds, to protect the chain from time drift attacks, where stakers set a block time too far ahead in the future, in order to claim a reward for themselves. DeFi also uses NTP time synchronization to allow for ongoing adjustment to the block time.

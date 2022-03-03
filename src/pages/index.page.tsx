@@ -4,7 +4,7 @@ import { HomePageHeader } from '@components/home/HomePageHeader'
 import { CardSection } from '@components/home/CardSection'
 import { ComparisonSection } from '@components/home/ComparisonSection'
 import { BenefitSection } from '@components/home/BenefitSection'
-import { RoadmapSection } from '@components/home/RoadmapSection'
+import { RoadmapSection } from '@components/home/RoadMap/RoadmapSection'
 
 export default function HomePage (): JSX.Element {
   return (

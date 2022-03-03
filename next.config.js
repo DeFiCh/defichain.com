@@ -1,4 +1,4 @@
-const { i18n } = require('./next-i18next.config');
+const {i18n} = require('./next-i18next.config');
 
 const securityHeaders = [
   {
@@ -43,7 +43,7 @@ module.exports = {
   reactStrictMode: true,
   pageExtensions: ['page.tsx', 'page.ts'],
   i18n,
-  async headers () {
+  async headers() {
     return [
       {
         source: '/(.*)',

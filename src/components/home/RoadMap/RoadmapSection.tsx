@@ -7,11 +7,13 @@ import { TimeLine2019 } from '@components/home/RoadMap/2019'
 import { TimeLineFuture } from '@components/home/RoadMap/Future'
 import { TimeLine2021 } from '@components/home/RoadMap/2021'
 import { TimeLine2020 } from '@components/home/RoadMap/2020'
+import { TimeLine2022 } from '@components/home/RoadMap/2022'
 
 export function RoadmapSection (): JSX.Element {
   return (
     <section className='bg-gray-50 py-20'>
       <Container>
+        <TimeLine2022 />
         <TimeLine2021 />
         <TimeLineFuture />
         <TimeLine2020 />
@@ -73,14 +75,14 @@ export function TimeLineContainer (props: PropsWithChildren<{testid: string, tim
 
 export function RoadmapCard (props: PropsWithChildren<{image: StaticImageData, month: string, testId: string}>): JSX.Element {
   return (
-    <div className='w-[320px] shadow-sm' data-testid={props.testId}>
-      <div className='bg-white p-4 space-y-4 flex flex-col min-h-[160px]'>
+    <div className=' flex flex-col w-[320px] h-[310px] shadow-sm' data-testid={props.testId}>
+      <div className='bg-white p-4 space-y-4 flex flex-col rounded-t-md min-h-[160px]'>
         <h1 className='font-medium text-xl'>{props.month}</h1>
         <div className='flex-1'>
           {props.children}
         </div>
       </div>
-      <div className='w-full overflow-hidden'>
+      <div className='w-full flex-1 grow overflow-hidden'>
         <NextImage className='h-full' src={props.image} alt='DeFiChain roadmap' title='DeFiChain roadmap' />
       </div>
     </div>

@@ -67,7 +67,7 @@ function HowToSection (props: PropsWithChildren<{ posts: PostI[] }>): JSX.Elemen
 
 function FAQSection (): JSX.Element {
   const { t } = useTranslation(['learn'])
-  const entries = t('FAQSection.entries', { returnObjects: true })
+  const entries: Array<{ title: string, desc: string }> = t('FAQSection.entries', { returnObjects: true })
 
   return (
     <section className='my-16'>

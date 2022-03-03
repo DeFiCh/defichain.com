@@ -1,13 +1,25 @@
-import {Container} from '@components/commons/Container'
+import { Container } from '@components/commons/Container'
 import React from 'react'
-import {getAllPosts, getPostBySlug} from './utils/api'
-import {remark} from 'remark'
+import { getAllPosts, getPostBySlug, Post } from './utils/api'
+import { remark } from 'remark'
 import ReactMarkdown from 'react-markdown'
-import {Header} from '@components/commons/Header'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import { Header } from '@components/commons/Header'
 import rehypeSlug from 'rehype-slug'
+import rehypeSanitize from 'rehype-sanitize'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import remarkGfm from 'remark-gfm'
+import { UserConfig } from 'next-i18next'
+import { GetStaticPathsResult } from 'next/types'
 
-export default function PostPage({post}): JSX.Element {
+interface PostPageProps {
+  props: {
+    _nextI18Next: { initialI18nStore: any, initialLocale: string, userConfig: UserConfig | null }
+    post: Post
+  }
+}
+
+export default function PostPage ({ post }): JSX.Element {
   return (
     <>
       <Header title={post.title}>
@@ -19,14 +31,24 @@ export default function PostPage({post}): JSX.Element {
       </Header>
       <Container>
         <article className='prose lg:prose-xl mx-auto py-20'>
-          <ReactMarkdown children={post.content}/>
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeSanitize, rehypeSlug, [rehypeAutolinkHeadings, {
+              behavior: 'wrap',
+              properties: {
+                className: ['no-underline hover:underline']
+              }
+            }]]}
+          >
+            {post.content}
+          </ReactMarkdown>
         </article>
       </Container>
     </>
   )
 }
 
-export async function getStaticProps({params, locale}) {
+export async function getStaticProps ({ params, locale }): Promise<PostPageProps> {
   const post = getPostBySlug(params.slug, [
     'title',
     'description',
@@ -34,12 +56,11 @@ export async function getStaticProps({params, locale}) {
   ], locale)
 
   const result = await remark()
-    .use(rehypeAutolinkHeadings)
-    .use(rehypeSlug)
-    .process(post.content || '')
+    .process(post.content)
 
   return {
     props: {
+      ...(await serverSideTranslations(locale, ['common', 'layout'])),
       post: {
         ...post,
         content: result.toString()
@@ -48,7 +69,7 @@ export async function getStaticProps({params, locale}) {
   }
 }
 
-export async function getStaticPaths(context) {
+export async function getStaticPaths (context): Promise<GetStaticPathsResult> {
   const allPosts = context.locales.map(locale => (
     {
       locale: locale,

@@ -27,9 +27,10 @@
     "react-markdown": "^8.0.0",
     "react-number-format": "^4.9.1",
     "rehype-autolink-headings": "^6.1.1",
+    "rehype-sanitize": "^5.0.1",
     "rehype-slug": "^5.0.1",
     "remark": "^14.0.2",
-    "remark-html": "^15.0.1"
+    "remark-gfm": "^3.0.1"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.12",

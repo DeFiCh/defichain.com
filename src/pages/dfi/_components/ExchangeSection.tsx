@@ -144,6 +144,5 @@ function ExchangeCard (props: {image: StaticImageData, url: string, name: string
         <Image alt={props.name} src={props.image} title={props.name} />
       </div>
     </ExternalLink>
-
   )
 }

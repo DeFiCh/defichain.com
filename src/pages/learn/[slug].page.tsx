@@ -1,68 +1,68 @@
-import fs from 'fs'
-import matter from 'gray-matter'
-import { MDXRemote } from 'next-mdx-remote'
-import { serialize } from 'next-mdx-remote/serialize'
-import path from 'path'
-import { getPostFilePaths, getPostPath } from './utils/mdxUtils'
 import { Container } from '@components/commons/Container'
+import React from 'react'
+import { getAllPosts, getPostBySlug } from './utils/api'
+import { remark } from 'remark'
+import ReactMarkdown from 'react-markdown'
 import { Header } from '@components/commons/Header'
-import rehypeSlug from 'rehype-slug'
-import { GetStaticPathsResult, GetStaticPropsResult } from 'next'
-import { MDXRemoteSerializeResult } from 'next-mdx-remote/dist/types'
+import remarkMdx from 'remark-mdx'
 
-interface PostPageProps {
-  source: MDXRemoteSerializeResult
-  frontMatter: { [p: string]: any }
-}
-
-export default function PostPage ({ source, frontMatter }): JSX.Element {
+export default function PostPage ({ post }): JSX.Element {
   return (
     <>
-      <Header title={frontMatter.title}>
+      <Header title={post.title}>
         <div className='mt-10 flex flex-wrap'>
           <div className='w-full text-2xl text-gray-900' data-testid='Header.desc.main'>
-            {frontMatter.description}
+            {post.description}
           </div>
         </div>
       </Header>
       <Container>
         <article className='prose lg:prose-xl mx-auto py-20'>
-          <MDXRemote {...source} />
+          <ReactMarkdown children={post.content} />
         </article>
       </Container>
     </>
   )
 }
 
-export async function getStaticProps ({ params, locale }): Promise<GetStaticPropsResult<PostPageProps>> {
-  const slug: string = params.slug
-  const postFilePath = path.join(getPostPath(locale), `${slug}.mdx`)
-  const source = fs.readFileSync(postFilePath)
+export async function getStaticProps ({ params, locale }) {
+  const post = getPostBySlug(params.slug, [
+    'title',
+    'description',
+    'content'
+  ], locale)
 
-  const { content, data } = matter(source)
-
-  const mdxSource = await serialize(content, {
-    mdxOptions: {
-      rehypePlugins: [rehypeSlug]
-    },
-    scope: data
-  })
+  const result = await remark().use(remarkMdx).process(post.content || '')
 
   return {
     props: {
-      source: mdxSource,
-      frontMatter: data
+      post: {
+        ...post,
+        content: result.toString()
+      }
     }
   }
 }
 
-export async function getStaticPaths (context): Promise<GetStaticPathsResult> {
-  const paths = context.locales?.map(locale => getPostFilePaths(locale)
-    .map((path) => path.replace(/\.mdx?$/, ''))
-    .map((slug) => ({ params: { slug }, locale: locale }))).flat()
+export async function getStaticPaths (context) {
+  const allPosts = context.locales.map(locale => (
+    {
+      locale: locale,
+      posts: getAllPosts(['slug'], locale)
+    }
+  ))
 
   return {
-    paths,
+    paths: allPosts.map(postsWithLocale => {
+      return postsWithLocale.posts.map(post => {
+        return {
+          params: {
+            slug: post.slug
+          },
+          locale: postsWithLocale.locale
+        }
+      })
+    }).flat(),
     fallback: false
   }
 }

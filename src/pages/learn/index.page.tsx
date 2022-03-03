@@ -1,10 +1,30 @@
-import { Header } from '@components/commons/Header'
-import { Container } from '@components/commons/Container'
-import { SSRConfig, useTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import {Header} from '@components/commons/Header'
+import {Container} from '@components/commons/Container'
+import {UserConfig, useTranslation} from 'next-i18next'
+import {serverSideTranslations} from 'next-i18next/serverSideTranslations'
+import {PropsWithChildren} from "react";
+import {getAllPosts} from "./utils/api";
+import {HowToCard} from "./_components/HowToCard";
+import {InferGetStaticPropsType} from "next";
+import {Disclosure} from '@headlessui/react'
+import {BsChevronCompactDown} from "react-icons/bs";
 
-export default function LearnPage (): JSX.Element {
-  const { t } = useTranslation(['learn'])
+
+interface PostI {
+  title: string
+  description: string
+  slug: string
+}
+
+interface LearnPageProps {
+  props: {
+    _nextI18Next: { initialI18nStore: any; initialLocale: string; userConfig: UserConfig | null }
+    posts: Array<PostI>
+  }
+}
+
+export default function LearnPage(props: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
+  const {t} = useTranslation(['learn'])
 
   return (
     <>
@@ -15,26 +35,83 @@ export default function LearnPage (): JSX.Element {
           </div>
         </div>
       </Header>
-      <Container />
+      <Container>
+        <HowToSection posts={props.posts}/>
+        <FAQSection/>
+      </Container>
     </>
   )
 }
 
-// function VideoSection (props: PropsWithChildren<{ title: string, testId: string }>): JSX.Element {
-//   return (
-//     <section className='my-16'>
-//       <h1 className='text-2xl lg:text-3xl font-semibold' data-testid={props.testId}>{props.title}</h1>
-//       <div className='flex flex-wrap -mx-1.5 my-10 pb-10'>
-//         {props.children}
-//       </div>
-//     </section>
-//   )
-// }
+function HowToSection(props: PropsWithChildren<{ posts: Array<PostI> }>): JSX.Element {
+  return (
+    <section className='my-16'>
 
-export async function getStaticProps ({ locale }): Promise<{ props: SSRConfig }> {
+      <h1 className='text-2xl lg:text-3xl font-medium w-full text-center md:text-left mb-5'
+          data-testid='HowToSection'>How To Guides</h1>
+
+      <div className='flex flex-wrap pb-10 -m-1'>
+        {(() => {
+          return (
+            props.posts.map(post => {
+              return <HowToCard title={post.title} desc={post.description} slug={post.slug}/>
+            })
+          )
+        })()}
+      </div>
+    </section>
+  )
+}
+
+function FAQSection(): JSX.Element {
+  const {t} = useTranslation(['learn'])
+  const entries = t('FAQSection.entries', {returnObjects: true}) as Array<{ title: string, desc: string }>
+
+  return (
+    <section className='my-16'>
+      <h1 className='text-2xl lg:text-3xl font-medium w-full text-center md:text-left mb-5'
+          data-testid='FAQSection'>FAQ
+      </h1>
+
+      {
+        entries.map(entry => {
+          return (
+            <FAQEntry title={entry.title} desc={entry.desc} />
+          )
+        })
+      }
+
+    </section>
+  )
+
+  function FAQEntry(props: { title: string, desc: string }): JSX.Element {
+    return (
+      <div key={props.title}>
+        <Disclosure>
+          {({open}) => (
+            <>
+              <Disclosure.Button className="py-4 text-xl lg:text-2xl font-medium flex items-center">
+                <BsChevronCompactDown size={28} className={`${open ? "rotate-180" : ""}`}/>
+                <span className='ml-4'>{props.title}</span>
+              </Disclosure.Button>
+              <Disclosure.Panel className="text-gray-500 text-lg mb-10">
+                {props.desc}
+              </Disclosure.Panel>
+            </>
+          )}
+        </Disclosure>
+      </div>
+    )
+  }
+}
+
+export async function getStaticProps({locale}): Promise<LearnPageProps> {
+  const allPosts: PostI[] = getAllPosts(['slug', 'title', 'description'], locale) as PostI[]
+
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'layout', 'ecosystem']))
+      ...(await serverSideTranslations(locale, ['common', 'layout', 'learn'])),
+      posts: allPosts
     }
   }
 }

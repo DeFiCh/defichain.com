@@ -1,7 +1,6 @@
 ---
-title: Run a DeFiChain masternode
+title: Run a masternode
 description: How to run a Defichain masternode on Linux/Mac OS
-locale: en_US
 ---
 
 ## Introduction

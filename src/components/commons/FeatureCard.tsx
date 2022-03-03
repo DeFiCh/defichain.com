@@ -1,8 +1,8 @@
 import { PropsWithChildren } from 'react'
 
-export function FeatureCard (props: PropsWithChildren<{ title: string, desc: string}>): JSX.Element {
+export function FeatureCard (props: PropsWithChildren<{ title: string, desc: string, testid?: string}>): JSX.Element {
   return (
-    <div className='md:w-1/2 lg:w-1/3 flex flex-wrap p-6 lg:p-10 text-gray-900'>
+    <div className='md:w-1/2 lg:w-1/3 flex flex-wrap p-6 lg:p-10 text-gray-900' data-testid={props.testid}>
       <div className='w-full'>
         {props.children}
       </div>

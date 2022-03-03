@@ -11,7 +11,7 @@ import { ExternalLink } from '@components/commons/link/ExternalLink'
 
 export function TimeLine2022 (): JSX.Element {
   return (
-    <TimeLineContainer testid='RoadmapSection.2021' timeline='2022'>
+    <TimeLineContainer testid='RoadmapSection.2021' timeline='2022' label='On Track'>
       <RoadmapCard
         image={OnChain}
         testId='RoadmapSection.2022.Onchain'

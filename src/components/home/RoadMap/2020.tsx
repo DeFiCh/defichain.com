@@ -19,7 +19,7 @@ import CoinPaparika from '../../../../public/assets/img/home/timeline/2020/dfi-c
 
 export function TimeLine2020 (): JSX.Element {
   return (
-    <TimeLineContainer achieved testid='RoadmapSection.2020' timeline='2020'>
+    <TimeLineContainer label='Achieved' testid='RoadmapSection.2020' timeline='2020'>
       <RoadmapCard
         image={DfiLaunch}
         testId='RoadmapSection.2020.May.Launch'

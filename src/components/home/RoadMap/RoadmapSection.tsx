@@ -23,7 +23,7 @@ export function RoadmapSection (): JSX.Element {
   )
 }
 
-export function TimeLineContainer (props: PropsWithChildren<{testid: string, timeline: string, achieved?: boolean}>): JSX.Element {
+export function TimeLineContainer (props: PropsWithChildren<{testid: string, timeline: string, label?: string}>): JSX.Element {
   const settings = {
     infinite: false,
     speed: 500,
@@ -64,7 +64,7 @@ export function TimeLineContainer (props: PropsWithChildren<{testid: string, tim
     <div data-testid={props.testid} className='py-28'>
       <div className='my-12'>
         <span className='mr-4 font-medium text-xl'>{props.timeline}</span>
-        {props.achieved !== undefined && <span>Achieved</span>}
+        {props.label !== undefined ?? <span>{props.label}</span>}
       </div>
       <Slider {...settings}>
         {props.children}

@@ -5,7 +5,7 @@ import WhitePaper from '../../../../public/assets/img/home/timeline/2019/white-p
 
 export function TimeLine2019 (): JSX.Element {
   return (
-    <TimeLineContainer achieved testid='RoadmapSection.2019' timeline='2019'>
+    <TimeLineContainer label='Achieved' testid='RoadmapSection.2019' timeline='2019'>
       <RoadmapCard
         image={ConceptImage}
         testId='RoadmapSection.2019.Sep.Concept'

@@ -25,7 +25,7 @@ import Transparency from '../../../../public/assets/img/home/timeline/2021/trans
 
 export function TimeLine2021 (): JSX.Element {
   return (
-    <TimeLineContainer testid='RoadmapSection.2021' timeline='2021' achieved>
+    <TimeLineContainer testid='RoadmapSection.2021' timeline='2021' label='Achieved'>
       <RoadmapCard
         image={DfiPs2021}
         testId='RoadmapSection.2021.Jan.Dfips'

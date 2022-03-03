@@ -4,6 +4,9 @@ module.exports = {
     './src/layouts/**/*.{js,ts,jsx,tsx}',
     './src/pages/**/*.{js,ts,jsx,tsx}'
   ],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
   theme: {
     fontFamily: {
       sans: ['"IBM Plex Sans"', 'sans-serif']

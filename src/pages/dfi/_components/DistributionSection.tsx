@@ -1,27 +1,34 @@
 import classNames from 'classnames'
 import { Container } from '@components/commons/Container'
+import { useTranslation } from 'next-i18next'
 
 export function DistributionSection (): JSX.Element {
+  const { t } = useTranslation(['dfi'])
+
   return (
     <section className='py-20'>
       <Container>
         <div className='flex flex-col w-full md:w-1/3 lg:w-1/2 mb-16 space-y-10'>
-          <h1 className='font-medium text-2xl md:text-5xl' data-testid='DistributionSection.Heading'>Initial Token Distribution</h1>
+          <h1
+            className='font-medium text-2xl md:text-5xl'
+            data-testid='DistributionSection.Heading'
+          >{t('DistributionSection.title')}
+          </h1>
           <div className='text-xl md:text-2xl' data-testid='DistributionSection.Text'>
-            Of the 1.2 billion $DFI coins, 49% will be in the initial supply, with the rest issued to masternode holders over time.
+            {t('DistributionSection.desc')}
           </div>
         </div>
         <div className='mx-auto w-full md:w-3/5 space-y-16' data-testid='DistributionSection.Chart'>
           <Chart
-            labelA='Initial supply'
-            labelB='To masternodes over time'
+            labelA={t('DistributionSection.chart.InitialSupply')}
+            labelB={t('DistributionSection.chart.ToMasternodes')}
           />
           <div>
-            Of the initial supply, 49% will be kept by the DeFiChain Foundation. The rest may be distributed to external partners, to fund the initial development.
+            {t('DistributionSection.chart.desc')}
           </div>
           <Chart
-            labelA='DeFiChain Foundation'
-            labelB='External partners'
+            labelA={t('DistributionSection.chart.DeFiChaiFoundation')}
+            labelB={t('DistributionSection.chart.ExternalPartners')}
             fill
           />
         </div>
@@ -30,7 +37,7 @@ export function DistributionSection (): JSX.Element {
   )
 }
 
-function Chart (props: {fill?: boolean, labelA: string, labelB: string}): JSX.Element {
+function Chart (props: { fill?: boolean, labelA: string, labelB: string }): JSX.Element {
   return (
     <>
       <div className='w-full h-[32px] relative'>
@@ -50,10 +57,14 @@ function Chart (props: {fill?: boolean, labelA: string, labelB: string}): JSX.El
         </div>
       </div>
       <div className={classNames('w-full h-[69px] relative leading-[2.4rem]', { 'divide-x': props.fill })}>
-        <div className='w-[49%] h-full absolute left-0 flex items-center justify-center rounded-tl rounded-bl bg-primary-500 text-white'>
+        <div
+          className='w-[49%] h-full absolute left-0 flex items-center justify-center rounded-tl rounded-bl bg-primary-500 text-white'
+        >
           {props.labelA}
         </div>
-        <div className={classNames('w-[51%] h-full left-[49%] absolute flex justify-center items-center rounded-bl rounded-br ', props.fill !== undefined ? 'bg-primary-500 text-white' : 'bg-gray-200 text-black ')}>
+        <div
+          className={classNames('w-[51%] h-full left-[49%] absolute flex justify-center items-center rounded-bl rounded-br ', props.fill !== undefined ? 'bg-primary-500 text-white' : 'bg-gray-200 text-black ')}
+        >
           {props.labelB}
         </div>
       </div>

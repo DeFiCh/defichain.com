@@ -1,6 +1,6 @@
 ---
 title: 运作递飞链主节点
-description: 入门Linux/Mac OS运作递飞链主节点。
+description: 入门Linux/macOS运作递飞链主节点。
 ---
 
 ## 简介
@@ -142,7 +142,7 @@ masternode_operator=OPERATOR_ADDRESS
 
 在程序钱包内可以直接设置主节点。请先点选主节点侧栏，接着按右上角的「创建＋」。这过程是自动化和无缝接轨的。
 
-![Masternode1](https://user-images.githubusercontent.com/3271586/112108417-2472a280-8beb-11eb-91f1-896904d46a85.png)
+![Masternode1](/img/guides/run-a-masternode/masternode.png)
 
 ## 同时在同个电脑上运作多个主节点
 

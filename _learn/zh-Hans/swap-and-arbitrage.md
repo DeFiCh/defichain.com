@@ -22,33 +22,33 @@ description: A step-by-step guide to swapping and arbitraging on the DEX
 
 启动递飞链程序后，请按侧边拦的 **钱包** 选项。先确认您有没有足够的DFI，交易中必要用的。若还没购买DFI，请查看[入门购买DFI](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)。
 
-<img src="/img/guides/installing-defi-app/wallets-choose.png" srcset="/img/guides/installing-defi-app/wallets-choose.png 1x, /img/guides/installing-defi-app/wallets-choose@2x.png 2x">
+![](/img/guides/installing-defi-app/wallets-choose.png)
 
 ### 步骤三: 进入去中心化交易所
 
 按侧栏中的 **DEX**。
 
-<img src="/img/guides/obtaining-tokens/go-to-dex.png" srcset="/img/guides/obtaining-tokens/go-to-dex.png 1x, /img/guides/obtaining-tokens/go-to-dex@2x.png 2x">
+![](/img/guides/obtaining-tokens/go-to-dex.png)
 
 ### 步骤四: 进行交换
 
 DEX(去中心化交易所)为您提共代币交换。请在左侧 **「From」** 按DFI。
 
-<img src="/img/guides/obtaining-tokens/dex-from.png" srcset="/img/guides/obtaining-tokens/dex-from.png 1x, /img/guides/obtaining-tokens/dex-from@2x.png 2x">
+![](/img/guides/obtaining-tokens/dex-from.png)
 
 请在右侧 **「到」** 按您想交换的代币。
 
-<img src="/img/guides/obtaining-tokens/dex-to.png" srcset="/img/guides/obtaining-tokens/dex-to.png 1x, /img/guides/obtaining-tokens/dex-to@2x.png 2x">
+![](/img/guides/obtaining-tokens/dex-to.png)
 
 您可以在 **「到」** 中指定DFI想卖的数量，或在 **「到」** 中指定要购买其他代币的数量。您也可以点 **MAX** 按钮输入最大DFI数量。
 
 按 **「继续」** 进下一步。
 
-<img src="/img/guides/obtaining-tokens/ready-to-swap.png" srcset="/img/guides/obtaining-tokens/ready-to-swap.png 1x, /img/guides/obtaining-tokens/ready-to-swap@2x.png 2x">
+![](/img/guides/obtaining-tokens/ready-to-swap.png)
 
 再次确认交换数量和费用后，请按 **「Swap」** 进行交换。
 
-<img src="/img/guides/obtaining-tokens/dex-verify.png" srcset="/img/guides/obtaining-tokens/dex-verify.png 1x, /img/guides/obtaining-tokens/dex-verify@2x.png 2x">
+![](/img/guides/obtaining-tokens/dex-verify.png)
 
 ---
 
@@ -64,10 +64,10 @@ DEX(去中心化交易所)为您提共代币交换。请在左侧 **「From」**
 
 先在Bittrex上购买一个BTC = `38,587.61607637 DFI`。
 
-<img src="/img/guides/arbitrage/arbitrage-cex.png" srcset="/img/guides/arbitrage/arbitrage-cex.png 1x, /img/guides/arbitrage/arbitrage-cex@2x.png 2x">
+![](/img/guides/arbitrage/arbitrage-cex.png)
 
 接着在DEX上卖掉 `1 BTC = 39,355.98845598 DFI` 您的利润是 `768.37237961 DFI` 也就是当天套利约2%。 当价格差的越多，套利的利润就越大。
 
-<img src="/img/guides/arbitrage/arbitrage1.png" srcset="/img/guides/arbitrage/arbitrage1.png 1x, /img/guides/arbitrage/arbitrage1@2x.png 2x">
+![](/img/guides/arbitrage/arbitrage1.png)
 
 [按下载递飞链桌面版程序](/downloads)，适用于Windows，macOS和Linux。您也可成为套利者。

@@ -13,6 +13,7 @@ export function RoadmapSection (): JSX.Element {
   return (
     <section className='bg-gray-50 py-20'>
       <Container>
+        <h1 className='text-5xl font-semibold my-10'>Roadmap</h1>
         <TimeLine2022 />
         <TimeLine2021 />
         <TimeLineFuture />
@@ -61,10 +62,10 @@ export function TimeLineContainer (props: PropsWithChildren<{testid: string, tim
     ]
   }
   return (
-    <div data-testid={props.testid} className='py-28'>
+    <div data-testid={props.testid} className='py-5 md:py-10'>
       <div className='my-12'>
-        <span className='mr-4 font-medium text-xl'>{props.timeline}</span>
-        {props.label !== undefined ?? <span>{props.label}</span>}
+        <span className='mr-2 font-medium text-2xl'>{props.timeline}</span>
+        <span className='text-gray-500 font-medium'>{props.label}</span>
       </div>
       <Slider {...settings}>
         {props.children}

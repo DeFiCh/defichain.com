@@ -114,7 +114,7 @@ function Card (props: Cardprops): JSX.Element {
   )
 }
 
-function PrevArrow (props: any): JSX.Element {
+export function PrevArrow (props: any): JSX.Element {
   return (
     <button className={classNames(props.className, '-top-[60px] sm:-top-[100px] left-[50%] md:left-[70%]')} style={props.style} onClick={props.onClick}>
       <BsChevronLeft fontSize={40} fill='fill-black' />
@@ -122,7 +122,7 @@ function PrevArrow (props: any): JSX.Element {
   )
 }
 
-function NextArrow (props: any): JSX.Element {
+export function NextArrow (props: any): JSX.Element {
   return (
     <button className={classNames(props.className, '-top-[60px] sm:-top-[100px] right-[20%]')} style={props.style} onClick={props.onClick}>
       <BsChevronRight fontSize={40} fill='fill-black' />

@@ -4,6 +4,7 @@ import { HomePageHeader } from '@components/home/HomePageHeader'
 import { CardSection } from '@components/home/CardSection'
 import { ComparisonSection } from '@components/home/ComparisonSection'
 import { BenefitSection } from '@components/home/BenefitSection'
+import { RoadmapSection } from '@components/home/RoadmapSection'
 
 export default function HomePage (): JSX.Element {
   return (
@@ -12,6 +13,7 @@ export default function HomePage (): JSX.Element {
       <CardSection />
       <ComparisonSection />
       <BenefitSection />
+      <RoadmapSection />
     </>
   )
 }

@@ -20,13 +20,13 @@ description: A step-by-step guide to using and installing the DeFiChain app.
 
 下載後請打開 **DeFi-Wallet-<version>.dmg**。在訪達窗口中，將左側的DeFi Wallet拉到右側的程序目錄。
 
-<p><img src="/img/guides/installing-defi-app/drag-to-install.png" srcset="/img/guides/installing-defi-app/drag-to-install.png 1x, /img/guides/installing-defi-app/drag-to-install@2x.png 2x"></p>
+![](/img/guides/installing-defi-app/drag-to-install.png)
 
 ### 步驟二：打開應用程序時處理macOS安全提示
 
 當您第一次打開遞飛鏈程序，窗口會顯示安全提示，確認後他會關閉。
 
-<p><img src="/img/guides/installing-defi-app/macos-security-prompt.png" srcset="/img/guides/installing-defi-app/macos-security-prompt.png 1x, /img/guides/installing-defi-app/macos-security-prompt@2x.png 2x"></p>
+![](/img/guides/installing-defi-app/macos-security-prompt.png)
 
 \**早期版本會顯示安全提示。未來版本會加蘋果代碼簽名，就不會有安全提示。*
 
@@ -36,15 +36,15 @@ description: A step-by-step guide to using and installing the DeFiChain app.
 
 到**系統偏**好設定內選**安全性與隱私**。
 
-<p><img src="/img/guides/installing-defi-app/system-preferences.png" srcset="/img/guides/installing-defi-app/system-preferences.png 1x, /img/guides/installing-defi-app/system-preferences@2x.png 2x"></p>
+![](/img/guides/installing-defi-app/system-preferences.png)
 
 允許並打開**程序**。
 
-<p><img src="/img/guides/installing-defi-app/open-anyway-a.png" srcset="/img/guides/installing-defi-app/open-anyway-a.png 1x, /img/guides/installing-defi-app/open-anyway-a@2x.png 2x"></p>
+![](/img/guides/installing-defi-app/open-anyway-a.png)
 
 請確認**開啓**。
 
-<p><img src="/img/guides/installing-defi-app/open-anyway-b.png" srcset="/img/guides/installing-defi-app/open-anyway-b.png 1x, /img/guides/installing-defi-app/open-anyway-b@2x.png 2x"></p>
+![](/img/guides/installing-defi-app/open-anyway-b.png)
 
 遞飛鏈程序安裝後會自動打開。
 
@@ -60,13 +60,13 @@ description: A step-by-step guide to using and installing the DeFiChain app.
 
 \**微軟Windows SmartScreen可能會標記尚未建立足夠長的曆史記錄的新上載的文件。*
 
-![Image](https://i.imgur.com/CUmfPMS.png)
+![](/img/guides/installing-defi-app/CUmfPMS.png)
 
 ### 步驟三: 繞過微軟安全提示
 
 點選**進行**。
 
-![Image](https://i.imgur.com/S7SFwms.png)
+![](/img/guides/installing-defi-app/S7SFwms.png)
 
 安裝完成後，遞飛鏈程序將自動啓動。
 
@@ -74,7 +74,7 @@ description: A step-by-step guide to using and installing the DeFiChain app.
 
 請確認下載文件啓用了**允許將程序作為程序執行文件**選項。
 
-![Image](https://i.imgur.com/TU3ggCU.png)
+![](/img/guides/installing-defi-app/TU3ggCU.png)
 
 您現在可運用遞飛鏈程序。
 
@@ -109,7 +109,7 @@ sudo dpkg -i PATH_TO_DEB_FILE
 
 ### 錢包介面
 
-<p><img src="/img/guides/installing-defi-app/wallets.png" srcset="/img/guides/installing-defi-app/wallets.png 1x, /img/guides/installing-defi-app/wallets@2x.png 2x"></p>
+![](/img/guides/installing-defi-app/wallets.png)
 
 #### 側邊攔主導覽
 
@@ -130,7 +130,7 @@ sudo dpkg -i PATH_TO_DEB_FILE
 
 切換到**錢包**標簽頁，選您要的錢包(如: DFI)
 
-<p><img src="/img/guides/installing-defi-app/wallets-choose.png" srcset="/img/guides/installing-defi-app/wallets-choose.png 1x, /img/guides/installing-defi-app/wallets-choose@2x.png 2x"></p>
+![](/img/guides/installing-defi-app/wallets-choose.png)
 
 ### 發送資金
 
@@ -138,29 +138,29 @@ sudo dpkg -i PATH_TO_DEB_FILE
 
 在錢包內點選**發送**。
 
-<p><img src="/img/guides/installing-defi-app/wallet-send.png" srcset="/img/guides/installing-defi-app/wallet-send.png 1x, /img/guides/installing-defi-app/wallet-send@2x.png 2x"></p>
+![](/img/guides/installing-defi-app/wallet-send.png)
 
 #### 步驟二
 
 輸入**金額**和**發送地址**。您也可掃一掃地址欄中的掃描選項。輸入好之後請按**繼續**。
 
-<p><img src="/img/guides/installing-defi-app/wallet-send1.png" srcset="/img/guides/installing-defi-app/wallet-send1.png 1x, /img/guides/installing-defi-app/wallet-send1@2x.png 2x"></p>
+![](/img/guides/installing-defi-app/wallet-send1.png)
 
 #### 步驟三
 
 再次確認**金額**和**收方地址**正確無誤。確認**發送按鈕**禁用幾秒鍾，以防止錯誤發送。
 
-<p><img src="/img/guides/installing-defi-app/wallet-send2.png" srcset="/img/guides/installing-defi-app/wallet-send2.png 1x, /img/guides/installing-defi-app/wallet-send2@2x.png 2x"></p>
+![](/img/guides/installing-defi-app/wallet-send2.png)
 
 點選**確認發送**。
 
-<p><img src="/img/guides/installing-defi-app/wallet-send3.png" srcset="/img/guides/installing-defi-app/wallet-send3.png 1x, /img/guides/installing-defi-app/wallet-send3@2x.png 2x"></p>
+![](/img/guides/installing-defi-app/wallet-send3.png)
 
 #### 步驟四
 
 交易完成後，請按**返回錢包**。
 
-<p><img src="/img/guides/installing-defi-app/wallet-send4.png" srcset="/img/guides/installing-defi-app/wallet-send4.png 1x, /img/guides/installing-defi-app/wallet-send4@2x.png 2x"></p>
+![](/img/guides/installing-defi-app/wallet-send4.png)
 
 您可在錢包內的**交易列表**中看到最新交易。
 
@@ -172,28 +172,28 @@ sudo dpkg -i PATH_TO_DEB_FILE
 
 錢包選好後請按**接收**。
 
-<img src="/img/guides/installing-defi-app/wallet-receive.png" srcset="/img/guides/installing-defi-app/wallet-receive.png 1x, /img/guides/installing-defi-app/wallet-receive@2x.png 2x">
+![](/img/guides/installing-defi-app/wallet-receive.png)
 
 接著請按**新地址**來創建新的接收地址。
 
-<img src="/img/guides/installing-defi-app/wallet-receive1.png" srcset="/img/guides/installing-defi-app/wallet-receive1.png 1x, /img/guides/installing-defi-app/wallet-receive1@2x.png 2x">
+![](/img/guides/installing-defi-app/wallet-receive1.png)
 
 #### 步驟二
 
 填進您的資訊，並給您的新地址貼上個名稱。接著請按**創建**。
 
-<img src="/img/guides/installing-defi-app/wallet-receive2.png" srcset="/img/guides/installing-defi-app/wallet-receive2.png 1x, /img/guides/installing-defi-app/wallet-receive2@2x.png 2x">
+![](/img/guides/installing-defi-app/wallet-receive2.png)
 
 #### 步驟三
 
 您剛剛創建的新地址將出現在您的接收地址列表中。
 
-<img src="/img/guides/installing-defi-app/wallet-receive3.png" srcset="/img/guides/installing-defi-app/wallet-receive3.png 1x, /img/guides/installing-defi-app/wallet-receive3@2x.png 2x">
+![](/img/guides/installing-defi-app/wallet-receive3.png)
 
 按**二維條碼**顯示地址二維條碼。
 
-<img src="/img/guides/installing-defi-app/wallet-receive4.png" srcset="/img/guides/installing-defi-app/wallet-receive4.png 1x, /img/guides/installing-defi-app/wallet-receive4@2x.png 2x">
+![](/img/guides/installing-defi-app/wallet-receive4.png)
 
 按**複制地址**將地址複制到系統剪貼版。
 
-<img src="/img/guides/installing-defi-app/wallet-receive5.png" srcset="/img/guides/installing-defi-app/wallet-receive5.png 1x, /img/guides/installing-defi-app/wallet-receive5@2x.png 2x">
+![](/img/guides/installing-defi-app/wallet-receive5.png)

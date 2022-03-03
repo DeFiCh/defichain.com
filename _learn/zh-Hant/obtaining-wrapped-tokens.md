@@ -19,33 +19,33 @@ description: A step-by-step guide to obtaining wrapped BTC/ETH/USDT via the DEX 
 
 打開遞飛鏈程序後，請按側邊欄中的 **「錢包」** 。確任您的錢包中有足夠的DFI做交易。如果您還需要DFI，您可以查看[購買DFI入門指南。](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)
 
-<img src="/img/guides/installing-defi-app/wallets-choose.png" srcset="/img/guides/installing-defi-app/wallets-choose.png 1x, /img/guides/installing-defi-app/wallets-choose@2x.png 2x">
+![](/img/guides/installing-defi-app/wallets-choose.png)
 
 ### 步驟三: 進入DEX（去中心化交易所）
 
 請按側邊欄中的 **DEX** 。
 
-<img src="/img/guides/obtaining-tokens/go-to-dex.png" srcset="/img/guides/obtaining-tokens/go-to-dex.png 1x, /img/guides/obtaining-tokens/go-to-dex@2x.png 2x">
+![](/img/guides/obtaining-tokens/go-to-dex.png)
 
 ### 步驟四：進行交換
 
 DEX為您提供替換貨幣的方式。請在左邊 **「從」** 選擇DFI。
 
-<img src="/img/guides/obtaining-tokens/dex-from.png" srcset="/img/guides/obtaining-tokens/dex-from.png 1x, /img/guides/obtaining-tokens/dex-from@2x.png 2x">
+![](/img/guides/obtaining-tokens/dex-from.png)
 
 接著請在 **「到」** 欄選擇您想買的貨幣。
 
-<img src="/img/guides/obtaining-tokens/dex-to.png" srcset="/img/guides/obtaining-tokens/dex-to.png 1x, /img/guides/obtaining-tokens/dex-to@2x.png 2x">
+![](/img/guides/obtaining-tokens/dex-to.png)
 
 您可以在 **「到」** 欄指定DFI或其他貨幣的數量。您也可以按 **「最大」** 按鈕輸入最大數量。
 
 准備好交換時，請按 **「繼續」**。
 
-<img src="/img/guides/obtaining-tokens/ready-to-swap.png" srcset="/img/guides/obtaining-tokens/ready-to-swap.png 1x, /img/guides/obtaining-tokens/ready-to-swap@2x.png 2x">
+![](/img/guides/obtaining-tokens/ready-to-swap.png)
 
 審核交易金額和費用。然後請按 **「交換」** 確認交換。
 
-<img src="/img/guides/obtaining-tokens/dex-verify.png" srcset="/img/guides/obtaining-tokens/dex-verify.png 1x, /img/guides/obtaining-tokens/dex-verify@2x.png 2x">
+![](/img/guides/obtaining-tokens/dex-verify.png)
 
 ---
 
@@ -64,7 +64,7 @@ _注意：如果您注冊一個新帳戶，您需要完成身份驗證（KYC）�
 1. 從其他錢包將ETH、BTC或USDT存入CakeDeFi
 2. 用現金購買ETH，BTC或USDT，CakeDeFi平台目前接受信用卡，蘋果支付和銀行轉帳方式 （不同國家有不同購買方式）
 
-<div class="mbg1"><img src="/img/guides/obtaining-tokens/cake-assets.png" srcset="/img/guides/obtaining-tokens/cake-assets.png 1x, /img/guides/obtaining-tokens/cake-assets@2x.png 2x"></div>
+![](/img/guides/obtaining-tokens/cake-assets.png)
 
 ### 步驟三：領出
 
@@ -72,7 +72,7 @@ _注意：如果您注冊一個新帳戶，您需要完成身份驗證（KYC）�
 
 在領出窗口彈出後，選擇DeFi遞飛鏈區塊鏈作為 **「發送網絡」**。在 **「到遞飛鏈地址」** 輸入您的遞飛鏈接收地址。請參閱[遞飛鏈程序接收指南](/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)。
 
-<img src="/img/guides/obtaining-tokens/cake-withdraw.png" srcset="/img/guides/obtaining-tokens/cake-withdraw.png 1x, /img/guides/obtaining-tokens/cake-withdraw@2x.png 2x">
+![](/img/guides/obtaining-tokens/cake-withdraw.png)
 
 輸入您的 **雙重認證碼** 並完成填寫表單的資料，然後按 **「領取」**。
 

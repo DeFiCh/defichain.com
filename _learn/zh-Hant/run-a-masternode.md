@@ -142,7 +142,7 @@ masternode_operator=OPERATOR_ADDRESS
 
 在程序錢包內可以直接設置主節點。請先點選主節點側欄，接著按右上角的「創建＋」。這過程是自動化和無縫接軌的。
 
-![Masternode1](https://user-images.githubusercontent.com/3271586/112108417-2472a280-8beb-11eb-91f1-896904d46a85.png)
+![Masternode1](/img/guides/run-a-masternode/masternode.png)
 
 ## 同時在同個電腦上運作多個主節點
 

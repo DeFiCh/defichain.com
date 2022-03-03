@@ -16,14 +16,14 @@ description: 入門控制台錢包加密技術
 ## 1. 保護你的錢包
 
 1. 請備份在安全的地方備份文件 `wallet.dat`。若有問題出現，這文件對恢複DFI和DST(規格性代幣)非常重要。這文件的路徑通常位于:
-  Linux: `~/.defi/wallets`
-  Mac: `~/Library/Application Support/DeFi/wallets`
-  Windows: `<root>\Users\<username>\AppData\Roaming\DeFi Blockchain\wallets`
-  請記住，這是個 _未加密_ 文件！確保絕對安全！
+   Linux: `~/.defi/wallets`
+   Mac: `~/Library/Application Support/DeFi/wallets`
+   Windows: `<root>\Users\<username>\AppData\Roaming\DeFi Blockchain\wallets`
+   請記住，這是個 _未加密_ 文件！確保絕對安全！
 
 2. 第一次請用長的隨機密碼來保護您的錢包。出于參考本指南將使用以下密碼短語:
-`REPLACE_THIS_WITH_A_LONG_SECURE_PASSPHRASE`
-您可以使用任何隨機密碼生成器，最好是離線密碼生成器。安全地寫下來。
+   `REPLACE_THIS_WITH_A_LONG_SECURE_PASSPHRASE`
+   您可以使用任何隨機密碼生成器，最好是離線密碼生成器。安全地寫下來。
 
 
 3. 在控制台上輸入以下內容來鎖定您的錢包：
@@ -32,11 +32,11 @@ description: 入門控制台錢包加密技術
     encryptwallet REPLACE_THIS_WITH_A_LONG_SECURE_PASSPHRASE
     ```
 
-    這步驟只需要花短短幾秒，您將看到 `wallet encrypted`。這表示您的錢包( `wallet.dat` 文件案)以加密。
+   這步驟只需要花短短幾秒，您將看到 `wallet encrypted`。這表示您的錢包( `wallet.dat` 文件案)以加密。
 
-    在這階段您的程序處在僅查的狀態但能正常運作流動性挖礦。如果您試圖發送DFI或DST，程序會顯示有失誤: `Add-on auth TX failed: Can't sign TX`
+   在這階段您的程序處在僅查的狀態但能正常運作流動性挖礦。如果您試圖發送DFI或DST，程序會顯示有失誤: `Add-on auth TX failed: Can't sign TX`
 
-    這表示您的錢包目前在已加密狀態。駭客在此階段只能觀看您的資産結余，但無法支出到其他地方
+   這表示您的錢包目前在已加密狀態。駭客在此階段只能觀看您的資産結余，但無法支出到其他地方
 
 
 ## 2. 解鎖你的錢包

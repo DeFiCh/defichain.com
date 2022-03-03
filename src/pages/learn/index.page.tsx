@@ -1,14 +1,13 @@
-import {Header} from '@components/commons/Header'
-import {Container} from '@components/commons/Container'
-import {UserConfig, useTranslation} from 'next-i18next'
-import {serverSideTranslations} from 'next-i18next/serverSideTranslations'
-import {PropsWithChildren} from "react";
-import {getAllPosts} from "./utils/api";
-import {HowToCard} from "./_components/HowToCard";
-import {InferGetStaticPropsType} from "next";
-import {Disclosure} from '@headlessui/react'
-import {BsChevronCompactDown} from "react-icons/bs";
-
+import { Header } from '@components/commons/Header'
+import { Container } from '@components/commons/Container'
+import { UserConfig, useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { PropsWithChildren } from 'react'
+import { getAllPosts } from './utils/api'
+import { HowToCard } from './_components/HowToCard'
+import { InferGetStaticPropsType } from 'next'
+import { Disclosure } from '@headlessui/react'
+import { BsChevronCompactDown } from 'react-icons/bs'
 
 interface PostI {
   title: string
@@ -18,13 +17,13 @@ interface PostI {
 
 interface LearnPageProps {
   props: {
-    _nextI18Next: { initialI18nStore: any; initialLocale: string; userConfig: UserConfig | null }
-    posts: Array<PostI>
+    _nextI18Next: { initialI18nStore: any, initialLocale: string, userConfig: UserConfig | null }
+    posts: PostI[]
   }
 }
 
-export default function LearnPage(props: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
-  const {t} = useTranslation(['learn'])
+export default function LearnPage (props: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
+  const { t } = useTranslation(['learn'])
 
   return (
     <>
@@ -36,25 +35,28 @@ export default function LearnPage(props: InferGetStaticPropsType<typeof getStati
         </div>
       </Header>
       <Container>
-        <HowToSection posts={props.posts}/>
-        <FAQSection/>
+        <HowToSection posts={props.posts} />
+        <FAQSection />
       </Container>
     </>
   )
 }
 
-function HowToSection(props: PropsWithChildren<{ posts: Array<PostI> }>): JSX.Element {
+function HowToSection (props: PropsWithChildren<{ posts: PostI[] }>): JSX.Element {
   return (
     <section className='my-16'>
 
-      <h1 className='text-2xl lg:text-3xl font-medium w-full text-center md:text-left mb-5'
-          data-testid='HowToSection'>How To Guides</h1>
+      <h1
+        className='text-2xl lg:text-3xl font-medium w-full text-center md:text-left mb-5'
+        data-testid='HowToSection'
+      >How To Guides
+      </h1>
 
       <div className='flex flex-wrap pb-10 -m-1'>
         {(() => {
           return (
             props.posts.map(post => {
-              return <HowToCard title={post.title} desc={post.description} slug={post.slug}/>
+              return <HowToCard title={post.title} desc={post.description} slug={post.slug} key={post.slug} />
             })
           )
         })()}
@@ -63,20 +65,22 @@ function HowToSection(props: PropsWithChildren<{ posts: Array<PostI> }>): JSX.El
   )
 }
 
-function FAQSection(): JSX.Element {
-  const {t} = useTranslation(['learn'])
-  const entries = t('FAQSection.entries', {returnObjects: true}) as Array<{ title: string, desc: string }>
+function FAQSection (): JSX.Element {
+  const { t } = useTranslation(['learn'])
+  const entries = t('FAQSection.entries', { returnObjects: true })
 
   return (
     <section className='my-16'>
-      <h1 className='text-2xl lg:text-3xl font-medium w-full text-center md:text-left mb-5'
-          data-testid='FAQSection'>FAQ
+      <h1
+        className='text-2xl lg:text-3xl font-medium w-full text-center md:text-left mb-5'
+        data-testid='FAQSection'
+      >FAQ
       </h1>
 
       {
         entries.map(entry => {
           return (
-            <FAQEntry title={entry.title} desc={entry.desc} />
+            <FAQEntry title={entry.title} desc={entry.desc} key={entry.title} />
           )
         })
       }
@@ -84,17 +88,17 @@ function FAQSection(): JSX.Element {
     </section>
   )
 
-  function FAQEntry(props: { title: string, desc: string }): JSX.Element {
+  function FAQEntry (props: { title: string, desc: string }): JSX.Element {
     return (
-      <div key={props.title}>
+      <div>
         <Disclosure>
-          {({open}) => (
+          {({ open }) => (
             <>
-              <Disclosure.Button className="py-4 text-xl lg:text-2xl font-medium flex items-center">
-                <BsChevronCompactDown size={28} className={`${open ? "rotate-180" : ""}`}/>
+              <Disclosure.Button className='py-4 text-xl lg:text-2xl font-medium flex items-center'>
+                <BsChevronCompactDown size={28} className={`${open ? 'rotate-180' : ''}`} />
                 <span className='ml-4'>{props.title}</span>
               </Disclosure.Button>
-              <Disclosure.Panel className="text-gray-500 text-lg mb-10">
+              <Disclosure.Panel className='text-gray-500 text-lg mb-10'>
                 {props.desc}
               </Disclosure.Panel>
             </>
@@ -105,7 +109,7 @@ function FAQSection(): JSX.Element {
   }
 }
 
-export async function getStaticProps({locale}): Promise<LearnPageProps> {
+export async function getStaticProps ({ locale }): Promise<LearnPageProps> {
   const allPosts: PostI[] = getAllPosts(['slug', 'title', 'description'], locale) as PostI[]
 
   return {

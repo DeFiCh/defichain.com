@@ -1,10 +1,8 @@
 {
   "Header": {
     "title": "下载区",
-    "desc": "下载适用于手机, macOS、Windows和Linux的程序"
-  },
-  "HowToSection": {
-    "title": "下载钱包程序和CLI (命令行介面控制台)。"
+    "desc": "下载适用于手机, macOS、Windows和Linux的程序",
+    "sub": "下载钱包程序和CLI (命令行介面控制台)。"
   },
   "LightWallets": {
     "title": "Light Wallets",

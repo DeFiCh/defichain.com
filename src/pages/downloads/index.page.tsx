@@ -24,7 +24,7 @@ export default function DownloadsPage (): JSX.Element {
             className='text-2xl lg:text-3xl font-medium'
             data-testid='DownloadsPage.Heading'
           >
-            Choose your own wallet.
+            {t('Header.sub')}
           </h1>
         </div>
 

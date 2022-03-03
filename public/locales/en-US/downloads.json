@@ -1,10 +1,8 @@
 {
   "Header": {
     "title": "Downloads",
-    "desc": "Download applications for mobile, macOS, Windows and Linux."
-  },
-  "HowToSection": {
-    "title": "Choose your own wallet."
+    "desc": "Download applications for mobile, macOS, Windows and Linux.",
+    "sub": "Choose your own wallet."
   },
   "LightWallets": {
     "title": "Light Wallets",

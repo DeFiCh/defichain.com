@@ -29,6 +29,7 @@
     "slick-carousel": "^1.8.1",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-sanitize": "^5.0.1",
+    "react-markdown": "^8.0.0",
     "rehype-slug": "^5.0.1",
     "remark": "^14.0.2",
     "remark-gfm": "^3.0.1"

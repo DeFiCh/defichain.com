@@ -1,6 +1,6 @@
 ---
 title: Run a masternode
-description: How to run a Defichain masternode on Linux/Mac OS
+description: How to run a DeFiChain masternode on Linux/macOS.
 ---
 
 ## Introduction
@@ -116,7 +116,7 @@ In order to participate in the staking algorithm, you must broadcast to the netw
 
 ```
 ~/.defi/defi-cli createmasternode OWNER_ADDRESS OPERATOR_ADDRESS
-```
+``` 
 
 where `OWNER_ADDRESS` is the address for the collateral/owner node and `OPERATOR_ADDRESS` is the address for the operator. Please note that it costs 10 DFI to run this command.
 
@@ -136,7 +136,7 @@ You may run the command `getmasternodeblocks OPERATOR_ADDRESS` to see how many b
 
 It's easy to set up your masternode through the DeFiChain Desktop Wallet, simply browse to the Masternodes tab and click on "Create +" in the upper right corner of the screen. The process is automated and seamless.
 
-![Masternode1](https://user-images.githubusercontent.com/3271586/112108417-2472a280-8beb-11eb-91f1-896904d46a85.png)
+![Masternode1](/img/guides/run-a-masternode/masternode.png)
 
 ## Running multiple masternodes on the same machine
 

@@ -5,33 +5,33 @@ description: How to encrypt your wallet via the console
 
 **Notice**: Encrypting your wallet via the console will cause your mnemonic phrase to change, do not rely on your mnemonic phrase as a backup if you follow this guide, instead make a backup after enabling encryption using backup files and store them in a secure location.
 
-At the time of this writing, v2.1.4, the app does not yet have a graphical UI built-in to facilitate wallet encryption or locking. This can be a serious risk as your wallets can be compromised by any person or system having access to your `wallet.dat` file at your DeFi folder. 
+At the time of this writing, v2.1.4, the app does not yet have a graphical UI built-in to facilitate wallet encryption or locking. This can be a serious risk as your wallets can be compromised by any person or system having access to your `wallet.dat` file at your DeFi folder.
 
 As DeFiChain node is a fork of Bitcoin Core, it has an inherited wallet encryption that you are able to manage with relative ease.
 
-This guide shows how you can perform the wallet encryption and decryption, also known as wallet locking and unlocking through the Console access available via DeFiChain app. 
+This guide shows how you can perform the wallet encryption and decryption, also known as wallet locking and unlocking through the Console access available via DeFiChain app.
 
-**Disclaimer**: Verify and understand all commands that you are about to enter at Console, especially from untrusted sources. The author of this guide is not responsible for any loss of funds. 
+**Disclaimer**: Verify and understand all commands that you are about to enter at Console, especially from untrusted sources. The author of this guide is not responsible for any loss of funds.
 
 ## 1. Securing your wallet
 
 1. Back up your existing `wallet.dat` somewhere safe. This file is very important to recover your DFI and DeFi Standard Tokens (DSTs) should things go wrong. The file can usually be located at the following paths:
-  `~/.defi/wallets` for Linux
-  `~/Library/Application Support/DeFi/wallets` for Mac
-  `<root>\Users\<username>\AppData\Roaming\DeFi Blockchain\wallets` for Windows
-  Remember that this file is _unencrypted_! Keep it absolutely safe!
+   `~/.defi/wallets` for Linux
+   `~/Library/Application Support/DeFi/wallets` for Mac
+   `<root>\Users\<username>\AppData\Roaming\DeFi Blockchain\wallets` for Windows
+   Remember that this file is _unencrypted_! Keep it absolutely safe!
 
 2. To secure your wallet for the first time, generate a nice long random passphrase. For illustration purposes, this guide will be using the following passphrase `REPLACE_THIS_WITH_A_LONG_SECURE_PASSPHRASE`. You can use any random passphrase generator, ideally offline ones. Write it down securely.
 
-3. Lock your wallet by typing the following at the Console: 
+3. Lock your wallet by typing the following at the Console:
 
     ```
     encryptwallet REPLACE_THIS_WITH_A_LONG_SECURE_PASSPHRASE
     ```
 
-    It should take a few seconds and you should see a message `wallet encrypted`.  At this point onwards, your wallet, i.e. `wallet.dat` file will be encrypted by default. 
+   It should take a few seconds and you should see a message `wallet encrypted`.  At this point onwards, your wallet, i.e. `wallet.dat` file will be encrypted by default.
 
-    Your DeFi App will function as normal for view-only, and your DeFi liquidity mining rewards will be streamining in as usual. Try to send some DFI or DST, you should now be seeing the following message: `Add-on auth TX failed: Can't sign TX`. This shows that your wallet keys are now encrypted. Hacker having access to your wallet at this stage would only be able to view your holdings, but unable to spend it.
+   Your DeFi App will function as normal for view-only, and your DeFi liquidity mining rewards will be streamining in as usual. Try to send some DFI or DST, you should now be seeing the following message: `Add-on auth TX failed: Can't sign TX`. This shows that your wallet keys are now encrypted. Hacker having access to your wallet at this stage would only be able to view your holdings, but unable to spend it.
 
 ## 2. Unlocking your wallet
 

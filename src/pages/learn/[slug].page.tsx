@@ -1,12 +1,13 @@
-import { Container } from '@components/commons/Container'
+import {Container} from '@components/commons/Container'
 import React from 'react'
-import { getAllPosts, getPostBySlug } from './utils/api'
-import { remark } from 'remark'
+import {getAllPosts, getPostBySlug} from './utils/api'
+import {remark} from 'remark'
 import ReactMarkdown from 'react-markdown'
-import { Header } from '@components/commons/Header'
-import remarkMdx from 'remark-mdx'
+import {Header} from '@components/commons/Header'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeSlug from 'rehype-slug'
 
-export default function PostPage ({ post }): JSX.Element {
+export default function PostPage({post}): JSX.Element {
   return (
     <>
       <Header title={post.title}>
@@ -18,21 +19,24 @@ export default function PostPage ({ post }): JSX.Element {
       </Header>
       <Container>
         <article className='prose lg:prose-xl mx-auto py-20'>
-          <ReactMarkdown children={post.content} />
+          <ReactMarkdown children={post.content}/>
         </article>
       </Container>
     </>
   )
 }
 
-export async function getStaticProps ({ params, locale }) {
+export async function getStaticProps({params, locale}) {
   const post = getPostBySlug(params.slug, [
     'title',
     'description',
     'content'
   ], locale)
 
-  const result = await remark().use(remarkMdx).process(post.content || '')
+  const result = await remark()
+    .use(rehypeAutolinkHeadings)
+    .use(rehypeSlug)
+    .process(post.content || '')
 
   return {
     props: {
@@ -44,7 +48,7 @@ export async function getStaticProps ({ params, locale }) {
   }
 }
 
-export async function getStaticPaths (context) {
+export async function getStaticPaths(context) {
   const allPosts = context.locales.map(locale => (
     {
       locale: locale,

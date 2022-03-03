@@ -19,33 +19,33 @@ Don’t have the app installed yet? [Click here for a step-by-step guide on how 
 
 After opening the DeFiChain App, click **Wallets** in the sidebar. Make sure you have funds (DFI) in your wallet, as DFI is needed for transaction fees. If you don't yet have DFI, [here is a step-by-step tutorial on how and where you can buy DFI.](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)
 
-<img src="/img/guides/installing-defi-app/wallets-choose.png" srcset="/img/guides/installing-defi-app/wallets-choose.png 1x, /img/guides/installing-defi-app/wallets-choose@2x.png 2x">
+![](/img/guides/installing-defi-app/wallets-choose.png)
 
 ### Step 3: Navigate to the DEX (Decentralized Exchange)
 
 Click on **DEX** in the sidebar to access the Decentralized Exchange.
 
-<img src="/img/guides/obtaining-tokens/go-to-dex.png" srcset="/img/guides/obtaining-tokens/go-to-dex.png 1x, /img/guides/obtaining-tokens/go-to-dex@2x.png 2x">
+![](/img/guides/obtaining-tokens/go-to-dex.png)
 
 ### Step 4: Perform a swap
 
 The DEX provides a way for you to swap one coin for another. In this case, select DFI in the left **From** field.
 
-<img src="/img/guides/obtaining-tokens/dex-from.png" srcset="/img/guides/obtaining-tokens/dex-from.png 1x, /img/guides/obtaining-tokens/dex-from@2x.png 2x">
+![](/img/guides/obtaining-tokens/dex-from.png)
 
 Then select the coin you want to buy in right **To** field.
 
-<img src="/img/guides/obtaining-tokens/dex-to.png" srcset="/img/guides/obtaining-tokens/dex-to.png 1x, /img/guides/obtaining-tokens/dex-to@2x.png 2x">
+![](/img/guides/obtaining-tokens/dex-to.png)
 
-You can either specify how much you DFI wish to sell in the **To** field, or how much of the other coin you wish to buy, in the **To** field. You can also click the **MAX** button to enter the maximum amount of DFI.
+You can either specify how much you DFI wish to sell in the **From** field, or how much of the other coin you wish to buy, in the **To** field. You can also click the **MAX** button to enter the maximum amount of DFI.
 
 Click **CONTINUE** when you are ready to swap.
 
-<img src="/img/guides/obtaining-tokens/ready-to-swap.png" srcset="/img/guides/obtaining-tokens/ready-to-swap.png 1x, /img/guides/obtaining-tokens/ready-to-swap@2x.png 2x">
+![](/img/guides/obtaining-tokens/ready-to-swap.png)
 
 Review the transaction amounts and fees. Then click **SWAP** to confirm.
 
-<img src="/img/guides/obtaining-tokens/dex-verify.png" srcset="/img/guides/obtaining-tokens/dex-verify.png 1x, /img/guides/obtaining-tokens/dex-verify@2x.png 2x">
+![](/img/guides/obtaining-tokens/dex-verify.png)
 
 ---
 
@@ -64,7 +64,7 @@ From your [CakeDeFi Assets page](https://pool.cakedefi.com/?utm_source=defichain
 1. Deposit ETH, BTC or USDT from an external wallet into CakeDeFi
 2. Buy ETH, BTC or USDT using the fiat on-ramp, which accepts payment methods like credit cards, Apple Pay and transfers, depending on your country
 
-<div class="mbg1"><img src="/img/guides/obtaining-tokens/cake-assets.png" srcset="/img/guides/obtaining-tokens/cake-assets.png 1x, /img/guides/obtaining-tokens/cake-assets@2x.png 2x"></div>
+![](/img/guides/obtaining-tokens/cake-assets.png)
 
 ### Step 3: Withdrawal
 
@@ -72,7 +72,7 @@ Once your ETH, BTC or USDT is in your CakeDeFi Assets, you can withdraw them. Cl
 
 In the withdrawal pop-up, select DeFi Blockchain as the **Transfer Network**. Enter your DeFiChain receive address in the **To DeFi Blockchain address** field. Information on how to get your DeFiChain app receiving address can be found in [this guide](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch).
 
-<img src="/img/guides/obtaining-tokens/cake-withdraw.png" srcset="/img/guides/obtaining-tokens/cake-withdraw.png 1x, /img/guides/obtaining-tokens/cake-withdraw@2x.png 2x">
+![](/img/guides/obtaining-tokens/cake-withdraw.png)
 
 Enter your **two-factor authentication code** and complete the rest of the form, then press **WITHDRAW**.
 

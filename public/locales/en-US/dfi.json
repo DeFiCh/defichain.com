@@ -1,0 +1,69 @@
+{
+  "Header": {
+    "title": "$DFI",
+    "desc": "Learn about and acquire the $DFI coin."
+  },
+  "DFICoinSection": {
+    "title": "$DFI coin",
+    "desc": "The $DFI coin is an integral unit of account in DeFiChain. The DeFiChain Foundation issued roughly 600 million DFI on May 11th, 2020. The current circulating supply (with staking and liquidity mining) is available at",
+    "disclaimer": "Important: DeFi Chain is a community project. There was/is no Initial Coin Offering, only free airdrops."
+  },
+  "CoinUtility": {
+    "title": "$DFI coin utility",
+    "entries": {
+      "Fees": {
+        "title": "Fees",
+        "desc": "Pay for transactions, smart contracts and other DeFi activities."
+      },
+      "LoanCollaterals": {
+        "title": "Loan collaterals",
+        "desc": "Lend or borrow using crypto assets as collateral."
+      },
+      "StakingNodes": {
+        "title": "Staking nodes",
+        "desc": "Fund a new staking node for just 20,000 DFI."
+      },
+      "DeFiCustomToken": {
+        "title": "DeFi Custom Token",
+        "desc": "Create a non-refundable personalised DCT (DeFi Custom Token)."
+      },
+      "BudgetProposal": {
+        "title": "Budget proposal",
+        "desc": "Submit a community budget proposal for 500 DFI (non-refundable)."
+      },
+      "LiquidityPools": {
+        "title": "Liquidity pools",
+        "desc": "Provide liquidity for the decentralized exchange between crypto assets."
+      }
+    }
+  },
+  "DistributionSection": {
+    "title": "Initial Token Distribution",
+    "desc": "Of the 1.2 billion $DFI coins, 49% will be in the initial supply, with the rest issued to masternode holders over time.",
+    "chart": {
+      "InitialSupply": "Initial supply",
+      "ToMasternodes": "To masternodes over time",
+      "DeFiChaiFoundation": "DeFiChain Foundation",
+      "ExternalPartners": "External Partners",
+      "desc": "Of the initial supply, 49% will be kept by the DeFiChain Foundation. The rest may be distributed to external partners, to fund the initial development."
+    }
+  },
+  "ExchangeSection": {
+    "title": "Acquiring $DFI coins",
+    "desc": "$DFI coins will be issued to users and partners with an interest in utilizing and participating in the ecosystem.",
+    "Exchanges": {
+      "title": "Exchanges",
+      "desc": "You can now purchase DFI at these select exchanges, with more exchanges to follow."
+    },
+    "Staking": {
+      "title": "Staking",
+      "desc": "DFI is now available at these select staking platforms."
+    },
+    "Developers": {
+      "title": "Developers",
+      "desc": "The DeFiChain Foundation gives grants to developers building functionality and dApps on DeFiChain.",
+      "email": "For further information, contact us at"
+    }
+  }
+}
+

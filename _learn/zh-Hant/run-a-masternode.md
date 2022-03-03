@@ -1,6 +1,6 @@
 ---
 title: 運作遞飛鏈主節點
-description: 入門Linux/Mac OS運作遞飛鏈主節點。
+description: 入門Linux/macOS運作遞飛鏈主節點。
 ---
 
 ## 簡介

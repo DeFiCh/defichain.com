@@ -16,36 +16,42 @@ export function UtilitySection (): JSX.Element {
           <FeatureCard
             title={t('CoinUtility.entries.Fees.title')}
             desc={t('CoinUtility.entries.Fees.desc')}
+            testid='UtilitySection.Fees'
           >
             <FaPercentage className='fill-primary-500' fontSize={50} />
           </FeatureCard>
           <FeatureCard
             title={t('CoinUtility.entries.LoanCollaterals.title')}
             desc={t('CoinUtility.entries.LoanCollaterals.desc')}
+            testid='UtilitySection.Collateral'
           >
             <RiExchangeDollarLine className='fill-primary-500' fontSize={50} />
           </FeatureCard>
           <FeatureCard
             title={t('CoinUtility.entries.StakingNodes.title')}
             desc={t('CoinUtility.entries.StakingNodes.desc')}
+            testid='UtilitySection.Nodes'
           >
             <FaGlobe className='fill-primary-500' fontSize={50} />
           </FeatureCard>
           <FeatureCard
             title={t('CoinUtility.entries.DeFiCustomToken.title')}
             desc={t('CoinUtility.entries.DeFiCustomToken.desc')}
+            testid='UtilitySection.Token'
           >
             <BsVinylFill className='fill-primary-500' fontSize={50} />
           </FeatureCard>
           <FeatureCard
             title={t('CoinUtility.entries.BudgetProposal.title')}
             desc={t('CoinUtility.entries.BudgetProposal.desc')}
+            testid='UtilitySection.Proposal'
           >
             <RiAuctionFill className='fill-primary-500' fontSize={50} />
           </FeatureCard>
           <FeatureCard
             title={t('CoinUtility.entries.LiquidityPools.title')}
             desc={t('CoinUtility.entries.LiquidityPools.desc')}
+            testid='UtilitySection.Pools'
           >
             <BsPieChartFill className='fill-primary-500' fontSize={50} />
           </FeatureCard>

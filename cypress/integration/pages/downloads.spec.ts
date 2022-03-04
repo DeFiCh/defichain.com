@@ -9,7 +9,7 @@ context('/downloads page on desktop', () => {
 
   it('should have Header', () => {
     cy.findByTestId('Header.title').should('have.text', 'Downloads')
-    cy.findByTestId('Header.desc.main').should('have.text', 'Download applications for mobile, Mac, Windows and Linux.')
+    cy.findByTestId('Header.desc.main').should('have.text', 'Download applications for mobile, macOS, Windows and Linux.')
   })
 
   it('should have page heading', function () {
@@ -17,14 +17,17 @@ context('/downloads page on desktop', () => {
     cy.findByTestId('DownloadsPage.Heading').should('be.visible')
   })
 
-  it('should have page section', function () {
-    cy.findByTestId('DownloadsPage.Dfi').should('be.visible')
-    cy.findByTestId('DownloadsPage.DesktopWallet').should('be.visible')
-    cy.findByTestId('DownloadsPage.Dfx').should('be.visible')
-    cy.findByTestId('DownloadsPage.SaiiveDesktop').should('be.visible')
-    cy.findByTestId('DownloadsPage.SaiiveMobile').should('be.visible')
-    cy.findByTestId('DownloadsPage.DfiNode').should('be.visible')
-    cy.findByTestId('DownloadsPage.Cli').should('be.visible')
+  it('should have Light Wallets', function () {
+    cy.findByTestId('LightWallets.Dfc').should('be.visible')
+    cy.findByTestId('LightWallets.Dfx').should('be.visible')
+    cy.findByTestId('LightWallets.Saiive').should('be.visible')
+  })
+
+  it('should have Fullnode wallets', function () {
+    cy.findByTestId('FullNodeWallets.Dfc').should('be.visible')
+    cy.findByTestId('FullNodeWallets.Rpi').should('be.visible')
+    cy.findByTestId('FullNodeWallets.Cli').should('be.visible')
+    cy.findByTestId('FullNodeWallets.Saiive').should('be.visible')
   })
 })
 
@@ -39,7 +42,7 @@ context('/downloads page on mobile', () => {
 
   it('should have Header', () => {
     cy.findByTestId('Header.title').should('have.text', 'Downloads')
-    cy.findByTestId('Header.desc.main').should('have.text', 'Download applications for mobile, Mac, Windows and Linux.')
+    cy.findByTestId('Header.desc.main').should('have.text', 'Download applications for mobile, macOS, Windows and Linux.')
   })
 
   it('should have page heading', function () {
@@ -47,13 +50,16 @@ context('/downloads page on mobile', () => {
     cy.findByTestId('DownloadsPage.Heading').should('be.visible')
   })
 
-  it('should have page section', function () {
-    cy.findByTestId('DownloadsPage.Dfi').should('be.visible')
-    cy.findByTestId('DownloadsPage.DesktopWallet').should('be.visible')
-    cy.findByTestId('DownloadsPage.Dfx').should('be.visible')
-    cy.findByTestId('DownloadsPage.SaiiveDesktop').should('be.visible')
-    cy.findByTestId('DownloadsPage.SaiiveMobile').should('be.visible')
-    cy.findByTestId('DownloadsPage.DfiNode').should('be.visible')
-    cy.findByTestId('DownloadsPage.Cli').should('be.visible')
+  it('should have Light Wallets', function () {
+    cy.findByTestId('LightWallets.Dfc').should('be.visible')
+    cy.findByTestId('LightWallets.Dfx').should('be.visible')
+    cy.findByTestId('LightWallets.Saiive').should('be.visible')
+  })
+
+  it('should have Fullnode wallets', function () {
+    cy.findByTestId('FullNodeWallets.Dfc').should('be.visible')
+    cy.findByTestId('FullNodeWallets.Rpi').should('be.visible')
+    cy.findByTestId('FullNodeWallets.Cli').should('be.visible')
+    cy.findByTestId('FullNodeWallets.Saiive').should('be.visible')
   })
 })

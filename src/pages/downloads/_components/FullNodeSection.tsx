@@ -14,6 +14,7 @@ export function FullNodeSection (): JSX.Element {
           title={t('FullNodeWallets.entries.DFC.title')}
           desc={t('FullNodeWallets.entries.DFC.desc')}
           imageSrc='/assets/img/downloads/dfiwallet.png'
+          testid='FullNodeWallets.Dfc'
         >
           <div className='flex flex-wrap items-center space-x-4 text-lg font-medium'>
             <ExternalLink
@@ -35,6 +36,8 @@ export function FullNodeSection (): JSX.Element {
           title={t('FullNodeWallets.entries.saiive.title')}
           desc={t('FullNodeWallets.entries.saiive.desc')}
           imageSrc='/assets/img/downloads/saiive.png'
+          testid='FullNodeWallets.Saiive'
+
         >
           <div className='flex items-center space-x-4 text-lg font-medium'>
             <ExternalLink
@@ -56,6 +59,7 @@ export function FullNodeSection (): JSX.Element {
           title={t('FullNodeWallets.entries.RPI.title')}
           desc={t('FullNodeWallets.entries.RPI.desc')}
           imageSrc='/assets/img/downloads/dfinode.png'
+          testid='FullNodeWallets.Rpi'
         >
           <div className='flex items-center text-lg font-medium'>
             <ExternalLink
@@ -69,6 +73,7 @@ export function FullNodeSection (): JSX.Element {
           title={t('FullNodeWallets.entries.CLI.title')}
           desc={t('FullNodeWallets.entries.CLI.desc')}
           imageSrc={<BsFillTerminalFill fontSize={50} className='fill-primary-500' />}
+          testid='FullNodeWallets.Cli'
         >
           <div className='flex items-center space-x-2 text-lg font-medium'>
             <ExternalLink

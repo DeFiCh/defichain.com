@@ -14,6 +14,7 @@ export function LightWalletSection (): JSX.Element {
           title={t('LightWallets.entries.DFC.title')}
           desc={t('LightWallets.entries.DFC.desc')}
           imageSrc='/assets/img/downloads/dfi.png'
+          testid='LightWallets.Dfc'
         >
           <div className='flex items-center space-x-5'>
             <AppStoreDownload url='https://apps.apple.com/us/app/defichain-wallet/id1572472820' />
@@ -25,6 +26,7 @@ export function LightWalletSection (): JSX.Element {
           title={t('LightWallets.entries.saiive.title')}
           desc={t('LightWallets.entries.saiive.desc')}
           imageSrc='/assets/img/downloads/saiive.png'
+          testid='LightWallets.Saiive'
         >
           <div className='flex items-center space-x-5'>
             <AppStoreDownload url='https://apps.apple.com/app/saiive-live-defi-wallet/id1588945201' />
@@ -36,6 +38,7 @@ export function LightWalletSection (): JSX.Element {
           title={t('LightWallets.entries.DFX.title')}
           desc={t('LightWallets.entries.DFX.desc')}
           imageSrc='/assets/img/downloads/dfxpng.png'
+          testid='LightWallets.Dfx'
         >
           <div className='flex items-center space-x-5'>
             <AppStoreDownload url='https://apps.apple.com/app/id1582633093' />

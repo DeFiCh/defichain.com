@@ -1,6 +1,12 @@
 import classNames from 'classnames'
 import Slider from 'react-slick'
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
+import { ExternalLink } from '../../components/commons/link/ExternalLink'
+import Link from 'next/link'
+import {
+  CSSProperties,
+  ReactEventHandler
+} from 'react'
 
 export function CardSection (): JSX.Element {
   const settings = {
@@ -46,43 +52,35 @@ export function CardSection (): JSX.Element {
           subtitle='Decentralized Assets'
           desc='Access decentralized assets with collateral in your vault.'
           testId='CardSection.LatestFeature'
-          url='/'
+          url='https://blog.defichain.com/what-are-decentralised-stock-tokens-and-how-do-they-work/'
           buttonText='Learn more'
+          external
         />
         <Card
           title='featured download'
           subtitle='DefiChain Wallet'
           desc='Experience DeFiChain with wallet apps built for both desktop and mobile.'
           testId='CardSection.Downloads'
-          url='/'
+          url='/downloads'
           buttonText='Go to downloads'
         />
         <Card
           title='how-to guide'
           subtitle='Buy $DFI'
           desc='Learn about and acquire the $DFI coin from various crypto exchanges.'
-          testId='CardSection.HowTo'
-          url='/'
+          testId='CardSection.Dfi'
+          url='https://blog.defichain.com/where-and-how-to-buy-dfi-defichain/'
           buttonText='Learn more'
-          fill
+          external
         />
         <Card
-          title='how-to guide'
-          subtitle='Buy $DFI'
-          desc='Learn about and acquire the $DFI coin from various crypto exchanges.'
-          testId='CardSection.HowTo'
-          url='/'
+          title='Ecosystem'
+          subtitle='Explore community projects'
+          desc='Comprehensive list of all things DeFiChain'
+          testId='CardSection.Ecosystem'
+          url='https://defilinks.io/'
           buttonText='Learn more'
-          fill
-        />
-        <Card
-          title='how-to guide'
-          subtitle='Buy $DFI'
-          desc='Learn about and acquire the $DFI coin from various crypto exchanges.'
-          testId='CardSection.HowTo'
-          url='/'
-          buttonText='Learn more'
-          fill
+          external
         />
       </Slider>
     </section>
@@ -92,11 +90,11 @@ export function CardSection (): JSX.Element {
 interface Cardprops {
   title: string
   desc: string
-  fill?: boolean
   url: string
   subtitle: string
   testId: string
   buttonText: string
+  external?: boolean
 }
 
 function Card (props: Cardprops): JSX.Element {
@@ -106,15 +104,28 @@ function Card (props: Cardprops): JSX.Element {
         <div className='uppercase text-sm text-gray-400'>{props.title}</div>
         <div className='text-2xl font-medium'>{props.subtitle}</div>
       </div>
-      <div className='mt-10'>
+      <div className='mt-10 text-xl font-light'>
         {props.desc}
       </div>
-      <a className={classNames('inline-flex shadow rounded justify-center mt-auto max-w-fit py-3 px-5 rounded', props.fill !== undefined ? 'text-primary-500 border-2 border-primary-500' : 'bg-primary-500 text-white')} href={props.url}>{props.buttonText}</a>
+      {props.external !== undefined ? (
+        <ExternalLink className='text-primary-500 border-2 border-primary-500 inline-flex shadow rounded justify-center mt-auto max-w-fit py-3 px-5 rounded' url={props.url} text={props.buttonText} />
+      ) : (
+        <Link href={{ pathname: props.url }} passHref>
+          <a className='text-primary-500 border-2 border-primary-500 inline-flex shadow rounded justify-center mt-auto max-w-fit py-3 px-5 rounded'>
+            {props.buttonText}
+          </a>
+        </Link>
+      )}
     </div>
   )
 }
 
-export function PrevArrow (props: any): JSX.Element {
+/**
+ * Note: Custom Arrow for Slick Slider
+ * All the defined props are required by slick slider  custom arrows to work.
+ */
+
+export function PrevArrow (props: {className?: string, onClick?: ReactEventHandler, style?: CSSProperties}): JSX.Element {
   return (
     <button className={classNames(props.className, '-top-[60px] sm:-top-[100px] left-[50%] md:left-[70%]')} style={props.style} onClick={props.onClick}>
       <BsChevronLeft fontSize={40} fill='fill-black' />
@@ -122,7 +133,7 @@ export function PrevArrow (props: any): JSX.Element {
   )
 }
 
-export function NextArrow (props: any): JSX.Element {
+export function NextArrow (props: {className?: string, onClick?: ReactEventHandler, style?: CSSProperties}): JSX.Element {
   return (
     <button className={classNames(props.className, '-top-[60px] sm:-top-[100px] right-[20%]')} style={props.style} onClick={props.onClick}>
       <BsChevronRight fontSize={40} fill='fill-black' />

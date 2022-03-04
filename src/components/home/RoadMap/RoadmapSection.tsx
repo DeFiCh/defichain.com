@@ -35,6 +35,13 @@ export function TimeLineContainer (props: PropsWithChildren<{testid: string, tim
     nextArrow: <NextArrow />,
     responsive: [
       {
+        breakpoint: 1500,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1
+        }
+      },
+      {
         breakpoint: 1180,
         settings: {
           slidesToShow: 3,

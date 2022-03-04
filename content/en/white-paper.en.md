@@ -386,7 +386,7 @@ The following table compares Bitcoin and its forks, as well as Ethereum, to DeFi
         <td>220</td>
         <td>500</td>
         <td>4,561.45</td>
-        <td>20,07.04</td>
+        <td>2,007.04</td>
         <td>7.6</td>
         <td>3.35</td>
       </tr>
@@ -486,7 +486,7 @@ DeFiChain utilizes a Proof-of-Stake (PoS) algorithm similar to Bitcoin Core’s 
 
 #### Masternodes for Staking
 
-To run a masternode (staking node), stakers must hold a fixed amount of DFI, initially set at 20,000. Masternodes on DeFiChain participate in active transaction validations and block creations. The staking amount is intended to be lowered with the stability and maturity of blockchain to encourage further decentralization.
+To run a masternode (staking node), stakers must hold a fixed amount of 20,000 DFI. Masternodes on DeFiChain participate in active transaction validations and block creations. The staking amount is intended to be lowered with the stability and maturity of blockchain to encourage further decentralization.
 
 Each staking node can perform only 1 hash per second, with the nonce from Bitcoin Core PoW algorithm replaced by a staker’s masternode ID.
 A new block is mined if it satisfies the following condition:
@@ -523,7 +523,7 @@ During a block’s generation, a staker has the right to include the double-sign
 
 To be able to apply a penalty to stakers who double-sign, DeFiChain has to disallow immediate withdrawing of stake. Thus, when a deactivation transaction is confirmed, DeFiChain requires 3000 blocks to pass. At a block time of 30 seconds, 3000 blocks is equivalent to 25 hours.
 
-The double-sign penalty is 10 times the block rewards, deducted from the collateral. This also disqualifies the stakers from further staking immediately. The staker wanting to get back to staking has to re-put in fresh stake UTXO of 1,000,000 DFI. Running the official DeFiChain node does not cause any unintentional or accidental double-sign. Double-sign happens only in cases of malicious intent.
+The double-sign penalty is 10 times the block rewards, deducted from the collateral. This also disqualifies the stakers from further staking immediately. The staker who wants to get back to staking has to deposit a fresh stake UTXO of 20,000 DFI. Running the official DeFiChain node does not cause any unintentional or accidental double-sign. Double-sign happens only in cases of malicious intent.
 
 #### Time Drift Attack
 
@@ -595,7 +595,7 @@ There are two approaches to this:
 
 1. Stablecoin approach
     - For every single issued 1 DBTC, 1 BTC has to be locked up in an address or a smart contract. 
-    - While this would help to build a guarantee to DBTC, it introduces some other issues – country-party risks and affect the decentralized nature of DeFi. 
+    - While this would help to build a guarantee to DBTC, it introduces some other issues – counterparty risks and affect the decentralized nature of DeFi. 
 
 2. Economic pegging
     - By providing a strong guarantee that the DAT representing an asset has its price closely tracking the native asset, i.e. by holding DBTC, one can have a good confidence that the value of DBTC will track that of BTC.
@@ -743,7 +743,7 @@ Thus Alice can obtain a compounded long position on DFI without putting in extra
 
 1. Charlie has DFI, but he needs short-term cashflow of another coin XXX. Charlies does not want to sell DFI for it nor does he want to spend fiat money to buy this coin.
 2. Charlie takes a loan via loan contract on DeFiChain for DXXX and converts it to XXX.
-3. Once he wishes to settle his loan, Charlie simply purchases XXX/DXXX and close his loan contract.
+3. Once he wishes to settle his loan, Charlie simply purchases XXX/DXXX and closes his loan contract.
 
 #### Lending a Coin for Cashflow
 
@@ -773,9 +773,10 @@ DFI is divisible up to 8 decimal places.
   - Lending loan interests payment
   - etc.
 - Collateral for borrowing of other cryptoassets on DeFiChain.
-- 1,000,000 DFI is required to run a staking node for DeFiChain.
+- 20,000 DFI is required to run a staking node for DeFiChain.
 - 1,000 DFI is required to create a DCT. This is refundable upon destruction of the DCT.
-- 500 DFI is required to submit a proposal for DFI the community budget. This is non-refundable.
+- 10 DFI is required to submit a Community Fund Proposal. This is non-refundable.
+- 50 DFI for submitting a Vote of Confidence. Also non-refundable. Both are to be paid to the burn address 8defichainBurnAddressXXXXXXXdRQkSm
 
 ### Fees from DeFi Activities
 
@@ -799,7 +800,7 @@ Burned token redistribution for the next 259,200 blocks =
 
 ### Masternodes
 
-DeFi is a Proof of Stake blockchain. Initially, 1,000,000 DFI allow the owner to own a staking node. The returns for staking will decrease over time, as the volume and number of transactions compensates for the reduction in per-transaction staking rewards.
+DeFi is a Proof of Stake blockchain. Initially, 1,000,000 DFI allows the owner to own a staking node. Today, the amount has been reduced to 20,000 DFI for ownership of a staking node. The returns for staking will decrease over time, as the volume and number of transactions compensate for the reduction in per-transaction staking rewards.
 
 Nodes are entitled to:
 
@@ -821,7 +822,7 @@ For clarification and transparency, Cake Pte Ltd is a private company located in
 
 The DeFiChain Foundation will create a community development fund with up to 10% of the block rewards under management. This percentage can be updated by submitting a DAO proposal that will be voted on by all masternodes. Community development funds were popularized by DASH[^10] and are used in some selective DAOs today. The community will determine the use of these funds for development, marketing, or research that forwards the DeFi community. DFI masternodes vote for projects they like and the highest voted proposals every month will be funded.
 
-It costs 500 DFI to submit a budget proposal and a proposal can be submitted by anyone. This fee is burned and non-refundable regardless of whether the budget is approved. Budgets are proposals which receive a net total of yes votes equal to or greater than 10% of the total possible votes (for example over 448 out of 4480). Budgets can be nullified at any time if vote totals (cast or re-cast) fall below the approval threshold. Budgets are processed (paid) in order of yes minus no votes. More popular budgets get payment priority. Voting happens on a monthly basis but can be changed by a masternode vote.
+It costs 10 DFI to submit a budget proposal and a proposal can be submitted by anyone. This fee is burned and non-refundable regardless of whether the budget is approved. Budgets are proposals which receive a net total of yes votes equal to or greater than 10% of the total possible votes (for example over 448 out of 4480). Budgets can be nullified at any time if vote totals (cast or re-cast) fall below the approval threshold. Budgets are processed (paid) in order of yes minus no votes. More popular budgets get payment priority. Voting happens on a monthly basis but can be changed by a masternode vote.
 
 For governance decisions, only the Foundation may submit proposals. Proposals are voted in similar way as DAO budget proposals except that decisions will be honored via simple majority vote.
 

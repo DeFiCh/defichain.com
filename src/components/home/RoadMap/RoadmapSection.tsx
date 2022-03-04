@@ -11,9 +11,9 @@ import { TimeLine2022 } from '@components/home/RoadMap/2022'
 
 export function RoadmapSection (): JSX.Element {
   return (
-    <section className='bg-gray-50 py-20'>
+    <section className='bg-gray-50 py-20' data-testid='RoadmapSection'>
       <Container>
-        <h1 className='text-5xl font-semibold my-10'>Roadmap</h1>
+        <h1 className='text-5xl font-semibold my-10' data-testid='RoadmapSection.Title'>Roadmap</h1>
         <TimeLine2022 />
         <TimeLine2021 />
         <TimeLineFuture />

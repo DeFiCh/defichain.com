@@ -45,7 +45,7 @@ export function CardSection (): JSX.Element {
   }
 
   return (
-    <section className='-mt-80'>
+    <section className='-mt-80' data-testid='CardSection'>
       <Slider {...settings}>
         <Card
           title='Latest feature'

@@ -48,7 +48,6 @@ context('/ on macbook-16', () => {
       cy.findByTestId('Dividends').should('be.visible')
       cy.findByTestId('Debt').should('be.visible')
     })
-
   })
 
   it('should have distribution section', function () {
@@ -72,7 +71,6 @@ context('/ on macbook-16', () => {
     })
   })
 })
-
 
 context('/ on iphone-x', () => {
   before(() => {
@@ -123,7 +121,6 @@ context('/ on iphone-x', () => {
       cy.findByTestId('Dividends').should('be.visible')
       cy.findByTestId('Debt').should('be.visible')
     })
-
   })
 
   it('should have distribution section', function () {

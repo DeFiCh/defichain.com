@@ -1,9 +1,9 @@
 import { PropsWithChildren } from 'react'
 import NextImage from 'next/image'
 
-export function DownloadCard (props: PropsWithChildren<{ title: string, desc: string, imageSrc: string | JSX.Element }>): JSX.Element {
+export function DownloadCard (props: PropsWithChildren<{ testid: string, title: string, desc: string, imageSrc: string | JSX.Element }>): JSX.Element {
   return (
-    <div className='p-1.5 w-full lg:w-1/2 flex flex-col'>
+    <div className='p-1.5 w-full lg:w-1/2 flex flex-col' data-testid={props.testid}>
       <div
         className='rounded bg-gray-50 py-10 px-16 space-y-10 flex flex-col flex-1'
       >

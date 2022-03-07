@@ -14,7 +14,6 @@ export function CardSection (): JSX.Element {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    arrow: false,
     lazyload: 'ondemand',
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
@@ -38,7 +37,9 @@ export function CardSection (): JSX.Element {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true
         }
       }
     ]

@@ -1,8 +1,9 @@
-import { SSRConfig, useTranslation } from 'next-i18next'
+import { SSRConfig, Trans, useTranslation } from 'next-i18next'
 import { Header } from '@components/commons/Header'
 import { Container } from '@components/commons/Container'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { DeveloperResourceSection } from './_components/DeveloperResourceSection'
+import { ExternalLink } from '@components/commons/link/ExternalLink'
 
 export default function DevelopersPage (): JSX.Element {
   const { t } = useTranslation(['page-developers', 'common'])
@@ -39,13 +40,13 @@ export default function DevelopersPage (): JSX.Element {
               className='text-lg'
               data-testid='DevelopersPage.Contributors.Text'
             >
-              {t('CoreContributors.desc')}
-              <a
-                className='ml-1.5 text-primary-500 hover:text-primary-600'
-                href='https://github.com/defich/'
-              >GitHub
-              </a>
-              {t('Punctuation.fullStop', { ns: 'common' })}
+              <Trans
+                t={t}
+                i18nKey='CoreContributors.desc'
+                components={[
+                  <ExternalLink key='0' className='text-primary-500' url='https://github.com/defich/' />
+                ]}
+              />
             </p>
           </div>
         </div>

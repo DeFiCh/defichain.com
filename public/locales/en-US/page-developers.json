@@ -14,7 +14,7 @@
       "button": "Downloads"
     },
     "Scan": {
-      "title": "Explore the blockchain on DeFiScan.",
+      "title": "Explore the blockchain on DeFi Scan.",
       "button": "Explore"
     },
     "WhitePaper": {
@@ -28,6 +28,6 @@
   },
   "CoreContributors": {
     "title": "Core Contributors",
-    "desc": "DeFiChain is an open-source project with a global team of core contributors, supported by a community of developers. The full list of projects and contributors can be found at"
+    "desc": "DeFiChain is an open-source project with a global team of core contributors, supported by a community of developers. The full list of projects and contributors can be found at <0>GitHub<0>."
   }
 }

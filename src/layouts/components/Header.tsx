@@ -100,7 +100,7 @@ function DesktopNavbar ({ price }: { price: string }): JSX.Element {
           testId='Desktop.HeaderLink.Learn'
         />
         <ExternalHeaderLink
-          className='ml-1 lg:ml-4' text='DeFiScan' url='https://defiscan.live/'
+          className='ml-1 lg:ml-4' text='DeFi Scan' url='https://defiscan.live/'
           testId='Desktop.HeaderLink.DeFiScan'
         />
       </div>
@@ -146,7 +146,7 @@ function MobileMenu ({ price }: { price: string }): JSX.Element {
             testId='Mobile.HeaderLink.Learn'
           />
           <ExternalHeaderLink
-            className='p-2 flex justify-center border-b border-gray-100' text='DeFiScan' url='https://defiscan.live/'
+            className='p-2 flex justify-center border-b border-gray-100' text='DeFi Scan' url='https://defiscan.live/'
             testId='Mobile.HeaderLink.DeFiScan'
           />
           <ExternalHeaderLink

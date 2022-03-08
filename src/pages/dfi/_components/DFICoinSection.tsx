@@ -18,7 +18,8 @@ export function DFICoinSection (): JSX.Element {
           >{t('DFICoinSection.title')}
           </h1>
           <div className='text-lg md:text-xl' data-testid='DfiPage.Section.Text'>
-            {t('DFICoinSection.desc')} <ExternalLink url='https://defiscan.live'>DeFi Scan</ExternalLink>.
+            {t('DFICoinSection.desc')} <ExternalLink url='https://defiscan.live'>DeFi Scan</ExternalLink>
+            {t('Punctuation.fullStop', { ns: 'common' })}
           </div>
           <div className='italic' data-testid='DfiPage.Section.Note'>
             {t('DFICoinSection.disclaimer')}

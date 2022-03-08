@@ -4,7 +4,7 @@ import { DeFiChainLogo } from '@components/icons/DeFiChainLogo'
 import Link from 'next/link'
 import { MdClose, MdMenu } from 'react-icons/md'
 import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { useWhaleApiClient } from '../context/WhaleContext'
 import { useTranslation } from 'next-i18next'
 import { Listbox, Popover, Transition } from '@headlessui/react'
@@ -45,7 +45,7 @@ export function Header (): JSX.Element {
   return (
     <header className={classNames('bg-white z-50 sticky top-0 md:shadow-none md:static', { 'shadow-lg': !atTop })}>
       <div className='border-b border-gray-100'>
-        <Container className='py-4'>
+        <Container className='py-4 md:py-8'>
           <div className='flex items-center justify-between'>
             <div className='flex w-full'>
               <Link href={{ pathname: '/' }} passHref>
@@ -55,7 +55,7 @@ export function Header (): JSX.Element {
               </Link>
               <DesktopNavbar price={dfiPrice} />
             </div>
-            <div className='lg:hidden'>
+            <div className='md:hidden'>
               {menu ? (
                 <MdClose
                   className='h-8 w-8 text-primary-500' onClick={() => setMenu(false)}
@@ -130,8 +130,8 @@ function MobileMenu ({ price }: { price: string }): JSX.Element {
   const { t } = useTranslation('layout')
 
   return (
-    <div className='lg:hidden'>
-      <div className='border-b border-gray-100 shadow-sm text-gray-600'>
+    <div className='md:hidden absolute z-50 w-full bg-white shadow-lg'>
+      <Container className='border-b border-gray-100 shadow-sm text-gray-600'>
         <div className='flex flex-col'>
           <HeaderLink
             className='flex justify-center border-b border-gray-100' text={t('header.navbar.dfi')} pathname='/dfi'
@@ -155,16 +155,16 @@ function MobileMenu ({ price }: { price: string }): JSX.Element {
             className='flex justify-center border-b border-gray-100' text={t('header.navbar.learn')} pathname='/learn'
             testId='Mobile.HeaderLink.Learn'
           />
-          <ExternalLink
+          <ExternalHeaderLink
             className='p-2 flex justify-center border-b border-gray-100' text='DeFi Scan' url='https://defiscan.live/'
             testId='Mobile.HeaderLink.DeFiScan'
           />
-          <div className='flex justify-center p-2.5'>
+          <div className='flex justify-center p-2'>
             <LanguageDropdown />
           </div>
-          <BuyDfiButton price={price} />
         </div>
-      </div>
+      </Container>
+      <BuyDfiButton price={price} />
     </div>
   )
 }
@@ -237,9 +237,9 @@ function BuyDfiButton ({ classname, price }: { classname?: string, price: string
 
   return (
     <Popover className='relative'>
-      <Popover.Button>
+      <Popover.Button as={Fragment}>
         <div
-          className={classNames('flex justify-center items-center text-white bg-primary-500 p-2 xl:px-4 lg:rounded md:mb-0', classname)}
+          className={classNames('flex justify-center items-center text-white bg-primary-500 p-2.5 xl:px-4 lg:rounded md:mb-0', classname)}
         >
           {t('header.navbar.buy')}
           <span className='font-medium'>$DFI</span>
@@ -252,7 +252,7 @@ function BuyDfiButton ({ classname, price }: { classname?: string, price: string
       </Popover.Button>
 
       <Popover.Panel
-        className='mt-2 bg-white w-32 rounded absolute z-50 text-center text-gray-700 text-lg border shadow-lg border-gray-200'
+        className='mt-2 bg-white w-48 rounded absolute z-50 text-center text-gray-700 text-lg border shadow-lg border-gray-200'
       >
         {
           exchanges.map(exchange => (
@@ -261,8 +261,8 @@ function BuyDfiButton ({ classname, price }: { classname?: string, price: string
                 <div className='flex justify-center p-3 hover:bg-gray-100 border-b'>
                   <Image
                     src={exchange.image ?? ''}
-                    width={100}
-                    height={30}
+                    width={140}
+                    height={32}
                     layout='fixed'
                     objectFit='contain'
                   />
@@ -279,20 +279,22 @@ function BuyDfiButton ({ classname, price }: { classname?: string, price: string
 function LanguageDropdown (): JSX.Element {
   const router = useRouter()
   const languages = [
-    { id: 'en-US', name: 'English' },
-    { id: 'zh-Hans', name: '简体中文' },
-    { id: 'zh-Hant', name: '繁體中文' }
+    { locale: 'en-US', name: 'English' },
+    { locale: 'zh-Hans', name: '简体中文' },
+    { locale: 'zh-Hant', name: '繁體中文' }
   ]
-  const [selectedLanguage, setSelectedLanguage] = useState(languages.find(language => language.id === router.locale) ?? languages[0])
+  const [selectedLanguage, setSelectedLanguage] = useState(languages.find(language => language.locale === router.locale) ?? languages[0])
 
   useEffect(() => {
-    void router.push(router.pathname, undefined, { locale: selectedLanguage.id })
+    if (selectedLanguage.locale !== router.locale) {
+      void router.push(router.pathname, undefined, { locale: selectedLanguage.locale })
+    }
   }, [selectedLanguage])
 
   return (
     <div className='relative' data-testid='SiteLangDropdown'>
       <Listbox value={selectedLanguage} onChange={setSelectedLanguage}>
-        <Listbox.Button>{selectedLanguage.name}</Listbox.Button>
+        <Listbox.Button className='text-lg'>{selectedLanguage.name}</Listbox.Button>
         <Transition
           enter='transition duration-100 ease-out'
           enterFrom='transform scale-95 opacity-0'
@@ -306,9 +308,9 @@ function LanguageDropdown (): JSX.Element {
           >
             <Listbox.Options>
               {languages.map((language) => (
-                <div className='border-b' key={language.id}>
+                <div className='border-b' key={language.locale}>
                   <Listbox.Option
-                    key={language.id}
+                    key={language.locale}
                     value={language}
                     className='p-2 hover:bg-gray-100 cursor-pointer'
                   >

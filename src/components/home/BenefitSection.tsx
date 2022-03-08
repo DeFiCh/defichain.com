@@ -17,7 +17,7 @@ export function BenefitSection (): JSX.Element {
     <>
       <section className='py-20' data-testid='BenefitSection.Benefits'>
         <Container>
-          <h1 className='font-medium text-2xl md:text-4xl my-5' data-testid='Benefits.title'>Benefits of DeFiChain.</h1>
+          <h1 className='font-medium text-2xl md:text-3xl my-5' data-testid='Benefits.title'>Benefits of DeFiChain.</h1>
           <div className='flex flex-wrap -mx-6 lg:-mx-10'>
             <FeatureCard
               title='Variety'

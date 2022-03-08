@@ -1,45 +1,30 @@
 import classNames from 'classnames'
 import Slider from 'react-slick'
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
-import { ExternalLink } from '../../components/commons/link/ExternalLink'
+import { ExternalLink } from '@components/commons/link/ExternalLink'
 import Link from 'next/link'
-import {
-  CSSProperties,
-  ReactEventHandler
-} from 'react'
+import { CSSProperties, ReactEventHandler } from 'react'
 
 export function CardSection (): JSX.Element {
   const settings = {
-    infinite: true,
+    infinite: false,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    lazyload: 'ondemand',
+    slidesToShow: 1,
+    initialSlide: 1,
+    centerMode: true,
+    centerPadding: '0px',
+    lazyload: 'progressive',
+    dots: true,
+    variableWidth: true,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
     responsive: [
       {
-        breakpoint: 1180,
+        breakpoint: 640,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true
-        }
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
           arrows: false,
-          dots: true
+          swipeToSlide: true,
+          dots: false
         }
       }
     ]
@@ -59,7 +44,7 @@ export function CardSection (): JSX.Element {
         />
         <Card
           title='featured download'
-          subtitle='DefiChain Wallet'
+          subtitle='DeFiChain Wallet'
           desc='Experience DeFiChain with wallet apps built for both desktop and mobile.'
           testId='CardSection.Downloads'
           url='/downloads'
@@ -80,7 +65,7 @@ export function CardSection (): JSX.Element {
           desc='Comprehensive list of all things DeFiChain'
           testId='CardSection.Ecosystem'
           url='https://defilinks.io/'
-          buttonText='Learn more'
+          buttonText='Explore'
           external
         />
       </Slider>
@@ -88,7 +73,7 @@ export function CardSection (): JSX.Element {
   )
 }
 
-interface Cardprops {
+interface CardProps {
   title: string
   desc: string
   url: string
@@ -98,21 +83,26 @@ interface Cardprops {
   external?: boolean
 }
 
-function Card (props: Cardprops): JSX.Element {
+function Card (props: CardProps): JSX.Element {
   return (
-    <div className='min-h-[320px] w-[318px] shadow p-4 flex flex-col mx-10 bg-white border-2 border-white' data-testid={props.testId}>
+    <div className='min-h-[320px] w-[320px] shadow-lg p-5 flex flex-col bg-white' data-testid={props.testId}>
       <div>
-        <div className='uppercase text-sm text-gray-400'>{props.title}</div>
-        <div className='text-2xl font-medium'>{props.subtitle}</div>
+        <div className='uppercase text-xs text-gray-500 font-medium'>{props.title}</div>
+        <div className='text-2xl font-medium mt-0.5'>{props.subtitle}</div>
       </div>
-      <div className='mt-10 text-xl font-light'>
+      <div className='mt-10 text-lg text-gray-500'>
         {props.desc}
       </div>
       {props.external !== undefined ? (
-        <ExternalLink className='text-primary-500 border-2 border-primary-500 inline-flex shadow rounded justify-center mt-auto max-w-fit py-3 px-5 rounded' url={props.url} text={props.buttonText} />
+        <ExternalLink
+          className='text-primary-500 border-2 border-primary-500 inline-flex shadow rounded justify-center mt-auto max-w-fit py-3 px-5 rounded'
+          url={props.url} text={props.buttonText}
+        />
       ) : (
         <Link href={{ pathname: props.url }} passHref>
-          <a className='text-primary-500 border-2 border-primary-500 inline-flex shadow rounded justify-center mt-auto max-w-fit py-3 px-5 rounded'>
+          <a
+            className='text-primary-500 border-2 border-primary-500 inline-flex shadow rounded justify-center mt-auto max-w-fit py-3 px-5 rounded'
+          >
             {props.buttonText}
           </a>
         </Link>
@@ -121,22 +111,23 @@ function Card (props: Cardprops): JSX.Element {
   )
 }
 
-/**
- * Note: Custom Arrow for Slick Slider
- * All the defined props are required by slick slider  custom arrows to work.
- */
-
-export function PrevArrow (props: {className?: string, onClick?: ReactEventHandler, style?: CSSProperties}): JSX.Element {
+export function PrevArrow (props: { className?: string, onClick?: ReactEventHandler, style?: CSSProperties }): JSX.Element {
   return (
-    <button className={classNames(props.className, '-top-[60px] sm:-top-[100px] left-[50%] md:left-[70%]')} style={props.style} onClick={props.onClick}>
+    <button
+      className={classNames(props.className, '-top-[60px] left-[65%] md:left-[70%] lg:left-[75%]')}
+      style={props.style} onClick={props.onClick}
+    >
       <BsChevronLeft fontSize={40} fill='fill-black' />
     </button>
   )
 }
 
-export function NextArrow (props: {className?: string, onClick?: ReactEventHandler, style?: CSSProperties}): JSX.Element {
+export function NextArrow (props: { className?: string, onClick?: ReactEventHandler, style?: CSSProperties }): JSX.Element {
   return (
-    <button className={classNames(props.className, '-top-[60px] sm:-top-[100px] right-[20%]')} style={props.style} onClick={props.onClick}>
+    <button
+      className={classNames(props.className, '-top-[60px] right-[20%]')} style={props.style}
+      onClick={props.onClick}
+    >
       <BsChevronRight fontSize={40} fill='fill-black' />
     </button>
   )

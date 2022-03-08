@@ -22,3 +22,21 @@ body {
         scrollbar-width: none; /* Firefox */
     }
 }
+
+
+/*Slick slider overrides*/
+.slick-prev::before, .slick-next::before {
+    display: none !important;
+}
+
+.slick-list {
+    margin: -16px;
+}
+
+.slick-slide {
+    padding: 16px;
+}
+
+.slick-dots {
+    bottom: -25px;
+}

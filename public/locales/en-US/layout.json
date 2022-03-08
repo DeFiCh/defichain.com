@@ -1,4 +1,16 @@
 {
+  "header": {
+    "navbar": {
+      "foundation": "Foundation",
+      "dfi": "$DFI",
+      "dex": "DEX",
+      "developers": "Developers",
+      "ecosystem": "Ecosystem",
+      "downloads": "Downloads",
+      "learn": "Learn",
+      "buy": "Buy"
+    }
+  },
   "footer": {
     "title": "Native Decentralized Finance for Bitcoin.",
     "sitemap": {

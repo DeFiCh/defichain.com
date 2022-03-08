@@ -6,6 +6,7 @@ import { MdArrowDropDown, MdArrowDropUp, MdClose, MdMenu } from 'react-icons/md'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import { useWhaleApiClient } from '../context/WhaleContext'
+import { useTranslation } from 'next-i18next'
 
 export function Header (): JSX.Element {
   const [menu, setMenu] = useState(false)
@@ -76,27 +77,29 @@ export function Header (): JSX.Element {
 }
 
 function DesktopNavbar ({ price }: { price: string }): JSX.Element {
+  const { t } = useTranslation('layout')
+
   return (
     <div className='hidden md:flex ml-2 lg:ml-8 md:w-full md:justify-end xl:justify-between items-center text-gray-600'>
       <div className='hidden lg:flex'>
         <HeaderLink
-          className='ml-1 lg:ml-4' text='$DFI' pathname='/dfi'
+          className='ml-1 lg:ml-4' text={t('header.navbar.dfi')} pathname='/dfi'
           testId='Desktop.HeaderLink.DFI'
         />
         <HeaderLink
-          className='ml-1 lg:ml-4' text='DEX' pathname='/dex'
+          className='ml-1 lg:ml-4' text={t('header.navbar.dex')} pathname='/dex'
           testId='Desktop.HeaderLink.DEX'
         />
         <HeaderLink
-          className='ml-1 lg:ml-4' text='Developers' pathname='/developers'
+          className='ml-1 lg:ml-4' text={t('header.navbar.developers')} pathname='/developers'
           testId='Desktop.HeaderLink.Developers'
         />
         <HeaderLink
-          className='ml-1 lg:ml-4' text='Ecosystem' pathname='/ecosystem'
+          className='ml-1 lg:ml-4' text={t('header.navbar.ecosystem')} pathname='/ecosystem'
           testId='Desktop.HeaderLink.Ecosystem'
         />
         <HeaderLink
-          className='ml-1 lg:ml-4' text='Learn' pathname='/learn'
+          className='ml-1 lg:ml-4' text={t('header.navbar.learn')} pathname='/learn'
           testId='Desktop.HeaderLink.Learn'
         />
         <ExternalHeaderLink
@@ -111,7 +114,7 @@ function DesktopNavbar ({ price }: { price: string }): JSX.Element {
           testId='Desktop.HeaderLink.DeFiScan'
         />
         <HeaderLink
-          text='Downloads' pathname='/downloads' className='ml-1 lg:ml-4 hidden lg:block'
+          text={t('header.navbar.downloads')} pathname='/downloads' className='ml-1 lg:ml-4 hidden lg:block'
           testId='Desktop.HeaderLink.Downloads'
         />
         <BuyDfiButton price={price} />
@@ -121,38 +124,35 @@ function DesktopNavbar ({ price }: { price: string }): JSX.Element {
 }
 
 function MobileMenu ({ price }: { price: string }): JSX.Element {
+  const { t } = useTranslation('layout')
+
   return (
     <div className='lg:hidden'>
       <Container className='border-b border-gray-100 shadow-sm text-gray-600'>
         <div className='flex flex-col'>
           <HeaderLink
-            className='flex justify-center border-b border-gray-100' text='$DFI' pathname='/dfi'
+            className='flex justify-center border-b border-gray-100' text={t('header.navbar.dfi')} pathname='/dfi'
             testId='Mobile.HeaderLink.DFI'
           />
           <HeaderLink
-            className='flex justify-center border-b border-gray-100' text='DEX' pathname='/dex'
+            className='flex justify-center border-b border-gray-100' text={t('header.navbar.dex')} pathname='/dex'
             testId='Mobile.HeaderLink.DEX'
           />
           <HeaderLink
-            className='flex justify-center border-b border-gray-100' text='Developers' pathname='/developers'
+            className='flex justify-center border-b border-gray-100' text={t('header.navbar.developers')} pathname='/developers'
             testId='Mobile.HeaderLink.Developers'
           />
           <HeaderLink
-            className='flex justify-center border-b border-gray-100' text='Ecosystem' pathname='/ecosystem'
+            className='flex justify-center border-b border-gray-100' text={t('header.navbar.ecosystem')} pathname='/ecosystem'
             testId='Mobile.HeaderLink.Ecosystem'
           />
           <HeaderLink
-            className='flex justify-center border-b border-gray-100' text='Learn' pathname='/learn'
+            className='flex justify-center border-b border-gray-100' text={t('header.navbar.learn')} pathname='/learn'
             testId='Mobile.HeaderLink.Learn'
           />
           <ExternalHeaderLink
             className='p-2 flex justify-center border-b border-gray-100' text='DeFi Scan' url='https://defiscan.live/'
             testId='Mobile.HeaderLink.DeFiScan'
-          />
-          <ExternalHeaderLink
-            className='p-2 md:hidden flex justify-center border-b border-gray-100' text='Github'
-            url='https://github.com/defich/ain'
-            testId='Mobile.HeaderLink.Github'
           />
           <BuyDfiButton classname='md:hidden' price={price} />
         </div>
@@ -192,14 +192,17 @@ export function ExternalHeaderLink (props: { text: string, url: string, classNam
 }
 
 function BuyDfiButton ({ classname, price }: { classname?: string, price: string }): JSX.Element {
+  const { t } = useTranslation('layout')
+
   return (
     <a
       className={classNames('flex text-white bg-primary-500 p-2 xl:px-4 rounded mb-2 md:mb-0 items-center', classname)}
     >
-      Buy $DFI
+      {t('header.navbar.buy')}
+      <span className='font-medium'>$DFI</span>
       {
         price !== '0' && (
-          <span className='ml-1.5 text-gray-200 text-sm'>${Number(price).toFixed(2)}</span>
+          <span className='ml-1.5 text-gray-100 font-medium text-sm'>${Number(price).toFixed(2)}</span>
         )
       }
     </a>

@@ -10,7 +10,9 @@ export function HowToCard (props: PropsWithChildren<{ title: string, desc: strin
         <div className='text-lg flex-1 mt-4' data-testid='HowToCard.Desc'>{props.desc}</div>
         <div className='mt-8'>
           <Link href={{ pathname: `/learn/${props.slug}` }} passHref>
-            <Button text='Read' />
+            <a className='contents'>
+              <Button text='Read' />
+            </a>
           </Link>
         </div>
       </div>

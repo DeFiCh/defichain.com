@@ -5,7 +5,7 @@ import { Container } from '@components/commons/Container'
 import { ExternalLink } from '@components/commons/link/ExternalLink'
 import Link from 'next/link'
 import { Section } from '@components/commons/Section'
-import { Button, ButtonUnfilled } from '@components/commons/Buttons'
+import { Button } from '@components/commons/Buttons'
 import { Hunter } from './_components/Hunter'
 
 export default function HomePage (): JSX.Element {
@@ -20,8 +20,9 @@ export default function HomePage (): JSX.Element {
             {t('Header.desc')}
           </div>
           <div className='flex flex-wrap mt-14 items-center'>
-            <Button text={t('Header.submit')} />
-            <ButtonUnfilled text={t('Header.howTo')} className='ml-1.5' />
+            <a className='contents' href='#submission'>
+              <Button text={t('Header.submit')} />
+            </a>
           </div>
         </div>
       </Header>
@@ -41,7 +42,7 @@ export default function HomePage (): JSX.Element {
           </div>
         </Section>
         <Section title={t('SubmissionSection.title')} testId='SubmissionSection'>
-          <div>
+          <div id='submission'>
             <Trans
               t={t}
               i18nKey='SubmissionSection.desc'
@@ -53,7 +54,9 @@ export default function HomePage (): JSX.Element {
             <div className='text-sm mt-1'>
               [GPG:
               <Link href={{ pathname: '/keys/security@defichain.com.public.key' }} passHref>
-                <span className='text-primary-500 hover:underline cursor-pointer ml-1'>F7CE 1F52 D5ED 7EE3 FC37 4614 E2C1 1358 5F01 B88B</span>
+                <a className='contents'>
+                  <span className='text-primary-500 hover:underline cursor-pointer ml-1'>F7CE 1F52 D5ED 7EE3 FC37 4614 E2C1 1358 5F01 B88B</span>
+                </a>
               </Link>
               ]
             </div>

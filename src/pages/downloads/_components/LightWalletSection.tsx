@@ -4,7 +4,7 @@ import { PlaystoreDownload } from './PlaystoreDownload'
 import { useTranslation } from 'next-i18next'
 
 export function LightWalletSection (): JSX.Element {
-  const { t } = useTranslation(['downloads'])
+  const { t } = useTranslation(['page-downloads'])
 
   return (
     <>

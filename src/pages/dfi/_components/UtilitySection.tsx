@@ -6,12 +6,12 @@ import { FeatureCard } from '@components/commons/FeatureCard'
 import { useTranslation } from 'next-i18next'
 
 export function UtilitySection (): JSX.Element {
-  const { t } = useTranslation(['dfi'])
+  const { t } = useTranslation(['page-dfi'])
 
   return (
     <section className='bg-gray-50 py-16 px-6'>
       <Container>
-        <h1 className='font-medium text-3xl' data-testid='UtilitySection.Heading'>{t('CoinUtility.title')}</h1>
+        <h1 className='font-medium text-2xl lg:text-3xl' data-testid='UtilitySection.Heading'>{t('CoinUtility.title')}</h1>
         <div className='flex flex-wrap -mx-6 lg:-mx-10'>
           <FeatureCard
             title={t('CoinUtility.entries.Fees.title')}

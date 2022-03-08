@@ -5,7 +5,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { DeveloperResourceSection } from './_components/DeveloperResourceSection'
 
 export default function DevelopersPage (): JSX.Element {
-  const { t } = useTranslation(['developers', 'common'])
+  const { t } = useTranslation(['page-developers', 'common'])
 
   return (
     <>
@@ -30,19 +30,19 @@ export default function DevelopersPage (): JSX.Element {
         <div className='container mx-auto py-10 md:py-20 lg:py-32'>
           <div className='w-full md:w-4/5 lg:1/2 space-y-10'>
             <h1
-              className='text-5xl font-semibold'
+              className='font-semibold text-2xl lg:text-3xl'
               data-testid='DevelopersPage.Contributors.Heading'
             >
               {t('CoreContributors.title')}
             </h1>
             <p
-              className='font-light text-2xl leading-10'
+              className='text-lg'
               data-testid='DevelopersPage.Contributors.Text'
             >
               {t('CoreContributors.desc')}
               <a
                 className='ml-1.5 text-primary-500 hover:text-primary-600'
-                href='https://github.com/defich/ain'
+                href='https://github.com/defich/'
               >GitHub
               </a>
               {t('Punctuation.fullStop', { ns: 'common' })}
@@ -57,7 +57,7 @@ export default function DevelopersPage (): JSX.Element {
 export async function getStaticProps ({ locale }): Promise<{ props: SSRConfig }> {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'layout', 'developers']))
+      ...(await serverSideTranslations(locale, ['common', 'layout', 'page-developers']))
     }
   }
 }

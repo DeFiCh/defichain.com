@@ -1,6 +1,6 @@
 import { SVGProps } from 'react'
 
-export function DfiCoin (props: SVGProps<SVGSVGElement>): JSX.Element {
+export function DFICoin (props: SVGProps<SVGSVGElement>): JSX.Element {
   return (
     <svg width='19em' height='17em' {...props}>
       <g fill='none' fillRule='evenodd'>

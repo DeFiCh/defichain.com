@@ -4,7 +4,7 @@ import { ExternalLink } from '@components/commons/link/ExternalLink'
 import { BsFillTerminalFill } from 'react-icons/bs'
 
 export function FullNodeSection (): JSX.Element {
-  const { t } = useTranslation(['downloads'])
+  const { t } = useTranslation(['page-downloads'])
 
   return (
     <>

@@ -12,7 +12,7 @@ import MessariLogo from '../../../public/assets/svg/ecosystem/messari_logo.svg'
 import { ResourceCard } from '@components/commons/ResourceCard'
 
 export default function EcosystemPage (): JSX.Element {
-  const { t } = useTranslation(['ecosystem'])
+  const { t } = useTranslation(['page-ecosystem'])
 
   return (
     <>
@@ -30,16 +30,17 @@ export default function EcosystemPage (): JSX.Element {
             text={t('ContributeSection.Developer.desc')} buttonText={t('ContributeSection.Developer.button')}
             url='/developers' testid='EcosystemSection.Developer'
           >
-            <h1 className='text-2xl lg:text-4xl font-medium'>{t('ContributeSection.Developer.title')}</h1>
+            <h1 className='text-2xl font-medium'>{t('ContributeSection.Developer.title')}</h1>
           </ResourceCard>
           <ResourceCard
             text={t('ContributeSection.ServiceProvider.desc')}
             buttonText={t('ContributeSection.ServiceProvider.button')}
             url='/developers' testid='EcosystemSection.ServiceProvider'
           >
-            <h1 className='text-2xl lg:text-4xl font-medium'>{t('ContributeSection.ServiceProvider.title')}</h1>
+            <h1 className='text-2xl font-medium'>{t('ContributeSection.ServiceProvider.title')}</h1>
           </ResourceCard>
         </EcosystemSection>
+
         <EcosystemSection title={t('PartnersSection.title')} testId='EcosystemSection.Partners'>
           <ResourceCard
             text={t('PartnersSection.CakeDeFi.desc')} buttonText={t('PartnersSection.CakeDeFi.button')}
@@ -97,7 +98,7 @@ function EcosystemSection (props: PropsWithChildren<{ title: string, testId: str
 export async function getStaticProps ({ locale }): Promise<{ props: SSRConfig }> {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'layout', 'ecosystem']))
+      ...(await serverSideTranslations(locale, ['common', 'layout', 'page-ecosystem']))
     }
   }
 }

@@ -4,7 +4,7 @@ import { useTranslation } from 'next-i18next'
 import { ResourceCard } from '@components/commons/ResourceCard'
 
 export function DeveloperResourceSection (): JSX.Element {
-  const { t } = useTranslation('developers')
+  const { t } = useTranslation('page-developers')
 
   return (
     <section className='flex flex-wrap -m-3 pb-10'>

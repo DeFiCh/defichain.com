@@ -14,7 +14,7 @@ export function Header (props: PropsWithChildren<{ className?: string, title: st
         backgroundPosition: 'right center'
       }}
     >
-      <Container className='h-full mt-36 mb-16 h-40'>
+      <Container className='h-full mt-40 mb-16 h-48'>
         <h1 className='text-4xl lg:text-5xl text-gray-900 w-full mb-6 font-medium' data-testid='Header.title'>
           {props.title}
         </h1>

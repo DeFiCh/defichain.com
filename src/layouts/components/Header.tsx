@@ -2,11 +2,12 @@ import classNames from 'classnames'
 import { Container } from '@components/commons/Container'
 import { DeFiChainLogo } from '@components/icons/DeFiChainLogo'
 import Link from 'next/link'
-import { MdArrowDropDown, MdArrowDropUp, MdClose, MdMenu } from 'react-icons/md'
+import { MdClose, MdMenu } from 'react-icons/md'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import { useWhaleApiClient } from '../context/WhaleContext'
 import { useTranslation } from 'next-i18next'
+import { Listbox, Transition } from '@headlessui/react'
 
 export function Header (): JSX.Element {
   const [menu, setMenu] = useState(false)
@@ -128,7 +129,7 @@ function MobileMenu ({ price }: { price: string }): JSX.Element {
 
   return (
     <div className='lg:hidden'>
-      <Container className='border-b border-gray-100 shadow-sm text-gray-600'>
+      <div className='border-b border-gray-100 shadow-sm text-gray-600'>
         <div className='flex flex-col'>
           <HeaderLink
             className='flex justify-center border-b border-gray-100' text={t('header.navbar.dfi')} pathname='/dfi'
@@ -139,11 +140,13 @@ function MobileMenu ({ price }: { price: string }): JSX.Element {
             testId='Mobile.HeaderLink.DEX'
           />
           <HeaderLink
-            className='flex justify-center border-b border-gray-100' text={t('header.navbar.developers')} pathname='/developers'
+            className='flex justify-center border-b border-gray-100' text={t('header.navbar.developers')}
+            pathname='/developers'
             testId='Mobile.HeaderLink.Developers'
           />
           <HeaderLink
-            className='flex justify-center border-b border-gray-100' text={t('header.navbar.ecosystem')} pathname='/ecosystem'
+            className='flex justify-center border-b border-gray-100' text={t('header.navbar.ecosystem')}
+            pathname='/ecosystem'
             testId='Mobile.HeaderLink.Ecosystem'
           />
           <HeaderLink
@@ -154,9 +157,12 @@ function MobileMenu ({ price }: { price: string }): JSX.Element {
             className='p-2 flex justify-center border-b border-gray-100' text='DeFi Scan' url='https://defiscan.live/'
             testId='Mobile.HeaderLink.DeFiScan'
           />
-          <BuyDfiButton classname='md:hidden' price={price} />
+          <div className='flex justify-center p-2.5'>
+            <LanguageDropdown />
+          </div>
+          <BuyDfiButton price={price} />
         </div>
-      </Container>
+      </div>
     </div>
   )
 }
@@ -195,8 +201,8 @@ function BuyDfiButton ({ classname, price }: { classname?: string, price: string
   const { t } = useTranslation('layout')
 
   return (
-    <a
-      className={classNames('flex text-white bg-primary-500 p-2 xl:px-4 rounded mb-2 md:mb-0 items-center', classname)}
+    <div
+      className={classNames('flex justify-center items-center text-white bg-primary-500 p-2 xl:px-4 lg:rounded md:mb-0', classname)}
     >
       {t('header.navbar.buy')}
       <span className='font-medium'>$DFI</span>
@@ -205,33 +211,54 @@ function BuyDfiButton ({ classname, price }: { classname?: string, price: string
           <span className='ml-1.5 text-gray-100 font-medium text-sm'>${Number(price).toFixed(2)}</span>
         )
       }
-    </a>
+    </div>
   )
 }
 
 function LanguageDropdown (): JSX.Element {
-  const [dropdown, dropDownToggle] = useState<boolean>(false)
+  const router = useRouter()
+  const languages = [
+    { id: 'en-US', name: 'English' },
+    { id: 'zh-Hans', name: '简体中文' },
+    { id: 'zh-Hant', name: '繁體中文' }
+  ]
+  const [selectedLanguage, setSelectedLanguage] = useState(languages.find(language => language.id === router.locale) ?? languages[0])
+
+  useEffect(() => {
+    void router.push(router.pathname, undefined, { locale: selectedLanguage.id })
+  }, [selectedLanguage])
+
   return (
     <div className='relative' data-testid='SiteLangDropdown'>
-      <div
-        className='flex items-center cursor-pointer justify-between w-22 p-3'
-        onClick={() => dropDownToggle(prev => !prev)}
-      >
-        <span>English</span>
-        {dropdown ? (
-          <MdArrowDropUp className='h-6 w-6' />
-        ) : (
-          <MdArrowDropDown className='h-6 w-6' />
-        )}
-      </div>
-      {dropdown && (
-        <div
-          className='bg-white p-4 w-32 rounded absolute z-50 text-center text-gray-700 flex space-y-4 flex-col text-lg border-2 shadow border-gray-200'
+      <Listbox value={selectedLanguage} onChange={setSelectedLanguage}>
+        <Listbox.Button>{selectedLanguage.name}</Listbox.Button>
+        <Transition
+          enter='transition duration-100 ease-out'
+          enterFrom='transform scale-95 opacity-0'
+          enterTo='transform scale-100 opacity-100'
+          leave='transition duration-75 ease-out'
+          leaveFrom='transform scale-100 opacity-100'
+          leaveTo='transform scale-95 opacity-0'
         >
-          <a className='cursor-pointer hover:text-gray-500'>简体中文</a>
-          <a className='cursor-pointer hover:text-gray-500'>繁體中文</a>
-        </div>
-      )}
+          <div
+            className='bg-white w-32 rounded absolute z-50 text-center text-gray-700 text-lg border shadow-lg border-gray-200'
+          >
+            <Listbox.Options>
+              {languages.map((language) => (
+                <div className='border-b' key={language.id}>
+                  <Listbox.Option
+                    key={language.id}
+                    value={language}
+                    className='p-2 hover:bg-gray-100 cursor-pointer'
+                  >
+                    {language.name}
+                  </Listbox.Option>
+                </div>
+              ))}
+            </Listbox.Options>
+          </div>
+        </Transition>
+      </Listbox>
     </div>
   )
 }

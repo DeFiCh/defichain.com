@@ -50,13 +50,19 @@ context('/ on macbook-16', () => {
     })
   })
 
+  it('should have BuiltOnBitcoinSection', function () {
+    cy.findByTestId('BuiltOnBitcoinSection').within(() => {
+      cy.findByTestId('title').should('be.visible').should('have.text', 'Built-on-bitcoin')
+      cy.findByTestId('desc').should('be.visible').should('have.text', 'DeFiChain marries the best of Proof-of-Stake, with the security and immutability of Bitcoin.')
+      cy.findByTestId('button').should('be.visible')
+      cy.findByTestId('image').should('be.visible')
+    })
+  })
+
   it('should have distribution section', function () {
     cy.findByTestId('DistributionSection').within(() => {
-      cy.findByTestId('title').should('be.visible').should('have.text', 'Built-on-bitcoin')
       cy.findByTestId('Nodes.Title').should('be.visible').should('have.text', 'Decentralized and distributed')
-      cy.findByTestId('desc').should('be.visible').should('have.text', 'DeFiChain marries the best of Proof-of-Stake, with the security and immutability of Bitcoin.')
       cy.findByTestId('Nodes.Desc').should('be.visible').should('have.text', 'DeFiChain nodes are distributed globally across datacenters in the US, Canada, Europe, India, Singapore and Australia.')
-      cy.findByTestId('image').should('be.visible')
       cy.findByTestId('Nodes.Image').should('be.visible')
     })
   })
@@ -123,13 +129,19 @@ context('/ on iphone-x', () => {
     })
   })
 
+  it('should have BuiltOnBitcoinSection', function () {
+    cy.findByTestId('BuiltOnBitcoinSection').within(() => {
+      cy.findByTestId('title').should('be.visible').should('have.text', 'Built-on-bitcoin')
+      cy.findByTestId('desc').should('be.visible').should('have.text', 'DeFiChain marries the best of Proof-of-Stake, with the security and immutability of Bitcoin.')
+      cy.findByTestId('button').should('be.visible')
+      cy.findByTestId('image').should('be.visible')
+    })
+  })
+
   it('should have distribution section', function () {
     cy.findByTestId('DistributionSection').within(() => {
-      cy.findByTestId('title').should('be.visible').should('have.text', 'Built-on-bitcoin')
       cy.findByTestId('Nodes.Title').should('be.visible').should('have.text', 'Decentralized and distributed')
-      cy.findByTestId('desc').should('be.visible').should('have.text', 'DeFiChain marries the best of Proof-of-Stake, with the security and immutability of Bitcoin.')
       cy.findByTestId('Nodes.Desc').should('be.visible').should('have.text', 'DeFiChain nodes are distributed globally across datacenters in the US, Canada, Europe, India, Singapore and Australia.')
-      cy.findByTestId('image').should('be.visible')
       cy.findByTestId('Nodes.Image').should('be.visible')
     })
   })

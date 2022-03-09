@@ -15,7 +15,7 @@ export function CardSection (): JSX.Element {
     centerMode: true,
     centerPadding: '0px',
     lazyload: 'progressive',
-    dots: true,
+    dots: false,
     variableWidth: true,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
@@ -35,7 +35,7 @@ export function CardSection (): JSX.Element {
   const cards: any[] = t('CardsSection.cards', { returnObjects: true })
 
   return (
-    <section className='-mt-80' data-testid='CardSection'>
+    <section className='-mt-80 bg-none' data-testid='CardSection'>
       <Slider {...settings}>
         {
           cards.map(card => {

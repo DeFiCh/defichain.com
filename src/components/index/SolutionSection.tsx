@@ -5,15 +5,15 @@ export function SolutionSection (): JSX.Element {
   const { t } = useTranslation('page-index')
 
   return (
-    <section className='lg:-mt-32 bg-gray-50 py-20'>
+    <section className='-mt-32 bg-gray-50 py-16 lg:py-10'>
       <Container>
         <div
-          className='flex flex-col lg:flex-row items-center mt-48 space-y-20 lg:space-y-0 lg:space-x-32'
+          className='flex flex-col lg:flex-row items-center mt-24 lg:mt-40 space-y-20 lg:space-y-0 lg:space-x-32'
           data-testid='SolutionSection'
         >
           <div className='w-full lg:w-1/2 space-y-3'>
             <h2 className='font-medium text-2xl md:text-3xl' data-testid='title'>{t('SolutionSection.title')}</h2>
-            <div className='text-xl leading-loose font-light' data-testid='desc'>
+            <div className='text-xl leading-loose' data-testid='desc'>
               {t('SolutionSection.desc')}
             </div>
           </div>

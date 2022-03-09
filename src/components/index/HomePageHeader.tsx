@@ -14,16 +14,13 @@ export function HomePageHeader (): JSX.Element {
       }}
     >
       <Container className='flex w-full min-h-[35rem] lg:min-h-[45rem] items-center justify-center'>
-        <div className='w-full md:w-1/2 -mt-48'>
-          <h1 className='w-full text-3xl lg:text-5xl text-center mb-6 font-semibold' data-testid='Header.title'>
+        <div className='w-full md:w-3/4 -mt-48'>
+          <h1 className='w-full text-3xl lg:text-6xl text-center mb-6 font-medium' data-testid='Header.title'>
             {t('Header.title')}
           </h1>
-          <div className='flex flex-wrap items-center'>
-            <div className='mt-10 flex flex-wrap'>
-              <div className='w-full text-lg text-center' data-testid='Header.desc.main'>
-                {t('Header.desc')}
-              </div>
-              <br />
+          <div className='mt-10'>
+            <div className='w-full text-lg md:text-xl text-center' data-testid='Header.desc.main'>
+              {t('Header.desc')}
             </div>
           </div>
         </div>

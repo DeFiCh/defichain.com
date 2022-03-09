@@ -4,14 +4,14 @@ import { RiAuctionFill, RiExchangeDollarLine } from 'react-icons/ri'
 import { BsPieChartFill, BsVinylFill } from 'react-icons/bs'
 import { FeatureCard } from '@components/commons/FeatureCard'
 import { useTranslation } from 'next-i18next'
+import { Section } from '@components/commons/Section'
 
 export function UtilitySection (): JSX.Element {
   const { t } = useTranslation(['page-dfi'])
 
   return (
-    <section className='bg-gray-50 py-16 px-6'>
-      <Container>
-        <h2 className='font-medium text-2xl lg:text-3xl' data-testid='UtilitySection.Heading'>{t('CoinUtility.title')}</h2>
+    <Container bgClassName='bg-gray-100'>
+      <Section title={t('CoinUtility.title')} testId='UtilitySection'>
         <div className='flex flex-wrap -mx-6 lg:-mx-10'>
           <FeatureCard
             title={t('CoinUtility.entries.Fees.title')}
@@ -56,7 +56,7 @@ export function UtilitySection (): JSX.Element {
             <BsPieChartFill className='fill-primary-500' fontSize={50} />
           </FeatureCard>
         </div>
-      </Container>
-    </section>
+      </Section>
+    </Container>
   )
 }

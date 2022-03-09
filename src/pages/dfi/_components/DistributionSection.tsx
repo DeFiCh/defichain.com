@@ -1,24 +1,20 @@
 import classNames from 'classnames'
 import { Container } from '@components/commons/Container'
 import { useTranslation } from 'next-i18next'
+import { Section } from '@components/commons/Section'
 
 export function DistributionSection (): JSX.Element {
   const { t } = useTranslation(['page-dfi'])
 
   return (
-    <section className='py-20'>
-      <Container>
-        <div className='flex flex-col w-full md:w-1/3 lg:w-1/2 mb-16 space-y-10'>
-          <h2
-            className='font-medium text-2xl lg:text-3xl'
-            data-testid='DistributionSection.Heading'
-          >{t('DistributionSection.title')}
-          </h2>
+    <Container>
+      <Section title={t('DistributionSection.title')} testId='DistributionSection'>
+        <div className='flex flex-col w-full md:w-1/3 lg:w-1/2'>
           <div className='text-xl' data-testid='DistributionSection.Text'>
             {t('DistributionSection.desc')}
           </div>
         </div>
-        <div className='mx-auto w-full md:w-3/5 space-y-16' data-testid='DistributionSection.Chart'>
+        <div className='mx-auto w-full md:w-3/5 space-y-16 mt-14' data-testid='DistributionSection.Chart'>
           <Chart
             labelA={t('DistributionSection.chart.InitialSupply')}
             labelB={t('DistributionSection.chart.ToMasternodes')}
@@ -32,8 +28,8 @@ export function DistributionSection (): JSX.Element {
             fill
           />
         </div>
-      </Container>
-    </section>
+      </Section>
+    </Container>
   )
 }
 

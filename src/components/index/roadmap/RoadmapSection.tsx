@@ -13,10 +13,10 @@ export function RoadmapSection (): JSX.Element {
   const { t } = useTranslation('page-index')
 
   return (
-    <section className='bg-gray-50 py-20' data-testid='RoadmapSection'>
+    <section className='bg-gray-50 py-10 lg:py-16' data-testid='RoadmapSection'>
       <Container>
         <h2
-          className='text-2xl md:text-3xl font-semibold my-10'
+          className='text-2xl md:text-3xl font-medium'
           data-testid='RoadmapSection.Title'
         >{t('RoadmapSection.title')}
         </h2>
@@ -33,7 +33,7 @@ export function RoadmapSection (): JSX.Element {
 
 export function TimeLineContainer (props: PropsWithChildren<{ testid: string, timeline: string, label?: string }>): JSX.Element {
   return (
-    <div data-testid={props.testid} className='py-5 md:py-10'>
+    <div data-testid={props.testid} className='pb-10 md:pb-20'>
       <Container>
         <div className='my-12'>
           <h3 className='inline mr-2 font-medium text-2xl'>{props.timeline}</h3>

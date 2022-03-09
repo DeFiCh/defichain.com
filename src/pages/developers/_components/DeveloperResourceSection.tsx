@@ -7,7 +7,7 @@ export function DeveloperResourceSection (): JSX.Element {
   const { t } = useTranslation('page-developers')
 
   return (
-    <section className='flex flex-wrap -m-3 pb-10'>
+    <section className='flex flex-wrap -m-1.5'>
       <ResourceCard
         text={t('DeveloperResourcesSection.GitHub.title')}
         buttonText={t('DeveloperResourcesSection.GitHub.button')}

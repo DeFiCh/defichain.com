@@ -24,9 +24,9 @@ export function BuiltOnBitcoinSection (): JSX.Element {
             <div className='text-lg md:text-xl' data-testid='desc'>
               {t('BuiltOnBitcoinSection.desc')}
             </div>
-            <div>
+            <div data-testid='button'>
               <Link href={{ pathname: '/white-paper' }} passHref>
-                <a className='contents' data-testid='button'>
+                <a className='contents'>
                   <Button text={t('BuiltOnBitcoinSection.button')} />
                 </a>
               </Link>

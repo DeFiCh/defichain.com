@@ -24,10 +24,7 @@ export default function DevelopersPage (): JSX.Element {
       </Header>
 
       <Container>
-        <Section title={t('DeveloperResourcesSection.title')} testId='DevelopersPage'>
-          <div className='mb-5'>
-            {t('DeveloperResourcesSection.title')}
-          </div>
+        <Section title={t('DeveloperResourcesSection.title')} testId='DeveloperResourcesSection'>
           <DeveloperResourceSection />
         </Section>
       </Container>

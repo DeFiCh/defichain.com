@@ -23,7 +23,7 @@ export function ExchangeSection (): JSX.Element {
     <Container bgClassName='bg-gray-50'>
       <Section title={t('ExchangeSection.title')} testId='ExchangeSection'>
         <div className='flex flex-col w-full md:w-1/3 lg:w-1/2 mb-16 space-y-10'>
-          <div className='text-xl' data-testid='DfiPage.Acquiring.Text'>
+          <div className='text-xl' data-testid='ExchangeSection.Desc'>
             {t('ExchangeSection.desc')}
           </div>
         </div>

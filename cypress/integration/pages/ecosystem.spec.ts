@@ -13,18 +13,22 @@ context('/ecosystem page on desktop', () => {
   })
 
   it('should have contribute section', function () {
-    cy.findByTestId('EcosystemSection.Contribute').should('have.text', 'Contribute to DeFiChain')
-    cy.findByTestId('EcosystemSection.Developer').should('be.visible')
-    cy.findByTestId('EcosystemSection.Partners').should('be.visible')
+    cy.findByTestId('EcosystemSection.Contribute').within(() => {
+      cy.findByTestId('Section.Title').should('have.text', 'Contribute to DeFiChain')
+      cy.findByTestId('EcosystemSection.Developer').should('be.visible')
+      cy.findByTestId('EcosystemSection.ServiceProvider').should('be.visible')
+    })
   })
 
-  it('should have partners section', function () {
-    cy.findByTestId('EcosystemSection.Partners').should('have.text', 'Partners')
-    cy.findByTestId('EcosystemSection.CakeDeFi').should('be.visible')
-    cy.findByTestId('EcosystemSection.Staking').should('be.visible')
-    cy.findByTestId('EcosystemSection.Blockfolio').should('be.visible')
-    cy.findByTestId('EcosystemSection.Blockspot').should('be.visible')
-    cy.findByTestId('EcosystemSection.Messari').should('be.visible')
+  it('should have conpartnerstribute section', function () {
+    cy.findByTestId('EcosystemSection.Partners').within(() => {
+      cy.findByTestId('Section.Title').should('have.text', 'Partners')
+      cy.findByTestId('EcosystemSection.CakeDeFi').should('be.visible')
+      cy.findByTestId('EcosystemSection.Staking').should('be.visible')
+      cy.findByTestId('EcosystemSection.Blockfolio').should('be.visible')
+      cy.findByTestId('EcosystemSection.Blockspot').should('be.visible')
+      cy.findByTestId('EcosystemSection.Messari').should('be.visible')
+    })
   })
 })
 
@@ -43,17 +47,21 @@ context('/ecosystem page on mobile', () => {
   })
 
   it('should have contribute section', function () {
-    cy.findByTestId('EcosystemSection.Contribute').should('have.text', 'Contribute to DeFiChain')
-    cy.findByTestId('EcosystemSection.Developer').should('be.visible')
-    cy.findByTestId('EcosystemSection.Partners').should('be.visible')
+    cy.findByTestId('EcosystemSection.Contribute').within(() => {
+      cy.findByTestId('Section.Title').should('have.text', 'Contribute to DeFiChain')
+      cy.findByTestId('EcosystemSection.Developer').should('be.visible')
+      cy.findByTestId('EcosystemSection.ServiceProvider').should('be.visible')
+    })
   })
 
-  it('should have partners section', function () {
-    cy.findByTestId('EcosystemSection.Partners').should('have.text', 'Partners')
-    cy.findByTestId('EcosystemSection.CakeDeFi').should('be.visible')
-    cy.findByTestId('EcosystemSection.Staking').should('be.visible')
-    cy.findByTestId('EcosystemSection.Blockfolio').should('be.visible')
-    cy.findByTestId('EcosystemSection.Blockspot').should('be.visible')
-    cy.findByTestId('EcosystemSection.Messari').should('be.visible')
+  it('should have conpartnerstribute section', function () {
+    cy.findByTestId('EcosystemSection.Partners').within(() => {
+      cy.findByTestId('Section.Title').should('have.text', 'Partners')
+      cy.findByTestId('EcosystemSection.CakeDeFi').should('be.visible')
+      cy.findByTestId('EcosystemSection.Staking').should('be.visible')
+      cy.findByTestId('EcosystemSection.Blockfolio').should('be.visible')
+      cy.findByTestId('EcosystemSection.Blockspot').should('be.visible')
+      cy.findByTestId('EcosystemSection.Messari').should('be.visible')
+    })
   })
 })

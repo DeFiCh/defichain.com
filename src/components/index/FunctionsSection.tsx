@@ -14,7 +14,7 @@ export function FunctionsSection (): JSX.Element {
   const { t } = useTranslation('page-index')
 
   return (
-    <section className='bg-gray-50 py-20' data-testid='BenefitSection.Design'>
+    <section className='bg-gray-50 py-20' data-testid='FunctionsSection'>
       <Container>
         <h1 className='font-medium text-2xl md:text-4xl w-full md:w-1/2 my-5' data-testid='Design.title'>
           {t('FunctionsSection.title')}

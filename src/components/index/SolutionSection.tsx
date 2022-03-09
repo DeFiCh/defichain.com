@@ -9,7 +9,7 @@ export function SolutionSection (): JSX.Element {
       <Container>
         <div
           className='flex flex-col lg:flex-row items-center mt-48 space-y-20 lg:space-y-0 lg:space-x-32'
-          data-testid='ComparisonSection'
+          data-testid='SolutionSection'
         >
           <div className='w-full lg:w-1/2 space-y-3'>
             <h1 className='font-medium text-2xl md:text-3xl' data-testid='title'>{t('SolutionSection.title')}</h1>

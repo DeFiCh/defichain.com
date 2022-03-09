@@ -10,7 +10,7 @@ export function BenefitsSection (): JSX.Element {
   const { t } = useTranslation('page-index')
 
   return (
-    <section className='py-20' data-testid='BenefitSection.Benefits'>
+    <section className='py-20' data-testid='BenefitSection'>
       <Container>
         <h1
           className='font-medium text-2xl md:text-3xl my-5'
@@ -35,7 +35,7 @@ export function BenefitsSection (): JSX.Element {
           <FeatureCard
             title={t('BenefitsSection.Security.title')}
             desc={t('BenefitsSection.Security.desc')}
-            testid='Benefits.Security'
+            testid='Security'
           >
             <MdOutlineDoNotDisturbOn className='fill-primary-500' fontSize={50} />
           </FeatureCard>

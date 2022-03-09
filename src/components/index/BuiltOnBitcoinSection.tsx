@@ -8,12 +8,12 @@ export function BuiltOnBitcoinSection (): JSX.Element {
   const { t } = useTranslation('page-index')
 
   return (
-    <section className='py-10' data-testid='DistributionSection'>
+    <section className='py-10' data-testid='BuiltOnBitcoinSection'>
       <Container>
         <div className='flex flex-wrap md:flex-nowrap space-y-6 md:space-y-0 md:space-x-28 py-20'>
           <div
             className='flex flex-col space-y-4 md:space-y-8 items-start '
-            data-testid='DistributionSection.BuiltOnBitcoin'
+            data-testid='BuiltOnBitcoinSection.BuiltOnBitcoin'
           >
             <h1
               className='text-2xl md:text-3xl font-semibold'

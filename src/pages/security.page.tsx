@@ -13,7 +13,7 @@ import { remark } from 'remark'
 import { getMDPageBySlug } from '../../utils/api'
 import { Head } from '@components/commons/Head'
 
-interface PostPageProps {
+interface SecurityPageProps {
   props: {
     _nextI18Next: { initialI18nStore: any, initialLocale: string, userConfig: UserConfig | null }
     post: Post
@@ -53,7 +53,7 @@ export default function SecurityPage ({ post }): JSX.Element {
   )
 }
 
-export async function getStaticProps ({ locale }): Promise<PostPageProps> {
+export async function getStaticProps ({ locale }): Promise<SecurityPageProps> {
   const post = getMDPageBySlug('security', locale)
 
   const result = await remark()

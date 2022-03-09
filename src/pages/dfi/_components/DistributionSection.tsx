@@ -9,11 +9,11 @@ export function DistributionSection (): JSX.Element {
     <section className='py-20'>
       <Container>
         <div className='flex flex-col w-full md:w-1/3 lg:w-1/2 mb-16 space-y-10'>
-          <h1
+          <h2
             className='font-medium text-2xl lg:text-3xl'
             data-testid='DistributionSection.Heading'
           >{t('DistributionSection.title')}
-          </h1>
+          </h2>
           <div className='text-xl' data-testid='DistributionSection.Text'>
             {t('DistributionSection.desc')}
           </div>

@@ -11,8 +11,9 @@ import React from 'react'
 import { Post } from './learn/utils/api'
 import { remark } from 'remark'
 import { getMDPageBySlug } from '../../utils/api'
+import { Head } from '@components/commons/Head'
 
-interface PostPageProps {
+interface WhitePaperPageProps {
   props: {
     _nextI18Next: { initialI18nStore: any, initialLocale: string, userConfig: UserConfig | null }
     post: Post
@@ -22,6 +23,10 @@ interface PostPageProps {
 export default function WhitePaperPage ({ post }): JSX.Element {
   return (
     <>
+      <Head
+        title={post.title}
+        description={post.description}
+      />
       <Header title={post.title}>
         <div className='mt-10 flex flex-wrap'>
           <div className='w-full text-2xl text-gray-900' data-testid='Header.desc.main'>
@@ -48,7 +53,7 @@ export default function WhitePaperPage ({ post }): JSX.Element {
   )
 }
 
-export async function getStaticProps ({ params, locale }): Promise<PostPageProps> {
+export async function getStaticProps ({ locale }): Promise<WhitePaperPageProps> {
   const post = getMDPageBySlug('white-paper', locale)
 
   const result = await remark()

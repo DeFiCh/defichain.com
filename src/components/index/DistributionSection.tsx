@@ -12,11 +12,11 @@ export function DistributionSection (): JSX.Element {
       <Container>
         <div className='pt-10' data-testid='DistributionSection.Nodes'>
           <div className='flex flex-col space-y-12'>
-            <h1
+            <h2
               className='text-2xl md:text-3xl font-semibold'
               data-testid='Nodes.Title'
             >{t('DistributionSection.title')}
-            </h1>
+            </h2>
             <div className='text-lg w-full md:w-1/2' data-testid='Nodes.Desc'>
               {t('DistributionSection.desc')}
             </div>

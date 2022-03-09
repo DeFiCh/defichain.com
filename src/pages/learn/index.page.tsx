@@ -8,6 +8,7 @@ import { HowToCard } from './_components/HowToCard'
 import { InferGetStaticPropsType } from 'next'
 import { Disclosure } from '@headlessui/react'
 import { BsChevronCompactDown } from 'react-icons/bs'
+import { Head } from '@components/commons/Head'
 
 interface PostI {
   title: string
@@ -27,6 +28,10 @@ export default function LearnPage (props: InferGetStaticPropsType<typeof getStat
 
   return (
     <>
+      <Head
+        title={t('Head.title')}
+        description={t('Head.desc')}
+      />
       <Header title={t('Header.title')}>
         <div className='mt-10 flex flex-wrap'>
           <div className='w-full text-2xl text-gray-900' data-testid='Header.desc.main'>
@@ -49,7 +54,7 @@ function HowToSection (props: PropsWithChildren<{ posts: PostI[] }>): JSX.Elemen
         className='text-2xl lg:text-3xl font-medium w-full md:text-left mb-5'
         data-testid='HowToSection.Title'
       >
-        How To Guides
+        <h2>How To Guides</h2>
       </div>
 
       <div className='flex flex-wrap pb-10 -m-1'>
@@ -71,12 +76,12 @@ function FAQSection (): JSX.Element {
 
   return (
     <section className='my-16'>
-      <h1
+      <h2
         className='text-2xl lg:text-3xl font-medium w-full md:text-left mb-5'
         data-testid='FAQSection'
       >
         FAQ
-      </h1>
+      </h2>
 
       {
         entries.map(entry => {

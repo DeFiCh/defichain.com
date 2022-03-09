@@ -22,9 +22,9 @@ export function ExchangeSection (): JSX.Element {
     <section className='py-20'>
       <Container>
         <div className='flex flex-col w-full md:w-1/3 lg:w-1/2 mb-16 space-y-10'>
-          <h1 className='font-medium text-2xl lg:text-3xl' data-testid='DfiPage.Acquiring.Heading'>
+          <h2 className='font-medium text-2xl lg:text-3xl' data-testid='DfiPage.Acquiring.Heading'>
             {t('ExchangeSection.title')}
-          </h1>
+          </h2>
           <div className='text-xl' data-testid='DfiPage.Acquiring.Text'>
             {t('ExchangeSection.desc')}
           </div>
@@ -32,11 +32,11 @@ export function ExchangeSection (): JSX.Element {
         <div className='flex flex-col md:flex-row md:space-x-10 mb-20'>
           <div className='w-full md:w-2/5 space-y-3'>
             <Dex className='fill-primary-500' fontSize={70} />
-            <h1
+            <h3
               className='text-2xl font-semibold'
               data-testid='ExchangeSection.Heading'
             >{t('ExchangeSection.Exchanges.title')}
-            </h1>
+            </h3>
             <div className='text-xl' data-testid='ExchangeSection.Text'>
               {t('ExchangeSection.Exchanges.desc')}
             </div>
@@ -107,11 +107,11 @@ export function ExchangeSection (): JSX.Element {
         <div className='flex flex-col md:flex-row md:space-x-10 mb-20'>
           <div className='flex flex-col w-full md:w-2/5 space-y-3'>
             <BsPieChartFill className='fill-primary-500' fontSize={70} />
-            <h1
+            <h3
               className='text-2xl font-semibold'
               data-testid='DfiPage.Staking.Heading'
             >{t('ExchangeSection.Staking.title')}
-            </h1>
+            </h3>
             <div className='text-xl' data-testid='DfiPage.Staking.Text'>
               {t('ExchangeSection.Staking.desc')}
             </div>
@@ -136,11 +136,11 @@ export function ExchangeSection (): JSX.Element {
         </div>
         <div className='flex flex-col w-full md:w-1/2 space-y-5'>
           <BsFileEarmarkCodeFill className='fill-primary-500' fontSize={70} />
-          <h1
+          <h3
             className='text-2xl font-semibold'
             data-testid='DfiPage.Developers.Heading'
           >{t('ExchangeSection.Developers.title')}
-          </h1>
+          </h3>
           <div className='text-xl' data-testid='DfiPage.Developers.Text'>
             {t('ExchangeSection.Developers.desc')}
           </div>

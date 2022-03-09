@@ -38,9 +38,9 @@ export function LiquidityPoolsSection (): JSX.Element {
   return (
     <div className='my-16'>
       <div className='flex justify-between mb-6'>
-        <div className='text-gray-900 font-medium text-2xl lg:text-3xl' data-testid='LiquidityPools.title'>
+        <h2 className='text-gray-900 font-medium text-2xl lg:text-3xl' data-testid='LiquidityPools.title'>
           {t('LiquidityPools.title')}
-        </div>
+        </h2>
       </div>
       <div className='w-full flex flex-wrap -m-2'>
         {(() => {
@@ -60,9 +60,9 @@ export function LiquidityPoolsSection (): JSX.Element {
                       <IconB className='absolute ml-5 h-10 w-10' />
                     </div>
                     <div className='text-gray-900'>
-                      <div className='text-xl font-semibold'>
+                      <h3 className='text-xl font-semibold'>
                         {`${item.tokenA.symbol}-${item.tokenB.symbol}`}
-                      </div>
+                      </h3>
                       {(() => {
                         if (item.apr === undefined) {
                           return 'N/A'

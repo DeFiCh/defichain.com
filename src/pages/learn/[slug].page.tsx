@@ -11,6 +11,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import remarkGfm from 'remark-gfm'
 import { UserConfig } from 'next-i18next'
 import { GetStaticPathsResult } from 'next/types'
+import { Head } from '@components/commons/Head'
 
 interface PostPageProps {
   props: {
@@ -22,6 +23,10 @@ interface PostPageProps {
 export default function PostPage ({ post }): JSX.Element {
   return (
     <>
+      <Head
+        title={post.title}
+        description={post.description}
+      />
       <Header title={post.title}>
         <div className='mt-10 flex flex-wrap'>
           <div className='w-full text-2xl text-gray-900' data-testid='Header.desc.main'>

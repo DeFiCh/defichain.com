@@ -17,8 +17,8 @@ export function Footer (): JSX.Element {
               <DeFiChainLogo className='w-12 lg:w-28 mb-2' />
             </a>
           </Link>
-          <h3 className='text-xl lg:text-2xl font-semibold' data-testid='Footer.Heading'>{t('footer.title')}
-          </h3>
+          <h2 className='text-xl lg:text-2xl font-semibold' data-testid='Footer.Heading'>{t('footer.title')}
+          </h2>
         </div>
         <div className='mt-10 flex flex-wrap lg:flex-nowrap lg:space-x-6'>
           <div className='flex-grow max-w-sm'>
@@ -29,8 +29,8 @@ export function Footer (): JSX.Element {
           </div>
         </div>
         <div className='flex flex-row items-center space-x-4 mt-16'>
-          <span className='font-semibold text-sm'>&#169; DeFiChain</span>
-          <FooterInternalLink text='Privacy Policy' pathname='/privacy-policy' testId='Footer.Privacy' tiny />
+          <span className='font-semibold'>&#169; DeFiChain</span>
+          <FooterInternalLink text='Privacy Policy' pathname='/privacy-policy' testId='Footer.Privacy' />
         </div>
       </Container>
     </footer>
@@ -42,16 +42,12 @@ function FooterSectionSitemap (): JSX.Element {
 
   return (
     <FooterSection heading='DeFiChain'>
-      <FooterInternalLink
-        text={t('footer.sitemap.foundation')} pathname='/foundation'
-        testId='FooterSectionSitemap.Foundation'
-      />
       <FooterInternalLink text={t('footer.sitemap.dfi')} pathname='/dfi' testId='FooterSectionSitemap.DFI' />
       <FooterInternalLink text={t('footer.sitemap.dex')} pathname='/dex' testId='FooterSectionSitemap.DEX' />
       <FooterInternalLink text={t('footer.sitemap.developers')} pathname='/developers' testId='FooterSectionSitemap.Developers' />
       <FooterInternalLink text={t('footer.sitemap.ecosystem')} pathname='/ecosystem' testId='FooterSectionSitemap.Ecosystem' />
       <FooterInternalLink text={t('footer.sitemap.downloads')} pathname='/downloads' testId='FooterSectionSitemap.Downloads' />
-      <FooterInternalLink text={t('footer.sitemap.media')} pathname='/media' testId='FooterSectionSitemap.Media' />
+      {/* <FooterInternalLink text={t('footer.sitemap.media')} pathname='/media' testId='FooterSectionSitemap.Media' /> */}
       <FooterInternalLink text={t('footer.sitemap.learn')} pathname='/learn' testId='FooterSectionSitemap.Learn' />
       <FooterInternalLink text={t('footer.sitemap.security')} pathname='/security' testId='FooterSectionSitemap.Security' />
       <FooterInternalLink text={t('footer.sitemap.bugbounty')} pathname='/bug-bounty' testId='FooterSectionSitemap.BugBounty' />
@@ -143,7 +139,7 @@ function FooterSection ({ heading, children }: PropsWithChildren<{ heading: stri
 function FooterExternalLink (props: { text: string, url: string, testId: string }): JSX.Element {
   return (
     <div className='space-x-2 py-1.5 w-1/2'>
-      <div className='font-light text-gray-500 hover:text-primary-500 cursor-pointer'>
+      <div className='text-lg text-gray-500 hover:text-primary-500 cursor-pointer'>
         <a href={props.url} target='_blank' rel='noreferrer' data-testid={props.testId}>
           {props.text}
         </a>
@@ -156,7 +152,7 @@ function FooterInternalLink (props: { text: string, pathname: string, testId: st
   return (
     <div className='space-x-2 py-1.5 w-1/2'>
       <div
-        className={classNames('font-light text-gray-500 hover:text-primary-500 cursor-pointer', { 'text-sm': props.tiny })}
+        className={classNames('text-lg text-gray-500 hover:text-primary-500 cursor-pointer', { 'text-sm': props.tiny })}
       >
         <Link href={{ pathname: props.pathname }}>
           <a data-testid={props.testId}>{props.text}</a>

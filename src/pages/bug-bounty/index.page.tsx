@@ -7,6 +7,8 @@ import Link from 'next/link'
 import { Section } from '@components/commons/Section'
 import { Button } from '@components/commons/Buttons'
 import { Hunter } from './_components/Hunter'
+import { Head } from '@components/commons/Head'
+import React from 'react'
 
 export default function HomePage (): JSX.Element {
   const { t } = useTranslation('page-bugbounty')
@@ -14,6 +16,10 @@ export default function HomePage (): JSX.Element {
 
   return (
     <>
+      <Head
+        title={t('Head.title')}
+        description={t('Head.desc')}
+      />
       <Header title={t('Header.title')}>
         <div className='mt-10 flex flex-wrap'>
           <div className='w-full text-2xl text-gray-900' data-testid='Header.desc.main'>

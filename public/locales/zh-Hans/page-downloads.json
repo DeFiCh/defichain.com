@@ -1,4 +1,8 @@
 {
+  "Head": {
+    "title": "下载区",
+    "desc": "递飞链钱包手机应用程序, 用于Mac、Windows和Linux的递飞链CLI和钱包程序的下载区。"
+  },
   "Header": {
     "title": "下载区",
     "desc": "下载适用于手机, macOS、Windows和Linux的程序",

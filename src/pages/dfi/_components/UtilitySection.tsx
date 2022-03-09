@@ -11,7 +11,7 @@ export function UtilitySection (): JSX.Element {
   return (
     <section className='bg-gray-50 py-16 px-6'>
       <Container>
-        <h1 className='font-medium text-2xl lg:text-3xl' data-testid='UtilitySection.Heading'>{t('CoinUtility.title')}</h1>
+        <h2 className='font-medium text-2xl lg:text-3xl' data-testid='UtilitySection.Heading'>{t('CoinUtility.title')}</h2>
         <div className='flex flex-wrap -mx-6 lg:-mx-10'>
           <FeatureCard
             title={t('CoinUtility.entries.Fees.title')}

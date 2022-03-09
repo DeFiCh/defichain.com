@@ -4,12 +4,17 @@ import { Container } from '@components/commons/Container'
 import { LiquidityPoolsSection } from './_components/LiquidityPoolsSection'
 import { WalletFeaturesSection } from './_components/WalletFeaturesSection'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { Head } from '@components/commons/Head'
 
 export default function DexPage (): JSX.Element {
   const { t } = useTranslation('page-dex')
 
   return (
     <>
+      <Head
+        title={t('Head.title')}
+        description={t('Head.desc')}
+      />
       <Header title={t('Header.title')}>
         <div className='mt-10 flex flex-wrap'>
           <div className='w-full text-2xl text-gray-900' data-testid='Header.desc.main'>{t('Header.desc.main')}</div>

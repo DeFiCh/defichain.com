@@ -23,7 +23,7 @@ export function Hunter (props: { index: number, hunter: HunterI }): JSX.Element 
       <div className='w-1/6 font-medium'>{props.index + 1}</div>
       <div className='w-2/6 flex flex-wrap items-start'>
         <div className='w-full'>
-          <span className='text-xl font-medium'>{props.hunter.name}</span><br />
+          <h3 className='inline text-xl font-medium'>{props.hunter.name}</h3><br />
           <ExternalLink url={`https://github.com/${props.hunter.github}`}>
             {props.hunter.github}
           </ExternalLink>

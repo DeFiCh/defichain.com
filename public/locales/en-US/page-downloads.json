@@ -1,4 +1,8 @@
 {
+  "Head": {
+    "title": "Downloads",
+    "desc": "DeFiChain mobile app, CLI and desktop app downloads for macOS, Windows and Linux."
+  },
   "Header": {
     "title": "Downloads",
     "desc": "Download applications for mobile, macOS, Windows and Linux.",

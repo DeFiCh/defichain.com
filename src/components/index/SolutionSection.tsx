@@ -12,7 +12,7 @@ export function SolutionSection (): JSX.Element {
           data-testid='SolutionSection'
         >
           <div className='w-full lg:w-1/2 space-y-3'>
-            <h1 className='font-medium text-2xl md:text-3xl' data-testid='title'>{t('SolutionSection.title')}</h1>
+            <h2 className='font-medium text-2xl md:text-3xl' data-testid='title'>{t('SolutionSection.title')}</h2>
             <div className='text-xl leading-loose font-light' data-testid='desc'>
               {t('SolutionSection.desc')}
             </div>
@@ -30,15 +30,15 @@ function ComparisonGraph (): JSX.Element {
   return (
     <div className='w-full' data-testid='ComparisonGraph'>
       <div className='flex flex-row mb-5'>
-        <h1
+        <span
           className='w-1/2 text-sm md:text-lg font-medium text-black text-center'
         >{t('SolutionSection.graph.TraditionalFinance')}
-        </h1>
-        <h1
+        </span>
+        <span
           className='w-1/2 text-sm md:text-lg font-medium text-black text-center'
         >{t('SolutionSection.graph.Fintech')}
-        </h1>
-        <h1 className='w-1/2 text-sm md:text-lg font-medium text-primary-500 text-center'>DeFi</h1>
+        </span>
+        <span className='w-1/2 text-sm md:text-lg font-medium text-primary-500 text-center'>DeFi</span>
       </div>
       <div className='flex text-gray-500 items-start w-full'>
         <div className='flex flex-col h-[192px] divide-x w-1/3'>

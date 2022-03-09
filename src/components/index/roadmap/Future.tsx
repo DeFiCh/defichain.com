@@ -12,7 +12,7 @@ export function TimeLineFuture (): JSX.Element {
     centerMode: true,
     centerPadding: '0px',
     lazyload: 'progressive',
-    dots: true,
+    dots: false,
     variableWidth: true,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,

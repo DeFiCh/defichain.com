@@ -4,6 +4,7 @@ import { getAssetIcon } from '@components/icons/assets/tokens'
 import { useWhaleApiClient } from '../../../layouts/context/WhaleContext'
 import { useEffect, useState } from 'react'
 import { PoolPairData } from '@defichain/whale-api-client/dist/api/poolpairs'
+import { Section } from '@components/commons/Section'
 
 export function LiquidityPoolsSection (): JSX.Element {
   const { t } = useTranslation('page-dex')
@@ -36,12 +37,7 @@ export function LiquidityPoolsSection (): JSX.Element {
   }
 
   return (
-    <div className='my-16'>
-      <div className='flex justify-between mb-6'>
-        <h2 className='text-gray-900 font-medium text-2xl lg:text-3xl' data-testid='LiquidityPools.title'>
-          {t('LiquidityPools.title')}
-        </h2>
-      </div>
+    <Section title={t('LiquidityPools.title')} testId='LiquidityPoolsSection'>
       <div className='w-full flex flex-wrap -m-2'>
         {(() => {
           return (
@@ -102,6 +98,6 @@ export function LiquidityPoolsSection (): JSX.Element {
           {showMore ? t('LiquidityPools.hide') : t('LiquidityPools.showAll')}
         </button>
       </div>
-    </div>
+    </Section>
   )
 }

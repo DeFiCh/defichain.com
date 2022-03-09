@@ -11,6 +11,7 @@ import { Staking } from '@components/icons/assets/wallet-features/Staking'
 import { FeatureCard } from '@components/commons/FeatureCard'
 import Image from 'next/image'
 import liquidityImage from '../../../../public/assets/img/dex/liquidity.png'
+import { Section } from '@components/commons/Section'
 
 export function WalletFeaturesSection (): JSX.Element {
   const { t } = useTranslation('page-dex')
@@ -19,21 +20,28 @@ export function WalletFeaturesSection (): JSX.Element {
     <div className='my-16'>
       <div className='flex flex-wrap items-start pt-8 pb-16'>
         <div className='w-full lg:w-1/2 lg:px-8'>
-          <Image src={liquidityImage} layout='responsive' objectFit='cover' alt={t('LiquidityMining.title')} data-testid='LiquidityMiningSection.image' />
+          <Image
+            src={liquidityImage} layout='responsive' objectFit='cover' alt={t('LiquidityMining.title')}
+            data-testid='LiquidityMiningSection.image'
+          />
         </div>
         <div className='w-full lg:w-1/2 flex flex-wrap lg:mt-2 xl:mt-4 lg:px-10 xl:px-14'>
           <div className='text-center lg:text-left text-gray-900'>
-            <h2 className='text-2xl lg:text-3xl font-medium' data-testid='LiquidityMiningSection.title'>{t('LiquidityMining.title')}</h2>
-            <div className='text-lg lg:text-xl mt-8' data-testid='LiquidityMiningSection.desc'>{t('LiquidityMining.desc')}</div>
+            <h2
+              className='text-2xl lg:text-3xl font-medium'
+              data-testid='LiquidityMiningSection.title'
+            >{t('LiquidityMining.title')}
+            </h2>
+            <div
+              className='text-lg lg:text-xl mt-8'
+              data-testid='LiquidityMiningSection.desc'
+            >{t('LiquidityMining.desc')}
+            </div>
           </div>
         </div>
       </div>
-      <div className='flex justify-between mb-10'>
-        <h2 className='font-medium text-2xl lg:text-3xl' data-testid='WalletFeaturesSection.title'>
-          {t('WalletFeaturesSection.title')}
-        </h2>
-      </div>
-      <div className='w-full flex flex-wrap'>
+
+      <Section title={t('WalletFeaturesSection.title')} testId='WalletFeaturesSection'>
         <div className='w-full flex flex-wrap -m-5 lg:-m-10'>
           <FeatureCard
             title={t('WalletFeaturesSection.HDWallet.title')}
@@ -101,7 +109,7 @@ export function WalletFeaturesSection (): JSX.Element {
             <Network fontSize={50} className='fill-primary-500' />
           </FeatureCard>
         </div>
-      </div>
+      </Section>
     </div>
   )
 }

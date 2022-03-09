@@ -5,6 +5,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { DeveloperResourceSection } from './_components/DeveloperResourceSection'
 import { ExternalLink } from '@components/commons/link/ExternalLink'
 import { Head } from '@components/commons/Head'
+import { Section } from '@components/commons/Section'
 
 export default function DevelopersPage (): JSX.Element {
   const { t } = useTranslation(['page-developers', 'common'])
@@ -21,40 +22,25 @@ export default function DevelopersPage (): JSX.Element {
           </div>
         </div>
       </Header>
+
       <Container>
-        <div className='flex w-full mt-16 mb-10'>
-          <h2
-            className='text-2xl lg:text-3xl font-medium w-full text-center md:text-left'
-            data-testid='DevelopersPage.Heading'
-          >
-            {t('DeveloperResourcesSection.title')}
-          </h2>
-        </div>
-        <DeveloperResourceSection />
+        <Section title={t('DeveloperResourcesSection.title')} testId='DeveloperResourcesSection'>
+          <DeveloperResourceSection />
+        </Section>
       </Container>
+
       <Container bgClassName='bg-gray-50'>
-        <div className='container mx-auto py-10 md:py-20 lg:py-32'>
-          <div className='w-full md:w-4/5 lg:1/2 space-y-10'>
-            <h2
-              className='font-semibold text-2xl lg:text-3xl'
-              data-testid='DevelopersPage.Contributors.Heading'
-            >
-              {t('CoreContributors.title')}
-            </h2>
-            <p
-              className='text-lg'
-              data-testid='DevelopersPage.Contributors.Text'
-            >
-              <Trans
-                t={t}
-                i18nKey='CoreContributors.desc'
-                components={[
-                  <ExternalLink key='0' className='text-primary-500' url='https://github.com/defich/' />
-                ]}
-              />
-            </p>
-          </div>
-        </div>
+        <Section title={t('CoreContributors.title')} testId='CoreContributors'>
+          <p className='text-lg' data-testid='DevelopersPage.Contributors.Text'>
+            <Trans
+              t={t}
+              i18nKey='CoreContributors.desc'
+              components={[
+                <ExternalLink key='0' className='text-primary-500' url='https://github.com/defich/' />
+              ]}
+            />
+          </p>
+        </Section>
       </Container>
     </>
   )

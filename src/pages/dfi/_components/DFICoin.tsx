@@ -2,7 +2,7 @@ import { SVGProps } from 'react'
 
 export function DFICoin (props: SVGProps<SVGSVGElement>): JSX.Element {
   return (
-    <svg width='19em' height='17em' {...props}>
+    <svg width='17em' height='14em' {...props}>
       <g fill='none' fillRule='evenodd'>
         <path
           d='M289.752 218.664c.54 24.418-60.102 45.564-135.448 47.232-75.346 1.666-136.866-16.778-137.406-41.198-.54-24.418 60.104-45.566 135.45-47.234 75.346-1.666 136.862 16.78 137.404 41.2'

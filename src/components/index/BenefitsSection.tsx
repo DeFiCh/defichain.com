@@ -10,7 +10,7 @@ export function BenefitsSection (): JSX.Element {
   const { t } = useTranslation('page-index')
 
   return (
-    <section className='py-20' data-testid='BenefitSection'>
+    <section className='py-10 lg:py-16' data-testid='BenefitSection'>
       <Container>
         <h2
           className='font-medium text-2xl md:text-3xl my-5'

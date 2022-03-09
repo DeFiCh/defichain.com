@@ -14,9 +14,9 @@ export function FunctionsSection (): JSX.Element {
   const { t } = useTranslation('page-index')
 
   return (
-    <section className='bg-gray-50 py-20' data-testid='FunctionsSection'>
+    <section className='bg-gray-50 py-10 lg:py-16' data-testid='FunctionsSection'>
       <Container>
-        <h2 className='font-medium text-2xl md:text-4xl w-full md:w-1/2 my-5' data-testid='Design.title'>
+        <h2 className='font-medium text-2xl md:text-3xl w-full md:w-1/2' data-testid='Design.title'>
           {t('FunctionsSection.title')}
         </h2>
         <div className='flex flex-wrap -mx-6 lg:-mx-10'>

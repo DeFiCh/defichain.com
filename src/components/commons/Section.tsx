@@ -2,10 +2,12 @@ import { PropsWithChildren } from 'react'
 
 export function Section (props: PropsWithChildren<{ title: string, testId: string }>): JSX.Element {
   return (
-    <section className='my-16'>
-      <h2 className='text-2xl lg:text-3xl font-semibold' data-testid={props.testId}>{props.title}</h2>
-      <div className='flex flex-wrap my-10 pb-10 text-lg'>
-        {props.children}
+    <section className='py-10 lg:py-16 min-h-[320px] flex items-center' data-testid={props.testId}>
+      <div>
+        <h2 className='text-2xl lg:text-3xl font-medium mb-8' data-testid='Section.Title'>{props.title}</h2>
+        <div className='flex flex-wrap text-lg items-center'>
+          {props.children}
+        </div>
       </div>
     </section>
   )

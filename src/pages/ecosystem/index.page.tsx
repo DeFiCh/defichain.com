@@ -11,6 +11,7 @@ import Blockfolio from '../../../public/assets/svg/ecosystem/blockfolio_logo.svg
 import MessariLogo from '../../../public/assets/svg/ecosystem/messari_logo.svg'
 import { ResourceCard } from '@components/commons/ResourceCard'
 import { Head } from '@components/commons/Head'
+import { Section } from '@components/commons/Section'
 
 export default function EcosystemPage (): JSX.Element {
   const { t } = useTranslation(['page-ecosystem'])
@@ -91,12 +92,11 @@ export default function EcosystemPage (): JSX.Element {
 
 function EcosystemSection (props: PropsWithChildren<{ title: string, testId: string }>): JSX.Element {
   return (
-    <section className='my-16'>
-      <h2 className='text-2xl lg:text-3xl font-semibold' data-testid={props.testId}>{props.title}</h2>
-      <div className='flex flex-wrap -mx-1.5 my-10 pb-10'>
+    <Section title={props.title} testId={props.testId}>
+      <div className='flex flex-wrap -mx-1.5'>
         {props.children}
       </div>
-    </section>
+    </Section>
   )
 }
 

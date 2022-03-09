@@ -14,18 +14,16 @@ import BittrueLogo from '../../../../public/assets/svg/exchanges/logo-bittrue.sv
 import DFXLogo from '../../../../public/assets/svg/exchanges/logo-dfx.svg'
 import LaTokenLogo from '../../../../public/assets/svg/exchanges/logo-latoken.svg'
 import { useTranslation } from 'next-i18next'
+import { Section } from '@components/commons/Section'
 
 export function ExchangeSection (): JSX.Element {
   const { t } = useTranslation(['page-dfi'])
 
   return (
-    <section className='py-20'>
-      <Container>
+    <Container bgClassName='bg-gray-50'>
+      <Section title={t('ExchangeSection.title')} testId='ExchangeSection'>
         <div className='flex flex-col w-full md:w-1/3 lg:w-1/2 mb-16 space-y-10'>
-          <h2 className='font-medium text-2xl lg:text-3xl' data-testid='DfiPage.Acquiring.Heading'>
-            {t('ExchangeSection.title')}
-          </h2>
-          <div className='text-xl' data-testid='DfiPage.Acquiring.Text'>
+          <div className='text-xl' data-testid='ExchangeSection.Desc'>
             {t('ExchangeSection.desc')}
           </div>
         </div>
@@ -33,7 +31,7 @@ export function ExchangeSection (): JSX.Element {
           <div className='w-full md:w-2/5 space-y-3'>
             <Dex className='fill-primary-500' fontSize={70} />
             <h3
-              className='text-2xl font-semibold'
+              className='text-2xl font-medium'
               data-testid='ExchangeSection.Heading'
             >{t('ExchangeSection.Exchanges.title')}
             </h3>
@@ -108,7 +106,7 @@ export function ExchangeSection (): JSX.Element {
           <div className='flex flex-col w-full md:w-2/5 space-y-3'>
             <BsPieChartFill className='fill-primary-500' fontSize={70} />
             <h3
-              className='text-2xl font-semibold'
+              className='text-2xl font-medium'
               data-testid='DfiPage.Staking.Heading'
             >{t('ExchangeSection.Staking.title')}
             </h3>
@@ -137,7 +135,7 @@ export function ExchangeSection (): JSX.Element {
         <div className='flex flex-col w-full md:w-1/2 space-y-5'>
           <BsFileEarmarkCodeFill className='fill-primary-500' fontSize={70} />
           <h3
-            className='text-2xl font-semibold'
+            className='text-2xl font-medium'
             data-testid='DfiPage.Developers.Heading'
           >{t('ExchangeSection.Developers.title')}
           </h3>
@@ -145,19 +143,22 @@ export function ExchangeSection (): JSX.Element {
             {t('ExchangeSection.Developers.desc')}
           </div>
           <span data-testid='DfiPage.Developers.Desc'>
-            {t('ExchangeSection.Developers.email')} <ExternalLink className='text-primary-500' url='mailto:partners@defichain.com'>partners@defichain.com</ExternalLink>
+            {t('ExchangeSection.Developers.email')}
+            <ExternalLink className='text-primary-500' url='mailto:partners@defichain.com'>
+              partners@defichain.com
+            </ExternalLink>
             {t('Punctuation.fullStop', { ns: 'common' })}
           </span>
         </div>
-      </Container>
-    </section>
+      </Section>
+    </Container>
   )
 }
 
 function ExchangeCard (props: { image: StaticImageData, url: string, name: string, testid: string }): JSX.Element {
   return (
     <ExternalLink url={props.url} testId={props.testid} className='w-1/2 md:w-1/3 lg:w-1/5 p-1'>
-      <div className='flex justify-center p-4 bg-gray-50 rounded'>
+      <div className='flex justify-center p-4 bg-white rounded'>
         <Image alt={props.name} src={props.image} title={props.name} />
       </div>
     </ExternalLink>

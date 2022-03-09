@@ -16,7 +16,7 @@ export function RoadmapSection (): JSX.Element {
     <section className='bg-gray-50 py-20' data-testid='RoadmapSection'>
       <Container>
         <h1
-          className='text-5xl font-semibold my-10'
+          className='text-2xl md:text-3xl font-semibold my-10'
           data-testid='RoadmapSection.Title'
         >{t('RoadmapSection.title')}
         </h1>

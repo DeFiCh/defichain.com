@@ -6,7 +6,7 @@ export function FeatureCard (props: PropsWithChildren<{ title: string, desc: str
       <div className='w-full'>
         {props.children}
       </div>
-      <div className='w-full text-xl lg:text-2xl font-medium mt-1.5 mb-4' data-testid='title'>{props.title}</div>
+      <h3 className='w-full text-xl lg:text-2xl font-medium mt-1.5 mb-4' data-testid='title'>{props.title}</h3>
       <div className='w-full text-lg min-h-full' data-testid='desc'>{props.desc}</div>
     </div>
   )

@@ -8,10 +8,15 @@ import { FunctionsSection } from '@components/index/FunctionsSection'
 import { RoadmapSection } from '@components/index/roadmap/RoadmapSection'
 import { BuiltOnBitcoinSection } from '@components/index/BuiltOnBitcoinSection'
 import { DistributionSection } from '@components/index/DistributionSection'
+import { Head } from '@components/commons/Head'
 
 export default function HomePage (): JSX.Element {
   return (
     <>
+      <Head
+        title='DeFiChain – Native Decentralized Finance for Bitcoin'
+        description='A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone.'
+      />
       <HomePageHeader />
       <CardSection />
       <SolutionSection />

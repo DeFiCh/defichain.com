@@ -17,8 +17,8 @@ export function Footer (): JSX.Element {
               <DeFiChainLogo className='w-12 lg:w-28 mb-2' />
             </a>
           </Link>
-          <h3 className='text-xl lg:text-2xl font-semibold' data-testid='Footer.Heading'>{t('footer.title')}
-          </h3>
+          <h2 className='text-xl lg:text-2xl font-semibold' data-testid='Footer.Heading'>{t('footer.title')}
+          </h2>
         </div>
         <div className='mt-10 flex flex-wrap lg:flex-nowrap lg:space-x-6'>
           <div className='flex-grow max-w-sm'>

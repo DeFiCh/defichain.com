@@ -16,9 +16,9 @@ export function FunctionsSection (): JSX.Element {
   return (
     <section className='bg-gray-50 py-20' data-testid='FunctionsSection'>
       <Container>
-        <h1 className='font-medium text-2xl md:text-4xl w-full md:w-1/2 my-5' data-testid='Design.title'>
+        <h2 className='font-medium text-2xl md:text-4xl w-full md:w-1/2 my-5' data-testid='Design.title'>
           {t('FunctionsSection.title')}
-        </h1>
+        </h2>
         <div className='flex flex-wrap -mx-6 lg:-mx-10'>
           <FeatureCard
             title={t('FunctionsSection.Lending.title')}

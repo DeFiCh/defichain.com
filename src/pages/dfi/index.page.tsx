@@ -5,12 +5,17 @@ import { DFICoinSection } from './_components/DFICoinSection'
 import { UtilitySection } from './_components/UtilitySection'
 import { DistributionSection } from './_components/DistributionSection'
 import { ExchangeSection } from './_components/ExchangeSection'
+import { Head } from '@components/commons/Head'
 
 export default function DFIPage (): JSX.Element {
   const { t } = useTranslation(['page-dfi'])
 
   return (
     <>
+      <Head
+        title='$DFI'
+        description='Learn about the $DFI coin and its utility, distribution, airdrops and how to acquire DFI.'
+      />
       <Header title={t('Header.title')}>
         <div className='mt-10 flex flex-wrap'>
           <div className='w-full text-2xl text-gray-900' data-testid='Header.desc.main'>

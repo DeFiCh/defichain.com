@@ -15,11 +15,11 @@ export function BuiltOnBitcoinSection (): JSX.Element {
             className='w-full lg:w-2/3 flex flex-col space-y-4 md:space-y-8 items-start '
             data-testid='BuiltOnBitcoinSection.BuiltOnBitcoin'
           >
-            <h1
+            <h2
               className='text-2xl md:text-3xl font-semibold'
               data-testid='title'
             >{t('BuiltOnBitcoinSection.title')}
-            </h1>
+            </h2>
             <div className='text-xl md:text-3xl font-light' data-testid='desc'>
               {t('BuiltOnBitcoinSection.desc')}
             </div>

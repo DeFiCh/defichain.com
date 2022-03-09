@@ -12,11 +12,11 @@ export function BenefitsSection (): JSX.Element {
   return (
     <section className='py-20' data-testid='BenefitSection'>
       <Container>
-        <h1
+        <h2
           className='font-medium text-2xl md:text-3xl my-5'
           data-testid='Benefits.title'
         >{t('BenefitsSection.title')}
-        </h1>
+        </h2>
         <div className='flex flex-wrap -mx-6 lg:-mx-10'>
           <FeatureCard
             title={t('BenefitsSection.Variety.title')}

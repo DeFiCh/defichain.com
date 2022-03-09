@@ -4,12 +4,17 @@ import { Container } from '@components/commons/Container'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { DeveloperResourceSection } from './_components/DeveloperResourceSection'
 import { ExternalLink } from '@components/commons/link/ExternalLink'
+import { Head } from '@components/commons/Head'
 
 export default function DevelopersPage (): JSX.Element {
   const { t } = useTranslation(['page-developers', 'common'])
 
   return (
     <>
+      <Head
+        title='Developers'
+        description='Start building on DeFiChain with developer resources and code.'
+      />
       <Header title={t('Header.title')}>
         <div className='mt-10 flex flex-wrap'>
           <div className='w-full text-2xl text-gray-900' data-testid='Header.desc.main'>{t('Header.desc')}
@@ -18,24 +23,24 @@ export default function DevelopersPage (): JSX.Element {
       </Header>
       <Container>
         <div className='flex w-full mt-16 mb-10'>
-          <h1
+          <h2
             className='text-2xl lg:text-3xl font-medium w-full text-center md:text-left'
             data-testid='DevelopersPage.Heading'
           >
             {t('DeveloperResourcesSection.title')}
-          </h1>
+          </h2>
         </div>
         <DeveloperResourceSection />
       </Container>
       <Container bgClassName='bg-gray-50'>
         <div className='container mx-auto py-10 md:py-20 lg:py-32'>
           <div className='w-full md:w-4/5 lg:1/2 space-y-10'>
-            <h1
+            <h2
               className='font-semibold text-2xl lg:text-3xl'
               data-testid='DevelopersPage.Contributors.Heading'
             >
               {t('CoreContributors.title')}
-            </h1>
+            </h2>
             <p
               className='text-lg'
               data-testid='DevelopersPage.Contributors.Text'

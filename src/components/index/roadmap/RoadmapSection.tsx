@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react'
-import NextImage from 'next/image'
+import Image from 'next/image'
 import { Container } from '@components/commons/Container'
 import { TimeLine2022 } from '@components/index/roadmap/2022'
 import { ExternalLink } from '@components/commons/link/ExternalLink'
@@ -15,11 +15,11 @@ export function RoadmapSection (): JSX.Element {
   return (
     <section className='bg-gray-50 py-20' data-testid='RoadmapSection'>
       <Container>
-        <h1
+        <h2
           className='text-2xl md:text-3xl font-semibold my-10'
           data-testid='RoadmapSection.Title'
         >{t('RoadmapSection.title')}
-        </h1>
+        </h2>
       </Container>
 
       <TimeLine2022 />
@@ -36,7 +36,7 @@ export function TimeLineContainer (props: PropsWithChildren<{ testid: string, ti
     <div data-testid={props.testid} className='py-5 md:py-10'>
       <Container>
         <div className='my-12'>
-          <span className='mr-2 font-medium text-2xl'>{props.timeline}</span>
+          <h3 className='inline mr-2 font-medium text-2xl'>{props.timeline}</h3>
           <span className='text-gray-500 font-medium'>{props.label}</span>
         </div>
       </Container>
@@ -49,7 +49,7 @@ export function RoadmapCard (props: PropsWithChildren<{ image: StaticImageData, 
   return (
     <div className='w-[320px] shadow-lg rounded overflow-hidden'>
       <div className='bg-white p-4 space-y-4 flex flex-col min-h-[160px]'>
-        <h1 className='font-medium text-xl'>{props.month}</h1>
+        <span className='font-medium text-xl'>{props.month}</span>
         <div>
           {
             props.url !== undefined ? (
@@ -65,12 +65,14 @@ export function RoadmapCard (props: PropsWithChildren<{ image: StaticImageData, 
         </div>
       </div>
       <div className='flex'>
-        <NextImage
+        <Image
           src={props.image}
           alt={props.alt}
+          title={props.alt}
           width={320}
           height={150}
           objectFit='cover'
+          placeholder='empty'
         />
       </div>
     </div>

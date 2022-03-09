@@ -29,8 +29,8 @@ export function Footer (): JSX.Element {
           </div>
         </div>
         <div className='flex flex-row items-center space-x-4 mt-16'>
-          <span className='font-semibold text-sm'>&#169; DeFiChain</span>
-          <FooterInternalLink text='Privacy Policy' pathname='/privacy-policy' testId='Footer.Privacy' tiny />
+          <span className='font-semibold'>&#169; DeFiChain</span>
+          <FooterInternalLink text='Privacy Policy' pathname='/privacy-policy' testId='Footer.Privacy' />
         </div>
       </Container>
     </footer>

@@ -172,7 +172,7 @@ function MobileMenu ({ price }: { price: string }): JSX.Element {
 function HeaderLink (props: { text: string, pathname: string, className?: string, testId?: string }): JSX.Element {
   const router = useRouter()
   return (
-    <Link href={{ pathname: props.pathname }}>
+    <Link href={{ pathname: props.pathname }} passHref>
       <a
         className={classNames(props.className, {
           'text-primary-500': router.pathname === props.pathname

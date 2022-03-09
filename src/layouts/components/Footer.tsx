@@ -154,7 +154,7 @@ function FooterInternalLink (props: { text: string, pathname: string, testId: st
       <div
         className={classNames('text-lg text-gray-500 hover:text-primary-500 cursor-pointer', { 'text-sm': props.tiny })}
       >
-        <Link href={{ pathname: props.pathname }}>
+        <Link href={{ pathname: props.pathname }} passHref>
           <a data-testid={props.testId}>{props.text}</a>
         </Link>
       </div>

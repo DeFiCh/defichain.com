@@ -239,7 +239,7 @@ function BuyDfiButton ({ classname, price }: { classname?: string, price: string
     <Popover className='relative'>
       <Popover.Button as={Fragment}>
         <div
-          className={classNames('flex justify-center items-center text-white bg-primary-500 p-2.5 xl:px-4 lg:rounded md:mb-0', classname)}
+          className={classNames('flex justify-center items-center text-white bg-primary-500 hover:bg-primary-600 p-2.5 xl:px-4 lg:rounded md:mb-0 cursor-pointer', classname)}
         >
           {t('header.navbar.buy')}
           <span className='font-medium ml-1'>$DFI</span>
@@ -295,7 +295,7 @@ function LanguageDropdown (): JSX.Element {
   return (
     <div className='relative' data-testid='SiteLangDropdown'>
       <Listbox value={selectedLanguage} onChange={setSelectedLanguage}>
-        <Listbox.Button className='text-lg'>{selectedLanguage.name}</Listbox.Button>
+        <Listbox.Button className='text-lg hover:text-primary-500'>{selectedLanguage.name}</Listbox.Button>
         <Transition
           enter='transition duration-100 ease-out'
           enterFrom='transform scale-95 opacity-0'

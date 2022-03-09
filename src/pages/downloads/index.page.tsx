@@ -6,7 +6,7 @@ import { LightWalletSection } from './_components/LightWalletSection'
 import { FullNodeSection } from './_components/FullNodeSection'
 
 export default function DownloadsPage (): JSX.Element {
-  const { t } = useTranslation(['downloads'])
+  const { t } = useTranslation(['page-downloads'])
 
   return (
     <>
@@ -39,7 +39,7 @@ export default function DownloadsPage (): JSX.Element {
 export async function getStaticProps ({ locale }): Promise<{ props: SSRConfig }> {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'layout', 'downloads']))
+      ...(await serverSideTranslations(locale, ['common', 'layout', 'page-downloads']))
     }
   }
 }

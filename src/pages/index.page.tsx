@@ -1,19 +1,23 @@
 import { SSRConfig } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { HomePageHeader } from '@components/home/HomePageHeader'
-import { CardSection } from '@components/home/CardSection'
-import { ComparisonSection } from '@components/home/ComparisonSection'
-import { BenefitSection } from '@components/home/BenefitSection'
-import { RoadmapSection } from '@components/home/RoadMap/RoadmapSection'
-import { DistributionSection } from '@components/home/DistributionSection'
+import { HomePageHeader } from '@components/index/HomePageHeader'
+import { CardSection } from '@components/index/CardSection'
+import { SolutionSection } from '@components/index/SolutionSection'
+import { BenefitsSection } from '@components/index/BenefitsSection'
+import { FunctionsSection } from '@components/index/FunctionsSection'
+import { RoadmapSection } from '@components/index/roadmap/RoadmapSection'
+import { BuiltOnBitcoinSection } from '@components/index/BuiltOnBitcoinSection'
+import { DistributionSection } from '@components/index/DistributionSection'
 
 export default function HomePage (): JSX.Element {
   return (
     <>
       <HomePageHeader />
       <CardSection />
-      <ComparisonSection />
-      <BenefitSection />
+      <SolutionSection />
+      <BenefitsSection />
+      <FunctionsSection />
+      <BuiltOnBitcoinSection />
       <DistributionSection />
       <RoadmapSection />
     </>
@@ -23,7 +27,7 @@ export default function HomePage (): JSX.Element {
 export async function getStaticProps ({ locale }): Promise<{ props: SSRConfig }> {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'layout']))
+      ...(await serverSideTranslations(locale, ['common', 'layout', 'page-index']))
     }
   }
 }

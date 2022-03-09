@@ -3,18 +3,18 @@ import { Container } from '@components/commons/Container'
 import { useTranslation } from 'next-i18next'
 
 export function DistributionSection (): JSX.Element {
-  const { t } = useTranslation(['dfi'])
+  const { t } = useTranslation(['page-dfi'])
 
   return (
     <section className='py-20'>
       <Container>
         <div className='flex flex-col w-full md:w-1/3 lg:w-1/2 mb-16 space-y-10'>
           <h1
-            className='font-medium text-2xl md:text-5xl'
+            className='font-medium text-2xl lg:text-3xl'
             data-testid='DistributionSection.Heading'
           >{t('DistributionSection.title')}
           </h1>
-          <div className='text-xl md:text-2xl' data-testid='DistributionSection.Text'>
+          <div className='text-xl' data-testid='DistributionSection.Text'>
             {t('DistributionSection.desc')}
           </div>
         </div>

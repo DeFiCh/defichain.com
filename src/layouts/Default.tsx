@@ -13,7 +13,7 @@ const description = 'DeFi Blockchain, enabling decentralized finance with Bitcoi
  */
 export function Default (props: PropsWithChildren<any>): JSX.Element | null {
   return (
-    <div className='flex flex-col min-h-screen'>
+    <div className='flex flex-col min-h-screen antialiased'>
       <Head>
         <meta charSet='UTF-8' />
 

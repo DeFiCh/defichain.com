@@ -23,7 +23,7 @@ interface LearnPageProps {
 }
 
 export default function LearnPage (props: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
-  const { t } = useTranslation(['learn'])
+  const { t } = useTranslation(['page-learn'])
 
   return (
     <>
@@ -66,7 +66,7 @@ function HowToSection (props: PropsWithChildren<{ posts: PostI[] }>): JSX.Elemen
 }
 
 function FAQSection (): JSX.Element {
-  const { t } = useTranslation(['learn'])
+  const { t } = useTranslation(['page-learn'])
   const entries: Array<{ title: string, desc: string }> = t('FAQSection.entries', { returnObjects: true })
 
   return (
@@ -95,11 +95,11 @@ function FAQSection (): JSX.Element {
         <Disclosure>
           {({ open }) => (
             <>
-              <Disclosure.Button className='py-4 text-xl lg:text-2xl font-medium flex items-center'>
+              <Disclosure.Button className='py-2.5 text-xl font-medium flex items-center'>
                 <BsChevronCompactDown size={28} className={`${open ? 'rotate-180' : ''}`} />
                 <span className='ml-4' data-testid='FAQEntry.Title'>{props.title}</span>
               </Disclosure.Button>
-              <Disclosure.Panel className='text-gray-500 text-lg mb-10' data-testid='FAQEntry.Desc'>
+              <Disclosure.Panel className='text-gray-600 text-lg mb-10 ml-11' data-testid='FAQEntry.Desc'>
                 {props.desc}
               </Disclosure.Panel>
             </>
@@ -115,7 +115,7 @@ export async function getStaticProps ({ locale }): Promise<LearnPageProps> {
 
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'layout', 'learn'])),
+      ...(await serverSideTranslations(locale, ['common', 'layout', 'page-learn'])),
       posts: allPosts
     }
   }

@@ -10,7 +10,7 @@ export interface Post {
 }
 
 export function getPostsDirectory (locale: string): string {
-  return join(process.cwd(), '_learn', locale)
+  return join(process.cwd(), 'content', '_learn', locale)
 }
 
 export function getPostSlugs (locale): string[] {

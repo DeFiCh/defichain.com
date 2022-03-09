@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import { PoolPairData } from '@defichain/whale-api-client/dist/api/poolpairs'
 
 export function LiquidityPoolsSection (): JSX.Element {
-  const { t } = useTranslation('dex')
+  const { t } = useTranslation('page-dex')
 
   const api = useWhaleApiClient()
   const [poolPairsData, setPoolPairsData] = useState<PoolPairData[]>([])

@@ -3,45 +3,45 @@ import Image from 'next/image'
 import { Container } from '@components/commons/Container'
 import { BsFileEarmarkCodeFill, BsPieChartFill } from 'react-icons/bs'
 import { Dex } from '@components/icons/assets/wallet-features/Dex'
-import KucoinLogo from '../../../../public/assets/svg/dfi/logo-kucoin.svg'
-import HotbitLogo from '../../../../public/assets/img/dfi/logo-hotbit.png'
-import EasyCryptoAULogo from '../../../../public/assets/img/dfi/logo-easycrypto-au.png'
-import EasyCryptoNZLogo from '../../../../public/assets/img/dfi/logo-easycrypto-nz.png'
-import TransakLogo from '../../../../public/assets/img/dfi/logo-transak.png'
-import CakeLogo from '../../../../public/assets/svg/dfi/logo-cake.svg'
-import BittrexLogo from '../../../../public/assets/svg/dfi/logo-bittrex.svg'
-import BittrueLogo from '../../../../public/assets/svg/dfi/logo-bittrue.svg'
-import DFXLogo from '../../../../public/assets/svg/dfi/logo-dfx.svg'
-import LaTokenLogo from '../../../../public/assets/svg/dfi/logo-latoken.svg'
+import KucoinLogo from '../../../../public/assets/svg/exchanges/logo-kucoin.svg'
+import HotbitLogo from '../../../../public/assets/img/exchanges/logo-hotbit.png'
+import EasyCryptoAULogo from '../../../../public/assets/img/exchanges/logo-easycrypto-au.png'
+import EasyCryptoNZLogo from '../../../../public/assets/img/exchanges/logo-easycrypto-nz.png'
+import TransakLogo from '../../../../public/assets/img/exchanges/logo-transak.png'
+import CakeLogo from '../../../../public/assets/svg/exchanges/logo-cake.svg'
+import BittrexLogo from '../../../../public/assets/svg/exchanges/logo-bittrex.svg'
+import BittrueLogo from '../../../../public/assets/svg/exchanges/logo-bittrue.svg'
+import DFXLogo from '../../../../public/assets/svg/exchanges/logo-dfx.svg'
+import LaTokenLogo from '../../../../public/assets/svg/exchanges/logo-latoken.svg'
 import { useTranslation } from 'next-i18next'
 
 export function ExchangeSection (): JSX.Element {
-  const { t } = useTranslation(['dfi'])
+  const { t } = useTranslation(['page-dfi'])
 
   return (
     <section className='py-20'>
       <Container>
-        <div className='flex flex-col w-full  md:w-1/3 lg:w-1/2 mb-16 space-y-10'>
-          <h1 className='font-medium text-2xl md:text-5xl' data-testid='DfiPage.Acquiring.Heading'>
+        <div className='flex flex-col w-full md:w-1/3 lg:w-1/2 mb-16 space-y-10'>
+          <h1 className='font-medium text-2xl lg:text-3xl' data-testid='DfiPage.Acquiring.Heading'>
             {t('ExchangeSection.title')}
           </h1>
-          <div className='text-xl md:text-2xl' data-testid='DfiPage.Acquiring.Text'>
+          <div className='text-xl' data-testid='DfiPage.Acquiring.Text'>
             {t('ExchangeSection.desc')}
           </div>
         </div>
         <div className='flex flex-col md:flex-row md:space-x-10 mb-20'>
-          <div className='flex flex-col w-full space-y-3'>
+          <div className='w-full md:w-2/5 space-y-3'>
             <Dex className='fill-primary-500' fontSize={70} />
             <h1
               className='text-2xl font-semibold'
               data-testid='ExchangeSection.Heading'
             >{t('ExchangeSection.Exchanges.title')}
             </h1>
-            <div className='text-xl font-light' data-testid='ExchangeSection.Text'>
+            <div className='text-xl' data-testid='ExchangeSection.Text'>
               {t('ExchangeSection.Exchanges.desc')}
             </div>
           </div>
-          <div className='flex flex-wrap justify-center md:justify-start'>
+          <div className='flex flex-wrap w-full md:w-3/5'>
             <ExchangeCard
               url='https://global.bittrex.com/Market/Index?MarketName=BTC-DFI'
               image={BittrexLogo}
@@ -105,18 +105,18 @@ export function ExchangeSection (): JSX.Element {
           </div>
         </div>
         <div className='flex flex-col md:flex-row md:space-x-10 mb-20'>
-          <div className='flex flex-col w-full md:w-1/3 space-y-3'>
+          <div className='flex flex-col w-full md:w-2/5 space-y-3'>
             <BsPieChartFill className='fill-primary-500' fontSize={70} />
             <h1
               className='text-2xl font-semibold'
               data-testid='DfiPage.Staking.Heading'
             >{t('ExchangeSection.Staking.title')}
             </h1>
-            <div className='text-xl font-light' data-testid='DfiPage.Staking.Text'>
+            <div className='text-xl' data-testid='DfiPage.Staking.Text'>
               {t('ExchangeSection.Staking.desc')}
             </div>
           </div>
-          <div className='flex flex-wrap justify-center md:justify-start'>
+          <div className='flex flex-wrap w-full md:w-3/5'>
             <ExchangeCard
               url='https://www.kucoin.com/earn/finance/list'
               image={KucoinLogo}
@@ -141,11 +141,12 @@ export function ExchangeSection (): JSX.Element {
             data-testid='DfiPage.Developers.Heading'
           >{t('ExchangeSection.Developers.title')}
           </h1>
-          <div className='text-xl font-light' data-testid='DfiPage.Developers.Text'>
+          <div className='text-xl' data-testid='DfiPage.Developers.Text'>
             {t('ExchangeSection.Developers.desc')}
           </div>
           <span data-testid='DfiPage.Developers.Desc'>
             {t('ExchangeSection.Developers.email')} <ExternalLink className='text-primary-500' url='mailto:partners@defichain.com'>partners@defichain.com</ExternalLink>
+            {t('Punctuation.fullStop', { ns: 'common' })}
           </span>
         </div>
       </Container>
@@ -155,8 +156,8 @@ export function ExchangeSection (): JSX.Element {
 
 function ExchangeCard (props: { image: StaticImageData, url: string, name: string, testid: string }): JSX.Element {
   return (
-    <ExternalLink url={props.url} testId={props.testid} className='m-5 w-1/2 md:w-1/3 lg:w-1/5'>
-      <div className='flex justify-center p-5 bg-gray-50 rounder-sm'>
+    <ExternalLink url={props.url} testId={props.testid} className='w-1/2 md:w-1/3 lg:w-1/5 p-1'>
+      <div className='flex justify-center p-4 bg-gray-50 rounded'>
         <Image alt={props.name} src={props.image} title={props.name} />
       </div>
     </ExternalLink>

@@ -9,14 +9,27 @@ import { Console } from '@components/icons/assets/wallet-features/Console'
 import { Network } from '@components/icons/assets/wallet-features/Network'
 import { Staking } from '@components/icons/assets/wallet-features/Staking'
 import { FeatureCard } from '@components/commons/FeatureCard'
+import Image from 'next/image'
+import liquidityImage from '../../../../public/assets/img/dex/liquidity.png'
 
 export function WalletFeaturesSection (): JSX.Element {
-  const { t } = useTranslation('dex')
+  const { t } = useTranslation('page-dex')
 
   return (
     <div className='my-16'>
+      <div className='flex flex-wrap items-start pt-8 pb-16'>
+        <div className='w-full lg:w-1/2 lg:px-8'>
+          <Image src={liquidityImage} layout='responsive' objectFit='cover' alt={t('LiquidityMining.title')} data-testid='LiquidityMiningSection.image' />
+        </div>
+        <div className='w-full lg:w-1/2 flex flex-wrap lg:mt-2 xl:mt-4 lg:px-10 xl:px-14'>
+          <div className='text-center lg:text-left text-gray-900'>
+            <div className='text-2xl lg:text-3xl font-medium' data-testid='LiquidityMiningSection.title'>{t('LiquidityMining.title')}</div>
+            <div className='text-lg lg:text-xl mt-8' data-testid='LiquidityMiningSection.desc'>{t('LiquidityMining.desc')}</div>
+          </div>
+        </div>
+      </div>
       <div className='flex justify-between mb-10'>
-        <div className='text-gray-900 font-medium text-2xl lg:text-3xl' data-testid='WalletFeaturesSection.title'>
+        <div className='font-medium text-2xl lg:text-3xl' data-testid='WalletFeaturesSection.title'>
           {t('WalletFeaturesSection.title')}
         </div>
       </div>

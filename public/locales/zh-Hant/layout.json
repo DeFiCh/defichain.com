@@ -1,4 +1,16 @@
 {
+  "header": {
+    "navbar": {
+      "foundation": "遞飛鏈基金會",
+      "dfi": "$DFI",
+      "dex": "DEX",
+      "developers": "開發者",
+      "ecosystem": "生態系統",
+      "downloads": "下載區",
+      "learn": "學習中心",
+      "buy": "購買"
+    }
+  },
   "footer": {
     "title": "比特幣生態中的開放式金融",
     "sitemap": {

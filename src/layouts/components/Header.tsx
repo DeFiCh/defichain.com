@@ -242,7 +242,7 @@ function BuyDfiButton ({ classname, price }: { classname?: string, price: string
           className={classNames('flex justify-center items-center text-white bg-primary-500 p-2.5 xl:px-4 lg:rounded md:mb-0', classname)}
         >
           {t('header.navbar.buy')}
-          <span className='font-medium'>$DFI</span>
+          <span className='font-medium ml-1'>$DFI</span>
           {
             price !== '0' && (
               <span className='ml-1.5 text-gray-100 font-medium text-sm'>${Number(price).toFixed(2)}</span>
@@ -265,6 +265,7 @@ function BuyDfiButton ({ classname, price }: { classname?: string, price: string
                     height={32}
                     layout='fixed'
                     objectFit='contain'
+                    alt={exchange.name}
                   />
                 </div>
               </ExternalLink>

@@ -8,7 +8,7 @@ export function HowToCard (props: PropsWithChildren<{ title: string, desc: strin
       <div className='rounded bg-gray-50 p-10 flex flex-col flex-1'>
         <h1 className='text-xl font-semibold' data-testid='HowToCard.Title'>{props.title}</h1>
         <div className='text-lg flex-1 mt-4' data-testid='HowToCard.Desc'>{props.desc}</div>
-        <div className='mt-8'>
+        <div className='mt-8' data-testid='HowToCard.Button'>
           <Link href={{ pathname: `/learn/${props.slug}` }} passHref>
             <a className='contents'>
               <Button text='Read' />

@@ -83,7 +83,7 @@ function DesktopNavbar ({ price }: { price: string }): JSX.Element {
   const { t } = useTranslation('layout')
 
   return (
-    <div className='hidden md:flex ml-2 lg:ml-8 md:w-full md:justify-end xl:justify-between items-center text-gray-600'>
+    <div className='hidden md:flex ml-2 lg:ml-8 md:w-full md:justify-end xl:justify-between items-center text-gray-600' data-testid='DesktopNavbar'>
       <div className='hidden lg:flex'>
         <HeaderLink
           className='ml-1 lg:ml-4' text={t('header.navbar.dfi')} pathname='/dfi'
@@ -130,7 +130,7 @@ function MobileMenu ({ price }: { price: string }): JSX.Element {
   const { t } = useTranslation('layout')
 
   return (
-    <div className='md:hidden absolute z-50 w-full bg-white shadow-lg'>
+    <div className='md:hidden absolute z-50 w-full bg-white shadow-lg' data-testid='MobileMenu'>
       <Container className='border-b border-gray-100 shadow-sm text-gray-600'>
         <div className='flex flex-col'>
           <HeaderLink

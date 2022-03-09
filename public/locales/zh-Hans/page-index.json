@@ -159,7 +159,7 @@
           "title": "第二季度",
           "desc": "衍生品(期货和期权)",
           "image": {
-            "url": "/img/timeline/2021/futures-trading@2x.png",
+            "url": "/img/timeline/2021/futures-trading@2x.jpg",
             "alt": "衍生品(期货和期权)"
           }
         },
@@ -252,7 +252,7 @@
           "desc": "DEX上增加DOGE-DFI",
           "url": "https://blog.defichain.com/doge-420-liquidity-mining/",
           "image": {
-            "url": "/img/timeline/2021/doge-pair@2x.png",
+            "url": "/img/timeline/2021/doge-pair@2x.jpg",
             "alt": "New DOGE-DFI pool pair"
           }
         },
@@ -261,7 +261,7 @@
           "desc": "达科他硬分叉为链带来更加去中心化",
           "url": "https://blog.defichain.com/dakota-upgrade/",
           "image": {
-            "url": "/img/timeline/2021/dakota-upgrade@2x.png",
+            "url": "/img/timeline/2021/dakota-upgrade@2x.jpg",
             "alt": "Dakota upgrade"
           }
         },
@@ -296,7 +296,7 @@
           "title": "四月",
           "desc": "遞飛鏈在Transak上線",
           "image": {
-            "url": "/img/timeline/2021/Tranak_April.jpeg",
+            "url": "/img/timeline/2021/Tranak_April.jpg",
             "alt": "遞飛鏈在Transak上線"
           }
         },
@@ -313,7 +313,7 @@
           "title": "五月",
           "desc": "推出比特币原子交换",
           "image": {
-            "url": "/img/timeline/2021/Eunos-Upgrade.png",
+            "url": "/img/timeline/2021/Eunos-Upgrade.jpg",
             "alt": "推出比特币原子交换"
           }
         },
@@ -340,7 +340,7 @@
           "desc": "原递飞链基金会终结并销毁所有DFI",
           "url": "https://blog.defichain.com/we-struck-off-the-foundation-long-live-the-decentralization/",
           "image": {
-            "url": "/img/timeline/2021/DFC-Foundation.png",
+            "url": "/img/timeline/2021/DFC-Foundation.jpg",
             "alt": "原递飞链基金会终结并销毁所有DFI"
           }
         },
@@ -358,7 +358,7 @@
           "desc": "推出DeFi Scan区块链浏览器",
           "url": "https://defiscan.live/",
           "image": {
-            "url": "/img/timeline/2021/DeFi-Scan.png",
+            "url": "/img/timeline/2021/DeFi-Scan.jpg",
             "alt": "推出DeFi Scan区块链浏览器"
           }
         },
@@ -366,7 +366,7 @@
           "title": "十月",
           "desc": "达成100%碳中和区块链",
           "image": {
-            "url": "/img/timeline/2021/Carbon-neutral.png",
+            "url": "/img/timeline/2021/Carbon-neutral.jpg",
             "alt": "达成100%碳中和区块链"
           }
         },
@@ -374,7 +374,7 @@
           "title": "十一月",
           "desc": "Fort Canning更新去中心化资产和相关dToken流动性挖矿",
           "image": {
-            "url": "/img/timeline/2021/Fort-Canning-Update-blank.png",
+            "url": "/img/timeline/2021/Fort-Canning-Update-blank.jpg",
             "alt": "Fort Canning更新去中心化资产和相关dToken流动性挖矿"
           }
         }
@@ -520,7 +520,7 @@
           "title": "八月",
           "desc": "递飞链品牌更新",
           "image": {
-            "url": "/img/timeline/2020/dechain-site-redesign@2x.png",
+            "url": "/img/timeline/2020/dechain-site-redesign@2x.jpg",
             "alt": "DeFiChain.com redesign"
           }
         },
@@ -538,7 +538,7 @@
           "desc": "递飞链改进提议案DFIP 1和2以被社区认可",
           "url": "https://defiblockchain.medium.com/dfip-1-2-voting-results-29bfc8c7a608",
           "image": {
-            "url": "/img/timeline/2020/dfips-approved@2x.png",
+            "url": "/img/timeline/2020/dfips-approved@2x.jpg",
             "alt": "DFIP 1 & 2 approved"
           }
         },
@@ -547,7 +547,7 @@
           "desc": "$DFI在Bitrue上币",
           "url": "https://www.bitrue.com/trade/dfi_btc",
           "image": {
-            "url": "/img/timeline/2020/bittrue@2x.png",
+            "url": "/img/timeline/2020/bittrue@2x.jpg",
             "alt": "DeFiChain listed on Bittrue"
           }
         },
@@ -556,7 +556,7 @@
           "desc": "宏茂桥硬分叉支持资产代币化",
           "url": "https://defiblockchain.medium.com/defichain-hardfork-successful-everything-you-need-to-know-5aa4ea92438b",
           "image": {
-            "url": "/img/timeline/2020/amk-hardfork@2x.png",
+            "url": "/img/timeline/2020/amk-hardfork@2x.jpg",
             "alt": "宏茂桥硬分叉支持资产代币化"
           }
         },
@@ -574,7 +574,7 @@
           "desc": "海湾硬分叉并支持流动性池",
           "url": "https://www.reddit.com/r/defiblockchain/comments/jem20f/defichain_version_130_for_bayfront_with_liquidity/",
           "image": {
-            "url": "/img/timeline/2020/bayfront-hardfork@2x.png",
+            "url": "/img/timeline/2020/bayfront-hardfork@2x.jpg",
             "alt": "Bayfront hard fork"
           }
         },

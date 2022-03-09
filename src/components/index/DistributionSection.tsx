@@ -8,7 +8,7 @@ export function DistributionSection (): JSX.Element {
   const { t } = useTranslation('page-index')
 
   return (
-    <section className='py-10' data-testid='DistributionSection'>
+    <section className='py-10 mb-10' data-testid='DistributionSection'>
       <Container>
         <div className='pt-10' data-testid='DistributionSection.Nodes'>
           <div className='flex flex-col space-y-12'>
@@ -21,7 +21,7 @@ export function DistributionSection (): JSX.Element {
               {t('DistributionSection.desc')}
             </div>
           </div>
-          <div className='w-full mt-24' data-testid='Nodes.Image'>
+          <div className='w-4/5 mt-16 mx-auto' data-testid='Nodes.Image'>
             <NextImage src={Nodes} />
           </div>
         </div>

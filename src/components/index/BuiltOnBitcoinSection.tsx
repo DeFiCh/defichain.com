@@ -12,7 +12,7 @@ export function BuiltOnBitcoinSection (): JSX.Element {
       <Container>
         <div className='flex flex-wrap md:flex-nowrap space-y-6 md:space-y-0 md:space-x-28 py-20'>
           <div
-            className='flex flex-col space-y-4 md:space-y-8 items-start '
+            className='w-full lg:w-2/3 flex flex-col space-y-4 md:space-y-8 items-start '
             data-testid='BuiltOnBitcoinSection.BuiltOnBitcoin'
           >
             <h1
@@ -29,7 +29,7 @@ export function BuiltOnBitcoinSection (): JSX.Element {
               </a>
             </Link>
           </div>
-          <div className='w-full' data-testid='image'>
+          <div className='w-full lg:w-1/3' data-testid='image'>
             <NextImage src={Bitcoin} />
           </div>
         </div>

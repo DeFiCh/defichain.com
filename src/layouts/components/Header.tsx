@@ -45,7 +45,7 @@ export function Header (): JSX.Element {
   return (
     <header className={classNames('bg-white z-50 sticky top-0 md:shadow-none md:static', { 'shadow-lg': !atTop })}>
       <div className='border-b border-gray-100'>
-        <Container className='py-4 md:py-8'>
+        <Container className='py-4 lg:py-6'>
           <div className='flex items-center justify-between'>
             <div className='flex w-full'>
               <Link href={{ pathname: '/' }} passHref>
@@ -55,7 +55,7 @@ export function Header (): JSX.Element {
               </Link>
               <DesktopNavbar price={dfiPrice} />
             </div>
-            <div className='md:hidden'>
+            <div className='lg:hidden'>
               {menu ? (
                 <MdClose
                   className='h-8 w-8 text-primary-500' onClick={() => setMenu(false)}
@@ -83,7 +83,7 @@ function DesktopNavbar ({ price }: { price: string }): JSX.Element {
   const { t } = useTranslation('layout')
 
   return (
-    <div className='hidden md:flex ml-2 lg:ml-8 md:w-full md:justify-end xl:justify-between items-center text-gray-600' data-testid='DesktopNavbar'>
+    <div className='hidden lg:flex ml-2 lg:ml-8 md:w-full md:justify-end xl:justify-between items-center text-gray-600' data-testid='DesktopNavbar'>
       <div className='hidden lg:flex'>
         <HeaderLink
           className='ml-1 lg:ml-4' text={t('header.navbar.dfi')} pathname='/dfi'
@@ -110,7 +110,7 @@ function DesktopNavbar ({ price }: { price: string }): JSX.Element {
           testId='Desktop.HeaderLink.DeFiScan'
         />
       </div>
-      <div className='hidden md:flex items-center mr-4 xl:mr-0 space-x-4'>
+      <div className='hidden lg:flex items-center mr-4 xl:mr-0 space-x-4'>
         <LanguageDropdown />
         <ExternalHeaderLink
           className='p-2 flex justify-center lg:hidden' text='Github' url='https://github.com/defich/ain'
@@ -130,7 +130,7 @@ function MobileMenu ({ price }: { price: string }): JSX.Element {
   const { t } = useTranslation('layout')
 
   return (
-    <div className='md:hidden absolute z-50 w-full bg-white shadow-lg' data-testid='MobileMenu'>
+    <div className='lg:hidden absolute z-50 w-full bg-white shadow-lg' data-testid='MobileMenu'>
       <Container className='border-b border-gray-100 shadow-sm text-gray-600'>
         <div className='flex flex-col'>
           <HeaderLink

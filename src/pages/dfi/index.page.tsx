@@ -13,8 +13,8 @@ export default function DFIPage (): JSX.Element {
   return (
     <>
       <Head
-        title='$DFI'
-        description='Learn about the $DFI coin and its utility, distribution, airdrops and how to acquire DFI.'
+        title={t('Head.title')}
+        description={t('Head.desc')}
       />
       <Header title={t('Header.title')}>
         <div className='mt-10 flex flex-wrap'>

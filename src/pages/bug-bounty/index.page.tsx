@@ -17,8 +17,8 @@ export default function HomePage (): JSX.Element {
   return (
     <>
       <Head
-        title='Bug Bounty Program'
-        description='DeFiChain is engaging with security experts as well as the community to hunt down vulnerabilities. Our bounty program rewards up to USD 50,000.'
+        title={t('Head.title')}
+        description={t('Head.desc')}
       />
       <Header title={t('Header.title')}>
         <div className='mt-10 flex flex-wrap'>

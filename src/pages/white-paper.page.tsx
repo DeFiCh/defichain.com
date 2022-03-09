@@ -24,8 +24,8 @@ export default function WhitePaperPage ({ post }): JSX.Element {
   return (
     <>
       <Head
-        title='White Paper'
-        description='DeFiChain white paper'
+        title={post.title}
+        description={post.description}
       />
       <Header title={post.title}>
         <div className='mt-10 flex flex-wrap'>

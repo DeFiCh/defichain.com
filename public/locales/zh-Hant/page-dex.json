@@ -1,4 +1,8 @@
 {
+  "Head": {
+    "title": "去中心化交易所",
+    "desc": "DEX上互換，流動性挖礦，錢包。適用于Windows，macOS和Linux"
+  },
   "Header": {
     "title": "去中心化交易所",
     "desc": {

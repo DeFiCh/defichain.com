@@ -12,8 +12,8 @@ export default function DevelopersPage (): JSX.Element {
   return (
     <>
       <Head
-        title='Developers'
-        description='Start building on DeFiChain with developer resources and code.'
+        title={t('Head.title')}
+        description={t('Head.desc')}
       />
       <Header title={t('Header.title')}>
         <div className='mt-10 flex flex-wrap'>

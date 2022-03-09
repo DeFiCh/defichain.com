@@ -1,4 +1,4 @@
-import { SSRConfig } from 'next-i18next'
+import { SSRConfig, useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { HomePageHeader } from '@components/index/HomePageHeader'
 import { CardSection } from '@components/index/CardSection'
@@ -11,11 +11,13 @@ import { DistributionSection } from '@components/index/DistributionSection'
 import { Head } from '@components/commons/Head'
 
 export default function HomePage (): JSX.Element {
+  const { t } = useTranslation(['page-index'])
+
   return (
     <>
       <Head
-        title='DeFiChain – Native Decentralized Finance for Bitcoin'
-        description='A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone.'
+        title={t('Head.title')}
+        description={t('Head.desc')}
       />
       <HomePageHeader />
       <CardSection />

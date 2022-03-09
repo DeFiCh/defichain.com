@@ -12,8 +12,8 @@ export default function DownloadsPage (): JSX.Element {
   return (
     <>
       <Head
-        title='Downloads'
-        description='DeFiChain mobile app, CLI and desktop app downloads for macOS, Windows and Linux.'
+        title={t('Head.title')}
+        description={t('Head.desc')}
       />
       <Header title={t('Header.title')}>
         <div className='mt-10 flex flex-wrap'>

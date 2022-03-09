@@ -18,8 +18,8 @@ export default function EcosystemPage (): JSX.Element {
   return (
     <>
       <Head
-        title='Ecosystem'
-        description='Be part of DeFiChain ecosystem.'
+        title={t('Head.title')}
+        description={t('Head.desc')}
       />
       <Header title={t('Header.title')}>
         <div className='mt-10 flex flex-wrap'>

@@ -1,9 +1,12 @@
 {
+  "Head": {
+    "title": "Bug Bounty Program",
+    "desc": "DeFiChain is engaging with security experts as well as the community to hunt down vulnerabilities. Our bounty program rewards up to USD 50,000."
+  },
   "Header": {
     "title": "DeFiChain Bug Bounty Program",
     "desc": "DeFiChain is engaging with security experts as well as the community to hunt down vulnerabilities. Our bounty program rewards up to USD 50,000.",
-    "submit": "Submit vulnerability",
-    "howTo": "How to participate"
+    "submit": "Submit vulnerability"
   },
   "LeaderboardSection": {
     "title": "Leaderboard",

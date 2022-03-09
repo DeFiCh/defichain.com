@@ -12,8 +12,8 @@ export default function DexPage (): JSX.Element {
   return (
     <>
       <Head
-        title='Decentralized Exchange'
-        description='Swap on the DEX, mine liquidity and more, with the DeFiChain wallet app. Available for Windows, macOS and Linux.'
+        title={t('Head.title')}
+        description={t('Head.desc')}
       />
       <Header title={t('Header.title')}>
         <div className='mt-10 flex flex-wrap'>

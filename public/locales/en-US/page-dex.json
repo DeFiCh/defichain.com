@@ -1,4 +1,8 @@
 {
+  "Head": {
+    "title": "Decentralized Exchange",
+    "desc": "Swap on the DEX, mine liquidity and more, with the DeFiChain wallet app. Available for Windows, macOS and Linux."
+  },
   "Header": {
     "title": "Decentralized Exchange",
     "desc": {

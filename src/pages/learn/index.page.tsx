@@ -29,8 +29,8 @@ export default function LearnPage (props: InferGetStaticPropsType<typeof getStat
   return (
     <>
       <Head
-        title='Learn'
-        description='Learn more and understand DeFiChain with videos and how-to guides.'
+        title={t('Head.title')}
+        description={t('Head.desc')}
       />
       <Header title={t('Header.title')}>
         <div className='mt-10 flex flex-wrap'>

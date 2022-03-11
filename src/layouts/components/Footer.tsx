@@ -79,6 +79,10 @@ function FooterSectionSitemap (): JSX.Element {
         text={t('footer.sitemap.whitepaper')} pathname='/white-paper'
         testId='FooterSectionSitemap.WhitePaper'
       />
+      <FooterExternalLink
+        text={t('footer.sitemap.dfcblog')} url='https://blog.defichain.com/'
+        testId='FooterSectionSitemap.DFCBlog'
+      />
     </FooterSection>
   )
 }

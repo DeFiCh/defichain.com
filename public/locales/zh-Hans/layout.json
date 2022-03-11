@@ -8,7 +8,8 @@
       "ecosystem": "生态系统",
       "downloads": "下载区",
       "learn": "学习中心",
-      "buy": "购买"
+      "buy": "购买",
+      "dfcblog": "博客"
     }
   },
   "footer": {
@@ -24,7 +25,8 @@
       "learn": "学习中心",
       "security": "安全性",
       "bugbounty": "漏洞悬赏",
-      "whitepaper": "白皮书"
+      "whitepaper": "白皮书",
+      "dfcblog": "博客"
     },
     "social": {
       "title": "社区",

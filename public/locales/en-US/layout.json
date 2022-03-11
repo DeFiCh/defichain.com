@@ -8,7 +8,8 @@
       "ecosystem": "Ecosystem",
       "downloads": "Downloads",
       "learn": "Learn",
-      "buy": "Buy"
+      "buy": "Buy",
+      "dfcblog": "Blog"
     }
   },
   "footer": {
@@ -24,7 +25,8 @@
       "learn": "Learn",
       "security": "Security",
       "bugbounty": "Bug Bounty",
-      "whitepaper": "White Paper"
+      "whitepaper": "White Paper",
+      "dfcblog": "Blog"
     },
     "social": {
       "title": "Social",

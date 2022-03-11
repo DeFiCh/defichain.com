@@ -8,7 +8,7 @@ const securityHeaders = [
       `child-src 'self' app.netlify.com;` +
       `form-action 'none';` +
       `frame-ancestors 'none';` +
-      `img-src 'self' data:;` +
+      `img-src 'self' data: s2.coinmarketcap.com;` +
       `media-src 'self';` +
       `object-src 'none';` +
       `script-src 'self' app.netlify.com netlify-cdp-loader.netlify.app ${process.env.NODE_ENV === 'development' ? `'unsafe-eval'` : ''};` +

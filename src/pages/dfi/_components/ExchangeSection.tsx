@@ -144,10 +144,9 @@ export function ExchangeSection (): JSX.Element {
           </div>
           <span data-testid='DfiPage.Developers.Desc'>
             {t('ExchangeSection.Developers.email')}
-            <ExternalLink className='text-primary-500' url='mailto:partners@defichain.com'>
+            <ExternalLink className='text-primary-500 ml-2' url='mailto:partners@defichain.com'>
               partners@defichain.com
             </ExternalLink>
-            {t('Punctuation.fullStop', { ns: 'common' })}
           </span>
         </div>
       </Section>

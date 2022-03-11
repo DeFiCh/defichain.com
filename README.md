@@ -11,7 +11,7 @@
 ## Developing & Contributing
 
 Thanks for contributing, appreciate all the help we can get. Feel free to make a pull-request, we will guide you along
-the way to make it mergeable. Here are some of our documented [contributing guidelines](CONTRIBUTING.md).
+the way to make it merge-able. Here are some of our documented [contributing guidelines](CONTRIBUTING.md).
 
 We use `npm 8` for this project, it's required to set
 up [npm workspaces](https://docs.npmjs.com/cli/v8/using-npm/workspaces).

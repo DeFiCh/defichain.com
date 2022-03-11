@@ -1,4 +1,4 @@
-# DeFi Scan Contributing Guide
+# DeFiChain.com Contributing Guide
 
 ## Developing Guides
 
@@ -7,7 +7,7 @@
 TODO comments should usually include the author's github username in parentheses. Example:
 
 ```ts
-// TODO(fuxingloh): Add tests.
+// TODO(joeldavidw): Add tests.
 ```
 
 ### Code of conduct
@@ -21,6 +21,10 @@ Each package, feature, code and decision should be explicit and well documented 
 ### TypeScript
 
 TypeScript must be used for all code written in this project.
+
+### Translations
+
+Translation files are located in `/public/locales/<Locale>` and `/content/<MD_Page>` for markdown pages.
 
 ### `constants.ts` not allowed
 

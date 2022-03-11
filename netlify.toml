@@ -7,3 +7,44 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+
+[[redirects]]
+  from = "http://defichain.com/*"
+  to = "https://defichain.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://zhs.defichain.com/*"
+  to = "https://zhs.defichain.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://zhs.defichain.com/*"
+  to = "https://defichain.com/zh-Hans/:splat"
+  status = 200
+
+[[redirects]]
+  from = "http://defichain.com/zh-Hans/*"
+  to = "https://defichain.com/zh-Hans/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://zht.defichain.com/*"
+  to = "https://zht.defichain.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://zht.defichain.com/*"
+  to = "https://defichain.com/zh-Hant/:splat"
+  status = 200
+
+[[redirects]]
+  from = "http://defichain.com/zh-Hant/*"
+  to = "https://defichain.com/zh-Hant/:splat"
+  status = 301
+  force = true

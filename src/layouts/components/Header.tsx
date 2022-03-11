@@ -108,7 +108,11 @@ function DesktopNavbar ({ price }: { price: string }): JSX.Element {
           testId='Desktop.HeaderLink.Learn'
         />
         <ExternalHeaderLink
-          className='ml-1 lg:ml-4' text='DeFi Scan' url='https://defiscan.live/'
+          className='ml-1 lg:ml-4' text={t('header.navbar.dfcblog')} url='https://blog.defichain.com/'
+          testId='Desktop.HeaderLink.DFCBlog'
+        />
+        <ExternalHeaderLink
+          className='ml-2 lg:ml-4' text='DeFi Scan' url='https://defiscan.live/'
           testId='Desktop.HeaderLink.DeFiScan'
         />
       </div>

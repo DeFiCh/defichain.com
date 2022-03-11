@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { PropsWithChildren } from 'react'
 import classNames from 'classnames'
 import { useTranslation } from 'next-i18next'
+import Script from 'next/script'
 
 export function Footer (): JSX.Element {
   const { t } = useTranslation('layout')
@@ -20,12 +21,20 @@ export function Footer (): JSX.Element {
           <h2 className='text-xl lg:text-2xl font-semibold' data-testid='Footer.Heading'>{t('footer.title')}
           </h2>
         </div>
-        <div className='mt-10 flex flex-wrap lg:flex-nowrap lg:space-x-6'>
+        <div className='mt-10 flex flex-wrap space-y-8 lg:flex-nowrap lg:space-x-6'>
           <div className='flex-grow max-w-sm'>
             <FooterSectionSitemap />
           </div>
           <div className='flex-grow max-w-sm'>
             <FooterSectionSocial />
+          </div>
+          <div className='flex flex-wrap w-full lg:w-1/2 justify-center lg:justify-end'>
+            <Script src='https://files.coinmarketcap.com/static/widget/currency.js' />
+            <div
+              className='coinmarketcap-currency-widget' data-currencyid='5804' data-base='USD' data-secondary=''
+              data-ticker='true' data-rank='false' data-marketcap='true' data-volume='true' data-statsticker='true'
+              data-stats='USD'
+            />
           </div>
         </div>
         <div className='flex flex-row items-center space-x-4 mt-16'>
@@ -44,14 +53,32 @@ function FooterSectionSitemap (): JSX.Element {
     <FooterSection heading='DeFiChain'>
       <FooterInternalLink text={t('footer.sitemap.dfi')} pathname='/dfi' testId='FooterSectionSitemap.DFI' />
       <FooterInternalLink text={t('footer.sitemap.dex')} pathname='/dex' testId='FooterSectionSitemap.DEX' />
-      <FooterInternalLink text={t('footer.sitemap.developers')} pathname='/developers' testId='FooterSectionSitemap.Developers' />
-      <FooterInternalLink text={t('footer.sitemap.ecosystem')} pathname='/ecosystem' testId='FooterSectionSitemap.Ecosystem' />
-      <FooterInternalLink text={t('footer.sitemap.downloads')} pathname='/downloads' testId='FooterSectionSitemap.Downloads' />
+      <FooterInternalLink
+        text={t('footer.sitemap.developers')} pathname='/developers'
+        testId='FooterSectionSitemap.Developers'
+      />
+      <FooterInternalLink
+        text={t('footer.sitemap.ecosystem')} pathname='/ecosystem'
+        testId='FooterSectionSitemap.Ecosystem'
+      />
+      <FooterInternalLink
+        text={t('footer.sitemap.downloads')} pathname='/downloads'
+        testId='FooterSectionSitemap.Downloads'
+      />
       {/* <FooterInternalLink text={t('footer.sitemap.media')} pathname='/media' testId='FooterSectionSitemap.Media' /> */}
       <FooterInternalLink text={t('footer.sitemap.learn')} pathname='/learn' testId='FooterSectionSitemap.Learn' />
-      <FooterInternalLink text={t('footer.sitemap.security')} pathname='/security' testId='FooterSectionSitemap.Security' />
-      <FooterInternalLink text={t('footer.sitemap.bugbounty')} pathname='/bug-bounty' testId='FooterSectionSitemap.BugBounty' />
-      <FooterInternalLink text={t('footer.sitemap.whitepaper')} pathname='/white-paper' testId='FooterSectionSitemap.WhitePaper' />
+      <FooterInternalLink
+        text={t('footer.sitemap.security')} pathname='/security'
+        testId='FooterSectionSitemap.Security'
+      />
+      <FooterInternalLink
+        text={t('footer.sitemap.bugbounty')} pathname='/bug-bounty'
+        testId='FooterSectionSitemap.BugBounty'
+      />
+      <FooterInternalLink
+        text={t('footer.sitemap.whitepaper')} pathname='/white-paper'
+        testId='FooterSectionSitemap.WhitePaper'
+      />
     </FooterSection>
   )
 }

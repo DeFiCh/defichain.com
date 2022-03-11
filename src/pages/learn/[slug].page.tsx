@@ -3,7 +3,7 @@ import React from 'react'
 import { getAllPosts, getPostBySlug, Post } from './utils/api'
 import { remark } from 'remark'
 import ReactMarkdown from 'react-markdown'
-import { Header } from '@components/commons/Header'
+import { PageHeader } from '@components/commons/PageHeader'
 import rehypeSlug from 'rehype-slug'
 import rehypeSanitize from 'rehype-sanitize'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
@@ -27,13 +27,13 @@ export default function PostPage ({ post }): JSX.Element {
         title={post.title}
         description={post.description}
       />
-      <Header title={post.title}>
+      <PageHeader title={post.title}>
         <div className='mt-10 flex flex-wrap'>
           <div className='w-full text-2xl text-gray-900' data-testid='Header.desc.main'>
             {post.description}
           </div>
         </div>
-      </Header>
+      </PageHeader>
       <Container>
         <article className='prose lg:prose-xl mx-auto py-20'>
           <ReactMarkdown

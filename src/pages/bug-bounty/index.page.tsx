@@ -1,6 +1,6 @@
 import { SSRConfig, Trans, useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { Header } from '@components/commons/Header'
+import { PageHeader } from '@components/commons/PageHeader'
 import { Container } from '@components/commons/Container'
 import { ExternalLink } from '@components/commons/link/ExternalLink'
 import Link from 'next/link'
@@ -20,7 +20,7 @@ export default function HomePage (): JSX.Element {
         title={t('Head.title')}
         description={t('Head.desc')}
       />
-      <Header title={t('Header.title')}>
+      <PageHeader title={t('Header.title')}>
         <div className='mt-10 flex flex-wrap'>
           <div className='w-full text-2xl text-gray-900' data-testid='Header.desc.main'>
             {t('Header.desc')}
@@ -31,7 +31,7 @@ export default function HomePage (): JSX.Element {
             </a>
           </div>
         </div>
-      </Header>
+      </PageHeader>
       <Container>
         <LeaderboardSection />
         <Section title={t('HowToSection.title')} testId='HowToSection'>

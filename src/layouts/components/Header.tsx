@@ -112,16 +112,12 @@ function DesktopNavbar ({ price }: { price: string }): JSX.Element {
           testId='Desktop.HeaderLink.DFCBlog'
         />
         <ExternalHeaderLink
-          className='ml-2 lg:ml-4' text='DeFi Scan' url='https://defiscan.live/'
+          className='ml-1 lg:ml-4' text='DeFi Scan' url='https://defiscan.live/'
           testId='Desktop.HeaderLink.DeFiScan'
         />
       </div>
       <div className='hidden lg:flex items-center mr-4 xl:mr-0 space-x-4'>
         <LanguageDropdown />
-        <ExternalHeaderLink
-          className='p-2 flex justify-center lg:hidden' text='Github' url='https://github.com/defich/ain'
-          testId='Desktop.HeaderLink.DeFiScan'
-        />
         <HeaderLink
           text={t('header.navbar.downloads')} pathname='/downloads' className='ml-1 lg:ml-4 hidden lg:block'
           testId='Desktop.HeaderLink.Downloads'
@@ -160,6 +156,10 @@ function MobileMenu ({ price }: { price: string }): JSX.Element {
           <HeaderLink
             className='flex justify-center border-b border-gray-100' text={t('header.navbar.learn')} pathname='/learn'
             testId='Mobile.HeaderLink.Learn'
+          />
+          <ExternalHeaderLink
+            className='p-2 flex justify-center border-b border-gray-100' text='Blog' url='https://defiscan.live/'
+            testId='Mobile.HeaderLink.DeFiScan'
           />
           <ExternalHeaderLink
             className='p-2 flex justify-center border-b border-gray-100' text='DeFi Scan' url='https://defiscan.live/'

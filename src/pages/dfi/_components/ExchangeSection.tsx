@@ -13,7 +13,7 @@ import BittrexLogo from '../../../../public/assets/svg/exchanges/logo-bittrex.sv
 import BittrueLogo from '../../../../public/assets/svg/exchanges/logo-bittrue.svg'
 import DFXLogo from '../../../../public/assets/svg/exchanges/logo-dfx.svg'
 import LaTokenLogo from '../../../../public/assets/svg/exchanges/logo-latoken.svg'
-import { useTranslation } from 'next-i18next'
+import { Trans, useTranslation } from 'next-i18next'
 import { Section } from '@components/commons/Section'
 
 export function ExchangeSection (): JSX.Element {
@@ -143,10 +143,13 @@ export function ExchangeSection (): JSX.Element {
             {t('ExchangeSection.Developers.desc')}
           </div>
           <span data-testid='DfiPage.Developers.Desc'>
-            {t('ExchangeSection.Developers.email')}
-            <ExternalLink className='text-primary-500 ml-2' url='mailto:partners@defichain.com'>
-              partners@defichain.com
-            </ExternalLink>
+            <Trans
+              t={t}
+              i18nKey='ExchangeSection.Developers.email'
+              components={[
+                <ExternalLink key='0' className='text-primary-500' url='mailto:partners@defichain.com' />
+              ]}
+            />
           </span>
         </div>
       </Section>

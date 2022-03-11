@@ -4,12 +4,11 @@ import { DeFiChainLogo } from '@components/icons/DeFiChainLogo'
 import Link from 'next/link'
 import { MdClose, MdMenu } from 'react-icons/md'
 import { useRouter } from 'next/router'
-import { Fragment, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useWhaleApiClient } from '../context/WhaleContext'
 import { useTranslation } from 'next-i18next'
-import { Listbox, Popover, Transition } from '@headlessui/react'
-import { ExternalLink } from '@components/commons/link/ExternalLink'
-import Image from 'next/image'
+import { BuyDFIButton } from './BuyDFIButton'
+import { LanguageDropdown } from './LanguageDropdown'
 
 export function Header (): JSX.Element {
   const [menu, setMenu] = useState(false)
@@ -83,7 +82,10 @@ function DesktopNavbar ({ price }: { price: string }): JSX.Element {
   const { t } = useTranslation('layout')
 
   return (
-    <div className='hidden lg:flex ml-2 lg:ml-8 md:w-full md:justify-end xl:justify-between items-center text-gray-600' data-testid='DesktopNavbar'>
+    <div
+      className='hidden lg:flex ml-2 lg:ml-8 md:w-full md:justify-end xl:justify-between items-center text-gray-600'
+      data-testid='DesktopNavbar'
+    >
       <div className='hidden lg:flex'>
         <HeaderLink
           className='ml-1 lg:ml-4' text={t('header.navbar.dfi')} pathname='/dfi'
@@ -120,7 +122,7 @@ function DesktopNavbar ({ price }: { price: string }): JSX.Element {
           text={t('header.navbar.downloads')} pathname='/downloads' className='ml-1 lg:ml-4 hidden lg:block'
           testId='Desktop.HeaderLink.Downloads'
         />
-        <BuyDfiButton price={price} />
+        <BuyDFIButton price={price} />
       </div>
     </div>
   )
@@ -164,7 +166,7 @@ function MobileMenu ({ price }: { price: string }): JSX.Element {
           </div>
         </div>
       </Container>
-      <BuyDfiButton price={price} />
+      <BuyDFIButton price={price} />
     </div>
   )
 }
@@ -195,134 +197,6 @@ export function ExternalHeaderLink (props: { text: string, url: string, classNam
       <a href={props.url} target='_blank' rel='noreferrer' data-testid={props.testId}>
         {props.text}
       </a>
-    </div>
-  )
-}
-
-function BuyDfiButton ({ classname, price }: { classname?: string, price: string }): JSX.Element {
-  const { t } = useTranslation('layout')
-
-  const exchanges = [
-    { name: 'DFX', image: '/assets/svg/exchanges/logo-dfx.svg', url: 'https://dfx.swiss/en/' },
-    { name: 'KuCoin', image: '/assets/svg/exchanges/logo-kucoin.svg', url: 'https://trade.kucoin.com/DFI-BTC' },
-    {
-      name: 'Bittrex',
-      image: '/assets/svg/exchanges/logo-bittrex.svg',
-      url: 'https://global.bittrex.com/Market/Index?MarketName=BTC-DFI'
-    },
-    { name: 'LATOKEN', image: '/assets/svg/exchanges/logo-latoken.svg', url: 'https://go.latoken.com/1gd' },
-    {
-      name: 'Hotbit',
-      image: '/assets/img/exchanges/logo-hotbit.png',
-      url: 'https://www.hotbit.io/exchange?symbol=DFI_USDT'
-    },
-    { name: 'Bittrue', image: '/assets/svg/exchanges/logo-bittrue.svg', url: 'https://www.bitrue.com/trade/dfi_btc' },
-    {
-      name: 'EasyCrypto (AU)',
-      image: '/assets/img/exchanges/logo-easycrypto-au.png',
-      url: 'https://easycrypto.ai/au/buy-sell/dfi-defichain'
-    },
-    {
-      name: 'EasyCrypto (NZ)',
-      image: '/assets/img/exchanges/logo-easycrypto-nz.png',
-      url: 'https://easycrypto.ai/nz/buy-sell/dfi-defichain'
-    },
-    {
-      name: 'Transak',
-      image: '/assets/img/exchanges/logo-transak.png',
-      url: 'https://global.transak.com/?apiKey=9cb22c33-f1fc-4ff0-9736-9159bb879568&cryptoCurrencyCode=DFI'
-    },
-    { name: 'Hoo', image: '/assets/img/exchanges/logo-hoo.png', url: 'https://hoo.com/innovation/dfi-usdt' }
-  ]
-
-  return (
-    <Popover className='relative'>
-      <Popover.Button as={Fragment}>
-        <div
-          className={classNames('flex justify-center items-center text-white bg-primary-500 hover:bg-primary-600 p-2.5 xl:px-4 lg:rounded md:mb-0 cursor-pointer', classname)}
-        >
-          {t('header.navbar.buy')}
-          <span className='font-medium ml-1'>$DFI</span>
-          {
-            price !== '0' && (
-              <span className='ml-1.5 text-gray-100 font-medium text-sm'>${Number(price).toFixed(2)}</span>
-            )
-          }
-        </div>
-      </Popover.Button>
-
-      <Popover.Panel
-        className='mt-2 bg-white w-48 rounded absolute z-50 text-center text-gray-700 text-lg border shadow-lg border-gray-200'
-      >
-        {
-          exchanges.map(exchange => (
-            <div key={exchange.name}>
-              <ExternalLink url={exchange.url}>
-                <div className='flex justify-center p-3 hover:bg-gray-100 border-b'>
-                  <Image
-                    src={exchange.image ?? ''}
-                    width={140}
-                    height={32}
-                    layout='fixed'
-                    objectFit='contain'
-                    alt={exchange.name}
-                  />
-                </div>
-              </ExternalLink>
-            </div>
-          ))
-        }
-      </Popover.Panel>
-    </Popover>
-  )
-}
-
-function LanguageDropdown (): JSX.Element {
-  const router = useRouter()
-  const languages = [
-    { locale: 'en-US', name: 'English' },
-    { locale: 'zh-Hans', name: '简体中文' },
-    { locale: 'zh-Hant', name: '繁體中文' }
-  ]
-  const [selectedLanguage, setSelectedLanguage] = useState(languages.find(language => language.locale === router.locale) ?? languages[0])
-
-  useEffect(() => {
-    if (selectedLanguage.locale !== router.locale) {
-      void router.push(router.pathname, undefined, { locale: selectedLanguage.locale })
-    }
-  }, [selectedLanguage])
-
-  return (
-    <div className='relative' data-testid='SiteLangDropdown'>
-      <Listbox value={selectedLanguage} onChange={setSelectedLanguage}>
-        <Listbox.Button className='text-lg hover:text-primary-500'>{selectedLanguage.name}</Listbox.Button>
-        <Transition
-          enter='transition duration-100 ease-out'
-          enterFrom='transform scale-95 opacity-0'
-          enterTo='transform scale-100 opacity-100'
-          leave='transition duration-75 ease-out'
-          leaveFrom='transform scale-100 opacity-100'
-          leaveTo='transform scale-95 opacity-0'
-        >
-          <div
-            className='mt-2 bg-white w-32 rounded absolute z-50 text-center text-gray-700 text-lg border shadow-lg border-gray-200'
-          >
-            <Listbox.Options>
-              {languages.map((language) => (
-                <div className='border-b' key={language.locale}>
-                  <Listbox.Option
-                    key={language.locale}
-                    value={language}
-                    className='p-2 hover:bg-gray-100 cursor-pointer'
-                  >
-                    {language.name}
-                  </Listbox.Option>
-                </div>
-              ))}
-            </Listbox.Options>
-          </div>
-        </Transition>
-      </Listbox>
     </div>
   )
 }

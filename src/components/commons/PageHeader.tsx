@@ -4,7 +4,7 @@ import { Container } from '@components/commons/Container'
 /**
  * Container implementation that is part of the design language.
  */
-export function Header (props: PropsWithChildren<{ className?: string, title: string }>): JSX.Element {
+export function PageHeader (props: PropsWithChildren<{ className?: string, title: string }>): JSX.Element {
   return (
     <div
       className='flex flex-col items-center pb-24'

@@ -27,7 +27,7 @@ export function ResourceCard (props: PropsWithChildren<{ external?: boolean, tex
             }
 
             return (
-              <NextLink href={props.url}>
+              <NextLink href={props.url} passHref>
                 <Button text={props.buttonText} />
               </NextLink>
             )

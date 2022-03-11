@@ -1,6 +1,6 @@
 import { UserConfig } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { Header } from '@components/commons/Header'
+import { PageHeader } from '@components/commons/PageHeader'
 import { Container } from '@components/commons/Container'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
@@ -27,13 +27,13 @@ export default function PrivacyPolicyPage ({ post }): JSX.Element {
         title={post.title}
         description={post.description}
       />
-      <Header title={post.title}>
+      <PageHeader title={post.title}>
         <div className='mt-10 flex flex-wrap'>
           <div className='w-full text-2xl text-gray-900' data-testid='Header.desc.main'>
             {post.description}
           </div>
         </div>
-      </Header>
+      </PageHeader>
       <Container>
         <article className='prose lg:prose-xl mx-auto py-20'>
           <ReactMarkdown

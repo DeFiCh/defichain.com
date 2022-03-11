@@ -8,6 +8,10 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+[[headers]]
+  for = "/keys/security@defichain.com.public.key"
+  [headers.values]
+    Content-Type = "text/plain"
 
 [[redirects]]
   from = "http://defichain.com/*"

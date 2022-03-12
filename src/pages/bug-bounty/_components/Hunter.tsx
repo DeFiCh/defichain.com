@@ -24,7 +24,7 @@ interface HunterI {
 export function Hunter (props: { index: number, hunter: HunterI }): JSX.Element {
   return (
     <div className='flex flex-wrap bg-gray-50 rounded-lg px-8 py-6'>
-      <div className='w-1/2 lg:w-2/6 flex flex-wrap items-start'>
+      <div className='w-full lg:w-2/6 flex flex-wrap items-start'>
         <div className='w-full'>
           <h3 className='inline text-xl font-medium'>
             <span className='mr-2'>{props.index + 1}.</span>
@@ -41,7 +41,7 @@ export function Hunter (props: { index: number, hunter: HunterI }): JSX.Element 
           }
         </div>
       </div>
-      <div className='w-full lg:w-4/6 flex flex-wrap mt-4 md:mt-0 -my-1 justify-end'>
+      <div className='w-full lg:w-4/6 flex flex-wrap mt-1 md:mt-0 -my-1 justify-end'>
         {props.hunter.bounties.map(bounty => {
           return (
             <div className='w-full flex flex-wrap text-base py-1.5 border-b' key={bounty.name}>

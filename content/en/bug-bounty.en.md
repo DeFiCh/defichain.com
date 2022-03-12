@@ -41,29 +41,45 @@ content:
           address: dYY5wLEmiawTAzTp2CP5qfrYyjmCVcwPv4
           bounties:
             - title: Masternode mining efficiency exploit
-              value_dfi: 5000
-              value_usd: 15000
+              value_dfi: 7500
+              value_usd: 26250
               txid: 3855e22b35f26cc962d154639d3ce1ac14a40286182b0c897cd5dbe8c0b60503
             - title: 3rd-party masternode fund lockup issue
-              value_dfi: 1500
-              value_usd: 4500
+              value_dfi: 2250
+              value_usd: 7875
               txid: f715e5ec45ffccbaade5d0de451d18cf00e386b04f0c3d87d8b7a80278e6b709
             - title: Probabilistic side mining exploit
-              value_dfi: 2500
-              value_usd: 7500
+              value_dfi: 3750
+              value_usd: 13125
               txid: e2fa3e133e35458328eded333f32e2c525c66861f37ca0be52f5b7e092c96cde
             - title: Dropping of masternode through transaction malleability
-              value_dfi: 4000
-              value_usd: 12000
+              value_dfi: 6000
+              value_usd: 21000
               txid: ee46a62e455f6aad526d9664022afb4a5014b4031e034f00bdf53dee3d5a6070
             - title: Masternode quorum anchor confirmation bug
-              value_dfi: 3000
-              value_usd: 9000
+              value_dfi: 4500
+              value_usd: 15750
               txid: 471c0e3e1c6e06375be6eef63eb51cc068ecf765301366f1d3d82c7446b8c0e3
             - title: Masternode boost with infinite timelock
-              value_dfi: 4000
-              value_usd: 12000
+              value_dfi: 6000
+              value_usd: 21000
               txid: 3e8bef9fc348183d6f7f685d105ced7693dfa6bc5f94431c3abba7d47271eb08
+        - name: (anonymous)
+          github: (anonymous)
+          address: dF3iyyrwGqYuiRXXcn7KTDjUC4CJgNL498
+          bounties:
+            - title: Atomic swap bug
+              value_dfi: 10500
+              value_usd: 31500
+              txid: d12dde9f5235f7787022f21601aff0a7ba9e4f4b46102d37c65a741be2fa867c
+        - name: Alex Andreae
+          github: sourcecoast
+          address: dFRdtWWcDRqdSKadjjer48tpSdd9qJeVVa
+          bounties:
+            - title: Bitcoin anchor fee validation issue
+              value_dfi: 3000
+              value_usd: 10500
+              txid: 770e0ae17a4ae5158ccd8d716d2c256deeaad101625b2fb1784b3f60317b84c3
       total_bounty: Total bounty
     participation:
       headline: How to participate

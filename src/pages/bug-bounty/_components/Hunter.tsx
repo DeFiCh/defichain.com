@@ -23,7 +23,7 @@ interface HunterI {
 
 export function Hunter (props: { index: number, hunter: HunterI }): JSX.Element {
   return (
-    <div className='flex flex-wrap bg-gray-50 rounded-lg px-8 py-6'>
+    <div className='flex flex-wrap bg-gray-50 rounded-lg p-4 lg:px-8 lg:py-6'>
       <div className='w-full lg:w-2/6 flex flex-wrap items-start'>
         <div className='w-full'>
           <h3 className='inline text-xl font-medium'>

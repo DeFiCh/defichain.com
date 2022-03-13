@@ -5,7 +5,7 @@ export function DownloadCard (props: PropsWithChildren<{ testid: string, title: 
   return (
     <div className='p-1.5 w-full lg:w-1/2 flex flex-col' data-testid={props.testid}>
       <div
-        className='rounded bg-gray-50 py-10 px-16 space-y-10 flex flex-col flex-1'
+        className='rounded bg-gray-50 p-5 lg:p-10 space-y-10 flex flex-col flex-1'
       >
         {(typeof props.imageSrc === 'string')
           ? (<div className='w-full'><NextImage src={props.imageSrc} width='64px' height='64px' /></div>)

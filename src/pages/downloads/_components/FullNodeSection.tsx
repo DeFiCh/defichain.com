@@ -1,7 +1,9 @@
 import { DownloadCard } from './DownloadCard'
-import { useTranslation } from 'next-i18next'
+import {SSRConfig, useTranslation} from 'next-i18next'
 import { ExternalLink } from '@components/commons/link/ExternalLink'
 import { BsFillTerminalFill } from 'react-icons/bs'
+import {getGitHubDownloadLinks} from "../_utils/getGitHubDownloadLinks";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 
 export function FullNodeSection (): JSX.Element {
   const { t } = useTranslation(['page-downloads'])
@@ -52,7 +54,7 @@ export function FullNodeSection (): JSX.Element {
           imageSrc={<BsFillTerminalFill fontSize={50} className='fill-primary-500' />}
           testid='FullNodeWallets.Cli'
         >
-          <div className='flex items-center space-x-2 text-lg font-medium'>
+          <div className='flex items-center space-x-4 text-lg font-medium'>
             <ExternalLink
               text='Mac'
               url='https://github.com/DeFiCh/ain/releases/download/v2.6.2/defichain-2.6.2-x86_64-apple-darwin18.tar.gz'
@@ -70,4 +72,15 @@ export function FullNodeSection (): JSX.Element {
       </div>
     </>
   )
+}
+
+export async function getStaticProps ({ locale }): Promise<{ props: SSRConfig }> {
+  await getGitHubDownloadLinks('DeFiCh/ain')
+  await getGitHubDownloadLinks('DeFiCh/app')
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common', 'layout', 'page-downloads']))
+    }
+  }
 }

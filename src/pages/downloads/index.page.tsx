@@ -5,6 +5,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { LightWalletSection } from './_components/LightWalletSection'
 import { FullNodeSection } from './_components/FullNodeSection'
 import { Head } from '@components/commons/Head'
+import {getGitHubDownloadLinks} from "./_utils/getGitHubDownloadLinks";
 
 export default function DownloadsPage (): JSX.Element {
   const { t } = useTranslation(['page-downloads'])

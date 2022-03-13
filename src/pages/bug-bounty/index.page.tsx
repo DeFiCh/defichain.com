@@ -10,7 +10,7 @@ import { Hunter } from './_components/Hunter'
 import { Head } from '@components/commons/Head'
 import React from 'react'
 
-export default function HomePage (): JSX.Element {
+export default function BugBountyPage (): JSX.Element {
   const { t } = useTranslation('page-bugbounty')
   const submissionList: any[] = t('SubmissionSection.list.entries', { returnObjects: true })
 

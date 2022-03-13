@@ -23,34 +23,11 @@ export function FullNodeSection (): JSX.Element {
             />
             <ExternalLink
               text='Windows'
-              url='https://github.com/DeFiCh/app/releases/download/v2.9.1/DeFi-Wallet-2.9.1.AppImage'
+              url='https://github.com/DeFiCh/app/releases/download/v2.9.1/DeFi-Wallet-Setup-2.9.1.exe'
             />
             <ExternalLink
               text='Linux (App Image)'
-              url='https://github.com/DeFiCh/app/releases/download/v2.9.1/DeFi-Wallet-Setup-2.9.1.exe'
-            />
-          </div>
-        </DownloadCard>
-
-        <DownloadCard
-          title={t('FullNodeWallets.entries.saiive.title')}
-          desc={t('FullNodeWallets.entries.saiive.desc')}
-          imageSrc='/assets/img/downloads/saiive.png'
-          testid='FullNodeWallets.Saiive'
-
-        >
-          <div className='flex items-center space-x-4 text-lg font-medium'>
-            <ExternalLink
-              text='Mac'
-              url='https://apps.apple.com/at/app/saiive-live-defi-wallet/id1588945201?l=en'
-            />
-            <ExternalLink
-              text='Windows'
-              url='https://github.com/saiive/saiive.live/releases'
-            />
-            <ExternalLink
-              text='Linux'
-              url='https://github.com/saiive/saiive.live/releases'
+              url='https://github.com/DeFiCh/app/releases/download/v2.9.1/DeFi-Wallet-2.9.1.AppImage'
             />
           </div>
         </DownloadCard>
@@ -78,15 +55,15 @@ export function FullNodeSection (): JSX.Element {
           <div className='flex items-center space-x-2 text-lg font-medium'>
             <ExternalLink
               text='Mac'
-              url='https://github.com/DeFiCh/ain/releases/download/v2.6.1/defichain-2.6.1-x86_64-apple-darwin11.tar.gz'
+              url='https://github.com/DeFiCh/ain/releases/download/v2.6.2/defichain-2.6.2-x86_64-apple-darwin18.tar.gz'
             />
             <ExternalLink
               text='Windows'
-              url='https://github.com/DeFiCh/ain/releases/download/v2.6.1/defichain-2.6.1-x86_64-w64-mingw32.zip'
+              url='https://github.com/DeFiCh/ain/releases/download/v2.6.2/defichain-2.6.2-x86_64-w64-mingw32.zip'
             />
             <ExternalLink
               text='Linux'
-              url='https://github.com/DeFiCh/ain/releases/download/v2.6.1/defichain-2.6.1-x86_64-pc-linux-gnu.tar.gz'
+              url='https://github.com/DeFiCh/ain/releases/download/v2.6.2/defichain-2.6.2-x86_64-pc-linux-gnu.tar.gz'
             />
           </div>
         </DownloadCard>

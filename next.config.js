@@ -15,7 +15,7 @@ const securityHeaders = [
       `script-src-elem 'self' files.coinmarketcap.com 3rdparty-apis.coinmarketcap.com ajax.googleapis.com;` +
       `style-src 'self' fonts.googleapis.com 'unsafe-inline';` +
       `font-src 'self' fonts.gstatic.com;` +
-      `connect-src 'self' ocean.defichain.com 3rdparty-apis.coinmarketcap.com;` +
+      `connect-src 'self' ocean.defichain.com 3rdparty-apis.coinmarketcap.com api.github.com;` +
       `prefetch-src 'self';`
   },
   {

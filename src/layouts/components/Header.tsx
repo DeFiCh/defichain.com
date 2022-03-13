@@ -165,7 +165,7 @@ function MobileMenu ({ price }: { price: string }): JSX.Element {
             className='p-2 flex justify-center border-b border-gray-100' text='DeFi Scan' url='https://defiscan.live/'
             testId='Mobile.HeaderLink.DeFiScan'
           />
-          <div className='flex justify-center p-2'>
+          <div className='flex w-full justify-center'>
             <LanguageDropdown />
           </div>
         </div>

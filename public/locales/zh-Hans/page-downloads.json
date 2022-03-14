@@ -44,6 +44,10 @@
       "CLI": {
         "title": "命令行介面控制台",
         "desc": "通过命令行介面与递飞链进行交易和其他功能。包含完整节点。"
+      },
+      "DFIElectrum": {
+        "title": "DeFiChain Electrum",
+        "desc": "Lightweight DeFiChain client"
       }
     }
   }

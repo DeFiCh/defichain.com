@@ -29,6 +29,7 @@ context('/downloads page on desktop', () => {
     cy.findByTestId('FullNodeWallets.Dfc').should('be.visible')
     cy.findByTestId('FullNodeWallets.Rpi').should('be.visible')
     cy.findByTestId('FullNodeWallets.Cli').should('be.visible')
+    cy.findByTestId('FullNodeWallets.DFIElectrum').should('be.visible')
   })
 })
 
@@ -63,5 +64,6 @@ context('/downloads page on mobile', () => {
     cy.findByTestId('FullNodeWallets.Dfc').should('be.visible')
     cy.findByTestId('FullNodeWallets.Rpi').should('be.visible')
     cy.findByTestId('FullNodeWallets.Cli').should('be.visible')
+    cy.findByTestId('FullNodeWallets.DFIElectrum').should('be.visible')
   })
 })

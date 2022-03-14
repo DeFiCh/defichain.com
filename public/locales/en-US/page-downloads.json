@@ -44,6 +44,10 @@
       "CLI": {
         "title": "CLI",
         "desc": "Transact and interact with DeFiChain through a command line interface. Full node included."
+      },
+      "DFIElectrum": {
+        "title": "DeFiChain Electrum",
+        "desc": "Lightweight DeFiChain client"
       }
     }
   }

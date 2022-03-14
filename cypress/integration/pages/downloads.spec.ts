@@ -13,7 +13,7 @@ context('/downloads page on desktop', () => {
   })
 
   it('should have Light Wallets', function () {
-    cy.findByTestId('LightWallets.title').should('be.visible').should('have.text', 'Daily access to DeFiChain')
+    cy.findByTestId('LightWallets.Title').should('be.visible').should('have.text', 'Daily access to DeFiChain')
     cy.findByTestId('LightWallets.Subtitle').should('be.visible').should('have.text', 'These wallets provide lightweight, easy access to DeFiChain’s suite of features. Best suited for users who interact with DeFiChain on a near-daily basis, while not compromising on speed and security of funds.')
 
     cy.findByTestId('LightWallets.Dfc').should('be.visible')
@@ -23,7 +23,7 @@ context('/downloads page on desktop', () => {
   })
 
   it('should have Fullnode wallets', function () {
-    cy.findByTestId('FullNodeWallets.title').should('be.visible').should('have.text', 'Advanced usage of DeFiChain')
+    cy.findByTestId('FullNodeWallets.Title').should('be.visible').should('have.text', 'Advanced usage of DeFiChain')
     cy.findByTestId('FullNodeWallets.Subtitle').should('be.visible').should('have.text', 'Advanced wallets that are suited for complex usage of DeFiChain, such as masternode management, multi-signature management, and more.')
 
     cy.findByTestId('FullNodeWallets.Dfc').should('be.visible')
@@ -47,7 +47,7 @@ context('/downloads page on mobile', () => {
   })
 
   it('should have Light Wallets', function () {
-    cy.findByTestId('LightWallets.title').should('be.visible').should('have.text', 'Daily access to DeFiChain')
+    cy.findByTestId('LightWallets.Title').should('be.visible').should('have.text', 'Daily access to DeFiChain')
     cy.findByTestId('LightWallets.Subtitle').should('be.visible').should('have.text', 'These wallets provide lightweight, easy access to DeFiChain’s suite of features. Best suited for users who interact with DeFiChain on a near-daily basis, while not compromising on speed and security of funds.')
 
     cy.findByTestId('LightWallets.Dfc').should('be.visible')
@@ -57,7 +57,7 @@ context('/downloads page on mobile', () => {
   })
 
   it('should have Fullnode wallets', function () {
-    cy.findByTestId('FullNodeWallets.title').should('be.visible').should('have.text', 'Advanced usage of DeFiChain')
+    cy.findByTestId('FullNodeWallets.Title').should('be.visible').should('have.text', 'Advanced usage of DeFiChain')
     cy.findByTestId('FullNodeWallets.Subtitle').should('be.visible').should('have.text', 'Advanced wallets that are suited for complex usage of DeFiChain, such as masternode management, multi-signature management, and more.')
 
     cy.findByTestId('FullNodeWallets.Dfc').should('be.visible')

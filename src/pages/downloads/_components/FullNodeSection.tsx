@@ -19,15 +19,15 @@ export function FullNodeSection (): JSX.Element {
           <div className='flex flex-wrap items-center space-x-4 text-lg font-medium'>
             <ExternalLink
               text='Mac'
-              url='https://github.com/DeFiCh/app/releases/download/v2.9.1/DeFi-Wallet-2.9.1.dmg'
+              url='https://github.com/DeFiCh/app/releases/download/v2.9.3/DeFi-Wallet-2.9.3.dmg'
             />
             <ExternalLink
               text='Windows'
-              url='https://github.com/DeFiCh/app/releases/download/v2.9.1/DeFi-Wallet-Setup-2.9.1.exe'
+              url='https://github.com/DeFiCh/app/releases/download/v2.9.3/DeFi-Wallet-Setup-2.9.3.exe'
             />
             <ExternalLink
               text='Linux (App Image)'
-              url='https://github.com/DeFiCh/app/releases/download/v2.9.1/DeFi-Wallet-2.9.1.AppImage'
+              url='https://github.com/DeFiCh/app/releases/download/v2.9.3/DeFi-Wallet-2.9.3.AppImage'
             />
           </div>
         </DownloadCard>

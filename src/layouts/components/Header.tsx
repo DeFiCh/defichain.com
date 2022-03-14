@@ -109,11 +109,11 @@ function DesktopNavbar ({ price }: { price: string }): JSX.Element {
         />
         <HeaderLink
           text={t('header.navbar.dfcblog')} pathname='https://blog.defichain.com/'
-          testId='Desktop.HeaderLink.DFCBlog'
+          testId='Desktop.HeaderLink.DFCBlog' targetBlank
         />
         <HeaderLink
           text='DeFi Scan' pathname='https://defiscan.live/'
-          testId='Desktop.HeaderLink.DeFiScan'
+          testId='Desktop.HeaderLink.DeFiScan' targetBlank
         />
       </div>
       <div className='hidden lg:flex items-center'>
@@ -159,12 +159,12 @@ function MobileMenu ({ price }: { price: string }): JSX.Element {
             testId='Mobile.HeaderLink.Learn'
           />
           <HeaderLink
-            className='flex justify-center border-b border-gray-100' text='Blog' pathname='https://defiscan.live/'
-            testId='Mobile.HeaderLink.DeFiScan'
+            className='flex justify-center border-b border-gray-100' text='Blog' pathname='https://blog.defichain.com/'
+            testId='Mobile.HeaderLink.DFCBlog' targetBlank
           />
           <HeaderLink
             className='flex justify-center border-b border-gray-100' text='DeFi Scan' pathname='https://defiscan.live/'
-            testId='Mobile.HeaderLink.DeFiScan'
+            testId='Mobile.HeaderLink.DeFiScan' targetBlank
           />
           <div className='flex w-full justify-center'>
             <LanguageDropdown />
@@ -175,7 +175,7 @@ function MobileMenu ({ price }: { price: string }): JSX.Element {
   )
 }
 
-function HeaderLink (props: { text: string, pathname: string, className?: string, testId?: string }): JSX.Element {
+function HeaderLink (props: { text: string, pathname: string, className?: string, testId?: string, targetBlank?: boolean }): JSX.Element {
   const router = useRouter()
   return (
     <Link href={{ pathname: props.pathname }} passHref>
@@ -183,10 +183,12 @@ function HeaderLink (props: { text: string, pathname: string, className?: string
         className={classNames(props.className, {
           'text-primary-500': router.pathname === props.pathname
         })} data-testid={props.testId}
+        target={props.targetBlank !== undefined && props.targetBlank ? '_blank' : ''}
       >
-        <div className={classNames('p-2 lg:p-0 lg:pb-0.5 ml-1 lg:ml-6 inline text-lg hover:text-primary-500 cursor-pointer', {
-          'lg:border-b-2 border-primary-500': router.pathname === props.pathname
-        })}
+        <div
+          className={classNames('p-2 lg:p-0 lg:pb-0.5 ml-1 lg:ml-6 inline text-lg hover:text-primary-500 cursor-pointer', {
+            'lg:border-b-2 border-primary-500': router.pathname === props.pathname
+          })}
         >
           {props.text}
         </div>

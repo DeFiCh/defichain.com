@@ -24,18 +24,8 @@ export default function DownloadsPage (): JSX.Element {
       </PageHeader>
 
       <Container>
-        <div className='flex w-full my-16 '>
-          <h2
-            className='text-2xl lg:text-3xl font-medium'
-            data-testid='DownloadsPage.Heading'
-          >
-            {t('Header.sub')}
-          </h2>
-        </div>
-
         <LightWalletSection />
         <FullNodeSection />
-
       </Container>
     </>
   )

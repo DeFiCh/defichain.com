@@ -1,15 +1,15 @@
 {
   "Head": {
-    "title": "Downloads",
-    "desc": "DeFiChain mobile app, CLI and desktop app downloads for macOS, Windows and Linux."
+    "title": "Your key to the DeFiChain ecosystem",
+    "desc": "Gain access to the DeFi landscape through non-custodial wallets designed for a multitude of requirements."
   },
   "Header": {
-    "title": "Downloads",
-    "desc": "Download applications for mobile, macOS, Windows and Linux.",
-    "sub": "Choose your own wallet."
+    "title": "Your key to the DeFiChain ecosystem",
+    "desc": "Gain access to the DeFi landscape through non-custodial wallets designed for a multitude of requirements."
   },
   "LightWallets": {
-    "title": "Light Wallets",
+    "title": "Daily access to DeFiChain",
+    "subtitle": "These wallets provide lightweight, easy access to DeFiChain’s suite of features. Best suited for users who interact with DeFiChain on a near-daily basis, while not compromising on speed and security of funds.",
     "entries": {
       "DFC": {
         "title": "DeFiChain wallet mobile app",
@@ -26,7 +26,8 @@
     }
   },
   "FullNodeWallets": {
-    "title": "Full Node Wallets",
+    "title": "Advanced usage of DeFiChain",
+    "subtitle": "Advanced wallets that are suited for complex usage of DeFiChain, such as masternode management, multi-signature management, and more.",
     "entries": {
       "DFC": {
         "title": "DeFi Wallet desktop app",

@@ -8,7 +8,8 @@ export function FullNodeSection (): JSX.Element {
 
   return (
     <>
-      <h2 className='text-xl lg:text-2xl font-medium mb-3'>{t('FullNodeWallets.title')}</h2>
+      <h2 className='text-xl lg:text-2xl font-medium mb-3 mt-10'>{t('FullNodeWallets.title')}</h2>
+      <p className='text-lg lg:text-xl mb-4'>{t('FullNodeWallets.subtitle')}</p>
       <div className='flex flex-wrap pb-10 -m-1'>
         <DownloadCard
           title={t('FullNodeWallets.entries.DFC.title')}
@@ -52,7 +53,7 @@ export function FullNodeSection (): JSX.Element {
           imageSrc={<BsFillTerminalFill fontSize={50} className='fill-primary-500' />}
           testid='FullNodeWallets.Cli'
         >
-          <div className='flex items-center space-x-2 text-lg font-medium'>
+          <div className='flex items-center space-x-4 text-lg font-medium'>
             <ExternalLink
               text='Mac'
               url='https://github.com/DeFiCh/ain/releases/download/v2.6.2/defichain-2.6.2-x86_64-apple-darwin18.tar.gz'

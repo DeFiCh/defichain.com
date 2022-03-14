@@ -20,7 +20,7 @@ export function LanguageDropdown (): JSX.Element {
   return (
     <div className='relative w-full lg:w-auto flex p-2 lg:p-0' data-testid='SiteLangDropdown'>
       <Listbox value={selectedLanguage} onChange={setSelectedLanguage}>
-        <Listbox.Button className='text-lg hover:text-primary-500 w-full'>{selectedLanguage.name}</Listbox.Button>
+        <Listbox.Button className='text-lg hover:text-primary-500 w-full focus:outline-none'>{selectedLanguage.name}</Listbox.Button>
         <Transition
           enter='transition duration-100 ease-out'
           enterFrom='transform scale-95 opacity-0'
@@ -33,13 +33,13 @@ export function LanguageDropdown (): JSX.Element {
           <div
             className='relative bg-white lg:mt-8 rounded text-center text-gray-700 text-lg border shadow-lg border-gray-200'
           >
-            <Listbox.Options>
+            <Listbox.Options className='focus:outline-none'>
               {languages.map((language) => (
                 <div className='border-b' key={language.locale}>
                   <Listbox.Option
                     key={language.locale}
                     value={language}
-                    className='p-2 hover:bg-gray-100 cursor-pointer'
+                    className='p-2 hover:bg-gray-100 cursor-pointer focus:outline-none'
                   >
                     {language.name}
                   </Listbox.Option>

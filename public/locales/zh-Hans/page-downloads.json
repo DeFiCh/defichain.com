@@ -1,40 +1,41 @@
 {
   "Head": {
-    "title": "下载区",
-    "desc": "递飞链钱包手机应用程序, 用于Mac、Windows和Linux的递飞链CLI和钱包程序的下载区。"
+    "title": "探索 DeFiChain 递飞链生态",
+    "desc": "进入 DeFi 领域，通过使用非托管式的虚拟钱包体现了技术开发的多种需求"
   },
   "Header": {
-    "title": "下载区",
-    "desc": "下载适用于手机, macOS、Windows和Linux的程序",
-    "sub": "下载钱包程序和CLI (命令行介面控制台)。"
+    "title": "探索 DeFiChain 递飞链生态",
+    "desc": "进入 DeFi 领域，通过使用非托管式的虚拟钱包体现了技术开发的多种需求"
   },
   "LightWallets": {
-    "title": "Light Wallets",
+    "title": "每日登入 DeFiChain",
+    "subtitle": "这类钱包提供容易的途径去接触 DeFiChain 递飞链的功能套件，最适合接入每天使用者和生态实现可互操作，同时又不影响资金的速度和资产的安全性。",
     "entries": {
       "DFC": {
         "title": "递飞链钱包手机应用程序",
         "desc": "轻钱包，立即启动开放式金融理财。"
       },
+      "DFX": {
+        "title": "DFX 钱包手机应用程序",
+        "desc": "以最简单和安全的方式存储、接收和发送递飞链代币，无需通过您的手机进行操作。"
+      },
       "saiive": {
         "title": "saiive.live 递飞链钱包手机应用程序",
         "desc": "来自社区和为社区提供的递飞链的非托管轻钱包。"
       },
-      "DFX": {
-        "title": "DFX 钱包手机应用程序",
-        "desc": "以最简单和安全的方式存储、接收和发送递飞链代币，无需通过您的手机进行操作。"
+      "saiiveDesktop": {
+        "title": "saiive.live 递飞链钱包电脑程序",
+        "desc": "来自社区和为社区提供的递飞链的非托管轻钱包。"
       }
     }
   },
   "FullNodeWallets": {
-    "title": "Full Node Wallets",
+    "title": "进阶使用 DeFiChain",
+    "subtitle": "进阶版的虚拟钱包更适用于配合 DeFiChain 递飞链上的复杂操作，例如管理主节点、多重签名等。",
     "entries": {
       "DFC": {
         "title": "递飞链钱包电脑程序",
         "desc": "使用全功能和递飞链钱包程序进行交易、流动性挖矿、交换等。包含完整节点。"
-      },
-      "saiive": {
-        "title": "saiive.live 递飞链钱包电脑程序",
-        "desc": "来自社区和为社区提供的递飞链的非托管轻钱包。"
       },
       "RPI": {
         "title": "递飞链钱包树莓派程序",
@@ -43,6 +44,10 @@
       "CLI": {
         "title": "命令行介面控制台",
         "desc": "通过命令行介面与递飞链进行交易和其他功能。包含完整节点。"
+      },
+      "DFIElectrum": {
+        "title": "DeFiChain Electrum",
+        "desc": "DeFiChain Electrum Client"
       }
     }
   }

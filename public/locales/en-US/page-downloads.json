@@ -1,40 +1,41 @@
 {
   "Head": {
-    "title": "Downloads",
-    "desc": "DeFiChain mobile app, CLI and desktop app downloads for macOS, Windows and Linux."
+    "title": "Your key to the DeFiChain ecosystem",
+    "desc": "Gain access to the DeFi landscape through non-custodial wallets designed for a multitude of requirements."
   },
   "Header": {
-    "title": "Downloads",
-    "desc": "Download applications for mobile, macOS, Windows and Linux.",
-    "sub": "Choose your own wallet."
+    "title": "Your key to the DeFiChain ecosystem",
+    "desc": "Gain access to the DeFi landscape through non-custodial wallets designed for a multitude of requirements."
   },
   "LightWallets": {
-    "title": "Light Wallets",
+    "title": "Daily access to DeFiChain",
+    "subtitle": "These wallets provide lightweight, easy access to DeFiChain’s suite of features. Best suited for users who interact with DeFiChain on a near-daily basis, while not compromising on speed and security of funds.",
     "entries": {
       "DFC": {
         "title": "DeFiChain wallet mobile app",
         "desc": "Lightweight, instant access to Decentralized Finance for Bitcoin, at your fingertips."
       },
+      "DFX": {
+        "title": "DFX wallet mobile app",
+        "desc": "Store, receive and send DeFiChain tokens with utmost simplicity and security uncomplicated from your mobile."
+      },
       "saiive": {
         "title": "saiive.live mobile wallet",
         "desc": "A non-custodial light wallet for DeFiChain from and for the community."
       },
-      "DFX": {
-        "title": "DFX wallet mobile app",
-        "desc": "Store, receive and send DeFiChain tokens with utmost simplicity and security uncomplicated from your mobile."
+      "saiiveDesktop": {
+        "title": "saiive.live desktop wallet",
+        "desc": "A non-custodial desktop wallet for DeFiChain from and for the community."
       }
     }
   },
   "FullNodeWallets": {
-    "title": "Full Node Wallets",
+    "title": "Advanced usage of DeFiChain",
+    "subtitle": "Advanced wallets that are suited for complex usage of DeFiChain, such as masternode management, multi-signature management, and more.",
     "entries": {
       "DFC": {
         "title": "DeFi Wallet desktop app",
         "desc": "Transact, liquidity mine, swap and more with the full-featured and fully-decentralized wallet app. Full node included."
-      },
-      "saiive": {
-        "title": "saiive.live desktop wallet",
-        "desc": "A non-custodial desktop wallet for DeFiChain from and for the community."
       },
       "RPI": {
         "title": "DeFi wallet for Raspberry Pi",
@@ -43,6 +44,10 @@
       "CLI": {
         "title": "CLI",
         "desc": "Transact and interact with DeFiChain through a command line interface. Full node included."
+      },
+      "DFIElectrum": {
+        "title": "DeFiChain Electrum",
+        "desc": "DeFiChain Electrum Client"
       }
     }
   }

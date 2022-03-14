@@ -9,7 +9,8 @@ export function LightWalletSection (): JSX.Element {
 
   return (
     <>
-      <h2 className='text-xl lg:text-2xl font-medium mb-3'>{t('LightWallets.title')}</h2>
+      <h2 className='text-xl lg:text-2xl font-medium mb-3 mt-10' data-testid='LightWalletSection.Title'>{t('LightWallets.title')}</h2>
+      <p className='text-lg lg:text-xl mb-4' data-testid='LightWalletSection.Subtitle'>{t('LightWallets.subtitle')}</p>
       <div className='flex flex-wrap pb-10 -m-1'>
         <DownloadCard
           title={t('LightWallets.entries.DFC.title')}
@@ -17,21 +18,9 @@ export function LightWalletSection (): JSX.Element {
           imageSrc='/assets/img/downloads/dfi.png'
           testid='LightWallets.Dfc'
         >
-          <div className='flex items-center space-x-5'>
+          <div className='flex items-center space-x-4'>
             <AppStoreDownload url='https://apps.apple.com/us/app/defichain-wallet/id1572472820' />
             <PlaystoreDownload url='https://play.google.com/store/apps/details?id=com.defichain.app' />
-          </div>
-        </DownloadCard>
-
-        <DownloadCard
-          title={t('LightWallets.entries.saiive.title')}
-          desc={t('LightWallets.entries.saiive.desc')}
-          imageSrc='/assets/img/downloads/saiive.png'
-          testid='LightWallets.Saiive'
-        >
-          <div className='flex items-center space-x-5'>
-            <AppStoreDownload url='https://apps.apple.com/app/saiive-live-defi-wallet/id1588945201' />
-            <PlaystoreDownload url='https://play.google.com/store/apps/details?id=at.saiive.live' />
           </div>
         </DownloadCard>
 
@@ -41,17 +30,31 @@ export function LightWalletSection (): JSX.Element {
           imageSrc='/assets/img/downloads/dfxpng.png'
           testid='LightWallets.Dfx'
         >
-          <div className='flex items-center space-x-5'>
+          <div className='flex items-center space-x-4'>
             <AppStoreDownload url='https://apps.apple.com/app/id1582633093' />
             <PlaystoreDownload url='https://play.google.com/store/apps/details?id=com.defichain.app.dfx' />
           </div>
         </DownloadCard>
 
         <DownloadCard
-          title={t('FullNodeWallets.entries.saiive.title')}
-          desc={t('FullNodeWallets.entries.saiive.desc')}
+          title={t('LightWallets.entries.saiive.title')}
+          desc={t('LightWallets.entries.saiive.desc')}
           imageSrc='/assets/img/downloads/saiive.png'
-          testid='FullNodeWallets.Saiive'
+          testid='LightWallets.Saiive'
+          imgClassName='rounded-xl'
+        >
+          <div className='flex items-center space-x-4'>
+            <AppStoreDownload url='https://apps.apple.com/app/saiive-live-defi-wallet/id1588945201' />
+            <PlaystoreDownload url='https://play.google.com/store/apps/details?id=at.saiive.live' />
+          </div>
+        </DownloadCard>
+
+        <DownloadCard
+          title={t('LightWallets.entries.saiiveDesktop.title')}
+          desc={t('LightWallets.entries.saiiveDesktop.desc')}
+          imageSrc='/assets/img/downloads/saiive.png'
+          testid='LightWallets.SaiiveDesktop'
+          imgClassName='rounded-xl'
         >
           <div className='flex items-center space-x-4 text-lg font-medium'>
             <ExternalLink

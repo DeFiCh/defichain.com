@@ -45,9 +45,9 @@ export function BuyDFIButton ({ classname, price }: { classname?: string, price:
     <Popover className='relative'>
       <Popover.Button as={Fragment}>
         <div
-          className={classNames('flex justify-center items-center text-white bg-primary-500 hover:bg-primary-600 p-2.5 xl:px-4 lg:rounded md:mb-0 cursor-pointer', classname)}
+          className={classNames('flex justify-center items-center text-white bg-primary-500 hover:bg-primary-600 p-2.5 lg:px-4 lg:rounded md:mb-0 cursor-pointer', classname)}
         >
-          {t('header.navbar.buy')}
+          <span>{t('header.navbar.buy')}</span>
           <span className='font-medium ml-1'>$DFI</span>
           {
             price !== '0' && (
@@ -58,13 +58,13 @@ export function BuyDFIButton ({ classname, price }: { classname?: string, price:
       </Popover.Button>
 
       <Popover.Panel
-        className='mt-2 bg-white w-48 rounded absolute z-50 text-center text-gray-700 text-lg border shadow-lg border-gray-200'
+        className='flex flex-wrap lg:mt-1 bg-white w-full lg:w-48 rounded absolute z-50 text-center text-gray-700 text-lg border shadow-lg border-gray-200'
       >
         {
           exchanges.map(exchange => (
-            <div key={exchange.name}>
+            <div key={exchange.name} className='w-1/2 lg:w-full'>
               <ExternalLink url={exchange.url}>
-                <div className='flex justify-center p-3 hover:bg-gray-100 border-b'>
+                <div className='flex justify-center p-3 hover:bg-gray-100 border-b border-r'>
                   <Image
                     src={exchange.image ?? ''}
                     width={140}

@@ -88,41 +88,41 @@ function DesktopNavbar ({ price }: { price: string }): JSX.Element {
     >
       <div className='hidden lg:flex'>
         <HeaderLink
-          className='ml-1 lg:ml-4' text={t('header.navbar.dfi')} pathname='/dfi'
+          text={t('header.navbar.dfi')} pathname='/dfi'
           testId='Desktop.HeaderLink.DFI'
         />
         <HeaderLink
-          className='ml-1 lg:ml-4' text={t('header.navbar.dex')} pathname='/dex'
+          text={t('header.navbar.dex')} pathname='/dex'
           testId='Desktop.HeaderLink.DEX'
         />
         <HeaderLink
-          className='ml-1 lg:ml-4' text={t('header.navbar.developers')} pathname='/developers'
+          text={t('header.navbar.developers')} pathname='/developers'
           testId='Desktop.HeaderLink.Developers'
         />
         <HeaderLink
-          className='ml-1 lg:ml-4' text={t('header.navbar.ecosystem')} pathname='/ecosystem'
+          text={t('header.navbar.ecosystem')} pathname='/ecosystem'
           testId='Desktop.HeaderLink.Ecosystem'
         />
         <HeaderLink
-          className='ml-1 lg:ml-4' text={t('header.navbar.learn')} pathname='/learn'
+          text={t('header.navbar.learn')} pathname='/learn'
           testId='Desktop.HeaderLink.Learn'
         />
-        <ExternalHeaderLink
-          className='ml-1 lg:ml-4' text={t('header.navbar.dfcblog')} url='https://blog.defichain.com/'
-          testId='Desktop.HeaderLink.DFCBlog'
+        <HeaderLink
+          text={t('header.navbar.dfcblog')} pathname='https://blog.defichain.com/'
+          testId='Desktop.HeaderLink.DFCBlog' targetBlank
         />
-        <ExternalHeaderLink
-          className='ml-1 lg:ml-4' text='DeFi Scan' url='https://defiscan.live/'
-          testId='Desktop.HeaderLink.DeFiScan'
+        <HeaderLink
+          text='DeFi Scan' pathname='https://defiscan.live/'
+          testId='Desktop.HeaderLink.DeFiScan' targetBlank
         />
       </div>
-      <div className='hidden lg:flex items-center mr-4 xl:mr-0 space-x-4'>
+      <div className='hidden lg:flex items-center'>
         <LanguageDropdown />
         <HeaderLink
-          text={t('header.navbar.downloads')} pathname='/downloads' className='ml-1 lg:ml-4 hidden lg:block'
+          text={t('header.navbar.downloads')} pathname='/downloads' className='hidden lg:block'
           testId='Desktop.HeaderLink.Downloads'
         />
-        <BuyDFIButton price={price} />
+        <BuyDFIButton classname='ml-6' price={price} />
       </div>
     </div>
   )
@@ -133,6 +133,7 @@ function MobileMenu ({ price }: { price: string }): JSX.Element {
 
   return (
     <div className='lg:hidden absolute z-50 w-full bg-white shadow-lg' data-testid='MobileMenu'>
+      <BuyDFIButton price={price} />
       <Container className='border-b border-gray-100 shadow-sm text-gray-600'>
         <div className='flex flex-col'>
           <HeaderLink
@@ -157,25 +158,24 @@ function MobileMenu ({ price }: { price: string }): JSX.Element {
             className='flex justify-center border-b border-gray-100' text={t('header.navbar.learn')} pathname='/learn'
             testId='Mobile.HeaderLink.Learn'
           />
-          <ExternalHeaderLink
-            className='p-2 flex justify-center border-b border-gray-100' text='Blog' url='https://defiscan.live/'
-            testId='Mobile.HeaderLink.DeFiScan'
+          <HeaderLink
+            className='flex justify-center border-b border-gray-100' text='Blog' pathname='https://blog.defichain.com/'
+            testId='Mobile.HeaderLink.DFCBlog' targetBlank
           />
-          <ExternalHeaderLink
-            className='p-2 flex justify-center border-b border-gray-100' text='DeFi Scan' url='https://defiscan.live/'
-            testId='Mobile.HeaderLink.DeFiScan'
+          <HeaderLink
+            className='flex justify-center border-b border-gray-100' text='DeFi Scan' pathname='https://defiscan.live/'
+            testId='Mobile.HeaderLink.DeFiScan' targetBlank
           />
-          <div className='flex justify-center p-2'>
+          <div className='flex w-full justify-center'>
             <LanguageDropdown />
           </div>
         </div>
       </Container>
-      <BuyDFIButton price={price} />
     </div>
   )
 }
 
-function HeaderLink (props: { text: string, pathname: string, className?: string, testId?: string }): JSX.Element {
+function HeaderLink (props: { text: string, pathname: string, className?: string, testId?: string, targetBlank?: boolean }): JSX.Element {
   const router = useRouter()
   return (
     <Link href={{ pathname: props.pathname }} passHref>
@@ -183,24 +183,16 @@ function HeaderLink (props: { text: string, pathname: string, className?: string
         className={classNames(props.className, {
           'text-primary-500': router.pathname === props.pathname
         })} data-testid={props.testId}
+        target={props.targetBlank !== undefined && props.targetBlank ? '_blank' : ''}
       >
-        <div className={classNames('inline m-2 text-lg pb-0.5 hover:text-primary-500 cursor-pointer', {
-          'border-b-2 border-primary-500': router.pathname === props.pathname
-        })}
+        <div
+          className={classNames('p-2 lg:p-0 lg:pb-0.5 ml-1 lg:ml-6 inline text-lg hover:text-primary-500 cursor-pointer', {
+            'lg:border-b-2 border-primary-500': router.pathname === props.pathname
+          })}
         >
           {props.text}
         </div>
       </a>
     </Link>
-  )
-}
-
-export function ExternalHeaderLink (props: { text: string, url: string, className: string, testId?: string }): JSX.Element {
-  return (
-    <div className={classNames('text-lg hover:text-primary-500 cursor-pointer', props.className)}>
-      <a href={props.url} target='_blank' rel='noreferrer' data-testid={props.testId}>
-        {props.text}
-      </a>
-    </div>
   )
 }

@@ -8,8 +8,8 @@ export function FullNodeSection (): JSX.Element {
 
   return (
     <>
-      <h2 className='text-xl lg:text-2xl font-medium mb-3 mt-10'>{t('FullNodeWallets.title')}</h2>
-      <p className='text-lg lg:text-xl mb-4'>{t('FullNodeWallets.subtitle')}</p>
+      <h2 className='text-xl lg:text-2xl font-medium mb-3 mt-10' data-testid='FullNodeSection.Title'>{t('FullNodeWallets.title')}</h2>
+      <p className='text-lg lg:text-xl mb-4' data-testid='FullNodeSection.Subtitle'>{t('FullNodeWallets.subtitle')}</p>
       <div className='flex flex-wrap pb-10 -m-1'>
         <DownloadCard
           title={t('FullNodeWallets.entries.DFC.title')}

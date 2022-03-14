@@ -12,22 +12,23 @@ context('/downloads page on desktop', () => {
     cy.findByTestId('Header.desc.main').should('have.text', 'Download applications for mobile, macOS, Windows and Linux.')
   })
 
-  it('should have page heading', function () {
-    cy.findByTestId('DownloadsPage.Heading').should('have.text', 'Choose your own wallet.')
-    cy.findByTestId('DownloadsPage.Heading').should('be.visible')
-  })
-
   it('should have Light Wallets', function () {
+    cy.findByTestId('LightWallets.title').should('be.visible').should('have.text', 'Daily access to DeFiChain')
+    cy.findByTestId('LightWallets.Subtitle').should('be.visible').should('have.text', 'These wallets provide lightweight, easy access to DeFiChain’s suite of features. Best suited for users who interact with DeFiChain on a near-daily basis, while not compromising on speed and security of funds.')
+
     cy.findByTestId('LightWallets.Dfc').should('be.visible')
     cy.findByTestId('LightWallets.Dfx').should('be.visible')
     cy.findByTestId('LightWallets.Saiive').should('be.visible')
+    cy.findByTestId('LightWallets.SaiiveDesktop').should('be.visible')
   })
 
   it('should have Fullnode wallets', function () {
+    cy.findByTestId('FullNodeWallets.title').should('be.visible').should('have.text', 'Advanced usage of DeFiChain')
+    cy.findByTestId('FullNodeWallets.Subtitle').should('be.visible').should('have.text', 'Advanced wallets that are suited for complex usage of DeFiChain, such as masternode management, multi-signature management, and more.')
+
     cy.findByTestId('FullNodeWallets.Dfc').should('be.visible')
     cy.findByTestId('FullNodeWallets.Rpi').should('be.visible')
     cy.findByTestId('FullNodeWallets.Cli').should('be.visible')
-    cy.findByTestId('FullNodeWallets.Saiive').should('be.visible')
   })
 })
 
@@ -41,25 +42,26 @@ context('/downloads page on mobile', () => {
   })
 
   it('should have Header', () => {
-    cy.findByTestId('Header.title').should('have.text', 'Downloads')
-    cy.findByTestId('Header.desc.main').should('have.text', 'Download applications for mobile, macOS, Windows and Linux.')
-  })
-
-  it('should have page heading', function () {
-    cy.findByTestId('DownloadsPage.Heading').should('have.text', 'Choose your own wallet.')
-    cy.findByTestId('DownloadsPage.Heading').should('be.visible')
+    cy.findByTestId('Header.title').should('have.text', 'Your key to the DeFiChain ecosystem')
+    cy.findByTestId('Header.desc.main').should('have.text', 'Gain access to the DeFi landscape through non-custodial wallets designed for a multitude of requirements.')
   })
 
   it('should have Light Wallets', function () {
+    cy.findByTestId('LightWallets.title').should('be.visible').should('have.text', 'Daily access to DeFiChain')
+    cy.findByTestId('LightWallets.Subtitle').should('be.visible').should('have.text', 'These wallets provide lightweight, easy access to DeFiChain’s suite of features. Best suited for users who interact with DeFiChain on a near-daily basis, while not compromising on speed and security of funds.')
+
     cy.findByTestId('LightWallets.Dfc').should('be.visible')
     cy.findByTestId('LightWallets.Dfx').should('be.visible')
     cy.findByTestId('LightWallets.Saiive').should('be.visible')
+    cy.findByTestId('LightWallets.SaiiveDesktop').should('be.visible')
   })
 
   it('should have Fullnode wallets', function () {
+    cy.findByTestId('FullNodeWallets.title').should('be.visible').should('have.text', 'Advanced usage of DeFiChain')
+    cy.findByTestId('FullNodeWallets.Subtitle').should('be.visible').should('have.text', 'Advanced wallets that are suited for complex usage of DeFiChain, such as masternode management, multi-signature management, and more.')
+
     cy.findByTestId('FullNodeWallets.Dfc').should('be.visible')
     cy.findByTestId('FullNodeWallets.Rpi').should('be.visible')
     cy.findByTestId('FullNodeWallets.Cli').should('be.visible')
-    cy.findByTestId('FullNodeWallets.Saiive').should('be.visible')
   })
 })

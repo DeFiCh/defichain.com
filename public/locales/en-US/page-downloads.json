@@ -47,7 +47,7 @@
       },
       "DFIElectrum": {
         "title": "DeFiChain Electrum",
-        "desc": "DeFiChain Electrum Client"
+        "desc": "Multi-signature DeFiChain wallet built with Electrum for treasury use cases and more."
       }
     }
   }

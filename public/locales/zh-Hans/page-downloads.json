@@ -46,8 +46,8 @@
         "desc": "通过命令行介面与递飞链进行交易和其他功能。包含完整节点。"
       },
       "DFIElectrum": {
-        "title": "DeFiChain Electrum",
-        "desc": "DeFiChain Electrum Client"
+        "title": "递飞链 Electrum 钱包",
+        "desc": "多重签名 DeFiChain 钱包采用 Electrum 软件技术，适用于于财务或更多用例。"
       }
     }
   }

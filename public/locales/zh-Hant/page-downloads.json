@@ -46,8 +46,8 @@
         "desc": "通過命令行介面與遞飛鏈進行交易和其他功能。包含完整節點。"
       },
       "DFIElectrum": {
-        "title": "DeFiChain Electrum",
-        "desc": "DeFiChain Electrum Client"
+        "title": "遞飛鏈 Electrum 錢包",
+        "desc": "多重簽名 DeFiChain 錢包採用 Electrum 軟件技術，適用於於財務或更多用例。"
       }
     }
   }

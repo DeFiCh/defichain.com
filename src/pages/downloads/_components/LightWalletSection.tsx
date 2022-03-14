@@ -25,6 +25,18 @@ export function LightWalletSection (): JSX.Element {
         </DownloadCard>
 
         <DownloadCard
+          title={t('LightWallets.entries.DFX.title')}
+          desc={t('LightWallets.entries.DFX.desc')}
+          imageSrc='/assets/img/downloads/dfxpng.png'
+          testid='LightWallets.Dfx'
+        >
+          <div className='flex items-center space-x-4'>
+            <AppStoreDownload url='https://apps.apple.com/app/id1582633093' />
+            <PlaystoreDownload url='https://play.google.com/store/apps/details?id=com.defichain.app.dfx' />
+          </div>
+        </DownloadCard>
+
+        <DownloadCard
           title={t('LightWallets.entries.saiive.title')}
           desc={t('LightWallets.entries.saiive.desc')}
           imageSrc='/assets/img/downloads/saiive.png'
@@ -38,22 +50,11 @@ export function LightWalletSection (): JSX.Element {
         </DownloadCard>
 
         <DownloadCard
-          title={t('LightWallets.entries.DFX.title')}
-          desc={t('LightWallets.entries.DFX.desc')}
-          imageSrc='/assets/img/downloads/dfxpng.png'
-          testid='LightWallets.Dfx'
-        >
-          <div className='flex items-center space-x-4'>
-            <AppStoreDownload url='https://apps.apple.com/app/id1582633093' />
-            <PlaystoreDownload url='https://play.google.com/store/apps/details?id=com.defichain.app.dfx' />
-          </div>
-        </DownloadCard>
-
-        <DownloadCard
-          title={t('FullNodeWallets.entries.saiive.title')}
-          desc={t('FullNodeWallets.entries.saiive.desc')}
+          title={t('LightWallets.entries.saiiveDesktop.title')}
+          desc={t('LightWallets.entries.saiiveDesktop.desc')}
           imageSrc='/assets/img/downloads/saiive.png'
           testid='FullNodeWallets.Saiive'
+          imgClassName='rounded-xl'
         >
           <div className='flex items-center space-x-4 text-lg font-medium'>
             <ExternalLink

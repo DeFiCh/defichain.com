@@ -15,13 +15,17 @@
         "title": "DeFiChain wallet mobile app",
         "desc": "Lightweight, instant access to Decentralized Finance for Bitcoin, at your fingertips."
       },
+      "DFX": {
+        "title": "DFX wallet mobile app",
+        "desc": "Store, receive and send DeFiChain tokens with utmost simplicity and security uncomplicated from your mobile."
+      },
       "saiive": {
         "title": "saiive.live mobile wallet",
         "desc": "A non-custodial light wallet for DeFiChain from and for the community."
       },
-      "DFX": {
-        "title": "DFX wallet mobile app",
-        "desc": "Store, receive and send DeFiChain tokens with utmost simplicity and security uncomplicated from your mobile."
+      "saiiveDesktop": {
+        "title": "saiive.live desktop wallet",
+        "desc": "A non-custodial desktop wallet for DeFiChain from and for the community."
       }
     }
   },
@@ -32,10 +36,6 @@
       "DFC": {
         "title": "DeFi Wallet desktop app",
         "desc": "Transact, liquidity mine, swap and more with the full-featured and fully-decentralized wallet app. Full node included."
-      },
-      "saiive": {
-        "title": "saiive.live desktop wallet",
-        "desc": "A non-custodial desktop wallet for DeFiChain from and for the community."
       },
       "RPI": {
         "title": "DeFi wallet for Raspberry Pi",

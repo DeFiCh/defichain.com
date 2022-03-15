@@ -142,7 +142,7 @@ Within a wallet, click on **Send**.
 
 #### Step 2
 
-Enter the **Amount** and, the **To address** to send to. Yu can also enter an address using QR code scanner feature next to the address field. Press **CONTINUE** when you are ready.
+Enter the **Amount** and, the **To address** to send to. You can also enter an address using QR code scanner feature next to the address field. Press **CONTINUE** when you are ready.
 
 ![](/img/guides/installing-defi-app/wallet-send1.png)
 

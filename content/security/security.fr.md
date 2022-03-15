@@ -1,17 +1,17 @@
 ---
-title: Security
-description: Security audits
+title: Sécurité
+description: Audits de sécurité
 ---
 
 ## Audit 2: KnownSec
 
 |             |                                                            |
 |-------------|------------------------------------------------------------|
-| __Results__ | PASS                                                       |
-| __Number__ | DeFiChain-GLSJ-20201020                                    |
-| __Date__ | October 20, 2020                                           |
-| __Auditor__ | ![Knownsec](/img/security/logo-knownsec.png)               |
-| __Audit report__ | [Download](/downloads/DeFiChain-Security-Audit-Report-V1.pdf) |
+| __Résultat__ | PASS                                                       |
+| __Numéro__ | DeFiChain-GLSJ-20201020                                    |
+| __Date__ | 20 octobre 2020                                          |
+| __Auditeur__ | ![Knownsec](/img/security/logo-knownsec.png)               |
+| __>Rapport d'audit__ | [Télécharger](/downloads/DeFiChain-Security-Audit-Report-V1.pdf) |
 
 ## Audit 1: Slow Mist
 

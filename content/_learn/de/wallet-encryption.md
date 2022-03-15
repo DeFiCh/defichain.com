@@ -65,7 +65,7 @@ Um sicherzustellen, dass deine Wallet wirklich gesperrt und verschlüsselt ist, 
 getwalletinfo
 ```
 
-Bei einer verschlüsselten Wallet solltest du eine Meldung erhalten, die `"unlocked_until": 1609145224` enthält. Wenn eine Wallet gesperrt ist, sollte `unlocked_until` `0` anzeigen. Wenn sie entsperrt ist, sollte sie einen [UNIX-Zeitstempel](https://www.epochconverter.com) anzeigen..
+Bei einer verschlüsselten Wallet solltest du eine Meldung erhalten, die `"unlocked_until": 1609145224` enthält. Wenn eine Wallet gesperrt ist, sollte `unlocked_until` `0` anzeigen. Wenn sie entsperrt ist, sollte sie einen [UNIX-Zeitstempel](https://www.epochconverter.com) anzeigen.
 
 Bei einer unverschlüsselten Wallet fehlt `unlocked_until`. Es zeigt nicht einmal `0` an.
 

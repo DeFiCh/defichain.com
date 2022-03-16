@@ -32,8 +32,8 @@
         "desc": "Create a non-refundable personalised DCT (DeFi Custom Token)."
       },
       "BudgetProposal": {
-        "title": "Budget proposal",
-        "desc": "Submit a community budget proposal for 500 DFI (non-refundable)."
+        "title": "Community fund proposal",
+        "desc": "Submit a community fund proposal for 10 DFI (non-refundable)."
       },
       "LiquidityPools": {
         "title": "Liquidity pools",

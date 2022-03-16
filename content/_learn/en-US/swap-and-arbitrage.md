@@ -13,13 +13,13 @@ Swapping tokens on the DeFiChain DEX (Decentralized Exchange) is easy. At the ti
 
 The DeFiChain DEX does not suffer the high gas fees of Ethereum-based DEX, due to network congestion. Afterall, Ethereum being a general purpose blockchain, isn't specifically designed for decentralized finance. DeFiChain on the other hand, is born and made for DeFi, and DeFi only.
 
-### Step 1: Launch the DeFi Wallet app
+### Step 1: Launch the DeFi Wallet desktop app
 
 Don’t have the app installed yet? [Click here for a step-by-step guide on how to do so.](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
 
 ### Step 2: Make sure you have DFI in your wallet
 
-After opening the DeFi Wallet App, click **Balances** in the sidebar. Make sure you have funds (DFI) in wallet, as DFI is needed for transaction fees. If you don't yet have DFI, [here is a step-by-step tutorial on how and where you can buy DFI.](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)
+After opening the DeFi Wallet desktop App, click **Balances** in the sidebar. Make sure you have funds (DFI) in wallet, as DFI is needed for transaction fees. If you don't yet have DFI, [here is a step-by-step tutorial on how and where you can buy DFI.](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)
 
 ![](/img/guides/installing-defi-app/wallets-choose.png)
 

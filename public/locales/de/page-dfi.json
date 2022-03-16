@@ -1,72 +1,72 @@
 {
   "Head": {
     "title": "$DFI",
-    "desc": "Learn about the $DFI coin and its utility, distribution, airdrops and how to acquire DFI."
+    "desc": "Erfahre mehr über den $DFI - Coin und seinen Nutzen, die Verteilung, Airdrops und wie du DFI erwerben kannst"
   },
   "Header": {
     "title": "$DFI",
-    "desc": "Learn about and acquire the $DFI coin."
+    "desc": "Lerne den $DFI - Coin kennen und erwirb ihn"
   },
   "DFICoinSection": {
     "title": "$DFI coin",
-    "desc": "The $DFI coin is an integral unit of account in DeFiChain. The DeFiChain Foundation issued roughly 600 million DFI on May 11th, 2020. The current circulating supply (with staking and liquidity mining) is available at",
-    "disclaimer": "Important: DeFiChain is a community project. There was/is no Initial Coin Offering, only free airdrops."
+    "desc": "Der $DFI - Coin ist eine integrale Rechnungseinheit der DeFiChain. Die DeFiChain Foundation hat am 11. Mai 2020 rund 600 Millionen DFI ausgegeben. Der aktuelle Umlaufbestand (mit Staking und Liquidity Mining) ist verfügbar unter",
+    "disclaimer": "Wichtig! DeFiChain ist ein Community-Projekt. Es gab/gibt kein Initial Coin Offering, sondern nur kostenlose Airdrops"
   },
   "CoinUtility": {
-    "title": "$DFI coin utility",
+    "title": "Nutzen und Einsatzbereiche des $DFI - Coins",
     "entries": {
       "Fees": {
-        "title": "Fees",
-        "desc": "Pay for transactions, smart contracts and other DeFi activities."
+        "title": "Gebühren",
+        "desc": "Bezahlen für Transaktionen, Smart Contracts und andere DeFi-Aktivitäten"
       },
       "LoanCollaterals": {
-        "title": "Loan collaterals",
-        "desc": "Lend or borrow using crypto assets as collateral."
+        "title": "Darlehens-Sicherheiten",
+        "desc": "Benutze Krypto-Assets als Sicherheiten, um zu leihen oder zu verleihen"
       },
       "StakingNodes": {
-        "title": "Staking nodes",
-        "desc": "Fund a new staking node for just 20,000 DFI."
+        "title": "Staking Nodes",
+        "desc": "Finanziere einen neuen Masternode für nur 20.000 DFI"
       },
       "DeFiCustomToken": {
-        "title": "DeFi Custom Token",
-        "desc": "Create a non-refundable personalised DCT (DeFi Custom Token)."
+        "title": "DeFi Custom Token - Benutzerdefinierter Token",
+        "desc": "Erstelle einen nicht rückzahlbaren personalisierten DCT (DeFi Custom Token)"
       },
       "BudgetProposal": {
-        "title": "Budget proposal",
-        "desc": "Submit a community budget proposal for 500 DFI (non-refundable)."
+        "title": "Vorschlag für den Community Fund",
+        "desc": "Reiche einen Vorschlag für den Community Fund für 10 DFI ein (nicht rückzahlbar)"
       },
       "LiquidityPools": {
-        "title": "Liquidity pools",
-        "desc": "Provide liquidity for the decentralized exchange between crypto assets."
+        "title": "Liquiditätspools",
+        "desc": "Bereitstellung von Liquidität für den dezentralen Tausch von Kryptowährungen"
       }
     }
   },
   "DistributionSection": {
-    "title": "Initial Token Distribution",
-    "desc": "Of the 1.2 billion $DFI coins, 49% will be in the initial supply, with the rest issued to masternode holders over time.",
+    "title": "Anfängliche Token-Verteilung",
+    "desc": "Von den 1,2 Milliarden $DFI Token befinden sich 49% in der Erstausgabe, der Rest wird im Laufe der Zeit an Masternode-Inhaber ausgegeben.",
     "chart": {
-      "InitialSupply": "Initial supply",
-      "ToMasternodes": "To masternodes over time",
+      "InitialSupply": "Anfangsbestand",
+      "ToMasternodes": "An die Masternodes im Laufe der Zeit",
       "DeFiChaiFoundation": "DeFiChain Foundation",
-      "ExternalPartners": "External Partners",
-      "desc": "Of the initial supply, 49% will be kept by the DeFiChain Foundation. The rest may be distributed to external partners, to fund the initial development."
+      "ExternalPartners": "Externe Partner",
+      "desc": "Von der anfänglichen Betrag bleiben 49% bei der DeFiChain Foundation. Der Rest kann an externe Partner verteilt werden, um die anfängliche Entwicklung zu finanzieren."
     }
   },
   "ExchangeSection": {
-    "title": "Acquiring $DFI coins",
-    "desc": "$DFI coins will be issued to users and partners with an interest in utilizing and participating in the ecosystem.",
+    "title": "Erwerb von $DFI-Token",
+    "desc": "$DFI Token werden an Nutzer und Partner ausgegeben, die ein Interesse daran haben, das Ökosystem zu nutzen und daran teilzunehmen.",
     "Exchanges": {
-      "title": "Exchanges",
-      "desc": "You can now purchase DFI at these select exchanges, with more exchanges to follow."
+      "title": "Exchanges/Börsen",
+      "desc": "Du kannst DFI jetzt an diesen ausgewählten Börsen kaufen, weitere Börsen werden folgen."
     },
     "Staking": {
       "title": "Staking",
-      "desc": "DFI is now available at these select staking platforms."
+      "desc": "DFI ist jetzt bei diesen ausgewählten Staking Plattformen erhältlich"
     },
     "Developers": {
-      "title": "Developers",
-      "desc": "The DeFiChain Foundation gives grants to developers building functionality and dApps on DeFiChain.",
-      "email": "For further information, contact us at <0>partners@defichain.com</0>."
+      "title": "Entwickler",
+      "desc": "Die DeFiChain Foundation vergibt Zuschüsse an Entwickler, die Funktionen und dApps auf DeFiChain aufbauen.",
+      "email": "Für weitere Informationen kontaktiere uns unter <0>partners@defichain.com</0>."
     }
   }
 }

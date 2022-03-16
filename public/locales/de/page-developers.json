@@ -1,37 +1,37 @@
 {
   "Head": {
-    "title": "Developers",
-    "desc": "Start building on DeFiChain with developer resources and code."
+    "title": "Entwickler",
+    "desc": "Baue auf Defichain mit Entwicklerressourcen und Programmcode"
   },
   "Header": {
-    "title": "Developers",
-    "desc": "Build on DeFiChain."
+    "title": "Entwickler",
+    "desc": "Bauen auf DeFiChain."
   },
   "DeveloperResourcesSection": {
-    "title": "Start building on DeFiChain with developer resources and code.",
+    "title": "Baue auf Defichain mit Entwicklerressourcen und Programmcode",
     "GitHub": {
-      "title": "Get developer resources and getting started guides.",
+      "title": "Erhalte Ressourcen für Entwickler und Einstiegshilfen",
       "button": "GitHub"
     },
     "Cli": {
-      "title": "Get the CLI and Desktop app.",
+      "title": "Hol dir die CLI (Befehlszeileninterface) und die Desktop-Anwendung",
       "button": "Downloads"
     },
     "Scan": {
-      "title": "Explore the blockchain on DeFi Scan.",
-      "button": "Explore"
+      "title": "Sieh dir die Blockchain auf DeFi Scan an",
+      "button": "Ansehen"
     },
     "WhitePaper": {
-      "title": "Read the DeFiChain technical paper.",
+      "title": "Lies das technische Dokument zu DeFiChain",
       "button": "White Paper"
     },
     "Reddit": {
-      "title": "Participate in our Reddit developer community.",
-      "button": "Discuss"
+      "title": "Nimm an unserer Reddit-Entwicklergemeinschaft teil",
+      "button": "Diskutieren"
     }
   },
   "CoreContributors": {
-    "title": "Core Contributors",
-    "desc": "DeFiChain is an open-source project with a global team of core contributors, supported by a community of developers. The full list of projects and contributors can be found at <0>GitHub<0>."
+    "title": "Kernmitarbeiter",
+    "desc": "DeFiChain ist ein Open-Source-Projekt mit einem globalen Team von Kernmitarbeitern, das von einer Gemeinschaft von Entwicklern unterstützt wird. Die vollständige Liste der Projekte und Mitwirkenden findest du unter <0>GitHub<0>."
   }
 }

@@ -22,7 +22,7 @@ export function Footer (): JSX.Element {
           </h2>
         </div>
         <div className='mt-10 flex flex-wrap space-y-8'>
-          <div className='flex flex-wrap w-full lg:w-1/2 space-y-8 lg:space-y-0'>
+          <div className='flex flex-wrap max-w-sm lg:max-w-max w-full lg:w-2/3 xl:w-1/2 space-y-8 lg:space-y-0'>
             <div className='lg:w-1/2'>
               <FooterSectionSitemap />
             </div>
@@ -30,7 +30,7 @@ export function Footer (): JSX.Element {
               <FooterSectionSocial />
             </div>
           </div>
-          <div className='flex flex-wrap w-full lg:w-1/2 justify-center lg:justify-end'>
+          <div className='flex flex-wrap w-full lg:w-1/3 xl:w-1/2 justify-center lg:justify-end'>
             <Script src='https://files.coinmarketcap.com/static/widget/currency.js' />
             <div
               className='coinmarketcap-currency-widget' data-currencyid='5804' data-base='USD' data-secondary=''

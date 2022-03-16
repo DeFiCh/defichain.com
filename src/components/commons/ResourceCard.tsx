@@ -5,30 +5,34 @@ import { Button } from '@components/commons/Buttons'
 
 export function ResourceCard (props: PropsWithChildren<{ external?: boolean, text: string, buttonText: string, url: string, testid: string }>): JSX.Element {
   return (
-    <div className='p-1.5 w-full lg:w-1/2'>
+    <div className='p-1.5 w-full lg:w-1/2 flex'>
       <div
-        className='rounded bg-gray-50 py-10 px-16'
+        className='w-full rounded bg-gray-50 py-10 px-6 lg:px-10 flex flex-wrap flex-1'
         data-testid={props.testid}
       >
         <div className='w-full'>
           {props.children}
         </div>
 
-        <div className='text-lg mt-4'>{props.text}</div>
+        <div className='w-full text-lg mt-4 flex-1'>{props.text}</div>
 
-        <div className='mt-10'>
+        <div className='w-full mt-10'>
           {(() => {
             if (props.external !== undefined) {
               return (
                 <ExternalLink url={props.url}>
-                  <Button text={props.buttonText} />
+                  <a className='contents'>
+                    <Button text={props.buttonText} />
+                  </a>
                 </ExternalLink>
               )
             }
 
             return (
               <NextLink href={props.url} passHref>
-                <Button text={props.buttonText} />
+                <a className='contents'>
+                  <Button text={props.buttonText} />
+                </a>
               </NextLink>
             )
           })()}

@@ -16,7 +16,6 @@ context('/ecosystem page on desktop', () => {
     cy.findByTestId('EcosystemSection.Contribute').within(() => {
       cy.findByTestId('Section.Title').should('have.text', 'Contribute to DeFiChain')
       cy.findByTestId('EcosystemSection.Developer').should('be.visible')
-      cy.findByTestId('EcosystemSection.ServiceProvider').should('be.visible')
     })
   })
 
@@ -50,7 +49,6 @@ context('/ecosystem page on mobile', () => {
     cy.findByTestId('EcosystemSection.Contribute').within(() => {
       cy.findByTestId('Section.Title').should('have.text', 'Contribute to DeFiChain')
       cy.findByTestId('EcosystemSection.Developer').should('be.visible')
-      cy.findByTestId('EcosystemSection.ServiceProvider').should('be.visible')
     })
   })
 

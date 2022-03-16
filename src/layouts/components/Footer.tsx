@@ -15,20 +15,22 @@ export function Footer (): JSX.Element {
         <div className='flex flex-col'>
           <Link href={{ pathname: '/' }} passHref>
             <a className='flex items-center cursor-pointer hover:text-primary-500' data-testid='Footer.Logo'>
-              <DeFiChainLogo className='w-12 lg:w-28 mb-2' />
+              <DeFiChainLogo className='w-20 lg:w-28 mb-2' />
             </a>
           </Link>
           <h2 className='text-xl lg:text-2xl font-semibold' data-testid='Footer.Heading'>{t('footer.title')}
           </h2>
         </div>
-        <div className='mt-10 flex flex-wrap space-y-8 lg:flex-nowrap lg:space-x-6'>
-          <div className='flex-grow max-w-sm'>
-            <FooterSectionSitemap />
+        <div className='mt-10 flex flex-wrap space-y-8'>
+          <div className='flex flex-wrap max-w-sm lg:max-w-max w-full lg:w-2/3 xl:w-1/2 space-y-8 lg:space-y-0'>
+            <div className='lg:w-1/2'>
+              <FooterSectionSitemap />
+            </div>
+            <div className='lg:w-1/2'>
+              <FooterSectionSocial />
+            </div>
           </div>
-          <div className='flex-grow max-w-sm'>
-            <FooterSectionSocial />
-          </div>
-          <div className='flex flex-wrap w-full lg:w-1/2 justify-center lg:justify-end'>
+          <div className='flex flex-wrap w-full lg:w-1/3 xl:w-1/2 justify-center lg:justify-end'>
             <Script src='https://files.coinmarketcap.com/static/widget/currency.js' />
             <div
               className='coinmarketcap-currency-widget' data-currencyid='5804' data-base='USD' data-secondary=''
@@ -159,7 +161,7 @@ function FooterSectionSocial (): JSX.Element {
 function FooterSection ({ heading, children }: PropsWithChildren<{ heading: string }>): JSX.Element {
   return (
     <section>
-      <h3 className='text-xl font-medium mb-4'>{heading}</h3>
+      <h3 className='text-xl font-medium mb-2'>{heading}</h3>
       <div className='flex flex-wrap'>
         {children}
       </div>

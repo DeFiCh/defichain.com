@@ -100,9 +100,13 @@ function FAQSection (): JSX.Element {
         <Disclosure>
           {({ open }) => (
             <>
-              <Disclosure.Button className='py-2.5 text-xl font-medium flex items-center'>
-                <BsChevronCompactDown size={28} className={`${open ? 'rotate-180' : ''}`} />
-                <span className='ml-4' data-testid='FAQEntry.Title'>{props.title}</span>
+              <Disclosure.Button className='py-2.5 text-xl font-medium'>
+                <div className='flex items-center text-left'>
+                  <div>
+                    <BsChevronCompactDown size={28} className={`${open ? 'rotate-180' : ''}`} />
+                  </div>
+                  <div className='ml-4' data-testid='FAQEntry.Title'>{props.title}</div>
+                </div>
               </Disclosure.Button>
               <Disclosure.Panel className='text-gray-600 text-lg mb-10 ml-11' data-testid='FAQEntry.Desc'>
                 {props.desc}

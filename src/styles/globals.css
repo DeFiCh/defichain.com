@@ -1,3 +1,6 @@
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@700&display=swap');
 
@@ -25,9 +28,16 @@ body {
 
 
 /*Slick slider overrides*/
-.slick-prev::before, .slick-next::before {
-    display: none !important;
+.slick-prev {
+    @apply left-[65%] md:left-[70%] lg:left-[75%] !important;
+    top: -60px !important;
 }
+
+.slick-next {
+    top: -60px !important;
+    right: 20% !important;
+}
+
 
 .slick-list {
     margin: -16px;

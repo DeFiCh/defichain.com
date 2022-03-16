@@ -1,5 +1,3 @@
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
 import NextNProgress from 'nextjs-progressbar'
 import '../styles/globals.css'
 import { appWithTranslation } from 'next-i18next'

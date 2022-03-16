@@ -1,6 +1,6 @@
 ---
 title: 获取挂钩的代币
-description: A step-by-step guide to obtaining wrapped BTC/ETH/USDT via the DEX or CakeDefi
+description: A step-by-step guide to obtaining wrapped BTC/ETH/USDT via the DEX or Cake DeFi
 ---
 
 为了向DEX和流动性挖矿提供流动，您需要同时进入配对中个端的货币，价值要同等。递飞链现时只支持挂钩的代币 （包含ETH、BTC和USDT）。
@@ -49,26 +49,26 @@ DEX为您提供替换货币的方式。请在左边 **「从」** 选择DFI。
 
 ---
 
-## 方法二：使用CakeDeFi
+## 方法二：使用Cake DeFi
 
-### 步骤一：登录您的CakeDeFi帐户
+### 步骤一：登录您的Cake DeFi帐户
 
-登录您的 [CakeDeFi帐户](https://www.cakedefi.com/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)。如果您还没有注册, [请按这注册。](https://www.cakedefi.com/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
+登录您的 [Cake  DeFi帐户](https://www.cakedefi.com/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)。如果您还没有注册, [请按这注册。](https://www.cakedefi.com/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
 
 _注意：如果您注册一个新帐户，您需要完成身份验证（KYC）。_
 
-### 步骤二：存入CakeDeFi
+### 步骤二：存入Cake DeFi
 
-从您的 [CakeDeFi资产页面](https://pool.cakedefi.com/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch#/wallets), 您可以领出ETH、BTC或USDT到递飞链。如果您目前没有这些货币，或者想增加余额，您可以：
+从您的 [Cake DeFi资产页面](https://pool.cakedefi.com/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch#/wallets), 您可以领出ETH、BTC或USDT到递飞链。如果您目前没有这些货币，或者想增加余额，您可以：
 
-1. 从其他钱包将ETH、BTC或USDT存入CakeDeFi
-2. 用现金购买ETH，BTC或USDT，CakeDeFi平台目前接受信用卡，苹果支付和银行转帐方式 （不同国家有不同购买方式）
+1. 从其他钱包将ETH、BTC或USDT存入Cake DeFi
+2. 用现金购买ETH，BTC或USDT，Cake DeFi平台目前接受信用卡，苹果支付和银行转帐方式 （不同国家有不同购买方式）
 
 ![](/img/guides/obtaining-tokens/cake-assets.png)
 
 ### 步骤三：领出
 
-当您的CakeDeFi有余额就可领出。选择您想领出的货币并按 **「领出」**。
+当您的Cake DeFi有余额就可领出。选择您想领出的货币并按 **「领出」**。
 
 在领出窗口弹出后，选择DeFi递飞链区块链作为 **「发送网络」**。在 **「到递飞链地址」** 输入您的递飞链接收地址。请参阅[递飞链程序接收指南](/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)。
 
@@ -78,4 +78,4 @@ _注意：如果您注册一个新帐户，您需要完成身份验证（KYC）�
 
 
 
-_注：出于安全性的原因，在CakeDeFi领出货币要24小时（工作日）至72小时（周末）才能完成。_
+_注：出于安全性的原因，在Cake DeFi领出货币要24小时（工作日）至72小时（周末）才能完成。_

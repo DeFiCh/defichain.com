@@ -1,35 +1,35 @@
 {
   "header": {
     "navbar": {
-      "foundation": "Foundation",
+      "foundation": "Fondation",
       "dfi": "$DFI",
       "dex": "DEX",
-      "developers": "Developers",
-      "ecosystem": "Ecosystem",
-      "downloads": "Downloads",
-      "learn": "Learn",
-      "buy": "Buy",
+      "developers": "Développeurs",
+      "ecosystem": "Écosystème",
+      "downloads": "Téléchargements",
+      "learn": "Apprendre",
+      "buy": "Acheter",
       "dfcblog": "Blog"
     }
   },
   "footer": {
-    "title": "Native Decentralized Finance for Bitcoin.",
+    "title": "Finance décentralisée native sur Bitcoin",
     "sitemap": {
-      "foundation": "Foundation",
+      "foundation": "Fondation",
       "dfi": "$DFI",
       "dex": "DEX",
-      "developers": "Developers",
-      "ecosystem": "Ecosystem",
+      "developers": "Développeurs",
+      "ecosystem": "Écosystème",
       "downloads": "Downloads",
-      "media": "Media",
-      "learn": "Learn",
-      "security": "Security",
-      "bugbounty": "Bug Bounty",
-      "whitepaper": "White Paper",
+      "media": "Médias",
+      "learn": "Apprendre",
+      "security": "Sécurité",
+      "bugbounty": "Prime aux bogues",
+      "whitepaper": "Livre blanc",
       "dfcblog": "Blog"
     },
     "social": {
-      "title": "Social",
+      "title": "Réseaux sociaux",
       "twitter": "Twitter",
       "youtube": "YouTube",
       "reddit": "Reddit",
@@ -38,7 +38,7 @@
       "discord": "Discord",
       "github": "GitHub",
       "telegram": "Telegram",
-      "merch": "Merch"
+      "merch": "Marchandise"
     }
   }
 }

@@ -1,61 +1,61 @@
 {
   "Head": {
-    "title": "Decentralized Exchange",
-    "desc": "Swap on the DEX, mine liquidity and more, with the DeFiChain wallet app. Available for Windows, macOS and Linux."
+    "title": "Échange décentralisé",
+    "desc": "Échanger sur le DEX, faites du liquidity mining et plus encore, avec l'application portefeuille de DeFiChain. Disponible pour Windows, macOS et Linux"
   },
   "Header": {
-    "title": "Decentralized Exchange",
+    "title": "Échange décentralisé",
     "desc": {
-      "main": "Liquidity mining for up to 100% returns, decentralized swapping, arbitrage and more, with the DeFi Wallet.",
-      "secondary": "Available for Windows, macOS and Linux."
+      "main": "Liquidity mining pour des rendements allant jusqu'à 100 %, swapping décentralisé, arbitrage et plus encore, avec le portefeuille DeFi Wallet",
+      "secondary": "Disponible pour Windows, macOS et Linux"
     }
   },
   "LiquidityMining": {
-    "title": "Earn More With Liquidity Mining!",
-    "desc": "Liquidity mine for incredibly high yields within the app! Supply liquidity to BTC, ETH, USDT and many other pool pairs to power the Decentralized Exchange, and earn fees and high block rewards in return. You can withdraw your liquidity at any time."
+    "title": "Gagnez plus avec du liquidity mining !",
+    "desc": "Liquidity mining pour des rendements incroyablement élevés dans l'application ! Fournissez des liquidités à BTC, ETH, USDT et à de nombreuses autres paires de pool pour alimenter l’échange décentralisé, et gagnez des frais et des récompenses de bloc élevées en retour. Vous pouvez retirer vos liquidités à tout moment."
   },
   "LiquidityPools": {
-    "title": "Liquidity Pools",
-    "showAll": "Show All",
-    "hide": "Hide"
+    "title": "Pools de liquidité",
+    "showAll": "Afficher tous",
+    "hide": "Cacher"
   },
   "WalletFeaturesSection": {
-    "title": "Other wallet features",
+    "title": "Autres caractéristiques du portefeuille",
     "HDWallet": {
       "title": "HD wallet",
-      "desc": "A Hierarchical Deterministic (HD) wallet based on the leading BIP39 standard."
+      "desc": "Un portefeuille hiérarchique déterministe (HD) basé sur la norme de pointe BIP39"
     },
     "BackupAndRestore": {
-      "title": "Backup and restore",
-      "desc": "Backup and restore your wallet and funds any time with your 24-word seed phrase."
+      "title": "Sauvegarde et restauration",
+      "desc": "Sauvegarder et restaurer son portefeuille et ses fonds à tout moment grâce à votre phrase mnémonique de 24 mots"
     },
     "DecentralizedExchange": {
-      "title": "Decentralized Exchange",
-      "desc": "Swap between DFI and wrapped tokens in a completely decentralized, exchange."
+      "title": "Échange décentralisé",
+      "desc": "Échanger des tokens DFI et des wrapped tokens dans un échange complètement décentralisé"
     },
     "LiquidityMining": {
       "title": "Liquidity mining",
-      "desc": "Supply and mine liquidity in popular pool pairs for potentially high yields."
+      "desc": "Fournir et exploiter la liquidité sous forme de liquidity mining dans des paires de pool populaires pour des rendements potentiellement élevés"
     },
     "TokensSupport": {
-      "title": "Tokens Support",
-      "desc": "Store and transact in DFI, as well as all tokens in the DeFiChain ecosystem."
+      "title": "Support des tokens",
+      "desc": "Stocker et effectuer des transactions en DFI, ainsi que tous les tokens de l'écosystème DeFiChain"
     },
     "MiniExplorer": {
-      "title": "Mini explorer",
-      "desc": "Explore the blockchain and examine transactions."
+      "title": "Mini explorateur",
+      "desc": "Explorer la blockchain et examiner les transactions"
     },
     "Masternodes": {
       "title": "Masternodes",
-      "desc": "View the full list of masternodes, and create your own masternodes."
+      "desc": "Voire la liste complète des masternodes, et créer son propre masternode"
     },
     "Console": {
       "title": "Console",
-      "desc": "Run account, blockchain, masternode, mining, network, wallet commands, and more."
+      "desc": "Exécutez le compte, la blockchain, le masternode, le minage, le réseau, les commandes du portefeuille, et plus"
     },
     "NetworkSelection": {
-      "title": "Network selection",
-      "desc": "The app supports easy connecting and switching between Mainnet and Testnet."
+      "title": "Sélection du réseau",
+      "desc": "L'application permet de se connecter et de basculer facilement entre Mainnet et Testnet"
     }
   }
 }

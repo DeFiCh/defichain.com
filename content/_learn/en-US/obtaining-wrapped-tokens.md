@@ -1,6 +1,6 @@
 ---
 title: Obtaining wrapped tokens
-description: A step-by-step guide to obtaining wrapped BTC/ETH/USDT via the DEX or CakeDefi
+description: A step-by-step guide to obtaining wrapped BTC/ETH/USDT via the DEX or Cake Defi
 ---
 
 To supply liquidity to the DEX and to liquidity mine, you will need not just DFI but tokens for the other side of the pool pair you wish to supply liquidity to. DeFiChain currently only support wrapped tokens, namely wrapped ETH, BTC and USDT.
@@ -9,7 +9,7 @@ If you also need DFI, you can watch our guide on [where and how to buy DFI](http
 
 ## Method 1: Using the DEX
 
-The first method is right within the DeFi app. Using the DEX, and depending on the balance and ratio of the pool pairs, you may end up swapping the tokens at a lower price than if you would have done it via the second method – using CakeDeFi.
+The first method is right within the DeFi app. Using the DEX, and depending on the balance and ratio of the pool pairs, you may end up swapping the tokens at a lower price than if you would have done it via the second method – using Cake DeFi.
 
 ### Step 1: Launch the DeFiChain app
 
@@ -49,26 +49,26 @@ Review the transaction amounts and fees. Then click **SWAP** to confirm.
 
 ---
 
-## Method 2: Using CakeDeFi
+## Method 2: Using Cake DeFi
 
-### Step 1: Login to your CakeDeFi account
+### Step 1: Login to your Cake DeFi account
 
-Login to your [CakeDeFi account](https://www.cakedefi.com/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch). If you don't have one yet, [click here to register.](https://www.cakedefi.com/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch).
+Login to your [Cake DeFi account](https://www.cakedefi.com/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch). If you don't have one yet, [click here to register.](https://www.cakedefi.com/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch).
 
 _Note: If you are registering a new account, you will need to complete identity verification (KYC)._
 
-### Step 2: Funds in CakeDeFi
+### Step 2: Funds in Cake DeFi
 
-From your [CakeDeFi Assets page](https://pool.cakedefi.com/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch#/wallets), you can withdraw ETH, BTC or USDT to DeFiChain. If you don't currently have these coins, or you'd like to obtain more, you can either:
+From your [Cake DeFi Assets page](https://pool.cakedefi.com/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch#/wallets), you can withdraw ETH, BTC or USDT to DeFiChain. If you don't currently have these coins, or you'd like to obtain more, you can either:
 
-1. Deposit ETH, BTC or USDT from an external wallet into CakeDeFi
+1. Deposit ETH, BTC or USDT from an external wallet into Cake DeFi
 2. Buy ETH, BTC or USDT using the fiat on-ramp, which accepts payment methods like credit cards, Apple Pay and transfers, depending on your country
 
 ![](/img/guides/obtaining-tokens/cake-assets.png)
 
 ### Step 3: Withdrawal
 
-Once your ETH, BTC or USDT is in your CakeDeFi Assets, you can withdraw them. Click the corresponding **WITHDRAW** button for the token you want to withdraw.
+Once your ETH, BTC or USDT is in your Cake DeFi Assets, you can withdraw them. Click the corresponding **WITHDRAW** button for the token you want to withdraw.
 
 In the withdrawal pop-up, select DeFi Blockchain as the **Transfer Network**. Enter your DeFiChain receive address in the **To DeFi Blockchain address** field. Information on how to get your DeFiChain app receiving address can be found in [this guide](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch).
 
@@ -78,4 +78,4 @@ Enter your **two-factor authentication code** and complete the rest of the form,
 
 
 
-_Note: For security reasons, withdrawals on CakeDeFi can take up to 24 hours (weekdays) and 72 hours (weekends) to be processed._
+_Note: For security reasons, withdrawals on Cake DeFi can take up to 24 hours (weekdays) and 72 hours (weekends) to be processed._

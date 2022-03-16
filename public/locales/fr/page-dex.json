@@ -51,7 +51,7 @@
     },
     "Console": {
       "title": "Console",
-      "desc": "Exécutez le compte, la blockchain, le masternode, le minage, le réseau, les commandes du portefeuille, et plus"
+      "desc": "Exécuter le compte, la blockchain, le masternode, le minage, le réseau, les commandes du portefeuille, et plus"
     },
     "NetworkSelection": {
       "title": "Sélection du réseau",

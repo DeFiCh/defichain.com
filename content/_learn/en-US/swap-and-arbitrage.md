@@ -19,7 +19,7 @@ Don’t have the app installed yet? [Click here for a step-by-step guide on how 
 
 ### Step 2: Make sure you have DFI in your wallet
 
-After opening the DeFi Wallet desktop App, click **Balances** in the sidebar. Make sure you have funds (DFI) in wallet, as DFI is needed for transaction fees. If you don't yet have DFI, [here is a step-by-step tutorial on how and where you can buy DFI.](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)
+After opening the DeFi Wallet desktop app, click **Balances** in the sidebar. Make sure you have funds (DFI) in wallet, as DFI is needed for transaction fees. If you don't yet have DFI, [here is a step-by-step tutorial on how and where you can buy DFI.](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)
 
 ![](/img/guides/installing-defi-app/wallets-choose.png)
 

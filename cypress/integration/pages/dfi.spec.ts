@@ -62,10 +62,6 @@ context('/dfi page on desktop', () => {
       cy.findByTestId('DfiPage.Staking.Kucoin').should('be.visible')
       cy.findByTestId('DfiPage.Staking.Cakedefi').should('be.visible')
       cy.findByTestId('DfiPage.Staking.Hotbit').should('be.visible')
-
-      cy.findByTestId('DfiPage.Developers.Heading').should('have.text', 'Developers')
-      cy.findByTestId('DfiPage.Developers.Text').should('be.visible')
-      cy.findByTestId('DfiPage.Developers.Desc').should('be.visible')
     })
   })
 })
@@ -134,10 +130,6 @@ context('/dfi page on mobile', () => {
       cy.findByTestId('DfiPage.Staking.Kucoin').should('be.visible')
       cy.findByTestId('DfiPage.Staking.Cakedefi').should('be.visible')
       cy.findByTestId('DfiPage.Staking.Hotbit').should('be.visible')
-
-      cy.findByTestId('DfiPage.Developers.Heading').should('have.text', 'Developers')
-      cy.findByTestId('DfiPage.Developers.Text').should('be.visible')
-      cy.findByTestId('DfiPage.Developers.Desc').should('be.visible')
     })
   })
 })

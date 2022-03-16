@@ -32,8 +32,8 @@
         "desc": "以一百个DFI创建自定代币 (不能退还)。"
       },
       "BudgetProposal": {
-        "title": "概算提议",
-        "desc": "以500 DFI提交社区预算建议（不可退还)。"
+        "title": "社区基金提议",
+        "desc": "以10 DFI提交社区基金提议（不可退还)。"
       },
       "LiquidityPools": {
         "title": "流动性池",
@@ -62,11 +62,6 @@
     "Staking": {
       "title": "权益质押平台",
       "desc": "DFI可在这些平台上运作权益质押。"
-    },
-    "Developers": {
-      "title": "开发者",
-      "desc": "递飞链基金会授予开发者在递飞链上创建功能和dApp的权利。",
-      "email": "若想了解更多资讯，请用邮件联系我们<0>partners@defichain.com</0>。"
     }
   }
 }

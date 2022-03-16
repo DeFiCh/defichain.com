@@ -29,6 +29,17 @@ body {
     display: none !important;
 }
 
+.slick-prev {
+    @apply left-[65%] md:left-[70%] lg:left-[75%];
+    top: -60px;
+}
+
+.slick-next {
+    top: -60px;
+    right: 20%;
+}
+
+
 .slick-list {
     margin: -16px;
 }

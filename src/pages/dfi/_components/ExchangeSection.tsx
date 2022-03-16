@@ -128,7 +128,7 @@ export function ExchangeSection (): JSX.Element {
             <ExchangeCard
               url='https://cakedefi.com/'
               image={CakeLogo}
-              testid='DfiPage.Staking.Cakedefi' name='Cake Defi'
+              testid='DfiPage.Staking.Cakedefi' name='Cake DeFi'
             />
           </div>
         </div>

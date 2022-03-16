@@ -45,7 +45,7 @@ export default function EcosystemPage (): JSX.Element {
             text={t('PartnersSection.CakeDeFi.desc')} buttonText={t('PartnersSection.CakeDeFi.button')}
             url='https://cakedefi.com' external testid='EcosystemSection.CakeDeFi'
           >
-            <Image alt='CakeDefi logo' src={CakeDeFiLogo} />
+            <Image alt='CakeDeFi logo' src={CakeDeFiLogo} />
             <h3 className='text-2xl mt-5 font-medium'>{t('PartnersSection.CakeDeFi.title')}</h3>
           </ResourceCard>
           <ResourceCard
@@ -67,14 +67,14 @@ export default function EcosystemPage (): JSX.Element {
             text={t('PartnersSection.Blockfolio.desc')} buttonText={t('PartnersSection.Blockfolio.button')}
             url='https://blockfolio.com/coin/DFI' external testid='EcosystemSection.Blockfolio'
           >
-            <Image alt='CakeDefi Logo' src={Blockfolio} />
+            <Image alt='CakeDeFi Logo' src={Blockfolio} />
             <h3 className='text-2xl mt-5 font-medium'>{t('PartnersSection.Blockfolio.title')}</h3>
           </ResourceCard>
           <ResourceCard
             text={t('PartnersSection.Messari.desc')} buttonText={t('PartnersSection.Messari.button')}
             url='https://messari.io/asset/defichain' external testid='EcosystemSection.Messari'
           >
-            <Image alt='CakeDefi Logo' src={MessariLogo} />
+            <Image alt='CakeDeFi Logo' src={MessariLogo} />
             <h3 className='text-2xl mt-5 font-medium'>{t('PartnersSection.Messari.title')}</h3>
           </ResourceCard>
         </EcosystemSection>

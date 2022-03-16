@@ -1,6 +1,6 @@
 ---
 title: 获取挂钩的代币
-description: A step-by-step guide to obtaining wrapped BTC/ETH/USDT via the DEX or Cake Defi
+description: A step-by-step guide to obtaining wrapped BTC/ETH/USDT via the DEX or Cake DeFi
 ---
 
 为了向DEX和流动性挖矿提供流动，您需要同时进入配对中个端的货币，价值要同等。递飞链现时只支持挂钩的代币 （包含ETH、BTC和USDT）。

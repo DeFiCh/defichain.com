@@ -5,7 +5,7 @@ description: How to run a DeFiChain masternode on Linux/macOS.
 
 ## Introduction
 
-Setting up a masternode on DefiChain allows you to participate in the consensus protocol and receive staking awards. One thing to note is that in order to set up a masternode, you must have a minimum of 20,000 DFI.
+Setting up a masternode on DeFiChain allows you to participate in the consensus protocol and receive staking awards. One thing to note is that in order to set up a masternode, you must have a minimum of 20,000 DFI.
 
 _NOTE: This how-to expects some basic familiarity with the Linux terminal_
 
@@ -71,7 +71,7 @@ where address is the new owner address you have created.
 
 ### Step 5 - Register as a masternode on the network
 
-In order to participate in the staking algorithm, you must broadcast to the network that you intend to participate, this can be done by running a command using the Defi CLI, the command is:
+In order to participate in the staking algorithm, you must broadcast to the network that you intend to participate, this can be done by running a command using the CLI, the command is:
 
 ```
 ~/.defi/defi-cli createmasternode address
@@ -112,7 +112,7 @@ Perform steps 1-4 the same as the above section for operating your own masternod
 
 ### Step 5 - Register as a masternode on the network
 
-In order to participate in the staking algorithm, you must broadcast to the network that you intend to participate, this can be done by running a command using the Defi CLI, the command is:
+In order to participate in the staking algorithm, you must broadcast to the network that you intend to participate, this can be done by running a command using the CLI, the command is:
 
 ```
 ~/.defi/defi-cli createmasternode OWNER_ADDRESS OPERATOR_ADDRESS

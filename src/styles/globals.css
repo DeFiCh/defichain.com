@@ -26,8 +26,7 @@ body {
 
 /*Slick slider overrides*/
 .slick-prev::before {
-    @apply left-[65%] md:left-[70%] lg:left-[75%];
-    top: -60px;
+    @apply -top-[60px] left-[65%] md:left-[70%] lg:left-[75%];
 }
 
 .slick-next::before {

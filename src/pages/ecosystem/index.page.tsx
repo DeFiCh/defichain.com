@@ -38,13 +38,6 @@ export default function EcosystemPage (): JSX.Element {
           >
             <h3 className='text-2xl font-medium'>{t('ContributeSection.Developer.title')}</h3>
           </ResourceCard>
-          <ResourceCard
-            text={t('ContributeSection.ServiceProvider.desc')}
-            buttonText={t('ContributeSection.ServiceProvider.button')}
-            url='/developers' testid='EcosystemSection.ServiceProvider'
-          >
-            <h3 className='text-2xl font-medium'>{t('ContributeSection.ServiceProvider.title')}</h3>
-          </ResourceCard>
         </EcosystemSection>
 
         <EcosystemSection title={t('PartnersSection.title')} testId='EcosystemSection.Partners'>
@@ -93,7 +86,7 @@ export default function EcosystemPage (): JSX.Element {
 function EcosystemSection (props: PropsWithChildren<{ title: string, testId: string }>): JSX.Element {
   return (
     <Section title={props.title} testId={props.testId}>
-      <div className='flex flex-wrap -mx-1.5'>
+      <div className='w-full flex flex-wrap -mx-1.5'>
         {props.children}
       </div>
     </Section>

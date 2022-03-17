@@ -1,53 +1,53 @@
 {
   "Head": {
-    "title": "Your key to the DeFiChain ecosystem",
-    "desc": "Gain access to the DeFi landscape through non-custodial wallets designed for a multitude of requirements."
+    "title": "Dein Schlüssel zum DeFiChain-Ökosystem",
+    "desc": "Erhalte Zugang zur DeFi-Landschaft durch Non-Custodial Wallets, die für eine Vielzahl von Anforderungen entwickelt wurden."
   },
   "Header": {
-    "title": "Your key to the DeFiChain ecosystem",
-    "desc": "Gain access to the DeFi landscape through non-custodial wallets designed for a multitude of requirements."
+    "title": "Dein Schlüssel zum DeFiChain-Ökosystem",
+    "desc": "Erhalte Zugang zur DeFi-Landschaft durch Non-Custodial Wallets, die für eine Vielzahl von Anforderungen entwickelt wurden."
   },
   "LightWallets": {
-    "title": "Daily access to DeFiChain",
-    "subtitle": "These wallets provide lightweight, easy access to DeFiChain’s suite of features. Best suited for users who interact with DeFiChain on a near-daily basis, while not compromising on speed and security of funds.",
+    "title": "Täglicher Zugang zu DeFiChain",
+    "subtitle": "Diese Wallets bieten einen leichten und einfachen Zugang zu den Funktionen von DeFiChain. Sie eignen sich am besten für Nutzer, die fast täglich mit DeFiChain interagieren und dabei keine Kompromisse bei der Geschwindigkeit und Sicherheit ihrer Einlagen eingehen.",
     "entries": {
       "DFC": {
-        "title": "DeFiChain wallet mobile app",
-        "desc": "Lightweight, instant access to Decentralized Finance for Bitcoin, at your fingertips."
+        "title": "DeFiChain Wallet Handy-App",
+        "desc": "Einfacher, schneller Zugang zum dezentralen Finanzsystem für Bitcoin, per Fingertipp."
       },
       "DFX": {
-        "title": "DFX wallet mobile app",
-        "desc": "Store, receive and send DeFiChain tokens with utmost simplicity and security uncomplicated from your mobile."
+        "title": "DFX wallet Handy-App",
+        "desc": "Speichere, empfange und versende DeFiChain Token mit größter Einfachheit und Sicherheit ganz unkompliziert per Handy."
       },
       "saiive": {
-        "title": "saiive.live mobile wallet",
-        "desc": "A non-custodial light wallet for DeFiChain from and for the community."
+        "title": "saiive.live Handy-App",
+        "desc": "Eine Non-Custodial Lightwallet für DeFiChain von und für die Community"
       },
       "saiiveDesktop": {
-        "title": "saiive.live desktop wallet",
-        "desc": "A non-custodial desktop wallet for DeFiChain from and for the community."
+        "title": "saiive.live Desktop-Wallet",
+        "desc": "Eine Non-Custodial Desktop-Wallet für DeFiChain von und für die Community"
       }
     }
   },
   "FullNodeWallets": {
-    "title": "Advanced usage of DeFiChain",
-    "subtitle": "Advanced wallets that are suited for complex usage of DeFiChain, such as masternode management, multi-signature management, and more.",
+    "title": "Erweiterte Nutzung von DeFiChain",
+    "subtitle": "Fortgeschrittene Wallets, die für die komplexe Nutzung von DeFiChain geeignet sind, wie z.B. Masternode-Management, Multi-Signatur-Management und mehr.",
     "entries": {
       "DFC": {
-        "title": "DeFi Wallet desktop app",
-        "desc": "Transact, liquidity mine, swap and more with the full-featured and fully-decentralized wallet app. Full node included."
+        "title": "DeFi Wallet Desktop-App",
+        "desc": "Mit der funktionsfähigen und vollständig dezentralen Wallet-App kannst du Transaktionen durchführen, Liquiditäts-Mining betreiben, tauschen und vieles mehr. Full-Node enthalten."
       },
       "RPI": {
-        "title": "DeFi wallet for Raspberry Pi",
-        "desc": "A version of the desktop wallet for Raspberry Pi 4B 4GB with official Raspberry Pi OS (32-Bit)."
+        "title": "DeFi Wallet für Raspberry Pi",
+        "desc": "Eine Version der Desktop-Wallet für Raspberry Pi 4B 4GB mit offiziellem Raspberry Pi OS (32-Bit)"
       },
       "CLI": {
         "title": "CLI",
-        "desc": "Transact and interact with DeFiChain through a command line interface. Full node included."
+        "desc": "Führe Transaktionen und Interaktionen mit DeFiChain über eine Befehlszeilenschnittstelle durch. Full-Node enthalten"
       },
       "DFIElectrum": {
         "title": "DeFiChain Electrum",
-        "desc": "Multi-signature DeFiChain wallet built with Electrum for treasury use cases and more."
+        "desc": "Multi-Signatur DeFiChain Wallet mit Electrum für Treasury-Anwendungen und mehr."
       }
     }
   }

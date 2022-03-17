@@ -1,24 +1,29 @@
-import { BTC } from './BTC'
-import { BCH } from './BCH'
-import { LTC } from './LTC'
+import { dBCH } from './dBCH'
+import { dBTC } from './dBTC'
+import { dDFI } from './dDFI'
+import { dDOGE } from './dDOGE'
+import { dETH } from './dETH'
 import { DFI } from './DFI'
+import { dLTC } from './dLTC'
+import { dUSDC } from './dUSDC'
+import { dUSDT } from './dUSDT'
 import { DUSD } from './DUSD'
 import { SVGProps } from 'react'
-import { USDT } from '@components/icons/assets/tokens/USDT'
-import { USDC } from '@components/icons/assets/tokens/USDC'
-import { ETH } from '@components/icons/assets/tokens/ETH'
-import { DOGE } from '@components/icons/assets/tokens/DOGE'
 import { _TokenDefault } from './_TokenDefault'
 
 const mapping: Record<string, (props: SVGProps<SVGSVGElement>) => JSX.Element> = {
+  _UTXO: DFI,
   DFI: DFI,
-  BTC: BTC,
-  BCH: BCH,
-  LTC: LTC,
-  USDT: USDT,
-  USDC: USDC,
-  ETH: ETH,
-  DOGE: DOGE,
+  'DFI (UTXO)': DFI,
+  'DFI (Token)': dDFI,
+  dBCH: dBCH,
+  dBTC: dBTC,
+  dDFI: dDFI,
+  dDOGE: dDOGE,
+  dETH: dETH,
+  dLTC: dLTC,
+  dUSDT: dUSDT,
+  dUSDC: dUSDC,
   dDUSD: DUSD,
   DUSD: DUSD
 }
@@ -31,7 +36,7 @@ const mapping: Record<string, (props: SVGProps<SVGSVGElement>) => JSX.Element> =
  * @return {(props: SVGProps<SVGSVGElement>) => JSX.Element}
  */
 export function getAssetIcon (symbol: string): (props: SVGProps<SVGSVGElement>) => JSX.Element {
-  const Icon = mapping[`${symbol}`]
+  const Icon = mapping[`d${symbol}`]
   if (Icon === undefined) {
     return _TokenDefault(symbol)
   }

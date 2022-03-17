@@ -57,7 +57,7 @@ export function LiquidityPoolsSection (): JSX.Element {
                     </div>
                     <div className='text-gray-900'>
                       <h3 className='text-xl font-semibold'>
-                        {`${item.tokenA.symbol}-${item.tokenB.symbol}`}
+                        {`${item.tokenA.displaySymbol}-${item.tokenB.displaySymbol}`}
                       </h3>
                       {(() => {
                         if (item.apr === undefined) {

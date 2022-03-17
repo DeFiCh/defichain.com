@@ -43,7 +43,6 @@ context('<Footer/> on desktop', () => {
     cy.findByTestId('FooterExternalLink.TelegramDE').should('be.visible').should('have.attr', 'href', 'https://t.me/defiblockchain_DE')
     cy.findByTestId('FooterExternalLink.TelegramIT').should('be.visible').should('have.attr', 'href', 'https://t.me/defiblockchain_IT')
     cy.findByTestId('FooterExternalLink.TelegramFR').should('be.visible').should('have.attr', 'href', 'https://t.me/defiblockchain_FR')
-    cy.findByTestId('FooterExternalLink.TelegramZH').should('be.visible').should('have.attr', 'href', 'https://t.me/defiblockchain_ZH')
   })
 
   it('should tiny footer links', function () {
@@ -96,7 +95,6 @@ context('<Footer/> on mobile', () => {
     cy.findByTestId('FooterExternalLink.TelegramDE').should('be.visible').should('have.attr', 'href', 'https://t.me/defiblockchain_DE')
     cy.findByTestId('FooterExternalLink.TelegramIT').should('be.visible').should('have.attr', 'href', 'https://t.me/defiblockchain_IT')
     cy.findByTestId('FooterExternalLink.TelegramFR').should('be.visible').should('have.attr', 'href', 'https://t.me/defiblockchain_FR')
-    cy.findByTestId('FooterExternalLink.TelegramZH').should('be.visible').should('have.attr', 'href', 'https://t.me/defiblockchain_ZH')
   })
 
   it('should tiny footer links', function () {

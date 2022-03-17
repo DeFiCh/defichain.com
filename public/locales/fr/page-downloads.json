@@ -12,15 +12,15 @@
     "subtitle": "Ces portefeuilles offrent un accès léger et facile à la suite de fonctionnalités de DeFiChain. Ils conviennent parfaitement aux utilisateurs qui interagissent avec DeFiChain sur une base quasi-quotidienne, tout en ne faisant aucun compromis sur la vitesse et la sécurité des fonds.",
     "entries": {
       "DFC": {
-        "title": "DeFiChain Wallet application mobile portefeuille",
+        "title": "DeFiChain Wallet application portefeuille mobile",
         "desc": "Un accès léger et instantané à la finance décentralisée sur Bitcoin, en quelques clics."
       },
       "DFX": {
-        "title": "DFX wallet application portefeuille mobile ",
+        "title": "DFX wallet application portefeuille mobile",
         "desc": "Stockez, recevez et envoyez des tokens DeFiChain avec une simplicité et une sécurité maximale, à partir de votre mobile"
       },
       "saiive": {
-        "title": "saiive.live application portefeuille mobile ",
+        "title": "saiive.live application portefeuille mobile",
         "desc": "Un portefeuille mobile léger non gardienné pour DeFiChain de et pour la communauté."
       },
       "saiiveDesktop": {

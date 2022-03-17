@@ -1,135 +1,135 @@
 {
   "Head": {
-    "title": "Native Decentralized Finance for Bitcoin",
-    "desc": "A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone."
+    "title": "Natives dezentrales Finanzwesen, basierend auf Bitcoin",
+    "desc": "Eine Blockchain für schnelle, intelligente und transparente dezentrale Finanzdienstleistungen, die für jeden zugänglich sind."
   },
   "Header": {
-    "title": "Native Decentralized Finance for Bitcoin",
-    "desc": "A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone."
+    "title": "Natives dezentrales Finanzwesen, basierend auf Bitcoin",
+    "desc": "Eine Blockchain für schnelle, intelligente und transparente dezentrale Finanzdienstleistungen, die für jeden zugänglich sind."
   },
   "CardsSection": {
     "cards": [
       {
-        "label": "LATEST FEATURE",
-        "title": "Decentralized Assets",
-        "desc": "Access decentralized assets with collateral in your vault.",
-        "buttonText": "Learn more",
+        "label": "NEUESTE FEATURES",
+        "title": "Dezentrale Aktiva",
+        "desc": "Zugang zu dezentralen Vermögenswerten mit Sicherheiten in deinem Vault",
+        "buttonText": "Mehr erfahren",
         "buttonType": "full",
         "url": "https://blog.defichain.com/what-are-decentralised-stock-tokens-and-how-do-they-work/"
       },
       {
-        "label": "FEATURED DOWNLOAD",
+        "label": "AKTUELLER DOWNLOAD",
         "title": "DeFiChain Wallet",
-        "desc": "Experience DeFiChain with wallet apps built for both desktop and mobile.",
-        "buttonText": "Go to Downloads",
+        "desc": "Entdecke DeFiChain mit Wallet-Apps, die sowohl für den Desktop als auch für das Handy entwickelt wurden",
+        "buttonText": "Downloadbereich",
         "buttonType": "full",
         "url": "https://defichain.com/downloads/"
       },
       {
-        "label": "HOW-TO GUIDE",
-        "title": "Buy $DFI",
-        "desc": "Learn about and acquire the $DFI coin from various crypto exchanges.",
-        "buttonText": "Learn more",
+        "label": "GEWUSST WIE",
+        "title": "$DFI kaufen",
+        "desc": "Erfahre mehr über den $DFI Coin und erwirb ihn an verschiedenen Krypto-Börsen",
+        "buttonText": "Mehr erfahren",
         "buttonType": "outline",
         "url": "https://blog.defichain.com/where-and-how-to-buy-dfi-defichain/"
       },
       {
-        "label": "ECOSYSTEM",
-        "title": "Explore community projects",
-        "desc": "Comprehensive list of all things DeFiChain.",
-        "buttonText": "Explore",
+        "label": "ÖKOSYSTEM",
+        "title": "Community-Projekte erkunden",
+        "desc": "Umfassende Liste mit allen Inhalten zur DeFiChain",
+        "buttonText": "Erkunden",
         "buttonType": "outline",
         "url": "https://defilinks.io/"
       }
     ]
   },
   "SolutionSection": {
-    "title": "The Post-Fintech Revolution",
-    "desc": "From trust-based to trust-less, decentralized finance overcomes what Fintech could not solve in traditional finance.",
+    "title": "Die Post-Fintech-Revolutionn",
+    "desc": "Von vertrauensbasiert zu nicht vertrauensbasiert - das dezentrale Finanzwesen überwindet, was Fintech im traditionellen Finanzwesen nicht lösen konnte",
     "graph": {
-      "TraditionalFinance": "Traditional Finance",
-      "Bureaucracy": "Bureaucracy",
-      "TrustSoftware": "Trust-based software",
+      "TraditionalFinance": "Traditionelles Finanzwesen",
+      "Bureaucracy": "Verwaltung, Bürokratie",
+      "TrustSoftware": "Auf Vertrauen basierende Software",
       "Fintech": "Fintech",
-      "MinimizedSoftware": "Trust-minimized software"
+      "MinimizedSoftware": "Software mit geringem Maß an Abhängigkeit von Vertrauen"
     }
   },
   "BenefitsSection": {
-    "title": "Benefits of DeFiChain.",
+    "title": "Vorteile von DeFiChain",
     "Variety": {
-      "title": "Variety",
-      "desc": "Wide range of crypto-economic financial operations."
+      "title": "Auswahl",
+      "desc": "Breites Spektrum an Krypto-Finanzgeschäften"
     },
     "Throughput": {
-      "title": "Throughput",
-      "desc": "Unparalleled high transaction throughput for all transactions."
+      "title": "Durchsatz",
+      "desc": "Unerreicht hoher Transaktionsdurchsatz für alle Transaktionen"
     },
     "Security": {
-      "title": "Security",
-      "desc": "Turing-incomplete for reduced attack vectors."
+      "title": "Sicherheit",
+      "desc": "Turing-incomplete für reduzierte Angriffsvektoren"
     },
     "Development": {
-      "title": "Development",
-      "desc": "Rapidly create a variety of DeFi apps on one chain."
+      "title": "Entwicklung",
+      "desc": "Erstelle im Handumdrehen eine Vielzahl von DeFi-Apps auf einer Chain"
     },
     "Governance": {
       "title": "Governance",
-      "desc": "Reliable decentralized governance, on and off-chain."
+      "desc": "Zuverlässige dezentrale Steuerung auf und außerhalb der Chain"
     },
     "Immutability": {
-      "title": "Immutability",
-      "desc": "Immutable by anchoring to the Bitcoin blockchain."
+      "title": "Unveränderlichkeit",
+      "desc": "Durch Verankerung in der Bitcoin-Blockchain unveränderlich"
     }
   },
   "FunctionsSection": {
-    "title": "Designed and engineered for decentralized finance dApps.",
+    "title": "Konzipiert und entwickelt für dezentrale Finanzanwendungen (dApps)",
     "Lending": {
-      "title": "Lending",
-      "desc": "Borrow and lend through collateralized systems."
+      "title": "Darlehen",
+      "desc": "Leihe und verleihe über besicherte Systeme"
     },
     "WrappedToken": {
-      "title": "Wrapping of tokens",
-      "desc": "Work with a variety of crypto-assets, directly, on-chain."
+      "title": "Wrapping von Token",
+      "desc": "Arbeite mit einer Vielzahl von Kryptoanlagen, direkt auf der Chain"
     },
     "Oracles": {
-      "title": "Pricing oracles",
-      "desc": "Collect data from other chains and non-crypto markets."
+      "title": "Preisorakel",
+      "desc": "Sammelt Daten von anderen Chains und Nicht-Kryptomärkten"
     },
     "Exchanges": {
-      "title": "Exchanges",
-      "desc": "Direct peer-to-peer trading between cryptocurrencies."
+      "title": "Tauschgeschäfte",
+      "desc": "Direkter Peer-to-Peer-Handel zwischen Kryptowährungen"
     },
     "Transferable": {
-      "title": "Transferable debts and receivables",
-      "desc": "Work with transparency not possible with institutions."
+      "title": "Übertragbare Schulden und Forderungen",
+      "desc": "Arbeit mit Transparenz, die bei Institutionen nicht möglich ist"
     },
     "Debt": {
-      "title": "Non-collateralized debt",
-      "desc": "Loans based on reputation and verifiable credentials."
+      "title": "Unbesicherte Schulden",
+      "desc": "Darlehen auf der Grundlage von Reputation und überprüfbaren Referenzen"
     },
     "Tokenization": {
-      "title": "Asset tokenization",
-      "desc": "Tokenize equity, real estate, and other holdings."
+      "title": "Tokenisierung von Vermögenswerten",
+      "desc": "Tokeniere Aktien, Immobilien und andere Anlageformen"
     },
     "Dividends": {
-      "title": "Distribution of dividends",
-      "desc": "Automatic investment payouts with smart contracts."
+      "title": "Ausschüttung von Dividenden",
+      "desc": "Automatische Ertragsauszahlung aus Investitionen mithilfe von Smart Contracts"
     }
   },
   "BuiltOnBitcoinSection": {
-    "title": "Built-on-bitcoin",
-    "desc": "DeFiChain marries the best of Proof-of-Stake, with the security and immutability of Bitcoin.",
-    "button": "Learn more"
+    "title": "Auf Bitcoin gebaut",
+    "desc": "DeFiChain verbindet das Beste von Proof-of-Stake mit der Sicherheit und Unveränderlichkeit von Bitcoin",
+    "button": "Mehr erfahren"
   },
   "DistributionSection": {
-    "title": "Decentralized and distributed",
-    "desc": "DeFiChain nodes are distributed globally across datacenters in the US, Canada, Europe, India, Singapore and Australia."
+    "title": "Dezentral und verteilt",
+    "desc": "DeFiChain-Nodes sind weltweit auf Rechenzentren in den USA, Kanada, Europa, Indien, Singapur und Australien verteilt"
   },
   "RoadmapSection": {
     "title": "Roadmap",
     "2022": {
       "title": "2022",
-      "status": "On track",
+      "status": "Auf dem Weg",
       "cards": [
         {
           "title": "Q1",
@@ -141,51 +141,51 @@
         },
         {
           "title": "Q2",
-          "desc": "Desktop Light Wallet",
+          "desc": "Desktop-Lightwallet",
           "image": {
             "url": "/img/timeline/2022/Desktop-Light-Wallet2x.png",
-            "alt": "Desktop Light Wallet"
+            "alt": "Desktop-Lightwallet"
           }
         },
         {
           "title": "Q2",
-          "desc": "Browser Extension Wallet",
+          "desc": "Browsererweiterungs-Wallet",
           "image": {
             "url": "/img/timeline/2022/Browser-Extension-Wallet2x.png",
-            "alt": "Browser Extension Wallet"
+            "alt": "Browsererweiterungs-Wallet"
           }
         },
         {
           "title": "Q2",
-          "desc": "Derivatives (Futures and options)",
+          "desc": "Derivate (Futures und Optionen)",
           "image": {
             "url": "/img/timeline/2021/futures-trading@2x.jpg",
-            "alt": "Derivatives"
+            "alt": "Derivate"
           }
         },
         {
           "title": "Q3-4",
-          "desc": "Ethereum Virtual Machine Support on DeFiChain",
+          "desc": "Unterstützung der Ethereum Virtual Machine auf DeFiChain",
           "url": "https://github.com/DeFiCh/dfips/issues/96",
           "image": {
             "url": "/img/timeline/2022/EVM2x.png",
-            "alt": "Ethereum Virtual Machine Support"
+            "alt": "Unterstützung von Ethereum Virtual Machine"
           }
         },
         {
           "title": "Q3-4",
-          "desc": "Non-fungible Token (NFT) Support",
+          "desc": "Unterstützung von nicht-fungiblen Token (NFT)",
           "image": {
             "url": "/img/timeline/2022/NFTs2x.png",
-            "alt": "NFT Support"
+            "alt": "NFT Unterstützung"
           }
         },
         {
           "title": "Q3-4",
-          "desc": "Ledger support for Light Wallet",
+          "desc": "Ledger-Unterstützung für Lightwallet",
           "image": {
             "url": "/img/timeline/2022/ledger@2x.png",
-            "alt": "Ledger support"
+            "alt": "Ledger-Unterstützung"
           }
         }
       ]

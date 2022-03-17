@@ -1,43 +1,43 @@
 {
   "Head": {
-    "title": "Native Decentralized Finance for Bitcoin",
-    "desc": "A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone."
+    "title": "Finance décentralisée native sur Bitcoin",
+    "desc": "Une blockchain dédiée aux services financiers décentralisés rapides, intelligents et transparents, accessibles à tous."
   },
   "Header": {
-    "title": "Native Decentralized Finance for Bitcoin",
-    "desc": "A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone."
+    "title": "Finance décentralisée native sur Bitcoin",
+    "desc": "Une blockchain dédiée aux services financiers décentralisés rapides, intelligents et transparents, accessibles à tous."
   },
   "CardsSection": {
     "cards": [
       {
-        "label": "LATEST FEATURE",
-        "title": "Decentralized Assets",
-        "desc": "Access decentralized assets with collateral in your vault.",
-        "buttonText": "Learn more",
+        "label": "DERNIÈRES NOUVELLES",
+        "title": "Actifs décentralisés",
+        "desc": "Accéder à des actifs décentralisés avec des garanties dans son vault",
+        "buttonText": "n savoir plus",
         "buttonType": "full",
         "url": "https://blog.defichain.com/what-are-decentralised-stock-tokens-and-how-do-they-work/"
       },
       {
-        "label": "FEATURED DOWNLOAD",
-        "title": "DeFiChain Wallet",
-        "desc": "Experience DeFiChain with wallet apps built for both desktop and mobile.",
-        "buttonText": "Go to Downloads",
+        "label": "TÉLÉCHARGEMENT EN VEDETTE",
+        "title": "Portefeuille DeFiChain",
+        "desc": "Faire l'expérience de DeFiChain avec des applications de portefeuille conçues pour le bureau et le mobile.",
+        "buttonText": "Téléchargements",
         "buttonType": "full",
         "url": "https://defichain.com/downloads/"
       },
       {
-        "label": "HOW-TO GUIDE",
-        "title": "Buy $DFI",
-        "desc": "Learn about and acquire the $DFI coin from various crypto exchanges.",
-        "buttonText": "Learn more",
+        "label": "GUIDE PRATIQUE",
+        "title": "Acheter $DFI",
+        "desc": "Apprendre à connaître et à acquérir du coin $DFI à partir de divers échanges de crypto.",
+        "buttonText": "En savoir plus",
         "buttonType": "outline",
         "url": "https://blog.defichain.com/where-and-how-to-buy-dfi-defichain/"
       },
       {
-        "label": "ECOSYSTEM",
-        "title": "Explore community projects",
-        "desc": "Comprehensive list of all things DeFiChain.",
-        "buttonText": "Explore",
+        "label": "ÉCOSYSTÈME",
+        "title": "Explorer les projets communautaires",
+        "desc": "Liste complète de tout ce qui concerne DeFiChain",
+        "buttonText": "Explorer",
         "buttonType": "outline",
         "url": "https://defilinks.io/"
       }

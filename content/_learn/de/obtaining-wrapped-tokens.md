@@ -9,9 +9,9 @@ Wenn du auch DFI brauchst, kannst du dir unseren Leitfaden [wo und wie man DFI k
 
 ## Methode 1: DEX verwenden
 
-Die erste Methode findet direkt in der DeFi Wallet App statt. Wenn du die DEX verwendest, kann es sein, dass du die Token je nach Kontostand und Verhältnis der Poolpaare zu einem niedrigeren Preis tauschen kannst, als wenn du die zweite Methode - über CakeDeFi - benutzt hättest.
+Die erste Methode findet direkt in der DeFi Wallet Desktop-App statt. Wenn du die DEX verwendest, kann es sein, dass du die Token je nach Kontostand und Verhältnis der Poolpaare zu einem niedrigeren Preis tauschen kannst, als wenn du die zweite Methode - über CakeDeFi - benutzt hättest.
 
-### Schritt 1: Starte die DeFi Wallet App
+### Schritt 1: Starte die DeFi Wallet Desktop-App
 
 Du hast die App noch nicht installiert? [Klicke hier für eine Schritt-für-Schritt-Anleitung, wie du sie installieren kannst.](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
 
@@ -59,7 +59,7 @@ _Hinweis: Wenn du ein neues Konto eröffnest, musst du eine Identitätsprüfung 
 
 ### Schritt 2: Guthaben bei CakeDeFi
 
-Von deiner [CakeDeFi Assets Seite](https://app.cakedefi.com/wallets) kannst du u.a. dETH, dBTC oder dUSDT auf die DeFi Wallet übertragen. Wenn du diese Token noch nicht hast oder dir mehr besorgen möchtest, kannst du entweder:
+Von deiner [CakeDeFi Assets Seite](https://app.cakedefi.com/wallets) kannst du u.a. dETH, dBTC oder dUSDT auf die DeFi Wallet Desktop-App übertragen. Wenn du diese Token noch nicht hast oder dir mehr besorgen möchtest, kannst du entweder:
 
 1. ETH, BTC oder USDT von einer externen Wallet bei CakeDeFi einzahlen
 2. ETH, BTC oder USDT über die Fiat-Onramp kaufen, die je nach Land Zahlungsmethoden wie Kreditkarten, Apple Pay und Überweisungen akzeptiert.

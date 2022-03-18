@@ -13,13 +13,13 @@ description: Un guide étape par étape pour échanger et arbitrer sur le DEX
 
 Le DEX DeFiChain ne souffre pas des frais de fourniture élevés des DEX basés sur Ethereum, dus à la congestion du réseau. Après tout, Ethereum étant une blockchain à usage général, n'est pas spécifiquement conçue pour la finance décentralisée. DeFiChain, par contre, est né et fait pour DeFi, et DeFi seulement.
 
-### Étape 1 : Lancez l'application DeFi Wallet
+### Étape 1 : Lancez l'application de bureau DeFi Wallet
 
 Vous n'avez pas encore installé l'application ? [Cliquez ici pour un guide étape par étape sur la façon de le faire.](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
 
 ### Étape 2 : Assurez-vous que vous avez DFI dans votre portefeuille.
 
-Après avoir ouvert l'application DeFi Wallet, cliquez sur **Soldes** dans la barre latérale. Assurez-vous que vous avez des fonds (DFI) dans le portefeuille, car les DFI sont nécessaires pour les frais de transaction. Si vous n'avez pas encore de DFI, [voici un tutoriel étape par étape sur comment et où vous pouvez acheter du DFI.](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)
+Après avoir ouvert l'application de bureau DeFi Wallet, cliquez sur **Soldes** dans la barre latérale. Assurez-vous que vous avez des fonds (DFI) dans le portefeuille, car les DFI sont nécessaires pour les frais de transaction. Si vous n'avez pas encore de DFI, [voici un tutoriel étape par étape sur comment et où vous pouvez acheter du DFI.](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)
 
 ![](/img/guides/installing-defi-app/wallets-choose.png)
 

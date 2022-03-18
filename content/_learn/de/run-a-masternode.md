@@ -132,9 +132,9 @@ Sieh nach deiner Masternode-Adresse in der Liste der Masternodes, um zu überpr�
 
 Du kannst den Befehl `getmasternodeblocks OPERATOR_ADDRESS` eingeben, um zu sehen, wie viele Blöcke dein Masternode bisher gemintet hat.
 
-## Einrichten über die DeFi Wallet App
+## Einrichten über die DeFi Wallet Desktop-App
 
-Es ist ganz einfach, deinen Masternode über die DeFi Wallet App einzurichten. Gehe einfach auf die Registerkarte Masternodes und klicke auf "Erstellen +" in der oberen rechten Ecke des Bildschirms. Der Prozess ist automatisch und selbsterklärend.
+Es ist ganz einfach, deinen Masternode über die DeFi Wallet Desktop-App einzurichten. Gehe einfach auf die Registerkarte Masternodes und klicke auf "Erstellen +" in der oberen rechten Ecke des Bildschirms. Der Prozess ist automatisch und selbsterklärend.
 
 ![Masternode1](/img/guides/run-a-masternode/masternode.png)
 

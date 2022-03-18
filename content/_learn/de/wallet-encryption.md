@@ -9,7 +9,7 @@ Zum Zeitpunkt des Verfassens dieses Artikels, v2.1.4, verfügt die App noch nich
 
 Da DeFiChain Node ein Fork von Bitcoin Core ist, verfügt er über eine übernommene Wallet-Verschlüsselung, die du relativ einfach verwalten kannst.
 
-Diese Anleitung zeigt dir, wie du die Ver- und Entschlüsselung der Wallet, auch Wallet Locking und Unlocking genannt, über den Konsolenzugang der DeFi Wallet App durchführen kannst. 
+Diese Anleitung zeigt dir, wie du die Ver- und Entschlüsselung der Wallet, auch Wallet Locking und Unlocking genannt, über den Konsolenzugang der DeFi Wallet Desktop-App durchführen kannst. 
 
 **Disclaimer**: Überprüfe und informiere dich über alle Befehle, die du in die Konsole eingibst, vor allem wenn sie aus nicht vertrauenswürdigen Quellen stammen. Der Autor dieses Leitfadens ist nicht für den Verlust von angelegtem Kapital verantwortlich.
 
@@ -31,7 +31,7 @@ Diese Anleitung zeigt dir, wie du die Ver- und Entschlüsselung der Wallet, auch
 
     Es sollte ein paar Sekunden dauern und du solltest die Meldung `wallet encrypted` sehen.  Ab diesem Zeitpunkt ist deine Wallet, d.h. die Datei "wallet.dat", standardmäßig verschlüsselt. 
 
-    Deine DeFi Wallet App wird wie gewohnt funktionieren und deine DeFi Liquiditäts-Mining-Rewards werden wie gewohnt eingehen. Wenn du versuchst, DFI oder DST zu senden, solltest du die folgende Meldung sehen: `Add-on auth TX failed: Can't sign TX`. Das zeigt, dass deine Wallet Keys jetzt verschlüsselt sind. Ein Hacker, der zu diesem Zeitpunkt Zugang zu deiner Wallet hat, kann nur deine Bestände einsehen, sie aber nicht ausgeben.
+    Deine DeFi Wallet Desktop-App wird wie gewohnt funktionieren und deine DeFi Liquiditäts-Mining-Rewards werden wie gewohnt eingehen. Wenn du versuchst, DFI oder DST zu senden, solltest du die folgende Meldung sehen: `Add-on auth TX failed: Can't sign TX`. Das zeigt, dass deine Wallet Keys jetzt verschlüsselt sind. Ein Hacker, der zu diesem Zeitpunkt Zugang zu deiner Wallet hat, kann nur deine Bestände einsehen, sie aber nicht ausgeben.
 
 ## 2. Entsperren deiner Wallet
 
@@ -77,4 +77,4 @@ Bei einer unverschlüsselten Wallet fehlt `unlocked_until`. Es zeigt nicht einma
 
 2. Um den Passsatz zu ändern, verwende `walletpassphrasechange "alter Passsatz" "neuer Passsatz"`.
 
-3. Die in diesem Leitfaden beschriebenen Schritte werden in zukünftige Versionen der DeFi Wallet App integriert. Die Unterstützung von Hardware Wallets wie Ledger ist ebenfalls in Arbeit.
+3. Die in diesem Leitfaden beschriebenen Schritte werden in zukünftige Versionen der DeFi Wallet Desktop-App integriert. Die Unterstützung von Hardware Wallets wie Ledger ist ebenfalls in Arbeit.

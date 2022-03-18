@@ -1,6 +1,6 @@
 ---
 title: Liquiditäts-Mining mit der DeFi Wallet
-description: Schritt-für-Schritt-Anleitung zum Liquiditäts-Mining mit der DeFi Wallet App
+description: Schritt-für-Schritt-Anleitung zum Liquiditäts-Mining mit der DeFi Wallet Desktop-App
 ---
 
 ## Was ist Liquiditäts-Mining?
@@ -12,7 +12,7 @@ Tokenpaaren, die von der DeFiChain DEX (Decentralized Exchange) bereitgestellt w
 
 ## Hinzufügen von Liquidität
 
-### Schritt 1: Starte die DeFi Wallet
+### Schritt 1: Starte die DeFi Wallet Desktop-App
 
 Du hast die App noch nicht installiert? [Klicke hier für eine Schritt-für-Schritt-Anleitung, wie du sie installieren kannst.](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
 

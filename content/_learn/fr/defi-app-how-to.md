@@ -18,13 +18,13 @@ Téléchargez la dernière application depuis la page [downloads](/downloads).
 
 ### Étape 1 : Installation
 
-Ouvrez l'image téléchargée **DeFi-Wallet-<version>.dmg**. Dans la fenêtre du Finder qui s'ouvre, faites glisser le DeFi Wallet sur la gauche, sur le raccourci du répertoire Applications sur la droite.
+Ouvrez l'image téléchargée **DeFi-Wallet-<version>.dmg**. Dans la fenêtre du Finder qui s'ouvre, faites glisser la DeFi Wallet sur la gauche, sur le raccourci du répertoire Applications sur la droite.
 
 ![](/img/guides/installing-defi-app/drag-to-install.png)
 
 ### Étape 2 : Gérer l'invite de sécurité de macOS lors de l'ouverture de l'application
 
-Ouvrez l'application. La première fois que vous ouvrez l'application DeFi Wallet, une invite de sécurité vous sera présentée. Appuyez sur OK pour la rejeter.
+Ouvrez l'application. La première fois que vous ouvrez l'application de bureau DeFi Wallet, une invite de sécurité vous sera présentée. Appuyez sur OK pour la rejeter.
 
 ![](/img/guides/installing-defi-app/macos-security-prompt.png)
 
@@ -32,7 +32,7 @@ Ouvrez l'application. La première fois que vous ouvrez l'application DeFi Walle
 
 ### Étape 3 : Autoriser l'exécution de l'application
 
-\**N'ouvrez l'application de cette façon que si vous êtes sûr d'avoir téléchargé l'application DeFi Wallet depuis une source officielle. L'application DeFi Wallet est actuellement disponible uniquement sur le [site officiel](/) et [DeFiChain’s GitHub](https://github.com/DeFiCh/app/releases).*
+\**N'ouvrez l'application de cette façon que si vous êtes sûr d'avoir téléchargé l'application de bureau DeFi Wallet depuis une source officielle. L'application de bureau DeFi Wallet est actuellement disponible uniquement sur le [site officiel](/) et [DeFiChain’s GitHub](https://github.com/DeFiCh/app/releases).*
 
 Aller à **Préférences système** et cliquer sur **Sécurité et confidentialité**.
 
@@ -46,7 +46,7 @@ Cliquez sur **Ouvrir** dans la fenêtre de confirmation.
 
 ![](/img/guides/installing-defi-app/open-anyway-b.png)
 
-L'application DeFi Wallet se lancera automatiquement lorsque l'installation sera terminée.
+L'application de bureau DeFi Wallet se lancera automatiquement lorsque l'installation sera terminée.
 
 ## Installation sur Windows
 
@@ -56,7 +56,7 @@ Double-cliquez sur le fichier téléchargé.
 
 ### Étape 2 : Invite de sécurité de Windows
 
-Si c'est la première fois que vous installez l'application DeFi Wallet, le programme d'installation peut vous présenter une invite de sécurité comme indiqué. Cliquez sur **Plus d'infos**.
+Si c'est la première fois que vous installez l'application de bureau DeFi Wallet, le programme d'installation peut vous présenter une invite de sécurité comme indiqué. Cliquez sur **Plus d'infos**.
 
 \**Microsoft Windows SmartScreen peut signaler les fichiers nouvellement téléchargés qui n'ont pas accumulé un historique suffisamment long.*
 
@@ -76,11 +76,11 @@ Veuillez vous assurer que vous avez activé l'option **Autoriser l'exécution du
 
 ![](/img/guides/installing-defi-app/TU3ggCU.png)
 
-Vous pouvez maintenant ouvrir l'application DeFi Wallet.
+Vous pouvez maintenant ouvrir l'application de bureau DeFi Wallet.
 
 ## Installation sur Linux avec Debian
 
-Vous pouvez choisir d'installer l'application DeFi Wallet en tant qu'outil IUG ou en tant qu'outil de ligne de commande.
+Vous pouvez choisir d'installer l'application de bureau DeFi Wallet en tant qu'outil IUG ou en tant qu'outil de ligne de commande.
 
 ### Utilisation du Centre logiciel Ubuntu
 

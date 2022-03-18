@@ -132,9 +132,9 @@ Recherchez l'adresse de votre masternode dans la liste des masternodes pour conf
 
 Vous pouvez exécuter la commande `getmasternodeblocks OPERATOR_ADDRESS` pour voir combien de blocs votre masternode a mintés jusqu'à présent.
 
-## Création via le portefeuille de bureau DeFi Wallet
+## Création via l'application de bureau DeFi Wallet
 
-Il est facile de configurer votre masternode via le portefeuille de bureau DeFi Wallet, il suffit de naviguer vers l'onglet Masternodes et de cliquer sur "Créer +" dans le coin supérieur droit de l'écran. Le processus est automatisé et sans faille.
+Il est facile de configurer votre masternode via l'application de bureau DeFi Wallet, il suffit de naviguer vers l'onglet Masternodes et de cliquer sur "Créer +" dans le coin supérieur droit de l'écran. Le processus est automatisé et sans faille.
 
 ![Masternode1](/img/guides/run-a-masternode/masternode.png)
 

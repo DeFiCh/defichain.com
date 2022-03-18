@@ -451,47 +451,47 @@
     },
     "2020": {
       "title": "2020",
-      "status": "Achieved",
+      "status": "Erreicht",
       "cards": [
         {
-          "title": "May",
-          "desc": "DeFiChain launch and DFI airdrops.",
+          "title": "Mai",
+          "desc": "DeFiChain Markteinführung und DFI-Airdrops",
           "url": "https://github.com/DeFiCh/",
           "image": {
             "url": "/img/timeline/2020/blockchain-launch@2x.png",
-            "alt": "DeFi logo"
+            "alt": "DeFi-Logo"
           }
         },
         {
-          "title": "Jun",
-          "desc": "$DFI coin started trading on LATOKEN.",
+          "title": "Jun.",
+          "desc": "$DFI Coin hat den Handel auf LATOKEN aufgenommen",
           "url": "https://exchange.latoken.com/exchange/DFI-USDT",
           "image": {
             "url": "/img/timeline/2020/dfi-latoken@2x.png",
-            "alt": "DFI on LATOKEN"
+            "alt": "DFI auf LATOKEN"
           }
         },
         {
-          "title": "Jun",
-          "desc": "$DFI coin started trading on CoinPaprika.",
+          "title": "Jun.",
+          "desc": "$DFI ist auf Coinpaprika gelistet",
           "url": "https://coinpaprika.com/coin/dfi-defi-chain/",
           "image": {
             "url": "/img/timeline/2019/dfi-coinpaprika@2x.png",
-            "alt": "DFI on CoinPaprika"
+            "alt": "DFI auf Coinpaprika"
           }
         },
         {
-          "title": "Jul",
-          "desc": "CoinGecko lists DFI.",
+          "title": "Jul.",
+          "desc": "CoinGecko listet DFI.",
           "url": "https://www.coingecko.com/en/coins/defichain",
           "image": {
             "url": "/img/timeline/2020/dfi-coingecko@2x.png",
-            "alt": "DFI on CoinGecko"
+            "alt": "DFI auf CoinGecko"
           }
         },
         {
-          "title": "Jul",
-          "desc": "Indoex lists DFI.",
+          "title": "Jul.",
+          "desc": "Indoex listet DFI",
           "url": "https://international.indoex.io/trade/DFI_USDT",
           "image": {
             "url": "/img/timeline/2020/dfi-indoex@2x.png",
@@ -499,70 +499,70 @@
           }
         },
         {
-          "title": "Jul",
-          "desc": "DeFiChain desktop app (GUI) launch.",
+          "title": "Jul.",
+          "desc": "Launch der DeFi Wallet Desktop-App (GUI)",
           "url": "https://github.com/DeFiCh/defi-app",
           "image": {
             "url": "/img/timeline/2020/defi-app@2x.png",
-            "alt": "DeFiChain client app"
+            "alt": "DeFiChain Client-Anwendung"
           }
         },
         {
-          "title": "Aug",
-          "desc": "DFI officially listed on HotBit.",
+          "title": "Aug.",
+          "desc": "DFI offiziell auf HotBit gelistet",
           "url": "https://www.hotbit.io/exchange?symbol=DFI_USDT",
           "image": {
             "url": "/img/timeline/2020/dfi-hotbit@2x.png",
-            "alt": "DFI on HotBit"
+            "alt": "DFI auf HotBit"
           }
         },
         {
-          "title": "Aug",
-          "desc": "DeFiChain brand refresh.",
+          "title": "Aug.",
+          "desc": "DeFiChain Markenrefresh",
           "image": {
             "url": "/img/timeline/2020/dechain-site-redesign@2x.jpg",
-            "alt": "DeFiChain.com redesign"
+            "alt": "Redesign von DeFiChain.com"
           }
         },
         {
-          "title": "Aug",
-          "desc": "DeFiChain listed on CoinMarketCap.",
+          "title": "Aug.",
+          "desc": "DeFiChain auf CoinMarketCap gelistet",
           "url": "https://coinmarketcap.com/currencies/defichain/markets/",
           "image": {
             "url": "/img/timeline/2020/dfi-coinmarketcap@2x.png",
-            "alt": "DFI on CoinMarketCap"
+            "alt": "DFI auf CoinMarketCap"
           }
         },
         {
-          "title": "Sep",
-          "desc": "DFIP 1 & 2 are approved by the DeFiChain community.",
+          "title": "Sep.",
+          "desc": "DFIP 1 & 2 werden von der DeFiChain Community angenommen",
           "url": "https://defiblockchain.medium.com/dfip-1-2-voting-results-29bfc8c7a608",
           "image": {
             "url": "/img/timeline/2020/dfips-approved@2x.jpg",
-            "alt": "DFIP 1 & 2 approved"
+            "alt": "DFIP 1 & 2 angenommen"
           }
         },
         {
-          "title": "Oct",
-          "desc": "DeFiChain listed on Bitrue.",
+          "title": "Okt.",
+          "desc": "DeFiChain auf Bitrue gelistet",
           "url": "https://www.bitrue.com/trade/dfi_btc",
           "image": {
             "url": "/img/timeline/2020/bittrue@2x.jpg",
-            "alt": "DeFiChain listed on Bittrue"
+            "alt": "DeFiChain auf Bittrue"
           }
         },
         {
-          "title": "Oct",
-          "desc": "Ang Mo Kio hardfork with asset tokenization support.",
+          "title": "Okt.",
+          "desc": "Ang Mo Kio Hardfork mit Unterstützung für die Tokenisierung von Vermögenswerten",
           "url": "https://defiblockchain.medium.com/defichain-hardfork-successful-everything-you-need-to-know-5aa4ea92438b",
           "image": {
             "url": "/img/timeline/2020/amk-hardfork@2x.jpg",
-            "alt": "Ang Mo Kio hardfork with asset tokenization support"
+            "alt": "Ang Mo Kio Hardfork mit Unterstützung für Vermögenswert-Tokenisierung"
           }
         },
         {
-          "title": "Oct",
-          "desc": "DeFiChain listed on Bittrex.",
+          "title": "Okt.",
+          "desc": "DeFiChain auf Bittrex gelistet",
           "url": "https://global.bittrex.com/Market/Index?MarketName=BTC-DFI",
           "image": {
             "url": "/img/timeline/2020/bittrex@2x.png",
@@ -570,45 +570,45 @@
           }
         },
         {
-          "title": "Nov",
-          "desc": "Bayfront hard fork with liquidity pool support.",
+          "title": "Nov.",
+          "desc": "Bayfront Hardfork mit Liquiditätspool-Unterstützung",
           "url": "https://www.reddit.com/r/defiblockchain/comments/jem20f/defichain_version_130_for_bayfront_with_liquidity/",
           "image": {
             "url": "/img/timeline/2020/bayfront-hardfork@2x.jpg",
-            "alt": "Bayfront hard fork"
+            "alt": "Bayfront Hardfork"
           }
         },
         {
-          "title": "Dec",
-          "desc": "Swap, Liquidity Pool and Yield Farming.",
+          "title": "Dez.",
+          "desc": "Tauschgeschäfte, Liquiditätspool und Yield Farming",
           "url": "https://www.youtube.com/watch?v=0uBwWK85BLU",
           "image": {
             "url": "/img/timeline/2020/liquidity-pool@2x.png",
-            "alt": "Liquidity Pool"
+            "alt": "Liquiditätspool"
           }
         }
       ]
     },
     "2019": {
       "title": "2019",
-      "status": "Achieved",
+      "status": "Erreicht",
       "cards": [
         {
-          "title": "Sep",
-          "desc": "Conceptualization of DeFiChain.",
+          "title": "Sep.",
+          "desc": "Konzeption von DeFiChain",
           "url": "https://cryptopotato.com/defichain-the-story-from-the-co-founders/",
           "image": {
             "url": "/img/timeline/2019/concept@2x.jpg",
-            "alt": "Conceptualization of DeFiChain"
+            "alt": "Konzeption von DeFiChain"
           }
         },
         {
-          "title": "Oct",
-          "desc": "DeFiChain White paper released.",
+          "title": "Okt.",
+          "desc": "DeFiChain White Paper veröffentlicht",
           "url": "/white-paper/",
           "image": {
             "url": "/img/timeline/2019/white-paper@2x.png",
-            "alt": "DeFi logo"
+            "alt": "DeFi Logo"
           }
         }
       ]

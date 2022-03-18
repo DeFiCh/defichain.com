@@ -13,13 +13,13 @@ Der Tausch von Token auf der DeFiChain DEX (Dezentrale Börse) ist einfach. Zum 
 
 Die DeFiChain DEX leidet nicht unter den hohen Gasgebühren, die bei Ethereum-basierten DEX aufgrund von Netzwerküberlastungen anfallen können. Da es sich bei Ethereum um eine Allzweck-Blockchain handelt, ist sie nicht speziell für dezentrale Finanzgeschäfte konzipiert. DeFiChain hingegen wurde für DeFi und nur für DeFi entwickelt.
 
-### Schritt 1: Starte die DeFi Wallet App
+### Schritt 1: Starte die DeFi Wallet Desktop-App
 
 Du hast die App noch nicht installiert? [Klicke hier und finde eine Schritt-für-Schritt-Anleitung, wie du sie installieren kannst.](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
 
 ### Schritt 2: Stelle sicher, dass du DFI auf deiner Wallet hast
 
-Nachdem du die DeFi Wallet App geöffnet hast, klicke in der Seitenleiste auf **Guthaben**. Vergewissere dich, dass du Guthaben (DFI) auf deiner Wallet hast, denn für die Transaktionsgebühren werden DFI benötigt. Wenn du noch keine DFI hast, [hier findest du eine Schritt-für-Schritt-Anleitung, wie und wo du DFI kaufen kannst.](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)
+Nachdem du die DeFi Wallet Desktop-App geöffnet hast, klicke in der Seitenleiste auf **Guthaben**. Vergewissere dich, dass du Guthaben (DFI) auf deiner Wallet hast, denn für die Transaktionsgebühren werden DFI benötigt. Wenn du noch keine DFI hast, [hier findest du eine Schritt-für-Schritt-Anleitung, wie und wo du DFI kaufen kannst.](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)
 
 ![](/img/guides/installing-defi-app/wallets-choose.png)
 
@@ -69,4 +69,4 @@ Dann müssen wir den `1 BTC` für `39,355.98845598 DFI` auf der DEX verkaufen, w
 
 ![](/img/guides/arbitrage/arbitrage1.png)
 
-[Lade die DeFi Wallet Desktop App](/downloads) herunter, die für macOS, Windows und Linux verfügbar ist, um die DEX zu nutzen. Auch du kannst ein Arbitrageur sein.
+[Lade die DeFi Wallet Desktop-App](/downloads) herunter, die für macOS, Windows und Linux verfügbar ist, um die DEX zu nutzen. Auch du kannst ein Arbitrageur sein.

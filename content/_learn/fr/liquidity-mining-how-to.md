@@ -12,7 +12,7 @@ de pièces, utilisées par le DEX (Decentralized Exchange) de DeFiChain.
 
 ## Ajout de liquidité
 
-### Étape 1 : Lancer l'application DeFi Wallet
+### Étape 1 : Lancer l'application de bureau DeFi Wallet
 
 Vous n'avez pas encore installé l'application ? [Cliquez ici pour un guide étape par étape sur la façon de le faire.](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
 

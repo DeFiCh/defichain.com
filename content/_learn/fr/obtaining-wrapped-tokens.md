@@ -9,9 +9,9 @@ Si vous avez également besoin de DFI, vous pouvez consulter notre guide sur [o�
 
 ## Méthode 1 : Utilisation du DEX
 
-La première méthode se trouve directement dans l'application DeFi Wallet. En utilisant le DEX, et en fonction de l'équilibre et du ratio des paires de pool, vous pouvez finir par échanger les tokens à un prix plus bas que si vous l'aviez fait via la deuxième méthode - en utilisant CakeDeFi.
+La première méthode se trouve directement dans l'application de bureau DeFi Wallet. En utilisant le DEX, et en fonction de l'équilibre et du ratio des paires de pool, vous pouvez finir par échanger les tokens à un prix plus bas que si vous l'aviez fait via la deuxième méthode - en utilisant CakeDeFi.
 
-### Étape 1 : Lancez l'application DeFi Wallet
+### Étape 1 : Lancez l'application de bureau DeFi Wallet
 
 Vous n'avez pas encore installé l'application ? [Cliquez ici pour un guide étape par étape sur la façon de le faire.](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
 
@@ -70,7 +70,7 @@ Depuis votre page [Actifs CakeDeFi](https://app.cakedefi.com/wallets) vous pouve
 
 Une fois que vos ETH, BTC ou USDT sont dans vos actifs CakeDeFi, vous pouvez les retirer. Cliquez sur le bouton **WITHDRAW** correspondant au token que vous voulez retirer.
 
-Dans la pop-up de retrait, sélectionnez DeFi Blockchain comme **Transfer Network** (reseau de transfert). Donnez votre adresse de réception DeFiChain dans le champ **To Defichain address**. Vous trouverez des informations sur la façon d'obtenir votre adresse de réception de l'application DeFi Wallet dans [ce guide](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch).
+Dans la pop-up de retrait, sélectionnez DeFi Blockchain comme **Transfer Network** (reseau de transfert). Donnez votre adresse de réception DeFiChain dans le champ **To Defichain address**. Vous trouverez des informations sur la façon d'obtenir votre adresse de réception de l'application de bureau DeFi Wallet dans [ce guide](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch).
 
 ![](/img/guides/obtaining-tokens/cake-withdraw.png)
 

@@ -1,50 +1,50 @@
 ---
-title: White paper
-description: DeFiChain white paper
+title: White Paper
+description: DeFiChain White Paper
 ---
 
-**Abstract**: The DeFiChain Foundation is developing DeFiChain, a blockchain specifically dedicated to decentralized financial applications. By focusing on the functionality of the blockchain and dedicating it specifically to decentralized finance, DeFiChain provides unparalleled high transaction throughput, reduced risk of errors, and intelligent feature development specifically for the fulfillment of financial services on the blockchain.
+**Übersicht**: Die DeFiChain Foundation entwickelt DeFiChain, eine Blockchain, die speziell für dezentrale Finanzanwendungen entwickelt wurde. DeFiChain konzentriert sich auf die Funktionalität der Blockchain und entwickelt sie speziell für dezentrale Finanzanwendungen. Dadurch bietet DeFiChain einen beispiellos hohen Transaktionsdurchsatz, ein geringeres Fehlerrisiko und intelligente Funktionen, die speziell für die Erbringung von Finanzdienstleistungen auf der Blockchain entwickelt wurden.
 
-**This Document is not a Prospectus**
+**Dieses Dokument ist kein Verkaufsprospekt**
 
-This document does not constitute nor imply a prospectus of any sort. No wording contained herein should be construed as a solicitation for investment. Accordingly, this whitepaper does not pertain in any way to an offering of securities in any jurisdiction worldwide whatsoever. Rather, this whitepaper constitutes a technical description of the functionality of the Cake products and the development and distribution of DeFiChain.
+Dieses Dokument stellt weder einen Prospekt dar noch beinhaltet es einen solchen. Keine der hierin enthaltenen Formulierungen sollte als Aufforderung zur Investition verstanden werden. Dementsprechend bezieht sich dieses Whitepaper in keiner Weise auf ein Angebot von Wertpapieren in irgendeiner Rechtsordnung weltweit. Vielmehr stellt dieses Whitepaper eine technische Beschreibung der Funktionsweise der Cake-Produkte und der Entwicklung und der Verbreitung von DeFiChain dar.
 
-**This Document is not a final technical specification**
+**Dieses Dokument ist keine vollständige technische Dokumentation**
 
-This document does not constitute nor imply a final technical specification of DeFiChain. Information presented on this whitepaper, technical or otherwise, is meant to outline the general idea of DeFiChain, its design and its use-cases and is subject to change with or without notice. For the latest up-to-date technical specification, check out the updates and documentations on the official website [https://defichain.com](https://defichain.com).
+Dieses Dokument stellt keine vollständige technische Dokumentation von DeFiChain dar und ist auch nicht als solche zu verstehen. Die in diesem Whitepaper enthaltenen technischen oder sonstigen Informationen sollen einen Überblick über DeFiChain, ihr Design und ihre Anwendungsfälle geben und können sich mit oder ohne vorherige Ankündigung ändern. Die neuesten technischen Informationen finden Sie in den Updates und Dokumentationen auf der offiziellen Website  [https://defichain.com](https://defichain.com).
 
-## Executive summary
+## Zusammenfassung
 
-The cryptocurrency industry is based on a simple premise: people should be fully in control of their finances. While it seems like a simple and obvious statement, the current systems are far from providing financial services that are truly under the control of the people who use them. The mission of DeFiChain is to give people (and in the future, machines, and devices) seamless access to decentralized financial services.
+Die Kryptowährungsbranche basiert auf einer einfachen Prämisse: Die Menschen sollten die volle Kontrolle über ihre Finanzen haben. Auch wenn dies eine einfache und selbstverständliche Aussage zu sein scheint, sind die derzeitigen Systeme weit davon entfernt, Finanzdienstleistungen anzubieten, die wirklich unter der Kontrolle der Menschen stehen, die sie nutzen. DeFiChain hat es sich zur Aufgabe gemacht, Menschen (und in Zukunft auch Maschinen und Geräten) einen nahtlosen Zugang zu dezentralen Finanzdienstleistungen zu ermöglichen.
 
-For that purpose, we are introducing DeFiChain, a dedicated blockchain specifically for decentralized finance (DeFi) [https://defichain.com](https://defichain.com).
+Zu diesem Zweck entwickeln wir DeFiChain, eine Blockchain speziell für dezentrale Finanzsysteme (DeFi)[https://defichain.com](https://defichain.com).
 
-By dedicating the functionality of a blockchain specifically to decentralized finance, DeFiChain provides high transaction throughput, reduced risk of errors, and intelligent feature development specifically for the fulfillment of Satoshi’s original intent: To create a reliable alternative form of financial services built on top of Bitcoin.
+Indem sie die Funktionalität einer Blockchain speziell für dezentrale Finanzsysteme entwickelt, bietet DeFiChain einen hohen Transaktionsdurchsatz, ein geringeres Fehlerrisiko und intelligente Funktionen, die speziell für die Umsetzung der ursprünglichen Absicht von Satoshi entwickelt wurden: Die Schaffung einer zuverlässigen alternativen Form von Finanzdienstleistungen, die auf Bitcoin aufbaut.
 
-Bitcoin, as described in the original Satoshi whitepaper, is designed as a form of digital cash, as a store and exchange of value. The evolution to Ethereum and smart contracts has allowed for tremendous new functionalities to be built on top of a blockchain, yet this development has come at a cost. The concept of one global operating system for everything has created a system that requires a complex codebase for smart contracts, slow throughput, and difficulty around the governance of the system.
+Bitcoin ist, wie im ursprünglichen Whitepaper von Satoshi beschrieben, als eine Form von digitalem Bargeld, als Speicher und Tauschmittel für Werte gedacht. Die Entwicklung hin zu Ethereum und intelligenten Verträgen, den Smart Contracts, hat es ermöglicht, enorme neue Funktionen auf einer Blockchain aufzubauen, doch diese Entwicklung hat ihren Preis. Das Konzept eines globalen Betriebssystems für alles hat ein System geschaffen, das eine komplexe Codebasis für Smart Contracts, einen langsamen Durchsatz und Schwierigkeiten bei der Steuerung des Systems mit sich bringt.
 
-DeFiChain approaches decentralized finance as a specific and critical segment of the blockchain community. DeFi is a dedicated blockchain that is optimized specifically for DeFi applications. DeFiChain is intentionally non-Turing-Complete and does not support any function, other than those needed for Decentralized Finance, resulting in a blockchain that provides higher throughput and better functionality specifically for dApps related to finance. The advantage of a non-Turing complete command set is that there is a much lower potential for coding errors of the type that have plagued Ethereum smart contracts such as with the DAO hack or the locked funds with Parity. While it is important that we have some smart contract languages that are Turing complete, in the area of finance, it is appropriate to restrict the capabilities of the language in favor of a more secure system with greatly-reduced attack vectors.
+DeFiChain geht das dezentrale Finanzsystem als ein spezifisches und wichtiges Segment der Blockchain-Community an. DeFiChain ist eine eigens entwickelte Blockchain, die speziell für DeFi-Anwendungen optimiert ist. DeFiChain ist absichtlich nicht turing-complete und unterstützt keine anderen Funktionen als die, die für das dezentrale Finanzsystem benötigt werden. Das Ergebnis ist eine Blockchain, die einen höheren Durchsatz und bessere Funktionen speziell für dApps im Finanzbereich bietet. Der Vorteil eines nicht turing-complete Befehlssatzes ist, dass die Gefahr von Programmierfehlern, wie sie bei Ethereum Smart Contracts (z. B. DAO-Hack) oder bei Parity (gesperrte Gelder) aufgetreten sind, deutlich geringer ist. Es ist zwar wichtig, dass wir einige Smart-Contract-Sprachen haben, die turing-complete sind, aber im Finanzbereich ist es angebracht, die Möglichkeiten der Programmiersprache zu Gunsten eines sichereren Systems mit stark reduzierten Angriffsvektoren einzuschränken.
 
-### The Problem
+### Die Problematik
 
-Today, almost all financial services are run by banks. Investments, for example, by definition, is the use of capital to earn more capital. Investors use a bank to put their money into interest or dividend-making instruments in order to grow their wealth. The problems with financial services are increasingly becoming obvious to everyone: compounded costs due to middle(wo)men, slow transactions, delays for cross-border transactions, and inaccessibility to many sectors of the population. A myriad of fintech solutions have been brought in to improve the system, but fundamentally the underlying banking system is still in control, so fintech has brought only limited improvements.
+Heutzutage werden fast alle Finanzdienstleistungen von Banken erbracht. Investitionen zum Beispiel sind per Definition der Einsatz von Kapital, um mehr Kapital zu verdienen. Anleger/innen nutzen eine Bank, um ihr Geld in zins- oder dividendenbringende Instrumente zu investieren und so ihr Vermögen zu vermehren. Die Probleme mit Finanzdienstleistungen werden immer deutlicher: erhöhte Kosten durch Zwischenhändler, langsame Transaktionen, Verzögerungen bei grenzüberschreitenden Geschäften und die fehlende Zugangsmöglichkeit für viele Bevölkerungsschichten. Unzählige Fintech-Lösungen wurden eingeführt, um das System zu verbessern, aber im Großen und Ganzen kontrolliert das zugrundeliegende Bankensystem immer noch das Geschehen, sodass Fintech nur begrenzte Verbesserungen gebracht hat.
 
-Cryptocurrency and Decentralized Finance (DeFi) offer a way to start with a new system, circumventing the difficulties faced in changing the finance industry. While crypto has attracted billions in investments, decentralized financial services are lagging. When it comes to investment in cryptocurrency, crypto investors can buy and sell, but that’s it. The cryptocurrency itself cannot be invested in the same way fiat currency can be. Initial attempts to create peer-to-peer lending and asset tokenization so far have proven partial and unreliable, so investors have extremely limited options when it comes to an investment of their cryptoassets. The potential is enormous to provide financial services in crypto, the same way they are offered in fiat currency.
+Kryptowährungen und dezentrale Finanzsysteme (DeFi) bieten eine Möglichkeit, mit einem neuen System zu beginnen und die Herausforderungen bei der Veränderung der Finanzindustrie zu meistern. Während Kryptowährungen Milliarden an Investitionen angezogen haben, hinken dezentrale Finanzdienstleistungen hinterher. Wenn es um Investitionen in Kryptowährungen geht, können Krypto-Investoren zwar kaufen und verkaufen, aber das war's auch schon. Die Kryptowährung selbst kann nicht auf die gleiche Weise investiert werden wie Fiat-Währungen. Die ersten Versuche, Peer-to-Peer-Kredite und die Tokenisierung von Vermögenswerten zu schaffen, haben sich bisher als unvollständig und unzuverlässig erwiesen, so dass Investoren nur sehr begrenzte Möglichkeiten haben, wenn es um die Anlage ihrer Krypto-Assets geht. Das Potenzial ist enorm, Finanzdienstleistungen in Kryptowährungen anzubieten, so wie sie auch in Fiat-Währungen angeboten werden.
 
-### The Solution
+### Die Lösung
 
-DeFiChain is designed for investors in the cryptocurrency market who are looking to make their cryptocurrency work just like any other form of capital, such that they can ensure a return on investment in any market. DeFiChain is a dedicated non-Turing-complete blockchain, designed specifically for the decentralized finance (DeFi) industry. DeFi provides full functionality for this specific segment of the DLT community, sacrificing other types of functionality for simplicity, rapid throughput, and security.
+DeFiChain wurde für Investoren auf dem Kryptowährungsmarkt entwickelt, die ihre Kryptowährung wie jede andere Form von Kapital einsetzen wollen, damit sie auf allen Märkten eine Rendite erzielen können. DeFiChain ist eine dedizierte, nicht turing-complete Blockchain, die speziell für das dezentrale Finanzsystem (DeFi) entwickelt wurde. DeFi bietet die volle Funktionalität für dieses spezielle Segment der DLT-Community und opfert andere Funktionen zugunsten von Einfachheit, schnellem Durchsatz und Sicherheit.
 
-The function set includes among others:
+Der Funktionsumfang umfasst unter anderem:
 
-- Decentralized lending
-- Decentralized wrapping of tokens
-- Decentralized Pricing oracles
-- Decentralized exchanges
-- Transferable debts and receivables
-- Decentralized Non-collateralized debt
-- Asset tokenization
-- Distribution of Dividends
+- Dezentrale Darlehen
+- Dezentrales Wrapping von Token
+- Dezentrale Preisorakel
+- Dezentrale Tauschgeschäfte
+- Übertragbare Schulden und Forderungen
+- Dezentrale nicht besicherte Darlehen
+- Tokenisierung von Vermögenswerten
+- Ausschüttung von Dividenden
 
 ### Timeline
 
@@ -52,11 +52,11 @@ The function set includes among others:
 
 ---
 
-## Background/Industry
+## Hintergrund/Branche
 
-### DeFi’s promises and challenges
+### DDie Möglichkeiten und Herausforderungen des DeFi-Systems
 
-Decentralized Finance promises to provide a variety of financial instruments without the need for middle(wo)men to ensure that the services are trusted. According to the OECD, financial services typically make up 20–30% of total service market revenue and about [20% of the total gross domestic product](https://www.investopedia.com/terms/g/gdp.asp) in [developed economies](https://www.investopedia.com/terms/d/developed-economy.asp)[^1]. This is an enormous industry dedicated to one thing: making sure that financial transactions are trusted. With the advent of blockchain, trustless systems and smart contracts can be used to replace much of the functionality of this industry, dramatically increasing the return on investment for the individual investor.
+Das dezentrale Finanzsystem verspricht, eine Vielzahl von Finanzinstrumenten anzubieten, ohne dass Mittelsmänner dafür sorgen müssen, dass die Dienstleistungen verlässlich sind. Nach Angaben der OECD machen Finanzdienstleistungen in [entwickelten Volkswirtschaften](https://www.investopedia.com/terms/d/developed-economy.asp)[^1] 20-30% des gesamten Dienstleistungsumsatzes und etwa 20% des gesamten [Bruttoinlandsprodukts](https://www.investopedia.com/terms/g/gdp.asp)aus. This is an enormous industry dedicated to one thing: making sure that financial transactions are trusted. With the advent of blockchain, trustless systems and smart contracts can be used to replace much of the functionality of this industry, dramatically increasing the return on investment for the individual investor.
 
 Financial services today are providing an important service, but at a very high cost, and despite many fintech developments, the following underlying issues persist:
 

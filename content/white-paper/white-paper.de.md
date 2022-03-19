@@ -277,73 +277,73 @@ Beispiele für Vermögenswerte, die mit der Blockchain in Token umgewandelt werd
 - Kleine Immobilieninvestitionen (Timesharing, kurzfristige Mietwohnungen usw.)
 - Große Immobilieninvestitionen (Flughäfen, Vergnügungsparks, Apartmentkomplexe, Gewerbegebiete)
 
-### Distribution of Dividends
+### Ausschüttung von Dividenden
 
-Any tokenized asset with return on investment can use the dividends distribution module to create smart contracts that pay out returns on the investment automatically. Using DeFiChain will allow a leap in the functionality of dividends distribution. It will be possible to implement models similar to today, where payouts are performed on a weekly, monthly, or quarterly basis, or models where payouts are on a daily, hourly or even minute-by-minute basis.
+Jedes tokenisierte Asset mit Rendite kann das Dividendenausschüttungsmodul nutzen, um Smart Contracts zu erstellen, die automatisch Renditen auf die Investition auszahlen. Die Verwendung von DeFiChain wird einen Sprung in der Funktionalität der Dividendenausschüttung ermöglichen. Es wird möglich sein, ähnliche Modelle wie heute zu implementieren, bei denen die Auszahlungen auf wöchentlicher, monatlicher oder vierteljährlicher Basis erfolgen, oder Modelle, bei denen die Auszahlungen auf täglicher, stündlicher oder sogar minütlicher Basis erfolgen.
 
-Distribution of dividends would be relevant in any type of tokenized asset, as described above. For example, today, a municipal government might do a bond issue to invest in a wind turbine to supply electricity. The government would take care of everything, and repay that bond according to the schedule. With distribution of dividends, the community could purchase the wind turbine directly, and distribute the dividends to the investors in the wind turbine. Instead of going through the administration required through the centralized authority (government), every citizen who wanted to could invest in that wind turbine, and dividends would be paid according to each person’s contribution to that investment. Eliminating overhead and fair distribution of profits would be major benefits for the community owning the wind turbine. In this case, the wind turbine is a public good, but it could also simply be a private investment.
+Jedes tokenisierte Asset mit Investmentrendite kann das Dividendenausschüttungsmodul nutzen, um Smart Contracts zu erstellen, die automatisch Renditen auf das Investment ausschütten. Die Verwendung von DeFiChain wird einen Sprung in der Funktionalität der Dividendenausschüttung ermöglichen. Es wird möglich sein, ähnliche Modelle wie heute zu implementieren, bei denen die Auszahlungen auf wöchentlicher, monatlicher oder vierteljährlicher Basis erfolgen, oder Modelle, bei denen die Auszahlungen auf täglicher, stündlicher oder sogar minütlicher Basis erfolgen.
 
-Any private investment could be run this way: a pinball machine, self-driving taxi, real estate investment, etc. Automatic distribution of dividends reduces the need for administration and overhead, as well as eliminating uncertainty about payouts and control by a centralized authority.
+Jede private Investition könnte auf diese Weise betrieben werden: ein Flipperautomat, ein autonomes Taxi, eine Immobilieninvestition, usw. Die automatische Ausschüttung von Dividenden reduziert den administrativen Aufwand und die Gemeinkosten. Außerdem entfällt die Unsicherheit über die Auszahlungen und die Kontrolle durch eine zentrale Stelle.
 
-The need for joint dividend investing is becoming increasingly relevant with IoT. Devices are able to create tremendous value. A self-driving car will be able to provide taxi services. Vending machines, sensors, satellites, etc., are all potentially revenue-generating devices that people can own together and share in the profit of together, yet until now the legal and financial complexity of doing so has been prohibitive. DeFi can simplify those processes.
+Die Notwendigkeit, gemeinsam in Dividenden zu investieren, wird mit dem IoT immer wichtiger. Geräte sind in der Lage, enorme Werte zu schaffen. Ein autonomes Fahrzeug wird Taxidienste anbieten können. Verkaufsautomaten, Sensoren, Satelliten usw. sind allesamt potenziell gewinnbringende Geräte, die Menschen gemeinsam besitzen und an deren Gewinn sie gemeinsam teilhaben können, doch bisher war die rechtliche und finanzielle Komplexität eines solchen Vorgehens abschreckend. DeFi kann diese Prozesse vereinfachen.
 
-Similarly, distribution of profits for a private company can be implemented. One of the first experiments in this area is a DAO (Decentralized Autonomous Organization) called dOrg. dOrg is a collection of programmers (as well as a sales/operations team) who co-own their software house. Distribution of salaries is through a DAO that functions as a multi-sig, such that every 2 weeks, the whole organization submits their payment requests for work contracted, and the team votes to pass one anothers’ salary requests. Inside dOrg, each person holds a “reputation” that represents the percentage of ownership each person has earned (they earn ownership according to the amount of work done since the inception of the company). But what will happen to the profit at the end of the year? Presumably, each individual will have to submit a request for their percentage of the profits, and everyone will have to vote on that, too, because the DAO does not allow for automated distribution of profits. Using DeFiChain, the team could easily implement a quarterly or annual function that would automatically distribute the profits of the company to each person, according to their holdings in the company. This scheme would work even for people who were active in the past, but are no longer active, so they aren’t in the DAO any longer, but they still hold a percentage based on their past contributions. Other contributors might be an investor who puts money into the company, but does not participate.
+In ähnlicher Weise lässt sich auch die Gewinnbeteiligung für ein Privatunternehmen realisieren. Eines der ersten Experimente in diesem Bereich ist eine DAO ( Dezentrale Autonome Organisation) namens dOrg. dOrg ist eine Ansammlung von Programmierern (sowie einem Vertriebs-/Operations-Team), die ihr Softwareunternehmen gemeinsam betreiben. Die Verteilung der Gehälter erfolgt über eine DAO, die als Multisig funktioniert, so dass alle 2 Wochen die gesamte Organisation ihre Zahlungsanträge für die in Auftrag gegebene Arbeit einreicht und das Team über die Gehaltsanträge der anderen abstimmt. Innerhalb von dOrg besitzt jede Person eine "Reputation", die den prozentualen Anteil an der Beteiligung darstellt, den jede Person verdient hat (die Beteiligung richtet sich nach dem Umfang der geleisteten Arbeit seit der Gründung des Unternehmens). Aber was passiert mit dem Gewinn am Ende des Jahres? Vermutlich muss jeder Einzelne einen Antrag auf seinen prozentualen Anteil an den Gewinnen stellen, und auch darüber müssen alle abstimmen, denn die DAO erlaubt keine automatische Verteilung der Gewinne. Mit DeFiChain könnte das Team leicht eine vierteljährliche oder jährliche Funktion implementieren, die die Gewinne des Unternehmens automatisch an jede Person entsprechend ihrer Beteiligung am Unternehmen verteilt. Dieses System würde sogar für Personen funktionieren, die in der Vergangenheit aktiv waren, aber nicht mehr aktiv sind, also nicht mehr in der DAO sind, aber immer noch einen Prozentsatz basierend auf ihren früheren Beiträgen halten. Andere Beitragszahler könnten Investoren sein, die Geld in das Unternehmen einbringen, sich aber nicht beteiligen.
 
-The examples above seem logical and straightforward, but today are extremely time-consuming and complex. People who want to make an investment together in companies, real estate, or other income-deriving assets type of dividend distribution today is complex and requires a lot of manual calculations. Through the DeFi Distribution of Dividends functionality, it becomes not just simple, but automatic for companies to distribute dividends to equity owners.
+Die obigen Beispiele scheinen logisch und einfach zu sein, sind aber heutzutage noch extrem zeitaufwendig und komplex. Menschen, die gemeinsam in Unternehmen, Immobilien oder andere ertragsbringende Anlagen investieren möchten, müssen heute eine komplexe Dividendenausschüttung vornehmen, die viele manuelle Berechnungen erfordert. Mit der DeFi-Funktionalität Dividendenausschüttung wird die Ausschüttung von Dividenden an die Anteilseigner für Unternehmen nicht nur einfach, sondern auch automatisiert.
 
 ---
 
 ## DeFiChain Design
 
-### Design Parameters
+### Design-Parameter
 
-Looking at the business requirements from the chapter before, DeFiChain needs to meet the following requirements:
+Mit Blick auf die fachlichen Anforderungen aus dem vorherigen Kapitel muss DeFiChain die folgenden Anforderungen erfüllen:
 
-1. Robust and secure: built on a proven and secure blockchain.
-2. Fast and scalable.
-3. Includes decentralized consensus mechanism.
-4. Provides extensible smart contract support, without a Turing-complete instruction set.
-5. As immutable as possible (Block anchoring enabled.) .
+1. Robust und sicher: auf einer bewährten und sicheren Blockchain aufgebaut
+2. Schnell und skalierbar
+3. Enthält einen dezentralen Konsensmechanismus
+4. Bietet erweiterbare Smart-Contract-Unterstützung, ohne einen Turing-Complete-Befehlssatz
+5. So unveränderlich wie möglich (Blockverankerung aktiviert)
 
-Each of these design principles is described in detail below.
+Jedes dieser Gestaltungsprinzipien wird im Folgenden ausführlich beschrieben.
 
-#### 1. Robust and Secure
+#### 1. Robust und sicher
 
-Bitcoin Core is the most robust and longest running blockchain in the world. It has been operating with no disruptions since the genesis block in January 2009. Furthermore, from a security standpoint, Bitcoin core has proven itself to be most secure blockchain with no security incidents, while securing the crypto asset with the highest valuation in the world, that is, Bitcoin (BTC). As of this writing, Bitcoin Core successfully secures $150 billion worth of crypto assets, or 68% of the crypto asset market capitalization.
+Bitcoin Core ist die robusteste und am längsten laufende Blockchain der Welt. Seit dem Genesis-Block im Januar 2009 ist sie ohne Unterbrechungen in Betrieb. Darüber hinaus hat sich Bitcoin Core als die sicherste Blockchain ohne Sicherheitszwischenfälle erwiesen und sichert gleichzeitig den am höchsten bewerteten Kryptowert der Welt, nämlich Bitcoin (BTC). Zum jetzigen Zeitpunkt sichert Bitcoin Core erfolgreich Kryptowährungen im Wert von 150 Mrd. US-Dollar oder 68 % der Marktkapitalisierung von Kryptowährungen.
 
-The proven security and robustness of the Bitcoin Core made it the blockchain of choice for DeFiChain base for extension. DeFiChain is built based on a fork of Bitcoin Core 0.18, specifically v0.18.1.
+Die bewährte Sicherheit und Robustheit des Bitcoin Core machte ihn zur Blockchain der Wahl für die Erweiterung der DeFiChain-Basis. DeFiChain basiert auf einem Fork von Bitcoin Core 0.18, genauer gesagt v0.18.1.
 
-DeFiChain will be written in C++, and the plan is to use other languages, such as Rust, in the future.
+DeFiChain wird in C++ geschrieben, und es ist geplant, in Zukunft auch andere Sprachen, wie z.B. Rust, zu verwenden.
 
-While DeFiChain is a new blockchain, basing it on a Bitcoin Core fork results in a chain that is easy to integrate with for exchanges and apps that support Bitcoin.
+DeFiChain ist zwar eine neue Blockchain, aber da sie auf einer Bitcoin Core Fork basiert, ergibt sich eine Chain, die für Börsen und Apps, die Bitcoin unterstützen, leicht zu integrieren ist.
 
-#### 2. Fast and Scalable
+#### 2. Schnell und skalierbar
 
-One of the proven disadvantages of the Bitcoin blockchain has been the slowness of transactions on the chain. Furthermore, scalability has become an issue as the number of blocks on the chain increase.
+Einer der erwiesenen Nachteile der Bitcoin-Blockchain ist die Langsamkeit der Transaktionen auf der Chain. Außerdem ist die Skalierbarkeit ein Problem, je mehr Blöcke zur Chain hinzukommen.
 
-In order to implement a blockchain with the required speed and scalability, DeFiChain fork of Bitcoin Core will include the following improvements:
+Um eine Blockchain mit der erforderlichen Geschwindigkeit und Skalierbarkeit zu implementieren, wird die DeFiChain-Fork von Bitcoin Core die folgenden Verbesserungen beinhalten:
 
-- Block time: 30 seconds
-- Block size: 16 MB
+- Blockzeit: 30 Sekunden
+- Blockgröße: 16 MB
 
-These improvements provide a transaction rate of over 2,200 transactions per second (tps) while maintaining manageable compute and bandwidth requirements to allow for decentralized operations of DeFiChain.
+Diese Verbesserungen ermöglichen eine Transaktionsrate von über 2.200 Transaktionen pro Sekunde (tps) bei gleichzeitig überschaubaren Rechen- und Bandbreitenanforderungen, die den dezentralen Betrieb von DeFiChain ermöglichen.
 
-The following table compares Bitcoin and its forks, as well as Ethereum, to DeFiChain performance:
+Die folgende Tabelle vergleicht Bitcoin und seine Forks sowie Ethereum mit der Performance von DeFiChain:
 
 <div class="table-responsive">
   <table>
     <thead>
       <tr>
         <th scope="col"></th>
-        <th scope="col">Block time (s)</th>
-        <th scope="col">Block size (MB)</th>
-        <th scope="col">Tx block space (% of block size)</th>
-        <th scope="col">Min tx size (B)</th>
-        <th scope="col">Avg tx size (B)</th>
-        <th scope="col">Txs in a block (max)</th>
-        <th scope="col">Txs in a block (avg)</th>
-        <th scope="col">Max tps</th>
-        <th scope="col">Average tps</th>
+        <th scope="col">Blockzeit (s)</th>
+        <th scope="col">Blockgröße (MB)</th>
+        <th scope="col">Trans.-Blockgröße (% d. Blocks)</th>
+        <th scope="col">Mind. Trans.-Größe (B)</th>
+        <th scope="col">Ø Trans.-Größe (B)</th>
+        <th scope="col">Trans. in 1 Block (max)</th>
+        <th scope="col">Trans. in 1 Block (Ø)</th>
+        <th scope="col">Max. Tps</th>
+        <th scope="col">Ø Tps</th>
       </tr>
     </thead>
     <tbody>
@@ -354,10 +354,10 @@ The following table compares Bitcoin and its forks, as well as Ethereum, to DeFi
         <td>98%</td>
         <td>220</td>
         <td>500</td>
-        <td>4,561.45</td>
-        <td>2,007.04</td>
-        <td>7.6</td>
-        <td>3.35</td>
+        <td>4 561,45</td>
+        <td>2 007,04</td>
+        <td>7,6</td>
+        <td>3,35</td>
       </tr>
       <tr>
         <th>Bitcoin Cash</th>
@@ -366,10 +366,10 @@ The following table compares Bitcoin and its forks, as well as Ethereum, to DeFi
         <td>98%</td>
         <td>220</td>
         <td>500</td>
-        <td>45,614.55</td>
-        <td>20,070.40</td>
+        <td>45 614,55</td>
+        <td>20 070,40</td>
         <td>76</td>
-        <td>33.45</td>
+        <td>33,45</td>
       </tr>
       <tr>
         <th>Bitcoin SV</th>
@@ -378,10 +378,10 @@ The following table compares Bitcoin and its forks, as well as Ethereum, to DeFi
         <td>98%</td>
         <td>220</td>
         <td>500</td>
-        <td>145,966.55</td>
-        <td>64,225.28</td>
-        <td>243.28</td>
-        <td>107.04</td>
+        <td>145 966,55</td>
+        <td>64 225,28</td>
+        <td>243,28</td>
+        <td>107,04</td>
       </tr>
       <tr class="highlight">
         <th>DeFi Chain</th>
@@ -390,91 +390,91 @@ The following table compares Bitcoin and its forks, as well as Ethereum, to DeFi
         <td>98%</td>
         <td>220</td>
         <td>500</td>
-        <td>72,983.27</td>
-        <td>32,112.64</td>
-        <td>2432.78</td>
-        <td>1,070.42</td>
+        <td>72 983,27</td>
+        <td>32 112,64</td>
+        <td>2 432,78</td>
+        <td>1 070,42</td>
       </tr>
     </tbody>
     <thead>
       <tr>
         <th scope="col"></th>
-        <th scope="col">Block time (s)</th>
-        <th scope="col">Gas limit</th>
-        <th scope="col">Tx block space (% of block size)</th>
-        <th scope="col">Min tx size (gas)</th>
-        <th scope="col">Avg tx size (gas)</th>
-        <th scope="col">Txs in a block (max)</th>
-        <th scope="col">Txs in a block (avg)</th>
-        <th scope="col">Max tps</th>
-        <th scope="col">Average tps</th>
+        <th scope="col">Blockzeit (s)</th>
+        <th scope="col">Gas Limit</th>
+        <th scope="col">Trans.-Blockgröße (% d. Blockgröße)</th>
+        <th scope="col">Mind. Trans.-Größe (gas)</th>
+        <th scope="col">Ø Trans.-Größe (gas)</th>
+        <th scope="col">Trans. in 1 Block (max)</th>
+        <th scope="col">Trans. in 1 Block (Ø)</th>
+        <th scope="col">Max Tps</th>
+        <th scope="col">Ø Tps</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th>Ethereum</th>
-        <td>13.5</td>
+        <td>13,5</td>
         <td>10m0</td>
         <td>100%</td>
         <td>21k</td>
         <td>60k</td>
-        <td>476.19</td>
-        <td>166.67</td>
-        <td>35.27</td>
-        <td>12.35</td>
+        <td>476,19</td>
+        <td>166,67</td>
+        <td>35,27</td>
+        <td>12,35</td>
         </tr>
     </tbody>
   </table>
 </div>
 
-#### 3. Decentralized Consensus Mechanism
+#### 3. Dezentraler Konsensmechanismus
 
-Bitcoin Core is using Proof-of-Work (PoW) as the consensus mechanism. DeFiChain leverages the best aspects of PoW, that is, using hashing of the staking node’s ID for block creation while focusing the majority of the consensus on Proof-of-Stake (PoS). The major improvement in the PoW mechanism for DeFiChain is that staking nodes can run without investing in high-end servers and ultra-fast bandwidth connections. Thus, DeFiChain is creating the potential for easier and faster decentralization of the mode ownership and infrastructure.
+Bitcoin Core verwendet Proof of Work (PoW) als Konsensmechanismus. DeFiChain nutzt die besten Aspekte von PoW, d.h. die Hashing-Funktion der Node-ID für die Blockerstellung, während der Großteil des Konsens auf Proof of Stake (PoS) basiert. Die größte Verbesserung des PoW-Mechanismus von DeFiChain besteht darin, dass die Staking Nodes ohne Investitionen in High-End-Server und ultraschnelle Breitbandverbindungen arbeiten können. So ermöglicht DeFiChain eine einfachere und schnellere Dezentralisierung, was Eigentum und Infrastruktur anbelangt.
 
-#### 4. Non-Turing-complete Smart Contracts
+#### 4. Nicht-Turing-complete Smart Contracts
 
-Decentralized financial transactions are implemented through smart contracts. For example to ensure that borrowers repay lenders, smart contracts implement the conditions of lending in the code. For smart contract development, DeFiChain will be adding opcode support for decentralized financial instruction sets. The DeFi opcode complements and works in tangent with the Script scripting language of the existing Bitcoin Core protocol.
+Dezentrale Finanztransaktionen werden durch Smart Contracts umgesetzt. Um z.B. sicherzustellen, dass Kreditnehmer ihre Kredite zurückzahlen, implementieren Smart Contracts die Bedingungen für die Kreditvergabe in den Code. Für die Entwicklung von Smart Contracts wird DeFiChain Opcode-Unterstützung für dezentrale Finanzbefehle bereitstellen. Der DeFi-Opcode ergänzt die Skriptsprache Script des bestehenden Bitcoin Core-Protokolls und arbeitet tangential dazu.
 
-The DeFi scripting language is called Recipe, denoting the language’s role in describing and allowing for decentralized financial contracts.
+Die DeFi-Skriptsprache heißt Recipe, was die Rolle der Sprache bei der Beschreibung und Ermöglichung dezentraler Finanzverträge bezeichnet.
 
-Bitcoin Script instruction words usually start with the prefix `OP_*`. Recipe instruction words carry the prefix `DF_*`.
+Bitcoin Script-Befehlswörter beginnen normalerweise mit dem Präfix `OP_*`. Recipe-Befehlswörter tragen das Präfix `DF_*`.
 
-#### 5. Immutable through Block Anchoring
+#### 5. Unveränderlich durch Blockverankerung
 
-While the common discussion of immutability is a binary conversation (a blockchain is either immutable or not), in fact, immutability is on a spectrum. The level of immutability of a blockchain is related to the cost of a rollback or “fork out” of mined blocks, also known as a 51% attack.
+Während die gängige Diskussion über Unveränderlichkeit ein binäres Gespräch ist (eine Blockchain ist entweder unabänderbar oder nicht), erstreckt sich die Unveränderlichkeit in Wirklichkeit über ein Spektrum. Der Grad der Unveränderlichkeit einer Blockchain hängt mit den Kosten für einen Rollback oder ein "Fork out" von geminten Blöcken zusammen, auch bekannt als 51%-Angriff.
 
-It takes time to amass significant miners or minters to make 51% attack costly enough that it is generally regarded as immutable, meaning that a new blockchain is automatically at a disadvantage when it comes to the immutability of the records. Some newer blockchains have been taking shortcuts to increase its immutability quality, typically by compromising on decentralization. For example, the chains may allow only delegated stakers chosen by the founders, or by making the blockchain permissioned instead of permissionless.
+Es dauert seine Zeit, bis sich genügend Miner oder Minter zusammengefunden haben, um einen 51%-Angriff so kostspielig zu machen, dass er im Allgemeinen als unveränderlich gilt, was bedeutet, dass eine neue Blockchain automatisch im Nachteil ist, wenn es um die Unveränderlichkeit der Aufzeichnungen geht. Einige neuere Blockchains haben Abkürzungen genommen, um ihre Unveränderlichkeit zu steigern, indem sie Kompromisse bei der Dezentralität eingegangen sind. So können die Chains zum Beispiel nur von den Gründern delegierte Staker zulassen oder die Blockchain mit statt ohne Berechtigungen ausstatten.
 
-DeFiChain aims to maintain decentralization quality while maintaining immutability. To do so, DeFiChain will anchor its block to Bitcoin blockchain every few blocks. This further enhances the immutability of DeFiChain without any compromise to the decentralized nature of the chain.
+DeFiChain zielt darauf ab, die Qualität der Dezentralität zu erhalten und gleichzeitig die Unveränderlichkeit zu bewahren. Um dies zu erreichen, verankert DeFiChain seine Blöcke alle paar Blöcke in der Bitcoin-Blockchain. Dadurch wird die Unveränderlichkeit von DeFiChain weiter erhöht, ohne die dezentrale Natur der Chain zu beeinträchtigen.
 
-### Consensus Algorithm
+### Konsens-Algorithmus
 
 #### Proof-of-Stake
 
-DeFiChain utilizes a Proof-of-Stake (PoS) algorithm similar to Bitcoin Core’s original Proof-of-Work (PoW) mining algorithm. While DeFiChain is choosing PoS over PoW, at the same time, DeFi technology retains the best of the tested and proven technologies that were developed in the Bitcoin Core blockchain.
+DeFiChain verwendet einen Proof of Stake (PoS)-Algorithmus, der dem ursprünglichen Proof of Work (PoW)-Mining-Algorithmus von Bitcoin Core ähnelt. Während DeFiChain PoS dem PoW-Algorithmus vorzieht, behält die DeFi-Technologie gleichzeitig die besten der getesteten und bewährten Technologien bei, die in der Bitcoin Core-Blockchain entwickelt wurden.
 
-#### Masternodes for Staking
+#### Masternodes zum Staking
 
-To run a masternode (staking node), stakers must hold a fixed amount of 20,000 DFI. Masternodes on DeFiChain participate in active transaction validations and block creations. The staking amount is intended to be lowered with the stability and maturity of blockchain to encourage further decentralization.
+Um einen Masternode (Staking Node) zu betreiben, müssen Staker einen festen Betrag von 20.000 DFI halten. Masternodes auf DeFiChain nehmen aktiv an Transaktionsüberprüfungen und Blockerstellungen teil. Der Mindestbetrag fürs Staking soll mit zunehmender Stabilität und Entwicklungsstufe der Blockchain gesenkt werden, um eine weitere Dezentralisierung zu fördern.
 
-Each staking node can perform only 1 hash per second, with the nonce from Bitcoin Core PoW algorithm replaced by a staker’s masternode ID.
-A new block is mined if it satisfies the following condition:
+Jeder Staking Node kann nur 1 Hash pro Sekunde durchführen, wobei die Nonce aus dem Bitcoin Core PoW Algorithmus durch die Masternode ID eines Stakers ersetzt wird.
+Ein neuer Block wird gemint, wenn er die folgende Bedingung erfüllt:
 
 `SHA256({staker’s UTXO}, {current timestamp, in seconds}, {stake modifier}) < {target}`
 
-The stakers check this requirement each second. If the block condition is less than the current target, then the stakers assemble and sign a new block.
-Staker’s UTXO require 20 confirmations before it can be accepted as a stake.
+Die Staker überprüfen diese Bedingung jede Sekunde. Wenn die Blockvoraussetzung geringer ist als das aktuelle Ziel, dann setzen die Staker einen neuen Block zusammen und signieren ihn. 
+Die UTXO der Staker benötigen 20 Bestätigungen, bevor sie als Stake akzeptiert werden können.
 
 #### Stake Modifier
 
-A stake modifier is a collective source of random entropy. Without a stake modifier, the future PoS kernel would be completely predictable. A good stake modifier needs to be neither predictable nor influance-able by stakers.
+Ein Stake-Modifier ist eine kollektiver Erzeuger von zufälliger Entropie. Ohne einen Stake-Modifier wäre der zukünftige PoS-Kernel völlig vorhersehbar. Ein guter Stake-Modifier darf weder vorhersehbar sein noch von den Stakern beeinflusst werden können.
 
-DeFiChain’s staker modifier is set to be `SHA256({previous stake modifier}, {masternode ID})`.
+Der Staker-Modifier von DeFiChain ist eingestellt auf `SHA256({previous stake modifier}, {masternode ID})`.
 
-#### Validation of Future and Past Headers
+#### Validierung von zukünftigen und vergangenen Kopfzeilen
 
-Unlike PoW, block header validation requires a stakes table. Headers get verified in batches before full blocks are downloaded, so the stakes table is used to verify future stakes.
-To be able to verify future headers, the blockchain needs to apply an additional rule, so any change of the stakes database gets written right away, but takes effect only after 300 blocks. As a result, any node will be able to verify any block header against its current stake, if a block header isn’t further in the future (or in the past) than 300 blocks.
+Im Gegensatz zu PoW wird für die Validierung der Kopfzeilen von Blöcken eine Staking-Tabelle benötigt. Die Kopfzeilen werden in Batches überprüft, bevor die vollständigen Blöcke heruntergeladen werden, daher wird die Staking-Tabelle verwendet, um zukünftige Stakings zu überprüfen. 
+Um zukünftige Kopfzeilen überprüfen zu können, muss die Blockchain eine zusätzliche Regel anwenden, damit jede Änderung in der Stakes-Datenbank sofort geschrieben wird, aber erst nach 300 Blöcken wirksam wird. So kann jeder Node jeden Block-Header mit seinem aktuellen Einsatz verifizieren, wenn der Block-Header nicht weiter in der Zukunft (oder Vergangenheit) liegt als 300 Blöcke.
 
 #### Nothing at Stake Protection
 

@@ -28,7 +28,7 @@
       {
         "label": "GEWUSST WIE",
         "title": "$DFI kaufen",
-        "desc": "Erfahre mehr über den $DFI Coin und erwirb ihn an verschiedenen Krypto-Börsen",
+        "desc": "Erfahre mehr über den $DFI-Coin und erwirb ihn an verschiedenen Krypto-Börsen",
         "buttonText": "Mehr erfahren",
         "buttonType": "outline",
         "url": "https://blog.defichain.com/where-and-how-to-buy-dfi-defichain/"
@@ -464,7 +464,7 @@
         },
         {
           "title": "Jun.",
-          "desc": "$DFI Coin hat den Handel auf LATOKEN aufgenommen",
+          "desc": "$DFI-Coin hat den Handel auf LATOKEN aufgenommen",
           "url": "https://exchange.latoken.com/exchange/DFI-USDT",
           "image": {
             "url": "/img/timeline/2020/dfi-latoken@2x.png",

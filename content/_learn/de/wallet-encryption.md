@@ -31,7 +31,7 @@ Diese Anleitung zeigt dir, wie du die Ver- und Entschlüsselung der Wallet, auch
 
     Es sollte ein paar Sekunden dauern und du solltest die Meldung `wallet encrypted` sehen.  Ab diesem Zeitpunkt ist deine Wallet, d.h. die Datei "wallet.dat", standardmäßig verschlüsselt. 
 
-    Deine DeFi Wallet Desktop-App wird wie gewohnt funktionieren und deine DeFi Liquiditäts-Mining-Rewards werden wie gewohnt eingehen. Wenn du versuchst, DFI oder DST zu senden, solltest du die folgende Meldung sehen: `Add-on auth TX failed: Can't sign TX`. Das zeigt, dass deine Wallet Keys jetzt verschlüsselt sind. Ein Hacker, der zu diesem Zeitpunkt Zugang zu deiner Wallet hat, kann nur deine Bestände einsehen, sie aber nicht ausgeben.
+    Deine DeFi Wallet Desktop-App wird wie gewohnt funktionieren und deine DeFi Liquiditäts-Mining-Rewards werden wie gewohnt eingehen. Wenn du versuchst, DFI oder DST zu senden, solltest du die folgende Meldung sehen: `Add-on auth TX failed: Can't sign TX`. Das zeigt, dass deine Wallet-Keys jetzt verschlüsselt sind. Ein Hacker, der zu diesem Zeitpunkt Zugang zu deiner Wallet hat, kann nur deine Bestände einsehen, sie aber nicht ausgeben.
 
 ## 2. Entsperren deiner Wallet
 

@@ -29,7 +29,7 @@ Klicke auf **DEX** in der Seitenleiste, um die dezentrale Börse aufzurufen.
 
 ### Schritt 4: Einen Tausch durchführen
 
-Der DEX bietet dir eine Möglichkeit, einen Token gegen einen anderen zu tauschen. In diesem Fall wählst du DFI im linken Feld **Von** aus.
+Die DEX bietet dir eine Möglichkeit, einen Token gegen einen anderen zu tauschen. In diesem Fall wählst du DFI im linken Feld **Von** aus.
 
 ![](/img/guides/obtaining-tokens/dex-from.png)
 
@@ -37,7 +37,7 @@ Wähle dann den Token, den du kaufen möchtest, im rechten Feld **In** aus.
 
 ![](/img/guides/obtaining-tokens/dex-to.png)
 
-Du kannst entweder im Feld **Von** angeben, wie viel du DFI verkaufen möchtest, oder im Feld **In**, wie viel des anderen Tokens du kaufen möchtest. Du kannst auch auf die Schaltfläche **MAX** klicken, um den maximalen Betrag an DFI einzugeben.
+Du kannst entweder im Feld **Von** angeben, wie viel DFI du verkaufen möchtest, oder im Feld **In**, wie viel des anderen Tokens du kaufen möchtest. Du kannst auch auf die Schaltfläche **MAX** klicken, um den maximalen Betrag an DFI einzugeben.
 
 Klicke auf **Weiter**, wenn du bereit bist zu tauschen.
 

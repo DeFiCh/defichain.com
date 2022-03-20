@@ -1,45 +1,45 @@
 {
   "Head": {
-    "title": "Learn",
-    "desc": "Learn more and understand DeFiChain with videos and how-to guides."
+    "title": "Mehr erfahren",
+    "desc": "Erfahre mehr und verstehe DeFiChain mit Videos und Anleitungen"
   },
   "Header": {
-    "title": "Learn",
-    "desc": "Learn more and understand DeFiChain."
+    "title": "Mehr erfahren",
+    "desc": "Erfahre mehr und verstehe DeFiChain"
   },
   "HowToSection": {
-    "title": "How To Guides"
+    "title": "Praktische Leitfäden"
   },
   "FAQSection": {
-    "title": "FAQ",
+    "title": "HÄUFIG GESTELLTE FRAGEN (FAQ)",
     "entries": [
       {
-        "title": "What is DeFi?",
-        "desc": "DeFi stands for Decentralized Finance. It describes the idea of not needing a trusted third-party to execute financial services, but with a blockchain in its place to enable people, and in the future, machines to become their own bank for these services, removing counterparty risks."
+        "title": "Was bedeutet DeFi?",
+        "desc": "DeFi steht für Dezentrales Finanzsystem. Es beschreibt die Idee, dass man für die Ausführung von Finanzdienstleistungen keinen vertrauenswürdigen Dritten braucht, sondern eine Blockchain, die Menschen und in Zukunft auch Maschinen in die Lage versetzt, ihre eigene Bank für diese Dienstleistungen zu werden und das Kontrahentenrisiko zu beseitigen."
       },
       {
-        "title": "What DeFi Services are there?",
-        "desc": "Any service offered by a bank can be decentralized. The first and most common service is issuing money. Bitcoin is a prime example of that. There are many others like consensus verification i.e. mining and staking, lending, exchanging, investing and more."
+        "title": "Welche DeFi-Dienste gibt es?",
+        "desc": "Jede von einer Bank angebotene Dienstleistung kann dezentralisiert werden. Die erste und häufigste Dienstleistung ist die Ausgabe von Geld. Bitcoin ist ein Paradebeispiel dafür. Es gibt noch viele weitere Dienste wie die Konsensverifizierung, d.h. Mining und Staking, Darlehen, Tauschgeschäfte, Kapitalanlagen und vieles mehr."
       },
       {
-        "title": "What is the DeFiChain?",
-        "desc": "DeFi services run on blockchain technology. The DeFiChain was created exactly for DeFi Services, while providing the optimal infrastructure for security, speed, and access, to name a few."
+        "title": "Um was handelt es sich bei DeFiChain?",
+        "desc": "Die DeFi-Dienste laufen auf der Blockchain-Technologie. DeFiChain wurde genau für diese DeFi-Dienste entwickelt und bietet hierfür optimierte Infrastruktur bezüglich Sicherheit, Geschwindigkeit und Zugang, um nur einige zu nennen."
       },
       {
-        "title": "Why not use the Bitcoin blockchain?",
-        "desc": "The Bitcoin blockchain was created for a single specific financial service – the decentralized and censorship-resistant store of value used as a medium of exchange, and perhaps a unit of account in the future. It does this better than other blockchains. However, beyond that, it lacks technical capabilities necessary for the infrastructure of other DeFi services."
+        "title": "Warum nicht die Bitcoin-Blockchain nutzen?",
+        "desc": "Die Bitcoin-Blockchain wurde für eine einzige spezifische Finanzdienstleistung geschaffen - als dezentraler und zensurresistenter Wertespeicher, der als Tauschmittel und in Zukunft vielleicht auch als Rechnungseinheit verwendet wird. Das kann sie besser als andere Blockchains. Darüber hinaus fehlt es ihr jedoch an technischen Fähigkeiten, die für die Infrastruktur anderer DeFi-Dienste notwendig sind."
       },
       {
-        "title": "Why not use the Ethereum blockchain?",
-        "desc": "Ethereum was meant to be a general-purpose platform. In principle, one could do anything with Ethereum, rendering it the jack of all trades but master of none. Problems such as the DAO and parity hack reveal the challenge to keep smart contracts secure, due to their general and universal nature."
+        "title": "Warum nicht die Ethereum-Blockchain nutzen?",
+        "desc": "Ethereum war als Plattform für universelle Zwecke gedacht. Im Prinzip kann man mit Ethereum alles machen, so dass es zum Tausendsassa, aber zum Meister in keinem Bereich wird. Probleme wie der DAO- und der Paritäts-Hack zeigen, wie schwierig es ist, Smart Contracts sicher zu machen, weil sie so allgemein und universell sind."
       },
       {
-        "title": "What is DFI?",
-        "desc": "DFI is the DeFiChain native token needed to execute code. It is also used for governance."
+        "title": "Was ist DFI?",
+        "desc": "DFI ist der native DeFiChain-Token, der zum Ausführen von Code benötigt wird. Er wird auch für die Governance verwendet."
       },
       {
-        "title": "Where can I learn more about DeFi, the DeFiChain and DFI?",
-        "desc": "We publish informational and educational content on DeFi. Follow us on our social media or join our mailing list to be the first to receive new content."
+        "title": "Wo kann ich mehr über DeFi, die DeFiChain und DFI erfahren?",
+        "desc": "Wir veröffentlichen Informations- und Bildungsinhalte über DeFi. Folge uns auf unseren sozialen Medien oder trage dich in unsere Mailingliste ein, um neue Infos als Erster zu erhalten."
       }
     ]
   }

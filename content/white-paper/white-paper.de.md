@@ -207,7 +207,7 @@ Die ersten Implementierungen der dezentralen Darlehensvergabe sind vollständig 
 
 ### Dezentrales Wrapping von Token
 
-Ein wichtiges Element bei DeFi ist die Fähigkeit, mit einer Vielzahl von Kryptoassets direkt auf der Chain zu arbeiten. Während die Transaktion auf der Chain über den nativen $DFI Coin erfolgt, kann DeFiChain Bitcoin, Ethereum, ERC-20 oder jedes andere Kryptoasset durch Wrapping verwenden.
+Ein wichtiges Element bei DeFi ist die Fähigkeit, mit einer Vielzahl von Kryptoassets direkt auf der Chain zu arbeiten. Während die Transaktion auf der Chain über den nativen $DFI-Coin erfolgt, kann DeFiChain Bitcoin, Ethereum, ERC-20 oder jedes andere Kryptoasset durch Wrapping verwenden.
 
 Wrapping erlaubt die Nutzung eines beliebigen digitalen Vermögenswerts, so dass der zugrunde liegende Vermögenswert beibehalten wird, aber auf eine andere Blockchain übertragen werden kann. DeFiChain bietet einen dezentralen Wrapping-Mechanismus, der es dem Eigentümer des Kryptoassets ermöglicht, die Bindung an den Vermögenswert aufrechtzuerhalten und einen vertrauenfreien Wrapping-Mechanismus zu nutzen, der sich nicht auf eine dritte Partei als Garant für das Wrapping oder den Vermögenswert verlässt. Die gewrappten Token können auf der jeweiligen Blockchain einfach gegen ihren ursprünglichen Wert getauscht werden.
 Die Erstellung eines gewrappten Token auf der DeFiChain ist eine Aktivität, die belohnt wird, so dass es für Inhaber von Kryptowährungen einen Anreiz gibt, gewrappte Token auf dem DeFi-Netzwerk als eine Form der honorierten dezentralen Finanzanlage zu erstellen.

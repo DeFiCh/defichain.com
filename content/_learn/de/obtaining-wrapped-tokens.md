@@ -1,5 +1,5 @@
 ---
-title: Erwerb von gewrappten Token (Wrapped Tokens)
+title: Erwerb von gewrappten Token (engl. "Wrapped Tokens")
 description: Eine Schritt-für-Schritt-Anleitung für den Erwerb von gewrappten BTC/ETH/USDT über die DEX oder CakeDefi
 ---
 

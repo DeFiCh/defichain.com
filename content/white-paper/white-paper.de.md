@@ -476,515 +476,515 @@ Der Staker-Modifier von DeFiChain ist eingestellt auf `SHA256({previous stake mo
 Im Gegensatz zu PoW wird für die Validierung der Kopfzeilen von Blöcken eine Staking-Tabelle benötigt. Die Kopfzeilen werden in Batches überprüft, bevor die vollständigen Blöcke heruntergeladen werden, daher wird die Staking-Tabelle verwendet, um zukünftige Stakings zu überprüfen. 
 Um zukünftige Kopfzeilen überprüfen zu können, muss die Blockchain eine zusätzliche Regel anwenden, damit jede Änderung in der Stakes-Datenbank sofort geschrieben wird, aber erst nach 300 Blöcken wirksam wird. So kann jeder Node jeden Block-Header mit seinem aktuellen Einsatz verifizieren, wenn der Block-Header nicht weiter in der Zukunft (oder Vergangenheit) liegt als 300 Blöcke.
 
-#### Nothing at Stake Protection
+#### Schutz vor Stakingkonflikten
 
-For PoS blockchains, there’s no limit to how many conflicting blocks a staker may sign. As a result, stakers may stake for every possible fork or branch, which weakens the finality of a PoS blockchain. This problem is known as a double-sign and is not possible in PoW blockchains, where a miner cannot mine all the possible branches without splitting mining capability. In PoW, this represents an intrinsic economic penalty. However, PoS blockchains cannot apply an inherent economic penalty for signing conflicting blocks on different branches.
+Bei PoS-Blockchains gibt es keine Begrenzung dafür, wie viele widersprüchliche Blöcke ein Staker signieren kann. Daher kann ein Staker für jede mögliche Fork oder Branch signieren, was die Endgültigkeit einer PoS-Blockchain schwächt. Dieses Problem wird als Doppelsignatur bezeichnet und ist bei PoW-Blockchains nicht möglich, da ein Miner nicht alle möglichen Branches minen kann, ohne seine Mining-Kapazität zu teilen. Bei PoW stellt dies einen wirtschaftlichen Nachteil dar. Bei PoS-Blockchains gibt es jedoch keine inhärente wirtschaftliche Strafe für das Signieren widersprüchlicher Blöcke auf verschiedenen Branches.
 
-Therefore, in order to enhance the finality of DeFiChain, in PoS, it’s necessary to detect double-signs and penalize them through an explicit mechanism.
+Um die Zuverlässigkeit der DeFiChain zu erhöhen, ist es daher notwendig, Doppelsignaturen im PoS zu erkennen und sie durch einen expliziten Mechanismus zu bestrafen.
 
-#### Detection of Double-sign
+#### Identifizierung einer Doppelsignatur
 
-Each block header has a sequence number as a number of blocks that a particular staker has minted before a particular block. If two blocks are minted with the same sequence number, it means that a staker has double-signed, even if the blocks have different ancestors, i.e. across branches.
+Jeder Block-Header hat eine Sequenznummer, die die Anzahl der Blöcke angibt, die ein bestimmter Staker vor einem bestimmten Block gemint hat. Wenn zwei Blöcke mit der gleichen Sequenznummer gemint werden, bedeutet das, dass ein Staker doppelt signiert hat, auch wenn die Blöcke unterschiedliche Vorgänger haben, d.h. über Branches hinweg.
 
-During a block’s generation, a staker has the right to include the double-sign proofs into his block header in exchange for only half of the penalty.
+Während der Generierung eines Blocks hat ein Staker das Recht, die doppelt signierten Proofs in seinen Block-Header aufzunehmen und dafür nur die Hälfte der Strafe zu zahlen.
 
-#### Double-sign Penalty
+#### Strafe für Doppelsignatur
 
-To be able to apply a penalty to stakers who double-sign, DeFiChain has to disallow immediate withdrawing of stake. Thus, when a deactivation transaction is confirmed, DeFiChain requires 3000 blocks to pass. At a block time of 30 seconds, 3000 blocks is equivalent to 25 hours.
+Um Staker, die doppelt signieren, bestrafen zu können, muss DeFiChain das sofortige Abheben des Stakes verbieten. Wenn also eine Deaktivierungstransaktion bestätigt wird, benötigt DeFiChain 3000 Blöcke, um sie abzuschließen. Bei einer Blockzeit von 30 Sekunden entsprechen 3000 Blöcke 25 Stunden.
 
-The double-sign penalty is 10 times the block rewards, deducted from the collateral. This also disqualifies the stakers from further staking immediately. The staker who wants to get back to staking has to deposit a fresh stake UTXO of 20,000 DFI. Running the official DeFiChain node does not cause any unintentional or accidental double-sign. Double-sign happens only in cases of malicious intent.
+Die Strafe für das Doppelsignieren beträgt das 10-fache der Blockprämie, die von der Sicherheit abgezogen wird. Das schließt die Staker auch sofort von weiteren Einsätzen aus. Der Staker, der seinen Einsatz wieder aufnehmen möchte, muss erneut UTXO in der Höhe von 20.000 DFI fürs Staking einsetzen. Wenn man den offiziellen DeFiChain-Node betreibt, kommt es nicht zu einem unbeabsichtigten oder versehentlichen Doppelsignieren. Doppeltes Signieren geschieht nur in böser Absicht.
 
-#### Time Drift Attack
+#### Zeitdrift Angriff
 
-The chain uses a maximum future block time of only approx. 5 seconds, to protect the chain from time drift attacks, where stakers set a block time too far ahead in the future, in order to claim a reward for themselves. DeFi also uses NTP time synchronization to allow for ongoing adjustment to the block time.
+Die Chain verwendet eine maximale zukünftige Blockzeit von nur ca. 5 Sekunden, um die Chain vor Zeitdrift-Angriffen (Time Drift Attacks) zu schützen, bei denen Staker eine Blockzeit zu weit in die Zukunft setzen, um einen Reward für sich zu beanspruchen. DeFi nutzt außerdem die NTP-Zeitsynchronisation, um eine ständige Anpassung der Blockzeit zu ermöglichen.
 
-### Bitcoin Anchoring
+### Bitcoin-Verankerung
 
-DeFiChain stakers publish blockchain block hashes periodically to the Bitcoin blockchain, providing public audit and block anchoring of DeFiChain to the strongest, most secure blockchain in the world.
+DeFiChain-Staker veröffentlichen regelmäßig Blockchain-Blockhashes auf der Bitcoin-Blockchain und sorgen so für eine öffentliche Prüfung und Blockverankerung von DeFiChain auf der stärksten und sichersten Blockchain der Welt.
 
-Every 60 blocks (approximately 30 minutes), a staker gets the right to write the Merkle root of the previous block onto the Bitcoin blockchain. The information written is, specifically, the txid of the Bitcoin transaction, Bitcoin block header and Merkle proof containing the Merkle root onto the newly mined block. By doing so, the staker will be rewarded an extra block reward in DFI, incentivising nodes to regularly anchor all records to the Bitcoin blockchain.
+Alle 60 Blöcke (etwa 30 Minuten) erhält ein Staker das Recht, die Merkle-Root des vorherigen Blocks in die Bitcoin-Blockchain zu schreiben. Dabei handelt es sich um die Transaktions-ID der Bitcoin-Transaktion, den Bitcoin-Block-Header und den Merkle-Proof, der die Merkle-Root enthält, die in den neu geminten Block geschrieben wird. Auf diese Weise wird der Staker mit einem zusätzlichen Block-Reward in DFI belohnt, was für die Nodes einen Anreiz darstellt, regelmäßig alle Datensätze in der Bitcoin-Blockchain zu verankern.
 
-![Bitcoin Ancoring](/img/white-paper/every-60-blocks.png)
+![Bitcoin-Verankerung](/img/white-paper/every-60-blocks.png)
 
-DeFiChain node will include a built-in Bitcoin Simplified Payment Verification (SPV) client. SPV clients sync the Bitcoin blockchain by downloading only block headers which is sufficient information for nodes to add and validate the anchors.
+DeFiChain-Nodes enthalten einen integrierten Bitcoin Simplified Payment Verification (SPV) Client. SPV-Clients synchronisieren die Bitcoin-Blockchain, indem sie nur die Block-Header herunterladen. Diese Informationen reichen den Nodes aus, um die Anker hinzuzufügen und zu validieren.
 
-## DeFi Building Blocks
+## DeFi-Bausteine
 
-To achieve our goals of enabling decentralized finance transactions on DeFiChain, the following build blocks will be included as a base **native** components on DeFiChain.
+Um unser Ziel, dezentrale Finanztransaktionen auf DeFiChain zu ermöglichen, zu erreichen, werden die folgenden Bausteine als **native** Basiskomponenten in DeFiChain enthalten sein.
 
-### Tokenization as a DeFi Standard Token (DST)
+### Tokenisierung als DeFi Standard Token (DST)
 
-The implementation of the features described in this whitepaper is performed with the use of standardized tokens. This chapter describes the mechanics of the tokens, interaction with other cryptoassets (tokens), and how they are used in DeFiChain.
+Die Umsetzung der in diesem Whitepaper beschriebenen Funktionen erfolgt mit Hilfe von standardisierten Token. Dieses Kapitel beschreibt die Funktionsweise der Token, die Interaktion mit anderen Kryptowährungen (Token) und wie sie bei DeFiChain verwendet werden.
 
-### Cross-chain Mechanics
+### Chainübergreifende Mechanismen
 
-DeFiChain uses token standards to bring in external tokens to DeFiChain in a trustless manner and allow trustless financial contracts and trading of all major cryptoasset tokens. The token standards are similar to ERC20 on Ethereum and Omni on Bitcoin blockchain. Through this standard, DeFiChain allows tokenization of any assets.
+DeFiChain nutzt Token-Standards, um externe Token vertrauensunabhängig in DeFiChain einzubringen und vertrauensunabhängige Finanzkontrakte und den Handel mit allen wichtigen Kryptoasset-Token zu ermöglichen. Die Token-Standards sind vergleichbar mit ERC20 auf Ethereum und Omni auf der Bitcoin-Blockchain. Durch diesen Standard ermöglicht DeFiChain die Tokenisierung beliebiger Vermögenswerte.
 
-On DeFiChain the standardized tokens are called DeFi Standard Token (DST). DST tokens are of two different types: DCT, created by users of the system, and DAT, which are asset-backed tokens created with the backing of cryptoassets.
+Auf der DeFiChain werden die standardisierten Token als DeFi Standard Token (DST) bezeichnet. Bei den DST Token gibt es zwei verschiedene Arten: DCT, die von den Nutzern des Systems erstellt werden, und DAT, bei denen es sich um durch Vermögenswerte besicherte Token handelt, die mit Hilfe von Kryptowährungen erstellt werden.
 
-![Custom token](/img/white-paper/custom-token.png)
+![Benutzerdefinierter Token](/img/white-paper/custom-token.png)
 
 ### DeFi Custom Token (DCT)
 
-DCTs are custom tokens that can be created by any user to represent any project or set of smart contracts implemented on DeFiChain. Any user can create such a DCT. To prevent abuse, creation of any proprietary DCT requires the user to lock up 1,000 DFI for the time that the tokens are issued. The DFI is returned when the tokens are revoked and the DCT is cancelled.
+DCTs sind benutzerdefinierte Token, die von jedem Nutzer erstellt werden können, um ein beliebiges Projekt oder eine Reihe von Smart-Contracts zu repräsentieren, die auf DeFiChain implementiert sind. Jeder Nutzer kann einen solchen DCT erstellen. Um Missbrauch vorzubeugen, muss der Nutzer bei der Erstellung eines eigenen DCTs 1.000 DFI für die Zeit der Ausgabe der Token sperren. Die DFI erhält man zurück, wenn die Token zurückgezogen werden und der DCT aufgelöst wird.
 
-DCT tokens are not backed intrinsically by DeFiChain. They may be backed through an external mechanism, but it’s essential to note that DeFiChain does not intrinsically back them. An example on the Ethereum blockchain would be DGX, which is an ERC20 token backed by gold. Ethereum does not back DGX, although the token is created through ERC20. The Digix Foundation is accountable for the value of that token. Similarly, DCT is the DeFi parallel to ERC20 on Ethereum. Creation and issuance of tokens on DeFi is simplified and the potential for errors in the smart contract is eliminated, because creators of DCT can set only the parameters below, using an easy to use scripting interface.
+DCT-Token werden nicht von DeFiChain selbst unterstützt. Sie können über einen externen Mechanismus gesichert werden, aber es ist wichtig zu wissen, dass DeFiChain sie nicht selbst sichert. Ein Beispiel auf der Ethereum-Blockchain wäre DGX, ein ERC20 Token, der mit Gold hinterlegt ist. Ethereum unterstützt DGX nicht, obwohl der Token über ERC20 erstellt wird. Die Digix Foundation ist für den Wert dieses Tokens verantwortlich. In ähnlicher Weise ist DCT die DeFi-Parallele zu ERC20 auf Ethereum. Die Erstellung und Ausgabe von Token auf DeFi wird vereinfacht und die Möglichkeit von Fehlern im Smart-Contract wird ausgeschlossen, da die Ersteller von DCT nur die unten aufgeführten Parameter über eine einfach zu bedienende Skriptschnittstelle festlegen können.
 
-#### DCT Parameters:
+#### DCT Parameter:
 
-- DCT ID: <UDID> Unique blockchain identifier for the token.
-- Name: <Token name> Name of the tokens.
-- Symbol: The ticker symbol for the tokens. The DCT protocol will provide a reference for ensuring the choice will be a unique symbol.
-- Decimal places: Divisible number of decimal places for the tokens. This cannot be changed once it is set.
-- Total initial supply: Initial issue of tokens during the event generated.
-- Initial distribution list: List of addresses for distribution of tokens.
-- Minting support: yes/no
-- Final supply limit (optional): Immutable total supply limit. If minting is supporting this will define the ceiling on how many tokens the token owner can mint in total (some may be reserved at this time). If this parameter is left blank, this is an unlimited supply token. This cannot be changed after the initial definition of the token.
-- Tradeability: yes/no. This is a one-way switch allowing the token owner to transfer tokens during initial distribution period and also to decide when a token is tradeable/movable. To ensure the decentralized nature of DCT, once “tradeability” is set to yes, the owner is no longer able to reverse the tradability of a token. Typically, when creating a token, this should be turned to “no” until the initial distribution is confirmed to be accurate.
+- DCT ID: <UDID> Eindeutige Blockchain-Kennung des Tokens
+- Name: <Token name> Name des Tokens
+- Symbol: Das Tickersymbol für den Token. Das DCT-Protokoll stellt eine Referenz zur Verfügung, um sicherzustellen, dass die Wahl auf ein eindeutiges Symbol fällt
+- Dezimalstellen: Teilbare Anzahl von Nachkommastellen für den Token. Sie kann nicht mehr geändert werden, wenn sie einmal festgelegt wurde.
+- Gesamter Anfangsbestand: Die Erstausgabe an Token, die im Zuge des Ereignisses generiert wird
+- Initiale Verteilungsliste: Adressenliste für die Verteilung von Token
+- Minting-Unterstützung: ja/nein
+- Obergrenze des Gesamtangebots (optional): Unveränderliche Obergrenze für das Gesamtangebot. Wenn das Minting unterstützt wird, legt diese Option fest, wie viele Token der Token-Besitzer insgesamt minten kann (einige können zu diesem Zeitpunkt reserviert sein). Wenn dieser Parameter leer gelassen wird, ist der Token unbegrenzt verfügbar. Dieser Parameter kann nach der ersten Definition des Tokens nicht mehr geändert werden. 
+- Handelbar? : ja/nein. Dies ist ein Einwegschalter, der es dem Token-Besitzer ermöglicht, Token während der anfänglichen Verteilungsphase zu transferieren und auch zu entscheiden, wann ein Token handelbar oder verschiebbar ist. Um den dezentralen Charakter von DCT zu gewährleisten, kann der Eigentümer die Handelbarkeit eines Tokens nicht mehr rückgängig machen, sobald "Handelbar?" auf ja gesetzt ist. In der Regel sollte dies bei der Erstellung eines Tokens auf "nein" gesetzt werden, bis die ursprüngliche Verteilung als korrekt bestätigt wurde.
 
-Using this interface, there is no need to have a smart contract developer, and there is no need for a security audit.
+Wenn du diese Schnittstelle verwendest, brauchst du keinen Smart-Contract-Entwickler und auch keine Sicherheitsaudits.
 
 ### DeFi Asset Token (DAT)
 
-DeFi Asset Tokens (DATs) are backed in a decentralized manner. DATs on DeFiChain are tokens and crypto assets external of DeFiChain, such as:
+DeFi Asset Token (DATs) sind dezentral abgesichert. DATs auf DeFiChain sind Token und Krypto-Vermögenswerte außerhalb von DeFiChain, wie z.B.:
 
-- DBTC, backed by BTC
-- DETH, backed by ETH
-- DXRP, backed by XRP
-- DUSDT, backed by USDT
-- DBCH, backed by BCH, etc.
+- DBTC, hinterlegt mit BTC
+- DETH, hinterlegt mit ETH
+- DXRP, hinterlegt mit XRP
+- DUSDT, hinterlegt mit USDT
+- DBCH, hinterlegt mit BCH, usw.
 
-New DATs are introduced to the system through voting by masternodes. This ensures that only assets that gather the most interest amongst DeFiChain users get introduced.
+Neue DATs werden durch Abstimmungen der Masternodes in das System eingeführt. So wird sichergestellt, dass nur Vermögenswerte eingeführt werden, die bei den DeFiChain-Nutzern auf das größte Interesse stoßen.
 
-### Economic Pegging of DATs
+### Wirtschaftliche Anbindung von DATs
 
-The goal of DAT is to have it represent the native asset on the other blockchains, e.g. 1 DBTC should represent 1 BTC.
+Das Ziel von DAT ist es, dass es den nativen Vermögenswert auf den anderen Blockchains repräsentiert, z.B. sollte 1 DBTC 1 BTC repräsentieren.
 
-There are two approaches to this:
+Hier gibt es zwei Ansätze:
 
-1. Stablecoin approach
-    - For every single issued 1 DBTC, 1 BTC has to be locked up in an address or a smart contract.
-    - While this would help to build a guarantee to DBTC, it introduces some other issues – counterparty risks and affect the decentralized nature of DeFi.
+1. Stablecoin-Ansatz
+    - Für jeden ausgegebenen 1 DBTC muss 1 BTC in einer Adresse oder einem Smart Contract hinterlegt werden. 
+    - Dies würde zwar helfen, eine Garantie für DBTC aufzubauen, bringt aber auch einige andere Probleme mit sich - Gegenparteirisiken und Auswirkungen auf den dezentralen Charakter von DeFi. 
 
-2. Economic pegging
-    - By providing a strong guarantee that the DAT representing an asset has its price closely tracking the native asset, i.e. by holding DBTC, one can have a good confidence that the value of DBTC will track that of BTC.
+2. Ökonomische Ankopplung
+    - Durch eine starke Garantie, dass der Preis des DAT, der einen Vermögenswert repräsentiert, sich eng an den entsprechenden Vermögenswert anlehnt, d.h. wenn man DBTC hält, kann man darauf vertrauen, dass sich der Wert von DBTC an den von BTC anpasst.
 
 
-In order for us to achieve economic pegging, the following building blocks are built natively on DeFiChain:
+Damit wir eine ökonomische Ankopplung erreichen können, werden die folgenden Bausteine direkt auf DeFiChain aufgesetzt:
 
-1. Loan Contract
-2. Decentralized Exchange (DEX)
-3. Cross-chain Exchange (XCX)
-4. Pricing Oracles
+1. Darlehensvertrag
+2. Dezentrale Börse (DEX)
+3. Chainübergreifende Tauschgeschäfte (XCX)
+4. Preisorakel
 
-![DAT overview](/img/white-paper/dat-overview.png)
+![DAT Übersicht](/img/white-paper/dat-overview.png)
 
-### Loan Contract
+### Darlehensvertrag
 
-Loan Contract is designed to allow the owner of the contract to take a collateralized loan against collateral locked in the contract. Each loan contract is unique to every owner (address) on DeFiChain.
+Der Darlehensvertrag dient dazu, dass der Eigentümer des Vertrags ein besichertes Darlehen gegen die im Vertrag festgelegten Sicherheiten aufnehmen kann. Jeder Darlehensvertrag ist für jeden Eigentümer (Adresse) auf DeFiChain einzigartig. 
 
-Any user can open a loan contract on DeFiChain, free of charge. The user who opens a loan contract owns the specific contract. This ownership, however, is transferable.
+Jeder Nutzer kann auf DeFiChain kostenlos einen Darlehensvertrag eröffnen. Der Nutzer, der einen Darlehensvertrag eröffnet, ist Eigentümer des jeweiligen Vertrags. Dieses Eigentum ist jedoch übertragbar.
 
-Once a loan contract is opened, DFI can be sent to fund the loan collateral. Once a loan contract is funded, it allows the owner to take out a loan by minting DATs up to a certain collateralization ratio. The minimum collateralization ratio can be adjusted by DeFiChain DAO and starts at 150%. In other words, $1,500 worth of collateral (in DFI), allows the loan contract owner to take out a maximum of $1,000 in loans.
+Sobald ein Darlehensvertrag eröffnet ist, können DFI gesendet werden, um die Besicherung des Darlehens zu finanzieren. Sobald ein Darlehensvertrag finanziert ist, kann der Eigentümer ein Darlehen aufnehmen, indem er DATs bis zu einem bestimmten Besicherungsgrad mintet. Der Mindestbesicherungsgrad kann von der DeFiChain DAO angepasst werden und beginnt bei 150%. Mit anderen Worten: Für 1.500 US-Dollar an Sicherheiten (in DFI) kann der Inhaber des Darlehensvertrags maximal 1.000 US-Dollar an Darlehen aufnehmen.
 
-Minted DATs are subject to a floating borrowing rate. A loan contract has no expiry date. The owner is able to take out a loan for as long as they desire, as long as the collateralization ratio stays above 150% at all times.
+Für gemintete DAT gilt ein variabler Sollzinssatz. Ein Darlehensvertrag hat kein Verfallsdatum. Der/die Eigentümer/in kann ein Darlehen so lange aufnehmen, wie er/sie möchte, solange die Besicherungsquote stets über 150 % liegt.
 
 ```
-Collateralization ratio = Collateral / (Loan + accrued interest)
+Besicherungsgrad = Sicherheiten / (Darlehen + aufgelaufene Zinsen)
 ```
 
-If a loan contract falls below the 150% collateralization ratio at any point in time, its collateral is liquidated via Decentralized Exchange (DEX) to pay off accrued interest. There will be an additional 15% liquidation penalty to discourage loan contracts from having to be liquidated. It is the responsibility of the loan contract owners to monitor the collateralization ratio to prevent an unwanted liquidation.
+Fällt ein Darlehensvertrag zu irgendeinem Zeitpunkt unter die Besicherungsquote von 150%, werden seine Sicherheiten über die dezentrale Börse (DEX) liquidiert, um die aufgelaufenen Zinsen zu begleichen. Um die Zahl der Auflösungen von Darlehensverträgen zu verringern, wird eine zusätzliche Liquidationsstrafe von 15% erhoben. Es liegt in der Verantwortung der Inhaber/innen von Darlehen, den Besicherungsgrad zu überwachen, um eine ungewollte Liquidation zu verhindern.
 
-If a loan contract is close to minimum collateralization ratio, the owner must take one of the following steps to prevent liquidation and having to incur 15% liquidation penalty:
+Wenn ein Darlehensvertrag nahe an der Mindestbesicherungsquote liegt, muss der/die Eigentümer/in eine der folgenden Maßnahmen ergreifen, um zu verhindern, dass er/sie liquidiert wird und eine 15%ige Liquidationsstrafe zahlen muss:
 
-1. Deposit more DFI into the loan contract, thereby increasing its collateral and collateralization ratio.
-2. Pay back some of the loan (or accrued interest), thereby decreasing the loan contract’s loan amount and increasing its collateralization ratio.
+1. Mehr DFI in den Darlehensvertrag einzahlen, wodurch die Sicherheiten und der Besicherungsgrad steigen.
+2. Einen Teil des Darlehens (oder der aufgelaufenen Zinsen) zurückzahlen, wodurch sich der Darlehensbetrag des Darlehensvertrags verringert und die Besicherungsquote steigt.
 
-Closing a loan contract entitles its owner to get back all 100% of its collateral. To close a loan contract, the owner has to pay back the loan in full, plus the accrued interest in its entity in the DAT (e.g. DBTC). Upon liquidation of the loan, the minted DAT is burned, and the initial minted DAT and the interest will be converted into DFI via the DeFi DEX described in this paper.
+Der Abschluss eines Darlehensvertrags gibt dem Eigentümer das Recht, die gesamten 100% seiner Sicherheiten zurückzuerhalten. Um einen Darlehensvertrag zu schließen, muss der Eigentümer das Darlehen vollständig zurückzahlen und zusätzlich die aufgelaufenen Zinsen für seine Entität im DAT (z. B. DBTC). Nach der Abwicklung des Darlehens wird der gemintete DAT verbrannt, und der ursprüngliche gemintete DAT und die Zinsen werden über den in diesem Papier beschriebenen DeFi DEX in DFI umgewandelt.
 
-While this concept is not new to the DeFi system, what is novel is the possibility to collateralize any asset due to DeFiChain’s nature.
+Dieses Konzept ist zwar nicht neu für das DeFi-System, neu ist jedoch die Möglichkeit, jedes beliebige Asset zu besichern, als Charakteristikum von DeFiChain.
 
-1. Alice opens a loan contract and funds it with 150k DFI.
-2. With DFI at $0.10 spot rate, Alice’s loan contract now has $15,000 worth of collateral.
-3. At the minimum collateralization ratio of 150% she can take out a maximum of $10,000 worth of DBTC, which is pegged to BTC spot price.
-4. Since the DBTC loan via loan contract accrues interest, and DBTC and the DFI price fluctuate, Alice decides to only take out $5,000 worth of DBTC, i.e. 0.5 DBTC, giving her loan contract a collateralization ratio of: 15000/5000 = 300%, well above 150%.
-5. Over-collateralization allows for some room for price movements of DBTC. If the BTC price increases to $15,000, Alice’s loan of 0.5 DBTC would now be worth $7,500. Her loan contract now has a collateralization ratio of: 15000/7500 = 200%, still above 150%, so liquidation would not be triggered even in the case of this type of price shift.
-6. The interest rate for each DAT loan differs. Assuming the DBTC loan rate is 5% annually, taking out a loan for a year, in order to close her loan contract and to fully redeem her initial 150k DFI, Alice has to pay back 0.5 DBTC * 1.05 = 0.525 DBTC by the end of the year.
+1. Alice eröffnet einen Darlehensvertrag und finanziert ihn mit 150k DFI.
+2. Bei einem Spotkurs von DFI von 0,10 $ hat Alices Darlehensvertrag jetzt einen Wert von 15.000 $.
+3. Bei einer Mindestbesicherung von 150% kann sie maximal DBTC im Wert von 10.000 Dollar aufnehmen, die an den Spotpreis von BTC gekoppelt sind.
+4. Da das DBTC-Darlehen über den Darlehensvertrag verzinst wird und der DBTC- und der DFI-Preis schwanken, beschließt Alice, nur DBTC im Wert von $5.000 aufzunehmen, also 0,5 DBTC, was ihrem Darlehensvertrag eine Besicherungsquote von: 15000/5000 = 300% verleiht, also deutlich über 150%.
+5. Die Übersicherung lässt einen gewissen Spielraum für Preisschwankungen von DBTC. Wenn der BTC-Preis auf 15.000 USD steigt, wäre Alices Darlehen von 0,5 DBTC jetzt 7.500 USD wert. Ihr Darlehensvertrag hat jetzt einen Besicherungsgrad von: 15000/7500 = 200%, also immer noch über 150%, so dass eine Liquidation auch bei einer solchen Preisveränderung nicht ausgelöst würde.
+6. Der Zinssatz für jedes DAT-Darlehen ist unterschiedlich. Angenommen, der Zinssatz für ein DAT-Darlehen beträgt 5 % pro Jahr und Alice nimmt ein Darlehen für ein Jahr auf. Um ihren Darlehensvertrag zu erfüllen und ihre anfänglichen 150k DFI vollständig zurückzuzahlen, muss Alice bis zum Ende des Jahres 0,5 DBTC * 1,05 = 0,525 DBTC zurückzahlen.
 
-![loan contract](/img/white-paper/alice-pdc.png)
+![Darlehensvertrag](/img/white-paper/alice-pdc.png)
 
-### Decentralized Exchange (DEX)
+### Dezentrale Börse (DEX)
 
-The DeFi internal DEX provides decentralized trading for all DeFi tokens and DFI itself, which means that all tokens: DFI and DCT (DAT and DCT) can be listed on DeFiChain DEX. DEX will initially launch with DFI as the base trading pair, providing markets such as DBTC/DFI, DETH/DFI, DUSDT/DFI, etc. With increasing volume, other base trading pairs can be introduced, subject to a DAO approval, providing markets such as DETH/DBTC, DFI/DUSDT, etc.
+Die DeFi interne DEX bietet dezentralen Handel für alle DeFi-Token und DFI selbst, was bedeutet, dass alle Token: DFI und DCT (DAT und DCT) auf der DeFiChain-DEX gehandelt werden können. Die DEX wird zunächst mit DFI als Basis-Handelspaar starten und Märkte wie DBTC/DFI, DETH/DFI, DUSDT/DFI, etc. anbieten. Mit steigendem Volumen können weitere Basis-Handelspaare eingeführt werden, sofern die DAO dies genehmigt, z. B. DETH/DBTC, DFI/DUSDT usw.
 
-DEX on DeFiChain operates without the need to pass custody to any intermediaries. Users are able to trade on their own in a trustless manner. One of the key differentiator about DeFiChain as compared to many other decentralized financial solutions is that DeFiChain is not only a consensus protocol facilitating DeFi, it is also comes with a very simple to use client user interface (UI) that allows users to interact directly on the blockchain without any intermediaries.
+Die DEX auf DeFiChain funktioniert ohne die Notwendigkeit, die Verwahrung an einen Broker zu übergeben. Die Nutzer können auf vertrauensunabhängige Weise selbst handeln. Eines der wichtigsten Unterscheidungsmerkmale von DeFiChain im Vergleich zu vielen anderen dezentralen Finanzlösungen ist, dass DeFiChain nicht nur ein Konsensprotokoll ist, das DeFi ermöglicht, sondern auch eine sehr einfach zu bedienende Client-Benutzeroberfläche (UI) hat, die es den Nutzern ermöglicht, direkt auf der Blockchain zu interagieren, ohne dass es einen Vermittler gibt.
 
-### Cross-chain Exchange (XCX)
+### Chainübergreifende Tauschgeschäfte (XCX)
 
-A user holding DBTC might be interested in holding of actual BTC instead of a DeFi pegged BTC token (DBTC).
+Ein Nutzer, der DBTC hält, könnte daran interessiert sein, echte BTC anstelle eines an DeFi gekoppelten BTC-Tokens (DBTC) zu halten.
 
-The DeFi Cross-chain Exchange (XCX) allows anyone to do exactly that. XCX allows listing of DATs with its native tokens, e.g. DBTC for BTC, DETH for ETH, DXRP for XRP. Actual transaction is carried out through the trustless swap of both tokens commonly known as atomic swap. Atomic swap guarantees that either both parties receive their exchanged coins, or neither transactions go through – providing a strong cryptographic guarantee that no one party is able to cheat the other.
+Mit dem chainübergreifenden Tauschgeschäft - DeFi Cross-Chain Exchange (XCX) kann jeder genau das tun. XCX ermöglicht die Notierung von DATs mit den dazugehörigen Token, z.B. DBTC für BTC, DETH für ETH, DXRP für XRP. Die eigentliche Transaktion wird durch den vertrauensunabhängigen Tausch der beiden Token durchgeführt, der auch als Atomic Swap bekannt ist. Atomic Swap garantiert, dass entweder beide Parteien ihre getauschten Token erhalten oder keine der Transaktionen durchgeführt wird - eine starke kryptografische Garantie, dass keine Partei die andere betrügen kann.
 
-We use the following terms to describe the parties in the XCX:
+Wir verwenden die folgenden Begriffe, um die Akteure beim XCX zu beschreiben:
 
-- Borrower: a person owning a DAT and wanting to get a native coin, e.g, a person who has DBTC and wanting to obtain BTC through the XCX.
-- Lender: a person owning BTC and receiving a DAT through the XCX, either temporarily for the duration of the XCX, or permanently, if the XCX expires.
+- Darlehensnehmer: eine Person, die einen DAT besitzt und einen nativen Token erhalten möchte, z.B. eine Person, die DBTC besitzt und BTC über XCX erhalten möchte.
+- Darlehensgeber: eine Person, die BTC besitzt und über XCX einen DAT erhält, entweder vorübergehend für die Dauer des XCX oder dauerhaft, wenn das XCX ausläuft.
 
-XCX orders contain several parameters that can be freely decided by the market marker (first lister of an order). For selling of DBTC for BTC (i.e. someone who’s interested in receiving actual BTC), the parameters are:
+XCX-Aufträge enthalten mehrere Parameter, die vom Market Marker (Erstanbieter eines Auftrags) frei gewählt werden können. Für den Verkauf von DBTC gegen BTC (d.h. jemand, der daran interessiert ist, tatsächliche BTC zu erhalten), sind die Parameter:
 
-- Amount: Amount of coin/DAT a seller is looking for and how much DAT is locked up.
-- Premium: Amount of additional fee a coin seller stands to make from this trade (Premium is listed per unit amount, thus allowing for partial fulfillment of trade orders). Together with expiry, it can also be considered as lending interest to the buyer. The Premium is paid instantly once an XCX is matched, before expiry of the lending contract. Premium can be positive (+) or negative (-) depending on supply and demand.
-- Guarantee: An optional additional amount in DBTC and/or DFI that is locked in the XCX that will provide an extra incentive for a lender as it resolves in either of the following  two outcomes:
-  a. Released back to the borrower should the BTC amount be paid up before expiry.
-  b. Release to the lender should the contract expire without the borrower making a payment thereby constituting an extra incentive.
-- Expiry: Time when the contract expires, it can be set as a date in the past for immediate settlement, i.e. no lending, but straight-out swap.
-- Native token address: Address to send BTC to for executing the contract.
+- Betrag: Die Summe an Token/DAT, die ein Verkäufer sucht, und wie viel DAT er unter Verschluss hat.
+- Prämie: Höhe der zusätzlichen Gebühr, die ein Token-Verkäufer bei diesem Handel einnimmt (die Prämie wird pro Einheit angegeben, so dass eine Teilerfüllung von Handelsaufträgen möglich ist). Zusammen mit dem Verfall kann sie auch als Leihzins für den Käufer betrachtet werden. Die Prämie wird sofort gezahlt, sobald ein XCX erfüllt ist, bevor der Leihvertrag abläuft. Die Prämie kann je nach Angebot und Nachfrage positiv (+) oder negativ (-) sein.
+- Garantie: Ein optionaler zusätzlicher Betrag in DBTC und/oder DFI, der im XCX festgeschrieben ist und einen zusätzlichen Anreiz für den Darlehensgeber darstellt, wenn er eine der beiden folgenden Möglichkeiten wählt:
+  a. Wird an den/die Darlehensnehmer/in zurückerstattet, wenn der BTC-Betrag vor Ablauf der Frist zurückgezahlt wird.
+  b. Freigabe an den Darlehensgeber, wenn der Vertrag ausläuft, ohne dass der Darlehensnehmer eine Zahlung leistet, was einen zusätzlichen Anreiz darstellt.
+- Verfall: Der Zeitpunkt, an dem der Kontrakt abläuft. Er kann als Datum in der Vergangenheit für eine sofortige Abrechnung festgelegt werden, d.h. kein Darlehen, sondern ein direkter Tausch.
+- Native Token-Adresse: Die Adresse, an die BTC für die Ausführung des Vertrags gesendet werden.
 
-#### First Example:
+#### Erstes Beispiel:
 
-Alice has 1 DBTC and wants 1 BTC so she can trade on a centralized exchange.
+Alice hat 1 DBTC und möchte 1 BTC, damit sie an einer zentralen Börse handeln kann
 
-Bob has 1 BTC that he does not need for 1 month, hoping to generate some lending interest during that period of time.
+Bob hat 1 BTC, den er einen Monat lang nicht braucht, und hofft, in dieser Zeit einige Zinseinnahmen zu erzielen.
 
-1. Alice lists the following XCX order:
-- Amount: 1 DBTC/BTC
-- Premium: 8,000 DFI
-- Guarantee: 0.1 DBTC
-- Expiry: December 31, 2019 – approx. 1 month.
-- Address: Alice lists her BTC deposit address
-2. Bob accepts the offer by sending a transaction on DeFiChain.
-3. Bob receives a confirmation on DeFiChain that his order is accepted. In case there are multiple order acceptance transactions.
-4. Bob sends 1 BTC to Alice’s BTC deposit address as listed in the XCX order and sends a transaction on DeFiChain with the BTC txid as receipt. Bob also specifies a receiving BTC address on the same transaction for Alice to repay the 1 BTC later on.
-5. Multiple DeFiChain stakers with BTC bridges confirm that Bob has indeed sent the amount as agreed and the that the txid is valid.
-6. XCX’s premium of 8000 DFI is instantly released to Bob. Bob can do what he wants with the DFI straight away with no strings attached. It is Bob’s to keep for this trade.
+1. Alice listet die folgenden XCX-Order:
+- Betrag: 1 DBTC/BTC
+- Prämie: 8.000 DFI
+- Garantie: 0,1 DBTC
+- Verfall: 31. Dezember 2019 - ca. 1 Monat.
+- Adresse: Alice gibt ihre BTC-Einzahlungsadresse an
+2. Bob nimmt das Angebot an, indem er eine Transaktion an DeFiChain sendet.
+3. Bob erhält eine Bestätigung auf DeFiChain, dass seine Order angenommen wurde. Falls es mehrere Transaktionen zur Orderannahme gibt.
+4. Bob schickt 1 BTC an die im XCX-Auftrag angegebene BTC-Einzahlungsadresse von Alice und sendet eine Transaktion auf DeFiChain mit dem BTC txid als Quittung. In der gleichen Transaktion gibt Bob auch eine BTC-Empfangsadresse an, an die Alice den 1 BTC später zurückzahlen kann. 
+5. Mehrere DeFiChain-Staker mit BTC-Bridges bestätigen, dass Bob den Betrag tatsächlich wie vereinbart gesendet hat und dass die Txid gültig ist.
+6. Die XCX-Prämie in Höhe von 8000 DFI wird sofort an Bob freigegeben. Bob kann mit den DFI sofort machen, was er will, ohne dass es an Bedingungen geknüpft ist. Bob kann sie für diesen Handel behalten.
 
-Now, Alice has 1 BTC and Bob has 8000 DFI. Alice also has 1 DBTC locked up on XCX order and Bob is the beneficiary of that BTC. Note that the beneficiary of an XCX is transferable, i.e. Bob is able to sell the XCX with Alice to a third party (this allows for decentralized debt selling and tokenization of receivables).
+Jetzt hat Alice 1 BTC und Bob hat 8000 DFI. Alice hat außerdem 1 DBTC in einer XCX-Order gebunden und Bob ist der Begünstigte dieser BTC. Beachte, dass der Begünstigte eines XCX übertragbar ist, d.h. Bob kann das XCX mit Alice an einen Dritten verkaufen (dies ermöglicht einen dezentralen Verkauf von Schuldtiteln und eine Tokenisierung von Forderungen).
 
-Should Alice wish to redeem her 1 DBTC from the XCX before the time is up, Alice will send Bob the 1 BTC she borrowed earlier to Bob’s address specified in the XCX and send the acknowledgment on DeFiChain. Upon confirmation by stakers with a BTC bridge, the XCX contract now closes and Alice gets her 1 DBTC back, having paid 8,000 DFIs as interest.
+Wenn Alice ihren 1 DBTC aus dem XCX vor Ablauf der Zeit einlösen möchte, schickt sie Bob den 1 BTC, die sie sich zuvor geliehen hat, an Bobs im XCX angegebene Adresse und sendet die Bestätigung auf DeFiChain. Nach der Bestätigung durch Staker mit einer BTC-Bridge wird der XCX-Vertrag nun geschlossen und Alice erhält ihren 1 DBTC zurück, nachdem sie 8.000 DFI als Zinsen gezahlt hat.
 
-Bob gets his 1 BTC back (keeping his 8000 DFI as lending interest).
+Bob bekommt seinen 1 BTC zurück (und behält seine 8000 DFI als Darlehenszinsen).
 
-Should Alice wish not to redeem the XCX before the expiry, Bob gets to keep Alice’s 1 DBTC.
+Sollte Alice das XCX nicht vor Ablauf der Frist einlösen wollen, darf Bob den 1 DBTC von Alice behalten.
 
-Alice gets to keep the 1 BTC (minus 8000 DFI interest) and Bob now gets 1 DBTC (plus 8000 DFI interest). Additionally Bob received the Guarantee of 0.1 DBTC providing him with an extra 10%.
+Alice darf den 1 BTC (abzüglich 8000 DFI-Zinsen) behalten und Bob erhält nun 1 DBTC (plus 8000 DFI-Zinsen). Zusätzlich hat Bob die Garantie von 0,1 DBTC erhalten, was ihm zusätzliche 10 % einbringt.
 
 ![XCX](/img/white-paper/alice-bob-xcx.png)
 
-#### Second Example:
+#### Zweites Beispiel:
 
-In a second scenario Charlie has 1 DBTC and wants 1 BTC. He has no intention of paying it back and getting his DBTC back. He also does not want to include an additional guarantee, so he adds a higher Premium and an immediate Expiry. Charlie would list the following XCX order:
+In einem zweiten Szenario hat Charlie 1 DBTC und will 1 BTC. Er hat nicht die Absicht, zu tilgen und seinen DBTC zurückzubekommen. Er möchte auch keine zusätzliche Garantie einschließen, also fügt er eine höhere Prämie und einen sofortigen Verfall hinzu. Charlie würde den folgenden XCX-Auftrag aufgeben:
 
-- Amount: 1 DBTC/BTC
-- Premium: 12000 DFI
-- Guarantee: None
-- Expiry: Immediate
+- Betrag: 1 DBTC/BTC
+- Prämie: 12000 DFI
+- Garantie: Keine
+- Verfall: Sofort
 
-Dave, notices the order has no guarantee and an immediate expiry and knows that this XCX order expires instantly. He happily provides the counter-trade to Charlie, giving him 1 BTC and receiving immediately 1 DBTC + 12000 DFI.
+Dave bemerkt, dass die Order keine Garantie und einen sofortigen Verfall hat und weiß, dass diese XCX-Order sofort verfällt. Er bietet Charlie gerne den Gegenhandel an, indem er ihm 1 BTC gibt und sofort 1 DBTC + 12000 DFI erhält.
 
-A Guarantee is therefore not a must, but a potential incentive for the lender to know whether he/she has to exchange the received funds afterwards or whether he/she will get the original native coins back.
+Eine Garantie ist also kein Muss, sondern ein möglicher Anreiz für den Darlehensgeber, um zu wissen, ob er/sie die erhaltenen Gelder im Nachhinein umtauschen muss oder ob er/sie die ursprünglichen nativen Coins zurückbekommt.
 
-### Pricing Oracles
+### Preisorakel
 
-A Pricing Contract is a smart contract on DeFiChain allowing multiple trusted and appointed parties to submit periodic price feeds of DATs and DFI.
+in Preiskontrakt ist ein Smart-Contract auf der DeFiChain, der es mehreren vertrauenswürdigen und benannten Parteien ermöglicht, regelmäßige Preisfeeds von DATs und DFI zu übermitteln. 
 
-Multiple Pricing Contract oracles are chosen by the DeFi DAO (explained in the next chapter).
+Die DeFi-DAO wählt mehrere Preiskontrakt-Orakel aus (wird im nächsten Kapitel erklärt).
 
-### Use Case Examples
+### Anwendungsbeispiele
 
-Following are examples of how the technical implementations of DeFiChain can be used. This is just a list of examples. Many other applications can be implemented as well.
+Im Folgenden findest du Beispiele dafür, wie die technischen Implementierungen von DeFiChain genutzt werden können. Dies ist nur eine Liste von Beispielen. Viele andere Anwendungen können ebenfalls implementiert werden. 
 
-#### Leveraging a Long Position
+#### Hebeln einer Long-Position
 
-1. Alice has 100k DFI. She likes the prospects of DFI and wants to leverage her position.
-2. Alice opens a loan contract on DeFiChain and takes out a loan in DUSDT.
-3. Alice sells DUSDT for more DFI.
+1. Alice hat 100k DFI. Sie mag die Aussichten von DFI und möchte ihre Position als Hebel nutzen.
+2. Alice eröffnet einen Darlehensvertrag auf DeFiChain und nimmt ein Darlehen in DUSDT auf.
+3. Alice verkauft DUSDT für mehr DFI.
 
-Thus Alice can obtain a compounded long position on DFI without putting in extra money.
+So kann Alice eine zusammengesetzte Long-Position auf DFI erwerben, ohne zusätzliches Kapital zu investieren.
 
-#### Shorting a Coin
+#### Leerverkauf eines Tokens
 
-1. Bob wishes to short coin XXX. Bob has DFI.
-2. Bob opens a loan contract on DeFiChain, takes out a loan in DXXX.
-3. Bob can now either sell DXXX for DFI or DUSDT on DeFi DEX, or convert DXXX via XCX to sell XXX on a non-DeFi-internal exchange.
-4. Once Bob wishes to close his short position, Bob buys back XXX (or DXXX) from the market, hopefully at a lower rate, closes his loan contract and thus completes his short of XXX.
+1. Bob möchte den Coin XXX shorten. Bob hat DFI.
+2. Bob eröffnet einen Darlehensvertrag auf DeFiChain und nimmt ein Darlehen in DXXX auf.
+3. Bob kann nun entweder DXXX für DFI oder DUSDT auf der DeFi-DEX verkaufen oder DXXX über XCX umwandeln, um XXX auf einer nicht-DeFi-internen Börse zu verkaufen.
+4. Sobald Bob seine Short-Position schließen möchte, kauft er XXX (oder DXXX) vom Markt zurück, hoffentlich zu einem niedrigeren Kurs, schließt seinen Darlehensvertrag und beendet damit seinen Short von XXX.
 
-#### Getting a Loan (Borrowing)
+#### Ein Darlehen erhalten (Kreditaufnahme)
 
-1. Charlie has DFI, but he needs short-term cashflow of another coin XXX. Charlies does not want to sell DFI for it nor does he want to spend fiat money to buy this coin.
-2. Charlie takes a loan via loan contract on DeFiChain for DXXX and converts it to XXX.
-3. Once he wishes to settle his loan, Charlie simply purchases XXX/DXXX and closes his loan contract.
+1. Charlie hat DFI, aber er braucht kurzfristig den Cashflow eines anderen Coins XXX. Charlies will weder DFI dafür verkaufen noch will er Fiatgeld ausgeben, um diesen Coin zu kaufen.
+2. Charlie nimmt ein Darlehen über einen Darlehensvertrag auf DeFiChain für DXXX auf und wandelt es in XXX um.
+3. Sobald er sein Darlehen begleichen möchte, kauft Charlie einfach XXX/DXXX und löst seinen Darlehensvertrag auf.
 
-#### Lending a Coin for Cashflow
+#### Einen Coin verleihen und dadurch Cashflow generieren
 
-1. Dave has BTC that he does not need in the short-term. Dave wishes to generate some interest (cashflow) by lending BTC.
-2. Dave lists BTC on XCX specifying his BTC amount, desired premium (interest rate) and expiry (period that he does not need his BTC).
-3. Once a counterparty takes up Dave’s listing, Dave receives an instant premium in DFI.
-4. Upon expiry, Dave would either receive his BTC back, or receive DFI with an additional Guarantee thereby netting more than his original BTC.
+1. Dave hat BTC, die er kurzfristig nicht braucht. Dave möchte durch das Verleihen von BTC einen gewissen Zins (Cashflow) erzielen.
+2. Dave listet BTC auf XCX und gibt dabei seinen BTC-Betrag, die gewünschte Prämie (Zinssatz) und den Verfallstermin (Zeitraum, in dem er seine BTC nicht benötigt) an.
+3. Sobald eine Gegenpartei Daves Angebot annimmt, erhält Dave sofort eine Prämie in DFI.
+4. Nach Ablauf der Frist bekommt Dave entweder seine BTC zurück oder er erhält DFI über die zusätzliche Garantie, wodurch er mehr als seine ursprünglichen BTC erhalten würde.
 
 ---
 
-## $DFI coin
+## Der $DFI-Coin
 
-The $DFI coin will be the integral unit of account in DeFiChain ecosystem.
+Der $DFI-Coin wird die integrale Rechnungseinheit im DeFiChain-Ökosystem sein.
 
-The DeFiChain Foundation will be issuing the DeFi utility token, DFI, capped at 1,200,000,000 (1.2 billion) for throughout its lifetime. There will only ever be 1.2 billion DFIs created.
+Die DeFiChain Foundation wird den DeFi Utility Token DFI ausgeben, der auf eine Gesamtmenge von 1.200.000.000 (1,2 Milliarden) begrenzt ist. Es werden niemals mehr als 1,2 Milliarden DFIs ausgegeben.
 
-DFI is divisible up to 8 decimal places.
+DFI ist bis zu 8 Dezimalstellen teilbar.
 
-### $DFI coin Utility
+### Der Nutzwert des $DFI-Coins
 
-- DFI is used for fee payment for all transactions and smart contracts on DeFiChain.
-    - Fee payment for decentralized exchange transactions
-    - Fee payment for token transfers
-- Fees payment for DeFi activities:
-    - DEX fees
-    - XCX fees
-    - Lending loan interests payment
-    - etc.
-- Collateral for borrowing of other cryptoassets on DeFiChain.
-- 20,000 DFI is required to run a staking node for DeFiChain.
-- 1,000 DFI is required to create a DCT. This is refundable upon destruction of the DCT.
-- 10 DFI is required to submit a Community Fund Proposal. This is non-refundable.
-- 50 DFI for submitting a Vote of Confidence. Also non-refundable. Both are to be paid to the burn address 8defichainBurnAddressXXXXXXXdRQkSm
+- DFI wird für die Zahlung von Gebühren für alle Transaktionen und Smart Contracts auf DeFiChain verwendet.
+  - Gebührenzahlung für dezentrale Börsengeschäfte
+  - Gebühren für Token-Transfers
+- Bezahlung der Gebühren für die DeFi-Aktionen:
+  - DEX-Gebühren
+  - XCX-Gebühren
+  - Zahlung von Darlehenszinsen
+  - usw.
+- Sicherheiten für die Beleihung anderer Kryptoassets auf DeFiChain.
+- 20.000 DFI sind erforderlich, um einen Staking Node auf der DeFiChain zu betreiben.
+- Für die Erstellung eines DCT sind 1.000 DFI erforderlich. Dieser Betrag wird bei der Zerstörung des DCT zurückerstattet.
+- 10 DFI ist erforderlich, um einen Vorschlag für den Community Fund einzureichen. Dieser Betrag ist nicht erstattungsfähig.
+- 50 DFI für das Einreichen eines Vertrauensvotums. Ebenfalls nicht erstattungsfähig. Beides ist an die Burn-Adresse 8defichainBurnAddressXXXXXXXdRQkSm zu zahlen.
 
-### Fees from DeFi Activities
+### Gebühren aus DeFi-Geschäften
 
-Fees from DeFi activities on DeFiChain are burned and redistributed through new token minting over a period of time as laid out below. This ensures that DeFi stakers enjoy the benefits of earning rewards from facilitating trustless DeFi trades on DeFiChain in a fair manner.
+Die Gebühren aus den DeFi-Geschäften auf DeFiChain werden verbrannt und durch das Minting neuer Token über einen bestimmten Zeitraum umverteilt, wie unten beschrieben. So wird sichergestellt, dass die DeFi-Staker in den Genuss der Vorteile kommen, die sich aus der Ermöglichung des vertrauensunabhängigen DeFi-Handels auf der DeFiChain ergeben, und zwar auf faire Art und Weise.
 
-**Rewards from minting a block on DeFiChain are calculated as**:
+**Die Rewards für das Minen eines Blocks auf DeFiChain werden wie folgt berechnet**:
 
-1. Underlying block reward schedule (see distribution schedule) +
-2. Burned token redistribution schedule
+1. Zugrunde liegender Block Reward Schedule (siehe Distributionsplan) +
+2. Zeitplan für die Umverteilung der geburnten Token
 
-The burned token redistribution schedule is determined automatically every 259,200 blocks (approx. every 90 days) and works as follows:
+Der Zeitplan für die Umverteilung der verbrannten Token wird automatisch alle 259.200 Blöcke (ca. alle 90 Tage) festgelegt und funktioniert wie folgt:
 
-![Burned token distribution](/img/white-paper/burn.png)
+![Umverteilung verbrannter Token](/img/white-paper/burn.png)
 
-Burned token redistribution for the next 259,200 blocks =
+Umverteilung der verbrannten Token für die nächsten 259.200 Blöcke = 
 
-1. (Total token burned from the last 259,200 blocks [Quarter -1]) / 4 +
-2. (Total token burned from block -518,400th to -259,200th block [Quarter -2]) / 4 +
-3. (Total token burned from block -777,600th to -518,400th block [Quarter -3]) / 4 +
-4. (Total token burned from block -1,036,800th to -777,600th block [Quarter -4]) / 4
+1. (Insgesamt verbrannte Token aus den letzten 259.200 Blöcken [Quartal -1]) / 4 + 
+2. (Insgesamt verbrannte Token von Block -518.400. bis -259.200. Block [Quartal -2]) / 4 + 
+3. (Insgesamt verbrannte Token von Block -777.600. bis -518.400. Block [Quartal -3]) / 4 + 
+4. (Insgesamt verbrannte Token von Block -1.036.800. bis -777.600. Block [Quartal -4]) / 4
 
 ### Masternodes
 
-DeFi is a Proof of Stake blockchain. Initially, 1,000,000 DFI allows the owner to own a staking node. Today, the amount has been reduced to 20,000 DFI for ownership of a staking node. The returns for staking will decrease over time, as the volume and number of transactions compensate for the reduction in per-transaction staking rewards.
+DeFi ist eine Proof of Stake-Blockchain. Ursprünglich konnte man mit 1.000.000 DFI einen Masternode betreiben. Heute ist der Betrag auf 20.000 DFI für das Betreiben eines Masternodes reduziert worden. Die Rendite für das Staking sinkt mit der Zeit, da das Volumen und die Anzahl der Transaktionen die geringeren Rewards für das Staking pro Transaktion ausgleichen.
 
-Nodes are entitled to:
+Diese Nodes haben Anspruch auf:
 
-- Periodic staking rewards as described later in this chapter.
-- Submission of votes to key decisions that govern DeFiChain in the governance system.
-- Submission of votes on how the DFI community budget is being allocated and distributed.
+- Regelmäßige Staking Rewards , wie später in diesem Kapitel beschrieben.
+- Abgabe von Stimmen zu wichtigen Entscheidungen, die DeFiChain im Governance-System verwalten.
+- Einreichung von Abstimmungen über die Zuweisung und Verteilung des DFI-Gemeinschaftsbudgets (Community Fund).
 
-### Governance
+### Governance / Verwaltung
 
-The DeFiChain Foundation is responsible for issuance of tokens and is governed by an independent board. This board will be governed by the DeFi masternodes voting on its members and also by giving directives on key decisions.
+Die DeFiChain Foundation ist für die Ausgabe der Token verantwortlich und wird von einem unabhängigen Vorstand geleitet. Dieser Vorstand wird von den DeFi Masternodes beaufsichtigt, die über seine Mitglieder abstimmen und auch Richtlinien für wichtige Entscheidungen geben.
 
-The DeFiChain Foundation awards tokens to users and groups to speed up adoption (see the section on initial token distribution and marketing). The Foundation is tasked with boosting the ecosystem, bringing in ecosystem partners, directing the development of the tools for ecosystem partners, and other activities to increase the number of ecosystem partners.
+Die DeFiChain Foundation vergibt Token an Nutzer und Gruppen, um die Akzeptanz zu beschleunigen (siehe den Abschnitt über die anfängliche Verteilung und Vermarktung von Token). Die Foundation hat die Aufgabe, das Ökosystem anzukurbeln, Ökosystempartner einzubinden, die Entwicklung von Tools für Ökosystempartner zu leiten und andere Aktivitäten durchzuführen, um die Zahl der Ökosystempartner zu steigen.
 
 ![Governance](/img/white-paper/governance.png)
 
-For clarification and transparency, Cake Pte Ltd is a private company located in Singapore. Cake Pte Ltd is an initial contributor as part of the ecosystem’s partners to creating services on DeFiChain.
+Zur Klarstellung und Transparenz: Cake Pte Ltd ist ein privates Unternehmen mit Sitz in Singapur. Cake Pte Ltd ist einer der ersten Partner des Ökosystems, der Dienste auf DeFiChain entwickelt.
 
 ### Community Development Fund
 
-The DeFiChain Foundation will create a community development fund with up to 10% of the block rewards under management. This percentage can be updated by submitting a DAO proposal that will be voted on by all masternodes. Community development funds were popularized by DASH[^10] and are used in some selective DAOs today. The community will determine the use of these funds for development, marketing, or research that forwards the DeFi community. DFI masternodes vote for projects they like and the highest voted proposals every month will be funded.
+Die DeFiChain Foundation wird einen gemeinschaftlichen Entwicklungsfonds einrichten, der bis zu 10 % der Block-Belohnungen verwaltet. Dieser Prozentsatz kann aktualisiert werden, indem ein DAO-Vorschlag eingereicht wird, über den alle Masternodes abstimmen. Community Development Funds wurden von DASH[^10] populär gemacht und werden heute in einigen ausgewählten DAOs eingesetzt. Die Community entscheidet über die Verwendung dieser Mittel für Entwicklung, Marketing oder Forschung, die der DeFi-Community zugute kommt. DFI Masternodes stimmen über Projekte ab, die ihnen gefallen, und die Vorschläge mit den meisten Stimmen werden jeden Monat finanziert.
 
-It costs 10 DFI to submit a budget proposal and a proposal can be submitted by anyone. This fee is burned and non-refundable regardless of whether the budget is approved. Budgets are proposals which receive a net total of yes votes equal to or greater than 10% of the total possible votes (for example over 448 out of 4480). Budgets can be nullified at any time if vote totals (cast or re-cast) fall below the approval threshold. Budgets are processed (paid) in order of yes minus no votes. More popular budgets get payment priority. Voting happens on a monthly basis but can be changed by a masternode vote.
+Die Einreichung eines Budgetvorschlags kostet 10 DFI und kann von jedem erfolgen. Diese Gebühr wird verbrannt und ist nicht erstattungsfähig, unabhängig davon, ob der Haushalt genehmigt wird. Budgets sind Vorschläge, die eine Nettosumme von Ja-Stimmen erhalten, die mindestens 10% der möglichen Gesamtstimmen ausmacht (z.B. mehr als 448 von 4480). Budgets können jederzeit annulliert werden, wenn die Gesamtzahl der Stimmen (abgegebene oder neu abgegebene) unter die Genehmigungsschwelle fällt. Die Budgets werden in der Reihenfolge der Ja- minus der Nein-Stimmen bearbeitet (bezahlt). Beliebtere Budgets werden vorrangig ausgezahlt. Die Abstimmung findet monatlich statt, kann aber durch eine Abstimmung auf dem Masternode geändert werden.
 
-For governance decisions, only the Foundation may submit proposals. Proposals are voted in similar way as DAO budget proposals except that decisions will be honored via simple majority vote.
+Für Governance-Entscheidungen kann nur die Foundation Vorschläge einreichen. Die Abstimmung über Vorschläge erfolgt ähnlich wie bei den Haushaltsvorschlägen der DAO, mit dem Unterschied, dass die Entscheidungen mit einfacher Mehrheit getroffen werden.
 
 [^10]: https://docs.dash.org/en/stable/governance/understanding.html
 
-### Initial Token Distribution
+### Anfängliche Verteilung der Token
 
-Of the roughly 1.2 billion $DFI coins 49% will be issued to the DeFiChain Foundation at the start. The rest will be issued to Masternode holders over time.
-Of the 49% initially issued $DFI coins, 49% will be kept by the DeFiChain Foundation. The rest may be distributed to accredited investors, large funds and institutions, collectively known as external partners, to fund the initial development of DeFiChain. In order to decentralize the holdings of DFIs as much as possible the DeFiChain Foundation may not keep more than 49% of all initially issued tokens. The use of potential proceedings of the tokens will be decided by the DeFiChain Foundation board but will exclusively be directed towards the adoption and development of DeFiChain.
+Von den rund 1,2 Milliarden $DFI-Coins werden zu Beginn 49% an die DeFiChain Foundation ausgegeben. Der Rest wird im Laufe der Zeit an Masternode-Inhaber ausgegeben.
+Von den 49% der anfänglich ausgegebenen $DFI-Coins werden 49% bei der DeFiChain Foundation verbleiben. Der Rest kann an akkreditierte Investoren, große Fonds und Institutionen, zusammenfassend als externe Partner bezeichnet, verteilt werden, um die anfängliche Entwicklung von DeFiChain zu finanzieren. Um die Bestände der DFI so weit wie möglich zu dezentralisieren, darf die DeFiChain Foundation nicht mehr als 49% aller ursprünglich ausgegebenen Token behalten. Über die Verwendung möglicher Einnahmen aus den Token entscheidet der Vorstand der DeFiChain Foundation, aber sie werden ausschließlich für die Einführung und Entwicklung von DeFiChain verwendet.
 
-For any avoidance of doubt, there will NOT be a public ICO.
+Um jeden Zweifel auszuschließen: Es wird KEIN öffentliches ICO (Unregulierte Emission von Utility Token zur Finanzierung) geben.
 
-![Initial Token Distribution](/img/white-paper/initial-token-distribution.png)
+![Anfängliche Verteilung der Token](/img/white-paper/initial-token-distribution.png)
 
-Further tokens will only ever be received through staking, which is described in the next chapter.
+Weitere Token erhält man nur durch Staking, das im nächsten Kapitel beschrieben wird.
 
-### Token Issuance Schedule via Staking
+### Zeitplan für die Ausgabe von Token über Staking
 
-DeFiChain is initially launched with a 200 DFI block reward, of which 10% goes to the community fund. The Foundation pledges to guarantee this 200 DFI block reward for at least 1,050,000 blocks since the the first genesis block, so approximately 1 year.
+DeFiChain wird zunächst mit einem Block Reward von 200 DFI gestartet, von denen 10% an den Community Fund gehen. Die Foundation verpflichtet sich, diese 200 DFI Blockbelohnung für mindestens 1.050.000 Blöcke ab dem ersten Genesis-Block, also etwa 1 Jahr, zu garantieren.
 
-Subsequently, block rewards will be adjusted through governance vote. The Foundation also further pledges that there will never be more than 1,200,000,000 (1.2 billion) DFI in circulation, unless until the DAO governance votes to change this limit. Therefore DFI is a deflationary utility token.
+Später werden die Blockbelohnungen durch eine Governance-Abstimmung angepasst. Die Foundation verpflichtet sich außerdem, dass nie mehr als 1.200.000.000 (1,2 Milliarden) DFI im Umlauf sein werden, es sei denn, die DAO-Governance stimmt über eine Änderung dieser Grenze ab. DFI ist also ein deflationärer Utility-Token.
 
-The proposed staking schedule for the first 10 years is according to the following table:
+Der vorgeschlagene Staking-Zeitrahmen für die ersten 10 Jahre ist in der folgenden Tabelle dargestellt:
 
 <div class="table-responsive">
   <table>
     <thead>
       <tr>
         <th scope="col">
-          Year
+          Jahr
         </th>
         <th scope="col">
-          Start of year token in circulation
+          Token im Umlauf zu Jahresbeginn
         </th>
         <th scope="col">
-          % of supply staked
+          % des Bestands gestaked
         </th>
         <th scope="col">
-          Block reward
+          Blockbelohnung
         </th>
         <th scope="col">
-          Targeted new token %
+          Angestrebte neue Token %
         </th>
         <th scope="col">
-          Targeted new token
+          Angestrebte neue Token
         </th>
         <th scope="col">
-          Staking return %
+          Staking Rendite %
         </th>
         <th scope="col">
-          Actual new token
+          Tatsächliche neue Token
         </th>
         <th scope="col">
-          End of year token in circulation
+          Token im Umlauf zum Jahresende
         </th>
         <th scope="col">
-          % of cap
+          % der Kapitalisierung
         </th>
         <th scope="col">
-          New token for year
+          Neue Token im Jahr
         </th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>1</td>
-        <td>490,000,000</td>
+        <td>490 000 000</td>
         <td>95%</td>
         <td>200</td>
-        <td>20.00%</td>
-        <td>98,000,000</td>
-        <td>42.91%</td>
-        <td>210,240,000</td>
-        <td>700,240,000</td>
-        <td>58.35%</td>
-        <td>210,240,000</td>
+        <td>20,00%</td>
+        <td>98 000 000</td>
+        <td>42,91%</td>
+        <td>210 240 000</td>
+        <td>700 240 000</td>
+        <td>58,35%</td>
+        <td>210 240 000</td>
       </tr>
       <tr>
         <td>2</td>
-        <td>700,240,000</td>
+        <td>700 240 000</td>
         <td>85%</td>
         <td>150</td>
-        <td>13.33%</td>
-        <td>93,365,333</td>
-        <td>22.52%</td>
-        <td>157,680,000</td>
-        <td>857,920,000</td>
-        <td>71.49%</td>
-        <td>157,680,000</td>
+        <td>13,33%</td>
+        <td>93 365 333</td>
+        <td>22,52%</td>
+        <td>157 680 000</td>
+        <td>857 920 000</td>
+        <td>71,49%</td>
+        <td>157 680 000</td>
       </tr>
       <tr>
         <td>3</td>
-        <td>857,920,000</td>
+        <td>857 920 000</td>
         <td>75%</td>
         <td>100</td>
-        <td>8.89%</td>
-        <td>76,259,556</td>
-        <td>12.25%</td>
-        <td>105,120,000</td>
-        <td>963,040,000</td>
-        <td>80.25%</td>
-        <td>105,120,000</td>
+        <td>8,89%</td>
+        <td>76 259 556</td>
+        <td>12,25%</td>
+        <td>105 120 000</td>
+        <td>963 040 000</td>
+        <td>80,25%</td>
+        <td>105 120 000</td>
       </tr>
       <tr>
         <td>4</td>
-        <td>963,040,000</td>
+        <td>963 040 000</td>
         <td>70%</td>
         <td>70</td>
-        <td>5.93%</td>
-        <td>57,069,037</td>
-        <td>7.64%</td>
-        <td>73,584,000</td>
-        <td>1,036,624,000</td>
-        <td>86.39%</td>
-        <td>73,584,000</td>
+        <td>5,93%</td>
+        <td>57 069 037</td>
+        <td>7,64%</td>
+        <td>73 584 000</td>
+        <td>1 036 624 000</td>
+        <td>86,39%</td>
+        <td>73 584 000</td>
       </tr>
       <tr>
         <td>5</td>
-        <td>1,036,624,000</td>
+        <td>1 036 624 000</td>
         <td>70%</td>
         <td>50</td>
-        <td>3.95%</td>
-        <td>40,953,047</td>
-        <td>5.07%</td>
-        <td>52,560,000</td>
-        <td>1,089,184,000</td>
-        <td>90.77%</td>
-        <td>52,560,000</td>
+        <td>3,95%</td>
+        <td>40 953 047</td>
+        <td>5,07%</td>
+        <td>52 560 000</td>
+        <td>1 089 184 000</td>
+        <td>90,77%</td>
+        <td>52 560 000</td>
       </tr>
       <tr>
         <td>6</td>
-        <td>1,089,184,000</td>
+        <td>1 089 184 000</td>
         <td>70%</td>
         <td>40</td>
-        <td>2.63%</td>
-        <td>28,686,328</td>
-        <td>3.86%</td>
-        <td>42,048,000</td>
-        <td>1,131,232,000</td>
-        <td>94.27%</td>
-        <td>42,048,000</td>
+        <td>2,63%</td>
+        <td>28 686 328</td>
+        <td>3,86%</td>
+        <td>42 048 000</td>
+        <td>1 131 232 000</td>
+        <td>94,27%</td>
+        <td>42 048 000</td>
       </tr>
       <tr>
         <td>7</td>
-        <td>1,131,232,000</td>
+        <td>1 131 232 000</td>
         <td>70%</td>
         <td>25</td>
-        <td>1.76%</td>
-        <td>19,862,510</td>
-        <td>2.32%</td>
-        <td>26,280,000</td>
-        <td>1,157,512,000</td>
-        <td>96.46%</td>
-        <td>26,280,000</td>
+        <td>1,76%</td>
+        <td>19 862 510</td>
+        <td>2,32%</td>
+        <td>26 280 000</td>
+        <td>1 157 512 000</td>
+        <td>96,46%</td>
+        <td>26 280 000</td>
       </tr>
       <tr>
         <td>8</td>
-        <td>1,157,512,000</td>
+        <td>1 157 512 000</td>
         <td>70%</td>
         <td>20</td>
-        <td>1.17%</td>
-        <td>13,549,295</td>
-        <td>1.82%</td>
-        <td>21,024,000</td>
-        <td>1,178,536,000</td>
-        <td>98.21%</td>
-        <td>21,024,000</td>
+        <td>1,17%</td>
+        <td>13 549 295</td>
+        <td>1,82%</td>
+        <td>21 024 000</td>
+        <td>1 178 536 000</td>
+        <td>98,21%</td>
+        <td>21 024 000</td>
       </tr>
       <tr>
         <td>9</td>
-        <td>1,178,536,000</td>
+        <td>1 178 536 000</td>
         <td>70%</td>
         <td>10</td>
-        <td>0.78%</td>
-        <td>9,196,928</td>
-        <td>0.89%</td>
-        <td>10,512,000</td>
-        <td>1,189,048,000</td>
-        <td>99.09%</td>
-        <td>10,512,000</td>
+        <td>0,78%</td>
+        <td>9 196 928</td>
+        <td>0,89%</td>
+        <td>10 512 000</td>
+        <td>1 189 048 000</td>
+        <td>99,09%</td>
+        <td>10 512 000</td>
       </tr>
       <tr>
         <td>10</td>
-        <td>1,189,048,000</td>
+        <td>1 189 048 000</td>
         <td>70%</td>
         <td>5</td>
-        <td>0.52%</td>
-        <td>6,185,973</td>
-        <td>0.44%</td>
-        <td>5,256,000</td>
-        <td>1,194,304,000</td>
-        <td>99.53%</td>
-        <td>5,256,000</td>
+        <td>0,52%</td>
+        <td>6 185 973</td>
+        <td>0,44%</td>
+        <td>5 256 000</td>
+        <td>1 194 304 000</td>
+        <td>99,53%</td>
+        <td>5 256 000</td>
       </tr>
     </tbody>
   </table>

@@ -11,7 +11,7 @@ Der Tausch von Token auf der DeFiChain-DEX (Dezentrale Börse) ist einfach. Zum 
 2. Bitcoin–DeFiChain (dBTC–DFI)
 3. Tether–DeFiChain (dUSDT–DFI)
 
-Die DeFiChain DEX leidet nicht unter den hohen Gasgebühren, die bei Ethereum-basierten DEX aufgrund von Netzwerküberlastungen anfallen können. Da es sich bei Ethereum um eine Allzweck-Blockchain handelt, ist sie nicht speziell für dezentrale Finanzgeschäfte konzipiert. DeFiChain hingegen wurde für DeFi und nur für DeFi entwickelt.
+Die DeFiChain-DEX leidet nicht unter den hohen Gasgebühren, die bei Ethereum-basierten DEX aufgrund von Netzwerküberlastungen anfallen können. Da es sich bei Ethereum um eine Allzweck-Blockchain handelt, ist sie nicht speziell für dezentrale Finanzgeschäfte konzipiert. DeFiChain hingegen wurde für DeFi und nur für DeFi entwickelt.
 
 ### Schritt 1: Starte die DeFi Wallet Desktop-App
 

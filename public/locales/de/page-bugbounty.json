@@ -97,19 +97,19 @@
   },
   "HowToSection": {
     "title": "Wie du teilnehmen kannst",
-    "desc": "Es gibt viele Möglichkeiten, mit der Suche nach einer Schwachstelle zu beginnen. Zunächst kannst du dich in das Testnet von DeFiChain einzuloggen, indem du Folgendes ausführst <0>defid -testnet</0>. Alternativ kannst du unseren Quellcode unter folgender Adresse prüfen <1>GitHub</1>. Wenn du einen Fehler findest, indem du mit unserem Programm interagierst und/oder unseren Quellcode untersuchst, können wir eine Prämie von bis zu 50.000 USD in DFI anbieten, vorausgesetzt, wir finden den Fehler signifikant und du bist in der Lage, nützliche Informationen über die Korrektur oder Reproduktion des Problems zu liefern.",
-    "bolded": "Be sure to study the code that is tagged for official releases, not the master branch or other code that is still currently under development."
+    "desc": "Es gibt viele Möglichkeiten, mit der Suche nach einer Schwachstelle zu beginnen. Zunächst kannst du dich in das Testnet von DeFiChain einloggen, indem du Folgendes ausführst <0>defid -testnet</0>. Alternativ kannst du unseren Quellcode unter folgender Adresse prüfen <1>GitHub</1>. Wenn du einen Fehler findest, während du mit unserem Programm interagierst und/oder unseren Quellcode untersuchst, können wir eine Prämie von bis zu 50.000 USD in DFI anbieten, vorausgesetzt, wir finden den Fehler signifikant und du bist in der Lage, nützliche Informationen über die Korrektur oder Reproduktion des Problems zu liefern.",
+    "bolded": "Achte darauf, dass du den Code untersuchst, der für offizielle Veröffentlichungen gekennzeichnet ist, nicht den Master-Branch oder anderen Code, der noch in der Entwicklung ist."
   },
   "SubmissionSection": {
     "title": "Einreichungsvorgang",
-    "desc": "Da Sicherheit ein sensibles Thema ist, ermutigen wir die Nutzer, keine Probleme bezüglich der Sicherheit der Blockchain öffentlich einzureichen. Wir ermutigen dich, deinen eigenen Ermessensspielraum zu nutzen. Wenn du denkst, dass das Problem nicht etwas ist, das die Öffentlichkeit leicht ausnutzen kann, dann zögere nicht, ein Issue im Repo unter folgender Adresse zu erstellen <0>GitHub</0>. Wenn das Problem einen kritischen Exploit darstellt, dann schreibe uns bitte eine E-Mail an <1>security@defichain.com</1>.",
+    "desc": "Da Sicherheit ein sensibles Thema ist, empfehlen wir den Nutzern, keine gefundenen Schwachstellen, die die Sicherheit der Blockchain betreffen, öffentlich einzureichen. Wir bitten dich, deinen eigenen Ermessensspielraum zu nutzen. Wenn du denkst, dass das Problem nicht etwas ist, das die Öffentlichkeit leicht ausnutzen kann, dann zögere nicht, ein Issue im Repo unter folgender Adresse zu erstellen <0>GitHub</0>. Wenn das Problem einen kritischen Exploit darstellt, dann schreibe uns bitte eine E-Mail an <1>security@defichain.com</1>.",
     "list": {
       "title": "Deine Einreichung sollte Folgendes enthalten:",
       "entries": [
         "Eine klare Beschreibung des Problems",
         "Eine Lösung für das Problem, vorzugsweise als Pull-Request",
         "Wenn du keine Lösung anbieten kannst, gib bitte eine klare Anleitung, wie man das Problem reproduzieren kann",
-        "Your email address or other relevant contact details (e.g. Telegram ID)",
+        "Deine E-Mail-Adresse oder andere relevante Kontaktdaten (z.B. Telegram ID)",
         "Deine DFI-Adresse, um die Prämie zu erhalten, wenn dein Antrag genehmigt wird"
       ]
     }

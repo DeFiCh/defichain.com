@@ -5,7 +5,7 @@ description: Eine Schritt-für-Schritt-Anleitung für Tausch- und Arbitragegesch
 
 ## Tauschen mittels der DEX
 
-Der Tausch von Token auf der DeFiChain DEX (Dezentrale Börse) ist einfach. Zum Zeitpunkt der Erstellung dieses Artikels bietet die DEX den Tausch für die folgenden Paare an:
+Der Tausch von Token auf der DeFiChain-DEX (Dezentrale Börse) ist einfach. Zum Zeitpunkt der Erstellung dieses Artikels bietet die DEX den Tausch für die folgenden Paare an:
 
 1. Ethereum–DeFiChain (dETH–DFI)
 2. Bitcoin–DeFiChain (dBTC–DFI)

@@ -1,349 +1,348 @@
 ---
-title: White paper
-description: DeFiChain white paper
+title: Livre blanc
+description: DeFiChain livre blanc (traduit de l'original en anglais)
 ---
 
-**Abstract**: The DeFiChain Foundation is developing DeFiChain, a blockchain specifically dedicated to decentralized financial applications. By focusing on the functionality of the blockchain and dedicating it specifically to decentralized finance, DeFiChain provides unparalleled high transaction throughput, reduced risk of errors, and intelligent feature development specifically for the fulfillment of financial services on the blockchain.
+**Synthèse**: La Fondation DeFiChain développe DeFiChain, une blockchain spécifiquement dédiée aux applications financières décentralisées. En se concentrant sur la fonctionnalité de la blockchain et en la dédiant spécifiquement à la finance décentralisée, DeFiChain fournit un débit de transaction élevé et inégalé, une réduction du risque d'erreurs et un développement spécifique de fonctionnalités intelligentes pour l'accomplissement de services financiers sur la blockchain.
 
-**This Document is not a Prospectus**
+**Ce document n'est pas prospectif**
 
-This document does not constitute nor imply a prospectus of any sort. No wording contained herein should be construed as a solicitation for investment. Accordingly, this whitepaper does not pertain in any way to an offering of securities in any jurisdiction worldwide whatsoever. Rather, this whitepaper constitutes a technical description of the functionality of the Cake products and the development and distribution of DeFiChain.
+Le présent document ne constitue ni n'implique de prospection d'aucune sorte. Aucun contenu de ce document ne doit être interprété comme une sollicitation d'investissement. Par conséquent, ce livre blanc ne se rapporte en aucune façon à une offre de titres dans quelque juridiction du monde que ce soit. Ce livre blanc constitue plutôt une description technique de la fonctionnalité des produits, du développement et de la distribution de DeFiChain.
 
-**This Document is not a final technical specification**
+**Ce document n'est pas une spécification technique finale**
 
-This document does not constitute nor imply a final technical specification of DeFiChain. Information presented on this whitepaper, technical or otherwise, is meant to outline the general idea of DeFiChain, its design and its use-cases and is subject to change with or without notice. For the latest up-to-date technical specification, check out the updates and documentations on the official website [https://defichain.com](https://defichain.com).
+Ce document ne constitue pas une spécification technique finale de DeFiChain. Les informations présentées dans ce livre blanc, qu'elles soient techniques ou autres, ont pour but de donner une idée générale de DeFiChain, de sa conception et de ses cas d'utilisation et peuvent être modifiées avec ou sans préavis. Pour connaître les dernières spécifications techniques, consultez les mises à jour et les documentations sur le site officiel. [https://defichain.com](https://defichain.com).
 
-## Executive summary
+## Résumé
 
-The cryptocurrency industry is based on a simple premise: people should be fully in control of their finances. While it seems like a simple and obvious statement, the current systems are far from providing financial services that are truly under the control of the people who use them. The mission of DeFiChain is to give people (and in the future, machines, and devices) seamless access to decentralized financial services.
+Le secteur des crypto-monnaies repose sur un postulat simple : les gens devraient avoir le contrôle total de leurs finances. Bien que cela semble être une déclaration simple et évidente, les systèmes actuels sont loin de fournir des services financiers qui sont vraiment sous le contrôle des personnes qui les utilisent. La mission de DeFiChain est de donner aux gens (et dans le futur, aux machines et aux appareils) un accès transparent aux services financiers décentralisés.
 
-For that purpose, we are introducing DeFiChain, a dedicated blockchain specifically for decentralized finance (DeFi) [https://defichain.com](https://defichain.com).
+À cette fin, nous introduisons DeFiChain, une blockchain dédiée spécifiquement pour la finance décentralisée (DeFi) [https://defichain.com](https://defichain.com).
 
-By dedicating the functionality of a blockchain specifically to decentralized finance, DeFiChain provides high transaction throughput, reduced risk of errors, and intelligent feature development specifically for the fulfillment of Satoshi’s original intent: To create a reliable alternative form of financial services built on top of Bitcoin.
+En dédiant la fonctionnalité d'une blockchain spécifiquement à la finance décentralisée, DeFiChain offre un débit de transaction élevé, un risque d'erreur réduit et un développement intelligent de fonctionnalités spécifiquement pour la réalisation de l'intention originale de Satoshi : créer une forme alternative fiable de services financiers construite sur le Bitcoin.
 
-Bitcoin, as described in the original Satoshi whitepaper, is designed as a form of digital cash, as a store and exchange of value. The evolution to Ethereum and smart contracts has allowed for tremendous new functionalities to be built on top of a blockchain, yet this development has come at a cost. The concept of one global operating system for everything has created a system that requires a complex codebase for smart contracts, slow throughput, and difficulty around the governance of the system.
+Le bitcoin, tel qu'il est décrit dans le livre blanc original de Satoshi, est conçu comme une forme d'argent numérique, un moyen de stocker et d'échanger de la valeur. L'évolution vers Ethereum et les contrats intelligents a permis de créer un grand nombre de nouvelles fonctionnalités à partir d'une blockchain, mais ce développement a eu un coût. Le concept d'un système d'exploitation global pour tout a créé un système qui nécessite une base de code complexe pour les contrats intelligents, un débit lent, et des difficultés autour de la gouvernance du système.
 
-DeFiChain approaches decentralized finance as a specific and critical segment of the blockchain community. DeFi is a dedicated blockchain that is optimized specifically for DeFi applications. DeFiChain is intentionally non-Turing-Complete and does not support any function, other than those needed for Decentralized Finance, resulting in a blockchain that provides higher throughput and better functionality specifically for dApps related to finance. The advantage of a non-Turing complete command set is that there is a much lower potential for coding errors of the type that have plagued Ethereum smart contracts such as with the DAO hack or the locked funds with Parity. While it is important that we have some smart contract languages that are Turing complete, in the area of finance, it is appropriate to restrict the capabilities of the language in favor of a more secure system with greatly-reduced attack vectors.
+DeFiChain aborde la finance décentralisée comme un segment spécifique et critique de la communauté blockchain. DeFiChain est une blockchain dédiée qui est optimisée spécifiquement pour les applications DeFi. DeFiChain est intentionnellement non-Turing-complète et ne supporte aucune fonction autres que celles nécessaires pour la finance décentralisée, résultant en une blockchain qui fournit un débit plus élevé et une meilleure fonctionnalité spécifiquement pour les dApps liées à la finance. L'avantage d'un ensemble de commandes non-Turing-complètes est qu'il y a beaucoup moins de risques d'erreurs de codage du type de celles qui ont affecté les smart contracts d'Ethereum, comme le hack DAO ou le blocage des fonds. S'il est important que certains langages de smart contracts soient Turing-complets, dans le domaine de la finance, il convient de restreindre les capacités du langage en faveur d'un système plus sûr dont les vecteurs d'attaque sont considérablement réduits.
 
-### The Problem
+### Le problème
 
-Today, almost all financial services are run by banks. Investments, for example, by definition, is the use of capital to earn more capital. Investors use a bank to put their money into interest or dividend-making instruments in order to grow their wealth. The problems with financial services are increasingly becoming obvious to everyone: compounded costs due to middle(wo)men, slow transactions, delays for cross-border transactions, and inaccessibility to many sectors of the population. A myriad of fintech solutions have been brought in to improve the system, but fundamentally the underlying banking system is still in control, so fintech has brought only limited improvements.
+Aujourd'hui, presque tous les services financiers sont gérés par des banques. Les investissements, par exemple, sont, par définition, l'utilisation du capital pour gagner plus de capital. Les investisseurs font appel à une banque pour placer leur argent dans des actifs générant des intérêts ou des dividendes afin d'accroître leur patrimoine. Les problèmes liés aux services financiers sont de plus en plus évidents pour tout le monde : coûts des intermédiaires, lenteur des transactions, retards pour les transactions transfrontalières et inaccessibilité pour de nombreux secteurs de la population. Une myriade de solutions fintech ont été apportées pour améliorer le système, mais fondamentalement, le système bancaire sous-jacent est toujours sous contrôle, de sorte que la fintech n'a apporté que des améliorations limitées.
 
-Cryptocurrency and Decentralized Finance (DeFi) offer a way to start with a new system, circumventing the difficulties faced in changing the finance industry. While crypto has attracted billions in investments, decentralized financial services are lagging. When it comes to investment in cryptocurrency, crypto investors can buy and sell, but that’s it. The cryptocurrency itself cannot be invested in the same way fiat currency can be. Initial attempts to create peer-to-peer lending and asset tokenization so far have proven partial and unreliable, so investors have extremely limited options when it comes to an investment of their cryptoassets. The potential is enormous to provide financial services in crypto, the same way they are offered in fiat currency.
+Les crypto-monnaies et la finance décentralisée (DeFi) offrent un moyen de commencer avec un nouveau système, en contournant les difficultés rencontrées pour changer le secteur de la finance. Alors que les crypto-monnaies ont attiré des milliards d'investissements, les services financiers décentralisés sont à la traîne. Lorsqu'il s'agit d'investir dans les crypto-monnaies, les investisseurs en crypto peuvent acheter et vendre, mais c'est tout. La crypto-monnaie elle-même ne peut pas être investie de la même manière que la monnaie fiduciaire. Les premières tentatives de création de prêts entre pairs et de tokenisation des actifs se sont jusqu'à présent révélées partielles et peu fiables, de sorte que les investisseurs ont des options extrêmement limitées lorsqu'il s'agit d'investir leurs crypto-actifs. Le potentiel est énorme pour fournir des services financiers en crypto, de la même manière qu'ils sont offerts en monnaie fiduciaire.
 
-### The Solution
+### La solution
 
-DeFiChain is designed for investors in the cryptocurrency market who are looking to make their cryptocurrency work just like any other form of capital, such that they can ensure a return on investment in any market. DeFiChain is a dedicated non-Turing-complete blockchain, designed specifically for the decentralized finance (DeFi) industry. DeFi provides full functionality for this specific segment of the DLT community, sacrificing other types of functionality for simplicity, rapid throughput, and security.
+DeFiChain est conçue pour les investisseurs sur le marché des crypto-monnaies qui cherchent à faire travailler leur crypto-monnaie comme toute autre forme de capital, de sorte qu'ils puissent assurer un retour sur investissement sur n'importe quel marché. DeFiChain est une blockchain non-Turing-complète dédiée, conçue spécifiquement pour la finance décentralisée (DeFi). La DeFi fournit une fonctionnalité complète pour ce segment spécifique de la communauté DLT, en sacrifiant d'autres types de fonctionnalité pour la simplicité, le débit rapide et la sécurité.
 
-The function set includes among others:
+L'ensemble des fonctions comprend entre autres :
 
-- Decentralized lending
-- Decentralized wrapping of tokens
-- Decentralized Pricing oracles
-- Decentralized exchanges
-- Transferable debts and receivables
-- Decentralized Non-collateralized debt
-- Asset tokenization
-- Distribution of Dividends
+- Le prêt décentralisé
+- Encapsulation (wrapping) décentralisé de token (wrapped BTC, wrapped ETH...)
+- Oracles de prix décentralisés
+- Le trading décentralisé
+- Dettes et créances transférables
+- Dettes non collatéralisées décentralisées
+- Tokenisation d'actifs
+- Distribution de dividendes
 
-### Timeline
+### Echéancier
 
 ![Roadmap](/img/white-paper/roadmap.png)
 
 ---
 
-## Background/Industry
+## Contexte/marché
 
-### DeFi’s promises and challenges
+### Les promesses et les défis de la DeFi
 
-Decentralized Finance promises to provide a variety of financial instruments without the need for middle(wo)men to ensure that the services are trusted. According to the OECD, financial services typically make up 20–30% of total service market revenue and about [20% of the total gross domestic product](https://www.investopedia.com/terms/g/gdp.asp) in [developed economies](https://www.investopedia.com/terms/d/developed-economy.asp)[^1]. This is an enormous industry dedicated to one thing: making sure that financial transactions are trusted. With the advent of blockchain, trustless systems and smart contracts can be used to replace much of the functionality of this industry, dramatically increasing the return on investment for the individual investor.
+La finance décentralisée promet de fournir une variété d'instruments financiers sans avoir besoin d'intermédiaires pour garantir la fiabilité des services. Selon l'OCDE, les services financiers représentent généralement 20 à 30% du revenu total du marché des services et [environ 20% du produit intérieur brut total](https://www.investopedia.com/terms/g/gdp.asp) dans les [économies développées](https://www.investopedia.com/terms/d/developed-economy.asp)[^1]. Il s'agit d'une énorme industrie qui se consacre à une seule chose : s'assurer que les transactions financières sont fiables. Avec l'avènement de la blockchain, les systèmes sans confiance et les smart contracts peuvent être utilisés pour remplacer une grande partie des fonctionnalités de ce secteur, augmentant considérablement le retour sur investissement pour l'investisseur individuel.
 
-Financial services today are providing an important service, but at a very high cost, and despite many fintech developments, the following underlying issues persist:
+Aujourd'hui, les services financiers fournissent un service important, mais à un coût très élevé, et malgré de nombreux développements au sein de la fintech, les problèmes sous-jacents suivants persistent :
 
-- High transaction costs. Due to regulatory requirements, legacy systems with complex interoperability issues, and control by large institutions, transaction fees are high for the average user of banking and financial services. Services that require a broker are even more expensive, as agents and other types of middlemen are involved.
-- Slow transactions, particularly for international transactions. Although theoretically, it should only take minutes for computers to transact, moving money from one institution to another can take hours within a country, and it can take days between countries.
-- Lack of transparency and unfair advantages to large players. Financial instruments are complex and most people do not have access to the information that would allow them to make optimal decisions. Lack of transparency is one of the major factors that led to the 2008 financial crisis and in the short term, it always leaves smaller investors (the average person) at a disadvantage compared to institutional investors.
-- Inaccessibility and/or higher cost to lower-income people. Financial services are simply not available in many geographies, and when they are, lower-income people are hit with even higher fees (percentage-wise) than average.
-- Despite legislation to reduce money laundering and related crimes, there is almost no evidence to suggest the current system or AML is, in fact, reducing money laundering.
+- Des coûts de transaction élevés. En raison des exigences réglementaires, des systèmes existants présentant des problèmes d'interopérabilité complexes et du contrôle exercé par les grandes institutions, les frais de transaction sont élevés pour l'utilisateur moyen des services bancaires et financiers. Les services qui nécessitent un courtier sont encore plus chers, car des agents et d'autres intermédiaires sont impliqués.
+- Lenteur des transactions, en particulier pour les transactions internationales. Bien qu'en théorie, les ordinateurs ne devraient prendre que quelques minutes pour effectuer une transaction, le transfert d'argent d'une institution à une autre peut prendre des heures dans un même pays, et des jours entre les pays.
+- Manque de transparence et avantages injustes pour les grands acteurs. Les instruments financiers sont complexes et la plupart des gens n'ont pas accès aux informations qui leur permettraient de prendre des décisions optimales. Le manque de transparence est l'un des principaux facteurs qui ont conduit à la crise financière de 2008 et, à court terme, il désavantage toujours les petits investisseurs (le citoyen moyen) par rapport aux investisseurs institutionnels.
+- Inaccessibilité et/ou coût plus élevé pour les personnes à faibles revenus. Les services financiers ne sont tout simplement pas disponibles dans de nombreuses régions et, lorsqu'ils le sont, les personnes à faibles revenus doivent payer des frais encore plus élevés (en pourcentage) que la moyenne. 
+- Malgré la législation visant à réduire le blanchiment d'argent et les crimes connexes, il n'existe pratiquement aucune preuve que le système actuel ou la LBC réduisent effectivement le blanchiment d'argent.
 
 [^1]: https://www.investopedia.com/ask/answers/030515/what-percentage-global-economy-comprised-financial-services-sector.asp
 
-Fintech has been attempting to address these problems, with some success. Fintech solutions such as online international transfer services, savings, and investment apps, and mobile money for underserved markets have begun to improve the situation. However, the change is incremental, and is still built on top of a system that fundamentally requires the overhead of agents to provide trust. While some of the costs can be reduced, fundamentally, fintech can’t address the underlying issues of lack of transparency because it is dealing in the same financial instruments and going through the same major institutions as traditional finance.
+La Fintech a tenté de résoudre ces problèmes, avec un certain succès. Les solutions Fintech telles que les services en ligne de virement à l'international, les applications d'épargne et d'investissement, et l'argent sur mobile pour les marchés mal desservis ont commencé à améliorer la situation. Toutefois, le changement est progressif et repose toujours sur un système qui nécessite fondamentalement l'intervention d'agents de confiance. S'il est possible de réduire certains coûts, la fintech ne peut fondamentalement pas résoudre les problèmes sous-jacents de manque de transparence, car elle utilise les mêmes instruments financiers et passe par les mêmes grandes institutions que la finance traditionnelle.
 
 ![2019: DeFi](/img/white-paper/2019-defi.png)
 
-For this reason, many investors have begun moving parts of their investments into cryptocurrency. Cryptocurrency, by definition has full transparency that traditional systems simply cannot provide. Furthermore, the amount of administration and bureaucracy required is minimal. Most of the activities that were carried out by agents can be written into the code in decentralized financial systems. Of course, there is still some overhead in creating and maintaining the code, as well as maintenance of the networks, but the amount of bureaucracy is minimal, eliminating much of the cost of transacting on these systems.
+C'est pourquoi de nombreux investisseurs ont commencé à transférer une partie de leurs investissements dans les crypto-monnaies. Par définition, les crypto-monnaies offrent une transparence totale que les systèmes traditionnels ne peuvent tout simplement pas offrir. En outre, la quantité d'administration et de bureaucratie requise est minimale. La plupart des activités qui étaient effectuées par des agents peuvent être inscrites dans le code informatique des systèmes financiers décentralisés. Bien sûr, la création et la maintenance du code, ainsi que la maintenance des réseaux, entraînent encore des frais généraux, mais la bureaucratie est minime, ce qui élimine une grande partie du coût des transactions sur ces systèmes.
 
-Despite the promise of decentralized finance, the technology is still nascent, and there are many opportunities to create a richer and more robust decentralized finance environment. To date, investors in cryptocurrency have extremely limited investment options. Promises of peer-to-peer lending platforms, asset tokenization and other types of blockchains have either failed to deliver, been hacked, or delivered a pared-down version of the original promise.
+Malgré les promesses de la finance décentralisée, la technologie en est encore à ses débuts et il existe de nombreuses possibilités de créer un environnement financier décentralisé plus riche et plus robuste. À ce jour, les investisseurs en crypto-monnaies ont des options d'investissement extrêmement limitées. Les promesses de plateformes de prêts entre particuliers, de tokenisation des actifs et d'autres types de blockchains n'ont pas tenu leurs promesses, ont été piratées ou ont donné une version réduite de la promesse initiale.
 
-Today, almost universally, cryptocurrency investors have only one way to earn money on their capital: rise of the cryptocurrency asset. While in the short term, this may be a good investment, it’s not how currency is designed to work. The investment of capital should provide a return on investment, and cryptocurrency is designed to be like any other form of currency. Investors today want the possibility to lend, invest, and receive returns on their cryptocurrency investments. Well-designed DeFi platforms should allow the development of a variety of safe and secure financial instruments for the investment of cryptocurrency.
+Aujourd'hui, presque universellement, les investisseurs en crypto-monnaies n'ont qu'un seul moyen de gagner de l'argent sur leur capital : la hausse de l'actif en crypto-monnaies. Si, à court terme, cela peut constituer un bon investissement, ce n'est pas ainsi que la monnaie est censée fonctionner. L'investissement de capitaux doit fournir un retour sur investissement, et les crypto-monnaies sont conçues pour être comme toute autre forme de monnaie. Les investisseurs d'aujourd'hui veulent avoir la possibilité de prêter, d'investir et de recevoir des retours sur leurs investissements en crypto-monnaies. Des plateformes DeFi bien conçues devraient permettre le développement d'une variété d'instruments financiers sûrs et sécurisés pour l'investissement en crypto-monnaies.
 
-![Be your own bank](/img/white-paper/be-your-own-bank.png)
+![Sois ta propre banque](/img/white-paper/be-your-own-bank.png)
 
-### The state of DeFi
+### Etat des lieux de la DeFi
 
-The current state of Decentralized Finance (DeFi) is populated by general purpose blockchains, most of which provide Turing-complete command sets for the development of smart contracts on the chain. While appropriate for many programming languages, this dogmatic pursuit of Turing-complete smart contracts languages has resulted in a variety of problems when it comes to scalability, security and robustness of the blockchains.
+La finance décentralisée (DeFi) est peuplée de blockchains à usage général, dont la plupart fournissent des ensembles de commandes Turing-complètes pour le développement de contrats intelligents (smart contract) sur la chaîne. Bien qu'elle soit appropriée pour de nombreux langages de programmation, cette recherche dogmatique de langages de contrats intelligents Turing-complets a entraîné divers problèmes en matière d'évolutivité, de sécurité et de robustesse des blockchains.
 
-- The sheer mass of dApps on networks such as Ethereum, EOS and TRON have potential (or proven) impact on other dApps on the network. The most obvious example was when CryptoKitties ground the Ethereum network practically to a halt. While some of the faster-throughput networks say this can’t happen, it will be some time before any other network reaches the critical mass of apps on Ethereum so that we can prove whether this is or isn’t the case.
-- For serious financial type dApps, it’s important to know that the network is being maintained and managed in a responsible and secure manner. Having a blockchain that is swamped with games, gambling and other types of less “mission critical” apps will ultimately influence the development and direction of the blockchains. With governance models that allocate power to masternodes, dev groups, and token-holders, the core development team will ultimately be influenced by the biggest players. Decentralized Finance apps can’t afford the potential consequences of sharing a blockchain with anyone who chooses to use that operating system.
-- Using Turing-complete command sets requires programmers to create complex programs to develop any kind of app. For example, to create a peer-to-peer lending contract on top of MakerDAO, a programmer requires approximately 2000 lines of code. Any bug in that code can cause loss of the funds, or some other consequence. Maintaining such a large code base intrinsically means larger chances for mistakes and a large attack surface for even simple apps.
+- Le nombre considérable de dApps sur des réseaux tels qu'Ethereum, EOS et TRON a un impact potentiel (ou avéré) sur les autres dApps du réseau. L'exemple le plus évident est celui de CryptoKitties, qui a pratiquement paralysé le réseau Ethereum. Bien que certains des réseaux à débit plus rapide affirment que cela ne peut pas se produire, il faudra un certain temps avant qu'un autre réseau atteigne la masse critique d'applications sur Ethereum pour que nous puissions prouver si c'est le cas ou non.
+- Pour les dApps sérieuses de type financier, il est important de savoir que le réseau est maintenu et géré de manière responsable et sécurisée. Le fait qu'une blockchain soit submergée par des jeux, des paris et d'autres types d'applications moins "critiques" finira par influencer le développement et la direction des blockchains. Avec des modèles de gouvernance qui attribuent le pouvoir aux masternodes, aux groupes de développement et aux détenteurs de jetons, l'équipe de développement sera finalement influencée par les plus grands acteurs. Les applications financières décentralisées ne peuvent pas se permettre les conséquences potentielles du partage d'une blockchain avec quiconque choisit d'utiliser ce système d'exploitation. 
+- L'utilisation de commandes Turing-complètes oblige les programmeurs à créer des programmes complexes pour développer tout type d'application. Par exemple, pour créer un contrat de prêt de pair à pair sur MakerDAO, un programmeur a besoin d'environ 2000 lignes de code. Tout bug dans ce code peut entraîner la perte des fonds, ou toute autre conséquence. Le maintien d'un code aussi important signifie intrinsèquement une plus grande probabilité d'erreurs et un angle d'attaque plus important, même pour les applications simples. 
 
-The limitations of general-purpose blockchains for DeFi apps has opened up a market opportunity to serve this market. While cryptocurrency momentum has continued to rise, most of the current applications are still on Ethereum. Concerns about the network have already led some of the major projects to consider porting or working with alternative or additional blockchains.
+Les limites des blockchains à usage général pour les applications DeFi ont ouvert une opportunité pour servir ce marché. Alors que la dynamique des crypto-monnaies a continué de croître, la plupart des applications actuelles sont encore sur Ethereum. Les préoccupations concernant le réseau ont déjà conduit certains des principaux projets à envisager un portage ou à travailler avec des blockchains alternatives ou supplémentaires.
 
-### DeFi’s current problems
+### Les problèmes actuels de la DeFi
 
-- Finance dApps require reliability and do not want to be associated with blockchains that host apps such as betting, entertainment or other apps that may tarnish the reputation of a blockchain at any time.
-- Sudden increases in volume of any dApp on a blockchain can potentially impact all the other dApps on that blockchain, either in terms of throughput, transaction price, or additional impacts, as seen with CryptoKitties on Ethereum.
-- General-purpose blockchains require a large amount of coding to provide financial services, increasing the risk of hackability or bugs in the code.
-  Functionalities that are basic requirements for financial services, such as multisig, are often difficult to implement or missing on general-purpose blockchains.
-- Maintenance of a Turing-complete blockchain means that resources are not focusing on the areas valued by DeFi apps.
-- Governance models of most of today’s blockchains are immature and showing signs of politicization, centralization and uncertainty. Without formal governance structures, the future of these blockchains is uncertain. Recent discussions of upgrades and forks in both Ethereum and Bitcoin have revealed the immaturity of these systems, and even the leader in governance, Aragon, showed the vulnerability of its on-chain governance system in the summer 2019 vote, where one large “whale” token-holder changed the outcome of several proposal votes at the last minute. Such vulnerabilities are unacceptable on blockchains dealing with finance.
-- Regulatory standards and regulatory bodies that appropriately address the needs of natively cross-border currencies and financial instruments. Jurisdiction-based regulation, and regulation based on legacy technology is falling short of the needs of the DeFi industry. It is clear that a new legal and regulatory framework is needed to protect the rights of people using these systems.
-- The blockchain industry itself has not shown the maturity to put in place its own standards bodies that will provide best practices or self-regulation in a way that would demonstrate the industry’s reliability for decentralized finance applications. To date, attempts at creating interoperability or self-regulation have been immature and have not resulted in leadership or standards that could be adopted by international bodies or serious regulators. The lack of self-regulation leaves the industry even more vulnerable to regulation from outside, making the environment risky for serious investors.
+- Les dApps financières ont besoin de fiabilité et ne veulent pas être associées à des blockchains qui hébergent des apps telles que des paris, des divertissements ou d'autres apps qui peuvent ternir la réputation de la blockchain à tout moment.
+- L'augmentation soudaine du volume d'une dApp sur une blockchain peut potentiellement avoir un impact sur toutes les autres dApps de cette blockchain, que ce soit en termes de débit, de prix des transactions ou autres impacts, comme on l'a vu avec CryptoKitties sur Ethereum.
+- Les blockchains généralistes nécessitent une grande quantité de codage pour fournir des services financiers, ce qui augmente le risque de piratage ou de bogues dans le code. Les fonctionnalités qui sont des exigences de base pour les services financiers, comme le multisig, sont souvent difficiles à mettre en œuvre ou absentes des blockchains généralistes.
+- La maintenance d'une blockchain Turing-complète signifie que les ressources ne sont pas concentrées sur les domaines appréciés par les applications DeFi.
+- Les modèles de gouvernance de la plupart des blockchains actuelles sont immatures et montrent des signes de politisation, de centralisation et d'incertitude. Sans structure de gouvernance formelle, l'avenir de ces blockchains est incertain. Les récentes discussions sur les mises à niveau et les forks à la fois dans Ethereum et Bitcoin ont révélé l'immaturité de ces systèmes, et même le leader de la gouvernance, Aragon, a montré la vulnérabilité de son système de gouvernance lors du vote de l'été 2019, où un grand détenteur de jetons (une "baleine") a changé le résultat de plusieurs votes de propositions à la dernière minute. De telles vulnérabilités sont inacceptables sur les blockchains traitant de la finance.
+- Des normes réglementaires et des organismes de réglementation qui répondent de manière appropriée aux besoins des monnaies et des instruments financiers transfrontaliers par nature. La réglementation basée sur les juridictions et sur les technologies existantes ne répond pas aux besoins du secteur de la DeFi. Il est clair qu'un nouveau cadre juridique et réglementaire est nécessaire pour protéger les droits des personnes utilisant ces systèmes. 
+- L'industrie de la blockchain elle-même n'a pas fait preuve de la maturité nécessaire pour mettre en place ses propres organismes de normalisation qui fourniront les meilleures pratiques ou une autorégulation démontrant sa fiabilité pour les applications financières décentralisées. À ce jour, les tentatives de création d'interopérabilité ou d'autorégulation ont été immatures et n'ont pas abouti à un leadership ou à des normes qui pourraient être adoptées par des organismes internationaux ou des régulateurs sérieux. L'absence d'autorégulation rend le secteur encore plus vulnérable à une réglementation extérieure, ce qui rend l'environnement risqué pour les investisseurs sérieux.
 
-### Consequences in the DeFi Market
+### Conséquences sur le secteur de la DeFi
 
-- Multisig wallets are the best the industry has to provide when it comes to joint management of funds, and the solutions for multi-sig are, to some degree, kludges. Multisig tends to be leger-specific and not flexible for different scenarios. For example, in traditional finance, multi-signature accounts can assign signatories different levels of authority, or require different signatures for different transaction types and levels. Different chains take different approaches to adding multisig capabilities to their existing blockchains.
-    - The BIP 11: M-of-N Standard Transactions is a Bitcoin Improvement Proposal (BIP)designed to add multisig support to Bitcoin blockchain.
-    - Ethereum provides a Turing-complete command set for development of multisig on chain, leading to multiple entities providing multisig smart contracts. Bugs such as those in the Parity multisig (discussed below) have resulted in untold sums in lost funds.
-- As a result of the complexity of the code required for multisig, in 2017, more than 150,000 ETH was lost to a hack in the Parity multisig wallet, due to an error in the code[^2]. The referenced article notes ways in which this code bug could have been avoided, but it emphasizes the point that these complexities in coding cause many different attack vectors. An entire industry has sprouted up around smart contract auditing, because the situation is so vulnerable.
-- In the largest industry hack (or bug?!), The DAO was drained of 3.6 million ETH due to a coding error in the smart contract holding all of the funds of The DAO.
+- Les portefeuilles multi-sig sont ce que l'industrie a de mieux à offrir en matière de gestion conjointe des fonds, et les solutions pour le multi-sig sont, dans une certaine mesure, des maladresses. Le multi-sig a tendance à être spécifique à un fournisseur et n'est pas flexible aux différents scénarios. Par exemple, dans la finance traditionnelle, les comptes multi-signatures peuvent attribuer aux signataires différents niveaux d'autorité, ou exiger différentes signatures pour différents types et niveaux de transaction. Les différentes chaînes adoptent des approches différentes pour ajouter des capacités multisig à leurs blockchains existantes.
+  - La BIP 11 : M-of-N Standard Transactions est une proposition d'amélioration du bitcoin (BIP) conçue pour ajouter un support multisig à la blockchain Bitcoin.
+  - Ethereum fournit un ensemble de commandes Turing-complètes pour le développement de multisig sur la chaîne, ce qui conduit à de multiples entités fournissant des contrats intelligents multisig. Des bogues tels que ceux du multisig Parity (abordés ci-dessous) ont entraîné des pertes de fonds considérables.
+- En raison de la complexité du code requis pour le multisig, en 2017, plus de 150 000 ETH ont été perdus à cause d'un piratage du portefeuille multisig de Parity, dû à une erreur dans le code[^2]. L'article référencé note les moyens par lesquels ce bug de code aurait pu être évité, mais il souligne le fait que ces complexités dans le codage provoquent de nombreux vecteurs d'attaque différents. Un marché entier s'est développé autour de l'audit des contrats intelligents, car c'est un domaine très vulnérable.
+- Dans le plus grand piratage (ou bug ? !) de l'industrie, le DAO a été vidé de 3,6 millions de ETH en raison d'une erreur de codage dans le contrat intelligent détenant tous les fonds du DAO.
 
-One of the many results is that the high risks get priced in to the underlying contracts leading to excessive costs for users, as can be seen when comparing rates from DeFi and non-DeFi examples. (For example 8% with decentralized DAI to 1.75% with centralized USDC (dated at the beginning of October 2019): https://deficompare.com/) Both coins represent 1 USD but the decentralized version ist 6.25% more expensive due to a priced in risk from the Ethereum contract.
+L'une des nombreuses conséquences est que le haut-niveau de risque est pris en compte dans les contrats sous-jacents, ce qui entraîne des surcoûts importants pour les utilisateurs, comme on peut le voir en comparant le taux des exemples DeFi et non DeFi. (Par exemple, 8 % avec DAI décentralisé contre 1,75 % avec USDC centralisé (daté de début octobre 2019) : https://deficompare.com/) Les deux tokens représentent 1 USD mais la version décentralisée est 6,25 % plus chère en raison du risque intégré dans le contrat Ethereum.
 
-The points described above are simply unacceptable for any type of financial transaction or investor. For that reason, it’s important to build dedicated services that will prevent such breaches, lower risks and thus cost. In the Blockchain world, having proper programming rules and reducing the attack vectors prevents this kind of attack.
+Les points décrits ci-dessus sont tout simplement inacceptables pour tout type de transaction financière ou tout profil d'investisseur. Pour cette raison, il est important de construire des services dédiés qui empêcheront de telles violations, réduiront les risques et donc les coûts. Dans le monde de la blockchain, le fait d'avoir des règles de programmation adéquates et de réduire les vecteurs d'attaque permet d'éviter ce type d'attaque.
 
 [^2]: [https://blog.zeppelin.solutions/on-the-parity-wallet-multisig-hack-405a8c12e8f7](https://blog.zeppelin.solutions/on-the-parity-wallet-multisig-hack-405a8c12e8f7)
 
 ---
 
-## Comparing existing DeFi alternatives
+## Comparaison des alternatives DeFi existantes
 
-### Bitcoin: Why Not?
+### Bitcoin : pourquoi pas ?
 
-Given our optimism on Bitcoin, the first question one might ask is why not develop DeFi using the Bitcoin Blockchain. While Bitcoin allows only basic smart contracts, some projects have begun developing workarounds. However, the transaction costs are restrictive on the Bitcoin chain, and we don’t believe it is going to be appropriate for the speed required for financial transactions. The Bitcoin chain is currently working as designed as a store of value. In our opinion, sticking to that single purpose is the best use of the chain and it is proven over the last decade. Adding financial services into the main chain adds unnecessary complexity and may cause side effects both for DeFi and for Bitcoin that are undesirable. Furthermore, it is not something we think that the Bitcoin governance is prepared to handle, and at some point, if DeFiChain requirements differed from those of the miners or developers on the Bitcoin chain, we would be subject to their decisions.
+Étant donné notre optimisme à l'égard de Bitcoin, la première question que l'on peut se poser est de savoir pourquoi ne pas développer DeFiChain en utilisant la blockchain Bitcoin. Bien que Bitcoin ne permette que des contrats intelligents basique, certains projets ont commencé à développer des solutions de contournement. Cependant, les coûts de transaction sont restrictifs sur la chaîne Bitcoin, et nous ne pensons pas qu'elle sera adaptée à la vitesse requise pour les transactions financières. La chaîne Bitcoin fonctionne actuellement comme prévu en tant que réserve de valeur. À notre avis, s'en tenir à cet objectif unique est la meilleure utilisation de la chaîne et cela a été prouvé au cours de la dernière décennie. L'ajout de services financiers dans la chaîne principale ajoute une complexité inutile et peut entraîner des effets secondaires indésirables à la fois pour la DeFi et pour Bitcoin. De plus, nous ne pensons pas que la gouvernance de Bitcoin soit prête à gérer cette situation, et à un moment donné, si les exigences de DeFiChain différaient de celles des mineurs ou des développeurs de la chaîne Bitcoin, nous serions soumis à leurs décisions.
 
-### Turing-complete Solutions: Ethereum, EOS, Tron…
+### Solutions Turing-complètes : Ethereum, EOS, Tron... {#turing-complete-solutions}
 
-To date, a number of DeFi applications have been built on Ethereum, Tron, EOS and many other turing-complete chains. Since Ethereum has the biggest adoption it allowed the surfacing of issues that come with using a turing-complete blockchain for DeFi applications the fastest. The DAO hack was one of the first and most dramatic exposures of the vulnerability of using such a complex language. Anyone issuing a token on the network knows how difficult it is. Just to create and issue an ERC20 token can easily cost over 100,000 USD, considering the cost of smart contract auditing that is necessary for innovative solutions. Simply the fact that there’s an entire industry built around “smart contract audits” should be enough to illustrate the problem. Despite the fact that ERC20 is the industry standard, it’s still so easy to hack that it’s impossible to issue even a simple token without getting a high-cost professional auditor as well as a programmer.
+À ce jour, un certain nombre d'applications DeFi ont été construites sur Ethereum, Tron, EOS et de nombreuses autres chaînes Turing-complètes. Comme Ethereum a été la plus largement adoptée, elle a permis de faire apparaître le plus rapidement les problèmes liés à l'utilisation d'une blockchain Turing-complète pour les applications DeFi. Le piratage de DAO a été l'une des premières et plus dramatiques expositions de la vulnérabilité de l'utilisation d'un langage aussi complexe. Quiconque émet un jeton sur le réseau sait à quel point c'est difficile. Le simple fait de créer et d'émettre un jeton ERC20 peut facilement coûter plus de 100 000 USD, si l'on tient compte du coût de l'audit des contrats intelligents devenu nécessaire pour les solutions innovantes. Le simple fait qu'il existe un secteur entier construit autour des "audits de contrats intelligents" devrait suffire à illustrer le problème. Malgré le fait que ERC20 soit le standard du marché, il est toujours facile à pirater, au point qu'il est impossible d'émettre ne serait-ce qu'un simple jeton sans faire appel à un auditeur professionnel très coûteux, et à un programmeur. 
 
-On an even more stark note, it’s now possible to scan for exploitable code using automation, and a 2018 study managed to scan a million smart contracts, finding over 34,000 hackable smart contracts[^3]. It’s unfathomable that 3.4% of financial transactions would be vulnerable. While this at the moment seems to be a problem mainly centered around Ethereum, we believe most other turing-complete chains will experience the same issues once more use cases get adopted on top of them.
+Une étude de 2018 a réussi à analyser un million de contrats intelligents et a trouvé plus de 34 000 contrats intelligents piratables[^3]. Il est impensable que 3,4 % des transactions financières soient vulnérables. Si, pour l'instant, ce problème semble être principalement centré sur Ethereum, nous pensons que la plupart des autres chaînes Turing-complètes connaîtront les mêmes problèmes une fois que davantage de cas d'utilisation auront été adoptés sur leurs bases.
 
-The second problem stays mostly within Ethereum, which is the network’s usage being already close to maximum capacity. It simply does not seem feasible to use the network for all of the decentralized finance applications. Ethereum’s market cap is a tenth of that of Bitcoin. If the system is already near capacity, it’s hard to see how it can manage the capacity of becoming a true DeFi network for the rest of the ecosystem. Something Vitalik Buterin has acknowledged in an interview: https://beincrypto.com/ethereum-founders-admit-never-designed-scalability/.
+Le deuxième problème réside principalement au sein d'Ethereum, à savoir que l'utilisation du réseau est déjà proche de sa capacité maximale. Il ne semble tout simplement pas possible d'utiliser le réseau pour toutes les applications financières décentralisées. La capitalisation boursière d'Ethereum représente un dixième de celle de Bitcoin. Si le système est déjà proche de sa capacité nominale, il est difficile de voir comment il peut gérer la capacité de devenir un véritable réseau DeFi pour le reste de l'écosystème, ce que Vitalik Buterin a reconnu dans une interview :  https://beincrypto.com/ethereum-founders-admit-never-designed-scalability/.
 
 [^3]: https://arxiv.org/pdf/1802.06038.pdf
 
-![Be your own bank](/img/white-paper/graph.png)
+![Sois ta propre banque](/img/white-paper/graph.png)
 
 ---
 
-## DeFiChain Solution
+## La solution DeFiChain
 
-### Staying in the Bitcoin Ecosystem
+### Rester dans l'écosystème Bitcoin
 
-The cryptocurrency market as a whole is difficult to predict. Most of the coins have become valueless, and it remains to be seen how the system will sustain itself after cash runs out from many of the major ICOs.
+Le marché des crypto-monnaies dans son ensemble est difficile à prévoir. La plupart des tokens sont devenues sans valeur, et il reste à voir comment le système se maintiendra après l'épuisement de l'argent de plusieurs des principales ICO.
 
-Despite this, our outlook on Bitcoin specifically is extremely optimistic. Over the last year, through market volatility, including instability in traditional financial markets, Bitcoin has retained its value, demonstrated its impermeability to attack and hackers, and gained increasing respect from traditional financial players.
+Malgré cela, nos perspectives sur le bitcoin en particulier sont extrêmement optimistes. Au cours de l'année dernière, malgré la volatilité des marchés, y compris l'instabilité des marchés financiers traditionnels, le bitcoin a conservé sa valeur, démontré son imperméabilité aux attaques et aux pirates, et gagné le respect des acteurs financiers traditionnels. 
 
-Bitcoin is increasingly being seen as a store of value, and it is perceived as the standard by which other cryptocurrencies are measured. While people’s portfolios vary widely, Bitcoin remains the standard currency that almost every crypto investor holds as a major part of their holdings. The tremendous community and ecosystem around Bitcoin bode well for its long-term viability as a store of value.
+Le bitcoin est de plus en plus considéré comme une réserve de valeur, et il est perçu comme la norme par rapport à laquelle les autres crypto-monnaies sont mesurées. Bien que les portefeuilles des particuliers varient considérablement, le bitcoin reste la monnaie standard que presque tous les investisseurs en crypto-monnaies détiennent comme une partie importante de leurs avoirs. La formidable communauté et l'écosystème qui entourent le bitcoin sont de bon augure pour sa viabilité à long terme en tant que réserve de valeur.
 
-For that reason, creating decentralized financial services around Bitcoin represents a tremendous opportunity that has yet been untapped, partially because of the difficulty of creating smart contracts that work with the Bitcoin network, and partially because of the fractalization of the development community to many side projects. We believe this tendency of the development community to jump on the newest developments has drawn attention away from the real story: Bitcoin is here to stay.
-Thus, we believe, building a DeFi Blockchain on top of Bitcoin would bring the best out of both worlds: Bitcoin’s stability and immutability and DeFi-chain’s scalability and functionality.
+Pour cette raison, la création de services financiers décentralisés autour de Bitcoin représente une opportunité formidable qui n'a pas encore été exploitée, en partie à cause de la difficulté de créer des contrats intelligents qui fonctionnent avec le réseau Bitcoin, et en partie à cause de l"éclatement de la communauté de développement vers de nombreux projets secondaires. Nous pensons que cette tendance de la communauté de développement à se jeter sur les développements les plus récents fait oublier l'essentiel : Bitcoin est là pour rester. 
+Ainsi, nous pensons que la construction d'une blockchain DeFiChain au-dessus de Bitcoin apporterait le meilleur des deux mondes : la stabilité et l'immutabilité de Bitcoin et l'évolutivité et l'utilitié de la chaine DeFi.
 
-### Building on Top of Bitcoin
+### Construire sur le bitcoin
 
-One of the major challenges in new blockchains is creating the robust immutability available after a critical mass of users and blocks secure the chain. To provide immediate security and immutability of the blockchain, DeFiChain will be anchoring itself to the bitcoin blockchain. Every few minutes, DeFiChain saves its most recent Merkle tree to the Bitcoin blockchain, similar to how Rootstock (Turing Complete Smart contracts secured by Bitcoin https://www.rsk.co/) is planning on connecting to Bitcoin. In this fashion, the most recent chain is always fully secure and immutable, and can be checked against the most recent record anchored to Bitcoin. Over time, DeFiChain will space out the anchors at larger intervals. This anchoring mechanism ensures provably immutable records from day one and defends against attacks, hackers and vulnerabilities that can cause concern in emerging chains.
+Un des défis majeurs des nouvelles blockchains est de créer une immutabilité robuste disponible après qu'une masse critique d'utilisateurs et de blocs sécurise la chaîne. Afin de fournir une sécurité immédiate et une immutabilité de la blockchain, DeFiChain s'ancrera à la blockchain bitcoin. Sur une fréquence de l'ordre de quelques minutes, DeFiChain sauvegarde son arbre de Merkle le plus récent sur la blockchain Bitcoin, de façon similaire à la façon dont Rootstock (contrats intelligents Turing-complets sécurisés par Bitcoin https://www.rsk.co/) prévoit de se connecter à Bitcoin. De cette façon, la chaîne la plus récente est toujours entièrement sécurisée et immuable, et peut être vérifiée par rapport à l'enregistrement le plus récent ancré à Bitcoin. Au fil du temps, DeFiChain espacera les ancrages à des intervalles plus grands. Ce mécanisme d'ancrage assure des enregistrements prouvés immutables dès le premier jour et protège contre les attaques, les pirates et les vulnérabilités qui peuvent causer des problèmes dans les chaînes émergentes.
 
-At the same time DeFiChain keeps its own consensus mechanism and function set, allowing for all those characteristics that Bitcoin does not inherently have. This is achieved by DeFiChain being a dedicated non-Turing-complete blockchain, designed specifically for the decentralized finance (DeFi) industry built on top of Bitcoin. DeFiChain provides full functionality for this specific segment of the DLT community, sacrificing other types of functionality for simplicity, rapid throughput and security.
-DeFiChain utilizes a completely decentralized Proof-of-Stake mechanism allowing for:
+En parallèle, DeFiChain garde son propre mécanisme de consensus et son propre ensemble de fonctions, permettant toutes les caractéristiques que Bitcoin n'a pas intrinsèquement. Ceci est réalisé par DeFiChain qui est une blockchain non-Turing-complète dédiée, conçue spécifiquement pour le secteur de la finance décentralisée (DeFi), construite au-dessus de Bitcoin. DeFiChain fournit une fonctionnalité complète pour ce segment spécifique de la communauté DLT, en abandonnant d'autres fonctionnalité pour assurer la simplicité, le débit rapide et la sécurité.
+DeFiChain utilise un mécanisme de preuve d'enjeu complètement décentralisé permettant :
 
-- a massive scalable and energy conserving consensus.
-- fast transactions and high security
-- ability to create a variety of DeFi apps based on one chain, rapidly and with very low attack surface
-- multi-token support on one chain through decentralized wrapped token technology.
-- decentralized governance
-- independence of other financial systems and financial instruments.
-- fully liquid investments with no minimum size of investments, and no minimum lock-up periods
+- un consensus global, évolutif et économe en énergie ;
+- des transactions rapides et une haute sécurité ;
+- la capacité de créer une variété d'applications DeFi basées sur une chaîne, rapidement et avec un angle d'attaque très restreint ;
+- le support de plusieurs tokens sur une seule chaîne grâce à la technologie des wrapped tokens décentralisés ;
+- gouvernance décentralisée ;
+- indépendance vis-à-vis des autres systèmes financiers et instruments financiers ;
+- des investissements entièrement liquides, sans taille minimale d'investissement, ni période minimale de blocage.
 
-Unlike Ethereum or other turing-complete blockchains, DeFiChain is not a general-purpose blockchain, and commands outside the basic set of functions are not allowed. Limiting the allowed commands on purpose provides a dramatically reduced attack surface for smart contracts, eliminating the obvious breaches that are made possible when programmers need to design complex coding for these functions. The details of these will be described in the next section.
+Contrairement à Ethereum ou bien à certaines blockchains Turing-complètes, DeFiChain n'est pas une blockchain à usage général, et les commandes en-dehors de l'ensemble des fonctions de base ne sont pas autorisées. Limiter à dessein les commandes autorisées fournit un angle d'attaque considérablement réduit pour les contrats intelligents, éliminant les failles évidentes qui sont rendues possibles lorsque les programmeurs doivent concevoir un codage complexe pour ces fonctions. Les détails de celles-ci seront décrits dans la section suivante.
 
-### Benefits of DeFiChain: Summary
+### Avantages de DeFiChain : résumé
 
-- Development of a variety of financial operations & vehicles for cryptocurrency economy.
-- High throughput for all transactions
-- Safer, more secure blockchain specifically for decentralized finance..
-- Rapid development of dApps for decentralized finance.
-- Peace of mind that the blockchain is not used for any types of non-financial dApps, thus decisions of Foundation and core developers are focused 100% on decentralized financial use-cases and nothing else.
-- Rapid development of dApps with dedicated calls specifically for finance applications.
-- Minimal attack surface of financial smart contracts developed on the platform.
-- Reliable governance (off-chain and on-chain).
-- Highly immutable – by periodic anchoring to Bitcoin blockchain.
+- Développement d'une variété d'opérations et de vecteurs financiers pour l'économie des crypto-monnaies ;
+- Haut débit pour toutes les transactions ;
+- Blockchain plus sûre, plus sécurisée, spécifiquement pour la finance décentralisée ;
+- Développement rapide de dApps pour la finance décentralisée ;
+- Tranquillité d'esprit : la blockchain n'est pas utilisée pour d'autres types d'applications non financières. Les décisions de la Fondation et des principaux développeurs sont donc axées à 100 % sur les cas d'utilisation financiers décentralisés et rien d'autre ;
+- Développement rapide des dApps avec des appels dédiés spécifiquement aux applications financières ;
+- Angle minimal d'attaque des contrats intelligents financiers développés sur la plateforme ;
+- Gouvernance fiable (hors chaîne et sur la chaîne) ;
+- Hautement immutable - par ancrage périodique à la blockchain Bitcoin.
 
-### Initial dAppSets
+### Jeux d'applications initiales
 
-- The initial function set includes:
-- Decentralized lending
-- Decentralized wrapping of tokens
-- Decentralized pricing oracles
-- Decentralized exchanges
-- Transferable debts and receivables
-- Decentralized non-collateralized debt
-- Asset tokenization
-- Distribution of dividends
+- L'ensemble initial des fonctions comprend :
+- Le prêt décentralisé
+- Encapsulation décentralisée de jetons
+- Oracles de prix décentralisés
+- L'echange décentralisée
+- Dettes et créances transférables
+- Dettes non collatéralisées décentralisées
+- Tokenisation d'actifs
+- Distribution de dividendes
 
-This chapter provides an overview of each of these functions and the following chapter covers the technical details in how this is achieved.
+Ce chapitre donne une vue d'ensemble de chacune de ces fonctions et le chapitre suivant couvre les détails techniques de leur réalisation.
 
-### Decentralized Lending
+### Prêts décentralisés
 
-Decentralized lending allows individuals and groups to borrow and lend without the intervention of a bank. Through collateralized systems, decentralized lending on Ethereum reached over a quarter of a billion dollars in 2018.
+Le prêt décentralisé permet aux individus et aux groupes d'emprunter et de prêter sans l'intervention d'une banque. Grâce à des systèmes de garantie, les prêts décentralisés sur Ethereum ont atteint plus d'un quart de milliard de dollars en 2018.
 
-All of these systems are based on Ethereum, meaning they are addressing only 15% of the market based on market capitalization. The DeFi platform will be addressing the entire 100% of the market by leading with Bitcoin, but also including the entire market through wrapping and pooling as described below.
+Tous ces systèmes sont basés sur Ethereum, ce qui signifie qu'ils ne s'adressent qu'à 15 % du marché, d'après sa capitalisation boursière. La plateforme DeFiChain s'adressera à 100 % du marché en traitant avec Bitcoin, mais aussi en incluant l'ensemble du marché par l'encapsulation et le pooling, comme décrit ci-dessous.
 
-The major decentralized lending platforms (Compound, Dharma, dYdX, and Maker) provide lending at rates ranging from 0.5% through 6%. Because everything is managed through smart contracts, the overhead of banks is eliminated, and the platforms are able to provide much better rates than banks. As these types of decentralized lending services become safer, it’s likely the market will also see an increase in peer-to-peer lending opportunities through dedicated applications.
+Les principales plateformes de prêt décentralisées (Compound, Dharma, dYdX et Maker) proposent des prêts à des taux allant de 0,5 % à 6 %. Comme tout est géré par des contrats intelligents, les frais bancaires sont éliminés, et les plateformes sont en mesure de fournir des taux bien meilleurs que ceux des banques. Au fur et à mesure que ces services de prêt décentralisés deviennent plus sûrs, on peut s'attendre à ce que le marché voit également une augmentation des possibilités de prêt de pair à pair par le biais d'applications dédiées.
 
-The power of decentralized lending lies in the market efficiencies available by eliminating the middlemen and administration involved in lending. Furthermore, with investors concerned about minimal or even negative interest rates, decentralized lending protects the investors from that potentiality, providing market rate interest while giving borrowers better rates than they can get in the existing financial markets. Given the magnitude of credit and the role it plays in the economy as a whole, decentralized lending offers the potential for many more initiatives to borrow money based on open markets and favorable conditions. Easier access to lending translates into a faster-growing economy.
+La puissance du prêt décentralisé réside dans les gains d'efficacité du marché obtenus en éliminant les intermédiaires et l'administration impliqués dans le prêt. De plus, les investisseurs étant préoccupés par les taux d'intérêt minimaux, voire négatifs, le prêt décentralisé les protège de cette éventualité, en fournissant des intérêts au taux du marché tout en offrant aux emprunteurs de meilleurs taux que ceux qu'ils peuvent obtenir sur les marchés financiers existants. Compte tenu de l'ampleur du crédit et du rôle qu'il joue dans l'ensemble de l'économie, le prêt décentralisé offre la possibilité à beaucoup plus d'initiatives d'emprunter de l'argent sur la base de marchés ouverts et de conditions favorables. Un accès plus facile au crédit se traduit par une croissance plus rapide de l'économie.
 
-Initial implementations of decentralized lending are fully collateralized, and because of the volatility of cryptocurrency, most platforms require double or more collateral on loans. This allows people to take loans based on cryptocurrency they hold. They can manage their cash flow problems without having to sell their crypto holdings, and meanwhile get favorable conditions on the loan.
+Les premiers déploiement de prêts décentralisés sont entièrement collatéralisés, et en raison de la volatilité des crypto-monnaies, la plupart des plateformes exigent une garantie du double ou plus sur les prêts. Cela permet aux gens de contracter des prêts sur la base des crypto-monnaies qu'ils détiennent. Ils peuvent ainsi gérer leurs problèmes de trésorerie sans avoir à vendre leurs crypto-monnaies, tout en bénéficiant de conditions de prêt favorables. 
 
-### Decentralized Wrapping of Tokens
+### Wrapping décentralisé des jetons
 
-An important issue for DeFi is the ability to work with a variety of cryptoassets, directly, on-chain. While the transaction on the chain is done via the native $DFI coin, DeFiChain can use Bitcoin, Ethereum, ERC-20, or any other cryptoasset through wrapping.
+Une question importante pour la DeFi est la capacité de travailler avec l'ensemble des crypto-monnaies, nativement, sur la blockchain. Alors que la transaction sur la blockchain se fait via le token natif $DFI, DeFiChain peut utiliser Bitcoin, Ethereum, ERC-20, ou toute autre crypto-monnaie grâce au wrapping (encapsulation).
 
-Wrapping allows the utilization of any digital asset such that the underlying asset is maintained, but it can transact on a different blockchain. DeFiChain provides a decentralized wrapping mechanism which allows the owner of the crytpoasset to maintain pegging to the asset and utilize a trustless wrapping mechanism that does not rely on any third party as a guarantor of the wrapping or asset. The wrapped tokens can be easily exchanged for their original value on their respective blockchain.
-Creating a wrapped token on DeFiChain is a rewarded activity, such that there is incentive for cryptocurrency holders to create wrapped tokens on the DeFi network as a form of rewarded decentralized financial investment.
+Le wrapping permet l'utilisation de n'importe quel actif numérique de sorte que l'actif sous-jacent est maintenu, mais il peut effectuer des transactions sur une blockchain différente. DeFiChain fournit un mécanisme de wrapping décentralisé qui permet au propriétaire de la crypto-monnaie de maintenir l'ancrage à l'actif et d'utiliser un mécanisme de wrapping qui ne dépend pas d'un tiers comme garant du wrapping ou de l'actif. Les jetons encapsulés peuvent être facilement échangés contre leur valeur originale sur leur blockchain respective. 
+La création d'un jeton encapsulé sur DeFiChain est une activité récompensée, de sorte que les détenteurs de crypto-monnaies sont incités à créer des jetons encapsulés sur le réseau DeFiChain comme une forme d'investissement financier décentralisé récompensé.
 
-Wrapping is a key capability of DeFi due to the need for interoperability of different types of cryptocurrencies and assets. To date, there are no interoperability standards between different currencies, and the only way to interoperate between currencies is by using wrapping or collateralization, which has to be provided by a third party. The entire point of decentralization is that people do not need to trust an authority, yet, today that is the main way that investors can interoperate between Bitcoin and Ethereum without converting from one coin to the other. The Polkadot protocol provides a platform for the development of interoperable apps, but not specifically for DeFi. As a new protocol, it is yet to be seen how it will be leveraged.
+Le wrapping est une capacité clé de la DeFi en raison du besoin d'interopérabilité de différents types de crypto-monnaies et d'actifs. À ce jour, il n'existe pas de normes d'interopérabilité entre les différentes monnaies, et le seul moyen d'interopérer entre les monnaies est d'utiliser le wrapping ou la collatéralisation, qui doit être fourni par un tiers. Tout l'intérêt de la décentralisation est que les gens n'ont pas besoin de faire confiance à une autorité. Pourtant, aujourd'hui, c'est le principal moyen pour les investisseurs d'interopérer entre Bitcoin et Ethereum sans conversion d'une monnaie à l'autre. Le protocole Polkadot fournit une plateforme pour le développement d'applications interopérables, mais pas spécifiquement pour la DeFi. En tant que nouveau protocole, il reste à voir comment il sera exploité.
 
-Without wrapping, holders would need to convert their cryptoasset to the DeFi currency in order to use the services offered. Obviously, for most investors, that’s unacceptable. The investor has put their money into Bitcoin, or Ethereum, or whatever else, because that is the currency they want to hold. The main purpose of DeFiChain is to enable financial transactions in any type of crypto asset, such that people can use the assets and coins they hold, as currency for investment in other types of financial vehicles.
-The decentralized wrapping function is crucial in allowing people to hold any asset and perform investments in another currency. So, for example, someone holding Bitcoin could make a loan to someone who wants to borrow ETH, or someone who wants to hedge against the cryptocurrency they have could do so using a wrapping function to use some of their assets to purchase options in other types of assets.
+Sans wrapping, les détenteurs devraient convertir leur crypto-monnaie en monnaie DeFiChain afin d'utiliser les services offerts. Évidemment, pour la plupart des investisseurs, c'est bloquant. L'investisseur a mis son argent dans le Bitcoin, ou l'Ethereum, ou autre, parce que c'est la monnaie qu'il veut détenir. Le but principal de DeFiChain est de permettre des transactions financières dans n'importe quel type d'actif cryptographique, de sorte que les gens puissent utiliser les actifs et les tokens qu'ils détiennent comme monnaie d'investissement dans d'autres types de produits financiers.
+La fonction de wrapping décentralisé est cruciale pour permettre aux gens de détenir n'importe quel actif et d'effectuer des investissements dans une autre monnaie. Ainsi, par exemple, une personne détenant des bitcoins pourrait faire un prêt à une personne souhaitant emprunter des ETH, ou une personne souhaitant se couvrir contre la crypto-monnaie qu'elle détient pourrait le faire en utilisant une fonction d'encapsulation pour utiliser certains de ses actifs afin d'acheter des options dans d'autres types d'actifs.
 
-### Decentralized Pricing Oracles
+### Oracles de prix décentralisés
 
-DeFiChain will include pricing oracles to collect data from outside blockchains. Oracles are used to collect data such as pricing of other cryptoassets[^4]. Oracles are an important way for blockchains to collect accurate information from both other blockchains and from non-crypto markets[^5].
+DeFiChain inclura des oracles de prix pour collecter des données issues de blockchains extérieures. Les oracles sont utilisés pour collecter des données telles que le prix d'autres crypto-monnaies[^4]. Les oracles sont un moyen important pour les blockchains de collecter des informations précises à la fois d'autres blockchains et de marchés non cryptographiques[^5].
 
-Participating as an oracle allows earning of tokens based on the accuracy of the oracles. The built-in oracle function will allow smart contracts to determine the number of oracles, consensus percentage, and the parameters for rewarding oracles for the data they provide.
+Participer en tant qu'oracle permet de gagner des tokens en fonction de l'exactitude des oracles. La fonction oracle intégrée permettra aux contrats intelligents de déterminer le nombre d'oracles, le pourcentage de consensus et les paramètres de récompense des oracles pour les données qu'ils fournissent.
 
-Oracles are eventually meant to be decentralized. However, DeFiChain will be launched with a few appointed trusted pricing oracles that periodically submit pricing data from trusted source onto DeFiChain.
+Les oracles sont à terme destinés à être décentralisés. Cependant, DeFiChain sera lancée en nommant quelques oracles de confiance qui soumettront périodiquement des données de prix de source fiable sur DeFiChain.
 
-### Decentralized Exchanges
+### Échanges décentralisés
 
-The decentralized exchange function will allow atomic swap of cryptocurrencies in a peer-to-peer fashion[^6]. The decentralized exchange function matches people for trading directly, without the need to buy and sell currency through an exchange. Using decentralized exchange reduces the risks associated with using exchanges, and ensures that the cryptoasset doesn’t leave the custodianship of the token-holders. It also removes the risk of custodianship from the exchange itself, because the mechanism is peer-to-peer based on an agreed-upon price or on the market price at the time of the exchange.
+La fonction d'échange décentralisé (decentralized exchange) permettra l'échange (swap) de crypto-monnaies en mode pair-à-pair. La fonction d'échange décentralisé met en relation des personnes pour des échanges directs, sans qu'il soit nécessaire d'acheter et de vendre des devises par l'intermédiaire d'une bourse. L'utilisation de d'échange décentralisé réduit les risques associés à l'utilisation des exchanges et garantit que la crypto-monnaie ne s'émancipe pas des détenteurs de tokens. Il élimine également le risque de l'aspect tutellaire de l'exchange lui-même, car le mécanisme est de pair à pair sur la base d'un prix convenu ou du prix du marché au moment de l'échange.
 
-While a number of decentralized exchanges are available on the market today[^7], DeFiChain solution allows integration of atomic swap capabilities in third-party applications by creating a decentralized exchange as a service.
+Alors qu'un certain nombre d'échanges décentralisés sont disponibles sur le marché aujourd'hui[^7], la solution de DeFiChain permet l'intégration de capacités d'échange dans des applications tierces en créant un service d'échange décentralisé.
 
 [^4]: https://cointelegraph.com/explained/blockchain-oracles-explained
 [^5]: https://hackernoon.com/oracles-help-smart-contracts-resolve-subjective-events-d81639d8291c
 [^6]: https://en.wikipedia.org/wiki/Decentralized_exchange
 [^7]: https://coinsutra.com/best-decentralized-exchanges-dex/
 
-### Transferable Debts and Receivables
+### Dettes et créances transférables
 
-DeFiChain will offer a set of calls to work with transferable debts and receivables. In the centralized finance world, debts and accounts receivable can only be managed through financial institutions that handle loans. The lack of transparency of these transferable debts was one of the factors leading to the financial crisis of 2008.
+DeFiChain fera un ensemble d'appels à projets sur les dettes et des créances transférables. Dans le monde de la finance centralisée, les dettes et les créances ne peuvent être gérées que par les institutions financières qui gèrent les prêts. Le manque de transparence de ces dettes transférables a été l'un des facteurs qui ont conduit à la crise financière de 2008.
 
-For small and medium enterprises, this can be a particularly powerful tool. For example, Jane’s widget factory supplies widgets to a large car manufacturer, but the car manufacturer pays for those widgets on a basis of invoice +60. Meanwhile, Jane has to pay for the materials to produce the widgets, and, of course, regular salaries to her workers on a monthly or weekly basis. The car manufacturer will pay the invoice, but not in time for Jane to pay all of her expenses. Without Defi, Jane needs to go to the bank and pay whatever interest rates they demand, because she has no alternatives. The transferable receivables function would allow anyone to offer Jane a loan based on the receivables. Since many people would be able to see that the car manufacturer is a low-risk customer, and that they will pay their invoices, anyone who wants can make an offer to Jane for a better rate than the bank, creating a competitive market for debts and receivables based on the real risk and market assessment of that risk. Jane now can get a loan with great rates, and the lenders, likewise get excellent returns on their loans, despite the fact that they are loaning the money for only 30-60 days.
+Pour les petites et moyennes entreprises, cela peut être un outil particulièrement puissant. Par exemple, jane, avec son usine de gadgets, fournit un grand constructeur automobile, mais ce dernier paie ces gadgets à 60 jours. Pendant ce temps, Jane doit payer les matériaux nécessaires à la production des gadgets et, bien sûr, les salaires réguliers de ses ouvriers sur une base mensuelle ou hebdomadaire. Le constructeur automobile paiera la facture, mais pas à temps pour que Jane puisse régler toutes ses dépenses. Sans la DeFi, Jane doit se rendre à la banque et payer les taux d'intérêt qu'elle exige, car elle n'a pas d'autre choix. La fonction de créances transférables permettrait à quiconque de proposer à Jane un prêt basé sur les créances. Étant donné que de nombreuses personnes sont en mesure de constater que le constructeur automobile est un client à faible risque et qu'il paiera ses factures, quiconque le souhaite peut faire une offre à Jane à un meilleur taux que celui de la banque, créant ainsi un marché concurrentiel pour les dettes et les créances sur la base du risque réel et de l'évaluation de ce risque par le marché. Jane peut maintenant obtenir un prêt à des taux très avantageux et les prêteurs, de même, obtiennent d'excellents retours sur leurs prêts, malgré le fait qu'ils ne prêtent l'argent que pour 30 à 60 jours.
 
-Blockchain adds transparency to the exchange of debts and loans based on receivables or other types of financial promises. DeFiChain will include the capability for organizations to create smart contracts that allow straightforward investment in such assets, so that peer-to-peer loans can be made without the need for a financial institution to guarantee these types of financial assets.
+La Blockchain ajoute la transparence à l'échange de dettes et de prêts basés sur des créances ou d'autres types de promesses financières. DeFiChain inclura la capacité pour les organisations de créer des contrats intelligents qui permettent un investissement simple dans ces actifs, de sorte que les prêts pair-à-pair peuvent être faits sans la nécessité d'une institution financière pour garantir ces types d'actifs financiers.
 
-### Decentralized Non-Collateralized Debt
+### Dette décentralisée non collatéralisée
 
-In the future, it will be possible to provide non-collateralized loans based on the reputation and other factors about borrowers. Through different forms of verifiable credentials, and records of an individual’s borrowing and repayment history, non-collateralized systems can be developed. Many of the identity solutions being developed today are looking at anonymous and pseudonymous reputation-reporting systems, based on a Decentralized Identifier (DID) issued by the individual, and Verifiable Credentials (VC) issued by known authorities who are reputable to provide information about the individual’s credit history.
+Dans le futur, il sera possible de fournir des prêts non collatéralisés (sans garantie) basés sur la réputation et d'autres facteurs concernant les emprunteurs. Il sera possible de développer des systèmes non collatéralisés grâce à différentes formes de références vérifiables et d'enregistrements de l'historique d'emprunt et de remboursement d'un individu. De nombreuses solutions d'identité développées aujourd'hui se penchent sur des systèmes anonymes et pseudonymes d'évaluation de la réputation, basés sur un identifiant décentralisé (DID) émis par l'individu, et des justificatifs vérifiables (VC) émis par des autorités connues et réputées pour fournir des informations sur l'historique de crédit de l'individu.
 
-The appropriate reputation based systems and risk assessment systems will need to be built out. While this will take time, perhaps years, it is foreseeable that this kind of system could supplement or replace today’s credit ratings scores.
+Les systèmes basés sur la réputation et les systèmes d'évaluation des risques devront être mis en place. Bien que cela prenne du temps, peut-être des années, il est prévisible que ce type de système puisse compléter ou remplacer les notes de crédit actuelles.
 
-Another potential application of this feature would be the ability to create non-collateralized decentralized stablecoins. The success of DAI and MakerDAO show the desirability of pegged stablecoins, yet the high level of collateralization is a deterrent to creating more such projects. It is feasible that through market mechanisms and staking, decentralized non-collateralized stablecoins can be created.
+Une autre application potentielle de cette fonctionnalité serait la possibilité de créer des monnaies stables décentralisées sans garantie. Le succès de DAI et de MakerDAO montre l'intérêt des monnaies stables ancrées, mais le niveau élevé de garantie est un frein à la création d'autres projets de ce type. Il est possible que, grâce aux mécanismes du marché et au staking, des monnaies stables décentralisées et non collatéralisées puissent être créées.
 
-### Asset Tokenization
+### Tokenisation des actifs
 
-Asset tokenization is the representation of an asset, such as real estate or company equity, in immutable tokens on the blockchain[^8]. This particular area of decentralized finance has tremendous potential and is one of the most exciting areas of investment for holders of cryptocurrency[^9].
+La tokenisation d'actifs est la représentation d'un actif, tel qu'un bien immobilier ou les fonds propres d'une entreprise, en jetons immutables sur la blockchain[^8]. Ce domaine particulier de la finance décentralisée a un potentiel énorme et constitue l'un des domaines d'investissement les plus intéressants pour les détenteurs de crypto-monnaies[^9].
 
-While several attempts have been made at asset tokenization in the blockchain space, most of them have pivoted and now provide services not directly related to asset tokenization (LAtoken, Etherparty). Tokeny and Tokenize-IT advertise themselves as tokenization platforms, but as of the writing of this paper, their processes are still fairly manual, and are heavily reliant on specific localities and regulatory requirements for those specific jurisdictions. Other blockchains, such as Tezos, have been mentioned as good platforms for asset tokenization, but, as with other multi-use blockchains, the Turing-complete set of commands will create complex smart contracts that are unnecessary when using DeFiChain.
-DeFiChain will provide a module specifically designed for asset tokenization, and will be particularly easy to use to tokenize assets such as company equity, real estate, and other valued holdings.
+Si plusieurs tentatives de tokenisation d'actifs ont été faites dans l'univers blockchain, la plupart d'entre elles ont pivoté et fournissent désormais des services qui ne sont pas directement liés à la tokenisation d'actifs (LAtoken, Etherparty). Tokeny et Tokenize-IT se présentent comme des plateformes de tokenisation, mais au moment de la rédaction de ce document, leurs processus sont encore assez manuels et dépendent fortement des réglementations locales spécifiques et des exigences réglementaires de ces juridictions. D'autres blockchains, telles que Tezos, ont été mentionnées comme de bonnes plateformes pour la tokenisation d'actifs, mais, comme avec d'autres blockchains multi-usages, l'ensemble de commandes Turing-complet créera des contrats intelligents complexes qui sont inutiles lors de l'utilisation de DeFiChain.
+DeFiChain fournira un module spécifiquement conçu pour la tokenisation d'actifs, et sera particulièrement facile à utiliser pour tokeniser des actifs tels que les capitaux propres des entreprises, les biens immobiliers et d'autres avoirs de valeur.
 
-Recently (October 2019), the Lichtenstein Blockchain law created the legal basis upon which any asset can be tokenized and legally bound to tokens or “containers” that represent the right to the asset. The law is precise in its wording, describing how a container issued by a trusted party now can hold the legal rights to the disposal over the asset. Disposal over the asset is distinct from ownership or rights to the asset, or even control as a specific concept. The careful wording of this law is a breakthrough for everyone in the world of asset tokenization, because it will now allow someone to go to a court of law with a token and expect to have legal legitimacy for assets that are tokenized (as long as the authority granting the token is recognized as a trusted authority to do so). It also opens up a space for DeFiChain to apply for this trusted status, such that the Asset Tokenization capability described here can be offered as a decentralized, legal and authorized capability that people can trust, without having to depend on any centralized authority.
+Récemment (octobre 2019), la loi Blockchain du Lichtenstein a créé la base juridique sur laquelle tout actif peut être tokenisé et légalement lié à des jetons ou à des "conteneurs" qui représentent le droit à l'actif. La loi est précise dans sa formulation, décrivant comment un conteneur émis par une partie de confiance peut désormais détenir les droits légaux de disposition sur l'actif. La disposition sur l'actif est distincte de la propriété ou des droits sur l'actif, ou même du contrôle en tant que concept spécifique. La formulation prudente de cette loi est une avancée pour tous les acteurs du monde de la tokenisation des actifs, car elle permettra désormais à quelqu'un de se présenter devant un tribunal avec un token et de s'attendre à avoir une légitimité juridique pour les actifs qui sont tokenisés (tant que l'autorité qui octroie le token est reconnue comme une autorité de confiance pour le faire). Elle ouvre également un espace pour DeFiChain pour demander ce statut de confiance, de sorte que la capacité de tokenisation d'actifs décrite ici peut être offerte comme une capacité décentralisée, légale et autorisée à laquelle les gens peuvent faire confiance, sans avoir à dépendre d'une autorité centralisée.
 
 [^8]: https://www2.deloitte.com/lu/en/pages/technology/articles/tokenization-assets-disrupting-financial-industry.html
 [^9]: https://www.forbes.com/sites/laurencoleman/2019/04/25/heres-why-interest-in-tokenizing-assets-is-starting-to-surge/#2ddeec4640a5
 
-For more information on this law, please see Liechtenstein’s website at https://liechtensteinusa.org/article/liechtensteins-parliament-approves-blockchain-act-unanimously
+Pour plus d'informations sur cette loi, veuillez consulter le site Web du Liechtenstein à l'adresse https://liechtensteinusa.org/article/liechtensteins-parliament-approves-blockchain-act-unanimously 
 
-Examples of assets people can now tokenize using the blockchain:
+Exemples d'actifs que les gens peuvent désormais tokeniser à l'aide de la blockchain :
 
-- Securities, such as ETF investing, stocks and shares.
-- Shares in privately held companies.
-- Energy and income generating devices, such as wind turbines, solar farms, satellites.
-- Ownership in food means of production (new forms of cooperative farms where non-farmers could own food supply instead of commodities traded on exchanges)
-- Self-driving cars, vending machines, ATMs, pinball machines, and other types of revenue-generating self-regulating devices.
-- DAOs (Decentralized Autonomous Organizations).
-- Small real estate investments (time shares, short-term rental apartments, etc.)
-- Large real estate investments (airports, amusement parks, apartment complexes, business parks)
+- Les titres, tels que les investissements dans les ETF, les actions et les parts ;
+- Actions de sociétés privées ;
+- Dispositifs de production d'énergie et de revenus, tels que les éoliennes, les fermes solaires, les satellites ;
+- Propriété dans les moyens de production alimentaire (nouvelles formes de fermes coopératives où les non-agriculteurs pourraient être propriétaires de l'approvisionnement alimentaire au lieu de marchandises échangées sur des bourses) ;
+- Voitures à conduite autonome, distributeurs automatiques, guichets automatiques et autres types de dispositifs autorégulateurs générateurs de revenus ;
+- DAO (Distributed Autonomous Organizations) ;
+- Petits investissements immobiliers (multipropriétés, appartements loués à court terme, etc.) ;
+- Grands investissements immobiliers (aéroports, parcs d'attractions, complexes d'appartements, parcs d'affaires)
 
-### Distribution of Dividends
+### Distribution de dividendes
 
-Any tokenized asset with return on investment can use the dividends distribution module to create smart contracts that pay out returns on the investment automatically. Using DeFiChain will allow a leap in the functionality of dividends distribution. It will be possible to implement models similar to today, where payouts are performed on a weekly, monthly, or quarterly basis, or models where payouts are on a daily, hourly or even minute-by-minute basis.
+Tout actif tokenisé avec retour sur investissement peut utiliser le module de distribution de dividendes pour créer des smart contracts qui versent automatiquement les retours sur investissement. L'utilisation de DeFiChain permettra un saut dans la fonctionnalité de la distribution de dividendes. Il sera possible de mettre en œuvre des modèles similaires à ceux d'aujourd'hui, où les paiements sont effectués sur une base hebdomadaire, mensuelle ou trimestrielle, ou des modèles où les paiements sont effectués sur une base quotidienne, horaire ou même minute par minute.
 
-Distribution of dividends would be relevant in any type of tokenized asset, as described above. For example, today, a municipal government might do a bond issue to invest in a wind turbine to supply electricity. The government would take care of everything, and repay that bond according to the schedule. With distribution of dividends, the community could purchase the wind turbine directly, and distribute the dividends to the investors in the wind turbine. Instead of going through the administration required through the centralized authority (government), every citizen who wanted to could invest in that wind turbine, and dividends would be paid according to each person’s contribution to that investment. Eliminating overhead and fair distribution of profits would be major benefits for the community owning the wind turbine. In this case, the wind turbine is a public good, but it could also simply be a private investment.
+La distribution de dividendes serait pertinente dans tout type d'actif tokenisé, comme décrit ci-dessus. Par exemple, aujourd'hui, un gouvernement municipal pourrait émettre une obligation pour investir dans une éolienne afin de fournir de l'électricité. Le gouvernement s'occuperait de tout, et rembourserait cette obligation selon le calendrier prévu. Avec la distribution de dividendes, la collectivité pourrait acheter directement l'éolienne, et distribuer les dividendes aux investisseurs de l'éolienne. Au lieu de passer par l'administration requise par l'autorité centralisée (gouvernement), chaque citoyen qui le souhaite pourrait investir dans cette éolienne, et les dividendes seraient payés en fonction de la contribution de chaque personne à cet investissement. L'élimination des frais généraux et la distribution équitable des bénéfices seraient des avantages majeurs pour la communauté propriétaire de l'éolienne. Dans ce cas, l'éolienne est un bien public, mais elle pourrait aussi simplement être un investissement privé.
 
-Any private investment could be run this way: a pinball machine, self-driving taxi, real estate investment, etc. Automatic distribution of dividends reduces the need for administration and overhead, as well as eliminating uncertainty about payouts and control by a centralized authority.
+Tout investissement privé pourrait être géré de cette manière : un jukebox, un taxi à conduite autonome, un investissement immobilier, etc. La distribution automatique des dividendes réduit le besoin d'administration et de frais généraux, tout en éliminant l'incertitude sur les versements et le contrôle par une autorité centralisée.
 
-The need for joint dividend investing is becoming increasingly relevant with IoT. Devices are able to create tremendous value. A self-driving car will be able to provide taxi services. Vending machines, sensors, satellites, etc., are all potentially revenue-generating devices that people can own together and share in the profit of together, yet until now the legal and financial complexity of doing so has been prohibitive. DeFi can simplify those processes.
+La nécessité d'investir dans des dividendes communs devient de plus en plus pertinente avec l'IoT. Les capteurs sont capables de créer une valeur considérable. Une voiture à conduite autonome sera en mesure de fournir des services de mobilité. Les distributeurs automatiques, les capteurs, les satellites, etc. sont tous des appareils potentiellement générateurs de revenus que les gens peuvent posséder ensemble et dont ils peuvent partager les bénéfices, mais jusqu'à présent, la complexité juridique et financière de cette démarche était prohibitive. DeFiChain peut simplifier ces processus.
 
-Similarly, distribution of profits for a private company can be implemented. One of the first experiments in this area is a DAO (Decentralized Autonomous Organization) called dOrg. dOrg is a collection of programmers (as well as a sales/operations team) who co-own their software house. Distribution of salaries is through a DAO that functions as a multi-sig, such that every 2 weeks, the whole organization submits their payment requests for work contracted, and the team votes to pass one anothers’ salary requests. Inside dOrg, each person holds a “reputation” that represents the percentage of ownership each person has earned (they earn ownership according to the amount of work done since the inception of the company). But what will happen to the profit at the end of the year? Presumably, each individual will have to submit a request for their percentage of the profits, and everyone will have to vote on that, too, because the DAO does not allow for automated distribution of profits. Using DeFiChain, the team could easily implement a quarterly or annual function that would automatically distribute the profits of the company to each person, according to their holdings in the company. This scheme would work even for people who were active in the past, but are no longer active, so they aren’t in the DAO any longer, but they still hold a percentage based on their past contributions. Other contributors might be an investor who puts money into the company, but does not participate.
+De même, la distribution des bénéfices pour une entreprise privée peut être mise en place. L'une des premières expériences dans ce domaine est une DAO (Distributed Autonomous Organization) appelée dOrg. Une dOrg est un collectif de programmeurs (ainsi qu'une équipe de ventes/opérations) qui sont copropriétaires de leur maison d'édition de logiciels. La distribution des salaires se fait par le biais d'une DAO qui fonctionne comme un multi-sig, de sorte que toutes les deux semaines, l'ensemble de l'organisation soumet ses demandes de paiement pour le travail demandé, et l'équipe vote pour approuver les demandes de salaire des uns et des autres. À l'intérieur de la dOrg, chaque personne détient une "réputation" qui représente le pourcentage de propriété que chaque personne a gagné (ils gagnent la propriété en fonction de la quantité de travail effectué depuis la création de l'entreprise). Mais qu'adviendra-t-il des bénéfices à la fin de l'année ? Vraisemblablement, chaque personne devra soumettre une demande pour son pourcentage de bénéfices, et tout le monde devra voter sur ce point également, car la DAO ne permet pas une distribution automatique des bénéfices. En utilisant DeFiChain, l'équipe pourrait facilement mettre en œuvre une fonction trimestrielle ou annuelle qui distribuerait automatiquement les bénéfices de l'entreprise à chaque personne, en fonction de leurs participations dans l'entreprise. Ce schéma fonctionnerait même pour les personnes qui étaient actives dans le passé, mais qui ne le sont plus, donc qui ne sont plus dans la DAO, mais qui détiennent toujours un pourcentage basé sur leurs contributions passées. Un autre type de contributeur pourrait être un investisseur qui met de l'argent dans l'entreprise, mais ne participe pas.
 
-The examples above seem logical and straightforward, but today are extremely time-consuming and complex. People who want to make an investment together in companies, real estate, or other income-deriving assets type of dividend distribution today is complex and requires a lot of manual calculations. Through the DeFi Distribution of Dividends functionality, it becomes not just simple, but automatic for companies to distribute dividends to equity owners.
+Les exemples ci-dessus semblent logiques et simples, mais ils sont aujourd'hui extrêmement chronophages et complexes. Les personnes qui veulent investir ensemble dans des sociétés, des biens immobiliers ou d'autres actifs générateurs de revenus font aujourd'hui face à la complexité du calcul et de la distribution de dividendes. Grâce à la fonctionnalité de distribution de dividendes de DeFiChain, il devient non seulement simple, mais aussi automatique pour les entreprises de distribuer des dividendes aux propriétaires d'actions.
 
 ---
 
-## DeFiChain Design
+## Conception de DeFiChain
 
-### Design Parameters
+### Paramètres de conception
 
-Looking at the business requirements from the chapter before, DeFiChain needs to meet the following requirements:
+En regardant les exigences de marché du chapitre précédent, DeFiChain doit répondre aux exigences suivantes :
 
-1. Robust and secure: built on a proven and secure blockchain.
-2. Fast and scalable.
-3. Includes decentralized consensus mechanism.
-4. Provides extensible smart contract support, without a Turing-complete instruction set.
-5. As immutable as possible (Block anchoring enabled.) .
+1. Robuste et sécurisée : construite sur une blockchain éprouvée et sécurisée ;
+2. Rapide et évolutive ;
+3. Inclut un mécanisme de consensus décentralisé ;
+4. Fournit un support extensible pour les contrats intelligents, sans un jeu d'instructions Turing-complètes ;
+5. Aussi immutable que possible (ancrage de blocs actif).
 
-Each of these design principles is described in detail below.
+Chacun de ces principes de conception est décrit en détail ci-dessous.
 
-#### 1. Robust and Secure
+#### 1. Robuste et sécurisée
 
-Bitcoin Core is the most robust and longest running blockchain in the world. It has been operating with no disruptions since the genesis block in January 2009. Furthermore, from a security standpoint, Bitcoin core has proven itself to be most secure blockchain with no security incidents, while securing the crypto asset with the highest valuation in the world, that is, Bitcoin (BTC). As of this writing, Bitcoin Core successfully secures $150 billion worth of crypto assets, or 68% of the crypto asset market capitalization.
+Le Bitcoin Core est la blockchain la plus robuste et la plus ancienne au monde. Elle fonctionne sans interruption depuis le bloc de genèse en janvier 2009. En outre, du point de vue de la sécurité, Bitcoin Core s'est avéré être la blockchain la plus sûre, sans aucun incident de sécurité, tout en sécurisant l'actif cryptographique dont la valorisation est la plus élevée au monde, à savoir le bitcoin (BTC). Au moment où nous écrivons ces lignes, le Bitcoin Core sécurise avec succès 150 milliards de dollars d'actifs cryptographiques, soit 68 % de la capitalisation du marché des actifs cryptographiques.
 
-The proven security and robustness of the Bitcoin Core made it the blockchain of choice for DeFiChain base for extension. DeFiChain is built based on a fork of Bitcoin Core 0.18, specifically v0.18.1.
+La sécurité et la robustesse prouvées du Bitcoin Core en ont fait la blockchain de choix pour la base d'extension de DeFiChain. DeFiChain est construit sur la base d'un fork de Bitcoin Core 0.18, plus précisément v0.18.1.
 
-DeFiChain will be written in C++, and the plan is to use other languages, such as Rust, in the future.
+DeFiChain sera écrite en C++, et le plan est d'utiliser d'autres langages, tels que Rust, à l'avenir.
 
-While DeFiChain is a new blockchain, basing it on a Bitcoin Core fork results in a chain that is easy to integrate with for exchanges and apps that support Bitcoin.
+Bien que DeFiChain soit une nouvelle blockchain, le fait de la baser sur un fork du Bitcoin Core permet d'obtenir une chaîne facile à intégrer pour les échanges et les applications qui supportent Bitcoin.
 
-#### 2. Fast and Scalable
+#### 2. Rapide et évolutive
 
-One of the proven disadvantages of the Bitcoin blockchain has been the slowness of transactions on the chain. Furthermore, scalability has become an issue as the number of blocks on the chain increase.
+L'un des inconvénients avérés de la blockchain Bitcoin est la lenteur des transactions sur la chaîne. De plus, l'extensibilité est devenue un problème lorsque le nombre de blocs sur la chaîne augmente.
 
-In order to implement a blockchain with the required speed and scalability, DeFiChain fork of Bitcoin Core will include the following improvements:
+Afin d'implémenter une blockchain avec la vitesse et l'évolutivité requises, DeFiChain, fork du Bitcoin Core, inclura les améliorations suivantes :
 
-- Block time: 30 seconds
-- Block size: 16 MB
+- Temps de bloc : 30 secondes
+- Taille des blocs : 16 Mo
 
-These improvements provide a transaction rate of over 2,200 transactions per second (tps) while maintaining manageable compute and bandwidth requirements to allow for decentralized operations of DeFiChain.
+Ces améliorations permettent d'obtenir un taux de transaction de plus de 2 200 transactions par seconde (tps) tout en maintenant des exigences de calcul et de bande passante gérables pour permettre les opérations décentralisées de DeFiChain.
 
-The following table compares Bitcoin and its forks, as well as Ethereum, to DeFiChain performance:
+Le tableau suivant compare les performances de Bitcoin et de ses forks, ainsi que d'Ethereum, à celles de DeFiChain :
 
 <div class="table-responsive">
   <table>
     <thead>
       <tr>
         <th scope="col"></th>
-        <th scope="col">Block time (s)</th>
-        <th scope="col">Block size (MB)</th>
-        <th scope="col">Tx block space (% of block size)</th>
-        <th scope="col">Min tx size (B)</th>
-        <th scope="col">Avg tx size (B)</th>
-        <th scope="col">Txs in a block (max)</th>
-        <th scope="col">Txs in a block (avg)</th>
-        <th scope="col">Max tps</th>
-        <th scope="col">Average tps</th>
+        <th scope="col">Cadence du bloc (s)</th>
+        <th scope="col">Taille du bloc (Mo)</th>
+        <th scope="col">Volume de Tx (% du bloc)</th>
+        <th scope="col">Taille Tx min (octets)</th>
+        <th scope="col">Taille Tx moy (octets)</th>
+        <th scope="col">Txs dans un bloc (max)</th>
+        <th scope="col">Txs dans un bloc (moy)</th>
+        <th scope="col">Tx par sec (max)</th>
+        <th scope="col">Tx par sec (moy)</th>
       </tr>
     </thead>
     <tbody>
@@ -354,10 +353,10 @@ The following table compares Bitcoin and its forks, as well as Ethereum, to DeFi
         <td>98%</td>
         <td>220</td>
         <td>500</td>
-        <td>4,561.45</td>
-        <td>2,007.04</td>
-        <td>7.6</td>
-        <td>3.35</td>
+        <td>4 561,45</td>
+        <td>2 007,04</td>
+        <td>7,6</td>
+        <td>3,35</td>
       </tr>
       <tr>
         <th>Bitcoin Cash</th>
@@ -366,10 +365,10 @@ The following table compares Bitcoin and its forks, as well as Ethereum, to DeFi
         <td>98%</td>
         <td>220</td>
         <td>500</td>
-        <td>45,614.55</td>
-        <td>20,070.40</td>
+        <td>45 614,55</td>
+        <td>20 070,40</td>
         <td>76</td>
-        <td>33.45</td>
+        <td>33,45</td>
       </tr>
       <tr>
         <th>Bitcoin SV</th>
@@ -378,10 +377,10 @@ The following table compares Bitcoin and its forks, as well as Ethereum, to DeFi
         <td>98%</td>
         <td>220</td>
         <td>500</td>
-        <td>145,966.55</td>
-        <td>64,225.28</td>
-        <td>243.28</td>
-        <td>107.04</td>
+        <td>145 966,55</td>
+        <td>64 225,28</td>
+        <td>243,28</td>
+        <td>107,04</td>
       </tr>
       <tr class="highlight">
         <th>DeFi Chain</th>
@@ -390,663 +389,663 @@ The following table compares Bitcoin and its forks, as well as Ethereum, to DeFi
         <td>98%</td>
         <td>220</td>
         <td>500</td>
-        <td>72,983.27</td>
-        <td>32,112.64</td>
-        <td>2432.78</td>
-        <td>1,070.42</td>
+        <td>72 983,27</td>
+        <td>32 112,64</td>
+        <td>2 432,78</td>
+        <td>1 070,42</td>
       </tr>
     </tbody>
     <thead>
       <tr>
         <th scope="col"></th>
-        <th scope="col">Block time (s)</th>
-        <th scope="col">Gas limit</th>
-        <th scope="col">Tx block space (% of block size)</th>
-        <th scope="col">Min tx size (gas)</th>
-        <th scope="col">Avg tx size (gas)</th>
-        <th scope="col">Txs in a block (max)</th>
-        <th scope="col">Txs in a block (avg)</th>
-        <th scope="col">Max tps</th>
-        <th scope="col">Average tps</th>
+        <th scope="col">Cadence du bloc (s)</th>
+        <th scope="col">Limite de gas</th>
+        <th scope="col">Volume de Tx (% du bloc)</th>
+        <th scope="col">Taille Tx min (gas)</th>
+        <th scope="col">Taille Tx moy (gas)</th>
+        <th scope="col">Txs dans un bloc (max)</th>
+        <th scope="col">Txs dans un bloc (moy)</th>
+        <th scope="col">Tx par sec (max)</th>
+        <th scope="col">Tx par sec (moy)</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th>Ethereum</th>
-        <td>13.5</td>
+        <td>13,5</td>
         <td>10m0</td>
         <td>100%</td>
         <td>21k</td>
         <td>60k</td>
-        <td>476.19</td>
-        <td>166.67</td>
-        <td>35.27</td>
-        <td>12.35</td>
+        <td>476,19</td>
+        <td>166,67</td>
+        <td>35,27</td>
+        <td>12,35</td>
         </tr>
     </tbody>
   </table>
 </div>
 
-#### 3. Decentralized Consensus Mechanism
+#### 3. Mécanisme de consensus décentralisé
 
-Bitcoin Core is using Proof-of-Work (PoW) as the consensus mechanism. DeFiChain leverages the best aspects of PoW, that is, using hashing of the staking node’s ID for block creation while focusing the majority of the consensus on Proof-of-Stake (PoS). The major improvement in the PoW mechanism for DeFiChain is that staking nodes can run without investing in high-end servers and ultra-fast bandwidth connections. Thus, DeFiChain is creating the potential for easier and faster decentralization of the mode ownership and infrastructure.
+Le Bitcoin Core utilise la preuve de travail (Proof-of-Work, ou PoW) comme mécanisme de consensus. DeFiChain exploite les meilleurs aspects de la PoW, c'est-à-dire l'utilisation du hachage de l'ID du nœud de staking pour la création de blocs tout en concentrant la majorité du consensus sur la preuve d'enjeu (Proof-of-Stake, ou PoS). L'amélioration majeure du mécanisme de PoW pour DeFiChain est que les nœuds de staking peuvent fonctionner sans investir dans des serveurs haut de gamme et des connexions à bande passante ultra rapide. Ainsi, DeFiChain crée le potentiel pour une décentralisation plus facile et plus rapide de l'infrastructure.
 
-#### 4. Non-Turing-complete Smart Contracts
+#### 4. Contrats intelligents non-Turing-complets
 
-Decentralized financial transactions are implemented through smart contracts. For example to ensure that borrowers repay lenders, smart contracts implement the conditions of lending in the code. For smart contract development, DeFiChain will be adding opcode support for decentralized financial instruction sets. The DeFi opcode complements and works in tangent with the Script scripting language of the existing Bitcoin Core protocol.
+Les transactions financières décentralisées sont mises en œuvre par le biais de contrats intelligents (smart contracts). Par exemple, pour s'assurer que les emprunteurs remboursent les prêteurs, les smart contracts mettent en œuvre les conditions de prêt dans le code. Pour le développement de contrats intelligents, DeFiChain ajoutera un support opcode pour les jeux d'instructions financières décentralisées. L'opcode DeFi complète et fonctionne conjointement avec le langage de programmation du protocole Bitcoin Core existant.
 
-The DeFi scripting language is called Recipe, denoting the language’s role in describing and allowing for decentralized financial contracts.
+Le langage de programmation de DeFiChain est appelé Recipe, ce qui indique le rôle du langage dans la description et l'autorisation des contrats financiers décentralisés.
 
-Bitcoin Script instruction words usually start with the prefix `OP_*`. Recipe instruction words carry the prefix `DF_*`.
+Les mots d'instruction Bitcoin Script commencent généralement par le préfixe `OP_*`. Les mots d'instruction Recipe portent le préfixe `DF_*`.
 
-#### 5. Immutable through Block Anchoring
+#### 5. Immutabilité par l'ancrage des blocs
 
-While the common discussion of immutability is a binary conversation (a blockchain is either immutable or not), in fact, immutability is on a spectrum. The level of immutability of a blockchain is related to the cost of a rollback or “fork out” of mined blocks, also known as a 51% attack.
+Alors que le sujet de l'immutabilité est résolument binaire (une blockchain est soit immutable soit non immutable), en fait, l'immutabilité est un curseur. Le niveau d'immutabilité d'une blockchain est lié au coût d'un retour en arrière ou d'un "fork out" de blocs minés, également connu sous le nom d'attaque à 51 %.
 
-It takes time to amass significant miners or minters to make 51% attack costly enough that it is generally regarded as immutable, meaning that a new blockchain is automatically at a disadvantage when it comes to the immutability of the records. Some newer blockchains have been taking shortcuts to increase its immutability quality, typically by compromising on decentralization. For example, the chains may allow only delegated stakers chosen by the founders, or by making the blockchain permissioned instead of permissionless.
+Il faut du temps pour amasser un nombre important de mineurs ou de minteurs pour rendre l'attaque à 51 % suffisamment coûteuse pour qu'elle soit généralement considérée comme immutable, ce qui signifie qu'une nouvelle blockchain est automatiquement désavantagée en ce qui concerne l'immutabilité des enregistrements. Certaines blockchains plus récentes ont pris des raccourcis pour augmenter leur niveau d'immutabilité, généralement en faisant des compromis sur la décentralisation. Par exemple, les chaînes peuvent n'autoriser que des acteurs délégués choisis par les fondateurs, ou en gérant des permissions sur la blockchain au lieu de l'avoir en libre accès.
 
-DeFiChain aims to maintain decentralization quality while maintaining immutability. To do so, DeFiChain will anchor its block to Bitcoin blockchain every few blocks. This further enhances the immutability of DeFiChain without any compromise to the decentralized nature of the chain.
+DeFiChain vise à maintenir la qualité de la décentralisation tout en maintenant l'immutabilité. Pour ce faire, DeFiChain ancrera son bloc à la blockchain Bitcoin tous les quelques blocs. Cela renforce encore l'immutabilité de DeFiChain sans compromettre la nature décentralisée de la chaîne.
 
-### Consensus Algorithm
+### Algorithme de consensus
 
-#### Proof-of-Stake
+#### Preuve d'enjeu
 
-DeFiChain utilizes a Proof-of-Stake (PoS) algorithm similar to Bitcoin Core’s original Proof-of-Work (PoW) mining algorithm. While DeFiChain is choosing PoS over PoW, at the same time, DeFi technology retains the best of the tested and proven technologies that were developed in the Bitcoin Core blockchain.
+DeFiChain utilise un algorithme de preuve d'enjeu (PoS) similaire à l'algorithme de minage original de la preuve de travail (PoW) de Bitcoin Core. Bien que DeFiChain choisisse la PoS plutôt que la PoW, la technologie DeFi conserve le meilleur des technologies testées et éprouvées qui ont été développées dans la blockchain Bitcoin Core.
 
-#### Masternodes for Staking
+#### Masternodes de staking
 
-To run a masternode (staking node), stakers must hold a fixed amount of 20,000 DFI. Masternodes on DeFiChain participate in active transaction validations and block creations. The staking amount is intended to be lowered with the stability and maturity of blockchain to encourage further decentralization.
+Pour faire fonctionner un masternode (nœud de staking), les stakers doivent détenir un montant fixe de 20 000 DFI. Les masternodes de DeFiChain participent aux validations de transactions actives et aux créations de blocs. Le montant du staking est destiné à être réduit avec la stabilité et la maturité de la blockchain pour encourager une plus grande décentralisation.
 
-Each staking node can perform only 1 hash per second, with the nonce from Bitcoin Core PoW algorithm replaced by a staker’s masternode ID.
-A new block is mined if it satisfies the following condition:
+Chaque nœud de staking ne peut effectuer qu'un seul hachage par seconde, le nonce de l'algorithme Bitcoin Core PoW étant remplacé par l'ID du masternode du staker.
+Un nouveau bloc est miné s'il satisfait à la condition suivante :
 
-`SHA256({staker’s UTXO}, {current timestamp, in seconds}, {stake modifier}) < {target}`
+`SHA256({UTXO du staker}, {horodatage actuel, en secondes}, {modificateur du staker}) < {cible}`
 
-The stakers check this requirement each second. If the block condition is less than the current target, then the stakers assemble and sign a new block.
+The stakers check this requirement each second. If the block condition is less than the current target, then the stakers assemble and sign a new block. 
 Staker’s UTXO require 20 confirmations before it can be accepted as a stake.
 
-#### Stake Modifier
+#### Modificateur de staking
 
-A stake modifier is a collective source of random entropy. Without a stake modifier, the future PoS kernel would be completely predictable. A good stake modifier needs to be neither predictable nor influance-able by stakers.
+Un modificateur de staking est un générateur collectif et aléatoire d'entropie. Sans un modificateur de staking, le futur noyau de PoS serait complètement prévisible. Un bon modificateur de staking doit être ni prévisible, ni influençable par les stakers.
 
-DeFiChain’s staker modifier is set to be `SHA256({previous stake modifier}, {masternode ID})`.
+Le modificateur de staking de DeFiChain est défini comme étant `SHA256({modificateur de staking précédent}, {masternode ID})`.
 
-#### Validation of Future and Past Headers
+#### Validation des en-têtes futurs et passés
 
-Unlike PoW, block header validation requires a stakes table. Headers get verified in batches before full blocks are downloaded, so the stakes table is used to verify future stakes.
-To be able to verify future headers, the blockchain needs to apply an additional rule, so any change of the stakes database gets written right away, but takes effect only after 300 blocks. As a result, any node will be able to verify any block header against its current stake, if a block header isn’t further in the future (or in the past) than 300 blocks.
+Contrairement à la PoW, la validation des en-têtes de blocs nécessite une table de staking. Les en-têtes sont vérifiés par lots avant que les blocs complets ne soient téléchargés, donc la table de staking est utilisée pour vérifier les stakings futurs.
+Pour être en mesure de vérifier les en-têtes futurs, la blockchain doit appliquer une règle supplémentaire, de sorte que toute modification de la base de données des staking est écrite immédiatement, mais ne prend effet qu'après 300 blocs. Par conséquent, n'importe quel nœud sera en mesure de vérifier n'importe quel en-tête de bloc par rapport au staking actuel, si un en-tête de bloc n'est pas plus loin dans le futur (ou dans le passé) que 300 blocs.
 
-#### Nothing at Stake Protection
+#### Protection contre les conflits de staking
 
-For PoS blockchains, there’s no limit to how many conflicting blocks a staker may sign. As a result, stakers may stake for every possible fork or branch, which weakens the finality of a PoS blockchain. This problem is known as a double-sign and is not possible in PoW blockchains, where a miner cannot mine all the possible branches without splitting mining capability. In PoW, this represents an intrinsic economic penalty. However, PoS blockchains cannot apply an inherent economic penalty for signing conflicting blocks on different branches.
+Pour les blockchains PoS, il n'y a pas de limite au nombre de blocs conflictuels qu'un staker peut signer. Par conséquent, les stakers peuvent signer pour chaque fork ou branche possible, ce qui affaiblit la finalité d'une blockchain PoS. Ce problème est connu sous le nom de double signature et n'est pas possible dans les blockchains PoW, où un mineur ne peut pas exploiter toutes les branches possibles sans diviser sa capacité d'exploitation. En PoW, cela représente une pénalité économique intrinsèque. Cependant, les blockchains PoS ne peuvent pas appliquer une pénalité économique intrinsèque pour la signature de blocs conflictuels sur différentes branches.
 
-Therefore, in order to enhance the finality of DeFiChain, in PoS, it’s necessary to detect double-signs and penalize them through an explicit mechanism.
+Par conséquent, afin d'améliorer la finalité de DeFiChain, dans la PoS, il est nécessaire de détecter les doubles-signatures et de les pénaliser par un mécanisme explicite.
 
-#### Detection of Double-sign
+#### Détection de la double signature
 
-Each block header has a sequence number as a number of blocks that a particular staker has minted before a particular block. If two blocks are minted with the same sequence number, it means that a staker has double-signed, even if the blocks have different ancestors, i.e. across branches.
+Chaque en-tête de bloc a un numéro de séquence comme un nombre de blocs qu'un staker particulier a créé avant un bloc particulier. Si deux blocs sont créés avec le même numéro de séquence, cela signifie qu'un staker a doublement signé, même si les blocs ont des ancêtres différents, c'est-à-dire à travers les branches
 
-During a block’s generation, a staker has the right to include the double-sign proofs into his block header in exchange for only half of the penalty.
+Pendant la génération d'un bloc, un staker a le droit d'inclure les preuves de double signature dans l'en-tête de son bloc en échange de la moitié seulement de la pénalité.
 
-#### Double-sign Penalty
+#### Pénalité pour double signature
 
-To be able to apply a penalty to stakers who double-sign, DeFiChain has to disallow immediate withdrawing of stake. Thus, when a deactivation transaction is confirmed, DeFiChain requires 3000 blocks to pass. At a block time of 30 seconds, 3000 blocks is equivalent to 25 hours.
+Pour pouvoir appliquer une pénalité aux personnes qui signent deux fois, DeFiChain doit interdire le retrait immédiat du staking. Ainsi, lorsqu'une transaction de désactivation est confirmée, DeFiChain a besoin de 3000 blocs pour passer. Avec un temps de bloc de 30 secondes, 3000 blocs équivalent à 25 heures.
 
-The double-sign penalty is 10 times the block rewards, deducted from the collateral. This also disqualifies the stakers from further staking immediately. The staker who wants to get back to staking has to deposit a fresh stake UTXO of 20,000 DFI. Running the official DeFiChain node does not cause any unintentional or accidental double-sign. Double-sign happens only in cases of malicious intent.
+La pénalité de double signature est de 10 fois les récompenses de bloc, déduites de la collatéralisation. Cette pénalité disqualifie également le staker de tout autre staking immédiatement. Le staker qui veut revenir au staking doit remettre un nouvel UTXO de 20,000 DFI. L'exécution du nœud officiel de DeFiChain ne cause aucune double-signature involontaire ou accidentelle. La double-signature ne se produit qu'en cas d'intention malveillante.
 
-#### Time Drift Attack
+#### Attaque de type time-drift (dérive temporelle)
 
-The chain uses a maximum future block time of only approx. 5 seconds, to protect the chain from time drift attacks, where stakers set a block time too far ahead in the future, in order to claim a reward for themselves. DeFi also uses NTP time synchronization to allow for ongoing adjustment to the block time.
+La chaîne utilise une prédiction de bloc futur sur 5 secondes environ pour éviter les attaque de type time-drift (dérive temporelle : des décalages d'horloge trop important entre masternodes, ndlr) où les stakers fixent un temps de bloc trop loin dans le futur, pour ensuite réclamer une récompense indue. DeFiChain se synchronise par NTP pour ajuster les horloges au fur et à mesure.
 
-### Bitcoin Anchoring
+### Ancrage sur Bitcoin
 
-DeFiChain stakers publish blockchain block hashes periodically to the Bitcoin blockchain, providing public audit and block anchoring of DeFiChain to the strongest, most secure blockchain in the world.
+Les stakers de DeFiChain publient périodiquement les hachages de blocs de la blockchain sur la blockchain Bitcoin, fournissant un audit public et un ancrage de DeFiChain à la blockchain la plus forte et la plus sécurisée au monde.
 
-Every 60 blocks (approximately 30 minutes), a staker gets the right to write the Merkle root of the previous block onto the Bitcoin blockchain. The information written is, specifically, the txid of the Bitcoin transaction, Bitcoin block header and Merkle proof containing the Merkle root onto the newly mined block. By doing so, the staker will be rewarded an extra block reward in DFI, incentivising nodes to regularly anchor all records to the Bitcoin blockchain.
+Tous les 60 blocs (environ 30 minutes), un staker obtient le droit d'écrire la racine de Merkle (Merkle root) du bloc précédent sur la blockchain Bitcoin. Les informations écrites sont, plus précisément, le txid de la transaction Bitcoin, l'en-tête du bloc Bitcoin et la preuve de Merkle contenant la racine de Merkle sur le bloc nouvellement miné. Ce faisant, le staker recevra une récompense de bloc supplémentaire en DFI, ce qui incitera les nœuds à ancrer régulièrement tous les enregistrements sur la blockchain Bitcoin.
 
-![Bitcoin Ancoring](/img/white-paper/every-60-blocks.png)
+![Ancrage sur Bitcoin](/img/white-paper/every-60-blocks.png)
 
-DeFiChain node will include a built-in Bitcoin Simplified Payment Verification (SPV) client. SPV clients sync the Bitcoin blockchain by downloading only block headers which is sufficient information for nodes to add and validate the anchors.
+Les nœuds de DeFiChain comprendront un client intégré de vérification simplifiée des paiements (SPV) de Bitcoin. Les clients SPV synchronisent la blockchain Bitcoin en téléchargeant uniquement les en-têtes de bloc, ce qui constitue une information suffisante pour que les nœuds puissent ajouter et valider les ancrages.
 
-## DeFi Building Blocks
+## Blocs de construction DeFiChain
 
-To achieve our goals of enabling decentralized finance transactions on DeFiChain, the following build blocks will be included as a base **native** components on DeFiChain.
+Pour atteindre nos objectifs de permettre des transactions financières décentralisées sur DeFiChain, les blocs de construction suivants seront inclus comme composants natifs de base sur DeFiChain.
 
-### Tokenization as a DeFi Standard Token (DST)
+### Tokenisation sous forme de tokens standards (DST)
 
-The implementation of the features described in this whitepaper is performed with the use of standardized tokens. This chapter describes the mechanics of the tokens, interaction with other cryptoassets (tokens), and how they are used in DeFiChain.
+La mise en œuvre des fonctionnalités décrites dans ce livre blanc est réalisée à l'aide de jetons standards. (JETON ci-après et dans les applications DiFiChain, appelé TOKEN pour éviter toute confusion avec UXTO, NDT). Ce chapitre décrit les mécanismes des tokens, l'interaction avec d'autres cryptoactifs (tokens), et comment ils sont utilisés dans DeFiChain.
 
-### Cross-chain Mechanics
+### Mécanique des chaînes croisées
 
-DeFiChain uses token standards to bring in external tokens to DeFiChain in a trustless manner and allow trustless financial contracts and trading of all major cryptoasset tokens. The token standards are similar to ERC20 on Ethereum and Omni on Bitcoin blockchain. Through this standard, DeFiChain allows tokenization of any assets.
+DeFiChain utilise des tokens standards pour introduire des tokens externes dans DeFiChain de manière transparente et permettre des contrats financiers et des échanges transparents de tous les principaux cryptoactifs. Les tokens standards sont similaires à ERC20 sur Ethereum et Omni sur la blockchain Bitcoin. Grâce à cette norme, DeFiChain permet la tokenisation de tous les actifs.
 
-On DeFiChain the standardized tokens are called DeFi Standard Token (DST). DST tokens are of two different types: DCT, created by users of the system, and DAT, which are asset-backed tokens created with the backing of cryptoassets.
+Sur DeFiChain, les tokens standards sont appelés DeFi Standard Token (DST). Les DST sont de deux types différents : DCT, créés par les utilisateurs du système, et DAT, qui sont des tokens adossés à des actifs créés avec le soutien de cryptoactifs.
 
-![Custom token](/img/white-paper/custom-token.png)
+![Illustration des catégories de DST](/img/white-paper/custom-token.png)
 
-### DeFi Custom Token (DCT)
+### Tokens personnalisés (DCT)
 
-DCTs are custom tokens that can be created by any user to represent any project or set of smart contracts implemented on DeFiChain. Any user can create such a DCT. To prevent abuse, creation of any proprietary DCT requires the user to lock up 1,000 DFI for the time that the tokens are issued. The DFI is returned when the tokens are revoked and the DCT is cancelled.
+Les DCTs sont des tokens personnalisés qui peuvent être créés par n'importe quel utilisateur pour représenter n'importe quel projet ou ensemble de smart contracts implémentés sur DeFiChain. Tout utilisateur peut créer un tel DCT. Pour éviter les abus, la création de tout DCT propriétaire exige que l'utilisateur verrouille 1,000 DFI pour le temps que les tokens sont émis. Les DFI sont restitués lorsque les tokens sont révoqués et que le DCT est annulé.
 
-DCT tokens are not backed intrinsically by DeFiChain. They may be backed through an external mechanism, but it’s essential to note that DeFiChain does not intrinsically back them. An example on the Ethereum blockchain would be DGX, which is an ERC20 token backed by gold. Ethereum does not back DGX, although the token is created through ERC20. The Digix Foundation is accountable for the value of that token. Similarly, DCT is the DeFi parallel to ERC20 on Ethereum. Creation and issuance of tokens on DeFi is simplified and the potential for errors in the smart contract is eliminated, because creators of DCT can set only the parameters below, using an easy to use scripting interface.
+Les tokens DCT ne sont pas soutenus intrinsèquement par DeFiChain. Ils peuvent être soutenus par un mécanisme externe, mais il est essentiel de noter que DeFiChain ne les soutient pas intrinsèquement. Un exemple sur la blockchain Ethereum serait DGX, qui est un jeton ERC20 soutenu par de l'or. Ethereum ne soutient pas DGX, bien que le jeton soit créé par ERC20. La Fondation Digix est responsable de la valeur de ce jeton. De même, les DCT sont à la DeFiChain ce que ERC20 est à l'Ethereum. La création et l'émission de tokens sur DeFiChain est simplifiée et le potentiel d'erreurs dans le contrat intelligent est éliminé, parce que les créateurs de DCT peuvent définir uniquement les paramètres ci-dessous, en utilisant une interface de script facile à utiliser.
 
-#### DCT Parameters:
+#### Paramètres des DCT :
 
-- DCT ID: <UDID> Unique blockchain identifier for the token.
-- Name: <Token name> Name of the tokens.
-- Symbol: The ticker symbol for the tokens. The DCT protocol will provide a reference for ensuring the choice will be a unique symbol.
-- Decimal places: Divisible number of decimal places for the tokens. This cannot be changed once it is set.
-- Total initial supply: Initial issue of tokens during the event generated.
-- Initial distribution list: List of addresses for distribution of tokens.
-- Minting support: yes/no
-- Final supply limit (optional): Immutable total supply limit. If minting is supporting this will define the ceiling on how many tokens the token owner can mint in total (some may be reserved at this time). If this parameter is left blank, this is an unlimited supply token. This cannot be changed after the initial definition of the token.
-- Tradeability: yes/no. This is a one-way switch allowing the token owner to transfer tokens during initial distribution period and also to decide when a token is tradeable/movable. To ensure the decentralized nature of DCT, once “tradeability” is set to yes, the owner is no longer able to reverse the tradability of a token. Typically, when creating a token, this should be turned to “no” until the initial distribution is confirmed to be accurate.
+- DCT ID: <UDID> Identifiant unique de la blockchain pour le token ;
+- Name: <Token name> Nom du token ;
+- Symbole : Le symbole des tokens. Le protocole DCT fournira une référence pour garantir que le choix sera un symbole unique ;
+- Décimales : Nombre de décimales divisible pour les jetons. Ce nombre ne peut pas être modifié une fois qu'il est fixé ;
+- Offre initiale totale : L'émission initiale de tokens pendant l'événement généré ;
+- Liste de distribution initiale : Liste d'adresses pour la distribution des tokens ;
+- Assistance au minting : oui/non ;
+- Limite d'approvisionnement final (facultatif) : Limite d'offre totale immutable. Si le minting est pris en charge, cela définira le plafond du nombre de tokens que le propriétaire du token peut minter au total (certains peuvent être réservés à ce moment-là). Si ce paramètre est laissé vide, il s'agit d'un token à approvisionnement illimité. Ce paramètre ne peut pas être modifié après la définition initiale du token.
+- Échangeabilité : oui/non. Il s'agit d'un commutateur à sens unique permettant au propriétaire du token de transférer des tokens pendant la période de distribution initiale et également de décider quand un token est échangeable/transférable. Pour garantir la nature décentralisée des DCT, une fois que l' "échangeabilité" est définie sur oui, le propriétaire ne peut plus inverser l'échangeabilité d'un token. En général, lors de la création d'un token, cette option doit être désactivée jusqu'à ce que la distribution initiale soit confirmée comme exacte.
 
-Using this interface, there is no need to have a smart contract developer, and there is no need for a security audit.
+En utilisant cette interface, il n'est pas nécessaire d'avoir un développeur de contrat intelligent, et il n'y a pas besoin d'un audit de sécurité.
 
-### DeFi Asset Token (DAT)
+### DeFi Token d'actif (DAT)
 
-DeFi Asset Tokens (DATs) are backed in a decentralized manner. DATs on DeFiChain are tokens and crypto assets external of DeFiChain, such as:
+Les DeFi Asset Tokens (DATs) sont soutenus d'une manière décentralisée. Les DAT sur DeFiChain sont des tokens et des crypto actifs externes à DeFiChain, tels que :
 
-- DBTC, backed by BTC
-- DETH, backed by ETH
-- DXRP, backed by XRP
-- DUSDT, backed by USDT
-- DBCH, backed by BCH, etc.
+- dBTC, soutenu par BTC ;
+- dETH, soutenu par ETH ;
+- dXRP, soutenu par XRP ;
+- dUSDT, soutenu par USDT ;
+- dBCH, soutenu par BCH, etc.
 
-New DATs are introduced to the system through voting by masternodes. This ensures that only assets that gather the most interest amongst DeFiChain users get introduced.
+Les nouveaux DAT sont introduits dans le système par le vote des masternodes. Cela garantit que seuls les actifs qui suscitent le plus d'intérêt parmi les utilisateurs de DeFiChain sont introduits.
 
-### Economic Pegging of DATs
+### Rattachement des DAT à l'économie
 
-The goal of DAT is to have it represent the native asset on the other blockchains, e.g. 1 DBTC should represent 1 BTC.
+Le but des DAT est qu'il représente l'actif natif sur les autres blockchains, par exemple 1 dBTC devrait représenter 1 BTC.
 
-There are two approaches to this:
+Il y a deux approches pour cela :
 
-1. Stablecoin approach
-    - For every single issued 1 DBTC, 1 BTC has to be locked up in an address or a smart contract.
-    - While this would help to build a guarantee to DBTC, it introduces some other issues – counterparty risks and affect the decentralized nature of DeFi.
+1. L'approche Stablecoin
+    - Pour chaque dBTC émis, 1 BTC doit être bloqué dans une adresse ou un contrat intelligent.
+    - Bien que cette approche permette d'établir une garantie pour les dBTC, elle introduit d'autres problèmes - les risques de contrepartie et affecte la nature décentralisée de DeFiChain.
 
-2. Economic pegging
-    - By providing a strong guarantee that the DAT representing an asset has its price closely tracking the native asset, i.e. by holding DBTC, one can have a good confidence that the value of DBTC will track that of BTC.
+2. Rattachement à l'économie
+    - En fournissant une garantie forte que le DAT représentant un actif a son prix qui suit de près l'actif natif, c'est-à-dire en détenant le dBTC, on peut avoir une bonne confiance que la valeur du DBTC suivra celle de BTC.
 
 
-In order for us to achieve economic pegging, the following building blocks are built natively on DeFiChain:
+Afin que nous puissions réaliser le rattachement économique, les blocs de construction suivants sont construits nativement sur DeFiChain :
 
-1. Loan Contract
-2. Decentralized Exchange (DEX)
-3. Cross-chain Exchange (XCX)
-4. Pricing Oracles
+1. Contrat de prêt
+2. Bourse décentralisée (DEX)
+3. Bourse inter-chaînes (XCX)
+4. Oracles de prix
 
-![DAT overview](/img/white-paper/dat-overview.png)
+![Aperçu conceptuel des DAT](/img/white-paper/dat-overview.png)
 
-### Loan Contract
+### Contrat de prêt
 
-Loan Contract is designed to allow the owner of the contract to take a collateralized loan against collateral locked in the contract. Each loan contract is unique to every owner (address) on DeFiChain.
+Le contrat de prêt est conçu pour permettre au propriétaire du contrat de prendre un prêt garanti contre la collatéralisation bloquée dans le contrat. Chaque contrat de prêt est unique pour chaque propriétaire (adresse) sur DeFiChain. 
 
-Any user can open a loan contract on DeFiChain, free of charge. The user who opens a loan contract owns the specific contract. This ownership, however, is transferable.
+Tout utilisateur peut ouvrir un contrat de prêt sur DeFiChain, gratuitement. L'utilisateur qui ouvre un contrat de prêt est propriétaire du contrat spécifique. Cette propriété, cependant, est transférable.
 
-Once a loan contract is opened, DFI can be sent to fund the loan collateral. Once a loan contract is funded, it allows the owner to take out a loan by minting DATs up to a certain collateralization ratio. The minimum collateralization ratio can be adjusted by DeFiChain DAO and starts at 150%. In other words, $1,500 worth of collateral (in DFI), allows the loan contract owner to take out a maximum of $1,000 in loans.
+Une fois qu'un contrat de prêt est ouvert, des DFI peuvent être envoyés pour financer la garantie du prêt. Une fois qu'un contrat de prêt est financé, il permet au propriétaire de contracter un prêt en mintant des DAT jusqu'à un certain ratio de garantie. Le ratio de garantie minimum peut être ajusté par le DAO DeFiChain et commence à 150%. En d'autres termes, une garantie de 1 500 $ (en DFI) permet au propriétaire du contrat de prêt de contracter un prêt de 1 000 $ maximum.
 
-Minted DATs are subject to a floating borrowing rate. A loan contract has no expiry date. The owner is able to take out a loan for as long as they desire, as long as the collateralization ratio stays above 150% at all times.
+Les DAT sont soumis à un taux d'emprunt variable. Un contrat de prêt n'a pas de date d'expiration. Le propriétaire peut contracter un prêt aussi longtemps qu'il le souhaite, à condition que le ratio de garantie reste supérieur à 150 % à tout moment.
 
 ```
-Collateralization ratio = Collateral / (Loan + accrued interest)
+Ratio de garantie = Garantie / (Prêt + intérêts courus)
 ```
 
-If a loan contract falls below the 150% collateralization ratio at any point in time, its collateral is liquidated via Decentralized Exchange (DEX) to pay off accrued interest. There will be an additional 15% liquidation penalty to discourage loan contracts from having to be liquidated. It is the responsibility of the loan contract owners to monitor the collateralization ratio to prevent an unwanted liquidation.
+Si un contrat de prêt tombe en dessous du ratio de collatéralisation de 150% à un moment donné, sa garantie est liquidée via le Decentralized Exchange (DEX) pour payer les intérêts courus. Une pénalité de liquidation supplémentaire de 15 % sera appliquée afin de dissuader les contrats de prêt d'être liquidés. Il est de la responsabilité des propriétaires de contrats de prêt de surveiller le ratio de garantie afin d'éviter une liquidation non désirée. 
 
-If a loan contract is close to minimum collateralization ratio, the owner must take one of the following steps to prevent liquidation and having to incur 15% liquidation penalty:
+Si un contrat de prêt est proche du ratio de garantie minimum, le propriétaire doit prendre l'une des mesures suivantes pour éviter la liquidation et l'imposition d'une pénalité de liquidation de 15 % :
 
-1. Deposit more DFI into the loan contract, thereby increasing its collateral and collateralization ratio.
-2. Pay back some of the loan (or accrued interest), thereby decreasing the loan contract’s loan amount and increasing its collateralization ratio.
+1. Déposer plus de DFI dans le contrat de prêt, augmentant ainsi sa garantie et son ratio de garantie ;
+2. Rembourser une partie du prêt (ou des intérêts courus), diminuant ainsi le montant du prêt du contrat et augmentant son ratio de garantie.
 
-Closing a loan contract entitles its owner to get back all 100% of its collateral. To close a loan contract, the owner has to pay back the loan in full, plus the accrued interest in its entity in the DAT (e.g. DBTC). Upon liquidation of the loan, the minted DAT is burned, and the initial minted DAT and the interest will be converted into DFI via the DeFi DEX described in this paper.
+La clôture d'un contrat de prêt permet à son propriétaire de récupérer la totalité de sa garantie. Pour clôturer un contrat de prêt, le propriétaire doit rembourser l'intégralité du prêt, plus les intérêts courus dans son entité en DAT (par exemple, dBTC). Lors de la liquidation du prêt, le DAT minté est détruit (burnt), et le DAT initial minté et les intérêts seront convertis en DFI via le DEX décrit dans ce document.
 
-While this concept is not new to the DeFi system, what is novel is the possibility to collateralize any asset due to DeFiChain’s nature.
+Bien que ce concept ne soit pas nouveau dans la DeFi, ce qui est nouveau est la possibilité de garantir n'importe quel actif en raison de la nature de DeFiChain.
 
-1. Alice opens a loan contract and funds it with 150k DFI.
-2. With DFI at $0.10 spot rate, Alice’s loan contract now has $15,000 worth of collateral.
-3. At the minimum collateralization ratio of 150% she can take out a maximum of $10,000 worth of DBTC, which is pegged to BTC spot price.
-4. Since the DBTC loan via loan contract accrues interest, and DBTC and the DFI price fluctuate, Alice decides to only take out $5,000 worth of DBTC, i.e. 0.5 DBTC, giving her loan contract a collateralization ratio of: 15000/5000 = 300%, well above 150%.
-5. Over-collateralization allows for some room for price movements of DBTC. If the BTC price increases to $15,000, Alice’s loan of 0.5 DBTC would now be worth $7,500. Her loan contract now has a collateralization ratio of: 15000/7500 = 200%, still above 150%, so liquidation would not be triggered even in the case of this type of price shift.
-6. The interest rate for each DAT loan differs. Assuming the DBTC loan rate is 5% annually, taking out a loan for a year, in order to close her loan contract and to fully redeem her initial 150k DFI, Alice has to pay back 0.5 DBTC * 1.05 = 0.525 DBTC by the end of the year.
+1. Alice ouvre un contrat de prêt et le finance avec 150k DFI ;
+2. Avec un DFI valant au comptant 0,10$, le contrat de prêt d'Alice a maintenant 15 000$ de garantie ;
+3. Avec un ratio de garantie minimum de 150 %, elle peut emprunter un maximum de 10 000 $ en dBTC, qui est lié au prix au comptant de la BTC ;
+4. Étant donné que le prêt dBTC via le contrat de prêt produit des intérêts, et que le prix du dBTC et du DFI fluctue, Alice décide de ne prendre que 5 000 $ de dBTC, soit 0,5 dBTC, ce qui donne à son contrat de prêt un taux de garantie de : 15000/5000 = 300%, bien supérieur à 150% ;
+5. Le surdimensionnement permet une certaine marge de manœuvre pour les mouvements de prix du dBTC. Si le prix du BTC passe à 15 000 $, le prêt de 0,5 dBTC d'Alice vaudra désormais 7 500 $. Son contrat de prêt a maintenant un ratio de garantie de : 15000/7500 = 200%, toujours supérieur à 150%, de sorte que la liquidation ne serait pas déclenchée même dans le cas de ce type de changement de prix ;
+6. Le taux d'intérêt de chaque prêt DAT est différent. En supposant que le taux d'intérêt des prêts dBTC est de 5% par an, en contractant un prêt pour un an, afin de clôturer son contrat de prêt et de racheter intégralement ses 150k DFI initiaux, Alice doit rembourser 0,5 dBTC * 1,05 = 0,525 dBTC avant la fin de l'année.
 
-![loan contract](/img/white-paper/alice-pdc.png)
+![Contrat de prêt](/img/white-paper/alice-pdc.png)
 
-### Decentralized Exchange (DEX)
+### Échange décentralisé (DEX, Decentralized Exchange)
 
-The DeFi internal DEX provides decentralized trading for all DeFi tokens and DFI itself, which means that all tokens: DFI and DCT (DAT and DCT) can be listed on DeFiChain DEX. DEX will initially launch with DFI as the base trading pair, providing markets such as DBTC/DFI, DETH/DFI, DUSDT/DFI, etc. With increasing volume, other base trading pairs can be introduced, subject to a DAO approval, providing markets such as DETH/DBTC, DFI/DUSDT, etc.
+Le DEX interne de DeFiChain fournit des échanges décentralisés pour tous les tokens DeFiChain et DFI lui-même, ce qui signifie que tous les tokens DFI et DCT (DAT et DCT) peuvent être listés sur le DEX de DeFiChain. Le DEX sera initialement lancé avec le DFI comme référence de négociation, fournissant des marchés tels que dBTC/DFI, dETH/DFI, dUSDT/DFI, etc. Avec l'augmentation du volume, d'autres référence peuvent être introduites, sous réserve de l'approbation de la DAO, fournissant des marchés tels que dETH/dBTC, DFI/dUSDT, etc.
 
-DEX on DeFiChain operates without the need to pass custody to any intermediaries. Users are able to trade on their own in a trustless manner. One of the key differentiator about DeFiChain as compared to many other decentralized financial solutions is that DeFiChain is not only a consensus protocol facilitating DeFi, it is also comes with a very simple to use client user interface (UI) that allows users to interact directly on the blockchain without any intermediaries.
+Le DEX de DeFiChain fonctionne sans avoir besoin de passer la tutelle à un quelconque intermédiaire. Les utilisateurs sont en mesure d'effectuer des transactions de manière autonome et en toute confiance. Une des caractéristiques différenciantes de DeFiChain par rapport à de nombreuses autres solutions financières décentralisées est que DeFiChain n'est pas seulement un protocole de consensus facilitant la DeFi, il est également livré avec une interface utilisateur client (UI) très simple à utiliser qui permet aux utilisateurs d'interagir directement sur la blockchain sans aucun intermédiaire.
 
-### Cross-chain Exchange (XCX)
+### Échange inter-chaînes (XCX)
 
-A user holding DBTC might be interested in holding of actual BTC instead of a DeFi pegged BTC token (DBTC).
+Un utilisateur détenant des dBTC pourrait être intéressé par la détention de BTC réels au lieu d'un token BTC (dBTC) ancré sur DeFiChain.
 
-The DeFi Cross-chain Exchange (XCX) allows anyone to do exactly that. XCX allows listing of DATs with its native tokens, e.g. DBTC for BTC, DETH for ETH, DXRP for XRP. Actual transaction is carried out through the trustless swap of both tokens commonly known as atomic swap. Atomic swap guarantees that either both parties receive their exchanged coins, or neither transactions go through – providing a strong cryptographic guarantee that no one party is able to cheat the other.
+L' échange inter-chaînes (Cross-chain Exchange, XCX) de DeFiChain permet à quiconque de faire exactement cela. Le XCX permet de lister les DATs avec leurs tokens natifs, par exemple dBTC pour BTC, dETH pour ETH, dXRP pour XRP. La transaction réelle est effectuée par l'échange sans tiers de confiance des deux tokens, communément appelé échange atomique (atomic swap). L'atomic swap garantit que soit les deux parties reçoivent les tokens échangés, soit aucune transaction n'est effectuée, ce qui constitue une garantie cryptographique solide qu'aucune partie n'est en mesure de tromper l'autre.
 
-We use the following terms to describe the parties in the XCX:
+Nous utilisons les termes suivants pour décrire les parties dans le XCX :
 
-- Borrower: a person owning a DAT and wanting to get a native coin, e.g, a person who has DBTC and wanting to obtain BTC through the XCX.
-- Lender: a person owning BTC and receiving a DAT through the XCX, either temporarily for the duration of the XCX, or permanently, if the XCX expires.
+- Emprunteur : une personne possédant un DAT et souhaitant obtenir un token natif, par exemple, une personne possédant un dBTC et souhaitant obtenir un BTC via le XCX ;
+- Prêteur : une personne possédant des BTC et recevant un DAT par le biais du XCX, soit temporairement pour la durée du XCX, soit définitivement, si le XCX expire.
 
-XCX orders contain several parameters that can be freely decided by the market marker (first lister of an order). For selling of DBTC for BTC (i.e. someone who’s interested in receiving actual BTC), the parameters are:
+Les ordres XCX contiennent plusieurs paramètres qui peuvent être librement décidés par le marqueur de marché (premier listage d'un ordre). Pour la vente de dBTC contre des BTC (c'est-à-dire quelqu'un qui est intéressé pour recevoir des BTC réels), les paramètres sont :
 
-- Amount: Amount of coin/DAT a seller is looking for and how much DAT is locked up.
-- Premium: Amount of additional fee a coin seller stands to make from this trade (Premium is listed per unit amount, thus allowing for partial fulfillment of trade orders). Together with expiry, it can also be considered as lending interest to the buyer. The Premium is paid instantly once an XCX is matched, before expiry of the lending contract. Premium can be positive (+) or negative (-) depending on supply and demand.
-- Guarantee: An optional additional amount in DBTC and/or DFI that is locked in the XCX that will provide an extra incentive for a lender as it resolves in either of the following  two outcomes:
-  a. Released back to the borrower should the BTC amount be paid up before expiry.
-  b. Release to the lender should the contract expire without the borrower making a payment thereby constituting an extra incentive.
-- Expiry: Time when the contract expires, it can be set as a date in the past for immediate settlement, i.e. no lending, but straight-out swap.
-- Native token address: Address to send BTC to for executing the contract.
+- Montant : La quantité de tokens/DAT recherchée par le vendeur et la quantité de DAT bloquée ;
+- Prime : Montant des frais supplémentaires qu'un vendeur de tokens peut gagner sur cette transaction (la prime est indiquée par montant unitaire, ce qui permet une exécution partielle des ordres de transaction). Avec l'expiration, elle peut également être considérée comme un prêt avec intérêts pour l'acheteur. La prime est payée instantanément dès qu'un XCX est apparié, avant l'expiration du contrat de prêt. La prime peut être positive (+) ou négative (-) selon l'offre et la demande ;
+- Garantie : Un montant supplémentaire optionnel en dBTC et/ou DFI qui est verrouillé dans le XCX et qui fournira une incitation supplémentaire pour un prêteur car il se résout dans l'un des deux résultats suivants :
+  a. Libéré à l'emprunteur si le montant BTC est payé avant l'expiration ;
+  b. Libération au profit du prêteur si le contrat expire sans que l'emprunteur ait effectué un paiement, ce qui constitue une incitation supplémentaire.
+- Expiration : Moment où le contrat expire, il peut être défini comme une date dans le passé pour un règlement immédiat, c'est-à-dire pas de prêt, mais un échange pur et simple.
+- Adresse du token natif : Adresse à laquelle envoyer les dBTC pour exécuter le contrat.
 
-#### First Example:
+#### Premier exemple :
 
-Alice has 1 DBTC and wants 1 BTC so she can trade on a centralized exchange.
+Alice a 1 dBTC et veut 1 BTC pour trader sur une bourse centralisée.
 
-Bob has 1 BTC that he does not need for 1 month, hoping to generate some lending interest during that period of time.
+Bob a 1 BTC dont il n'a pas besoin pendant 1 mois, et espère générer un intérêt sur prêt pendant cette période.
 
-1. Alice lists the following XCX order:
-- Amount: 1 DBTC/BTC
-- Premium: 8,000 DFI
-- Guarantee: 0.1 DBTC
-- Expiry: December 31, 2019 – approx. 1 month.
-- Address: Alice lists her BTC deposit address
-2. Bob accepts the offer by sending a transaction on DeFiChain.
-3. Bob receives a confirmation on DeFiChain that his order is accepted. In case there are multiple order acceptance transactions.
-4. Bob sends 1 BTC to Alice’s BTC deposit address as listed in the XCX order and sends a transaction on DeFiChain with the BTC txid as receipt. Bob also specifies a receiving BTC address on the same transaction for Alice to repay the 1 BTC later on.
-5. Multiple DeFiChain stakers with BTC bridges confirm that Bob has indeed sent the amount as agreed and the that the txid is valid.
-6. XCX’s premium of 8000 DFI is instantly released to Bob. Bob can do what he wants with the DFI straight away with no strings attached. It is Bob’s to keep for this trade.
+1. Alice passe l'ordre XCX suivant :
+- Montant : 1 dBTC/BTC ;
+- Prime : 8 000 DFI ;
+- Garantie : 0,1 dBTC ;
+- Expiration : 31 décembre 2019 - environ 1 mois.
+- Adresse : Alice indique son adresse de dépôt BTC
+2. Bob accepte l'offre en envoyant une transaction sur DeFiChain ;
+3. Bob reçoit une confirmation sur DeFiChain que sa commande est acceptée, dans le cas où il y a plusieurs transactions d'acceptation de commande.
+4. Bob envoie 1 BTC à l'adresse de dépôt BTC d'Alice comme indiqué dans la commande XCX et envoie une transaction sur DeFiChain avec le BTC txid comme reçu. Bob spécifie également une adresse de réception de BTC sur la même transaction pour qu'Alice puisse rembourser les 1 BTC plus tard.
+5. De multiples stakers de DeFiChain avec des passerelles BTC confirment que Bob a bien envoyé le montant comme convenu et que le txid est valide.
+6. La prime de XCX de 8 000 DFI est instantanément libérée pour Bob. Bob peut faire ce qu'il veut avec les DFI immédiatement, sans aucune condition. C'est à Bob de la garder pour cette transaction.
 
-Now, Alice has 1 BTC and Bob has 8000 DFI. Alice also has 1 DBTC locked up on XCX order and Bob is the beneficiary of that BTC. Note that the beneficiary of an XCX is transferable, i.e. Bob is able to sell the XCX with Alice to a third party (this allows for decentralized debt selling and tokenization of receivables).
+Maintenant, Alice a 1 BTC et Bob a 8000 DFI. Alice a également 1 dBTC bloqué sur l'ordre XCX et Bob est le bénéficiaire de ce BTC. Notez que le bénéficiaire d'un XCX est transférable, c'est-à-dire que Bob peut vendre le XCX avec Alice à un tiers (cela permet la vente décentralisée de dettes et la tokenisation des créances).
 
-Should Alice wish to redeem her 1 DBTC from the XCX before the time is up, Alice will send Bob the 1 BTC she borrowed earlier to Bob’s address specified in the XCX and send the acknowledgment on DeFiChain. Upon confirmation by stakers with a BTC bridge, the XCX contract now closes and Alice gets her 1 DBTC back, having paid 8,000 DFIs as interest.
+Si Alice souhaite racheter son dBTC du XCX avant la date d'expiration, Alice enverra à Bob le BTC qu'elle a emprunté plus tôt à l'adresse de Bob spécifiée dans le XCX et enverra l'accusé de réception sur DeFiChain. Après confirmation par les stakers avec une passerelle BTC, le contrat XCX se ferme maintenant et Alice récupère son dBTC, ayant payé 8 000 DFIs comme intérêt.
 
-Bob gets his 1 BTC back (keeping his 8000 DFI as lending interest).
+Bob récupère son BTC (en gardant ses 8 000 DFI comme intérêt de prêt).
 
-Should Alice wish not to redeem the XCX before the expiry, Bob gets to keep Alice’s 1 DBTC.
+Si Alice ne souhaite pas racheter le XCX avant l'expiration, Bob conserve le dBTC d'Alice.
 
-Alice gets to keep the 1 BTC (minus 8000 DFI interest) and Bob now gets 1 DBTC (plus 8000 DFI interest). Additionally Bob received the Guarantee of 0.1 DBTC providing him with an extra 10%.
+Alice garde le BTC (moins les 8 000 DFI d'intérêts) et Bob reçoit maintenant 1 dBTC (plus les 8 000 DFI d'intérêts). De plus, Bob a reçu la garantie de 0,1 dBTC, ce qui lui procure un supplément de 10%.
 
 ![XCX](/img/white-paper/alice-bob-xcx.png)
 
-#### Second Example:
+#### Deuxième exemple :
 
-In a second scenario Charlie has 1 DBTC and wants 1 BTC. He has no intention of paying it back and getting his DBTC back. He also does not want to include an additional guarantee, so he adds a higher Premium and an immediate Expiry. Charlie would list the following XCX order:
+Dans un deuxième scénario, Charlie a 1 dBTC et veut 1 BTC. Il n'a pas l'intention de le rembourser et de récupérer son dBTC. Il ne veut pas non plus inclure une garantie supplémentaire, il ajoute donc une prime plus élevée et une expiration immédiate. Charlie inscrit l'ordre XCX suivant :
 
-- Amount: 1 DBTC/BTC
-- Premium: 12000 DFI
-- Guarantee: None
-- Expiry: Immediate
+- Montant : 1 dBTC/BTC ;
+- Prime : 12 000 DFI ;
+- Garantie : Aucune ;
+- Expiration : Immédiate.
 
-Dave, notices the order has no guarantee and an immediate expiry and knows that this XCX order expires instantly. He happily provides the counter-trade to Charlie, giving him 1 BTC and receiving immediately 1 DBTC + 12000 DFI.
+Dave remarque que l'ordre n'a aucune garantie et une expiration immédiate et sait que cet ordre XCX expire instantanément. Il fournit volontiers la contre-opération à Charlie, lui donnant 1 BTC et recevant immédiatement 1 dBTC + 12000 DFI.
 
-A Guarantee is therefore not a must, but a potential incentive for the lender to know whether he/she has to exchange the received funds afterwards or whether he/she will get the original native coins back.
+Une garantie n'est donc pas une obligation, mais une incitation potentielle pour le prêteur à savoir s'il doit échanger les fonds reçus par la suite ou s'il récupérera les tokens natifs originaux.
 
-### Pricing Oracles
+### Oracles de tarification
 
-A Pricing Contract is a smart contract on DeFiChain allowing multiple trusted and appointed parties to submit periodic price feeds of DATs and DFI.
+Un oracle est un smart contract sur DeFiChain permettant à plusieurs parties de confiance et désignées de soumettre des flux de prix périodiques de DATs et DFIs. 
 
-Multiple Pricing Contract oracles are chosen by the DeFi DAO (explained in the next chapter).
+Plusieurs oracles sont choisis par le DAO de DeFiChain (expliqué dans le chapitre suivant).
 
-### Use Case Examples
+### Cas d'usage
 
-Following are examples of how the technical implementations of DeFiChain can be used. This is just a list of examples. Many other applications can be implemented as well.
+Les exemples suivants montrent comment les implémentations techniques de DeFiChain peuvent être utilisées. Il ne s'agit que d'exemples. Beaucoup d'autres applications peuvent être mises en œuvre également.
 
-#### Leveraging a Long Position
+#### L'effet de levier à long terme
 
-1. Alice has 100k DFI. She likes the prospects of DFI and wants to leverage her position.
-2. Alice opens a loan contract on DeFiChain and takes out a loan in DUSDT.
-3. Alice sells DUSDT for more DFI.
+1. Alice a 100k DFI. Elle aime les perspectives de DFI et veut tirer parti de sa position.
+2. Alice ouvre un contrat de prêt sur DeFiChain et prend un prêt en dUSDT.
+3. Alice vend ses dUSDT pour plus de DFI.
 
-Thus Alice can obtain a compounded long position on DFI without putting in extra money.
+Ainsi, Alice peut obtenir une position longue cumulée en DFI sans investir d'argent supplémentaire.
 
-#### Shorting a Coin
+#### Faire un short / vendre à découvert
 
-1. Bob wishes to short coin XXX. Bob has DFI.
-2. Bob opens a loan contract on DeFiChain, takes out a loan in DXXX.
-3. Bob can now either sell DXXX for DFI or DUSDT on DeFi DEX, or convert DXXX via XCX to sell XXX on a non-DeFi-internal exchange.
-4. Once Bob wishes to close his short position, Bob buys back XXX (or DXXX) from the market, hopefully at a lower rate, closes his loan contract and thus completes his short of XXX.
+1. Bob souhaite vendre à découvert la pièce XXX. Il dispose de DFI.
+2. Il ouvre un contrat de prêt sur DeFiChain et contracte un prêt en dXXX.
+3. Bob peut maintenant soit vendre des dXXX pour des DFI ou dUSDT sur le DEX, soit convertir des dXXX via le XCX pour vendre XXX sur un marché externe à DeFiChain.
+4. Lorsque Bob souhaite clôturer sa position courte, il rachète des XXX (ou des dXXX) sur le marché, si possible à un taux plus bas, clôt son contrat de prêt et termine ainsi sa position courte de XXX.
 
-#### Getting a Loan (Borrowing)
+#### Obtenir un prêt
 
-1. Charlie has DFI, but he needs short-term cashflow of another coin XXX. Charlies does not want to sell DFI for it nor does he want to spend fiat money to buy this coin.
-2. Charlie takes a loan via loan contract on DeFiChain for DXXX and converts it to XXX.
-3. Once he wishes to settle his loan, Charlie simply purchases XXX/DXXX and closes his loan contract.
+1. Charlie possède des DFI, mais il a besoin de liquidités à court terme pour une autre pièce XXX. Charlie ne veut pas vendre de DFI pour l'obtenir et ne veut pas non plus dépenser de la monnaie fiduciaire pour acheter cette pièce.
+2. Charlie prend un prêt via un contrat de prêt sur DeFiChain pour des dXXX et les convertit en XXX.
+3. Lorsqu'il souhaite régler son prêt, Charlie achète simplement XXX/dXXX et clôture son contrat de prêt.
 
-#### Lending a Coin for Cashflow
+#### Prêter pour générer du cashflow
 
-1. Dave has BTC that he does not need in the short-term. Dave wishes to generate some interest (cashflow) by lending BTC.
-2. Dave lists BTC on XCX specifying his BTC amount, desired premium (interest rate) and expiry (period that he does not need his BTC).
-3. Once a counterparty takes up Dave’s listing, Dave receives an instant premium in DFI.
-4. Upon expiry, Dave would either receive his BTC back, or receive DFI with an additional Guarantee thereby netting more than his original BTC.
+1. Dave possède des BTC dont il n'a pas besoin à court terme. Il souhaite générer des intérêts (cashflow) en prêtant des BTC.
+2. Dave met en vente des BTC sur le XCX en précisant le montant de ses BTC, la prime souhaitée (taux d'intérêt) et l'échéance (période pendant laquelle il n'a pas besoin de ses BTC).
+3. Dès qu'une contrepartie accepte l'inscription de Dave, ce dernier reçoit une prime instantanée en DFI.
+4. À l'expiration, Dave peut soit récupérer ses BTC, soit recevoir des DFI avec une garantie supplémentaire, ce qui lui rapporte plus que ses BTC initiaux.
 
 ---
 
-## $DFI coin
+## Le Coin $DFI
 
-The $DFI coin will be the integral unit of account in DeFiChain ecosystem.
+Le $DFI sera l'unité de compte intégrale dans l'écosystème DeFiChain.
 
-The DeFiChain Foundation will be issuing the DeFi utility token, DFI, capped at 1,200,000,000 (1.2 billion) for throughout its lifetime. There will only ever be 1.2 billion DFIs created.
+La Fondation DeFiChain émettra le token utilitaire DeFi, DFI, plafonné à 1 200 000 000 (1,2 milliards) pendant toute sa durée de vie. Il n'y aura jamais plus que 1,2 milliard de DFI créés.
 
-DFI is divisible up to 8 decimal places.
+DFI est divisible jusqu'à 8 décimales.
 
-### $DFI coin Utility
+### Utilité du $DFI
 
-- DFI is used for fee payment for all transactions and smart contracts on DeFiChain.
-    - Fee payment for decentralized exchange transactions
-    - Fee payment for token transfers
-- Fees payment for DeFi activities:
-    - DEX fees
-    - XCX fees
-    - Lending loan interests payment
-    - etc.
-- Collateral for borrowing of other cryptoassets on DeFiChain.
-- 20,000 DFI is required to run a staking node for DeFiChain.
-- 1,000 DFI is required to create a DCT. This is refundable upon destruction of the DCT.
-- 10 DFI is required to submit a Community Fund Proposal. This is non-refundable.
-- 50 DFI for submitting a Vote of Confidence. Also non-refundable. Both are to be paid to the burn address 8defichainBurnAddressXXXXXXXdRQkSm
+- Le DFI est utilisé pour le paiement des frais pour toutes les transactions et les smart contracts sur DeFiChain.
+  - Paiement de frais pour les transactions d'échange décentralisées
+  - Paiement de frais pour les transferts de tokens
+- Paiement de frais pour les activités de DeFi :
+  - Frais DEX
+  - Frais XCX
+  - Paiement des intérêts des prêts
+  - etc.
+- Garantie pour l'emprunt d'autres cryptoactifs sur DeFiChain.
+- 20.000 DFI est requis pour exécuter un masternode de DeFiChain.
+- 1.000 DFI est nécessaire pour créer un DCT. Cette somme est remboursée lors de la destruction du DCT.
+- 10 DFI sont nécessaires pour soumettre une proposition de budget de la communauté DFI. Ce montant n'est pas remboursable.
+- 50 DFI pour le vote de confiance. Également non remboursable. Les deux sont à payer à l'adresse de brûlage 8defichainBurnAddressXXXXXdRQkSm
 
-### Fees from DeFi Activities
+### Frais d'activités du DFI
 
-Fees from DeFi activities on DeFiChain are burned and redistributed through new token minting over a period of time as laid out below. This ensures that DeFi stakers enjoy the benefits of earning rewards from facilitating trustless DeFi trades on DeFiChain in a fair manner.
+Les frais provenant des activités de DeFi sur DeFiChain sont détruit par le burning et redistribués par le minting de nouveaux tokens sur une période de temps comme indiqué ci-dessous. Cela garantit que les dépositaires de DeFi bénéficient des avantages de gagner des récompenses en facilitant les transactions DeFi sans tiers de confiance sur DeFiChain d'une manière équitable.
 
-**Rewards from minting a block on DeFiChain are calculated as**:
+**Les récompenses du mining d'un bloc sur DeFiChain sont calculées comme suit :**:
 
-1. Underlying block reward schedule (see distribution schedule) +
-2. Burned token redistribution schedule
+1. Schéma de récompense du bloc sous-jacent (voir le schéma de distribution) +
+2. Programme de redistribution des tokens brûlés (burnt)
 
-The burned token redistribution schedule is determined automatically every 259,200 blocks (approx. every 90 days) and works as follows:
+Le programme de redistribution des tokens brûlés est déterminé automatiquement tous les 259 200 blocs (environ tous les 90 jours) et fonctionne comme suit :
 
-![Burned token distribution](/img/white-paper/burn.png)
+![Programme de redistriution des tokens brûlés ](/img/white-paper/burn.png)
 
-Burned token redistribution for the next 259,200 blocks =
+Redistribution des tokens brûlés pour les 259 200 prochains blocs =
 
-1. (Total token burned from the last 259,200 blocks [Quarter -1]) / 4 +
-2. (Total token burned from block -518,400th to -259,200th block [Quarter -2]) / 4 +
-3. (Total token burned from block -777,600th to -518,400th block [Quarter -3]) / 4 +
-4. (Total token burned from block -1,036,800th to -777,600th block [Quarter -4]) / 4
+1. (Total des tokens brûlés des 259 200 derniers blocs [trimestre -1]) / 4 +
+2. (Total des tokens brûlés du bloc courant B - 518 400 au bloc B - 259 200 [trimestre -2]) / 4 +
+3. (Total des tokens brûlés du bloc B - 777 600 au bloc B - 518 400 [trimestre 3]) / 4 +
+4. (Total des tokens brûlés du bloc B - 1 036 800 au bloc B - 777 600 [trimestre -4]) / 4
 
 ### Masternodes
 
-DeFi is a Proof of Stake blockchain. Initially, 1,000,000 DFI allows the owner to own a staking node. Today, the amount has been reduced to 20,000 DFI for ownership of a staking node. The returns for staking will decrease over time, as the volume and number of transactions compensate for the reduction in per-transaction staking rewards.
+DeFiChain est une blockchain basée sur la preuve d'enjeu. Initialement, posséder 1 000 000 DFI permettait d'avoir un masternode. Aujourd'hui, le montant a été réduit à 20 000 DFI pour la propriété d'un masternode. Le rendement du staking diminuera avec le temps, car le volume et le nombre de transactions compensent la réduction des récompenses de staking par transaction.
 
-Nodes are entitled to:
+Les masternodes ont droit à :
 
-- Periodic staking rewards as described later in this chapter.
-- Submission of votes to key decisions that govern DeFiChain in the governance system.
-- Submission of votes on how the DFI community budget is being allocated and distributed.
+- Des récompenses périodiques de staking comme décrit plus loin dans ce chapitre.
+- Soumission de votes pour les décisions clés qui gouvernent DeFiChain dans le système de gouvernance.
+- Soumission de votes sur la façon dont le budget de la communauté DFI est alloué et distribué.
 
-### Governance
+### Gouvernance
 
-The DeFiChain Foundation is responsible for issuance of tokens and is governed by an independent board. This board will be governed by the DeFi masternodes voting on its members and also by giving directives on key decisions.
+La Fondation DeFiChain est responsable de l'émission de tokens et est gouvernée par un conseil indépendant. Ce conseil sera gouverné par les masternodes lors de votes par ses membres et aussi en donnant des directives sur les décisions clés.
 
-The DeFiChain Foundation awards tokens to users and groups to speed up adoption (see the section on initial token distribution and marketing). The Foundation is tasked with boosting the ecosystem, bringing in ecosystem partners, directing the development of the tools for ecosystem partners, and other activities to increase the number of ecosystem partners.
+La Fondation DeFiChain attribue des tokens aux utilisateurs et aux groupes pour accélérer l'adoption (voir la section sur la distribution initiale de tokens et le marketing). La Fondation a pour mission de dynamiser l'écosystème, de faire venir des partenaires dans l'écosystème, de diriger le développement des outils pour les partenaires de l'écosystème et d'autres activités visant à augmenter le nombre de partenaires de l'écosystème.
 
-![Governance](/img/white-paper/governance.png)
+![Gouvernance de DeFiChain](/img/white-paper/governance.png)
 
-For clarification and transparency, Cake Pte Ltd is a private company located in Singapore. Cake Pte Ltd is an initial contributor as part of the ecosystem’s partners to creating services on DeFiChain.
+Pour des raisons de clarification et de transparence, Cake Pte Ltd est une société privée située à Singapour. Cake Pte Ltd est un contributeur initial dans le cadre des partenariats à l'écosystème pour créer des services sur DeFiChain.
 
-### Community Development Fund
+### Fonds de développement de la communauté
 
-The DeFiChain Foundation will create a community development fund with up to 10% of the block rewards under management. This percentage can be updated by submitting a DAO proposal that will be voted on by all masternodes. Community development funds were popularized by DASH[^10] and are used in some selective DAOs today. The community will determine the use of these funds for development, marketing, or research that forwards the DeFi community. DFI masternodes vote for projects they like and the highest voted proposals every month will be funded.
+La Fondation DeFiChain créera un fonds de développement de la communauté avec une gestion allant jusqu'à 10% des récompenses du bloc. Ce pourcentage peut être mis à jour en soumettant une proposition de DAO qui sera votée par tous les masternodes. Les fonds de développement communautaires ont été popularisés par DASH et sont utilisés aujourd'hui dans certaines DAO sélectives. La communauté déterminera l'utilisation de ces fonds pour le développement, le marketing ou la recherche au profit de la communauté DeFiChain. Les masternodes DFI votent pour les projets qu'ils aiment et les propositions les plus votées chaque mois seront financées.
 
-It costs 10 DFI to submit a budget proposal and a proposal can be submitted by anyone. This fee is burned and non-refundable regardless of whether the budget is approved. Budgets are proposals which receive a net total of yes votes equal to or greater than 10% of the total possible votes (for example over 448 out of 4480). Budgets can be nullified at any time if vote totals (cast or re-cast) fall below the approval threshold. Budgets are processed (paid) in order of yes minus no votes. More popular budgets get payment priority. Voting happens on a monthly basis but can be changed by a masternode vote.
+Il en coûte 10 DFI de soumettre une proposition de budget, et une proposition peut être soumise par n'importe qui. Ces frais sont brûlés et non remboursables, que le budget soit approuvé ou non. Les budgets sont des propositions qui reçoivent un total net de votes positifs égal ou supérieur à 10% du total des votes possibles (par exemple plus de 448 sur 4480). Les budgets peuvent être annulés à tout moment si le total des votes (exprimés ou renouvelés) tombe sous le seuil d'approbation. Les budgets sont traités (financés) dans l'ordre des votes positifs moins les votes négatifs. Les budgets les plus populaires sont financés en priorité. Les votes ont lieu sur une base mensuelle mais peuvent être modifiés par un vote du masternode.
 
-For governance decisions, only the Foundation may submit proposals. Proposals are voted in similar way as DAO budget proposals except that decisions will be honored via simple majority vote.
+Pour les décisions de gouvernance, seule la Fondation peut soumettre des propositions. Les propositions sont votées de la même manière que les propositions de budget de la DAO, sauf que les décisions seront honorées par un vote à la majorité simple.
 
 [^10]: https://docs.dash.org/en/stable/governance/understanding.html
 
-### Initial Token Distribution
+### Distribution initiale des tokens
 
-Of the roughly 1.2 billion $DFI coins 49% will be issued to the DeFiChain Foundation at the start. The rest will be issued to Masternode holders over time.
-Of the 49% initially issued $DFI coins, 49% will be kept by the DeFiChain Foundation. The rest may be distributed to accredited investors, large funds and institutions, collectively known as external partners, to fund the initial development of DeFiChain. In order to decentralize the holdings of DFIs as much as possible the DeFiChain Foundation may not keep more than 49% of all initially issued tokens. The use of potential proceedings of the tokens will be decided by the DeFiChain Foundation board but will exclusively be directed towards the adoption and development of DeFiChain.
+Sur les 1.2 milliards de tokens $DFI, 49% seront émis à la Fondation DeFiChain au démarrage. Le reste sera émis aux détenteurs de masternodes au fil du temps.
+Des 49% de tokens $DFI initialement émises, 49% seront conservées par la Fondation DeFiChain. Le reste peut être distribué aux investisseurs accrédités, aux grands fonds et aux institutions, collectivement connus comme partenaires externes, pour financer le développement initial de DeFiChain. Afin de décentraliser autant que possible les avoirs de DFI, la Fondation DeFiChain ne peut pas conserver plus de 49% de tous les tokens initialement émis. L'utilisation potentielle des tokens sera décidée par le conseil de la Fondation DeFiChain mais sera exclusivement dirigée vers l'adoption et le développement de DeFiChain.
 
-For any avoidance of doubt, there will NOT be a public ICO.
+Pour éviter tout doute, il n'y aura PAS d'ICO publique.
 
-![Initial Token Distribution](/img/white-paper/initial-token-distribution.png)
+![Schéma de la distribution initiale de tokens](/img/white-paper/initial-token-distribution.png)
 
-Further tokens will only ever be received through staking, which is described in the next chapter.
+D'autres tokens seront uniquement reçus que par le biais du staking, qui est décrit dans le chapitre suivant.
 
-### Token Issuance Schedule via Staking
+### Calendrier d'émission de jetons par le staking
 
-DeFiChain is initially launched with a 200 DFI block reward, of which 10% goes to the community fund. The Foundation pledges to guarantee this 200 DFI block reward for at least 1,050,000 blocks since the the first genesis block, so approximately 1 year.
+DeFiChain est initialement lancée avec une récompense de 200 DFI par bloc, dont 10% vont au fonds communautaire. La Fondation s'engage à garantir cette récompense de 200 DFI pour au moins 1 050 000 blocs depuis le premier bloc de genèse, soit environ 1 an.
 
-Subsequently, block rewards will be adjusted through governance vote. The Foundation also further pledges that there will never be more than 1,200,000,000 (1.2 billion) DFI in circulation, unless until the DAO governance votes to change this limit. Therefore DFI is a deflationary utility token.
+Par la suite, les récompenses par bloc seront ajustées par un vote de la gouvernance. La Fondation s'engage également à ce qu'il n'y ait jamais plus de 1 200 000 000 (1,2 milliard) de DFI en circulation, à moins que la gouvernance de la DAO ne vote pour modifier cette limite. Par conséquent, le DFI est un token utilitaire déflationniste.
 
-The proposed staking schedule for the first 10 years is according to the following table:
+Le programme de staking proposé pour les 10 premières années est conforme au tableau suivant :
 
 <div class="table-responsive">
   <table>
     <thead>
       <tr>
         <th scope="col">
-          Year
+          Année
         </th>
         <th scope="col">
-          Start of year token in circulation
+          Tokens en circulation au début de l'année
         </th>
         <th scope="col">
-          % of supply staked
+          Volume de tokens en staking
         </th>
         <th scope="col">
-          Block reward
+          Récompense de bloc (DFI)
         </th>
         <th scope="col">
-          Targeted new token %
+          Objectif de nouveaux tokens
         </th>
         <th scope="col">
-          Targeted new token
+          Objectif de nouveaux tokens (nb)
         </th>
         <th scope="col">
-          Staking return %
+          Intérêts de staking
         </th>
         <th scope="col">
-          Actual new token
+          Nouveaux tokens effectifs
         </th>
         <th scope="col">
-          End of year token in circulation
+          Tokens en circulation en fin d'année
         </th>
         <th scope="col">
-          % of cap
+          % de la capitalisation
         </th>
         <th scope="col">
-          New token for year
+          Nouveaux tokens sur l'année
         </th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>1</td>
-        <td>490,000,000</td>
+        <td>490 000 000</td>
         <td>95%</td>
         <td>200</td>
-        <td>20.00%</td>
-        <td>98,000,000</td>
-        <td>42.91%</td>
-        <td>210,240,000</td>
-        <td>700,240,000</td>
-        <td>58.35%</td>
-        <td>210,240,000</td>
+        <td>20,00%</td>
+        <td>98 000 000</td>
+        <td>42,91%</td>
+        <td>210 240 000</td>
+        <td>700 240 000</td>
+        <td>58,35%</td>
+        <td>210 240 000</td>
       </tr>
       <tr>
         <td>2</td>
-        <td>700,240,000</td>
+        <td>700 240 000</td>
         <td>85%</td>
         <td>150</td>
-        <td>13.33%</td>
-        <td>93,365,333</td>
-        <td>22.52%</td>
-        <td>157,680,000</td>
-        <td>857,920,000</td>
-        <td>71.49%</td>
-        <td>157,680,000</td>
+        <td>13,33%</td>
+        <td>93 365 333</td>
+        <td>22,52%</td>
+        <td>157 680 000</td>
+        <td>857 920 000</td>
+        <td>71,49%</td>
+        <td>157 680 000</td>
       </tr>
       <tr>
         <td>3</td>
-        <td>857,920,000</td>
+        <td>857 920 000</td>
         <td>75%</td>
         <td>100</td>
-        <td>8.89%</td>
-        <td>76,259,556</td>
-        <td>12.25%</td>
-        <td>105,120,000</td>
-        <td>963,040,000</td>
-        <td>80.25%</td>
-        <td>105,120,000</td>
+        <td>8,89%</td>
+        <td>76 259 556</td>
+        <td>12,25%</td>
+        <td>105 120 000</td>
+        <td>963 040 000</td>
+        <td>80,25%</td>
+        <td>105 120 000</td>
       </tr>
       <tr>
         <td>4</td>
-        <td>963,040,000</td>
+        <td>963 040 000</td>
         <td>70%</td>
         <td>70</td>
-        <td>5.93%</td>
-        <td>57,069,037</td>
-        <td>7.64%</td>
-        <td>73,584,000</td>
-        <td>1,036,624,000</td>
-        <td>86.39%</td>
-        <td>73,584,000</td>
+        <td>5,93%</td>
+        <td>57 069 037</td>
+        <td>7,64%</td>
+        <td>73 584 000</td>
+        <td>1 036 624 000</td>
+        <td>86,39%</td>
+        <td>73 584 000</td>
       </tr>
       <tr>
         <td>5</td>
-        <td>1,036,624,000</td>
+        <td>1 036 624 000</td>
         <td>70%</td>
         <td>50</td>
-        <td>3.95%</td>
-        <td>40,953,047</td>
-        <td>5.07%</td>
-        <td>52,560,000</td>
-        <td>1,089,184,000</td>
-        <td>90.77%</td>
-        <td>52,560,000</td>
+        <td>3,95%</td>
+        <td>40 953 047</td>
+        <td>5,07%</td>
+        <td>52 560 000</td>
+        <td>1 089 184 000</td>
+        <td>90,77%</td>
+        <td>52 560 000</td>
       </tr>
       <tr>
         <td>6</td>
-        <td>1,089,184,000</td>
+        <td>1 089 184 000</td>
         <td>70%</td>
         <td>40</td>
-        <td>2.63%</td>
-        <td>28,686,328</td>
-        <td>3.86%</td>
-        <td>42,048,000</td>
-        <td>1,131,232,000</td>
-        <td>94.27%</td>
-        <td>42,048,000</td>
+        <td>2,63%</td>
+        <td>28 686 328</td>
+        <td>3,86%</td>
+        <td>42 048 000</td>
+        <td>1 131 232 000</td>
+        <td>94,27%</td>
+        <td>42 048 000</td>
       </tr>
       <tr>
         <td>7</td>
-        <td>1,131,232,000</td>
+        <td>1 131 232 000</td>
         <td>70%</td>
         <td>25</td>
-        <td>1.76%</td>
-        <td>19,862,510</td>
-        <td>2.32%</td>
-        <td>26,280,000</td>
-        <td>1,157,512,000</td>
-        <td>96.46%</td>
-        <td>26,280,000</td>
+        <td>1,76%</td>
+        <td>19 862 510</td>
+        <td>2,32%</td>
+        <td>26 280 000</td>
+        <td>1 157 512 000</td>
+        <td>96,46%</td>
+        <td>26 280 000</td>
       </tr>
       <tr>
         <td>8</td>
-        <td>1,157,512,000</td>
+        <td>1 157 512 000</td>
         <td>70%</td>
         <td>20</td>
-        <td>1.17%</td>
-        <td>13,549,295</td>
-        <td>1.82%</td>
-        <td>21,024,000</td>
-        <td>1,178,536,000</td>
-        <td>98.21%</td>
-        <td>21,024,000</td>
+        <td>1,17%</td>
+        <td>13 549 295</td>
+        <td>1,82%</td>
+        <td>21 024 000</td>
+        <td>1 178 536 000</td>
+        <td>98,21%</td>
+        <td>21 024 000</td>
       </tr>
       <tr>
         <td>9</td>
-        <td>1,178,536,000</td>
+        <td>1 178 536 000</td>
         <td>70%</td>
         <td>10</td>
-        <td>0.78%</td>
-        <td>9,196,928</td>
-        <td>0.89%</td>
-        <td>10,512,000</td>
-        <td>1,189,048,000</td>
-        <td>99.09%</td>
-        <td>10,512,000</td>
+        <td>0,78%</td>
+        <td>9 196 928</td>
+        <td>0,89%</td>
+        <td>10 512 000</td>
+        <td>1 189 048 000</td>
+        <td>99,09%</td>
+        <td>10 512 000</td>
       </tr>
       <tr>
         <td>10</td>
-        <td>1,189,048,000</td>
+        <td>1 189 048 000</td>
         <td>70%</td>
         <td>5</td>
-        <td>0.52%</td>
-        <td>6,185,973</td>
-        <td>0.44%</td>
-        <td>5,256,000</td>
-        <td>1,194,304,000</td>
-        <td>99.53%</td>
-        <td>5,256,000</td>
+        <td>0,52%</td>
+        <td>6 185 973</td>
+        <td>0,44%</td>
+        <td>5 256 000</td>
+        <td>1 194 304 000</td>
+        <td>99,53%</td>
+        <td>5 256 000</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-### Acquiring $DFI coins
+### Acquérir des $DFI
 
-$DFI coins will be issued only to the users of DeFiChain or partners with an interest in utilizing and participating in the ecosystem. There will be NO public sale or public token offering. Following are the only ways to get $DFI coins:
+Les coins $DFI seront émis uniquement aux utilisateurs de DeFiChain ou aux partenaires ayant un intérêt à utiliser et à participer à l'écosystème. Il n'y aura PAS de vente publique ou d'offre publique de tokens. Voici les seules façons d'obtenir des $DFI :
 
-- Institutional investors, accredited investors and funds who are interested in the use of DeFiChain can contact the DeFi founders at (partners@defichain.com).
-- Over time, DFI will be available on staking platforms (such as www.CakeDeFi.com) and on selected exchanges.
-- The DeFiChain Foundation will issue airdrop tokens for users of DeFiChain. (Hodlers and other market makers).
-- The DeFiChain Foundation gives grants to developers who are developing functionality for DeFiChain or dApps to run on the blockchain.
+- Les investisseurs institutionnels, les investisseurs accrédités et les fonds qui sont intéressés par l'utilisation de DeFiChain peuvent contacter les fondateurs à  (partners@defichain.com).
+- Au fil du temps, le DFI sera disponible sur des plateformes de staking (comme www.CakeDeFi.com) et sur des bourses sélectionnées.
+- La Fondation DeFiChain effectuera des airdrop pour les utilisateurs de DeFiChain. (Hodlers et autres faiseurs de marché).
+- La Fondation DeFiChain accorde des subventions aux développeurs qui développent des fonctionnalités pour DeFiChain ou des dApps à exécuter sur la blockchain.
 
 ---
 
-## DeFiChain Foundation
+## La Fondation DeFiChain
 
-The DeFiChain Foundation is incorporated as a company limited by guarantee, resembling a foundation structure which holds the DeFiChain Trademarks, Domains and makes sure the DFI foundation funds are used as instructed by the masternodes.
+La Fondation DeFiChain est une société à responsabilité limitée ("company limited by guarantee" dans l'original), ressemblant à une structure de fondation qui détient les marques commerciales DeFiChain, les domaines et s'assure que les fonds de la fondation DFI sont utilisés selon les instructions des masternodes.
 
 ---
 
 ## Marketing
 
-### Target Market
+### Marché cible
 
-Unlike most other DeFi-focused initiatives, DeFiChain being built on top of Bitcoin can harness almost the entire crypto market without being limited to “smaller” chains like Ethereum etc. Thus, as of publication, the target market for DeFiChain are over 60-80 million cryptocurrency owners and we can expect that hundreds of millions of other users will join in the future. This group of investors is investing and holding cryptocurrency due to the returns as well as their belief in the future of the industry. As investors, they have widely done well with the rise in many of the cryptoassets, however, they are not able to use their holdings in order to get better returns. Providing DeFi services will allow these investors to hold the coins they believe in, and increase their holdings over time based on investments that go deeper than just currency trading.
+Contrairement à la plupart des autres initiatives axées sur la DeFi, DeFiChain est construite sur le Bitcoin et peut exploiter la quasi-totalité du marché des crypto-monnaies sans être limitée aux chaînes "plus petites" comme Ethereum, etc. Ainsi, au moment de la publication, le marché cible de DeFiChain est de plus de 60-80 millions de propriétaires de crypto-monnaies et nous pouvons nous attendre à ce que des centaines de millions d'autres utilisateurs nous rejoignent dans le futur. Ce groupe d'investisseurs investit et détient des crypto-monnaies en raison des rendements ainsi que de leur croyance dans l'avenir de l'industrie. En tant qu'investisseurs, ils ont largement profité de la hausse de nombreuses crypto-monnaies, mais ils ne sont pas en mesure d'utiliser leurs avoirs pour obtenir de meilleurs rendements. Les services DeFi permettront à ces investisseurs de détenir les tokens auxquels ils croient et d'augmenter leurs avoirs au fil du temps grâce à des investissements qui vont au-delà du simple trading de devises.
 
-### Go-to-market Strategy
+### Stratégie de mise sur le marché
 
-The initial DeFiChain team is made up of some of the top names in the cryptocurrency industry, people who have made a name for themselves not just by delivering on their promises, but by creating a following. The team has built up a variety of marketing channels and has an established following on social media, wide distribution of books in the area of cryptocurrency, and deep contacts within the cryptocurrency industry.
+L'équipe initiale de DeFiChain est composée de certains des plus grands noms de l'industrie des crypto-monnaies, des personnes qui se sont fait un nom non seulement en tenant leurs promesses, mais aussi en créant une dynamique. L'équipe a mis en place une variété de canaux de marketing et dispose d'un public établi sur les médias sociaux, d'une large distribution de livres dans le domaine de la crypto-monnaie et de contacts robustes dans l'industrie de la crypto-monnaie.
 
-With the experience of building up social media followings of hundreds of thousands of users in the course of just a few years, the team plans to leverage their current followers and bring them onto specific channels that will be the domain of DeFiChain. The team will build up a complete marketing engine and staff, using the same proven competence they displayed in the past.
+Ayant l'expérience de construire des communautés sur les réseaux sociaux de centaines de milliers d'utilisateurs en quelques années seulement, l'équipe prévoit de tirer parti de ses adeptes actuels et de les amener sur des canaux spécifiques qui seront le domaine de DeFiChain. L'équipe mettra en place une équipe dirigeante de marketing transversal, en utilisant les mêmes compétences éprouvées qu'elle a montrées dans le passé.
 
-Unlike other blockchains, DeFiChain will be balanced between marketing and technology expertise. Building the best network is only half of the job. DFI holders can rest assured that the marketing team has the proven experience in building up a marketing engine that is required for product success and that the tech team will be able to deliver on the roadmap.
+Contrairement aux autres blockchains, DeFiChain sera équilibrée entre l'expertise marketing et technologique. Construire le meilleur réseau n'est que la moitié du travail. Les détenteurs de DFI peuvent être assurés que l'équipe de marketing a l'expérience éprouvée dans la construction d'un programme marketing nécessaire au succès du produit et que l'équipe technique sera en mesure de respecter la feuille de route.
 
-### Partnerships
+### Partenariats
 
-The DeFiChain Foundation will be tasked with assessing applications from ecosystem partners and providing foundation grants in the form of $DFI coins to developers and contributors to DeFiChain. Many open source projects and blockchain developers today are looking for the right blockchain project in order to develop their DeFi applications, and the prospect of a dedicated DeFiChain, backed by industry leaders is appealing.
+La Fondation DeFiChain sera chargée d'évaluer les demandes des partenaires de l'écosystème et de fournir des subventions de la fondation sous forme de $DFI aux développeurs et aux contributeurs de DeFiChain. De nombreux projets open source et développeurs de blockchain recherchent aujourd'hui le bon projet de blockchain afin de développer leurs applications DeFi, et la perspective d'une DeFiChain dédiée, soutenue par les leaders de l'industrie est séduisante.
 
-The DeFiChain Foundation will undertake a variety of efforts to choose the best projects for the expansion of DeFiChain:
+La Fondation DeFiChain va entreprendre divers efforts pour choisir les meilleurs projets pour l'expansion de DeFiChain :
 
-- Creation of a formal application process so that worthy projects can apply for airdrop or foundation grants for their development
-- Approaching developers in the ecosystem who are doing DeFi dApps on other blockchains, and providing grants for them to develop their dApps on DeFi.
-- General marketing to get the word out about the availability of DeFiChain Foundation grants to fund worthy projects.
+- Création d'un processus de demande formel afin que les projets valables puissent demander des subventions pour leur développement (airdrop ou fondation)
+- Approcher les développeurs dans l'écosystème qui font des dApps DeFi sur d'autres blockchains, et leur fournir des subventions pour qu'ils développent leurs dApps sur DeFiChain.
+- Marketing général pour faire passer le mot sur la disponibilité des subventions de la Fondation DeFiChain pour financer des projets valables.
 
-Every project on DeFiChain will naturally bring it its own users and put effort towards marketing of the project, adding users and hodlers to DeFiChain.
+Chaque projet sur DeFiChain apportera naturellement ses propres utilisateurs et fera des efforts pour le marketing du projet, ajoutant des utilisateurs et des hébergeurs à DeFiChain.
 
 [partners@defichain.com](mailto:partners@defichain.com)
 
 ---
 
-## Roadmap and Milestones
+## Feuille de route et points d'avancement
 
 ![Roadmap](/img/white-paper/roadmap.png)
 
-## A Glimpse into the Future
+## Un aperçu de l'avenir
 
-Building on top of DeFiChain will lead to some of the most exciting benefits not only for first-world areas, but moreover also all those that need decentralized finance the most. For example, imagine Anna, who owns a small business in a developing economy, but who doesn’t have a traditional bank account. She uses mobile money and digital currencies to run her business, accepting payments through mobile--which makes perfect sense, because nobody in her province uses cash or credit cards. Anna uses DeFiChain to take out a loan when one of her suppliers pays late, saving her business. In the old days, she would have simply gone out of business, because no bank would loan money to her. Anna also invests wisely. When she is paid by the supplier, she immediately moves the cash into various tokenized assets to avoid the hyperinflation and instability of her national government’s currency, and on top of that, she is able to earn interest.
+Construire à partir de DeFiChain conduira à certains des avantages les plus excitants, non seulement pour les régions les plus dévelopées, mais aussi pour ceux qui ont le plus besoin de finances décentralisées. Par exemple, imaginez Anna, qui possède une petite entreprise dans une économie en développement, mais qui n'a pas de compte bancaire traditionnel. Elle utilise l'argent mobile et les monnaies numériques pour gérer son entreprise, acceptant les paiements par mobile - ce qui est parfaitement logique, car personne dans sa province n'utilise d'argent liquide ou de cartes de crédit. Anna utilise DeFiChain pour contracter un prêt lorsqu'un de ses fournisseurs paie en retard, sauvant ainsi son entreprise. Autrefois, elle aurait tout simplement fait faillite, car aucune banque ne voulait lui prêter de l'argent. Anna investit également de manière judicieuse. Lorsqu'elle est payée par le fournisseur, elle transfère immédiatement l'argent dans divers actifs symboliques pour éviter l'hyperinflation et l'instabilité de la monnaie de son gouvernement national, et en plus de cela, elle peut gagner des intérêts.
 
-Anna creates a group of local businesspeople, and together they pool funds to help other entrepreneurs in their village. They purchase office space, solar panels, and a satellite to create a business center. The group uses DeFi to eliminate the overhead of complex legal contracts between them. They receive automatic dividends when the business center profits. Some of them reinvest in a delivery drone which charges for its services, and distributes the income to the investors. Others invest in sensor equipment that test local soil conditions, and sell the data to commodity markets. All of the sensors work independently and charge independently, and the investors simply reap the profits, all calculated automatically on DeFiChain.
+Anna crée un groupe d'entrepreneurs locaux et, ensemble, ils mettent les fonds en commun pour aider d'autres entrepreneurs de leur village. Ils achètent des bureaux, des panneaux solaires et un satellite pour créer un centre d'affaires. Le groupe utilise DeFiChain pour éliminer les frais généraux des contrats juridiques complexes entre eux. Ils reçoivent des dividendes automatiques lorsque le centre d'affaires réalise des bénéfices. Certains d'entre eux réinvestissent dans un drone de livraison qui facture ses services et distribue les revenus aux investisseurs. D'autres investissent dans des équipements de capteurs qui testent les conditions du sol local, et vendent les données aux marchés de matières premières. Tous les capteurs fonctionnent indépendamment et sont facturés indépendamment, et les investisseurs récoltent simplement les bénéfices, tous calculés automatiquement sur DeFiChain.
 
-Now, 5 years after her initial use of DeFi, Anna is able to take out a loan with no collateral, based on her long-term record of smart investments and returning loans on time, as well as assessment of her industry from trusted oracles. It’s a win-win situation. The lenders come from all over the globe, from people who want to diversify their investment portfolio to developing economies. The lenders don’t have to worry about the complexity of cross-border transactions or legal requirements. They escape the banking systems of their own countries, which moved to zero and negative-interest rates on savings. Now, these regular investors can be assured of returns on investments based on Anna and people like her, who run great businesses and can provide returns on people’s investments.
+Aujourd'hui, 5 ans après son utilisation initiale de DeFiChain, Anna est en mesure de contracter un prêt sans garantie, en se basant sur son historique d'investissements intelligents et de remboursements de prêts à temps, ainsi que sur l'évaluation de son secteur par des oracles de confiance. C'est une situation gagnant-gagnant. Les prêteurs viennent du monde entier, qu'il s'agisse de personnes souhaitant diversifier leur portefeuille d'investissements ou d'économies en développement. Les prêteurs n'ont pas à se soucier de la complexité des transactions transfrontalières ou des exigences juridiques. Ils échappent aux systèmes bancaires de leurs propres pays, qui sont passés à des taux d'intérêt nuls ou négatifs sur l'épargne. Maintenant, ces investisseurs réguliers peuvent être assurés de retours sur les investissements basés sur Anna et des personnes comme elle, qui dirigent de grandes entreprises et peuvent fournir des retours sur les investissements des gens.
 
-**This is what DeFiChain is all about - To make the world a better place!**
+**C'est la raison d'être de DeFiChain - Faire du monde un meilleur endroit !**

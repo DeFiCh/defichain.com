@@ -34,7 +34,7 @@ Wir möchten, dass die Node-Software in einem einheitlichen und leicht zugängli
 mkdir ~/.defi
 ```
 
-Kopiere nun die Binärdateien, indem du folgendes ausführst:
+Kopiere nun die Binärdateien, indem du Folgendes ausführst:
 ```
 cp ./defichain-1.x.x/bin/* ~/.defi
 ```

@@ -750,7 +750,7 @@ DFI est divisible jusqu'à 8 décimales.
 
 Les frais provenant des activités de DeFi sur DeFiChain sont détruit par le burning et redistribués par le minting de nouveaux tokens sur une période de temps comme indiqué ci-dessous. Cela garantit que les dépositaires de DeFi bénéficient des avantages de gagner des récompenses en facilitant les transactions DeFi sans tiers de confiance sur DeFiChain d'une manière équitable.
 
-**Les récompenses du mining d'un bloc sur DeFiChain sont calculées comme suit :**:
+**Les récompenses du minage d'un bloc sur DeFiChain sont calculées comme suit :**:
 
 1. Schéma de récompense du bloc sous-jacent (voir le schéma de distribution) +
 2. Programme de redistribution des tokens brûlés (burnt)

@@ -7,6 +7,43 @@
     "title": "Media",
     "desc": "Media resources and assets."
   },
+  "DownloadSection": {
+    "title": "Downloads",
+    "entries": [
+      {
+        "name": "DeFiChain logo",
+        "desc": "The official and default logo.",
+        "image": {
+          "svg": "/downloads/logo-defi-blockchain.svg",
+          "png": "/downloads/logo-defi-blockchain.png"
+        }
+      },
+      {
+        "name": "The DeFi jellyfish",
+        "desc": "Useful when space is constrained.",
+        "image": {
+          "svg": "/downloads/symbol-defi-blockchain.svg",
+          "png": "/downloads/symbol-defi-blockchain.png"
+        }
+      },
+      {
+        "name": "DFI 3D Coin",
+        "desc": "Available as SVG and PNG.",
+        "image": {
+          "svg": "/downloads/coin-defi-blockchain.svg",
+          "png": "/downloads/coin-defi-blockchain.png"
+        }
+      },
+      {
+        "name": "Built-on-Bitcoin",
+        "desc": "Available as SVG and PNG.",
+        "image": {
+          "svg": "/downloads/built-on-bitcoin.svg",
+          "png": "/downloads/built-on-bitcoin.png"
+        }
+      }
+    ]
+  },
   "MediaSection": {
     "title": "DeFiChain covered in the press and media.",
     "entries": [

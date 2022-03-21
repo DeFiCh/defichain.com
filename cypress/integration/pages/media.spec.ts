@@ -1,0 +1,57 @@
+context('/media page on desktop', () => {
+  before(() => {
+    cy.visit('/media')
+  })
+
+  beforeEach(() => {
+    cy.viewport('macbook-16')
+  })
+
+  it('should have Header', () => {
+    cy.findByTestId('Header.title').should('have.text', 'Media')
+    cy.findByTestId('Header.desc.main').should('have.text', 'Media resources and assets.')
+  })
+
+  it('should have MediaSection', function () {
+      cy.findByTestId('MediaSection').within(() => {
+        cy.findByTestId('Section.Title').should('have.text', 'Contribute to DeFiChain')
+        cy.findByTestId('MediaSection.Card').should('have.length.at.least', 20)
+      })
+  })
+
+  it('should have DownloadSection', function () {
+    cy.findByTestId('DownloadSection').within(() => {
+      cy.findByTestId('Section.Title').should('have.text', 'Downloads')
+      cy.findByTestId('DownloadSection.Card').should('have.length', 4)
+    })
+  })
+})
+
+context('/media page on mobile', () => {
+  before(() => {
+    cy.visit('/media')
+  })
+
+  beforeEach(() => {
+    cy.viewport('iphone-x')
+  })
+
+  it('should have Header', () => {
+    cy.findByTestId('Header.title').should('have.text', 'Media')
+    cy.findByTestId('Header.desc.main').should('have.text', 'Media resources and assets.')
+  })
+
+  it('should have MediaSection', function () {
+    cy.findByTestId('MediaSection').within(() => {
+      cy.findByTestId('Section.Title').should('have.text', 'Contribute to DeFiChain')
+      cy.findByTestId('MediaSection.Card').should('have.length.at.least', 20)
+    })
+  })
+
+  it('should have DownloadSection', function () {
+    cy.findByTestId('DownloadSection').within(() => {
+      cy.findByTestId('Section.Title').should('have.text', 'Downloads')
+      cy.findByTestId('DownloadSection.Card').should('have.length', 4)
+    })
+  })
+})

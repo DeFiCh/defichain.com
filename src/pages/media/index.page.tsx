@@ -36,12 +36,12 @@ function MediaSection (): JSX.Element {
   const mediaList: any[] = t('MediaSection.entries', { returnObjects: true })
 
   return (
-    <Section title={t('MediaSection.title')} testId=''>
+    <Section title={t('MediaSection.title')} testId='MediaSection'>
       <div className='flex flex-wrap -mx-1.5'>
         {
           mediaList.map(media => {
             return (
-              <div className='p-1.5 w-full md:w-1/2 lg:w-1/3 xl:w-1/4 flex flex-col' key={media.url}>
+              <div className='p-1.5 w-full md:w-1/2 lg:w-1/3 xl:w-1/4 flex flex-col' key={media.url} data-testid='MediaSection.Card'>
                 <ExternalLink url={media.url} className='flex flex-col flex-1 text-gray-900'>
                   <div
                     className='p-6 flex flex-wrap bg-gray-50 rounded-lg justify-start flex flex-col flex-1 hover:shadow-lg'
@@ -81,12 +81,12 @@ function DownloadSection (): JSX.Element {
 
   return (
     <div className='w-full'>
-      <Section title={t('DownloadSection.title')} testId=''>
+      <Section title={t('DownloadSection.title')} testId='DownloadSection'>
         <div className='w-full flex flex-wrap -mx-1.5'>
           {
             downloadList.map(download => {
               return (
-                <div className='p-1.5 w-full md:w-1/2 lg:w-1/3 xl:w-1/4 flex flex-col' key={download.name}>
+                <div className='p-1.5 w-full md:w-1/2 lg:w-1/3 xl:w-1/4 flex flex-col' key={download.name} data-testid='DownloadSection.Card'>
                   <div
                     className='p-6 flex flex-wrap bg-gray-50 rounded-lg justify-start flex flex-col flex-1'
                   >

@@ -13,10 +13,10 @@ context('/media page on desktop', () => {
   })
 
   it('should have MediaSection', function () {
-      cy.findByTestId('MediaSection').within(() => {
-        cy.findByTestId('Section.Title').should('have.text', 'Contribute to DeFiChain')
-        cy.findByTestId('MediaSection.Card').should('have.length.at.least', 20)
-      })
+    cy.findByTestId('MediaSection').within(() => {
+      cy.findByTestId('Section.Title').should('have.text', 'DeFiChain covered in the press and media.')
+      cy.findByTestId('MediaSection.Card').should('have.length.at.least', 20)
+    })
   })
 
   it('should have DownloadSection', function () {
@@ -43,7 +43,7 @@ context('/media page on mobile', () => {
 
   it('should have MediaSection', function () {
     cy.findByTestId('MediaSection').within(() => {
-      cy.findByTestId('Section.Title').should('have.text', 'Contribute to DeFiChain')
+      cy.findByTestId('Section.Title').should('have.text', 'DeFiChain covered in the press and media.')
       cy.findByTestId('MediaSection.Card').should('have.length.at.least', 20)
     })
   })

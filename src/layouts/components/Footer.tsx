@@ -67,7 +67,7 @@ function FooterSectionSitemap (): JSX.Element {
         text={t('footer.sitemap.downloads')} pathname='/downloads'
         testId='FooterSectionSitemap.Downloads'
       />
-      {/* <FooterInternalLink text={t('footer.sitemap.media')} pathname='/media' testId='FooterSectionSitemap.Media' /> */}
+      <FooterInternalLink text={t('footer.sitemap.media')} pathname='/media' testId='FooterSectionSitemap.Media' />
       <FooterInternalLink text={t('footer.sitemap.learn')} pathname='/learn' testId='FooterSectionSitemap.Learn' />
       <FooterInternalLink
         text={t('footer.sitemap.security')} pathname='/security'

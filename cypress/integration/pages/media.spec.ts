@@ -44,14 +44,14 @@ context('/media page on mobile', () => {
   it('should have MediaSection', function () {
     cy.findByTestId('MediaSection').within(() => {
       cy.findByTestId('Section.Title').should('have.text', 'DeFiChain covered in the press and media.')
-      cy.findByTestId('MediaSection.Card').should('have.length.at.least', 20)
+      cy.findAllByTestId('MediaSection.Card').should('have.length.at.least', 20)
     })
   })
 
   it('should have DownloadSection', function () {
     cy.findByTestId('DownloadSection').within(() => {
       cy.findByTestId('Section.Title').should('have.text', 'Downloads')
-      cy.findByTestId('DownloadSection.Card').should('have.length', 4)
+      cy.findAllByTestId('DownloadSection.Card').should('have.length', 4)
     })
   })
 })

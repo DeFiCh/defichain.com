@@ -39,38 +39,11 @@
       },
       {
         "source": {
-          "name": "IT专家网",
-          "image": "/svg/press/jinse.svg"
-        },
-        "title": "库币新币观察：将DeFi带入比特币生态，DeFiChain有何特别之处？",
-        "date": "22 Jan, 2021",
-        "url": "https://www.jinse.com/news/blockchain/986014.html"
-      },
-      {
-        "source": {
-          "name": "KuCoin Blog",
-          "image": "/svg/press/logo-kucoin.svg"
-        },
-        "title": "KuCoin Crypto Gem Observer: Integrating DeFi with Bitcoin, Why Is DeFiChain So Special?",
-        "date": "23 Jan, 2021",
-        "url": "https://medium.com/kucoinexchange/kucoin-crypto-gem-observer-integrating-defi-with-bitcoin-why-is-defichain-so-special-b72eeebc398b"
-      },
-      {
-        "source": {
           "name": "Crypto Mode"
         },
         "title": "DFI’ying Expectations: DeFiChain, the Largest DeFi Protocol on the Bitcoin Ecosystem Lists its DFI Coin on KuCoin",
         "date": "21 Jan, 2021",
         "url": "https://cryptomode.com/dfiying-expectations-defichain-the-largest-defi-protocol-on-the-bitcoin-ecosystem-lists-its-dfi-coin-on-kucoin/"
-      },
-      {
-        "source": {
-          "name": "CoinMarketCap",
-          "image": "/svg/press/coinmarketcap.svg"
-        },
-        "title": "DeFiChain Listing on KuCoin Exchange!",
-        "date": "20 Jan, 2021",
-        "url": "https://coinmarketcap.com/headlines/signals/defichain-listing-on-kucoin-exchange-defichain/"
       },
       {
         "source": {
@@ -127,15 +100,6 @@
       },
       {
         "source": {
-          "name": "CoinMarketCap",
-          "image": "/svg/press/coinmarketcap.svg"
-        },
-        "title": "Stock Up DFI for Yield Farming! No Trading Fees on Bittrex Global!",
-        "date": "2 Dec, 2020",
-        "url": "https://coinmarketcap.com/headlines/signals/stock-up-dfi-for-yield-farming-no-trading-fees-on-bittrex-global-defichain/"
-      },
-      {
-        "source": {
           "name": "CryptoCompare",
           "image": "/img/press/cryptocompare.png"
         },
@@ -154,15 +118,6 @@
       },
       {
         "source": {
-          "name": "CoinMarketCap",
-          "image": "/svg/press/coinmarketcap.svg"
-        },
-        "title": "DeFiChain is now on Blockfolio Signal!",
-        "date": "31 Oct, 2020",
-        "url": "https://coinmarketcap.com/headlines/signals/defichain-is-now-on-blockfolio-signal-defichain/"
-      },
-      {
-        "source": {
           "name": "Yahoo",
           "image": "/svg/press/yahoo.svg"
         },
@@ -172,39 +127,12 @@
       },
       {
         "source": {
-          "name": "CoinMarketCap",
-          "image": "/svg/press/coinmarketcap.svg"
-        },
-        "title": "DeFiChain (DFI) listing on Bittrex!",
-        "date": "16 Oct, 2020",
-        "url": "https://coinmarketcap.com/headlines/signals/defichain-dfi-listing-on-bittrex-defichain/"
-      },
-      {
-        "source": {
           "name": "The Shift",
           "image": "/img/press/theshift.png"
         },
         "title": "DeFi coins list: decentralised finance builds",
         "date": "13 Oct, 2020",
         "url": "https://theshift.media/defi-coins-list-defichain/"
-      },
-      {
-        "source": {
-          "name": "Yahoo",
-          "image": "/svg/press/yahoo.svg"
-        },
-        "title": "Bringing DeFi to CeFi: DeFiChain Announces Listing of DFI on Bitrue",
-        "date": "21 Sep, 2020",
-        "url": "https://finance.yahoo.com/news/bringing-defi-cefi-defichain-announces-221500922.html"
-      },
-      {
-        "source": {
-          "name": "Crypto Folds",
-          "image": "/img/press/cryptofolds.png"
-        },
-        "title": "The $DFI coin - A Financial Tool for the Digital Economy",
-        "date": "12 Sep, 2020",
-        "url": "https://www.cryptofolds.com/the-dfi-token-a-financial-tool-for-the-digital-economy"
       },
       {
         "source": {

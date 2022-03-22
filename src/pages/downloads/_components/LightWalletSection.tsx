@@ -2,7 +2,6 @@ import { DownloadCard } from './DownloadCard'
 import { AppStoreDownload } from './AppStoreDownload'
 import { PlaystoreDownload } from './PlaystoreDownload'
 import { useTranslation } from 'next-i18next'
-import { ExternalLink } from '@components/commons/link/ExternalLink'
 
 export function LightWalletSection (): JSX.Element {
   const { t } = useTranslation(['page-downloads'])
@@ -33,42 +32,6 @@ export function LightWalletSection (): JSX.Element {
           <div className='flex items-center space-x-4'>
             <AppStoreDownload url='https://apps.apple.com/app/id1582633093' />
             <PlaystoreDownload url='https://play.google.com/store/apps/details?id=com.defichain.app.dfx' />
-          </div>
-        </DownloadCard>
-
-        <DownloadCard
-          title={t('LightWallets.entries.saiive.title')}
-          desc={t('LightWallets.entries.saiive.desc')}
-          imageSrc='/assets/img/downloads/saiive.png'
-          testid='LightWallets.Saiive'
-          imgClassName='rounded-xl'
-        >
-          <div className='flex items-center space-x-4'>
-            <AppStoreDownload url='https://apps.apple.com/app/saiive-live-defi-wallet/id1588945201' />
-            <PlaystoreDownload url='https://play.google.com/store/apps/details?id=at.saiive.live' />
-          </div>
-        </DownloadCard>
-
-        <DownloadCard
-          title={t('LightWallets.entries.saiiveDesktop.title')}
-          desc={t('LightWallets.entries.saiiveDesktop.desc')}
-          imageSrc='/assets/img/downloads/saiive.png'
-          testid='LightWallets.SaiiveDesktop'
-          imgClassName='rounded-xl'
-        >
-          <div className='flex items-center space-x-4 text-lg font-medium'>
-            <ExternalLink
-              text='Mac'
-              url='https://apps.apple.com/at/app/saiive-live-defi-wallet/id1588945201?l=en'
-            />
-            <ExternalLink
-              text='Windows'
-              url='https://github.com/saiive/saiive.live/releases'
-            />
-            <ExternalLink
-              text='Linux'
-              url='https://github.com/saiive/saiive.live/releases'
-            />
           </div>
         </DownloadCard>
       </div>

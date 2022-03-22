@@ -18,8 +18,6 @@ context('/downloads page on desktop', () => {
 
     cy.findByTestId('LightWallets.Dfc').should('be.visible')
     cy.findByTestId('LightWallets.Dfx').should('be.visible')
-    cy.findByTestId('LightWallets.Saiive').should('be.visible')
-    cy.findByTestId('LightWallets.SaiiveDesktop').should('be.visible')
   })
 
   it('should have Fullnode wallets', function () {
@@ -53,8 +51,6 @@ context('/downloads page on mobile', () => {
 
     cy.findByTestId('LightWallets.Dfc').should('be.visible')
     cy.findByTestId('LightWallets.Dfx').should('be.visible')
-    cy.findByTestId('LightWallets.Saiive').should('be.visible')
-    cy.findByTestId('LightWallets.SaiiveDesktop').should('be.visible')
   })
 
   it('should have Fullnode wallets', function () {

@@ -11,13 +11,13 @@ If you also need DFI, you can watch our guide on [where and how to buy DFI](http
 
 The first method is right within the DeFi Wallet app. Using the DEX, and depending on the balance and ratio of the pool pairs, you may end up swapping the tokens at a lower price than if you would have done it via the second method – using Cake DeFi.
 
-### Step 1: Launch the DeFi Wallet app
+### Step 1: Launch the DeFi Wallet desktop app
 
 Don’t have the app installed yet? [Click here for a step-by-step guide on how to do so.](https://defichain.com/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
 
 ### Step 2: Make sure you have DFI in your wallet
 
-After opening the DeFi Wallet app, click **Balances** in the sidebar. Make sure you have funds (DFI) in your wallet, as DFI is needed for transaction fees. If you don't yet have DFI, [here is a step-by-step tutorial on how and where you can buy DFI.](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)
+After opening the DeFi Wallet desktop app, click **Balances** in the sidebar. Make sure you have funds (DFI) in your wallet, as DFI is needed for transaction fees. If you don't yet have DFI, [here is a step-by-step tutorial on how and where you can buy DFI.](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)
 
 ![](/img/guides/installing-defi-app/wallets-choose.png)
 

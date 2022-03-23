@@ -9,7 +9,7 @@ If you also need DFI, you can watch our guide on [where and how to buy DFI](http
 
 ## Method 1: Using the DEX
 
-The first method is right within the DeFi app. Using the DEX, and depending on the balance and ratio of the pool pairs, you may end up swapping the tokens at a lower price than if you would have done it via the second method – using CakeDeFi.
+The first method is right within the DeFi Wallet desktop app. Using the DEX, and depending on the balance and ratio of the pool pairs, you may end up swapping the tokens at a lower price than if you would have done it via the second method – using CakeDeFi.
 
 ### Step 1: Launch the DeFiChain app
 

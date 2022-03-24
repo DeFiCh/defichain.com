@@ -13,6 +13,7 @@ import BittrexLogo from '../../../../public/assets/svg/exchanges/logo-bittrex.sv
 import BittrueLogo from '../../../../public/assets/svg/exchanges/logo-bittrue.svg'
 import DFXLogo from '../../../../public/assets/svg/exchanges/logo-dfx.svg'
 import LaTokenLogo from '../../../../public/assets/svg/exchanges/logo-latoken.svg'
+import HooLogo from '../../../../public/assets/img/exchanges/logo-hoo.png'
 import { Trans, useTranslation } from 'next-i18next'
 import { Section } from '@components/commons/Section'
 
@@ -84,7 +85,7 @@ export function ExchangeSection (): JSX.Element {
             />
             <ExchangeCard
               url='https://hoo.com/innovation/dfi-usdt'
-              image={KucoinLogo}
+              image={HooLogo}
               testid='ExchangeSection.Hoo'
               name='Hoo'
             />
@@ -160,8 +161,8 @@ export function ExchangeSection (): JSX.Element {
 function ExchangeCard (props: { image: StaticImageData, url: string, name: string, testid: string }): JSX.Element {
   return (
     <ExternalLink url={props.url} testId={props.testid} className='w-1/2 md:w-1/3 lg:w-1/5 p-1'>
-      <div className='flex justify-center p-4 bg-white rounded'>
-        <Image alt={props.name} src={props.image} title={props.name} />
+      <div className='flex justify-center p-4 bg-white rounded flex max-h-16'>
+        <Image alt={props.name} src={props.image} title={props.name} objectFit='contain' />
       </div>
     </ExternalLink>
   )

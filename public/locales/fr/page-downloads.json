@@ -18,14 +18,6 @@
       "DFX": {
         "title": "DFX wallet application portefeuille mobile",
         "desc": "Stockez, recevez et envoyez des tokens DeFiChain avec une simplicité et une sécurité maximale, à partir de votre mobile"
-      },
-      "saiive": {
-        "title": "saiive.live application portefeuille mobile",
-        "desc": "Un portefeuille mobile léger non gardienné pour DeFiChain de et pour la communauté."
-      },
-      "saiiveDesktop": {
-        "title": "saiive.live application portefeuille de bureau",
-        "desc": "Un portefeuille de bureau léger non gardienné pour DeFiChain de et pour la communauté."
       }
     }
   },

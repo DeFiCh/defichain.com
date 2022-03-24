@@ -47,9 +47,10 @@
     "chart": {
       "InitialSupply": "Initial supply",
       "ToMasternodes": "To masternodes over time",
-      "DeFiChaiFoundation": "DeFiChain Foundation",
-      "ExternalPartners": "External Partners",
-      "desc": "Of the initial supply, 49% will be kept by the DeFiChain Foundation. The rest may be distributed to external partners, to fund the initial development."
+      "Airdropped": "Airdropped",
+      "Burned": "Burned",
+      "Destroyed": "Destroyed",
+      "desc": "Of the initial supply, 26% of the tokens have been airdropped, <0>27% burned</0>, and <1>47% destroyed</1>."
     }
   },
   "ExchangeSection": {

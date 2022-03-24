@@ -31,7 +31,7 @@ Ce guide montre comment vous pouvez effectuer le chiffrement et le déchiffremen
 
     Cela devrait prendre quelques secondes et vous devriez voir un message `wallet encrypted`. À partir de ce moment, votre portefeuille, c'est-à-dire `wallet.dat`, sera chiffré par défaut. 
 
-    Votre application DeFi fonctionnera comme d'habitude en affichage seul, et vos récompenses de liquidity mining DeFi afflueront comme d'habitude. Essayez d'envoyer des DFI ou DST, vous devriez maintenant voir le message suivant : `Add-on auth TX failed : Can't sign TX`. Cela montre que les clés de votre portefeuille sont maintenant chiffrées. Un pirate ayant accès à votre portefeuille à ce stade serait seulement capable de voir vos avoirs, mais incapable de les dépenser.
+    Votre application de bureau DeFi Wallet fonctionnera comme d'habitude en affichage seul, et vos récompenses de liquidity mining DeFi afflueront comme d'habitude. Essayez d'envoyer des DFI ou DST, vous devriez maintenant voir le message suivant : `Add-on auth TX failed : Can't sign TX`. Cela montre que les clés de votre portefeuille sont maintenant chiffrées. Un pirate ayant accès à votre portefeuille à ce stade serait seulement capable de voir vos avoirs, mais incapable de les dépenser.
 
 ## 2. Déverrouillage de votre portefeuille
 
@@ -77,4 +77,4 @@ Pour un portefeuille non chiffré, `unlocked_until` est absent. Il n'afficherait
 
 2. Pour changer de phrase secrète, utilisez `walletpassphrasechange "anciennephrasesecrète" "nouvellephrasesecrète"`.
 
-3. Les étapes décrites dans ce guide seront intégrées dans les futures versions de l'application DeFi Wallet. En outre, le support du portefeuille matériel via Ledger est également en cours de réalisation.
+3. Les étapes décrites dans ce guide seront intégrées dans les futures versions de l'application de bureau DeFi Wallet. En outre, le support du portefeuille matériel via Ledger est également en cours de réalisation.

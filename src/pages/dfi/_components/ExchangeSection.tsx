@@ -13,6 +13,7 @@ import BittrexLogo from '../../../../public/assets/svg/exchanges/logo-bittrex.sv
 import BittrueLogo from '../../../../public/assets/svg/exchanges/logo-bittrue.svg'
 import DFXLogo from '../../../../public/assets/svg/exchanges/logo-dfx.svg'
 import LaTokenLogo from '../../../../public/assets/svg/exchanges/logo-latoken.svg'
+import HooLogo from '../../../../public/assets/img/exchanges/logo-hoo.png'
 import { Trans, useTranslation } from 'next-i18next'
 import { Section } from '@components/commons/Section'
 
@@ -84,7 +85,7 @@ export function ExchangeSection (): JSX.Element {
             />
             <ExchangeCard
               url='https://hoo.com/innovation/dfi-usdt'
-              image={KucoinLogo}
+              image={HooLogo}
               testid='ExchangeSection.Hoo'
               name='Hoo'
             />

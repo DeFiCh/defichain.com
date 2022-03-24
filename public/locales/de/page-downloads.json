@@ -18,14 +18,6 @@
       "DFX": {
         "title": "DFX wallet Handy-App",
         "desc": "Speichere, empfange und versende DeFiChain Token mit größter Einfachheit und Sicherheit ganz unkompliziert per Handy."
-      },
-      "saiive": {
-        "title": "saiive.live mobile App",
-        "desc": "Eine Non-Custodial Lightwallet für DeFiChain von und für die Community"
-      },
-      "saiiveDesktop": {
-        "title": "saiive.live Desktop-Wallet",
-        "desc": "Eine Non-Custodial Desktop-Wallet für DeFiChain von und für die Community"
       }
     }
   },

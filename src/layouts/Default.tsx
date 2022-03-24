@@ -26,14 +26,19 @@ export function Default (props: PropsWithChildren<any>): JSX.Element | null {
         <meta key='viewport' name='viewport' content='user-scalable=no, width=device-width, initial-scale=1' />
         <meta key='apple-mobile-web-app-capable' name='apple-mobile-web-app-capable' content='yes' />
 
-        <meta key='og:title' name='og:title' content={title} />
-        <meta key='og:site_name' name='og:site_name' content={title} />
-        <meta key='og:type' name='og:type' content='website' />
-        <meta key='og:url' name='og:url' content='https://defichain.com/' />
-        <meta key='og:description' name='og:description' content={description} />
-        <meta key='og:locale' name='og:locale' content={router.locale} />
-        <meta key='og:image' name='og:image' content='https://defichain.com/img/og/ogimage_en.png' />
-        <meta key='og:image:type' name='og:image:type' content='image/png' />
+        {/* Open Graph */}
+        <meta property='og:title' name='og:title' content={title} />
+        <meta property='og:site_name' name='og:site_name' content={title} />
+        <meta property='og:type' name='og:type' content='website' />
+        <meta property='og:url' name='og:url' content='https://defichain.com/' />
+        <meta property='og:description' name='og:description' content={description} />
+        <meta property='og:locale' name='og:locale' content={router.locale} />
+        <meta property='og:image' name='og:image' content='https://defichain.com/img/og/ogimage_en.png' />
+        <meta property='og:image:type' name='og:image:type' content='image/png' />
+
+        {/* Twitter */}
+        <meta property='twitter:card' content='summary' />
+        <meta property='twitter:site' content='@defichain' />
 
         <link rel='canonical' href='' />
         <link rel='icon' href='/favicon.ico' />

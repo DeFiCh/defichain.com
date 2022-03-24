@@ -18,14 +18,6 @@
       "DFX": {
         "title": "DFX wallet mobile app",
         "desc": "Store, receive and send DeFiChain tokens with utmost simplicity and security uncomplicated from your mobile."
-      },
-      "saiive": {
-        "title": "saiive.live mobile wallet",
-        "desc": "A non-custodial light wallet for DeFiChain from and for the community."
-      },
-      "saiiveDesktop": {
-        "title": "saiive.live desktop wallet",
-        "desc": "A non-custodial desktop wallet for DeFiChain from and for the community."
       }
     }
   },

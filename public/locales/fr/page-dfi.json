@@ -62,11 +62,6 @@
     "Staking": {
       "title": "Staking",
       "desc": "DFI est maintenant disponible sur ces plateformes de staking sélectionnées"
-    },
-    "Developers": {
-      "title": "Développeurs",
-      "desc": "La Fondation DeFiChain accorde des subventions aux développeurs qui créent des fonctionnalités et des dApps sur DeFiChain.",
-      "email": "Pour plus d'informations, contactez-nous à <0>partners@defichain.com</0>."
     }
   }
 }

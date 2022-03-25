@@ -1,25 +1,25 @@
 {
   "Head": {
-    "title": "Media",
-    "desc": "DeFiChain and $DFI in the news and media. Download media resources and assets."
+    "title": "Medien",
+    "desc": "DeFiChain und $DFI-Coin in den Print- und Onlinemedien. Medieninhalte und Materialien herunterladen"
   },
   "Header": {
-    "title": "Media",
-    "desc": "Media resources and assets."
+    "title": "Medien",
+    "desc": "Medieninhalte und Materialien"
   },
   "DownloadSection": {
     "title": "Downloads",
     "entries": [
       {
-        "name": "DeFiChain logo",
-        "desc": "The official and default logo.",
+        "name": "Logo der DeFiChain ",
+        "desc": "Das offizielle Standardlogo",
         "image": {
           "svg": "/downloads/logo-defi-blockchain.svg",
           "png": "/downloads/logo-defi-blockchain.png"
         }
       },
       {
-        "name": "The DeFi jellyfish",
+        "name": "Die DeFi-Qualle",
         "desc": "Useful when space is constrained.",
         "image": {
           "svg": "/downloads/symbol-defi-blockchain.svg",
@@ -27,8 +27,8 @@
         }
       },
       {
-        "name": "DFI 3D Coin",
-        "desc": "Available as SVG and PNG.",
+        "name": "DFI 3D-Coin",
+        "desc": "Verfügbar als SVG und PNG",
         "image": {
           "svg": "/downloads/coin-defi-blockchain.svg",
           "png": "/downloads/coin-defi-blockchain.png"
@@ -36,7 +36,7 @@
       },
       {
         "name": "Built-on-Bitcoin",
-        "desc": "Available as SVG and PNG.",
+        "desc": "Verfügbar als SVG und PNG",
         "image": {
           "svg": "/downloads/built-on-bitcoin.svg",
           "png": "/downloads/built-on-bitcoin.png"
@@ -45,7 +45,7 @@
     ]
   },
   "MediaSection": {
-    "title": "DeFiChain covered in the press and media.",
+    "title": "DeFiChain in der Presse und den Medien",
     "entries": [
       {
         "source": {
@@ -53,7 +53,7 @@
           "image": "/svg/press/nasdaq.svg"
         },
         "title": "To Secure a Sustainable Future for DeFi, We Need to Look Beyond Ethereum",
-        "date": "14 Apr, 2021",
+        "date": "14. Apr. 2021",
         "url": "https://www.nasdaq.com/articles/to-secure-a-sustainable-future-for-defi-we-need-to-look-beyond-ethereum-2021-04-14"
       },
       {
@@ -62,7 +62,7 @@
           "image": "/img/press/crowdfundinsider.png"
         },
         "title": "DeFiChain, a Blockchain Platform on the Bitcoin Network, Introduces ERC-20 Token Standard DFI on Ethereum",
-        "date": "30 Mar, 2021",
+        "date": "30. März 2021",
         "url": "https://www.crowdfundinsider.com/2021/03/173734-defichain-a-blockchain-platform-on-the-bitcoin-network-introduces-erc-20-token-standard-dfi-on-ethereum/"
       },
       {
@@ -71,7 +71,7 @@
           "image": "/img/press/cryptomode.png"
         },
         "title": "Shifting into ‘Lite’speed: DeFiChain Launches Litecoin Liquidity Mining",
-        "date": "11 Feb, 2021",
+        "date": "11. Feb. 2021",
         "url": "https://cryptomode.com/shifting-into-litespeed-defichain-launches-litecoin-liquidity-mining/"
       },
       {
@@ -79,7 +79,7 @@
           "name": "Crypto Mode"
         },
         "title": "DFI’ying Expectations: DeFiChain, the Largest DeFi Protocol on the Bitcoin Ecosystem Lists its DFI Coin on KuCoin",
-        "date": "21 Jan, 2021",
+        "date": "21. Jan. 2021",
         "url": "https://cryptomode.com/dfiying-expectations-defichain-the-largest-defi-protocol-on-the-bitcoin-ecosystem-lists-its-dfi-coin-on-kucoin/"
       },
       {
@@ -88,7 +88,7 @@
           "image": "/svg/press/logo-kucoin.svg"
         },
         "title": "DeFiChain (DFI) Gets Listed on KuCoin!",
-        "date": "20 Jan, 2021",
+        "date": "20. Jan. 2021",
         "url": "https://www.kucoin.com/news/en-defichain-gets-listed-on-kucoin"
       },
       {
@@ -97,7 +97,7 @@
           "image": "/img/press/nairametrics.png"
         },
         "title": "4 cryptos gain over 400% in a month, far outperforming Bitcoin",
-        "date": "18 Jan, 2021",
+        "date": "18. Jan. 2021",
         "url": "https://nairametrics.com/2021/01/18/4-cryptos-gain-over-400-in-a-month-far-outperforming-bitcoin/"
       },
       {
@@ -106,7 +106,7 @@
           "image": "/svg/press/dailyhodl.svg"
         },
         "title": "Four Crypto Assets Surge More Than 400% in Just One Month As Alt Season Roars",
-        "date": "17 Jan, 2021",
+        "date": "17. Jan. 2021",
         "url": "https://dailyhodl.com/2021/01/17/four-crypto-assets-surge-more-than-400-in-just-one-month-as-alt-season-roars/"
       },
       {
@@ -114,7 +114,7 @@
           "name": "Altcoin Buzz"
         },
         "title": "DeFiChain – The Launch of Yield Farming",
-        "date": "16 Dec, 2020",
+        "date": "16. Dez. 2020",
         "url": "https://www.altcoinbuzz.io/cryptocurrency-news/blockchain-technology/defichain-the-launch-of-yield-farming/"
       },
       {
@@ -123,7 +123,7 @@
           "image": "/svg/press/cryptonews.svg"
         },
         "title": "DeFiChain Announces Yield Farming Launch and DEXember 100X Promotion",
-        "date": "9 Dec, 2020",
+        "date": "9. Dez. 2020",
         "url": "https://cryptonews.com/news/defichain-announces-yield-farming-launch-and-dexember-100x-p-8558.htm"
       },
       {
@@ -132,7 +132,7 @@
           "image": "/img/press/cryptocompare.png"
         },
         "title": "DeFiChain DEX: A Truly Decentralized Exchange Has Just Launched",
-        "date": "30 Nov, 2020",
+        "date": "30. Nov. 2020",
         "url": "https://www.cryptocompare.com/exchanges/guides/defichain-dex-a-truly-decentralized-exchange-has-just-launched/"
       },
       {
@@ -141,7 +141,7 @@
           "image": "/img/press/hackernoon.png"
         },
         "title": "Looking to Invest in a DeFi Project? Here are 5 Ideas Worth Considering",
-        "date": "6 Nov, 2020",
+        "date": "6. Nov. 2020",
         "url": "https://hackernoon.com/looking-to-invest-in-a-defi-project-here-are-5-ideas-worth-considering-dv363w6d"
       },
       {
@@ -150,7 +150,7 @@
           "image": "/svg/press/yahoo.svg"
         },
         "title": "DeFiChain Announces Successful Hard Fork and New Listing on Bittrex Global Exchange",
-        "date": "20 Oct, 2020",
+        "date": "20. Oct. 2020",
         "url": "https://finance.yahoo.com/news/defichain-announces-successful-hard-fork-114941334.html"
       },
       {
@@ -159,7 +159,7 @@
           "image": "/img/press/theshift.png"
         },
         "title": "DeFi coins list: decentralised finance builds",
-        "date": "13 Oct, 2020",
+        "date": "13. Okt. 2020",
         "url": "https://theshift.media/defi-coins-list-defichain/"
       },
       {
@@ -168,7 +168,7 @@
           "image": "/svg/press/cryptoadventure.svg"
         },
         "title": "DeFiChain – A Glimpse into the Future of Decentralized Finance (DeFi)",
-        "date": "5 Sep, 2020",
+        "date": "5. Sep. 2020",
         "url": "https://cryptoadventure.org/defichain-a-glimpse-into-the-future-of-decentralized-finance-defi/"
       },
       {
@@ -177,7 +177,7 @@
           "image": "/img/press/cryptopotato.png"
         },
         "title": "DeFiChain: The Story From the Co-Founders",
-        "date": "10 Aug, 2020",
+        "date": "10. Aug. 2020",
         "url": "https://cryptopotato.com/defichain-the-story-from-the-co-founders/"
       },
       {
@@ -186,7 +186,7 @@
           "image": "/img/press/defiworld.png"
         },
         "title": "DeFiChain – An in-depth Analysis of Decentralized Finance on Bitcoin",
-        "date": "26 Jul, 2020",
+        "date": "26. Jul. 2020",
         "url": "https://defiworld.substack.com/p/defi-chain-an-in-depth-analysis-of"
       },
       {
@@ -195,7 +195,7 @@
           "image": "/svg/press/btc-echo.svg"
         },
         "title": "200% pro Jahr durch Compound Liquidity Mining & Yield Farming",
-        "date": "27 Jun, 2020",
+        "date": "27. Jun. 2020",
         "url": "https://www.btc-echo.de/200-prozent-mit-compound-defi/"
       },
       {
@@ -204,7 +204,7 @@
           "image": "/img/press/bitconio.png"
         },
         "title": "The $DFI coin starts the exchange on LAToken!",
-        "date": "18 Jun, 2020",
+        "date": "18. Jun. 2020",
         "url": "https://www.bitconio.net/en/cryptoeconomy/bitcoin/the-dfi-token-starts-the-exchange-on-latoken/"
       },
       {
@@ -213,7 +213,7 @@
           "image": "/svg/press/btc-echo.svg"
         },
         "title": "Bitcoin bekommt auf der DeFi-Chain eine neue Bleibe",
-        "date": "16 Jun, 2020",
+        "date": "16. Jun. 2020",
         "url": "https://www.btc-echo.de/bitcoin-bekommt-auf-der-defi-chain-eine-neue-bleibe/"
       },
       {
@@ -222,7 +222,7 @@
           "image": "/img/press/hackernoon.png"
         },
         "title": "Is DeFi Now Dead? Inside the dForce / LendfMe 25 Million USD Hack!",
-        "date": "21 Apr, 2020",
+        "date": "21. Apr. 2020",
         "url": "https://hackernoon.com/is-defi-now-dead-inside-the-dforce-lendfme-25-million-usd-hack-sf5332j3"
       },
       {
@@ -231,7 +231,7 @@
           "image": "/svg/press/wallstreetonline.svg"
         },
         "title": "Bitcoin Lending: Vergleich der 5 besten Crypto Plattformen",
-        "date": "9 Apr, 2020",
+        "date": "9. Apr. 2020",
         "url": " https://www.wallstreet-online.de/nachricht/12392059-bitcoin-lending-vergleich-5-besten-crypto-plattformen/all"
       }
     ]

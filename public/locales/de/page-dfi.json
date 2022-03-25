@@ -49,7 +49,7 @@
       "ToMasternodes": "An die Masternodes im Laufe der Zeit",
       "DeFiChaiFoundation": "DeFiChain Foundation",
       "ExternalPartners": "Externe Partner",
-      "desc": "Von der anfänglichen Betrag bleiben 49% bei der DeFiChain Foundation. Der Rest kann an externe Partner verteilt werden, um die anfängliche Entwicklung zu finanzieren."
+      "desc": "Vom anfänglichen Betrag bleiben 49% bei der DeFiChain Foundation. Der Rest kann an externe Partner verteilt werden, um die anfängliche Entwicklung zu finanzieren."
     }
   },
   "ExchangeSection": {
@@ -62,11 +62,6 @@
     "Staking": {
       "title": "Staking",
       "desc": "DFI ist jetzt bei diesen ausgewählten Staking Plattformen erhältlich"
-    },
-    "Developers": {
-      "title": "Entwickler",
-      "desc": "Die DeFiChain Foundation vergibt Zuschüsse an Entwickler, die Funktionen und dApps auf DeFiChain aufbauen.",
-      "email": "Für weitere Informationen kontaktiere uns unter <0>partners@defichain.com</0>."
     }
   }
 }

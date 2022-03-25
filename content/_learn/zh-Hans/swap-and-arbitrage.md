@@ -14,13 +14,13 @@ description: A step-by-step guide to swapping and arbitraging on the DEX
 
 递飞链 DEX并不会经历以太坊因网络拥塞的高矿费。以太坊毕竟是个大通用区块链，并不是专门为去中心化金融而设计的。相对的，递飞链是为去中心化金融和中心化金融所产生的。
 
-### 步骤一：开启递飞链程序
+### 步骤一：开启递飞链钱包电脑程序
 
 还没安装程序的小伙伴们 [请按入门指南](/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
 
 ### 步骤二: 确认您的钱包以有DFI
 
-启动递飞链程序后，请按侧边拦的 **钱包** 选项。先确认您有没有足够的DFI，交易中必要用的。若还没购买DFI，请查看[入门购买DFI](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)。
+启动递飞链钱包电脑程序后，请按侧边拦的 **余额** 选项。先确认您有没有足够的DFI，交易中必要用的。若还没购买DFI，请查看[入门购买DFI](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)。
 
 ![](/img/guides/installing-defi-app/wallets-choose.png)
 
@@ -70,4 +70,4 @@ DEX(去中心化交易所)为您提共代币交换。请在左侧 **「From」**
 
 ![](/img/guides/arbitrage/arbitrage1.png)
 
-[按下载递飞链桌面版程序](/downloads)，适用于Windows，macOS和Linux。您也可成为套利者。
+[按下载递飞链钱包电脑程序](/downloads)，适用于Windows，macOS和Linux。您也可成为套利者。

@@ -9,15 +9,15 @@ description: A step-by-step guide to obtaining wrapped BTC/ETH/USDT via the DEX 
 
 ## 方法一：使用DEX
 
-第一種方法就在遞飛鏈程序中使用DEX，並依據池中配對的比率來換出DFI。用這個方式交換可能會換來價格比較高的比率。使用第二種方法，如Cake DeFi更優。
+第一種方法就在遞飛鏈桌面版錢包應用程序中使用DEX，並依據池中配對的比率來換出DFI。用這個方式交換可能會換來價格比較高的比率。使用第二種方法，如Cake DeFi更優。
 
-### 步驟一：啓動遞飛鏈程序
+### 步驟一：啓動遞飛鏈桌面版錢包應用程序
 
 還沒有安裝應用程序嗎？[單擊此處獲取有關如何執行此操作的分步指南。](/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
 
 ### 步驟二：確認錢包裏有DFI
 
-打開遞飛鏈程序後，請按側邊欄中的 **「錢包」** 。確任您的錢包中有足夠的DFI做交易。如果您還需要DFI，您可以查看[購買DFI入門指南。](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)
+打開遞飛鏈桌面版錢包應用程序後，請按側邊欄中的 **「餘額」** 。確任您的錢包中有足夠的DFI做交易。如果您還需要DFI，您可以查看[購買DFI入門指南。](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)
 
 ![](/img/guides/installing-defi-app/wallets-choose.png)
 
@@ -53,13 +53,13 @@ DEX為您提供替換貨幣的方式。請在左邊 **「從」** 選擇DFI。
 
 ### 步驟一：登錄您的Cake DeFi帳戶
 
-登錄您的 [Cake DeFi帳戶](https://www.cakedefi.com/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)。如果您還沒有注冊, [請按這注冊。](https://www.cakedefi.com/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
+登錄您的 [Cake DeFi帳戶](https://app.cakedefi.com/login)。如果您還沒有注冊, [請按這注冊。](https://app.cakedefi.com/register)
 
 _注意：如果您注冊一個新帳戶，您需要完成身份驗證（KYC）。_
 
 ### 步驟二：存入Cake DeFi
 
-從您的 [Cake DeFi資産頁面](https://pool.cakedefi.com/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch#/wallets), 您可以領出ETH、BTC或USDT到遞飛鏈。如果您目前沒有這些貨幣，或者想增加余額，您可以：
+從您的 [Cake DeFi資産頁面](https://app.cakedefi.com/wallets), 您可以領出ETH、BTC或USDT到遞飛鏈。如果您目前沒有這些貨幣，或者想增加余額，您可以：
 
 1. 從其他錢包將ETH、BTC或USDT存入Cake DeFi
 2. 用現金購買ETH，BTC或USDT，Cake DeFi平台目前接受信用卡，蘋果支付和銀行轉帳方式 （不同國家有不同購買方式）
@@ -78,4 +78,4 @@ _注意：如果您注冊一個新帳戶，您需要完成身份驗證（KYC）�
 
 
 
-_注：出于安全性的原因，在CakeDeFi領出貨幣要24小時（工作日）至72小時（周末）才能完成。_
+_注：出于安全性的原因，在Cake DeFi領出貨幣要24小時（工作日）至72小時（周末）才能完成。_

@@ -484,7 +484,7 @@ Therefore, in order to enhance the finality of DeFiChain, in PoS, it’s necessa
 
 #### Detection of Double-sign
 
-Each block header has a sequence number as a number of blocks that a particular staker has minted before a particular block. If two blocks are minted with the same sequence number, it means that a staker has double-signed, even if the blocks have different ancestors, i.e. across branches.
+Each block header has a sequence number as a number of blocks that a particular staker has mined before a particular block. If two blocks are mined with the same sequence number, it means that a staker has double-signed, even if the blocks have different ancestors, i.e. across branches.
 
 During a block’s generation, a staker has the right to include the double-sign proofs into his block header in exchange for only half of the penalty.
 
@@ -751,7 +751,7 @@ DFI is divisible up to 8 decimal places.
 
 Fees from DeFi activities on DeFiChain are burned and redistributed through new token minting over a period of time as laid out below. This ensures that DeFi stakers enjoy the benefits of earning rewards from facilitating trustless DeFi trades on DeFiChain in a fair manner.
 
-**Rewards from minting a block on DeFiChain are calculated as**:
+**Rewards from mining a block on DeFiChain are calculated as**:
 
 1. Underlying block reward schedule (see distribution schedule) +
 2. Burned token redistribution schedule

@@ -32,8 +32,8 @@
         "desc": "Create a non-refundable personalised DCT (DeFi Custom Token)."
       },
       "BudgetProposal": {
-        "title": "Budget proposal",
-        "desc": "Submit a community budget proposal for 500 DFI (non-refundable)."
+        "title": "Community fund proposal",
+        "desc": "Submit a community fund proposal for 10 DFI (non-refundable)."
       },
       "LiquidityPools": {
         "title": "Liquidity pools",
@@ -61,13 +61,7 @@
     },
     "Staking": {
       "title": "Staking",
-      "desc": "DFI is now available at these select staking platforms."
-    },
-    "Developers": {
-      "title": "Developers",
-      "desc": "The DeFiChain Foundation gives grants to developers building functionality and dApps on DeFiChain.",
-      "email": "For further information, contact us at <0>partners@defichain.com</0>."
+      "desc": "DFI is now available at these staking platforms."
     }
   }
 }
-

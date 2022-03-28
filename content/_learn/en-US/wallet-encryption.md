@@ -9,7 +9,7 @@ At the time of this writing, v2.1.4, the app does not yet have a graphical UI bu
 
 As DeFiChain node is a fork of Bitcoin Core, it has an inherited wallet encryption that you are able to manage with relative ease.
 
-This guide shows how you can perform the wallet encryption and decryption, also known as wallet locking and unlocking through the Console access available via DeFiChain app.
+This guide shows how you can perform the wallet encryption and decryption, also known as wallet locking and unlocking through the Console access available via DeFi Wallet desktop app.
 
 **Disclaimer**: Verify and understand all commands that you are about to enter at Console, especially from untrusted sources. The author of this guide is not responsible for any loss of funds.
 
@@ -31,7 +31,7 @@ This guide shows how you can perform the wallet encryption and decryption, also 
 
    It should take a few seconds and you should see a message `wallet encrypted`.  At this point onwards, your wallet, i.e. `wallet.dat` file will be encrypted by default.
 
-   Your DeFi App will function as normal for view-only, and your DeFi liquidity mining rewards will be streamining in as usual. Try to send some DFI or DST, you should now be seeing the following message: `Add-on auth TX failed: Can't sign TX`. This shows that your wallet keys are now encrypted. Hacker having access to your wallet at this stage would only be able to view your holdings, but unable to spend it.
+   Your DeFi Wallet desktop app will function as normal for view-only, and your DeFi liquidity mining rewards will be streamining in as usual. Try to send some DFI or DST, you should now be seeing the following message: `Add-on auth TX failed: Can't sign TX`. This shows that your wallet keys are now encrypted. Hacker having access to your wallet at this stage would only be able to view your holdings, but unable to spend it.
 
 ## 2. Unlocking your wallet
 
@@ -77,4 +77,4 @@ For an unencrypted wallet, `unlocked_until` is missing. It would not even show `
 
 2. To change passphrase, use `walletpassphrasechange "oldpassphrase" "newpassphrase"`.
 
-3. The steps described in this guide will be integrated in future releases of DeFiChain's app. Also, hardware wallet support via Ledger is also under work.
+3. The steps described in this guide will be integrated in future releases of the DeFi Wallet desktop app. Also, hardware wallet support via Ledger is also under work.

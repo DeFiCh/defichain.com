@@ -32,8 +32,8 @@
         "desc": "以一百個DFI創建自定代幣 (不能退還)。"
       },
       "BudgetProposal": {
-        "title": "概算提議",
-        "desc": "以500 DFI提交社區預算建議（不可退還)。"
+        "title": "社區基金提議",
+        "desc": "以10 DFI提交社區基金提議（不可退還)。"
       },
       "LiquidityPools": {
         "title": "流動性池",
@@ -62,11 +62,6 @@
     "Staking": {
       "title": "權益質押平台",
       "desc": "DFI可在這些平台上運作權益質押。"
-    },
-    "Developers": {
-      "title": "開發者",
-      "desc": "遞飛鏈基金會授予開發者在遞飛鏈上創建功能和dApp的權利。",
-      "email": "若想了解更多資訊，請用郵件聯系我們<0>partners@defichain.com</0>。"
     }
   }
 }

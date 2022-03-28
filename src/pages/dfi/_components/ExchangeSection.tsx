@@ -1,7 +1,7 @@
 import { ExternalLink } from '@components/commons/link/ExternalLink'
 import Image from 'next/image'
 import { Container } from '@components/commons/Container'
-import { BsFileEarmarkCodeFill, BsPieChartFill } from 'react-icons/bs'
+import { BsPieChartFill } from 'react-icons/bs'
 import { Dex } from '@components/icons/assets/wallet-features/Dex'
 import KucoinLogo from '../../../../public/assets/svg/exchanges/logo-kucoin.svg'
 import HotbitLogo from '../../../../public/assets/img/exchanges/logo-hotbit.png'
@@ -14,7 +14,7 @@ import BittrueLogo from '../../../../public/assets/svg/exchanges/logo-bittrue.sv
 import DFXLogo from '../../../../public/assets/svg/exchanges/logo-dfx.svg'
 import LaTokenLogo from '../../../../public/assets/svg/exchanges/logo-latoken.svg'
 import HooLogo from '../../../../public/assets/img/exchanges/logo-hoo.png'
-import { Trans, useTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next'
 import { Section } from '@components/commons/Section'
 
 export function ExchangeSection (): JSX.Element {
@@ -103,7 +103,7 @@ export function ExchangeSection (): JSX.Element {
             />
           </div>
         </div>
-        <div className='flex flex-col md:flex-row md:space-x-10 mb-20'>
+        <div className='flex flex-col md:flex-row md:space-x-5'>
           <div className='flex flex-col w-full md:w-2/5 space-y-3'>
             <BsPieChartFill className='fill-primary-500' fontSize={70} />
             <h3
@@ -132,26 +132,6 @@ export function ExchangeSection (): JSX.Element {
               testid='DfiPage.Staking.Cakedefi' name='Cake DeFi'
             />
           </div>
-        </div>
-        <div className='flex flex-col w-full md:w-1/2 space-y-5'>
-          <BsFileEarmarkCodeFill className='fill-primary-500' fontSize={70} />
-          <h3
-            className='text-2xl font-medium'
-            data-testid='DfiPage.Developers.Heading'
-          >{t('ExchangeSection.Developers.title')}
-          </h3>
-          <div className='text-xl' data-testid='DfiPage.Developers.Text'>
-            {t('ExchangeSection.Developers.desc')}
-          </div>
-          <span data-testid='DfiPage.Developers.Desc'>
-            <Trans
-              t={t}
-              i18nKey='ExchangeSection.Developers.email'
-              components={[
-                <ExternalLink key='0' className='text-primary-500' url='mailto:partners@defichain.com' />
-              ]}
-            />
-          </span>
         </div>
       </Section>
     </Container>

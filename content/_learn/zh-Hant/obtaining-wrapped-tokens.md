@@ -9,15 +9,15 @@ description: A step-by-step guide to obtaining wrapped BTC/ETH/USDT via the DEX 
 
 ## 方法一：使用DEX
 
-第一種方法就在遞飛鏈錢包電腦程序中使用DEX，並依據池中配對的比率來換出DFI。用這個方式交換可能會換來價格比較高的比率。使用第二種方法，如Cake DeFi更優。
+第一種方法就在遞遞飛鏈桌面版錢包應用程序中使用DEX，並依據池中配對的比率來換出DFI。用這個方式交換可能會換來價格比較高的比率。使用第二種方法，如Cake DeFi更優。
 
-### 步驟一：啓動遞飛鏈錢包電腦程序
+### 步驟一：啓動遞遞飛鏈桌面版錢包應用程序
 
 還沒有安裝應用程序嗎？[單擊此處獲取有關如何執行此操作的分步指南。](/learn/defi-app-how-to/?utm_source=defichain&utm_medium=dex-guide&utm_campaign=dex-launch)
 
 ### 步驟二：確認錢包裏有DFI
 
-打開遞飛鏈錢包電腦程序後，請按側邊欄中的 **「餘額」** 。確任您的錢包中有足夠的DFI做交易。如果您還需要DFI，您可以查看[購買DFI入門指南。](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)
+打開遞遞飛鏈桌面版錢包應用程序後，請按側邊欄中的 **「餘額」** 。確任您的錢包中有足夠的DFI做交易。如果您還需要DFI，您可以查看[購買DFI入門指南。](https://defichain.ghost.io/where-and-how-to-buy-dfi-defichain/)
 
 ![](/img/guides/installing-defi-app/wallets-choose.png)
 

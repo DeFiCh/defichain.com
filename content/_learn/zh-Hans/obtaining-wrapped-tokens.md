@@ -9,7 +9,7 @@ description: A step-by-step guide to obtaining wrapped BTC/ETH/USDT via the DEX 
 
 ## 方法一：使用DEX
 
-第一种方法就在递飞链桌面版钱包应用程序中使用DEX，并依据池中配对的比率来换出DFI。用这个方式交换可能会换来价格比较高的比率。使用第二种方法，如CakeDeFi更优。
+第一种方法就在递飞链桌面版钱包应用程序中使用DEX，并依据池中配对的比率来换出DFI。用这个方式交换可能会换来价格比较高的比率。使用第二种方法，如Cake DeFi更优。
 
 ### 步骤一：启动递飞链桌面版钱包应用程序
 

@@ -47,9 +47,10 @@
     "chart": {
       "InitialSupply": "初始代币供应",
       "ToMasternodes": "随着时间的推移主节点",
-      "DeFiChaiFoundation": "递飞链基金会",
-      "ExternalPartners": "外部合作伙伴",
-      "desc": "在初始代币供应中，有49％将由递飞链基金会保留。其余的可以分发给外部合作伙伴，以资助最初的开发。"
+      "Airdropped": "空投",
+      "Burned": "销毁",
+      "Destroyed": "于转换为 DAO 自治组织时被销毁",
+      "desc": "根据初始经济模型，空投数量为总供应量的 26% ，<0>27% 被销毁</0>，<1>47% 于转换为 DAO 自治组织时被销毁</1>。"
     }
   },
   "ExchangeSection": {

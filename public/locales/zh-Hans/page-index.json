@@ -214,7 +214,7 @@
         },
         {
           "title": "一月",
-          "desc": "递飞链正式登上MESSARI数据分析",
+          "desc": "递飞链在MESSARI上币",
           "url": "https://messari.io/asset/defi",
           "image": {
             "url": "/img/timeline/2021/messari@2x.png",
@@ -223,7 +223,7 @@
         },
         {
           "title": "一月",
-          "desc": "库币上币",
+          "desc": "递飞链在库币上币",
           "url": "https://www.kucoin.com/news/en-defichain-gets-listed-on-kucoin?utm_source=DFI",
           "image": {
             "url": "/img/timeline/2021/kucoin@2x.png",
@@ -294,10 +294,10 @@
         },
         {
           "title": "四月",
-          "desc": "遞飛鏈在Transak上線",
+          "desc": "递飞链在Transak上币",
           "image": {
             "url": "/img/timeline/2021/Tranak_April.jpg",
-            "alt": "遞飛鏈在Transak上線"
+            "alt": "DeFiChain listed on Transak"
           }
         },
         {
@@ -464,16 +464,16 @@
         },
         {
           "title": "六月",
-          "desc": "$DFI在LATOKEN上币",
+          "desc": "$DFI在LATOKEN上线交易对",
           "url": "https://exchange.latoken.com/exchange/DFI-USDT",
           "image": {
             "url": "/img/timeline/2020/dfi-latoken@2x.png",
-            "alt": "DFI on LATOKEN"
+            "alt": "$DFI coin started trading on LATOKEN"
           }
         },
         {
           "title": "六月",
-          "desc": "$DFI在CoinPaprika上线",
+          "desc": "$DFI在Coinpaprika上币",
           "url": "https://coinpaprika.com/coin/dfi-defi-chain/",
           "image": {
             "url": "/img/timeline/2019/dfi-coinpaprika@2x.png",
@@ -482,7 +482,7 @@
         },
         {
           "title": "七月",
-          "desc": "$DFI在CoinGecko上线",
+          "desc": "$DFI在CoinGecko上币",
           "url": "https://www.coingecko.com/en/coins/defichain",
           "image": {
             "url": "/img/timeline/2020/dfi-coingecko@2x.png",
@@ -526,7 +526,7 @@
         },
         {
           "title": "八月",
-          "desc": "DFI在CoinMarketCap上线",
+          "desc": "DFI在CoinMarketCap上币",
           "url": "https://coinmarketcap.com/currencies/defichain/markets/",
           "image": {
             "url": "/img/timeline/2020/dfi-coinmarketcap@2x.png",

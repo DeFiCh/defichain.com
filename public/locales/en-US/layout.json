@@ -26,7 +26,8 @@
       "security": "Security",
       "bugbounty": "Bug Bounty",
       "whitepaper": "White Paper",
-      "dfcblog": "Blog"
+      "dfcblog": "Blog",
+      "language": "en"
     },
     "social": {
       "title": "Social",

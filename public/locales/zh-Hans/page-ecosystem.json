@@ -41,6 +41,11 @@
       "title": "Messari数据分析",
       "desc": "加密经济透明化的数据工具",
       "button": "前往 Messari数据分析"
+    },
+    "CoinGecko": {
+      "title": "CoinGecko",
+      "desc": "在 CoinGecko 查看递飞链 DEX 信息",
+      "button": "前往 CoinGecko"
     }
   }
 }

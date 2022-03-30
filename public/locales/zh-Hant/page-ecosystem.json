@@ -34,13 +34,18 @@
     },
     "Blockfolio": {
       "title": "Blockfolio",
-      "desc": "Watch DFI on the Blockfolio Signal platform.",
-      "button": "Go to Blockfolio"
+      "desc": "在Blockfolio資產追中APP上關注DFI",
+      "button": "前往 Blockfolio"
     },
     "Messari": {
       "title": "Messari數據分析",
       "desc": "加密經濟透明化的數據工具",
       "button": "前往 Messari數據分析"
+    },
+    "CoinGecko": {
+      "title": "CoinGecko",
+      "desc": "在 CoinGecko 查看遞飛鏈 DEX 信息",
+      "button": "前往 CoinGecko"
     }
   }
 }

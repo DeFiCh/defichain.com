@@ -72,7 +72,7 @@ export function ExchangeSection (): JSX.Element {
               name='Kucoin'
             />
             <ExchangeCard
-              url='https://global.transak.com/?apiKey=9cb22c33-f1fc-4ff0-9736-9159bb879568&cryptoCurrencyCode=DFI'
+              url='https://global.transak.com'
               image={TransakLogo}
               testid='ExchangeSection.Transak'
               name='Transak'

@@ -11,7 +11,7 @@ const securityHeaders = [
       `img-src 'self' assets.coingecko.com *.cloudfront.net data:;` +
       `media-src 'self';` +
       `object-src 'none';` +
-      `script-src 'self' app.netlify.com netlify-cdp-loader.netlify.app ${process.env.NODE_ENV === 'development' ? `'unsafe-eval'` : ''};` +
+      `script-src 'self' widgets.coingecko.com app.netlify.com netlify-cdp-loader.netlify.app ${process.env.NODE_ENV === 'development' ? `'unsafe-eval'` : ''};` +
       `script-src-elem 'self' widgets.coingecko.com ajax.googleapis.com;` +
       `style-src 'self' fonts.googleapis.com 'unsafe-inline';` +
       `font-src 'self' fonts.gstatic.com;` +

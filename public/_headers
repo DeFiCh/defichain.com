@@ -1,5 +1,5 @@
 /*
-  Content-Security-Policy: default-src 'none'; base-uri 'none'; child-src 'self' app.netlify.com; form-action 'none'; frame-ancestors 'none'; img-src 'self' *.cloudfront.net s2.coinmarketcap.com data:; media-src 'self'; object-src 'none'; script-src 'self' app.netlify.com netlify-cdp-loader.netlify.app; script-src-elem 'self' files.coinmarketcap.com 3rdparty-apis.coinmarketcap.com ajax.googleapis.com; style-src 'self' fonts.googleapis.com 'unsafe-inline'; font-src 'self' fonts.gstatic.com; connect-src 'self' ocean.defichain.com 3rdparty-apis.coinmarketcap.com; prefetch-src 'self';
+  Content-Security-Policy: default-src 'none'; base-uri 'none'; child-src 'self' app.netlify.com; form-action 'none'; frame-ancestors 'none'; img-src 'self' *.cloudfront.net data:; media-src 'self'; object-src 'none'; script-src 'self' app.netlify.com netlify-cdp-loader.netlify.app; script-src-elem 'self' ajax.googleapis.com; style-src 'self' fonts.googleapis.com 'unsafe-inline'; font-src 'self' fonts.gstatic.com; connect-src 'self' ocean.defichain.com; prefetch-src 'self';
   Referrer-Policy: same-origin
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY

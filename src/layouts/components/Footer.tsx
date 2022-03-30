@@ -30,9 +30,10 @@ export function Footer (): JSX.Element {
               <FooterSectionSocial />
             </div>
           </div>
-          <div className='flex flex-wrap w-full lg:w-1/3 xl:w-1/2 justify-center lg:justify-end'>
+          <div className='flex flex-wrap w-full lg:w-1/3 xl:w-1/2 justify-start lg:justify-end'>
             <Script src='https://widgets.coingecko.com/coingecko-coin-ticker-widget.js' />
-            <coingecko-coin-ticker-widget coin-id='defichain' currency='usd' locale='en' width='400' />
+            {/* @ts-expect-error */}
+            <coingecko-coin-ticker-widget coin-id='defichain' currency='usd' locale={t('footer.sitemap.language')} width='0' />
           </div>
         </div>
         <div className='flex flex-row items-center space-x-4 mt-16'>

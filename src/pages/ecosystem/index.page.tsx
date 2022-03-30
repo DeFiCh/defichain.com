@@ -53,7 +53,7 @@ export default function EcosystemPage (): JSX.Element {
             text={t('PartnersSection.StakingRewards.desc')} buttonText={t('PartnersSection.StakingRewards.button')}
             url='https://www.stakingrewards.com/earn/defichain/' external testid='EcosystemSection.Staking'
           >
-            <Image alt='staking rewards logo' src={StakingRewardsLogo} />
+            <Image alt='Staking Rewards Logo' src={StakingRewardsLogo} />
             <h3 className='text-2xl mt-5 font-medium'>{t('PartnersSection.StakingRewards.title')}</h3>
           </ResourceCard>
           <ResourceCard
@@ -61,28 +61,28 @@ export default function EcosystemPage (): JSX.Element {
             buttonText={t('PartnersSection.Blockspot.button')} url='https://blockspot.io/coin/defichain/' external
             testid='EcosystemSection.Blockspot'
           >
-            <Image alt='staking rewards logo' src={BlockspotLogo} />
+            <Image alt='Blockspot Logo' src={BlockspotLogo} />
             <h3 className='text-2xl mt-5 font-medium'>{t('PartnersSection.Blockspot.title')}</h3>
           </ResourceCard>
           <ResourceCard
             text={t('PartnersSection.Blockfolio.desc')} buttonText={t('PartnersSection.Blockfolio.button')}
             url='https://blockfolio.com/coin/DFI' external testid='EcosystemSection.Blockfolio'
           >
-            <Image alt='CakeDeFi Logo' src={Blockfolio} />
+            <Image alt='Blockfolio Logo' src={Blockfolio} />
             <h3 className='text-2xl mt-5 font-medium'>{t('PartnersSection.Blockfolio.title')}</h3>
           </ResourceCard>
           <ResourceCard
             text={t('PartnersSection.Messari.desc')} buttonText={t('PartnersSection.Messari.button')}
             url='https://messari.io/asset/defichain' external testid='EcosystemSection.Messari'
           >
-            <Image alt='CakeDeFi Logo' src={MessariLogo} />
+            <Image alt='Messari Logo' src={MessariLogo} />
             <h3 className='text-2xl mt-5 font-medium'>{t('PartnersSection.Messari.title')}</h3>
           </ResourceCard>
           <ResourceCard
             text={t('PartnersSection.CoinGecko.desc')} buttonText={t('PartnersSection.CoinGecko.button')}
             url='https://www.coingecko.com/en/coins/defichain' external testid='EcosystemSection.CoinGecko'
           >
-            <Image alt='CakeDeFi Logo' src={CoinGeckoLogo} />
+            <Image alt='CoinGecko Logo' src={CoinGeckoLogo} />
             <h3 className='text-2xl mt-5 font-medium'>{t('PartnersSection.CoinGecko.title')}</h3>
           </ResourceCard>
         </EcosystemSection>

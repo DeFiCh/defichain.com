@@ -80,7 +80,7 @@ export default function EcosystemPage (): JSX.Element {
           </ResourceCard>
           <ResourceCard
             text={t('PartnersSection.CoinGecko.desc')} buttonText={t('PartnersSection.CoinGecko.button')}
-            url='https://www.coingecko.com/en/coins/defichain' external testid='EcosystemSection.CoinGecko'
+            url='https://www.coingecko.com/en/exchanges/defichain' external testid='EcosystemSection.CoinGecko'
           >
             <Image alt='CoinGecko Logo' src={CoinGeckoLogo} />
             <h3 className='text-2xl mt-5 font-medium'>{t('PartnersSection.CoinGecko.title')}</h3>

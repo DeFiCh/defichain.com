@@ -15,7 +15,7 @@ const securityHeaders = [
       `script-src-elem 'self' widgets.coingecko.com ajax.googleapis.com;` +
       `style-src 'self' fonts.googleapis.com 'unsafe-inline';` +
       `font-src 'self' fonts.gstatic.com;` +
-      `connect-src 'self' wss://cable.coingecko.com ocean.defichain.com;` +
+      `connect-src 'self' api.coingecko.com wss://cable.coingecko.com ocean.defichain.com;` +
       `prefetch-src 'self';`
   },
   {

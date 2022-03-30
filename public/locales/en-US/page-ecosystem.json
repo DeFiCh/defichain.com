@@ -41,6 +41,11 @@
       "title": "Messari",
       "desc": "Data tools that bring transparency to the cryptoeconomy.",
       "button": "Go to Messari"
+    },
+    "CoinGecko": {
+      "title": "CoinGecko",
+      "desc": "View DeFiChain DEX information on CoinGecko.",
+      "button": "Go to CoinGecko"
     }
   }
 }

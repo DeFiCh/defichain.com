@@ -42,3 +42,9 @@
   to = "https://defichain.com/zh-Hant/:splat"
   status = 301
   force = true
+  
+[[redirects]]
+  from = "https://defichain.com/dfi-token"
+  to = "https://defichain.com/dfi"
+  status = 301
+  force = true

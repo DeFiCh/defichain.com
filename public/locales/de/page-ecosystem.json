@@ -13,11 +13,6 @@
       "title": "Werde ein Entwickler",
       "desc": "Erfahre, wie du auf DeFiChain aufbauen und den $DFI-Coin nutzen kannst.",
       "button": "Entwickler"
-    },
-    "ServiceProvider": {
-      "title": "Werde ein Serviceanbieter",
-      "desc": "Teile uns mit, wie du zum Ökosystem beitragen möchtest",
-      "button": "Kontakt"
     }
   },
   "PartnersSection": {
@@ -47,5 +42,9 @@
       "desc": "Datentools, die Transparenz in die Kryptoökonomie bringen",
       "button": "Weiter zu Messari"
     }
+    "CoinGecko": {
+      "title": "CoinGecko",
+      "desc": "Zeige DeFiChain DEX Informationen auf CoinGecko an.",
+      "button": "Weiter zu CoinGecko"
   }
 }

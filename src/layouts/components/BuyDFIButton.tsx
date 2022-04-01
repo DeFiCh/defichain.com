@@ -36,7 +36,7 @@ export function BuyDFIButton ({ classname, price }: { classname?: string, price:
     {
       name: 'Transak',
       image: '/assets/img/exchanges/logo-transak.png',
-      url: 'https://global.transak.com/?apiKey=9cb22c33-f1fc-4ff0-9736-9159bb879568&cryptoCurrencyCode=DFI'
+      url: 'https://global.transak.com'
     },
     { name: 'Hoo', image: '/assets/img/exchanges/logo-hoo.png', url: 'https://hoo.com/innovation/dfi-usdt' }
   ]

@@ -147,7 +147,7 @@ function FooterSectionSocial (): JSX.Element {
         testId='FooterExternalLink.TelegramIT'
       />
       <FooterExternalLink
-        text={`${t('footer.social.telegram')} (ES)`} url='https://t.me/defiblockchain_ES'
+        text={`${t('footer.social.telegram')} (ES)`} url='https://t.me/official_defichain_es'
         testId='FooterExternalLink.TelegramES'
       />
       <FooterExternalLink

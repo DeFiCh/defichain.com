@@ -1,0 +1,13 @@
+{
+  "404": {
+    "title": "Page Not Found - DeFiChain",
+    "error": "404 - Page Not Found"
+  },
+  "500": {
+    "title": "Something Went Wrong - DeFiChain",
+    "error": "500 - Internal Error"
+  },
+  "common": {
+    "back": "BACK HOME"
+  }
+}

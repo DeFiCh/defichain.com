@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/defichain.com-new.iml" filepath="$PROJECT_DIR$/.idea/defichain.com-new.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/defichain.com.iml" filepath="$PROJECT_DIR$/.idea/defichain.com.iml" />
     </modules>
   </component>
 </project>

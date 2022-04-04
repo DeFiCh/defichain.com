@@ -20,16 +20,16 @@ export function FullNodeSection (): JSX.Element {
         >
           <div className='flex flex-wrap items-center space-x-4 text-lg font-medium'>
             <ExternalLink
-              text='Mac'
-              url='https://github.com/DeFiCh/app/releases/download/v2.9.3/DeFi-Wallet-2.9.3.dmg'
+              text='macOS'
+              url='https://github.com/DeFiCh/app/releases/download/v2.10.0/DeFi-Wallet-2.10.0.dmg'
             />
             <ExternalLink
               text='Windows'
-              url='https://github.com/DeFiCh/app/releases/download/v2.9.3/DeFi-Wallet-Setup-2.9.3.exe'
+              url='https://github.com/DeFiCh/app/releases/download/v2.10.0/DeFi-Wallet-Setup-2.10.0.exe'
             />
             <ExternalLink
               text='Linux (App Image)'
-              url='https://github.com/DeFiCh/app/releases/download/v2.9.3/DeFi-Wallet-2.9.3.AppImage'
+              url='https://github.com/DeFiCh/app/releases/download/v2.10.0/DeFi-Wallet-2.10.0.AppImage'
             />
           </div>
         </DownloadCard>
@@ -56,16 +56,16 @@ export function FullNodeSection (): JSX.Element {
         >
           <div className='flex items-center space-x-4 text-lg font-medium'>
             <ExternalLink
-              text='Mac'
-              url='https://github.com/DeFiCh/ain/releases/download/v2.6.2/defichain-2.6.2-x86_64-apple-darwin18.tar.gz'
+              text='macOS'
+              url='https://github.com/DeFiCh/ain/releases/download/v2.7.0/defichain-2.7.0-x86_64-apple-darwin18.tar.gz'
             />
             <ExternalLink
               text='Windows'
-              url='https://github.com/DeFiCh/ain/releases/download/v2.6.2/defichain-2.6.2-x86_64-w64-mingw32.zip'
+              url='https://github.com/DeFiCh/ain/releases/download/v2.7.0/defichain-2.7.0-x86_64-w64-mingw32.zip'
             />
             <ExternalLink
               text='Linux'
-              url='https://github.com/DeFiCh/ain/releases/download/v2.6.2/defichain-2.6.2-x86_64-pc-linux-gnu.tar.gz'
+              url='https://github.com/DeFiCh/ain/releases/download/v2.7.0/defichain-2.7.0-x86_64-pc-linux-gnu.tar.gz'
             />
           </div>
         </DownloadCard>

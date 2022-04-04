@@ -1,12 +1,10 @@
-import { SSRConfig, useTranslation } from 'next-i18next'
+import { SSRConfig } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { PageError } from '@components/commons/error/PageError'
 
 export default function InternalError (): JSX.Element {
-  const { t } = useTranslation(['page-error'])
-
   return (
-    <PageError title={t('500.title')} errorDesc={t('500.error')} text={t('common.back')} />
+    <PageError title='Something Went Wrong - DeFiChain' errorDesc='500 - Internal Server Error' text='BACK HOME' />
   )
 }
 

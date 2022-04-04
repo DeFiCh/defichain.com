@@ -5,7 +5,7 @@
   },
   "500": {
     "title": "Something Went Wrong - DeFiChain",
-    "error": "500 - Internal Error"
+    "error": "500 - Internal Server Error"
   },
   "common": {
     "back": "BACK HOME"

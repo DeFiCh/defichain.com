@@ -33,7 +33,7 @@
       },
       "BudgetProposal": {
         "title": "Proposition de fonds communautaire",
-        "desc": "Submit a community budget proposal for 500 DFI (non-refundable)."
+        "desc": "Soumettre une proposition de budget communautaire pour 10 DFI (non remboursable)"
       },
       "LiquidityPools": {
         "title": "Pools de liquidité",
@@ -54,7 +54,7 @@
   },
   "ExchangeSection": {
     "title": "Acquérir des coins $DFI",
-    "desc": "Les coins DFI seront émis pour les utilisateurs et les partenaires ayant un intérêt à utiliser et à participer à l'écosystème.",
+    "desc": "Les coins DFI seront émis pour les utilisateurs et les partenaires ayant un intérêt à utiliser et à participer à l'écosystème",
     "Exchanges": {
       "title": "Échanges",
       "desc": "Vous pouvez maintenant acheter DFI sur ces échanges sélectionnés, d'autres échanges suivront"

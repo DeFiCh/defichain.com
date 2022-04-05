@@ -1,6 +1,6 @@
 ---
 title: Obtention des wrapped tokens 
-description: Un guide étape par étape pour obtenir des wrapped BTC/ETH/USDT via le DEX ou CakeDefi
+description: Un guide étape par étape pour obtenir des wrapped BTC/ETH/USDT via le DEX ou Cake DeFi
 ---
 
 Pour fournir des liquidités au DEX et pour le liquidity mining, vous aurez besoin non seulement de DFI mais aussi de tokens pour l'autre côté de la paire de pool à laquelle vous souhaitez fournir des liquidités. DeFiChain ne supporte actuellement que les wrapped tokens, à savoir les wrapped ETH, BTC et USDT.

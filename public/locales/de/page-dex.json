@@ -54,7 +54,7 @@
       "desc": "Verwalte und verwende Account, Blockchain, Masternode, Mining, Netzwerk, Wallet-Befehle und mehr"
     },
     "NetworkSelection": {
-      "title": "Network selection",
+      "title": "Netzwerkauswahl",
       "desc": "Die App unterstützt das einfache Einloggen und Umschalten zwischen Mainnet und Testnet"
     }
   }

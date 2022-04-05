@@ -1,14 +1,15 @@
 {
   "Head": {
     "title": "Learn",
-    "desc": "Learn more and understand DeFiChain with videos and how-to guides."
+    "desc": "Learn more and understand DeFiChain with videos and how-to guides"
   },
   "Header": {
     "title": "Learn",
-    "desc": "Learn more and understand DeFiChain."
+    "desc": "Learn more and understand DeFiChain"
   },
   "HowToSection": {
-    "title": "How To Guides"
+    "title": "How To Guides",
+    "read": "Read"
   },
   "FAQSection": {
     "title": "FAQ",

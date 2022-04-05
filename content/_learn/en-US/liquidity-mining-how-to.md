@@ -1,6 +1,6 @@
 ---
-title: Liquidity mining with DeFi app.
-description: Step-by-step on how to liquidity mine with DeFi app.
+title: Liquidity mining with DeFi app
+description: Step-by-step on how to liquidity mine with DeFi app
 ---
 
 ## What is liquidity mining?

@@ -1,7 +1,7 @@
 {
   "Head": {
     "title": "Ecosystem",
-    "desc": "Be part of DeFiChain ecosystem."
+    "desc": "Be part of DeFiChain Ecosystem"
   },
   "Header": {
     "title": "Ecosystem",
@@ -11,7 +11,7 @@
     "title": "Contribute to DeFiChain",
     "Developer": {
       "title": "Become a developer",
-      "desc": "Learn how you can build on DeFiChain and use $DFI coin.",
+      "desc": "Learn how you can build on DeFiChain and use $DFI coin",
       "button": "Developers"
     }
   },
@@ -19,32 +19,32 @@
     "title": "Partners",
     "CakeDeFi": {
       "title": "Cake DeFi",
-      "desc": "Stake DFI and receive DFI as rewards when using Cake DeFi.",
+      "desc": "Stake DFI and receive DFI as rewards when using Cake DeFi",
       "button": "Go to Cake DeFi"
     },
     "StakingRewards": {
       "title": "Staking Rewards",
-      "desc": "DeFiChain (DFI) interest calculator and current rates.",
+      "desc": "DeFiChain (DFI) interest calculator and current rates",
       "button": "Go to Staking Rewards"
     },
     "Blockspot": {
       "title": "Blockspot.io",
-      "desc": "DeFiChain (DFI) price, graph, data and info on Blockspot.io.",
+      "desc": "DeFiChain (DFI) price, graph, data and info on Blockspot.io",
       "button": "Go to Blockspot.io"
     },
     "Blockfolio": {
       "title": "Blockfolio",
-      "desc": "Watch DFI on the Blockfolio Signal platform.",
+      "desc": "Watch DFI on the Blockfolio Signal platform",
       "button": "Go to Blockfolio"
     },
     "Messari": {
       "title": "Messari",
-      "desc": "Data tools that bring transparency to the cryptoeconomy.",
+      "desc": "Data tools that bring transparency to the cryptoeconomy",
       "button": "Go to Messari"
     },
     "CoinGecko": {
       "title": "CoinGecko",
-      "desc": "View DeFiChain DEX information on CoinGecko.",
+      "desc": "View DeFiChain DEX information on CoinGecko",
       "button": "Go to CoinGecko"
     }
   }

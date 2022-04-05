@@ -11,7 +11,7 @@
     "title": "An DeFiChain mitwirken",
     "Developer": {
       "title": "Werde ein Entwickler",
-      "desc": "Erfahre, wie du auf DeFiChain aufbauen und den $DFI-Coin nutzen kannst.",
+      "desc": "Erfahre, wie du auf DeFiChain aufbauen und den $DFI-Coin nutzen kannst",
       "button": "Entwickler"
     }
   },
@@ -19,7 +19,7 @@
     "title": "Partner",
     "CakeDeFi": {
       "title": "Cake DeFi",
-      "desc": "Stake DFI und erhalte DFI als Rewards, indem du Cake DeFi benutzt.",
+      "desc": "Stake DFI und erhalte DFI als Rewards, indem du Cake DeFi benutzt",
       "button": "Weiter zu Cake DeFi"
     },
     "StakingRewards": {
@@ -44,7 +44,7 @@
     },
     "CoinGecko": {
       "title": "CoinGecko",
-      "desc": "Zeige DeFiChain DEX Informationen auf CoinGecko an.",
+      "desc": "Zeige DeFiChain DEX Informationen auf CoinGecko an",
       "button": "Weiter zu CoinGecko"
     }
   }

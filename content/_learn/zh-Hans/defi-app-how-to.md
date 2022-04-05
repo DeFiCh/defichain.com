@@ -1,6 +1,6 @@
 ---
 title: 递飞链程序入门指南
-description: 分步指南。
+description: 分步指南
 ---
 
 ## 下载程序

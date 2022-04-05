@@ -1,6 +1,6 @@
 ---
 title: DeFiChain app how-to
-description: A step-by-step guide to using and installing the DeFiChain app.
+description: A step-by-step guide to using and installing the DeFiChain app
 ---
 
 ## Download the app

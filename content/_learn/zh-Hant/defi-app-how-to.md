@@ -1,6 +1,6 @@
 ---
 title: 遞飛鏈程序入門指南
-description: A step-by-step guide to using and installing the DeFiChain app.
+description: 分步指南
 ---
 
 ## 下載程序

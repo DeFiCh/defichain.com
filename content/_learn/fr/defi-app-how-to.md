@@ -1,6 +1,6 @@
 ---
 title: Comment utiliser l'application DeFiChain
-description: Un guide étape par étape pour utiliser et installer l'application DeFiChain.
+description: Un guide étape par étape pour utiliser et installer l'application DeFiChain
 ---
 
 ## Télécharger l'application

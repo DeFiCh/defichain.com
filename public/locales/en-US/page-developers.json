@@ -1,32 +1,32 @@
 {
   "Head": {
     "title": "Developers",
-    "desc": "Start building on DeFiChain with developer resources and code."
+    "desc": "Start building on DeFiChain with developer resources and code"
   },
   "Header": {
     "title": "Developers",
-    "desc": "Build on DeFiChain."
+    "desc": "Build on DeFiChain"
   },
   "DeveloperResourcesSection": {
     "title": "Start building on DeFiChain with developer resources and code.",
     "GitHub": {
-      "title": "Get developer resources and getting started guides.",
+      "title": "Get developer resources and getting started guides",
       "button": "GitHub"
     },
     "Cli": {
-      "title": "Get the CLI and Desktop app.",
+      "title": "Get the CLI and Desktop app",
       "button": "Downloads"
     },
     "Scan": {
-      "title": "Explore the blockchain on DeFi Scan.",
+      "title": "Explore the blockchain on DeFi Scan",
       "button": "Explore"
     },
     "WhitePaper": {
-      "title": "Read the DeFiChain technical paper.",
+      "title": "Read the DeFiChain technical paper",
       "button": "White Paper"
     },
     "Reddit": {
-      "title": "Participate in our Reddit developer community.",
+      "title": "Participate in our Reddit developer community",
       "button": "Discuss"
     }
   },

@@ -38,7 +38,7 @@ effektive Jahreszins angezeigt.
 Du kannst z.B. dem dETH-DFI, dBTH-DFI und dUSDT-DFI Pool Liquidität zur Verfügung stellen. Für welches Poolpaar
 du dich auch entscheidest, du brauchst die entsprechenden Token in deiner Wallet. Wenn du z.B. den dBTC-DFI-Pool
 mit Liquidität versorgen willst, musst du genügend dBTC (wrapped BTC) und DFI in deiner Wallet haben. Die aktuelle
-Version von DeFiChain akzeptiert nur wrapped Token (wrapped ETH/BTH/USDT). Wenn du derzeit keine wrapped Token
+Version von DeFiChain akzeptiert nur gewrappte Token (wrapped ETH/BTH/USDT). Wenn du derzeit keine gewrappte Token
 hast, [sieh dir diese Anleitung an](/learn/obtaining-wrapped-tokens).
 
 Wenn du bereit bist, einem der Poolpaare Liquidität zur Verfügung zu stellen, klicke auf **LIQUIDITÄT HINZUFÜGEN**. 

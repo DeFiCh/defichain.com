@@ -1,6 +1,6 @@
 ---
 title: Run a masternode
-description: How to run a DeFiChain masternode on Linux/macOS.
+description: How to run a DeFiChain masternode on Linux/macOS
 ---
 
 ## Introduction

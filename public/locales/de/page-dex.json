@@ -27,11 +27,11 @@
     },
     "BackupAndRestore": {
       "title": "Backup und Wiederherstellung",
-      "desc": "Du kannst deine Wallet und dein Guthaben jederzeit mit deinem 24 Wörter Seed sichern und wiederherstellen."
+      "desc": "Du kannst deine Wallet und dein Guthaben jederzeit mit deinem 24 Wörter Seed sichern und wiederherstellen"
     },
     "DecentralizedExchange": {
       "title": "Dezentrale Börse",
-      "desc": "Tausche zwischen DFI- und gewrappten Token auf einer vollständig dezentralen Exchange."
+      "desc": "Tausche zwischen DFI- und gewrappten Token auf einer vollständig dezentralen Exchange"
     },
     "LiquidityMining": {
       "title": "Liquiditäts-Mining",

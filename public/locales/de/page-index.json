@@ -385,7 +385,7 @@
       "cards": [
         {
           "title": "3 Jahre",
-          "desc": "Dezentraler Handel mit Einsatz von Hebeln (10x oder 50x Hebelung der Sicherheiten)",
+          "desc": "Dezentraler Handel mit Einsatz von Hebeln (mit 10-fachem oder 50-fachem Hebel des Kapitaleinsatzes)",
           "image": {
             "url": "/img/timeline/3y/decentralized-leverage@2x.png",
             "alt": "Dezentraler Handel mit Hebelwirkung"

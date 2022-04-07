@@ -54,7 +54,7 @@ Der Funktionsumfang umfasst unter anderem:
 
 ## Hintergrund/Branche
 
-### DDie Möglichkeiten und Herausforderungen des DeFi-Systems
+### Die Möglichkeiten und Herausforderungen des DeFi-Systems
 
 Das dezentrale Finanzsystem verspricht, eine Vielzahl von Finanzinstrumenten anzubieten, ohne dass Mittelsmänner dafür sorgen müssen, dass die Dienstleistungen verlässlich sind. Nach Angaben der OECD machen Finanzdienstleistungen in [entwickelten Volkswirtschaften](https://www.investopedia.com/terms/d/developed-economy.asp)[^1] 20-30% des gesamten Dienstleistungsumsatzes und etwa 20% des gesamten [Bruttoinlandsprodukts](https://www.investopedia.com/terms/g/gdp.asp) aus. Das ist ein riesiger Wirtschaftszweig, der sich nur auf eines konzentriert: sicherzustellen, dass Finanztransaktionen verlässlich sind. Mit dem Aufkommen der Blockchain können vertrauensunabhängige Systeme und intelligente Verträge einen Großteil der Funktionen dieser Branche ersetzen, wodurch die Rendite für den einzelnen Anleger drastisch steigt.
 

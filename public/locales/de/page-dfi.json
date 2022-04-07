@@ -1,0 +1,67 @@
+{
+  "Head": {
+    "title": "$DFI",
+    "desc": "Erfahre mehr über den $DFI-Coin und seinen Nutzen, die Verteilung, Airdrops und wie du DFI erwerben kannst"
+  },
+  "Header": {
+    "title": "$DFI",
+    "desc": "Lerne den $DFI-Coin kennen und erwirb ihn"
+  },
+  "DFICoinSection": {
+    "title": "$DFI coin",
+    "desc": "Der $DFI-Coin ist eine integrale Rechnungseinheit der DeFiChain. Die DeFiChain Foundation hat am 11. Mai 2020 rund 600 Millionen DFI ausgegeben. Der aktuelle Umlaufbestand (mit Staking und Liquiditäts-Mining) ist verfügbar unter",
+    "disclaimer": "Wichtig! DeFiChain ist ein Community-Projekt. Es gab/gibt kein Initial Coin Offering, sondern nur kostenlose Airdrops"
+  },
+  "CoinUtility": {
+    "title": "Nutzen und Einsatzbereiche des $DFI-Coins",
+    "entries": {
+      "Fees": {
+        "title": "Gebühren",
+        "desc": "Bezahlen für Transaktionen, Smart Contracts und andere DeFi-Aktivitäten"
+      },
+      "LoanCollaterals": {
+        "title": "Darlehens-Sicherheiten",
+        "desc": "Benutze Krypto-Assets als Sicherheiten, um zu leihen oder zu verleihen"
+      },
+      "StakingNodes": {
+        "title": "Staking Nodes",
+        "desc": "Finanziere einen neuen Masternode für nur 20.000 DFI"
+      },
+      "DeFiCustomToken": {
+        "title": "DeFi Custom Token - Benutzerdefinierter Token",
+        "desc": "Erstelle einen nicht rückzahlbaren personalisierten DCT (DeFi Custom Token)"
+      },
+      "BudgetProposal": {
+        "title": "Vorschlag für den Community Fund",
+        "desc": "Reiche einen Vorschlag für den Community Fund für 10 DFI ein (nicht rückzahlbar)"
+      },
+      "LiquidityPools": {
+        "title": "Liquiditätspools",
+        "desc": "Bereitstellung von Liquidität für den dezentralen Tausch von Kryptowährungen"
+      }
+    }
+  },
+  "DistributionSection": {
+    "title": "Anfängliche Token-Verteilung",
+    "desc": "Von den 1,2 Milliarden $DFI Token befinden sich 49% in der Erstausgabe, der Rest wird im Laufe der Zeit an Masternode-Inhaber ausgegeben.",
+    "chart": {
+      "InitialSupply": "Anfangsbestand",
+      "ToMasternodes": "An die Masternodes im Laufe der Zeit",
+      "DeFiChaiFoundation": "DeFiChain Foundation",
+      "ExternalPartners": "Externe Partner",
+      "desc": "Von dem ursprünglichen Kontingent wurden 26% der Token per Airdrop ausgegeben, <0>27% verbrannt</0> und <1>47% zerstört</1>."
+    }
+  },
+  "ExchangeSection": {
+    "title": "Erwerb von $DFI-Token",
+    "desc": "$DFI-Token werden an Nutzer und Partner ausgegeben, die ein Interesse daran haben, das Ökosystem zu nutzen und daran teilzunehmen.",
+    "Exchanges": {
+      "title": "Exchanges/Börsen",
+      "desc": "Du kannst DFI jetzt an diesen ausgewählten Börsen kaufen, weitere Börsen werden folgen"
+    },
+    "Staking": {
+      "title": "Staking",
+      "desc": "DFI ist jetzt bei diesen ausgewählten Staking Plattformen erhältlich"
+    }
+  }
+}

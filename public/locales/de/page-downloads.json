@@ -1,0 +1,46 @@
+{
+  "Head": {
+    "title": "Dein Schlüssel zum DeFiChain-Ökosystem",
+    "desc": "Erhalte Zugang zur DeFi-Welt durch Non-Custodial Wallets, die für eine Vielzahl von Anforderungen entwickelt wurden."
+  },
+  "Header": {
+    "title": "Dein Schlüssel zum DeFiChain-Ökosystem",
+    "desc": "Erhalte Zugang zur DeFi-Welt durch Non-Custodial Wallets, die für eine Vielzahl von Anforderungen entwickelt wurden."
+  },
+  "LightWallets": {
+    "title": "Täglicher Zugang zu DeFiChain",
+    "subtitle": "Diese Wallets bieten einen leichten und einfachen Zugang zu den Funktionen von DeFiChain. Sie eignen sich am besten für Nutzer, die fast täglich mit DeFiChain interagieren und dabei keine Kompromisse bei der Geschwindigkeit und Sicherheit ihrer Einlagen eingehen.",
+    "entries": {
+      "DFC": {
+        "title": "DeFiChain Wallet Handy-App",
+        "desc": "Einfacher, schneller Zugang zum dezentralen Finanzsystem für Bitcoin, per Fingertipp."
+      },
+      "DFX": {
+        "title": "DFX wallet Handy-App",
+        "desc": "Speichere, empfange und versende DeFiChain Token mit größter Einfachheit und Sicherheit ganz unkompliziert per Handy."
+      }
+    }
+  },
+  "FullNodeWallets": {
+    "title": "Erweiterte Nutzung von DeFiChain",
+    "subtitle": "Fortgeschrittene Wallets, die für die komplexe Nutzung von DeFiChain geeignet sind, wie z.B. Masternode-Management, Multi-Signatur-Management und mehr.",
+    "entries": {
+      "DFC": {
+        "title": "DeFi Wallet Desktop-App",
+        "desc": "Mit der funktionsfähigen und vollständig dezentralen Wallet-App kannst du Transaktionen durchführen, Liquiditäts-Mining betreiben, tauschen und vieles mehr. Full-Node enthalten."
+      },
+      "RPI": {
+        "title": "DeFi Wallet für Raspberry Pi",
+        "desc": "Eine Version der Desktop-Wallet für Raspberry Pi 4B 4GB mit offiziellem Raspberry Pi OS (32-Bit)"
+      },
+      "CLI": {
+        "title": "CLI",
+        "desc": "Führe Transaktionen und Interaktionen mit DeFiChain über eine Befehlszeilenschnittstelle durch. Full-Node enthalten"
+      },
+      "DFIElectrum": {
+        "title": "DeFiChain Electrum",
+        "desc": "Multi-Signatur DeFiChain Wallet mit Electrum für Treasury-Anwendungen und mehr."
+      }
+    }
+  }
+}

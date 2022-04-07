@@ -1,0 +1,45 @@
+{
+  "header": {
+    "navbar": {
+      "foundation": "Foundation",
+      "dfi": "$DFI",
+      "dex": "DEX",
+      "developers": "Entwickler",
+      "ecosystem": "Ökosystem",
+      "downloads": "Downloads",
+      "learn": "Mehr erfahren",
+      "buy": "Kaufen",
+      "dfcblog": "Blog"
+    }
+  },
+  "footer": {
+    "title": "Natives dezentrales Finanzwesen, basierend auf Bitcoin",
+    "sitemap": {
+      "foundation": "Foundation",
+      "dfi": "$DFI",
+      "dex": "DEX",
+      "developers": "Entwickler",
+      "ecosystem": "Ökosystem",
+      "downloads": "Downloads",
+      "media": "Medien",
+      "learn": "Mehr erfahren",
+      "security": "Sicherheit",
+      "bugbounty": "Bug-Bounty",
+      "whitepaper": "White Paper",
+      "dfcblog": "Blog",
+      "language": "de"
+    },
+    "social": {
+      "title": "Soziale Netze",
+      "twitter": "Twitter",
+      "youtube": "YouTube",
+      "reddit": "Reddit",
+      "linkedin": "LinkedIn",
+      "facebook": "Facebook",
+      "discord": "Discord",
+      "github": "GitHub",
+      "telegram": "Telegram",
+      "merch": "Verkaufsartikel"
+    }
+  }
+}

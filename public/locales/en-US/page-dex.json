@@ -7,7 +7,7 @@
     "title": "Decentralized Exchange",
     "desc": {
       "main": "Liquidity mining for up to 100% returns, decentralized swapping, arbitrage and more, with the DeFi Wallet.",
-      "secondary": "Available for Windows, macOS and Linux."
+      "secondary": "Available for Windows, macOS and Linux"
     }
   },
   "LiquidityMining": {
@@ -23,39 +23,39 @@
     "title": "Other wallet features",
     "HDWallet": {
       "title": "HD wallet",
-      "desc": "A Hierarchical Deterministic (HD) wallet based on the leading BIP39 standard."
+      "desc": "A Hierarchical Deterministic (HD) wallet based on the leading BIP39 standard"
     },
     "BackupAndRestore": {
       "title": "Backup and restore",
-      "desc": "Backup and restore your wallet and funds any time with your 24-word seed phrase."
+      "desc": "Backup and restore your wallet and funds any time with your 24-word seed phrase"
     },
     "DecentralizedExchange": {
       "title": "Decentralized Exchange",
-      "desc": "Swap between DFI and wrapped tokens in a completely decentralized, exchange."
+      "desc": "Swap between DFI and wrapped tokens in a completely decentralized, exchange"
     },
     "LiquidityMining": {
       "title": "Liquidity mining",
-      "desc": "Supply and mine liquidity in popular pool pairs for potentially high yields."
+      "desc": "Supply and mine liquidity in popular pool pairs for potentially high yields"
     },
     "TokensSupport": {
       "title": "Tokens Support",
-      "desc": "Store and transact in DFI, as well as all tokens in the DeFiChain ecosystem."
+      "desc": "Store and transact in DFI, as well as all tokens in the DeFiChain ecosystem"
     },
     "MiniExplorer": {
       "title": "Mini explorer",
-      "desc": "Explore the blockchain and examine transactions."
+      "desc": "Explore the blockchain and examine transactions"
     },
     "Masternodes": {
       "title": "Masternodes",
-      "desc": "View the full list of masternodes, and create your own masternodes."
+      "desc": "View the full list of masternodes, and create your own masternodes"
     },
     "Console": {
       "title": "Console",
-      "desc": "Run account, blockchain, masternode, mining, network, wallet commands, and more."
+      "desc": "Run account, blockchain, masternode, mining, network, wallet commands, and more"
     },
     "NetworkSelection": {
       "title": "Network selection",
-      "desc": "The app supports easy connecting and switching between Mainnet and Testnet."
+      "desc": "The app supports easy connecting and switching between Mainnet and Testnet"
     }
   }
 }

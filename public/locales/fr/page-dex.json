@@ -1,0 +1,61 @@
+{
+  "Head": {
+    "title": "Échange décentralisé",
+    "desc": "Échanger sur le DEX, faites du liquidity mining et plus encore, avec l'application portefeuille de DeFiChain. Disponible pour Windows, macOS et Linux"
+  },
+  "Header": {
+    "title": "Échange décentralisé",
+    "desc": {
+      "main": "Liquidity mining pour des rendements allant jusqu'à 100 %, swapping décentralisé, arbitrage et plus encore, avec le portefeuille DeFi Wallet",
+      "secondary": "Disponible pour Windows, macOS et Linux"
+    }
+  },
+  "LiquidityMining": {
+    "title": "Gagnez plus avec du liquidity mining !",
+    "desc": "Liquidity mining pour des rendements incroyablement élevés dans l'application ! Fournissez des liquidités à BTC, ETH, USDT et à de nombreuses autres paires de pool pour alimenter l’échange décentralisé, et gagnez des frais et des récompenses de bloc élevées en retour. Vous pouvez retirer vos liquidités à tout moment."
+  },
+  "LiquidityPools": {
+    "title": "Pools de liquidité",
+    "showAll": "Afficher tous",
+    "hide": "Cacher"
+  },
+  "WalletFeaturesSection": {
+    "title": "Autres caractéristiques du portefeuille",
+    "HDWallet": {
+      "title": "HD wallet",
+      "desc": "Un portefeuille hiérarchique déterministe (HD) basé sur la norme de pointe BIP39"
+    },
+    "BackupAndRestore": {
+      "title": "Sauvegarde et restauration",
+      "desc": "Sauvegarder et restaurer son portefeuille et ses fonds à tout moment grâce à votre phrase mnémonique de 24 mots"
+    },
+    "DecentralizedExchange": {
+      "title": "Échange décentralisé",
+      "desc": "Échanger des tokens DFI et des wrapped tokens dans un échange complètement décentralisé"
+    },
+    "LiquidityMining": {
+      "title": "Liquidity mining",
+      "desc": "Fournir et exploiter la liquidité sous forme de liquidity mining dans des paires de pool populaires pour des rendements potentiellement élevés"
+    },
+    "TokensSupport": {
+      "title": "Support des tokens",
+      "desc": "Stocker et effectuer des transactions en DFI, ainsi que tous les tokens de l'écosystème DeFiChain"
+    },
+    "MiniExplorer": {
+      "title": "Mini explorateur",
+      "desc": "Explorer la blockchain et examiner les transactions"
+    },
+    "Masternodes": {
+      "title": "Masternodes",
+      "desc": "Voire la liste complète des masternodes, et créer son propre masternode"
+    },
+    "Console": {
+      "title": "Console",
+      "desc": "Exécuter le compte, la blockchain, le masternode, le minage, le réseau, les commandes du portefeuille, et plus"
+    },
+    "NetworkSelection": {
+      "title": "Sélection du réseau",
+      "desc": "L'application permet de se connecter et de basculer facilement entre Mainnet et Testnet"
+    }
+  }
+}

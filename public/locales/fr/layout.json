@@ -1,0 +1,45 @@
+{
+  "header": {
+    "navbar": {
+      "foundation": "Fondation",
+      "dfi": "$DFI",
+      "dex": "DEX",
+      "developers": "Développeurs",
+      "ecosystem": "Écosystème",
+      "downloads": "Téléchargements",
+      "learn": "Apprendre",
+      "buy": "Acheter",
+      "dfcblog": "Blog"
+    }
+  },
+  "footer": {
+    "title": "Finance décentralisée native sur Bitcoin",
+    "sitemap": {
+      "foundation": "Fondation",
+      "dfi": "$DFI",
+      "dex": "DEX",
+      "developers": "Développeurs",
+      "ecosystem": "Écosystème",
+      "downloads": "Downloads",
+      "media": "Médias",
+      "learn": "Apprendre",
+      "security": "Sécurité",
+      "bugbounty": "Prime aux bogues",
+      "whitepaper": "Livre blanc",
+      "dfcblog": "Blog",
+      "language": "fr"
+    },
+    "social": {
+      "title": "Réseaux sociaux",
+      "twitter": "Twitter",
+      "youtube": "YouTube",
+      "reddit": "Reddit",
+      "linkedin": "LinkedIn",
+      "facebook": "Facebook",
+      "discord": "Discord",
+      "github": "GitHub",
+      "telegram": "Telegram",
+      "merch": "Marchandise"
+    }
+  }
+}

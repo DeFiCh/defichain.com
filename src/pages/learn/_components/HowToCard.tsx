@@ -1,8 +1,11 @@
 import { PropsWithChildren } from 'react'
 import Link from 'next/link'
 import { Button } from '@components/commons/Buttons'
+import { useTranslation } from 'next-i18next'
 
 export function HowToCard (props: PropsWithChildren<{ title: string, desc: string, slug: string }>): JSX.Element {
+  const { t } = useTranslation(['page-learn'])
+
   return (
     <div className='p-1.5 w-full lg:w-1/2 flex flex-col' data-testid='HowToCard'>
       <div className='rounded bg-gray-50 p-10 flex flex-col flex-1'>
@@ -11,7 +14,7 @@ export function HowToCard (props: PropsWithChildren<{ title: string, desc: strin
         <div className='mt-8' data-testid='HowToCard.Button'>
           <Link href={{ pathname: `/learn/${props.slug}` }} passHref>
             <a className='contents'>
-              <Button text='Read' />
+              <Button text={t('HowToSection.read')} />
             </a>
           </Link>
         </div>

@@ -1,0 +1,46 @@
+{
+  "Head": {
+    "title": "Votre clé pour l'écosystème DeFiChain",
+    "desc": "Accédez au paysage DeFi grâce à des portefeuilles non gardiens conçus pour une multitude d'exigences."
+  },
+  "Header": {
+    "title": "Votre clé pour l'écosystème DeFiChain",
+    "desc": "Accédez au paysage DeFi grâce à des portefeuilles non gardiens conçus pour une multitude d'exigences."
+  },
+  "LightWallets": {
+    "title": "Accès quotidien à DeFiChain",
+    "subtitle": "Ces portefeuilles offrent un accès léger et facile à la suite de fonctionnalités de DeFiChain. Ils conviennent parfaitement aux utilisateurs qui interagissent avec DeFiChain sur une base quasi-quotidienne, tout en ne faisant aucun compromis sur la vitesse et la sécurité des fonds.",
+    "entries": {
+      "DFC": {
+        "title": "DeFiChain Wallet application portefeuille mobile",
+        "desc": "Un accès léger et instantané à la finance décentralisée sur Bitcoin, en quelques clics."
+      },
+      "DFX": {
+        "title": "DFX wallet application portefeuille mobile",
+        "desc": "Stockez, recevez et envoyez des tokens DeFiChain avec une simplicité et une sécurité maximale, à partir de votre mobile"
+      }
+    }
+  },
+  "FullNodeWallets": {
+    "title": "Utilisation avancée de DeFiChain",
+    "subtitle": "Les portefeuilles avancés qui sont adaptés à une utilisation complexe de DeFiChain, comme la gestion des masternodes, la gestion des multi-signatures, et plus encore.",
+    "entries": {
+      "DFC": {
+        "title": "DeFi Wallet desktop app, application de bureau",
+        "desc": "Transaction, liquidity mining, échange et plus avec l'application portefeuille complète et entièrement décentralisée. Nœud complet inclus."
+      },
+      "RPI": {
+        "title": "DeFi wallet for Raspberry Pi, portefeuille DeFi pour Raspberry Pi",
+        "desc": "Une version du portefeuille de bureau pour Raspberry Pi 4B 4Go avec Raspberry Pi OS (32-Bit) officiel."
+      },
+      "CLI": {
+        "title": "ILC (Interface de ligne de commande)",
+        "desc": "Transaction et interaction avec DeFiChain par le biais d'une interface de ligne de commande. Nœud complet inclus."
+      },
+      "DFIElectrum": {
+        "title": "DeFiChain Electrum",
+        "desc": "Portefeuille DeFiChain multi signature construit avec Electrum pour les cas d'utilisation de la trésorerie et plus encore."
+      }
+    }
+  }
+}

@@ -1,11 +1,11 @@
 {
   "Head": {
     "title": "$DFI",
-    "desc": "了解$DFI代幣及其效用，分配，空投以及如何獲取DFI。"
+    "desc": "了解$DFI代幣及其效用，分配，空投以及如何獲取DFI"
   },
   "Header": {
     "title": "$DFI",
-    "desc": "了解並獲得$DFI代幣。"
+    "desc": "了解並獲得$DFI代幣"
   },
   "DFICoinSection": {
     "title": "$DFI貨幣",
@@ -17,27 +17,27 @@
     "entries": {
       "Fees": {
         "title": "費用",
-        "desc": "支付交易、智能合約和其他遞飛鏈運作的費用。"
+        "desc": "支付交易、智能合約和其他遞飛鏈運作的費用"
       },
       "LoanCollaterals": {
         "title": "借貸抵押",
-        "desc": "其他加密資産貸款的資金抵押。"
+        "desc": "其他加密資産貸款的資金抵押"
       },
       "StakingNodes": {
         "title": "權益質押節點",
-        "desc": "創建新的權益質押節點的要提供兩萬個DFI。"
+        "desc": "創建新的權益質押節點的要提供兩萬個DFI"
       },
       "DeFiCustomToken": {
         "title": "遞飛鏈自定代幣",
-        "desc": "以一百個DFI創建自定代幣 (不能退還)。"
+        "desc": "以一百個DFI創建自定代幣 (不能退還)"
       },
       "BudgetProposal": {
         "title": "社區基金提議",
-        "desc": "以10 DFI提交社區基金提議（不可退還)。"
+        "desc": "以10 DFI提交社區基金提議（不可退還)"
       },
       "LiquidityPools": {
         "title": "流動性池",
-        "desc": "為 DEX 提供加密資產流動性，並獲得獎勵回報。"
+        "desc": "為 DEX 提供加密資產流動性，並獲得獎勵回報"
       }
     }
   },
@@ -62,7 +62,7 @@
     },
     "Staking": {
       "title": "權益質押平台",
-      "desc": "DFI可在這些平台上運作權益質押。"
+      "desc": "DFI可在這些平台上運作權益質押"
     }
   }
 }

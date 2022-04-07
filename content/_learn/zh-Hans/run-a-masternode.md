@@ -1,6 +1,6 @@
 ---
 title: 运作递飞链主节点
-description: 入门Linux/macOS运作递飞链主节点。
+description: 入门Linux/macOS运作递飞链主节点
 ---
 
 ## 简介

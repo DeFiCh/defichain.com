@@ -6,6 +6,8 @@ export function LanguageDropdown (): JSX.Element {
   const router = useRouter()
   const languages = [
     { locale: 'en-US', name: 'English' },
+    { locale: 'de', name: 'Deutsch' },
+    { locale: 'fr', name: 'Français' },
     { locale: 'zh-Hans', name: '简体中文' },
     { locale: 'zh-Hant', name: '繁體中文' }
   ]

@@ -9,7 +9,7 @@ context('Learn page on desktop', () => {
 
   it('should have Header', () => {
     cy.findByTestId('Header.title').should('contain.text', 'Learn')
-    cy.findByTestId('Header.desc.main').should('have.text', 'Learn more and understand DeFiChain.')
+    cy.findByTestId('Header.desc.main').should('have.text', 'Learn more and understand DeFiChain')
   })
 
   it('should have page heading', function () {
@@ -43,7 +43,7 @@ context('Learn page on mobile', () => {
 
   it('should have Header', () => {
     cy.findByTestId('Header.title').should('contain.text', 'Learn')
-    cy.findByTestId('Header.desc.main').should('have.text', 'Learn more and understand DeFiChain.')
+    cy.findByTestId('Header.desc.main').should('have.text', 'Learn more and understand DeFiChain')
   })
 
   it('should have page heading', function () {

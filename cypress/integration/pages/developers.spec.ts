@@ -9,7 +9,7 @@ context('Developers page on desktop', () => {
 
   it('should have Header', () => {
     cy.findByTestId('Header.title').should('contain.text', 'Developers')
-    cy.findByTestId('Header.desc.main').should('have.text', 'Build on DeFiChain.')
+    cy.findByTestId('Header.desc.main').should('have.text', 'Build on DeFiChain')
   })
 
   it('should have page DeveloperResourcesSection', function () {
@@ -42,7 +42,7 @@ context('Developers page on mobile', () => {
 
   it('should have Header', () => {
     cy.findByTestId('Header.title').should('contain.text', 'Developers')
-    cy.findByTestId('Header.desc.main').should('have.text', 'Build on DeFiChain.')
+    cy.findByTestId('Header.desc.main').should('have.text', 'Build on DeFiChain')
   })
 
   it('should have page DeveloperResourcesSection', function () {

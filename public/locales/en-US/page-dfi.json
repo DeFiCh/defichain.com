@@ -64,5 +64,9 @@
       "title": "Staking",
       "desc": "DFI is now available at these staking platforms"
     }
+  },
+  "ERC20Section": {
+    "title": "DeFiChain ERC20",
+    "desc": "Bridging both ecosystems, allowing more Ethereum-based users to experience the real value of Native DeFi on DeFiChain. Learn more <0>here</0>."
   }
 }

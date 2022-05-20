@@ -11,7 +11,7 @@ export function ERC20Section (): JSX.Element {
   return (
     <Container>
       <Section title={t('ERC20Section.title')} testId='ERC20Section'>
-        <div className='flex flex-col w-full md:w-1/3 lg:w-1/2 mb-16 space-y-10'>
+        <div className='flex flex-col w-full md:w-1/3 lg:w-1/2 mb-16'>
           <div className='text-xl' data-testid='ERC20Section.Desc'>
             <Trans
               t={t}
@@ -21,11 +21,14 @@ export function ERC20Section (): JSX.Element {
               ]}
             />
           </div>
-          <ExternalLink url='https://etherscan.io/token/0x8Fc8f8269ebca376D046Ce292dC7eaC40c8D358A'>
-            <a className='contents'>
-              <Button text='View Contract Address' />
-            </a>
-          </ExternalLink>
+          <div className='mt-10'>
+            <ExternalLink url='https://etherscan.io/token/0x8Fc8f8269ebca376D046Ce292dC7eaC40c8D358A'>
+              <a className='contents'>
+                <Button text={t('ERC20Section.button')} />
+              </a>
+            </ExternalLink>
+          </div>
+          <span className='italic mt-2'>{t('ERC20Section.address')}</span>
         </div>
       </Section>
     </Container>

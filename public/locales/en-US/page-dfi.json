@@ -67,7 +67,7 @@
   },
   "ERC20Section": {
     "title": "DeFiChain ERC20",
-    "desc": "Bridging both ecosystems, allowing more Ethereum-based users to experience the real value of Native DeFi on DeFiChain. Learn more <0>here</0>.",
+    "desc": "The DeFiChain ERC20 is a bridge between both ecosystems, allowing more Ethereum-based users to experience the real value of Native DeFi on DeFiChain. Learn more <0>here</0>.",
     "address": "Address: 0x8Fc8f8269ebca376D046Ce292dC7eaC40c8D358A",
     "button": "View Contract Address"
   }

@@ -108,7 +108,7 @@ function DesktopNavbar ({ price }: { price: string }): JSX.Element {
           testId='Desktop.HeaderLink.Learn'
         />
         <HeaderLink
-          text={t('header.navbar.dfcblog')} pathname='https://blog.defichain.com/'
+          text={t('header.navbar.dfcblog')} pathname={t('header.navbar.bloglink')}
           testId='Desktop.HeaderLink.DFCBlog' targetBlank
         />
         <HeaderLink
@@ -159,7 +159,7 @@ function MobileMenu ({ price }: { price: string }): JSX.Element {
             testId='Mobile.HeaderLink.Learn'
           />
           <HeaderLink
-            className='flex justify-center border-b border-gray-100' text='Blog' pathname='https://blog.defichain.com/'
+            className='flex justify-center border-b border-gray-100' text={t('header.navbar.dfcblog')} pathname={t('header.navbar.bloglink')}
             testId='Mobile.HeaderLink.DFCBlog' targetBlank
           />
           <HeaderLink

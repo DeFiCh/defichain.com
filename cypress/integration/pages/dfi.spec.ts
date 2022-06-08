@@ -62,6 +62,7 @@ context('/dfi page on desktop', () => {
       cy.findByTestId('DfiPage.Staking.Kucoin').should('be.visible')
       cy.findByTestId('DfiPage.Staking.Cakedefi').should('be.visible')
       cy.findByTestId('DfiPage.Staking.Hotbit').should('be.visible')
+      cy.findByTestId('DfiPage.Staking.Dfx').should('be.visible')
     })
   })
 })

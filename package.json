@@ -54,7 +54,6 @@
     "eslint-config-standard-with-typescript": "^21.0.1",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.0.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.7",
     "postcss": "^8.4.12",

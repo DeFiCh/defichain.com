@@ -134,7 +134,7 @@ export function ExchangeSection (): JSX.Element {
             <ExchangeCard
               url='https://dfx.swiss/en/'
               image={DFXLogo}
-              testid='ExchangeSection.Dfx' name='Dfx'
+              testid='DfiPage.Staking.Dfx' name='Dfx'
             />
           </div>
         </div>

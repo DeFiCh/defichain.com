@@ -131,6 +131,11 @@ export function ExchangeSection (): JSX.Element {
               image={CakeLogo}
               testid='DfiPage.Staking.Cakedefi' name='Cake DeFi'
             />
+            <ExchangeCard
+              url='https://dfx.swiss/en/'
+              image={DFXLogo}
+              testid='ExchangeSection.Dfx' name='Dfx'
+            />
           </div>
         </div>
       </Section>

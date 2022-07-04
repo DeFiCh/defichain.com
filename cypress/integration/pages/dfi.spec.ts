@@ -125,6 +125,8 @@ context('/dfi page on mobile', () => {
       cy.findByTestId('ExchangeSection.Hoo').should('be.visible')
       cy.findByTestId('ExchangeSection.Transak').should('be.visible')
       cy.findByTestId('ExchangeSection.Dfx').should('be.visible')
+      cy.findByTestId('ExchangeSection.Bybit').should('be.visible')
+      cy.findByTestId('ExchangeSection.Swyftx').should('be.visible')
 
       cy.findByTestId('DfiPage.Staking.Heading').should('be.visible').should('have.text', 'Staking')
       cy.findByTestId('DfiPage.Staking.Text').should('be.visible')

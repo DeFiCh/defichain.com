@@ -14,6 +14,8 @@ import BittrueLogo from '../../../../public/assets/svg/exchanges/logo-bittrue.sv
 import DFXLogo from '../../../../public/assets/svg/exchanges/logo-dfx.svg'
 import LaTokenLogo from '../../../../public/assets/svg/exchanges/logo-latoken.svg'
 import HooLogo from '../../../../public/assets/img/exchanges/logo-hoo.png'
+import BybitLogo from '../../../../public/assets/svg/exchanges/logo-bybit.svg'
+import SwyftxLogo from '../../../../public/assets/svg/exchanges/logo-swyftx.svg'
 import { useTranslation } from 'next-i18next'
 import { Section } from '@components/commons/Section'
 
@@ -100,6 +102,18 @@ export function ExchangeSection (): JSX.Element {
               image={EasyCryptoNZLogo}
               testid='ExchangeSection.EasyNz'
               name='EasyCrypto NZ'
+            />
+            <ExchangeCard
+              url='https://www.bybit.com/en-US/trade/spot/DFI/USDT'
+              image={BybitLogo}
+              testid='ExchangeSection.Bybit'
+              name='Bybit'
+            />
+            <ExchangeCard
+              url='https://swyftx.com/au/buy/defichain'
+              image={SwyftxLogo}
+              testid='ExchangeSection.Swyftx'
+              name='Swyftx'
             />
           </div>
         </div>

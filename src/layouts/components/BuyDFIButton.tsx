@@ -38,7 +38,9 @@ export function BuyDFIButton ({ classname, price }: { classname?: string, price:
       image: '/assets/img/exchanges/logo-transak.png',
       url: 'https://global.transak.com'
     },
-    { name: 'Hoo', image: '/assets/img/exchanges/logo-hoo.png', url: 'https://hoo.com/innovation/dfi-usdt' }
+    { name: 'Hoo', image: '/assets/img/exchanges/logo-hoo.png', url: 'https://hoo.com/innovation/dfi-usdt' },
+    { name: 'Bybit', image: '/assets/svg/exchanges/logo-bybit.svg', url: 'https://www.bybit.com/en-US/trade/spot/DFI/USDT' },
+    { name: 'Swyftx', image: '/assets/svg/exchanges/logo-swyftx.svg', url: 'https://swyftx.com/au/buy/defichain/' }
   ]
 
   return (

@@ -1,7 +1,7 @@
 import { Container } from '@components/commons/Container'
 import NextImage from 'next/image'
 
-import Nodes from '../../../public/assets/svg/hero/nodes-map.svg'
+import Nodes from '../../../public/assets/svg/hero/nodes-map-v2.svg'
 import { useTranslation } from 'next-i18next'
 
 export function DistributionSection (): JSX.Element {

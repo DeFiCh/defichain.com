@@ -11,8 +11,8 @@ const securityHeaders = [
       `img-src 'self' assets.coingecko.com assets.coinmarketcap.com *.cloudfront.net data:;` +
       `media-src 'self';` +
       `object-src 'none';` +
-      `script-src 'self' widgets.coingecko.com widgets.coinmarketcap.com app.netlify.com netlify-cdp-loader.netlify.app ${process.env.NODE_ENV === 'development' ? `'unsafe-eval'` : ''};` +
-      `script-src-elem 'self' widgets.coingecko.com widgets.coinmarketcap.com ajax.googleapis.com;` +
+      `script-src 'self' widgets.coingecko.com s2.coinmarketcap.com app.netlify.com netlify-cdp-loader.netlify.app ${process.env.NODE_ENV === 'development' ? `'unsafe-eval'` : ''};` +
+      `script-src-elem 'self' widgets.coingecko.com s2.coinmarketcap.com ajax.googleapis.com;` +
       `style-src 'self' fonts.googleapis.com 'unsafe-inline';` +
       `font-src 'self' fonts.gstatic.com;` +
       `connect-src 'self' api.coingecko.com api.coinmarketcap.com wss://cable.coingecko.com wss://cable.coinmarketcap.com ocean.defichain.com api.github.com;` +

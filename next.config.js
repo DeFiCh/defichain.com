@@ -13,7 +13,7 @@ const securityHeaders = [
       `object-src 'none';` +
       `script-src 'self' widgets.coingecko.com s2.coinmarketcap.com app.netlify.com netlify-cdp-loader.netlify.app ${process.env.NODE_ENV === 'development' ? `'unsafe-eval'` : ''};` +
       `script-src-elem 'self' widgets.coingecko.com s2.coinmarketcap.com ajax.googleapis.com;` +
-      `style-src 'self' fonts.googleapis.com 'unsafe-inline';` +
+      `style-src 'self' fonts.googleapis.com s2.coinmarketcap.com 'unsafe-inline';` +
       `font-src 'self' fonts.gstatic.com;` +
       `connect-src 'self' api.coingecko.com api.coinmarketcap.com wss://cable.coingecko.com ocean.defichain.com api.github.com;` +
       `prefetch-src 'self';`

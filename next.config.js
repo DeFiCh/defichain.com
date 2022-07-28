@@ -11,7 +11,7 @@ const securityHeaders = [
       `img-src 'self' assets.coingecko.com s2.coinmarketcap.com *.cloudfront.net data:;` +
       `media-src 'self';` +
       `object-src 'none';` +
-      `script-src 'self' widgets.coingecko.com files.coinmarketcap.com 3rdparty-apis.coinmarketcap.com app.netlify.com netlify-cdp-loader.netlify.app ${process.env.NODE_ENV === 'development' ? `'unsafe-eval'` : ''};` +
+      `script-src 'self' ajax.googleapis.com widgets.coingecko.com files.coinmarketcap.com 3rdparty-apis.coinmarketcap.com app.netlify.com netlify-cdp-loader.netlify.app ${process.env.NODE_ENV === 'development' ? `'unsafe-eval'` : ''};` +
       `script-src-elem 'self' ajax.googleapis.com widgets.coingecko.com files.coinmarketcap.com 3rdparty-apis.coinmarketcap.com;` +
       `style-src 'self' fonts.googleapis.com 'unsafe-inline' files.coinmarketcap.com 'unsafe-inline';` +
       `font-src 'self' fonts.gstatic.com;` +

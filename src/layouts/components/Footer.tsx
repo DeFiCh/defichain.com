@@ -33,7 +33,7 @@ export function Footer (): JSX.Element {
           <div className='flex flex-wrap w-full lg:w-1/2 xl:w-1/3 mx-auto lg:mx-0 xl:ml-auto space-y-6'>
             <div className='w-full'>
               <Script src='https://files.coinmarketcap.com/static/widget/currency.js' />
-              <div className='coinmarketcap-currency-widget' data-currencyid='5804' data-base='USD' data-ticker='true' data-rank='true' data-marketcap='true' data-volume='true' data-statsticker='true' />
+              <div className='coinmarketcap-currency-widget' data-currencyid='5804' data-base='USD' data-ticker='true' data-rank='true' data-marketcap='true' data-volume='true' data-statsticker='false' />
             </div>
             <Script src='https://widgets.coingecko.com/coingecko-coin-ticker-widget.js' />
             <div className='w-full'>

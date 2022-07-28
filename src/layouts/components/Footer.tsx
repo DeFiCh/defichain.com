@@ -21,7 +21,7 @@ export function Footer (): JSX.Element {
           <h2 className='text-xl lg:text-2xl font-semibold' data-testid='Footer.Heading'>{t('footer.title')}
           </h2>
         </div>
-        <div className='mt-10 flex flex-wrap space-y-8'>
+        <div className='mt-10 flex flex-wrap space-y-8 lg:space-y-0'>
           <div className='flex flex-wrap max-w-sm lg:max-w-max w-full lg:w-2/3 xl:w-1/2 space-y-8 lg:space-y-0'>
             <div className='lg:w-1/2'>
               <FooterSectionSitemap />
@@ -30,7 +30,11 @@ export function Footer (): JSX.Element {
               <FooterSectionSocial />
             </div>
           </div>
-          <div className='flex flex-wrap w-full lg:w-1/2 xl:w-1/3 mx-auto lg:mx-0 xl:ml-auto'>
+          <div className='flex flex-wrap w-full lg:w-1/2 xl:w-1/3 mx-auto lg:mx-0 xl:ml-auto space-y-6'>
+            <Script src='https://files.coinmarketcap.com/static/widget/currency.js' />
+            <div className='w-full'>
+              <div className='coinmarketcap-currency-widget' data-currencyid='5804' data-base='USD' data-ticker='true' data-rank='true' data-marketcap='true' data-volume='true' data-statsticker='true' data-stats='USD' />
+            </div>
             <Script src='https://widgets.coingecko.com/coingecko-coin-ticker-widget.js' />
             <div className='w-full'>
               {/* @ts-expect-error */}

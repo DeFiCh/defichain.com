@@ -21,7 +21,7 @@ export function Footer (): JSX.Element {
           <h2 className='text-xl lg:text-2xl font-semibold' data-testid='Footer.Heading'>{t('footer.title')}
           </h2>
         </div>
-        <div className='mt-10 flex flex-wrap space-y-8 lg:space-y-0'>
+        <div className='mt-10 flex flex-wrap space-y-8 xl:space-y-0'>
           <div className='flex flex-wrap max-w-sm lg:max-w-max w-full lg:w-2/3 xl:w-1/2 space-y-8 lg:space-y-0'>
             <div className='lg:w-1/2'>
               <FooterSectionSitemap />

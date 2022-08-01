@@ -16,6 +16,7 @@ import LaTokenLogo from '../../../../public/assets/svg/exchanges/logo-latoken.sv
 import HooLogo from '../../../../public/assets/img/exchanges/logo-hoo.png'
 import BybitLogo from '../../../../public/assets/svg/exchanges/logo-bybit.svg'
 import SwyftxLogo from '../../../../public/assets/svg/exchanges/logo-swyftx.svg'
+import HuobiLogo from '../../../../public/assets/img/exchanges/logo-huobi.png'
 import { useTranslation } from 'next-i18next'
 import { Section } from '@components/commons/Section'
 
@@ -42,7 +43,7 @@ export function ExchangeSection (): JSX.Element {
               {t('ExchangeSection.Exchanges.desc')}
             </div>
           </div>
-          <div className='flex flex-wrap w-full md:w-3/5'>
+          <div className='flex flex-wrap w-full md:w-3/5 mt-6 md:mt-0'>
             <ExchangeCard
               url='https://global.bittrex.com/Market/Index?MarketName=BTC-DFI'
               image={BittrexLogo}
@@ -71,6 +72,12 @@ export function ExchangeSection (): JSX.Element {
               url='https://trade.kucoin.com/DFI-BTC'
               image={KucoinLogo}
               testid='ExchangeSection.Kucoin'
+              name='Kucoin'
+            />
+            <ExchangeCard
+              url='https://www.huobi.com/en-us/exchange/dfi_usdt'
+              image={HuobiLogo}
+              testid='ExchangeSection.Huobi'
               name='Kucoin'
             />
             <ExchangeCard
@@ -129,7 +136,7 @@ export function ExchangeSection (): JSX.Element {
               {t('ExchangeSection.Staking.desc')}
             </div>
           </div>
-          <div className='flex flex-wrap w-full md:w-3/5'>
+          <div className='flex flex-wrap w-full md:w-3/5 mt-6 md:mt-0'>
             <ExchangeCard
               url='https://www.kucoin.com/earn/finance/list'
               image={KucoinLogo}
@@ -160,7 +167,7 @@ export function ExchangeSection (): JSX.Element {
 function ExchangeCard (props: { image: StaticImageData, url: string, name: string, testid: string }): JSX.Element {
   return (
     <ExternalLink url={props.url} testId={props.testid} className='w-1/2 md:w-1/3 lg:w-1/5 p-1'>
-      <div className='flex justify-center p-4 bg-white rounded flex max-h-16'>
+      <div className='flex justify-center p-4 bg-white rounded h-16'>
         <Image alt={props.name} src={props.image} title={props.name} objectFit='contain' />
       </div>
     </ExternalLink>

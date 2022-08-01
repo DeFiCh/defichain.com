@@ -9,20 +9,41 @@ export function BuyDFIButton ({ classname, price }: { classname?: string, price:
   const { t } = useTranslation('layout')
 
   const exchanges = [
-    { name: 'DFX', image: '/assets/svg/exchanges/logo-dfx.svg', url: 'https://dfx.swiss/en/' },
-    { name: 'KuCoin', image: '/assets/svg/exchanges/logo-kucoin.svg', url: 'https://trade.kucoin.com/DFI-BTC' },
+    {
+      name: 'DFX',
+      image: '/assets/svg/exchanges/logo-dfx.svg',
+      url: 'https://dfx.swiss/en/'
+    },
+    {
+      name: 'KuCoin',
+      image: '/assets/svg/exchanges/logo-kucoin.svg',
+      url: 'https://trade.kucoin.com/DFI-BTC'
+    },
+    {
+      name: 'Huobi',
+      image: '/assets/img/exchanges/logo-huobi.png',
+      url: 'https://www.huobi.com/en-us/exchange/dfi_usdt'
+    },
     {
       name: 'Bittrex',
       image: '/assets/svg/exchanges/logo-bittrex.svg',
       url: 'https://global.bittrex.com/Market/Index?MarketName=BTC-DFI'
     },
-    { name: 'LATOKEN', image: '/assets/svg/exchanges/logo-latoken.svg', url: 'https://go.latoken.com/1gd' },
+    {
+      name: 'LATOKEN',
+      image: '/assets/svg/exchanges/logo-latoken.svg',
+      url: 'https://go.latoken.com/1gd'
+    },
     {
       name: 'Hotbit',
       image: '/assets/img/exchanges/logo-hotbit.png',
       url: 'https://www.hotbit.io/exchange?symbol=DFI_USDT'
     },
-    { name: 'Bittrue', image: '/assets/svg/exchanges/logo-bittrue.svg', url: 'https://www.bitrue.com/trade/dfi_btc' },
+    {
+      name: 'Bittrue',
+      image: '/assets/svg/exchanges/logo-bittrue.svg',
+      url: 'https://www.bitrue.com/trade/dfi_btc'
+    },
     {
       name: 'EasyCrypto (AU)',
       image: '/assets/img/exchanges/logo-easycrypto-au.png',
@@ -38,9 +59,21 @@ export function BuyDFIButton ({ classname, price }: { classname?: string, price:
       image: '/assets/img/exchanges/logo-transak.png',
       url: 'https://global.transak.com'
     },
-    { name: 'Hoo', image: '/assets/img/exchanges/logo-hoo.png', url: 'https://hoo.com/innovation/dfi-usdt' },
-    { name: 'Bybit', image: '/assets/svg/exchanges/logo-bybit.svg', url: 'https://www.bybit.com/en-US/trade/spot/DFI/USDT' },
-    { name: 'Swyftx', image: '/assets/svg/exchanges/logo-swyftx.svg', url: 'https://swyftx.com/au/buy/defichain/' }
+    {
+      name: 'Hoo',
+      image: '/assets/img/exchanges/logo-hoo.png',
+      url: 'https://hoo.com/innovation/dfi-usdt'
+    },
+    {
+      name: 'Bybit',
+      image: '/assets/svg/exchanges/logo-bybit.svg',
+      url: 'https://www.bybit.com/en-US/trade/spot/DFI/USDT'
+    },
+    {
+      name: 'Swyftx',
+      image: '/assets/svg/exchanges/logo-swyftx.svg',
+      url: 'https://swyftx.com/au/buy/defichain/'
+    }
   ]
 
   return (

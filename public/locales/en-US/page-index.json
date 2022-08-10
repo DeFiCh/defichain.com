@@ -509,15 +509,6 @@
         },
         {
           "title": "Aug",
-          "desc": "DFI officially listed on HotBit.",
-          "url": "https://www.hotbit.io/exchange?symbol=DFI_USDT",
-          "image": {
-            "url": "/img/timeline/2020/dfi-hotbit@2x.png",
-            "alt": "DFI on HotBit"
-          }
-        },
-        {
-          "title": "Aug",
           "desc": "DeFiChain brand refresh.",
           "image": {
             "url": "/img/timeline/2020/dechain-site-redesign@2x.jpg",

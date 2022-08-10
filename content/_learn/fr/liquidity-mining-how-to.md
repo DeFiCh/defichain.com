@@ -34,10 +34,10 @@ le TAEG sont affichés.
 
 ### Étape 4 : Décidez de la paire de pool à laquelle vous allez fournir des liquidités.
 
-Vous pouvez fournir des liquidités au pool ETH-DFI, BTH-DFI et USDT-DFI. Quelle que soit la paire de pool que vous
+Vous pouvez fournir des liquidités au pool ETH-DFI, BTC-DFI et USDT-DFI. Quelle que soit la paire de pool que vous
 décidez de fournir, vous aurez besoin des tokens correspondantes dans votre portefeuille. Par exemple, si vous 
 souhaitez fournir des liquidités au pool BTC-DFI, vous devez avoir suffisamment de BTC (wrapped BTC) et de DFI dans
-votre portefeuille. La version actuelle de DeFiChain n'accepte que les wrapped tokens (wrapped ETH/BTH/USDT). Si vous
+votre portefeuille. La version actuelle de DeFiChain n'accepte que les wrapped tokens (wrapped ETH/BTC/USDT). Si vous
 n'avez pas encore de wrapped tokens, [consultez ce guide](/learn/obtaining-wrapped-tokens).
 
 Une fois que vous êtes prêt à fournir des liquidités à l'une des paires de pool, cliquez sur **AJOUT DE LIQUIDITÉ**. 

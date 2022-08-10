@@ -4,7 +4,6 @@ import { Container } from '@components/commons/Container'
 import { BsPieChartFill } from 'react-icons/bs'
 import { Dex } from '@components/icons/assets/wallet-features/Dex'
 import KucoinLogo from '../../../../public/assets/svg/exchanges/logo-kucoin.svg'
-import HotbitLogo from '../../../../public/assets/img/exchanges/logo-hotbit.png'
 import EasyCryptoAULogo from '../../../../public/assets/img/exchanges/logo-easycrypto-au.png'
 import EasyCryptoNZLogo from '../../../../public/assets/img/exchanges/logo-easycrypto-nz.png'
 import TransakLogo from '../../../../public/assets/img/exchanges/logo-transak.png'
@@ -13,7 +12,6 @@ import BittrexLogo from '../../../../public/assets/svg/exchanges/logo-bittrex.sv
 import BittrueLogo from '../../../../public/assets/svg/exchanges/logo-bittrue.svg'
 import DFXLogo from '../../../../public/assets/svg/exchanges/logo-dfx.svg'
 import LaTokenLogo from '../../../../public/assets/svg/exchanges/logo-latoken.svg'
-import HooLogo from '../../../../public/assets/img/exchanges/logo-hoo.png'
 import BybitLogo from '../../../../public/assets/svg/exchanges/logo-bybit.svg'
 import SwyftxLogo from '../../../../public/assets/svg/exchanges/logo-swyftx.svg'
 import BitLogo from '../../../../public/assets/img/exchanges/bit.png'
@@ -88,18 +86,6 @@ export function ExchangeSection (): JSX.Element {
               name='Transak'
             />
             <ExchangeCard
-              url='https://www.hotbit.io/exchange?symbol=DFI_USDT'
-              image={HotbitLogo}
-              testid='ExchangeSection.Hotbit'
-              name='Hotbit'
-            />
-            <ExchangeCard
-              url='https://hoo.com/innovation/dfi-usdt'
-              image={HooLogo}
-              testid='ExchangeSection.Hoo'
-              name='Hoo'
-            />
-            <ExchangeCard
               url='https://easycrypto.com/au/buy-sell/dfi-defichain'
               image={EasyCryptoAULogo}
               testid='ExchangeSection.EasyAu'
@@ -149,11 +135,6 @@ export function ExchangeSection (): JSX.Element {
               url='https://www.kucoin.com/earn/finance/list'
               image={KucoinLogo}
               testid='DfiPage.Staking.Kucoin' name='Kucoin'
-            />
-            <ExchangeCard
-              url='https://www.hotbit.io/invest/detail/304'
-              image={HotbitLogo}
-              testid='DfiPage.Staking.Hotbit' name='Hotbit'
             />
             <ExchangeCard
               url='https://cakedefi.com/'

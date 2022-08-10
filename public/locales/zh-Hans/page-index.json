@@ -509,15 +509,6 @@
         },
         {
           "title": "八月",
-          "desc": "$DFI在HotBit上币",
-          "url": "https://www.hotbit.io/exchange?symbol=DFI_USDT",
-          "image": {
-            "url": "/img/timeline/2020/dfi-hotbit@2x.png",
-            "alt": "DFI on HotBit"
-          }
-        },
-        {
-          "title": "八月",
           "desc": "递飞链品牌更新",
           "image": {
             "url": "/img/timeline/2020/dechain-site-redesign@2x.jpg",

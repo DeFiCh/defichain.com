@@ -73,6 +73,11 @@ export function BuyDFIButton ({ classname, price }: { classname?: string, price:
       name: 'Swyftx',
       image: '/assets/svg/exchanges/logo-swyftx.svg',
       url: 'https://swyftx.com/au/buy/defichain/'
+    },
+    {
+      name: 'Bit.com',
+      image: '/assets/img/exchanges/bit.png',
+      url: 'https://www.bit.com/legacy/spot?pair=DFI-USDT'
     }
   ]
 

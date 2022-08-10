@@ -35,11 +35,6 @@ export function BuyDFIButton ({ classname, price }: { classname?: string, price:
       url: 'https://go.latoken.com/1gd'
     },
     {
-      name: 'Hotbit',
-      image: '/assets/img/exchanges/logo-hotbit.png',
-      url: 'https://www.hotbit.io/exchange?symbol=DFI_USDT'
-    },
-    {
       name: 'Bittrue',
       image: '/assets/svg/exchanges/logo-bittrue.svg',
       url: 'https://www.bitrue.com/trade/dfi_btc'
@@ -58,11 +53,6 @@ export function BuyDFIButton ({ classname, price }: { classname?: string, price:
       name: 'Transak',
       image: '/assets/img/exchanges/logo-transak.png',
       url: 'https://global.transak.com'
-    },
-    {
-      name: 'Hoo',
-      image: '/assets/img/exchanges/logo-hoo.png',
-      url: 'https://hoo.com/innovation/dfi-usdt'
     },
     {
       name: 'Bybit',

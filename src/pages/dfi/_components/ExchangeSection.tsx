@@ -14,6 +14,7 @@ import DFXLogo from '../../../../public/assets/svg/exchanges/logo-dfx.svg'
 import LaTokenLogo from '../../../../public/assets/svg/exchanges/logo-latoken.svg'
 import BybitLogo from '../../../../public/assets/svg/exchanges/logo-bybit.svg'
 import SwyftxLogo from '../../../../public/assets/svg/exchanges/logo-swyftx.svg'
+import BitLogo from '../../../../public/assets/img/exchanges/bit.png'
 import HuobiLogo from '../../../../public/assets/img/exchanges/logo-huobi.png'
 import { useTranslation } from 'next-i18next'
 import { Section } from '@components/commons/Section'
@@ -108,6 +109,13 @@ export function ExchangeSection (): JSX.Element {
               testid='ExchangeSection.Swyftx'
               name='Swyftx'
             />
+            <ExchangeCard
+              url='https://www.bit.com/legacy/spot?pair=DFI-USDT'
+              image={BitLogo}
+              testid='ExchangeSection.Bit'
+              name='Bit'
+            />
+
           </div>
         </div>
         <div className='flex flex-col md:flex-row md:space-x-5'>

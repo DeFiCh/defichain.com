@@ -62,7 +62,7 @@ context('/ on macbook-16', () => {
   it('should have distribution section', function () {
     cy.findByTestId('DistributionSection').within(() => {
       cy.findByTestId('Nodes.Title').should('be.visible').should('have.text', 'Decentralized and distributed')
-      cy.findByTestId('Nodes.Desc').should('be.visible').should('have.text', 'DeFiChain nodes are distributed globally across datacenters in the US, Canada, Europe, India, Singapore and Australia.')
+      cy.findByTestId('Nodes.Desc').should('be.visible').should('have.text', 'The DeFiChain community runs more than 10,000 masternodes which are distributed globally.')
       cy.findByTestId('Nodes.Image').should('be.visible')
     })
   })
@@ -141,7 +141,7 @@ context('/ on iphone-x', () => {
   it('should have distribution section', function () {
     cy.findByTestId('DistributionSection').within(() => {
       cy.findByTestId('Nodes.Title').should('be.visible').should('have.text', 'Decentralized and distributed')
-      cy.findByTestId('Nodes.Desc').should('be.visible').should('have.text', 'DeFiChain nodes are distributed globally across datacenters in the US, Canada, Europe, India, Singapore and Australia.')
+      cy.findByTestId('Nodes.Desc').should('be.visible').should('have.text', 'The DeFiChain community runs more than 10,000 masternodes which are distributed globally.')
       cy.findByTestId('Nodes.Image').should('be.visible')
     })
   })

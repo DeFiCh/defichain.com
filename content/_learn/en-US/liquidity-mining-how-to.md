@@ -34,10 +34,10 @@ displayed.
 
 ### Step 4: Decide which pool pair to supply liquidity to
 
-You can supply liquidity to the ETH-DFI, BTH-DFI and USDT-DFI pool. Whichever pool pair you decide to supply to, you
+You can supply liquidity to the ETH-DFI, BTC-DFI and USDT-DFI pool. Whichever pool pair you decide to supply to, you
 will need the corresponding coins in your wallet. For example, if you wish to supply liquidity to the BTC-DFI pool, you
 need to have sufficient BTC (wrapped BTC) and DFI in your wallet. The current version of DeFiChain only accepts wrapped
-tokens (wrapped ETH/BTH/USDT). If you do not currently have any wrapped
+tokens (wrapped ETH/BTC/USDT). If you do not currently have any wrapped
 tokens, [check out this guide](/learn/obtaining-wrapped-tokens).
 
 Once you are ready to supply liquidity to any of the pool pairs, click **ADD LIQUIDITY**. You can also click the **+**

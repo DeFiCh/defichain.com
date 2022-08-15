@@ -8,14 +8,14 @@ const securityHeaders = [
       `child-src 'self' app.netlify.com;` +
       `form-action 'none';` +
       `frame-ancestors 'none';` +
-      `img-src 'self' assets.coingecko.com *.cloudfront.net data:;` +
+      `img-src 'self' assets.coingecko.com s2.coinmarketcap.com *.cloudfront.net data:;` +
       `media-src 'self';` +
       `object-src 'none';` +
-      `script-src 'self' widgets.coingecko.com app.netlify.com netlify-cdp-loader.netlify.app ${process.env.NODE_ENV === 'development' ? `'unsafe-eval'` : ''};` +
-      `script-src-elem 'self' widgets.coingecko.com ajax.googleapis.com;` +
-      `style-src 'self' fonts.googleapis.com 'unsafe-inline';` +
+      `script-src 'self' ajax.googleapis.com widgets.coingecko.com files.coinmarketcap.com 3rdparty-apis.coinmarketcap.com app.netlify.com netlify-cdp-loader.netlify.app ${process.env.NODE_ENV === 'development' ? `'unsafe-eval'` : ''};` +
+      `script-src-elem 'self' ajax.googleapis.com widgets.coingecko.com files.coinmarketcap.com 3rdparty-apis.coinmarketcap.com;` +
+      `style-src 'self' fonts.googleapis.com 'unsafe-inline' files.coinmarketcap.com 'unsafe-inline';` +
       `font-src 'self' fonts.gstatic.com;` +
-      `connect-src 'self' api.coingecko.com wss://cable.coingecko.com ocean.defichain.com api.github.com;` +
+      `connect-src 'self' api.coingecko.com 3rdparty-apis.coinmarketcap.com wss://cable.coingecko.com ocean.defichain.com api.github.com;` +
       `prefetch-src 'self';`
   },
   {

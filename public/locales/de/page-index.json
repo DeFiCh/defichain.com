@@ -123,7 +123,7 @@
   },
   "DistributionSection": {
     "title": "Dezentral und verteilt",
-    "desc": "DeFiChain-Nodes sind weltweit auf Rechenzentren in den USA, Kanada, Europa, Indien, Singapur und Australien verteilt"
+    "desc": "Die DeFiChain-Community betreibt mehr als 10.000 Masternodes, die weltweit verteilt sind."
   },
   "RoadmapSection": {
     "title": "Roadmap",
@@ -505,15 +505,6 @@
           "image": {
             "url": "/img/timeline/2020/defi-app@2x.png",
             "alt": "DeFiChain Client-Anwendung"
-          }
-        },
-        {
-          "title": "Aug.",
-          "desc": "DFI offiziell auf HotBit gelistet",
-          "url": "https://www.hotbit.io/exchange?symbol=DFI_USDT",
-          "image": {
-            "url": "/img/timeline/2020/dfi-hotbit@2x.png",
-            "alt": "DFI auf HotBit"
           }
         },
         {

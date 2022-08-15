@@ -123,7 +123,7 @@
   },
   "DistributionSection": {
     "title": "去中心化與分散式",
-    "desc": "遞飛鏈節點遍布全球，數據中心地理位置包含中國, 美國，加拿大，歐洲，印度，新加坡和澳大利亞"
+    "desc": "超過10,000 多個主節點在DeFiChain 社區運行 ，並分佈在全球各地。"
   },
   "RoadmapSection": {
     "title": "發展路線圖",
@@ -505,15 +505,6 @@
           "image": {
             "url": "/img/timeline/2020/defi-app@2x.png",
             "alt": "DeFiChain client app"
-          }
-        },
-        {
-          "title": "八月",
-          "desc": "$DFI在HotBit上幣",
-          "url": "https://www.hotbit.io/exchange?symbol=DFI_USDT",
-          "image": {
-            "url": "/img/timeline/2020/dfi-hotbit@2x.png",
-            "alt": "DFI on HotBit"
           }
         },
         {

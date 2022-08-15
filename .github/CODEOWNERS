@@ -1,20 +1,20 @@
 # Define individuals that are responsible for code in a repository.
 # More details are here: https://help.github.com/articles/about-codeowners/
 
-/.github/                                       @fuxingloh @joeldavidw
-/.husky/                                        @fuxingloh @joeldavidw
+/.github/                                       @fuxingloh @joeldavidw @thedoublejay
+/.husky/                                        @fuxingloh @joeldavidw @thedoublejay
 
-/src/                                           @joeldavidw @siradji @nichellekoh
+/src/                                           @thedoublejay @kyleleow @pierregee
 
-/src/styles/                                    @joeldavidw @nichellekoh
+/src/styles/                                    @thedoublejay @kyleleow @pierregee
 
-/public/                                        @joeldavidw @siradji @nichellekoh
+/public/                                        @thedoublejay @kyleleow @pierregee
 
-next.config.js                                  @joeldavidw
-package.json                                    @joeldavidw
-package-lock.json                               @joeldavidw
-tsconfig.json                                   @joeldavidw
+next.config.js                                  @joeldavidw @thedoublejay @kyleleow @pierregee
+package.json                                    @joeldavidw @thedoublejay @kyleleow @pierregee
+package-lock.json                               @joeldavidw @thedoublejay @kyleleow @pierregee
+tsconfig.json                                   @joeldavidw @thedoublejay @kyleleow @pierregee
 
-CONTRIBUTING.md                                 @fuxingloh @joeldavidw
-README.md                                       @fuxingloh @joeldavidw
+CONTRIBUTING.md                                 @fuxingloh @joeldavidw @thedoublejay @kyleleow @pierregee
+README.md                                       @fuxingloh @joeldavidw @thedoublejay @kyleleow @pierregee
 LICENSE                                         @fuxingloh

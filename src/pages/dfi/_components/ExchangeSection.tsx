@@ -4,7 +4,6 @@ import { Container } from '@components/commons/Container'
 import { BsPieChartFill } from 'react-icons/bs'
 import { Dex } from '@components/icons/assets/wallet-features/Dex'
 import KucoinLogo from '../../../../public/assets/svg/exchanges/logo-kucoin.svg'
-import HotbitLogo from '../../../../public/assets/img/exchanges/logo-hotbit.png'
 import EasyCryptoAULogo from '../../../../public/assets/img/exchanges/logo-easycrypto-au.png'
 import EasyCryptoNZLogo from '../../../../public/assets/img/exchanges/logo-easycrypto-nz.png'
 import TransakLogo from '../../../../public/assets/img/exchanges/logo-transak.png'
@@ -13,7 +12,10 @@ import BittrexLogo from '../../../../public/assets/svg/exchanges/logo-bittrex.sv
 import BittrueLogo from '../../../../public/assets/svg/exchanges/logo-bittrue.svg'
 import DFXLogo from '../../../../public/assets/svg/exchanges/logo-dfx.svg'
 import LaTokenLogo from '../../../../public/assets/svg/exchanges/logo-latoken.svg'
-import HooLogo from '../../../../public/assets/img/exchanges/logo-hoo.png'
+import BybitLogo from '../../../../public/assets/svg/exchanges/logo-bybit.svg'
+import SwyftxLogo from '../../../../public/assets/svg/exchanges/logo-swyftx.svg'
+import BitLogo from '../../../../public/assets/img/exchanges/bit.png'
+import HuobiLogo from '../../../../public/assets/img/exchanges/logo-huobi.png'
 import { useTranslation } from 'next-i18next'
 import { Section } from '@components/commons/Section'
 
@@ -40,7 +42,7 @@ export function ExchangeSection (): JSX.Element {
               {t('ExchangeSection.Exchanges.desc')}
             </div>
           </div>
-          <div className='flex flex-wrap w-full md:w-3/5'>
+          <div className='flex flex-wrap w-full md:w-3/5 mt-6 md:mt-0'>
             <ExchangeCard
               url='https://global.bittrex.com/Market/Index?MarketName=BTC-DFI'
               image={BittrexLogo}
@@ -72,22 +74,16 @@ export function ExchangeSection (): JSX.Element {
               name='Kucoin'
             />
             <ExchangeCard
+              url='https://www.huobi.com/en-us/exchange/dfi_usdt'
+              image={HuobiLogo}
+              testid='ExchangeSection.Huobi'
+              name='Kucoin'
+            />
+            <ExchangeCard
               url='https://global.transak.com'
               image={TransakLogo}
               testid='ExchangeSection.Transak'
               name='Transak'
-            />
-            <ExchangeCard
-              url='https://www.hotbit.io/exchange?symbol=DFI_USDT'
-              image={HotbitLogo}
-              testid='ExchangeSection.Hotbit'
-              name='Hotbit'
-            />
-            <ExchangeCard
-              url='https://hoo.com/innovation/dfi-usdt'
-              image={HooLogo}
-              testid='ExchangeSection.Hoo'
-              name='Hoo'
             />
             <ExchangeCard
               url='https://easycrypto.com/au/buy-sell/dfi-defichain'
@@ -101,6 +97,25 @@ export function ExchangeSection (): JSX.Element {
               testid='ExchangeSection.EasyNz'
               name='EasyCrypto NZ'
             />
+            <ExchangeCard
+              url='https://www.bybit.com/en-US/trade/spot/DFI/USDT'
+              image={BybitLogo}
+              testid='ExchangeSection.Bybit'
+              name='Bybit'
+            />
+            <ExchangeCard
+              url='https://swyftx.com/au/buy/defichain'
+              image={SwyftxLogo}
+              testid='ExchangeSection.Swyftx'
+              name='Swyftx'
+            />
+            <ExchangeCard
+              url='https://www.bit.com/legacy/spot?pair=DFI-USDT'
+              image={BitLogo}
+              testid='ExchangeSection.Bit'
+              name='Bit'
+            />
+
           </div>
         </div>
         <div className='flex flex-col md:flex-row md:space-x-5'>
@@ -115,21 +130,21 @@ export function ExchangeSection (): JSX.Element {
               {t('ExchangeSection.Staking.desc')}
             </div>
           </div>
-          <div className='flex flex-wrap w-full md:w-3/5'>
+          <div className='flex flex-wrap w-full md:w-3/5 mt-6 md:mt-0'>
             <ExchangeCard
               url='https://www.kucoin.com/earn/finance/list'
               image={KucoinLogo}
               testid='DfiPage.Staking.Kucoin' name='Kucoin'
             />
             <ExchangeCard
-              url='https://www.hotbit.io/invest/detail/304'
-              image={HotbitLogo}
-              testid='DfiPage.Staking.Hotbit' name='Hotbit'
-            />
-            <ExchangeCard
               url='https://cakedefi.com/'
               image={CakeLogo}
               testid='DfiPage.Staking.Cakedefi' name='Cake DeFi'
+            />
+            <ExchangeCard
+              url='https://dfx.swiss/en/'
+              image={DFXLogo}
+              testid='DfiPage.Staking.Dfx' name='Dfx'
             />
           </div>
         </div>
@@ -141,7 +156,7 @@ export function ExchangeSection (): JSX.Element {
 function ExchangeCard (props: { image: StaticImageData, url: string, name: string, testid: string }): JSX.Element {
   return (
     <ExternalLink url={props.url} testId={props.testid} className='w-1/2 md:w-1/3 lg:w-1/5 p-1'>
-      <div className='flex justify-center p-4 bg-white rounded flex max-h-16'>
+      <div className='flex justify-center p-4 bg-white rounded h-16'>
         <Image alt={props.name} src={props.image} title={props.name} objectFit='contain' />
       </div>
     </ExternalLink>

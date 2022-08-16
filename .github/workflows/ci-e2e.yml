@@ -25,14 +25,14 @@ jobs:
     steps:
       - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
 
-      - uses: actions/setup-node@eeb10cff27034e7acf239c5d29f62154018672fd
+      - uses: actions/setup-node@2fddd8803e2f5c9604345a0b591c3020ee971a93
         with:
           node-version: 16
           cache: 'npm'
 
       - run: npm ci
 
-      - uses: cypress-io/github-action@16aacf8ea6a67e5e5d907d34bc3be8ad0e6e979f
+      - uses: cypress-io/github-action@30008f1458a5a2c97054bfe118fe33d75976c482
         with:
           install: false
           record: true

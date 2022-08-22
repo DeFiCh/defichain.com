@@ -68,6 +68,11 @@ export function BuyDFIButton ({ classname, price }: { classname?: string, price:
       name: 'Bit.com',
       image: '/assets/img/exchanges/bit.png',
       url: 'https://www.bit.com/legacy/spot?pair=DFI-USDT'
+    },
+    {
+      name: 'Bitmart.com',
+      image: '/assets/svg/exchanges/logo-bitmart.svg',
+      url: 'https://www.bitmart.com/trade/en?layout=basic&symbol=DFI_USDT'
     }
   ]
 

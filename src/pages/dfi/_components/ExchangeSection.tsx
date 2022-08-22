@@ -16,6 +16,7 @@ import BybitLogo from '../../../../public/assets/svg/exchanges/logo-bybit.svg'
 import SwyftxLogo from '../../../../public/assets/svg/exchanges/logo-swyftx.svg'
 import BitLogo from '../../../../public/assets/img/exchanges/bit.png'
 import HuobiLogo from '../../../../public/assets/img/exchanges/logo-huobi.png'
+import BitmartLogo from '../../../../public/assets/svg/exchanges/logo-bitmart.svg'
 import { useTranslation } from 'next-i18next'
 import { Section } from '@components/commons/Section'
 
@@ -114,6 +115,12 @@ export function ExchangeSection (): JSX.Element {
               image={BitLogo}
               testid='ExchangeSection.Bit'
               name='Bit'
+            />
+            <ExchangeCard
+              url='https://www.bitmart.com/trade/en?layout=basic&symbol=DFI_USDT'
+              image={BitmartLogo}
+              testid='ExchangeSection.Bitmart'
+              name='Bitmart'
             />
 
           </div>

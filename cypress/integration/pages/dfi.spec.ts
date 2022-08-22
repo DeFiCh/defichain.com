@@ -56,6 +56,7 @@ context('/dfi page on desktop', () => {
       cy.findByTestId('ExchangeSection.Transak').should('be.visible')
       cy.findByTestId('ExchangeSection.Dfx').should('be.visible')
       cy.findByTestId('ExchangeSection.Bit').should('be.visible')
+      cy.findByTestId('ExchangeSection.Bitmart').should('be.visible')
 
       cy.findByTestId('DfiPage.Staking.Heading').should('be.visible').should('have.text', 'Staking')
       cy.findByTestId('DfiPage.Staking.Text').should('be.visible')

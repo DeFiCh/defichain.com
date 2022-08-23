@@ -117,7 +117,7 @@ export function ExchangeSection (): JSX.Element {
               name='Bit'
             />
             <ExchangeCard
-              url='https://www.bitmart.com/trade/en?layout=basic&symbol=DFI_USDT'
+              url='https://www.bitmart.com/trade/en?symbol=%24DFI_USDT&layout=basic'
               image={BitmartLogo}
               testid='ExchangeSection.Bitmart'
               name='Bitmart'

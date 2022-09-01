@@ -3,17 +3,87 @@
     "project": "./tsconfig.json"
   },
   "extends": [
-    "standard-with-typescript",
-    "standard-jsx",
-    "next",
-    "next/core-web-vitals"
+    "next/core-web-vitals",
+    "airbnb",
+    "airbnb-typescript",
+    "prettier"
   ],
   "ignorePatterns": [
     "*.json"
   ],
+  "plugins": [
+    "prettier"
+  ],
   "rules": {
-    "@typescript-eslint/no-non-null-assertion": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ],
+    "react/prop-types": "off",
+    "import/extensions": "off",
+    "no-undef": "warn",
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": [
+          "Link"
+        ],
+        "specialLink": [
+          "hrefLeft",
+          "hrefRight"
+        ],
+        "aspects": [
+          "invalidHref",
+          "preferButton"
+        ]
+      }
+    ],
+    // Temporary warning as moving from Standard to Airbnb
+    "react/destructuring-assignment": "off",
+    "react/no-unused-prop-types": "off",
+    "@typescript-eslint/no-use-before-define": "off",
     "react-hooks/exhaustive-deps": "off",
+    "react/jsx-no-constructed-context-values": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "react/button-has-type": "off",
+    "no-nested-ternary": "off",
+    "arrow-body-style": "off",
+    "no-restricted-syntax": "off",
+    "import/prefer-default-export": "off",
+    "no-param-reassign": "off",
+    "prefer-destructuring": "off",
+    "react/jsx-no-useless-fragment": "off",
+    "object-shorthand": "off",
+    "@typescript-eslint/no-shadow": "off",
+    "import/order": "off",
+    "no-else-return": "off",
+    "react/no-unescaped-entities": "off",
+    "default-case": "off",
+    "no-unsafe-optional-chaining": "off",
+    "react/no-array-index-key": "off",
+    "no-restricted-globals": "off",
+    "no-await-in-loop": "off",
+    "consistent-return": "off",
+    "react/no-unstable-nested-components": "off",
+    "react/jsx-no-bind": "off",
+    "no-restricted-properties": "off",
+    "prefer-exponentiation-operator": "off",
+    "@typescript-eslint/return-await": "off",
+    "import/no-cycle": "off",
+    "@typescript-eslint/naming-convention": "off",
+    "@typescript-eslint/no-unused-expressions": "off",
+    "no-underscore-dangle": "off",
+    "global-require": "off",
     "curly": [
       "error",
       "all"
@@ -29,13 +99,19 @@
     "no-void": "off",
     "import/no-default-export": "error",
     "multiline-ternary": "off",
+    "jsx-a11y/mouse-events-have-key-events": "off",
     "no-restricted-imports": [
-      "error",
+      "warn",
+      {
+        "name": "next/link",
+        "message": "Please use @components/commons/Link instead."
+      },
       {
         "name": "next/head",
         "message": "Please use @components/commons/Head instead."
       }
-    ]
+    ],
+    "@typescript-eslint/default-param-last": "warn"
   },
   "overrides": [
     {

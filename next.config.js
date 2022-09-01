@@ -41,7 +41,11 @@ const securityHeaders = [
 ]
 
 module.exports = {
+  experimental: {
+    forceSwcTransforms: true,
+  },
   reactStrictMode: true,
+  swcMinify: true,
   pageExtensions: ['page.tsx', 'page.ts'],
   i18n,
   async headers() {

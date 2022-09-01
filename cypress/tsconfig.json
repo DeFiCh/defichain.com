@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
+    "allowJs": false,
+    // solves type clash between jest and cypress
     "skipLibCheck": true,
     "strict": true,
     "moduleResolution": "node",

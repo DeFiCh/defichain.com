@@ -41,7 +41,7 @@ jobs:
           start: npm run start
           wait-on: 'http://localhost:3000'
           browser: chrome
-          spec: cypress/integration/**
+          spec: cypress/e2e/**
           tag: ${{ github.event_name }}
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}

@@ -93,6 +93,10 @@ function FooterSectionSitemap (): JSX.Element {
         text={t('footer.sitemap.dfcblog')} url='https://blog.defichain.com/'
         testId='FooterSectionSitemap.DFCBlog'
       />
+      <FooterExternalLink
+        text={t('footer.sitemap.newsletter')} url='https://bit.ly/3yQxtmW'
+        testId='FooterSectionSitemap.Newsletter'
+      />
     </FooterSection>
   )
 }
@@ -157,6 +161,10 @@ function FooterSectionSocial (): JSX.Element {
       <FooterExternalLink
         text={`${t('footer.social.telegram')} (FR)`} url='https://t.me/defiblockchain_FR'
         testId='FooterExternalLink.TelegramFR'
+      />
+      <FooterExternalLink
+        text={`${t('footer.social.telegram')} (ZH)`} url='https://t.me/defichain_ZH'
+        testId='FooterExternalLink.TelegramZH'
       />
       <FooterExternalLink
         text={`${t('footer.social.telegram')} (TR)`} url='https://t.me/defiblockchain_TR'

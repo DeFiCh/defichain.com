@@ -1,56 +1,55 @@
-@import 'slick-carousel/slick/slick.css';
-@import 'slick-carousel/slick/slick-theme.css';
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-    overflow-x: hidden;
-    width: 100%;
-    box-sizing: border-box;
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @layer utilities {
-    /* Chrome, Safari and Opera */
-    .no-scrollbar::-webkit-scrollbar {
-        display: none;
-    }
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 
-    .no-scrollbar {
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
-    }
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
 
-
 /*Slick slider overrides*/
-.slick-prev::before, .slick-next::before {
-    display: none !important;
+.slick-prev::before,
+.slick-next::before {
+  display: none !important;
 }
 
 .slick-prev {
-    @apply left-[65%] md:left-[70%] lg:left-[75%] !important;
-    top: -50px !important;
+  @apply left-[65%] md:left-[70%] lg:left-[75%] !important;
+  top: -50px !important;
 }
 
 .slick-next {
-    top: -50px !important;
-    right: 20% !important;
+  top: -50px !important;
+  right: 20% !important;
 }
 
-
 .slick-list {
-    margin: -16px;
+  margin: -16px;
 }
 
 .slick-slide {
-    padding: 16px;
+  padding: 16px;
 }
 
 .slick-dots {
-    bottom: -25px;
+  bottom: -25px;
 }

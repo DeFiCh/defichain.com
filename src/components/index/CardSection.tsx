@@ -1,20 +1,20 @@
-import classNames from 'classnames'
-import Slider from 'react-slick'
-import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
-import Link from 'next/link'
-import { CSSProperties, ReactEventHandler } from 'react'
-import { useTranslation } from 'next-i18next'
-import { Button, ButtonUnfilled } from '@components/commons/Buttons'
+import classNames from "classnames";
+import Slider from "react-slick";
+import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import Link from "next/link";
+import { CSSProperties, ReactEventHandler } from "react";
+import { useTranslation } from "next-i18next";
+import { Button, ButtonUnfilled } from "@components/commons/Buttons";
 
-export function CardSection (): JSX.Element {
+export function CardSection(): JSX.Element {
   const settings = {
     infinite: false,
     speed: 500,
     slidesToShow: 1,
     initialSlide: 1,
     centerMode: true,
-    centerPadding: '0px',
-    lazyload: 'progressive',
+    centerPadding: "0px",
+    lazyload: "progressive",
     dots: false,
     variableWidth: true,
     prevArrow: <PrevArrow />,
@@ -25,61 +25,59 @@ export function CardSection (): JSX.Element {
         settings: {
           arrows: false,
           swipeToSlide: true,
-          dots: false
-        }
-      }
-    ]
-  }
+          dots: false,
+        },
+      },
+    ],
+  };
 
-  const { t } = useTranslation('page-index')
-  const cards: any[] = t('CardsSection.cards', { returnObjects: true })
+  const { t } = useTranslation("page-index");
+  const cards: any[] = t("CardsSection.cards", { returnObjects: true });
 
   return (
-    <section className='-mt-80 bg-none' data-testid='CardSection'>
+    <section className="-mt-80 bg-none" data-testid="CardSection">
       <Slider {...settings}>
-        {
-          cards.map(card => {
-            return (
-              <Card
-                label={card.label}
-                title={card.title}
-                desc={card.desc}
-                buttonText={card.buttonText}
-                buttonType={card.buttonType}
-                url={card.url}
-                key={card.title}
-              />
-            )
-          })
-        }
+        {cards.map((card) => {
+          return (
+            <Card
+              label={card.label}
+              title={card.title}
+              desc={card.desc}
+              buttonText={card.buttonText}
+              buttonType={card.buttonType}
+              url={card.url}
+              key={card.title}
+            />
+          );
+        })}
       </Slider>
     </section>
-  )
+  );
 }
 
 interface CardProps {
-  label: string
-  title: string
-  desc: string
-  url: string
-  buttonText: string
-  buttonType: 'full' | 'outline'
+  label: string;
+  title: string;
+  desc: string;
+  url: string;
+  buttonText: string;
+  buttonType: "full" | "outline";
 }
 
-function Card (props: CardProps): JSX.Element {
+function Card(props: CardProps): JSX.Element {
   return (
-    <div className='min-h-[320px] w-[320px] shadow-lg p-5 flex flex-col bg-white'>
+    <div className="min-h-[320px] w-[320px] shadow-lg p-5 flex flex-col bg-white">
       <div>
-        <div className='uppercase text-xs text-gray-500 font-medium'>{props.label}</div>
-        <div className='text-2xl font-medium mt-0.5'>{props.title}</div>
+        <div className="uppercase text-xs text-gray-500 font-medium">
+          {props.label}
+        </div>
+        <div className="text-2xl font-medium mt-0.5">{props.title}</div>
       </div>
-      <div className='mt-10 text-lg text-gray-500'>
-        {props.desc}
-      </div>
-      <div className='mt-auto'>
+      <div className="mt-10 text-lg text-gray-500">{props.desc}</div>
+      <div className="mt-auto">
         <Link href={{ pathname: props.url }} passHref>
-          <a className='contents'>
-            {props.buttonType === 'outline' ? (
+          <a className="contents">
+            {props.buttonType === "outline" ? (
               <ButtonUnfilled text={props.buttonText} />
             ) : (
               <Button text={props.buttonText} />
@@ -88,27 +86,37 @@ function Card (props: CardProps): JSX.Element {
         </Link>
       </div>
     </div>
-  )
+  );
 }
 
-export function PrevArrow (props: { className?: string, onClick?: ReactEventHandler, style?: CSSProperties }): JSX.Element {
+export function PrevArrow(props: {
+  className?: string;
+  onClick?: ReactEventHandler;
+  style?: CSSProperties;
+}): JSX.Element {
   return (
     <button
       className={classNames(props.className)}
-      style={props.style} onClick={props.onClick}
-    >
-      <BsChevronLeft fontSize={40} fill='fill-black' />
-    </button>
-  )
-}
-
-export function NextArrow (props: { className?: string, onClick?: ReactEventHandler, style?: CSSProperties }): JSX.Element {
-  return (
-    <button
-      className={classNames(props.className)} style={props.style}
+      style={props.style}
       onClick={props.onClick}
     >
-      <BsChevronRight fontSize={40} fill='fill-black' />
+      <BsChevronLeft fontSize={40} fill="fill-black" />
     </button>
-  )
+  );
+}
+
+export function NextArrow(props: {
+  className?: string;
+  onClick?: ReactEventHandler;
+  style?: CSSProperties;
+}): JSX.Element {
+  return (
+    <button
+      className={classNames(props.className)}
+      style={props.style}
+      onClick={props.onClick}
+    >
+      <BsChevronRight fontSize={40} fill="fill-black" />
+    </button>
+  );
 }

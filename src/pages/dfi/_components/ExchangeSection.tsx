@@ -1,5 +1,5 @@
 import { ExternalLink } from '@components/commons/link/ExternalLink'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import { Container } from '@components/commons/Container'
 import { BsPieChartFill } from 'react-icons/bs'
 import { Dex } from '@components/icons/assets/wallet-features/Dex'

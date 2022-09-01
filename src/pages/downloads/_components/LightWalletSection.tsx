@@ -17,7 +17,7 @@ export function LightWalletSection (): JSX.Element {
           imageSrc='/assets/img/downloads/dfi.png'
           testid='LightWallets.Dfc'
         >
-          <div className='flex items-center space-x-4'>
+          <div className='grid gap-2 md:flex md:items-center md:space-x-4'>
             <AppStoreDownload url='https://apps.apple.com/us/app/defichain-wallet/id1572472820' />
             <PlaystoreDownload url='https://play.google.com/store/apps/details?id=com.defichain.app' />
           </div>
@@ -29,7 +29,7 @@ export function LightWalletSection (): JSX.Element {
           imageSrc='/assets/img/downloads/dfxpng.png'
           testid='LightWallets.Dfx'
         >
-          <div className='flex items-center space-x-4'>
+          <div className='grid gap-2 md:flex md:items-center md:space-x-4'>
             <AppStoreDownload url='https://apps.apple.com/app/id1582633093' />
             <PlaystoreDownload url='https://play.google.com/store/apps/details?id=com.defichain.app.dfx' />
           </div>

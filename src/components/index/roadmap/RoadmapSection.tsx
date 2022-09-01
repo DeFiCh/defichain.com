@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import { Container } from '@components/commons/Container'
 import { TimeLine2022 } from '@components/index/roadmap/2022'
 import { ExternalLink } from '@components/commons/link/ExternalLink'

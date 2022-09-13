@@ -42,7 +42,7 @@
     "@tailwindcss/typography": "^0.5.7",
     "@testing-library/cypress": "^8.0.3",
     "@types/lodash": "^4.14.185",
-    "@types/node": "^18.7.16",
+    "@types/node": "^18.7.17",
     "@types/react": "^18.0.19",
     "autoprefixer": "^10.4.9",
     "babel-plugin-istanbul": "^6.1.1",

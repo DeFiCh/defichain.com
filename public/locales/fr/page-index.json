@@ -132,60 +132,60 @@
       "status": "En bonne voie",
       "cards": [
         {
-          "title": "T1",
-          "desc": "Gouvernance sur la chaîne",
+          "title": "2022 T4",
+          "desc": "Fin de la refonte du design du LW 2.0",
           "image": {
-            "url": "/img/timeline/2022/On-Chain-governance2x.png",
-            "alt": "Gouvernance sur la chaîne"
+            "url": "/img/timeline/2022-2023/LW2.0_design_refresh.png",
+            "alt": "Fin de la refonte du design du LW 2.0"
           }
         },
         {
-          "title": "T2",
-          "desc": "Portefeuille léger de bureau",
+          "title": "2022 T4",
+          "desc": "Gouvernance on-chain",
           "image": {
-            "url": "/img/timeline/2022/Desktop-Light-Wallet2x.png",
-            "alt": "Portefeuille léger de bureau"
+            "url": "/img/timeline/2022-2023/On-Chain governance2x.png",
+            "alt": "Gouvernance on-chain"
           }
         },
         {
-          "title": "T2",
-          "desc": "Portefeuille d'extension de navigateur",
+          "title": "2022 T4",
+          "desc": "Defimetachain.org",
+          "url": "https://defimetachain.org/",
           "image": {
-            "url": "/img/timeline/2022/Browser-Extension-Wallet2x.png",
-            "alt": "Portefeuille d'extension de navigateur"
+            "url": "/img/timeline/2022-2023/defimetachain_website.png",
+            "alt": "Defimetachain.org"
           }
         },
         {
-          "title": "T2",
-          "desc": "Produits dérivés (futures et options)",
+          "title": "2022 T4 à 2023 T1",
+          "desc": "DeFi Meta Chain",
           "image": {
-            "url": "/img/timeline/2021/futures-trading@2x.jpg",
-            "alt": "Produits dérivés"
+            "url": "/img/timeline/2022-2023/DefiMetaChain.png",
+            "alt": "DeFi Meta Chain"
           }
         },
         {
-          "title": "T3-4",
-          "desc": "Support de la machine virtuelle Ethereum sur DeFiChain",
-          "url": "https://github.com/DeFiCh/dfips/issues/96",
+          "title": "2023 T1",
+          "desc": "Explorateur DeFi Meta Chain",
           "image": {
-            "url": "/img/timeline/2022/EVM2x.png",
-            "alt": "Support de la machine virtuelle Ethereum"
+            "url": "/img/timeline/2022-2023/DeFiMetaChain_explorer.png",
+            "alt": "Explorateur DeFi Meta Chain"
           }
         },
         {
-          "title": "T3-4",
-          "desc": "Support des tokens non fongibles (NFT)",
+          "title": "2023 T1 ",
+          "desc": "Plateforme de lancement DeFi Meta Chain",
           "image": {
-            "url": "/img/timeline/2022/NFTs2x.png",
-            "alt": "Support des NFT"
+            "url": "/img/timeline/2022-2023/DeFiMetaChain_launchpad.png",
+            "alt": "Plateforme de lancement DeFi Meta Chain"
           }
         },
         {
-          "title": "T3-4",
-          "desc": "Soutien du Ledger pour le portefeuille léger",
+          "title": "2023 T1",
+          "desc": "Options",
           "image": {
-            "url": "/img/timeline/2022/ledger@2x.png",
-            "alt": "Soutien du Ledger"
+            "url": "/img/timeline/2022-2023/WRYTES2x.png",
+            "alt": "Options"
           }
         }
       ]

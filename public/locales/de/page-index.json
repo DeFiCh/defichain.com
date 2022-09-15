@@ -132,60 +132,60 @@
       "status": "Auf Kurs",
       "cards": [
         {
-          "title": "Q1",
-          "desc": "On-chain Governance",
+          "title": "2022 Q4",
+          "desc": "Fertigstellung der Lightwallet 2.0 Design-Aktualisierung",
           "image": {
-            "url": "/img/timeline/2022/On-Chain-governance2x.png",
-            "alt": "On-chain Governance"
+            "url": "/img/timeline/2022-2023/LW2.0_design_refresh.png",
+            "alt": "Fertigstellung der Lightwallet 2.0 Design-Aktualisierung"
           }
         },
         {
-          "title": "Q2",
-          "desc": "Desktop-Lightwallet",
+          "title": "2022 Q4",
+          "desc": "On-Chain-Governance",
           "image": {
-            "url": "/img/timeline/2022/Desktop-Light-Wallet2x.png",
-            "alt": "Desktop-Lightwallet"
+            "url": "/img/timeline/2022-2023/On-Chain governance2x.png",
+            "alt": "On-Chain-Governance"
           }
         },
         {
-          "title": "Q2",
-          "desc": "Browsererweiterungs-Wallet",
+          "title": "2022 Q4",
+          "desc": "Defimetachain.org",
+          "url": "https://defimetachain.org/",
           "image": {
-            "url": "/img/timeline/2022/Browser-Extension-Wallet2x.png",
-            "alt": "Browsererweiterungs-Wallet"
+            "url": "/img/timeline/2022-2023/defimetachain_website.png",
+            "alt": "Defimetachain.org"
           }
         },
         {
-          "title": "Q2",
-          "desc": "Derivate (Futures und Optionen)",
+          "title": "2022 Q4 bis 2023 Q1",
+          "desc": "DeFi Meta Chain",
           "image": {
-            "url": "/img/timeline/2021/futures-trading@2x.jpg",
-            "alt": "Derivate"
+            "url": "/img/timeline/2022-2023/DefiMetaChain.png",
+            "alt": "DeFi Meta Chain"
           }
         },
         {
-          "title": "Q3-4",
-          "desc": "Unterstützung der Ethereum Virtual Machine auf DeFiChain",
-          "url": "https://github.com/DeFiCh/dfips/issues/96",
+          "title": "2023 Q1",
+          "desc": "DeFi Meta Chain Explorer",
           "image": {
-            "url": "/img/timeline/2022/EVM2x.png",
-            "alt": "Unterstützung von Ethereum Virtual Machine"
+            "url": "/img/timeline/2022-2023/DeFiMetaChain_explorer.png",
+            "alt": "DeFi Meta Chain Explorer"
           }
         },
         {
-          "title": "Q3-4",
-          "desc": "Unterstützung von nicht-fungiblen Token (NFT)",
+          "title": "2023 Q1 ",
+          "desc": "DeFi Meta Chain Launchpad",
           "image": {
-            "url": "/img/timeline/2022/NFTs2x.png",
-            "alt": "NFT Unterstützung"
+            "url": "/img/timeline/2022-2023/DeFiMetaChain_launchpad.png",
+            "alt": "DeFi Meta Chain Launchpad"
           }
         },
         {
-          "title": "Q3-4",
-          "desc": "Ledger-Unterstützung für Lightwallet",
+          "title": "2023 Q1",
+          "desc": "Optionen",
           "image": {
-            "url": "/img/timeline/2022/ledger@2x.png",
-            "alt": "Ledger-Unterstützung"
+            "url": "/img/timeline/2022-2023/WRYTES2x.png",
+            "alt": "Optionen"
           }
         }
       ]

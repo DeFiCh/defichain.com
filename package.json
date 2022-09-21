@@ -44,7 +44,7 @@
     "@types/lodash": "^4.14.185",
     "@types/node": "^18.7.18",
     "@types/react": "^18.0.20",
-    "autoprefixer": "^10.4.11",
+    "autoprefixer": "^10.4.12",
     "babel-plugin-istanbul": "^6.1.1",
     "babel-plugin-jsx-remove-data-test-id": "^3.0.0",
     "cypress": "^10.8.0",

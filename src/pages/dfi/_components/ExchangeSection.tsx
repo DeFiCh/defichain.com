@@ -17,6 +17,7 @@ import SwyftxLogo from "../../../../public/assets/svg/exchanges/logo-swyftx.svg"
 import BitLogo from "../../../../public/assets/img/exchanges/bit.png";
 import HuobiLogo from "../../../../public/assets/img/exchanges/logo-huobi.png";
 import BitmartLogo from "../../../../public/assets/svg/exchanges/logo-bitmart.svg";
+import GateioLogo from "../../../../public/assets/svg/exchanges/logo-gateio.svg";
 import { useTranslation } from "next-i18next";
 import { Section } from "@components/commons/Section";
 
@@ -80,6 +81,12 @@ export function ExchangeSection(): JSX.Element {
               image={HuobiLogo}
               testid="ExchangeSection.Huobi"
               name="Kucoin"
+            />
+            <ExchangeCard
+              url="https://www.gate.io/trade/DFI_USDT"
+              image={GateioLogo}
+              testid="ExchangeSection.Gateio"
+              name="Bitmart"
             />
             <ExchangeCard
               url="https://global.transak.com"

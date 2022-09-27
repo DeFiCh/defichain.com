@@ -31,6 +31,11 @@ export function BuyDFIButton({
       url: "https://www.huobi.com/en-us/exchange/dfi_usdt",
     },
     {
+      name: "Gate.io",
+      image: "/assets/svg/exchanges/logo-gateio.svg",
+      url: "https://www.gate.io/trade/DFI_USDT",
+    },
+    {
       name: "Bittrex",
       image: "/assets/svg/exchanges/logo-bittrex.svg",
       url: "https://global.bittrex.com/Market/Index?MarketName=BTC-DFI",

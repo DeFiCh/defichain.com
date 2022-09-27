@@ -80,6 +80,11 @@ export function BuyDFIButton({
       image: "/assets/svg/exchanges/logo-bitmart.svg",
       url: "https://www.bitmart.com/trade/en?symbol=%24DFI_USDT&layout=basic",
     },
+    {
+      name: "Gate.io",
+      image: "/assets/svg/exchanges/logo-gateio.svg",
+      url: "https://www.gate.io/trade/DFI_USDT",
+    },
   ];
 
   return (

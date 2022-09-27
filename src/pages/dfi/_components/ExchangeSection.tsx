@@ -86,7 +86,7 @@ export function ExchangeSection(): JSX.Element {
               url="https://www.gate.io/trade/DFI_USDT"
               image={GateioLogo}
               testid="ExchangeSection.Gateio"
-              name="Bitmart"
+              name="Gateio"
             />
             <ExchangeCard
               url="https://global.transak.com"

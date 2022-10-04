@@ -186,6 +186,11 @@ function FooterSectionSocial(): JSX.Element {
         testId="FooterExternalLink.Github"
       />
       <FooterExternalLink
+        text={t("footer.social.coinMarketCap")}
+        url="https://coinmarketcap.com/community/profile/DeFiChain"
+        testId="FooterExternalLink.CoinMarketCap"
+      />
+      <FooterExternalLink
         text={`${t("footer.social.merch")} (US)`}
         url="https://defichain.myspreadshop.com/"
         testId="FooterExternalLink.MerchUS"

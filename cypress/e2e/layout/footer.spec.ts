@@ -79,6 +79,13 @@ context("<Footer/> on desktop", () => {
     cy.findByTestId("FooterExternalLink.Github")
       .should("be.visible")
       .should("have.attr", "href", "https://github.com/DeFiCh/ain");
+    cy.findByTestId("FooterExternalLink.CoinMarketCap")
+      .should("be.visible")
+      .should(
+        "have.attr",
+        "href",
+        "https://coinmarketcap.com/community/profile/DeFiChain"
+      );
     cy.findByTestId("FooterExternalLink.Facebook")
       .should("be.visible")
       .should(

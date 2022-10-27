@@ -52,13 +52,13 @@ export function Header(): JSX.Element {
         <Container className="py-4 lg:py-6">
           <div className="flex items-center justify-between">
             <div className="flex w-full">
-              <Link href={{ pathname: "/" }} passHref>
-                <a
-                  className="flex items-center cursor-pointer hover:text-primary-500"
-                  data-testid="Header.SiteLogo"
-                >
-                  <DeFiChainLogo className="w-12 lg:block lg:w-16 h-full" />
-                </a>
+              <Link
+                href={{ pathname: "/" }}
+                passHref
+                className="flex items-center cursor-pointer hover:text-primary-500"
+                data-testid="Header.SiteLogo"
+              >
+                <DeFiChainLogo className="w-12 lg:block lg:w-16 h-full" />
               </Link>
               <DesktopNavbar price={dfiPrice} />
             </div>
@@ -220,28 +220,28 @@ function HeaderLink(props: {
 }): JSX.Element {
   const router = useRouter();
   return (
-    <Link href={{ pathname: props.pathname }} passHref>
-      <a
-        className={classNames(props.className, {
-          "text-primary-500": router.pathname === props.pathname,
-        })}
-        data-testid={props.testId}
-        target={
-          props.targetBlank !== undefined && props.targetBlank ? "_blank" : ""
-        }
+    <Link
+      href={{ pathname: props.pathname }}
+      passHref
+      className={classNames(props.className, {
+        "text-primary-500": router.pathname === props.pathname,
+      })}
+      data-testid={props.testId}
+      target={
+        props.targetBlank !== undefined && props.targetBlank ? "_blank" : ""
+      }
+    >
+      <div
+        className={classNames(
+          "p-2 lg:p-0 lg:pb-0.5 ml-1 lg:ml-6 inline text-lg hover:text-primary-500 cursor-pointer",
+          {
+            "lg:border-b-2 border-primary-500":
+              router.pathname === props.pathname,
+          }
+        )}
       >
-        <div
-          className={classNames(
-            "p-2 lg:p-0 lg:pb-0.5 ml-1 lg:ml-6 inline text-lg hover:text-primary-500 cursor-pointer",
-            {
-              "lg:border-b-2 border-primary-500":
-                router.pathname === props.pathname,
-            }
-          )}
-        >
-          {props.text}
-        </div>
-      </a>
+        {props.text}
+      </div>
     </Link>
   );
 }

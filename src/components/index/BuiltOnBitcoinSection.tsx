@@ -26,10 +26,12 @@ export function BuiltOnBitcoinSection(): JSX.Element {
               {t("BuiltOnBitcoinSection.desc")}
             </div>
             <div data-testid="button">
-              <Link href={{ pathname: "/white-paper" }} passHref>
-                <a className="contents">
-                  <Button text={t("BuiltOnBitcoinSection.button")} />
-                </a>
+              <Link
+                href={{ pathname: "/white-paper" }}
+                passHref
+                className="contents"
+              >
+                <Button text={t("BuiltOnBitcoinSection.button")} />
               </Link>
             </div>
           </div>

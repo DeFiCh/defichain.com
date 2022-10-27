@@ -75,14 +75,12 @@ function Card(props: CardProps): JSX.Element {
       </div>
       <div className="mt-10 text-lg text-gray-500">{props.desc}</div>
       <div className="mt-auto">
-        <Link href={{ pathname: props.url }} passHref>
-          <a className="contents">
-            {props.buttonType === "outline" ? (
-              <ButtonUnfilled text={props.buttonText} />
-            ) : (
-              <Button text={props.buttonText} />
-            )}
-          </a>
+        <Link href={{ pathname: props.url }} passHref className="contents">
+          {props.buttonType === "outline" ? (
+            <ButtonUnfilled text={props.buttonText} />
+          ) : (
+            <Button text={props.buttonText} />
+          )}
         </Link>
       </div>
     </div>

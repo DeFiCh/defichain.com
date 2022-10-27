@@ -83,12 +83,11 @@ export default function BugBountyPage(): JSX.Element {
               <Link
                 href={{ pathname: "/keys/security@defichain.com.public.key" }}
                 passHref
+                className="contents"
               >
-                <a className="contents">
-                  <span className="text-primary-500 hover:underline cursor-pointer ml-1">
-                    F7CE 1F52 D5ED 7EE3 FC37 4614 E2C1 1358 5F01 B88B
-                  </span>
-                </a>
+                <span className="text-primary-500 hover:underline cursor-pointer ml-1">
+                  F7CE 1F52 D5ED 7EE3 FC37 4614 E2C1 1358 5F01 B88B
+                </span>
               </Link>
               ]
             </div>

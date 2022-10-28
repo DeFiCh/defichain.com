@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import NextImage from "next/image";
+import Image from "next/image";
 import classNames from "classnames";
 
 export function DownloadCard(
@@ -19,11 +19,12 @@ export function DownloadCard(
       <div className="rounded bg-gray-50 py-10 px-16 space-y-10 flex flex-col flex-1">
         {typeof props.imageSrc === "string" ? (
           <div className="w-full overflow-hidden">
-            <NextImage
+            <Image
               src={props.imageSrc}
-              width="64px"
-              height="64px"
+              width={64}
+              height={64}
               className={classNames(props.imgClassName)}
+              alt=""
             />
           </div>
         ) : (

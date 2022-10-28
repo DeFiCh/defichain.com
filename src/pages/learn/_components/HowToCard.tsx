@@ -21,10 +21,12 @@ export function HowToCard(
           {props.desc}
         </div>
         <div className="mt-8" data-testid="HowToCard.Button">
-          <Link href={{ pathname: `/learn/${props.slug}` }} passHref>
-            <a className="contents">
-              <Button text={t("HowToSection.read")} />
-            </a>
+          <Link
+            href={{ pathname: `/learn/${props.slug}` }}
+            passHref
+            className="contents"
+          >
+            <Button text={t("HowToSection.read")} />
           </Link>
         </div>
       </div>

@@ -35,10 +35,8 @@ export function ResourceCard(
             }
 
             return (
-              <NextLink href={props.url} passHref>
-                <a className="contents">
-                  <Button text={props.buttonText} />
-                </a>
+              <NextLink href={props.url} passHref className="contents">
+                <Button text={props.buttonText} />
               </NextLink>
             );
           })()}

@@ -9,7 +9,7 @@ import { Console } from "@components/icons/assets/wallet-features/Console";
 import { Network } from "@components/icons/assets/wallet-features/Network";
 import { Staking } from "@components/icons/assets/wallet-features/Staking";
 import { FeatureCard } from "@components/commons/FeatureCard";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import liquidityImage from "../../../../public/assets/img/dex/liquidity.png";
 import { Section } from "@components/commons/Section";
 

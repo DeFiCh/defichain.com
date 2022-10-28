@@ -1,5 +1,5 @@
 import { Container } from "@components/commons/Container";
-import NextImage from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import Bitcoin from "../../../public/assets/svg/hero/builtonbitcoin.svg";
 import { useTranslation } from "next-i18next";
@@ -26,15 +26,17 @@ export function BuiltOnBitcoinSection(): JSX.Element {
               {t("BuiltOnBitcoinSection.desc")}
             </div>
             <div data-testid="button">
-              <Link href={{ pathname: "/white-paper" }} passHref>
-                <a className="contents">
-                  <Button text={t("BuiltOnBitcoinSection.button")} />
-                </a>
+              <Link
+                href={{ pathname: "/white-paper" }}
+                passHref
+                className="contents"
+              >
+                <Button text={t("BuiltOnBitcoinSection.button")} />
               </Link>
             </div>
           </div>
           <div className="w-1/2 lg:w-1/4 mx-auto" data-testid="image">
-            <NextImage src={Bitcoin} />
+            <Image src={Bitcoin} alt="" />
           </div>
         </div>
       </Container>

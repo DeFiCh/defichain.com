@@ -1,5 +1,5 @@
 import { Container } from "@components/commons/Container";
-import NextImage from "next/image";
+import Image from "next/image";
 
 import Nodes from "../../../public/assets/svg/hero/nodes-map-v2.svg";
 import { useTranslation } from "next-i18next";
@@ -26,7 +26,7 @@ export function DistributionSection(): JSX.Element {
             </div>
           </div>
           <div className="w-4/5 mt-16 mx-auto" data-testid="Nodes.Image">
-            <NextImage src={Nodes} />
+            <Image src={Nodes} alt="" />
           </div>
         </div>
       </Container>

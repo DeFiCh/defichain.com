@@ -23,7 +23,7 @@ export function PageError(props: {
             {props.errorDesc}
           </div>
           <div className="flex w-full justify-center mt-8">
-            <Link href={{ pathname: "/" }} passHref>
+            <Link href={{ pathname: "/" }} passHref legacyBehavior>
               <button
                 type="button"
                 className="w-48 py-2.5 text-primary-300 hover:text-primary-500 border border-primary-200 hover:border-primary-500 rounded"

@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import { useTranslation } from "next-i18next";
 import { Popover } from "@headlessui/react";
 import { ExternalLink } from "@components/commons/link/ExternalLink";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export function BuyDFIButton({
   classname,

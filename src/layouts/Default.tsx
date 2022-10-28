@@ -69,8 +69,6 @@ export function Default(props: PropsWithChildren<any>): JSX.Element | null {
         {/* Twitter */}
         <meta property="twitter:card" content="summary" />
         <meta property="twitter:site" content="@defichain" />
-
-        <link rel="canonical" href="" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
       </Head>

@@ -13,13 +13,13 @@ export function Footer(): JSX.Element {
     <footer className="mt-20 mb-12">
       <Container>
         <div className="flex flex-col">
-          <Link href={{ pathname: "/" }} passHref>
-            <a
-              className="flex items-center cursor-pointer hover:text-primary-500"
-              data-testid="Footer.Logo"
-            >
-              <DeFiChainLogo className="w-20 lg:w-28 mb-2" />
-            </a>
+          <Link
+            href={{ pathname: "/" }}
+            passHref
+            className="flex items-center cursor-pointer hover:text-primary-500"
+            data-testid="Footer.Logo"
+          >
+            <DeFiChainLogo className="w-20 lg:w-28 mb-2" />
           </Link>
           <h2
             className="text-xl lg:text-2xl font-semibold"
@@ -301,8 +301,12 @@ function FooterInternalLink(props: {
           { "text-sm": props.tiny }
         )}
       >
-        <Link href={{ pathname: props.pathname }} passHref>
-          <a data-testid={props.testId}>{props.text}</a>
+        <Link
+          href={{ pathname: props.pathname }}
+          passHref
+          data-testid={props.testId}
+        >
+          {props.text}
         </Link>
       </div>
     </div>

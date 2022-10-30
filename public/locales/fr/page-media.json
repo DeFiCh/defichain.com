@@ -41,6 +41,14 @@
           "svg": "/downloads/built-on-bitcoin.svg",
           "png": "/downloads/built-on-bitcoin.png"
         }
+      },
+      {
+        "name": "Propulsé par DeFiChain",
+        "desc": "Disponible en SVG et PNG",
+        "image": {
+          "svg": "/downloads/powered-by-defi.svg",
+          "png": "/downloads/powered-by-defi.zip"
+        }
       }
     ]
   },

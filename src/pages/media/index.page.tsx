@@ -50,7 +50,7 @@ function MediaSection(): JSX.Element {
                 url={media.url}
                 className="flex flex-col flex-1 text-gray-900"
               >
-                <div className="p-6 flex flex-wrap bg-gray-50 rounded-lg justify-start flex-col flex-1 hover:shadow-lg">
+                <div className="p-6 flex flex-wrap bg-gray-50 rounded-lg justify-start flex flex-col flex-1 hover:shadow-lg">
                   <div className="text-sm font-medium text-gray-500">
                     {media.source.name}
                   </div>
@@ -58,12 +58,13 @@ function MediaSection(): JSX.Element {
                     {media.title}
                   </div>
                   {media.source.image !== undefined ? (
-                    <div>
+                    <div className="relative w-[140px] h-[40px]">
                       <Image
+                        fill
+                        style={{ objectFit: "contain", objectPosition: "left" }}
                         src={media.source.image}
                         alt={media.source.name}
                         title={media.source.name}
-                        className="max-w-[140px] max-h-10"
                       />
                     </div>
                   ) : (
@@ -96,13 +97,14 @@ function DownloadSection(): JSX.Element {
                 key={download.name}
                 data-testid="DownloadSection.Card"
               >
-                <div className="p-6 flex flex-wrap bg-gray-50 rounded-lg justify-start flex-col flex-1">
-                  <div>
+                <div className="p-6 flex flex-wrap bg-gray-50 rounded-lg justify-start flex flex-col flex-1">
+                  <div className="relative w-[140px] h-[40px]">
                     <Image
+                      fill
+                      style={{ objectFit: "contain", objectPosition: "left" }}
                       src={download.image.svg}
                       alt={download.name}
                       title={download.name}
-                      className="max-w-[140px] max-h-20"
                     />
                   </div>
                   <div className="font-medium text-xl mt-4 flex-1 text-gray-900">

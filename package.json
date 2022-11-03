@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@defichain/whale-api-client": "^2.67.2",
-    "@headlessui/react": "^1.6.6",
+    "@headlessui/react": "^1.7.4",
     "classnames": "^2.3.2",
     "gray-matter": "^4.0.3",
     "lodash": "^4.17.21",

@@ -39,7 +39,7 @@
   "devDependencies": {
     "@cypress/code-coverage": "^3.10.0",
     "@netlify/plugin-nextjs": "^4.28.4",
-    "@tailwindcss/typography": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.8",
     "@testing-library/cypress": "^8.0.3",
     "@types/lodash": "^4.14.188",
     "@types/node": "^18.7.18",

@@ -21,7 +21,7 @@
     "lodash": "^4.17.21",
     "next": "^13.0.3",
     "next-i18next": "^12.1.0",
-    "next-sitemap": "^3.1.30",
+    "next-sitemap": "^3.1.32",
     "nextjs-progressbar": "^0.0.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

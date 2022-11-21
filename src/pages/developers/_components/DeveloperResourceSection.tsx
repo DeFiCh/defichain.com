@@ -4,9 +4,9 @@ import {
   BsReddit,
   BsSticky,
 } from "react-icons/bs";
-import { DeFiChainLogoNoText } from "@components/icons/DeFiChainLogoNoText";
 import { useTranslation } from "next-i18next";
 import { ResourceCard } from "@components/commons/ResourceCard";
+import { DeFiScanLogo } from "@components/icons/DeFiScanLogo";
 
 export function DeveloperResourceSection(): JSX.Element {
   const { t } = useTranslation("page-developers");
@@ -37,7 +37,7 @@ export function DeveloperResourceSection(): JSX.Element {
         testid="ResourceSection.Explore"
         external
       >
-        <DeFiChainLogoNoText fontSize={50} className="fill-primary-500" />
+        <DeFiScanLogo className="w-48" />
       </ResourceCard>
       <ResourceCard
         text={t("DeveloperResourcesSection.WhitePaper.title")}

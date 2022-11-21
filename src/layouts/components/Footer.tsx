@@ -19,7 +19,7 @@ export function Footer(): JSX.Element {
             className="flex items-center cursor-pointer hover:text-primary-500"
             data-testid="Footer.Logo"
           >
-            <DeFiChainLogo className="w-20 lg:w-28 mb-2" />
+            <DeFiChainLogo className="w-40 lg:w-52 mb-2" />
           </Link>
           <h2
             className="text-xl lg:text-2xl font-semibold"

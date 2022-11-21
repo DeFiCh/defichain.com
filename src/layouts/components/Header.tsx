@@ -58,7 +58,7 @@ export function Header(): JSX.Element {
                 className="flex items-center cursor-pointer hover:text-primary-500"
                 data-testid="Header.SiteLogo"
               >
-                <DeFiChainLogo className="w-12 lg:block lg:w-16 h-full" />
+                <DeFiChainLogo className="w-32 lg:block lg:w-40 h-full" />
               </Link>
               <DesktopNavbar price={dfiPrice} />
             </div>

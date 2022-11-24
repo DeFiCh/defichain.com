@@ -29,7 +29,7 @@
         "desc": "官方和预设标志。",
         "image": {
           "svg": "/downloads/logo-defi-blockchain.svg",
-          "png": "/downloads/logo-defi-blockchain.png"
+          "png": "/downloads/logo-defi-blockchain.zip"
         }
       },
       {
@@ -61,7 +61,7 @@
         "desc": "提供SVG和PNG格式。",
         "image": {
           "svg": "/downloads/powered-by-defi.svg",
-          "png": "/downloads/powered-by-defi.png"
+          "png": "/downloads/powered-by-defi.zip"
         }
       }
     ]

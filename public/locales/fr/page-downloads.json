@@ -29,7 +29,7 @@
         "desc": "Le logo officiel et par défaut",
         "image": {
           "svg": "/downloads/logo-defi-blockchain.svg",
-          "png": "/downloads/logo-defi-blockchain.png"
+          "png": "/downloads/logo-defi-blockchain.zip"
         }
       },
       {
@@ -61,7 +61,7 @@
         "desc": "Disponible en SVG et PNG",
         "image": {
           "svg": "/downloads/powered-by-defi.svg",
-          "png": "/downloads/powered-by-defi.png"
+          "png": "/downloads/powered-by-defi.zip"
         }
       }
     ]

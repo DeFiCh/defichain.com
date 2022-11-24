@@ -7,51 +7,6 @@
     "title": "媒體素材",
     "desc": "媒體資源和素材。"
   },
-  "DownloadSection": {
-    "title": "下載",
-    "entries": [
-      {
-        "name": "遞飛鏈標志",
-        "desc": "官方和預設標志。",
-        "image": {
-          "svg": "/downloads/logo-defi-blockchain.svg",
-          "png": "/downloads/logo-defi-blockchain.png"
-        }
-      },
-      {
-        "name": "遞飛鏈水母",
-        "desc": "空間受限時可用。",
-        "image": {
-          "svg": "/downloads/symbol-defi-blockchain.svg",
-          "png": "/downloads/symbol-defi-blockchain.png"
-        }
-      },
-      {
-        "name": "DFI 3D 貨幣標志",
-        "desc": "提供SVG和PNG格式。",
-        "image": {
-          "svg": "/downloads/coin-defi-blockchain.svg",
-          "png": "/downloads/coin-defi-blockchain.png"
-        }
-      },
-      {
-        "name": "比特幣上建構",
-        "desc": "提供SVG和PNG格式。",
-        "image": {
-          "svg": "/downloads/built-on-bitcoin.svg",
-          "png": "/downloads/built-on-bitcoin.png"
-        }
-      },
-      {
-        "name": "Powered By DeFiChain",
-        "desc": "提供SVG和PNG格式。",
-        "image": {
-          "svg": "/downloads/powered-by-defi.svg",
-          "png": "/downloads/powered-by-defi.zip"
-        }
-      }
-    ]
-  },
   "MediaSection": {
     "title": "遞飛鏈媒體報導",
     "entries": [

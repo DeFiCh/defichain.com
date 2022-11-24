@@ -7,51 +7,6 @@
     "title": "Médias",
     "desc": "Ressources et les atouts des médias"
   },
-  "DownloadSection": {
-    "title": "Téléchargements",
-    "entries": [
-      {
-        "name": "Logo de DeFiChain",
-        "desc": "Le logo officiel et par défaut",
-        "image": {
-          "svg": "/downloads/logo-defi-blockchain.svg",
-          "png": "/downloads/logo-defi-blockchain.png"
-        }
-      },
-      {
-        "name": "La méduse DeFi",
-        "desc": "Utile lorsque l'espace est restreint",
-        "image": {
-          "svg": "/downloads/symbol-defi-blockchain.svg",
-          "png": "/downloads/symbol-defi-blockchain.png"
-        }
-      },
-      {
-        "name": "Coin 3D de DFI",
-        "desc": "Disponible en SVG et PNG",
-        "image": {
-          "svg": "/downloads/coin-defi-blockchain.svg",
-          "png": "/downloads/coin-defi-blockchain.png"
-        }
-      },
-      {
-        "name": "Construit sur Bitcoin",
-        "desc": "Disponible en SVG et PNG",
-        "image": {
-          "svg": "/downloads/built-on-bitcoin.svg",
-          "png": "/downloads/built-on-bitcoin.png"
-        }
-      },
-      {
-        "name": "Propulsé par DeFiChain",
-        "desc": "Disponible en SVG et PNG",
-        "image": {
-          "svg": "/downloads/powered-by-defi.svg",
-          "png": "/downloads/powered-by-defi.zip"
-        }
-      }
-    ]
-  },
   "MediaSection": {
     "title": "DeFiChain covered in the press and media.",
     "entries": [

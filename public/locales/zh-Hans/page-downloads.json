@@ -21,6 +21,51 @@
       }
     }
   },
+  "DownloadSection": {
+    "title": "下載",
+    "entries": [
+      {
+        "name": "递飞链标志",
+        "desc": "官方和预设标志。",
+        "image": {
+          "svg": "/downloads/logo-defi-blockchain.svg",
+          "png": "/downloads/logo-defi-blockchain.png"
+        }
+      },
+      {
+        "name": "递飞链水母",
+        "desc": "空间受限时可用。",
+        "image": {
+          "svg": "/downloads/symbol-defi-blockchain.svg",
+          "png": "/downloads/symbol-defi-blockchain.png"
+        }
+      },
+      {
+        "name": "DFI 3D 货币标志",
+        "desc": "提供SVG和PNG格式。",
+        "image": {
+          "svg": "/downloads/coin-defi-blockchain.svg",
+          "png": "/downloads/coin-defi-blockchain.png"
+        }
+      },
+      {
+        "name": "比特币上建构",
+        "desc": "提供SVG和PNG格式。",
+        "image": {
+          "svg": "/downloads/built-on-bitcoin.svg",
+          "png": "/downloads/built-on-bitcoin.png"
+        }
+      },
+      {
+        "name": "Powered By DeFiChain",
+        "desc": "提供SVG和PNG格式。",
+        "image": {
+          "svg": "/downloads/powered-by-defi.svg",
+          "png": "/downloads/powered-by-defi.png"
+        }
+      }
+    ]
+  },
   "FullNodeWallets": {
     "title": "进阶使用 DeFiChain",
     "subtitle": "进阶版的虚拟钱包更适用于配合 DeFiChain 递飞链上的复杂操作，例如管理主节点、多重签名等。",
@@ -44,4 +89,3 @@
     }
   }
 }
-

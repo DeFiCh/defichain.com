@@ -104,9 +104,15 @@ context("/downloads page on mobile", () => {
   });
 
   it("should have DownloadSection", () => {
-    cy.findByTestId("DownloadSection").within(() => {
-      cy.findByTestId("Section.Title").should("have.text", "Downloads");
-      cy.findAllByTestId("DownloadSection.Card").should("have.length", 5);
-    });
+    cy.findByTestId("DownloadSection.Title")
+      .should("be.visible")
+      .should("have.text", "Downloads");
+    cy.findByTestId("DownloadSection.Subtitle")
+      .should("be.visible")
+      .should(
+        "have.text",
+        'The media assets are released under CCO license. "No Rights Reserved".'
+      );
+    cy.findAllByTestId("DownloadSection.Card").should("have.length", 5);
   });
 });

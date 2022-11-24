@@ -27,13 +27,6 @@ context("/media page on desktop", () => {
       );
     });
   });
-
-  it("should have DownloadSection", () => {
-    cy.findByTestId("DownloadSection").within(() => {
-      cy.findByTestId("Section.Title").should("have.text", "Downloads");
-      cy.findAllByTestId("DownloadSection.Card").should("have.length", 5);
-    });
-  });
 });
 
 context("/media page on mobile", () => {
@@ -63,13 +56,6 @@ context("/media page on mobile", () => {
         "have.length.at.least",
         20
       );
-    });
-  });
-
-  it("should have DownloadSection", () => {
-    cy.findByTestId("DownloadSection").within(() => {
-      cy.findByTestId("Section.Title").should("have.text", "Downloads");
-      cy.findAllByTestId("DownloadSection.Card").should("have.length", 5);
     });
   });
 });

@@ -4,6 +4,7 @@ import { SSRConfig, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { LightWalletSection } from "./_components/LightWalletSection";
 import { FullNodeSection } from "./_components/FullNodeSection";
+import { DownloadSection } from "./_components/DownloadSection";
 import { Head } from "@components/commons/Head";
 
 export default function DownloadsPage(): JSX.Element {
@@ -26,6 +27,7 @@ export default function DownloadsPage(): JSX.Element {
       <Container>
         <LightWalletSection />
         <FullNodeSection />
+        <DownloadSection />
       </Container>
     </>
   );

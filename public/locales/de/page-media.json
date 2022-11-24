@@ -7,51 +7,6 @@
     "title": "Medien",
     "desc": "Medieninhalte und Materialien"
   },
-  "DownloadSection": {
-    "title": "Downloads",
-    "entries": [
-      {
-        "name": "Logo der DeFiChain ",
-        "desc": "Das offizielle Standardlogo",
-        "image": {
-          "svg": "/downloads/logo-defi-blockchain.svg",
-          "png": "/downloads/logo-defi-blockchain.png"
-        }
-      },
-      {
-        "name": "Die DeFi-Qualle",
-        "desc": "Nützlich, wenn der Platz knapp ist",
-        "image": {
-          "svg": "/downloads/symbol-defi-blockchain.svg",
-          "png": "/downloads/symbol-defi-blockchain.png"
-        }
-      },
-      {
-        "name": "DFI 3D-Coin",
-        "desc": "Verfügbar als SVG und PNG",
-        "image": {
-          "svg": "/downloads/coin-defi-blockchain.svg",
-          "png": "/downloads/coin-defi-blockchain.png"
-        }
-      },
-      {
-        "name": "Built-on-Bitcoin",
-        "desc": "Verfügbar als SVG und PNG",
-        "image": {
-          "svg": "/downloads/built-on-bitcoin.svg",
-          "png": "/downloads/built-on-bitcoin.png"
-        }
-      },
-      {
-        "name": "Powered By DeFiChain",
-        "desc": "Verfügbar als SVG und PNG",
-        "image": {
-          "svg": "/downloads/powered-by-defi.svg",
-          "png": "/downloads/powered-by-defi.zip"
-        }
-      }
-    ]
-  },
   "MediaSection": {
     "title": "DeFiChain in der Presse und den Medien",
     "entries": [

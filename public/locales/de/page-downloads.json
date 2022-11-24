@@ -21,6 +21,52 @@
       }
     }
   },
+  "DownloadSection": {
+    "title": "Downloads",
+    "subtitle": "The media assets are released under CCO license. \"No Rights Reserved\".",
+    "entries": [
+      {
+        "name": "Logo der DeFiChain ",
+        "desc": "Das offizielle Standardlogo",
+        "image": {
+          "svg": "/downloads/logo-defi-blockchain.svg",
+          "png": "/downloads/logo-defi-blockchain.zip"
+        }
+      },
+      {
+        "name": "Die DeFi-Qualle",
+        "desc": "Nützlich, wenn der Platz knapp ist",
+        "image": {
+          "svg": "/downloads/symbol-defi-blockchain.svg",
+          "png": "/downloads/symbol-defi-blockchain.png"
+        }
+      },
+      {
+        "name": "DFI 3D-Coin",
+        "desc": "Verfügbar als SVG und PNG",
+        "image": {
+          "svg": "/downloads/coin-defi-blockchain.svg",
+          "png": "/downloads/coin-defi-blockchain.png"
+        }
+      },
+      {
+        "name": "Built-on-Bitcoin",
+        "desc": "Verfügbar als SVG und PNG",
+        "image": {
+          "svg": "/downloads/built-on-bitcoin.svg",
+          "png": "/downloads/built-on-bitcoin.png"
+        }
+      },
+      {
+        "name": "Powered By DeFiChain",
+        "desc": "Verfügbar als SVG und PNG",
+        "image": {
+          "svg": "/downloads/powered-by-defi.svg",
+          "png": "/downloads/powered-by-defi.zip"
+        }
+      }
+    ]
+  },
   "FullNodeWallets": {
     "title": "Erweiterte Nutzung von DeFiChain",
     "subtitle": "Fortgeschrittene Wallets, die für die komplexe Nutzung von DeFiChain geeignet sind, wie z.B. Masternode-Management, Multi-Signatur-Management und mehr.",

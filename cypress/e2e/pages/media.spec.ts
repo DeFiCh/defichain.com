@@ -65,11 +65,4 @@ context("/media page on mobile", () => {
       );
     });
   });
-
-  it("should have DownloadSection", () => {
-    cy.findByTestId("DownloadSection").within(() => {
-      cy.findByTestId("Section.Title").should("have.text", "Downloads");
-      cy.findAllByTestId("DownloadSection.Card").should("have.length", 5);
-    });
-  });
 });

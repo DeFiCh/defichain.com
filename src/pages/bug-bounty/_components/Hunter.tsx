@@ -1,6 +1,6 @@
 import { ExternalLink } from "@components/commons/link/ExternalLink";
 import { BiLinkExternal } from "react-icons/bi";
-import ReactNumberFormat from "react-number-format";
+import { NumericFormat } from "react-number-format";
 
 /**
  * Container implementation that is part of the design language.
@@ -51,14 +51,14 @@ export function Hunter(props: { index: number; hunter: HunterI }): JSX.Element {
             >
               <div className="w-full lg:w-2/3 font-medium">{bounty.name}</div>
               <div className="w-full lg:w-1/3 flex flex-wrap mt-1 lg:mt-0 lg:justify-end items-center">
-                <ReactNumberFormat
+                <NumericFormat
                   value={bounty.payout.dfi}
                   thousandSeparator
                   decimalScale={0}
                   suffix=" DFI"
                   displayType="text"
                 />
-                <ReactNumberFormat
+                <NumericFormat
                   value={bounty.payout.usd}
                   thousandSeparator
                   decimalScale={0}

@@ -1,5 +1,5 @@
 import { useTranslation } from "next-i18next";
-import NumberFormat from "react-number-format";
+import { NumericFormat } from "react-number-format";
 import { getAssetIcon } from "@components/icons/assets/tokens";
 import { useWhaleApiClient } from "../../../layouts/context/WhaleContext";
 import { useEffect, useState } from "react";
@@ -70,7 +70,7 @@ export function LiquidityPoolsSection(): JSX.Element {
 
                       return (
                         <>
-                          <NumberFormat
+                          <NumericFormat
                             value={item.apr.total * 100}
                             displayType="text"
                             thousandSeparator

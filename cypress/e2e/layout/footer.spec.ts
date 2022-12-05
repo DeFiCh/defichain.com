@@ -54,6 +54,9 @@ context("<Footer/> on desktop", () => {
     cy.findByTestId("FooterSectionSitemap.Newsletter")
       .should("be.visible")
       .should("have.attr", "href", "https://bit.ly/3yQxtmW");
+    cy.findByTestId("FooterSectionSitemap.Wiki")
+      .should("be.visible")
+      .should("have.attr", "href", "https://defichainwiki.com");
   });
 
   it("should have Footer Social links", () => {
@@ -194,6 +197,9 @@ context("<Footer/> on mobile", () => {
     cy.findByTestId("FooterSectionSitemap.Newsletter")
       .should("be.visible")
       .should("have.attr", "href", "https://bit.ly/3yQxtmW");
+    cy.findByTestId("FooterSectionSitemap.Wiki")
+      .should("be.visible")
+      .should("have.attr", "href", "https://defichainwiki.com");
   });
 
   it("should have Footer Social links", () => {

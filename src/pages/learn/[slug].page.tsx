@@ -1,6 +1,5 @@
 import { Container } from "@components/commons/Container";
 import React from "react";
-import { getAllPosts, getPostBySlug, Post } from "./utils/api";
 import { remark } from "remark";
 import ReactMarkdown from "react-markdown";
 import { PageHeader } from "@components/commons/PageHeader";
@@ -12,6 +11,7 @@ import remarkGfm from "remark-gfm";
 import { UserConfig } from "next-i18next";
 import { GetStaticPathsResult } from "next/types";
 import { Head } from "@components/commons/Head";
+import { getAllPosts, getPostBySlug, Post } from "./utils/api";
 
 interface PostPageProps {
   props: {
@@ -89,22 +89,20 @@ export async function getStaticProps({
 
 export async function getStaticPaths(context): Promise<GetStaticPathsResult> {
   const allPosts = context.locales.map((locale) => ({
-    locale: locale,
+    locale,
     posts: getAllPosts(["slug"], locale),
   }));
 
   return {
     paths: allPosts
-      .map((postsWithLocale) => {
-        return postsWithLocale.posts.map((post) => {
-          return {
-            params: {
-              slug: post.slug,
-            },
-            locale: postsWithLocale.locale,
-          };
-        });
-      })
+      .map((postsWithLocale) =>
+        postsWithLocale.posts.map((post) => ({
+          params: {
+            slug: post.slug,
+          },
+          locale: postsWithLocale.locale,
+        }))
+      )
       .flat(),
     fallback: false,
   };

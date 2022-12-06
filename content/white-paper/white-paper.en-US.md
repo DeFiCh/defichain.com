@@ -104,8 +104,8 @@ The limitations of general-purpose blockchains for DeFi apps has opened up a mar
 ### Consequences in the DeFi Market
 
 - Multisig wallets are the best the industry has to provide when it comes to joint management of funds, and the solutions for multi-sig are, to some degree, kludges. Multisig tends to be leger-specific and not flexible for different scenarios. For example, in traditional finance, multi-signature accounts can assign signatories different levels of authority, or require different signatures for different transaction types and levels. Different chains take different approaches to adding multisig capabilities to their existing blockchains.
-    - The BIP 11: M-of-N Standard Transactions is a Bitcoin Improvement Proposal (BIP)designed to add multisig support to Bitcoin blockchain.
-    - Ethereum provides a Turing-complete command set for development of multisig on chain, leading to multiple entities providing multisig smart contracts. Bugs such as those in the Parity multisig (discussed below) have resulted in untold sums in lost funds.
+  - The BIP 11: M-of-N Standard Transactions is a Bitcoin Improvement Proposal (BIP)designed to add multisig support to Bitcoin blockchain.
+  - Ethereum provides a Turing-complete command set for development of multisig on chain, leading to multiple entities providing multisig smart contracts. Bugs such as those in the Parity multisig (discussed below) have resulted in untold sums in lost funds.
 - As a result of the complexity of the code required for multisig, in 2017, more than 150,000 ETH was lost to a hack in the Parity multisig wallet, due to an error in the code[^2]. The referenced article notes ways in which this code bug could have been avoided, but it emphasizes the point that these complexities in coding cause many different attack vectors. An entire industry has sprouted up around smart contract auditing, because the situation is so vulnerable.
 - In the largest industry hack (or bug?!), The DAO was drained of 3.6 million ETH due to a coding error in the smart contract holding all of the funds of The DAO.
 
@@ -563,12 +563,12 @@ The goal of DAT is to have it represent the native asset on the other blockchain
 There are two approaches to this:
 
 1. Stablecoin approach
-    - For every single issued 1 DBTC, 1 BTC has to be locked up in an address or a smart contract.
-    - While this would help to build a guarantee to DBTC, it introduces some other issues – counterparty risks and affect the decentralized nature of DeFi.
+
+   - For every single issued 1 DBTC, 1 BTC has to be locked up in an address or a smart contract.
+   - While this would help to build a guarantee to DBTC, it introduces some other issues – counterparty risks and affect the decentralized nature of DeFi.
 
 2. Economic pegging
-    - By providing a strong guarantee that the DAT representing an asset has its price closely tracking the native asset, i.e. by holding DBTC, one can have a good confidence that the value of DBTC will track that of BTC.
-
+   - By providing a strong guarantee that the DAT representing an asset has its price closely tracking the native asset, i.e. by holding DBTC, one can have a good confidence that the value of DBTC will track that of BTC.
 
 In order for us to achieve economic pegging, the following building blocks are built natively on DeFiChain:
 
@@ -609,7 +609,7 @@ While this concept is not new to the DeFi system, what is novel is the possibili
 3. At the minimum collateralization ratio of 150% she can take out a maximum of $10,000 worth of DBTC, which is pegged to BTC spot price.
 4. Since the DBTC loan via loan contract accrues interest, and DBTC and the DFI price fluctuate, Alice decides to only take out $5,000 worth of DBTC, i.e. 0.5 DBTC, giving her loan contract a collateralization ratio of: 15000/5000 = 300%, well above 150%.
 5. Over-collateralization allows for some room for price movements of DBTC. If the BTC price increases to $15,000, Alice’s loan of 0.5 DBTC would now be worth $7,500. Her loan contract now has a collateralization ratio of: 15000/7500 = 200%, still above 150%, so liquidation would not be triggered even in the case of this type of price shift.
-6. The interest rate for each DAT loan differs. Assuming the DBTC loan rate is 5% annually, taking out a loan for a year, in order to close her loan contract and to fully redeem her initial 150k DFI, Alice has to pay back 0.5 DBTC * 1.05 = 0.525 DBTC by the end of the year.
+6. The interest rate for each DAT loan differs. Assuming the DBTC loan rate is 5% annually, taking out a loan for a year, in order to close her loan contract and to fully redeem her initial 150k DFI, Alice has to pay back 0.5 DBTC \* 1.05 = 0.525 DBTC by the end of the year.
 
 ![loan contract](/img/white-paper/alice-pdc.png)
 
@@ -634,7 +634,7 @@ XCX orders contain several parameters that can be freely decided by the market m
 
 - Amount: Amount of coin/DAT a seller is looking for and how much DAT is locked up.
 - Premium: Amount of additional fee a coin seller stands to make from this trade (Premium is listed per unit amount, thus allowing for partial fulfillment of trade orders). Together with expiry, it can also be considered as lending interest to the buyer. The Premium is paid instantly once an XCX is matched, before expiry of the lending contract. Premium can be positive (+) or negative (-) depending on supply and demand.
-- Guarantee: An optional additional amount in DBTC and/or DFI that is locked in the XCX that will provide an extra incentive for a lender as it resolves in either of the following  two outcomes:
+- Guarantee: An optional additional amount in DBTC and/or DFI that is locked in the XCX that will provide an extra incentive for a lender as it resolves in either of the following two outcomes:
   a. Released back to the borrower should the BTC amount be paid up before expiry.
   b. Release to the lender should the contract expire without the borrower making a payment thereby constituting an extra incentive.
 - Expiry: Time when the contract expires, it can be set as a date in the past for immediate settlement, i.e. no lending, but straight-out swap.
@@ -647,11 +647,13 @@ Alice has 1 DBTC and wants 1 BTC so she can trade on a centralized exchange.
 Bob has 1 BTC that he does not need for 1 month, hoping to generate some lending interest during that period of time.
 
 1. Alice lists the following XCX order:
+
 - Amount: 1 DBTC/BTC
 - Premium: 8,000 DFI
 - Guarantee: 0.1 DBTC
 - Expiry: December 31, 2019 – approx. 1 month.
 - Address: Alice lists her BTC deposit address
+
 2. Bob accepts the offer by sending a transaction on DeFiChain.
 3. Bob receives a confirmation on DeFiChain that his order is accepted. In case there are multiple order acceptance transactions.
 4. Bob sends 1 BTC to Alice’s BTC deposit address as listed in the XCX order and sends a transaction on DeFiChain with the BTC txid as receipt. Bob also specifies a receiving BTC address on the same transaction for Alice to repay the 1 BTC later on.
@@ -734,13 +736,13 @@ DFI is divisible up to 8 decimal places.
 ### $DFI coin Utility
 
 - DFI is used for fee payment for all transactions and smart contracts on DeFiChain.
-    - Fee payment for decentralized exchange transactions
-    - Fee payment for token transfers
+  - Fee payment for decentralized exchange transactions
+  - Fee payment for token transfers
 - Fees payment for DeFi activities:
-    - DEX fees
-    - XCX fees
-    - Lending loan interests payment
-    - etc.
+  - DEX fees
+  - XCX fees
+  - Lending loan interests payment
+  - etc.
 - Collateral for borrowing of other cryptoassets on DeFiChain.
 - 20,000 DFI is required to run a staking node for DeFiChain.
 - 1,000 DFI is required to create a DCT. This is refundable upon destruction of the DCT.

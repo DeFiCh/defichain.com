@@ -25,11 +25,11 @@ This guide shows how you can perform the wallet encryption and decryption, also 
 
 3. Lock your wallet by typing the following at the Console:
 
-    ```
-    encryptwallet REPLACE_THIS_WITH_A_LONG_SECURE_PASSPHRASE
-    ```
+   ```
+   encryptwallet REPLACE_THIS_WITH_A_LONG_SECURE_PASSPHRASE
+   ```
 
-   It should take a few seconds and you should see a message `wallet encrypted`.  At this point onwards, your wallet, i.e. `wallet.dat` file will be encrypted by default.
+   It should take a few seconds and you should see a message `wallet encrypted`. At this point onwards, your wallet, i.e. `wallet.dat` file will be encrypted by default.
 
    Your DeFi Wallet desktop app will function as normal for view-only, and your DeFi liquidity mining rewards will be streamining in as usual. Try to send some DFI or DST, you should now be seeing the following message: `Add-on auth TX failed: Can't sign TX`. This shows that your wallet keys are now encrypted. Hacker having access to your wallet at this stage would only be able to view your holdings, but unable to spend it.
 

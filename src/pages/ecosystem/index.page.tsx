@@ -4,15 +4,15 @@ import { SSRConfig, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { PropsWithChildren } from "react";
 import Image from "next/image";
+import { ResourceCard } from "@components/commons/ResourceCard";
+import { Head } from "@components/commons/Head";
+import { Section } from "@components/commons/Section";
 import CakeDeFiLogo from "../../../public/assets/svg/ecosystem/cake_logo.svg";
 import StakingRewardsLogo from "../../../public/assets/svg/ecosystem/stakingrewards_logo.svg";
 import BlockspotLogo from "../../../public/assets/img/ecosystem/blockspot.png";
 import Blockfolio from "../../../public/assets/svg/ecosystem/blockfolio_logo.svg";
 import MessariLogo from "../../../public/assets/svg/ecosystem/messari_logo.svg";
 import CoinGeckoLogo from "../../../public/assets/svg/ecosystem/coingecko_logo.svg";
-import { ResourceCard } from "@components/commons/ResourceCard";
-import { Head } from "@components/commons/Head";
-import { Section } from "@components/commons/Section";
 
 export default function EcosystemPage(): JSX.Element {
   const { t } = useTranslation(["page-ecosystem"]);

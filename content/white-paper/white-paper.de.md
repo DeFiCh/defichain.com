@@ -11,7 +11,7 @@ Dieses Dokument stellt weder einen Prospekt dar noch beinhaltet es einen solchen
 
 **Dieses Dokument ist keine vollständige technische Dokumentation**
 
-Dieses Dokument stellt keine vollständige technische Dokumentation von DeFiChain dar und ist auch nicht als solche zu verstehen. Die in diesem Whitepaper enthaltenen technischen oder sonstigen Informationen sollen einen Überblick über DeFiChain, ihr Design und ihre Anwendungsfälle geben und können sich mit oder ohne vorherige Ankündigung ändern. Die neuesten technischen Informationen finden Sie in den Updates und Dokumentationen auf der offiziellen Website  [https://defichain.com](https://defichain.com).
+Dieses Dokument stellt keine vollständige technische Dokumentation von DeFiChain dar und ist auch nicht als solche zu verstehen. Die in diesem Whitepaper enthaltenen technischen oder sonstigen Informationen sollen einen Überblick über DeFiChain, ihr Design und ihre Anwendungsfälle geben und können sich mit oder ohne vorherige Ankündigung ändern. Die neuesten technischen Informationen finden Sie in den Updates und Dokumentationen auf der offiziellen Website [https://defichain.com](https://defichain.com).
 
 ## Zusammenfassung
 
@@ -98,7 +98,7 @@ Die Einschränkungen von Allzweck-Blockchains für DeFi-Anwendungen haben eine M
   Funktionalitäten, die Grundvoraussetzungen für Finanzdienstleistungen sind, wie z.B. Multisig, sind oft schwer zu implementieren oder fehlen bei universellen Blockchains.
 - Die Pflege einer Turing-completen Blockchain bedeutet, dass sich die Ressourcen nicht auf die Bereiche konzentrieren, die für DeFi-Apps von Bedeutung sind.
 - Die Governance-Modelle der meisten heutigen Blockchains sind unreif und zeigen Anzeichen von Politisierung, Zentralisierung und Unsicherheit. Ohne formale Governance-Strukturen ist die Zukunft dieser Blockchains ungewiss. Die jüngsten Diskussionen über Upgrades und Forks sowohl bei Ethereum als auch bei Bitcoin haben die Unausgereiftheit dieser Systeme offenbart, und selbst der Marktführer in Sachen Governance, Aragon, hat die Anfälligkeit seines On-Chain-Governance-Systems bei der Abstimmung im Sommer 2019 gezeigt, bei der ein großer "Wal"-Token-Inhaber das Ergebnis mehrerer Proposal-Abstimmungen in letzter Minute verändert hat. Solche Schwachstellen sind bei Blockchains, die sich mit Finanzen befassen, inakzeptabel.
-- Regulierungsstandards und Regulierungsbehörden, die den Bedürfnissen von nativ grenzüberschreitenden Währungen und Finanzinstrumenten gerecht werden. Rechtsprechungsbasierte Regulierung und Regulierung, die auf veralteter Technologie basiert, wird den Bedürfnissen der DeFi-Branche nicht gerecht. Es ist klar, dass ein neuer rechtlicher und regulatorischer Rahmen notwendig ist, um die Rechte der Menschen zu schützen, die diese Systeme nutzen. 
+- Regulierungsstandards und Regulierungsbehörden, die den Bedürfnissen von nativ grenzüberschreitenden Währungen und Finanzinstrumenten gerecht werden. Rechtsprechungsbasierte Regulierung und Regulierung, die auf veralteter Technologie basiert, wird den Bedürfnissen der DeFi-Branche nicht gerecht. Es ist klar, dass ein neuer rechtlicher und regulatorischer Rahmen notwendig ist, um die Rechte der Menschen zu schützen, die diese Systeme nutzen.
 - Die Blockchain-Branche selbst hat noch nicht die Reife gezeigt, um eigene Standardisierungsgremien einzurichten, die Best Practices oder Selbstregulierung in einer Weise bereitstellen, die die Zuverlässigkeit der Branche für dezentrale Finanzanwendungen unter Beweis stellen würde. Bislang waren die Versuche, Interoperabilität oder Selbstregulierung zu schaffen, unausgereift und haben nicht zu einer Leitlinie oder zu Standards geführt, die von internationalen Gremien oder seriösen Regulierungsbehörden akzeptiert werden könnten. Das Fehlen einer Selbstregulierung macht die Branche noch anfälliger für eine Regulierung von außen und macht das Umfeld für seriöse Investoren riskant.
 
 ### Konsequenzen für den DeFi-Markt
@@ -125,7 +125,7 @@ Angesichts unseres Optimismus in Bezug auf Bitcoin stellt sich zunächst die Fra
 
 ### Turing-complete Lösungen: Ethereum, EOS, Tron...
 
-Bis heute wurden eine Reihe von DeFi-Anwendungen auf Ethereum, Tron, EOS und vielen anderen Turing-complete Chains entwickelt. Da Ethereum die größte Verbreitung hat, konnten die Probleme, die mit der Verwendung einer Turing-complete Blockchain für DeFi-Anwendungen einhergehen, am schnellsten aufgedeckt werden. Der DAO-Hack war eine der ersten und dramatischsten Enthüllungen über die Anfälligkeit der Verwendung einer so komplexen Programmiersprache. Jeder, der einen Token über das Netzwerk ausgibt, weiß, wie schwierig das ist. Allein die Erstellung und Ausgabe eines ERC20-Tokens kann leicht über 100.000 USD kosten, wenn man die Kosten für die Prüfung von Smart Contracts berücksichtigt, die für innovative Lösungen notwendig sind. Allein die Tatsache, dass es eine ganze Branche gibt, die sich mit der Prüfung von Smart Contracts beschäftigt, sollte ausreichen, um das Problem zu verdeutlichen. Obwohl ERC20 der Industriestandard ist, ist er immer noch so leicht zu hacken, dass es unmöglich ist, auch nur einen einfachen Token herauszugeben, ohne einen teuren professionellen Prüfer oder Programmierer zu engagieren. 
+Bis heute wurden eine Reihe von DeFi-Anwendungen auf Ethereum, Tron, EOS und vielen anderen Turing-complete Chains entwickelt. Da Ethereum die größte Verbreitung hat, konnten die Probleme, die mit der Verwendung einer Turing-complete Blockchain für DeFi-Anwendungen einhergehen, am schnellsten aufgedeckt werden. Der DAO-Hack war eine der ersten und dramatischsten Enthüllungen über die Anfälligkeit der Verwendung einer so komplexen Programmiersprache. Jeder, der einen Token über das Netzwerk ausgibt, weiß, wie schwierig das ist. Allein die Erstellung und Ausgabe eines ERC20-Tokens kann leicht über 100.000 USD kosten, wenn man die Kosten für die Prüfung von Smart Contracts berücksichtigt, die für innovative Lösungen notwendig sind. Allein die Tatsache, dass es eine ganze Branche gibt, die sich mit der Prüfung von Smart Contracts beschäftigt, sollte ausreichen, um das Problem zu verdeutlichen. Obwohl ERC20 der Industriestandard ist, ist er immer noch so leicht zu hacken, dass es unmöglich ist, auch nur einen einfachen Token herauszugeben, ohne einen teuren professionellen Prüfer oder Programmierer zu engagieren.
 
 Noch gravierender ist, dass es inzwischen möglich ist, automatisiert nach angreifbarem Code zu suchen. Eine Studie aus dem Jahr 2018 hat eine Million Smart Contracts gescannt und dabei über 34.000 hackbare Smart Contracts gefunden[^3]. Es ist unvorstellbar, dass 3,4 % der Finanztransaktionen angreifbar sind. Im Moment scheint sich dieses Problem vor allem auf Ethereum zu konzentrieren, aber wir glauben, dass die meisten anderen Turing-Complete Chains die gleichen Probleme haben werden, sobald mehr Anwendungsfälle auf ihnen laufen.
 
@@ -143,11 +143,11 @@ Das zweite Problem liegt vor allem in Ethereum selbst: Das Netzwerk ist bereits 
 
 Der Kryptowährungsmarkt als Ganzes ist schwer vorherzusagen. Die meisten Coins sind wertlos geworden, und es bleibt abzuwarten, wie sich das System selbst erhalten wird, wenn das Geld der großen ICOs ausgeht.
 
-Trotzdem ist unser Ausblick auf Bitcoin extrem optimistisch. Im Laufe des letzten Jahres hat Bitcoin trotz der Marktvolatilität, einschließlich der Instabilität der traditionellen Finanzmärkte, seinen Wert beibehalten, seine Robustheit gegenüber Angriffen und Hackern unter Beweis gestellt und sich zunehmenden Respekt bei den traditionellen Finanzakteuren verschafft. 
+Trotzdem ist unser Ausblick auf Bitcoin extrem optimistisch. Im Laufe des letzten Jahres hat Bitcoin trotz der Marktvolatilität, einschließlich der Instabilität der traditionellen Finanzmärkte, seinen Wert beibehalten, seine Robustheit gegenüber Angriffen und Hackern unter Beweis gestellt und sich zunehmenden Respekt bei den traditionellen Finanzakteuren verschafft.
 
 Bitcoin wird zunehmend als Wertaufbewahrungsmittel angesehen und gilt als Standard, an dem andere Kryptowährungen gemessen werden. Auch wenn die Portfolios der Menschen sehr unterschiedlich sind, bleibt Bitcoin die Standardwährung, die fast jeder Krypto-Investor als Hauptbestandteil seines Portfolios hält. Die riesige Gemeinschaft und das Ökosystem rund um Bitcoin sind ein gutes Zeichen für seine langfristige Überlebensfähigkeit als Wertaufbewahrungsmittel.
 
-Aus diesem Grund stellt die Entwicklung dezentraler Finanzdienstleistungen rund um Bitcoin eine enorme Chance dar, die bisher nicht genutzt wurde. Das liegt zum einen an der Schwierigkeit, Smart Contracts zu erstellen, die mit dem Bitcoin-Netzwerk funktionieren, und zum anderen an der Aufsplitterung der Entwicklergemeinschaft in viele Nebenprojekte. Wir glauben, dass diese Tendenz der Entwicklergemeinschaft, sich auf die neuesten Entwicklungen zu stürzen, die Aufmerksamkeit vom eigentlichen Thema ablenkt: Bitcoin ist hier, um zu bleiben. 
+Aus diesem Grund stellt die Entwicklung dezentraler Finanzdienstleistungen rund um Bitcoin eine enorme Chance dar, die bisher nicht genutzt wurde. Das liegt zum einen an der Schwierigkeit, Smart Contracts zu erstellen, die mit dem Bitcoin-Netzwerk funktionieren, und zum anderen an der Aufsplitterung der Entwicklergemeinschaft in viele Nebenprojekte. Wir glauben, dass diese Tendenz der Entwicklergemeinschaft, sich auf die neuesten Entwicklungen zu stürzen, die Aufmerksamkeit vom eigentlichen Thema ablenkt: Bitcoin ist hier, um zu bleiben.
 Daher glauben wir, dass der Aufbau einer DeFi Blockchain auf Bitcoin das Beste aus beiden Welten bringen würde: die Stabilität und Unveränderlichkeit von Bitcoin und die Skalierbarkeit und Funktionalität der DeFi-Chain.
 
 ### Auf Bitcoin bauen
@@ -160,7 +160,7 @@ DeFiChain nutzt einen vollständig dezentralen Proof of Stake-Mechanismus, der F
 - Einen massiv skalierbaren und energiesparenden Konsens
 - Schnelle Transaktionen und hohe Sicherheit
 - Die Fähigkeit, eine Vielzahl von DeFi-Apps auf Basis einer Chain schnell und mit sehr geringer Angriffsfläche zu erstellen
-- Unterstützung mehrerer Token auf einer Chain durch dezentrale Wrapped-Token-Technologie. 
+- Unterstützung mehrerer Token auf einer Chain durch dezentrale Wrapped-Token-Technologie.
 - Dezentralisierte Verwaltung, Governance genannt
 - Unabhängigkeit von anderen Finanzsystemen und Finanzinstrumenten
 - Vollständig liquide Investitionen ohne Mindestgröße und ohne Mindestlaufzeiten
@@ -186,7 +186,7 @@ Im Gegensatz zu Ethereum oder anderen Turing-completen Blockchains ist DeFiChain
 - Dezentrales Wrapping von Token
 - Dezentrale Preisorakel
 - Dezentrale Tauschgeschäfte
-- Übertragbare Schulden und Forderungen 
+- Übertragbare Schulden und Forderungen
 - Dezentrale nicht besicherte Darlehen
 - Tokenisierung von Assets
 - Ausschüttung von Dividenden
@@ -214,7 +214,7 @@ Die Erstellung eines gewrappten Token auf der DeFiChain ist eine Aktivität, die
 
 Wrapping ist eine Schlüsselfunktion von DeFi, da die Interoperabilität verschiedener Formen von Kryptowährungen und Assets sichergestellt werden muss. Bis heute gibt es keine Interoperabilitätsstandards zwischen verschiedenen Währungen und die einzige Möglichkeit der Interoperabilität zwischen Währungen ist die Verwendung von Wrapping oder Sicherheiten, die von einer dritten Partei bereitgestellt werden müssen. Der ganze Sinn der Dezentralisierung besteht darin, dass die Menschen keiner Autorität vertrauen müssen. Dennoch ist dies heute die wichtigste Option für Investoren, zwischen Bitcoin und Ethereum zu interagieren, ohne von einem Token zum anderen zu wechseln. Das Polkadot-Protokoll bietet eine Plattform für die Entwicklung interoperabler Apps, aber nicht speziell für DeFi. Da es sich um ein neues Protokoll handelt, bleibt abzuwarten, wie es genutzt werden wird.
 
-Ohne Wrapping müssten die Inhaber ihr Krypto-Asset in die DeFi-Währung umwandeln, um die angebotenen Dienste nutzen zu können. Für die meisten Anleger ist das natürlich inakzeptabel. Der Anleger hat sein Geld in Bitcoin oder Ethereum oder was auch immer investiert, weil das die Währung ist, die er halten möchte. Der Hauptzweck von DeFiChain besteht darin, Finanztransaktionen in jeder Art von Krypto-Asset zu ermöglichen, so dass die Menschen die Assets und Token, die sie halten, als Währung für Investitionen in andere Arten von Finanzinstrumenten verwenden können. 
+Ohne Wrapping müssten die Inhaber ihr Krypto-Asset in die DeFi-Währung umwandeln, um die angebotenen Dienste nutzen zu können. Für die meisten Anleger ist das natürlich inakzeptabel. Der Anleger hat sein Geld in Bitcoin oder Ethereum oder was auch immer investiert, weil das die Währung ist, die er halten möchte. Der Hauptzweck von DeFiChain besteht darin, Finanztransaktionen in jeder Art von Krypto-Asset zu ermöglichen, so dass die Menschen die Assets und Token, die sie halten, als Währung für Investitionen in andere Arten von Finanzinstrumenten verwenden können.
 Die dezentrale Wrapping-Funktion ist von entscheidender Bedeutung, da sie es den Menschen ermöglicht, jeden beliebigen Vermögenswert zu halten und Investitionen in eine andere Währung zu tätigen. So könnte zum Beispiel jemand, der Bitcoin besitzt, ein Darlehen an jemanden vergeben, der sich ETH leihen möchte, oder jemand, der sich gegen die Kryptowährung, die er besitzt, absichern möchte, könnte dies mithilfe einer Wrapping-Funktion tun, um einen Teil seines Vermögens zum Kauf von Optionen auf andere Arten von Vermögenswerten zu verwenden.
 
 ### Dezentrale Preisorakel
@@ -242,7 +242,7 @@ DeFiChain wird eine Reihe von Angeboten machen, um mit übertragbaren Schulden u
 
 Für kleine und mittlere Unternehmen kann dies ein besonders mächtiges Instrument sein. Zum Beispiel liefert Janes Widgets-Fabrik die Teile an einen großen Autohersteller, aber der Autohersteller zahlt für diese Teile auf der Rechnungsbasis Zahlung nach 60 Tagen. In der Zwischenzeit muss Jane die Materialien für die Herstellung der Ware und natürlich die regelmäßigen Löhne für ihre Beschäftigten auf monatlicher oder wöchentlicher Basis bezahlen. Der Autohersteller wird die Rechnung bezahlen, aber nicht so rechtzeitig, dass Jane alle ihre Ausgaben begleichen kann. Ohne Defi muss Jane zur Bank gehen und die Zinsen zahlen, die sie verlangt, weil sie keine Alternativen hat. Die Funktion der übertragbaren Forderungen würde es jedem ermöglichen, Jane ein Darlehen auf der Grundlage der Forderungen anzubieten. Da viele Leute sehen können, dass der Autohersteller ein Kunde mit geringem Risiko ist und dass er seine Rechnungen bezahlen wird, kann jeder, der will, Jane ein Angebot zu einem besseren Zinssatz als die Bank machen. So entsteht ein wettbewerbsfähiger Markt für Schulden und Forderungen, der auf dem tatsächlichen Risiko und der Risikobewertung des Marktes basiert. Jane kann nun ein Darlehen zu günstigen Konditionen erhalten, und die Kreditgeber erzielen ebenfalls hervorragende Renditen für ihre Darlehen, obwohl sie das Geld nur für 30-60 Tage ausleihen.
 
-Blockchain schafft Transparenz beim Austausch von Schulden und Darlehen, die auf Forderungen oder anderen finanziellen Zusicherungen basieren. DeFiChain wird Organisationen die Möglichkeit geben, Smart Contracts zu erstellen, die eine unkomplizierte Investition in solche Vermögenswerte ermöglichen, so dass Peer-to-Peer-Darlehen vergeben werden können, ohne dass ein Finanzinstitut für diese Art von finanziellen Vermögenswerten garantieren muss. 
+Blockchain schafft Transparenz beim Austausch von Schulden und Darlehen, die auf Forderungen oder anderen finanziellen Zusicherungen basieren. DeFiChain wird Organisationen die Möglichkeit geben, Smart Contracts zu erstellen, die eine unkomplizierte Investition in solche Vermögenswerte ermöglichen, so dass Peer-to-Peer-Darlehen vergeben werden können, ohne dass ein Finanzinstitut für diese Art von finanziellen Vermögenswerten garantieren muss.
 
 ### Dezentrale nicht besicherte Darlehen
 
@@ -264,7 +264,7 @@ Kürzlich (Oktober 2019) wurde mit dem Lichtensteiner Blockchain-Gesetz die rech
 [^8]: https://www2.deloitte.com/lu/en/pages/technology/articles/tokenization-assets-disrupting-financial-industry.html
 [^9]: https://www.forbes.com/sites/laurencoleman/2019/04/25/heres-why-interest-in-tokenizing-assets-is-starting-to-surge/#2ddeec4640a5
 
-Weitere Informationen zu diesem Gesetz findest du auf der Website Liechtensteins unter  https://liechtensteinusa.org/article/liechtensteins-parliament-approves-blockchain-act-unanimously
+Weitere Informationen zu diesem Gesetz findest du auf der Website Liechtensteins unter https://liechtensteinusa.org/article/liechtensteins-parliament-approves-blockchain-act-unanimously
 
 Beispiele für Vermögenswerte, die mit der Blockchain in Token umgewandelt werden können:
 
@@ -462,7 +462,7 @@ Ein neuer Block wird gemint, wenn er die folgende Bedingung erfüllt:
 
 `SHA256({staker’s UTXO}, {current timestamp, in seconds}, {stake modifier}) < {target}`
 
-Die Staker überprüfen diese Bedingung jede Sekunde. Wenn die Blockvoraussetzung geringer ist als das aktuelle Ziel, dann setzen die Staker einen neuen Block zusammen und signieren ihn. 
+Die Staker überprüfen diese Bedingung jede Sekunde. Wenn die Blockvoraussetzung geringer ist als das aktuelle Ziel, dann setzen die Staker einen neuen Block zusammen und signieren ihn.
 Die UTXO der Staker benötigen 20 Bestätigungen, bevor sie als Stake akzeptiert werden können.
 
 #### Stake Modifier
@@ -473,7 +473,7 @@ Der Staker-Modifier von DeFiChain ist eingestellt auf `SHA256({previous stake mo
 
 #### Validierung von zukünftigen und vergangenen Kopfzeilen
 
-Im Gegensatz zu PoW wird für die Validierung der Kopfzeilen von Blöcken eine Staking-Tabelle benötigt. Die Kopfzeilen werden in Batches überprüft, bevor die vollständigen Blöcke heruntergeladen werden, daher wird die Staking-Tabelle verwendet, um zukünftige Stakings zu überprüfen. 
+Im Gegensatz zu PoW wird für die Validierung der Kopfzeilen von Blöcken eine Staking-Tabelle benötigt. Die Kopfzeilen werden in Batches überprüft, bevor die vollständigen Blöcke heruntergeladen werden, daher wird die Staking-Tabelle verwendet, um zukünftige Stakings zu überprüfen.
 Um zukünftige Kopfzeilen überprüfen zu können, muss die Blockchain eine zusätzliche Regel anwenden, damit jede Änderung in der Stakes-Datenbank sofort geschrieben wird, aber erst nach 300 Blöcken wirksam wird. So kann jeder Node jeden Block-Header mit seinem aktuellen Einsatz verifizieren, wenn der Block-Header nicht weiter in der Zukunft (oder Vergangenheit) liegt als 300 Blöcke.
 
 #### Schutz vor Stakingkonflikten
@@ -539,7 +539,7 @@ DCT-Token werden nicht von DeFiChain selbst unterstützt. Sie können über eine
 - Gesamter Anfangsbestand: Die Erstausgabe an Token, die im Zuge des Ereignisses generiert wird
 - Initiale Verteilungsliste: Adressenliste für die Verteilung von Token
 - Minting-Unterstützung: ja/nein
-- Obergrenze des Gesamtangebots (optional): Unveränderliche Obergrenze für das Gesamtangebot. Wenn das Minting unterstützt wird, legt diese Option fest, wie viele Token der Token-Besitzer insgesamt minten kann (einige können zu diesem Zeitpunkt reserviert sein). Wenn dieser Parameter leer gelassen wird, ist der Token unbegrenzt verfügbar. Dieser Parameter kann nach der ersten Definition des Tokens nicht mehr geändert werden. 
+- Obergrenze des Gesamtangebots (optional): Unveränderliche Obergrenze für das Gesamtangebot. Wenn das Minting unterstützt wird, legt diese Option fest, wie viele Token der Token-Besitzer insgesamt minten kann (einige können zu diesem Zeitpunkt reserviert sein). Wenn dieser Parameter leer gelassen wird, ist der Token unbegrenzt verfügbar. Dieser Parameter kann nach der ersten Definition des Tokens nicht mehr geändert werden.
 - Handelbar? : ja/nein. Dies ist ein Einwegschalter, der es dem Token-Besitzer ermöglicht, Token während der anfänglichen Verteilungsphase zu transferieren und auch zu entscheiden, wann ein Token handelbar oder verschiebbar ist. Um den dezentralen Charakter von DCT zu gewährleisten, kann der Eigentümer die Handelbarkeit eines Tokens nicht mehr rückgängig machen, sobald "Handelbar?" auf ja gesetzt ist. In der Regel sollte dies bei der Erstellung eines Tokens auf "nein" gesetzt werden, bis die ursprüngliche Verteilung als korrekt bestätigt wurde.
 
 Wenn du diese Schnittstelle verwendest, brauchst du keinen Smart-Contract-Entwickler und auch keine Sicherheitsaudits.
@@ -563,12 +563,12 @@ Das Ziel von DAT ist es, dass es den nativen Vermögenswert auf den anderen Bloc
 Hier gibt es zwei Ansätze:
 
 1. Stablecoin-Ansatz
-    - Für jeden ausgegebenen 1 DBTC muss 1 BTC in einer Adresse oder einem Smart Contract hinterlegt werden. 
-    - Dies würde zwar helfen, eine Garantie für DBTC aufzubauen, bringt aber auch einige andere Probleme mit sich - Gegenparteirisiken und Auswirkungen auf den dezentralen Charakter von DeFi. 
+
+   - Für jeden ausgegebenen 1 DBTC muss 1 BTC in einer Adresse oder einem Smart Contract hinterlegt werden.
+   - Dies würde zwar helfen, eine Garantie für DBTC aufzubauen, bringt aber auch einige andere Probleme mit sich - Gegenparteirisiken und Auswirkungen auf den dezentralen Charakter von DeFi.
 
 2. Ökonomische Ankopplung
-    - Durch eine starke Garantie, dass der Preis des DAT, der einen Vermögenswert repräsentiert, sich eng an den entsprechenden Vermögenswert anlehnt, d.h. wenn man DBTC hält, kann man darauf vertrauen, dass sich der Wert von DBTC an den von BTC anpasst.
-
+   - Durch eine starke Garantie, dass der Preis des DAT, der einen Vermögenswert repräsentiert, sich eng an den entsprechenden Vermögenswert anlehnt, d.h. wenn man DBTC hält, kann man darauf vertrauen, dass sich der Wert von DBTC an den von BTC anpasst.
 
 Damit wir eine ökonomische Ankopplung erreichen können, werden die folgenden Bausteine direkt auf DeFiChain aufgesetzt:
 
@@ -581,7 +581,7 @@ Damit wir eine ökonomische Ankopplung erreichen können, werden die folgenden B
 
 ### Darlehensvertrag
 
-Der Darlehensvertrag dient dazu, dass der Eigentümer des Vertrags ein besichertes Darlehen gegen die im Vertrag festgelegten Sicherheiten aufnehmen kann. Jeder Darlehensvertrag ist für jeden Eigentümer (Adresse) auf DeFiChain einzigartig. 
+Der Darlehensvertrag dient dazu, dass der Eigentümer des Vertrags ein besichertes Darlehen gegen die im Vertrag festgelegten Sicherheiten aufnehmen kann. Jeder Darlehensvertrag ist für jeden Eigentümer (Adresse) auf DeFiChain einzigartig.
 
 Jeder Nutzer kann auf DeFiChain kostenlos einen Darlehensvertrag eröffnen. Der Nutzer, der einen Darlehensvertrag eröffnet, ist Eigentümer des jeweiligen Vertrags. Dieses Eigentum ist jedoch übertragbar.
 
@@ -609,7 +609,7 @@ Dieses Konzept ist zwar nicht neu für das DeFi-System, neu ist jedoch die Mögl
 3. Bei einer Mindestbesicherung von 150% kann sie maximal DBTC im Wert von 10.000 Dollar aufnehmen, die an den Spotpreis von BTC gekoppelt sind.
 4. Da das DBTC-Darlehen über den Darlehensvertrag verzinst wird und der DBTC- und der DFI-Preis schwanken, beschließt Alice, nur DBTC im Wert von $5.000 aufzunehmen, also 0,5 DBTC, was ihrem Darlehensvertrag eine Besicherungsquote von: 15000/5000 = 300% verleiht, also deutlich über 150%.
 5. Die Übersicherung lässt einen gewissen Spielraum für Preisschwankungen von DBTC. Wenn der BTC-Preis auf 15.000 USD steigt, wäre Alices Darlehen von 0,5 DBTC jetzt 7.500 USD wert. Ihr Darlehensvertrag hat jetzt einen Besicherungsgrad von: 15000/7500 = 200%, also immer noch über 150%, so dass eine Liquidation auch bei einer solchen Preisveränderung nicht ausgelöst würde.
-6. Der Zinssatz für jedes DAT-Darlehen ist unterschiedlich. Angenommen, der Zinssatz für ein DAT-Darlehen beträgt 5 % pro Jahr und Alice nimmt ein Darlehen für ein Jahr auf. Um ihren Darlehensvertrag zu erfüllen und ihre anfänglichen 150k DFI vollständig zurückzuzahlen, muss Alice bis zum Ende des Jahres 0,5 DBTC * 1,05 = 0,525 DBTC zurückzahlen.
+6. Der Zinssatz für jedes DAT-Darlehen ist unterschiedlich. Angenommen, der Zinssatz für ein DAT-Darlehen beträgt 5 % pro Jahr und Alice nimmt ein Darlehen für ein Jahr auf. Um ihren Darlehensvertrag zu erfüllen und ihre anfänglichen 150k DFI vollständig zurückzuzahlen, muss Alice bis zum Ende des Jahres 0,5 DBTC \* 1,05 = 0,525 DBTC zurückzahlen.
 
 ![Darlehensvertrag](/img/white-paper/alice-pdc.png)
 
@@ -647,14 +647,16 @@ Alice hat 1 DBTC und möchte 1 BTC, damit sie an einer zentralen Börse handeln 
 Bob hat 1 BTC, den er einen Monat lang nicht braucht, und hofft, in dieser Zeit einige Zinseinnahmen zu erzielen.
 
 1. Alice listet die folgenden XCX-Order:
+
 - Betrag: 1 DBTC/BTC
 - Prämie: 8.000 DFI
 - Garantie: 0,1 DBTC
 - Verfall: 31. Dezember 2019 - ca. 1 Monat.
 - Adresse: Alice gibt ihre BTC-Einzahlungsadresse an
+
 2. Bob nimmt das Angebot an, indem er eine Transaktion an DeFiChain sendet.
 3. Bob erhält eine Bestätigung auf DeFiChain, dass seine Order angenommen wurde. Falls es mehrere Transaktionen zur Orderannahme gibt.
-4. Bob schickt 1 BTC an die im XCX-Auftrag angegebene BTC-Einzahlungsadresse von Alice und sendet eine Transaktion auf DeFiChain mit dem BTC txid als Quittung. In der gleichen Transaktion gibt Bob auch eine BTC-Empfangsadresse an, an die Alice den 1 BTC später zurückzahlen kann. 
+4. Bob schickt 1 BTC an die im XCX-Auftrag angegebene BTC-Einzahlungsadresse von Alice und sendet eine Transaktion auf DeFiChain mit dem BTC txid als Quittung. In der gleichen Transaktion gibt Bob auch eine BTC-Empfangsadresse an, an die Alice den 1 BTC später zurückzahlen kann.
 5. Mehrere DeFiChain-Staker mit BTC-Bridges bestätigen, dass Bob den Betrag tatsächlich wie vereinbart gesendet hat und dass die Txid gültig ist.
 6. Die XCX-Prämie in Höhe von 8000 DFI wird sofort an Bob freigegeben. Bob kann mit den DFI sofort machen, was er will, ohne dass es an Bedingungen geknüpft ist. Bob kann sie für diesen Handel behalten.
 
@@ -685,13 +687,13 @@ Eine Garantie ist also kein Muss, sondern ein möglicher Anreiz für den Darlehe
 
 ### Preisorakel
 
-in Preiskontrakt ist ein Smart-Contract auf der DeFiChain, der es mehreren vertrauenswürdigen und benannten Parteien ermöglicht, regelmäßige Preisfeeds von DATs und DFI zu übermitteln. 
+in Preiskontrakt ist ein Smart-Contract auf der DeFiChain, der es mehreren vertrauenswürdigen und benannten Parteien ermöglicht, regelmäßige Preisfeeds von DATs und DFI zu übermitteln.
 
 Die DeFi-DAO wählt mehrere Preiskontrakt-Orakel aus (wird im nächsten Kapitel erklärt).
 
 ### Anwendungsbeispiele
 
-Im Folgenden findest du Beispiele dafür, wie die technischen Implementierungen von DeFiChain genutzt werden können. Dies ist nur eine Liste von Beispielen. Viele andere Anwendungen können ebenfalls implementiert werden. 
+Im Folgenden findest du Beispiele dafür, wie die technischen Implementierungen von DeFiChain genutzt werden können. Dies ist nur eine Liste von Beispielen. Viele andere Anwendungen können ebenfalls implementiert werden.
 
 #### Hebeln einer Long-Position
 
@@ -760,11 +762,11 @@ Der Zeitplan für die Umverteilung der verbrannten Token wird automatisch alle 2
 
 ![Umverteilung verbrannter Token](/img/white-paper/burn.png)
 
-Umverteilung der verbrannten Token für die nächsten 259.200 Blöcke = 
+Umverteilung der verbrannten Token für die nächsten 259.200 Blöcke =
 
-1. (Insgesamt verbrannte Token aus den letzten 259.200 Blöcken [Quartal -1]) / 4 + 
-2. (Insgesamt verbrannte Token von Block -518.400. bis -259.200. Block [Quartal -2]) / 4 + 
-3. (Insgesamt verbrannte Token von Block -777.600. bis -518.400. Block [Quartal -3]) / 4 + 
+1. (Insgesamt verbrannte Token aus den letzten 259.200 Blöcken [Quartal -1]) / 4 +
+2. (Insgesamt verbrannte Token von Block -518.400. bis -259.200. Block [Quartal -2]) / 4 +
+3. (Insgesamt verbrannte Token von Block -777.600. bis -518.400. Block [Quartal -3]) / 4 +
 4. (Insgesamt verbrannte Token von Block -1.036.800. bis -777.600. Block [Quartal -4]) / 4
 
 ### Masternodes

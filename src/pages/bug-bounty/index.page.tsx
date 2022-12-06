@@ -6,9 +6,9 @@ import { ExternalLink } from "@components/commons/link/ExternalLink";
 import Link from "next/link";
 import { Section } from "@components/commons/Section";
 import { Button } from "@components/commons/Buttons";
-import { Hunter } from "./_components/Hunter";
 import { Head } from "@components/commons/Head";
 import React from "react";
+import { Hunter } from "./_components/Hunter";
 
 export default function BugBountyPage(): JSX.Element {
   const { t } = useTranslation("page-bugbounty");
@@ -95,9 +95,9 @@ export default function BugBountyPage(): JSX.Element {
           <div className="mt-5">
             {t("SubmissionSection.list.title")}
             <ul className="list-disc pl-4">
-              {submissionList.map((item, index) => {
-                return <li key={`list-item-${index}`}>{item}</li>;
-              })}
+              {submissionList.map((item, index) => (
+                <li key={`list-item-${index}`}>{item}</li>
+              ))}
             </ul>
           </div>
         </Section>
@@ -121,11 +121,9 @@ function LeaderboardSection(): JSX.Element {
         {t("LeaderboardSection.desc")}
       </div>
       <div>
-        {hunters.map((hunter, index) => {
-          return (
-            <Hunter hunter={hunter} index={index} key={`hunter-${index}`} />
-          );
-        })}
+        {hunters.map((hunter, index) => (
+          <Hunter hunter={hunter} index={index} key={`hunter-${index}`} />
+        ))}
       </div>
     </Section>
   );

@@ -17,7 +17,6 @@ Some further information collected may be other personally identifiable informat
 
 This information is used by DEFICHAIN FOUNDATION LTD. for the operation of the services, to maintain quality of the Services, and to provide general statistics regarding use of the defichain.com website.
 
-
 ## When is information collected?
 
 We collect information from you when you subscribe to a newsletter, respond to a survey, fill out a form or enter information on our site.
@@ -97,7 +96,6 @@ It’s also important to note that we do not allow third party behavioral tracki
 We want to ensure that your Personal Information is accurate and up to date. If any of the information that you have provided to DEFICHAIN FOUNDATION LTD. changes, for example if you change your email address, name or contact number, please let us know the correct details by sending an email to [partners@defichain.com](mailto:partners@defichain.com). You may ask us, or we may ask you to correct information you or we think is inaccurate, and you may also ask us to remove information which is inaccurate.
 
 You have the right to ask us not to collect, use, process, or disclose your Personal Information in any of the manner described herein. We will usually inform you (before collecting your Personal Information) if we intend to use your Personal Information for such purposes or if we intend to disclose your Personal Information to any third party for such purposes. You can give us notice of your intention to halt the collection, use, processing, or disclosure of your Personal Information at any time by contacting us at [partners@defichain.com](mailto:partners@defichain.com).
-
 
 ## Changes To This Statement
 

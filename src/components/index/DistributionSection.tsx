@@ -1,8 +1,8 @@
 import { Container } from "@components/commons/Container";
 import Image from "next/image";
 
-import Nodes from "../../../public/assets/svg/hero/nodes-map-v2.svg";
 import { useTranslation } from "next-i18next";
+import Nodes from "../../../public/assets/svg/hero/nodes-map-v2.svg";
 
 export function DistributionSection(): JSX.Element {
   const { t } = useTranslation("page-index");

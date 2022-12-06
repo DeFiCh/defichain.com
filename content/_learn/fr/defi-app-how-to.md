@@ -9,10 +9,10 @@ Téléchargez la dernière application depuis la page [downloads](/downloads).
 
 ## Exigences minimales
 
-| Exigences | Minimum requis |
-|-|-|
-| Mémoire vive | 4Go |
-| OS | macOS 10.14, Windows 10, Ubuntu LTS 18 et supérieur |
+| Exigences    | Minimum requis                                      |
+| ------------ | --------------------------------------------------- |
+| Mémoire vive | 4Go                                                 |
+| OS           | macOS 10.14, Windows 10, Ubuntu LTS 18 et supérieur |
 
 ## Installation sur macOS
 
@@ -28,11 +28,11 @@ Ouvrez l'application. La première fois que vous ouvrez l'application de bureau 
 
 ![](/img/guides/installing-defi-app/macos-security-prompt.png)
 
-\**Vous verrez cette invite de sécurité dans les premières versions non signées de l'application. Dans les versions futures signées par Apple, vous ne verrez pas d'invite de sécurité. Pour l'instant, veuillez suivre l'étape 3 pour une solution de contournement.*
+\*_Vous verrez cette invite de sécurité dans les premières versions non signées de l'application. Dans les versions futures signées par Apple, vous ne verrez pas d'invite de sécurité. Pour l'instant, veuillez suivre l'étape 3 pour une solution de contournement._
 
 ### Étape 3 : Autoriser l'exécution de l'application
 
-\**N'ouvrez l'application de cette façon que si vous êtes sûr d'avoir téléchargé l'application de bureau DeFi Wallet depuis une source officielle. L'application de bureau DeFi Wallet est actuellement disponible uniquement sur le [site officiel](/) et [DeFiChain’s GitHub](https://github.com/DeFiCh/app/releases).*
+\*_N'ouvrez l'application de cette façon que si vous êtes sûr d'avoir téléchargé l'application de bureau DeFi Wallet depuis une source officielle. L'application de bureau DeFi Wallet est actuellement disponible uniquement sur le [site officiel](/) et [DeFiChain’s GitHub](https://github.com/DeFiCh/app/releases)._
 
 Aller à **Préférences système** et cliquer sur **Sécurité et confidentialité**.
 
@@ -58,7 +58,7 @@ Double-cliquez sur le fichier téléchargé.
 
 Si c'est la première fois que vous installez l'application de bureau DeFi Wallet, le programme d'installation peut vous présenter une invite de sécurité comme indiqué. Cliquez sur **Plus d'infos**.
 
-\**Microsoft Windows SmartScreen peut signaler les fichiers nouvellement téléchargés qui n'ont pas accumulé un historique suffisamment long.*
+\*_Microsoft Windows SmartScreen peut signaler les fichiers nouvellement téléchargés qui n'ont pas accumulé un historique suffisamment long._
 
 ![](/img/guides/installing-defi-app/CUmfPMS.png)
 
@@ -84,7 +84,7 @@ Vous pouvez choisir d'installer l'application de bureau DeFi Wallet en tant qu'o
 
 ### Utilisation du Centre logiciel Ubuntu
 
-La méthode la plus simple consiste à utiliser le Centre logiciel dans Ubuntu. Il suffit de naviguer jusqu'au dossier (généralement le dossier *Téléchargements*) contenant le fichier **.deb** téléchargé et de l'ouvrir.
+La méthode la plus simple consiste à utiliser le Centre logiciel dans Ubuntu. Il suffit de naviguer jusqu'au dossier (généralement le dossier _Téléchargements_) contenant le fichier **.deb** téléchargé et de l'ouvrir.
 
 ### Installer les fichiers .deb en ligne de commande à l'aide de dpkg
 
@@ -99,7 +99,6 @@ ou
 ```
 sudo dpkg -i PATH_TO_DEB_FILE
 ```
-
 
 Vous pouvez maintenant ouvrir l'application DeFi Wallet.
 

@@ -9,10 +9,10 @@ Lade die neueste App-Version von der Seite [Downloads](/downloads) herunter.
 
 ## Mindestanforderungen
 
-| Anforderung | Mindestens erforderlich |
-|-|-|
-| Arbeitsspeicher | 4 GB |
-| Betriebssystem | macOS 10.14, Windows 10, Ubuntu LTS 18 oder höher |
+| Anforderung     | Mindestens erforderlich                           |
+| --------------- | ------------------------------------------------- |
+| Arbeitsspeicher | 4 GB                                              |
+| Betriebssystem  | macOS 10.14, Windows 10, Ubuntu LTS 18 oder höher |
 
 ## Installation unter macOS
 
@@ -28,11 +28,11 @@ Lade die neueste App-Version von der Seite [Downloads](/downloads) herunter.
 
 ![](/img/guides/installing-defi-app/macos-security-prompt.png)
 
-\**Diese Sicherheitsabfrage erscheint bei frühen, nicht signierten Versionen der App. In zukünftigen Versionen, die von Apple signiert sind, wird keine Sicherheitsabfrage mehr zu sehen sein. Falls also noch nötig, bitte Schritt 3 ausführen.*
+\*_Diese Sicherheitsabfrage erscheint bei frühen, nicht signierten Versionen der App. In zukünftigen Versionen, die von Apple signiert sind, wird keine Sicherheitsabfrage mehr zu sehen sein. Falls also noch nötig, bitte Schritt 3 ausführen._
 
 ### Schritt 3: Ausführung der App zulassen
 
-\**Öffne die App nur auf diese Weise, wenn du sicher bist, dass du die DeFi Wallet Desktop-App von einer offiziellen Quelle heruntergeladen hast. Die DeFi Wallet Desktop-App ist derzeit nur auf der [offiziellen Website](/) und [DeFiChain’s GitHub](https://github.com/DeFiCh/app/releases) verfügbar.*
+\*_Öffne die App nur auf diese Weise, wenn du sicher bist, dass du die DeFi Wallet Desktop-App von einer offiziellen Quelle heruntergeladen hast. Die DeFi Wallet Desktop-App ist derzeit nur auf der [offiziellen Website](/) und [DeFiChain’s GitHub](https://github.com/DeFiCh/app/releases) verfügbar._
 
 Gehe zu **Systemeinstellungen** und klicke auf **Sicherheit & Datenschutz**..
 
@@ -58,7 +58,7 @@ Ein Doppelklick auf die heruntergeladene Datei
 
 Wenn du die DeFi Wallet Desktop-App zum ersten Mal installierst, kann es sein, dass das Installationsprogramm eine Sicherheitsabfrage anzeigt. Klicke auf **Mehr Info**.
 
-\**Microsoft Windows SmartScreen kann neu hochgeladene Dateien melden, die noch nicht lange genug in der Vergangenheit liegen.*
+\*_Microsoft Windows SmartScreen kann neu hochgeladene Dateien melden, die noch nicht lange genug in der Vergangenheit liegen._
 
 ![](/img/guides/installing-defi-app/CUmfPMS.png)
 
@@ -84,7 +84,7 @@ Du kannst die DeFi Wallet Desktop-App entweder als GUI-Tool oder als Befehlszeil
 
 ### Software Center verwenden
 
-Die einfachste Methode ist, das Software Center in Ubuntu zu verwenden. Navigiere einfach zu dem Ordner, der die heruntergeladene **.deb** Datei enthält (normalerweise der Ordner *Downloads*), und öffne sie.
+Die einfachste Methode ist, das Software Center in Ubuntu zu verwenden. Navigiere einfach zu dem Ordner, der die heruntergeladene **.deb** Datei enthält (normalerweise der Ordner _Downloads_), und öffne sie.
 
 ### Installiere .deb-Dateien in der Befehlszeile mit dpkg
 
@@ -99,7 +99,6 @@ or
 ```
 sudo dpkg -i PATH_TO_DEB_FILE
 ```
-
 
 Du kannst jetzt die DeFi Wallet öffnen.
 

@@ -1,9 +1,9 @@
-import { DownloadCard } from "./DownloadCard";
 import { useTranslation } from "next-i18next";
 import { ExternalLink } from "@components/commons/link/ExternalLink";
 import { BsFillTerminalFill } from "react-icons/bs";
-import { DynamicDownloadCard } from "./DynamicDownloadCard";
 import { FaReact } from "react-icons/fa";
+import { DynamicDownloadCard } from "./DynamicDownloadCard";
+import { DownloadCard } from "./DownloadCard";
 
 export function FullNodeSection(): JSX.Element {
   const { t } = useTranslation(["page-downloads"]);

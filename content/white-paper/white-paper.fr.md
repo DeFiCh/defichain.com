@@ -63,7 +63,7 @@ Aujourd'hui, les services financiers fournissent un service important, mais à u
 - Des coûts de transaction élevés. En raison des exigences réglementaires, des systèmes existants présentant des problèmes d'interopérabilité complexes et du contrôle exercé par les grandes institutions, les frais de transaction sont élevés pour l'utilisateur moyen des services bancaires et financiers. Les services qui nécessitent un courtier sont encore plus chers, car des agents et d'autres intermédiaires sont impliqués.
 - Lenteur des transactions, en particulier pour les transactions internationales. Bien qu'en théorie, les ordinateurs ne devraient prendre que quelques minutes pour effectuer une transaction, le transfert d'argent d'une institution à une autre peut prendre des heures dans un même pays, et des jours entre les pays.
 - Manque de transparence et avantages injustes pour les grands acteurs. Les instruments financiers sont complexes et la plupart des gens n'ont pas accès aux informations qui leur permettraient de prendre des décisions optimales. Le manque de transparence est l'un des principaux facteurs qui ont conduit à la crise financière de 2008 et, à court terme, il désavantage toujours les petits investisseurs (le citoyen moyen) par rapport aux investisseurs institutionnels.
-- Inaccessibilité et/ou coût plus élevé pour les personnes à faibles revenus. Les services financiers ne sont tout simplement pas disponibles dans de nombreuses régions et, lorsqu'ils le sont, les personnes à faibles revenus doivent payer des frais encore plus élevés (en pourcentage) que la moyenne. 
+- Inaccessibilité et/ou coût plus élevé pour les personnes à faibles revenus. Les services financiers ne sont tout simplement pas disponibles dans de nombreuses régions et, lorsqu'ils le sont, les personnes à faibles revenus doivent payer des frais encore plus élevés (en pourcentage) que la moyenne.
 - Malgré la législation visant à réduire le blanchiment d'argent et les crimes connexes, il n'existe pratiquement aucune preuve que le système actuel ou la LBC réduisent effectivement le blanchiment d'argent.
 
 [^1]: https://www.investopedia.com/ask/answers/030515/what-percentage-global-economy-comprised-financial-services-sector.asp
@@ -85,8 +85,8 @@ Aujourd'hui, presque universellement, les investisseurs en crypto-monnaies n'ont
 La finance décentralisée (DeFi) est peuplée de blockchains à usage général, dont la plupart fournissent des ensembles de commandes Turing-complètes pour le développement de contrats intelligents (smart contract) sur la chaîne. Bien qu'elle soit appropriée pour de nombreux langages de programmation, cette recherche dogmatique de langages de contrats intelligents Turing-complets a entraîné divers problèmes en matière d'évolutivité, de sécurité et de robustesse des blockchains.
 
 - Le nombre considérable de dApps sur des réseaux tels qu'Ethereum, EOS et TRON a un impact potentiel (ou avéré) sur les autres dApps du réseau. L'exemple le plus évident est celui de CryptoKitties, qui a pratiquement paralysé le réseau Ethereum. Bien que certains des réseaux à débit plus rapide affirment que cela ne peut pas se produire, il faudra un certain temps avant qu'un autre réseau atteigne la masse critique d'applications sur Ethereum pour que nous puissions prouver si c'est le cas ou non.
-- Pour les dApps sérieuses de type financier, il est important de savoir que le réseau est maintenu et géré de manière responsable et sécurisée. Le fait qu'une blockchain soit submergée par des jeux, des paris et d'autres types d'applications moins "critiques" finira par influencer le développement et la direction des blockchains. Avec des modèles de gouvernance qui attribuent le pouvoir aux masternodes, aux groupes de développement et aux détenteurs de jetons, l'équipe de développement sera finalement influencée par les plus grands acteurs. Les applications financières décentralisées ne peuvent pas se permettre les conséquences potentielles du partage d'une blockchain avec quiconque choisit d'utiliser ce système d'exploitation. 
-- L'utilisation de commandes Turing-complètes oblige les programmeurs à créer des programmes complexes pour développer tout type d'application. Par exemple, pour créer un contrat de prêt de pair à pair sur MakerDAO, un programmeur a besoin d'environ 2000 lignes de code. Tout bug dans ce code peut entraîner la perte des fonds, ou toute autre conséquence. Le maintien d'un code aussi important signifie intrinsèquement une plus grande probabilité d'erreurs et un angle d'attaque plus important, même pour les applications simples. 
+- Pour les dApps sérieuses de type financier, il est important de savoir que le réseau est maintenu et géré de manière responsable et sécurisée. Le fait qu'une blockchain soit submergée par des jeux, des paris et d'autres types d'applications moins "critiques" finira par influencer le développement et la direction des blockchains. Avec des modèles de gouvernance qui attribuent le pouvoir aux masternodes, aux groupes de développement et aux détenteurs de jetons, l'équipe de développement sera finalement influencée par les plus grands acteurs. Les applications financières décentralisées ne peuvent pas se permettre les conséquences potentielles du partage d'une blockchain avec quiconque choisit d'utiliser ce système d'exploitation.
+- L'utilisation de commandes Turing-complètes oblige les programmeurs à créer des programmes complexes pour développer tout type d'application. Par exemple, pour créer un contrat de prêt de pair à pair sur MakerDAO, un programmeur a besoin d'environ 2000 lignes de code. Tout bug dans ce code peut entraîner la perte des fonds, ou toute autre conséquence. Le maintien d'un code aussi important signifie intrinsèquement une plus grande probabilité d'erreurs et un angle d'attaque plus important, même pour les applications simples.
 
 Les limites des blockchains à usage général pour les applications DeFi ont ouvert une opportunité pour servir ce marché. Alors que la dynamique des crypto-monnaies a continué de croître, la plupart des applications actuelles sont encore sur Ethereum. Les préoccupations concernant le réseau ont déjà conduit certains des principaux projets à envisager un portage ou à travailler avec des blockchains alternatives ou supplémentaires.
 
@@ -97,7 +97,7 @@ Les limites des blockchains à usage général pour les applications DeFi ont ou
 - Les blockchains généralistes nécessitent une grande quantité de codage pour fournir des services financiers, ce qui augmente le risque de piratage ou de bogues dans le code. Les fonctionnalités qui sont des exigences de base pour les services financiers, comme le multisig, sont souvent difficiles à mettre en œuvre ou absentes des blockchains généralistes.
 - La maintenance d'une blockchain Turing-complète signifie que les ressources ne sont pas concentrées sur les domaines appréciés par les applications DeFi.
 - Les modèles de gouvernance de la plupart des blockchains actuelles sont immatures et montrent des signes de politisation, de centralisation et d'incertitude. Sans structure de gouvernance formelle, l'avenir de ces blockchains est incertain. Les récentes discussions sur les mises à niveau et les forks à la fois dans Ethereum et Bitcoin ont révélé l'immaturité de ces systèmes, et même le leader de la gouvernance, Aragon, a montré la vulnérabilité de son système de gouvernance lors du vote de l'été 2019, où un grand détenteur de jetons (une "baleine") a changé le résultat de plusieurs votes de propositions à la dernière minute. De telles vulnérabilités sont inacceptables sur les blockchains traitant de la finance.
-- Des normes réglementaires et des organismes de réglementation qui répondent de manière appropriée aux besoins des monnaies et des instruments financiers transfrontaliers par nature. La réglementation basée sur les juridictions et sur les technologies existantes ne répond pas aux besoins du secteur de la DeFi. Il est clair qu'un nouveau cadre juridique et réglementaire est nécessaire pour protéger les droits des personnes utilisant ces systèmes. 
+- Des normes réglementaires et des organismes de réglementation qui répondent de manière appropriée aux besoins des monnaies et des instruments financiers transfrontaliers par nature. La réglementation basée sur les juridictions et sur les technologies existantes ne répond pas aux besoins du secteur de la DeFi. Il est clair qu'un nouveau cadre juridique et réglementaire est nécessaire pour protéger les droits des personnes utilisant ces systèmes.
 - L'industrie de la blockchain elle-même n'a pas fait preuve de la maturité nécessaire pour mettre en place ses propres organismes de normalisation qui fourniront les meilleures pratiques ou une autorégulation démontrant sa fiabilité pour les applications financières décentralisées. À ce jour, les tentatives de création d'interopérabilité ou d'autorégulation ont été immatures et n'ont pas abouti à un leadership ou à des normes qui pourraient être adoptées par des organismes internationaux ou des régulateurs sérieux. L'absence d'autorégulation rend le secteur encore plus vulnérable à une réglementation extérieure, ce qui rend l'environnement risqué pour les investisseurs sérieux.
 
 ### Conséquences sur le secteur de la DeFi
@@ -124,11 +124,11 @@ Les points décrits ci-dessus sont tout simplement inacceptables pour tout type 
 
 ### Solutions Turing-complètes : Ethereum, EOS, Tron... {#turing-complete-solutions}
 
-À ce jour, un certain nombre d'applications DeFi ont été construites sur Ethereum, Tron, EOS et de nombreuses autres chaînes Turing-complètes. Comme Ethereum a été la plus largement adoptée, elle a permis de faire apparaître le plus rapidement les problèmes liés à l'utilisation d'une blockchain Turing-complète pour les applications DeFi. Le piratage de DAO a été l'une des premières et plus dramatiques expositions de la vulnérabilité de l'utilisation d'un langage aussi complexe. Quiconque émet un jeton sur le réseau sait à quel point c'est difficile. Le simple fait de créer et d'émettre un jeton ERC20 peut facilement coûter plus de 100 000 USD, si l'on tient compte du coût de l'audit des contrats intelligents devenu nécessaire pour les solutions innovantes. Le simple fait qu'il existe un secteur entier construit autour des "audits de contrats intelligents" devrait suffire à illustrer le problème. Malgré le fait que ERC20 soit le standard du marché, il est toujours facile à pirater, au point qu'il est impossible d'émettre ne serait-ce qu'un simple jeton sans faire appel à un auditeur professionnel très coûteux, et à un programmeur. 
+À ce jour, un certain nombre d'applications DeFi ont été construites sur Ethereum, Tron, EOS et de nombreuses autres chaînes Turing-complètes. Comme Ethereum a été la plus largement adoptée, elle a permis de faire apparaître le plus rapidement les problèmes liés à l'utilisation d'une blockchain Turing-complète pour les applications DeFi. Le piratage de DAO a été l'une des premières et plus dramatiques expositions de la vulnérabilité de l'utilisation d'un langage aussi complexe. Quiconque émet un jeton sur le réseau sait à quel point c'est difficile. Le simple fait de créer et d'émettre un jeton ERC20 peut facilement coûter plus de 100 000 USD, si l'on tient compte du coût de l'audit des contrats intelligents devenu nécessaire pour les solutions innovantes. Le simple fait qu'il existe un secteur entier construit autour des "audits de contrats intelligents" devrait suffire à illustrer le problème. Malgré le fait que ERC20 soit le standard du marché, il est toujours facile à pirater, au point qu'il est impossible d'émettre ne serait-ce qu'un simple jeton sans faire appel à un auditeur professionnel très coûteux, et à un programmeur.
 
 Une étude de 2018 a réussi à analyser un million de contrats intelligents et a trouvé plus de 34 000 contrats intelligents piratables[^3]. Il est impensable que 3,4 % des transactions financières soient vulnérables. Si, pour l'instant, ce problème semble être principalement centré sur Ethereum, nous pensons que la plupart des autres chaînes Turing-complètes connaîtront les mêmes problèmes une fois que davantage de cas d'utilisation auront été adoptés sur leurs bases.
 
-Le deuxième problème réside principalement au sein d'Ethereum, à savoir que l'utilisation du réseau est déjà proche de sa capacité maximale. Il ne semble tout simplement pas possible d'utiliser le réseau pour toutes les applications financières décentralisées. La capitalisation boursière d'Ethereum représente un dixième de celle de Bitcoin. Si le système est déjà proche de sa capacité nominale, il est difficile de voir comment il peut gérer la capacité de devenir un véritable réseau DeFi pour le reste de l'écosystème, ce que Vitalik Buterin a reconnu dans une interview :  https://beincrypto.com/ethereum-founders-admit-never-designed-scalability/.
+Le deuxième problème réside principalement au sein d'Ethereum, à savoir que l'utilisation du réseau est déjà proche de sa capacité maximale. Il ne semble tout simplement pas possible d'utiliser le réseau pour toutes les applications financières décentralisées. La capitalisation boursière d'Ethereum représente un dixième de celle de Bitcoin. Si le système est déjà proche de sa capacité nominale, il est difficile de voir comment il peut gérer la capacité de devenir un véritable réseau DeFi pour le reste de l'écosystème, ce que Vitalik Buterin a reconnu dans une interview : https://beincrypto.com/ethereum-founders-admit-never-designed-scalability/.
 
 [^3]: https://arxiv.org/pdf/1802.06038.pdf
 
@@ -142,11 +142,11 @@ Le deuxième problème réside principalement au sein d'Ethereum, à savoir que 
 
 Le marché des crypto-monnaies dans son ensemble est difficile à prévoir. La plupart des tokens sont devenues sans valeur, et il reste à voir comment le système se maintiendra après l'épuisement de l'argent de plusieurs des principales ICO.
 
-Malgré cela, nos perspectives sur le bitcoin en particulier sont extrêmement optimistes. Au cours de l'année dernière, malgré la volatilité des marchés, y compris l'instabilité des marchés financiers traditionnels, le bitcoin a conservé sa valeur, démontré son imperméabilité aux attaques et aux pirates, et gagné le respect des acteurs financiers traditionnels. 
+Malgré cela, nos perspectives sur le bitcoin en particulier sont extrêmement optimistes. Au cours de l'année dernière, malgré la volatilité des marchés, y compris l'instabilité des marchés financiers traditionnels, le bitcoin a conservé sa valeur, démontré son imperméabilité aux attaques et aux pirates, et gagné le respect des acteurs financiers traditionnels.
 
 Le bitcoin est de plus en plus considéré comme une réserve de valeur, et il est perçu comme la norme par rapport à laquelle les autres crypto-monnaies sont mesurées. Bien que les portefeuilles des particuliers varient considérablement, le bitcoin reste la monnaie standard que presque tous les investisseurs en crypto-monnaies détiennent comme une partie importante de leurs avoirs. La formidable communauté et l'écosystème qui entourent le bitcoin sont de bon augure pour sa viabilité à long terme en tant que réserve de valeur.
 
-Pour cette raison, la création de services financiers décentralisés autour de Bitcoin représente une opportunité formidable qui n'a pas encore été exploitée, en partie à cause de la difficulté de créer des contrats intelligents qui fonctionnent avec le réseau Bitcoin, et en partie à cause de l"éclatement de la communauté de développement vers de nombreux projets secondaires. Nous pensons que cette tendance de la communauté de développement à se jeter sur les développements les plus récents fait oublier l'essentiel : Bitcoin est là pour rester. 
+Pour cette raison, la création de services financiers décentralisés autour de Bitcoin représente une opportunité formidable qui n'a pas encore été exploitée, en partie à cause de la difficulté de créer des contrats intelligents qui fonctionnent avec le réseau Bitcoin, et en partie à cause de l"éclatement de la communauté de développement vers de nombreux projets secondaires. Nous pensons que cette tendance de la communauté de développement à se jeter sur les développements les plus récents fait oublier l'essentiel : Bitcoin est là pour rester.
 Ainsi, nous pensons que la construction d'une blockchain DeFiChain au-dessus de Bitcoin apporterait le meilleur des deux mondes : la stabilité et l'immutabilité de Bitcoin et l'évolutivité et l'utilitié de la chaine DeFi.
 
 ### Construire sur le bitcoin
@@ -202,13 +202,13 @@ Les principales plateformes de prêt décentralisées (Compound, Dharma, dYdX et
 
 La puissance du prêt décentralisé réside dans les gains d'efficacité du marché obtenus en éliminant les intermédiaires et l'administration impliqués dans le prêt. De plus, les investisseurs étant préoccupés par les taux d'intérêt minimaux, voire négatifs, le prêt décentralisé les protège de cette éventualité, en fournissant des intérêts au taux du marché tout en offrant aux emprunteurs de meilleurs taux que ceux qu'ils peuvent obtenir sur les marchés financiers existants. Compte tenu de l'ampleur du crédit et du rôle qu'il joue dans l'ensemble de l'économie, le prêt décentralisé offre la possibilité à beaucoup plus d'initiatives d'emprunter de l'argent sur la base de marchés ouverts et de conditions favorables. Un accès plus facile au crédit se traduit par une croissance plus rapide de l'économie.
 
-Les premiers déploiement de prêts décentralisés sont entièrement collatéralisés, et en raison de la volatilité des crypto-monnaies, la plupart des plateformes exigent une garantie du double ou plus sur les prêts. Cela permet aux gens de contracter des prêts sur la base des crypto-monnaies qu'ils détiennent. Ils peuvent ainsi gérer leurs problèmes de trésorerie sans avoir à vendre leurs crypto-monnaies, tout en bénéficiant de conditions de prêt favorables. 
+Les premiers déploiement de prêts décentralisés sont entièrement collatéralisés, et en raison de la volatilité des crypto-monnaies, la plupart des plateformes exigent une garantie du double ou plus sur les prêts. Cela permet aux gens de contracter des prêts sur la base des crypto-monnaies qu'ils détiennent. Ils peuvent ainsi gérer leurs problèmes de trésorerie sans avoir à vendre leurs crypto-monnaies, tout en bénéficiant de conditions de prêt favorables.
 
 ### Wrapping décentralisé des jetons
 
 Une question importante pour la DeFi est la capacité de travailler avec l'ensemble des crypto-monnaies, nativement, sur la blockchain. Alors que la transaction sur la blockchain se fait via le token natif $DFI, DeFiChain peut utiliser Bitcoin, Ethereum, ERC-20, ou toute autre crypto-monnaie grâce au wrapping (encapsulation).
 
-Le wrapping permet l'utilisation de n'importe quel actif numérique de sorte que l'actif sous-jacent est maintenu, mais il peut effectuer des transactions sur une blockchain différente. DeFiChain fournit un mécanisme de wrapping décentralisé qui permet au propriétaire de la crypto-monnaie de maintenir l'ancrage à l'actif et d'utiliser un mécanisme de wrapping qui ne dépend pas d'un tiers comme garant du wrapping ou de l'actif. Les jetons encapsulés peuvent être facilement échangés contre leur valeur originale sur leur blockchain respective. 
+Le wrapping permet l'utilisation de n'importe quel actif numérique de sorte que l'actif sous-jacent est maintenu, mais il peut effectuer des transactions sur une blockchain différente. DeFiChain fournit un mécanisme de wrapping décentralisé qui permet au propriétaire de la crypto-monnaie de maintenir l'ancrage à l'actif et d'utiliser un mécanisme de wrapping qui ne dépend pas d'un tiers comme garant du wrapping ou de l'actif. Les jetons encapsulés peuvent être facilement échangés contre leur valeur originale sur leur blockchain respective.
 La création d'un jeton encapsulé sur DeFiChain est une activité récompensée, de sorte que les détenteurs de crypto-monnaies sont incités à créer des jetons encapsulés sur le réseau DeFiChain comme une forme d'investissement financier décentralisé récompensé.
 
 Le wrapping est une capacité clé de la DeFi en raison du besoin d'interopérabilité de différents types de crypto-monnaies et d'actifs. À ce jour, il n'existe pas de normes d'interopérabilité entre les différentes monnaies, et le seul moyen d'interopérer entre les monnaies est d'utiliser le wrapping ou la collatéralisation, qui doit être fourni par un tiers. Tout l'intérêt de la décentralisation est que les gens n'ont pas besoin de faire confiance à une autorité. Pourtant, aujourd'hui, c'est le principal moyen pour les investisseurs d'interopérer entre Bitcoin et Ethereum sans conversion d'une monnaie à l'autre. Le protocole Polkadot fournit une plateforme pour le développement d'applications interopérables, mais pas spécifiquement pour la DeFi. En tant que nouveau protocole, il reste à voir comment il sera exploité.
@@ -263,7 +263,7 @@ Récemment (octobre 2019), la loi Blockchain du Lichtenstein a créé la base ju
 [^8]: https://www2.deloitte.com/lu/en/pages/technology/articles/tokenization-assets-disrupting-financial-industry.html
 [^9]: https://www.forbes.com/sites/laurencoleman/2019/04/25/heres-why-interest-in-tokenizing-assets-is-starting-to-surge/#2ddeec4640a5
 
-Pour plus d'informations sur cette loi, veuillez consulter le site Web du Liechtenstein à l'adresse https://liechtensteinusa.org/article/liechtensteins-parliament-approves-blockchain-act-unanimously 
+Pour plus d'informations sur cette loi, veuillez consulter le site Web du Liechtenstein à l'adresse https://liechtensteinusa.org/article/liechtensteins-parliament-approves-blockchain-act-unanimously
 
 Exemples d'actifs que les gens peuvent désormais tokeniser à l'aide de la blockchain :
 
@@ -461,7 +461,7 @@ Un nouveau bloc est miné s'il satisfait à la condition suivante :
 
 `SHA256({UTXO du staker}, {horodatage actuel, en secondes}, {modificateur du staker}) < {cible}`
 
-The stakers check this requirement each second. If the block condition is less than the current target, then the stakers assemble and sign a new block. 
+The stakers check this requirement each second. If the block condition is less than the current target, then the stakers assemble and sign a new block.
 Staker’s UTXO require 20 confirmations before it can be accepted as a stake.
 
 #### Modificateur de staking
@@ -562,12 +562,12 @@ Le but des DAT est qu'il représente l'actif natif sur les autres blockchains, p
 Il y a deux approches pour cela :
 
 1. L'approche Stablecoin
-    - Pour chaque dBTC émis, 1 BTC doit être bloqué dans une adresse ou un contrat intelligent.
-    - Bien que cette approche permette d'établir une garantie pour les dBTC, elle introduit d'autres problèmes - les risques de contrepartie et affecte la nature décentralisée de DeFiChain.
+
+   - Pour chaque dBTC émis, 1 BTC doit être bloqué dans une adresse ou un contrat intelligent.
+   - Bien que cette approche permette d'établir une garantie pour les dBTC, elle introduit d'autres problèmes - les risques de contrepartie et affecte la nature décentralisée de DeFiChain.
 
 2. Rattachement à l'économie
-    - En fournissant une garantie forte que le DAT représentant un actif a son prix qui suit de près l'actif natif, c'est-à-dire en détenant le dBTC, on peut avoir une bonne confiance que la valeur du DBTC suivra celle de BTC.
-
+   - En fournissant une garantie forte que le DAT représentant un actif a son prix qui suit de près l'actif natif, c'est-à-dire en détenant le dBTC, on peut avoir une bonne confiance que la valeur du DBTC suivra celle de BTC.
 
 Afin que nous puissions réaliser le rattachement économique, les blocs de construction suivants sont construits nativement sur DeFiChain :
 
@@ -580,7 +580,7 @@ Afin que nous puissions réaliser le rattachement économique, les blocs de cons
 
 ### Contrat de prêt
 
-Le contrat de prêt est conçu pour permettre au propriétaire du contrat de prendre un prêt garanti contre la collatéralisation bloquée dans le contrat. Chaque contrat de prêt est unique pour chaque propriétaire (adresse) sur DeFiChain. 
+Le contrat de prêt est conçu pour permettre au propriétaire du contrat de prendre un prêt garanti contre la collatéralisation bloquée dans le contrat. Chaque contrat de prêt est unique pour chaque propriétaire (adresse) sur DeFiChain.
 
 Tout utilisateur peut ouvrir un contrat de prêt sur DeFiChain, gratuitement. L'utilisateur qui ouvre un contrat de prêt est propriétaire du contrat spécifique. Cette propriété, cependant, est transférable.
 
@@ -592,7 +592,7 @@ Les DAT sont soumis à un taux d'emprunt variable. Un contrat de prêt n'a pas d
 Ratio de garantie = Garantie / (Prêt + intérêts courus)
 ```
 
-Si un contrat de prêt tombe en dessous du ratio de collatéralisation de 150% à un moment donné, sa garantie est liquidée via le Decentralized Exchange (DEX) pour payer les intérêts courus. Une pénalité de liquidation supplémentaire de 15 % sera appliquée afin de dissuader les contrats de prêt d'être liquidés. Il est de la responsabilité des propriétaires de contrats de prêt de surveiller le ratio de garantie afin d'éviter une liquidation non désirée. 
+Si un contrat de prêt tombe en dessous du ratio de collatéralisation de 150% à un moment donné, sa garantie est liquidée via le Decentralized Exchange (DEX) pour payer les intérêts courus. Une pénalité de liquidation supplémentaire de 15 % sera appliquée afin de dissuader les contrats de prêt d'être liquidés. Il est de la responsabilité des propriétaires de contrats de prêt de surveiller le ratio de garantie afin d'éviter une liquidation non désirée.
 
 Si un contrat de prêt est proche du ratio de garantie minimum, le propriétaire doit prendre l'une des mesures suivantes pour éviter la liquidation et l'imposition d'une pénalité de liquidation de 15 % :
 
@@ -608,7 +608,7 @@ Bien que ce concept ne soit pas nouveau dans la DeFi, ce qui est nouveau est la 
 3. Avec un ratio de garantie minimum de 150 %, elle peut emprunter un maximum de 10 000 $ en dBTC, qui est lié au prix au comptant de la BTC ;
 4. Étant donné que le prêt dBTC via le contrat de prêt produit des intérêts, et que le prix du dBTC et du DFI fluctue, Alice décide de ne prendre que 5 000 $ de dBTC, soit 0,5 dBTC, ce qui donne à son contrat de prêt un taux de garantie de : 15000/5000 = 300%, bien supérieur à 150% ;
 5. Le surdimensionnement permet une certaine marge de manœuvre pour les mouvements de prix du dBTC. Si le prix du BTC passe à 15 000 $, le prêt de 0,5 dBTC d'Alice vaudra désormais 7 500 $. Son contrat de prêt a maintenant un ratio de garantie de : 15000/7500 = 200%, toujours supérieur à 150%, de sorte que la liquidation ne serait pas déclenchée même dans le cas de ce type de changement de prix ;
-6. Le taux d'intérêt de chaque prêt DAT est différent. En supposant que le taux d'intérêt des prêts dBTC est de 5% par an, en contractant un prêt pour un an, afin de clôturer son contrat de prêt et de racheter intégralement ses 150k DFI initiaux, Alice doit rembourser 0,5 dBTC * 1,05 = 0,525 dBTC avant la fin de l'année.
+6. Le taux d'intérêt de chaque prêt DAT est différent. En supposant que le taux d'intérêt des prêts dBTC est de 5% par an, en contractant un prêt pour un an, afin de clôturer son contrat de prêt et de racheter intégralement ses 150k DFI initiaux, Alice doit rembourser 0,5 dBTC \* 1,05 = 0,525 dBTC avant la fin de l'année.
 
 ![Contrat de prêt](/img/white-paper/alice-pdc.png)
 
@@ -646,11 +646,13 @@ Alice a 1 dBTC et veut 1 BTC pour trader sur une bourse centralisée.
 Bob a 1 BTC dont il n'a pas besoin pendant 1 mois, et espère générer un intérêt sur prêt pendant cette période.
 
 1. Alice passe l'ordre XCX suivant :
+
 - Montant : 1 dBTC/BTC ;
 - Prime : 8 000 DFI ;
 - Garantie : 0,1 dBTC ;
 - Expiration : 31 décembre 2019 - environ 1 mois.
 - Adresse : Alice indique son adresse de dépôt BTC
+
 2. Bob accepte l'offre en envoyant une transaction sur DeFiChain ;
 3. Bob reçoit une confirmation sur DeFiChain que sa commande est acceptée, dans le cas où il y a plusieurs transactions d'acceptation de commande.
 4. Bob envoie 1 BTC à l'adresse de dépôt BTC d'Alice comme indiqué dans la commande XCX et envoie une transaction sur DeFiChain avec le BTC txid comme reçu. Bob spécifie également une adresse de réception de BTC sur la même transaction pour qu'Alice puisse rembourser les 1 BTC plus tard.
@@ -684,7 +686,7 @@ Une garantie n'est donc pas une obligation, mais une incitation potentielle pour
 
 ### Oracles de tarification
 
-Un oracle est un smart contract sur DeFiChain permettant à plusieurs parties de confiance et désignées de soumettre des flux de prix périodiques de DATs et DFIs. 
+Un oracle est un smart contract sur DeFiChain permettant à plusieurs parties de confiance et désignées de soumettre des flux de prix périodiques de DATs et DFIs.
 
 Plusieurs oracles sont choisis par le DAO de DeFiChain (expliqué dans le chapitre suivant).
 
@@ -993,7 +995,7 @@ Le programme de staking proposé pour les 10 premières années est conforme au 
 
 Les coins $DFI seront émis uniquement aux utilisateurs de DeFiChain ou aux partenaires ayant un intérêt à utiliser et à participer à l'écosystème. Il n'y aura PAS de vente publique ou d'offre publique de tokens. Voici les seules façons d'obtenir des $DFI :
 
-- Les investisseurs institutionnels, les investisseurs accrédités et les fonds qui sont intéressés par l'utilisation de DeFiChain peuvent contacter les fondateurs à  (partners@defichain.com).
+- Les investisseurs institutionnels, les investisseurs accrédités et les fonds qui sont intéressés par l'utilisation de DeFiChain peuvent contacter les fondateurs à (partners@defichain.com).
 - Au fil du temps, le DFI sera disponible sur des plateformes de staking (comme www.CakeDeFi.com) et sur des bourses sélectionnées.
 - La Fondation DeFiChain effectuera des airdrop pour les utilisateurs de DeFiChain. (Hodlers et autres faiseurs de marché).
 - La Fondation DeFiChain accorde des subventions aux développeurs qui développent des fonctionnalités pour DeFiChain ou des dApps à exécuter sur la blockchain.

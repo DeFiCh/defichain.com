@@ -8,11 +8,6 @@
     "airbnb-typescript",
     "prettier"
   ],
-  "plugins": [
-    "prettier"
-  ],
-  "ignorePatterns": [
-    "**/plugins/*.ts",
-    "**/support/*.ts"
-  ]
+  "plugins": ["prettier"],
+  "ignorePatterns": ["**/plugins/*.ts", "**/support/*.ts"]
 }

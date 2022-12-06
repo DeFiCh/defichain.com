@@ -6,7 +6,7 @@ description: Comment procéder au liquidity mining avec l'application DeFi, éta
 ## Qu'est-ce que le liquidity mining ?
 
 Le liquidity mining est un mécanisme DeFi (decentralized finance) dans lequel les participants fournissent des
-cryptocurrencies dans des pools de liquidité, et sont récompensés par des frais et des tokens en fonction de leur 
+cryptocurrencies dans des pools de liquidité, et sont récompensés par des frais et des tokens en fonction de leur
 part de la liquidité totale du pool. Les pools de liquidité dans DeFiChain consistent en des liquidités par paires
 de pièces, utilisées par le DEX (Decentralized Exchange) de DeFiChain.
 
@@ -24,8 +24,8 @@ Cliquez sur **Liquidité** dans la barre latérale pour accéder aux pools de li
 
 ### Étape 3 : En savoir plus
 
-Lorsque vous atterrirez pour la première fois sur **Liquidité**, des vidéos vous seront présentées pour en savoir plus 
-sur le liquidity mining sur DeFiChain et le fonctionnement du DEX. La vidéo sur la _perte impermanente_ est également utile. 
+Lorsque vous atterrirez pour la première fois sur **Liquidité**, des vidéos vous seront présentées pour en savoir plus
+sur le liquidity mining sur DeFiChain et le fonctionnement du DEX. La vidéo sur la _perte impermanente_ est également utile.
 
 ![](/img/guides/liquidity-mining/liquidity-welcome.png)
 
@@ -35,13 +35,13 @@ le TAEG sont affichés.
 ### Étape 4 : Décidez de la paire de pool à laquelle vous allez fournir des liquidités.
 
 Vous pouvez fournir des liquidités au pool ETH-DFI, BTC-DFI et USDT-DFI. Quelle que soit la paire de pool que vous
-décidez de fournir, vous aurez besoin des tokens correspondantes dans votre portefeuille. Par exemple, si vous 
+décidez de fournir, vous aurez besoin des tokens correspondantes dans votre portefeuille. Par exemple, si vous
 souhaitez fournir des liquidités au pool BTC-DFI, vous devez avoir suffisamment de BTC (wrapped BTC) et de DFI dans
 votre portefeuille. La version actuelle de DeFiChain n'accepte que les wrapped tokens (wrapped ETH/BTC/USDT). Si vous
 n'avez pas encore de wrapped tokens, [consultez ce guide](/learn/obtaining-wrapped-tokens).
 
-Une fois que vous êtes prêt à fournir des liquidités à l'une des paires de pool, cliquez sur **AJOUT DE LIQUIDITÉ**. 
-Vous pouvez également cliquer sur le bouton **+** pour n'importe quelle paire de pool afin d'ajouter spécifiquement 
+Une fois que vous êtes prêt à fournir des liquidités à l'une des paires de pool, cliquez sur **AJOUT DE LIQUIDITÉ**.
+Vous pouvez également cliquer sur le bouton **+** pour n'importe quelle paire de pool afin d'ajouter spécifiquement
 de la liquidité à cette paire de pool.
 
 ![](/img/guides/liquidity-mining/liquidity-add-buttons.png)
@@ -49,8 +49,8 @@ de la liquidité à cette paire de pool.
 ### Étape 5 : Ajout de liquidité
 
 Dans cet exemple, nous allons ajouter de la liquidité à la paire de pool BTC-DFI. Saisissez les montants d'entrée pour
-le côté BTC et le côté DFI. Vous pouvez utiliser les boutons **MAX** pour ajouter le montant maximum pour chaque token, 
-disponible dans votre portefeuille. Lorsque vous saisissez un montant d'un côté de la paire, l'application équilibre 
+le côté BTC et le côté DFI. Vous pouvez utiliser les boutons **MAX** pour ajouter le montant maximum pour chaque token,
+disponible dans votre portefeuille. Lorsque vous saisissez un montant d'un côté de la paire, l'application équilibre
 automatiquement le montant de l'autre côté, sur la base du ratio de liquidité actuel dans le pool.
 
 ![](/img/guides/liquidity-mining/liquidity-adding.png)

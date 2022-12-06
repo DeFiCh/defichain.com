@@ -1,7 +1,7 @@
+import { useTranslation } from "next-i18next";
 import { DownloadCard } from "./DownloadCard";
 import { AppStoreDownload } from "./AppStoreDownload";
 import { PlaystoreDownload } from "./PlaystoreDownload";
-import { useTranslation } from "next-i18next";
 
 export function LightWalletSection(): JSX.Element {
   const { t } = useTranslation(["page-downloads"]);

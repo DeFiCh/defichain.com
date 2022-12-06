@@ -3,6 +3,8 @@ import Image, { StaticImageData } from "next/legacy/image";
 import { Container } from "@components/commons/Container";
 import { BsPieChartFill } from "react-icons/bs";
 import { Dex } from "@components/icons/assets/wallet-features/Dex";
+import { useTranslation } from "next-i18next";
+import { Section } from "@components/commons/Section";
 import KucoinLogo from "../../../../public/assets/svg/exchanges/logo-kucoin.svg";
 import EasyCryptoAULogo from "../../../../public/assets/img/exchanges/logo-easycrypto-au.png";
 import EasyCryptoNZLogo from "../../../../public/assets/img/exchanges/logo-easycrypto-nz.png";
@@ -18,8 +20,6 @@ import BitLogo from "../../../../public/assets/img/exchanges/bit.png";
 import HuobiLogo from "../../../../public/assets/img/exchanges/logo-huobi.png";
 import BitmartLogo from "../../../../public/assets/svg/exchanges/logo-bitmart.svg";
 import GateioLogo from "../../../../public/assets/svg/exchanges/logo-gateio.svg";
-import { useTranslation } from "next-i18next";
-import { Section } from "@components/commons/Section";
 
 export function ExchangeSection(): JSX.Element {
   const { t } = useTranslation(["page-dfi"]);

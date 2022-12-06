@@ -10,9 +10,11 @@ L'installation d'un masternode sur DeFiChain vous permet de participer au protoc
 _REMARQUE : Ce guide pratique nécessite une certaine familiarité avec le terminal Linux_
 
 ## Rôles des masternodes
+
 Il existe deux rôles distincts : "propriétaire du masternode" et "opérateur du masternode". Le propriétaire détient la garantie et l'activité principale (minter de nouvelles coins, voter pour les ancrages) est réalisée par l'opérateur. En général, un nœud peut jouer les deux rôles.
 
 ## Pour les propriétaires qui opèrent leurs propres masternodes
+
 Dans ce scénario, l'adresse de l'opérateur sera égale à l'adresse (garantie) du propriétaire .
 
 ### Étape 1 - Téléchargez et extrayez le logiciel de nœud.
@@ -22,6 +24,7 @@ La première étape consiste à télécharger les binaires. Voici les liens vers
 [Téléchargements](/downloads/)
 
 Ensuite, nous pouvons extraire le fichier tar en exécutant (remplacez 1.x.x par votre numéro de version) :
+
 ```
 tar -xvzf defichain-1.x.x-x86_64-pc-linux-gnu.tar.gz
 ```
@@ -35,13 +38,14 @@ mkdir ~/.defi
 ```
 
 Maintenant, copiez les binaires en exécutant :
+
 ```
 cp ./defichain-1.x.x/bin/* ~/.defi
 ```
 
 ### Étape 3 - Configuration de crontab pour que notre nœud fonctionne en arrière-plan
 
-Maintenant, nous pouvons exécuter directement notre nœud en exécutant `~/.defi/defid` mais ce n'est pas très pratique, car nous devrions garder la session de terminal ouverte en permanence et exécuter cette commande à chaque fois que nous redémarrons notre ordinateur ou notre session SSH. 
+Maintenant, nous pouvons exécuter directement notre nœud en exécutant `~/.defi/defid` mais ce n'est pas très pratique, car nous devrions garder la session de terminal ouverte en permanence et exécuter cette commande à chaque fois que nous redémarrons notre ordinateur ou notre session SSH.
 
 A la place, nous allons utiliser crontab pour maintenir le processus en marche. Exécutez `crontab -e`, et sélectionnez un éditeur (je recommande Nano si vous ne savez pas lequel choisir), puis collez :
 
@@ -61,7 +65,7 @@ Afin d'exécuter un masternode, vous devez posséder au moins 20 000 DFI. Config
 
 où "label" est le label que vous souhaitez donner à l'adresse.
 
-Maintenant, afin de transférer les fonds à cette adresse, vous pouvez utiliser : 
+Maintenant, afin de transférer les fonds à cette adresse, vous pouvez utiliser :
 
 ```
 ~/.defi/defi-cli sendtoaddress address
@@ -104,6 +108,7 @@ Recherchez l'adresse de votre masternode dans la liste des masternodes pour conf
 Vous pouvez exécuter la commande `getmasternodeblocks OPERATOR_ADDRESS` pour voir combien de blocs votre masternode a mintés jusqu'à présent.
 
 ## Pour les propriétaires qui souhaitent déléguer les tâches du masternode à un autre nœud
+
 Dans ce scénario, l'adresse de l'opérateur sera différente de l'adresse (garantie) du propriétaire.
 
 ### Étape 1-4 - Idem que ci-dessus
@@ -116,7 +121,7 @@ Afin de participer à l'algorithme de staking, vous devez diffuser au réseau qu
 
 ```
 ~/.defi/defi-cli createmasternode OWNER_ADDRESS OPERATOR_ADDRESS
-``` 
+```
 
 où `OWNER_ADDRESS` est l'adresse du nœud de garantie/propriétaire et `OPERATOR_ADDRESS` est l'adresse de l'opérateur. Veuillez noter que l'exécution de cette commande coûte 10 DFI.
 
@@ -154,15 +159,18 @@ Lors de la prochaine exécution, le nœud commencera à minter pour tous les mas
 
 ## Démission de masternodes
 
-Si vous décidez de démissionner de votre masternode, vous pouvez exécuter 
+Si vous décidez de démissionner de votre masternode, vous pouvez exécuter
 
 ```
 ~/.defi/defi-cli resignmasternode
 ```
+
 ## Statuts du masternode
+
 Envoyer une transaction `createmasternode` (ou 'resignmasternode') ne signifie pas qu'elle agit immédiatement après avoir été soumise à la blockchain. Il y a des délais spéciaux pour chaque statut.
 
 Les masternodes peuvent exister dans ces statuts :
+
 ```
         PRE_ENABLED,
         ENABLED,
@@ -171,6 +179,7 @@ Les masternodes peuvent exister dans ces statuts :
         PRE_BANNED,
         BANNED
 ```
+
 - `PRE_ENABLED` - le masternode a été créé, mais attend un nombre suffisant de blocs après la création pour être activé
 - `ENABLED` - le masternode est en état de fonctionnement complet, peut minter des blocs et signer des ancrages
 - `PRE_RESIGNED` - le masternode est toujours opérationnel, mais a reçu une transaction 'resign' et attendra un délai spécial pour être résigné

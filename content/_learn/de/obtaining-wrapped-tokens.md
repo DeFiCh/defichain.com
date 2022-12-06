@@ -76,6 +76,4 @@ Wähle im Abheben-Fenster (Withdraw) Defichain als **Transfer Network** aus. Gib
 
 Gib deinen **Zwei-Faktor-Authentifizierungscode** ein und fülle den Rest des Formulars aus, dann klicke auf **WITHDRAW**.
 
-
-
 _Hinweis: Aus Sicherheitsgründen kann es bis zu 24 Stunden (werktags) und 72 Stunden (am Wochenende) dauern, bis Abhebungen über CakeDeFi bearbeitet werden._

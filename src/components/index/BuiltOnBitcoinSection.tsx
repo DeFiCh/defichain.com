@@ -1,9 +1,9 @@
 import { Container } from "@components/commons/Container";
 import Image from "next/image";
 import Link from "next/link";
-import Bitcoin from "../../../public/assets/svg/hero/builtonbitcoin.svg";
 import { useTranslation } from "next-i18next";
 import { Button } from "@components/commons/Buttons";
+import Bitcoin from "../../../public/assets/svg/hero/builtonbitcoin.svg";
 
 export function BuiltOnBitcoinSection(): JSX.Element {
   const { t } = useTranslation("page-index");

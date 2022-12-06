@@ -5,7 +5,7 @@ description: Comment chiffrer votre portefeuille via la console
 
 **Avertissement** : Le chiffrement de votre portefeuille via la console entraînera un changement de votre phrase mnémonique. Ne comptez pas sur votre phrase mnémonique comme sauvegarde si vous suivez ce guide, faites plutôt une sauvegarde après avoir activé le chiffrement en utilisant des fichiers de sauvegarde et stockez-les dans un endroit sûr.
 
-Au moment de la rédaction de ce document, v2.1.4, l'application ne dispose pas encore d'une interface graphique intégrée pour faciliter le chiffrement ou le verrouillage des portefeuilles. Cela peut constituer un risque sérieux car vos portefeuilles peuvent être compromis par toute personne ou système ayant accès à votre fichier `wallet.dat` dans votre dossier DeFi. 
+Au moment de la rédaction de ce document, v2.1.4, l'application ne dispose pas encore d'une interface graphique intégrée pour faciliter le chiffrement ou le verrouillage des portefeuilles. Cela peut constituer un risque sérieux car vos portefeuilles peuvent être compromis par toute personne ou système ayant accès à votre fichier `wallet.dat` dans votre dossier DeFi.
 
 Comme le nœud DeFiChain est un fork de Bitcoin Core, il dispose d'un chiffrement de portefeuille hérité que vous êtes en mesure de gérer avec une relative facilité.
 
@@ -16,22 +16,22 @@ Ce guide montre comment vous pouvez effectuer le chiffrement et le déchiffremen
 ## 1. Sécuriser votre portefeuille
 
 1. Faites une sauvegarde de votre `wallet.dat` existant dans un endroit sûr. Ce fichier est très important pour récupérer vos DFI et vos tokens standards DeFi (DST) si les choses tournent mal. Le fichier se trouve généralement dans les chemins suivants :
-  `~/.defi/wallets` pour Linux
-  `~/Library/Application Support/DeFi/wallets` pour Mac
-  `<root>\Users\<username>\AppData\Roaming\DeFi Blockchain\wallets` pour Windows.
-  N'oubliez pas que ce fichier est _non chiffré_ ! Gardez-le absolument en sécurité !
+   `~/.defi/wallets` pour Linux
+   `~/Library/Application Support/DeFi/wallets` pour Mac
+   `<root>\Users\<username>\AppData\Roaming\DeFi Blockchain\wallets` pour Windows.
+   N'oubliez pas que ce fichier est _non chiffré_ ! Gardez-le absolument en sécurité !
 
 2. Pour sécuriser votre portefeuille pour la première fois, générez une phrase secrète aléatoire relativement longue mais facile à retenir pour vous. À titre d'illustration, ce guide utilisera les phrases secrètes suivantes `REMPLACER_CECI_PAR_UNE_LONGUE_PHRASE_SECRÈTE`. Vous pouvez utiliser n'importe quel générateur de mot de passe aléatoire, idéalement hors ligne. Notez-la en toute sécurité.
 
-3. Verrouillez votre portefeuille en tapant ce qui suit dans la console : 
+3. Verrouillez votre portefeuille en tapant ce qui suit dans la console :
 
-    ```
-    encryptwallet REMPLACER_CECI_PAR_UNE_LONGUE_PHRASE_SECRÈTE
-    ```
+   ```
+   encryptwallet REMPLACER_CECI_PAR_UNE_LONGUE_PHRASE_SECRÈTE
+   ```
 
-    Cela devrait prendre quelques secondes et vous devriez voir un message `wallet encrypted`. À partir de ce moment, votre portefeuille, c'est-à-dire `wallet.dat`, sera chiffré par défaut. 
+   Cela devrait prendre quelques secondes et vous devriez voir un message `wallet encrypted`. À partir de ce moment, votre portefeuille, c'est-à-dire `wallet.dat`, sera chiffré par défaut.
 
-    Votre application de bureau DeFi Wallet fonctionnera comme d'habitude en affichage seul, et vos récompenses de liquidity mining DeFi afflueront comme d'habitude. Essayez d'envoyer des DFI ou DST, vous devriez maintenant voir le message suivant : `Add-on auth TX failed : Can't sign TX`. Cela montre que les clés de votre portefeuille sont maintenant chiffrées. Un pirate ayant accès à votre portefeuille à ce stade serait seulement capable de voir vos avoirs, mais incapable de les dépenser.
+   Votre application de bureau DeFi Wallet fonctionnera comme d'habitude en affichage seul, et vos récompenses de liquidity mining DeFi afflueront comme d'habitude. Essayez d'envoyer des DFI ou DST, vous devriez maintenant voir le message suivant : `Add-on auth TX failed : Can't sign TX`. Cela montre que les clés de votre portefeuille sont maintenant chiffrées. Un pirate ayant accès à votre portefeuille à ce stade serait seulement capable de voir vos avoirs, mais incapable de les dépenser.
 
 ## 2. Déverrouillage de votre portefeuille
 

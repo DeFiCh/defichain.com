@@ -31,54 +31,50 @@ export function Hunter(props: { index: number; hunter: HunterI }): JSX.Element {
             {props.hunter.name}
           </h3>
           {props.hunter.github !== undefined && (
-            <>
-              <ExternalLink
-                className="ml-2 text-base"
-                url={`https://github.com/${props.hunter.github}`}
-              >
-                @{props.hunter.github}
-              </ExternalLink>
-            </>
+            <ExternalLink
+              className="ml-2 text-base"
+              url={`https://github.com/${props.hunter.github}`}
+            >
+              @{props.hunter.github}
+            </ExternalLink>
           )}
         </div>
       </div>
       <div className="w-full lg:w-4/6 flex flex-wrap mt-1 md:mt-0 -my-1 justify-end">
-        {props.hunter.bounties.map((bounty) => {
-          return (
-            <div
-              className="w-full flex flex-wrap text-base py-1.5 border-b"
-              key={bounty.name}
-            >
-              <div className="w-full lg:w-2/3 font-medium">{bounty.name}</div>
-              <div className="w-full lg:w-1/3 flex flex-wrap mt-1 lg:mt-0 lg:justify-end items-center">
-                <NumericFormat
-                  value={bounty.payout.dfi}
-                  thousandSeparator
-                  decimalScale={0}
-                  suffix=" DFI"
-                  displayType="text"
+        {props.hunter.bounties.map((bounty) => (
+          <div
+            className="w-full flex flex-wrap text-base py-1.5 border-b"
+            key={bounty.name}
+          >
+            <div className="w-full lg:w-2/3 font-medium">{bounty.name}</div>
+            <div className="w-full lg:w-1/3 flex flex-wrap mt-1 lg:mt-0 lg:justify-end items-center">
+              <NumericFormat
+                value={bounty.payout.dfi}
+                thousandSeparator
+                decimalScale={0}
+                suffix=" DFI"
+                displayType="text"
+              />
+              <NumericFormat
+                value={bounty.payout.usd}
+                thousandSeparator
+                decimalScale={0}
+                prefix="($"
+                suffix=" USD)"
+                displayType="text"
+                className="ml-2 text-gray-400"
+              />
+              <ExternalLink
+                url={`https://defiscan.live/transactions/${bounty.txid}`}
+              >
+                <BiLinkExternal
+                  size={20}
+                  className="ml-2 text-primary-500 cursor-pointer"
                 />
-                <NumericFormat
-                  value={bounty.payout.usd}
-                  thousandSeparator
-                  decimalScale={0}
-                  prefix="($"
-                  suffix=" USD)"
-                  displayType="text"
-                  className="ml-2 text-gray-400"
-                />
-                <ExternalLink
-                  url={`https://defiscan.live/transactions/${bounty.txid}`}
-                >
-                  <BiLinkExternal
-                    size={20}
-                    className="ml-2 text-primary-500 cursor-pointer"
-                  />
-                </ExternalLink>
-              </div>
+              </ExternalLink>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </div>
   );

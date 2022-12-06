@@ -2,10 +2,10 @@ import { PageHeader } from "@components/commons/PageHeader";
 import { Container } from "@components/commons/Container";
 import { SSRConfig, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { Head } from "@components/commons/Head";
 import { LightWalletSection } from "./_components/LightWalletSection";
 import { FullNodeSection } from "./_components/FullNodeSection";
 import { DownloadSection } from "./_components/DownloadSection";
-import { Head } from "@components/commons/Head";
 
 export default function DownloadsPage(): JSX.Element {
   const { t } = useTranslation(["page-downloads"]);

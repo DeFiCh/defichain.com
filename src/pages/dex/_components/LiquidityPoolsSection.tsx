@@ -1,10 +1,10 @@
 import { useTranslation } from "next-i18next";
 import { NumericFormat } from "react-number-format";
 import { getAssetIcon } from "@components/icons/assets/tokens";
-import { useWhaleApiClient } from "../../../layouts/context/WhaleContext";
 import { useEffect, useState } from "react";
 import { PoolPairData } from "@defichain/whale-api-client/dist/api/poolpairs";
 import { Section } from "@components/commons/Section";
+import { useWhaleApiClient } from "../../../layouts/context/WhaleContext";
 
 export function LiquidityPoolsSection(): JSX.Element {
   const { t } = useTranslation("page-dex");
@@ -41,8 +41,8 @@ export function LiquidityPoolsSection(): JSX.Element {
   return (
     <Section title={t("LiquidityPools.title")} testId="LiquidityPoolsSection">
       <div className="w-full flex flex-wrap -m-2">
-        {(() => {
-          return poolPairsData.map((item, index) => {
+        {(() =>
+          poolPairsData.map((item, index) => {
             if (index > 11 && !showMore) {
               return <></>;
             }
@@ -89,8 +89,7 @@ export function LiquidityPoolsSection(): JSX.Element {
                 </div>
               </div>
             );
-          });
-        })()}
+          }))()}
       </div>
       <div
         className="flex w-full justify-center mt-8"

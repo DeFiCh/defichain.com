@@ -10,9 +10,11 @@ Setting up a masternode on DeFiChain allows you to participate in the consensus 
 _NOTE: This how-to expects some basic familiarity with the Linux terminal_
 
 ## Masternode roles
+
 There are two distinct roles: 'masternode owner' and 'masternode operator'. The owner holds the collateral and the primary activity (minting new coins, voting for anchors) is performed by operator. In general, a node can play both roles.
 
 ## For owners who operate their own masternodes
+
 In this scenario, the operator's address will be equal to the owner's (collateral) address.
 
 ### Step 1 - Download and extract node software
@@ -22,6 +24,7 @@ The first step is to download the binaries. Here are links to binaries for Windo
 [Downloads](/downloads/)
 
 Following that we can extract the tar file by running (Replace 1.x.x with your version number):
+
 ```
 tar -xvzf defichain-1.x.x-x86_64-pc-linux-gnu.tar.gz
 ```
@@ -35,6 +38,7 @@ mkdir ~/.defi
 ```
 
 Now copy the binaries by running:
+
 ```
 cp ./defichain-1.x.x/bin/* ~/.defi
 ```
@@ -104,6 +108,7 @@ look for your masternode address in the list of masternodes to confirm that you 
 You may run the command `getmasternodeblocks OPERATOR_ADDRESS` to see how many blocks your masternode has minted so far.
 
 ## For owners who would like to delegate the masternode duties to another node
+
 In this scenario, the operator's address will be different to the owner's (collateral) address.
 
 ### Step 1-4 - Same as above
@@ -116,7 +121,7 @@ In order to participate in the staking algorithm, you must broadcast to the netw
 
 ```
 ~/.defi/defi-cli createmasternode OWNER_ADDRESS OPERATOR_ADDRESS
-``` 
+```
 
 where `OWNER_ADDRESS` is the address for the collateral/owner node and `OPERATOR_ADDRESS` is the address for the operator. Please note that it costs 10 DFI to run this command.
 
@@ -159,10 +164,13 @@ If you decide to resign your masternode, you may run
 ```
 ~/.defi/defi-cli resignmasternode
 ```
+
 ## Masternode states
+
 Sending `createmasternode` (or 'resignmasternode') transaction doesn't mean that it acts immediately after submitting to the blockchain. There are special delays for each state.
 
 Masternodes can exist in these states:
+
 ```
         PRE_ENABLED,
         ENABLED,
@@ -171,6 +179,7 @@ Masternodes can exist in these states:
         PRE_BANNED,
         BANNED
 ```
+
 - `PRE_ENABLED` - masternode was created, but waits for enough blocks after creation to get activated.
 - `ENABLED` - masternode is in fully operable state, can mint blocks and sign anchors
 - `PRE_RESIGNED` - masternode is still operable, but have received a 'resign' transaction and will wait for a special delay to get resigned

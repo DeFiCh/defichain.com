@@ -1,8 +1,8 @@
 import { ExternalLink } from "@components/commons/link/ExternalLink";
 import { Container } from "@components/commons/Container";
 import { useTranslation } from "next-i18next";
-import { DFICoin } from "./DFICoin";
 import { Section } from "@components/commons/Section";
+import { DFICoin } from "./DFICoin";
 
 export function DFICoinSection(): JSX.Element {
   const { t } = useTranslation(["page-dfi"]);

@@ -5,8 +5,8 @@ import Link from "next/link";
 import { MdClose, MdMenu } from "react-icons/md";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { useWhaleApiClient } from "../context/WhaleContext";
 import { useTranslation } from "next-i18next";
+import { useWhaleApiClient } from "../context/WhaleContext";
 import { BuyDFIButton } from "./BuyDFIButton";
 import { LanguageDropdown } from "./LanguageDropdown";
 

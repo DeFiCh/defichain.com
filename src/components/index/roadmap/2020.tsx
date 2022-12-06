@@ -36,23 +36,21 @@ export function TimeLine2020(): JSX.Element {
 
   return (
     <TimeLineContainer
-      label={t("RoadmapSection.2020.status")}
+      label={t<string>("RoadmapSection.2020.status")}
       testid="RoadmapSection.2020"
       timeline={t("RoadmapSection.2020.title")}
     >
       <Slider {...settings}>
-        {cards.map((card) => {
-          return (
-            <RoadmapCard
-              month={card.title}
-              desc={card.desc}
-              url={card.url}
-              image={card.image.url}
-              alt={card.image.alt}
-              key={card.desc}
-            />
-          );
-        })}
+        {cards.map((card) => (
+          <RoadmapCard
+            month={card.title}
+            desc={card.desc}
+            url={card.url}
+            image={card.image.url}
+            alt={card.image.alt}
+            key={card.desc}
+          />
+        ))}
       </Slider>
     </TimeLineContainer>
   );

@@ -2,17 +2,20 @@ import { SSRConfig, Trans, useTranslation } from "next-i18next";
 import { PageHeader } from "@components/commons/PageHeader";
 import { Container } from "@components/commons/Container";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { DeveloperResourceSection } from "./_components/DeveloperResourceSection";
 import { ExternalLink } from "@components/commons/link/ExternalLink";
 import { Head } from "@components/commons/Head";
 import { Section } from "@components/commons/Section";
+import { DeveloperResourceSection } from "./_components/DeveloperResourceSection";
 
 export default function DevelopersPage(): JSX.Element {
   const { t } = useTranslation(["page-developers", "common"]);
 
   return (
     <>
-      <Head title={t("Head.title")} description={t("Head.desc")} />
+      <Head
+        title={t<string>("Head.title")}
+        description={t<string>("Head.desc")}
+      />
       <PageHeader title={t("Header.title")}>
         <div className="mt-10 flex flex-wrap">
           <div

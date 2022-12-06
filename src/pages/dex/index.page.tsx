@@ -1,17 +1,20 @@
 import { SSRConfig, useTranslation } from "next-i18next";
 import { PageHeader } from "@components/commons/PageHeader";
 import { Container } from "@components/commons/Container";
-import { LiquidityPoolsSection } from "./_components/LiquidityPoolsSection";
-import { WalletFeaturesSection } from "./_components/WalletFeaturesSection";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Head } from "@components/commons/Head";
+import { LiquidityPoolsSection } from "./_components/LiquidityPoolsSection";
+import { WalletFeaturesSection } from "./_components/WalletFeaturesSection";
 
 export default function DexPage(): JSX.Element {
   const { t } = useTranslation("page-dex");
 
   return (
     <>
-      <Head title={t("Head.title")} description={t("Head.desc")} />
+      <Head
+        title={t<string>("Head.title")}
+        description={t<string>("Head.desc")}
+      />
       <PageHeader title={t("Header.title")}>
         <div className="mt-10 flex flex-wrap">
           <div

@@ -1,5 +1,5 @@
 ---
-title: Obtention des wrapped tokens 
+title: Obtention des wrapped tokens
 description: Un guide étape par étape pour obtenir des wrapped BTC/ETH/USDT via le DEX ou Cake DeFi
 ---
 
@@ -33,7 +33,7 @@ Le DEX vous permet d'échanger un token contre un autre. Dans ce cas, sélection
 
 ![](/img/guides/obtaining-tokens/dex-from.png)
 
-Ensuite, sélectionnez le token que vous voulez acheter dans le champ droit **À**. 
+Ensuite, sélectionnez le token que vous voulez acheter dans le champ droit **À**.
 
 ![](/img/guides/obtaining-tokens/dex-to.png)
 
@@ -75,7 +75,5 @@ Dans la pop-up de retrait, sélectionnez DeFi Blockchain comme **Transfer Networ
 ![](/img/guides/obtaining-tokens/cake-withdraw.png)
 
 Saisissez votre **two-factor authentication code** (code d'authentification à deux facteurs) et complétez le reste du formulaire, puis appuyez sur **WITHDRAW**.
-
-
 
 _Note : Pour des raisons de sécurité, le traitement des retraits sur CakeDeFi peut prendre jusqu'à 24 heures (jours de semaine) et 72 heures (week-ends)._

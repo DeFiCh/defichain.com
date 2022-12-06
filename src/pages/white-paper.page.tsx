@@ -8,10 +8,10 @@ import rehypeSanitize from "rehype-sanitize";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import React from "react";
-import { Post } from "./learn/utils/api";
 import { remark } from "remark";
-import { getMDPageBySlug } from "../../utils/api";
 import { Head } from "@components/commons/Head";
+import { Post } from "./learn/utils/api";
+import { getMDPageBySlug } from "../../utils/api";
 
 interface WhitePaperPageProps {
   props: {

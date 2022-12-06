@@ -10,9 +10,11 @@ Wenn du einen Masternode auf DefiChain einrichtest, kannst du am Konsensprotokol
 _HINWEIS: Diese Anleitung setzt grundlegende Kenntnisse im Umgang mit dem Linux-Terminal voraus._
 
 ## Masternode-Rollen
+
 Es gibt zwei verschiedene Rollen: den "masternode owner" und den "masternode operator". Der Owner hält die Sicherheiten und die Hauptaktivität (Minten neuer Token, Abstimmung über Verankerung) wird vom Operator durchgeführt. Im Prinzip kann ein Node beide Rollen spielen.
 
 ## Für Owner, die ihre eigenen Masternodes betreiben
+
 In diesem Szenario ist die Adresse des Operators gleich der (Kollateral-) Adresse des Owners.
 
 ### Schritt 1 - Herunterladen und Extrahieren der Node-Software
@@ -22,6 +24,7 @@ Der erste Schritt besteht darin, die Binärdateien herunterzuladen. Hier sind di
 [Downloads](/downloads/)
 
 Danach können wir die tar-Datei entpacken, indem wir folgendes ausführen (Ersetze 1.x.x mit deiner Versionsnummer):
+
 ```
 tar -xvzf defichain-1.x.x-x86_64-pc-linux-gnu.tar.gz
 ```
@@ -35,13 +38,14 @@ mkdir ~/.defi
 ```
 
 Kopiere nun die Binärdateien, indem du Folgendes ausführst:
+
 ```
 cp ./defichain-1.x.x/bin/* ~/.defi
 ```
 
 ### Schritt 3 - Einrichten von crontab, damit unser Node im Hintergrund läuft
 
-Jetzt können wir unseren Node direkt starten, indem wir `~/.defi/defid` ausführen, aber das wäre nicht sehr bequem, da wir die ganze Zeit die Terminalsitzung offen halten und diesen Befehl jedes Mal ausführen müssten, wenn wir unseren Computer oder unsere SSH-Sitzung neu starten. 
+Jetzt können wir unseren Node direkt starten, indem wir `~/.defi/defid` ausführen, aber das wäre nicht sehr bequem, da wir die ganze Zeit die Terminalsitzung offen halten und diesen Befehl jedes Mal ausführen müssten, wenn wir unseren Computer oder unsere SSH-Sitzung neu starten.
 
 Stattdessen werden wir crontab verwenden, um den Prozess am Laufen zu halten. Führe `crontab -e` aus und wähle einen Editor (ich empfehle Nano, wenn du dir nicht sicher bist, welchen du wählen sollst), dann füge:
 
@@ -104,6 +108,7 @@ Suche deine Masternode-Adresse in der Liste der Masternodes, um zu überprüfen,
 Du kannst den Befehl `getmasternodeblocks OPERATOR_ADDRESS` ausführen, um zu sehen, wie viele Blöcke dein Masternode bisher gemint hat.
 
 ## Für Owner, die die Aufgaben des Masternodes an einen anderen Node delegieren möchten
+
 In diesem Fall ist die Operator-Adresse eine andere als die Owner-Adresse (Kollateraladresse).
 
 ### Schritt 1-4 - Wie oben
@@ -116,13 +121,13 @@ Um am Staking-Algorithmus teilzunehmen, musst du dem Netzwerk mitteilen, dass du
 
 ```
 ~/.defi/defi-cli createmasternode OWNER_ADDRESS OPERATOR_ADDRESS
-``` 
+```
 
 wobei `OWNER_ADDRESS` die Adresse des Kollateral-/Owner Nodes und `OPERATOR_ADDRESS` die Adresse des Operators ist. Bitte beachte, dass es 10 DFI kostet, diesen Befehl auszuführen.
 
 Danach gibt es nichts mehr zu tun. Du kannst einfach sicherstellen, dass dein Masternode-Operator den Masternode auf seiner Seite korrekt betreibt, indem du ihm die Operator-Adresse übermittelst.
 
-Wir können überprüfen, ob der Masternode läuft, indem wir Folgendes ausführen: 
+Wir können überprüfen, ob der Masternode läuft, indem wir Folgendes ausführen:
 
 ```
 ~/.defi/defi-cli listmasternodes
@@ -154,15 +159,18 @@ Beim nächsten Aufruf beginnt der Node mit dem Minting für alle angegebenen Mas
 
 ## Masternodes zurückziehen
 
-Wenn du dich entscheidest, deinen Masternodebetrieb zu beenden, kannst du Folgendes ausführen 
+Wenn du dich entscheidest, deinen Masternodebetrieb zu beenden, kannst du Folgendes ausführen
 
 ```
 ~/.defi/defi-cli resignmasternode
 ```
+
 ## Masternode-Status
+
 Wenn du eine Transaktion "createemasternode" (oder "resignmasternode") sendest, bedeutet das nicht, dass sie sofort nach dem Übertragen an die Blockchain wirksam wird. Für jeden Status gibt es gewisse Verzögerungen.
 
 Masternodes können in diesen Status vorkommen:
+
 ```
         PRE_ENABLED,
         ENABLED,
@@ -171,6 +179,7 @@ Masternodes können in diesen Status vorkommen:
         PRE_BANNED,
         BANNED
 ```
+
 - `PRE_ENABLED` - Masternode wurde erstellt, wartet aber nach der Erstellung auf genügend Blöcke, um aktiviert zu werden.
 - `ENABLED` - Masternode ist voll funktionsfähig, kann Blöcke minten und Verankerungen signieren
 - `PRE_RESIGNED` - Der Masternode ist noch in Betrieb, hat aber eine "Resign"-Transaktion erhalten und wartet eine gewisse Verzögerung lang, um aus dem Betrieb genommen zu werden.

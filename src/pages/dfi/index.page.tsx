@@ -1,11 +1,11 @@
 import { PageHeader } from "@components/commons/PageHeader";
 import { SSRConfig, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { Head } from "@components/commons/Head";
 import { DFICoinSection } from "./_components/DFICoinSection";
 import { UtilitySection } from "./_components/UtilitySection";
 import { DistributionSection } from "./_components/DistributionSection";
 import { ExchangeSection } from "./_components/ExchangeSection";
-import { Head } from "@components/commons/Head";
 import { ERC20Section } from "./_components/ERC20Section";
 
 export default function DFIPage(): JSX.Element {

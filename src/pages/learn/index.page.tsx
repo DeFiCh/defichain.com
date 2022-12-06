@@ -3,12 +3,12 @@ import { Container } from "@components/commons/Container";
 import { UserConfig, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { PropsWithChildren } from "react";
-import { getAllPosts } from "./utils/api";
-import { HowToCard } from "./_components/HowToCard";
 import { InferGetStaticPropsType } from "next";
 import { Disclosure } from "@headlessui/react";
 import { BsChevronCompactDown } from "react-icons/bs";
 import { Head } from "@components/commons/Head";
+import { HowToCard } from "./_components/HowToCard";
+import { getAllPosts } from "./utils/api";
 
 interface PostI {
   title: string;
@@ -66,18 +66,15 @@ function HowToSection(
       </div>
 
       <div className="flex flex-wrap pb-10 -m-1">
-        {(() => {
-          return props.posts.map((post) => {
-            return (
-              <HowToCard
-                title={post.title}
-                desc={post.description}
-                slug={post.slug}
-                key={post.slug}
-              />
-            );
-          });
-        })()}
+        {(() =>
+          props.posts.map((post) => (
+            <HowToCard
+              title={post.title}
+              desc={post.description}
+              slug={post.slug}
+              key={post.slug}
+            />
+          )))()}
       </div>
     </section>
   );
@@ -99,11 +96,9 @@ function FAQSection(): JSX.Element {
         FAQ
       </h2>
 
-      {entries.map((entry) => {
-        return (
-          <FAQEntry title={entry.title} desc={entry.desc} key={entry.title} />
-        );
-      })}
+      {entries.map((entry) => (
+        <FAQEntry title={entry.title} desc={entry.desc} key={entry.title} />
+      ))}
     </section>
   );
 

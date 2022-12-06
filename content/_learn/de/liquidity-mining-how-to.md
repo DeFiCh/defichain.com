@@ -6,8 +6,8 @@ description: Schritt-für-Schritt-Anleitung zum Liquiditäts-Mining mit der DeFi
 ## Was ist Liquiditäts-Mining?
 
 Liquiditäts-Mining ist ein DeFi-Mechanismus (DeFi stehend für dezentrales Finanzwesen), bei dem die Teilnehmer
-Kryptowährungen in Liquiditätspools bereitstellen und dafür mit Gebühren und Token auf der Grundlage ihres Anteils 
-an der gesamten Pool-Liquidität belohnt werden. Die Liquiditätspools in DeFiChain bestehen aus Liquidität in 
+Kryptowährungen in Liquiditätspools bereitstellen und dafür mit Gebühren und Token auf der Grundlage ihres Anteils
+an der gesamten Pool-Liquidität belohnt werden. Die Liquiditätspools in DeFiChain bestehen aus Liquidität in
 Tokenpaaren, die von der DeFiChain DEX (Decentralized Exchange) bereitgestellt werden.
 
 ## Hinzufügen von Liquidität
@@ -24,8 +24,8 @@ Klicke auf **Liquidität** in der Seitenleiste, um zu den Liquiditätspools zu g
 
 ### Schritt 3: Mehr erfahren
 
-Wenn du zum ersten Mal beim Menüpunkt **Liquidität** ankommst, kannst du dir Videos ansehen, um mehr über 
-Liquiditäts-Mining auf der DeFiChain und die Funktionsweise der DEX zu erfahren. Das Video über _impermanenten Verlust_ 
+Wenn du zum ersten Mal beim Menüpunkt **Liquidität** ankommst, kannst du dir Videos ansehen, um mehr über
+Liquiditäts-Mining auf der DeFiChain und die Funktionsweise der DEX zu erfahren. Das Video über _impermanenten Verlust_
 ist ebenfalls hilfreich.
 
 ![](/img/guides/liquidity-mining/liquidity-welcome.png)
@@ -41,7 +41,7 @@ mit Liquidität versorgen willst, musst du genügend dBTC (wrapped BTC) und DFI 
 Version von DeFiChain akzeptiert nur gewrappte Token (wrapped ETH/BTC/USDT). Wenn du derzeit keine gewrappte Token
 hast, [sieh dir diese Anleitung an](/learn/obtaining-wrapped-tokens).
 
-Wenn du bereit bist, einem der Poolpaare Liquidität zur Verfügung zu stellen, klicke auf **LIQUIDITÄT HINZUFÜGEN**. 
+Wenn du bereit bist, einem der Poolpaare Liquidität zur Verfügung zu stellen, klicke auf **LIQUIDITÄT HINZUFÜGEN**.
 Du kannst auch auf die Schaltfläche **+** bei einem Poolpaar klicken, um gezielt Liquidität zu diesem Poolpaar
 hinzuzufügen.
 
@@ -51,7 +51,7 @@ hinzuzufügen.
 
 In diesem Beispiel werden wir dem Poolpaar dBTC-DFI Liquidität hinzufügen. Gib die Beträge sowohl für die dBTC-Seite
 als auch für die DFI-Seite ein. Mit den Schaltflächen **MAX** kannst du für jeden Token den maximalen Betrag
-eingeben, der in deiner Wallet verfügbar ist. Wenn du einen Betrag auf einer Seite des Paares eingibst, gleicht 
+eingeben, der in deiner Wallet verfügbar ist. Wenn du einen Betrag auf einer Seite des Paares eingibst, gleicht
 die App den Betrag auf der anderen Seite automatisch aus, basierend auf dem Verhältnis der aktuellen Liquidität im Pool.
 
 ![](/img/guides/liquidity-mining/liquidity-adding.png)

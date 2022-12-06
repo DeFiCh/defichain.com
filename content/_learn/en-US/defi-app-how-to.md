@@ -9,10 +9,10 @@ Download the latest app from the [downloads](/downloads) page.
 
 ## Minimum requirements
 
-| Requirement | Minimum Required |
-|-|-|
-| Memory | 4GB |
-| OS | macOS 10.14, Windows 10, Ubuntu LTS 18 and above |
+| Requirement | Minimum Required                                 |
+| ----------- | ------------------------------------------------ |
+| Memory      | 4GB                                              |
+| OS          | macOS 10.14, Windows 10, Ubuntu LTS 18 and above |
 
 ## Installing on macOS
 
@@ -28,11 +28,11 @@ Open the app. The first time you open the DeFi app, you will be presented with a
 
 ![](/img/guides/installing-defi-app/macos-security-prompt.png)
 
-\**You will see this security prompt with early unsigned releases of the app. In future releases signed with Apple, you will not see security prompts. For now, please follow step 3 for a workaround.*
+\*_You will see this security prompt with early unsigned releases of the app. In future releases signed with Apple, you will not see security prompts. For now, please follow step 3 for a workaround._
 
 ### Step 3: Allow app execution
 
-\**Only open the app this way if you are sure you have downloaded DeFi app from an official source. DeFi app is currently only available on the [official website](/) and [DeFiChain’s GitHub](https://github.com/DeFiCh/app/releases).*
+\*_Only open the app this way if you are sure you have downloaded DeFi app from an official source. DeFi app is currently only available on the [official website](/) and [DeFiChain’s GitHub](https://github.com/DeFiCh/app/releases)._
 
 Go to **System Preferences** and click on **Security & Privacy**.
 
@@ -58,7 +58,7 @@ Double click on the downloaded file.
 
 If this is the first time you are installing the DeFi app, the installer may present you with a security prompt as shown. Click **More info**.
 
-\**Microsoft Windows SmartScreen may flag newly uploaded files that have not built up a long enough history.*
+\*_Microsoft Windows SmartScreen may flag newly uploaded files that have not built up a long enough history._
 
 ![](/img/guides/installing-defi-app/CUmfPMS.png)
 
@@ -84,7 +84,7 @@ You can choose to either install DeFi app as a GUI tool or command line tool.
 
 ### Using Software Center
 
-The simplest method is to use Software Center in Ubuntu. Simply navigate to the folder (usually *Downloads* folder)  containing the downloaded **.deb** file and open it.
+The simplest method is to use Software Center in Ubuntu. Simply navigate to the folder (usually _Downloads_ folder) containing the downloaded **.deb** file and open it.
 
 ### Install .deb files in command line using dpkg
 
@@ -99,7 +99,6 @@ or
 ```
 sudo dpkg -i PATH_TO_DEB_FILE
 ```
-
 
 You can now open DeFi app.
 

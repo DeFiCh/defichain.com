@@ -10,8 +10,8 @@ import { Network } from "@components/icons/assets/wallet-features/Network";
 import { Staking } from "@components/icons/assets/wallet-features/Staking";
 import { FeatureCard } from "@components/commons/FeatureCard";
 import Image from "next/legacy/image";
-import liquidityImage from "../../../../public/assets/img/dex/liquidity.png";
 import { Section } from "@components/commons/Section";
+import liquidityImage from "../../../../public/assets/img/dex/liquidity.png";
 
 export function WalletFeaturesSection(): JSX.Element {
   const { t } = useTranslation("page-dex");
@@ -24,7 +24,7 @@ export function WalletFeaturesSection(): JSX.Element {
             src={liquidityImage}
             layout="responsive"
             objectFit="cover"
-            alt={t("LiquidityMining.title")}
+            alt={t<string>("LiquidityMining.title")}
             data-testid="LiquidityMiningSection.image"
           />
         </div>

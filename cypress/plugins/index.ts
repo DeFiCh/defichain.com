@@ -15,8 +15,11 @@
  * @type {Cypress.PluginConfig}
  */
 // @ts-ignore
-module.exports = (on: Cypress.PluginEvents, config: Cypress.PluginConfigOptions): any => {
+module.exports = (
+  on: Cypress.PluginEvents,
+  config: Cypress.PluginConfigOptions
+): any => {
   // @ts-ignore
-  require('@cypress/code-coverage/task')(on, config)
-  return config
-}
+  require("@cypress/code-coverage/task")(on, config);
+  return config;
+};

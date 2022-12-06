@@ -76,6 +76,4 @@ In the withdrawal pop-up, select DeFi Blockchain as the **Transfer Network**. En
 
 Enter your **two-factor authentication code** and complete the rest of the form, then press **WITHDRAW**.
 
-
-
 _Note: For security reasons, withdrawals on Cake DeFi can take up to 24 hours (weekdays) and 72 hours (weekends) to be processed._

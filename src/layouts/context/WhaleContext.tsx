@@ -17,7 +17,7 @@ export function WhaleProvider(
   const memo = useMemo(() => {
     const api = newWhaleClient();
     return {
-      api: api,
+      api,
     };
   }, []);
 

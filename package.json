@@ -20,7 +20,7 @@
     "classnames": "^2.3.2",
     "gray-matter": "^4.0.3",
     "lodash": "^4.17.21",
-    "next-i18next": "^13.0.0",
+    "next-i18next": "^12.1.0",
     "react-markdown": "^8.0.4",
     "react-number-format": "^5.1.2",
     "react-slick": "^0.29.0",

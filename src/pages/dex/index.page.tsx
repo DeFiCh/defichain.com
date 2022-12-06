@@ -11,7 +11,10 @@ export default function DexPage(): JSX.Element {
 
   return (
     <>
-      <Head title={t("Head.title")} description={t("Head.desc")} />
+      <Head
+        title={t<string>("Head.title")}
+        description={t<string>("Head.desc")}
+      />
       <PageHeader title={t("Header.title")}>
         <div className="mt-10 flex flex-wrap">
           <div

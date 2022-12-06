@@ -24,7 +24,7 @@ export function WalletFeaturesSection(): JSX.Element {
             src={liquidityImage}
             layout="responsive"
             objectFit="cover"
-            alt={t("LiquidityMining.title")}
+            alt={t<string>("LiquidityMining.title")}
             data-testid="LiquidityMiningSection.image"
           />
         </div>

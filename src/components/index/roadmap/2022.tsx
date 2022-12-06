@@ -38,21 +38,19 @@ export function TimeLine2022(): JSX.Element {
     <TimeLineContainer
       testid="RoadmapSection.2022"
       timeline={t("RoadmapSection.2022.title")}
-      label={t("RoadmapSection.2022.status")}
+      label={t<string>("RoadmapSection.2022.status")}
     >
       <Slider {...settings}>
-        {cards.map((card) => {
-          return (
-            <RoadmapCard
-              month={card.title}
-              desc={card.desc}
-              url={card.url}
-              image={card.image.url}
-              alt={card.image.alt}
-              key={card.desc}
-            />
-          );
-        })}
+        {cards.map((card) => (
+          <RoadmapCard
+            month={card.title}
+            desc={card.desc}
+            url={card.url}
+            image={card.image.url}
+            alt={card.image.alt}
+            key={card.desc}
+          />
+        ))}
       </Slider>
     </TimeLineContainer>
   );

@@ -78,6 +78,7 @@ export function RoadmapCard(
           height={150}
           objectFit="cover"
           placeholder="empty"
+          unoptimized
         />
       </div>
     </div>

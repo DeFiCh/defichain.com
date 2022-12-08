@@ -10,8 +10,8 @@ specifiers:
   '@types/lodash': ^4.14.191
   '@types/node': ^18.7.18
   '@types/react': ^18.0.26
-  '@waveshq/standard-web': ^0.7.1
-  '@waveshq/standard-web-linter': ^0.7.1
+  '@waveshq/standard-web': ^0.8.0
+  '@waveshq/standard-web-linter': ^0.8.0
   autoprefixer: ^10.4.13
   babel-plugin-istanbul: ^6.1.1
   babel-plugin-jsx-remove-data-test-id: ^3.0.0
@@ -35,7 +35,7 @@ specifiers:
 dependencies:
   '@defichain/whale-api-client': 3.5.3_defichain@3.5.3
   '@headlessui/react': 1.7.4_biqbaboplfbrettd7655fr4n2y
-  '@waveshq/standard-web': 0.7.1_nxrcxq3d2px3f3w2g4ulingn6i
+  '@waveshq/standard-web': 0.8.0_nxrcxq3d2px3f3w2g4ulingn6i
   classnames: 2.3.2
   gray-matter: 4.0.3
   lodash: 4.17.21
@@ -58,7 +58,7 @@ devDependencies:
   '@types/lodash': 4.14.191
   '@types/node': 18.11.11
   '@types/react': 18.0.26
-  '@waveshq/standard-web-linter': 0.7.1_klpylqwss7j4mjsavnu5vopi6q
+  '@waveshq/standard-web-linter': 0.8.0_klpylqwss7j4mjsavnu5vopi6q
   autoprefixer: 10.4.13_postcss@8.4.19
   babel-plugin-istanbul: 6.1.1
   babel-plugin-jsx-remove-data-test-id: 3.0.0_@babel+core@7.20.5
@@ -2170,8 +2170,8 @@ packages:
     resolution: {integrity: sha512-haGBC8noyA5BfjCRXRH+VIkHCDVW5iD5UX24P2nOdilwUxI4qWsattS/co8QBGq64XsNLRAMdM5pQUE3zxkF9Q==}
     dev: true
 
-  /@waveshq/standard-web-linter/0.7.1_klpylqwss7j4mjsavnu5vopi6q:
-    resolution: {integrity: sha512-etiivCPf6g54PqSnzQOZ5LzeoiL/JbHbn/BZP6AOs+vH6FNImoiGhX9N0uS67suVr3HbU5HPUYVpDEKlrYnb9Q==}
+  /@waveshq/standard-web-linter/0.8.0_klpylqwss7j4mjsavnu5vopi6q:
+    resolution: {integrity: sha512-BWWTrl801NGMWvJZosVdhVzFLVL8JJHCV83WvMQ0HRlbzr1JNs5k1jefA7S+XrHomMWcZhuglVNbHze7iHP3SQ==}
     dependencies:
       eslint: 8.29.0
       eslint-config-airbnb: 19.0.4_u6r7wmyqgznou2plc6ye67x2ku
@@ -2206,8 +2206,8 @@ packages:
       - supports-color
     dev: true
 
-  /@waveshq/standard-web/0.7.1_nxrcxq3d2px3f3w2g4ulingn6i:
-    resolution: {integrity: sha512-BsOGarD8dGPktXTDUggRw17Ze/0qrY4+qAdpuk97FEMUWgfWEZr9bojsotBW1xv4DVzyrcoITt1bLNpaw2JYEw==}
+  /@waveshq/standard-web/0.8.0_nxrcxq3d2px3f3w2g4ulingn6i:
+    resolution: {integrity: sha512-9kuQYrUVNiw6Ai8Cd9KGJ7v929RILI9uVfvgPOZDoV4d+1IJBTiEQi9il5r0A7sHCamqzkITjD+T8yaBBxbcig==}
     dependencies:
       '@types/react': 18.0.26
       '@types/react-dom': 18.0.9

@@ -11,8 +11,8 @@ specifiers:
   '@types/lodash': ^4.14.191
   '@types/node': ^18.11.12
   '@types/react': ^18.0.26
-  '@waveshq/standard-web': ^0.11.0
-  '@waveshq/standard-web-linter': ^0.11.0
+  '@waveshq/standard-web': ^0.12.0
+  '@waveshq/standard-web-linter': ^0.12.0
   autoprefixer: ^10.4.13
   babel-plugin-istanbul: ^6.1.1
   babel-plugin-jsx-remove-data-test-id: ^3.0.0
@@ -37,7 +37,7 @@ dependencies:
   '@defichain/whale-api-client': 3.6.0_defichain@3.6.0
   '@headlessui/react': 1.7.5_biqbaboplfbrettd7655fr4n2y
   '@netlify/ipx': 1.3.2
-  '@waveshq/standard-web': 0.11.0_nxrcxq3d2px3f3w2g4ulingn6i
+  '@waveshq/standard-web': 0.12.0_nxrcxq3d2px3f3w2g4ulingn6i
   classnames: 2.3.2
   gray-matter: 4.0.3
   lodash: 4.17.21
@@ -60,7 +60,7 @@ devDependencies:
   '@types/lodash': 4.14.191
   '@types/node': 18.11.12
   '@types/react': 18.0.26
-  '@waveshq/standard-web-linter': 0.11.0_l3iuvjjloeqaaqqxtco55sogfm
+  '@waveshq/standard-web-linter': 0.12.0_l3iuvjjloeqaaqqxtco55sogfm
   autoprefixer: 10.4.13_postcss@8.4.20
   babel-plugin-istanbul: 6.1.1
   babel-plugin-jsx-remove-data-test-id: 3.0.0_@babel+core@7.20.5
@@ -2169,8 +2169,8 @@ packages:
     resolution: {integrity: sha512-haGBC8noyA5BfjCRXRH+VIkHCDVW5iD5UX24P2nOdilwUxI4qWsattS/co8QBGq64XsNLRAMdM5pQUE3zxkF9Q==}
     dev: true
 
-  /@waveshq/standard-web-linter/0.11.0_l3iuvjjloeqaaqqxtco55sogfm:
-    resolution: {integrity: sha512-U6r1+DbB3/KNFv4HgVigRSZzQguPNnJuGN+zhYLz7eU86JD8lBUVHbKXHL8r2aqNuDlt40u2nixY7ldX9UQO0g==}
+  /@waveshq/standard-web-linter/0.12.0_l3iuvjjloeqaaqqxtco55sogfm:
+    resolution: {integrity: sha512-c87+X+7RRwy9Kp0TPBEYelWgbo3bdzNIUz5QVouficG9uAB30VcvocGtG2r55IOAj9W6aktnX/nplPdn58Iw7Q==}
     dependencies:
       eslint: 8.29.0
       eslint-config-airbnb: 19.0.4_u6r7wmyqgznou2plc6ye67x2ku
@@ -2205,8 +2205,8 @@ packages:
       - supports-color
     dev: true
 
-  /@waveshq/standard-web/0.11.0_nxrcxq3d2px3f3w2g4ulingn6i:
-    resolution: {integrity: sha512-PjU/E5rdrkeI6W8FWly3AzNTfDbqIJY/ESn/EwLf1JuNcMMCjudxOUKGYaB3JojHzeyFgbIDTmmRMjHV/OlQkg==}
+  /@waveshq/standard-web/0.12.0_nxrcxq3d2px3f3w2g4ulingn6i:
+    resolution: {integrity: sha512-eQlo3cxZvFJwiCXR7OS5/R4/eqQSWK8/x7anPRcoKWrcbzR4bN/0O1S1MhvDfsMVl4dPEPPpMZzuRZqSS9iGzA==}
     dependencies:
       '@netlify/ipx': 1.3.2
       '@types/react': 18.0.26

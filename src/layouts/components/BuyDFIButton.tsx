@@ -118,6 +118,7 @@ export function BuyDFIButton({
                   layout="fixed"
                   objectFit="contain"
                   alt={exchange.name}
+                  unoptimized
                 />
               </div>
             </ExternalLink>

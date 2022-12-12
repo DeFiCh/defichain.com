@@ -189,6 +189,7 @@ function ExchangeCard(props: {
           src={props.image}
           title={props.name}
           objectFit="contain"
+          unoptimized
         />
       </div>
     </ExternalLink>

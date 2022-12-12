@@ -26,6 +26,7 @@ export function WalletFeaturesSection(): JSX.Element {
             objectFit="cover"
             alt={t<string>("LiquidityMining.title")}
             data-testid="LiquidityMiningSection.image"
+            unoptimized
           />
         </div>
         <div className="w-full lg:w-1/2 flex flex-wrap lg:mt-2 xl:mt-4 lg:px-10 xl:px-14">

@@ -38,42 +38,41 @@ function MediaSection(): JSX.Element {
   return (
     <Section title={t("MediaSection.title")} testId="MediaSection">
       <div className="flex flex-wrap -mx-1.5">
-        {mediaList.map((media) => {
-          return (
-            <div
-              className="p-1.5 w-full md:w-1/2 lg:w-1/3 xl:w-1/4 flex flex-col"
-              key={media.url}
-              data-testid="MediaSection.Card"
+        {mediaList.map((media) => (
+          <div
+            className="p-1.5 w-full md:w-1/2 lg:w-1/3 xl:w-1/4 flex flex-col"
+            key={media.url}
+            data-testid="MediaSection.Card"
+          >
+            <ExternalLink
+              url={media.url}
+              className="flex flex-col flex-1 text-gray-900"
             >
-              <ExternalLink
-                url={media.url}
-                className="flex flex-col flex-1 text-gray-900"
-              >
-                <div className="p-6 flex flex-wrap bg-gray-50 rounded-lg justify-start flex flex-col flex-1 hover:shadow-lg">
-                  <div className="text-sm font-medium text-gray-500">
-                    {media.source.name}
-                  </div>
-                  <div className="font-medium text-xl mt-4 mb-8 flex-1 text-gray-900">
-                    {media.title}
-                  </div>
-                  {media.source.image !== undefined ? (
-                    <div className="relative w-[140px] h-[40px]">
-                      <Image
-                        fill
-                        style={{ objectFit: "contain", objectPosition: "left" }}
-                        src={media.source.image}
-                        alt={media.source.name}
-                        title={media.source.name}
-                      />
-                    </div>
-                  ) : (
-                    <></>
-                  )}
+              <div className="p-6 flex flex-wrap bg-gray-50 rounded-lg justify-start flex flex-col flex-1 hover:shadow-lg">
+                <div className="text-sm font-medium text-gray-500">
+                  {media.source.name}
                 </div>
-              </ExternalLink>
-            </div>
-          );
-        })}
+                <div className="font-medium text-xl mt-4 mb-8 flex-1 text-gray-900">
+                  {media.title}
+                </div>
+                {media.source.image !== undefined ? (
+                  <div className="relative w-[140px] h-[40px]">
+                    <Image
+                      fill
+                      style={{ objectFit: "contain", objectPosition: "left" }}
+                      src={media.source.image}
+                      alt={media.source.name}
+                      title={media.source.name}
+                      unoptimized
+                    />
+                  </div>
+                ) : (
+                  <></>
+                )}
+              </div>
+            </ExternalLink>
+          </div>
+        ))}
       </div>
     </Section>
   );

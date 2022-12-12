@@ -20,6 +20,7 @@ export function DownloadCard(
         {typeof props.imageSrc === "string" ? (
           <div className="w-full overflow-hidden">
             <Image
+              unoptimized
               src={props.imageSrc}
               width={64}
               height={64}

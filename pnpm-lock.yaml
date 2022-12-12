@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@cypress/code-coverage': ^3.10.0
-  '@defichain/whale-api-client': ^3.5.3
+  '@defichain/whale-api-client': ^3.6.0
   '@headlessui/react': ^1.7.5
   '@netlify/ipx': ^1.3.2
   '@netlify/plugin-nextjs': ^4.29.3
@@ -34,7 +34,7 @@ specifiers:
   tailwindcss: ^3.2.4
 
 dependencies:
-  '@defichain/whale-api-client': 3.5.3_defichain@3.5.3
+  '@defichain/whale-api-client': 3.6.0_defichain@3.6.0
   '@headlessui/react': 1.7.5_biqbaboplfbrettd7655fr4n2y
   '@netlify/ipx': 1.3.2
   '@waveshq/standard-web': 0.8.0_nxrcxq3d2px3f3w2g4ulingn6i
@@ -1300,49 +1300,49 @@ packages:
       - supports-color
     dev: true
 
-  /@defichain/jellyfish-api-core/3.5.3_defichain@3.5.3:
-    resolution: {integrity: sha512-prDYzjAy3gey1qFuzWpoM4S797YV0723r4i62RwMZmXT759dwYY3jtPBbT/XNNJJloDhtHTLL+FG8sYA6KWpEg==}
+  /@defichain/jellyfish-api-core/3.6.0_defichain@3.6.0:
+    resolution: {integrity: sha512-xJ5EDzI3OVcJiSU+idSbWRj473o4I5vRS2aNcbe7uc7RG9grfMbUNh2vGeqxxoT+pG4fRoRl4ZoZB90ommHKUA==}
     peerDependencies:
-      defichain: ^3.5.3
+      defichain: ^3.6.0
     dependencies:
-      '@defichain/jellyfish-json': 3.5.3_defichain@3.5.3
-      defichain: 3.5.3
+      '@defichain/jellyfish-json': 3.6.0_defichain@3.6.0
+      defichain: 3.6.0
     dev: false
 
-  /@defichain/jellyfish-api-jsonrpc/3.5.3_defichain@3.5.3:
-    resolution: {integrity: sha512-Vm2DVcfo5OtgZMGZe61P4ME38Rcuo2rU2+czgSE+r4WpUL0AGfzExjTtSAH9+hSdkmwplUrzXobBITrg4w8ndA==}
+  /@defichain/jellyfish-api-jsonrpc/3.6.0_defichain@3.6.0:
+    resolution: {integrity: sha512-3T8tDEdca5ZUjBPb6AQ47OfsxqZamMoavQpxyA4alfK/C79du4n3z40scCHY2hgoZyKhvdkZUFBCyTsJjNWfVQ==}
     peerDependencies:
-      defichain: ^3.5.3
+      defichain: ^3.6.0
     dependencies:
-      '@defichain/jellyfish-api-core': 3.5.3_defichain@3.5.3
+      '@defichain/jellyfish-api-core': 3.6.0_defichain@3.6.0
       abort-controller: 3.0.0
       cross-fetch: 3.1.5
-      defichain: 3.5.3
+      defichain: 3.6.0
     transitivePeerDependencies:
       - encoding
     dev: false
 
-  /@defichain/jellyfish-json/3.5.3_defichain@3.5.3:
-    resolution: {integrity: sha512-bNzP8YVJP6+cvo8hSDojMwkOw2ysRHO9+ZgP6ju1qYuLhsj47dlfAVhKzjMFiVnSck872ElCnygWS+Pd5ruS2Q==}
+  /@defichain/jellyfish-json/3.6.0_defichain@3.6.0:
+    resolution: {integrity: sha512-tewi7nGNHFQfCBaVP+fFw6azSZNGB5FqBznw0byKx5m7JdXambJeD7htjW/F2hVB+oqKGyugBsTR4Ro/ped12Q==}
     peerDependencies:
-      defichain: ^3.5.3
+      defichain: ^3.6.0
     dependencies:
       '@types/lossless-json': 1.0.1
       bignumber.js: 9.1.1
-      defichain: 3.5.3
+      defichain: 3.6.0
       lossless-json: 1.0.5
     dev: false
 
-  /@defichain/whale-api-client/3.5.3_defichain@3.5.3:
-    resolution: {integrity: sha512-y5A6vtqJbe1Tuwnh0KgIXnL9w+MFBSwHGaSNcBQ2f8iox0W1Brpga3ZdkYXIRmYZGIMqyHcfgrh+R2L/IJL/lA==}
+  /@defichain/whale-api-client/3.6.0_defichain@3.6.0:
+    resolution: {integrity: sha512-iZqgIzkzAFxxtJB4XdtOT8m9IksNbAVUcqD9e26obAj1wJ5e+3ATsZdhcEGabtzCBcyNhB8sox3xX4WwcBv+nA==}
     peerDependencies:
-      defichain: ^3.5.3
+      defichain: ^3.6.0
     dependencies:
-      '@defichain/jellyfish-api-core': 3.5.3_defichain@3.5.3
-      '@defichain/jellyfish-api-jsonrpc': 3.5.3_defichain@3.5.3
+      '@defichain/jellyfish-api-core': 3.6.0_defichain@3.6.0
+      '@defichain/jellyfish-api-jsonrpc': 3.6.0_defichain@3.6.0
       abort-controller: 3.0.0
       cross-fetch: 3.1.5
-      defichain: 3.5.3
+      defichain: 3.6.0
       url-search-params-polyfill: 8.1.1
     transitivePeerDependencies:
       - encoding
@@ -3314,8 +3314,8 @@ packages:
       strip-bom: 4.0.0
     dev: true
 
-  /defichain/3.5.3:
-    resolution: {integrity: sha512-UNprXjUqwGLCfjLsysDzoVcxx1uCdIcPhrZ298/F/caTvOm6sxwPswa7o3x1krVarwzbjAZRgpPIaT2NA6xS/g==}
+  /defichain/3.6.0:
+    resolution: {integrity: sha512-pmSwa/OZF81LFnoKUAIqLaNJKtYhCfYr65ChA7LH4OE3BuUgOcYuIEfy/+zjMgaLW83VK02O95zOed4nbgQUTQ==}
     engines: {node: '>=v16.17.0'}
     dev: false
 

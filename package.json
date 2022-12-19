@@ -16,7 +16,7 @@
   "dependencies": {
     "@defichain/whale-api-client": "^3.11.0",
     "@headlessui/react": "^1.7.5",
-    "@waveshq/standard-web": "^0.20.0",
+    "@waveshq/standard-web": "^0.20.1",
     "classnames": "^2.3.2",
     "gray-matter": "^4.0.3",
     "lodash": "^4.17.21",
@@ -39,7 +39,7 @@
     "@types/lodash": "^4.14.191",
     "@types/node": "^18.11.12",
     "@types/react": "^18.0.26",
-    "@waveshq/standard-web-linter": "^0.20.0",
+    "@waveshq/standard-web-linter": "^0.20.1",
     "autoprefixer": "^10.4.13",
     "babel-plugin-istanbul": "^6.1.1",
     "babel-plugin-jsx-remove-data-test-id": "^3.0.0",

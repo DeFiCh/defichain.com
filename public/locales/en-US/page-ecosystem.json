@@ -32,11 +32,6 @@
       "desc": "DeFiChain (DFI) price, graph, data and info on Blockspot.io",
       "button": "Go to Blockspot.io"
     },
-    "Blockfolio": {
-      "title": "Blockfolio",
-      "desc": "Watch DFI on the Blockfolio Signal platform",
-      "button": "Go to Blockfolio"
-    },
     "Messari": {
       "title": "Messari",
       "desc": "Data tools that bring transparency to the cryptoeconomy",

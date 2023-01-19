@@ -8,6 +8,7 @@ import { TimeLineFuture } from "@components/index/roadmap/Future";
 import { TimeLine2020 } from "@components/index/roadmap/2020";
 import { TimeLine2019 } from "@components/index/roadmap/2019";
 import { useTranslation } from "next-i18next";
+import { TimeLine2023 } from "./2023";
 
 export function RoadmapSection(): JSX.Element {
   const { t } = useTranslation("page-index");
@@ -22,7 +23,7 @@ export function RoadmapSection(): JSX.Element {
           {t("RoadmapSection.title")}
         </h2>
       </Container>
-
+      <TimeLine2023 />
       <TimeLine2022 />
       <TimeLine2021 />
       <TimeLineFuture />

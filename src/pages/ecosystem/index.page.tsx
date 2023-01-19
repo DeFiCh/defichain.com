@@ -10,7 +10,6 @@ import { Section } from "@components/commons/Section";
 import CakeDeFiLogo from "../../../public/assets/svg/ecosystem/cake_logo.svg";
 import StakingRewardsLogo from "../../../public/assets/svg/ecosystem/stakingrewards_logo.svg";
 import BlockspotLogo from "../../../public/assets/img/ecosystem/blockspot.png";
-import Blockfolio from "../../../public/assets/svg/ecosystem/blockfolio_logo.svg";
 import MessariLogo from "../../../public/assets/svg/ecosystem/messari_logo.svg";
 import CoinGeckoLogo from "../../../public/assets/svg/ecosystem/coingecko_logo.svg";
 
@@ -86,18 +85,6 @@ export default function EcosystemPage(): JSX.Element {
             <Image alt="Blockspot Logo" src={BlockspotLogo} />
             <h3 className="text-2xl mt-5 font-medium">
               {t("PartnersSection.Blockspot.title")}
-            </h3>
-          </ResourceCard>
-          <ResourceCard
-            text={t("PartnersSection.Blockfolio.desc")}
-            buttonText={t("PartnersSection.Blockfolio.button")}
-            url="https://blockfolio.com/coin/DFI"
-            external
-            testid="EcosystemSection.Blockfolio"
-          >
-            <Image alt="Blockfolio Logo" src={Blockfolio} />
-            <h3 className="text-2xl mt-5 font-medium">
-              {t("PartnersSection.Blockfolio.title")}
             </h3>
           </ResourceCard>
           <ResourceCard

@@ -30,7 +30,6 @@ context("/ecosystem page on desktop", () => {
       cy.findByTestId("Section.Title").should("have.text", "Partners");
       cy.findByTestId("EcosystemSection.CakeDeFi").should("be.visible");
       cy.findByTestId("EcosystemSection.Staking").should("be.visible");
-      cy.findByTestId("EcosystemSection.Blockfolio").should("be.visible");
       cy.findByTestId("EcosystemSection.Blockspot").should("be.visible");
       cy.findByTestId("EcosystemSection.Messari").should("be.visible");
     });
@@ -69,7 +68,6 @@ context("/ecosystem page on mobile", () => {
       cy.findByTestId("Section.Title").should("have.text", "Partners");
       cy.findByTestId("EcosystemSection.CakeDeFi").should("be.visible");
       cy.findByTestId("EcosystemSection.Staking").should("be.visible");
-      cy.findByTestId("EcosystemSection.Blockfolio").should("be.visible");
       cy.findByTestId("EcosystemSection.Blockspot").should("be.visible");
       cy.findByTestId("EcosystemSection.Messari").should("be.visible");
     });

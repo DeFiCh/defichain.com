@@ -22,7 +22,7 @@ specifiers:
   next-i18next: ^12.1.0
   postcss: ^8.4.21
   react-markdown: ^8.0.4
-  react-number-format: ^5.1.2
+  react-number-format: ^5.1.3
   react-slick: ^0.29.0
   rehype-autolink-headings: ^6.1.1
   rehype-sanitize: ^5.0.1
@@ -41,7 +41,7 @@ dependencies:
   lodash: 4.17.21
   next-i18next: 12.1.0_q76c2b4vyoegvsbrcwkfvimnai
   react-markdown: 8.0.4_kzbn2opkn2327fwg5yzwzya5o4
-  react-number-format: 5.1.2_biqbaboplfbrettd7655fr4n2y
+  react-number-format: 5.1.3_biqbaboplfbrettd7655fr4n2y
   react-slick: 0.29.0_biqbaboplfbrettd7655fr4n2y
   rehype-autolink-headings: 6.1.1
   rehype-sanitize: 5.0.1
@@ -6667,8 +6667,8 @@ packages:
       - supports-color
     dev: false
 
-  /react-number-format/5.1.2_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-NXm/MvZVjmPqrFbjAut/prCyBZ+pA+O+C12rDkWZrwS3JXz1J42RC1kpclkdnkx2KDjRCNFLb21FlwGcNBZddw==}
+  /react-number-format/5.1.3_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-N4XVBXDEIu9qVZIIwKTfCwhPh1fWx/i50I6XnMLsckj7OHi7A85+AMCzUmMCpx05usVVee14Rr/P7MUY0Pp2Kg==}
     peerDependencies:
       react: ^0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^18.0.0
       react-dom: ^0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^18.0.0

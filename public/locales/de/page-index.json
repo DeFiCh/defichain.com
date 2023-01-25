@@ -127,39 +127,39 @@
   },
   "RoadmapSection": {
     "title": "Roadmap",
-    "2022": {
-      "title": "2022-2023",
+    "2023": {
+      "title": "2023",
       "status": "Auf Kurs",
       "cards": [
         {
-          "title": "2022 Q4",
-          "desc": "Fertigstellung der Lightwallet 2.0 Design-Aktualisierung",
+          "title": "2023 Q1",
+          "desc": "DeFiChain-Konsortium",
           "image": {
-            "url": "/img/timeline/2022-2023/LW2.0_design_refresh.png",
-            "alt": "Fertigstellung der Lightwallet 2.0 Design-Aktualisierung"
+            "url": "/img/timeline/2023/2023_Q1_CONSORTIUM.png",
+            "alt": "DeFiChain-Konsortium"
           }
         },
         {
-          "title": "2022 Q4",
-          "desc": "On-Chain-Governance",
+          "title": "2023 Q1",
+          "desc": "DeFiChain On-Chain Governance",
           "image": {
-            "url": "/img/timeline/2022-2023/On-Chain_governance2x.png",
-            "alt": "On-Chain-Governance"
+            "url": "/img/timeline/2023/2023_Q1_OCG.png",
+            "alt": "DeFiChain On-Chain Governance"
           }
         },
         {
-          "title": "2022 Q4",
-          "desc": "Defimetachain.org",
+          "title": "2023 Q1",
+          "desc": "ERC-20-Bridge",
           "image": {
-            "url": "/img/timeline/2022-2023/defimetachain_website.png",
-            "alt": "Defimetachain.org"
+            "url": "/img/timeline/2023/2023_Q1_ERC_20_BRIDGE.png",
+            "alt": "ERC-20-Bridge"
           }
         },
         {
-          "title": "2022 Q4 bis 2023 Q1",
+          "title": "2023 Q1",
           "desc": "DeFi Meta Chain",
           "image": {
-            "url": "/img/timeline/2022-2023/DefiMetaChain.png",
+            "url": "/img/timeline/2023/2023_Q1_DMC.png",
             "alt": "DeFi Meta Chain"
           }
         },
@@ -167,24 +167,134 @@
           "title": "2023 Q1",
           "desc": "DeFi Meta Chain Explorer",
           "image": {
-            "url": "/img/timeline/2022-2023/DeFiMetaChain_explorer.png",
+            "url": "/img/timeline/2023/2023_Q1_DMC_EXPLORER.png",
             "alt": "DeFi Meta Chain Explorer"
           }
         },
         {
-          "title": "2023 Q1 ",
-          "desc": "DeFi Meta Chain Launchpad",
+          "title": "2023 Q1",
+          "desc": "DeFiChain DevNet",
           "image": {
-            "url": "/img/timeline/2022-2023/DeFiMetaChain_launchpad.png",
-            "alt": "DeFi Meta Chain Launchpad"
+            "url": "/img/timeline/2023/2023_Q1_DFC_DEVNET.png",
+            "alt": "DeFiChain DevNet"
           }
         },
         {
           "title": "2023 Q1",
-          "desc": "Optionen",
+          "desc": "DeFiChain.com-Neugestaltung",
           "image": {
-            "url": "/img/timeline/2022-2023/WRYTES2x.png",
-            "alt": "Optionen"
+            "url": "/img/timeline/2023/2023_Q1_DFC_REDESIGN.png",
+            "alt": "DeFiChain.com-Neugestaltung"
+          }
+        },
+        {
+          "title": "2023 Q1",
+          "desc": "Desktop-Lightwallet",
+          "image": {
+            "url": "/img/timeline/2023/2023_Q1_DESKTOP LW.png",
+            "alt": "Desktop-Lightwallet"
+          }
+        },
+        {
+          "title": "2023 Q2",
+          "desc": "DeFi Meta Chain Launchpad",
+          "image": {
+            "url": "/img/timeline/2023/2023_Q2_DMC_LAUNCH_PAD.png",
+            "alt": "DeFi Meta Chain Launchpad"
+          }
+        },
+        {
+          "title": "2023 Q2",
+          "desc": "DeFi Meta Chain Launchpool",
+          "image": {
+            "url": "/img/timeline/2023/2023_Q2_DMC_LAUNCH_POOL.png",
+            "alt": "DeFi Meta Chain Launchpool"
+          }
+        },
+        {
+          "title": "2023 Q2",
+          "desc": "DeFi Meta Chain Hackathon",
+          "image": {
+            "url": "/img/timeline/2023/2023_Q2_DMC_HACKATHON.png",
+            "alt": "DeFi Meta Chain Hackathon"
+          }
+        },
+        {
+          "title": "2023 Q2",
+          "desc": "Inkubator-Programm der DeFi Meta Chain",
+          "image": {
+            "url": "/img/timeline/2023/2023_Q2_DMC_INCUBATOR.png",
+            "alt": "Inkubator-Programm der DeFi Meta Chain"
+          }
+        }
+      ]
+    },
+    "2022": {
+      "title": "2022",
+      "status": "Erreicht",
+      "cards": [
+        {
+          "title": "2022 Q1",
+          "desc": "DeFiChain Electrum wurde eingeführt",
+          "image": {
+            "url": "/img/timeline/2022/2022_Q1_DFC_ELECTRUM.png",
+            "alt": "DeFiChain Electrum wurde eingeführt"
+          }
+        },
+        {
+          "title": "2022 Q2",
+          "desc": "FutureSwap wurde eingeführt",
+          "image": {
+            "url": "/img/timeline/2022/2022_Q2_FUTURE_SWAP.png",
+            "alt": "FutureSwap wurde eingeführt"
+          }
+        },
+        {
+          "title": "2022 Q2",
+          "desc": "Notierung auf ByBit",
+          "image": {
+            "url": "/img/timeline/2022/2022_Q2_BYBIT_LISTING.png",
+            "alt": "Notierung auf ByBit"
+          }
+        },
+        {
+          "title": "2022 Q3",
+          "desc": "Notierung auf GateIO",
+          "image": {
+            "url": "/img/timeline/2022/2022_Q3_GATEIO_LISTING.png",
+            "alt": "Notierung auf GateIO"
+          }
+        },
+        {
+          "title": "2022 Q3",
+          "desc": "Notierung auf Huobi",
+          "image": {
+            "url": "/img/timeline/2022/2022_Q3_HUOBI_LISTING.png",
+            "alt": "Notierung auf Huobi"
+          }
+        },
+        {
+          "title": "2022 Q4",
+          "desc": "Start der Webseite DeFi Meta Chain Official",
+          "image": {
+            "url": "/img/timeline/2022/2022_Q4_DMC_WEBSITE_LAUNCH.png",
+            "alt": "Start der Webseite DeFi Meta Chain Official"
+          }
+        },
+        {
+          "title": "2022 Q4",
+          "desc": "Einführung des Hard Forks Grand Central",
+          "image": {
+            "url": "/img/timeline/2022/2022_Q4_GRAND_CENTRAL_HARDFORK.png",
+            "alt": "Einführung des Hard Forks Grand Central"
+          }
+        },
+        {
+          "title": "2022 Q4",
+          "desc": "Top 10 Projekte nach Community-Followern auf CoinMarketCap",
+          "image": {
+            "url": "/img/timeline/2022/2022_Q4_TOP_10_PROJECT_CMC.png",
+            "alt": "Top 10 Projekte nach Community-Followern auf CoinMarketCap"
           }
         }
       ]

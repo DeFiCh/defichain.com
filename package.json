@@ -35,7 +35,7 @@
     "@cypress/code-coverage": "^3.10.0",
     "@netlify/plugin-nextjs": "^4.30.2",
     "@tailwindcss/typography": "^0.5.9",
-    "@testing-library/cypress": "^8.0.7",
+    "@testing-library/cypress": "^9.0.0",
     "@types/lodash": "^4.14.191",
     "@types/node": "^18.11.12",
     "@types/react": "^18.0.26",

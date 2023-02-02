@@ -1,10 +1,7 @@
 context("Developers page on desktop", () => {
-  before(() => {
-    cy.visit("/developers");
-  });
-
   beforeEach(() => {
     cy.viewport("macbook-16");
+    cy.visit("/developers");
   });
 
   it("should have Header", () => {
@@ -35,12 +32,9 @@ context("Developers page on desktop", () => {
 });
 
 context("Developers page on mobile", () => {
-  before(() => {
-    cy.visit("/developers");
-  });
-
   beforeEach(() => {
     cy.viewport("iphone-x");
+    cy.visit("/developers");
   });
 
   it("should have Header", () => {

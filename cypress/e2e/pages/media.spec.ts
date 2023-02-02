@@ -1,10 +1,7 @@
 context("/media page on desktop", () => {
-  before(() => {
-    cy.visit("/media");
-  });
-
   beforeEach(() => {
     cy.viewport("macbook-16");
+    cy.visit("/media");
   });
 
   it("should have Header", () => {
@@ -30,12 +27,9 @@ context("/media page on desktop", () => {
 });
 
 context("/media page on mobile", () => {
-  before(() => {
-    cy.visit("/media");
-  });
-
   beforeEach(() => {
     cy.viewport("iphone-x");
+    cy.visit("/media");
   });
 
   it("should have Header", () => {

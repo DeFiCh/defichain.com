@@ -1,10 +1,7 @@
 context("/dex on macbook-16", () => {
-  before(() => {
-    cy.visit("/dex");
-  });
-
   beforeEach(() => {
     cy.viewport("macbook-16");
+    cy.visit("/dex");
   });
 
   it("should have Header", () => {
@@ -127,12 +124,9 @@ context("/dex on macbook-16", () => {
 });
 
 context("/dex on iphone-x", () => {
-  before(() => {
-    cy.visit("/dex");
-  });
-
   beforeEach(() => {
     cy.viewport("iphone-x");
+    cy.visit("/dex");
   });
 
   it("should have Header", () => {

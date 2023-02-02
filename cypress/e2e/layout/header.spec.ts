@@ -1,10 +1,7 @@
 context("<Header/> on desktop", () => {
-  before(() => {
-    cy.visit("/");
-  });
-
   beforeEach(() => {
     cy.viewport("macbook-16");
+    cy.visit("/");
   });
 
   it("should have Defichain Logo", () => {
@@ -43,12 +40,9 @@ context("<Header/> on desktop", () => {
 });
 
 context("<Header/> on mobile", () => {
-  before(() => {
-    cy.visit("/");
-  });
-
   beforeEach(() => {
     cy.viewport("iphone-x");
+    cy.visit("/");
   });
 
   it("should have Defichain Logo", () => {

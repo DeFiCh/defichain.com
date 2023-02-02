@@ -1,10 +1,7 @@
 context("/ecosystem page on desktop", () => {
-  before(() => {
-    cy.visit("/ecosystem");
-  });
-
   beforeEach(() => {
     cy.viewport("macbook-16");
+    cy.visit("/ecosystem");
   });
 
   it("should have Header", () => {
@@ -37,12 +34,9 @@ context("/ecosystem page on desktop", () => {
 });
 
 context("/ecosystem page on mobile", () => {
-  before(() => {
-    cy.visit("/ecosystem");
-  });
-
   beforeEach(() => {
     cy.viewport("iphone-x");
+    cy.visit("/ecosystem");
   });
 
   it("should have Header", () => {

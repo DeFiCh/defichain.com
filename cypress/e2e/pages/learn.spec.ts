@@ -1,10 +1,7 @@
 context("Learn page on desktop", () => {
-  before(() => {
-    cy.visit("/learn");
-  });
-
   beforeEach(() => {
     cy.viewport("macbook-16");
+    cy.visit("/learn");
   });
 
   it("should have Header", () => {
@@ -20,28 +17,30 @@ context("Learn page on desktop", () => {
   });
 
   it("should have md posts", () => {
-    cy.findAllByTestId("HowToCard").within(() => {
-      cy.findByTestId("HowToCard.Title").should("be.visible");
-      cy.findByTestId("HowToCard.Desc").should("be.visible");
-      cy.findByTestId("HowToCard.Button").should("be.visible");
+    cy.findAllByTestId("HowToCard").each((element) => {
+      cy.wrap(element).within(() => {
+        cy.findByTestId("HowToCard.Title").should("be.visible");
+        cy.findByTestId("HowToCard.Desc").should("be.visible");
+        cy.findByTestId("HowToCard.Button").should("be.visible");
+      });
     });
   });
 
   it("should have faq", () => {
-    cy.findAllByTestId("FAQEntry").within(() => {
-      cy.findByTestId("FAQEntry.Title").should("be.visible").click();
-      cy.findByTestId("FAQEntry.Desc").should("be.visible");
+    cy.findAllByTestId("FAQEntry").each((element) => {
+      cy.wrap(element).within(() => {
+        cy.findByTestId("FAQEntry.Title").should("be.visible").click();
+        cy.findByTestId("FAQEntry.Desc").should("be.visible");
+      });
     });
   });
 });
 
 context("Learn page on mobile", () => {
-  before(() => {
-    cy.visit("/learn");
-  });
-
   beforeEach(() => {
     cy.viewport("iphone-x");
+    cy.visit("/learn");
+    cy.intercept("");
   });
 
   it("should have Header", () => {
@@ -57,17 +56,21 @@ context("Learn page on mobile", () => {
   });
 
   it("should have md posts", () => {
-    cy.findAllByTestId("HowToCard").within(() => {
-      cy.findByTestId("HowToCard.Title").should("be.visible");
-      cy.findByTestId("HowToCard.Desc").should("be.visible");
-      cy.findByTestId("HowToCard.Button").should("be.visible");
+    cy.findAllByTestId("HowToCard").each((element) => {
+      cy.wrap(element).within(() => {
+        cy.findByTestId("HowToCard.Title").should("be.visible");
+        cy.findByTestId("HowToCard.Desc").should("be.visible");
+        cy.findByTestId("HowToCard.Button").should("be.visible");
+      });
     });
   });
 
   it("should have faq", () => {
-    cy.findAllByTestId("FAQEntry").within(() => {
-      cy.findByTestId("FAQEntry.Title").should("be.visible").click();
-      cy.findByTestId("FAQEntry.Desc").should("be.visible");
+    cy.findAllByTestId("FAQEntry").each((element) => {
+      cy.wrap(element).within(() => {
+        cy.findByTestId("FAQEntry.Title").should("be.visible").click();
+        cy.findByTestId("FAQEntry.Desc").should("be.visible");
+      });
     });
   });
 });

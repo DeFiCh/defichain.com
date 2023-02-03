@@ -1,7 +1,11 @@
 context("<Footer/> on desktop", () => {
+  before(() => {
+    cy.visit("/");
+  });
+
   beforeEach(() => {
     cy.viewport("macbook-16");
-    cy.visit("/");
+    cy.interceptGeckoApi();
   });
 
   it("should have Defichain Logo", () => {
@@ -136,9 +140,13 @@ context("<Footer/> on desktop", () => {
 });
 
 context("<Footer/> on mobile", () => {
+  before(() => {
+    cy.visit("/");
+  });
+
   beforeEach(() => {
     cy.viewport("iphone-x");
-    cy.visit("/");
+    cy.interceptGeckoApi();
   });
 
   it("should have Defichain Logo", () => {

@@ -8,6 +8,7 @@ declare global {
        * @param {() => void} exec to execute before waiting
        */
       interceptServerSideWait(exec: () => void): Chainable<null>;
+      interceptGeckoApi(): Chainable<null>;
     }
   }
 }
@@ -17,4 +18,12 @@ Cypress.Commands.add("interceptServerSideWait", (exec: () => void) => {
   exec();
   cy.wait("@nextData");
   cy.wait(500);
+});
+
+Cypress.Commands.add("interceptGeckoApi", () => {
+  cy.intercept("https://api.coingecko.co/api/v3/coins/defichain", {});
+  cy.intercept(
+    "https://widgets.coingecko.com/coingecko-coin-ticker-widget.js",
+    {}
+  );
 });

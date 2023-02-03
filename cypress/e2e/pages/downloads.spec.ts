@@ -1,7 +1,11 @@
 context("/downloads page on desktop", () => {
+  before(() => {
+    cy.visit("/downloads");
+  });
+
   beforeEach(() => {
     cy.viewport("macbook-16");
-    cy.visit("/downloads");
+    cy.interceptGeckoApi();
   });
 
   it("should have Header", () => {
@@ -49,9 +53,13 @@ context("/downloads page on desktop", () => {
 });
 
 context("/downloads page on mobile", () => {
+  before(() => {
+    cy.visit("/downloads");
+  });
+
   beforeEach(() => {
     cy.viewport("iphone-x");
-    cy.visit("/downloads");
+    cy.interceptGeckoApi();
   });
 
   it("should have Header", () => {

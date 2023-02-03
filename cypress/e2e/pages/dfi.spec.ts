@@ -1,7 +1,11 @@
 context("/dfi page on desktop", () => {
+  before(() => {
+    cy.visit("/dfi");
+  });
+
   beforeEach(() => {
     cy.viewport("macbook-16");
-    cy.visit("/dfi");
+    cy.interceptGeckoApi();
   });
 
   it("should have Header", () => {
@@ -81,9 +85,13 @@ context("/dfi page on desktop", () => {
 });
 
 context("/dfi page on mobile", () => {
+  before(() => {
+    cy.visit("/dfi");
+  });
+
   beforeEach(() => {
     cy.viewport("iphone-x");
-    cy.visit("/dfi");
+    cy.interceptGeckoApi();
   });
 
   it("should have Header", () => {

@@ -1,7 +1,11 @@
 context("Learn page on desktop", () => {
+  before(() => {
+    cy.visit("/learn");
+  });
+
   beforeEach(() => {
     cy.viewport("macbook-16");
-    cy.visit("/learn");
+    cy.interceptGeckoApi();
   });
 
   it("should have Header", () => {
@@ -37,10 +41,13 @@ context("Learn page on desktop", () => {
 });
 
 context("Learn page on mobile", () => {
+  before(() => {
+    cy.visit("/learn");
+  });
+
   beforeEach(() => {
     cy.viewport("iphone-x");
-    cy.visit("/learn");
-    cy.intercept("");
+    cy.interceptGeckoApi();
   });
 
   it("should have Header", () => {

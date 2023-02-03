@@ -5,6 +5,7 @@ context("/dex on macbook-16", () => {
 
   beforeEach(() => {
     cy.viewport("macbook-16");
+    cy.interceptGeckoApi();
   });
 
   it("should have Header", () => {
@@ -133,6 +134,7 @@ context("/dex on iphone-x", () => {
 
   beforeEach(() => {
     cy.viewport("iphone-x");
+    cy.interceptGeckoApi();
   });
 
   it("should have Header", () => {

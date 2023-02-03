@@ -5,6 +5,7 @@ context("/media page on desktop", () => {
 
   beforeEach(() => {
     cy.viewport("macbook-16");
+    cy.interceptGeckoApi();
   });
 
   it("should have Header", () => {
@@ -36,6 +37,7 @@ context("/media page on mobile", () => {
 
   beforeEach(() => {
     cy.viewport("iphone-x");
+    cy.interceptGeckoApi();
   });
 
   it("should have Header", () => {

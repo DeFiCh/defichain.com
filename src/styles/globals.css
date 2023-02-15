@@ -24,6 +24,26 @@ body {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+
+  .accent-dfc-gradient {
+    background: linear-gradient(90deg, #FF00FF 0%, #EC0C8D 100.04%);
+  }
+
+  .accent-gradient-1 {
+    background: linear-gradient(72.57deg, #EC008C 17.15%, #5B10FF 89.41%, #0468D6 102.56%);
+  }
+
+  .accent-gradient-2 {
+    background: linear-gradient(261.07deg, #EC008C -0.26%, #5B10FF 79.46%, #082FD4 100%);
+  }
+
+  .accent-gradient-3 {
+    background: linear-gradient(90.66deg, #42F9C2 -6.44%, #082FD4 76.25%);
+  }
+
+  .accent-gradient-4 {
+    background: linear-gradient(270deg, #7FF5C5 0%, #1530CC 100%);
+  }
 }
 
 /*Slick slider overrides*/

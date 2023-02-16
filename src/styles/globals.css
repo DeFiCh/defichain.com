@@ -3,6 +3,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Space+Grotesk&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -70,9 +71,17 @@ body {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), #FFFFFF;
   }
 
+  .header-dropdown-bg {
+    background: linear-gradient(144deg, rgba(22, 22, 22, 0.98) -0.38%, rgba(2, 2, 2, 0.98) 100.17%, rgba(2, 2, 2, 0.98) 100.17%);
+  }
+
   /* Accent gradients */
   .accent-dfc-gradient {
     background: linear-gradient(90deg, #FF00FF 0%, #EC0C8D 100.04%);
+  }
+
+  .accent-dfc-gradient-text {
+    background-image: linear-gradient(90deg, #ff00ff 0%, #ec0c8d 100.04%);
   }
 
   .accent-gradient-1 {

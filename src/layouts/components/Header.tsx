@@ -2,13 +2,12 @@ import classNames from "classnames";
 import { Container } from "@components/commons/Container";
 import { DeFiChainLogo } from "@components/icons/DeFiChainLogo";
 import Link from "next/link";
-import { MdClose, MdMenu } from "react-icons/md";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { useTranslation } from "next-i18next";
+import { Menu, Transition } from "@headlessui/react";
+import { MdClose, MdMenu } from "react-icons/md";
 import { useWhaleApiClient } from "../context/WhaleContext";
 import { BuyDFIButton } from "./BuyDFIButton";
-import { LanguageDropdown } from "./LanguageDropdown";
 
 export function Header(): JSX.Element {
   const [menu, setMenu] = useState(false);
@@ -44,7 +43,7 @@ export function Header(): JSX.Element {
   return (
     <header
       className={classNames(
-        "bg-white z-50 sticky top-0 md:shadow-none md:static",
+        "bg-dark-00 z-50 sticky top-0 md:shadow-none md:static",
         { "shadow-lg": !atTop }
       )}
     >
@@ -58,7 +57,10 @@ export function Header(): JSX.Element {
                 className="flex items-center cursor-pointer hover:text-primary-500"
                 data-testid="Header.SiteLogo"
               >
-                <DeFiChainLogo className="w-32 lg:block lg:w-40 h-full" />
+                <DeFiChainLogo
+                  fill="#FFFFFF"
+                  className="w-32 lg:block lg:w-40 h-full"
+                />
               </Link>
               <DesktopNavbar price={dfiPrice} />
             </div>
@@ -80,134 +82,134 @@ export function Header(): JSX.Element {
           </div>
         </Container>
       </div>
-
-      <div>{menu && <MobileMenu price={dfiPrice} />}</div>
     </header>
   );
 }
-
 function DesktopNavbar({ price }: { price: string }): JSX.Element {
-  const { t } = useTranslation("layout");
-
   return (
-    <div
-      className="hidden lg:flex ml-2 lg:ml-8 md:w-full md:justify-end xl:justify-between items-center text-gray-600"
-      data-testid="DesktopNavbar"
-    >
-      <div className="hidden lg:flex">
-        <HeaderLink
-          text={t("header.navbar.dfi")}
-          pathname="/dfi"
-          testId="Desktop.HeaderLink.DFI"
-        />
-        <HeaderLink
-          text={t("header.navbar.dex")}
-          pathname="/dex"
-          testId="Desktop.HeaderLink.DEX"
-        />
-        <HeaderLink
-          text={t("header.navbar.developers")}
-          pathname="/developers"
-          testId="Desktop.HeaderLink.Developers"
-        />
-        <HeaderLink
-          text={t("header.navbar.ecosystem")}
-          pathname="/ecosystem"
-          testId="Desktop.HeaderLink.Ecosystem"
-        />
-        <HeaderLink
-          text={t("header.navbar.learn")}
-          pathname="/learn"
-          testId="Desktop.HeaderLink.Learn"
-        />
-        <HeaderLink
-          text={t("header.navbar.dfcblog")}
-          pathname={t("header.navbar.bloglink")}
-          testId="Desktop.HeaderLink.DFCBlog"
-          targetBlank
-        />
-        <HeaderLink
-          text="DeFi Scan"
-          pathname="https://defiscan.live/"
-          testId="Desktop.HeaderLink.DeFiScan"
-          targetBlank
-        />
+    <div className="w-full hidden lg:flex">
+      <div className="w-full flex justify-center place-self-center gap-x-[37px]">
+        {MenuItems.map((item) => (
+          <MenuItemsDropdown item={item} />
+        ))}
       </div>
-      <div className="hidden lg:flex items-center">
-        <LanguageDropdown />
-        <HeaderLink
-          text={t("header.navbar.downloads")}
-          pathname="/downloads"
-          className="hidden lg:block"
-          testId="Desktop.HeaderLink.Downloads"
-        />
-        <BuyDFIButton classname="ml-6" price={price} />
-      </div>
+      <BuyDFIButton classname="ml-6" price={price} />
     </div>
   );
 }
 
-function MobileMenu({ price }: { price: string }): JSX.Element {
-  const { t } = useTranslation("layout");
-
+function MenuItemsDropdown({
+  item,
+}: {
+  item: {
+    label: string;
+    dropDownItems: DropDownItem[];
+    testId: string;
+    image?: {
+      imagePath: string;
+      pathname: string;
+      title: string;
+      subTitle: string;
+      buttonText: string;
+      imageContainerCustomStyle: string;
+      subtitleCustomStyle?: string;
+      defiChainLogo?: boolean;
+    };
+  };
+}) {
+  const [isShowing, setIsShowing] = useState(false);
   return (
-    <div
-      className="lg:hidden absolute z-50 w-full bg-white shadow-lg"
-      data-testid="MobileMenu"
+    <Menu
+      as="div"
+      className="relative"
+      onMouseLeave={() => {
+        setIsShowing(false);
+      }}
+      onMouseEnter={() => {
+        setIsShowing(true);
+      }}
     >
-      <BuyDFIButton price={price} />
-      <Container className="border-b border-gray-100 shadow-sm text-gray-600">
-        <div className="flex flex-col">
-          <HeaderLink
-            className="flex justify-center border-b border-gray-100"
-            text={t("header.navbar.dfi")}
-            pathname="/dfi"
-            testId="Mobile.HeaderLink.DFI"
-          />
-          <HeaderLink
-            className="flex justify-center border-b border-gray-100"
-            text={t("header.navbar.dex")}
-            pathname="/dex"
-            testId="Mobile.HeaderLink.DEX"
-          />
-          <HeaderLink
-            className="flex justify-center border-b border-gray-100"
-            text={t("header.navbar.developers")}
-            pathname="/developers"
-            testId="Mobile.HeaderLink.Developers"
-          />
-          <HeaderLink
-            className="flex justify-center border-b border-gray-100"
-            text={t("header.navbar.ecosystem")}
-            pathname="/ecosystem"
-            testId="Mobile.HeaderLink.Ecosystem"
-          />
-          <HeaderLink
-            className="flex justify-center border-b border-gray-100"
-            text={t("header.navbar.learn")}
-            pathname="/learn"
-            testId="Mobile.HeaderLink.Learn"
-          />
-          <HeaderLink
-            className="flex justify-center border-b border-gray-100"
-            text={t("header.navbar.dfcblog")}
-            pathname={t("header.navbar.bloglink")}
-            testId="Mobile.HeaderLink.DFCBlog"
-            targetBlank
-          />
-          <HeaderLink
-            className="flex justify-center border-b border-gray-100"
-            text="DeFi Scan"
-            pathname="https://defiscan.live/"
-            testId="Mobile.HeaderLink.DeFiScan"
-            targetBlank
-          />
-          <div className="flex w-full justify-center">
-            <LanguageDropdown />
+      <>
+        <Menu.Button className={classNames("flex font-semibold")}>
+          <div
+            className={classNames("text-light-00", {
+              "accent-dfc-gradient-text bg-clip-text text-transparent":
+                isShowing,
+            })}
+          >
+            {item.label}
           </div>
-        </div>
-      </Container>
-    </div>
+        </Menu.Button>
+        <Transition
+          show={isShowing}
+          enter="transition duration-100 ease-out"
+          enterFrom="transform scale-95 opacity-0"
+          enterTo="transform scale-100 opacity-100"
+          leave="transition duration-75 ease-out"
+          leaveFrom="transform scale-100 opacity-100"
+          leaveTo="transform scale-95 opacity-0"
+        >
+          <Menu.Items
+            data-testid="Desktop.HeaderLink.More.Items"
+            className="absolute top-6 -left-32 p-12 header-dropdown-bg border rounded-lg border-dark-300 min-h-[296px] min-w-[564px]"
+          >
+            <div className={classNames("flex flex-row gap-x-[134px]")}>
+              <div
+                className={classNames(
+                  "flex gap-y-16 gap-x-[134px]",
+                  item.dropDownItems.length > 1 && item.image !== undefined
+                    ? "flex-col"
+                    : " flex-row"
+                )}
+              >
+                {item.dropDownItems.map((dropDownItem) => (
+                  <div className="flex flex-col gap-y-5">
+                    <div className="whitespace-nowrap font-bold text-dark-500">
+                      {dropDownItem.title}
+                    </div>
+                    {dropDownItem.items.map((subItem) => (
+                      <HeaderLink
+                        text={subItem.label}
+                        pathname={subItem.pathname}
+                        className="whitespace-nowrap text-dark-1000"
+                        testId="Desktop.HeaderLink.Downloads"
+                      />
+                    ))}
+                  </div>
+                ))}
+              </div>
+              {item.image && (
+                <div
+                  style={{ backgroundImage: `url(${item.image.imagePath})` }}
+                  className={classNames(
+                    `p-8 border border-dark-300 bg-dark rounded-[15px] flex flex-col`,
+                    item.image.imageContainerCustomStyle
+                  )}
+                >
+                  {item.image.defiChainLogo && (
+                    <DeFiChainLogo fill="#FFFFFF" className="w-[140px]" />
+                  )}
+                  <div className="font-semibold text-light-00">
+                    {item.image.title}
+                  </div>
+                  <div
+                    className={classNames(
+                      item.image.subtitleCustomStyle ??
+                        "text-dark-700 max-w-[178px] mt-1"
+                    )}
+                  >
+                    {item.image.subTitle}
+                  </div>
+                  <button className="mt-4 bg-light-00 w-fit py-2 px-5 rounded-[92px] text-sm font-semibold">
+                    {item.image.buttonText}
+                  </button>
+                </div>
+              )}
+            </div>
+          </Menu.Items>
+        </Transition>
+      </>
+    </Menu>
   );
 }
 
@@ -224,7 +226,8 @@ function HeaderLink(props: {
       href={{ pathname: props.pathname }}
       passHref
       className={classNames(props.className, {
-        "text-primary-500": router.pathname === props.pathname,
+        "bg-clip-text text-transparent accent-dfc-gradient-text":
+          router.pathname === props.pathname,
       })}
       data-testid={props.testId}
       target={
@@ -233,7 +236,7 @@ function HeaderLink(props: {
     >
       <div
         className={classNames(
-          "p-2 lg:p-0 lg:pb-0.5 ml-1 lg:ml-6 inline text-lg hover:text-primary-500 cursor-pointer",
+          "leading-5 cursor-pointer w-fit bg-clip-text hover:text-transparent hover:accent-dfc-gradient-text",
           {
             "lg:border-b-2 border-primary-500":
               router.pathname === props.pathname,
@@ -245,3 +248,205 @@ function HeaderLink(props: {
     </Link>
   );
 }
+
+interface SubItems {
+  label: string;
+  pathname: string;
+  testId: string;
+}
+
+interface DropDownItem {
+  title: string;
+  items: SubItems[];
+}
+
+const MenuItems = [
+  {
+    label: "Explore",
+    dropDownItems: [
+      {
+        title: "GET STARTED",
+        items: [
+          {
+            label: "$DFI",
+            pathname: "/txs",
+            testId: "Desktop.HeaderLink.Explore.Wallets",
+          },
+          {
+            label: "Invest, Trade and Earn",
+            pathname: "/txs",
+            testId: "Desktop.HeaderLink.Explore.InvestTradeEarn",
+          },
+          {
+            label: "DEX",
+            pathname: "/txs",
+            testId: "Desktop.HeaderLink.Explore.Dex",
+          },
+          {
+            label: "Masternodes",
+            pathname: "/txs",
+            testId: "Desktop.HeaderLink.Explore.Masternodes",
+          },
+          {
+            label: "Wallets",
+            pathname: "/txs",
+            testId: "Desktop.HeaderLink.Explore.Masternodes",
+          },
+        ],
+      },
+    ],
+    testId: "Desktop.HeaderLink.Explore",
+    image: {
+      imagePath: "/assets/img/header/header-metal-dfi-coin.png",
+      pathname: "/txs",
+      title: "$DFI",
+      subTitle: "The integral coin of DeFiChain Ecosystem",
+      buttonText: "Learn more",
+      imageContainerCustomStyle:
+        "w-[324px] h-[189px] bg-dark-00 bg-no-repeat bg-right-bottom",
+    },
+  },
+  {
+    label: "Build",
+    dropDownItems: [
+      {
+        title: "DEVELOPERS",
+        items: [
+          {
+            label: "Github ↗",
+            pathname: "/txs",
+            testId: "Desktop.HeaderLink.Explore.Wallets",
+          },
+          {
+            label: "Jellyfish SDK",
+            pathname: "/txs",
+            testId: "Desktop.HeaderLink.Explore.InvestTradeEarn",
+          },
+          {
+            label: "Bug Bounty",
+            pathname: "/txs",
+            testId: "Desktop.HeaderLink.Explore.Dex",
+          },
+        ],
+      },
+      {
+        title: "RESOURCES",
+        items: [
+          {
+            label: "White Paper",
+            pathname: "/txs",
+            testId: "Desktop.HeaderLink.Explore.Wallets",
+          },
+          {
+            label: "Developer Toolkit",
+            pathname: "/txs",
+            testId: "Desktop.HeaderLink.Explore.InvestTradeEarn",
+          },
+          {
+            label: "Media Assets",
+            pathname: "/txs",
+            testId: "Desktop.HeaderLink.Explore.Dex",
+          },
+        ],
+      },
+    ],
+    testId: "Desktop.HeaderLink.Explore",
+  },
+  {
+    label: "Ecosystem",
+    dropDownItems: [
+      {
+        title: "PROJECTS",
+        items: [
+          {
+            label: "DefiChain Block Explorer",
+            pathname: "/txs",
+            testId: "Desktop.HeaderLink.Explore.Wallets",
+          },
+          {
+            label: "DefiChain Bridge",
+            pathname: "/txs",
+            testId: "Desktop.HeaderLink.Explore.InvestTradeEarn",
+          },
+        ],
+      },
+      {
+        title: "PROGRAMMES",
+        items: [
+          {
+            label: "On Chain Governance",
+            pathname: "/txs",
+            testId: "Desktop.HeaderLink.Explore.Wallets",
+          },
+          {
+            label: "$100M Accelerator Program",
+            pathname: "/txs",
+            testId: "Desktop.HeaderLink.Explore.InvestTradeEarn",
+          },
+        ],
+      },
+    ],
+    testId: "Desktop.HeaderLink.Explore",
+    image: {
+      imagePath: "/assets/img/header/header-jellyfish.png",
+      pathname: "/txs",
+      title: "",
+      subTitle: "Powered by the Security of Bitcoin & Flexibililty of Ethereum",
+      buttonText: "Explore",
+      imageContainerCustomStyle: "w-[242px] h-[260px] rounded-[15px]",
+      subtitleCustomStyle: "text-dark-1000 font-medium mt-5 mb-5 w-[178px]",
+      defiChainLogo: true,
+    },
+  },
+  {
+    label: "Community",
+    dropDownItems: [
+      {
+        title: "DEVELOPERS",
+        items: [
+          {
+            label: "Blog",
+            pathname: "/txs",
+            testId: "Desktop.HeaderLink.Explore.Wallets",
+          },
+          {
+            label: "Newsletter",
+            pathname: "/txs",
+            testId: "Desktop.HeaderLink.Explore.InvestTradeEarn",
+          },
+        ],
+      },
+      {
+        title: "SOCIALS",
+        items: [
+          {
+            label: "Telegram",
+            pathname: "/txs",
+            testId: "Desktop.HeaderLink.Explore.Wallets",
+          },
+          {
+            label: "Reddit",
+            pathname: "/txs",
+            testId: "Desktop.HeaderLink.Explore.InvestTradeEarn",
+          },
+          {
+            label: "GitHub",
+            pathname: "/txs",
+            testId: "Desktop.HeaderLink.Explore.InvestTradeEarn",
+          },
+          {
+            label: "Youtube",
+            pathname: "/txs",
+            testId: "Desktop.HeaderLink.Explore.InvestTradeEarn",
+          },
+          {
+            label: "Twitter",
+            pathname: "https://twitter.com/defichain",
+            testId: "Desktop.HeaderLink.Explore.InvestTradeEarn",
+          },
+        ],
+      },
+    ],
+    testId: "Desktop.HeaderLink.Explore",
+  },
+];

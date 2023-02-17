@@ -72,7 +72,7 @@ body {
   }
 
   .header-dropdown-bg {
-    background: linear-gradient(144deg, rgba(22, 22, 22, 0.98) -0.38%, rgba(2, 2, 2, 0.98) 100.17%, rgba(2, 2, 2, 0.98) 100.17%);
+    background: linear-gradient(144deg, rgba(22, 22, 22, 0.8) -0.38%, rgba(2, 2, 2, 0.8) 100.17%);
   }
 
   /* Accent gradients */

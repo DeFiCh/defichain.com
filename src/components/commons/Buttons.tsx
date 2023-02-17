@@ -89,11 +89,11 @@ export function GradientButton({
     <button
       onClick={onClick}
       disabled={disabled}
-      className="accent-gradient-1 rounded-[44px] p-1 w-auto h-auto"
+      className="accent-gradient-1 rounded-[44px] p-1 w-auto h-auto disabled:opacity-30 disabled:pointer-events-none"
     >
       <div
         className={classNames(
-          "flex items-center bg-dark-00 text-light-00 rounded-[44px] hover:accent-gradient-1 w-full h-full disabled:opacity-30 disabled:pointer-events-none whitespace-nowrap",
+          "flex items-center bg-dark-00 text-light-00 rounded-[44px] hover:accent-gradient-1 w-full h-full whitespace-nowrap",
           className ?? "px-5 py-3"
         )}
       >

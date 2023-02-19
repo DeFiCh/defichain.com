@@ -79,6 +79,44 @@ export function GradientButton({
   className,
   disabled,
   onClick,
+  href,
+}: {
+  buttonText: string;
+  className?: string;
+  disabled?: boolean;
+  onClick?: () => void;
+  href?: string;
+}) {
+  if (href) {
+    return (
+      <a
+        href={href}
+        className={classNames({ "pointer-events-none": disabled })}
+      >
+        <GradientButtonElement
+          buttonText={buttonText}
+          className={className}
+          disabled={disabled}
+          onClick={onClick}
+        />
+      </a>
+    );
+  }
+  return (
+    <GradientButtonElement
+      buttonText={buttonText}
+      className={className}
+      disabled={disabled}
+      onClick={onClick}
+    />
+  );
+}
+
+function GradientButtonElement({
+  buttonText,
+  className,
+  disabled,
+  onClick,
 }: {
   buttonText: string;
   className?: string;
@@ -102,6 +140,7 @@ export function GradientButton({
     </button>
   );
 }
+
 // To remove currently not removed yet to load homescreen without error
 export function ButtonUnfilled(
   props: PropsWithChildren<{ className?: string; text: string }>

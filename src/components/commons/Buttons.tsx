@@ -166,7 +166,7 @@ export function LinkButton({
         "font-semibold text-dark-1000 hover:text-brand-100 flex flex-row gap-x-2 items-center",
         className,
         {
-          "pointer-events-none": disabled,
+          "pointer-events-none opacity-30": disabled,
         }
       )}
     >

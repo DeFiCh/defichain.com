@@ -82,7 +82,7 @@ body {
     background: linear-gradient(270deg, #7FF5C5 0%, #1530CC 100%);
   }
 
-  .gradient-button {
+  .gradient-button-hover {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(72.57deg, #EC008C 17.15%, #5B10FF 89.41%, #0468D6 102.56%);
   }
 }

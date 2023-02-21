@@ -163,7 +163,7 @@ export function LinkButton({
       onMouseLeave={() => setIsMouseEnter(false)}
       href={href}
       className={classNames(
-        "font-semibold text-dark-100 hover:text-brand-100 flex flex-row items-center",
+        "font-semibold text-dark-1000 hover:text-brand-100 flex flex-row gap-x-2 items-center",
         className,
         {
           "pointer-events-none": disabled,

@@ -157,7 +157,12 @@ function DesktopNavbar({ price }: { price: string }): JSX.Element {
             2
           )}`}
         />
-        <LinkButton diagonalArrow buttonText="test" href="https://google.com" />
+        <LinkButton
+          className="text-xl"
+          diagonalArrow
+          buttonText="test"
+          href="https://google.com"
+        />
       </div>
     </div>
   );

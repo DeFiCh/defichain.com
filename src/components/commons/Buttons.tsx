@@ -163,7 +163,7 @@ export function LinkButton({
       href={href}
       className={classNames(
         "hover:text-brand-100 flex flex-row gap-x-2 items-center",
-        className ?? "text-dark-1000 font-semibold",
+        className ?? "text-lg text-dark-1000 font-semibold",
         {
           "pointer-events-none opacity-30": disabled,
         }

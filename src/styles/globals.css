@@ -45,28 +45,12 @@ body {
     background: rgba(142, 142, 142, 0.3);
   }
 
-  .on-button-hover {
-    background: linear-gradient(144deg, rgba(46, 46, 46, 0.5) -0.38%, rgba(18, 18, 18, 0.5) 100.17%);
-  }
-
   .on-list-hover {
     background: linear-gradient(144deg, rgba(46, 46, 46, 0.2) -0.38%, rgba(18, 18, 18, 0.2) 100.17%);
   }
 
-  .on-button-press {
-    background: linear-gradient(144deg, rgba(46, 46, 46, 0.95) -0.38%, rgba(18, 18, 18, 0.95) 100.17%);
-  }
-
   .on-list-press {
     background: linear-gradient(144deg, rgba(46, 46, 46, 0.4) -0.38%, rgba(18, 18, 18, 0.4) 100.17%);
-  }
-
-  .cta-on-hover {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), #FFFFFF;
-  }
-
-  .cta-on-press {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), #FFFFFF;
   }
 
   .header-dropdown-bg {
@@ -96,6 +80,10 @@ body {
 
   .accent-gradient-4 {
     background: linear-gradient(270deg, #7FF5C5 0%, #1530CC 100%);
+  }
+
+  .gradient-button {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(72.57deg, #EC008C 17.15%, #5B10FF 89.41%, #0468D6 102.56%)
   }
 }
 

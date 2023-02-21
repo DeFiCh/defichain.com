@@ -1,5 +1,6 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, useState } from "react";
 import classNames from "classnames";
+import { IoMdArrowRoundForward } from "react-icons/io";
 
 export function Button({
   buttonText,
@@ -7,18 +8,18 @@ export function Button({
   disabled,
   href,
   onClick,
-  isCTAButton = true,
 }: {
   buttonText: string;
   className?: string;
   disabled?: boolean;
   href?: string;
   onClick?: () => void;
-  isCTAButton?: boolean;
 }) {
   if (href) {
     return (
       <a
+        rel="noreferrer"
+        target="_blank"
         href={href}
         className={classNames({ "pointer-events-none": disabled })}
       >
@@ -27,7 +28,6 @@ export function Button({
           className={className}
           disabled={disabled}
           onClick={onClick}
-          isCTAButton={isCTAButton}
         />
       </a>
     );
@@ -38,7 +38,6 @@ export function Button({
       className={className}
       disabled={disabled}
       onClick={onClick}
-      isCTAButton={isCTAButton}
     />
   );
 }
@@ -48,7 +47,6 @@ function ButtonElement({
   className,
   disabled,
   onClick,
-  isCTAButton = true,
 }: {
   buttonText: string;
   className?: string;
@@ -63,10 +61,8 @@ function ButtonElement({
       disabled={disabled}
       className={classNames(
         className ?? "py-4",
-        "flex items-center justify-center rounded-[92px] font-bold disabled:opacity-30 disabled:pointer-events-none min-w-[150px]",
-        isCTAButton
-          ? "bg-dark-1000 text-dark-100 hover:text-dark-00 active:text-dark-00 hover:cta-on-hover active:cta-on-press"
-          : "text-dark-1000 hover:on-button-hover active:on-button-press"
+        "flex items-center justify-center rounded-[92px] font-bold disabled:opacity-30 disabled:pointer-events-none min-w-[133px]",
+        "bg-dark-1000 text-dark-100 hover:bg-brand-100 active:bg-brand-100 active:opacity-70"
       )}
     >
       {buttonText}
@@ -90,6 +86,8 @@ export function GradientButton({
   if (href) {
     return (
       <a
+        rel="noreferrer"
+        target="_blank"
         href={href}
         className={classNames({ "pointer-events-none": disabled })}
       >
@@ -127,17 +125,58 @@ function GradientButtonElement({
     <button
       onClick={onClick}
       disabled={disabled}
-      className="accent-gradient-1 rounded-[44px] p-[2px] w-auto h-auto disabled:opacity-30 disabled:pointer-events-none min-w-[134px] flex items-center "
+      className="gradient-button rounded-[44px] p-[2px] w-auto h-auto disabled:opacity-30 disabled:pointer-events-none min-w-[133px] flex items-center active:opacity-70"
     >
       <div
         className={classNames(
-          "font-medium text-sm leading-4 text-light-00 rounded-[44px] hover:accent-gradient-1 w-full h-full whitespace-nowrap",
+          "font-medium text-sm leading-4 text-light-00 rounded-[44px] hover:gradient-button w-full h-full whitespace-nowrap",
           className ?? "py-3 bg-dark-00"
         )}
       >
         {buttonText}
       </div>
     </button>
+  );
+}
+
+export function LinkButton({
+  buttonText,
+  className,
+  disabled,
+  href,
+  horizontalArrow,
+  diagonalArrow,
+}: {
+  buttonText: string;
+  className?: string;
+  disabled?: boolean;
+  href: string;
+  horizontalArrow?: boolean;
+  diagonalArrow?: boolean;
+}) {
+  const [isMouseEnter, setIsMouseEnter] = useState(false);
+  return (
+    <a
+      rel="noreferrer"
+      target="_blank"
+      onMouseEnter={() => setIsMouseEnter(true)}
+      onMouseLeave={() => setIsMouseEnter(false)}
+      href={href}
+      className={classNames(
+        "font-semibold text-dark-100 hover:text-brand-100 flex flex-row items-center",
+        className,
+        {
+          "pointer-events-none": disabled,
+        }
+      )}
+    >
+      {buttonText}
+      {(horizontalArrow || diagonalArrow) && isMouseEnter && (
+        <IoMdArrowRoundForward
+          className={classNames({ "-rotate-45": diagonalArrow })}
+        />
+      )}
+    </a>
   );
 }
 

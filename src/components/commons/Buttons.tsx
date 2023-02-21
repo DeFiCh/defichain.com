@@ -52,7 +52,6 @@ function ButtonElement({
   className?: string;
   disabled?: boolean;
   onClick?: () => void;
-  isCTAButton?: boolean;
 }) {
   return (
     <button

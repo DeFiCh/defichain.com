@@ -158,7 +158,7 @@ function DesktopNavbar({ price }: { price: string }): JSX.Element {
           )}`}
         />
         <LinkButton
-          className="text-xl"
+          className="text-xl text-dark-00"
           diagonalArrow
           buttonText="test"
           href="https://google.com"

@@ -83,7 +83,7 @@ body {
   }
 
   .gradient-button {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(72.57deg, #EC008C 17.15%, #5B10FF 89.41%, #0468D6 102.56%)
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(72.57deg, #EC008C 17.15%, #5B10FF 89.41%, #0468D6 102.56%);
   }
 }
 

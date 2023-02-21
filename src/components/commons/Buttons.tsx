@@ -60,7 +60,7 @@ function ButtonElement({
       disabled={disabled}
       className={classNames(
         className ?? "py-4",
-        "flex items-center justify-center rounded-[92px] font-bold disabled:opacity-30 disabled:pointer-events-none min-w-[133px]",
+        "flex items-center justify-center rounded-[92px] font-bold disabled:opacity-30 disabled:pointer-events-none min-w-[232px]",
         "bg-dark-1000 text-dark-100 hover:bg-brand-100 active:bg-brand-100 active:opacity-70"
       )}
     >
@@ -124,7 +124,7 @@ function GradientButtonElement({
     <button
       onClick={onClick}
       disabled={disabled}
-      className="gradient-button rounded-[44px] p-[2px] w-auto h-auto disabled:opacity-30 disabled:pointer-events-none min-w-[133px] flex items-center active:opacity-70"
+      className="accent-gradient-1 hover:gradient-button rounded-[44px] p-0.5 w-auto h-auto disabled:opacity-30 disabled:pointer-events-none min-w-[133px] flex items-center active:opacity-70"
     >
       <div
         className={classNames(

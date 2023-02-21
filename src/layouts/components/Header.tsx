@@ -6,6 +6,7 @@ import { MdClose, MdMenu } from "react-icons/md";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
+import { GradientButton } from "@components/commons/Buttons";
 import { useWhaleApiClient } from "../context/WhaleContext";
 import { BuyDFIButton } from "./BuyDFIButton";
 import { LanguageDropdown } from "./LanguageDropdown";
@@ -141,7 +142,12 @@ function DesktopNavbar({ price }: { price: string }): JSX.Element {
           className="hidden lg:block"
           testId="Desktop.HeaderLink.Downloads"
         />
-        <BuyDFIButton classname="ml-6" price={price} />
+
+        <GradientButton
+          buttonText={`${t("header.navbar.buy")} DFI $${Number(price).toFixed(
+            2
+          )}`}
+        />
       </div>
     </div>
   );

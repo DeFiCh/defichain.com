@@ -62,8 +62,8 @@ function ButtonElement({
       onClick={onClick}
       disabled={disabled}
       className={classNames(
-        className ?? "py-4 px-28",
-        "flex items-center justify-center rounded-[92px] font-bold disabled:opacity-30 disabled:pointer-events-none",
+        className ?? "py-4",
+        "flex items-center justify-center rounded-[92px] font-bold disabled:opacity-30 disabled:pointer-events-none min-w-[150px]",
         isCTAButton
           ? "bg-dark-1000 text-dark-100 hover:text-dark-00 active:text-dark-00 hover:cta-on-hover active:cta-on-press"
           : "text-dark-1000 hover:on-button-hover active:on-button-press"
@@ -127,12 +127,12 @@ function GradientButtonElement({
     <button
       onClick={onClick}
       disabled={disabled}
-      className="accent-gradient-1 rounded-[44px] p-1 w-auto h-auto disabled:opacity-30 disabled:pointer-events-none"
+      className="accent-gradient-1 rounded-[44px] p-1 w-auto h-auto disabled:opacity-30 disabled:pointer-events-none min-w-[134px] flex items-center "
     >
       <div
         className={classNames(
-          "flex items-center bg-dark-00 text-light-00 rounded-[44px] hover:accent-gradient-1 w-full h-full whitespace-nowrap",
-          className ?? "px-5 py-3"
+          "font-medium text-sm text-light-00 rounded-[44px] hover:accent-gradient-1 w-full h-full whitespace-nowrap",
+          className ?? "py-3 bg-dark-00"
         )}
       >
         {buttonText}

@@ -127,7 +127,7 @@ function GradientButtonElement({
     <button
       onClick={onClick}
       disabled={disabled}
-      className="accent-gradient-1 rounded-[44px] p-1 w-auto h-auto disabled:opacity-30 disabled:pointer-events-none min-w-[134px] flex items-center "
+      className="accent-gradient-1 rounded-[44px] p-[2px] w-auto h-auto disabled:opacity-30 disabled:pointer-events-none min-w-[134px] flex items-center "
     >
       <div
         className={classNames(

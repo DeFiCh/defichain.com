@@ -30,7 +30,7 @@ specifiers:
   remark: ^14.0.2
   remark-gfm: ^3.0.1
   slick-carousel: ^1.8.1
-  tailwindcss: ^3.2.6
+  tailwindcss: ^3.2.7
 
 dependencies:
   '@defichain/whale-api-client': 3.28.2_defichain@3.28.2
@@ -53,7 +53,7 @@ dependencies:
 devDependencies:
   '@cypress/code-coverage': 3.10.0_da7ulnoq6vpebhu34hcgnsbfam
   '@netlify/plugin-nextjs': 4.30.3
-  '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.6
+  '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
   '@testing-library/cypress': 9.0.0_cypress@12.5.1
   '@types/lodash': 4.14.191
   '@types/node': 18.11.12
@@ -64,7 +64,7 @@ devDependencies:
   babel-plugin-jsx-remove-data-test-id: 3.0.0_@babel+core@7.20.5
   cypress: 12.5.1
   postcss: 8.4.21
-  tailwindcss: 3.2.6_postcss@8.4.21
+  tailwindcss: 3.2.7_postcss@8.4.21
 
 packages:
 
@@ -1893,7 +1893,7 @@ packages:
     dependencies:
       tslib: 2.4.1
 
-  /@tailwindcss/typography/0.5.9_tailwindcss@3.2.6:
+  /@tailwindcss/typography/0.5.9_tailwindcss@3.2.7:
     resolution: {integrity: sha512-t8Sg3DyynFysV9f4JDOVISGsjazNb48AeIYQwcL+Bsq5uf4RYL75C1giZ43KISjeDGBaTN3Kxh7Xj/vRSMJUUg==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
@@ -1902,7 +1902,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.2.6_postcss@8.4.21
+      tailwindcss: 3.2.7_postcss@8.4.21
     dev: true
 
   /@testing-library/cypress/9.0.0_cypress@12.5.1:
@@ -7426,8 +7426,8 @@ packages:
       tslib: 2.4.1
     dev: true
 
-  /tailwindcss/3.2.6_postcss@8.4.21:
-    resolution: {integrity: sha512-BfgQWZrtqowOQMC2bwaSNe7xcIjdDEgixWGYOd6AL0CbKHJlvhfdbINeAW76l1sO+1ov/MJ93ODJ9yluRituIw==}
+  /tailwindcss/3.2.7_postcss@8.4.21:
+    resolution: {integrity: sha512-B6DLqJzc21x7wntlH/GsZwEXTBttVSl1FtCzC8WP4oBc/NKef7kaax5jeihkkCEWc831/5NDJ9gRNDK6NEioQQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:

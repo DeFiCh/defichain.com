@@ -16,7 +16,7 @@ specifiers:
   babel-plugin-istanbul: ^6.1.1
   babel-plugin-jsx-remove-data-test-id: ^3.0.0
   classnames: ^2.3.2
-  cypress: ^12.5.1
+  cypress: ^12.6.0
   gray-matter: ^4.0.3
   lodash: ^4.17.21
   next-i18next: ^12.1.0
@@ -51,10 +51,10 @@ dependencies:
   slick-carousel: 1.8.1_jquery@3.6.1
 
 devDependencies:
-  '@cypress/code-coverage': 3.10.0_da7ulnoq6vpebhu34hcgnsbfam
+  '@cypress/code-coverage': 3.10.0_ci4kzwosvku7ygszn3mokum6je
   '@netlify/plugin-nextjs': 4.30.3
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
-  '@testing-library/cypress': 9.0.0_cypress@12.5.1
+  '@testing-library/cypress': 9.0.0_cypress@12.6.0
   '@types/lodash': 4.14.191
   '@types/node': 18.11.12
   '@types/react': 18.0.28
@@ -62,7 +62,7 @@ devDependencies:
   autoprefixer: 10.4.13_postcss@8.4.21
   babel-plugin-istanbul: 6.1.1
   babel-plugin-jsx-remove-data-test-id: 3.0.0_@babel+core@7.20.5
-  cypress: 12.5.1
+  cypress: 12.6.0
   postcss: 8.4.21
   tailwindcss: 3.2.7_postcss@8.4.21
 
@@ -1216,14 +1216,14 @@ packages:
     resolution: {integrity: sha512-q/yVUnqckA8Do+EvAfpy7RLdumnBy9ZsducMUtZTvpdbJC7azEf1hGtnYYxm0QfphYxjwggv6XtH64prvS1W+A==}
     dev: false
 
-  /@cypress/code-coverage/3.10.0_da7ulnoq6vpebhu34hcgnsbfam:
+  /@cypress/code-coverage/3.10.0_ci4kzwosvku7ygszn3mokum6je:
     resolution: {integrity: sha512-K5pW2KPpK4vKMXqxd6vuzo6m9BNgpAv1LcrrtmqAtOJ1RGoEILXYZVost0L6Q+V01NyY7n7jXIIfS7LR3nP6YA==}
     peerDependencies:
       cypress: '*'
     dependencies:
       '@cypress/webpack-preprocessor': 5.15.6_lxwsdojuovvngvdkxl6v3c5p3q
       chalk: 4.1.2
-      cypress: 12.5.1
+      cypress: 12.6.0
       dayjs: 1.10.7
       debug: 4.3.4
       execa: 4.1.0
@@ -1905,7 +1905,7 @@ packages:
       tailwindcss: 3.2.7_postcss@8.4.21
     dev: true
 
-  /@testing-library/cypress/9.0.0_cypress@12.5.1:
+  /@testing-library/cypress/9.0.0_cypress@12.6.0:
     resolution: {integrity: sha512-c1XiCGeHGGTWn0LAU12sFUfoX3qfId5gcSE2yHode+vsyHDWraxDPALjVnHd4/Fa3j4KBcc5k++Ccy6A9qnkMA==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
@@ -1913,7 +1913,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.20.7
       '@testing-library/dom': 8.19.0
-      cypress: 12.5.1
+      cypress: 12.6.0
     dev: true
 
   /@testing-library/dom/8.19.0:
@@ -3123,8 +3123,8 @@ packages:
   /csstype/3.1.1:
     resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
 
-  /cypress/12.5.1:
-    resolution: {integrity: sha512-ZmCmJ3lsyeOpBfh410m5+AO2CO1AxAzFBt7k6/uVbNcrNZje1vdiwYTpj2ksPKg9mjr9lR6V8tmlDNMvr4H/YQ==}
+  /cypress/12.6.0:
+    resolution: {integrity: sha512-WdHSVaS1lumSd5XpVTslZd8ui9GIGphrzvXq9+3DtVhqjRZC5M70gu5SW/Y/SLPq3D1wiXGZoHC6HJ7ESVE2lw==}
     engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
     hasBin: true
     requiresBuild: true

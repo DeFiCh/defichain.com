@@ -83,7 +83,7 @@ export function Header(): JSX.Element {
           "z-50 sticky lg:static relative w-full top-0 md:shadow-none",
           { "shadow-lg": !atTop },
           isHoverOn ? "header-dropdown-bg" : "bg-dark-00",
-          { "lg:bg-opacity-100 md:bg-opacity-0": menu }
+          { "lg:bg-opacity-100 bg-opacity-0": menu }
         )}
       >
         <Container className="lg:py-0 py-4">
@@ -143,12 +143,10 @@ export function Header(): JSX.Element {
 }
 function DesktopNavbar(): JSX.Element {
   return (
-    <div className="w-full hidden lg:flex">
-      <div className="w-full flex justify-center place-self-center gap-x-[52px]">
-        {MenuItems.map((item) => (
-          <MenuItemsDropdown item={item} />
-        ))}
-      </div>
+    <div className="w-full hidden lg:flex justify-center gap-x-[52px]">
+      {MenuItems.map((item) => (
+        <MenuItemsDropdown item={item} />
+      ))}
     </div>
   );
 }
@@ -171,16 +169,17 @@ function MenuItemsDropdown({ item }: { item: string }) {
       }}
     >
       <>
-        <Menu.Button className={classNames("font-semibold")}>
-          <div
-            className={classNames("text-light-00", {
+        <div className="w-auto text-center">
+          <Menu.Button
+            className={classNames("text-light-00 font-semibold", {
               "accent-dfc-gradient-text bg-clip-text text-transparent":
                 isShowing,
             })}
           >
             {item}
-          </div>
-        </Menu.Button>
+          </Menu.Button>
+        </div>
+
         <Container>
           <Transition
             show={isShowing}

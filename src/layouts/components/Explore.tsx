@@ -92,7 +92,7 @@ export function Explore() {
         <div
           style={{ backgroundImage: `url(${MenuItems.image.bgImage})` }}
           className={classNames(
-            `hidden md:block p-8 border border-dark-200 bg-dark-00 rounded-[15px] flex flex-col w-[416px] bg-no-repeat bg-right-bottom`
+            `hidden md:block p-8 border-[0.5px] border-dark-200 bg-dark-00 rounded-[15px] flex flex-col w-[416px] xl:h-[176px] md:h-[191px]] bg-contain bg-no-repeat bg-right-bottom`
           )}
         >
           <div className="font-bold text-dark-1000">

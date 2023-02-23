@@ -43,7 +43,7 @@ const MenuItems = {
     },
   ],
   image: {
-    bgImage: "/assets/img/header/header-metal-dfi-coin.png",
+    bgImage: "/assets/img/header/header-jellyfish.png",
     subtitle: "Powered by the Security of Bitcoin & Flexibility of Ethereum",
   },
 };
@@ -85,7 +85,7 @@ export function Ecosystem() {
       <div
         style={{ backgroundImage: `url(${MenuItems.image.bgImage})` }}
         className={classNames(
-          `hidden md:block md:mt-[56px] p-8 border border-dark-200 bg-dark-00 rounded-[15px] flex flex-col w-[396px] h-[176px] bg-no-repeat bg-right-bottom`
+          `hidden md:block md:mt-[56px] p-8 border-[0.5px] border-dark-200 bg-dark-00 rounded-[15px] flex flex-col w-[416px] xl:h-[240px] md:h-[176px] bg-contain bg-no-repeat bg-right-top`
         )}
       >
         <DeFiChainLogo fill="#FFFFFF" className="w-[140px]" />

@@ -1,6 +1,6 @@
 export function MasternodeIcon({
   className,
-  width = 41,
+  width = 40,
   height = 40,
 }: {
   className: string;
@@ -11,7 +11,7 @@ export function MasternodeIcon({
     <svg
       width={width}
       height={height}
-      viewBox="0 0 41 40"
+      viewBox="0 0 40 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

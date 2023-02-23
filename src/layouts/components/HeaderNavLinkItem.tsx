@@ -38,7 +38,7 @@ export function HeaderNavLinkItem({
   return (
     <a href={href} className="group flex flex-row items-center gap-x-[28px]">
       {Icon && (
-        <div>
+        <div className="h-[28.33px] w-[28.33px]">
           <Icon
             className={classNames(
               iconsStrokes.some((el) => icon.includes(el))

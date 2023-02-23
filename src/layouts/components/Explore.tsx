@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import { useState } from "react";
 import { HeaderNavLinkItem } from "./HeaderNavLinkItem";
 
 const MenuItems = {
@@ -46,6 +47,8 @@ const MenuItems = {
 };
 
 export function Explore() {
+  const [hoverState, setHoverState] = useState<string | undefined>(undefined);
+
   return (
     <div className="flex flex-col">
       <div className="text-dark-500 font-bold leading-5 mb-[36px] md:block hidden">
@@ -55,18 +58,24 @@ export function Explore() {
         <div className="flex md:flex-row flex-col gap-y-8 gap-x-6">
           <div className="flex-col space-y-8 min-w-[368px]">
             <HeaderNavLinkItem
+              hoverState={hoverState}
+              setHoverState={setHoverState}
               href={MenuItems.dropDownItems.items[0].href}
               icon={MenuItems.dropDownItems.items[0].icon}
               label={MenuItems.dropDownItems.items[0].title}
               subLabel={MenuItems.dropDownItems.items[0].subtitle}
             />
             <HeaderNavLinkItem
+              hoverState={hoverState}
+              setHoverState={setHoverState}
               href={MenuItems.dropDownItems.items[1].href}
               icon={MenuItems.dropDownItems.items[1].icon}
               label={MenuItems.dropDownItems.items[1].title}
               subLabel={MenuItems.dropDownItems.items[1].subtitle}
             />
             <HeaderNavLinkItem
+              hoverState={hoverState}
+              setHoverState={setHoverState}
               href={MenuItems.dropDownItems.items[2].href}
               icon={MenuItems.dropDownItems.items[2].icon}
               label={MenuItems.dropDownItems.items[2].title}
@@ -75,12 +84,16 @@ export function Explore() {
           </div>
           <div className="flex-col space-y-8 min-w-[368px]">
             <HeaderNavLinkItem
+              hoverState={hoverState}
+              setHoverState={setHoverState}
               href={MenuItems.dropDownItems.items[3].href}
               icon={MenuItems.dropDownItems.items[3].icon}
               label={MenuItems.dropDownItems.items[3].title}
               subLabel={MenuItems.dropDownItems.items[3].subtitle}
             />
             <HeaderNavLinkItem
+              hoverState={hoverState}
+              setHoverState={setHoverState}
               href={MenuItems.dropDownItems.items[4].href}
               icon={MenuItems.dropDownItems.items[4].icon}
               label={MenuItems.dropDownItems.items[4].title}

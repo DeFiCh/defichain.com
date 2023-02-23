@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import { DeFiChainLogo } from "@components/icons/DeFiChainLogo";
+import { useState } from "react";
 import { HeaderNavLinkItem } from "./HeaderNavLinkItem";
 
 const MenuItems = {
@@ -49,6 +50,7 @@ const MenuItems = {
 };
 
 export function Ecosystem() {
+  const [hoverState, setHoverState] = useState<string | undefined>(undefined);
   return (
     <div className="flex xl:flex-row md:flex-col">
       <div className="flex md:flex-row flex-col gap-y-[72px]">
@@ -60,6 +62,8 @@ export function Ecosystem() {
           <div className="flex flex-col gap-y-8">
             {MenuItems.dropDownItems[0].items.map((item) => (
               <HeaderNavLinkItem
+                hoverState={hoverState}
+                setHoverState={setHoverState}
                 label={item.title}
                 subLabel={item.subtitle}
                 href={item.href}
@@ -75,7 +79,12 @@ export function Ecosystem() {
           </div>
           <div className="flex flex-col gap-y-8">
             {MenuItems.dropDownItems[1].items.map((item) => (
-              <HeaderNavLinkItem label={item.title} href={item.href} />
+              <HeaderNavLinkItem
+                hoverState={hoverState}
+                setHoverState={setHoverState}
+                label={item.title}
+                href={item.href}
+              />
             ))}
           </div>
         </div>

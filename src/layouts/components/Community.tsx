@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { HeaderNavLinkItem } from "./HeaderNavLinkItem";
 
 const MenuItems = {
@@ -90,6 +91,7 @@ const MenuItems = {
 };
 
 export function Community() {
+  const [hoverState, setHoverState] = useState<string | undefined>(undefined);
   return (
     <div className="flex md:flex-row flex-col gap-y-9 gap-x-32">
       {/* first col */}
@@ -101,6 +103,8 @@ export function Community() {
           <div className="flex flex-col gap-y-8">
             {MenuItems.dropDownItems[0].items.map((item) => (
               <HeaderNavLinkItem
+                hoverState={hoverState}
+                setHoverState={setHoverState}
                 label={item.title}
                 subLabel={item.subtitle}
                 href={item.href}
@@ -117,7 +121,12 @@ export function Community() {
         </div>
         <div className="grid xl:grid-cols-4 xl:grid-rows-4 lg:grid-cols-3 lg:grid-rows-5 grid-cols-2 grid-rows-8 grid-flow-col gap-y-6 gap-x-20 place-items-start">
           {MenuItems.dropDownItems[1].items.map((item) => (
-            <HeaderNavLinkItem label={item.title} href={item.href} />
+            <HeaderNavLinkItem
+              hoverState={hoverState}
+              setHoverState={setHoverState}
+              label={item.title}
+              href={item.href}
+            />
           ))}
         </div>
       </div>

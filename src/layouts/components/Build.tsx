@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { HeaderNavLinkItem } from "./HeaderNavLinkItem";
 
 const MenuItems = {
@@ -48,6 +49,7 @@ const MenuItems = {
 };
 
 export function Build() {
+  const [hoverState, setHoverState] = useState<string | undefined>(undefined);
   return (
     <div className="flex flex-col">
       <div className="hidden md:block text-dark-500 font-bold leading-5 mb-8">
@@ -56,6 +58,8 @@ export function Build() {
       <div className="grid md:grid-cols-3 md:grid-rows-2 grid-rows-6 grid-flow-col gap-y-8 gap-x-8">
         {MenuItems.dropDownItems.items.map((item) => (
           <HeaderNavLinkItem
+            hoverState={hoverState}
+            setHoverState={setHoverState}
             label={item.title}
             subLabel={item.subtitle}
             href={item.href}

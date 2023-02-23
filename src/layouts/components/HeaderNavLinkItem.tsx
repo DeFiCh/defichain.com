@@ -12,17 +12,22 @@ import { WhitePaperIcon } from "@public/assets/icon/WhitePaperIcon";
 import { SecurityIcon } from "@public/assets/icon/SecurityIcon";
 import { MediaAssetsIcon } from "@public/assets/icon/MediaAssetsIcon";
 import { DeveloperResourceIcon } from "@public/assets/icon/DeveloperResourceIcon";
+import { Dispatch, SetStateAction } from "react";
 
 export function HeaderNavLinkItem({
   icon,
   label,
   subLabel,
   href,
+  hoverState,
+  setHoverState,
 }: {
   icon?: string;
   label: string;
   subLabel?: string;
   href: string;
+  hoverState: string | undefined;
+  setHoverState: Dispatch<SetStateAction<string | undefined>>;
 }) {
   const Icon = iconMapping[icon] as React.ElementType;
   const iconsStrokes = [
@@ -36,7 +41,21 @@ export function HeaderNavLinkItem({
     "developer",
   ];
   return (
-    <a href={href} className="group flex flex-row items-center gap-x-[28px]">
+    <a
+      onMouseEnter={() => {
+        setHoverState(label);
+      }}
+      onMouseLeave={() => {
+        setHoverState(undefined);
+      }}
+      href={href}
+      className={classNames(
+        "group flex flex-row items-center gap-x-[28px]",
+        hoverState !== undefined && hoverState !== label
+          ? "opacity-70 duration-500 transition"
+          : "opacity-100"
+      )}
+    >
       {Icon && (
         <div className="h-[28.33px] w-[28.33px]">
           <Icon

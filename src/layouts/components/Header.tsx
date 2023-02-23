@@ -10,6 +10,7 @@ import {
   useContext,
   useEffect,
   useMemo,
+  useRef,
   useState,
 } from "react";
 import { Menu, Transition } from "@headlessui/react";
@@ -17,6 +18,7 @@ import { MdMenu } from "react-icons/md";
 import { IoChevronDown, IoCloseCircleOutline } from "react-icons/io5";
 import { GradientButton } from "@components/commons/Buttons";
 import { useTranslation } from "next-i18next";
+import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import { useWhaleApiClient } from "../context/WhaleContext";
 import { Explore } from "./Explore";
 import { Ecosystem } from "./Ecosystem";
@@ -60,6 +62,14 @@ export function Header(): JSX.Element {
     };
   }, []);
 
+  useEffect(() => {
+    if (menu) {
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.documentElement.style.overflow = "auto";
+    }
+  }, [menu]);
+
   const [isHoverOn, setIsHoverOn] = useState(false);
   const [dropDownState, setDropDownState] = useState<
     MobileTabletDropDownState | undefined
@@ -82,8 +92,7 @@ export function Header(): JSX.Element {
         className={classNames(
           "z-50 sticky lg:static relative w-full top-0 md:shadow-none",
           { "shadow-lg": !atTop },
-          isHoverOn ? "header-dropdown-bg" : "bg-dark-00",
-          { "lg:bg-opacity-100 bg-opacity-0": menu }
+          isHoverOn || menu ? "header-dropdown-bg" : "bg-dark-00"
         )}
       >
         <Container className="lg:py-0 py-4">
@@ -132,7 +141,7 @@ export function Header(): JSX.Element {
       </header>
 
       {menu && (
-        <div className="w-full lg:hidden fixed z-[49]">
+        <div className="w-full lg:hidden z-[49]">
           <DropDownContext.Provider value={obj}>
             <TabletAndMobileMenu />
           </DropDownContext.Provider>
@@ -206,51 +215,55 @@ function MenuItemsDropdown({ item }: { item: string }) {
 }
 
 function TabletAndMobileMenu() {
+  const ref = useRef<HTMLDivElement>(null);
+  const dimension = useWindowDimensions();
   const { t } = useTranslation("layout");
   const { dfiPrice, dropDownState } = useContext(DropDownContext);
-
+  useEffect(() => {
+    if (ref.current) {
+      ref.current.style.height = `${
+        dimension.height - ref.current.offsetTop
+      }px`;
+    }
+  }, [ref, dimension]);
   return (
-    <div className="h-screen w-screen">
-      <div
-        onClick={(e) => {
-          e.stopPropagation();
-        }}
-        className="flex flex-col float-right h-screen w-screen header-dropdown-bg lg:hidden overflow-y-scroll"
-        data-testid="TabletMenu"
-      >
-        <div className="mt-20 flex flex-col">
-          {MenuItems.map((item, key) => {
-            const DropDown = dropDownMapping[item.toLowerCase()];
-            return (
-              <>
-                <Container>
-                  <TabletDropDown label={item}>
-                    <DropDown />
-                  </TabletDropDown>
-                </Container>
-                {key !== MenuItems.length - 1 && (
-                  <div className="card-outline-2 h-[0.5px]" />
-                )}
-              </>
-            );
-          })}
-          <Container
-            className={classNames(
-              "block md:hidden w-full flex justify-center mb-[56px]",
-              dropDownState === MobileTabletDropDownState.COMMUNITY
-                ? "mt[84px]"
-                : "mt-[68px]"
-            )}
-          >
-            <GradientButton
-              className="py-3 bg-dark-00"
-              borderClassName="w-full"
-              buttonText={`${t("header.navbar.buy")} DFI $${Number(
-                dfiPrice
-              ).toFixed(2)}`}
-            />
-          </Container>
-        </div>
+    <div
+      ref={ref}
+      className="flex flex-col float-right w-screen header-dropdown-bg lg:hidden overflow-y-scroll"
+      data-testid="TabletMenu"
+    >
+      <div className="flex flex-col">
+        {MenuItems.map((item, key) => {
+          const DropDown = dropDownMapping[item.toLowerCase()];
+          return (
+            <>
+              <Container>
+                <TabletDropDown label={item}>
+                  <DropDown />
+                </TabletDropDown>
+              </Container>
+              {key !== MenuItems.length - 1 && (
+                <div className="card-outline-2 h-[0.5px]" />
+              )}
+            </>
+          );
+        })}
+        <Container
+          className={classNames(
+            "block md:hidden w-full flex justify-center mb-[56px]",
+            dropDownState === MobileTabletDropDownState.COMMUNITY
+              ? "mt[84px]"
+              : "mt-[68px]"
+          )}
+        >
+          <GradientButton
+            className="py-3 bg-dark-00"
+            borderClassName="w-full"
+            buttonText={`${t("header.navbar.buy")} DFI $${Number(
+              dfiPrice
+            ).toFixed(2)}`}
+          />
+        </Container>
       </div>
     </div>
   );

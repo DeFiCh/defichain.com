@@ -41,7 +41,7 @@ export function HeaderNavLinkItem({
         <div className="h-[28.33px] w-[28.33px]">
           <Icon
             className={classNames(
-              iconsStrokes.some((el) => icon.includes(el))
+              iconsStrokes.some((element) => icon.includes(element))
                 ? "group-hover:stroke-brand-100"
                 : "fill-dark-700 group-hover:fill-brand-100"
             )}

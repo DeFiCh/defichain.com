@@ -17,7 +17,7 @@ export function InvestIcon({
     >
       <path
         className={className}
-        d="M38.3333 10L22.5 25.8333L14.1667 17.5L1.66667 30"
+        d="M38.3334 10L22.5001 25.8333L14.1667 17.5L1.66675 30"
         stroke="#A6A6A6"
         strokeWidth="2"
         strokeLinecap="round"

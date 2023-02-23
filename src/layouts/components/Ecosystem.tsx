@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import { DeFiChainLogo } from "@components/icons/DeFiChainLogo";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { HeaderNavLinkItem } from "./HeaderNavLinkItem";
 
 const MenuItems = {
@@ -45,12 +45,23 @@ const MenuItems = {
   ],
   image: {
     bgImage: "/assets/img/header/header-jellyfish.png",
+    hoverBgImage: "/assets/img/header/header-hover-jellyfish.png",
     subtitle: "Powered by the Security of Bitcoin & Flexibility of Ethereum",
   },
 };
 
 export function Ecosystem() {
   const [hoverState, setHoverState] = useState<string | undefined>(undefined);
+  const [cardImage, setCardImage] = useState(`url(${MenuItems.image.bgImage})`);
+  const [cardHover, setCardHover] = useState(false);
+
+  useEffect(() => {
+    if (cardHover) {
+      setCardImage(`url(${MenuItems.image.hoverBgImage})`);
+    } else {
+      setCardImage(`url(${MenuItems.image.bgImage})`);
+    }
+  }, [cardHover]);
   return (
     <div className="flex xl:flex-row md:flex-col">
       <div className="flex md:flex-row flex-col gap-y-[72px]">
@@ -92,14 +103,26 @@ export function Ecosystem() {
 
       {/* image */}
       <div
-        style={{ backgroundImage: `url(${MenuItems.image.bgImage})` }}
+        onMouseEnter={() => {
+          setCardHover(true);
+        }}
+        onMouseLeave={() => {
+          setCardHover(false);
+        }}
         className={classNames(
-          `hidden md:block md:mt-[56px] p-8 border-[0.5px] border-dark-200 bg-dark-00 rounded-[15px] flex flex-col w-[416px] xl:h-[240px] md:h-[176px] bg-contain bg-no-repeat bg-right-top`
+          "p-[0.5px] hidden md:block md:mt-[56px] group cursor-pointer hover:accent-gradient-1 rounded-[15px] w-[416px] xl:h-[176px] md:h-[191px]"
         )}
       >
-        <DeFiChainLogo fill="#FFFFFF" className="w-[140px]" />
-        <div className={classNames("text-dark-800 max-w-[178px] mt-2")}>
-          {MenuItems.image.subtitle}
+        <div
+          style={{ backgroundImage: cardImage }}
+          className={classNames(
+            `w-full h-full p-8 border-[0.5px] border-dark-200 bg-dark-00 rounded-[15px] flex flex-col bg-contain bg-no-repeat bg-right-top`
+          )}
+        >
+          <DeFiChainLogo fill="#FFFFFF" className="w-[140px]" />
+          <div className={classNames("text-dark-800 max-w-[178px] mt-2")}>
+            {MenuItems.image.subtitle}
+          </div>
         </div>
       </div>
     </div>

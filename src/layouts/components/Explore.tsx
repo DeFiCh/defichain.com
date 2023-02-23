@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { HeaderNavLinkItem } from "./HeaderNavLinkItem";
 
 const MenuItems = {
@@ -41,13 +41,25 @@ const MenuItems = {
   },
   image: {
     bgImage: "/assets/img/header/header-metal-dfi-coin.png",
+    hoverBgImage: "/assets/img/header/header-hover-dfi-coin.png",
     title: "$DFI",
     subtitle: "Learn about the token and where to get",
+    href: "",
   },
 };
 
 export function Explore() {
   const [hoverState, setHoverState] = useState<string | undefined>(undefined);
+  const [cardImage, setCardImage] = useState(`url(${MenuItems.image.bgImage})`);
+  const [cardHover, setCardHover] = useState(false);
+
+  useEffect(() => {
+    if (cardHover) {
+      setCardImage(`url(${MenuItems.image.hoverBgImage})`);
+    } else {
+      setCardImage(`url(${MenuItems.image.bgImage})`);
+    }
+  }, [cardHover]);
 
   return (
     <div className="flex flex-col">
@@ -103,17 +115,28 @@ export function Explore() {
         </div>
 
         <div
-          style={{ backgroundImage: `url(${MenuItems.image.bgImage})` }}
-          className={classNames(
-            `hidden md:block p-8 border-[0.5px] border-dark-200 bg-dark-00 rounded-[15px] flex flex-col w-[416px] xl:h-[176px] md:h-[191px]] bg-contain bg-no-repeat bg-right-bottom`
-          )}
+          onMouseEnter={() => {
+            setCardHover(true);
+          }}
+          onMouseLeave={() => {
+            setCardHover(false);
+          }}
+          className="group cursor-pointer hover:accent-gradient-1 hidden md:block rounded-[15px] bg-dark-200 w-[416px] xl:h-[176px] md:h-[191px] p-[0.5px]"
         >
-          <div className="font-bold text-dark-1000">
-            {MenuItems.image.title}
-          </div>
-          <div className={classNames("text-dark-800 max-w-[178px] mt-1")}>
-            {MenuItems.image.subtitle}
-          </div>
+          <a
+            href={MenuItems.image.href}
+            style={{ backgroundImage: cardImage }}
+            className={classNames(
+              `p-8 bg-dark-00 w-full h-full rounded-[15px] flex flex-col bg-contain bg-no-repeat bg-right-bottom`
+            )}
+          >
+            <div className="font-bold text-dark-1000">
+              {MenuItems.image.title}
+            </div>
+            <div className={classNames("text-dark-800 max-w-[178px] mt-1")}>
+              {MenuItems.image.subtitle}
+            </div>
+          </a>
         </div>
       </div>
     </div>

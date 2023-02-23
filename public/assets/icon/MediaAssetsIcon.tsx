@@ -1,6 +1,6 @@
 export function MediaAssetsIcon({
   className,
-  width = 40,
+  width = 41,
   height = 40,
 }: {
   className: string;
@@ -11,13 +11,13 @@ export function MediaAssetsIcon({
     <svg
       width={width}
       height={height}
-      viewBox="0 0 40 40"
+      viewBox="0 0 41 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
         className={className}
-        d="M31.6667 5H8.33333C6.49238 5 5 6.49238 5 8.33333V31.6667C5 33.5076 6.49238 35 8.33333 35H31.6667C33.5076 35 35 33.5076 35 31.6667V8.33333C35 6.49238 33.5076 5 31.6667 5Z"
+        d="M31.9999 5H8.66659C6.82564 5 5.33325 6.49238 5.33325 8.33333V31.6667C5.33325 33.5076 6.82564 35 8.66659 35H31.9999C33.8409 35 35.3333 33.5076 35.3333 31.6667V8.33333C35.3333 6.49238 33.8409 5 31.9999 5Z"
         stroke="#A6A6A6"
         strokeWidth="1.5"
         strokeLinecap="round"
@@ -25,7 +25,7 @@ export function MediaAssetsIcon({
       />
       <path
         className={className}
-        d="M14.1667 16.6667C15.5474 16.6667 16.6667 15.5474 16.6667 14.1667C16.6667 12.786 15.5474 11.6667 14.1667 11.6667C12.786 11.6667 11.6667 12.786 11.6667 14.1667C11.6667 15.5474 12.786 16.6667 14.1667 16.6667Z"
+        d="M14.4999 16.6667C15.8806 16.6667 16.9999 15.5474 16.9999 14.1667C16.9999 12.786 15.8806 11.6667 14.4999 11.6667C13.1192 11.6667 11.9999 12.786 11.9999 14.1667C11.9999 15.5474 13.1192 16.6667 14.4999 16.6667Z"
         stroke="#A6A6A6"
         strokeWidth="1.5"
         strokeLinecap="round"
@@ -33,7 +33,7 @@ export function MediaAssetsIcon({
       />
       <path
         className={className}
-        d="M35 25L26.6667 16.6667L8.33334 35"
+        d="M35.3333 25L27 16.6667L8.66663 35"
         stroke="#A6A6A6"
         strokeWidth="1.5"
         strokeLinecap="round"

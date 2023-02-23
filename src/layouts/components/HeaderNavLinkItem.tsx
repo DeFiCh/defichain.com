@@ -52,16 +52,16 @@ export function HeaderNavLinkItem({
       className={classNames(
         "group flex flex-row items-center gap-x-[28px]",
         hoverState !== undefined && hoverState !== label
-          ? "opacity-70 duration-500 transition"
-          : "opacity-100"
+          ? "opacity-70 duration-300 transition"
+          : "opacity-100 duration-300 transition"
       )}
     >
       {Icon && (
-        <div className="h-[28.33px] w-[28.33px]">
+        <div>
           <Icon
             className={classNames(
               iconsStrokes.some((element) => icon.includes(element))
-                ? "group-hover:stroke-brand-100 group-hover:duration-500 group-hover:transition"
+                ? "group-hover:stroke-brand-100 group-hover:duration-300 group-hover:transition"
                 : "fill-dark-700 group-hover:fill-brand-100"
             )}
           />
@@ -69,10 +69,10 @@ export function HeaderNavLinkItem({
       )}
 
       <div className="flex flex-col">
-        <div className="text-dark-1000 group-hover:duration-500 group-hover:transition group-hover:text-brand-100 font-semibold md:text-lg leading-6 whitespace-nowrap">
+        <div className="text-dark-1000 group-hover:duration-300 group-hover:transition group-hover:text-brand-100 font-semibold md:text-lg leading-6 whitespace-nowrap">
           {label}
         </div>
-        <div className="group-hover:duration-500 group-hover:transition group-hover:text-brand-100 text-dark-700 leading-5">
+        <div className="group-hover:duration-300 group-hover:transition group-hover:text-brand-100 text-dark-700 leading-5 md:text-base text-sm">
           {subLabel}
         </div>
       </div>

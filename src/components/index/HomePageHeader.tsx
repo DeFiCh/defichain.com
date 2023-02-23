@@ -27,7 +27,7 @@ export function HomePageHeader(): JSX.Element {
               className="w-full lg:text-lg text-dark-700"
               data-testid="Header.desc.main"
             >
-              <span>{t("Header.desc")}</span>
+              {t("Header.desc")}
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import { Container } from "@components/commons/Container";
 import { useTranslation } from "next-i18next";
-import Image from "next/image";
+import { Gif } from "@components/commons/Gif";
 import dfiCoinGif from "../../../public/assets/svg/hero/dfi-coin-gif.gif";
 
 export function HomePageHeader(): JSX.Element {
@@ -30,13 +30,7 @@ export function HomePageHeader(): JSX.Element {
           </div>
         </div>
         <div>
-          <Image
-            src={dfiCoinGif}
-            alt="DFI coin gif"
-            width={595}
-            height={590}
-            objectFit="cover"
-          />
+          <Gif src={dfiCoinGif} alt="DFI coin gif" width={595} height={590} />
         </div>
       </Container>
     </div>

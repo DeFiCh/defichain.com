@@ -73,8 +73,11 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        "montserrat": ["Montserrat", "sans-serif"]
-      }
-    }
+        montserrat: ["Montserrat", "sans-serif"],
+      },
+      gridTemplateRows: {
+        8: "repeat(8, minmax(0, 1fr))",
+      },
+    },
   },
 };

@@ -61,7 +61,7 @@ export function HeaderNavLinkItem({
           <Icon
             className={classNames(
               iconsStrokes.some((element) => icon.includes(element))
-                ? "group-hover:stroke-brand-100"
+                ? "group-hover:stroke-brand-100 group-hover:duration-500 group-hover:transition"
                 : "fill-dark-700 group-hover:fill-brand-100"
             )}
           />
@@ -69,10 +69,10 @@ export function HeaderNavLinkItem({
       )}
 
       <div className="flex flex-col">
-        <div className="text-dark-1000 group-hover:text-brand-100 font-semibold md:text-lg leading-6 whitespace-nowrap">
+        <div className="text-dark-1000 group-hover:duration-500 group-hover:transition group-hover:text-brand-100 font-semibold md:text-lg leading-6 whitespace-nowrap">
           {label}
         </div>
-        <div className="group-hover:text-brand-100 text-dark-700 leading-5">
+        <div className="group-hover:duration-500 group-hover:transition group-hover:text-brand-100 text-dark-700 leading-5">
           {subLabel}
         </div>
       </div>

@@ -69,7 +69,7 @@ export function HeaderNavLinkItem({
       )}
 
       <div className="flex flex-col">
-        <div className="text-dark-1000 group-hover:duration-300 group-hover:transition group-hover:text-brand-100 font-semibold md:text-lg leading-6 whitespace-nowrap">
+        <div className="text-dark-1000 group-hover:duration-300 group-hover:transition group-hover:text-brand-100 font-semibold md:text-lg leading-6 lg:whitespace-nowrap md:whitespace-pre-wrap whitespace-nowrap">
           {label}
         </div>
         <div className="group-hover:duration-300 group-hover:transition group-hover:text-brand-100 text-dark-700 leading-5 md:text-base text-sm">

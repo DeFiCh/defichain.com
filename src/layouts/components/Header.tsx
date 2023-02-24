@@ -112,7 +112,7 @@ export function Header(): JSX.Element {
         className={classNames(
           "sticky lg:static relative w-full top-0",
           { "shadow-lg": !atTop },
-          isHoverOn ? "bg-opacity-0" : "bg-dark-00"
+          isHoverOn || menu ? "bg-opacity-0" : "bg-dark-00"
         )}
       >
         <Container className="md:pt-14 lg:pb-0 md:pb-6 py-4">
@@ -121,7 +121,7 @@ export function Header(): JSX.Element {
               <Link
                 href={{ pathname: "/" }}
                 passHref
-                className="grow flex items-center cursor-pointer hover:text-primary-500 h-full lg:pt-4 lg:py-0 md:py-[15.28px] py-[14.69px]"
+                className="grow flex items-center cursor-pointer hover:text-primary-500 h-full lg:pt-4 lg:py-0"
                 data-testid="Header.SiteLogo"
               >
                 <DeFiChainLogo

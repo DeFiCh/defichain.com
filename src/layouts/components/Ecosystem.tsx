@@ -44,6 +44,7 @@ const MenuItems = {
     },
   ],
   image: {
+    href: "",
     bgImage: "/assets/img/header/header-jellyfish.png",
     hoverBgImage: "/assets/img/header/header-hover-jellyfish.png",
     subtitle: "Powered by the Security of Bitcoin & Flexibility of Ethereum",
@@ -64,9 +65,9 @@ export function Ecosystem() {
   }, [cardHover]);
   return (
     <div className="flex xl:flex-row md:flex-col">
-      <div className="flex md:flex-row flex-col gap-y-[72px]">
+      <div className="flex md:flex-row flex-col gap-y-[72px] gap-x-6">
         {/* first col */}
-        <div className="flex flex-col min-w-[368px]">
+        <div className="flex flex-col min-w-[396px]">
           <div className="hidden md:block text-dark-500 font-bold leading-5 mb-8">
             {MenuItems.dropDownItems[0].label}
           </div>
@@ -115,7 +116,8 @@ export function Ecosystem() {
           "p-[0.5px] hidden md:block md:mt-[56px] group cursor-pointer hover:accent-gradient-1 rounded-[15px] w-[416px] xl:h-[176px] md:h-[191px]"
         )}
       >
-        <div
+        <a
+          href={MenuItems.image.href}
           style={{ backgroundImage: cardImage }}
           className={classNames(
             `w-full h-full p-8 border-[0.5px] border-dark-200 bg-dark-00 rounded-[15px] flex flex-col bg-contain bg-no-repeat bg-right-top`
@@ -125,7 +127,7 @@ export function Ecosystem() {
           <div className={classNames("text-dark-800 max-w-[178px] mt-2")}>
             {MenuItems.image.subtitle}
           </div>
-        </div>
+        </a>
       </div>
     </div>
   );

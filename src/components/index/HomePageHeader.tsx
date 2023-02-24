@@ -24,7 +24,7 @@ export function HomePageHeader(): JSX.Element {
           </h1>
           <div className="mt-5">
             <div
-              className="w-full lg:text-lg text-dark-700"
+              className="w-full lg:text-xl text-dark-700 font-desc"
               data-testid="Header.desc.main"
             >
               {t("Header.desc")}

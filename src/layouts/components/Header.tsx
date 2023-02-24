@@ -95,7 +95,7 @@ export function Header(): JSX.Element {
           isHoverOn || menu ? "header-dropdown-bg" : "bg-dark-00"
         )}
       >
-        <Container className="lg:py-0 py-4">
+        <Container className="lg:pt-14 lg:pb-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex w-full">
               <Link
@@ -237,7 +237,7 @@ function TabletAndMobileMenu() {
           const DropDown = dropDownMapping[item.toLowerCase()];
           return (
             <>
-              <Container>
+              <Container className="px-6">
                 <TabletDropDown label={item}>
                   <DropDown />
                 </TabletDropDown>
@@ -292,7 +292,7 @@ function TabletDropDown({
       >
         <div
           className={classNames(
-            "grow font-semibold text-lg",
+            "grow font-semibold md:text-lg text-base",
             dropDownState === label ? "text-brand-100" : "text-dark-700"
           )}
         >

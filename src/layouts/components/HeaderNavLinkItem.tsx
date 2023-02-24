@@ -12,7 +12,8 @@ import { WhitePaperIcon } from "@public/assets/icon/WhitePaperIcon";
 import { SecurityIcon } from "@public/assets/icon/SecurityIcon";
 import { MediaAssetsIcon } from "@public/assets/icon/MediaAssetsIcon";
 import { DeveloperResourceIcon } from "@public/assets/icon/DeveloperResourceIcon";
-import { Dispatch, SetStateAction } from "react";
+import { IoMdArrowRoundForward } from "react-icons/io";
+import { Dispatch, SetStateAction, useState } from "react";
 
 export function HeaderNavLinkItem({
   icon,
@@ -21,6 +22,7 @@ export function HeaderNavLinkItem({
   href,
   hoverState,
   setHoverState,
+  haveIcon = false,
 }: {
   icon?: string;
   label: string;
@@ -28,6 +30,7 @@ export function HeaderNavLinkItem({
   href: string;
   hoverState: string | undefined;
   setHoverState: Dispatch<SetStateAction<string | undefined>>;
+  haveIcon?: boolean;
 }) {
   const Icon = iconMapping[icon] as React.ElementType;
   const iconsStrokes = [
@@ -40,13 +43,17 @@ export function HeaderNavLinkItem({
     "security",
     "developer",
   ];
+
+  const [isMouseEnter, setIsMouseEnter] = useState(false);
   return (
     <a
       onMouseEnter={() => {
         setHoverState(label);
+        setIsMouseEnter(true);
       }}
       onMouseLeave={() => {
         setHoverState(undefined);
+        setIsMouseEnter(false);
       }}
       href={href}
       className={classNames(
@@ -59,6 +66,11 @@ export function HeaderNavLinkItem({
       {Icon && (
         <div>
           <Icon
+            id={
+              label === "DeFi Meta Chain"
+                ? "github-ecosystem"
+                : "github-explore"
+            }
             className={classNames(
               iconsStrokes.some((element) => icon.includes(element))
                 ? "group-hover:stroke-brand-100 group-hover:duration-300 group-hover:transition"
@@ -69,10 +81,35 @@ export function HeaderNavLinkItem({
       )}
 
       <div className="flex flex-col">
-        <div className="text-dark-1000 group-hover:duration-300 group-hover:transition group-hover:text-brand-100 font-semibold md:text-lg leading-6 lg:whitespace-nowrap md:whitespace-pre-wrap whitespace-nowrap">
-          {label}
+        <div className="flex flex-row items-center">
+          <div className="mr-[7px] flex text-dark-1000 group-hover:duration-300 group-hover:transition group-hover:accent-dfc-gradient-text group-hover:bg-clip-text group-hover:text-transparent font-semibold md:text-lg leading-6 lg:whitespace-nowrap md:whitespace-pre-wrap whitespace-nowrap">
+            {label}
+          </div>
+          {isMouseEnter && haveIcon && (
+            <>
+              <IoMdArrowRoundForward
+                style={{ fill: "url(#accent-gradient)" }}
+                size={20}
+                className="-rotate-45"
+              />
+
+              <svg width="0" height="0">
+                <linearGradient
+                  id="accent-gradient"
+                  x1="100%"
+                  y1="100%"
+                  x2="0%"
+                  y2="0%"
+                >
+                  <stop stopColor="#FF00FF" offset="0%" />
+                  <stop stopColor="#EC0C8D" offset="100%" />
+                </linearGradient>
+              </svg>
+            </>
+          )}
         </div>
-        <div className="group-hover:duration-300 group-hover:transition group-hover:text-brand-100 text-dark-700 leading-5 md:text-base text-sm">
+
+        <div className="text-dark-700 leading-5 md:text-base text-sm">
           {subLabel}
         </div>
       </div>

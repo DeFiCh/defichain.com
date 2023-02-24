@@ -186,7 +186,7 @@ function MenuItemsDropdown({ item }: { item: string }) {
   const DropDown = dropDownMapping[item.toLowerCase()];
   return (
     <Menu
-      className="lg:pt-6 lg:pb-10"
+      className="lg:pt-6 lg:pb-10 cursor-pointer"
       as="div"
       onMouseLeave={() => {
         setIsShowing(false);

@@ -90,7 +90,7 @@ export function Header(): JSX.Element {
     <>
       <header
         className={classNames(
-          "z-50 sticky lg:static relative w-full top-0 md:shadow-none",
+          "z-50 sticky lg:static relative w-full top-0",
           { "shadow-lg": !atTop },
           isHoverOn || menu ? "header-dropdown-bg" : "bg-dark-00"
         )}
@@ -141,7 +141,7 @@ export function Header(): JSX.Element {
       </header>
 
       {menu && (
-        <div className="w-full lg:hidden z-[49]">
+        <div className="w-full lg:hidden">
           <DropDownContext.Provider value={obj}>
             <TabletAndMobileMenu />
           </DropDownContext.Provider>
@@ -180,7 +180,7 @@ function MenuItemsDropdown({ item }: { item: string }) {
       <>
         <div className="w-auto text-center">
           <Menu.Button
-            className={classNames("text-light-00 font-semibold", {
+            className={classNames("text-dark-700 text-lg font-semibold", {
               "accent-dfc-gradient-text bg-clip-text text-transparent":
                 isShowing,
             })}

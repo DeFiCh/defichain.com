@@ -11,7 +11,7 @@ export function HomePageHeader(): JSX.Element {
   return (
     <div className="flex flex-col items-center pb-24 mt-[15.87px] lg:mt-9">
       <Container className="flex flex-col-reverse lg:flex-row lg:justify-between px-6 items-start lg:pl-[120px] lg:pr-[77.24px] max-w-full">
-        <div className="lg:w-[479px] lg:mt-16">
+        <div className="lg:w-[479px] lg:mt-16 mt-[25.44px]">
           <h1
             className="w-full text-4xl lg:text-[80px] lg:leading-[84px]"
             data-testid="Header.title"
@@ -23,7 +23,7 @@ export function HomePageHeader(): JSX.Element {
           </h1>
           <div className="mt-5">
             <div
-              className="w-full lg:text-xl text-dark-700 font-desc"
+              className="w-full tracking-[0.03em] lg:tracking-normal lg:text-xl text-dark-700 font-desc"
               data-testid="Header.desc.main"
             >
               {t("Header.desc")}

@@ -1,10 +1,10 @@
-interface GifProps {
+interface VideoProps {
   src: string;
   width?: number;
   height?: number;
 }
 
-export function Video(props: GifProps): JSX.Element {
+export function Video(props: VideoProps): JSX.Element {
   const { src, width, height } = props;
   return (
     <video autoPlay muted loop>

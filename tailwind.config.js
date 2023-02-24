@@ -72,10 +72,5 @@ module.exports = {
       warning: "#D97B01",
       valid: "#0CC72C",
     },
-    extend: {
-      fontFamily: {
-        montserrat: ["Montserrat", "sans-serif"],
-      },
-    },
   },
 };

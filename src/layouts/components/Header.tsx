@@ -5,8 +5,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import {
   createContext,
-  Dispatch,
-  SetStateAction,
   useContext,
   useEffect,
   useMemo,
@@ -25,14 +23,13 @@ import { Ecosystem } from "./Ecosystem";
 import { Build } from "./Build";
 import { Community } from "./Community";
 
-export const HoverContext = createContext<
-  Dispatch<SetStateAction<boolean>> | undefined
->(undefined);
+export const HoverContext = createContext<any>(undefined);
 
 export const DropDownContext = createContext<any | undefined>(undefined);
 
 export function Header(): JSX.Element {
   const [menu, setMenu] = useState(false);
+  const [headerHeight, setHeaderHeight] = useState<number>(0);
   const [atTop, setAtTop] = useState(true);
   const [dfiPrice, setDfiPrice] = useState<string>("0");
   const router = useRouter();
@@ -84,24 +81,47 @@ export function Header(): JSX.Element {
     [dropDownState, setDropDownState, dfiPrice, setDfiPrice]
   );
 
+  const desktopContextObj = useMemo(
+    () => ({
+      isHoverOn,
+      setIsHoverOn,
+      headerHeight,
+    }),
+    [isHoverOn, setIsHoverOn, headerHeight, setHeaderHeight]
+  );
+
   const { t } = useTranslation("layout");
 
+  const ref = useRef<HTMLDivElement>(null);
+  const dimension = useWindowDimensions();
+  useEffect(() => {
+    if (ref.current) {
+      setHeaderHeight(ref.current.offsetHeight);
+    }
+  }, [ref, dimension]);
+
   return (
-    <>
+    <div
+      ref={ref}
+      className={classNames(
+        "z-50",
+        menu ? "header-dropdown-bg" : "bg-opacity-0"
+      )}
+    >
       <header
         className={classNames(
-          "z-50 sticky lg:static relative w-full top-0",
+          "sticky lg:static relative w-full top-0",
           { "shadow-lg": !atTop },
-          isHoverOn || menu ? "header-dropdown-bg" : "bg-dark-00"
+          isHoverOn ? "bg-opacity-0" : "bg-dark-00"
         )}
       >
-        <Container className="md:pt-14 lg:pb-4 md:pb-6 py-4">
+        <Container className="md:pt-14 lg:pb-0 md:pb-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex w-full">
               <Link
                 href={{ pathname: "/" }}
                 passHref
-                className="grow flex items-center cursor-pointer hover:text-primary-500 h-full flex self-center lg:py-0 md:py-[15.28px] py-[14.69px]"
+                className="grow flex items-center cursor-pointer hover:text-primary-500 h-full lg:pt-4 lg:py-0 md:py-[15.28px] py-[14.69px]"
                 data-testid="Header.SiteLogo"
               >
                 <DeFiChainLogo
@@ -109,10 +129,10 @@ export function Header(): JSX.Element {
                   className="w-[159px] h-9 md:w-[194.33px] lg:block lg:w-40 lg:h-full md:h-[44px]"
                 />
               </Link>
-              <HoverContext.Provider value={setIsHoverOn}>
+              <HoverContext.Provider value={desktopContextObj}>
                 <DesktopNavbar />
               </HoverContext.Provider>
-              <div className="hidden md:flex h-full flex self-center">
+              <div className="hidden md:flex h-full flex  lg:pt-4">
                 <GradientButton
                   className="py-3 bg-dark-00"
                   buttonText={`${t("header.navbar.buy")} DFI $${Number(
@@ -147,7 +167,7 @@ export function Header(): JSX.Element {
           </DropDownContext.Provider>
         </div>
       )}
-    </>
+    </div>
   );
 }
 function DesktopNavbar(): JSX.Element {
@@ -162,11 +182,11 @@ function DesktopNavbar(): JSX.Element {
 
 function MenuItemsDropdown({ item }: { item: string }) {
   const [isShowing, setIsShowing] = useState(false);
-  const setIsHoverOn = useContext(HoverContext);
+  const { headerHeight, setIsHoverOn } = useContext(HoverContext);
   const DropDown = dropDownMapping[item.toLowerCase()];
   return (
     <Menu
-      className="lg:py-6"
+      className="lg:pt-6 lg:pb-10"
       as="div"
       onMouseLeave={() => {
         setIsShowing(false);
@@ -192,16 +212,15 @@ function MenuItemsDropdown({ item }: { item: string }) {
         <Container>
           <Transition
             show={isShowing}
-            enter="transition duration-500 ease-out"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="transition duration-500 ease-out"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
+            enter="transition duration-500"
+            enterFrom="ease-in"
+            enterTo="ease-out"
           >
             <Menu.Items
+              style={{ paddingTop: headerHeight }}
+              as="div"
               data-testid="Desktop.HeaderLink.More.Items"
-              className="absolute inset-x-0 z-[-1] header-dropdown-bg w-screen"
+              className="absolute inset-x-0 z-[-1] top-0 header-dropdown-bg w-screen"
             >
               <Container className="py-20">
                 <DropDown />
@@ -215,10 +234,10 @@ function MenuItemsDropdown({ item }: { item: string }) {
 }
 
 function TabletAndMobileMenu() {
-  const ref = useRef<HTMLDivElement>(null);
-  const dimension = useWindowDimensions();
   const { t } = useTranslation("layout");
   const { dfiPrice, dropDownState } = useContext(DropDownContext);
+  const ref = useRef<HTMLDivElement>(null);
+  const dimension = useWindowDimensions();
   useEffect(() => {
     if (ref.current) {
       ref.current.style.height = `${
@@ -229,7 +248,7 @@ function TabletAndMobileMenu() {
   return (
     <div
       ref={ref}
-      className="flex flex-col float-right w-screen header-dropdown-bg lg:hidden overflow-y-scroll"
+      className="flex flex-col w-screen lg:hidden overflow-y-scroll"
       data-testid="TabletMenu"
     >
       <div className="flex flex-col">

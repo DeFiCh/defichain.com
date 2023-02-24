@@ -1,7 +1,6 @@
 import { Container } from "@components/commons/Container";
 import { useTranslation } from "next-i18next";
-import { Gif } from "@components/commons/Gif";
-import dfiCoinGif from "../../../public/assets/svg/hero/dfi-coin-gif.gif";
+import { Video } from "@components/commons/Video";
 
 export function HomePageHeader(): JSX.Element {
   const { t } = useTranslation("page-index");
@@ -32,7 +31,11 @@ export function HomePageHeader(): JSX.Element {
           </div>
         </div>
         <div className="w-[252.82px] lg:w-[595px] ml-[83px] lg:ml-auto">
-          <Gif src={dfiCoinGif} alt="DFI coin gif" width={595} height={590} />
+          <Video
+            src="/assets/svg/hero/dfi-coin-video.mp4"
+            width={595}
+            height={595}
+          />
         </div>
       </Container>
     </div>

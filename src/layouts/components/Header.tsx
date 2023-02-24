@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import { Container } from "@components/commons/Container";
-import { DeFiChainLogo } from "@components/icons/DeFiChainLogo";
+import DeFiChainLogo from "@components/icons/DeFiChainLogo";
 import Link from "next/link";
 import { MdClose, MdMenu } from "react-icons/md";
 import { useRouter } from "next/router";

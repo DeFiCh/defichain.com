@@ -101,8 +101,9 @@ export function Community() {
             {MenuItems.dropDownItems[0].label}
           </div>
           <div className="flex flex-col gap-y-8">
-            {MenuItems.dropDownItems[0].items.map((item) => (
+            {MenuItems.dropDownItems[0].items.map((item, key) => (
               <HeaderNavLinkItem
+                key={key}
                 hoverState={hoverState}
                 setHoverState={setHoverState}
                 label={item.title}
@@ -120,8 +121,9 @@ export function Community() {
           {MenuItems.dropDownItems[1].label}
         </div>
         <div className="grid xl:grid-cols-4 xl:grid-rows-4 lg:grid-cols-3 lg:grid-rows-5 grid-cols-2 grid-rows-8 grid-flow-col gap-y-6 gap-x-20 place-items-start">
-          {MenuItems.dropDownItems[1].items.map((item) => (
+          {MenuItems.dropDownItems[1].items.map((item, key) => (
             <HeaderNavLinkItem
+              key={key}
               hoverState={hoverState}
               setHoverState={setHoverState}
               label={item.title}

@@ -173,8 +173,8 @@ export function Header(): JSX.Element {
 function DesktopNavbar(): JSX.Element {
   return (
     <div className="w-full hidden lg:flex justify-center gap-x-[52px]">
-      {MenuItems.map((item) => (
-        <MenuItemsDropdown item={item} />
+      {MenuItems.map((item, key) => (
+        <MenuItemsDropdown key={key} item={item} />
       ))}
     </div>
   );
@@ -209,7 +209,7 @@ function MenuItemsDropdown({ item }: { item: string }) {
           </Menu.Button>
         </div>
 
-        <Container>
+        <Container className="cursor-auto">
           <Transition
             show={isShowing}
             enter="transition duration-500"
@@ -255,7 +255,7 @@ function TabletAndMobileMenu() {
         {MenuItems.map((item, key) => {
           const DropDown = dropDownMapping[item.toLowerCase()];
           return (
-            <>
+            <div key={key}>
               <Container className="px-6">
                 <TabletDropDown label={item}>
                   <DropDown />
@@ -264,7 +264,7 @@ function TabletAndMobileMenu() {
               {key !== MenuItems.length - 1 && (
                 <div className="card-outline-2 h-[0.5px]" />
               )}
-            </>
+            </div>
           );
         })}
         <Container

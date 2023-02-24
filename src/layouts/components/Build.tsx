@@ -56,8 +56,9 @@ export function Build() {
         {MenuItems.dropDownItems.label}
       </div>
       <div className="grid md:grid-cols-3 md:grid-rows-2 grid-rows-6 grid-flow-col gap-y-8 gap-x-8">
-        {MenuItems.dropDownItems.items.map((item) => (
+        {MenuItems.dropDownItems.items.map((item, key) => (
           <HeaderNavLinkItem
+            key={key}
             hoverState={hoverState}
             setHoverState={setHoverState}
             label={item.title}

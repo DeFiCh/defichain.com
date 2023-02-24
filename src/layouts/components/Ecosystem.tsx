@@ -71,8 +71,9 @@ export function Ecosystem() {
             {MenuItems.dropDownItems[0].label}
           </div>
           <div className="flex flex-col gap-y-8">
-            {MenuItems.dropDownItems[0].items.map((item) => (
+            {MenuItems.dropDownItems[0].items.map((item, key) => (
               <HeaderNavLinkItem
+                key={key}
                 hoverState={hoverState}
                 setHoverState={setHoverState}
                 label={item.title}
@@ -89,8 +90,9 @@ export function Ecosystem() {
             {MenuItems.dropDownItems[1].label}
           </div>
           <div className="flex flex-col gap-y-8">
-            {MenuItems.dropDownItems[1].items.map((item) => (
+            {MenuItems.dropDownItems[1].items.map((item, key) => (
               <HeaderNavLinkItem
+                key={key}
                 hoverState={hoverState}
                 setHoverState={setHoverState}
                 label={item.title}

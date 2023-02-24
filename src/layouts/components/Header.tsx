@@ -256,10 +256,10 @@ function TabletAndMobileMenu() {
           const DropDown = dropDownMapping[item.toLowerCase()];
           return (
             <div key={key}>
-              <Container className="px-6">
-                <TabletDropDown label={item}>
+              <Container className={classNames("px-6", { "mt-5": key === 0 })}>
+                <TabletMobileDropDown label={item}>
                   <DropDown />
-                </TabletDropDown>
+                </TabletMobileDropDown>
               </Container>
               {key !== MenuItems.length - 1 && (
                 <div className="card-outline-2 h-[0.5px]" />
@@ -288,7 +288,7 @@ function TabletAndMobileMenu() {
   );
 }
 
-function TabletDropDown({
+function TabletMobileDropDown({
   children,
   label,
 }: {

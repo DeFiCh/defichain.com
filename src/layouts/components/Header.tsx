@@ -95,18 +95,18 @@ export function Header(): JSX.Element {
           isHoverOn || menu ? "header-dropdown-bg" : "bg-dark-00"
         )}
       >
-        <Container className="lg:pt-14 lg:pb-4 py-4">
+        <Container className="md:pt-14 lg:pb-4 md:pb-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex w-full">
               <Link
                 href={{ pathname: "/" }}
                 passHref
-                className="grow flex items-center cursor-pointer hover:text-primary-500 h-full flex self-center"
+                className="grow flex items-center cursor-pointer hover:text-primary-500 h-full flex self-center lg:py-0 md:py-[15.28px] py-[14.69px]"
                 data-testid="Header.SiteLogo"
               >
                 <DeFiChainLogo
                   fill="#FFFFFF"
-                  className="w-32 lg:block lg:w-40 h-full"
+                  className="w-[159px] h-9 md:w-[194.33px] lg:block lg:w-40 lg:h-full md:h-[44px]"
                 />
               </Link>
               <HoverContext.Provider value={setIsHoverOn}>

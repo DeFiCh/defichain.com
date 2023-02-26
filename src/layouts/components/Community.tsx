@@ -139,10 +139,9 @@ export function Community() {
           )}
         >
           {MenuItems.dropDownItems[1].items.map((item, key) => (
-            <div className="w-[160px]">
+            <div key={key} className="w-[160px]">
               <HeaderNavLinkItem
                 haveIcon
-                key={key}
                 hoverState={hoverState}
                 setHoverState={setHoverState}
                 label={item.title}

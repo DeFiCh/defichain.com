@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import { DeFiChainLogo } from "@components/icons/DeFiChainLogo";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "next-i18next";
 import { HeaderNavLinkItem } from "./HeaderNavLinkItem";
 
@@ -57,23 +57,12 @@ export function Ecosystem() {
     ],
     image: {
       href: "",
-      bgImage: "/assets/img/header/header-jellyfish.png",
-      hoverBgImage: "/assets/img/header/header-hover-jellyfish.png",
       subtitle: t("header.ecosystem.image.subtitle"),
     },
   };
 
   const [hoverState, setHoverState] = useState<string | undefined>(undefined);
-  const [cardImage, setCardImage] = useState(`url(${MenuItems.image.bgImage})`);
-  const [cardHover, setCardHover] = useState(false);
 
-  useEffect(() => {
-    if (cardHover) {
-      setCardImage(`url(${MenuItems.image.hoverBgImage})`);
-    } else {
-      setCardImage(`url(${MenuItems.image.bgImage})`);
-    }
-  }, [cardHover]);
   return (
     <div className="flex xl:flex-row md:flex-col">
       <div className="flex md:flex-row flex-col gap-y-[72px] gap-x-6">
@@ -117,21 +106,14 @@ export function Ecosystem() {
 
       {/* image */}
       <div
-        onMouseEnter={() => {
-          setCardHover(true);
-        }}
-        onMouseLeave={() => {
-          setCardHover(false);
-        }}
         className={classNames(
           "p-[0.5px] hidden md:block md:mt-[56px] group hover:transition hover:duration-500 cursor-pointer hover:accent-gradient-1 rounded-[15px] w-[416px] xl:h-[176px] md:h-[191px]"
         )}
       >
         <a
           href={MenuItems.image.href}
-          style={{ backgroundImage: cardImage }}
           className={classNames(
-            `w-full h-full p-8 border-[0.5px] border-dark-200 bg-dark-00 rounded-[15px] flex flex-col bg-contain bg-no-repeat bg-right-top`
+            `header-ecosystem-card-bg w-full h-full p-8 border-[0.5px] border-dark-200 bg-dark-00 rounded-[15px] flex flex-col bg-contain bg-no-repeat bg-right-top`
           )}
         >
           <DeFiChainLogo fill="#FFFFFF" className="w-[140px]" />

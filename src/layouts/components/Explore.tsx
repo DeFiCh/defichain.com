@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "next-i18next";
 import { HeaderNavLinkItem } from "./HeaderNavLinkItem";
 
@@ -46,8 +46,6 @@ export function Explore() {
       ],
     },
     image: {
-      bgImage: "/assets/img/header/header-metal-dfi-coin.png",
-      hoverBgImage: "/assets/img/header/header-hover-dfi-coin.png",
       title: t("header.explore.image.title"),
       subtitle: t("header.explore.image.subtitle"),
       href: "",
@@ -55,16 +53,6 @@ export function Explore() {
   };
 
   const [hoverState, setHoverState] = useState<string | undefined>(undefined);
-  const [cardImage, setCardImage] = useState(`url(${MenuItems.image.bgImage})`);
-  const [cardHover, setCardHover] = useState(false);
-
-  useEffect(() => {
-    if (cardHover) {
-      setCardImage(`url(${MenuItems.image.hoverBgImage})`);
-    } else {
-      setCardImage(`url(${MenuItems.image.bgImage})`);
-    }
-  }, [cardHover]);
 
   return (
     <div className="flex flex-col">
@@ -119,20 +107,11 @@ export function Explore() {
           </div>
         </div>
 
-        <div
-          onMouseEnter={() => {
-            setCardHover(true);
-          }}
-          onMouseLeave={() => {
-            setCardHover(false);
-          }}
-          className="group cursor-pointer hover:accent-gradient-1 hover:transition hover:duration-500 hidden md:block rounded-[15px] bg-dark-200 w-[416px] xl:h-[176px] md:h-[191px] p-[0.5px]"
-        >
+        <div className="group cursor-pointer hover:accent-gradient-1 hover:transition hover:duration-500 hidden md:block rounded-[15px] bg-dark-200 w-[416px] xl:h-[176px] md:h-[191px] p-[0.5px]">
           <a
             href={MenuItems.image.href}
-            style={{ backgroundImage: cardImage }}
             className={classNames(
-              `p-8 bg-dark-00 w-full h-full rounded-[15px] flex flex-col bg-contain bg-no-repeat bg-right-bottom`
+              `header-explore-card-bg p-8 bg-dark-00 w-full h-full rounded-[15px] flex flex-col bg-contain bg-no-repeat bg-right-bottom`
             )}
           >
             <div className="font-bold text-dark-1000">

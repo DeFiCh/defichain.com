@@ -142,7 +142,7 @@ export function Header(): JSX.Element {
       </Container>
 
       {menu && (
-        <div className="w-full h-full lg:hidden">
+        <div className="lg:hidden">
           <DropDownContext.Provider value={tabletMobileDropDownObj}>
             <TabletMobileMenu />
           </DropDownContext.Provider>
@@ -192,7 +192,7 @@ function DesktopMenu({ item }: { item: string }) {
       <Container className="cursor-auto w-full">
         <Transition
           style={{ top: headerHeight - 1 }}
-          className="absolute inset-x-0 z-[-1] header-dropdown-bg w-screen"
+          className="absolute inset-x-0 header-dropdown-bg w-screen"
           show={isShowing}
           enter="transition ease duration-500 transform"
           enterFrom="opacity-0"
@@ -228,7 +228,7 @@ function TabletMobileMenu() {
   return (
     <div
       ref={ref}
-      className="flex flex-col w-screen lg:hidden overflow-y-scroll no-scrollbar"
+      className="flex flex-col lg:hidden overflow-y-scroll no-scrollbar"
       data-testid="TabletMenu"
     >
       <div className="flex flex-col grow">
@@ -251,7 +251,7 @@ function TabletMobileMenu() {
 
         <Container
           className={classNames(
-            "block md:hidden w-full flex justify-center mb-[56px]",
+            "block md:hidden flex justify-center mb-[56px]",
             dropDownState === MobileTabletDropDownState.COMMUNITY
               ? "mt[84px]"
               : "mt-[68px]"

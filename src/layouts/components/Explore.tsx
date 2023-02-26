@@ -107,17 +107,24 @@ export function Explore() {
           </div>
         </div>
 
-        <div className="group cursor-pointer hover:accent-gradient-1 hover:transition hover:duration-500 hidden md:block rounded-[15px] bg-dark-200 w-[416px] xl:h-[176px] md:h-[191px] p-[0.5px]">
+        <div
+          className={classNames(
+            "p-[0.5px] rounded-[15px] w-[416px] xl:h-[176px] md:h-[191px]",
+            "group cursor-pointer hidden md:block",
+            "bg-dark-200 hover:accent-gradient-1 hover:transition hover:duration-500"
+          )}
+        >
           <a
             href={MenuItems.image.href}
             className={classNames(
-              `header-explore-card-bg p-8 bg-dark-00 w-full h-full rounded-[15px] flex flex-col bg-contain bg-no-repeat bg-right-bottom`
+              "p-8 w-full h-full rounded-[15px] flex flex-col",
+              "bg-dark-00 header-explore-card-bg bg-contain bg-no-repeat bg-right-bottom"
             )}
           >
-            <div className="font-bold text-dark-1000">
+            <div className="font-bold text-2xl text-dark-1000">
               {MenuItems.image.title}
             </div>
-            <div className={classNames("text-dark-800 max-w-[178px] mt-1")}>
+            <div className="text-dark-800 max-w-[178px] mt-1">
               {MenuItems.image.subtitle}
             </div>
           </a>

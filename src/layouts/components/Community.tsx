@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { useTranslation } from "next-i18next";
+import classNames from "classnames";
 import { HeaderNavLinkItem } from "./HeaderNavLinkItem";
 
-interface colLabels {
+interface ColLabels {
   title?: string;
   subtitle: string;
 }
 
 export function Community() {
   const { t } = useTranslation("layout");
-  const entries: Array<{ title: string; labels: colLabels[] }> = t(
+  const entries: Array<{ title: string; labels: ColLabels[] }> = t(
     "header.community.info",
     { returnObjects: true }
   );
@@ -26,7 +27,7 @@ export function Community() {
             subtitle: entries[0].labels[0].subtitle,
           },
           {
-            icon: "whitepaper",
+            icon: "newsletter",
             href: "",
             title: entries[0].labels[1].title,
             subtitle: entries[0].labels[1].subtitle,
@@ -131,7 +132,12 @@ export function Community() {
         <div className="text-dark-500 font-bold leading-5 mb-8">
           {MenuItems.dropDownItems[1].label}
         </div>
-        <div className="grid xl:grid-cols-4 xl:grid-rows-4 lg:grid-cols-3 lg:grid-rows-5 grid-cols-2 grid-rows-8 grid-flow-col gap-y-6 gap-x-20 place-items-start">
+        <div
+          className={classNames(
+            "grid grid-flow-col xl:grid-cols-4 xl:grid-rows-4 lg:grid-cols-3 lg:grid-rows-5 grid-cols-2 grid-rows-8",
+            "gap-y-6 gap-x-20 place-items-start"
+          )}
+        >
           {MenuItems.dropDownItems[1].items.map((item, key) => (
             <div className="w-[160px]">
               <HeaderNavLinkItem

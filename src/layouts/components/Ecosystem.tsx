@@ -4,14 +4,14 @@ import { useState } from "react";
 import { useTranslation } from "next-i18next";
 import { HeaderNavLinkItem } from "./HeaderNavLinkItem";
 
-interface colLabels {
+interface ColLabels {
   title?: string;
   subtitle: string;
 }
 
 export function Ecosystem() {
   const { t } = useTranslation("layout");
-  const entries: Array<{ title: string; labels: colLabels[] }> = t(
+  const entries: Array<{ title: string; labels: ColLabels[] }> = t(
     "header.ecosystem.info",
     { returnObjects: true }
   );
@@ -107,13 +107,16 @@ export function Ecosystem() {
       {/* image */}
       <div
         className={classNames(
-          "p-[0.5px] hidden md:block md:mt-[56px] group hover:transition hover:duration-500 cursor-pointer hover:accent-gradient-1 rounded-[15px] w-[416px] xl:h-[176px] md:h-[191px]"
+          "p-[0.5px] rounded-[15px] w-[416px] xl:h-[176px] md:h-[191px]",
+          "cursor-pointer hidden md:block md:mt-[56px] ",
+          "group hover:transition hover:duration-500 hover:accent-gradient-1"
         )}
       >
         <a
           href={MenuItems.image.href}
           className={classNames(
-            `header-ecosystem-card-bg w-full h-full p-8 border-[0.5px] border-dark-200 bg-dark-00 rounded-[15px] flex flex-col bg-contain bg-no-repeat bg-right-top`
+            "w-full h-full p-8 rounded-[15px] border-[0.5px] flex flex-col",
+            "border-dark-200 header-ecosystem-card-bg bg-dark-00 bg-contain bg-no-repeat bg-right-top"
           )}
         >
           <DeFiChainLogo fill="#FFFFFF" className="w-[140px]" />

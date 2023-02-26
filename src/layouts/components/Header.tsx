@@ -33,6 +33,13 @@ export function Header(): JSX.Element {
   const [dfiPrice, setDfiPrice] = useState<string>("0");
   const router = useRouter();
   const api = useWhaleApiClient();
+  const [isHoverOn, setIsHoverOn] = useState(false);
+  const [dropDownState, setDropDownState] = useState<
+    MobileTabletDropDownState | undefined
+  >(undefined);
+  const { t } = useTranslation("layout");
+  const ref = useRef<HTMLDivElement>(null);
+  const dimension = useWindowDimensions();
 
   useEffect(() => {
     function routeChangeStart(): void {
@@ -55,11 +62,6 @@ export function Header(): JSX.Element {
     }
   }, [menu]);
 
-  const [isHoverOn, setIsHoverOn] = useState(false);
-  const [dropDownState, setDropDownState] = useState<
-    MobileTabletDropDownState | undefined
-  >(undefined);
-
   const tabletMobileDropDownObj = useMemo(
     () => ({
       dropDownState,
@@ -78,10 +80,6 @@ export function Header(): JSX.Element {
     [isHoverOn, setIsHoverOn, headerHeight, setHeaderHeight]
   );
 
-  const { t } = useTranslation("layout");
-
-  const ref = useRef<HTMLDivElement>(null);
-  const dimension = useWindowDimensions();
   useEffect(() => {
     if (ref.current) {
       setHeaderHeight(ref.current.offsetHeight);
@@ -146,7 +144,7 @@ export function Header(): JSX.Element {
       {menu && (
         <div className="w-full h-full lg:hidden">
           <DropDownContext.Provider value={tabletMobileDropDownObj}>
-            <TabletAndMobileMenu />
+            <TabletMobileMenu />
           </DropDownContext.Provider>
         </div>
       )}
@@ -157,16 +155,16 @@ function DesktopNavbar(): JSX.Element {
   return (
     <div className="w-full hidden lg:flex justify-center gap-x-[52px]">
       {MenuItems.map((item, key) => (
-        <DesktopMenuItemsDropdown key={key} item={item} />
+        <DesktopMenu key={key} item={item} />
       ))}
     </div>
   );
 }
 
-function DesktopMenuItemsDropdown({ item }: { item: string }) {
+function DesktopMenu({ item }: { item: string }) {
   const [isShowing, setIsShowing] = useState(false);
   const { headerHeight, setIsHoverOn } = useContext(HoverContext);
-  const DropDown = dropDownMapping[item.toLowerCase()];
+  const DesktopDropDown = dropDownMapping[item.toLowerCase()];
   const { t } = useTranslation("layout");
   return (
     <Menu
@@ -181,44 +179,41 @@ function DesktopMenuItemsDropdown({ item }: { item: string }) {
         setIsHoverOn!(true);
       }}
     >
-      <>
-        <div className="w-auto text-center">
-          <Menu.Button
-            className={classNames("text-dark-700 text-lg font-semibold", {
-              "accent-dfc-gradient-text bg-clip-text text-transparent":
-                isShowing,
-            })}
-          >
-            {t(`header.navbar.${item.toLowerCase()}`)}
-          </Menu.Button>
-        </div>
+      <div className="w-auto text-center">
+        <Menu.Button
+          className={classNames("text-dark-700 text-lg font-semibold", {
+            "accent-dfc-gradient-text bg-clip-text text-transparent": isShowing,
+          })}
+        >
+          {t(`header.navbar.${item.toLowerCase()}`)}
+        </Menu.Button>
+      </div>
 
-        <Container className="cursor-auto w-full">
-          <Transition
-            style={{ top: headerHeight - 1 }}
-            className="absolute inset-x-0 z-[-1] header-dropdown-bg w-screen"
-            show={isShowing}
-            enter="transition ease duration-500 transform"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="transition ease duration-500 transform"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0 "
-          >
-            <Menu.Items as="div" data-testid="Desktop.HeaderLink.More.Items">
-              <Container className="pt-[48.77px] pb-16">
-                <DropDown />
-              </Container>
-              <div className="accent-gradient-1 h-[0.5px]" />
-            </Menu.Items>
-          </Transition>
-        </Container>
-      </>
+      <Container className="cursor-auto w-full">
+        <Transition
+          style={{ top: headerHeight - 1 }}
+          className="absolute inset-x-0 z-[-1] header-dropdown-bg w-screen"
+          show={isShowing}
+          enter="transition ease duration-500 transform"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="transition ease duration-500 transform"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0 "
+        >
+          <Menu.Items as="div" data-testid="Desktop.HeaderLink.More.Items">
+            <Container className="pt-[48.77px] pb-16">
+              <DesktopDropDown />
+            </Container>
+            <div className="accent-gradient-1 h-[0.5px]" />
+          </Menu.Items>
+        </Transition>
+      </Container>
     </Menu>
   );
 }
 
-function TabletAndMobileMenu() {
+function TabletMobileMenu() {
   const { t } = useTranslation("layout");
   const { dfiPrice, dropDownState } = useContext(DropDownContext);
   const ref = useRef<HTMLDivElement>(null);

@@ -14,6 +14,7 @@ import { MediaAssetsIcon } from "@public/assets/icon/MediaAssetsIcon";
 import { DeveloperResourceIcon } from "@public/assets/icon/DeveloperResourceIcon";
 import { RiArrowRightUpLine } from "react-icons/ri";
 import { Dispatch, SetStateAction, useState } from "react";
+import { NewsLetterIcon } from "@public/assets/icon/NewsLetterIcon";
 
 export function HeaderNavLinkItem({
   icon,
@@ -42,6 +43,7 @@ export function HeaderNavLinkItem({
     "media",
     "security",
     "developer",
+    "newsletter",
   ];
 
   const [isMouseEnter, setIsMouseEnter] = useState(false);
@@ -82,7 +84,13 @@ export function HeaderNavLinkItem({
 
       <div className="flex flex-col">
         <div className="flex flex-row items-center">
-          <div className="mr-[7px] flex text-dark-1000 group-hover:duration-300 group-hover:transition group-hover:accent-dfc-gradient-text group-hover:bg-clip-text group-hover:text-transparent font-semibold md:text-lg leading-6 lg:whitespace-nowrap md:whitespace-pre-wrap whitespace-nowrap">
+          <div
+            className={classNames(
+              "mr-[7px] flex font-semibold text-dark-1000 md:text-lg leading-6",
+              "group-hover:text-transparent group-hover:bg-clip-text group-hover:duration-300 group-hover:transition group-hover:accent-dfc-gradient-text",
+              "lg:whitespace-nowrap md:whitespace-pre-wrap whitespace-nowrap"
+            )}
+          >
             {label}
           </div>
           {isMouseEnter && haveIcon && (
@@ -130,4 +138,5 @@ const iconMapping = {
   security: SecurityIcon,
   media: MediaAssetsIcon,
   developer: DeveloperResourceIcon,
+  newsletter: NewsLetterIcon,
 };

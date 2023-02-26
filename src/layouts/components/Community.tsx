@@ -135,7 +135,7 @@ export function Community() {
         <div
           className={classNames(
             "grid grid-flow-col xl:grid-cols-4 xl:grid-rows-4 lg:grid-cols-3 lg:grid-rows-5 grid-cols-2 grid-rows-8",
-            "gap-y-6 gap-x-20 place-items-start"
+            "gap-y-6 md:gap-x-20 gap-x-10 place-items-start"
           )}
         >
           {MenuItems.dropDownItems[1].items.map((item, key) => (

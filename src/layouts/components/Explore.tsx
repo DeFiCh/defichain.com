@@ -1,54 +1,59 @@
 import classNames from "classnames";
 import { useEffect, useState } from "react";
+import { useTranslation } from "next-i18next";
 import { HeaderNavLinkItem } from "./HeaderNavLinkItem";
 
-const MenuItems = {
-  label: "Explore",
-  dropDownItems: {
-    label: "EXPLORE DEFICHAIN",
-    items: [
-      {
-        icon: "dfi",
-        href: "",
-        title: "$DFI",
-        subtitle: "Learn about the token",
-      },
-      {
-        icon: "invest",
-        href: "",
-        title: "Invest, Trade and Earn",
-        subtitle: "Explore use cases of DeFiChain",
-      },
-      {
-        icon: "dex",
-        href: "",
-        title: "Decentralized Exchange",
-        subtitle: "Maximize your assets",
-      },
-      {
-        icon: "wallet",
-        href: "",
-        title: "Wallets",
-        subtitle: "Store assets in your own way",
-      },
-      {
-        icon: "masternode",
-        href: "",
-        title: "Masternodes",
-        subtitle: "Place your stakes in DeFiChain",
-      },
-    ],
-  },
-  image: {
-    bgImage: "/assets/img/header/header-metal-dfi-coin.png",
-    hoverBgImage: "/assets/img/header/header-hover-dfi-coin.png",
-    title: "$DFI",
-    subtitle: "Learn about the token and where to get",
-    href: "",
-  },
-};
-
 export function Explore() {
+  const { t } = useTranslation("layout");
+  const entries: Array<{ title: string; subtitle: string }> = t(
+    "header.explore.labels",
+    { returnObjects: true }
+  );
+  const MenuItems = {
+    dropDownItems: {
+      label: t("header.explore.title"),
+      items: [
+        {
+          icon: "dfi",
+          href: "",
+          title: entries[0].title,
+          subtitle: entries[0].subtitle,
+        },
+        {
+          icon: "invest",
+          href: "",
+          title: entries[1].title,
+          subtitle: entries[1].subtitle,
+        },
+        {
+          icon: "dex",
+          href: "",
+          title: entries[2].title,
+          subtitle: entries[2].subtitle,
+        },
+        {
+          icon: "wallet",
+          href: "",
+          title: entries[3].title,
+          subtitle: entries[3].subtitle,
+        },
+        {
+          icon: "masternode",
+          href: "",
+          title: entries[4].title,
+          subtitle: entries[4].subtitle,
+        },
+      ],
+    },
+    image: {
+      bgImage: "/assets/img/header/header-metal-dfi-coin.png",
+      hoverBgImage: "/assets/img/header/header-hover-dfi-coin.png",
+      title: t("header.explore.image.title"),
+      subtitle: t("header.explore.image.subtitle"),
+      href: "",
+    },
+  };
+
   const [hoverState, setHoverState] = useState<string | undefined>(undefined);
   const [cardImage, setCardImage] = useState(`url(${MenuItems.image.bgImage})`);
   const [cardHover, setCardHover] = useState(false);
@@ -121,7 +126,7 @@ export function Explore() {
           onMouseLeave={() => {
             setCardHover(false);
           }}
-          className="group cursor-pointer hover:accent-gradient-1 hidden md:block rounded-[15px] bg-dark-200 w-[416px] xl:h-[176px] md:h-[191px] p-[0.5px]"
+          className="group cursor-pointer hover:accent-gradient-1 hover:transition hover:duration-500 hidden md:block rounded-[15px] bg-dark-200 w-[416px] xl:h-[176px] md:h-[191px] p-[0.5px]"
         >
           <a
             href={MenuItems.image.href}

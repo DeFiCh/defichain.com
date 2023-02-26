@@ -1,57 +1,68 @@
 import classNames from "classnames";
 import { DeFiChainLogo } from "@components/icons/DeFiChainLogo";
 import { useEffect, useState } from "react";
+import { useTranslation } from "next-i18next";
 import { HeaderNavLinkItem } from "./HeaderNavLinkItem";
 
-const MenuItems = {
-  label: "Ecosystem",
-  dropDownItems: [
-    {
-      label: "DIVE INTO THE ECOSYSTEM",
-      items: [
-        {
-          icon: "apps",
-          href: "",
-          title: "DefiChain Apps",
-          subtitle: "See DeFiChain in action",
-        },
-        {
-          icon: "dfi",
-          href: "",
-          title: "DeFi Meta Chain",
-          subtitle: "Expand possibilities in DeFiChain",
-        },
-        {
-          icon: "governance",
-          href: "",
-          title: "Governance",
-          subtitle: "For DeFiChain, By DeFiChain",
-        },
-      ],
-    },
-    {
-      label: "GET INVOLVED WITH DEFICHAIN",
-      items: [
-        {
-          href: "",
-          title: "Bug Bounty",
-        },
-        {
-          href: "",
-          title: "$100M Accelerator Program",
-        },
-      ],
-    },
-  ],
-  image: {
-    href: "",
-    bgImage: "/assets/img/header/header-jellyfish.png",
-    hoverBgImage: "/assets/img/header/header-hover-jellyfish.png",
-    subtitle: "Powered by the Security of Bitcoin & Flexibility of Ethereum",
-  },
-};
+interface colLabels {
+  title?: string;
+  subtitle: string;
+}
 
 export function Ecosystem() {
+  const { t } = useTranslation("layout");
+  const entries: Array<{ title: string; labels: colLabels[] }> = t(
+    "header.ecosystem.info",
+    { returnObjects: true }
+  );
+
+  const MenuItems = {
+    dropDownItems: [
+      {
+        label: entries[0].title,
+        items: [
+          {
+            icon: "apps",
+            href: "",
+            title: entries[0].labels[0].title,
+            subtitle: entries[0].labels[0].subtitle,
+          },
+          {
+            icon: "dfi",
+            href: "",
+            title: entries[0].labels[1].title,
+            subtitle: entries[0].labels[1].subtitle,
+          },
+          {
+            icon: "governance",
+            href: "",
+            title: entries[0].labels[2].title,
+            subtitle: entries[0].labels[2].subtitle,
+          },
+        ],
+      },
+      {
+        label: entries[1].title,
+        items: [
+          {
+            href: "",
+            title: entries[1].labels[0].title,
+          },
+          {
+            href: "",
+            title: entries[1].labels[1].title,
+          },
+        ],
+      },
+    ],
+    image: {
+      href: "",
+      bgImage: "/assets/img/header/header-jellyfish.png",
+      hoverBgImage: "/assets/img/header/header-hover-jellyfish.png",
+      subtitle: t("header.ecosystem.image.subtitle"),
+    },
+  };
+
   const [hoverState, setHoverState] = useState<string | undefined>(undefined);
   const [cardImage, setCardImage] = useState(`url(${MenuItems.image.bgImage})`);
   const [cardHover, setCardHover] = useState(false);
@@ -113,7 +124,7 @@ export function Ecosystem() {
           setCardHover(false);
         }}
         className={classNames(
-          "p-[0.5px] hidden md:block md:mt-[56px] group cursor-pointer hover:accent-gradient-1 rounded-[15px] w-[416px] xl:h-[176px] md:h-[191px]"
+          "p-[0.5px] hidden md:block md:mt-[56px] group hover:transition hover:duration-500 cursor-pointer hover:accent-gradient-1 rounded-[15px] w-[416px] xl:h-[176px] md:h-[191px]"
         )}
       >
         <a

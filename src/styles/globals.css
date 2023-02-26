@@ -8,7 +8,7 @@
 @tailwind utilities;
 
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
   box-sizing: border-box;
 }
@@ -56,7 +56,7 @@ body {
   }
 
   .header-dropdown-bg {
-    background: linear-gradient(147.98deg, #161616 -16.18%, #000000 100.22%);
+    background: rgba(0, 0, 0, 0.9)
   }
 
 

@@ -1,96 +1,107 @@
 import { useState } from "react";
+import { useTranslation } from "next-i18next";
 import { HeaderNavLinkItem } from "./HeaderNavLinkItem";
 
-const MenuItems = {
-  label: "Community",
-  dropDownItems: [
-    {
-      label: "DIVE INTO THE ECOSYSTEM",
-      items: [
-        {
-          icon: "apps",
-          href: "",
-          title: "Blog",
-          subtitle: "Read and learn more",
-        },
-        {
-          icon: "whitepaper",
-          href: "",
-          title: "Newsletter",
-          subtitle: "Get the latest news",
-        },
-      ],
-    },
-    {
-      label: "JOIN COMMUNITIES",
-      items: [
-        {
-          href: "",
-          title: "Reddit",
-        },
-        {
-          href: "",
-          title: "Twitter",
-        },
-        {
-          href: "",
-          title: "Facebook",
-        },
-        {
-          href: "",
-          title: "GitHub",
-        },
-        {
-          href: "",
-          title: "Youtube",
-        },
-        {
-          href: "",
-          title: "LinkedIn",
-        },
-        {
-          href: "",
-          title: "Discord",
-        },
-        {
-          href: "",
-          title: "CoinMarketCap",
-        },
-
-        {
-          href: "",
-          title: "Telegram (EN)",
-        },
-        {
-          href: "",
-          title: "Telegram (DE)",
-        },
-        {
-          href: "",
-          title: "Telegram (FR)",
-        },
-        {
-          href: "",
-          title: "Telegram (ES)",
-        },
-        {
-          href: "",
-          title: "Telegram (IT)",
-        },
-        {
-          href: "",
-          title: "Telegram (ID)",
-        },
-        {
-          href: "",
-          title: "Telegram (TR)",
-        },
-      ],
-    },
-  ],
-};
+interface colLabels {
+  title?: string;
+  subtitle: string;
+}
 
 export function Community() {
+  const { t } = useTranslation("layout");
+  const entries: Array<{ title: string; labels: colLabels[] }> = t(
+    "header.community.info",
+    { returnObjects: true }
+  );
+
+  const MenuItems = {
+    dropDownItems: [
+      {
+        label: entries[0].title,
+        items: [
+          {
+            icon: "apps",
+            href: "",
+            title: entries[0].labels[0].title,
+            subtitle: entries[0].labels[0].subtitle,
+          },
+          {
+            icon: "whitepaper",
+            href: "",
+            title: entries[0].labels[1].title,
+            subtitle: entries[0].labels[1].subtitle,
+          },
+        ],
+      },
+      {
+        label: entries[1].title,
+        items: [
+          {
+            href: "",
+            title: entries[1].labels[0].title,
+          },
+          {
+            href: "",
+            title: entries[1].labels[1].title,
+          },
+          {
+            href: "",
+            title: entries[1].labels[2].title,
+          },
+          {
+            href: "",
+            title: entries[1].labels[3].title,
+          },
+          {
+            href: "",
+            title: entries[1].labels[4].title,
+          },
+          {
+            href: "",
+            title: entries[1].labels[5].title,
+          },
+          {
+            href: "",
+            title: entries[1].labels[6].title,
+          },
+          {
+            href: "",
+            title: entries[1].labels[7].title,
+          },
+
+          {
+            href: "",
+            title: entries[1].labels[8].title,
+          },
+          {
+            href: "",
+            title: entries[1].labels[9].title,
+          },
+          {
+            href: "",
+            title: entries[1].labels[10].title,
+          },
+          {
+            href: "",
+            title: entries[1].labels[11].title,
+          },
+          {
+            href: "",
+            title: entries[1].labels[12].title,
+          },
+          {
+            href: "",
+            title: entries[1].labels[13].title,
+          },
+          {
+            href: "",
+            title: entries[1].labels[14].title,
+          },
+        ],
+      },
+    ],
+  };
+
   const [hoverState, setHoverState] = useState<string | undefined>(undefined);
   return (
     <div className="flex md:flex-row flex-col gap-y-9 gap-x-32">
@@ -122,14 +133,16 @@ export function Community() {
         </div>
         <div className="grid xl:grid-cols-4 xl:grid-rows-4 lg:grid-cols-3 lg:grid-rows-5 grid-cols-2 grid-rows-8 grid-flow-col gap-y-6 gap-x-20 place-items-start">
           {MenuItems.dropDownItems[1].items.map((item, key) => (
-            <HeaderNavLinkItem
-              haveIcon
-              key={key}
-              hoverState={hoverState}
-              setHoverState={setHoverState}
-              label={item.title}
-              href={item.href}
-            />
+            <div className="w-[160px]">
+              <HeaderNavLinkItem
+                haveIcon
+                key={key}
+                hoverState={hoverState}
+                setHoverState={setHoverState}
+                label={item.title}
+                href={item.href}
+              />
+            </div>
           ))}
         </div>
       </div>

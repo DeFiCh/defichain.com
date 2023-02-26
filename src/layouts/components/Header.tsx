@@ -30,7 +30,6 @@ export const DropDownContext = createContext<any | undefined>(undefined);
 export function Header(): JSX.Element {
   const [menu, setMenu] = useState(false);
   const [headerHeight, setHeaderHeight] = useState<number>(0);
-  const [atTop, setAtTop] = useState(true);
   const [dfiPrice, setDfiPrice] = useState<string>("0");
   const router = useRouter();
   const api = useWhaleApiClient();
@@ -49,17 +48,6 @@ export function Header(): JSX.Element {
   }, []);
 
   useEffect(() => {
-    function scrollHandler(): void {
-      window.pageYOffset > 30 ? setAtTop(false) : setAtTop(true);
-    }
-
-    window.addEventListener("scroll", scrollHandler);
-    return () => {
-      window.removeEventListener("scroll", scrollHandler);
-    };
-  }, []);
-
-  useEffect(() => {
     if (menu) {
       document.documentElement.style.overflow = "hidden";
     } else {
@@ -72,7 +60,7 @@ export function Header(): JSX.Element {
     MobileTabletDropDownState | undefined
   >(undefined);
 
-  const obj = useMemo(
+  const tabletMobileDropDownObj = useMemo(
     () => ({
       dropDownState,
       setDropDownState,
@@ -101,89 +89,85 @@ export function Header(): JSX.Element {
   }, [ref, dimension]);
 
   return (
-    <div
+    <header
       ref={ref}
       className={classNames(
-        "z-50",
-        menu ? "header-dropdown-bg" : "bg-opacity-0"
+        "sticky top-0 left-0 right-0 w-full bg-dark-00 z-50",
+        isHoverOn || menu
+          ? "header-dropdown-bg border-b-0 "
+          : "border-b-[0.1px] border-b-dark-200"
       )}
     >
-      <header
-        className={classNames(
-          "sticky lg:static relative w-full top-0",
-          { "shadow-lg": !atTop },
-          isHoverOn || menu ? "bg-opacity-0" : "bg-dark-00"
-        )}
-      >
-        <Container className="md:pt-14 lg:pb-0 md:pb-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex w-full">
-              <Link
-                href={{ pathname: "/" }}
-                passHref
-                className="grow flex items-center cursor-pointer hover:text-primary-500 h-full lg:pt-4 lg:py-0"
-                data-testid="Header.SiteLogo"
-              >
-                <DeFiChainLogo
-                  fill="#FFFFFF"
-                  className="w-[159px] h-9 md:w-[194.33px] lg:block lg:w-40 lg:h-full md:h-[44px]"
-                />
-              </Link>
-              <HoverContext.Provider value={desktopContextObj}>
-                <DesktopNavbar />
-              </HoverContext.Provider>
-              <div className="hidden md:flex h-full flex  lg:pt-4">
-                <GradientButton
-                  className="py-3 bg-dark-00"
-                  buttonText={`${t("header.navbar.buy")} DFI $${Number(
-                    dfiPrice
-                  ).toFixed(2)}`}
-                />
-              </div>
-            </div>
-            <div className="lg:hidden ml-[27px]">
-              {menu ? (
-                <IoCloseCircleOutline
-                  className="cursor-pointer hover:text-brand-100 active:opacity-70 h-8 w-8 text-dark-1000"
-                  onClick={() => setMenu(false)}
-                  data-testid="Header.CloseMenu"
-                />
-              ) : (
-                <MdMenu
-                  className="cursor-pointer hover:text-brand-100 active:opacity-70 h-8 w-8 text-dark-1000"
-                  onClick={() => setMenu(true)}
-                  data-testid="Header.OpenMenu"
-                />
-              )}
-            </div>
+      <Container className="md:pt-14 lg:pb-0 md:pb-6 py-4 flex items-center justify-between">
+        <div className="flex w-full">
+          <Link
+            href={{ pathname: "/" }}
+            passHref
+            className="grow flex items-center cursor-pointer hover:text-primary-500 h-full lg:pt-4 lg:py-0"
+            data-testid="Header.SiteLogo"
+          >
+            <DeFiChainLogo
+              fill="#FFFFFF"
+              className="w-[159px] h-9 md:w-[194.33px] lg:block lg:w-40 lg:h-full md:h-[44px]"
+            />
+          </Link>
+
+          <HoverContext.Provider value={desktopContextObj}>
+            <DesktopNavbar />
+          </HoverContext.Provider>
+
+          <div className="hidden md:flex h-full flex lg:pt-4">
+            <GradientButton
+              className="py-3 bg-dark-00"
+              buttonText={`${t("header.navbar.buy")} DFI $${Number(
+                dfiPrice
+              ).toFixed(2)}`}
+            />
           </div>
-        </Container>
-      </header>
+        </div>
+
+        <div className="lg:hidden ml-[27px]">
+          {menu ? (
+            <IoCloseCircleOutline
+              className="cursor-pointer hover:text-brand-100 active:opacity-70 h-8 w-8 text-dark-1000"
+              onClick={() => setMenu(false)}
+              data-testid="Header.CloseMenu"
+            />
+          ) : (
+            <MdMenu
+              className="cursor-pointer hover:text-brand-100 active:opacity-70 h-8 w-8 text-dark-1000"
+              onClick={() => setMenu(true)}
+              data-testid="Header.OpenMenu"
+            />
+          )}
+        </div>
+      </Container>
 
       {menu && (
-        <div className="w-full lg:hidden">
-          <DropDownContext.Provider value={obj}>
+        <div className="w-full h-full lg:hidden">
+          <DropDownContext.Provider value={tabletMobileDropDownObj}>
             <TabletAndMobileMenu />
           </DropDownContext.Provider>
         </div>
       )}
-    </div>
+    </header>
   );
 }
 function DesktopNavbar(): JSX.Element {
   return (
     <div className="w-full hidden lg:flex justify-center gap-x-[52px]">
       {MenuItems.map((item, key) => (
-        <MenuItemsDropdown key={key} item={item} />
+        <DesktopMenuItemsDropdown key={key} item={item} />
       ))}
     </div>
   );
 }
 
-function MenuItemsDropdown({ item }: { item: string }) {
+function DesktopMenuItemsDropdown({ item }: { item: string }) {
   const [isShowing, setIsShowing] = useState(false);
   const { headerHeight, setIsHoverOn } = useContext(HoverContext);
   const DropDown = dropDownMapping[item.toLowerCase()];
+  const { t } = useTranslation("layout");
   return (
     <Menu
       className="lg:pt-6 lg:pb-10 cursor-pointer"
@@ -205,26 +189,27 @@ function MenuItemsDropdown({ item }: { item: string }) {
                 isShowing,
             })}
           >
-            {item}
+            {t(`header.navbar.${item.toLowerCase()}`)}
           </Menu.Button>
         </div>
 
-        <Container className="cursor-auto">
+        <Container className="cursor-auto w-full">
           <Transition
+            style={{ top: headerHeight - 1 }}
+            className="absolute inset-x-0 z-[-1] header-dropdown-bg w-screen"
             show={isShowing}
-            enter="transition duration-500"
-            enterFrom="ease-in"
-            enterTo="ease-out"
+            enter="transition ease duration-500 transform"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="transition ease duration-500 transform"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0 "
           >
-            <Menu.Items
-              style={{ paddingTop: headerHeight }}
-              as="div"
-              data-testid="Desktop.HeaderLink.More.Items"
-              className="absolute inset-x-0 z-[-1] top-0 header-dropdown-bg w-screen"
-            >
-              <Container className="py-20">
+            <Menu.Items as="div" data-testid="Desktop.HeaderLink.More.Items">
+              <Container className="pt-[48.77px] pb-16">
                 <DropDown />
               </Container>
+              <div className="accent-gradient-1 h-[0.5px]" />
             </Menu.Items>
           </Transition>
         </Container>
@@ -248,10 +233,10 @@ function TabletAndMobileMenu() {
   return (
     <div
       ref={ref}
-      className="flex flex-col w-screen lg:hidden overflow-y-scroll"
+      className="flex flex-col w-screen lg:hidden overflow-y-scroll no-scrollbar"
       data-testid="TabletMenu"
     >
-      <div className="flex flex-col">
+      <div className="flex flex-col grow">
         {MenuItems.map((item, key) => {
           const DropDown = dropDownMapping[item.toLowerCase()];
           return (
@@ -261,12 +246,14 @@ function TabletAndMobileMenu() {
                   <DropDown />
                 </TabletMobileDropDown>
               </Container>
+
               {key !== MenuItems.length - 1 && (
                 <div className="card-outline-2 h-[0.5px]" />
               )}
             </div>
           );
         })}
+
         <Container
           className={classNames(
             "block md:hidden w-full flex justify-center mb-[56px]",
@@ -283,6 +270,8 @@ function TabletAndMobileMenu() {
             ).toFixed(2)}`}
           />
         </Container>
+
+        <div className="mt-auto accent-gradient-1 h-[0.5px]" />
       </div>
     </div>
   );
@@ -317,6 +306,7 @@ function TabletMobileDropDown({
         >
           {label}
         </div>
+
         <IoChevronDown
           size={20}
           className={classNames("text-dark-1000", {
@@ -324,6 +314,7 @@ function TabletMobileDropDown({
           })}
         />
       </div>
+
       <div
         className={classNames(
           "mt-9 pb-10",

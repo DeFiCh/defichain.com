@@ -1,54 +1,60 @@
 import { useState } from "react";
+import { useTranslation } from "next-i18next";
 import { HeaderNavLinkItem } from "./HeaderNavLinkItem";
 
-const MenuItems = {
-  label: "Build",
-  dropDownItems: {
-    label: "START BUILDING",
-    items: [
-      {
-        icon: "jellyfish",
-        href: "",
-        title: "Jellyfish SDK",
-        subtitle: "Build for modern DeFi Applications",
-      },
-      {
-        icon: "whitepaper",
-        href: "",
-        title: "DeFiChain White Paper",
-        subtitle: "Fundamentals of DeFiChain",
-      },
-
-      {
-        icon: "github",
-        href: "",
-        title: "GitHub",
-        subtitle: "Track recent developments",
-      },
-      {
-        icon: "developer",
-        href: "",
-        title: "Developer Resources",
-        subtitle: "Start building on DeFiChain",
-      },
-
-      {
-        icon: "media",
-        href: "",
-        title: "Media Assets",
-        subtitle: "Brand resources of DeFiChain",
-      },
-      {
-        icon: "security",
-        href: "",
-        title: "Security",
-        subtitle: "Trustless and decentralized",
-      },
-    ],
-  },
-};
-
 export function Build() {
+  const { t } = useTranslation("layout");
+  const entries: Array<{ title: string; subtitle: string }> = t(
+    "header.build.labels",
+    { returnObjects: true }
+  );
+
+  const MenuItems = {
+    dropDownItems: {
+      label: t("header.build.title"),
+      items: [
+        {
+          icon: "jellyfish",
+          href: "",
+          title: entries[0].title,
+          subtitle: entries[0].subtitle,
+        },
+        {
+          icon: "whitepaper",
+          href: "",
+          title: entries[1].title,
+          subtitle: entries[1].subtitle,
+        },
+
+        {
+          icon: "github",
+          href: "",
+          title: entries[2].title,
+          subtitle: entries[2].subtitle,
+        },
+        {
+          icon: "developer",
+          href: "",
+          title: entries[3].title,
+          subtitle: entries[3].subtitle,
+        },
+
+        {
+          icon: "media",
+          href: "",
+          title: entries[4].title,
+          subtitle: entries[4].subtitle,
+        },
+        {
+          icon: "security",
+          href: "",
+          title: entries[5].title,
+          subtitle: entries[5].subtitle,
+        },
+      ],
+    },
+  };
+
   const [hoverState, setHoverState] = useState<string | undefined>(undefined);
   return (
     <div className="flex flex-col">

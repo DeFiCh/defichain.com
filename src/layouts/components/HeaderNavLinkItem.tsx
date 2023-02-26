@@ -12,7 +12,7 @@ import { WhitePaperIcon } from "@public/assets/icon/WhitePaperIcon";
 import { SecurityIcon } from "@public/assets/icon/SecurityIcon";
 import { MediaAssetsIcon } from "@public/assets/icon/MediaAssetsIcon";
 import { DeveloperResourceIcon } from "@public/assets/icon/DeveloperResourceIcon";
-import { IoMdArrowRoundForward } from "react-icons/io";
+import { RiArrowRightUpLine } from "react-icons/ri";
 import { Dispatch, SetStateAction, useState } from "react";
 
 export function HeaderNavLinkItem({
@@ -59,7 +59,7 @@ export function HeaderNavLinkItem({
       className={classNames(
         "group flex flex-row items-center gap-x-[28px]",
         hoverState !== undefined && hoverState !== label
-          ? "opacity-70 duration-300 transition"
+          ? "opacity-60 duration-300 transition"
           : "opacity-100 duration-300 transition"
       )}
     >
@@ -87,10 +87,9 @@ export function HeaderNavLinkItem({
           </div>
           {isMouseEnter && haveIcon && (
             <>
-              <IoMdArrowRoundForward
+              <RiArrowRightUpLine
                 style={{ fill: "url(#accent-gradient)" }}
-                size={20}
-                className="-rotate-45"
+                size={24}
               />
 
               <svg width="0" height="0">

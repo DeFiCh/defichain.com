@@ -184,9 +184,9 @@ export default function Footer(): JSX.Element {
     }
   }, [router]);
   return (
-    <footer className="py-10 px-6 bg-dark-100">
-      <Container>
-        <div className="py-10 footer-background h-full w-full rounded-[30px] px-[24px] lg:px-[96px]">
+    <footer className="relative bg-dark-00">
+      <Container className="relative z-10 py-10 px-6">
+        <div className="py-10 h-full w-full footer-background rounded-[30px] px-[24px] lg:px-[96px]">
           <div className="flex-col md:hidden pt-10">
             <Link
               href={{ pathname: "/" }}
@@ -252,6 +252,8 @@ export default function Footer(): JSX.Element {
           </div>
         </div>
       </Container>
+      <div className="absolute bottom-[150px] left-0 bg-contain bg-no-repeat bg-clip-border bg-origin-padding mix-blend-screen h-full w-full bg-[url('/assets/img/footer/transparent_coin_2.png')]" />
+      <div className="absolute bottom-[65px] right-0 bg-contain bg-no-repeat mix-blend-screen bg-right h-[25%] w-[25%] bg-[url('/assets/img/footer/arrow_1.png')]" />
     </footer>
   );
 }

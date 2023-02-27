@@ -14,7 +14,6 @@ interface SocialsRowProps {
 
 export default function SocialsRow(props: SocialsRowProps): JSX.Element {
   const { language, customStyle } = props;
-
   return (
     <div className={classNames(customStyle)}>
       <a

@@ -186,71 +186,69 @@ export default function Footer(): JSX.Element {
   return (
     <footer className="py-10 px-6 bg-dark-100">
       <Container>
-        <div className="rounded-[30px] card-outline-2 p-0.5 min-w-[133px] w-auto h-auto flex items-center">
-          <div className="footer-background h-full w-full rounded-[30px] px-[24px] lg:px-[96px]">
-            <div className="flex-col md:hidden pt-10">
-              <Link
-                href={{ pathname: "/" }}
-                passHref
-                className="flex items-center cursor-pointer hover:accent-dfc-gradient-text"
-                data-testid="Footer.Logo"
-              >
-                <DeFiChainLogo className="w-40 lg:w-52" />
-              </Link>
-              <SocialsRow
-                customStyle="text-dark-500 gap-4 flex flex-row pt-6 md:hidden"
-                language={language}
-              />
-            </div>
-            <div className="text-sm mt-[24px] md:flex md:flex-row md:justify-between md:pb-[86px]">
-              {/* EXPLORE */}
-              <FooterColumn
-                category={MenuItems[0].category}
-                childLinks={MenuItems[0].childLink}
-              />
-              {/* ECOSYSTEM */}
-              <FooterColumn
-                category={MenuItems[1].category}
-                childLinks={MenuItems[1].childLink}
-              />
-              {/* BUILD */}
-              <FooterColumn
-                category={MenuItems[2].category}
-                childLinks={MenuItems[2].childLink}
-              />
-              {/* COMMUNITY */}
-              <FooterColumn
-                category={MenuItems[3].category}
-                childLinks={MenuItems[3].childLink}
-              />
-            </div>
-            {/* Bottom section of footer */}
-            <div className="md:flex md:flex-row md:space-x-2 pb-[42px] text-dark-500 md:items-center md:justify-between">
-              <DeFiChainLogo className="w-[156.07px] hidden md:block" />
-              <div className="flex flex-col-reverse md:flex-row">
-                <div className="flex flex-row items-center">
-                  <FooterInternalBottomLink
-                    text="Privacy Policy"
-                    pathname="/privacy-policy"
-                    testId="Footer.Privacy"
-                  />
-                  <span className="px-2">•</span>
-                  <FooterInternalBottomLink
-                    text="Terms of use"
-                    pathname="/privacy-policy"
-                    testId="Footer.Privacy"
-                  />
-                </div>
-                <div className="pt-[54px] pb-[18px] md:pt-0 md:pb-0 md:pl-[31px]">
-                  <LanguageDropdownV2 />
-                </div>
+        <div className="py-10 footer-background h-full w-full rounded-[30px] px-[24px] lg:px-[96px]">
+          <div className="flex-col md:hidden pt-10">
+            <Link
+              href={{ pathname: "/" }}
+              passHref
+              className="flex items-center cursor-pointer hover:accent-dfc-gradient-text"
+              data-testid="Footer.Logo"
+            >
+              <DeFiChainLogo className="w-40 lg:w-52" />
+            </Link>
+            <SocialsRow
+              customStyle="text-dark-500 gap-4 flex flex-row pt-6 md:hidden"
+              language={language}
+            />
+          </div>
+          <div className="text-sm mt-[24px] md:flex md:flex-row md:justify-between md:pb-[86px]">
+            {/* EXPLORE */}
+            <FooterColumn
+              category={MenuItems[0].category}
+              childLinks={MenuItems[0].childLink}
+            />
+            {/* ECOSYSTEM */}
+            <FooterColumn
+              category={MenuItems[1].category}
+              childLinks={MenuItems[1].childLink}
+            />
+            {/* BUILD */}
+            <FooterColumn
+              category={MenuItems[2].category}
+              childLinks={MenuItems[2].childLink}
+            />
+            {/* COMMUNITY */}
+            <FooterColumn
+              category={MenuItems[3].category}
+              childLinks={MenuItems[3].childLink}
+            />
+          </div>
+          {/* Bottom section of footer */}
+          <div className="md:flex md:flex-row md:space-x-2 text-dark-500 md:items-center md:justify-between">
+            <DeFiChainLogo className="w-[156.07px] hidden md:block" />
+            <div className="flex flex-col-reverse md:flex-row">
+              <div className="flex flex-row items-center">
+                <FooterInternalBottomLink
+                  text="Privacy Policy"
+                  pathname="/privacy-policy"
+                  testId="Footer.Privacy"
+                />
+                <span className="px-2">•</span>
+                <FooterInternalBottomLink
+                  text="Terms of use"
+                  pathname="/privacy-policy"
+                  testId="Footer.Privacy"
+                />
               </div>
-              {/* SOCIALS */}
-              <SocialsRow
-                customStyle="md:grid grid-flow-col hidden absolute right-[40px] bottom-[180px] md:gap-2 lg:gap-5 lg:right-[106px]"
-                language={language}
-              />
+              <div className="pt-[54px] pb-[18px] md:pt-0 md:pb-0 md:pl-[31px]">
+                <LanguageDropdownV2 />
+              </div>
             </div>
+            {/* SOCIALS */}
+            <SocialsRow
+              customStyle="md:grid grid-flow-col hidden absolute right-[40px] bottom-[180px] md:gap-2 lg:gap-5 lg:right-[106px]"
+              language={language}
+            />
           </div>
         </div>
       </Container>

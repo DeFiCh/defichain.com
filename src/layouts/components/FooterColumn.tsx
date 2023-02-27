@@ -19,7 +19,7 @@ export default function FooterColumn({
 }): JSX.Element {
   return (
     <section className="md:px-2">
-      <h3 className="text-sm font-semibold text-dark-500 pb-[22px] pt-[28px] md:pb-[38px]">
+      <h3 className="text-sm font-semibold pb-[22px] pt-[54px] text-dark-500 md:pb-[38px] md:pt-0">
         {category}
       </h3>
       <div className="grid grid-flow-row grid-cols-2 gap-6 md:grid-cols-1">

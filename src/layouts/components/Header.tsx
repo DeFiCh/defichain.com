@@ -274,7 +274,7 @@ function TabletMobileMenu() {
           className={classNames(
             "block md:hidden flex justify-center mb-[56px]",
             dropDownState === MobileTabletDropDownState.COMMUNITY
-              ? "mt[84px]"
+              ? "mt-[84px]"
               : "mt-[68px]"
           )}
         >

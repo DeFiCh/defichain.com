@@ -115,6 +115,7 @@ export function Community() {
           <div className="flex flex-col gap-y-8">
             {MenuItems.dropDownItems[0].items.map((item, key) => (
               <HeaderNavLinkItem
+                target="_blank"
                 key={key}
                 hoverState={hoverState}
                 setHoverState={setHoverState}
@@ -141,6 +142,7 @@ export function Community() {
           {MenuItems.dropDownItems[1].items.map((item, key) => (
             <div key={key} className="w-[160px]">
               <HeaderNavLinkItem
+                target="_blank"
                 haveIcon
                 hoverState={hoverState}
                 setHoverState={setHoverState}

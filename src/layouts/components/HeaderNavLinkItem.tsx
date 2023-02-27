@@ -24,6 +24,7 @@ export function HeaderNavLinkItem({
   hoverState,
   setHoverState,
   haveIcon = false,
+  target = "_self",
 }: {
   icon?: string;
   label: string;
@@ -32,6 +33,7 @@ export function HeaderNavLinkItem({
   hoverState: string | undefined;
   setHoverState: Dispatch<SetStateAction<string | undefined>>;
   haveIcon?: boolean;
+  target?: string;
 }) {
   const Icon = iconMapping[icon] as React.ElementType;
   const iconsStrokes = [
@@ -73,6 +75,8 @@ export function HeaderNavLinkItem({
         setIsMouseEnter(false);
       }}
       href={href}
+      rel="noreferrer"
+      target={target}
       className={classNames(
         "group flex flex-row items-center gap-x-[28px]",
         hoverState !== undefined && hoverState !== label
@@ -81,17 +85,15 @@ export function HeaderNavLinkItem({
       )}
     >
       {Icon && (
-        <div>
-          <Icon
-            id={dfiId}
-            className={classNames(
-              "group-hover:duration-500 group-hover:transition",
-              iconsStrokes.some((element) => icon.includes(element))
-                ? "group-hover:stroke-brand-100"
-                : "fill-dark-700 group-hover:fill-brand-100"
-            )}
-          />
-        </div>
+        <Icon
+          id={dfiId}
+          className={classNames(
+            "group-hover:duration-500 group-hover:transition",
+            iconsStrokes.some((element) => icon.includes(element))
+              ? "group-hover:stroke-brand-100"
+              : "fill-dark-700 group-hover:fill-brand-100"
+          )}
+        />
       )}
 
       <div className="flex flex-col">

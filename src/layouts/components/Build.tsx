@@ -21,7 +21,7 @@ export function Build() {
         },
         {
           icon: "whitepaper",
-          href: "https://defichain.com/white-paper",
+          href: "",
           title: entries[1].title,
           subtitle: entries[1].subtitle,
         },
@@ -29,6 +29,7 @@ export function Build() {
         {
           icon: "github",
           href: "https://github.com/DeFiCh/ain",
+          target: "_blank",
           title: entries[2].title,
           subtitle: entries[2].subtitle,
         },
@@ -64,6 +65,7 @@ export function Build() {
       <div className="grid md:grid-cols-3 lg:grid-rows-2 md:grid-rows-[80px_minmax(100px,_1fr)] grid-rows-6 grid-flow-col gap-y-8 gap-x-8">
         {MenuItems.dropDownItems.items.map((item, key) => (
           <HeaderNavLinkItem
+            target={item.target}
             haveIcon={item.title === "GitHub"}
             key={key}
             hoverState={hoverState}

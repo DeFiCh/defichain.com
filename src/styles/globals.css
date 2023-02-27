@@ -61,7 +61,6 @@ body {
     background: rgba(0, 0, 0, 0.9)
   }
 
-
   /* Accent gradients */
   .accent-dfc-gradient {
     background: linear-gradient(90deg, #FF00FF 0%, #EC0C8D 100.04%);

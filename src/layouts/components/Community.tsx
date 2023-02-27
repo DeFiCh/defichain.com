@@ -21,7 +21,7 @@ export function Community() {
         label: entries[0].title,
         items: [
           {
-            icon: "apps",
+            icon: "dfi",
             href: "",
             title: entries[0].labels[0].title,
             subtitle: entries[0].labels[0].subtitle,

@@ -47,6 +47,21 @@ export function HeaderNavLinkItem({
   ];
 
   const [isMouseEnter, setIsMouseEnter] = useState(false);
+
+  let dfiId = "dfi-ecosystem";
+
+  switch (label) {
+    case "DeFi Meta Chain":
+      dfiId = "dfi-ecosystem";
+      break;
+    case "$DFI":
+      dfiId = "dfi-explore";
+      break;
+    case "DeFiChain Blog":
+    default:
+      dfiId = "dfi-community";
+  }
+
   return (
     <a
       onMouseEnter={() => {
@@ -68,11 +83,7 @@ export function HeaderNavLinkItem({
       {Icon && (
         <div>
           <Icon
-            id={
-              label === "DeFi Meta Chain"
-                ? "github-ecosystem"
-                : "github-explore"
-            }
+            id={dfiId}
             className={classNames(
               iconsStrokes.some((element) => icon.includes(element))
                 ? "group-hover:stroke-brand-100 group-hover:duration-300 group-hover:transition"

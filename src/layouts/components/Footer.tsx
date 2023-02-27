@@ -246,7 +246,7 @@ export default function Footer(): JSX.Element {
             </div>
             {/* SOCIALS */}
             <SocialsRow
-              customStyle="md:grid grid-flow-col hidden absolute right-[40px] bottom-[180px] md:gap-2 lg:gap-5 lg:right-[106px]"
+              customStyle="md:grid grid-flow-col hidden absolute right-[40px] bottom-[178px] md:gap-2 lg:gap-5 lg:right-[106px]"
               language={language}
             />
           </div>

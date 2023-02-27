@@ -68,7 +68,7 @@ export function Header(): JSX.Element {
       setDropDownState,
       dfiPrice,
     }),
-    [dropDownState, setDropDownState, dfiPrice, setDfiPrice]
+    [dropDownState, setDropDownState, dfiPrice]
   );
 
   const desktopContextObj = useMemo(
@@ -77,7 +77,7 @@ export function Header(): JSX.Element {
       setIsHoverOn,
       headerHeight,
     }),
-    [isHoverOn, setIsHoverOn, headerHeight, setHeaderHeight]
+    [isHoverOn, setIsHoverOn, headerHeight]
   );
 
   useEffect(() => {
@@ -90,13 +90,13 @@ export function Header(): JSX.Element {
     <header
       ref={ref}
       className={classNames(
-        "sticky top-0 left-0 right-0 w-full bg-dark-00 z-50",
+        "sticky top-0 left-0 right-0 w-full bg-dark-00 z-50 transition-all ease-in-out duration-500",
         isHoverOn || menu
           ? "header-dropdown-bg border-b-0 "
           : "border-b-[0.1px] border-b-dark-200"
       )}
     >
-      <Container className="md:pt-14 lg:pb-0 md:pb-6 py-4 flex items-center justify-between">
+      <Container className="lg:pb-0 md:pt-14 md:pb-6 py-[30.69px] md:px-12 px-6 flex items-center justify-between">
         <div className="flex w-full">
           <Link
             href={{ pathname: "/" }}
@@ -140,14 +140,18 @@ export function Header(): JSX.Element {
           )}
         </div>
       </Container>
-
-      {menu && (
-        <div className="lg:hidden">
+      <div
+        className={classNames(
+          "lg:hidden transition-all ease-in-out duration-500",
+          menu ? "opacity-100" : "opacity-0"
+        )}
+      >
+        {menu && (
           <DropDownContext.Provider value={tabletMobileDropDownObj}>
             <TabletMobileMenu />
           </DropDownContext.Provider>
-        </div>
-      )}
+        )}
+      </div>
     </header>
   );
 }
@@ -236,14 +240,16 @@ function TabletMobileMenu() {
           const DropDown = dropDownMapping[item.toLowerCase()];
           return (
             <div key={key}>
-              <Container className={classNames("px-6", { "mt-5": key === 0 })}>
+              <Container
+                className={classNames("md:px-12 px-6", { "mt-5": key === 0 })}
+              >
                 <TabletMobileDropDown label={item}>
                   <DropDown />
                 </TabletMobileDropDown>
               </Container>
 
               {key !== MenuItems.length - 1 && (
-                <div className="card-outline-2 h-[0.5px]" />
+                <hr className="card-outline-2 border-0 h-[0.5px]" />
               )}
             </div>
           );
@@ -312,7 +318,7 @@ function TabletMobileDropDown({
 
       <div
         className={classNames(
-          "mt-9 pb-10",
+          "md:pb-9 py-4 mb-4",
           dropDownState === label ? "block" : "hidden"
         )}
       >

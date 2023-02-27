@@ -22,13 +22,13 @@ export function Community() {
         items: [
           {
             icon: "dfi",
-            href: "",
+            href: "https://blog.defichain.com/",
             title: entries[0].labels[0].title,
             subtitle: entries[0].labels[0].subtitle,
           },
           {
             icon: "newsletter",
-            href: "",
+            href: "https://bit.ly/3yQxtmW",
             title: entries[0].labels[1].title,
             subtitle: entries[0].labels[1].subtitle,
           },
@@ -38,64 +38,64 @@ export function Community() {
         label: entries[1].title,
         items: [
           {
-            href: "",
+            href: "https://www.reddit.com/r/defiblockchain/",
             title: entries[1].labels[0].title,
           },
           {
-            href: "",
+            href: "https://twitter.com/defichain",
             title: entries[1].labels[1].title,
           },
           {
-            href: "",
+            href: "https://www.facebook.com/defichain.official",
             title: entries[1].labels[2].title,
           },
           {
-            href: "",
+            href: "https://github.com/DeFiCh/ain",
             title: entries[1].labels[3].title,
           },
           {
-            href: "",
+            href: "https://www.youtube.com/DeFiChain",
             title: entries[1].labels[4].title,
           },
           {
-            href: "",
+            href: "https://www.linkedin.com/company/defichain",
             title: entries[1].labels[5].title,
           },
           {
-            href: "",
+            href: "https://discord.com/invite/py55egyaGy",
             title: entries[1].labels[6].title,
           },
           {
-            href: "",
+            href: "https://coinmarketcap.com/community/profile/DeFiChain",
             title: entries[1].labels[7].title,
           },
 
           {
-            href: "",
+            href: "https://t.me/defiblockchain",
             title: entries[1].labels[8].title,
           },
           {
-            href: "",
+            href: "https://t.me/defiblockchain_DE",
             title: entries[1].labels[9].title,
           },
           {
-            href: "",
+            href: "https://t.me/defiblockchain_FR",
             title: entries[1].labels[10].title,
           },
           {
-            href: "",
+            href: "https://t.me/official_defichain_es",
             title: entries[1].labels[11].title,
           },
           {
-            href: "",
+            href: "https://t.me/defiblockchain_IT",
             title: entries[1].labels[12].title,
           },
           {
-            href: "",
+            href: "https://t.me/defiblockchain_ID",
             title: entries[1].labels[13].title,
           },
           {
-            href: "",
+            href: "https://t.me/defiblockchain_TR",
             title: entries[1].labels[14].title,
           },
         ],

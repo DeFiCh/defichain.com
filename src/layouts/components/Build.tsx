@@ -21,14 +21,14 @@ export function Build() {
         },
         {
           icon: "whitepaper",
-          href: "",
+          href: "https://defichain.com/white-paper",
           title: entries[1].title,
           subtitle: entries[1].subtitle,
         },
 
         {
           icon: "github",
-          href: "",
+          href: "https://github.com/DeFiCh/ain",
           title: entries[2].title,
           subtitle: entries[2].subtitle,
         },

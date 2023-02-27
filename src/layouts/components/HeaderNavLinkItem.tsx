@@ -99,7 +99,7 @@ export function HeaderNavLinkItem({
           <div
             className={classNames(
               "mr-[7px] flex font-semibold text-dark-1000 md:text-lg leading-6",
-              "group-hover:text-transparent group-hover:bg-clip-text group-hover:duration-300 group-hover:transition group-hover:accent-dfc-gradient-text",
+              "group-hover:text-transparent group-hover:bg-clip-text group-hover:duration-500 group-hover:transition group-hover:accent-dfc-gradient-text",
               "lg:whitespace-nowrap md:whitespace-pre-wrap whitespace-nowrap"
             )}
           >

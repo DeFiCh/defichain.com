@@ -56,22 +56,25 @@ export function Explore() {
 
   return (
     <div className="flex flex-col">
-      <div className="text-dark-500 font-bold leading-5 mb-6 md:block hidden">
+      <div className="text-dark-500 font-bold leading-5 mb-10 md:block hidden">
         {MenuItems.dropDownItems.label}
       </div>
       <div className="flex xl:flex-row md:flex-col gap-10">
-        <div className="grid md:grid-rows-3 lg:grid-cols-[364px_minmax(364px,_1fr)_1px] md:grid-cols-2 grid-rows-5 gap-x-10 grid-flow-col">
+        <div
+          className={classNames(
+            "grid md:grid-rows-3 lg:grid-cols-[364px_minmax(364px,_1fr)_1px] md:grid-cols-2 grid-rows-5",
+            "gap-x-10 grid-flow-col gap-y-8"
+          )}
+        >
           {MenuItems.dropDownItems.items.map((item) => (
-            <div className="py-4">
-              <HeaderNavLinkItem
-                hoverState={hoverState}
-                setHoverState={setHoverState}
-                href={item.href}
-                icon={item.icon}
-                label={item.title}
-                subLabel={item.subtitle}
-              />
-            </div>
+            <HeaderNavLinkItem
+              hoverState={hoverState}
+              setHoverState={setHoverState}
+              href={item.href}
+              icon={item.icon}
+              label={item.title}
+              subLabel={item.subtitle}
+            />
           ))}
         </div>
 

@@ -94,6 +94,10 @@ body {
     text-fill-color: transparent;
   }
 
+  .hover-icons:hover {
+    fill: #ff00ff;
+  }
+
   .accent-gradient-1 {
     background: linear-gradient(
       72.57deg,

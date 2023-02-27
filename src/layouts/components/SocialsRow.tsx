@@ -14,6 +14,7 @@ interface SocialsRowProps {
 
 export default function SocialsRow(props: SocialsRowProps): JSX.Element {
   const { language, customStyle } = props;
+
   return (
     <div className={classNames(customStyle)}>
       <a
@@ -21,40 +22,45 @@ export default function SocialsRow(props: SocialsRowProps): JSX.Element {
         target="_blank"
         rel="noreferrer"
         data-testid="GitHub"
+        id="GitHub"
       >
-        <AiFillGithub size={24} />
+        <AiFillGithub className="hover-icons" size={24} />
       </a>
       <a
         href="https://www.reddit.com/r/defiblockchain/"
         target="_blank"
         rel="noreferrer"
         data-testid="Reddit"
+        id="Reddit"
       >
-        <AiFillRedditCircle size={24} />
+        <AiFillRedditCircle className="hover-icons" size={24} />
       </a>
       <a
         href="https://www.youtube.com/DeFiChain"
         target="_blank"
         rel="noreferrer"
         data-testid="YouTube"
+        id="YouTube"
       >
-        <AiFillYoutube size={24} />
+        <AiFillYoutube className="hover-icons" size={24} />
       </a>
       <a
         href={`https://t.me/defiblockchain${language}`}
         target="_blank"
         rel="noreferrer"
-        data-testid="GitHub"
+        data-testid="Telegram"
+        id="Telegram"
       >
-        <FaTelegramPlane size={24} />
+        <FaTelegramPlane className="hover-icons" size={24} />
       </a>
       <a
         href="https://twitter.com/defichain"
         target="_blank"
         rel="noreferrer"
-        data-testid="GitHub"
+        data-testid="Twitter"
+        id="Twitter"
       >
-        <AiOutlineTwitter size={24} />
+        <AiOutlineTwitter className="hover-icons" size={24} />
       </a>
     </div>
   );

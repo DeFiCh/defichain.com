@@ -249,7 +249,7 @@ function TabletMobileMenu() {
               </Container>
 
               {key !== MenuItems.length - 1 && (
-                <hr className="card-outline-2 border-0 h-[0.5px]" />
+                <hr className="card-outline-2 border-0 h-[0.5px] w-[990px]" />
               )}
             </div>
           );

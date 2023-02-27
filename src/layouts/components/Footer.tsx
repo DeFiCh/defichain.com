@@ -168,6 +168,8 @@ export const MenuItems = [
 
 export default function Footer(): JSX.Element {
   const router = useRouter();
+
+  // default set language to be english to be directed to international telegram link
   const [language, setLanguage] = useState(router.locale ?? "");
 
   // eslint-disable-next-line consistent-return

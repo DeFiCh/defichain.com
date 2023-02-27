@@ -113,7 +113,6 @@ export function Ecosystem() {
         )}
       >
         <a
-          // style={{ backgroundImage: cardImage }}
           href={MenuItems.image.href}
           className={classNames(
             "w-full h-full p-8 rounded-[15px] border-[0.5px] flex flex-col",

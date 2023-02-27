@@ -34,6 +34,7 @@ export function Header(): JSX.Element {
   const router = useRouter();
   const api = useWhaleApiClient();
   const [isHoverOn, setIsHoverOn] = useState(false);
+  const [isAnimation, setIsAnimation] = useState(false);
   const [dropDownState, setDropDownState] = useState<
     MobileTabletDropDownState | undefined
   >(undefined);
@@ -128,13 +129,23 @@ export function Header(): JSX.Element {
           {menu ? (
             <IoCloseCircleOutline
               className="cursor-pointer hover:text-brand-100 active:opacity-70 h-8 w-8 text-dark-1000"
-              onClick={() => setMenu(false)}
+              onClick={async () => {
+                setIsAnimation(false);
+                await new Promise((r) => {
+                  setTimeout(r, 450);
+                });
+                setMenu(false);
+              }}
               data-testid="Header.CloseMenu"
             />
           ) : (
             <MdMenu
               className="cursor-pointer hover:text-brand-100 active:opacity-70 h-8 w-8 text-dark-1000"
-              onClick={() => setMenu(true)}
+              onClick={() => {
+                setIsAnimation(true);
+
+                setMenu(true);
+              }}
               data-testid="Header.OpenMenu"
             />
           )}
@@ -142,8 +153,8 @@ export function Header(): JSX.Element {
       </Container>
       <div
         className={classNames(
-          "lg:hidden transition-all ease-in-out duration-500",
-          menu ? "opacity-100" : "opacity-0"
+          "lg:hidden transition-all ease-in-out duration-700",
+          isAnimation ? "opacity-100" : "opacity-0"
         )}
       >
         {menu && (

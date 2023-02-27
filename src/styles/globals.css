@@ -90,34 +90,6 @@ body {
   .gradient-button-hover {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(72.57deg, #EC008C 17.15%, #5B10FF 89.41%, #0468D6 102.56%);
   }
-
-  .header-explore-card-bg {
-    background-image: url(
-    "/assets/img/header/header-metal-dfi-coin.png");
-    transition: ease-in-out;
-    transition-duration: 300ms;
-
-  }
-  .header-explore-card-bg:hover {
-    background-image: url(
-    "/assets/img/header/header-hover-dfi-coin.png");
-    transition: ease-in-out;
-    transition-duration: 300ms;
-  }
-
-  .header-ecosystem-card-bg {
-    background-image: url(
-    "/assets/img/header/header-jellyfish.png");
-    transition: ease-in-out;
-    transition-duration: 300ms;
-
-  }
-  .header-ecosystem-card-bg:hover {
-    background-image: url(
-    "/assets/img/header/header-hover-jellyfish.png");
-    transition: ease-in-out;
-    transition-duration: 300ms;
-  }
 }
 
 /*Slick slider overrides*/

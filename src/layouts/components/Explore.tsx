@@ -79,14 +79,15 @@ export function Explore() {
           className={classNames(
             "p-[0.5px] rounded-[15px] w-[416px] xl:h-[176px] md:h-[191px]",
             "group cursor-pointer hidden md:block",
-            "bg-dark-200 hover:accent-gradient-1 hover:transition hover:duration-500"
+            "bg-dark-200 hover:accent-gradient-1 hover:transition-all hover:duration-300"
           )}
         >
           <a
             href={MenuItems.image.href}
             className={classNames(
               "p-8 w-full h-full rounded-[15px] flex flex-col",
-              "bg-dark-00 header-explore-card-bg bg-contain bg-no-repeat bg-right-bottom"
+              "bg-dark-00 bg-contain bg-no-repeat bg-right-bottom bg-[url(/assets/img/header/header-metal-dfi-coin.png)]",
+              "hover:bg-[url(/assets/img/header/header-hover-dfi-coin.png)] hover:transition-all hover:duration-300"
             )}
           >
             <div className="font-bold text-2xl text-dark-1000">

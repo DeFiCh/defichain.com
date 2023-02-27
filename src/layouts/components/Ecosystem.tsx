@@ -109,14 +109,16 @@ export function Ecosystem() {
         className={classNames(
           "p-[0.5px] rounded-[15px] w-[416px] xl:h-[176px] md:h-[191px]",
           "cursor-pointer hidden md:block md:mt-[56px] ",
-          "group hover:transition hover:duration-500 hover:accent-gradient-1"
+          "bg-dark-200 hover:accent-gradient-1 hover:transition-all hover:duration-300"
         )}
       >
         <a
+          // style={{ backgroundImage: cardImage }}
           href={MenuItems.image.href}
           className={classNames(
             "w-full h-full p-8 rounded-[15px] border-[0.5px] flex flex-col",
-            "border-dark-200 header-ecosystem-card-bg bg-dark-00 bg-contain bg-no-repeat bg-right-top"
+            "border-dark-200 bg-dark-00 bg-[url(/assets/img/header/header-jellyfish.png)] bg-contain bg-no-repeat bg-right-top ",
+            "hover:bg-[url(/assets/img/header/header-hover-jellyfish.png)] hover:transition-all hover:duration-300"
           )}
         >
           <DeFiChainLogo fill="#FFFFFF" className="w-[140px]" />

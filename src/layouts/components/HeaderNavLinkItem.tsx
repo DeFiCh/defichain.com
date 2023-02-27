@@ -85,8 +85,9 @@ export function HeaderNavLinkItem({
           <Icon
             id={dfiId}
             className={classNames(
+              "group-hover:duration-500 group-hover:transition",
               iconsStrokes.some((element) => icon.includes(element))
-                ? "group-hover:stroke-brand-100 group-hover:duration-300 group-hover:transition"
+                ? "group-hover:stroke-brand-100"
                 : "fill-dark-700 group-hover:fill-brand-100"
             )}
           />

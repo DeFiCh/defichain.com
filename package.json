@@ -14,7 +14,7 @@
     "playground:start": "docker-compose rm -fsv && docker-compose up"
   },
   "dependencies": {
-    "@defichain/whale-api-client": "^3.28.2",
+    "@defichain/whale-api-client": "^3.29.1",
     "@headlessui/react": "^1.7.7",
     "@waveshq/standard-web": "^0.43.0",
     "classnames": "^2.3.2",

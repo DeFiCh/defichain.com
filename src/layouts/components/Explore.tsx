@@ -56,7 +56,7 @@ export function Explore() {
 
   return (
     <div className="flex flex-col">
-      <div className="text-dark-500 font-bold leading-5 mb-[36px] md:block hidden">
+      <div className="text-dark-500 font-bold leading-5 mb-6 md:block hidden">
         {MenuItems.dropDownItems.label}
       </div>
       <div className="flex xl:flex-row md:flex-col gap-10">

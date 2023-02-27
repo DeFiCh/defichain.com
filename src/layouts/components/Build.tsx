@@ -58,7 +58,7 @@ export function Build() {
   const [hoverState, setHoverState] = useState<string | undefined>(undefined);
   return (
     <div className="flex flex-col">
-      <div className="hidden md:block text-dark-500 font-bold leading-5 mb-8">
+      <div className="hidden md:block text-dark-500 font-bold leading-5 mb-10">
         {MenuItems.dropDownItems.label}
       </div>
       <div className="grid md:grid-cols-3 md:grid-rows-2 grid-rows-6 grid-flow-col gap-y-8 gap-x-8">

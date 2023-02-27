@@ -144,18 +144,19 @@ export function Header(): JSX.Element {
           )}
         </div>
       </Container>
-      <div
-        className={classNames(
-          "lg:hidden transition-all ease-in-out duration-500",
-          menu ? "opacity-100" : "opacity-0"
-        )}
+      <Transition
+        show={menu}
+        enter="transition-opacity duration-300"
+        enterFrom="opacity-0"
+        enterTo="opacity-100"
+        leave="transition-opacity duration-150"
+        leaveFrom="opacity-100"
+        leaveTo="opacity-0"
       >
-        {menu && (
-          <DropDownContext.Provider value={tabletMobileDropDownObj}>
-            <TabletMobileMenu />
-          </DropDownContext.Provider>
-        )}
-      </div>
+        <DropDownContext.Provider value={tabletMobileDropDownObj}>
+          <TabletMobileMenu />
+        </DropDownContext.Provider>
+      </Transition>
     </header>
   );
 }

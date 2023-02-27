@@ -4,7 +4,7 @@ specifiers:
   '@cypress/code-coverage': ^3.10.0
   '@defichain/whale-api-client': ^3.28.2
   '@headlessui/react': ^1.7.7
-  '@netlify/plugin-nextjs': ^4.30.3
+  '@netlify/plugin-nextjs': ^4.30.4
   '@tailwindcss/typography': ^0.5.9
   '@testing-library/cypress': ^9.0.0
   '@types/lodash': ^4.14.191
@@ -52,7 +52,7 @@ dependencies:
 
 devDependencies:
   '@cypress/code-coverage': 3.10.0_ci4kzwosvku7ygszn3mokum6je
-  '@netlify/plugin-nextjs': 4.30.3
+  '@netlify/plugin-nextjs': 4.30.4
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
   '@testing-library/cypress': 9.0.0_cypress@12.6.0
   '@types/lodash': 4.14.191
@@ -1685,8 +1685,8 @@ packages:
       - supports-color
       - utf-8-validate
 
-  /@netlify/plugin-nextjs/4.30.3:
-    resolution: {integrity: sha512-3dUQd9qbjoqvQLSR7Uq3KwHQb/ffiJwLYvr0fap5kPpnRzKl4NPPMJjkOruIshBAMnRieqsJnZAOvIQpDH7Yvg==}
+  /@netlify/plugin-nextjs/4.30.4:
+    resolution: {integrity: sha512-Y72G0P2uKe4tJZuiKibBdIeBz69/0G00umzy8D96LHHs5jq4Yr/Wbp/u56YG3MA84E/qmOhBfyc20DGbPMe9tQ==}
     engines: {node: '>=12.0.0'}
     dependencies:
       '@netlify/esbuild': 0.14.39

@@ -2,6 +2,7 @@
 @import "slick-carousel/slick/slick-theme.css";
 
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -26,11 +27,19 @@ body {
 
   /* UI components */
   .card-bg {
-    background: linear-gradient(144deg, rgba(0, 0, 0, 0.5) -0.38%, rgba(0, 0, 0, 0.5) 100.17%);
+    background: linear-gradient(
+      144deg,
+      rgba(0, 0, 0, 0.5) -0.38%,
+      rgba(0, 0, 0, 0.5) 100.17%
+    );
   }
 
   .banner-bg {
-    background: linear-gradient(97.67deg, rgba(0, 0, 0, 0.4) 0.05%, rgba(0, 0, 0, 0) 93%);
+    background: linear-gradient(
+      97.67deg,
+      rgba(0, 0, 0, 0.4) 0.05%,
+      rgba(0, 0, 0, 0) 93%
+    );
   }
 
   .card-stroke {
@@ -38,7 +47,11 @@ body {
   }
 
   .card-section-bg {
-    background: linear-gradient(144.57deg, rgba(124, 124, 124, 0.1) -0.38%, rgba(74, 74, 74, 0.1) 98.45%);
+    background: linear-gradient(
+      144.57deg,
+      rgba(124, 124, 124, 0.1) -0.38%,
+      rgba(74, 74, 74, 0.1) 98.45%
+    );
   }
 
   .grid-lines {
@@ -46,20 +59,32 @@ body {
   }
 
   .on-list-hover {
-    background: linear-gradient(144deg, rgba(46, 46, 46, 0.2) -0.38%, rgba(18, 18, 18, 0.2) 100.17%);
+    background: linear-gradient(
+      144deg,
+      rgba(46, 46, 46, 0.2) -0.38%,
+      rgba(18, 18, 18, 0.2) 100.17%
+    );
   }
 
   .on-list-press {
-    background: linear-gradient(144deg, rgba(46, 46, 46, 0.4) -0.38%, rgba(18, 18, 18, 0.4) 100.17%);
+    background: linear-gradient(
+      144deg,
+      rgba(46, 46, 46, 0.4) -0.38%,
+      rgba(18, 18, 18, 0.4) 100.17%
+    );
   }
 
   .header-dropdown-bg {
-    background: linear-gradient(144deg, rgba(22, 22, 22, 0.8) -0.38%, rgba(2, 2, 2, 0.8) 100.17%);
+    background: linear-gradient(
+      144deg,
+      rgba(22, 22, 22, 0.8) -0.38%,
+      rgba(2, 2, 2, 0.8) 100.17%
+    );
   }
 
   /* Accent gradients */
   .accent-dfc-gradient {
-    background: linear-gradient(90deg, #FF00FF 0%, #EC0C8D 100.04%);
+    background: linear-gradient(90deg, #ff00ff 0%, #ec0c8d 100.04%);
   }
 
   .accent-dfc-gradient-text {
@@ -67,23 +92,34 @@ body {
   }
 
   .accent-gradient-1 {
-    background: linear-gradient(72.57deg, #EC008C 17.15%, #5B10FF 89.41%, #0468D6 102.56%);
+    background: linear-gradient(
+      72.57deg,
+      #ec008c 17.15%,
+      #5b10ff 89.41%,
+      #0468d6 102.56%
+    );
   }
 
   .accent-gradient-2 {
-    background: linear-gradient(261.07deg, #EC008C -0.26%, #5B10FF 79.46%, #082FD4 100%);
+    background: linear-gradient(
+      261.07deg,
+      #ec008c -0.26%,
+      #5b10ff 79.46%,
+      #082fd4 100%
+    );
   }
 
   .accent-gradient-3 {
-    background: linear-gradient(90.66deg, #42F9C2 -6.44%, #082FD4 76.25%);
+    background: linear-gradient(90.66deg, #42f9c2 -6.44%, #082fd4 76.25%);
   }
 
   .accent-gradient-4 {
-    background: linear-gradient(270deg, #7FF5C5 0%, #1530CC 100%);
+    background: linear-gradient(270deg, #7ff5c5 0%, #1530cc 100%);
   }
 
   .gradient-button-hover {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(72.57deg, #EC008C 17.15%, #5B10FF 89.41%, #0468D6 102.56%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      linear-gradient(72.57deg, #ec008c 17.15%, #5b10ff 89.41%, #0468d6 102.56%);
   }
 }
 

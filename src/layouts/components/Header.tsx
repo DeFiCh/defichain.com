@@ -49,7 +49,7 @@ export function Header(): JSX.Element {
   return (
     <header
       className={classNames(
-        "bg-white z-50 sticky top-0 md:shadow-none md:static",
+        "bg-dark-00  z-50 sticky top-0 md:shadow-none md:static",
         { "shadow-lg": !atTop }
       )}
     >

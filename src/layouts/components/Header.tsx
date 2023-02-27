@@ -134,7 +134,7 @@ export function Header(): JSX.Element {
                 setIsTabletMobileAnimationOpen(false);
                 // set timeout to execute animation before closing menu
                 await new Promise((r) => {
-                  setTimeout(r, 450);
+                  setTimeout(r, 500);
                 });
                 setMenu(false);
               }}
@@ -154,7 +154,7 @@ export function Header(): JSX.Element {
       </Container>
       <div
         className={classNames(
-          "lg:hidden transition-all ease-in-out duration-700",
+          "lg:hidden transition-all ease-in-out duration-500",
           isTabletMobileAnimationOpen ? "opacity-100" : "opacity-0"
         )}
       >
@@ -301,16 +301,24 @@ function TabletMobileDropDown({
   label: MobileTabletDropDownState;
 }) {
   const { dropDownState, setDropDownState } = useContext(DropDownContext);
+  const [isDropDownAnimationOpen, setIsDropDownAnimationOpen] = useState(
+    dropDownState === label
+  );
 
   return (
     <div className="flex flex-col">
       <div
         className="flex flex-row cursor-pointer items-center py-5 "
-        onClick={() => {
+        onClick={async () => {
           if (dropDownState === label) {
+            setIsDropDownAnimationOpen(false);
+            await new Promise((r) => {
+              setTimeout(r, 300);
+            });
             setDropDownState(undefined);
           } else {
             setDropDownState(label);
+            setIsDropDownAnimationOpen(true);
           }
         }}
       >
@@ -333,11 +341,13 @@ function TabletMobileDropDown({
 
       <div
         className={classNames(
-          "md:pb-9 py-4 mb-4",
-          dropDownState === label ? "block" : "hidden"
+          "transition-all ease-in-out duration-300 opacity-0",
+          isDropDownAnimationOpen ? "opacity-100" : "opacity-0"
         )}
       >
-        {children}
+        {dropDownState === label && (
+          <div className="md:pb-9 py-4 mb-4 ">{children}</div>
+        )}
       </div>
     </div>
   );

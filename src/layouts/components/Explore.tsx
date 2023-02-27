@@ -59,52 +59,20 @@ export function Explore() {
       <div className="text-dark-500 font-bold leading-5 mb-[36px] md:block hidden">
         {MenuItems.dropDownItems.label}
       </div>
-      <div className="flex xl:flex-row md:flex-col gap-8">
-        <div className="flex md:flex-row flex-col gap-y-8 gap-x-6">
-          <div className="flex-col space-y-8 min-w-[368px]">
-            <HeaderNavLinkItem
-              hoverState={hoverState}
-              setHoverState={setHoverState}
-              href={MenuItems.dropDownItems.items[0].href}
-              icon={MenuItems.dropDownItems.items[0].icon}
-              label={MenuItems.dropDownItems.items[0].title}
-              subLabel={MenuItems.dropDownItems.items[0].subtitle}
-            />
-            <HeaderNavLinkItem
-              hoverState={hoverState}
-              setHoverState={setHoverState}
-              href={MenuItems.dropDownItems.items[1].href}
-              icon={MenuItems.dropDownItems.items[1].icon}
-              label={MenuItems.dropDownItems.items[1].title}
-              subLabel={MenuItems.dropDownItems.items[1].subtitle}
-            />
-            <HeaderNavLinkItem
-              hoverState={hoverState}
-              setHoverState={setHoverState}
-              href={MenuItems.dropDownItems.items[2].href}
-              icon={MenuItems.dropDownItems.items[2].icon}
-              label={MenuItems.dropDownItems.items[2].title}
-              subLabel={MenuItems.dropDownItems.items[2].subtitle}
-            />
-          </div>
-          <div className="flex-col space-y-8 min-w-[368px]">
-            <HeaderNavLinkItem
-              hoverState={hoverState}
-              setHoverState={setHoverState}
-              href={MenuItems.dropDownItems.items[3].href}
-              icon={MenuItems.dropDownItems.items[3].icon}
-              label={MenuItems.dropDownItems.items[3].title}
-              subLabel={MenuItems.dropDownItems.items[3].subtitle}
-            />
-            <HeaderNavLinkItem
-              hoverState={hoverState}
-              setHoverState={setHoverState}
-              href={MenuItems.dropDownItems.items[4].href}
-              icon={MenuItems.dropDownItems.items[4].icon}
-              label={MenuItems.dropDownItems.items[4].title}
-              subLabel={MenuItems.dropDownItems.items[4].subtitle}
-            />
-          </div>
+      <div className="flex xl:flex-row md:flex-col gap-10">
+        <div className="grid md:grid-rows-3 lg:grid-cols-[364px_minmax(364px,_1fr)_1px] md:grid-cols-2 grid-rows-5 gap-x-10 grid-flow-col">
+          {MenuItems.dropDownItems.items.map((item) => (
+            <div className="py-4">
+              <HeaderNavLinkItem
+                hoverState={hoverState}
+                setHoverState={setHoverState}
+                href={item.href}
+                icon={item.icon}
+                label={item.title}
+                subLabel={item.subtitle}
+              />
+            </div>
+          ))}
         </div>
 
         <div

@@ -185,6 +185,9 @@ function DesktopMenu({ item }: { item: string }) {
     >
       <div className="w-auto text-center">
         <Menu.Button
+          onClick={() => {
+            setIsShowing(!isShowing);
+          }}
           className={classNames("text-dark-700 text-lg font-semibold", {
             "accent-dfc-gradient-text bg-clip-text text-transparent": isShowing,
           })}

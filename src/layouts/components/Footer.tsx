@@ -1,9 +1,12 @@
 import DeFiChainLogo from "@components/icons/DeFiChainLogo";
 import Link from "next/link";
 import { Container } from "@components/commons/Container";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import LanguageDropdownV2 from "./LanguageDropdownV2";
 import FooterInternalBottomLink from "./FooterInternalBottomLink";
 import FooterColumn from "./FooterColumn";
+import SocialsRow from "./SocialsRow";
 
 export const MenuItems = [
   {
@@ -164,6 +167,20 @@ export const MenuItems = [
 ];
 
 export default function Footer(): JSX.Element {
+  const router = useRouter();
+  const [language, setLanguage] = useState(router.locale ?? "");
+
+  // eslint-disable-next-line consistent-return
+  useEffect(() => {
+    switch (router.locale) {
+      case "de":
+        return setLanguage("_DE");
+      case "fr":
+        return setLanguage("_FR");
+      default:
+        setLanguage("");
+    }
+  }, [router]);
   return (
     <footer className="py-10 px-6 bg-dark-100">
       <Container>
@@ -178,9 +195,12 @@ export default function Footer(): JSX.Element {
               >
                 <DeFiChainLogo className="w-40 lg:w-52" />
               </Link>
+              <SocialsRow
+                customStyle="text-dark-500 gap-4 flex flex-row pt-6 md:hidden"
+                language={language}
+              />
             </div>
             <div className="text-sm mt-[24px] md:flex md:flex-row md:justify-between md:pb-[86px]">
-              {/* TODO <SocialLinkSection /> */}
               {/* EXPLORE */}
               <FooterColumn
                 category={MenuItems[0].category}
@@ -223,6 +243,11 @@ export default function Footer(): JSX.Element {
                   <LanguageDropdownV2 />
                 </div>
               </div>
+              {/* SOCIALS */}
+              <SocialsRow
+                customStyle="md:grid grid-flow-col hidden absolute right-[40px] bottom-[180px] md:gap-2 lg:gap-5 lg:right-[106px]"
+                language={language}
+              />
             </div>
           </div>
         </div>

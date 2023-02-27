@@ -293,9 +293,6 @@ function TabletMobileDropDown({
   label: MobileTabletDropDownState;
 }) {
   const { dropDownState, setDropDownState } = useContext(DropDownContext);
-  const [isDropDownAnimationOpen, setIsDropDownAnimationOpen] = useState(
-    dropDownState === label
-  );
 
   return (
     <div className="flex flex-col">
@@ -303,14 +300,9 @@ function TabletMobileDropDown({
         className="flex flex-row cursor-pointer items-center py-5"
         onClick={async () => {
           if (dropDownState === label) {
-            setIsDropDownAnimationOpen(false);
-            await new Promise((r) => {
-              setTimeout(r, 300);
-            });
             setDropDownState(undefined);
           } else {
             setDropDownState(label);
-            setIsDropDownAnimationOpen(true);
           }
         }}
       >
@@ -331,16 +323,17 @@ function TabletMobileDropDown({
         />
       </div>
 
-      <div
-        className={classNames(
-          "transition-all ease-in-out duration-300 opacity-0",
-          isDropDownAnimationOpen ? "opacity-100" : "opacity-0"
-        )}
+      <Transition
+        show={dropDownState === label}
+        enter="transition-opacity duration-300"
+        enterFrom="opacity-0"
+        enterTo="opacity-100"
+        leave="transition-opacity duration-150"
+        leaveFrom="opacity-100"
+        leaveTo="opacity-0"
       >
-        {dropDownState === label && (
-          <div className="md:pb-9 py-4 mb-4 ">{children}</div>
-        )}
-      </div>
+        <div className="md:pb-9 py-4 mb-4 ">{children}</div>
+      </Transition>
     </div>
   );
 }

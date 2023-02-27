@@ -274,7 +274,7 @@ function TabletMobileMenu() {
           className={classNames(
             "block md:hidden flex justify-center mb-[56px]",
             dropDownState === MobileTabletDropDownState.COMMUNITY
-              ? "mt-[84px]"
+              ? "mt-[52px]"
               : "mt-[68px]"
           )}
         >
@@ -308,7 +308,7 @@ function TabletMobileDropDown({
   return (
     <div className="flex flex-col">
       <div
-        className="flex flex-row cursor-pointer items-center py-5 "
+        className="flex flex-row cursor-pointer items-center py-5"
         onClick={async () => {
           if (dropDownState === label) {
             setIsDropDownAnimationOpen(false);

@@ -189,7 +189,6 @@ function DesktopMenu({ item }: { item: string }) {
       }}
     >
       <Menu.Button
-        as="div"
         onClick={() => {
           setIsShowing(!isShowing);
         }}

@@ -11,7 +11,7 @@ export function Container(
     <div className={classNames("w-full", props.bgClassName)}>
       <div
         className={classNames(
-          "mx-12 xl:mx-[120px] 2xl:mx-[300px]",
+          "mx-6 md:mx-12 xl:mx-[120px] 2xl:mx-[300px]",
           props.className
         )}
       >

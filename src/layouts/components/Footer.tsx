@@ -185,8 +185,8 @@ export default function Footer(): JSX.Element {
   }, [router]);
   return (
     <footer className="relative bg-dark-00">
-      <Container className="relative z-10 py-10 md:px-0">
-        <div className="py-10 h-full w-full footer-background rounded-[30px] md:px-[56px] lg:px-[96px]">
+      <Container className="relative z-10 py-10 sm:px-0">
+        <div className="py-10 h-full w-full footer-background rounded-[30px] px-[24px] md:px-[56px] lg:px-[96px]">
           <div className="flex-col md:hidden">
             <Link
               href={{ pathname: "/" }}

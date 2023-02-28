@@ -242,7 +242,7 @@ export default function Footer(): JSX.Element {
                 <span className="px-2">•</span>
                 <FooterInternalBottomLink
                   text="Terms of use"
-                  pathname="/privacy-policy"
+                  pathname="/terms-of-use"
                   testId="Footer.Privacy"
                 />
               </div>

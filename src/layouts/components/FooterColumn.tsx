@@ -18,7 +18,7 @@ export default function FooterColumn({
   childLinks: FooterLinkItemProps[];
 }): JSX.Element {
   return (
-    <section className="md:px-2">
+    <section>
       <h3 className="text-sm font-semibold pb-[22px] pt-[54px] text-dark-500 md:pb-[38px] md:pt-0">
         {category}
       </h3>

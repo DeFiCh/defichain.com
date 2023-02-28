@@ -185,7 +185,7 @@ export default function Footer(): JSX.Element {
   }, [router]);
   return (
     <footer className="relative bg-dark-00">
-      <Container className="relative z-10 py-10 px-6">
+      <Container className="relative z-10 py-10 sm:px-0">
         <div className="py-10 h-full w-full footer-background rounded-[30px] px-[24px] lg:px-[96px]">
           <div className="flex-col md:hidden">
             <Link
@@ -201,7 +201,7 @@ export default function Footer(): JSX.Element {
               language={language}
             />
           </div>
-          <div className="text-sm mt-[24px] md:flex md:flex-row md:justify-between md:pb-[86px]">
+          <div className="text-sm md:grid md:grid-cols-2 md:grid-flow-row md:gap-[62px] lg:flex lg:flex-row md:justify-between md:pb-[86px]">
             {/* EXPLORE */}
             <FooterColumn
               category={MenuItems[0].category}
@@ -218,10 +218,16 @@ export default function Footer(): JSX.Element {
               childLinks={MenuItems[2].childLink}
             />
             {/* COMMUNITY */}
-            <FooterColumn
-              category={MenuItems[3].category}
-              childLinks={MenuItems[3].childLink}
-            />
+            <div className="justify-between flex flex-col">
+              <FooterColumn
+                category={MenuItems[3].category}
+                childLinks={MenuItems[3].childLink}
+              />
+              <SocialsRow
+                customStyle="pl-2 hidden md:grid text-dark-500 grid-flow-col gap-1 md:gap-2 lg:gap-5"
+                language={language}
+              />
+            </div>
           </div>
           {/* Bottom section of footer */}
           <div className="md:flex md:flex-row md:space-x-2 text-dark-500 md:items-center md:justify-between">
@@ -244,11 +250,6 @@ export default function Footer(): JSX.Element {
                 <LanguageDropdownV2 />
               </div>
             </div>
-            {/* SOCIALS */}
-            <SocialsRow
-              customStyle="md:grid grid-flow-col hidden absolute right-[40px] bottom-[178px] md:gap-2 lg:gap-5 lg:right-[106px]"
-              language={language}
-            />
           </div>
         </div>
       </Container>

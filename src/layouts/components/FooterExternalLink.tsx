@@ -19,31 +19,37 @@ export default function FooterExternalLink(props: {
   return (
     <div
       id="FooterExternalLinkText"
-      className="text-dark-1000 font-semibold cursor-pointer w-[150px] flex flex-row items-center hover:accent-dfc-gradient-text group-hover:bg-clip-text"
+      className="text-dark-1000 font-semibold cursor-pointer w-[150px] hover:accent-dfc-gradient-text group-hover:bg-clip-text"
     >
-      <a href={url} target="_blank" rel="noreferrer" data-testid={testId}>
+      <a
+        href={url}
+        target="_blank"
+        rel="noreferrer"
+        data-testid={testId}
+        className="flex flex-row items-center"
+      >
         {t(`footer.sitemap.${text}`)}
+        <svg width="0" height="0">
+          <linearGradient
+            id="accent-gradient"
+            x1="100%"
+            y1="100%"
+            x2="0%"
+            y2="0%"
+          >
+            <stop stopColor="#FF00FF" offset="0%" />
+            <stop stopColor="#EC0C8D" offset="100%" />
+          </linearGradient>
+        </svg>
+        {hasUpArrowIcon ? (
+          <RiArrowRightUpLine
+            className="pl-0.5"
+            // uses the gradient color defined with the same svg id
+            style={{ fill: isHovered ? "url(#accent-gradient)" : "" }}
+            size={20}
+          />
+        ) : null}
       </a>
-      <svg width="0" height="0">
-        <linearGradient
-          id="accent-gradient"
-          x1="100%"
-          y1="100%"
-          x2="0%"
-          y2="0%"
-        >
-          <stop stopColor="#FF00FF" offset="0%" />
-          <stop stopColor="#EC0C8D" offset="100%" />
-        </linearGradient>
-      </svg>
-      {hasUpArrowIcon ? (
-        <RiArrowRightUpLine
-          className="pl-0.5"
-          // uses the gradient color defined with the same svg id
-          style={{ fill: isHovered ? "url(#accent-gradient)" : "" }}
-          size={20}
-        />
-      ) : null}
     </div>
   );
 }

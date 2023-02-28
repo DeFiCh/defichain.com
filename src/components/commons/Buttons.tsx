@@ -3,13 +3,13 @@ import classNames from "classnames";
 import { IoMdArrowRoundForward } from "react-icons/io";
 
 export function Button({
-  buttonText,
+  text,
   className,
   disabled,
   href,
   onClick,
 }: {
-  buttonText: string;
+  text: string;
   className?: string;
   disabled?: boolean;
   href?: string;
@@ -24,7 +24,7 @@ export function Button({
         className={classNames({ "pointer-events-none": disabled })}
       >
         <ButtonElement
-          buttonText={buttonText}
+          text={text}
           className={className}
           disabled={disabled}
           onClick={onClick}
@@ -34,7 +34,7 @@ export function Button({
   }
   return (
     <ButtonElement
-      buttonText={buttonText}
+      text={text}
       className={className}
       disabled={disabled}
       onClick={onClick}
@@ -43,12 +43,12 @@ export function Button({
 }
 
 function ButtonElement({
-  buttonText,
+  text,
   className,
   disabled,
   onClick,
 }: {
-  buttonText: string;
+  text: string;
   className?: string;
   disabled?: boolean;
   onClick?: () => void;
@@ -64,7 +64,7 @@ function ButtonElement({
         "bg-dark-1000 text-dark-100 hover:bg-brand-100 active:bg-brand-100 active:opacity-70"
       )}
     >
-      {buttonText}
+      {text}
     </button>
   );
 }
@@ -72,12 +72,14 @@ function ButtonElement({
 export function GradientButton({
   buttonText,
   className,
+  borderClassName,
   disabled,
   onClick,
   href,
 }: {
   buttonText: string;
   className?: string;
+  borderClassName?: string;
   disabled?: boolean;
   onClick?: () => void;
   href?: string;
@@ -91,6 +93,7 @@ export function GradientButton({
         className={classNames({ "pointer-events-none": disabled })}
       >
         <GradientButtonElement
+          borderClassName={borderClassName}
           buttonText={buttonText}
           className={className}
           disabled={disabled}
@@ -101,6 +104,7 @@ export function GradientButton({
   }
   return (
     <GradientButtonElement
+      borderClassName={borderClassName}
       buttonText={buttonText}
       className={className}
       disabled={disabled}
@@ -114,17 +118,22 @@ function GradientButtonElement({
   className,
   disabled,
   onClick,
+  borderClassName,
 }: {
   buttonText: string;
   className?: string;
   disabled?: boolean;
   onClick?: () => void;
+  borderClassName?: string;
 }) {
   return (
     <button
       onClick={onClick}
       disabled={disabled}
-      className="accent-gradient-1 hover:gradient-button-hover rounded-[44px] p-0.5 w-auto h-auto disabled:opacity-30 disabled:pointer-events-none min-w-[133px] flex items-center active:opacity-70"
+      className={classNames(
+        "accent-gradient-1 hover:gradient-button-hover rounded-[44px] p-0.5 w-auto h-auto disabled:opacity-30 disabled:pointer-events-none min-w-[133px] flex items-center active:opacity-70",
+        borderClassName
+      )}
     >
       <div
         className={classNames(

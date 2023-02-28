@@ -5,7 +5,7 @@ import { RxChevronDown } from "react-icons/rx";
 import { VscGlobe } from "react-icons/vsc";
 import classNames from "classnames";
 
-export default function LanguageDropdownV2(): JSX.Element {
+export function LanguageDropdownV2(): JSX.Element {
   const router = useRouter();
   const languages = [
     { locale: "en-US", name: "English" },

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Container } from "@components/commons/Container";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import LanguageDropdownV2 from "./LanguageDropdownV2";
+import { LanguageDropdownV2 } from "./LanguageDropdownV2";
 import FooterInternalBottomLink from "./FooterInternalBottomLink";
 import FooterColumn from "./FooterColumn";
 import SocialsRow from "./SocialsRow";

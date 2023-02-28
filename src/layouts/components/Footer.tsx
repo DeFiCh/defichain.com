@@ -185,7 +185,7 @@ export default function Footer(): JSX.Element {
   }, [router]);
   return (
     <footer className="relative bg-dark-00">
-      <Container className="relative z-10 py-10 px-0 md:px-10 lg:px-0">
+      <Container className="relative z-10 py-10">
         <div className="py-10 h-full w-full footer-background rounded-[30px] px-6 md:px-14 lg:px-24">
           <div className="flex-col md:hidden">
             <Link
@@ -196,10 +196,6 @@ export default function Footer(): JSX.Element {
             >
               <DeFiChainLogo className="w-40 lg:w-52" />
             </Link>
-            <SocialsRow
-              customStyle="text-dark-500 gap-4 flex flex-row pt-6 md:hidden"
-              language={language}
-            />
           </div>
           <div className="text-sm md:grid md:grid-cols-2 md:grid-flow-row md:gap-[62px] lg:flex lg:flex-row md:justify-between md:pb-[86px]">
             {/* EXPLORE */}
@@ -224,7 +220,7 @@ export default function Footer(): JSX.Element {
                 childLinks={MenuItems[3].childLink}
               />
               <SocialsRow
-                customStyle="pl-2 hidden md:grid text-dark-500 grid-flow-col gap-1 md:gap-2 lg:gap-5"
+                customStyle="pt-[22px] text-dark-500 flex flex-row gap-5"
                 language={language}
               />
             </div>
@@ -246,15 +242,15 @@ export default function Footer(): JSX.Element {
                   testId="Footer.Privacy"
                 />
               </div>
-              <div className="pt-[54px] pb-[18px] md:pt-0 md:pb-0 md:pl-[31px]">
+              <div className="flex pt-[54px] pb-[18px] md:pt-0 md:pb-0 md:pl-[31px]">
                 <LanguageDropdownV2 />
               </div>
             </div>
           </div>
         </div>
       </Container>
-      <div className="absolute bottom-20 md:bottom-[150px] left-0 bg-contain bg-no-repeat bg-clip-border bg-origin-padding mix-blend-screen w-[150px] h-full md:w-full bg-[url('/assets/img/footer/transparent_coin_2.png')]" />
-      <div className="absolute bottom-0 md:bottom-[65px] right-0 bg-contain bg-no-repeat mix-blend-screen bg-bottom md:bg-right h-[25%] w-[25%] bg-[url('/assets/img/footer/arrow_1.png')]" />
+      <div className="absolute bottom-20 md:bottom-[150px] left-0 bg-contain bg-no-repeat bg-clip-border bg-origin-padding mix-blend-screen w-[150px] h-full md:w-2/5 bg-[url('/assets/img/footer/transparent_coin_2.png')]" />
+      <div className="absolute bottom-0 md:bottom-[65px] right-0 bg-contain bg-no-repeat mix-blend-screen bg-bottom md:bg-right h-1/4 w-1/4 bg-[url('/assets/img/footer/arrow_1.png')]" />
     </footer>
   );
 }

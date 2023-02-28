@@ -62,7 +62,7 @@ export function Build() {
       <div className="hidden md:block text-dark-500 font-bold leading-5 mb-10">
         {MenuItems.dropDownItems.label}
       </div>
-      <div className="grid md:grid-cols-3 lg:grid-rows-2 md:grid-rows-[80px_minmax(100px,_1fr)] grid-rows-6 grid-flow-col gap-y-8 gap-x-8">
+      <div className="grid lg:grid-rows-2 md:grid-rows-[68px_minmax(10px,_1fr)_68px] md:grid-cols-2 grid-rows-6 grid-flow-col gap-y-8 gap-x-8">
         {MenuItems.dropDownItems.items.map((item, key) => (
           <HeaderNavLinkItem
             target={item.target}

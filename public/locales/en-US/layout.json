@@ -10,7 +10,170 @@
       "learn": "Learn",
       "buy": "Buy",
       "dfcblog": "Blog",
-      "bloglink": "https://blog.defichain.com/"
+      "bloglink": "https://blog.defichain.com/",
+      "explore": "Explore",
+      "build": "Build",
+      "community": "Community"
+    },
+    "explore": {
+      "title": "EXPLORE DEFICHAIN",
+      "labels": [
+        {
+          "title": "$DFI",
+          "subtitle": "Learn about the token"
+        },
+        {
+          "title": "Invest, Trade and Earn",
+          "subtitle": "Explore use cases of DeFiChain"
+        },
+        {
+          "title": "Decentralized Exchange",
+          "subtitle": "Maximize your assets"
+        },
+        {
+          "title": "Wallets",
+          "subtitle": "Store assets in your own way"
+        },
+        {
+          "title": "Masternodes",
+          "subtitle": "Place your stakes in DeFiChain"
+        }
+      ],
+      "image": {
+        "title": "$DFI",
+        "subtitle": "Learn about the token and where to get"
+      }
+    },
+    "ecosystem": {
+      "info": [
+        {
+          "title": "DIVE INTO THE ECOSYSTEM",
+          "labels": [
+            {
+              "title": "DeFiChain Apps",
+              "subtitle": "See DeFiChain in action"
+            },
+            {
+              "title": "DeFi Meta Chain",
+              "subtitle": "Expand possibilities in DeFiChain"
+            },
+            {
+              "title": "Governance",
+              "subtitle": "For DeFiChain, By DeFiChain"
+            }
+          ]
+        },
+        {
+          "title": "GET INVOLVED WITH DEFICHAIN",
+          "labels": [
+            {
+              "title": "Bug Bounty"
+            },
+            {
+              "title": "$100M Accelerator Program"
+            }
+          ]
+        }
+      ],
+      "image": {
+        "subtitle": "Learn about the token and where to get"
+      }
+    },
+    "build": {
+      "title": "START BUILDING",
+      "labels": [
+        {
+          "title": "Jellyfish SDK",
+          "subtitle": "Build for modern DeFi Applications"
+        },
+        {
+          "title": "DeFiChain White Paper",
+          "subtitle": "Fundamentals of DeFiChain"
+        },
+        {
+          "title": "GitHub",
+          "subtitle": "Track recent developments"
+        },
+        {
+          "title": "Developer Resources",
+          "subtitle": "Start building on DeFiChain"
+        },
+        {
+          "title": "Media Assets",
+          "subtitle": "Brand resources of DeFiChain"
+        },
+        {
+          "title": "Security",
+          "subtitle": "Trustless and decentralized"
+        }
+      ]
+    },
+    "community": {
+      "info": [
+        {
+          "title": "DIVE INTO THE ECOSYSTEM",
+          "labels": [
+            {
+              "title": "DeFiChain Blog",
+              "subtitle": "Read and learn more"
+            },
+            {
+              "title": "Newsletter",
+              "subtitle": "Get the latest news"
+            }
+          ]
+        },
+        {
+          "title": "JOIN COMMUNITIES",
+          "labels": [
+            {
+              "title": "Reddit"
+            },
+            {
+              "title": "Twitter"
+            },
+            {
+              "title": "Facebook"
+            },
+            {
+              "title": "GitHub"
+            },
+            {
+              "title": "Youtube"
+            },
+            {
+              "title": "LinkedIn"
+            },
+            {
+              "title": "Discord"
+            },
+            {
+              "title": "CoinMarketCap"
+            },
+            {
+              "title": "Telegram (EN)"
+            },
+            {
+              "title": "Telegram (DE)"
+            },
+            {
+              "title": "Telegram (FR)"
+            },
+            {
+              "title": "Telegram (ES)"
+            },
+            {
+              "title": "Telegram (IT)"
+            },
+            {
+              "title": "Telegram (ID)"
+            },
+            {
+              "title": "Telegram (TR)"
+            }
+          ]
+        }
+      ]
     }
   },
   "footer": {

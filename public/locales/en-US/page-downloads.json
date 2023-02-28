@@ -18,6 +18,10 @@
       "DFX": {
         "title": "DFX wallet mobile app",
         "desc": "Buy and sell DeFiChain assets with simple bank transfers, and use non-custodial DFX wallet to participate in DeFiChain applications such as Liquidity Mining and $DFI Staking."
+      },
+      "JLY": {
+        "title": "Jellywallet",
+        "desc": "Jellywallet is the ultimate non-custodial browser wallet for the DeFiChain ecosystem, allowing for seamless access to the exciting world of DeFi and Web3. Available for Chrome, Firefox and Brave Browser."
       }
     }
   },

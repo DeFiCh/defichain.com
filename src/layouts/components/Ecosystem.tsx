@@ -2,6 +2,7 @@ import classNames from "classnames";
 import { DeFiChainLogo } from "@components/icons/DeFiChainLogo";
 import { useState } from "react";
 import { useTranslation } from "next-i18next";
+import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import { HeaderNavLinkItem } from "./HeaderNavLinkItem";
 
 interface ColLabels {
@@ -62,12 +63,18 @@ export function Ecosystem() {
   };
 
   const [hoverState, setHoverState] = useState<string | undefined>(undefined);
+  const dimension = useWindowDimensions();
 
   return (
-    <div className="flex xl:flex-row md:flex-col">
-      <div className="flex md:flex-row flex-col gap-y-[72px] lg:gap-x-10 md:gap-x-20">
+    <div
+      className={classNames(
+        "flex",
+        dimension.width < 1280 ? "flex-col" : "flex-row gap-x-20"
+      )}
+    >
+      <div className="flex md:flex-row flex-col gap-y-[72px] gap-x-20">
         {/* first col */}
-        <div className="flex flex-col lg:min-w-[396px] md:max-w-[360px]">
+        <div className="flex flex-col">
           <div className="hidden md:block text-dark-500 font-bold leading-5 mb-10">
             {MenuItems.dropDownItems[0].label}
           </div>
@@ -86,7 +93,7 @@ export function Ecosystem() {
           </div>
         </div>
         {/* second col */}
-        <div className="flex flex-col lg:min-w-[396px] md:max-w-[360px]">
+        <div className="flex flex-col">
           <div className="text-dark-500 font-bold leading-5 mb-7">
             {MenuItems.dropDownItems[1].label}
           </div>
@@ -117,7 +124,7 @@ export function Ecosystem() {
           className={classNames(
             "w-full h-full p-8 rounded-[15px] border-[0.5px] flex flex-col",
             "border-dark-200 bg-dark-00 bg-[url(/assets/img/header/header-jellyfish.png)] bg-contain bg-no-repeat bg-right-top ",
-            "hover:bg-[url(/assets/img/header/header-hover-jellyfish.png)] hover:transition-all hover:duration-300"
+            "hover:bg-[url(/assets/img/header/header-hover-jellyfish.png)] transition-all duration-300"
           )}
         >
           <DeFiChainLogo fill="#FFFFFF" className="w-[140px]" />

@@ -79,7 +79,8 @@ body {
   }
 
   .header-dropdown-bg {
-    background: rgba(0, 0, 0, 0.9)
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(30px);
   }
 
   /* Accent gradients */

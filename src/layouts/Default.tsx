@@ -13,7 +13,9 @@ const description =
 /**
  * Default Layout with <Head> providing default Metadata for SEO
  */
-export function Default(props: PropsWithChildren<any>): JSX.Element | null {
+export default function Default(
+  props: PropsWithChildren<any>
+): JSX.Element | null {
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
 
@@ -75,11 +77,14 @@ export function Default(props: PropsWithChildren<any>): JSX.Element | null {
 
       {mounted && (
         <WhaleProvider>
-          <Header />
-          <main className="flex-grow bg-dark-00 text-dark-1000">
-            {props.children}
-          </main>
-          <Footer />
+          <div className="relative">
+            <Header />
+            <main className="flex-grow z-10 text-dark-1000">
+              {props.children}
+            </main>
+            <div className="absolute z-0 inset-0 top-0 bg-cover mix-blend-screen bg-center bg-[url('/assets/img/background/background-mobile.png')] md:bg-[url('/assets/img/background/background-tablet.png')] lg:bg-[url('/assets/img/background/background-web.png')]" />
+            <Footer />
+          </div>
         </WhaleProvider>
       )}
     </div>

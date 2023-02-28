@@ -30,7 +30,7 @@ export function HomePageHeader(): JSX.Element {
             </div>
           </div>
         </div>
-        <div className="w-full min-w-[364px] max-w-[379px] mt-[-31px] mr-[-16px] ml-auto md:mt-[-49px] md:mr-[-32.18px] md:ml-0 md:min-w-[382px] md:max-w-[584px] lg:ml-auto lg:max-w-[722px] lg:mt-[-49px] xl:max-w-[758px] xl:mt-[-57px] 2xl:max-w-[929px] 2xl:mt-[-80px]">
+        <div className="z-[-1] w-full min-w-[364px] max-w-[379px] mt-[-31px] mr-[-16px] ml-auto md:mt-[-49px] md:mr-[-32.18px] md:ml-0 md:min-w-[382px] md:max-w-[584px] lg:ml-auto lg:max-w-[722px] lg:mt-[-49px] xl:max-w-[758px] xl:mt-[-57px] 2xl:max-w-[929px] 2xl:mt-[-80px]">
           <Video
             src="/assets/svg/hero/dfi-coin-video.mp4"
             width={595}

@@ -13,9 +13,7 @@ const description =
 /**
  * Default Layout with <Head> providing default Metadata for SEO
  */
-export default function Default(
-  props: PropsWithChildren<any>
-): JSX.Element | null {
+export function Default(props: PropsWithChildren<any>): JSX.Element | null {
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
 

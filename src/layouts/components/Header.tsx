@@ -6,6 +6,11 @@ import { MdClose, MdMenu } from "react-icons/md";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
+import {
+  Button,
+  GradientButton,
+  LinkButton,
+} from "@components/commons/Buttons";
 import { useWhaleApiClient } from "../context/WhaleContext";
 import { BuyDFIButton } from "./BuyDFIButton";
 import { LanguageDropdown } from "./LanguageDropdown";
@@ -44,7 +49,7 @@ export function Header(): JSX.Element {
   return (
     <header
       className={classNames(
-        "bg-white z-50 sticky top-0 md:shadow-none md:static",
+        "bg-dark-00  z-50 sticky top-0 md:shadow-none md:static",
         { "shadow-lg": !atTop }
       )}
     >
@@ -141,7 +146,23 @@ function DesktopNavbar({ price }: { price: string }): JSX.Element {
           className="hidden lg:block"
           testId="Desktop.HeaderLink.Downloads"
         />
-        <BuyDFIButton classname="ml-6" price={price} />
+
+        <GradientButton
+          buttonText={`${t("header.navbar.buy")} DFI $${Number(price).toFixed(
+            2
+          )}`}
+        />
+        <Button
+          buttonText={`${t("header.navbar.buy")} DFI $${Number(price).toFixed(
+            2
+          )}`}
+        />
+        <LinkButton
+          className="text-dark-700 text-lg font-semibold"
+          diagonalArrow
+          buttonText="test"
+          href="https://google.com"
+        />
       </div>
     </div>
   );

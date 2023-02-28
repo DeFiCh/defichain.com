@@ -73,8 +73,9 @@ export function Explore() {
             "gap-x-10 grid-flow-col gap-y-8"
           )}
         >
-          {MenuItems.dropDownItems.items.map((item) => (
+          {MenuItems.dropDownItems.items.map((item, key) => (
             <HeaderNavLinkItem
+              key={key}
               hoverState={hoverState}
               setHoverState={setHoverState}
               href={item.href}

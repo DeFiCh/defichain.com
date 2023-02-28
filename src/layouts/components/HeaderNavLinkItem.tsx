@@ -35,7 +35,7 @@ export function HeaderNavLinkItem({
   haveIcon?: boolean;
   target?: string;
 }) {
-  const Icon = iconMapping[icon] as React.ElementType;
+  const Icon = iconMapping[icon!] as React.ElementType;
   const iconsStrokes = [
     "masternode",
     "invest",
@@ -89,7 +89,7 @@ export function HeaderNavLinkItem({
           id={dfiId}
           className={classNames(
             "group-hover:duration-500 group-hover:transition",
-            iconsStrokes.some((element) => icon.includes(element))
+            iconsStrokes.some((element) => icon!.includes(element))
               ? "group-hover:stroke-brand-100"
               : "fill-dark-700 group-hover:fill-brand-100"
           )}

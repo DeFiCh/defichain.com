@@ -24,6 +24,7 @@ export default function HomePage(): JSX.Element {
       <BuiltOnBitcoinSection />
       <DistributionSection />
       <RoadmapSection />
+      <div className="absolute z-0 inset-0 top-0 bg-cover mix-blend-screen bg-center bg-[url('/assets/img/background/background-mobile.png')] md:bg-[url('/assets/img/background/background-tablet.png')] lg:bg-[url('/assets/img/background/background-web.png')]" />
     </>
   );
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "next-i18next";
 import classNames from "classnames";
+import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import { HeaderNavLinkItem } from "./HeaderNavLinkItem";
 
 interface ColLabels {
@@ -14,6 +15,7 @@ export function Community() {
     "header.community.info",
     { returnObjects: true }
   );
+  const dimension = useWindowDimensions();
 
   const MenuItems = {
     dropDownItems: [
@@ -105,7 +107,11 @@ export function Community() {
 
   const [hoverState, setHoverState] = useState<string | undefined>(undefined);
   return (
-    <div className="flex md:flex-row flex-col gap-y-9 gap-x-32">
+    <div
+      className={classNames("flex md:flex-row flex-col gap-y-9 gap-x-32", {
+        "gap-x-16": dimension.width < 784,
+      })}
+    >
       {/* first col */}
       <div className="flex flex-col">
         <div>
@@ -135,8 +141,8 @@ export function Community() {
         </div>
         <div
           className={classNames(
-            "grid grid-flow-col xl:grid-cols-4 xl:grid-rows-4 lg:grid-cols-3 lg:grid-rows-5 grid-cols-2 grid-rows-8",
-            "gap-y-6 md:gap-x-10 gap-x-10 place-items-start"
+            "grid grid-flow-col xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 xl:grid-rows-4 lg:grid-rows-5 grid-rows-8",
+            "gap-y-6 gap-x-10 lg:gap-x-20 place-items-start"
           )}
         >
           {MenuItems.dropDownItems[1].items.map((item, key) => (

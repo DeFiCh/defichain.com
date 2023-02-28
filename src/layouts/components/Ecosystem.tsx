@@ -65,9 +65,9 @@ export function Ecosystem() {
 
   return (
     <div className="flex xl:flex-row md:flex-col">
-      <div className="flex md:flex-row flex-col gap-y-[72px] gap-x-6">
+      <div className="flex md:flex-row flex-col gap-y-[72px] lg:gap-x-10 md:gap-x-20">
         {/* first col */}
-        <div className="flex flex-col min-w-[396px]">
+        <div className="flex flex-col lg:min-w-[396px] md:max-w-[360px]">
           <div className="hidden md:block text-dark-500 font-bold leading-5 mb-10">
             {MenuItems.dropDownItems[0].label}
           </div>
@@ -86,7 +86,7 @@ export function Ecosystem() {
           </div>
         </div>
         {/* second col */}
-        <div className="flex flex-col min-w-[368px]">
+        <div className="flex flex-col lg:min-w-[396px] md:max-w-[360px]">
           <div className="text-dark-500 font-bold leading-5 mb-7">
             {MenuItems.dropDownItems[1].label}
           </div>

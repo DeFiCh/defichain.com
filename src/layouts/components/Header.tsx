@@ -90,7 +90,7 @@ export function Header(): JSX.Element {
     <header
       ref={ref}
       className={classNames(
-        "sticky top-0 left-0 right-0 w-full bg-dark-00 z-50 transition-all ease-in-out duration-500",
+        "sticky top-0 left-0 right-0 w-full bg-dark-00 z-50 transition-opacity ease-in-out duration-500",
         isHoverOn || menu
           ? "header-dropdown-bg border-b-0 "
           : "border-b-[0.1px] border-b-dark-200"

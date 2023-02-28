@@ -96,8 +96,8 @@ export function Header(): JSX.Element {
           : "border-b-[0.1px] border-b-dark-200"
       )}
     >
-      <Container className="lg:pb-0 md:pt-14 md:pb-6 py-[30.69px] md:px-12 px-6 flex items-center justify-between">
-        <div className="flex w-full">
+      <Container className="lg:pb-0 md:pt-14 md:pb-6 py-[30.69px] flex items-center justify-between 2xl:mx-[120px]">
+        <div className="flex flex-row w-full">
           <Link
             href={{ pathname: "/" }}
             passHref
@@ -162,7 +162,7 @@ export function Header(): JSX.Element {
 }
 function DesktopNavbar(): JSX.Element {
   return (
-    <div className="w-full hidden lg:flex justify-center gap-x-[52px]">
+    <div className="w-full hidden lg:grid lg:grid-cols-[66px_100px_44px_100px] justify-center gap-x-[52px]">
       {MenuItems.map((item, key) => (
         <DesktopMenu key={key} item={item} />
       ))}
@@ -188,20 +188,19 @@ function DesktopMenu({ item }: { item: string }) {
         setIsHoverOn!(true);
       }}
     >
-      <div className="w-auto text-center">
-        <Menu.Button
-          onClick={() => {
-            setIsShowing(!isShowing);
-          }}
-          className={classNames("text-dark-700 text-lg font-semibold", {
-            "accent-dfc-gradient-text bg-clip-text text-transparent": isShowing,
-          })}
-        >
-          {t(`header.navbar.${item.toLowerCase()}`)}
-        </Menu.Button>
-      </div>
+      <Menu.Button
+        as="div"
+        onClick={() => {
+          setIsShowing(!isShowing);
+        }}
+        className={classNames("text-dark-700 text-lg font-semibold", {
+          "accent-dfc-gradient-text bg-clip-text text-transparent": isShowing,
+        })}
+      >
+        {t(`header.navbar.${item.toLowerCase()}`)}
+      </Menu.Button>
 
-      <Container className="cursor-auto w-full">
+      <Container className="cursor-auto">
         <Transition
           style={{ top: headerHeight - 1 }}
           className="absolute inset-x-0 header-dropdown-bg w-screen"
@@ -248,9 +247,7 @@ function TabletMobileMenu() {
           const DropDown = dropDownMapping[item.toLowerCase()];
           return (
             <div key={key}>
-              <Container
-                className={classNames("md:px-12 px-6", { "mt-5": key === 0 })}
-              >
+              <Container className={classNames({ "mt-5": key === 0 })}>
                 <TabletMobileDropDown label={item}>
                   <DropDown />
                 </TabletMobileDropDown>

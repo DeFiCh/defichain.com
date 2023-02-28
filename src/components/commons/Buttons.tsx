@@ -3,13 +3,13 @@ import classNames from "classnames";
 import { IoMdArrowRoundForward } from "react-icons/io";
 
 export function Button({
-  buttonText,
+  text,
   className,
   disabled,
   href,
   onClick,
 }: {
-  buttonText: string;
+  text: string;
   className?: string;
   disabled?: boolean;
   href?: string;
@@ -24,7 +24,7 @@ export function Button({
         className={classNames({ "pointer-events-none": disabled })}
       >
         <ButtonElement
-          buttonText={buttonText}
+          text={text}
           className={className}
           disabled={disabled}
           onClick={onClick}
@@ -34,7 +34,7 @@ export function Button({
   }
   return (
     <ButtonElement
-      buttonText={buttonText}
+      text={text}
       className={className}
       disabled={disabled}
       onClick={onClick}
@@ -43,12 +43,12 @@ export function Button({
 }
 
 function ButtonElement({
-  buttonText,
+  text,
   className,
   disabled,
   onClick,
 }: {
-  buttonText: string;
+  text: string;
   className?: string;
   disabled?: boolean;
   onClick?: () => void;
@@ -64,7 +64,7 @@ function ButtonElement({
         "bg-dark-1000 text-dark-100 hover:bg-brand-100 active:bg-brand-100 active:opacity-70"
       )}
     >
-      {buttonText}
+      {text}
     </button>
   );
 }

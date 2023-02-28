@@ -9,6 +9,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['"Space Grotesk"', "sans-serif"],
+      desc: ['"Montserrat"', "sans-serif"],
     },
     colors: {
       transparent: "rgba(0, 0, 0 ,0)",
@@ -71,10 +72,23 @@ module.exports = {
       warning: "#D97B01",
       valid: "#0CC72C",
     },
+    screens: {
+      sm: "320px",
+      // => @media (min-width: 320px) { ... }
+
+      md: "600px",
+      // => @media (min-width: 600px) { ... }
+
+      lg: "1024px",
+      // => @media (min-width: 1024px) { ... }
+
+      xl: "1440px",
+      // => @media (min-width: 1440px) { ... }
+
+      "2xl": "1920px",
+      // => @media (min-width: 1920px) { ... }
+    },
     extend: {
-      fontFamily: {
-        montserrat: ["Montserrat", "sans-serif"],
-      },
       gridTemplateRows: {
         8: "repeat(8, minmax(0, 1fr))",
       },

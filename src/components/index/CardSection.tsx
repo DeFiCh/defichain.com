@@ -35,21 +35,19 @@ export function CardSection(): JSX.Element {
   const cards: any[] = t("CardsSection.cards", { returnObjects: true });
 
   return (
-    <section className="-mt-80 bg-none" data-testid="CardSection">
+    <section className="bg-none" data-testid="CardSection">
       <Slider {...settings}>
-        {cards.map((card) => {
-          return (
-            <Card
-              label={card.label}
-              title={card.title}
-              desc={card.desc}
-              buttonText={card.buttonText}
-              buttonType={card.buttonType}
-              url={card.url}
-              key={card.title}
-            />
-          );
-        })}
+        {cards.map((card) => (
+          <Card
+            label={card.label}
+            title={card.title}
+            desc={card.desc}
+            buttonText={card.buttonText}
+            buttonType={card.buttonType}
+            url={card.url}
+            key={card.title}
+          />
+        ))}
       </Slider>
     </section>
   );

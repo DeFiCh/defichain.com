@@ -1,4 +1,5 @@
 import { useTranslation } from "next-i18next";
+import { ExternalLink } from "components/commons/link/ExternalLink";
 import { DownloadCard } from "./DownloadCard";
 import { AppStoreDownload } from "./AppStoreDownload";
 import { PlaystoreDownload } from "./PlaystoreDownload";
@@ -42,6 +43,28 @@ export function LightWalletSection(): JSX.Element {
           <div className="grid gap-2 md:flex md:items-center md:space-x-4">
             <AppStoreDownload url="https://apps.apple.com/app/id1582633093" />
             <PlaystoreDownload url="https://play.google.com/store/apps/details?id=com.defichain.app.dfx" />
+          </div>
+        </DownloadCard>
+
+        <DownloadCard
+          title={t("LightWallets.entries.JLY.title")}
+          desc={t("LightWallets.entries.JLY.desc")}
+          imageSrc="/assets/img/downloads/jly.svg"
+          testid="LightWallets.Jly"
+        >
+          <div className="flex items-center space-x-4 text-lg font-medium">
+            <ExternalLink
+              text="Chrome"
+              url="https://chrome.google.com/webstore/detail/jellywallet/eegcfalgkkhehkhbjbggbhhlcnckadih"
+            />
+            <ExternalLink
+              text="Firefox"
+              url="https://addons.mozilla.org/en-US/firefox/addon/jellywallet/"
+            />
+            <ExternalLink
+              text="Brave"
+              url="https://chrome.google.com/webstore/detail/jellywallet/eegcfalgkkhehkhbjbggbhhlcnckadih"
+            />
           </div>
         </DownloadCard>
       </div>

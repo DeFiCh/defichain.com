@@ -88,5 +88,10 @@ module.exports = {
       "2xl": "1920px",
       // => @media (min-width: 1920px) { ... }
     },
+    extend: {
+      gridTemplateRows: {
+        8: "repeat(8, minmax(0, 1fr))",
+      },
+    },
   },
 };

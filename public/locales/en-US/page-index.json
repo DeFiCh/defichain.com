@@ -7,6 +7,21 @@
     "title": "Connecting old and new worlds",
     "desc": "A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone."
   },
+  "StatisticsSection": {
+    "dfiMinted": {
+      "title": "TOTAL DFI MINTED",
+      "desc": "{{perc}} of max supply"
+    },
+    "tvlLocked": {
+      "title": "TOTAL VALUE LOCKED IN USD",
+      "mobileTitle": "TVL IN USD",
+      "desc": "Pool | Masternodes | Vaults"
+    },
+    "masternodes": {
+      "title": "MASTERNODES",
+      "desc": "{{perc}} locked"
+    }
+  },
   "CardsSection": {
     "cards": [
       {

@@ -4,27 +4,33 @@ import {
   StatsData,
   SupplyData,
 } from "@defichain/whale-api-client/dist/api/stats";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import CountUp from "react-countup";
 import classNames from "classnames";
+import { useTranslation } from "next-i18next";
+import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import { useWhaleApiClient } from "../../layouts/context/WhaleContext";
 import { calculatePercentage } from "../../shared/calculatePercentage";
 
 export function StatsDisplay() {
   const api = useWhaleApiClient();
-
   const [stats, setStats] = useState<StatsData>();
   const [supply, setSupply] = useState<SupplyData>();
-
-  async function getData() {
-    await Promise.all([api.stats.getSupply(), api.stats.get()]).then((item) => {
-      setSupply(item[0]);
-      setStats(item[1]);
-    });
-  }
+  const { t } = useTranslation("page-index");
+  const isFirstLoad = useRef(true);
+  const dimensions = useWindowDimensions();
 
   useEffect(() => {
-    getData();
+    if (isFirstLoad) {
+      isFirstLoad.current = false;
+      void api.stats.getSupply().then((supplyItem) => {
+        setSupply(supplyItem);
+      });
+
+      void api.stats.get().then((statsItem) => {
+        setStats(statsItem);
+      });
+    }
   });
 
   return (
@@ -36,26 +42,33 @@ export function StatsDisplay() {
         <div className="card-bg rounded-[30px] p-6">
           <div className="flex lg:flex-row flex-col gap-y-4 justify-evenly justify-center">
             <StatsItem
-              title="TOTAL DFI MINTED"
+              title={t("StatisticsSection.dfiMinted.title")}
               stats={supply?.total ?? 0}
-              desc={`${calculatePercentage(
-                supply?.total,
-                supply?.max
-              )} of max supply`}
+              desc={t("StatisticsSection.dfiMinted.desc", {
+                perc: calculatePercentage(supply?.total, supply?.max),
+              })}
             />
             <StatsItem
-              title="Total VALUE LOCKED IN USD"
+              title={
+                dimensions.width <= 600
+                  ? t("StatisticsSection.tvlLocked.mobileTitle")
+                  : t("StatisticsSection.tvlLocked.title")
+              }
               prefix="$"
               stats={stats?.tvl.total ?? 0}
-              desc="Pool | Masternodes | Vaults"
+              desc={t("StatisticsSection.tvlLocked.desc")}
               descStyle="lg:block hidden"
             />
             <StatsItem
-              title="MASTERNODES"
+              title={t("StatisticsSection.masternodes.title")}
               stats={stats?.count.masternodes ?? 0}
-              desc={`$${useUnitSuffix(
-                stats ? stats.tvl.masternodes.toString() : "0"
-              )}+ locked`}
+              desc={t("StatisticsSection.masternodes.desc", {
+                perc: useUnitSuffix(
+                  stats ? stats.tvl.masternodes.toString() : "0"
+                )
+                  .toString()
+                  .concat("+"),
+              })}
             />
           </div>
         </div>
@@ -81,12 +94,12 @@ function StatsItem({
   const value = useUnitSuffix(stats.toString(), UnitSuffixReturnValue.VALUE);
 
   return (
-    <div className="flex lg:flex-col flex-row items-center gap-y-2">
+    <div className="flex lg:flex-col flex-row md:items-center items-start gap-y-2">
       <div className="bg-clip-text text-transparent accent-gradient-2 font-bold leading-5">
         {title}
       </div>
       <div className="flex flex-col lg:items-center items-end lg:gap-y-2 gap-y-1 lg:grow-0 grow">
-        <div className="text-dark-1000 lg:text-[52px] text-xl leading-6 lg:leading-[52px]">
+        <div className="text-dark-1000 text-xl leading-6 lg:text-[52px] lg:leading-[52px]">
           {prefix ?? ""}
           <CountUp
             onUpdate={({ reset, start }) => {
@@ -100,7 +113,14 @@ function StatsItem({
           {suffix ? suffix.toString().concat("+") : ""}
         </div>
 
-        <div className={classNames("text-dark-700", descStyle)}>{desc}</div>
+        <div
+          className={classNames(
+            "font-desc text-dark-700 lg:text-base lg:leading-6 md:text-sm text-xs",
+            descStyle
+          )}
+        >
+          {desc}
+        </div>
       </div>
     </div>
   );

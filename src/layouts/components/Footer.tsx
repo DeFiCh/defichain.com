@@ -191,6 +191,7 @@ export default function Footer(): JSX.Element {
             <FooterColumn
               category={MenuItems[0].category}
               childLinks={MenuItems[0].childLink}
+              customStyle="sm:pt-0"
             />
             {/* ECOSYSTEM */}
             <FooterColumn

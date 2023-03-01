@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import FooterInternalLink from "./FooterInternalLink";
 
 interface FooterLinkItemProps {
@@ -13,13 +14,20 @@ interface FooterLinkItemProps {
 export default function FooterColumn({
   category,
   childLinks,
+  customStyle,
 }: {
   category: string;
+  customStyle?: string;
   childLinks: FooterLinkItemProps[];
 }): JSX.Element {
   return (
     <section>
-      <h3 className="text-sm font-semibold pb-[22px] text-dark-500 md:pb-[38px] sm:pt-[54px] md:pt-0">
+      <h3
+        className={classNames(
+          "text-sm font-semibold pb-[22px] text-dark-500 md:pb-[38px] sm:pt-[54px] md:pt-0",
+          customStyle
+        )}
+      >
         {category}
       </h3>
       <div className="grid grid-flow-row grid-cols-2 gap-6 md:grid-cols-1">

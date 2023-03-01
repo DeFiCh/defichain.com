@@ -5,9 +5,11 @@ export function StartExploring() {
   return (
     <Container className="flex justify-center md:mt-0 mt-9">
       <a href="#statistics_display">
-        <button className="flex flex-col items-center gap-y-[17px]">
-          <div className="text-sm text-dark-700">Start exploring</div>
-          <IoChevronDown />
+        <button className="group flex flex-col items-center gap-y-[17px]">
+          <div className="text-sm text-dark-700 group-hover:text-brand-100">
+            Start exploring
+          </div>
+          <IoChevronDown className="group-hover:text-brand-100" />
         </button>
       </a>
     </Container>

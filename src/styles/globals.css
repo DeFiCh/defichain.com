@@ -47,7 +47,13 @@ body {
   }
 
   .card-outline-2 {
-    background: linear-gradient(120.02deg, rgba(255, 255, 255, 0.25) 8.27%, rgba(223, 243, 167, 0.2) 33.42%, rgba(99, 173, 241, 0.3) 68.31%, rgba(255, 0, 175, 0.5) 103.28%)
+    background: linear-gradient(
+      120.02deg,
+      rgba(255, 255, 255, 0.25) 8.27%,
+      rgba(223, 243, 167, 0.2) 33.42%,
+      rgba(99, 173, 241, 0.3) 68.31%,
+      rgba(255, 0, 175, 0.5) 103.28%
+    );
   }
 
   .card-section-bg {
@@ -89,7 +95,15 @@ body {
   }
 
   .accent-dfc-gradient-text {
-    background-image: linear-gradient(90deg, #ff00ff 0%, #ec0c8d 100.04%);
+    background: linear-gradient(90deg, #ff00ff 0%, #ec0c8d 100.04%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  .hover-icons:hover {
+    fill: #ff00ff;
   }
 
   .accent-gradient-1 {
@@ -150,4 +164,16 @@ body {
 
 .slick-dots {
   bottom: -25px;
+}
+
+.footer-background {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    linear-gradient(
+      152.58deg,
+      rgba(51, 51, 51, 0.4) -3.08%,
+      rgba(128, 128, 128, 0.1) 77.78%
+    );
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2),
+    0px 5px 20px -1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
 }

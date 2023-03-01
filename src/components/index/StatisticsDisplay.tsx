@@ -34,46 +34,56 @@ export function StatsDisplay() {
   });
 
   return (
-    <Container className="lg:mt-[57px] md:mt-[76px] mt-[65px]">
-      <div
-        id="statistics_display"
-        className="card-outline-2 p-[0.5px] rounded-[30px]"
-      >
-        <div className="card-bg rounded-[30px] p-6">
-          <div className="flex lg:flex-row flex-col gap-y-4 justify-evenly justify-center">
-            <StatsItem
-              title={t("StatisticsSection.dfiMinted.title")}
-              stats={supply?.total ?? 0}
-              desc={t("StatisticsSection.dfiMinted.desc", {
-                perc: calculatePercentage(supply?.total, supply?.max),
-              })}
-            />
-            <StatsItem
-              title={
-                dimensions.width <= 600
-                  ? t("StatisticsSection.tvlLocked.mobileTitle")
-                  : t("StatisticsSection.tvlLocked.title")
-              }
-              prefix="$"
-              stats={stats?.tvl.total ?? 0}
-              desc={t("StatisticsSection.tvlLocked.desc")}
-              descStyle="lg:block hidden"
-            />
-            <StatsItem
-              title={t("StatisticsSection.masternodes.title")}
-              stats={stats?.count.masternodes ?? 0}
-              desc={t("StatisticsSection.masternodes.desc", {
-                perc: useUnitSuffix(
-                  stats ? stats.tvl.masternodes.toString() : "0"
-                )
-                  .toString()
-                  .concat("+"),
-              })}
-            />
+    <div className="relative z-0">
+      <Container className="relative lg:mt-[57px] md:mt-[76px] mt-[65px]">
+        <div
+          id="statistics_display"
+          className="card-outline-2 p-[0.5px] rounded-[30px]"
+        >
+          <div className="card-bg rounded-[30px] p-6">
+            <div className="flex lg:flex-row flex-col gap-y-4 justify-evenly justify-center">
+              <StatsItem
+                title={t("StatisticsSection.dfiMinted.title")}
+                stats={supply?.total ?? 0}
+                desc={t("StatisticsSection.dfiMinted.desc", {
+                  perc: calculatePercentage(supply?.total, supply?.max),
+                })}
+              />
+              <StatsItem
+                title={
+                  dimensions.width <= 600
+                    ? t("StatisticsSection.tvlLocked.mobileTitle")
+                    : t("StatisticsSection.tvlLocked.title")
+                }
+                prefix="$"
+                stats={stats?.tvl.total ?? 0}
+                desc={t("StatisticsSection.tvlLocked.desc")}
+                descStyle="lg:block hidden"
+              />
+              <StatsItem
+                title={t("StatisticsSection.masternodes.title")}
+                stats={stats?.count.masternodes ?? 0}
+                desc={t("StatisticsSection.masternodes.desc", {
+                  perc: useUnitSuffix(
+                    stats ? stats.tvl.masternodes.toString() : "0"
+                  )
+                    .toString()
+                    .concat("+"),
+                })}
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </Container>
+      </Container>
+      <div
+        className={classNames(
+          "absolute z-[-1] bg-contain bg-no-repeat bg-left bg-[url(/assets/img/index/index-cube.png)]",
+          "lg:top-0 md:top-[89.06px] top-[108px]",
+          "h-screen w-full",
+          "lg:w-[453px] lg:h-[453px] md:w-[292.42px] md:h-[292.42px] w-[208px] h-[208px]"
+        )}
+      />
+    </div>
   );
 }
 

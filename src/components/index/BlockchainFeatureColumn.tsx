@@ -28,19 +28,15 @@ export function BlockchainFeatureColumn({
 }
 
 function FeatureIcon({ item }: { item: BlockchainFeatureItemProp }) {
-  //   console.log(typeof iconMapping["IMMUTABILITY"]);
-  const { title } = item;
-  const Icon = iconMapping[title] as React.ElementType;
-  console.log(Icon);
+  const Icon = iconMapping[item.title] as React.ElementType;
 
   return (
     <div className="grid grid-flow-row grid-cols-1 gap-4">
-      {/* <Icon /> */}
+      {Icon && <Icon />}
       <h3 className="font-bold leading-5 text-dark-1000">{item.title}</h3>
       <div className="text-dark-700">{item.desc}</div>
     </div>
   );
-  //   <div>Helloo</div>;
 }
 
 const iconMapping = {

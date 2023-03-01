@@ -3,12 +3,6 @@ import { Container } from "@components/commons/Container";
 // import Link from "next/link";
 import { useTranslation } from "next-i18next";
 // import { Button } from "@components/commons/Buttons";
-// import { ThroughputIcon } from "@components/icons/assets/blockchainFeatures/ThroughputIcon";
-// import { ImmutabilityIcon } from "@components/icons/assets/blockchainFeatures/ImmutabilityIcon";
-// import { VarietyIcon } from "@components/icons/assets/blockchainFeatures/VarietyIcon";
-// import { SecurityIcon } from "@components/icons/assets/blockchainFeatures/SecurityIcon";
-// import { DevelopmentIcon } from "@components/icons/assets/blockchainFeatures/DevelopmentIcon";
-import { getBlockchainFeatureIcon } from "@components/icons/assets/blockchainFeatures";
 import { BlockchainFeatureColumn } from "./BlockchainFeatureColumn";
 
 export const BlockchainFeatureItems = [
@@ -38,7 +32,6 @@ export function BlockchainFeaturesSection(): JSX.Element {
   const { t } = useTranslation("page-index");
   const separatedTitle = t("BlockchainFeatureSection.title").split(" ");
 
-  console.log(typeof BlockchainFeatureItems);
   return (
     <section className="py-10 lg:py-16" data-testid="BlockchainFeatureSection">
       <Container className="flex justify-between">
@@ -68,7 +61,6 @@ export function BlockchainFeaturesSection(): JSX.Element {
           </div>
         </div>
         <div className="flex gap-x-10 px-12">
-          {getBlockchainFeatureIcon("THROUGHPUT")}
           <BlockchainFeatureColumn items={BlockchainFeatureItems.slice(0, 3)} />
           <BlockchainFeatureColumn items={BlockchainFeatureItems.slice(3)} />
         </div>

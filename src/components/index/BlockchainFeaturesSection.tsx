@@ -3,26 +3,54 @@ import { Container } from "@components/commons/Container";
 // import Link from "next/link";
 import { useTranslation } from "next-i18next";
 // import { Button } from "@components/commons/Buttons";
+// import { ThroughputIcon } from "@components/icons/assets/blockchainFeatures/ThroughputIcon";
+// import { ImmutabilityIcon } from "@components/icons/assets/blockchainFeatures/ImmutabilityIcon";
+// import { VarietyIcon } from "@components/icons/assets/blockchainFeatures/VarietyIcon";
+// import { SecurityIcon } from "@components/icons/assets/blockchainFeatures/SecurityIcon";
+// import { DevelopmentIcon } from "@components/icons/assets/blockchainFeatures/DevelopmentIcon";
+import { getBlockchainFeatureIcon } from "@components/icons/assets/blockchainFeatures";
+import { BlockchainFeatureColumn } from "./BlockchainFeatureColumn";
+
+export const BlockchainFeatureItems = [
+  {
+    title: "THROUGHPUT",
+    desc: "Unparalleled high transaction throughput for all transactions.",
+  },
+  {
+    title: "IMMUTABILITY",
+    desc: "Marries the best of Proof-of-Stake, with the security of Bitcoin.",
+  },
+  {
+    title: "VARIETY",
+    desc: "Wide range of crypto-economic financial operations.",
+  },
+  {
+    title: "SECURITY",
+    desc: "Turing-incomplete for reduced attack vectors.",
+  },
+  {
+    title: "DEVELOPMENT",
+    desc: "Rapidly create a variety of DeFi apps on one chain.",
+  },
+];
 
 export function BlockchainFeaturesSection(): JSX.Element {
   const { t } = useTranslation("page-index");
   const separatedTitle = t("BlockchainFeatureSection.title").split(" ");
-  //   const coloredWord = separatedTitle[2];
-  //   separatedTitle.shift();
-  console.log(separatedTitle);
 
+  console.log(typeof BlockchainFeatureItems);
   return (
     <section className="py-10 lg:py-16" data-testid="BlockchainFeatureSection">
-      <Container>
-        <div className="flex flex-wrap md:flex-nowrap space-y-6 md:space-y-0 md:space-x-28">
+      <Container className="flex justify-between">
+        <div className="flex lg:w-[504px]">
           <div
-            className="w-full lg:w-2/3 flex flex-col space-y-4 md:space-y-8 items-start "
-            data-testid="BlockchainFeatureSection"
+            className="w-full flex flex-col space-y-4 md:space-y-5 "
+            data-testid="BlockchainFeatureSection.text"
           >
-            <h2
-              className="text-2xl md:text-3xl font-medium"
-              data-testid="title"
-            >
+            <div className="gradient-text tracking-[.04em]">
+              {t("BlockchainFeatureSection.subtitle")}
+            </div>
+            <h2 className="lg:text-6xl lg:leading-[72px]" data-testid="title">
               {separatedTitle.map((word, index) =>
                 index === 2 ? (
                   <span className="text-electric">{`${word} `}</span>
@@ -31,22 +59,18 @@ export function BlockchainFeaturesSection(): JSX.Element {
                 )
               )}
             </h2>
-            <div className="text-lg md:text-xl" data-testid="desc">
+            <div
+              className="text-dark-700 text-lg md:text-xl"
+              data-testid="desc"
+            >
               {t("BlockchainFeatureSection.desc")}
             </div>
-            {/* <div data-testid="button">
-              <Link
-                href={{ pathname: "/white-paper" }}
-                passHref
-                className="contents"
-              >
-                <Button text={t("BlockchainFeatureSection.button")} />
-              </Link>
-            </div> */}
           </div>
-          <div className="w-1/2 lg:w-1/4 mx-auto" data-testid="image">
-            {/* <Image src={Bitcoin} alt="" /> */}
-          </div>
+        </div>
+        <div className="flex gap-x-10 px-12">
+          {getBlockchainFeatureIcon("THROUGHPUT")}
+          <BlockchainFeatureColumn items={BlockchainFeatureItems.slice(0, 3)} />
+          <BlockchainFeatureColumn items={BlockchainFeatureItems.slice(3)} />
         </div>
       </Container>
     </section>

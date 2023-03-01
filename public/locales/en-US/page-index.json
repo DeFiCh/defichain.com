@@ -716,27 +716,7 @@
   },
   "BlockchainFeatureSection": {
     "title": "Designed for Decentralized Finance",
-    "subtitle": "non-Turing-complete blockchain",
-    "desc": "DeFiChain provides full functionality for this segment of the DLT community, sacrificing other types of functionality for simplicity, rapid throughput, and security.",
-    "Throughput": {
-      "title": "Throughput",
-      "desc": "Unparalleled high transaction throughput for all transactions."
-    },
-    "Immutability": {
-      "title": "Immutability",
-      "desc": "Marries the best of Proof-of-Stake, with the security of Bitcoin."
-    },
-    "Variety": {
-      "title": "Variety",
-      "desc": "Wide range of crypto-economic financial operations."
-    },
-    "Security": {
-      "title": "Security",
-      "desc": "Turing-incomplete for reduced attack vectors."
-    },
-    "Development": {
-      "title": "Development",
-      "desc": "Rapidly create a variety of DeFi apps on one chain."
-    }
+    "subtitle": "NON-TURING-COMPLETE BLOCKCHAIN",
+    "desc": "DeFiChain provides full functionality for this segment of the DLT community, sacrificing other types of functionality for simplicity, rapid throughput, and security."
   }
 }

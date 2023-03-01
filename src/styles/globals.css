@@ -47,7 +47,13 @@ body {
   }
 
   .card-outline-2 {
-    background: linear-gradient(120.02deg, rgba(255, 255, 255, 0.25) 8.27%, rgba(223, 243, 167, 0.2) 33.42%, rgba(99, 173, 241, 0.3) 68.31%, rgba(255, 0, 175, 0.5) 103.28%)
+    background: linear-gradient(
+      120.02deg,
+      rgba(255, 255, 255, 0.25) 8.27%,
+      rgba(223, 243, 167, 0.2) 33.42%,
+      rgba(99, 173, 241, 0.3) 68.31%,
+      rgba(255, 0, 175, 0.5) 103.28%
+    );
   }
 
   .card-section-bg {
@@ -150,4 +156,17 @@ body {
 
 .slick-dots {
   bottom: -25px;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    72.57deg,
+    #ec008c 17.15%,
+    #5b10ff 89.41%,
+    #0468d6 102.56%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }

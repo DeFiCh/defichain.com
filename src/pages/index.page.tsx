@@ -9,6 +9,8 @@ import { RoadmapSection } from "@components/index/roadmap/RoadmapSection";
 import { BuiltOnBitcoinSection } from "@components/index/BuiltOnBitcoinSection";
 import { DistributionSection } from "@components/index/DistributionSection";
 import { Head } from "@components/commons/Head";
+import { StatsDisplay } from "@components/index/StatisticsDisplay";
+import { StartExploring } from "@components/index/StartExploring";
 
 export default function HomePage(): JSX.Element {
   const { t } = useTranslation(["page-index"]);
@@ -17,6 +19,8 @@ export default function HomePage(): JSX.Element {
     <>
       <Head title={t("Head.title")} description={t("Head.desc")} />
       <HomePageHeader />
+      <StartExploring />
+      <StatsDisplay />
       <CardSection />
       <SolutionSection />
       <BenefitsSection />

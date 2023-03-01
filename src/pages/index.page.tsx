@@ -8,6 +8,7 @@ import { FunctionsSection } from "@components/index/FunctionsSection";
 import { RoadmapSection } from "@components/index/roadmap/RoadmapSection";
 import { BuiltOnBitcoinSection } from "@components/index/BuiltOnBitcoinSection";
 import { DistributionSection } from "@components/index/DistributionSection";
+import { BlockchainFeaturesSection } from "@components/index/BlockchainFeaturesSection";
 import { Head } from "@components/commons/Head";
 
 export default function HomePage(): JSX.Element {
@@ -19,6 +20,7 @@ export default function HomePage(): JSX.Element {
       <HomePageHeader />
       <CardSection />
       <SolutionSection />
+      <BlockchainFeaturesSection />
       <BenefitsSection />
       <FunctionsSection />
       <BuiltOnBitcoinSection />

@@ -264,7 +264,7 @@ export default function Footer(): JSX.Element {
         </div>
       </Container>
       <div className="absolute bottom-20 md:bottom-[150px] left-0 bg-contain bg-no-repeat bg-clip-border bg-origin-padding mix-blend-screen w-[150px] h-full md:w-2/5 bg-[url('/assets/img/footer/transparent_coin_2.png')]" />
-      <div className="absolute bottom-0 md:bottom-[65px] right-0 bg-contain bg-no-repeat mix-blend-screen bg-bottom md:bg-right h-1/4 w-1/4 bg-[url('/assets/img/footer/arrow_1.png')]" />
+      <div className="absolute bottom-6 md:bottom-[65px] right-0 bg-contain bg-no-repeat mix-blend-screen bg-bottom md:bg-right h-1/4 w-1/4 bg-[url('/assets/img/footer/arrow_1.png')]" />
     </footer>
   );
 }

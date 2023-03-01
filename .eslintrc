@@ -7,7 +7,7 @@
     "prefer-destructuring": "warn",
     "react/no-array-index-key": "warn",
     "arrow-body-style": "warn",
-    "import/prefer-default-export": "warn",
+    "import/prefer-default-export": "off",
     "@typescript-eslint/default-param-last": "warn",
     "react/no-unstable-nested-components": "warn",
     "react/jsx-no-useless-fragment": "warn",

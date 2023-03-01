@@ -21,7 +21,7 @@ export function StatsDisplay() {
   const dimensions = useWindowDimensions();
 
   useEffect(() => {
-    if (isFirstLoad) {
+    if (isFirstLoad.current) {
       isFirstLoad.current = false;
       void api.stats.getSupply().then((supplyItem) => {
         setSupply(supplyItem);

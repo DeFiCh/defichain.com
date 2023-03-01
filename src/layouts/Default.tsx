@@ -2,7 +2,7 @@
 import Head from "next/head";
 import { PropsWithChildren, useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { Footer } from "./components/Footer";
+import Footer from "./components/Footer";
 import { Header } from "./components/Header";
 import { WhaleProvider } from "./context/WhaleContext";
 

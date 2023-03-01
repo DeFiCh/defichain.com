@@ -1,5 +1,4 @@
 import DeFiChainLogo from "@components/icons/DeFiChainLogo";
-import Link from "next/link";
 import { Container } from "@components/commons/Container";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -187,16 +186,6 @@ export default function Footer(): JSX.Element {
     <footer className="relative bg-dark-00">
       <Container className="relative z-10 py-10">
         <div className="py-10 h-full w-full footer-background rounded-[30px] px-6 md:px-14 lg:px-24">
-          <div className="flex-col md:hidden">
-            <Link
-              href={{ pathname: "/" }}
-              passHref
-              className="flex items-center cursor-pointer hover:accent-dfc-gradient-text"
-              data-testid="Footer.Logo"
-            >
-              <DeFiChainLogo className="w-40 lg:w-52" />
-            </Link>
-          </div>
           <div className="text-sm md:grid md:grid-cols-2 md:grid-flow-row md:gap-[62px] lg:flex lg:flex-row md:justify-between md:pb-[86px]">
             {/* EXPLORE */}
             <FooterColumn
@@ -214,21 +203,22 @@ export default function Footer(): JSX.Element {
               childLinks={MenuItems[2].childLink}
             />
             {/* COMMUNITY */}
-            <div className="justify-between flex flex-col">
+            <div className="justify-between flex flex-col mt-[54px]">
               <FooterColumn
                 category={MenuItems[3].category}
                 childLinks={MenuItems[3].childLink}
               />
               <SocialsRow
-                customStyle="pt-[22px] text-dark-500 flex flex-row gap-5"
+                customStyle="text-dark-500 flex flex-row gap-5 sm:pb-[54px] sm:pt-[38px] md:pb-0"
                 language={language}
               />
             </div>
           </div>
           {/* Bottom section of footer */}
-          <div className="md:flex md:flex-row md:space-x-2 text-dark-500 md:items-center md:justify-between">
-            <DeFiChainLogo className="w-[156.07px] hidden md:block" />
-            <div className="flex flex-col-reverse md:flex-row">
+          {/* Mobile View */}
+          <div className="sm:block md:hidden">
+            <div className="text-dark-500 items-center sm:items-center sm:grid sm:grid-rows-2 sm:grid-flow-col sm:gap-[9px]">
+              <DeFiChainLogo className="w-[128px]" />
               <div className="flex flex-row items-center">
                 <FooterInternalBottomLink
                   text="Privacy Policy"
@@ -242,8 +232,32 @@ export default function Footer(): JSX.Element {
                   testId="Footer.Privacy"
                 />
               </div>
-              <div className="flex pt-[54px] pb-[18px] md:pt-0 md:pb-0 md:pl-[31px]">
+              <div className="flex justify-end">
                 <LanguageDropdownV2 />
+              </div>
+            </div>
+          </div>
+          {/* Web View */}
+          <div className="md:block hidden">
+            <div className="flex flex-row justify-between items-center">
+              <DeFiChainLogo className="w-[176.67px]" />
+              <div className="flex flex-row">
+                <div className="flex flex-row items-center">
+                  <FooterInternalBottomLink
+                    text="Privacy Policy"
+                    pathname="/privacy-policy"
+                    testId="Footer.Privacy"
+                  />
+                  <span className="px-2 text-dark-500">•</span>
+                  <FooterInternalBottomLink
+                    text="Terms of use"
+                    pathname="/terms-of-use"
+                    testId="Footer.Privacy"
+                  />
+                </div>
+                <div className="flex pl-[23px]">
+                  <LanguageDropdownV2 />
+                </div>
               </div>
             </div>
           </div>

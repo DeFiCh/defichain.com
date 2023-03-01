@@ -184,7 +184,7 @@ export default function Footer(): JSX.Element {
   }, [router]);
   return (
     <footer className="relative bg-dark-00">
-      <Container className="relative z-10 py-10 lg:pb-[144px]">
+      <Container className="relative z-10 py-10 pb-[108px] md:pb-[132px] lg:pb-[144px]">
         <div className="py-10 h-full w-full footer-background rounded-[30px] px-6 md:px-14 lg:px-24">
           <div className="text-sm md:grid md:grid-cols-2 md:grid-flow-row md:gap-[62px] lg:flex lg:flex-row md:justify-between md:pb-[86px]">
             {/* EXPLORE */}

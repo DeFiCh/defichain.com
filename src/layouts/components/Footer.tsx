@@ -203,7 +203,7 @@ export default function Footer(): JSX.Element {
               childLinks={MenuItems[2].childLink}
             />
             {/* COMMUNITY */}
-            <div className="justify-between flex flex-col mt-[54px]">
+            <div className="justify-between flex flex-col">
               <FooterColumn
                 category={MenuItems[3].category}
                 childLinks={MenuItems[3].childLink}

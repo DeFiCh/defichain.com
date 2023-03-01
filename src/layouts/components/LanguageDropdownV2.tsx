@@ -8,9 +8,9 @@ import classNames from "classnames";
 export function LanguageDropdownV2(): JSX.Element {
   const router = useRouter();
   const languages = [
-    { locale: "en-US", name: "English" },
-    { locale: "de", name: "Deutch" },
-    { locale: "fr", name: "Français" },
+    { locale: "en-US", name: "EN" },
+    { locale: "de", name: "DE" },
+    { locale: "fr", name: "FR" },
     { locale: "zh-Hans", name: "简体中文" },
     { locale: "zh-Hant", name: "繁體中文" },
   ];
@@ -57,7 +57,7 @@ export function LanguageDropdownV2(): JSX.Element {
                 {languages.map((language, index) => (
                   <div
                     className={classNames(
-                      "border-dark-200 mx-[8px] text-left",
+                      "border-dark-200 mx-[8px] text-center",
                       {
                         "border-b": languages.length - 1 !== index,
                       }

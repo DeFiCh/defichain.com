@@ -216,10 +216,15 @@ export default function Footer(): JSX.Element {
           </div>
           {/* Bottom section of footer */}
           {/* Mobile View */}
-          <div className="sm:block md:hidden">
-            <div className="text-dark-500 items-center sm:items-center sm:grid sm:grid-rows-2 sm:grid-flow-col sm:gap-[9px]">
-              <DeFiChainLogo className="w-[128px]" />
-              <div className="flex flex-row items-center">
+          <div className="block md:hidden">
+            <div className="text-dark-500">
+              <div className="flex flex-row items-center justify-between">
+                <DeFiChainLogo className="w-[128px]" />
+                <div className="flex justify-end">
+                  <LanguageDropdownV2 />
+                </div>
+              </div>
+              <div className="flex flex-row items-center pt-2">
                 <FooterInternalBottomLink
                   text="Privacy Policy"
                   pathname="/privacy-policy"
@@ -232,9 +237,6 @@ export default function Footer(): JSX.Element {
                   testId="Footer.Privacy"
                 />
               </div>
-              <div className="flex justify-end">
-                <LanguageDropdownV2 />
-              </div>
             </div>
           </div>
           {/* Web View */}
@@ -242,7 +244,7 @@ export default function Footer(): JSX.Element {
             <div className="flex flex-row justify-between items-center">
               <DeFiChainLogo className="w-[176.67px]" />
               <div className="flex flex-row">
-                <div className="flex flex-row items-center">
+                <div className="flex flex-row items-center pl-3">
                   <FooterInternalBottomLink
                     text="Privacy Policy"
                     pathname="/privacy-policy"

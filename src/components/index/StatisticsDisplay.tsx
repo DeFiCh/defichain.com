@@ -46,7 +46,7 @@ export function StatsDisplay() {
           className="scroll-mt-[200px] card-outline-2 p-[0.5px] rounded-[30px]"
         >
           <div className="card-bg rounded-[30px] py-10 px-6">
-            <div className="flex lg:flex-row flex-col gap-y-4 justify-evenly justify-center">
+            <div className="flex lg:flex-row flex-col gap-y-4">
               <StatsItem
                 title={t("StatisticsSection.dfiMinted.title")}
                 stats={supply?.total ?? undefined}
@@ -105,8 +105,8 @@ function StatsItem({
   );
 
   return (
-    <div className="flex lg:flex-col flex-row lg:items-center items-start gap-y-2 gap-x-2">
-      <div className="lg:w-[368px] md:w-[316px] w-[135px] lg:text-center bg-clip-text text-transparent accent-gradient-2 font-bold leading-5">
+    <div className="flex lg:grow grow-0 lg:flex-col flex-row lg:items-center items-start gap-y-2 gap-x-2">
+      <div className="lg:w-full md:w-[316px] w-[135px] lg:text-center bg-clip-text text-transparent accent-gradient-2 font-bold leading-5">
         {title}
       </div>
       <div className="flex flex-col lg:items-center items-end lg:gap-y-2 gap-y-1 lg:grow-0 grow">

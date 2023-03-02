@@ -43,11 +43,14 @@ export function BlockchainFeaturesSection(): JSX.Element {
   };
 
   return (
-    <section className="py-10 lg:py-16" data-testid="BlockchainFeatureSection">
+    <section
+      className="py-6 md:py-12 lg:py-[88px]"
+      data-testid="BlockchainFeatureSection"
+    >
       <Container className="flex flex-col justify-between lg:flex-row">
         <div className="flex lg:w-[504px]">
           <div
-            className="w-full flex flex-col space-y-5 md:space-y-4 lg:space-y-5"
+            className="w-full flex flex-col space-y-5 md:space-y-4 lg:mt-32 lg:space-y-5"
             data-testid="BlockchainFeatureSection.text"
           >
             <div className="gradient-text leading-4 tracking-[.04em]">

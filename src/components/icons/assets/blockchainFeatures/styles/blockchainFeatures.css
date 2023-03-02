@@ -1,0 +1,23 @@
+.throughputSmallSquare {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: spin 0.3s linear, fill ease-in 3s forwards;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes fill {
+  0% {
+    fill: none;
+  }
+
+  100% {
+    fill: red;
+  }
+}

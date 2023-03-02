@@ -3,29 +3,28 @@ import { SVGProps } from "react";
 export function ThroughputIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="50"
+      width="51"
       height="50"
-      viewBox="0 0 50 50"
+      viewBox="0 0 51 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <rect x="1" y="14.5" width="35" height="35" stroke="#A6A6A6" />
+      <rect x="1" y="0.5" width="49" height="49" stroke="#A6A6A6" />
       <rect
-        x="1"
+        x="1.5"
         y="31"
         width="18"
         height="18"
-        fill="url(#paint0_linear_416_19893)"
+        fill="url(#paint0_linear_118_3485)"
       />
-      <rect x="0.5" y="14.5" width="35" height="35" stroke="#A6A6A6" />
-      <rect x="0.5" y="0.5" width="49" height="49" stroke="#A6A6A6" />
-
       <defs>
         <linearGradient
-          id="paint0_linear_416_19893"
-          x1="-2.65625"
+          id="paint0_linear_118_3485"
+          x1="-2.15625"
           y1="24.4375"
-          x2="15.7325"
+          x2="16.2325"
           y2="18.664"
           gradientUnits="userSpaceOnUse"
         >
@@ -56,23 +55,46 @@ export function ThroughputIconHover(props: SVGProps<SVGSVGElement>) {
         fill="url(#paint0_linear_4153_20709)"
         stroke="black"
       />
-      <rect
-        x="0.5"
-        y="14.5"
-        width="35"
-        height="35"
-        fill="url(#paint1_linear_4153_20709)"
-        stroke="black"
-      />
-      <rect
-        x="0.5"
-        y="49.5"
-        width="19"
-        height="19"
-        transform="rotate(-90 0.5 49.5)"
-        fill="url(#paint2_linear_4153_20709)"
-        stroke="black"
-      />
+      <g className="throughputMedSquare">
+        <rect
+          x="0.5"
+          y="14.5"
+          width="35"
+          height="35"
+          fill="none"
+          stroke="black"
+        >
+          <animateTransform
+            attributeName="fill"
+            values="url(#paint1_linear_4153_20709)"
+            dur="3s"
+            repeatCount="indefinite"
+          />
+        </rect>
+      </g>
+
+      <g className="throughputSmallSquare">
+        <rect
+          x="0.5"
+          y="49.5"
+          width="19"
+          height="19"
+          transform="rotate(-90 0.5 49.5)"
+          fill="url(#paint2_linear_4153_20709)"
+          stroke="black"
+        >
+          <animateTransform
+            attributeName="transform"
+            attributeType="XML"
+            type="rotate"
+            from="0 60 70"
+            to="360 60 70"
+            dur="3s"
+            repeatCount="indefinite"
+          />
+        </rect>
+      </g>
+
       <defs>
         <linearGradient
           id="paint0_linear_4153_20709"

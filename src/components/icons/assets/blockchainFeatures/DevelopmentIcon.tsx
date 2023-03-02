@@ -41,3 +41,97 @@ export function DevelopmentIcon(props: SVGProps<SVGSVGElement>): JSX.Element {
     </svg>
   );
 }
+
+export function DevelopmentIconHover(
+  props: SVGProps<SVGSVGElement>
+): JSX.Element {
+  return (
+    <svg
+      width="61"
+      height="50"
+      viewBox="0 0 61 50"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M17.2781 20.8457L27.5633 38.6601L6.99293 38.6601L17.2781 20.8457Z"
+        fill="url(#paint0_linear_4153_20760)"
+        stroke="url(#paint1_linear_4153_20760)"
+        strokeWidth="0.77209"
+      />
+      <path
+        d="M43.5298 20.8457L53.815 38.6601L33.2446 38.6601L43.5298 20.8457Z"
+        fill="url(#paint2_linear_4153_20760)"
+        stroke="url(#paint3_linear_4153_20760)"
+        strokeWidth="0.77209"
+      />
+      <path
+        d="M30.327 39.0353L13.4224 9.76172L47.2263 9.75863L30.327 39.0353Z"
+        fill="url(#paint4_linear_4153_20760)"
+      />
+      <defs>
+        <linearGradient
+          id="paint0_linear_4153_20760"
+          x1="45.1125"
+          y1="28.2537"
+          x2="39.2179"
+          y2="54.6915"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#EC008C" />
+          <stop offset="0.846071" stopColor="#5B10FF" />
+          <stop offset="1" stopColor="#0468D6" />
+        </linearGradient>
+        <linearGradient
+          id="paint1_linear_4153_20760"
+          x1="45.1125"
+          y1="28.2537"
+          x2="39.2179"
+          y2="54.6915"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#EC008C" />
+          <stop offset="0.846071" stopColor="#5B10FF" />
+          <stop offset="1" stopColor="#0468D6" />
+        </linearGradient>
+        <linearGradient
+          id="paint2_linear_4153_20760"
+          x1="71.3642"
+          y1="28.2538"
+          x2="65.4696"
+          y2="54.6915"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#EC008C" />
+          <stop offset="0.846071" stopColor="#5B10FF" />
+          <stop offset="1" stopColor="#0468D6" />
+        </linearGradient>
+        <linearGradient
+          id="paint3_linear_4153_20760"
+          x1="71.3642"
+          y1="28.2538"
+          x2="65.4696"
+          y2="54.6915"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#EC008C" />
+          <stop offset="0.846071" stopColor="#5B10FF" />
+          <stop offset="1" stopColor="#0468D6" />
+        </linearGradient>
+        <linearGradient
+          id="paint4_linear_4153_20760"
+          x1="57.7737"
+          y1="53.2637"
+          x2="17.8985"
+          y2="65.7873"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#EC008C" />
+          <stop offset="0.846071" stopColor="#5B10FF" />
+          <stop offset="1" stopColor="#0468D6" />
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+}

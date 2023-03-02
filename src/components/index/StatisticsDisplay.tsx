@@ -34,9 +34,9 @@ export function StatsDisplay() {
   });
 
   const { suffix, value } = useUnitSuffix(
-    stats ? stats.tvl.masternodes.toString() : "0"
+    stats ? stats.tvl.masternodes.toString() : "N/A"
   );
-  const masternodeValue = value.concat(suffix).concat("+");
+  const masternodeValue = `${value + suffix}+`;
 
   return (
     <div className="relative z-0">
@@ -49,7 +49,7 @@ export function StatsDisplay() {
             <div className="flex lg:flex-row flex-col gap-y-4 justify-evenly justify-center">
               <StatsItem
                 title={t("StatisticsSection.dfiMinted.title")}
-                stats={supply?.total ?? 0}
+                stats={supply?.total ?? undefined}
                 desc={t("StatisticsSection.dfiMinted.desc", {
                   perc: calculatePercentage(supply?.total, supply?.max),
                 })}
@@ -61,13 +61,13 @@ export function StatsDisplay() {
                     : t("StatisticsSection.tvlLocked.title")
                 }
                 prefix="$"
-                stats={stats?.tvl.total ?? 0}
+                stats={stats?.tvl.total ?? undefined}
                 desc={t("StatisticsSection.tvlLocked.desc")}
                 descStyle="lg:block hidden"
               />
               <StatsItem
                 title={t("StatisticsSection.masternodes.title")}
-                stats={stats?.count.masternodes ?? 0}
+                stats={stats?.count.masternodes ?? undefined}
                 desc={t("StatisticsSection.masternodes.desc", {
                   perc: masternodeValue,
                 })}
@@ -96,36 +96,44 @@ function StatsItem({
   descStyle,
 }: {
   title: string;
-  stats: number;
+  stats: number | undefined;
   desc: string;
   prefix?: string;
   descStyle?: string;
 }) {
-  const { suffix, value } = useUnitSuffix(stats.toString());
+  const { suffix, value } = useUnitSuffix(
+    stats === undefined ? "N/A" : stats.toString()
+  );
 
   return (
-    <div className="flex lg:flex-col flex-row lg:items-center items-start gap-y-2">
+    <div className="flex lg:flex-col flex-row lg:items-center items-start gap-y-2 gap-x-2">
       <div className="bg-clip-text text-transparent accent-gradient-2 font-bold leading-5">
         {title}
       </div>
       <div className="flex flex-col lg:items-center items-end lg:gap-y-2 gap-y-1 lg:grow-0 grow">
         <div className="text-dark-1000 text-xl leading-6 lg:text-[52px] lg:leading-[52px]">
-          {prefix ?? ""}
-          <CountUp
-            onUpdate={({ reset, start }) => {
-              reset();
-              start();
-            }}
-            end={Number(value)}
-            enableScrollSpy
-            duration={0.5}
-          />
-          {suffix ? suffix.toString().concat("+") : ""}
+          {stats ? (
+            <>
+              {prefix ?? ""}
+              <CountUp
+                onUpdate={({ reset, start }) => {
+                  reset();
+                  start();
+                }}
+                end={Number(value)}
+                enableScrollSpy
+                duration={0.5}
+              />
+              {suffix ? suffix.toString().concat("+") : ""}
+            </>
+          ) : (
+            <>N/A</>
+          )}
         </div>
 
         <div
           className={classNames(
-            "font-desc text-dark-700 lg:text-base lg:leading-6 md:text-sm text-xs",
+            "font-desc text-dark-700 lg:text-base lg:leading-6 md:text-sm text-xs text-right",
             descStyle
           )}
         >

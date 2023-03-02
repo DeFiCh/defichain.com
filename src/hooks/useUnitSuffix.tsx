@@ -7,12 +7,12 @@ const units = {
   12: "T",
 };
 
-interface unitSuffixObj {
+interface UnitSuffix {
   suffix: string;
   value: string;
 }
 
-export function useUnitSuffix(value: string): unitSuffixObj {
+export function useUnitSuffix(value: string): UnitSuffix {
   const updatedValue = BigNumber(value);
   const places = updatedValue.e !== null ? Math.floor(updatedValue.e / 3) : 0;
   const suffix = `${units[places * 3] ?? ""}`;

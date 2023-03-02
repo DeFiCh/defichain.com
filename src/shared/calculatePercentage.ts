@@ -3,7 +3,7 @@ export function calculatePercentage(
   value2: number | undefined
 ): string {
   if (value1 === undefined || value2 === undefined) {
-    return "";
+    return "N/A";
   }
 
   return `${((value1 / value2) * 100).toFixed(2)}%`;

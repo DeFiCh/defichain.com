@@ -79,8 +79,8 @@ export function StatsDisplay() {
       <div
         className={classNames(
           "absolute z-[-1] bg-contain bg-no-repeat bg-left bg-[url(/assets/img/index/index-cube.png)]",
-          "lg:top-0 md:top-[89.06px] top-[108px]",
-          "lg:w-[453px] lg:h-[453px] md:w-[292.42px] md:h-[292.42px] w-[208px] h-[208px]"
+          "lg:top-0 md:top-[84px] top-[108px] lg:left-0 md:-left-14",
+          "2xl:w-full 2xl:h-[600px] lg:w-full lg:h-[400px] md:w-[280px] md:h-[280px] w-[208px] h-[208px]"
         )}
       />
     </div>

@@ -16,16 +16,16 @@ export function useUnitSuffix(value: string): UnitSuffix {
   const updatedValue = BigNumber(value);
   const places = updatedValue.e !== null ? Math.floor(updatedValue.e / 3) : 0;
   const suffix = `${units[places * 3] ?? ""}`;
-  const unitSuffixReturnObj = {
+  const unitValueWithSuffix = {
     suffix,
     value,
   };
 
   if (suffix) {
-    unitSuffixReturnObj.value = updatedValue
+    unitValueWithSuffix.value = updatedValue
       .dividedBy(1000 ** places)
       .toFormat(0);
   }
 
-  return unitSuffixReturnObj;
+  return unitValueWithSuffix;
 }

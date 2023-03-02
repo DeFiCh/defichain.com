@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { DeFiChainLogo } from "@components/icons/DeFiChainLogo";
+import DeFiChainLogo from "@components/icons/DeFiChainLogo";
 import { useState } from "react";
 import { useTranslation } from "next-i18next";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";

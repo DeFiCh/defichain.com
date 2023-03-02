@@ -80,7 +80,6 @@ export function StatsDisplay() {
         className={classNames(
           "absolute z-[-1] bg-contain bg-no-repeat bg-left bg-[url(/assets/img/index/index-cube.png)]",
           "lg:top-0 md:top-[89.06px] top-[108px]",
-          "h-screen w-full",
           "lg:w-[453px] lg:h-[453px] md:w-[292.42px] md:h-[292.42px] w-[208px] h-[208px]"
         )}
       />
@@ -107,7 +106,7 @@ function StatsItem({
 
   return (
     <div className="flex lg:flex-col flex-row lg:items-center items-start gap-y-2 gap-x-2">
-      <div className="bg-clip-text text-transparent accent-gradient-2 font-bold leading-5">
+      <div className="lg:w-[368px] md:w-[316px] w-[135px] lg:text-center bg-clip-text text-transparent accent-gradient-2 font-bold leading-5">
         {title}
       </div>
       <div className="flex flex-col lg:items-center items-end lg:gap-y-2 gap-y-1 lg:grow-0 grow">

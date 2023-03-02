@@ -1,5 +1,5 @@
 import { Container } from "@components/commons/Container";
-import { UnitSuffixReturnValue, useUnitSuffix } from "@hooks/useUnitSuffix";
+import { useUnitSuffix } from "@hooks/useUnitSuffix";
 import {
   StatsData,
   SupplyData,
@@ -33,14 +33,19 @@ export function StatsDisplay() {
     }
   });
 
+  const { suffix, value } = useUnitSuffix(
+    stats ? stats.tvl.masternodes.toString() : "0"
+  );
+  const masternodeValue = value.concat(suffix).concat("+");
+
   return (
     <div className="relative z-0">
       <Container className="relative lg:mt-[57px] md:mt-[76px] mt-[65px]">
         <div
           id="statistics_display"
-          className="card-outline-2 p-[0.5px] rounded-[30px]"
+          className="scroll-mt-[200px] card-outline-2 p-[0.5px] rounded-[30px]"
         >
-          <div className="card-bg rounded-[30px] p-6">
+          <div className="card-bg rounded-[30px] py-10 px-6">
             <div className="flex lg:flex-row flex-col gap-y-4 justify-evenly justify-center">
               <StatsItem
                 title={t("StatisticsSection.dfiMinted.title")}
@@ -64,11 +69,7 @@ export function StatsDisplay() {
                 title={t("StatisticsSection.masternodes.title")}
                 stats={stats?.count.masternodes ?? 0}
                 desc={t("StatisticsSection.masternodes.desc", {
-                  perc: useUnitSuffix(
-                    stats ? stats.tvl.masternodes.toString() : "0"
-                  )
-                    .toString()
-                    .concat("+"),
+                  perc: masternodeValue,
                 })}
               />
             </div>
@@ -100,11 +101,10 @@ function StatsItem({
   prefix?: string;
   descStyle?: string;
 }) {
-  const suffix = useUnitSuffix(stats.toString(), UnitSuffixReturnValue.SUFFIX);
-  const value = useUnitSuffix(stats.toString(), UnitSuffixReturnValue.VALUE);
+  const { suffix, value } = useUnitSuffix(stats.toString());
 
   return (
-    <div className="flex lg:flex-col flex-row md:items-center items-start gap-y-2">
+    <div className="flex lg:flex-col flex-row lg:items-center items-start gap-y-2">
       <div className="bg-clip-text text-transparent accent-gradient-2 font-bold leading-5">
         {title}
       </div>

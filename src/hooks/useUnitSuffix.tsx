@@ -7,28 +7,25 @@ const units = {
   12: "T",
 };
 
-export enum UnitSuffixReturnValue {
-  SUFFIX = "suffix",
-  VALUE = "value",
+interface unitSuffixObj {
+  suffix: string;
+  value: string;
 }
 
-export function useUnitSuffix(
-  value: string,
-  returnValue?: UnitSuffixReturnValue
-): string | BigNumber {
+export function useUnitSuffix(value: string): unitSuffixObj {
   const updatedValue = BigNumber(value);
   const places = updatedValue.e !== null ? Math.floor(updatedValue.e / 3) : 0;
   const suffix = `${units[places * 3] ?? ""}`;
-
-  if (returnValue === UnitSuffixReturnValue.SUFFIX) {
-    return suffix;
-  }
-
-  if (returnValue) {
-    return updatedValue.dividedBy(1000 ** places).toFormat(0);
-  }
-  return updatedValue.dividedBy(1000 ** places).toFormat(0, {
-    decimalSeparator: ".",
+  const unitSuffixReturnObj = {
     suffix,
-  });
+    value,
+  };
+
+  if (suffix) {
+    unitSuffixReturnObj.value = updatedValue
+      .dividedBy(1000 ** places)
+      .toFormat(0);
+  }
+
+  return unitSuffixReturnObj;
 }

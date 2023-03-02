@@ -19,7 +19,7 @@
     },
     "masternodes": {
       "title": "MASTERNODES",
-      "desc": "{{perc}} locked"
+      "desc": "${{perc}} locked"
     }
   },
   "CardsSection": {

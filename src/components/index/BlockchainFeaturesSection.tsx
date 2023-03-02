@@ -3,6 +3,7 @@ import { Container } from "@components/commons/Container";
 // import Link from "next/link";
 import { useTranslation } from "next-i18next";
 // import { Button } from "@components/commons/Buttons";
+import Slider from "react-slick";
 import { BlockchainFeatureColumn } from "./BlockchainFeatureColumn";
 
 export const BlockchainFeatureItems = [
@@ -11,26 +12,35 @@ export const BlockchainFeatureItems = [
     desc: "Unparalleled high transaction throughput for all transactions.",
   },
   {
-    title: "IMMUTABILITY",
-    desc: "Marries the best of Proof-of-Stake, with the security of Bitcoin.",
-  },
-  {
-    title: "VARIETY",
-    desc: "Wide range of crypto-economic financial operations.",
-  },
-  {
     title: "SECURITY",
     desc: "Turing-incomplete for reduced attack vectors.",
   },
   {
+    title: "IMMUTABILITY",
+    desc: "Marries the best of Proof-of-Stake, with the security of Bitcoin.",
+  },
+  {
     title: "DEVELOPMENT",
     desc: "Rapidly create a variety of DeFi apps on one chain.",
+  },
+  {
+    title: "VARIETY",
+    desc: "Wide range of crypto-economic financial operations.",
   },
 ];
 
 export function BlockchainFeaturesSection(): JSX.Element {
   const { t } = useTranslation("page-index");
   const separatedTitle = t("BlockchainFeatureSection.title").split(" ");
+  const sliderSettings = {
+    arrows: false,
+    dots: true,
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    lazyLoad: true,
+    dotsClass: "custom-dots",
+  };
 
   return (
     <section className="py-10 lg:py-16" data-testid="BlockchainFeatureSection">
@@ -66,9 +76,16 @@ export function BlockchainFeaturesSection(): JSX.Element {
             </div>
           </div>
         </div>
-        <div className="flex justify-between md:gap-x-16 lg:gap-x-10 w-full lg:w-[568px] lg:px-12 mt-14 md:mt-[72px] lg:mt-0">
-          <BlockchainFeatureColumn items={BlockchainFeatureItems.slice(0, 3)} />
-          <BlockchainFeatureColumn items={BlockchainFeatureItems.slice(3)} />
+        <div className="justify-between hidden md:flex md:gap-x-16 lg:w-[568px] lg:gap-x-10 w-full lg:px-12 mt-14 md:mt-[72px] lg:mt-0">
+          <BlockchainFeatureColumn items={BlockchainFeatureItems} />
+        </div>
+        <div className="block mt-14 md:hidden">
+          <Slider {...sliderSettings}>
+            <BlockchainFeatureColumn
+              items={BlockchainFeatureItems.slice(0, 3)}
+            />
+            <BlockchainFeatureColumn items={BlockchainFeatureItems.slice(3)} />
+          </Slider>
         </div>
       </Container>
     </section>

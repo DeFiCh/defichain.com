@@ -1,4 +1,6 @@
-export function ImmutabilityIcon() {
+import { SVGProps } from "react";
+
+export function ImmutabilityIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="68"
@@ -6,6 +8,7 @@ export function ImmutabilityIcon() {
       viewBox="0 0 68 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M1.3886 24.999L33.9286 12.4398L66.4685 24.999L33.9286 37.5583L1.3886 24.999Z"

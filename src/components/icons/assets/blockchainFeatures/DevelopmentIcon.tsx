@@ -1,4 +1,6 @@
-export function DevelopmentIcon(): JSX.Element {
+import { SVGProps } from "react";
+
+export function DevelopmentIcon(props: SVGProps<SVGSVGElement>): JSX.Element {
   return (
     <svg
       width="56"
@@ -6,6 +8,7 @@ export function DevelopmentIcon(): JSX.Element {
       viewBox="0 0 56 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M31.9773 24.1232L17.5438 49.1228L3.11027 24.1232L31.9773 24.1232Z"

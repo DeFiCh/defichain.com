@@ -18,7 +18,7 @@ export function BlockchainFeatureColumn({
   items: Array<BlockchainFeatureItemProp>;
 }): JSX.Element {
   return (
-    <div className="space-y-16 flex-1">
+    <div className="flex flex-1 flex-wrap gap-8 md:gap-12 lg:gap-y-16 lg:gap-x-10">
       {items.map((item) => (
         <FeatureIcon item={item} />
       ))}
@@ -30,18 +30,20 @@ function FeatureIcon({ item }: { item: BlockchainFeatureItemProp }) {
   const Icon = iconMapping[item.title] as React.ElementType;
 
   return (
-    <div className="grid grid-flow-row grid-cols-1 gap-4">
-      {Icon && <Icon />}
-      <h3 className="font-bold leading-5 text-dark-1000 mt-1">{item.title}</h3>
-      <div className="text-dark-700">{item.desc}</div>
+    <div className="flex flex-row md:flex-col w-80 md:w-[312px] lg:w-[216px]">
+      <div>{Icon && <Icon className="w-[50px]" />}</div>
+      <div className="ml-5 space-y-2 md:ml-0 md:mt-5 md:space-y-4">
+        <h3 className="font-bold leading-5 text-dark-1000">{item.title}</h3>
+        <div className="text-dark-700 text-sm md:text-base">{item.desc}</div>
+      </div>
     </div>
   );
 }
 
 const iconMapping = {
   THROUGHPUT: ThroughputIcon,
-  IMMUTABILITY: ImmutabilityIcon,
-  VARIETY: VarietyIcon,
   SECURITY: SecurityIcon,
+  IMMUTABILITY: ImmutabilityIcon,
   DEVELOPMENT: DevelopmentIcon,
+  VARIETY: VarietyIcon,
 };

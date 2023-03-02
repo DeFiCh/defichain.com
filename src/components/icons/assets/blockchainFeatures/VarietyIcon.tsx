@@ -1,4 +1,6 @@
-export function VarietyIcon(): JSX.Element {
+import { SVGProps } from "react";
+
+export function VarietyIcon(props: SVGProps<SVGSVGElement>): JSX.Element {
   return (
     <svg
       width="80"
@@ -6,6 +8,7 @@ export function VarietyIcon(): JSX.Element {
       viewBox="0 0 80 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <circle cx="23.5714" cy="24.5011" r="23.0714" stroke="#A6A6A6" />
       <path

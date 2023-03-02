@@ -1,4 +1,6 @@
-export function SecurityIcon() {
+import { SVGProps } from "react";
+
+export function SecurityIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="50"
@@ -6,6 +8,7 @@ export function SecurityIcon() {
       viewBox="0 0 50 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <circle cx="25" cy="25" r="24.5" stroke="url(#paint0_linear_416_19901)" />
       <circle cx="29.1662" cy="24.924" r="20.1818" stroke="#A6A6A6" />

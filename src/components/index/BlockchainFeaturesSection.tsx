@@ -34,33 +34,39 @@ export function BlockchainFeaturesSection(): JSX.Element {
 
   return (
     <section className="py-10 lg:py-16" data-testid="BlockchainFeatureSection">
-      <Container className="flex justify-between">
+      <Container className="flex flex-col justify-between lg:flex-row">
         <div className="flex lg:w-[504px]">
           <div
-            className="w-full flex flex-col space-y-4 md:space-y-5 "
+            className="w-full flex flex-col space-y-5 md:space-y-4 lg:space-y-5"
             data-testid="BlockchainFeatureSection.text"
           >
-            <div className="gradient-text tracking-[.04em]">
+            <div className="gradient-text leading-4 tracking-[.04em]">
               {t("BlockchainFeatureSection.subtitle")}
             </div>
-            <h2 className="lg:text-6xl lg:leading-[72px]" data-testid="title">
+            <h2
+              className="text-[40px] leading-[44px] tracking-[-0.02em] lg:text-6xl lg:leading-[72px] lg:tracking-normal"
+              data-testid="title"
+            >
               {separatedTitle.map((word, index) =>
                 index === 2 ? (
-                  <span className="text-electric">{`${word} `}</span>
+                  <>
+                    <br />
+                    <span className="text-electric">{`${word} `}</span>
+                  </>
                 ) : (
                   <span>{`${word} `}</span>
                 )
               )}
             </h2>
             <div
-              className="text-dark-700 text-lg md:text-xl"
+              className="text-dark-700 tracking-[.03em] lg:text-xl lg:tracking-normal"
               data-testid="desc"
             >
               {t("BlockchainFeatureSection.desc")}
             </div>
           </div>
         </div>
-        <div className="flex gap-x-10 px-12">
+        <div className="flex justify-between md:gap-x-16 lg:gap-x-10 w-full lg:w-[568px] lg:px-12 mt-14 md:mt-[72px] lg:mt-0">
           <BlockchainFeatureColumn items={BlockchainFeatureItems.slice(0, 3)} />
           <BlockchainFeatureColumn items={BlockchainFeatureItems.slice(3)} />
         </div>

@@ -48,7 +48,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
   // unscrollable area
 
   return (
-    <div>
+    <div className="pt-48px md: pt-[96px] lg:pt-[292px]">
       <Container className="relative md:grid md:grid-flow-row md:grid-cols-1 lg:grid lg:grid-flow-col md:mt-[24px]">
         <div
           className="flex lg:order-1 flex-col md:pb-[72px] pb-[48px] lg:pb-0"

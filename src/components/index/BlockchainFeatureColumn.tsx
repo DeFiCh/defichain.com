@@ -71,10 +71,13 @@ function FeatureIcon({
     >
       <div>
         {isHovering && Icon ? (
-          <IconOnHover className="w-[50px] h-[50px]" />
+          <IconOnHover className="w-[50px] md:w-fit h-[50px]" />
         ) : (
           //   <Icon className="w-[50px] h-[50px]" id={`${id}-${itesm.title}`} />
-          <Icon className="w-[50px] h-[50px]" id={`${id}-${item.title}`} />
+          <Icon
+            className="w-[50px] md:w-fit h-[50px]"
+            id={`${id}-${item.title}`}
+          />
         )}
       </div>
       <div className="ml-5 space-y-2 md:ml-0 md:mt-5 md:space-y-4">

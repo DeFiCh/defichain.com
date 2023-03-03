@@ -2,32 +2,69 @@
   transform-box: fill-box;
   transform-origin: 50% 50%;
   animation: spin 0.3s linear;
+  --rotateDeg: -90deg;
 }
 #security-icon-small-circle {
-  animation: moveAcross 0.3s linear both;
+  animation: move 0.3s linear both;
   animation-play-state: paused;
   --xLength: -20px;
+  --yLength: 0px;
 }
 #security-icon-med-circle {
-  animation: moveAcross 0.3s linear both;
+  animation: move 0.3s linear both;
   animation-play-state: paused;
   --xLength: -8px;
+  --yLength: 0px;
 }
 #immutability-icon-top {
-  animation: moveDown 0.3s linear both;
+  animation: move 0.3s linear both;
   animation-play-state: paused;
+  --xLength: 0px;
   --yLength: 20px;
 }
 #immutability-icon-middle {
-  animation: moveDown 0.3s linear both;
+  animation: move 0.3s linear both;
   animation-play-state: paused;
+  --xLength: 0px;
   --yLength: 10px;
+}
+
+#development-icon-poly-10 {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: spin 0.3s linear both, move 0.3s linear both;
+  animation-play-state: paused;
+  --rotateDeg: -120deg;
+  --xLength: 0px;
+  --yLength: 0px;
+}
+
+#development-icon-poly-12 {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: spin 0.3s linear both, move 0.3s linear both;
+  animation-play-state: paused;
+  --rotateDeg: 120deg;
+  --xLength: 0px;
+  --yLength: 0px;
+}
+#variety-icon-poly {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: spin 0.3s linear both, move 0.3s linear both;
+  animation-play-state: paused;
+  --rotateDeg: 120deg;
+  --xLength: 0px;
+  --yLength: 0px;
 }
 
 .blockchain-feature-item:hover #security-icon-small-circle,
 .blockchain-feature-item:hover #security-icon-med-circle,
 .blockchain-feature-item:hover #immutability-icon-top,
-.blockchain-feature-item:hover #immutability-icon-middle {
+.blockchain-feature-item:hover #immutability-icon-middle,
+.blockchain-feature-item:hover #development-icon-poly-10,
+.blockchain-feature-item:hover #development-icon-poly-12,
+.blockchain-feature-item:hover #variety-icon-poly {
   animation-play-state: running;
 }
 
@@ -36,17 +73,12 @@
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(-90deg);
+    transform: rotate(var(--rotateDeg));
   }
 }
 
-@keyframes moveAcross {
+@keyframes move {
   to {
-    transform: translateX(var(--xLength));
-  }
-}
-@keyframes moveDown {
-  to {
-    transform: translateY(var(--yLength));
+    transform: translate(var(--xLength), var(--yLength));
   }
 }

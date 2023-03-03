@@ -78,17 +78,7 @@ export function ThroughputIconHover(props: SVGProps<SVGSVGElement>) {
           transform="rotate(-90 0.5 49.5)"
           fill="url(#paint3_linear_4153_20709)"
           stroke="black"
-        >
-          {/* <animateTransform
-            attributeName="transform"
-            attributeType="XML"
-            type="rotate"
-            from="0 60 70"
-            to="360 60 70"
-            dur="3s"
-            repeatCount="indefinite"
-          /> */}
-        </rect>
+        />
       </g>
 
       <defs>

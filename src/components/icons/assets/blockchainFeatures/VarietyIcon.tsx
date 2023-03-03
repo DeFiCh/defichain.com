@@ -32,34 +32,53 @@ export function VarietyIcon(props: SVGProps<SVGSVGElement>): JSX.Element {
 }
 
 export function VarietyIconHover(props: SVGProps<SVGSVGElement>): JSX.Element {
+  const { className } = props;
   return (
     <svg
-      width="48"
-      height="48"
-      viewBox="0 0 48 48"
+      width="80"
+      height="51"
+      viewBox="0 0 80 51"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}
+      className={className}
     >
-      <ellipse
-        cx="24.0714"
-        cy="23.6855"
-        rx="23.5714"
-        ry="23.6855"
-        fill="url(#paint0_linear_4153_20798)"
-      />
+      <g>
+        <circle
+          cx="23.5714"
+          cy="24.5921"
+          r="23.0714"
+          fill="url(#paint0_linear_4754_52336)"
+        />
+        <circle
+          cx="23.5714"
+          cy="24.5921"
+          r="23.0714"
+          stroke="url(#paint1_linear_4754_52336)"
+        />
+      </g>
       <path
-        d="M24.5 14.9194L33.7946 24.259L24.5 33.5985L15.2054 24.259L24.5 14.9194Z"
+        id="variety-icon-poly"
+        d="M30.7071 25.0909L55 0.79805L79.2929 25.0909L55 49.3838L30.7071 25.0909Z"
         fill="black"
-        stroke="url(#paint1_linear_4153_20798)"
-      />
+        stroke="url(#paint2_linear_4754_52336)"
+      >
+        <animate
+          attributeName="d"
+          attributeType="XML"
+          from="M30.7071 25.0909L55 0.79805L79.2929 25.0909L55 49.3838L30.7071 25.0909Z"
+          to="M24.5 14.9194L33.7946 24.259L24.5 33.5985L15.2054 24.259L24.5 14.9194Z"
+          begin="0s"
+          dur="0.3s"
+          fill="freeze"
+        />
+      </path>
       <defs>
         <linearGradient
-          id="paint0_linear_4153_20798"
-          x1="-9.07589"
-          y1="-17.2707"
-          x2="39.1266"
-          y2="-32.3319"
+          id="paint0_linear_4754_52336"
+          x1="-9.57589"
+          y1="-16.1669"
+          x2="38.585"
+          y2="-31.2879"
           gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#EC008C" />
@@ -67,11 +86,23 @@ export function VarietyIconHover(props: SVGProps<SVGSVGElement>): JSX.Element {
           <stop offset="1" stopColor="#0468D6" />
         </linearGradient>
         <linearGradient
-          id="paint1_linear_4153_20798"
-          x1="41.7917"
-          y1="10.1284"
-          x2="48.2632"
-          y2="30.6413"
+          id="paint1_linear_4754_52336"
+          x1="-9.57589"
+          y1="-16.1669"
+          x2="38.585"
+          y2="-31.2879"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#EC008C" />
+          <stop offset="0.846071" stopColor="#5B10FF" />
+          <stop offset="1" stopColor="#0468D6" />
+        </linearGradient>
+        <linearGradient
+          id="paint2_linear_4754_52336"
+          x1="19.8437"
+          y1="-18.1382"
+          x2="70.9235"
+          y2="-34.1757"
           gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#EC008C" />

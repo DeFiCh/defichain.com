@@ -87,7 +87,7 @@ export function BlockchainFeaturesSection(): JSX.Element {
             id="tablet-desktop-screen"
           />
         </div>
-        <div className="block mt-[56.5px] md:hidden">
+        <div className="block z-0 md:z-[-1] mt-[56.5px] md:hidden">
           <Slider {...sliderSettings}>
             <BlockchainFeatureColumn
               items={BlockchainFeatureItems.slice(0, 3)}

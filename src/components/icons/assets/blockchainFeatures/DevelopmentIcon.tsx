@@ -46,38 +46,67 @@ export function DevelopmentIcon(props: SVGProps<SVGSVGElement>): JSX.Element {
 export function DevelopmentIconHover(
   props: SVGProps<SVGSVGElement>
 ): JSX.Element {
+  const { className } = props;
   return (
     <svg
-      width="61"
+      width="56"
       height="50"
-      viewBox="0 0 61 50"
+      viewBox="0 0 56 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}
+      className={className}
     >
       <path
-        d="M17.2781 20.8457L27.5633 38.6601L6.99293 38.6601L17.2781 20.8457Z"
-        fill="url(#paint0_linear_4153_20760)"
-        stroke="url(#paint1_linear_4153_20760)"
-        strokeWidth="0.77209"
-      />
+        d="M17.8055 50L2.61233 23.6846L32.9987 23.6846L17.8055 50Z"
+        fill="url(#paint0_linear_4754_52211)"
+      >
+        <animate
+          attributeName="d"
+          attributeType="XML"
+          from="M17.8055 50L2.61233 23.6846L32.9987 23.6846L17.8055 50Z"
+          to="M30.327 39.0353L13.4224 9.76172L47.2263 9.75863L30.327 39.0353Z"
+          begin="0s"
+          dur="0.3s"
+          fill="freeze"
+        />
+      </path>
       <path
-        d="M43.5298 20.8457L53.815 38.6601L33.2446 38.6601L43.5298 20.8457Z"
-        fill="url(#paint2_linear_4153_20760)"
-        stroke="url(#paint3_linear_4153_20760)"
-        strokeWidth="0.77209"
-      />
+        id="development-icon-poly-12"
+        d="M26.3337 49.8047L7.13117 16.545L45.5362 16.545L26.3337 49.8047Z"
+        fill="url(#paint1_linear_4754_52211)"
+      >
+        <animate
+          attributeName="d"
+          attributeType="XML"
+          from="M26.3337 49.8047L7.13117 16.545L45.5362 16.545L26.3337 49.8047Z"
+          to="M43.5298 20.8457L53.815 38.6601L33.2446 38.6601L43.5298 20.8457Z"
+          begin="0s"
+          dur="0.3s"
+          fill="freeze"
+        />
+      </path>
       <path
-        d="M30.327 39.0353L13.4224 9.76172L47.2263 9.75863L30.327 39.0353Z"
-        fill="url(#paint4_linear_4153_20760)"
-      />
+        id="development-icon-poly-10"
+        d="M33.3508 44.3463L14.1483 11.0866L52.5533 11.0866L33.3508 44.3463Z"
+        fill="url(#paint2_linear_4754_52211)"
+      >
+        <animate
+          attributeName="d"
+          attributeType="XML"
+          from="M33.3508 44.3463L14.1483 11.0866L52.5533 11.0866L33.3508 44.3463Z"
+          to="M17.2781 20.8457L27.5633 38.6601L6.99293 38.6601L17.2781 20.8457Z"
+          begin="0s"
+          dur="0.3s"
+          fill="freeze"
+        />
+      </path>
       <defs>
         <linearGradient
-          id="paint0_linear_4153_20760"
-          x1="45.1125"
-          y1="28.2537"
-          x2="39.2179"
-          y2="54.6915"
+          id="paint0_linear_4754_52211"
+          x1="42.4762"
+          y1="62.7922"
+          x2="6.63131"
+          y2="74.0464"
           gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#EC008C" />
@@ -85,11 +114,11 @@ export function DevelopmentIconHover(
           <stop offset="1" stopColor="#0468D6" />
         </linearGradient>
         <linearGradient
-          id="paint1_linear_4153_20760"
-          x1="45.1125"
-          y1="28.2537"
-          x2="39.2179"
-          y2="54.6915"
+          id="paint1_linear_4754_52211"
+          x1="57.5147"
+          y1="65.9726"
+          x2="12.2107"
+          y2="80.1967"
           gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#EC008C" />
@@ -97,35 +126,11 @@ export function DevelopmentIconHover(
           <stop offset="1" stopColor="#0468D6" />
         </linearGradient>
         <linearGradient
-          id="paint2_linear_4153_20760"
-          x1="71.3642"
-          y1="28.2538"
-          x2="65.4696"
-          y2="54.6915"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="#EC008C" />
-          <stop offset="0.846071" stopColor="#5B10FF" />
-          <stop offset="1" stopColor="#0468D6" />
-        </linearGradient>
-        <linearGradient
-          id="paint3_linear_4153_20760"
-          x1="71.3642"
-          y1="28.2538"
-          x2="65.4696"
-          y2="54.6915"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="#EC008C" />
-          <stop offset="0.846071" stopColor="#5B10FF" />
-          <stop offset="1" stopColor="#0468D6" />
-        </linearGradient>
-        <linearGradient
-          id="paint4_linear_4153_20760"
-          x1="57.7737"
-          y1="53.2637"
-          x2="17.8985"
-          y2="65.7873"
+          id="paint2_linear_4754_52211"
+          x1="64.5318"
+          y1="60.5142"
+          x2="19.2278"
+          y2="74.7383"
           gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#EC008C" />

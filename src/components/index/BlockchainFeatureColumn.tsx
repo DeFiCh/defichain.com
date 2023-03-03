@@ -18,7 +18,7 @@ import {
   DevelopmentIcon,
   DevelopmentIconHover,
 } from "@components/icons/assets/blockchainFeatures/DevelopmentIcon";
-import clsx from "clsx";
+import classNames from "classnames";
 // import { MorphReplace } from "react-svg-morph";
 // import { Transition } from "@headlessui/react";
 // import "@components/icons/assets/blockchainFeatures/styles/blockchainFeatures.css";
@@ -27,26 +27,31 @@ import { useState } from "react";
 interface BlockchainFeatureItemProp {
   title: string;
   desc: string;
-  //   Icon: JSX.Element;
-  //   testId: string;
 }
 
 export function BlockchainFeatureColumn({
   items,
-}: //   testId,
-{
+  id,
+}: {
   items: Array<BlockchainFeatureItemProp>;
+  id: string;
 }): JSX.Element {
   return (
     <div className="flex flex-1 flex-wrap gap-8 md:gap-12 lg:gap-y-16 lg:gap-x-10">
       {items.map((item) => (
-        <FeatureIcon item={item} />
+        <FeatureIcon item={item} id={id} />
       ))}
     </div>
   );
 }
 
-function FeatureIcon({ item }: { item: BlockchainFeatureItemProp }) {
+function FeatureIcon({
+  item,
+  id,
+}: {
+  item: BlockchainFeatureItemProp;
+  id: string;
+}) {
   const Icon = iconMapping[item.title] as React.ElementType;
   const IconOnHover = iconMapping[`${item.title}_hover`] as React.ElementType;
   const [isHovering, setIsHovering] = useState(false);
@@ -68,24 +73,15 @@ function FeatureIcon({ item }: { item: BlockchainFeatureItemProp }) {
       onBlur={handleMouseOut}
     >
       <div>
-        {/* <MorphReplace width={50} height={50}>
-          {isHovering && Icon ? (
-            <IconOnHover className="w-[50px] h-[50px]" />
-          ) : (
-            <Icon className="w-[50px] h-[50px]" />
-          )}
-        </MorphReplace> */}
-        {/* <MorphReplace width={50} height={50}> */}
         {isHovering && Icon ? (
           <IconOnHover className="w-[50px] h-[50px]" />
         ) : (
-          <Icon className="w-[50px] h-[50px]" />
+          <Icon className="w-[50px] h-[50px]" id={`${id}`} />
         )}
-        {/* </MorphReplace> */}
       </div>
       <div className="ml-5 space-y-2 md:ml-0 md:mt-5 md:space-y-4">
         <h3
-          className={clsx("font-bold leading-5 text-dark-1000", {
+          className={classNames("font-bold leading-5 text-dark-1000", {
             "gradient-text": isHovering,
           })}
         >

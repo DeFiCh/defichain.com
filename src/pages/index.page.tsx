@@ -11,6 +11,7 @@ import { DistributionSection } from "@components/index/DistributionSection";
 import { Head } from "@components/commons/Head";
 import { StatsDisplay } from "@components/index/StatisticsDisplay";
 import { StartExploring } from "@components/index/StartExploring";
+import { ReadyForFlexibility } from "@components/index/ReadyForFlexibility";
 
 export default function HomePage(): JSX.Element {
   const { t } = useTranslation(["page-index"]);
@@ -21,6 +22,7 @@ export default function HomePage(): JSX.Element {
       <HomePageHeader />
       <StartExploring />
       <StatsDisplay />
+      <ReadyForFlexibility />
       <CardSection />
       <SolutionSection />
       <BenefitsSection />

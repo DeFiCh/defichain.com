@@ -2,35 +2,35 @@ import { Container } from "@components/commons/Container";
 import { JellyfishBackground } from "@components/index/Jellyfish";
 import classNames from "classnames";
 import { Button } from "@components/commons/Buttons";
-import { useWindowDimensions } from "@hooks/useWindowDimensions";
+import { useTranslation } from "next-i18next";
 
 export function ReadyForFlexibility() {
-  const dimensions = useWindowDimensions();
+  const { t } = useTranslation("page-index");
+  const separatedTitle = t("ReadyForFlexibilitySection.title").split(" ");
+  const lastWord = separatedTitle[separatedTitle.length - 1];
+  separatedTitle.pop();
+
   return (
     <div className="relative z-0 lg:mt-[316.02px] md:mt-[131px] mt-[142px]">
       <Container>
         <div
           className={classNames(
-            "flex flex-col lg:w-[548px] md:w-[425px] w-auto",
-            { "w-[327px]": dimensions.width <= 750 }
+            "flex flex-col lg:w-[548px] md:w-[425px] w-auto"
           )}
         >
           <div className="leading-4 accent-gradient-1 text-transparent bg-clip-text w-fit">
-            READY FOR FLEXIBILITY
+            {t("ReadyForFlexibilitySection.label")}
           </div>
           <div className="text-6xl text-[40px] leading-11 mt-5">
-            <span className="text-dark-1000">DeFi MetaChain the</span>
-            <span className="text-electric">&nbsp;upgrade</span>
+            <span className="text-dark-1000">{separatedTitle.join(" ")}</span>
+            <span className="text-electric">&nbsp;{lastWord}</span>
           </div>
           <div>
             <div className="tracking-[0.03em] text-dark-700 font-desc lg:text-xl md:text-base lg:mt-8 mt-5">
-              DeFi Meta Chain is an EVM-compatible blockchain that uses Proof of
-              Authority (POA) and runs in parallel with the Native DeFiChain
-              blockchain.
+              {t("ReadyForFlexibilitySection.descParaOne")}
             </div>
             <div className="tracking-[0.03em] text-dark-700 font-desc lg:text-xl md:text-base mt-8">
-              Read through the documentation to get started with deploying next
-              generation DeFi applications on DeFi Meta Chain.
+              {t("ReadyForFlexibilitySection.descParaTwo")}
             </div>
           </div>
 

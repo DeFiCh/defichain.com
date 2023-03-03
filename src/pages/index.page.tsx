@@ -9,6 +9,7 @@ import { RoadmapSection } from "@components/index/roadmap/RoadmapSection";
 import { BuiltOnBitcoinSection } from "@components/index/BuiltOnBitcoinSection";
 import { DistributionSection } from "@components/index/DistributionSection";
 import { Head } from "@components/commons/Head";
+import { DeFiChainEcoSystemSection } from "@components/index/DeFiChainEcoSystemSection";
 
 export default function HomePage(): JSX.Element {
   const { t } = useTranslation(["page-index"]);
@@ -17,6 +18,7 @@ export default function HomePage(): JSX.Element {
     <>
       <Head title={t("Head.title")} description={t("Head.desc")} />
       <HomePageHeader />
+      <DeFiChainEcoSystemSection />
       <CardSection />
       <SolutionSection />
       <BenefitsSection />

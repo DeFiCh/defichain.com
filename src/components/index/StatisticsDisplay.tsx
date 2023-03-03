@@ -49,7 +49,7 @@ export function StatsDisplay() {
             <div className="flex lg:flex-row flex-col gap-y-4">
               <StatsItem
                 title={t("StatisticsSection.dfiMinted.title")}
-                stats={supply?.total ?? undefined}
+                stats={supply?.total}
                 desc={t("StatisticsSection.dfiMinted.desc", {
                   perc: calculatePercentage(supply?.total, supply?.max),
                 })}
@@ -61,13 +61,13 @@ export function StatsDisplay() {
                     : t("StatisticsSection.tvlLocked.title")
                 }
                 prefix="$"
-                stats={stats?.tvl.total ?? undefined}
+                stats={stats?.tvl.total}
                 desc={t("StatisticsSection.tvlLocked.desc")}
                 descStyle="lg:block hidden"
               />
               <StatsItem
                 title={t("StatisticsSection.masternodes.title")}
-                stats={stats?.count.masternodes ?? undefined}
+                stats={stats?.count.masternodes}
                 desc={t("StatisticsSection.masternodes.desc", {
                   perc: masternodeValue,
                 })}
@@ -123,7 +123,7 @@ function StatsItem({
                 enableScrollSpy
                 duration={0.5}
               />
-              {suffix ? suffix.toString().concat("+") : ""}
+              {suffix !== "" ? `${suffix}+` : suffix}
             </>
           ) : (
             <>N/A</>

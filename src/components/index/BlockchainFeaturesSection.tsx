@@ -1,3 +1,4 @@
+import { Button } from "@components/commons/Buttons";
 import { Container } from "@components/commons/Container";
 // import Image from "next/image";
 // import Link from "next/link";
@@ -50,7 +51,7 @@ export function BlockchainFeaturesSection(): JSX.Element {
       <Container className="flex flex-col justify-between lg:flex-row">
         <div className="flex lg:w-[504px]">
           <div
-            className="w-full flex flex-col space-y-5 md:space-y-4 lg:mt-32 lg:space-y-5"
+            className="w-full flex flex-col space-y-5 md:space-y-5 lg:mt-32 lg:space-y-5"
             data-testid="BlockchainFeatureSection.text"
           >
             <div className="gradient-text leading-4 tracking-[.04em]">
@@ -77,17 +78,28 @@ export function BlockchainFeaturesSection(): JSX.Element {
             >
               {t("BlockchainFeatureSection.desc")}
             </div>
+            <Button
+              className="text-sm min-w-0 w-[206px] py-3 !mt-[23px] md:!mt-9 lg:text-base lg:w-[232px] lg:py-4 lg:!mt-10"
+              text="Start building"
+            />
           </div>
         </div>
         <div className="justify-between hidden md:flex md:gap-x-16 lg:w-[568px] lg:gap-x-10 w-full lg:px-12 mt-14 md:mt-[72px] lg:mt-0">
-          <BlockchainFeatureColumn items={BlockchainFeatureItems} />
+          <BlockchainFeatureColumn
+            items={BlockchainFeatureItems}
+            id="tablet-desktop-screen"
+          />
         </div>
-        <div className="block mt-14 md:hidden">
+        <div className="block mt-[56.5px] md:hidden">
           <Slider {...sliderSettings}>
             <BlockchainFeatureColumn
               items={BlockchainFeatureItems.slice(0, 3)}
+              id="mobile-screen"
             />
-            <BlockchainFeatureColumn items={BlockchainFeatureItems.slice(3)} />
+            <BlockchainFeatureColumn
+              items={BlockchainFeatureItems.slice(3)}
+              id="mobile-screen"
+            />
           </Slider>
         </div>
       </Container>

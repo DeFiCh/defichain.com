@@ -1,6 +1,7 @@
 import { SVGProps } from "react";
 
 export function VarietyIcon(props: SVGProps<SVGSVGElement>): JSX.Element {
+  const { id, className } = props;
   return (
     <svg
       width="80"
@@ -8,16 +9,13 @@ export function VarietyIcon(props: SVGProps<SVGSVGElement>): JSX.Element {
       viewBox="0 0 80 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}
+      className={className}
     >
       <circle cx="23.5714" cy="24.5011" r="23.0714" stroke="#A6A6A6" />
-      <path
-        d="M55 0L80 25L55 50L30 25L55 0Z"
-        fill="url(#paint0_linear_430_25736)"
-      />
+      <path d="M55 0L80 25L55 50L30 25L55 0Z" fill={`url('#${id}')`} />
       <defs>
         <linearGradient
-          id="paint0_linear_430_25736"
+          id={id}
           x1="19.8437"
           y1="-18.2292"
           x2="70.9235"

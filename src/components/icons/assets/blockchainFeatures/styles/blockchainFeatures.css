@@ -1,7 +1,7 @@
 .throughputSmallSquare {
   transform-box: fill-box;
   transform-origin: 50% 50%;
-  animation: spin 0.3s linear, fill ease-in 3s forwards;
+  animation: spin 1s linear;
 }
 @keyframes spin {
   0% {

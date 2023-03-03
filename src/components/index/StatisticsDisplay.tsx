@@ -4,7 +4,7 @@ import {
   StatsData,
   SupplyData,
 } from "@defichain/whale-api-client/dist/api/stats";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import CountUp from "react-countup";
 import classNames from "classnames";
 import { useTranslation } from "next-i18next";
@@ -17,21 +17,17 @@ export function StatsDisplay() {
   const [stats, setStats] = useState<StatsData>();
   const [supply, setSupply] = useState<SupplyData>();
   const { t } = useTranslation("page-index");
-  const isFirstLoad = useRef(true);
   const dimensions = useWindowDimensions();
 
   useEffect(() => {
-    if (isFirstLoad.current) {
-      isFirstLoad.current = false;
-      void api.stats.getSupply().then((supplyItem) => {
-        setSupply(supplyItem);
-      });
+    void api.stats.getSupply().then((supplyItem) => {
+      setSupply(supplyItem);
+    });
 
-      void api.stats.get().then((statsItem) => {
-        setStats(statsItem);
-      });
-    }
-  });
+    void api.stats.get().then((statsItem) => {
+      setStats(statsItem);
+    });
+  }, [api.stats]);
 
   const { suffix, value } = useUnitSuffix(
     stats ? stats.tvl.masternodes.toString() : "N/A"

@@ -3125,9 +3125,8 @@ packages:
     resolution: {integrity: sha512-3lqz5YjWTYnW6dlDa5TLaTCcShfar1e40rmcJVwCBJC6mWlFuj0eCHIElmG1g5kyuJ/GD+8Wn4FFCcz4gJPfaQ==}
     dev: true
 
-  /countup.js/2.5.0:
-    resolution: {integrity: sha512-/59H8Q6wzu6VfHeqGUgXoyh6kgboGr5mALmRKi8YA11DlcaXSnT1PZG6mTyBRLco4ZjExKlmfNHeMbQgZvis9Q==}
-    dev: false
+  /countup.js/2.4.2:
+    resolution: { integrity: sha512-EExCcu5rd7ffBj65B3CVNuS1HddN1Y4WuTfJEuocJXwZlNnlXZQ4sD9M/Cq32ZS0zR38F9vGMCw/iFcVImrNbw==}
 
   /cross-fetch/3.1.5:
     resolution: {integrity: sha512-lvb1SBsI0Z7GDwmuid+mU3kWVBwTVUbe7S0H52yaaAdQOXq2YktTCZdlAcNKFzE6QtRz0snpw9bNiPeOIkkQvw==}

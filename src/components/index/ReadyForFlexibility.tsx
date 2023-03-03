@@ -11,7 +11,13 @@ export function ReadyForFlexibility() {
   separatedTitle.pop();
 
   return (
-    <div className="relative z-0 lg:mt-[316.02px] md:mt-[131px] mt-[142px]">
+    <div
+      className={classNames(
+        "relative z-0",
+        "lg:mt-[316.02px] md:mt-[131px] mt-[142px]",
+        "lg:mb-60 md:mb-[164px] mb-40"
+      )}
+    >
       <Container>
         <div
           className={classNames(
@@ -26,15 +32,17 @@ export function ReadyForFlexibility() {
           >
             {t("ReadyForFlexibilitySection.label")}
           </div>
-          <div className="text-6xl text-[40px] leading-11 mt-5 tracking-normal md:tracking-[-0.02em]">
+
+          <div className="mt-5 text-6xl text-[40px] tracking-normal leading-11 md:tracking-[-0.02em]">
             <span className="text-dark-1000">{separatedTitle.join(" ")}</span>
             <span className="text-electric">&nbsp;{lastWord}</span>
           </div>
+
           <div>
-            <div className="tracking-[0.03em] text-dark-700 font-desc lg:text-xl md:text-base lg:mt-8 mt-5">
+            <div className="lg:mt-8 mt-5 lg:text-xl md:text-base tracking-[0.03em] text-dark-700 font-desc">
               {t("ReadyForFlexibilitySection.descParaOne")}
             </div>
-            <div className="tracking-[0.03em] text-dark-700 font-desc lg:text-xl md:text-base lg:mt-8 mt-5">
+            <div className="lg:mt-8 mt-5 lg:text-xl md:text-base tracking-[0.03em] text-dark-700 font-desc">
               {t("ReadyForFlexibilitySection.descParaTwo")}
             </div>
           </div>

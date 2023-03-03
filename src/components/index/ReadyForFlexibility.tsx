@@ -18,10 +18,15 @@ export function ReadyForFlexibility() {
             "flex flex-col lg:w-[548px] md:w-[425px] w-auto"
           )}
         >
-          <div className="leading-4 accent-gradient-1 text-transparent bg-clip-text w-fit">
+          <div
+            className={classNames(
+              "accent-gradient-1 text-transparent bg-clip-text",
+              "lg:w-fit md:w-[409px] w-[272px] leading-4 tracking-[0.04em]"
+            )}
+          >
             {t("ReadyForFlexibilitySection.label")}
           </div>
-          <div className="text-6xl text-[40px] leading-11 mt-5">
+          <div className="text-6xl text-[40px] leading-11 mt-5 tracking-normal md:tracking-[-0.02em]">
             <span className="text-dark-1000">{separatedTitle.join(" ")}</span>
             <span className="text-electric">&nbsp;{lastWord}</span>
           </div>
@@ -29,14 +34,14 @@ export function ReadyForFlexibility() {
             <div className="tracking-[0.03em] text-dark-700 font-desc lg:text-xl md:text-base lg:mt-8 mt-5">
               {t("ReadyForFlexibilitySection.descParaOne")}
             </div>
-            <div className="tracking-[0.03em] text-dark-700 font-desc lg:text-xl md:text-base mt-8">
+            <div className="tracking-[0.03em] text-dark-700 font-desc lg:text-xl md:text-base lg:mt-8 mt-5">
               {t("ReadyForFlexibilitySection.descParaTwo")}
             </div>
           </div>
 
           <Button
             text="Explore DeFi MetaChain"
-            className="lg:mt-16 mt-8 py-4 w-[294px]"
+            className="lg:mt-16 mt-8 py-4 lg:w-[294px] w-[245px]"
           />
         </div>
       </Container>

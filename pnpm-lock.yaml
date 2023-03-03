@@ -3126,7 +3126,8 @@ packages:
     dev: true
 
   /countup.js/2.4.2:
-    resolution: { integrity: sha512-EExCcu5rd7ffBj65B3CVNuS1HddN1Y4WuTfJEuocJXwZlNnlXZQ4sD9M/Cq32ZS0zR38F9vGMCw/iFcVImrNbw==}
+    resolution: {integrity: sha512-EExCcu5rd7ffBj65B3CVNuS1HddN1Y4WuTfJEuocJXwZlNnlXZQ4sD9M/Cq32ZS0zR38F9vGMCw/iFcVImrNbw==}
+    dev: false
 
   /cross-fetch/3.1.5:
     resolution: {integrity: sha512-lvb1SBsI0Z7GDwmuid+mU3kWVBwTVUbe7S0H52yaaAdQOXq2YktTCZdlAcNKFzE6QtRz0snpw9bNiPeOIkkQvw==}
@@ -6646,7 +6647,7 @@ packages:
       react: '>= 16.3.0'
     dependencies:
       '@rollup/plugin-babel': 6.0.3_@babel+core@7.20.5
-      countup.js: 2.5.0
+      countup.js: 2.4.2
       react: 18.2.0
     transitivePeerDependencies:
       - '@babel/core'

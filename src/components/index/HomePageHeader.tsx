@@ -2,18 +2,20 @@ import { Container } from "@components/commons/Container";
 import { useTranslation } from "next-i18next";
 import { Video } from "@components/commons/Video";
 import classNames from "classnames";
+import { useState } from "react";
 
 export function HomePageHeader(): JSX.Element {
   const { t } = useTranslation("page-index");
   const separatedTitle = t("Header.title").split(" ");
   const firstWord = separatedTitle[0];
   separatedTitle.shift();
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   return (
     <div className="flex flex-col items-center md:mt-0">
       <Container
         className={classNames(
-          "flex flex-col-reverse md:flex-row items-start md:justify-between",
+          "relative z-0 flex flex-col-reverse md:flex-row items-start md:justify-between",
           "pr-6 md:pr-0 lg:pr-0 xl:pr-[59px] 2xl:pr-[39px]",
           "2xl:max-w-[1920px] max-w-full "
         )}
@@ -39,12 +41,16 @@ export function HomePageHeader(): JSX.Element {
         </div>
         <div
           className={classNames(
-            "w-full mt-[-31px] md:mt-[-49px] lg:mt-[-49px] xl:mt-[-57px] 2xl:mt-[-80px]",
+            "z-[-1] w-full mt-[-31px] md:mt-[-49px] lg:mt-[-49px] xl:mt-[-57px] 2xl:mt-[-80px]",
             "min-w-[364px] md:min-w-[382px] md:max-w-[584px] max-w-[379px] lg:max-w-[722px] xl:max-w-[758px] 2xl:max-w-[929px]",
             "md:ml-0 ml-auto mr-[-16px] md:mr-[-32.18px]"
           )}
         >
+          {!isVideoLoaded && (
+            <img src="/assets/img/index/dficoin.png" alt="DFI coin" />
+          )}
           <Video
+            setIsVideoLoaded={setIsVideoLoaded}
             src="/assets/svg/hero/dfi-coin-video.mp4"
             width={595}
             height={595}

@@ -62,6 +62,12 @@ export function Header(): JSX.Element {
     }
   }, [menu]);
 
+  useEffect(() => {
+    if (dimension.width >= 1024 && menu) {
+      setMenu(false);
+    }
+  }, [dimension.width, menu]);
+
   const tabletMobileDropDownObj = useMemo(
     () => ({
       dropDownState,
@@ -261,7 +267,7 @@ function TabletMobileMenu() {
 
         <Container
           className={classNames(
-            "block md:hidden flex justify-center mb-[56px]",
+            "block md:hidden justify-center mb-[56px]",
             dropDownState === MobileTabletDropDownState.COMMUNITY
               ? "mt-[52px]"
               : "mt-[68px]"

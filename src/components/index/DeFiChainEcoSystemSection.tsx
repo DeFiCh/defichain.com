@@ -7,8 +7,7 @@ const cardItems = [
   {
     title: "Invest, Trade and Earn with DeFiChain",
     subTitle: "Learn More",
-    img: "meta-dfi-coin-1",
-    imgOnHover: "meta-dfi-coin-hover",
+    img: "meta-dfi-coin",
     id: "invest",
     href: "",
   },
@@ -16,7 +15,6 @@ const cardItems = [
     title: "Own a Masternode",
     subTitle: "Get Started",
     img: "glass-cube",
-    imgOnHover: "glass-cube-hover",
     id: "masternode",
     href: "",
   },
@@ -24,15 +22,13 @@ const cardItems = [
     title: "dApps for DeFiChain",
     subTitle: "Explore",
     img: "wallet-apps",
-    imgOnHover: "wallet-apps-hover",
     id: "dapps",
     href: "",
   },
   {
     title: "Connecting blockchains with Quantum",
     subTitle: "Learn More",
-    img: "wallet-apps",
-    imgOnHover: "wallet-apps-hover",
+    img: "quantum",
     id: "quantum",
     href: "",
   },
@@ -49,9 +45,9 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
 
   return (
     <div className="pt-48px md: pt-[96px] lg:pt-[292px]">
-      <Container className="relative md:grid md:grid-flow-row md:grid-cols-1 lg:grid lg:grid-flow-col md:mt-[24px]">
+      <Container className="relative lg:flex lg:justify-center  md:mt-[24px]">
         <div
-          className="flex lg:order-1 flex-col md:pb-[72px] pb-[48px] lg:pb-0"
+          className="lg:pl-[144px] lg:order-1 md:pb-[72px] pb-[48px] lg:pb-0"
           id="unscrollable-section"
         >
           <div className="md:w-[316px] leading-4 bg-clip-text text-transparent accent-gradient-1">
@@ -68,51 +64,57 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
           </span>
           <div className="absolute hidden lg:block h-1/4 w-1/4 bottom-0 right-0 bg-contain bg-no-repeat mix-blend-screen bg-bottom md:bg-right bg-[url('/assets/img/footer/arrow_1.png')]" />
         </div>
-        <div className="scrollbar grid grid-flow-row grid-cols-1 gap-6 md:grid-flow-row md:grid-cols-2 lg:block lg:h-[639px] lg:overflow-y-auto">
-          {cardItems.map((item) => (
-            <div
-              onMouseEnter={() => {
-                setHoverState(item.id);
-              }}
-              onMouseLeave={() => {
-                setHoverState(undefined);
-              }}
-              className={classNames(
-                "p-[0.5px] rounded-[15px] h-[215px] w-full xs:w-[327px] lg:w-[487px] xl:h-[215]",
-                "md:block md:mb-[24px]",
-                "bg-dark-200 hover:accent-gradient-1 hover:transition-all hover:duration-300"
-              )}
-            >
-              <a
-                href={item.href}
-                className={classNames(
-                  "w-full h-full p-8 rounded-[15px] border-[0.5px] flex flex-col",
-                  "border-dark-200 bg-dark-00 bg-cover bg-no-repeat bg-right-top",
-                  "transition-all duration-300"
-                )}
-                style={{
-                  backgroundImage: `url(/assets/img/ecosystem/${item.img}.png`,
+        <div>
+          <div className="no-scrollbar grid grid-flow-row grid-cols-1 gap-6 md:grid-flow-row md:grid-cols-2 lg:block lg:h-[639px] lg:overflow-y-auto lg:place-self-end">
+            {cardItems.map((item) => (
+              <div
+                key={item.id}
+                onMouseEnter={() => {
+                  setHoverState(item.id);
                 }}
+                onMouseLeave={() => {
+                  setHoverState(undefined);
+                }}
+                className={classNames(
+                  "p-[0.5px] rounded-[15px] h-[215px] w-full xs:w-[327px] lg:w-[487px] xl:h-[215]",
+                  "md:block md:mb-[24px]",
+                  "card-outline-2 hover:accent-gradient-1"
+                )}
               >
-                <span
-                  className={classNames("w-[47%] text-2xl", {
-                    "accent-dfc-gradient-text":
-                      hoverState !== undefined && hoverState === item.id,
-                  })}
-                >
-                  {item.title}
-                </span>
-                <div
+                <a
+                  href={item.href}
                   className={classNames(
-                    "text-base text-dark-500 max-w-[178px] mt-2 flex flex-row items-center"
+                    "w-full h-full p-8 rounded-[15px] border-[0.5px] flex flex-col",
+                    "border-dark-200 bg-dark-00 bg-cover bg-no-repeat bg-right-top",
+                    "hover:transition-all duration-300"
                   )}
+                  style={{
+                    backgroundImage:
+                      hoverState !== undefined && hoverState === item.id
+                        ? `url(/assets/img/ecosystem/${item.img}-hover.png)`
+                        : `url(/assets/img/ecosystem/${item.img}.png)`,
+                  }}
                 >
-                  {item.subTitle}
-                  <FiArrowUpRight size={20} className="ml-[13px]" />
-                </div>
-              </a>
-            </div>
-          ))}
+                  <span
+                    className={classNames("w-[47%] text-2xl", {
+                      "accent-dfc-gradient-text":
+                        hoverState !== undefined && hoverState === item.id,
+                    })}
+                  >
+                    {item.title}
+                  </span>
+                  <div
+                    className={classNames(
+                      "text-base text-dark-500 max-w-[178px] mt-2 flex flex-row items-center"
+                    )}
+                  >
+                    {item.subTitle}
+                    <FiArrowUpRight size={20} className="ml-[13px]" />
+                  </div>
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </Container>
     </div>

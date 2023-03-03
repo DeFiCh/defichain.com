@@ -14,8 +14,8 @@ body {
   box-sizing: border-box;
 }
 
-html{
-  scroll-behavior:smooth
+html {
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
@@ -177,27 +177,4 @@ html{
 
 .hover-icons:hover {
   fill: #ff00ff;
-}
-
-.scrollbar::-webkit-scrollbar {
-  width: 14px;
-}
-
-.scrollbar::-webkit-scrollbar-corner {
-  background: rgba(0, 0, 0, 0);
-}
-
-.scrollbar::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.scrollbar::-webkit-scrollbar-thumb {
-  border: 4px solid rgba(0, 0, 0, 0);
-  background-clip: padding-box;
-  border-radius: 9999px;
-  opacity: 0.6;
-}
-
-.scrollbar:hover::-webkit-scrollbar-thumb {
-  opacity: 1;
 }

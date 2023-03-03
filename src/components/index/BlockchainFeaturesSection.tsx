@@ -45,7 +45,7 @@ export function BlockchainFeaturesSection(): JSX.Element {
 
   return (
     <section
-      className="py-6 md:py-12 lg:py-[88px]"
+      className="py-6 md:py-12 lg:py-[88px] relative"
       data-testid="BlockchainFeatureSection"
     >
       <Container className="flex flex-col justify-between lg:flex-row">
@@ -103,6 +103,7 @@ export function BlockchainFeaturesSection(): JSX.Element {
           </Slider>
         </div>
       </Container>
+      <div className="hidden md:block absolute h-[785.44px] w-[785.44px] md:left-[-240px] md:bottom-0 lg:left-0 lg:bottom-[-289.56px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/blockchainFeatures/blockchainFeaturesBg.png')]" />
     </section>
   );
 }

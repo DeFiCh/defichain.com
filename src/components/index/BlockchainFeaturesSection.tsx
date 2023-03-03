@@ -76,12 +76,12 @@ export function BlockchainFeaturesSection(): JSX.Element {
               {t("BlockchainFeatureSection.desc")}
             </div>
             <Button
-              className="text-sm min-w-0 w-[206px] py-3 !mt-[23px] md:!mt-9 lg:text-base lg:w-[232px] lg:py-4 lg:!mt-10"
+              className="z-10 text-sm min-w-0 w-[206px] py-3 !mt-[23px] md:!mt-9 lg:text-base lg:w-[232px] lg:py-4 lg:!mt-10"
               text="Start building"
             />
           </div>
         </div>
-        <div className="justify-between hidden md:flex md:gap-x-16 lg:w-[568px] lg:gap-x-10 w-full lg:px-12 mt-14 md:mt-[72px] lg:mt-0">
+        <div className="z-10 justify-between hidden md:flex md:gap-x-16 lg:w-[568px] lg:gap-x-10 w-full lg:px-12 mt-14 md:mt-[72px] lg:mt-0">
           <BlockchainFeatureColumn
             items={BlockchainFeatureItems}
             id="tablet-desktop-screen"

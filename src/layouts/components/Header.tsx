@@ -63,10 +63,10 @@ export function Header(): JSX.Element {
   }, [menu]);
 
   useEffect(() => {
-    if (dimension.width >= 1024) {
+    if (dimension.width >= 1024 && menu) {
       setMenu(false);
     }
-  }, [dimension.width]);
+  }, [dimension.width, menu]);
 
   const tabletMobileDropDownObj = useMemo(
     () => ({

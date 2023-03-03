@@ -40,7 +40,7 @@ export function StatsDisplay() {
 
   return (
     <div className="relative z-0">
-      <Container className="relative lg:mt-[57px] md:mt-[76px] mt-[133px]">
+      <Container className="relative lg:mt-[57px] mt-[76px]">
         <div
           id="statistics_display"
           className="scroll-mt-[200px] card-outline-2 p-[0.5px] rounded-[30px]"

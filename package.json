@@ -16,8 +16,6 @@
   "dependencies": {
     "@defichain/whale-api-client": "^3.29.1",
     "@headlessui/react": "^1.7.7",
-    "@react-three/drei": "^9.57.0",
-    "@react-three/fiber": "^8.11.5",
     "@waveshq/standard-web": "^0.44.0",
     "classnames": "^2.3.2",
     "gray-matter": "^4.0.3",
@@ -33,8 +31,7 @@
     "rehype-slug": "^5.1.0",
     "remark": "^14.0.2",
     "remark-gfm": "^3.0.1",
-    "slick-carousel": "^1.8.1",
-    "three": "^0.149.0"
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.10.0",

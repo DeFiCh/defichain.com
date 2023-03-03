@@ -1,5 +1,4 @@
 import { Container } from "@components/commons/Container";
-import { JellyfishBackground } from "@components/index/Jellyfish";
 import classNames from "classnames";
 import { Button } from "@components/commons/Buttons";
 import { useTranslation } from "next-i18next";
@@ -53,20 +52,6 @@ export function ReadyForFlexibility() {
           />
         </div>
       </Container>
-      <JellyfishBackground
-        desktop={{
-          position: [50, 110, -70],
-          rotation: [0.3, -0.2, -0.6],
-          containerStyle:
-            "2xl:right-[10%] xl:right-[12%] lg:right-[14%] top-[55%] h-[453px] w-[453px] z-[-1]",
-        }}
-        tablet={{
-          position: [50, 110, -70],
-          rotation: [0.3, -0.2, -0.6],
-          containerStyle:
-            "right-[14%] top-[45%] h-[232.46px] w-[232.46px] z-[-1]",
-        }}
-      />
       <div
         className={classNames(
           " mix-blend-screen absolute z-[-1] inset-0 bg-right bg-contain bg-no-repeat ",

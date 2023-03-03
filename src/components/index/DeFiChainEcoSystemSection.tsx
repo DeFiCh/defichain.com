@@ -1,7 +1,6 @@
 import { Container } from "@components/commons/Container";
-import classNames from "classnames";
 import { useState } from "react";
-import { FiArrowUpRight } from "react-icons/fi";
+import { Card } from "./components/Card";
 
 const cardItems = [
   {
@@ -10,6 +9,7 @@ const cardItems = [
     img: "meta-dfi-coin",
     id: "invest",
     href: "",
+    customStyle: "xs:w-full md:w-[251px]",
   },
   {
     title: "Own a Masternode",
@@ -17,6 +17,7 @@ const cardItems = [
     img: "glass-cube",
     id: "masternode",
     href: "",
+    customStyle: "w-1/2",
   },
   {
     title: "dApps for DeFiChain",
@@ -24,6 +25,8 @@ const cardItems = [
     img: "wallet-apps",
     id: "dapps",
     href: "",
+    customStyle: "w-1/2",
+    mobileImg: "wallet-apps-mobile",
   },
   {
     title: "Connecting blockchains with Quantum",
@@ -31,12 +34,12 @@ const cardItems = [
     img: "quantum",
     id: "quantum",
     href: "",
+    customStyle: "w-11/12 md:w-[251px]",
   },
 ];
 
 // TODO translations
 export function DeFiChainEcoSystemSection(): JSX.Element {
-  // check if the card is being hovered, if yes, change text color
   const [hoverState, setHoverState] = useState<string | undefined>(undefined);
 
   // TODO
@@ -45,7 +48,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
 
   return (
     <div className="pt-48px md: pt-[96px] lg:pt-[292px]">
-      <Container className="relative lg:flex lg:justify-center  md:mt-[24px]">
+      <Container className="relative lg:flex lg:justify-center md:mt-[24px]">
         <div
           className="lg:pl-[144px] lg:order-1 md:pb-[72px] pb-[48px] lg:pb-0"
           id="unscrollable-section"
@@ -66,54 +69,26 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
         </div>
         <div>
           <div className="no-scrollbar grid grid-flow-row grid-cols-1 gap-6 md:grid-flow-row md:grid-cols-2 lg:block lg:h-[639px] lg:overflow-y-auto lg:place-self-end">
-            {cardItems.map((item) => (
-              <div
-                key={item.id}
-                onMouseEnter={() => {
-                  setHoverState(item.id);
-                }}
-                onMouseLeave={() => {
-                  setHoverState(undefined);
-                }}
-                className={classNames(
-                  "p-[0.5px] rounded-[15px] h-[215px] w-full xs:w-[327px] lg:w-[487px] xl:h-[215]",
-                  "md:block md:mb-[24px]",
-                  "card-outline-2 hover:accent-gradient-1"
-                )}
-              >
-                <a
-                  href={item.href}
-                  className={classNames(
-                    "w-full h-full p-8 rounded-[15px] border-[0.5px] flex flex-col",
-                    "border-dark-200 bg-dark-00 bg-cover bg-no-repeat bg-right-top",
-                    "hover:transition-all duration-300"
-                  )}
-                  style={{
-                    backgroundImage:
-                      hoverState !== undefined && hoverState === item.id
-                        ? `url(/assets/img/ecosystem/${item.img}-hover.png)`
-                        : `url(/assets/img/ecosystem/${item.img}.png)`,
-                  }}
-                >
-                  <span
-                    className={classNames("w-[47%] text-2xl", {
-                      "accent-dfc-gradient-text":
-                        hoverState !== undefined && hoverState === item.id,
-                    })}
-                  >
-                    {item.title}
-                  </span>
-                  <div
-                    className={classNames(
-                      "text-base text-dark-500 max-w-[178px] mt-2 flex flex-row items-center"
-                    )}
-                  >
-                    {item.subTitle}
-                    <FiArrowUpRight size={20} className="ml-[13px]" />
-                  </div>
-                </a>
-              </div>
-            ))}
+            <Card
+              content={cardItems[0]}
+              setHoverState={setHoverState}
+              hoverState={hoverState}
+            />
+            <Card
+              content={cardItems[1]}
+              setHoverState={setHoverState}
+              hoverState={hoverState}
+            />
+            <Card
+              content={cardItems[2]}
+              setHoverState={setHoverState}
+              hoverState={hoverState}
+            />
+            <Card
+              content={cardItems[3]}
+              setHoverState={setHoverState}
+              hoverState={hoverState}
+            />
           </div>
         </div>
       </Container>

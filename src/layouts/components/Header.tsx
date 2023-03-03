@@ -116,7 +116,7 @@ export function Header(): JSX.Element {
 
           <div className="hidden md:flex h-full flex lg:pt-4">
             <GradientButton
-              className="py-3 bg-dark-00"
+              className="py-3 px-5 bg-dark-00"
               buttonText={`${t("header.navbar.buy")} DFI $${Number(
                 dfiPrice
               ).toFixed(2)}`}

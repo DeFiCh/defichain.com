@@ -14,6 +14,10 @@ body {
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior:smooth
+}
+
 @layer utilities {
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
@@ -27,11 +31,8 @@ body {
 
   /* UI components */
   .card-bg {
-    background: linear-gradient(
-      144deg,
-      rgba(0, 0, 0, 0.5) -0.38%,
-      rgba(0, 0, 0, 0.5) 100.17%
-    );
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(8px);
   }
 
   .banner-bg {

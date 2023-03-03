@@ -19,20 +19,6 @@
     "react/button-has-type": "warn",
     "@typescript-eslint/naming-convention": "warn",
     "no-underscore-dangle": "warn",
-    "react/no-unused-prop-types": "warn",
-    "react/no-unknown-property": [
-      "error",
-      {
-        "ignore": [
-          "intensity",
-          "position",
-          "rotation",
-          "dispose",
-          "rotation",
-          "geometry",
-          "material"
-        ]
-      }
-    ]
+    "react/no-unused-prop-types": "warn"
   }
 }

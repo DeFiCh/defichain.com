@@ -10,6 +10,7 @@ module.exports = {
     fontFamily: {
       sans: ['"Space Grotesk"', "sans-serif"],
       desc: ['"Montserrat"', "sans-serif"],
+      mono: ['"Space Mono"', "sans-serif"],
     },
     colors: {
       transparent: "rgba(0, 0, 0 ,0)",

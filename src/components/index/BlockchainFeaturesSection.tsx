@@ -1,9 +1,6 @@
 import { Button } from "@components/commons/Buttons";
 import { Container } from "@components/commons/Container";
-// import Image from "next/image";
-// import Link from "next/link";
 import { useTranslation } from "next-i18next";
-// import { Button } from "@components/commons/Buttons";
 import Slider from "react-slick";
 import { BlockchainFeatureColumn } from "./BlockchainFeatureColumn";
 

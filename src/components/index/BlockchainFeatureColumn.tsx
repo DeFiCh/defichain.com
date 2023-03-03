@@ -19,9 +19,6 @@ import {
   DevelopmentIconHover,
 } from "@components/icons/assets/blockchainFeatures/DevelopmentIcon";
 import classNames from "classnames";
-// import { MorphReplace } from "react-svg-morph";
-// import { Transition } from "@headlessui/react";
-// import "@components/icons/assets/blockchainFeatures/styles/blockchainFeatures.css";
 import { useState } from "react";
 
 interface BlockchainFeatureItemProp {

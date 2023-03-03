@@ -1,8 +1,36 @@
 .throughputSmallSquare {
   transform-box: fill-box;
   transform-origin: 50% 50%;
-  animation: spin 1s linear;
+  animation: spin 0.3s linear;
 }
+#security-icon-small-circle {
+  animation: moveAcross 0.3s linear both;
+  animation-play-state: paused;
+  --xLength: -20px;
+}
+#security-icon-med-circle {
+  animation: moveAcross 0.3s linear both;
+  animation-play-state: paused;
+  --xLength: -8px;
+}
+#immutability-icon-top {
+  animation: moveDown 0.3s linear both;
+  animation-play-state: paused;
+  --yLength: 20px;
+}
+#immutability-icon-middle {
+  animation: moveDown 0.3s linear both;
+  animation-play-state: paused;
+  --yLength: 10px;
+}
+
+.blockchain-feature-item:hover #security-icon-small-circle,
+.blockchain-feature-item:hover #security-icon-med-circle,
+.blockchain-feature-item:hover #immutability-icon-top,
+.blockchain-feature-item:hover #immutability-icon-middle {
+  animation-play-state: running;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -12,12 +40,13 @@
   }
 }
 
-@keyframes fill {
-  0% {
-    fill: none;
+@keyframes moveAcross {
+  to {
+    transform: translateX(var(--xLength));
   }
-
-  100% {
-    fill: red;
+}
+@keyframes moveDown {
+  to {
+    transform: translateY(var(--yLength));
   }
 }

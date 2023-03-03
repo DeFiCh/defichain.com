@@ -63,7 +63,7 @@ function FeatureIcon({
 
   return (
     <div
-      className="flex flex-row md:flex-col w-80 md:w-[304px] lg:w-[216px]"
+      className="blockchain-feature-item flex flex-row md:flex-col w-80 md:w-[304px] lg:w-[216px]"
       onMouseOver={handleMouseOver}
       onFocus={handleMouseOver}
       onMouseOut={handleMouseOut}
@@ -73,6 +73,7 @@ function FeatureIcon({
         {isHovering && Icon ? (
           <IconOnHover className="w-[50px] h-[50px]" />
         ) : (
+          //   <Icon className="w-[50px] h-[50px]" id={`${id}-${itesm.title}`} />
           <Icon className="w-[50px] h-[50px]" id={`${id}-${item.title}`} />
         )}
       </div>

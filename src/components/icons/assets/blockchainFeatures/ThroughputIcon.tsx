@@ -33,6 +33,7 @@ export function ThroughputIcon(props: SVGProps<SVGSVGElement>) {
 }
 
 export function ThroughputIconHover(props: SVGProps<SVGSVGElement>) {
+  const { className } = props;
   return (
     <svg
       width="50"
@@ -40,7 +41,7 @@ export function ThroughputIconHover(props: SVGProps<SVGSVGElement>) {
       viewBox="0 0 50 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}
+      className={className}
     >
       <rect
         x="0.5"

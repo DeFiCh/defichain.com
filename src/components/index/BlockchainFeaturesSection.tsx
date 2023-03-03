@@ -45,7 +45,7 @@ export function BlockchainFeaturesSection(): JSX.Element {
       className="py-6 md:py-12 lg:py-[88px] relative"
       data-testid="BlockchainFeatureSection"
     >
-      <Container className="flex flex-col justify-between lg:flex-row">
+      <Container className="flex flex-col justify-between lg:flex-row 2xl:max-w-[1920px] 2xl:mx-[300px]">
         <div className="flex lg:w-[504px]">
           <div
             className="w-full flex flex-col space-y-5 md:space-y-5 lg:mt-32 lg:space-y-5"

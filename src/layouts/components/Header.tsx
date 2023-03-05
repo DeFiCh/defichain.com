@@ -40,6 +40,7 @@ export function Header(): JSX.Element {
   const { t } = useTranslation("layout");
   const ref = useRef<HTMLDivElement>(null);
   const dimension = useWindowDimensions();
+  const [isCursorOnHeader, setIsCursorOnHeader] = useState(false);
 
   useEffect(() => {
     function routeChangeStart(): void {
@@ -82,8 +83,9 @@ export function Header(): JSX.Element {
       isHoverOn,
       setIsHoverOn,
       headerHeight,
+      isCursorOnHeader,
     }),
-    [isHoverOn, setIsHoverOn, headerHeight]
+    [isHoverOn, headerHeight, isCursorOnHeader]
   );
 
   useEffect(() => {
@@ -91,6 +93,32 @@ export function Header(): JSX.Element {
       setHeaderHeight(ref.current.offsetHeight);
     }
   }, [ref, dimension]);
+
+  const header = document.querySelector(
+    ".mouse-cursor-gradient-tracking"
+  ) as HTMLElement;
+
+  if (header && deviceType() === ViewPort.DESKTOP) {
+    header.addEventListener("mousemove", (e: MouseEvent) => {
+      const headerRect = header.getBoundingClientRect();
+      const x = (e.clientX - headerRect.left) / headerRect.width;
+      const y = (e.clientY - headerRect.top) / headerRect.height;
+      const gradient = `radial-gradient(circle at ${x * 100}% ${
+        y * 100
+      }%, #ff00ff 0%, #A6A6A6 30%)`;
+      header.style.backgroundImage = gradient;
+      if (e.clientY >= headerRect.bottom) {
+        setIsCursorOnHeader(false);
+      } else {
+        setIsCursorOnHeader(true);
+      }
+    });
+
+    header.addEventListener("mouseleave", () => {
+      header.style.backgroundImage =
+        "linear-gradient(to right, #A6A6A6, #A6A6A6)";
+    });
+  }
 
   return (
     <header
@@ -168,7 +196,7 @@ export function Header(): JSX.Element {
 }
 function DesktopNavbar(): JSX.Element {
   return (
-    <div className="w-full hidden lg:grid lg:grid-cols-[66px_100px_44px_100px] justify-center gap-x-[52px]">
+    <div className="mouse-cursor-gradient-tracking w-full hidden lg:flex flex-row justify-center gap-x-1">
       {MenuItems.map((item, key) => (
         <DesktopMenu key={key} item={item} />
       ))}
@@ -178,12 +206,14 @@ function DesktopNavbar(): JSX.Element {
 
 function DesktopMenu({ item }: { item: string }) {
   const [isShowing, setIsShowing] = useState(false);
-  const { headerHeight, setIsHoverOn } = useContext(HoverContext);
+  const { headerHeight, setIsHoverOn, isCursorOnHeader } =
+    useContext(HoverContext);
   const DesktopDropDown = dropDownMapping[item.toLowerCase()];
   const { t } = useTranslation("layout");
+
   return (
     <Menu
-      className="lg:pt-6 lg:pb-10 cursor-pointer"
+      className="lg:pt-6 lg:pb-10 cursor-pointer lg:w-[136px] text-center"
       as="div"
       onMouseLeave={() => {
         setIsShowing(false);
@@ -198,14 +228,15 @@ function DesktopMenu({ item }: { item: string }) {
         onClick={() => {
           setIsShowing(!isShowing);
         }}
-        className={classNames("text-dark-700 text-lg font-semibold", {
-          "accent-dfc-gradient-text bg-clip-text text-transparent": isShowing,
+        className={classNames({
+          "accent-dfc-gradient-text bg-clip-text text-transparent":
+            isShowing && !isCursorOnHeader,
         })}
       >
         {t(`header.navbar.${item.toLowerCase()}`)}
       </Menu.Button>
 
-      <Container className="cursor-auto">
+      <Container className="cursor-auto text-left">
         <Transition
           style={{ top: headerHeight - 1 }}
           className="absolute inset-x-0 header-dropdown-bg w-screen"
@@ -361,3 +392,24 @@ const dropDownMapping = {
   build: Build,
   community: Community,
 };
+
+enum ViewPort {
+  TABLET = "tablet",
+  MOBILE = "mobile",
+  DESKTOP = "desktop",
+}
+
+function deviceType() {
+  const ua = navigator.userAgent;
+  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+    return ViewPort.TABLET;
+  }
+  if (
+    /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+      ua
+    )
+  ) {
+    return ViewPort.MOBILE;
+  }
+  return ViewPort.DESKTOP;
+}

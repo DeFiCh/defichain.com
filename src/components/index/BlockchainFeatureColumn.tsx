@@ -73,7 +73,6 @@ function FeatureIcon({
         {isHovering && Icon ? (
           <IconOnHover className="w-[50px] md:w-fit h-[50px]" />
         ) : (
-          //   <Icon className="w-[50px] h-[50px]" id={`${id}-${itesm.title}`} />
           <Icon
             className="w-[50px] md:w-fit h-[50px]"
             id={`${id}-${item.title}`}

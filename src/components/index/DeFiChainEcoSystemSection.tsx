@@ -1,6 +1,5 @@
 import { Container } from "@components/commons/Container";
 import { useState } from "react";
-import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import { Card } from "./components/Card";
 
 const cardItems = [
@@ -41,48 +40,16 @@ const cardItems = [
 
 export function DeFiChainEcoSystemSection(): JSX.Element {
   const [hoverState, setHoverState] = useState<string | undefined>(undefined);
-  const dimensions = useWindowDimensions();
 
   // TODO
   // animation of svg
   // remove unused code
   // translations
 
-  function preventScroll(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    return false;
-  }
-
-  const unscrollableArea = document.getElementById("unscrollableArea");
-  const scrollableArea = document.getElementById("scrollableArea");
-
-  if (dimensions.width >= 1440) {
-    if (unscrollableArea) {
-      unscrollableArea.addEventListener("wheel", preventScroll, {
-        passive: false,
-      });
-    }
-    if (scrollableArea) {
-      scrollableArea.removeEventListener("wheel", preventScroll);
-    }
-  }
-
-  if (scrollableArea) {
-    if (dimensions.width <= 584) {
-      scrollableArea.style.height = "980px";
-    } else {
-      scrollableArea.style.height = "639px";
-    }
-  }
-
   return (
     <div className="pt-48px md: pt-[96px] lg:pt-[292px]">
-      <Container className="relative lg:flex lg:justify-center md:mt-[24px]">
-        <div
-          className="lg:pl-[144px] lg:order-1 md:pb-[72px] pb-[48px] lg:pb-0"
-          id="unscrollableArea"
-        >
+      <Container className="flexbox-wrapper no-scrollbar relative lg:flex lg:justify-center md:mt-[24px]">
+        <div className="stickyContainer lg:pl-[144px] lg:order-1 md:pb-[72px] pb-[48px] lg:pb-0">
           <div className="md:w-[316px] leading-4 bg-clip-text text-transparent accent-gradient-1">
             JUMPSTART INTO DEFICHAIN ECOSYSTEM
           </div>
@@ -97,34 +64,32 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
           </span>
           <div className="absolute hidden lg:block h-1/4 w-1/4 bottom-0 right-0 bg-contain bg-no-repeat mix-blend-screen bg-bottom md:bg-right bg-[url('/assets/img/footer/arrow_1.png')]" />
         </div>
-        <div id="scrollableArea">
-          <div className="no-scrollbar grid grid-flow-row grid-cols-1 gap-6 md:grid-flow-row md:grid-cols-2 lg:block lg:h-[639px] lg:overflow-y-auto lg:place-self-end">
-            {/* <InvestCard
+        <div className="no-scrollbar grid grid-flow-row grid-cols-1 gap-6 md:grid-flow-row md:grid-cols-2 lg:block lg:h-[639px] lg:place-self-end">
+          {/* <InvestCard
             content={cardItems[0]}
             setHoverState={setHoverState}
             hoverState={hoverState}
           /> */}
-            <Card
-              content={cardItems[0]}
-              setHoverState={setHoverState}
-              hoverState={hoverState}
-            />
-            <Card
-              content={cardItems[1]}
-              setHoverState={setHoverState}
-              hoverState={hoverState}
-            />
-            <Card
-              content={cardItems[2]}
-              setHoverState={setHoverState}
-              hoverState={hoverState}
-            />
-            <Card
-              content={cardItems[3]}
-              setHoverState={setHoverState}
-              hoverState={hoverState}
-            />
-          </div>
+          <Card
+            content={cardItems[0]}
+            setHoverState={setHoverState}
+            hoverState={hoverState}
+          />
+          <Card
+            content={cardItems[1]}
+            setHoverState={setHoverState}
+            hoverState={hoverState}
+          />
+          <Card
+            content={cardItems[2]}
+            setHoverState={setHoverState}
+            hoverState={hoverState}
+          />
+          <Card
+            content={cardItems[3]}
+            setHoverState={setHoverState}
+            hoverState={hoverState}
+          />
         </div>
       </Container>
     </div>

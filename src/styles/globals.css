@@ -179,15 +179,15 @@ html {
   fill: #ff00ff;
 }
 
-/* DefiChainEcosystem section */
-#scrollableArea {
-  height: 639px;
-  min-width: 272px;
+.flexbox-wrapper {
+  display: flex;
   overflow: auto;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  height: 639px;
 }
 
-#scrollableArea::-webkit-scrollbar {
-  display: none;
+.stickyContainer {
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  top: 0;
+  align-self: flex-start; /* <-- this is the fix */
 }

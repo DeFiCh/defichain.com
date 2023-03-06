@@ -241,8 +241,7 @@ function DesktopMenu({ item }: { item: string }) {
           setIsShowing(!isShowing);
         }}
         className={classNames({
-          "accent-dfc-gradient-text bg-clip-text text-transparent":
-            isShowing && !isCursorOnHeader,
+          "text-brand-100": isShowing && !isCursorOnHeader,
         })}
       >
         {t(`header.navbar.${item.toLowerCase()}`)}

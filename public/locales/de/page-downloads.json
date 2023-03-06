@@ -1,7 +1,7 @@
 {
   "Head": {
     "title": "Dein Schlüssel zum DeFiChain-Ökosystem",
-    "desc": "Erhalte Zugang zur DeFi-Welt durch Non-Custodial Wallets, die für eine Vielzahl von Anforderungen entwickelt wurden."
+    "desc": "Erhalte Zugang zur DeFi-Welt durch Non-Custodial-Wallets, die für eine Vielzahl von Anforderungen entwickelt wurden."
   },
   "Header": {
     "title": "Dein Schlüssel zum DeFiChain-Ökosystem",
@@ -17,7 +17,11 @@
       },
       "DFX": {
         "title": "DFX wallet Handy-App",
-        "desc": "Dein Weg zur finanziellen Freiheit - kaufe und verkaufe DeFiChain-Assets mit einfachen Banküberweisungen und nutze die non-custodial DFX-Wallet um mit Liquidity Mining und $DFI Staking passiven Cashflow aufzubauen."
+        "desc": "Dein Weg zur finanziellen Freiheit - kaufe und verkaufe DeFiChain-Assets mit einfachen Banküberweisungen und nutze die Non-Custodial DFX-Wallet, um mit Liquiditäts-Mining und $DFI-Staking passiven Cashflow aufzubauen."
+      },
+      "JLY": {
+        "title": "Jellywallet",
+        "desc": "Jellywallet ist die ultimative, Non-Custodial Browser-Wallet für das DeFiChain-Ökosystem, die einen nahtlosen Zugang zur spannenden Welt von DeFi und Web3 ermöglicht. Verfügbar für Chrome, Firefox und den Brave Browser."
       }
     }
   },

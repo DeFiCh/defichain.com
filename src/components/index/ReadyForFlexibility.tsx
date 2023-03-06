@@ -2,6 +2,7 @@ import { Container } from "@components/commons/Container";
 import classNames from "classnames";
 import { Button } from "@components/commons/Buttons";
 import { useTranslation } from "next-i18next";
+import { SectionTitle } from "@components/commons/SectionTitle";
 
 export function ReadyForFlexibility() {
   const { t } = useTranslation("page-index");
@@ -23,14 +24,10 @@ export function ReadyForFlexibility() {
             "flex flex-col lg:w-[548px] md:w-[425px] w-auto"
           )}
         >
-          <div
-            className={classNames(
-              "accent-gradient-1 text-transparent bg-clip-text",
-              "lg:w-fit md:w-[409px] w-[272px] leading-4 tracking-[0.04em]"
-            )}
-          >
-            {t("ReadyForFlexibilitySection.label")}
-          </div>
+          <SectionTitle
+            text={t("ReadyForFlexibilitySection.label")}
+            customStyle="lg:w-fit md:w-[409px] w-[272px]"
+          />
 
           <div className="mt-5 text-6xl text-[40px] tracking-normal leading-11 md:tracking-[-0.02em]">
             <span className="text-dark-1000">{separatedTitle.join(" ")}</span>

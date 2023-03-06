@@ -6,7 +6,6 @@ interface VideoProps {
 
 export function Video(props: VideoProps): JSX.Element {
   const { src, width, height } = props;
-
   return (
     <video
       poster="/assets/img/index/dficoin.png"

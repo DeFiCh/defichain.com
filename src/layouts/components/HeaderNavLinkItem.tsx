@@ -130,7 +130,7 @@ export function HeaderNavLinkItem({
           )}
         </div>
 
-        <div className="text-dark-700 leading-5 md:text-base text-sm">
+        <div className="text-dark-700 leading-5 md:text-base text-sm font-normal">
           {subLabel}
         </div>
       </div>

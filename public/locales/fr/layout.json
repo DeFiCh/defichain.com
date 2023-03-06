@@ -9,7 +9,170 @@
       "downloads": "Téléchargements",
       "learn": "Apprendre",
       "buy": "Acheter",
-      "dfcblog": "Blog"
+      "dfcblog": "Blog",
+      "explore": "Explorer",
+      "build": "Construire",
+      "community": "Communauté"
+    },
+    "explore": {
+      "title": "Explorer DeFiChain",
+      "labels": [
+        {
+          "title": "$DFI",
+          "subtitle": "En savoir plus sur le token"
+        },
+        {
+          "title": "Investir, négocier et gagner",
+          "subtitle": "Explorer les cas d'utilisation de DeFiChain"
+        },
+        {
+          "title": "Échange décentralisé",
+          "subtitle": "Maximisez vos actifs"
+        },
+        {
+          "title": "Portefeuilles",
+          "subtitle": "Stockez vos actifs à votre manière"
+        },
+        {
+          "title": "Masternodes",
+          "subtitle": "Staking de DeFiChain"
+        }
+      ],
+      "image": {
+        "title": "$DFI",
+        "subtitle": "En savoir plus sur le token et où l'obtenir"
+      }
+    },
+    "ecosystem": {
+      "info": [
+        {
+          "title": "PLONGEZ DANS L'ÉCOSYSTÈME",
+          "labels": [
+            {
+              "title": "Applications DeFiChain",
+              "subtitle": "Voyez DeFiChain en action"
+            },
+            {
+              "title": "DeFi Meta Chain",
+              "subtitle": "Élargir les possibilités sur DeFiChain"
+            },
+            {
+              "title": "Gouvernance",
+              "subtitle": "Pour DeFiChain, par DeFiChain"
+            }
+          ]
+        },
+        {
+          "title": "IMPLIQUEZ-VOUS DANS DEFICHAIN",
+          "labels": [
+            {
+              "title": "Bounty de bogues"
+            },
+            {
+              "title": "Programme d'accélérateur de 100 millions de $"
+            }
+          ]
+        }
+      ],
+      "image": {
+        "subtitle": "Propulsé par la sécurité du Bitcoin et la flexibilité d'Ethereum"
+      }
+    },
+    "build": {
+      "title": "COMMENCER À CONSTRUIRE",
+      "labels": [
+        {
+          "title": "Kit de développement logiciel Jellyfish",
+          "subtitle": "Construire pour des applications modernes de DeFi"
+        },
+        {
+          "title": "Livre blanc de DeFiChain",
+          "subtitle": "Fondamentaux de DeFiChain"
+        },
+        {
+          "title": "GitHub",
+          "subtitle": "Suivre les développements récents"
+        },
+        {
+          "title": "Ressources pour les développeurs",
+          "subtitle": "Commencez à construire sur DeFiChain"
+        },
+        {
+          "title": "Ressources média",
+          "subtitle": "Ressources de marque de DeFiChain"
+        },
+        {
+          "title": "Sécurité",
+          "subtitle": "Sans confiance et décentralisé"
+        }
+      ]
+    },
+    "community": {
+      "info": [
+        {
+          "title": "PLONGER DANS L'ÉCOSYSTÈME",
+          "labels": [
+            {
+              "title": "Blog de DeFiChain",
+              "subtitle": "Read and learn more"
+            },
+            {
+              "title": "Bulletin d'information",
+              "subtitle": "Obtenir les dernières nouvelles"
+            }
+          ]
+        },
+        {
+          "title": "REJOINDRE LES COMMUNAUTÉS",
+          "labels": [
+            {
+              "title": "Reddit"
+            },
+            {
+              "title": "Twitter"
+            },
+            {
+              "title": "Facebook"
+            },
+            {
+              "title": "GitHub"
+            },
+            {
+              "title": "Youtube"
+            },
+            {
+              "title": "LinkedIn"
+            },
+            {
+              "title": "Discord"
+            },
+            {
+              "title": "CoinMarketCap"
+            },
+            {
+              "title": "Telegram (EN)"
+            },
+            {
+              "title": "Telegram (DE)"
+            },
+            {
+              "title": "Telegram (FR)"
+            },
+            {
+              "title": "Telegram (ES)"
+            },
+            {
+              "title": "Telegram (IT)"
+            },
+            {
+              "title": "Telegram (ID)"
+            },
+            {
+              "title": "Telegram (TR)"
+            }
+          ]
+        }
+      ]
     }
   },
   "footer": {

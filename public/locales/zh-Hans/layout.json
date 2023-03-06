@@ -5,11 +5,174 @@
       "dfi": "$DFI",
       "dex": "DEX",
       "developers": "开发者",
-      "ecosystem": "生态系统",
+      "ecosystem": "生态圈",
       "downloads": "下载区",
       "learn": "学习中心",
       "buy": "购买",
-      "dfcblog": "博客"
+      "dfcblog": "博客",
+      "explore": "探索",
+      "build": "建造",
+      "community": "社区"
+    },
+    "explore": {
+      "title": "探索 DeFiChain",
+      "labels": [
+        {
+          "title": "$DFI",
+          "subtitle": "了解代币（Token）"
+        },
+        {
+          "title": "投资、交易和赚取",
+          "subtitle": "探索 DeFiChain 的实例"
+        },
+        {
+          "title": "去中心化交易所",
+          "subtitle": "最大化你的资产"
+        },
+        {
+          "title": "钱包",
+          "subtitle": "以自己的方式存储资产"
+        },
+        {
+          "title": "主节点",
+          "subtitle": "将您的部分投入 DeFiChain"
+        }
+      ],
+      "image": {
+        "title": "$DFI",
+        "subtitle": "Learn about the token and where to get"
+      }
+    },
+    "ecosystem": {
+      "info": [
+        {
+          "title": "进入生态圈",
+          "labels": [
+            {
+              "title": "DeFiChain 应用",
+              "subtitle": "查看 DeFiChain 目前的进展"
+            },
+            {
+              "title": "DeFi元链",
+              "subtitle": "扩展 DeFiChain 的可能性"
+            },
+            {
+              "title": "治理",
+              "subtitle": "由 DeFiChain，为DeFiChain"
+            }
+          ]
+        },
+        {
+          "title": "参与并加入 DEFICHAIN",
+          "labels": [
+            {
+              "title": "漏洞奖励"
+            },
+            {
+              "title": "1 亿美元的加速器计划"
+            }
+          ]
+        }
+      ],
+      "image": {
+        "subtitle": "来自比特币的安全性和以太坊的灵活性保驾护航"
+      }
+    },
+    "build": {
+      "title": "建造起点",
+      "labels": [
+        {
+          "title": "Jellyfish SDK",
+          "subtitle": "为现代 DeFi 应用进行构建"
+        },
+        {
+          "title": "DeFiChain 白皮书",
+          "subtitle": "DeFiChain 的基础"
+        },
+        {
+          "title": "GitHub",
+          "subtitle": "跟进最新的进展"
+        },
+        {
+          "title": "开发人员资源",
+          "subtitle": "开始在 DeFiChain 上构建"
+        },
+        {
+          "title": "媒体资源",
+          "subtitle": "DeFiChain品牌资源"
+        },
+        {
+          "title": "安全性",
+          "subtitle": "去信任和去中心化"
+        }
+      ]
+    },
+    "community": {
+      "info": [
+        {
+          "title": "进入生态圈",
+          "labels": [
+            {
+              "title": "DeFiChain 部落格",
+              "subtitle": "Read and learn more"
+            },
+            {
+              "title": "Newsletter",
+              "subtitle": "获取最新消息"
+            }
+          ]
+        },
+        {
+          "title": "加入大家庭",
+          "labels": [
+            {
+              "title": "Reddit"
+            },
+            {
+              "title": "Twitter"
+            },
+            {
+              "title": "Facebook"
+            },
+            {
+              "title": "GitHub"
+            },
+            {
+              "title": "Youtube"
+            },
+            {
+              "title": "LinkedIn"
+            },
+            {
+              "title": "Discord"
+            },
+            {
+              "title": "CoinMarketCap"
+            },
+            {
+              "title": "Telegram (EN)"
+            },
+            {
+              "title": "Telegram (DE)"
+            },
+            {
+              "title": "Telegram (FR)"
+            },
+            {
+              "title": "Telegram (ES)"
+            },
+            {
+              "title": "Telegram (IT)"
+            },
+            {
+              "title": "Telegram (ID)"
+            },
+            {
+              "title": "Telegram (TR)"
+            }
+          ]
+        }
+      ]
     }
   },
   "footer": {

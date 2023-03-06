@@ -104,7 +104,7 @@ export function Explore() {
             <div className="font-bold text-2xl text-dark-1000">
               {MenuItems.image.title}
             </div>
-            <div className="text-dark-800 max-w-[178px] mt-1">
+            <div className="text-dark-800 max-w-[178px] mt-1 text-base font-normal">
               {MenuItems.image.subtitle}
             </div>
           </a>

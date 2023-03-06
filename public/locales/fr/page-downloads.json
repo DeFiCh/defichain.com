@@ -18,6 +18,10 @@
       "DFX": {
         "title": "DFX wallet application portefeuille mobile",
         "desc": "Acheter et vendre des actifs DeFiChain avec de simples virements bancaires, et utiliser le portefeuille DFX non gardien pour participer aux applications DeFiChain telles que le liquidity mining et le staking de $DFI."
+        },
+      "JLY": {
+        "title": "Jellywallet",
+        "desc": "Jellywallet est le portefeuille de navigateur non gardien ultime pour l'écosystème DeFiChain, permettant un accès transparent au monde passionnant de DeFi et Web3. Disponible pour Chrome, Firefox et Brave Browser."
       }
     }
   },

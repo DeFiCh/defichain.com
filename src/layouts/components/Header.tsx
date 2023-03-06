@@ -101,7 +101,7 @@ export function Header(): JSX.Element {
       ".mouse-cursor-gradient-tracking"
     ) as HTMLElement;
 
-    function mouseMove(e: MouseEvent) {
+    function onMouseMove(e: MouseEvent) {
       const headerRect = header.getBoundingClientRect();
       const x = (e.clientX - headerRect.left) / headerRect.width;
       const y = (e.clientY - headerRect.top) / headerRect.height;
@@ -116,20 +116,19 @@ export function Header(): JSX.Element {
       }
     }
 
-    function mouseLeave() {
+    function onMouseLeave() {
       header.style.backgroundImage =
         "linear-gradient(to right, #A6A6A6, #A6A6A6)";
     }
 
     if (header && device === ViewPort.DESKTOP) {
-      header.addEventListener("mousemove", mouseMove);
-
-      header.addEventListener("mouseleave", mouseLeave);
+      header.addEventListener("mousemove", onMouseMove);
+      header.addEventListener("mouseleave", onMouseLeave);
     }
 
     return () => {
-      header.removeEventListener("mousemove", mouseMove);
-      header.removeEventListener("mouseleave", mouseLeave);
+      header.removeEventListener("mousemove", onMouseMove);
+      header.removeEventListener("mouseleave", onMouseLeave);
     };
   }, [device, dimension]);
 

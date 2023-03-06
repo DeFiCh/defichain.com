@@ -2,6 +2,7 @@ import { Button } from "@components/commons/Buttons";
 import { Container } from "@components/commons/Container";
 import { useTranslation } from "next-i18next";
 import Slider from "react-slick";
+import { SectionTitle } from "@components/commons/SectionTitle";
 import { BlockchainFeatureColumn } from "./BlockchainFeatureColumn";
 
 export const BlockchainFeatureItems = [
@@ -51,9 +52,7 @@ export function BlockchainFeaturesSection(): JSX.Element {
             className="w-full flex flex-col space-y-5 md:space-y-5 lg:mt-32 lg:space-y-5"
             data-testid="BlockchainFeatureSection.text"
           >
-            <div className="gradient-text leading-4 tracking-[.04em]">
-              {t("BlockchainFeatureSection.subtitle")}
-            </div>
+            <SectionTitle text={t("BlockchainFeatureSection.subtitle")} />
             <h2
               className="text-[40px] leading-[44px] tracking-[-0.02em] lg:text-6xl lg:leading-[72px] lg:tracking-normal"
               data-testid="title"

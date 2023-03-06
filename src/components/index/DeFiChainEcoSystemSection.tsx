@@ -60,7 +60,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
         <div
           className={classNames(
             "lg:pl-[144px] lg:order-1 md:pb-[72px] pb-[48px] lg:pb-0",
-            { stickyContainer: dimensions.width >= 1033 } // only apply styling when in large screen
+            { "sticky-container": dimensions.width >= 1033 } // only apply styling when in large screen
           )}
         >
           <div className="md:w-[316px] leading-4 bg-clip-text text-transparent accent-gradient-1">

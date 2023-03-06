@@ -17,6 +17,7 @@ import { IoChevronDown, IoCloseCircleOutline } from "react-icons/io5";
 import { GradientButton } from "@components/commons/Buttons";
 import { useTranslation } from "next-i18next";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
+import { useDeviceDetect, ViewPort } from "@hooks/useDeviceDetect";
 import { useWhaleApiClient } from "../context/WhaleContext";
 import { Explore } from "./Explore";
 import { Ecosystem } from "./Ecosystem";
@@ -41,6 +42,7 @@ export function Header(): JSX.Element {
   const ref = useRef<HTMLDivElement>(null);
   const dimension = useWindowDimensions();
   const [isCursorOnHeader, setIsCursorOnHeader] = useState(false);
+  const device = useDeviceDetect();
 
   useEffect(() => {
     function routeChangeStart(): void {
@@ -92,12 +94,14 @@ export function Header(): JSX.Element {
     if (ref.current) {
       setHeaderHeight(ref.current.offsetHeight);
     }
+  }, [ref, dimension]);
 
+  useEffect(() => {
     const header = document.querySelector(
       ".mouse-cursor-gradient-tracking"
     ) as HTMLElement;
 
-    if (header && deviceType() === ViewPort.DESKTOP) {
+    if (header && device === ViewPort.DESKTOP) {
       header.addEventListener("mousemove", (e: MouseEvent) => {
         const headerRect = header.getBoundingClientRect();
         const x = (e.clientX - headerRect.left) / headerRect.width;
@@ -118,7 +122,7 @@ export function Header(): JSX.Element {
           "linear-gradient(to right, #A6A6A6, #A6A6A6)";
       });
     }
-  }, [ref, dimension]);
+  }, [device, dimension]);
 
   return (
     <header
@@ -392,24 +396,3 @@ const dropDownMapping = {
   build: Build,
   community: Community,
 };
-
-enum ViewPort {
-  TABLET = "tablet",
-  MOBILE = "mobile",
-  DESKTOP = "desktop",
-}
-
-function deviceType() {
-  const ua = navigator.userAgent;
-  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-    return ViewPort.TABLET;
-  }
-  if (
-    /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
-      ua
-    )
-  ) {
-    return ViewPort.MOBILE;
-  }
-  return ViewPort.DESKTOP;
-}

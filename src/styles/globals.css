@@ -3,6 +3,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -175,6 +176,20 @@ html {
   backdrop-filter: blur(6px);
 }
 
+.mouse-cursor-gradient-tracking {
+  background: linear-gradient(to right, #a6a6a6, #a6a6a6);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.mouse-cursor-gradient-tracking > * {
+  transition: opacity 0.2s ease-in-out;
+}
+
 .hover-icons:hover {
   fill: #ff00ff;
 }
@@ -227,4 +242,17 @@ html {
     opacity: 0;
     transform: translate(-100%, -100%);
   }
+}
+
+.flexbox-wrapper {
+  display: flex;
+  overflow: auto;
+  height: 639px;
+}
+
+.stickyContainer {
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  top: 0;
+  align-self: flex-start; /* <-- this is the fix */
 }

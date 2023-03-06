@@ -2,14 +2,12 @@ import { Container } from "@components/commons/Container";
 import { useTranslation } from "next-i18next";
 import { Video } from "@components/commons/Video";
 import classNames from "classnames";
-import { useState } from "react";
 
 export function HomePageHeader(): JSX.Element {
   const { t } = useTranslation("page-index");
   const separatedTitle = t("Header.title").split(" ");
   const firstWord = separatedTitle[0];
   separatedTitle.shift();
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   return (
     <div className="flex flex-col items-center md:mt-0">
@@ -46,11 +44,7 @@ export function HomePageHeader(): JSX.Element {
             "md:ml-0 ml-auto mr-[-16px] md:mr-[-32.18px]"
           )}
         >
-          {!isVideoLoaded && (
-            <img src="/assets/img/index/dficoin.png" alt="DFI coin" />
-          )}
           <Video
-            setIsVideoLoaded={setIsVideoLoaded}
             src="/assets/svg/hero/dfi-coin-video.mp4"
             width={595}
             height={595}

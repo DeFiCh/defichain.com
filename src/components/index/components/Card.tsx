@@ -9,12 +9,12 @@ import {
 import { WalletApps, WalletAppsHover } from "@public/assets/img/ecosystem/Dapp";
 import { Quantum, QuantumHover } from "@public/assets/img/ecosystem/Quantum";
 
-interface InvestCardProps {
+interface CardProps {
   id: string;
   href: string;
   img: string;
-  title: string;
-  subTitle: string;
+  // title: string;
+  // subTitle: string;
   customStyle?: string;
   mobileImg?: string;
 }
@@ -23,10 +23,14 @@ export function Card({
   content,
   setHoverState,
   hoverState,
+  title,
+  subTitle,
 }: {
-  content: InvestCardProps;
+  content: CardProps;
   setHoverState: Dispatch<SetStateAction<string | undefined>>;
   hoverState?: string;
+  title: string;
+  subTitle: string;
 }): JSX.Element {
   const Icon = iconMapping[content.id] as React.ElementType;
   const IconOnHover = iconMapping[`${content.id}_hover`] as React.ElementType;
@@ -53,7 +57,7 @@ export function Card({
           className={classNames(
             "w-full h-full p-6 rounded-[15px] border-[0.5px] flex flex-col",
             "border-dark-200 bg-dark-00 bg-cover bg-no-repeat bg-right-top",
-            "hover:transition-all duration-1000"
+            "duration-1000 hover:transition hover:ease-in delay-250"
           )}
           // style={{
           //   backgroundImage:
@@ -69,14 +73,14 @@ export function Card({
                   hoverState !== undefined && hoverState === content.id,
               })}
             >
-              {content.title}
+              {title}
             </span>
             <div
               className={classNames(
                 "text-base text-dark-500 pt-[22px] flex flex-row items-center font-semibold"
               )}
             >
-              {content.subTitle}
+              {subTitle}
               <FiArrowUpRight size={20} className="ml-[13px]" />
             </div>
             <div className="absolute right-[-95px] top-[30.7%] bottom-[-23.26%]">

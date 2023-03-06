@@ -1,29 +1,25 @@
 import { Container } from "@components/commons/Container";
+import { SectionTitle } from "@components/commons/SectionTitle";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import classNames from "classnames";
 import { useState } from "react";
+import { useTranslation } from "next-i18next";
 import { Card } from "./components/Card";
 
 const cardItems = [
   {
-    title: "Invest, Trade and Earn with DeFiChain",
-    subTitle: "Learn More",
     img: "meta-dfi-coin",
     id: "invest",
     href: "",
     customStyle: "xs:w-full md:w-[251px]",
   },
   {
-    title: "Own a Masternode",
-    subTitle: "Get Started",
     img: "glass-cube",
     id: "masternode",
     href: "",
     customStyle: "w-1/2",
   },
   {
-    title: "dApps for DeFiChain",
-    subTitle: "Explore",
     img: "wallet-apps",
     id: "dapps",
     href: "",
@@ -31,8 +27,6 @@ const cardItems = [
     mobileImg: "wallet-apps-mobile",
   },
   {
-    title: "Connecting blockchains with Quantum",
-    subTitle: "Learn More",
     img: "quantum",
     id: "quantum",
     href: "",
@@ -43,6 +37,8 @@ const cardItems = [
 export function DeFiChainEcoSystemSection(): JSX.Element {
   const [hoverState, setHoverState] = useState<string | undefined>(undefined);
   const dimensions = useWindowDimensions();
+  const { t } = useTranslation("page-index");
+  const sectionTitle = t("EcosystemSection.title").split(" ");
 
   // TODO
   // animation of svg
@@ -63,36 +59,49 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             { "sticky-container": dimensions.width >= 1033 } // only apply styling when in large screen
           )}
         >
-          <div className="md:w-[316px] leading-4 bg-clip-text text-transparent accent-gradient-1">
-            JUMPSTART INTO DEFICHAIN ECOSYSTEM
-          </div>
+          <SectionTitle
+            text={t("EcosystemSection.label")}
+            customStyle="lg:w-fit md:w-[409px] w-[272px]"
+          />
           <span className="block lg:text-6xl text-[40px] leading-[44px] max-w-[560px] pt-[20px] lg:leading-[72px]">
-            <span className="">Constant evolution </span>
-            <span className="">to</span>
+            <span>
+              {sectionTitle[0]} {sectionTitle[1]}
+            </span>
+            <span> {sectionTitle[2]} </span>
             <span className="md:block lg:inline">
-              <span className="text-electric"> build, deliver</span>
-              <span> and </span>
-              <span className="text-electric">outperform</span>
+              <span className="text-electric">
+                {sectionTitle[3]} {sectionTitle[4]}
+              </span>
+              <span> {sectionTitle[5]} </span>
+              <span className="text-electric">{sectionTitle[6]}</span>
             </span>
           </span>
         </div>
         <div className="no-scrollbar grid grid-flow-row grid-cols-1 gap-6 md:grid-flow-row md:grid-cols-2 lg:block lg:h-[639px] lg:place-self-end">
           <Card
+            title={t("EcosystemSection.cards.investTitle")}
+            subTitle={t("EcosystemSection.cards.investSubtitle")}
             content={cardItems[0]}
             setHoverState={setHoverState}
             hoverState={hoverState}
           />
           <Card
+            title={t("EcosystemSection.cards.masternodeTitle")}
+            subTitle={t("EcosystemSection.cards.masternodeSubtitle")}
             content={cardItems[1]}
             setHoverState={setHoverState}
             hoverState={hoverState}
           />
           <Card
+            title={t("EcosystemSection.cards.dappsTitle")}
+            subTitle={t("EcosystemSection.cards.dappsSubtitle")}
             content={cardItems[2]}
             setHoverState={setHoverState}
             hoverState={hoverState}
           />
           <Card
+            title={t("EcosystemSection.cards.quantumTitle")}
+            subTitle={t("EcosystemSection.cards.quantumSubtitle")}
             content={cardItems[3]}
             setHoverState={setHoverState}
             hoverState={hoverState}

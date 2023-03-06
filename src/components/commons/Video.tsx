@@ -15,6 +15,7 @@ export function Video(props: VideoProps): JSX.Element {
       autoPlay
       muted
       loop
+      playsInline
       onLoadedData={() => {
         setIsVideoLoaded(true);
       }}

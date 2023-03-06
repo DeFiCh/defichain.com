@@ -200,7 +200,7 @@ html {
   height: 639px;
 }
 
-.stickyContainer {
+.sticky-container {
   position: -webkit-sticky; /* for Safari */
   position: sticky;
   top: 0;

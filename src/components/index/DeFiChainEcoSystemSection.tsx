@@ -50,14 +50,19 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
   // translations
 
   return (
-    <div className="pt-48px md: pt-[96px] lg:pt-[292px]">
+    <div className="relative pt-48px md:pt-[96px] lg:pt-[292px]">
       <Container
         className={classNames(
-          "no-scrollbar relative lg:flex lg:justify-center md:mt-[24px]",
-          { "flexbox-wrapper": dimensions.width >= 1440 } // only apply styling when in large screen
+          "no-scrollbar z-10 relative lg:flex lg:justify-center md:mt-[24px]",
+          { "flexbox-wrapper": dimensions.width >= 1033 } // only apply styling when in large screen
         )}
       >
-        <div className="stickyContainer lg:pl-[144px] lg:order-1 md:pb-[72px] pb-[48px] lg:pb-0">
+        <div
+          className={classNames(
+            "lg:pl-[144px] lg:order-1 md:pb-[72px] pb-[48px] lg:pb-0",
+            { stickyContainer: dimensions.width >= 1033 } // only apply styling when in large screen
+          )}
+        >
           <div className="md:w-[316px] leading-4 bg-clip-text text-transparent accent-gradient-1">
             JUMPSTART INTO DEFICHAIN ECOSYSTEM
           </div>
@@ -94,6 +99,27 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
           />
         </div>
       </Container>
+      <div
+        className={classNames(
+          "absolute h-1/3 w-1/3 lg:bottom-[200px] md:bottom-[100px] left-0 bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/ecosystem/defichain-logo-outline.png')]",
+          {
+            "h-[475px] w-[475px] left-[-300px] top-[300px]":
+              dimensions.width <= 700,
+          }
+        )}
+      />
+      <div
+        className={classNames(
+          "absolute h-1/3 w-1/3 bottom-0 right-[21px] bg-contain bg-no-repeat mix-blend-screen bg-bottom md:bg-right bg-[url('/assets/img/footer/arrow_1.png')]",
+          {
+            "bottom-[225px] right-[-110px]": dimensions.width < 900,
+          },
+          {
+            "top-[400px] right-[-220px] h-[300px] w-[300px]":
+              dimensions.width < 596,
+          }
+        )}
+      />
     </div>
   );
 }

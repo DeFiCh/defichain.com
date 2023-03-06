@@ -1,4 +1,6 @@
 import { Container } from "@components/commons/Container";
+import { useWindowDimensions } from "@hooks/useWindowDimensions";
+import classNames from "classnames";
 import { useState } from "react";
 import { Card } from "./components/Card";
 
@@ -40,6 +42,7 @@ const cardItems = [
 
 export function DeFiChainEcoSystemSection(): JSX.Element {
   const [hoverState, setHoverState] = useState<string | undefined>(undefined);
+  const dimensions = useWindowDimensions();
 
   // TODO
   // animation of svg
@@ -48,7 +51,12 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
 
   return (
     <div className="pt-48px md: pt-[96px] lg:pt-[292px]">
-      <Container className="flexbox-wrapper no-scrollbar relative lg:flex lg:justify-center md:mt-[24px]">
+      <Container
+        className={classNames(
+          "no-scrollbar relative lg:flex lg:justify-center md:mt-[24px]",
+          { "flexbox-wrapper": dimensions.width >= 1440 } // only apply styling when in large screen
+        )}
+      >
         <div className="stickyContainer lg:pl-[144px] lg:order-1 md:pb-[72px] pb-[48px] lg:pb-0">
           <div className="md:w-[316px] leading-4 bg-clip-text text-transparent accent-gradient-1">
             JUMPSTART INTO DEFICHAIN ECOSYSTEM
@@ -62,14 +70,8 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
               <span className="text-electric">outperform</span>
             </span>
           </span>
-          <div className="absolute hidden lg:block h-1/4 w-1/4 bottom-0 right-0 bg-contain bg-no-repeat mix-blend-screen bg-bottom md:bg-right bg-[url('/assets/img/footer/arrow_1.png')]" />
         </div>
         <div className="no-scrollbar grid grid-flow-row grid-cols-1 gap-6 md:grid-flow-row md:grid-cols-2 lg:block lg:h-[639px] lg:place-self-end">
-          {/* <InvestCard
-            content={cardItems[0]}
-            setHoverState={setHoverState}
-            hoverState={hoverState}
-          /> */}
           <Card
             content={cardItems[0]}
             setHoverState={setHoverState}

@@ -70,7 +70,7 @@ export function BlockchainFeaturesSection(): JSX.Element {
               )}
             </h2>
             <div
-              className="text-dark-700 tracking-[.03em] lg:text-xl lg:tracking-normal"
+              className="text-dark-700 tracking-[.03em] lg:text-xl lg:tracking-normal font-desc"
               data-testid="desc"
             >
               {t("BlockchainFeatureSection.desc")}

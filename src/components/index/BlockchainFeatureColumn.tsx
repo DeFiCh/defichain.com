@@ -82,12 +82,14 @@ function FeatureIcon({
       <div className="ml-5 space-y-2 md:ml-0 md:mt-5 md:space-y-4">
         <h3
           className={classNames("font-bold leading-5 text-dark-1000", {
-            "gradient-text": isHovering,
+            "!text-brand-100": isHovering,
           })}
         >
           {item.title}
         </h3>
-        <div className="text-dark-700 text-sm md:text-base">{item.desc}</div>
+        <div className="text-dark-700 text-sm md:text-base font-desc">
+          {item.desc}
+        </div>
       </div>
     </div>
   );

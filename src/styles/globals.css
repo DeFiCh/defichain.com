@@ -178,3 +178,16 @@ html {
 .hover-icons:hover {
   fill: #ff00ff;
 }
+
+/* DefiChainEcosystem section */
+#scrollableArea {
+  height: 639px;
+  min-width: 272px;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+#scrollableArea::-webkit-scrollbar {
+  display: none;
+}

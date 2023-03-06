@@ -59,12 +59,15 @@ export function BlockchainFeaturesSection(): JSX.Element {
             >
               {separatedTitle.map((word, index) =>
                 index === 2 ? (
-                  <>
+                  <span key={`${word}`}>
                     <br />
-                    <span className="text-electric">{`${word} `}</span>
-                  </>
+                    <span
+                      className="text-electric"
+                      key={`${word}`}
+                    >{`${word} `}</span>
+                  </span>
                 ) : (
-                  <span>{`${word} `}</span>
+                  <span key={`${word}`}>{`${word} `}</span>
                 )
               )}
             </h2>

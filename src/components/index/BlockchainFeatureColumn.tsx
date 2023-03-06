@@ -36,7 +36,7 @@ export function BlockchainFeatureColumn({
   return (
     <div className="flex flex-1 flex-wrap gap-8 md:gap-12 lg:gap-y-16 lg:gap-x-10">
       {items.map((item) => (
-        <FeatureIcon item={item} id={id} />
+        <FeatureIcon item={item} id={id} key={item.title} />
       ))}
     </div>
   );

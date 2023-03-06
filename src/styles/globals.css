@@ -178,3 +178,53 @@ html {
 .hover-icons:hover {
   fill: #ff00ff;
 }
+
+#invest_hover {
+  transform-box: fill-box;
+  transform-origin: 40% 70%;
+  animation: transform 0.3s linear both;
+  animation-play-state: paused;
+  --rotateDeg: -45deg;
+  --xLength: -30px;
+  --yLength: 0px;
+}
+.card-test:hover #invest_hover,
+.card-test:hover #masternode_hover {
+  animation-play-state: running;
+}
+
+#masternode_hover {
+  animation-name: fade-out-top-left;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(var(--rotateDeg));
+  }
+}
+@keyframes transform {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(var(--xLength), var(--yLength))
+      rotate(var(--rotateDeg));
+  }
+}
+
+@keyframes fade-out-top-left {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-100%, -100%);
+  }
+}

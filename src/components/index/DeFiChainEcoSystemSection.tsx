@@ -48,7 +48,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
 
   return (
     <div className="pt-48px md: pt-[96px] lg:pt-[292px]">
-      <Container className="relative lg:flex lg:justify-center md:mt-[24px]">
+      <Container className="relative overflow-hidden lg:flex lg:justify-center md:mt-[24px]">
         <div
           className="lg:pl-[144px] lg:order-1 md:pb-[72px] pb-[48px] lg:pb-0"
           id="unscrollable-section"

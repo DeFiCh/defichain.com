@@ -1,6 +1,13 @@
 import classNames from "classnames";
 import { Dispatch, SetStateAction } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
+import { MetaDfiCoinHover } from "@public/assets/img/ecosystem/MetaDfiCoin";
+import {
+  GlassCube,
+  GlassCubeHover,
+} from "@public/assets/img/ecosystem/GlassCube";
+import { WalletApps, WalletAppsHover } from "@public/assets/img/ecosystem/Dapp";
+import { Quantum, QuantumHover } from "@public/assets/img/ecosystem/Quantum";
 
 interface InvestCardProps {
   id: string;
@@ -21,6 +28,9 @@ export function Card({
   setHoverState: Dispatch<SetStateAction<string | undefined>>;
   hoverState?: string;
 }): JSX.Element {
+  const Icon = iconMapping[content.id] as React.ElementType;
+  const IconOnHover = iconMapping[`${content.id}_hover`] as React.ElementType;
+
   return (
     <div>
       <div
@@ -32,6 +42,7 @@ export function Card({
           setHoverState(undefined);
         }}
         className={classNames(
+          "card-test relative overflow-hidden",
           "p-[0.5px] rounded-[15px] h-[215px] w-full xs:w-[327px] lg:w-[487px] xl:h-[215]",
           "md:block md:mb-[24px]",
           "card-outline-2 hover:accent-gradient-1"
@@ -44,12 +55,12 @@ export function Card({
             "border-dark-200 bg-dark-00 bg-cover bg-no-repeat bg-right-top",
             "hover:transition-all duration-1000"
           )}
-          style={{
-            backgroundImage:
-              hoverState !== undefined && hoverState === content.id
-                ? `url(/assets/img/ecosystem/${content.img}-hover.png)`
-                : `url(/assets/img/ecosystem/${content.img}.png)`,
-          }}
+          // style={{
+          //   backgroundImage:
+          //     hoverState !== undefined && hoverState === content.id
+          //       ? `url(/assets/img/ecosystem/${content.img}-hover.png)`
+          //       : `url(/assets/img/ecosystem/${content.img}.png)`,
+          // }}
         >
           <div className={classNames(content.customStyle)}>
             <span
@@ -68,9 +79,27 @@ export function Card({
               {content.subTitle}
               <FiArrowUpRight size={20} className="ml-[13px]" />
             </div>
+            <div className="absolute right-[-95px] top-[30.7%] bottom-[-23.26%]">
+              {hoverState !== undefined && hoverState === content.id && Icon ? (
+                <IconOnHover id={`${content.id}_hover`} className="" />
+              ) : (
+                <Icon className="transition-all ease-in-out delay-300" />
+              )}
+            </div>
           </div>
         </a>
       </div>
     </div>
   );
 }
+
+const iconMapping = {
+  invest: MetaDfiCoinHover,
+  invest_hover: MetaDfiCoinHover,
+  masternode: GlassCube,
+  masternode_hover: GlassCubeHover,
+  dapps: WalletApps,
+  dapps_hover: WalletAppsHover,
+  quantum: Quantum,
+  quantum_hover: QuantumHover,
+};

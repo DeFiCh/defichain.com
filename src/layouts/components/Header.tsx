@@ -101,27 +101,36 @@ export function Header(): JSX.Element {
       ".mouse-cursor-gradient-tracking"
     ) as HTMLElement;
 
-    if (header && device === ViewPort.DESKTOP) {
-      header.addEventListener("mousemove", (e: MouseEvent) => {
-        const headerRect = header.getBoundingClientRect();
-        const x = (e.clientX - headerRect.left) / headerRect.width;
-        const y = (e.clientY - headerRect.top) / headerRect.height;
-        const gradient = `radial-gradient(circle at ${x * 100}% ${
-          y * 100
-        }%, #ff00ff 0%, #A6A6A6 15%)`;
-        header.style.backgroundImage = gradient;
-        if (e.clientY >= headerRect.bottom) {
-          setIsCursorOnHeader(false);
-        } else {
-          setIsCursorOnHeader(true);
-        }
-      });
-
-      header.addEventListener("mouseleave", () => {
-        header.style.backgroundImage =
-          "linear-gradient(to right, #A6A6A6, #A6A6A6)";
-      });
+    function mouseMove(e: MouseEvent) {
+      const headerRect = header.getBoundingClientRect();
+      const x = (e.clientX - headerRect.left) / headerRect.width;
+      const y = (e.clientY - headerRect.top) / headerRect.height;
+      const gradient = `radial-gradient(circle at ${x * 100}% ${
+        y * 100
+      }%, #ff00ff 0%, #A6A6A6 15%)`;
+      header.style.backgroundImage = gradient;
+      if (e.clientY >= headerRect.bottom) {
+        setIsCursorOnHeader(false);
+      } else {
+        setIsCursorOnHeader(true);
+      }
     }
+
+    function mouseLeave() {
+      header.style.backgroundImage =
+        "linear-gradient(to right, #A6A6A6, #A6A6A6)";
+    }
+
+    if (header && device === ViewPort.DESKTOP) {
+      header.addEventListener("mousemove", mouseMove);
+
+      header.addEventListener("mouseleave", mouseLeave);
+    }
+
+    return () => {
+      header.removeEventListener("mousemove", mouseMove);
+      header.removeEventListener("mouseleave", mouseLeave);
+    };
   }, [device, dimension]);
 
   return (

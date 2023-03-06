@@ -17,6 +17,7 @@ import { IoChevronDown, IoCloseCircleOutline } from "react-icons/io5";
 import { GradientButton } from "@components/commons/Buttons";
 import { useTranslation } from "next-i18next";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
+import { useDeviceDetect, ViewPort } from "@hooks/useDeviceDetect";
 import { useWhaleApiClient } from "../context/WhaleContext";
 import { Explore } from "./Explore";
 import { Ecosystem } from "./Ecosystem";
@@ -40,6 +41,8 @@ export function Header(): JSX.Element {
   const { t } = useTranslation("layout");
   const ref = useRef<HTMLDivElement>(null);
   const dimension = useWindowDimensions();
+  const [isCursorOnHeader, setIsCursorOnHeader] = useState(false);
+  const device = useDeviceDetect();
 
   useEffect(() => {
     function routeChangeStart(): void {
@@ -62,6 +65,12 @@ export function Header(): JSX.Element {
     }
   }, [menu]);
 
+  useEffect(() => {
+    if (dimension.width >= 1024 && menu) {
+      setMenu(false);
+    }
+  }, [dimension.width, menu]);
+
   const tabletMobileDropDownObj = useMemo(
     () => ({
       dropDownState,
@@ -76,8 +85,9 @@ export function Header(): JSX.Element {
       isHoverOn,
       setIsHoverOn,
       headerHeight,
+      isCursorOnHeader,
     }),
-    [isHoverOn, setIsHoverOn, headerHeight]
+    [isHoverOn, headerHeight, isCursorOnHeader]
   );
 
   useEffect(() => {
@@ -85,6 +95,42 @@ export function Header(): JSX.Element {
       setHeaderHeight(ref.current.offsetHeight);
     }
   }, [ref, dimension]);
+
+  useEffect(() => {
+    const header = document.querySelector(
+      ".mouse-cursor-gradient-tracking"
+    ) as HTMLElement;
+
+    function onMouseMove(e: MouseEvent) {
+      const headerRect = header.getBoundingClientRect();
+      const x = (e.clientX - headerRect.left) / headerRect.width;
+      const y = (e.clientY - headerRect.top) / headerRect.height;
+      const gradient = `radial-gradient(circle at ${x * 100}% ${
+        y * 100
+      }%, #ff00ff 0%, #A6A6A6 15%)`;
+      header.style.backgroundImage = gradient;
+      if (e.clientY >= headerRect.bottom) {
+        setIsCursorOnHeader(false);
+      } else {
+        setIsCursorOnHeader(true);
+      }
+    }
+
+    function onMouseLeave() {
+      header.style.backgroundImage =
+        "linear-gradient(to right, #A6A6A6, #A6A6A6)";
+    }
+
+    if (header && device === ViewPort.DESKTOP) {
+      header.addEventListener("mousemove", onMouseMove);
+      header.addEventListener("mouseleave", onMouseLeave);
+    }
+
+    return () => {
+      header.removeEventListener("mousemove", onMouseMove);
+      header.removeEventListener("mouseleave", onMouseLeave);
+    };
+  }, [device, dimension]);
 
   return (
     <header
@@ -162,7 +208,7 @@ export function Header(): JSX.Element {
 }
 function DesktopNavbar(): JSX.Element {
   return (
-    <div className="w-full hidden lg:grid lg:grid-cols-[66px_100px_44px_100px] justify-center gap-x-[52px]">
+    <div className="mouse-cursor-gradient-tracking w-full hidden lg:flex flex-row justify-center gap-x-1">
       {MenuItems.map((item, key) => (
         <DesktopMenu key={key} item={item} />
       ))}
@@ -172,12 +218,14 @@ function DesktopNavbar(): JSX.Element {
 
 function DesktopMenu({ item }: { item: string }) {
   const [isShowing, setIsShowing] = useState(false);
-  const { headerHeight, setIsHoverOn } = useContext(HoverContext);
+  const { headerHeight, setIsHoverOn, isCursorOnHeader } =
+    useContext(HoverContext);
   const DesktopDropDown = dropDownMapping[item.toLowerCase()];
   const { t } = useTranslation("layout");
+
   return (
     <Menu
-      className="lg:pt-6 lg:pb-10 cursor-pointer"
+      className="lg:pt-6 lg:pb-10 cursor-pointer lg:w-[136px] text-center"
       as="div"
       onMouseLeave={() => {
         setIsShowing(false);
@@ -192,14 +240,15 @@ function DesktopMenu({ item }: { item: string }) {
         onClick={() => {
           setIsShowing(!isShowing);
         }}
-        className={classNames("text-dark-700 text-lg font-semibold", {
-          "accent-dfc-gradient-text bg-clip-text text-transparent": isShowing,
+        className={classNames({
+          "accent-dfc-gradient-text bg-clip-text text-transparent":
+            isShowing && !isCursorOnHeader,
         })}
       >
         {t(`header.navbar.${item.toLowerCase()}`)}
       </Menu.Button>
 
-      <Container className="cursor-auto">
+      <Container className="cursor-auto text-left">
         <Transition
           style={{ top: headerHeight - 1 }}
           className="absolute inset-x-0 header-dropdown-bg w-screen"
@@ -207,7 +256,7 @@ function DesktopMenu({ item }: { item: string }) {
           enter="transition ease duration-500 transform"
           enterFrom="opacity-0"
           enterTo="opacity-100"
-          leave="transition ease duration-500 transform"
+          leave="transition ease duration-200 transform"
           leaveFrom="opacity-100"
           leaveTo="opacity-0 "
         >
@@ -261,7 +310,7 @@ function TabletMobileMenu() {
 
         <Container
           className={classNames(
-            "block md:hidden flex justify-center mb-[56px]",
+            "block md:hidden justify-center mb-[56px]",
             dropDownState === MobileTabletDropDownState.COMMUNITY
               ? "mt-[52px]"
               : "mt-[68px]"

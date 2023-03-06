@@ -13,35 +13,36 @@
     }
   },
   "footer": {
-    "title": "比特币生态中的开放式金融",
-    "sitemap": {
-      "foundation": "递飞链基金会",
-      "dfi": "$DFI",
-      "dex": "DEX",
-      "developers": "开发者",
-      "ecosystem": "生态系统",
-      "downloads": "下载区",
-      "media": "媒体素材",
-      "learn": "学习中心",
-      "security": "安全性",
-      "bugbounty": "漏洞悬赏",
-      "whitepaper": "白皮书",
-      "dfcblog": "博客",
-      "language": "zh",
-      "newsletter": "Newsletter"
+    "explore": {
+      "EXPLORE": "探索",
+      "$DFI": "$DFI",
+      "Invest, Trade and Earn": "投资、交易和赚取",
+      "Decentralized Exchange": "去中心化交易所",
+      "Wallets": "钱包",
+      "Masternodes": "主节点"
     },
-    "social": {
-      "title": "社区",
-      "twitter": "推特",
-      "youtube": "YouTube",
-      "reddit": "Reddit",
-      "linkedin": "領英",
-      "facebook": "脸书",
-      "discord": "Discord",
-      "github": "GitHub",
-      "coinMarketCap": "CoinMarketCap",
-      "telegram": "电报群",
-      "merch": "商品"
+    "ecosystem": {
+      "ECOSYSTEM": "生态圈",
+      "DeFiChain Apps": "DeFiChain 应用",
+      "DeFi Meta Chain": "DeFi元链",
+      "DeFiScan": "DeFiScan",
+      "Governance": "治理",
+      "Bug Bounty": "漏洞奖励",
+      "$100M Accelerator Program": "1 亿美元的加速器计划"
+    },
+    "build": {
+      "BUILD": "建造",
+      "Jellyfish SDK": "Kit de développement logiciel Jellyfish",
+      "DeFiChain White Paper": "DeFiChain 白皮书",
+      "GitHub": "GitHub",
+      "Developer Resource": "Developer Resource",
+      "Media Assets": "媒体资源",
+      "Security": "安全性"
+    },
+    "community": {
+      "COMMUNITY": "社区",
+      "Blog": "Blog",
+      "Newsletter": "Newsletter"
     }
   }
 }

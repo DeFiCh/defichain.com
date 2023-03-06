@@ -177,50 +177,36 @@
     }
   },
   "footer": {
-    "title": "Native Decentralized Finance for Bitcoin.",
-    "sitemap": {
-      "foundation": "Foundation",
-      "dfi": "$DFI",
-      "dex": "DEX",
-      "decentralizedExchange": "Decentralized Exchange",
-      "developers": "Developers",
-      "ecosystem": "Ecosystem",
-      "downloads": "Downloads",
-      "media": "Media",
-      "learn": "Learn",
-      "security": "Security",
-      "whitepaper": "White Paper",
-      "dfcblog": "Blog",
-      "language": "en",
-      "newsletter": "Newsletter",
-      "investTradeNEarn": "Invest, Trade and Earn",
-      "wallets": "Wallets",
-      "masternodes": "Masternodes",
-      "defichainapps": "DeFiChain Apps",
-      "defiscan": "DeFiScan",
-      "defimetachain": "DeFi Meta Chain",
-      "governance": "Governance",
-      "bugbounty": "Bug Bounty",
-      "100macceleratorprogram": "$100M Accelerator Program",
-      "jellyfishsdk": "Jellyfish SDK",
-      "defichainwhitepaper": "DeFiChain White Paper",
-      "github": "GitHub",
-      "developerResource": "Developer Resource",
-      "mediaAssets": "Media Assets",
-      "blog": "Blog"
+    "explore": {
+      "EXPLORE": "EXPLORE",
+      "$DFI": "$DFI",
+      "Invest, Trade and Earn": "Invest, Trade and Earn",
+      "Decentralized Exchange": "Decentralized Exchange",
+      "Wallets": "Wallets",
+      "Masternodes": "Masternodes"
     },
-    "social": {
-      "title": "Social",
-      "twitter": "Twitter",
-      "youtube": "YouTube",
-      "reddit": "Reddit",
-      "linkedin": "LinkedIn",
-      "facebook": "Facebook",
-      "discord": "Discord",
-      "github": "GitHub",
-      "coinMarketCap": "CoinMarketCap",
-      "telegram": "Telegram",
-      "merch": "Merch"
+    "ecosystem": {
+      "ECOSYSTEM": "ECOSYSTEM",
+      "DeFiChain Apps": "DeFiChain Apps",
+      "DeFi Meta Chain": "DeFi Meta Chain",
+      "DeFiScan": "DeFiScan",
+      "Governance": "Governance",
+      "Bug Bounty": "Bug Bounty",
+      "$100M Accelerator Program": "$100M Accelerator Program"
+    },
+    "build": {
+      "BUILD": "BUILD",
+      "Jellyfish SDK": "Jellyfish SDK",
+      "DeFiChain White Paper": "DeFiChain White Paper",
+      "GitHub": "GitHub",
+      "Developer Resource": "Developer Resource",
+      "Media Assets": "Media Assets",
+      "Security": "Security"
+    },
+    "community": {
+      "COMMUNITY": "COMMUNITY",
+      "Blog": "Blog",
+      "Newsletter": "Newsletter"
     }
   }
 }

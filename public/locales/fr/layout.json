@@ -13,35 +13,36 @@
     }
   },
   "footer": {
-    "title": "Finance décentralisée native sur Bitcoin",
-    "sitemap": {
-      "foundation": "Fondation",
-      "dfi": "$DFI",
-      "dex": "DEX",
-      "developers": "Développeurs",
-      "ecosystem": "Écosystème",
-      "downloads": "Downloads",
-      "media": "Médias",
-      "learn": "Apprendre",
-      "security": "Sécurité",
-      "bugbounty": "Prime aux bogues",
-      "whitepaper": "Livre blanc",
-      "dfcblog": "Blog",
-      "language": "fr",
-      "newsletter": "Newsletter"
+    "explore": {
+      "EXPLORE": "EXPLORER",
+      "$DFI": "$DFI",
+      "Invest, Trade and Earn": "Investir, négocier et gagner",
+      "Decentralized Exchange": "Échange décentralisé",
+      "Wallets": "Portefeuilles",
+      "Masternodes": "Masternodes"
     },
-    "social": {
-      "title": "Réseaux sociaux",
-      "twitter": "Twitter",
-      "youtube": "YouTube",
-      "reddit": "Reddit",
-      "linkedin": "LinkedIn",
-      "facebook": "Facebook",
-      "discord": "Discord",
-      "github": "GitHub",
-      "coinMarketCap": "CoinMarketCap",
-      "telegram": "Telegram",
-      "merch": "Marchandise"
+    "ecosystem": {
+      "ECOSYSTEM": "ECOSYSTÈME",
+      "DeFiChain Apps": "Applications DeFiChain",
+      "DeFi Meta Chain": "DeFi Meta Chain",
+      "DeFiScan": "DeFiScan",
+      "Governance": "Gouvernance",
+      "Bug Bounty": "Bounty de bogues",
+      "$100M Accelerator Program": "Programme d'accélérateur de 100 millions de $"
+    },
+    "build": {
+      "BUILD": "CONSTRUIRE",
+      "Jellyfish SDK": "Kit de développement logiciel Jellyfish",
+      "DeFiChain White Paper": "Livre blanc de DeFiChain",
+      "GitHub": "GitHub",
+      "Developer Resource": "Developer Resource",
+      "Media Assets": "Ressources média",
+      "Security": "Sécurité"
+    },
+    "community": {
+      "COMMUNITY": "COMMUNAUTÉ",
+      "Blog": "Blog",
+      "Newsletter": "Newsletter"
     }
   }
 }

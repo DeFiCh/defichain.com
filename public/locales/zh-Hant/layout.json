@@ -13,35 +13,36 @@
     }
   },
   "footer": {
-    "title": "比特幣生態中的開放式金融",
-    "sitemap": {
-      "foundation": "遞飛鏈基金會",
-      "dfi": "$DFI",
-      "dex": "DEX",
-      "developers": "開發者",
-      "ecosystem": "生態系統",
-      "downloads": "下載區",
-      "media": "媒體素材",
-      "learn": "學習中心",
-      "security": "安全性",
-      "bugbounty": "漏洞懸賞",
-      "whitepaper": "白皮書",
-      "dfcblog": "博客",
-      "language": "zh-tw",
-      "newsletter": "Newsletter"
+    "explore": {
+      "EXPLORE": "探索",
+      "$DFI": "$DFI",
+      "Invest, Trade and Earn": "Investir, négocier et gagner",
+      "Decentralized Exchange": "Échange décentralisé",
+      "Wallets": "Portefeuilles",
+      "Masternodes": "Masternodes"
     },
-    "social": {
-      "title": "社區",
-      "twitter": "推特",
-      "youtube": "YouTube",
-      "reddit": "Reddit",
-      "linkedin": "領英",
-      "facebook": "臉書",
-      "discord": "Discord",
-      "github": "GitHub",
-      "coinMarketCap": "CoinMarketCap",
-      "telegram": "電報群",
-      "merch": "商品"
+    "ecosystem": {
+      "ECOSYSTEM": "生態圈",
+      "DeFiChain Apps": "DeFiChain 應用",
+      "DeFi Meta Chain": "DeFi元鏈",
+      "DeFiScan": "DeFiScan",
+      "Governance": "治理",
+      "Bug Bounty": "漏洞獎勵",
+      "$100M Accelerator Program": "1 億美元的加速器計劃"
+    },
+    "build": {
+      "BUILD": "建造",
+      "Jellyfish SDK": "Jellyfish SDK",
+      "DeFiChain White Paper": "DeFiChain 白皮書",
+      "GitHub": "GitHub",
+      "Developer Resource": "Developer Resource",
+      "Media Assets": "媒體資源",
+      "Security": "安全性"
+    },
+    "community": {
+      "COMMUNITY": "社區",
+      "Blog": "Blog",
+      "Newsletter": "Newsletter"
     }
   }
 }

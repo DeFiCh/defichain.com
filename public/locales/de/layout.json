@@ -14,35 +14,36 @@
     }
   },
   "footer": {
-    "title": "Natives dezentrales Finanzwesen, basierend auf Bitcoin",
-    "sitemap": {
-      "foundation": "Foundation",
-      "dfi": "$DFI",
-      "dex": "DEX",
-      "developers": "Entwickler",
-      "ecosystem": "Ökosystem",
-      "downloads": "Downloads",
-      "media": "Medien",
-      "learn": "Mehr erfahren",
-      "security": "Sicherheit",
-      "bugbounty": "Bug-Bounty",
-      "whitepaper": "White Paper",
-      "dfcblog": "Blog",
-      "language": "de",
-      "newsletter": "Newsletter"
+    "explore": {
+      "EXPLORE": "ERKUNDEN",
+      "$DFI": "$DFI",
+      "Invest, Trade and Earn": "Investieren, Handeln und Verdienen",
+      "Decentralized Exchange": "Dezentrale Börse",
+      "Wallets": "Wallets",
+      "Masternodes": "Masternodes"
     },
-    "social": {
-      "title": "Soziale Netze",
-      "twitter": "Twitter",
-      "youtube": "YouTube",
-      "reddit": "Reddit",
-      "linkedin": "LinkedIn",
-      "facebook": "Facebook",
-      "discord": "Discord",
-      "github": "GitHub",
-      "coinMarketCap": "CoinMarketCap",
-      "telegram": "Telegram",
-      "merch": "Verkaufsartikel"
+    "ecosystem": {
+      "ECOSYSTEM": "ÖKOSYSTEM",
+      "DeFiChain Apps": "DeFiChain Apps",
+      "DeFi Meta Chain": "DeFi Meta Chain",
+      "DeFiScan": "DeFiScan",
+      "Governance": "Governance",
+      "Bug Bounty": "Bug-Bounty",
+      "$100M Accelerator Program": "100 Mio. $ Accelerator-Programm"
+    },
+    "build": {
+      "BUILD": "BAUEN",
+      "Jellyfish SDK": "Jellyfish SDK",
+      "DeFiChain White Paper": "DeFiChain White Paper",
+      "GitHub": "GitHub",
+      "Developer Resource": "Developer Resource",
+      "Media Assets": "Medien",
+      "Security": "Sicherheit"
+    },
+    "community": {
+      "COMMUNITY": "COMMUNITY",
+      "Blog": "Blog",
+      "Newsletter": "Newsletter"
     }
   }
 }

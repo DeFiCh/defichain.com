@@ -62,6 +62,12 @@ export function Header(): JSX.Element {
     }
   }, [menu]);
 
+  useEffect(() => {
+    if (dimension.width >= 1024 && menu) {
+      setMenu(false);
+    }
+  }, [dimension.width, menu]);
+
   const tabletMobileDropDownObj = useMemo(
     () => ({
       dropDownState,
@@ -116,7 +122,7 @@ export function Header(): JSX.Element {
 
           <div className="hidden md:flex h-full flex lg:pt-4">
             <GradientButton
-              className="py-3 bg-dark-00"
+              className="py-3 px-5 bg-dark-00"
               buttonText={`${t("header.navbar.buy")} DFI $${Number(
                 dfiPrice
               ).toFixed(2)}`}
@@ -261,7 +267,7 @@ function TabletMobileMenu() {
 
         <Container
           className={classNames(
-            "block md:hidden flex justify-center mb-[56px]",
+            "block md:hidden justify-center mb-[56px]",
             dropDownState === MobileTabletDropDownState.COMMUNITY
               ? "mt-[52px]"
               : "mt-[68px]"

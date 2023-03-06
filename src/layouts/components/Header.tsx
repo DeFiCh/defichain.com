@@ -92,33 +92,33 @@ export function Header(): JSX.Element {
     if (ref.current) {
       setHeaderHeight(ref.current.offsetHeight);
     }
+
+    const header = document.querySelector(
+      ".mouse-cursor-gradient-tracking"
+    ) as HTMLElement;
+
+    if (header && deviceType() === ViewPort.DESKTOP) {
+      header.addEventListener("mousemove", (e: MouseEvent) => {
+        const headerRect = header.getBoundingClientRect();
+        const x = (e.clientX - headerRect.left) / headerRect.width;
+        const y = (e.clientY - headerRect.top) / headerRect.height;
+        const gradient = `radial-gradient(circle at ${x * 100}% ${
+          y * 100
+        }%, #ff00ff 0%, #A6A6A6 15%)`;
+        header.style.backgroundImage = gradient;
+        if (e.clientY >= headerRect.bottom) {
+          setIsCursorOnHeader(false);
+        } else {
+          setIsCursorOnHeader(true);
+        }
+      });
+
+      header.addEventListener("mouseleave", () => {
+        header.style.backgroundImage =
+          "linear-gradient(to right, #A6A6A6, #A6A6A6)";
+      });
+    }
   }, [ref, dimension]);
-
-  const header = document.querySelector(
-    ".mouse-cursor-gradient-tracking"
-  ) as HTMLElement;
-
-  if (header && deviceType() === ViewPort.DESKTOP) {
-    header.addEventListener("mousemove", (e: MouseEvent) => {
-      const headerRect = header.getBoundingClientRect();
-      const x = (e.clientX - headerRect.left) / headerRect.width;
-      const y = (e.clientY - headerRect.top) / headerRect.height;
-      const gradient = `radial-gradient(circle at ${x * 100}% ${
-        y * 100
-      }%, #ff00ff 0%, #A6A6A6 30%)`;
-      header.style.backgroundImage = gradient;
-      if (e.clientY >= headerRect.bottom) {
-        setIsCursorOnHeader(false);
-      } else {
-        setIsCursorOnHeader(true);
-      }
-    });
-
-    header.addEventListener("mouseleave", () => {
-      header.style.backgroundImage =
-        "linear-gradient(to right, #A6A6A6, #A6A6A6)";
-    });
-  }
 
   return (
     <header
@@ -244,7 +244,7 @@ function DesktopMenu({ item }: { item: string }) {
           enter="transition ease duration-500 transform"
           enterFrom="opacity-0"
           enterTo="opacity-100"
-          leave="transition ease duration-500 transform"
+          leave="transition ease duration-200 transform"
           leaveFrom="opacity-100"
           leaveTo="opacity-0 "
         >

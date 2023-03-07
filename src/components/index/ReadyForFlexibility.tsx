@@ -33,10 +33,10 @@ export function ReadyForFlexibility() {
           </div>
 
           <div>
-            <div className="lg:mt-8 mt-5 lg:text-xl md:text-base tracking-[0.03em] text-dark-700 font-desc">
+            <div className="lg:mt-8 mt-5 lg:text-xl md:text-base lg:tracking-normal tracking-[0.03em] text-dark-700 font-desc">
               {t("ReadyForFlexibilitySection.descParaOne")}
             </div>
-            <div className="lg:mt-8 mt-5 lg:text-xl md:text-base tracking-[0.03em] text-dark-700 font-desc">
+            <div className="lg:mt-8 mt-5 lg:text-xl md:text-base lg:tracking-normal tracking-[0.03em] text-dark-700 font-desc">
               {t("ReadyForFlexibilitySection.descParaTwo")}
             </div>
           </div>

@@ -32,7 +32,7 @@ export function StatsDisplay() {
   const { suffix, value } = useUnitSuffix(
     stats ? stats.tvl.masternodes.toString() : "N/A"
   );
-  const masternodeValue = value === "N/A" ? "N/A" : `${value + suffix}+`;
+  const masternodeValue = `${value + suffix}+`;
 
   return (
     <div className="relative z-0">
@@ -46,13 +46,9 @@ export function StatsDisplay() {
               <StatsItem
                 title={t("StatisticsSection.dfiMinted.title")}
                 stats={supply?.total}
-                desc={
-                  supply === undefined
-                    ? "N/A"
-                    : t("StatisticsSection.dfiMinted.desc", {
-                        perc: calculatePercentage(supply.total, supply.max),
-                      })
-                }
+                desc={t("StatisticsSection.dfiMinted.desc", {
+                  perc: calculatePercentage(supply?.total, supply?.max),
+                })}
               />
               <StatsItem
                 title={
@@ -68,13 +64,9 @@ export function StatsDisplay() {
               <StatsItem
                 title={t("StatisticsSection.masternodes.title")}
                 stats={stats?.count.masternodes}
-                desc={
-                  masternodeValue === "N/A"
-                    ? masternodeValue
-                    : t("StatisticsSection.masternodes.desc", {
-                        perc: masternodeValue,
-                      })
-                }
+                desc={t("StatisticsSection.masternodes.desc", {
+                  perc: masternodeValue,
+                })}
               />
             </div>
           </div>

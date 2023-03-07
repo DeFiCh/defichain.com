@@ -193,3 +193,19 @@ html{
 .mouse-cursor-gradient-tracking > * {
   transition: opacity 0.2s ease-in-out;
 }
+
+.jellyfish-item {
+  animation: diagonal-move-anim 3s linear infinite alternate;
+  position: absolute;
+}
+@keyframes diagonal-move-anim {
+
+  0% {
+    transform: translate(200px, 0px);
+  }
+
+  100% {
+    transform: translate(100px, 100px);
+  }
+
+}

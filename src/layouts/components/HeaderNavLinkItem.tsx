@@ -104,7 +104,7 @@ export function HeaderNavLinkItem({
             className={classNames(
               "mr-[7px] flex font-semibold text-dark-1000 md:text-lg leading-6",
               "group-hover:duration-500 group-hover:transition group-hover:text-brand-100 group-active:opacity-70",
-              "lg:whitespace-nowrap md:whitespace-pre-wrap whitespace-nowrap"
+              "md:whitespace-pre-wrap whitespace-nowrap"
             )}
           >
             {label}

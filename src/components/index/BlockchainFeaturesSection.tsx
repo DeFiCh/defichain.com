@@ -43,7 +43,7 @@ export function BlockchainFeaturesSection(): JSX.Element {
 
   return (
     <section
-      className="py-6 md:py-12 lg:py-[88px] relative"
+      className="pt-14 pb-12 md:py-24 lg:py-[156px] relative"
       data-testid="BlockchainFeatureSection"
     >
       <Container className="flex flex-col justify-between lg:flex-row 2xl:max-w-[1920px] 2xl:mx-[300px]">

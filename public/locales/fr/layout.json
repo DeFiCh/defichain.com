@@ -114,10 +114,6 @@
           "labels": [
             {
               "title": "Blog de DeFiChain",
-              "subtitle": "Read and learn more"
-            },
-            {
-              "title": "Bulletin d'information",
               "subtitle": "Obtenir les dernières nouvelles"
             }
           ]
@@ -169,6 +165,9 @@
             },
             {
               "title": "Telegram (TR)"
+            },
+            {
+              "title": "Telegram (ZH)"
             }
           ]
         }

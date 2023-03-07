@@ -14,14 +14,14 @@ export function SecurityIcon(props: SVGProps<SVGSVGElement>) {
       <circle cx="25" cy="25" r="24.5" stroke={`url('#${id}')`} />
       <circle
         id="security-icon-med-circle-mouse-out"
-        cx="29.1662"
+        cx="21.1662"
         cy="24.924"
         r="20.1818"
         stroke="#A6A6A6"
       />
       <circle
         id="security-icon-small-circle-mouse-out"
-        cx="35.5291"
+        cx="15.5291"
         cy="24.9237"
         r="13.8182"
         stroke="#A6A6A6"

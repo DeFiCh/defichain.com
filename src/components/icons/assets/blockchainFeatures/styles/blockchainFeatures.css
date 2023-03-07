@@ -36,6 +36,38 @@
   animation-play-state: running;
 }
 
+/* on mouseout animations */
+.throughputSmallSquareMouseOut {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: spin 0.3s linear;
+  --rotateDeg: 90deg;
+}
+
+#security-icon-small-circle-mouse-out {
+  animation: move 0.3s linear both;
+  --xLength: 20px;
+  --yLength: 0px;
+}
+
+#security-icon-med-circle-mouse-out {
+  animation: move 0.3s linear both;
+  --xLength: 8px;
+  --yLength: 0px;
+}
+
+#immutability-icon-top-mouse-out {
+  animation: move 0.3s linear both;
+  --xLength: 0px;
+  --yLength: -20px;
+}
+
+#immutability-icon-middle-mouse-out {
+  animation: move 0.3s linear both;
+  --xLength: 0px;
+  --yLength: -10px;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -48,74 +80,5 @@
 @keyframes move {
   to {
     transform: translate(var(--xLength), var(--yLength));
-  }
-}
-
-/* on mouseout animations */
-.throughputSmallSquareMouseOut {
-  transform-box: fill-box;
-  transform-origin: 50% 50%;
-  animation: reverse-spin 0.3s linear;
-  --rotateDeg: 90deg;
-}
-
-#security-icon-small-circle-mouse-out {
-  transform-box: fill-box;
-  animation: reverse-move 0.3s linear both;
-  animation-play-state: running;
-  --xLength: 20px;
-  --yLength: 0px;
-}
-
-#security-icon-med-circle-mouse-out {
-  animation: reverse-move 0.3s linear both;
-  animation-play-state: paused;
-  --xLength: 8px;
-  --yLength: 0px;
-}
-
-#immutability-icon-top-mouse-out {
-  animation: reverse-move 0.3s linear both;
-  animation-play-state: paused;
-  --xLength: 0px;
-  --yLength: -20px;
-}
-
-#immutability-icon-middle-mouse-out {
-  animation: reverse-move 0.3s linear both;
-  animation-play-state: paused;
-  --xLength: 0px;
-  --yLength: -10px;
-}
-
-.blockchain-feature-item:hover #security-icon-small-circle-mouse-out,
-.blockchain-feature-item:hover #security-icon-med-circle-mouse-out,
-.blockchain-feature-item:hover #immutability-icon-top-mouse-out,
-.blockchain-feature-item:hover #immutability-icon-middle-mouse-out {
-  animation-play-state: running;
-}
-
-@keyframes reverse-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(var(--rotateDeg));
-  }
-}
-
-@keyframes reverse-move {
-  to {
-    transform: translate(-var(--xLength), -var(--yLength));
-  }
-}
-
-@keyframes reverse-spin-move {
-  0% {
-    transform: rotate(0deg) translate(0px, 0px);
-  }
-  100% {
-    transform: rotate(var(--rotateDeg))
-      translate(-var(--xLength), -var(--yLength));
   }
 }

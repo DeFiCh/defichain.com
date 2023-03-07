@@ -69,16 +69,14 @@ function FeatureIcon({
       onMouseOut={handleMouseOut}
       onBlur={handleMouseOut}
     >
-      <div>
-        {isHovering && Icon ? (
-          <IconOnHover className="w-[50px] md:w-fit h-[50px]" />
-        ) : (
-          <Icon
-            className="w-[50px] md:w-fit h-[50px]"
-            id={`${id}-${item.title}`}
-          />
-        )}
-      </div>
+      {isHovering && Icon ? (
+        <IconOnHover className="w-[50px] md:w-fit h-[50px]" />
+      ) : (
+        <Icon
+          className="w-[50px] md:w-fit h-[50px]"
+          id={`${id}-${item.title}`}
+        />
+      )}
       <div className="ml-5 space-y-2 md:ml-0 md:mt-5 md:space-y-4">
         <h3
           className={classNames("font-bold leading-5 text-dark-1000", {

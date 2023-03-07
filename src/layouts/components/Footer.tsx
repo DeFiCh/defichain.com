@@ -13,8 +13,8 @@ export const MenuItems = [
     childLink: [
       {
         label: "$DFI",
-        pathname: "/DFI",
-        testId: "dfi",
+        pathname: "/dfi",
+        testId: "DFI",
         altLabel: "dfi",
         isExternaLink: false,
       },
@@ -191,22 +191,26 @@ export default function Footer(): JSX.Element {
             <FooterColumn
               category={MenuItems[0].category}
               childLinks={MenuItems[0].childLink}
+              customStyle="pt-0"
             />
             {/* ECOSYSTEM */}
             <FooterColumn
               category={MenuItems[1].category}
               childLinks={MenuItems[1].childLink}
+              customStyle="sm:pt-[54px]"
             />
             {/* BUILD */}
             <FooterColumn
               category={MenuItems[2].category}
               childLinks={MenuItems[2].childLink}
+              customStyle="sm:pt-[54px]"
             />
             {/* COMMUNITY */}
             <div className="justify-between flex flex-col">
               <FooterColumn
                 category={MenuItems[3].category}
                 childLinks={MenuItems[3].childLink}
+                customStyle="sm:pt-[54px]"
               />
               <SocialsRow
                 customStyle="text-dark-500 flex flex-row gap-5 sm:pb-[54px] sm:pt-[38px] md:pb-0"
@@ -219,7 +223,9 @@ export default function Footer(): JSX.Element {
           <div className="block md:hidden">
             <div className="text-dark-500">
               <div className="flex flex-row items-center justify-between">
-                <DeFiChainLogo className="w-[128px]" />
+                <div data-testid="Footer.Mobile.Logo">
+                  <DeFiChainLogo className="w-[128px]" />
+                </div>
                 <div className="flex justify-end">
                   <LanguageDropdownV2 />
                 </div>
@@ -228,13 +234,13 @@ export default function Footer(): JSX.Element {
                 <FooterInternalBottomLink
                   text="Privacy Policy"
                   pathname="/privacy-policy"
-                  testId="Footer.Privacy"
+                  testId="Footer.Mobile.Privacy"
                 />
                 <span className="px-2">•</span>
                 <FooterInternalBottomLink
                   text="Terms of use"
                   pathname="/terms-of-use"
-                  testId="Footer.Privacy"
+                  testId="Footer.Mobile.Terms"
                 />
               </div>
             </div>
@@ -242,19 +248,21 @@ export default function Footer(): JSX.Element {
           {/* Web View */}
           <div className="md:block hidden">
             <div className="flex flex-row justify-between items-center">
-              <DeFiChainLogo className="w-[176.67px]" />
+              <div data-testid="Footer.Web.Logo">
+                <DeFiChainLogo className="w-[176.67px]" />
+              </div>
               <div className="flex flex-row">
                 <div className="flex flex-row items-center pl-3">
                   <FooterInternalBottomLink
                     text="Privacy Policy"
                     pathname="/privacy-policy"
-                    testId="Footer.Privacy"
+                    testId="Footer.Web.Privacy"
                   />
                   <span className="px-2 text-dark-500">•</span>
                   <FooterInternalBottomLink
                     text="Terms of use"
                     pathname="/terms-of-use"
-                    testId="Footer.Privacy"
+                    testId="Footer.Web.Terms"
                   />
                 </div>
                 <div className="flex pl-[23px]">

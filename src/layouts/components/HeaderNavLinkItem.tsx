@@ -85,15 +85,17 @@ export function HeaderNavLinkItem({
       )}
     >
       {Icon && (
-        <Icon
-          id={dfiId}
-          className={classNames(
-            "group-hover:duration-500 group-hover:transition group-active:opacity-70",
-            iconsStrokes.some((element) => icon!.includes(element))
-              ? "group-hover:stroke-brand-100"
-              : "fill-dark-700 group-hover:fill-brand-100"
-          )}
-        />
+        <div>
+          <Icon
+            id={dfiId}
+            className={classNames(
+              "group-hover:duration-500 group-hover:transition group-active:opacity-70",
+              iconsStrokes.some((element) => icon!.includes(element))
+                ? "group-hover:stroke-brand-100"
+                : "fill-dark-700 group-hover:fill-brand-100"
+            )}
+          />
+        </div>
       )}
 
       <div className="flex flex-col">

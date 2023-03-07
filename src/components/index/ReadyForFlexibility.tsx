@@ -21,11 +21,7 @@ export function ReadyForFlexibility() {
       )}
     >
       <Container>
-        <div
-          className={classNames(
-            "flex flex-col lg:w-[548px] md:w-[425px] w-auto"
-          )}
-        >
+        <div className={classNames("flex flex-col md:w-1/2 w-auto")}>
           <SectionTitle
             text={t("ReadyForFlexibilitySection.label")}
             customStyle="lg:w-fit md:w-[409px] w-[272px]"
@@ -63,8 +59,8 @@ export function ReadyForFlexibility() {
         className={classNames(
           "jellyfish-item z-[-2] bg-[url(/assets/img/index/jellyfish.png)] hidden md:block",
           "lg:h-[317.38px] md:h-[161.58px] absolute inset-0 z-[-1] bg-contain bg-no-repeat bg-right",
-          "2xl:right-[25%] xl:right-[30%] lg:right-[35%] lg:top-[60%] top-[50%] right-[40%]",
-          { "right-[45%]": dimension.width <= 750 }
+          "2xl:right-[20%] xl:right-[25%] lg:right-[35%] lg:top-[60%] top-[45%] right-[25%]",
+          { "right-[30%]": dimension.width <= 750 }
         )}
       />
     </div>

@@ -201,11 +201,18 @@ html{
 @keyframes diagonal-move-anim {
 
   0% {
-    transform: translate(200px, 0px);
+    transform: translate(0px, 0px);
   }
-
+  25% {
+    transform: translate(25px, 25px);
+  }
+  50% {
+    transform: translate(50px, 0px);
+  }
+  75% {
+    transform: translate(75px, 25px);
+  }
   100% {
-    transform: translate(100px, 100px);
+    transform: translate(100px, 0px);
   }
-
 }

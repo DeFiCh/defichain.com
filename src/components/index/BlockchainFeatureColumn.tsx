@@ -79,9 +79,12 @@ function FeatureIcon({
       )}
       <div className="ml-5 space-y-2 md:ml-0 md:mt-5 md:space-y-4">
         <h3
-          className={classNames("font-bold leading-5 text-dark-1000", {
-            "!text-brand-100": isHovering,
-          })}
+          className={classNames(
+            "font-bold leading-5 text-dark-1000 transition duration-300 ease-in-out",
+            {
+              "!text-brand-100": isHovering,
+            }
+          )}
         >
           {item.title}
         </h3>

@@ -17,8 +17,8 @@ body {
   box-sizing: border-box;
 }
 
-html{
-  scroll-behavior:smooth
+html {
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
@@ -183,7 +183,7 @@ html{
 }
 
 .mouse-cursor-gradient-tracking {
-  background: linear-gradient(to right, #A6A6A6, #A6A6A6);
+  background: linear-gradient(to right, #a6a6a6, #a6a6a6);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -194,19 +194,6 @@ html{
 
 .mouse-cursor-gradient-tracking > * {
   transition: opacity 0.2s ease-in-out;
-}
-
-.gradient-text {
-  background: linear-gradient(
-    72.57deg,
-    #ec008c 17.15%,
-    #5b10ff 89.41%,
-    #0468d6 102.56%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
 }
 
 .custom-dots {

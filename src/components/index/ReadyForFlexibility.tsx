@@ -59,8 +59,8 @@ export function ReadyForFlexibility() {
         className={classNames(
           "jellyfish-item z-[-2] bg-[url(/assets/img/index/jellyfish.png)] hidden md:block",
           "lg:h-[317.38px] md:h-[161.58px] absolute inset-0 z-[-1] bg-contain bg-no-repeat bg-right",
-          "2xl:right-[20%] xl:right-[25%] lg:right-[35%] lg:top-[60%] top-[45%] right-[25%]",
-          { "right-[30%]": dimension.width <= 750 }
+          "2xl:right-[20%] xl:right-[25%] lg:right-[30%] lg:top-[60%] top-[50%] right-[35%]",
+          { "right-[40%]": dimension.width <= 750 }
         )}
       />
     </div>

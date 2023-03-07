@@ -14,8 +14,8 @@
     "playground:start": "docker-compose rm -fsv && docker-compose up"
   },
   "dependencies": {
-    "@defichain/whale-api-client": "^3.29.1",
     "@headlessui/react": "^1.7.13",
+    "@waveshq/standard-defichain-jellyfishsdk": "^0.44.3",
     "@waveshq/standard-web": "^0.44.3",
     "classnames": "^2.3.2",
     "gray-matter": "^4.0.3",
@@ -49,7 +49,7 @@
   },
   "engines": {
     "node": "^18.0.0 || ^16.16.0",
-    "pnpm": ">=7.27.0"
+    "pnpm": ">=7.29.0"
   },
-  "packageManager": "pnpm@7.27.1"
+  "packageManager": "pnpm@7.29.0"
 }

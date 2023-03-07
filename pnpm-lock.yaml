@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@cypress/code-coverage': ^3.10.0
   '@defichain/whale-api-client': ^3.29.1
-  '@headlessui/react': ^1.7.7
+  '@headlessui/react': ^1.7.13
   '@netlify/plugin-nextjs': ^4.31.0
   '@tailwindcss/typography': ^0.5.9
   '@testing-library/cypress': ^9.0.0
@@ -34,7 +34,7 @@ specifiers:
 
 dependencies:
   '@defichain/whale-api-client': 3.29.1_defichain@3.29.1
-  '@headlessui/react': 1.7.7_biqbaboplfbrettd7655fr4n2y
+  '@headlessui/react': 1.7.13_biqbaboplfbrettd7655fr4n2y
   '@waveshq/standard-web': 0.44.2_74szalr6nvm2vfmc55i43xp6ce
   classnames: 2.3.2
   gray-matter: 4.0.3
@@ -1367,8 +1367,8 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@headlessui/react/1.7.7_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-BqDOd/tB9u2tA0T3Z0fn18ktw+KbVwMnkxxsGPIH2hzssrQhKB5n/6StZOyvLYP/FsYtvuXfi9I0YowKPv2c1w==}
+  /@headlessui/react/1.7.13_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-9n+EQKRtD9266xIHXdY5MfiXPDfYwl7zBM7KOx2Ae3Gdgxy8QML1FkCMjq6AsOf0l6N9uvI4HcFtuFlenaldKg==}
     engines: {node: '>=10'}
     peerDependencies:
       react: ^16 || ^17 || ^18

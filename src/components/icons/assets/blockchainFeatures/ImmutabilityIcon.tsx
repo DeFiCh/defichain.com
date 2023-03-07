@@ -12,6 +12,7 @@ export function ImmutabilityIcon(props: SVGProps<SVGSVGElement>) {
       className={className}
     >
       <path
+        id="immutability-icon-middle-mouse-out"
         d="M1.3886 24.999L33.9286 12.4398L66.4685 24.999L33.9286 37.5583L1.3886 24.999Z"
         stroke="#A6A6A6"
       />
@@ -20,6 +21,7 @@ export function ImmutabilityIcon(props: SVGProps<SVGSVGElement>) {
         stroke="#A6A6A6"
       />
       <path
+        id="immutability-icon-top-mouse-out"
         d="M33.9286 0L67.8571 13.0952L33.9286 26.1905L0 13.0952L33.9286 0Z"
         fill={`url('#${id}')`}
       />

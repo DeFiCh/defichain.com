@@ -29,42 +29,10 @@
   --yLength: 10px;
 }
 
-#development-icon-poly-10 {
-  transform-box: fill-box;
-  transform-origin: 50% 50%;
-  animation: spin 0.3s linear both, move 0.3s linear both;
-  animation-play-state: paused;
-  --rotateDeg: -120deg;
-  --xLength: 0px;
-  --yLength: 0px;
-}
-
-#development-icon-poly-12 {
-  transform-box: fill-box;
-  transform-origin: 50% 50%;
-  animation: spin 0.3s linear both, move 0.3s linear both;
-  animation-play-state: paused;
-  --rotateDeg: 120deg;
-  --xLength: 0px;
-  --yLength: 0px;
-}
-#variety-icon-poly {
-  transform-box: fill-box;
-  transform-origin: 50% 50%;
-  animation: spin 0.3s linear both, move 0.3s linear both;
-  animation-play-state: paused;
-  --rotateDeg: 120deg;
-  --xLength: 0px;
-  --yLength: 0px;
-}
-
 .blockchain-feature-item:hover #security-icon-small-circle,
 .blockchain-feature-item:hover #security-icon-med-circle,
 .blockchain-feature-item:hover #immutability-icon-top,
-.blockchain-feature-item:hover #immutability-icon-middle,
-.blockchain-feature-item:hover #development-icon-poly-10,
-.blockchain-feature-item:hover #development-icon-poly-12,
-.blockchain-feature-item:hover #variety-icon-poly {
+.blockchain-feature-item:hover #immutability-icon-middle {
   animation-play-state: running;
 }
 
@@ -80,5 +48,74 @@
 @keyframes move {
   to {
     transform: translate(var(--xLength), var(--yLength));
+  }
+}
+
+/* on mouseout animations */
+.throughputSmallSquareMouseOut {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: reverse-spin 0.3s linear;
+  --rotateDeg: 90deg;
+}
+
+#security-icon-small-circle-mouse-out {
+  transform-box: fill-box;
+  animation: reverse-move 0.3s linear both;
+  animation-play-state: running;
+  --xLength: 20px;
+  --yLength: 0px;
+}
+
+#security-icon-med-circle-mouse-out {
+  animation: reverse-move 0.3s linear both;
+  animation-play-state: paused;
+  --xLength: 8px;
+  --yLength: 0px;
+}
+
+#immutability-icon-top-mouse-out {
+  animation: reverse-move 0.3s linear both;
+  animation-play-state: paused;
+  --xLength: 0px;
+  --yLength: -20px;
+}
+
+#immutability-icon-middle-mouse-out {
+  animation: reverse-move 0.3s linear both;
+  animation-play-state: paused;
+  --xLength: 0px;
+  --yLength: -10px;
+}
+
+.blockchain-feature-item:hover #security-icon-small-circle-mouse-out,
+.blockchain-feature-item:hover #security-icon-med-circle-mouse-out,
+.blockchain-feature-item:hover #immutability-icon-top-mouse-out,
+.blockchain-feature-item:hover #immutability-icon-middle-mouse-out {
+  animation-play-state: running;
+}
+
+@keyframes reverse-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(var(--rotateDeg));
+  }
+}
+
+@keyframes reverse-move {
+  to {
+    transform: translate(-var(--xLength), -var(--yLength));
+  }
+}
+
+@keyframes reverse-spin-move {
+  0% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+  100% {
+    transform: rotate(var(--rotateDeg))
+      translate(-var(--xLength), -var(--yLength));
   }
 }

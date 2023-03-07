@@ -13,7 +13,9 @@ export function ThroughputIcon(props: SVGProps<SVGSVGElement>) {
     >
       <rect x="1" y="14.5" width="35" height="35" stroke="#A6A6A6" />
       <rect x="1" y="0.5" width="49" height="49" stroke="#A6A6A6" />
-      <rect x="1.5" y="31" width="18" height="18" fill={`url('#${id}')`} />
+      <g className="throughputSmallSquareMouseOut">
+        <rect x="1.5" y="31" width="18" height="18" fill={`url('#${id}')`} />
+      </g>
       <defs>
         <linearGradient
           id={id}
@@ -51,23 +53,14 @@ export function ThroughputIconHover(props: SVGProps<SVGSVGElement>) {
         fill="url(#paint1_linear_4153_20709)"
         stroke="black"
       />
-      <g className="throughputMedSquare">
-        <rect
-          x="0.5"
-          y="14.5"
-          width="35"
-          height="35"
-          fill="none"
-          stroke="black"
-        >
-          <animateTransform
-            attributeName="fill"
-            values="url(#paint2_linear_4153_20709)"
-            dur="3s"
-            repeatCount="indefinite"
-          />
-        </rect>
-      </g>
+      <rect
+        x="0.5"
+        y="14.5"
+        width="35"
+        height="35"
+        fill="none"
+        stroke="black"
+      />
 
       <g className="throughputSmallSquare">
         <rect

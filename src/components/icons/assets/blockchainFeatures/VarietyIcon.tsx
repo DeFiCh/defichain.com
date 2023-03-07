@@ -12,7 +12,21 @@ export function VarietyIcon(props: SVGProps<SVGSVGElement>): JSX.Element {
       className={className}
     >
       <circle cx="23.5714" cy="24.5011" r="23.0714" stroke="#A6A6A6" />
-      <path d="M55 0L80 25L55 50L30 25L55 0Z" fill={`url('#${id}')`} />
+      <path
+        id="variety-icon-poly-mouse-out"
+        d="M55 0L80 25L55 50L30 25L55 0Z"
+        fill={`url('#${id}')`}
+      >
+        <animate
+          attributeName="d"
+          attributeType="XML"
+          from="M24.5 14.9194L33.7946 24.259L24.5 33.5985L15.2054 24.259L24.5 14.9194Z"
+          to="M55 0L80 25L55 50L30 25L55 0Z"
+          begin="0s"
+          dur="0.3s"
+          fill="freeze"
+        />
+      </path>
       <defs>
         <linearGradient
           id={id}

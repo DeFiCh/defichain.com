@@ -3,16 +3,14 @@ import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import FooterExternalLink from "./FooterExternalLink";
 
-export default function FooterInternalLink({
-  href,
+export default function FooterLink({
   testId,
   altLabel,
   isExternaLink,
   hasUpArrowIcon,
   url,
 }: {
-  href?: string;
-  url?: string;
+  url: string;
   altLabel: string;
   testId: string;
   isExternaLink: boolean;
@@ -29,12 +27,13 @@ export default function FooterInternalLink({
           testId={testId}
         />
       ) : (
+        // Internal link
         <div
           className={classNames(
             "text-dark-1000 font-semibold hover:accent-dfc-gradient-text cursor-pointer w-[133px] md:w-full"
           )}
         >
-          <Link href={{ pathname: href }} passHref data-testid={testId}>
+          <Link href={url} passHref data-testid={testId}>
             {t(`footer.sitemap.${altLabel}`)}
           </Link>
         </div>

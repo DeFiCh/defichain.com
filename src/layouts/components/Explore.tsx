@@ -69,7 +69,7 @@ export function Explore() {
       >
         <div
           className={classNames(
-            "grid md:grid-rows-3 lg:grid-cols-[364px_minmax(364px,_1fr)_1px] md:grid-cols-2 grid-rows-5",
+            "grid md:grid-rows-[minmax(50px,_65px)_minmax(50px,_1fr)_50px] lg:grid-cols-[364px_minmax(364px,_1fr)_1px] md:grid-cols-2 grid-rows-5",
             "gap-x-10 grid-flow-col gap-y-8"
           )}
         >

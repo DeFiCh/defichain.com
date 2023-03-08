@@ -101,7 +101,7 @@ export function Header(): JSX.Element {
       const y = (e.clientY - headerRect.top) / headerRect.height;
       const gradient = `radial-gradient(circle at ${x * 100}% ${
         y * 100
-      }%, #ff00ff 0%, #A6A6A6 15%)`;
+      }%, #ff00af 0%, #A6A6A6 15%)`;
       header.style.backgroundImage = gradient;
       if (e.clientY >= headerRect.bottom) {
         setIsCursorOnHeader(false);
@@ -235,8 +235,7 @@ function DesktopMenu({ item }: { item: string }) {
           setIsShowing(!isShowing);
         }}
         className={classNames({
-          "accent-dfc-gradient-text bg-clip-text text-transparent":
-            isShowing && !isCursorOnHeader,
+          "text-brand-100": isShowing && !isCursorOnHeader,
         })}
       >
         {t(`header.navbar.${item.toLowerCase()}`)}

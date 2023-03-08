@@ -256,3 +256,19 @@ html {
   top: 0;
   align-self: flex-start; /* <-- this is the fix */
 }
+
+.jellyfish-item {
+  animation: diagonal-move-anim 2.5s cubic-bezier(0.42, 0, 0.58, 1) infinite
+    alternate;
+  position: absolute;
+}
+
+@keyframes diagonal-move-anim {
+  0% {
+    transform: translate(150px, 0px);
+  }
+
+  100% {
+    transform: translate(130px, 20px);
+  }
+}

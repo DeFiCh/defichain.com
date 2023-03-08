@@ -332,6 +332,7 @@ function TabletMobileDropDown({
   label: MobileTabletDropDownState;
 }) {
   const { dropDownState, setDropDownState } = useContext(DropDownContext);
+  const { t } = useTranslation("layout");
 
   return (
     <div className="flex flex-col">
@@ -351,7 +352,7 @@ function TabletMobileDropDown({
             dropDownState === label ? "text-brand-100" : "text-dark-700"
           )}
         >
-          {label}
+          {t(`header.navbar.${label.toLowerCase()}`)}
         </div>
 
         <IoChevronDown

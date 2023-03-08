@@ -127,8 +127,15 @@ export function Ecosystem() {
             "hover:bg-[url(/assets/img/header/header-hover-jellyfish.png)] transition-all duration-300"
           )}
         >
-          <DeFiChainLogo fill="#FFFFFF" className="w-[140px]" />
-          <div className={classNames("text-dark-800 max-w-[178px] mt-2")}>
+          <div>
+            <DeFiChainLogo fill="#FFFFFF" className="w-[140px]" />
+          </div>
+
+          <div
+            className={classNames(
+              "text-dark-800 max-w-[200px] mt-2 text-base font-normal"
+            )}
+          >
             {MenuItems.image.subtitle}
           </div>
         </a>

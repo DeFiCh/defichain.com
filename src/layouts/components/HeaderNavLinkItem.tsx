@@ -85,15 +85,17 @@ export function HeaderNavLinkItem({
       )}
     >
       {Icon && (
-        <Icon
-          id={dfiId}
-          className={classNames(
-            "group-hover:duration-500 group-hover:transition",
-            iconsStrokes.some((element) => icon!.includes(element))
-              ? "group-hover:stroke-brand-100"
-              : "fill-dark-700 group-hover:fill-brand-100"
-          )}
-        />
+        <div>
+          <Icon
+            id={dfiId}
+            className={classNames(
+              "group-hover:duration-500 group-hover:transition group-active:opacity-70",
+              iconsStrokes.some((element) => icon!.includes(element))
+                ? "group-hover:stroke-brand-100"
+                : "fill-dark-700 group-hover:fill-brand-100"
+            )}
+          />
+        </div>
       )}
 
       <div className="flex flex-col">
@@ -101,8 +103,8 @@ export function HeaderNavLinkItem({
           <div
             className={classNames(
               "mr-[7px] flex font-semibold text-dark-1000 md:text-lg leading-6",
-              "group-hover:text-transparent group-hover:bg-clip-text group-hover:duration-500 group-hover:transition group-hover:accent-dfc-gradient-text",
-              "lg:whitespace-nowrap md:whitespace-pre-wrap whitespace-nowrap"
+              "group-hover:duration-500 group-hover:transition group-hover:text-brand-100 group-active:opacity-70",
+              "md:whitespace-pre-wrap whitespace-nowrap"
             )}
           >
             {label}
@@ -130,7 +132,7 @@ export function HeaderNavLinkItem({
           )}
         </div>
 
-        <div className="text-dark-700 leading-5 md:text-base text-sm">
+        <div className="text-dark-700 leading-5 md:text-base text-sm group-active:opacity-70 duration-500 font-normal">
           {subLabel}
         </div>
       </div>

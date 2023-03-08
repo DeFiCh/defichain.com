@@ -10,6 +10,7 @@ module.exports = {
     fontFamily: {
       sans: ['"Space Grotesk"', "sans-serif"],
       desc: ['"Montserrat"', "sans-serif"],
+      mono: ['"Space Mono"', "monospace"],
     },
     colors: {
       transparent: "rgba(0, 0, 0 ,0)",
@@ -90,7 +91,7 @@ module.exports = {
     },
     extend: {
       gridTemplateRows: {
-        8: "repeat(8, minmax(0, 1fr))",
+        9: "repeat(9, minmax(0, 1fr))",
       },
     },
   },

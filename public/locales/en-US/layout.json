@@ -76,7 +76,7 @@
         }
       ],
       "image": {
-        "subtitle": "Learn about the token and where to get"
+        "subtitle": "Powered by the Security of Bitcoin & Flexibility of Ethereum"
       }
     },
     "build": {
@@ -115,10 +115,6 @@
           "labels": [
             {
               "title": "DeFiChain Blog",
-              "subtitle": "Read and learn more"
-            },
-            {
-              "title": "Newsletter",
               "subtitle": "Get the latest news"
             }
           ]
@@ -170,6 +166,15 @@
             },
             {
               "title": "Telegram (TR)"
+            },
+            {
+              "title": "Telegram (ZH)"
+            },
+            {
+              "title": "Telegram (RU)"
+            },
+            {
+              "title": "Telegram (PT)"
             }
           ]
         }

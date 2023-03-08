@@ -3,6 +3,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -12,6 +13,10 @@ body {
   overflow-x: clip;
   width: 100%;
   box-sizing: border-box;
+}
+
+html{
+  scroll-behavior:smooth
 }
 
 @layer utilities {
@@ -27,11 +32,8 @@ body {
 
   /* UI components */
   .card-bg {
-    background: linear-gradient(
-      144deg,
-      rgba(0, 0, 0, 0.5) -0.38%,
-      rgba(0, 0, 0, 0.5) 100.17%
-    );
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(8px);
   }
 
   .banner-bg {
@@ -107,7 +109,7 @@ body {
   }
 
   .accent-gradient-1 {
-    background: linear-gradient(
+    background-image: linear-gradient(
       72.57deg,
       #ec008c 17.15%,
       #5b10ff 89.41%,
@@ -116,7 +118,7 @@ body {
   }
 
   .accent-gradient-2 {
-    background: linear-gradient(
+    background-image: linear-gradient(
       261.07deg,
       #ec008c -0.26%,
       #5b10ff 79.46%,
@@ -176,4 +178,33 @@ body {
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2),
     0px 5px 20px -1px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(6px);
+}
+
+.mouse-cursor-gradient-tracking {
+  background: linear-gradient(to right, #A6A6A6, #A6A6A6);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.mouse-cursor-gradient-tracking > * {
+  transition: opacity 0.2s ease-in-out;
+}
+
+.jellyfish-item {
+  animation: diagonal-move-anim 2.5s cubic-bezier(0.42, 0, 0.58, 1) infinite alternate;
+  position: absolute;
+}
+
+@keyframes diagonal-move-anim {
+  0% {
+    transform: translate(150px, 0px);
+  }
+
+  100% {
+    transform: translate(130px, 20px);
+  }
 }

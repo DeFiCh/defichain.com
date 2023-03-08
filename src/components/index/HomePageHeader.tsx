@@ -10,10 +10,10 @@ export function HomePageHeader(): JSX.Element {
   separatedTitle.shift();
 
   return (
-    <div className="flex flex-col items-center pb-24 md:mt-0">
+    <div className="flex flex-col items-center md:mt-0">
       <Container
         className={classNames(
-          "flex flex-col-reverse md:flex-row items-start md:justify-between",
+          "relative z-0 flex flex-col-reverse md:flex-row items-start md:justify-between",
           "pr-6 md:pr-0 lg:pr-0 xl:pr-[59px] 2xl:pr-[39px]",
           "2xl:max-w-[1920px] max-w-full "
         )}

@@ -32,7 +32,7 @@ export function StatsDisplay() {
   const { suffix, value } = useUnitSuffix(
     stats ? stats.tvl.masternodes.toString() : "N/A"
   );
-  const masternodeValue = `${value + suffix}+`;
+  const masternodeValue = value === "N/A" ? undefined : `${value + suffix}+`;
 
   return (
     <div className="relative z-0">
@@ -46,9 +46,13 @@ export function StatsDisplay() {
               <StatsItem
                 title={t("StatisticsSection.dfiMinted.title")}
                 stats={supply?.total}
-                desc={t("StatisticsSection.dfiMinted.desc", {
-                  perc: calculatePercentage(supply?.total, supply?.max),
-                })}
+                desc={
+                  supply?.total === undefined
+                    ? supply?.total
+                    : t("StatisticsSection.dfiMinted.desc", {
+                        perc: calculatePercentage(supply.total, supply.max),
+                      })
+                }
               />
               <StatsItem
                 title={
@@ -58,15 +62,23 @@ export function StatsDisplay() {
                 }
                 prefix="$"
                 stats={stats?.tvl.total}
-                desc={t("StatisticsSection.tvlLocked.desc")}
+                desc={
+                  stats?.tvl.total === undefined
+                    ? stats?.tvl.total
+                    : t("StatisticsSection.tvlLocked.desc")
+                }
                 descStyle="lg:block hidden"
               />
               <StatsItem
                 title={t("StatisticsSection.masternodes.title")}
                 stats={stats?.count.masternodes}
-                desc={t("StatisticsSection.masternodes.desc", {
-                  perc: masternodeValue,
-                })}
+                desc={
+                  masternodeValue === undefined
+                    ? masternodeValue
+                    : t("StatisticsSection.masternodes.desc", {
+                        perc: masternodeValue,
+                      })
+                }
               />
             </div>
           </div>
@@ -92,7 +104,7 @@ function StatsItem({
 }: {
   title: string;
   stats: number | undefined;
-  desc: string;
+  desc?: string;
   prefix?: string;
   descStyle?: string;
 }) {
@@ -126,14 +138,16 @@ function StatsItem({
           )}
         </div>
 
-        <div
-          className={classNames(
-            "font-desc text-dark-700 lg:text-base lg:leading-6 md:text-sm text-xs text-right",
-            descStyle
-          )}
-        >
-          {desc}
-        </div>
+        {desc !== undefined && (
+          <div
+            className={classNames(
+              "font-desc text-dark-700 lg:text-base lg:leading-6 md:text-sm text-xs text-right",
+              descStyle
+            )}
+          >
+            {desc}
+          </div>
+        )}
       </div>
     </div>
   );

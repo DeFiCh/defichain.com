@@ -28,12 +28,6 @@ export function Community() {
             title: entries[0].labels[0].title,
             subtitle: entries[0].labels[0].subtitle,
           },
-          {
-            icon: "newsletter",
-            href: "https://bit.ly/3yQxtmW",
-            title: entries[0].labels[1].title,
-            subtitle: entries[0].labels[1].subtitle,
-          },
         ],
       },
       {
@@ -100,6 +94,18 @@ export function Community() {
             href: "https://t.me/defiblockchain_TR",
             title: entries[1].labels[14].title,
           },
+          {
+            href: "https://t.me/defichain_ZH",
+            title: entries[1].labels[15].title,
+          },
+          {
+            href: "https://t.me/defichain_RU",
+            title: entries[1].labels[16].title,
+          },
+          {
+            href: "https://t.me/defichain_PT",
+            title: entries[1].labels[17].title,
+          },
         ],
       },
     ],
@@ -141,7 +147,7 @@ export function Community() {
         </div>
         <div
           className={classNames(
-            "grid grid-flow-col xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 xl:grid-rows-4 lg:grid-rows-5 grid-rows-8",
+            "grid grid-flow-col xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 xl:grid-rows-4 lg:grid-rows-6 grid-rows-9",
             "gap-y-6 gap-x-10 lg:gap-x-20 place-items-start"
           )}
         >

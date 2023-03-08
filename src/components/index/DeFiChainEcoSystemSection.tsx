@@ -83,7 +83,9 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             content={cardItems[0]}
             setHoverState={setHoverState}
             hoverState={hoverState}
-            customIconStyle="right-[-95px] top-[30.7%] bottom-[-23.26%] w-[307px]"
+            customIconStyle="w-[487.9px] right-0 top-0"
+            // TODO styles for animating only coin icon
+            // customIconStyle="right-0 top-0 bottom-[-23.26%] w-[307px]"
           />
           <Card
             title={t("EcosystemSection.cards.masternodeTitle")}
@@ -99,7 +101,10 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             content={cardItems[2]}
             setHoverState={setHoverState}
             hoverState={hoverState}
-            customIconStyle="w-[420.9px] top-0 md:right-0 right-[-100px]"
+            customIconStyle={classNames("w-[420.9px] top-0 ", {
+              "right-0": dimensions.width > 768,
+              "right-[-100px]": dimensions.width <= 768,
+            })}
           />
           <Card
             title={t("EcosystemSection.cards.quantumTitle")}
@@ -107,13 +112,16 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             content={cardItems[3]}
             setHoverState={setHoverState}
             hoverState={hoverState}
-            customIconStyle="w-full md:w-[500px] sm:w-[530px] top-0 left-0"
+            customIconStyle={classNames("w-full top-0 left-0", {
+              "w-[500px]": dimensions.width >= 943,
+              "w-[300px]": dimensions.width <= 943,
+            })}
           />
         </div>
       </Container>
       <div
         className={classNames(
-          "absolute h-1/3 w-1/3 lg:bottom-[200px] md:bottom-[100px] left-0 bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/ecosystem/defichain-logo-outline.png')]",
+          "absolute h-1/3 w-1/3 lg:bottom-[200px] md:bottom-[100px] left-0 bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/ecosystem/dfi-logo-vector.png')]",
           {
             "h-[475px] w-[475px] left-[-300px] top-[300px]":
               dimensions.width <= 700,

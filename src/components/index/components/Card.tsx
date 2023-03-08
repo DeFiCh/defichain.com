@@ -82,7 +82,7 @@ export function Card({
           <div
             className={classNames("absolute mix-blend-screen", customIconStyle)}
           >
-            <div className="relative">
+            <div>
               <Icon id={`${content.id}`} />
             </div>
             {/* TODO animate icons */}

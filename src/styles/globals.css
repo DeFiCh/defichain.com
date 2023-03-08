@@ -214,6 +214,12 @@ html {
   animation-play-state: paused;
 }
 
+#quantum_donut {
+  position: absolute;
+  right: -64.51px;
+  top: 36.68px;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);

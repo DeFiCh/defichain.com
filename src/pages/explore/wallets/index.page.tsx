@@ -1,7 +1,7 @@
 import { Container } from "@components/commons/Container";
 import { SSRConfig } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { ExploreCards, ExploreCardsImage } from "../components/ExploreCards";
+import { ExploreCards, ExploreCardsImage } from "../_components/ExploreCards";
 
 export default function ExploreWallets() {
   return (

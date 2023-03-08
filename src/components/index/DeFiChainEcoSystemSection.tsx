@@ -122,7 +122,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
       />
       <div
         className={classNames(
-          "absolute h-1/3 w-1/3 bottom-0 right-[21px] bg-contain bg-no-repeat mix-blend-screen bg-bottom md:bg-right bg-[url('/assets/img/footer/arrow_1.png')]",
+          "absolute h-1/4 w-1/4 bottom-0 right-[21px] bg-contain bg-no-repeat mix-blend-screen bg-bottom md:bg-right bg-[url('/assets/img/footer/arrow_1.png')]",
           {
             "bottom-[225px] right-[-110px]": dimensions.width < 900,
           },

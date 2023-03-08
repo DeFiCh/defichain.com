@@ -11,20 +11,19 @@ const cardItems = [
     img: "meta-dfi-coin",
     id: "invest",
     href: "",
-    customStyle: "xs:w-full md:w-[251px]",
+    customStyle: "xs:w-full md:w-[70%] lg:w-[251px]",
   },
   {
     img: "glass-cube",
     id: "masternode",
     href: "",
-    customStyle: "w-1/2",
+    customStyle: "w-[45%]",
   },
   {
     img: "wallet-apps",
     id: "dapps",
     href: "",
-    customStyle: "w-1/2",
-    mobileImg: "wallet-apps-mobile",
+    customStyle: "w-[50%]",
   },
   {
     img: "quantum",
@@ -84,6 +83,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             content={cardItems[0]}
             setHoverState={setHoverState}
             hoverState={hoverState}
+            customIconStyle="right-[-95px] top-[30.7%] bottom-[-23.26%] w-[307px]"
           />
           <Card
             title={t("EcosystemSection.cards.masternodeTitle")}
@@ -91,6 +91,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             content={cardItems[1]}
             setHoverState={setHoverState}
             hoverState={hoverState}
+            customIconStyle="right-0 top-0 bottom-[-23.26%] w-[307px]"
           />
           <Card
             title={t("EcosystemSection.cards.dappsTitle")}
@@ -98,6 +99,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             content={cardItems[2]}
             setHoverState={setHoverState}
             hoverState={hoverState}
+            customIconStyle="w-[420.9px] top-0 md:right-0 right-[-100px]"
           />
           <Card
             title={t("EcosystemSection.cards.quantumTitle")}
@@ -105,6 +107,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             content={cardItems[3]}
             setHoverState={setHoverState}
             hoverState={hoverState}
+            customIconStyle="w-full md:w-[500px] sm:w-[530px] top-0 left-0"
           />
         </div>
       </Container>

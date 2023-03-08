@@ -18,7 +18,7 @@ export function QuantumHover(props: QuantumProps): JSX.Element {
   return (
     <Image
       src={QuantumIconHover}
-      alt="Quantum Icon"
+      alt="Quantum Icon Hover"
       id={id}
       className={className}
     />

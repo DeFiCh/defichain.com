@@ -193,25 +193,25 @@ html {
 .hover-icons:hover {
   fill: #ff00ff;
 }
+/* TODO hover out onto the original image*/
 
 #invest_hover {
   transform-box: fill-box;
-  transform-origin: 40% 70%;
-  animation: transform 0.3s linear both;
+  transform-origin: 40% 60%;
+  animation: transform 0.2s linear both;
   animation-play-state: paused;
   --rotateDeg: -45deg;
-  --xLength: -30px;
-  --yLength: 0px;
+  --xLength: -40px;
+  --yLength: 10px;
 }
-.card-test:hover #invest_hover,
-.card-test:hover #masternode_hover {
+.dapp-card #invest_hover,
+.dapp-card #masternode_hover {
   animation-play-state: running;
 }
 
 #masternode_hover {
-  animation-name: fade-out-top-left;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+  animation: fade-out 0.3s ease-in;
+  animation-play-state: paused;
 }
 
 @keyframes spin {
@@ -224,7 +224,7 @@ html {
 }
 @keyframes transform {
   0% {
-    opacity: 0;
+    opacity: 1;
   }
   100% {
     opacity: 1;
@@ -233,14 +233,14 @@ html {
   }
 }
 
-@keyframes fade-out-top-left {
+@keyframes fade-out {
   0% {
-    opacity: 1;
-    transform: translate(0, 0);
+    opacity: 0.5;
+    transform: scale(1.3);
   }
   100% {
-    opacity: 0;
-    transform: translate(-100%, -100%);
+    opacity: 1;
+    transform: scale(1);
   }
 }
 

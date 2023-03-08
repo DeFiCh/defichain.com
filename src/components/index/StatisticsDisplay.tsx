@@ -104,7 +104,7 @@ function StatsItem({
 }: {
   title: string;
   stats: number | undefined;
-  desc: string | undefined;
+  desc?: string;
   prefix?: string;
   descStyle?: string;
 }) {

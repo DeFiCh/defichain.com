@@ -33,7 +33,8 @@ export function Card({
   customIconStyle?: string;
 }): JSX.Element {
   const Icon = iconMapping[content.id] as React.ElementType;
-  const IconOnHover = iconMapping[`${content.id}_hover`] as React.ElementType;
+  // TODO animate icons
+  // const IconOnHover = iconMapping[`${content.id}_hover`] as React.ElementType;
 
   return (
     <div className="">
@@ -81,7 +82,11 @@ export function Card({
           <div
             className={classNames("absolute mix-blend-screen", customIconStyle)}
           >
-            {hoverState !== undefined && hoverState === content.id && Icon ? (
+            <div className="relative">
+              <Icon id={`${content.id}`} />
+            </div>
+            {/* TODO animate icons */}
+            {/* {hoverState !== undefined && hoverState === content.id && Icon ? (
               <div className="relative">
                 <IconOnHover id={`${content.id}_hover`} />
               </div>
@@ -89,7 +94,7 @@ export function Card({
               <div className="relative">
                 <Icon id={`${content.id}`} />
               </div>
-            )}
+            )} */}
           </div>
         </a>
       </div>

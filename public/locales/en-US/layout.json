@@ -177,36 +177,38 @@
     }
   },
   "footer": {
-    "explore": {
-      "EXPLORE": "EXPLORE",
-      "$DFI": "$DFI",
-      "Invest, Trade and Earn": "Invest, Trade and Earn",
-      "Decentralized Exchange": "Decentralized Exchange",
-      "Wallets": "Wallets",
-      "Masternodes": "Masternodes"
-    },
-    "ecosystem": {
-      "ECOSYSTEM": "ECOSYSTEM",
-      "DeFiChain Apps": "DeFiChain Apps",
-      "DeFi Meta Chain": "DeFi Meta Chain",
-      "DeFiScan": "DeFiScan",
-      "Governance": "Governance",
-      "Bug Bounty": "Bug Bounty",
-      "$100M Accelerator Program": "$100M Accelerator Program"
-    },
-    "build": {
-      "BUILD": "BUILD",
-      "Jellyfish SDK": "Jellyfish SDK",
-      "DeFiChain White Paper": "DeFiChain White Paper",
-      "GitHub": "GitHub",
-      "Developer Resource": "Developer Resource",
-      "Media Assets": "Media Assets",
-      "Security": "Security"
-    },
-    "community": {
-      "COMMUNITY": "COMMUNITY",
-      "Blog": "Blog",
-      "Newsletter": "Newsletter"
+    "sitemap": {
+      "EXPLORE": {
+        "EXPLORE": "EXPLORE",
+        "$DFI": "$DFI",
+        "Invest, Trade and Earn": "Invest, Trade and Earn",
+        "Decentralized Exchange": "Decentralized Exchange",
+        "Wallets": "Wallets",
+        "Masternodes": "Masternodes"
+      },
+      "ECOSYSTEM": {
+        "ECOSYSTEM": "ECOSYSTEM",
+        "DeFiChain Apps": "DeFiChain Apps",
+        "DeFi Meta Chain": "DeFi Meta Chain",
+        "DeFiScan": "DeFiScan",
+        "Governance": "Governance",
+        "Bug Bounty": "Bug Bounty",
+        "$100M Accelerator Program": "$100M Accelerator Program"
+      },
+      "BUILD": {
+        "BUILD": "BUILD",
+        "Jellyfish SDK": "Jellyfish SDK",
+        "DeFiChain White Paper": "DeFiChain White Paper",
+        "GitHub": "GitHub",
+        "Developer Resource": "Developer Resource",
+        "Media Assets": "Media Assets",
+        "Security": "Security"
+      },
+      "COMMUNITY": {
+        "COMMUNITY": "COMMUNITY",
+        "Blog": "Blog",
+        "Newsletter": "Newsletter"
+      }
     }
   }
 }

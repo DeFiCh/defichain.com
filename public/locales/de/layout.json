@@ -14,36 +14,38 @@
     }
   },
   "footer": {
-    "explore": {
-      "EXPLORE": "ERKUNDEN",
-      "$DFI": "$DFI",
-      "Invest, Trade and Earn": "Investieren, Handeln und Verdienen",
-      "Decentralized Exchange": "Dezentrale Börse",
-      "Wallets": "Wallets",
-      "Masternodes": "Masternodes"
-    },
-    "ecosystem": {
-      "ECOSYSTEM": "ÖKOSYSTEM",
-      "DeFiChain Apps": "DeFiChain Apps",
-      "DeFi Meta Chain": "DeFi Meta Chain",
-      "DeFiScan": "DeFiScan",
-      "Governance": "Governance",
-      "Bug Bounty": "Bug-Bounty",
-      "$100M Accelerator Program": "100 Mio. $ Accelerator-Programm"
-    },
-    "build": {
-      "BUILD": "BAUEN",
-      "Jellyfish SDK": "Jellyfish SDK",
-      "DeFiChain White Paper": "DeFiChain White Paper",
-      "GitHub": "GitHub",
-      "Developer Resource": "Developer Resource",
-      "Media Assets": "Medien",
-      "Security": "Sicherheit"
-    },
-    "community": {
-      "COMMUNITY": "COMMUNITY",
-      "Blog": "Blog",
-      "Newsletter": "Newsletter"
+    "sitemap": {
+      "EXPLORE": {
+        "EXPLORE": "ERKUNDEN",
+        "$DFI": "$DFI",
+        "Invest, Trade and Earn": "Investieren, Handeln und Verdienen",
+        "Decentralized Exchange": "Dezentrale Börse",
+        "Wallets": "Wallets",
+        "Masternodes": "Masternodes"
+      },
+      "ECOSYSTEM": {
+        "ECOSYSTEM": "ÖKOSYSTEM",
+        "DeFiChain Apps": "DeFiChain Apps",
+        "DeFi Meta Chain": "DeFi Meta Chain",
+        "DeFiScan": "DeFiScan",
+        "Governance": "Governance",
+        "Bug Bounty": "Bug-Bounty",
+        "$100M Accelerator Program": "100 Mio. $ Accelerator-Programm"
+      },
+      "BUILD": {
+        "BUILD": "BAUEN",
+        "Jellyfish SDK": "Jellyfish SDK",
+        "DeFiChain White Paper": "DeFiChain White Paper",
+        "GitHub": "GitHub",
+        "Developer Resource": "Developer Resource",
+        "Media Assets": "Medien",
+        "Security": "Sicherheit"
+      },
+      "COMMUNITY": {
+        "COMMUNITY": "COMMUNITY",
+        "Blog": "Blog",
+        "Newsletter": "Newsletter"
+      }
     }
   }
 }

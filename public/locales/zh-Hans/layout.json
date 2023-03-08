@@ -13,36 +13,38 @@
     }
   },
   "footer": {
-    "explore": {
-      "EXPLORE": "探索",
-      "$DFI": "$DFI",
-      "Invest, Trade and Earn": "投资、交易和赚取",
-      "Decentralized Exchange": "去中心化交易所",
-      "Wallets": "钱包",
-      "Masternodes": "主节点"
-    },
-    "ecosystem": {
-      "ECOSYSTEM": "生态圈",
-      "DeFiChain Apps": "DeFiChain 应用",
-      "DeFi Meta Chain": "DeFi元链",
-      "DeFiScan": "DeFiScan",
-      "Governance": "治理",
-      "Bug Bounty": "漏洞奖励",
-      "$100M Accelerator Program": "1 亿美元的加速器计划"
-    },
-    "build": {
-      "BUILD": "建造",
-      "Jellyfish SDK": "Kit de développement logiciel Jellyfish",
-      "DeFiChain White Paper": "DeFiChain 白皮书",
-      "GitHub": "GitHub",
-      "Developer Resource": "Developer Resource",
-      "Media Assets": "媒体资源",
-      "Security": "安全性"
-    },
-    "community": {
-      "COMMUNITY": "社区",
-      "Blog": "Blog",
-      "Newsletter": "Newsletter"
+    "sitemap": {
+      "EXPLORE": {
+        "EXPLORE": "探索",
+        "$DFI": "$DFI",
+        "Invest, Trade and Earn": "投资、交易和赚取",
+        "Decentralized Exchange": "去中心化交易所",
+        "Wallets": "钱包",
+        "Masternodes": "主节点"
+      },
+      "ECOSYSTEM": {
+        "ECOSYSTEM": "生态圈",
+        "DeFiChain Apps": "DeFiChain 应用",
+        "DeFi Meta Chain": "DeFi元链",
+        "DeFiScan": "DeFiScan",
+        "Governance": "治理",
+        "Bug Bounty": "漏洞奖励",
+        "$100M Accelerator Program": "1 亿美元的加速器计划"
+      },
+      "BUILD": {
+        "BUILD": "建造",
+        "Jellyfish SDK": "Jellyfish SDK",
+        "DeFiChain White Paper": "DeFiChain 白皮书",
+        "GitHub": "GitHub",
+        "Developer Resource": "开发者资源",
+        "Media Assets": "媒体资源",
+        "Security": "安全性"
+      },
+      "COMMUNITY": {
+        "COMMUNITY": "社区",
+        "Blog": "部落格",
+        "Newsletter": "通讯"
+      }
     }
   }
 }

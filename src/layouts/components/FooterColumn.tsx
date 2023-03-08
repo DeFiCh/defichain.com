@@ -34,6 +34,8 @@ export default function FooterColumn({
         {childLinks.map((link) => (
           <FooterLink
             key={link.label}
+            label={link.label}
+            category={category}
             altLabel={link.altLabel}
             isExternaLink={link.isExternaLink}
             // use external url instead of internal pathname

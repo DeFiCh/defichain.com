@@ -13,36 +13,38 @@
     }
   },
   "footer": {
-    "explore": {
-      "EXPLORE": "EXPLORER",
-      "$DFI": "$DFI",
-      "Invest, Trade and Earn": "Investir, négocier et gagner",
-      "Decentralized Exchange": "Échange décentralisé",
-      "Wallets": "Portefeuilles",
-      "Masternodes": "Masternodes"
-    },
-    "ecosystem": {
-      "ECOSYSTEM": "ECOSYSTÈME",
-      "DeFiChain Apps": "Applications DeFiChain",
-      "DeFi Meta Chain": "DeFi Meta Chain",
-      "DeFiScan": "DeFiScan",
-      "Governance": "Gouvernance",
-      "Bug Bounty": "Bounty de bogues",
-      "$100M Accelerator Program": "Programme d'accélérateur de 100 millions de $"
-    },
-    "build": {
-      "BUILD": "CONSTRUIRE",
-      "Jellyfish SDK": "Kit de développement logiciel Jellyfish",
-      "DeFiChain White Paper": "Livre blanc de DeFiChain",
-      "GitHub": "GitHub",
-      "Developer Resource": "Ressource pour les développeurs",
-      "Media Assets": "Ressources média",
-      "Security": "Sécurité"
-    },
-    "community": {
-      "COMMUNITY": "COMMUNAUTÉ",
-      "Blog": "Blog",
-      "Newsletter": "Bulletin d'information"
+    "sitemap": {
+      "EXPLORE": {
+        "EXPLORE": "EXPLORER",
+        "$DFI": "$DFI",
+        "Invest, Trade and Earn": "Investir, négocier et gagner",
+        "Decentralized Exchange": "Échange décentralisé",
+        "Wallets": "Portefeuilles",
+        "Masternodes": "Masternodes"
+      },
+      "ECOSYSTEM": {
+        "ECOSYSTEM": "ECOSYSTÈME",
+        "DeFiChain Apps": "Applications DeFiChain",
+        "DeFi Meta Chain": "DeFi Meta Chain",
+        "DeFiScan": "DeFiScan",
+        "Governance": "Gouvernance",
+        "Bug Bounty": "Bounty de bogues",
+        "$100M Accelerator Program": "Programme d'accélérateur de 100 millions de $"
+      },
+      "BUILD": {
+        "BUILD": "CONSTRUIRE",
+        "Jellyfish SDK": "Kit de développement logiciel Jellyfish",
+        "DeFiChain White Paper": "Livre blanc de DeFiChain",
+        "GitHub": "GitHub",
+        "Developer Resource": "Ressource pour les développeurs",
+        "Media Assets": "Ressources média",
+        "Security": "Sécurité"
+      },
+      "COMMUNITY": {
+        "COMMUNITY": "COMMUNAUTÉ",
+        "Blog": "Blog",
+        "Newsletter": "Bulletin d'information"
+      }
     }
   }
 }

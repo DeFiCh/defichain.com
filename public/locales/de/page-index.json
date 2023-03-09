@@ -17,7 +17,7 @@
     },
     "tvlLocked": {
       "title": "TOTAL VALUE LOCKED IN USD",
-      "mobileTitle": "TVL IN USD",
+      "mobileTitle": "TVL IN US-DOLLAR",
       "desc": "Pool | Masternodes | Vaults"
     },
     "masternodes": {

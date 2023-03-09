@@ -17,7 +17,7 @@
     },
     "tvlLocked": {
       "title": "以美元计价的总价值",
-      "mobileTitle": "TVL IN USD",
+      "mobileTitle": "以美元计价的总价值",
       "desc": "池 | 主节点 | 资金库"
     },
     "masternodes": {

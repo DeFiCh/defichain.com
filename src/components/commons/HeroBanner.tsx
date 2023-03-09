@@ -2,7 +2,7 @@ import { Container } from "@components/commons/Container";
 import classNames from "classnames";
 import { SectionTitle } from "@components/commons/SectionTitle";
 import { Button } from "@components/commons/Buttons";
-import { IoChevronDown } from "react-icons/io5";
+import { StartExploring } from "@components/commons/StartExploring";
 
 export function HeroBanner({
   title,
@@ -65,20 +65,7 @@ export function HeroBanner({
           )}
         </div>
         {startExploring && (
-          <a
-            href={startExploringJumpLink}
-            className={classNames("hidden md:flex justify-center")}
-          >
-            <button
-              type="button"
-              className="group flex flex-col items-center gap-y-[17px]"
-            >
-              <div className="text-sm text-dark-700 group-hover:text-brand-100">
-                Start exploring
-              </div>
-              <IoChevronDown className="group-hover:text-brand-100" />
-            </button>
-          </a>
+          <StartExploring startExploringJumpLink={startExploringJumpLink!} />
         )}
       </Container>
       <div

@@ -34,7 +34,7 @@ export function Explore() {
         },
         {
           icon: "wallet",
-          href: "",
+          href: "/explore/wallets",
           title: entries[3].title,
           subtitle: entries[3].subtitle,
         },

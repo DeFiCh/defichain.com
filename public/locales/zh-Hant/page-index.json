@@ -7,6 +7,31 @@
     "title": "比特幣生態中的DeFi",
     "desc": "遞飛鏈：原生區塊鏈專為全民堤共快速，智能和透明化的DeFi金融服務"
   },
+  "HeroBannerSection": {
+    "Start exploring": "開始探索"
+  },
+  "StatisticsSection": {
+    "dfiMinted": {
+      "title": "DFI 鑄造總量",
+      "desc": "最大供應量的{{perc}}"
+    },
+    "tvlLocked": {
+      "title": "以美元計價的總價值",
+      "mobileTitle": "TVL IN USD",
+      "desc": "池 | 主節點 | 資金庫"
+    },
+    "masternodes": {
+      "title": "主節點",
+      "desc": "已鎖定 ${{perc}}"
+    }
+  },
+  "ReadyForFlexibilitySection": {
+    "label": "为灵活性做好准备",
+    "title": "DeFi MetaChain 升级",
+    "descParaOne": "DeFi MetaChain （DeFi 元链）是一个兼容 EVM 的区块链，它使用权威证明（Proof of Authority，POA）并与原生 DeFiChain 区块链并列运行。",
+    "descParaTwo": "通读文档以开始在 DeFi MetaChain 上部署下一代 DeFi 应用程序。",
+    "button": "探索 DeFi MetaChain"
+  },
   "CardsSection": {
     "cards": [
       {

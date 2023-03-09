@@ -12,7 +12,7 @@ export function StartExploring() {
           className="group flex flex-col items-center gap-y-[17px]"
         >
           <div className="text-sm text-dark-700 group-hover:text-brand-100">
-            {t("HeroBannerSection.Start exploring")}
+            {t("HeroBannerSection.button")}
           </div>
           <IoChevronDown className="group-hover:text-brand-100" />
         </button>

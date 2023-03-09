@@ -8,7 +8,7 @@
     "desc": "Une blockchain dédiée aux services financiers décentralisés rapides, intelligents et transparents, accessibles à tous."
   },
   "HeroBannerSection": {
-    "Start exploring": "Commencer à explorer"
+    "button": "Commencer à explorer"
   },
   "StatisticsSection": {
     "dfiMinted": {

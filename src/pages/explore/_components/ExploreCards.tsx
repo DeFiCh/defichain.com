@@ -34,7 +34,9 @@ export function ExploreCards({
     ],
     diamondCoin: [
       "url(/assets/img/explore/diamond-coin.png)",
-      shiftMobileView ? "bg-[right_top_-7em]" : "bg-right-bottom",
+      shiftMobileView
+        ? "bg-[right_-16em_top_-25em]"
+        : "bg-[right_-12em_bottom_-18em]",
     ],
     phone: [
       "url(/assets/img/explore/phone.png)",

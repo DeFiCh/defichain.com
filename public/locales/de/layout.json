@@ -184,35 +184,35 @@
   "footer": {
     "sitemap": {
       "EXPLORE": {
-        "EXPLORE": "ERKUNDEN",
-        "$DFI": "$DFI",
-        "Invest, Trade and Earn": "Investieren, Handeln und Verdienen",
-        "Decentralized Exchange": "Dezentrale Börse",
-        "Wallets": "Wallets",
-        "Masternodes": "Masternodes"
+        "category": "ERKUNDEN",
+        "dfi": "$DFI",
+        "investTradeNEarn": "Investieren, Handeln und Verdienen",
+        "decentralizedExchange": "Dezentrale Börse",
+        "wallets": "Wallets",
+        "masternodes": "Masternodes"
       },
       "ECOSYSTEM": {
-        "ECOSYSTEM": "ÖKOSYSTEM",
-        "DeFiChain Apps": "DeFiChain Apps",
-        "DeFi Meta Chain": "DeFi Meta Chain",
-        "DeFiScan": "DeFiScan",
-        "Governance": "Governance",
-        "Bug Bounty": "Bug-Bounty",
-        "$100M Accelerator Program": "100 Mio. $ Accelerator-Programm"
+        "category": "ÖKOSYSTEM",
+        "defichainapps": "DeFiChain Apps",
+        "defimetachain": "DeFi Meta Chain",
+        "defiscan": "DeFiScan",
+        "governance": "Governance",
+        "bugbounty": "Bug-Bounty",
+        "100macceleratorprogram": "100 Mio. $ Accelerator-Programm"
       },
       "BUILD": {
-        "BUILD": "BAUEN",
-        "Jellyfish SDK": "Jellyfish SDK",
-        "DeFiChain White Paper": "DeFiChain White Paper",
-        "GitHub": "GitHub",
-        "Developer Resource": "Developer Resource",
-        "Media Assets": "Medien",
-        "Security": "Sicherheit"
+        "category": "BAUEN",
+        "jellyfishsdk": "Jellyfish SDK",
+        "defichainwhitepaper": "DeFiChain White Paper",
+        "github": "GitHub",
+        "developerResource": "Developer Resource",
+        "mediaAssets": "Medien",
+        "security": "Sicherheit"
       },
       "COMMUNITY": {
-        "COMMUNITY": "COMMUNITY",
-        "Blog": "Blog",
-        "Newsletter": "Newsletter"
+        "category": "COMMUNITY",
+        "blog": "Blog",
+        "newsletter": "Newsletter"
       }
     }
   }

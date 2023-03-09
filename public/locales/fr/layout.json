@@ -183,35 +183,35 @@
   "footer": {
     "sitemap": {
       "EXPLORE": {
-        "EXPLORE": "EXPLORER",
+        "category": "EXPLORER",
         "$DFI": "$DFI",
-        "Invest, Trade and Earn": "Investir, négocier et gagner",
-        "Decentralized Exchange": "Échange décentralisé",
-        "Wallets": "Portefeuilles",
-        "Masternodes": "Masternodes"
+        "investTradeNEarn": "Investir, négocier et gagner",
+        "decentralizedExchange": "Échange décentralisé",
+        "wallets": "Portefeuilles",
+        "masternodes": "Masternodes"
       },
       "ECOSYSTEM": {
-        "ECOSYSTEM": "ECOSYSTÈME",
-        "DeFiChain Apps": "Applications DeFiChain",
-        "DeFi Meta Chain": "DeFi Meta Chain",
-        "DeFiScan": "DeFiScan",
-        "Governance": "Gouvernance",
-        "Bug Bounty": "Bounty de bogues",
-        "$100M Accelerator Program": "Programme d'accélérateur de 100 millions de $"
+        "category": "ECOSYSTÈME",
+        "defichainapps": "Applications DeFiChain",
+        "defimetachain": "DeFi Meta Chain",
+        "defiscan": "DeFiScan",
+        "governance": "Gouvernance",
+        "bugbounty": "Bounty de bogues",
+        "100macceleratorprogram": "Programme d'accélérateur de 100 millions de $"
       },
       "BUILD": {
-        "BUILD": "CONSTRUIRE",
-        "Jellyfish SDK": "Kit de développement logiciel Jellyfish",
-        "DeFiChain White Paper": "Livre blanc de DeFiChain",
-        "GitHub": "GitHub",
-        "Developer Resource": "Ressource pour les développeurs",
-        "Media Assets": "Ressources média",
-        "Security": "Sécurité"
+        "category": "CONSTRUIRE",
+        "jellyfishsdk": "Kit de développement logiciel Jellyfish",
+        "defichainwhitepaper": "Livre blanc de DeFiChain",
+        "github": "GitHub",
+        "developerResource": "Ressource pour les développeurs",
+        "mediaAssets": "Ressources média",
+        "security": "Sécurité"
       },
       "COMMUNITY": {
-        "COMMUNITY": "COMMUNAUTÉ",
-        "Blog": "Blog",
-        "Newsletter": "Bulletin d'information"
+        "category": "COMMUNAUTÉ",
+        "blog": "Blog",
+        "newsletter": "Bulletin d'information"
       }
     }
   }

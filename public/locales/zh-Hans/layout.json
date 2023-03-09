@@ -183,35 +183,35 @@
   "footer": {
     "sitemap": {
       "EXPLORE": {
-        "EXPLORE": "探索",
+        "category": "探索",
         "$DFI": "$DFI",
-        "Invest, Trade and Earn": "投资、交易和赚取",
-        "Decentralized Exchange": "去中心化交易所",
-        "Wallets": "钱包",
-        "Masternodes": "主节点"
+        "investTradeNEarn": "投资、交易和赚取",
+        "decentralizedExchange": "去中心化交易所",
+        "wallets": "钱包",
+        "masternodes": "主节点"
       },
       "ECOSYSTEM": {
-        "ECOSYSTEM": "生态圈",
-        "DeFiChain Apps": "DeFiChain 应用",
-        "DeFi Meta Chain": "DeFi元链",
-        "DeFiScan": "DeFiScan",
-        "Governance": "治理",
-        "Bug Bounty": "漏洞奖励",
-        "$100M Accelerator Program": "1 亿美元的加速器计划"
+        "category": "生态圈",
+        "defichainapps": "DeFiChain 应用",
+        "defimetachain": "DeFi元链",
+        "defiscan": "DeFiScan",
+        "governance": "治理",
+        "bugbounty": "漏洞奖励",
+        "100macceleratorprogram": "1 亿美元的加速器计划"
       },
       "BUILD": {
-        "BUILD": "建造",
-        "Jellyfish SDK": "Jellyfish SDK",
-        "DeFiChain White Paper": "DeFiChain 白皮书",
-        "GitHub": "GitHub",
-        "Developer Resource": "开发者资源",
-        "Media Assets": "媒体资源",
-        "Security": "安全性"
+        "category": "建造",
+        "jellyfishsdk": "Jellyfish SDK",
+        "defichainwhitepaper": "DeFiChain 白皮书",
+        "github": "GitHub",
+        "developerResource": "开发者资源",
+        "mediaAssets": "媒体资源",
+        "security": "安全性"
       },
       "COMMUNITY": {
-        "COMMUNITY": "社区",
-        "Blog": "部落格",
-        "Newsletter": "通讯"
+        "category": "社区",
+        "blog": "部落格",
+        "newsletter": "通讯"
       }
     }
   }

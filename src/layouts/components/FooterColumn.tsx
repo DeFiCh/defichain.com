@@ -30,13 +30,13 @@ export default function FooterColumn({
           customStyle
         )}
       >
-        {t(`footer.sitemap.${category}.${category}`)}
+        {t(`footer.sitemap.${category}.category`)}
       </h3>
       <div className="grid grid-flow-row grid-cols-2 gap-6 md:grid-cols-1">
         {childLinks.map((link) => (
           <FooterLink
             key={link.label}
-            label={link.label}
+            altLabel={link.altLabel}
             category={category}
             isExternaLink={link.isExternaLink}
             // use external url instead of internal pathname

@@ -5,14 +5,14 @@ import FooterExternalLink from "./FooterExternalLink";
 
 export default function FooterLink({
   testId,
-  label,
+  altLabel,
   category,
   isExternaLink,
   hasUpArrowIcon,
   url,
 }: {
   url: string;
-  label: string;
+  altLabel: string;
   category: string;
   testId: string;
   isExternaLink: boolean;
@@ -23,7 +23,7 @@ export default function FooterLink({
     <div>
       {isExternaLink === true && url !== undefined ? (
         <FooterExternalLink
-          label={label}
+          text={altLabel}
           category={category}
           url={url}
           hasUpArrowIcon={hasUpArrowIcon}
@@ -37,7 +37,7 @@ export default function FooterLink({
           )}
         >
           <Link href={url} passHref data-testid={testId}>
-            {t(`footer.sitemap.${category}.${label}`)}
+            {t(`footer.sitemap.${category}.${altLabel}`)}
           </Link>
         </div>
       )}

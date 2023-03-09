@@ -4,6 +4,11 @@ import { SectionTitle } from "@components/commons/SectionTitle";
 import { Button } from "@components/commons/Buttons";
 import { StartExploring } from "@components/commons/StartExploring";
 
+// The HeroBanner component takes in title, subtitle, desc and HeroBannerBG
+// currently only COIN_ARROW, DFI_COIN and CUBE image are available
+// it also takes in optional params on the customBgPosStyle
+// if cta button is needed to pass in ctaButton, text and link
+// if start exploring button is needed to pass in start exploring and jumplink
 export function HeroBanner({
   title,
   subtitle,
@@ -84,9 +89,11 @@ export function HeroBanner({
 const bgMapping = {
   coinArrow: "bg-[url(/assets/img/herobanner/hero-banner-coin-arrow.png)]",
   cube: "bg-[url(/assets/img/herobanner/hero-banner-cube.png)]",
+  dfiCoin: "bg-[url(/assets/img/herobanner/hero-banner-dfi-coin.png)]",
 };
 
 export enum HeroBannerBG {
   COIN_ARROW = "coinArrow",
   CUBE = "cube",
+  DFI_COIN = "dfiCoin",
 }

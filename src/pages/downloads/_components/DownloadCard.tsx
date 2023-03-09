@@ -22,7 +22,7 @@ export function DownloadCard(
             <Image
               unoptimized
               src={props.imageSrc}
-              width={props.imageSrc.includes("quantum") ? 160 : 64}
+              width={64}
               height={64}
               className={classNames(props.imgClassName)}
               alt=""

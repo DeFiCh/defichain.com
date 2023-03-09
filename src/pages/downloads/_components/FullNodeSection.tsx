@@ -76,6 +76,17 @@ export function FullNodeSection(): JSX.Element {
             linux: ".appimage",
           }}
         />
+
+        <DownloadCard
+          title={t("FullNodeWallets.entries.QUANTUM.title")}
+          desc={t("FullNodeWallets.entries.QUANTUM.desc")}
+          imageSrc="/assets/img/downloads/quantum.png"
+          testid="FullNodeWallets.Quantum"
+        >
+          <div className="flex items-center text-lg font-medium">
+            <ExternalLink text="Quantum" url="https://quantumbridge.app/" />
+          </div>
+        </DownloadCard>
       </div>
     </>
   );

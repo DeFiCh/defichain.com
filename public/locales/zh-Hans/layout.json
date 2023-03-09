@@ -213,6 +213,10 @@
         "blog": "部落格",
         "newsletter": "通讯"
       }
+    },
+    "bottomlink": {
+      "privacy": "隐私政策",
+      "terms": "使用条款"
     }
   }
 }

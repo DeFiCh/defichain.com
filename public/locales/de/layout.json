@@ -214,6 +214,10 @@
         "blog": "Blog",
         "newsletter": "Newsletter"
       }
+    },
+    "bottomlink": {
+      "privacy": "Datenschutzrichtlinie",
+      "terms": "Nutzungsbedingungen"
     }
   }
 }

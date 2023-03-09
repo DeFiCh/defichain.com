@@ -214,6 +214,10 @@
         "blog": "Blog",
         "newsletter": "Newsletter"
       }
+    },
+    "bottomlink": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of use"
     }
   }
 }

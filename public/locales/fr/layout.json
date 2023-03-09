@@ -213,6 +213,10 @@
         "blog": "Blog",
         "newsletter": "Bulletin d'information"
       }
+    },
+    "bottomlink": {
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d'utilisation"
     }
   }
 }

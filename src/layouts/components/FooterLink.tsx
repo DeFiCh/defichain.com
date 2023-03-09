@@ -7,7 +7,6 @@ export default function FooterLink({
   testId,
   label,
   category,
-  altLabel,
   isExternaLink,
   hasUpArrowIcon,
   url,
@@ -15,7 +14,6 @@ export default function FooterLink({
   url: string;
   label: string;
   category: string;
-  altLabel: string;
   testId: string;
   isExternaLink: boolean;
   hasUpArrowIcon?: boolean;
@@ -27,7 +25,6 @@ export default function FooterLink({
         <FooterExternalLink
           label={label}
           category={category}
-          text={altLabel}
           url={url}
           hasUpArrowIcon={hasUpArrowIcon}
           testId={testId}

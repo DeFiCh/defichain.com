@@ -19,28 +19,32 @@ export function CardLink(
 ): JSX.Element {
   const Icon = iconMap[props.text.toLowerCase().replace(" ", "")];
   return (
-    <a
-      href={props.url}
+    <div
       className={classNames(
-        "border-dark-200 border-[0.5px] rounded-[5px] z-10",
-        props.className
+        "p-[0.5px] rounded-[5px]",
+        "bg-dark-200 hover:accent-gradient-1 active:opacity-70"
       )}
-      target="_blank"
-      rel="noreferrer"
-      data-testid={props.testId}
     >
-      <div className="flex gap-x-[7.09px] bg-dark-00 p-2 items-center rounded-[5px]">
-        <Icon size={20} />
-        <div className="lg:flex flex-col hidden">
-          <div className="text-[7.2px] leading-[9px] text-light-00 font-desc">
-            {props.descText}
-          </div>
-          <div className="text-[10px] leading-[12px] text-light-00 font-bold font-desc">
-            {props.text}
+      <a
+        href={props.url}
+        className={classNames("rounded-[5px]", props.className)}
+        target="_blank"
+        rel="noreferrer"
+        data-testid={props.testId}
+      >
+        <div className="flex gap-x-[7.09px] bg-dark-00 p-2 items-center rounded-[5px]">
+          <Icon size={20} />
+          <div className="lg:flex flex-col hidden">
+            <div className="text-[7.2px] leading-[9px] text-light-00 font-desc">
+              {props.descText}
+            </div>
+            <div className="text-[10px] leading-[12px] text-light-00 font-bold font-desc">
+              {props.text}
+            </div>
           </div>
         </div>
-      </div>
-    </a>
+      </a>
+    </div>
   );
 }
 

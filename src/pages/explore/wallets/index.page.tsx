@@ -2,6 +2,7 @@ import { Container } from "@components/commons/Container";
 import { SSRConfig, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { ExploreCards, ExploreCardsImage } from "../_components/ExploreCards";
+import { AdvanceUsageSection } from "./_components/AdvanceUsageSection";
 
 export default function ExploreWallets() {
   const { t } = useTranslation("page-explore");
@@ -10,22 +11,25 @@ export default function ExploreWallets() {
     { returnObjects: true }
   );
   return (
-    <Container className="lg:mb-8 md:mb-6 mb-4">
-      <div className="flex flex-row overflow-x-scroll lg:gap-x-[32.97px] md:gap-x-[24.97px] gap-x-[16.97px]">
-        <ExploreCards
-          title={t("WalletsFooterCards.cardTitle")}
-          desc={entries[0].title}
-          bgImage={ExploreCardsImage.DIAMONDCOIN}
-          href=""
-        />
-        <ExploreCards
-          title={t("WalletsFooterCards.cardTitle")}
-          desc={entries[1].title}
-          bgImage={ExploreCardsImage.METALCOIN}
-          href=""
-        />
-      </div>
-    </Container>
+    <>
+      <AdvanceUsageSection />
+      <Container className="lg:mb-8 md:mb-6 mb-4">
+        <div className="flex flex-row overflow-x-scroll lg:gap-x-[32.97px] md:gap-x-[24.97px] gap-x-[16.97px]">
+          <ExploreCards
+            title={t("WalletsFooterCards.cardTitle")}
+            desc={entries[0].title}
+            bgImage={ExploreCardsImage.DIAMONDCOIN}
+            href=""
+          />
+          <ExploreCards
+            title={t("WalletsFooterCards.cardTitle")}
+            desc={entries[1].title}
+            bgImage={ExploreCardsImage.METALCOIN}
+            href=""
+          />
+        </div>
+      </Container>
+    </>
   );
 }
 
@@ -38,6 +42,7 @@ export async function getStaticProps({
         "common",
         "layout",
         "page-explore",
+        "page-downloads",
       ])),
     },
   };

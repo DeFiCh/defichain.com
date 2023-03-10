@@ -13,13 +13,13 @@ export default function ExploreMasternodes() {
     <Container className="lg:mb-8 md:mb-6 mb-4">
       <div className="flex flex-row overflow-x-scroll lg:gap-x-[32.97px] md:gap-x-[24.97px] gap-x-[16.97px]">
         <ExploreCards
-          title="EXPLORE DEFICHAIN"
+          title={t("MasternodesFooterCards.cardTitle")}
           desc={entries[0].title}
           bgImage={ExploreCardsImage.PHONE}
           href=""
         />
         <ExploreCards
-          title="EXPLORE DEFICHAIN"
+          title={t("MasternodesFooterCards.cardTitle")}
           desc={entries[1].title}
           bgImage={ExploreCardsImage.ARROW}
           href=""

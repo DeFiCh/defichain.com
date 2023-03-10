@@ -7,15 +7,15 @@ import { ExploreCards, ExploreCardsImage } from "../_components/ExploreCards";
 export default function ExploreWallets() {
   const { t } = useTranslation("page-explore");
   const entries: Array<{ title: string; subtitle: string }> = t(
-    "WalletsFooterCards.cards",
+    "wallets.footerCards.cards",
     { returnObjects: true }
   );
   return (
     <>
       <HeroBanner
-        title={t("HeroBanner.title")}
-        subtitle={t("HeroBanner.subtitle")}
-        desc={t("HeroBanner.desc")}
+        title={t("wallets.heroBanner.title")}
+        subtitle={t("wallets.heroBanner.subtitle")}
+        desc={t("wallets.heroBanner.desc")}
         heroBG={HeroBannerBG.COIN_ARROW}
         startExploring
         startExploringJumpLink=""
@@ -24,13 +24,13 @@ export default function ExploreWallets() {
       <Container className="lg:mb-8 md:mb-6 mb-4">
         <div className="flex flex-row overflow-x-scroll lg:gap-x-[32.97px] md:gap-x-[24.97px] gap-x-[16.97px]">
           <ExploreCards
-            title={t("WalletsFooterCards.cardTitle")}
+            title={t("wallets.footerCards.cardTitle")}
             desc={entries[0].title}
             bgImage={ExploreCardsImage.DIAMONDCOIN}
             href=""
           />
           <ExploreCards
-            title={t("WalletsFooterCards.cardTitle")}
+            title={t("wallets.footerCards.cardTitle")}
             desc={entries[1].title}
             bgImage={ExploreCardsImage.METALCOIN}
             href=""

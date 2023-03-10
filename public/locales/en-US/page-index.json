@@ -734,5 +734,10 @@
         }
       ]
     }
+  },
+  "BlockchainFeatureSection": {
+    "title": "Designed for Decentralized Finance",
+    "subtitle": "NON-TURING-COMPLETE BLOCKCHAIN",
+    "desc": "DeFiChain offers comprehensive functionality tailored to the needs of the Distributed Ledger Technology (DLT) community, prioritizing simplicity, rapid throughput, and security."
   }
 }

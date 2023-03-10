@@ -34,13 +34,13 @@ export function Explore() {
         },
         {
           icon: "wallet",
-          href: "",
+          href: "/explore/wallets",
           title: entries[3].title,
           subtitle: entries[3].subtitle,
         },
         {
           icon: "masternode",
-          href: "",
+          href: "/explore/masternodes",
           title: entries[4].title,
           subtitle: entries[4].subtitle,
         },

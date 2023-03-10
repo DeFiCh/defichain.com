@@ -3,10 +3,10 @@ import { SSRConfig, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { ExploreCards, ExploreCardsImage } from "../_components/ExploreCards";
 
-export default function ExploreWallets() {
+export default function ExploreMasternodes() {
   const { t } = useTranslation("page-explore");
   const entries: Array<{ title: string; subtitle: string }> = t(
-    "WalletsFooterCards.cards",
+    "MasternodesFooterCards.cards",
     { returnObjects: true }
   );
   return (
@@ -15,7 +15,7 @@ export default function ExploreWallets() {
         <ExploreCards
           title="EXPLORE DEFICHAIN"
           desc={entries[0].title}
-          bgImage={ExploreCardsImage.DIAMONDCOIN}
+          bgImage={ExploreCardsImage.PHONE}
           href=""
         />
         <ExploreCards

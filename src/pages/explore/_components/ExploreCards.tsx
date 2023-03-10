@@ -60,7 +60,7 @@ export function ExploreCards({
       }}
       className={classNames(
         "p-[1px] rounded-[15px] h-[300px] z-10",
-        customSize ?? "md:w-[584px] min-w-[272px]",
+        customSize ?? "md:w-full min-w-[272px]",
         "cursor-pointer",
         "card-outline-2 hover:accent-gradient-1 transition-all ease-in-out duration-300"
       )}

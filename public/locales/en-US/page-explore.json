@@ -1,7 +1,30 @@
 {
+
   "HeroBanner": {
-    "title":"CHOOSE A WALLET THAT SUITS YOU",
+    "title": "CHOOSE A WALLET THAT SUITS YOU",
     "subtitle": "DeFiChain Wallets",
     "desc": "Gain access to the DeFi landscape through non-custodial wallets designed for a multitude of requirements."
+  },
+  "WalletsFooterCards": {
+    "cardTitle": "EXPLORE DEFICHAIN",
+    "cards": [
+      {
+        "title": "Trade with DEX"
+      },
+      {
+        "title": "Get $DFI"
+      }
+    ]
+  },
+  "MasternodesFooterCards": {
+    "cardTitle": "EXPLORE DEFICHAIN",
+    "cards": [
+      {
+        "title": "Choose your wallet"
+      },
+      {
+        "title": "Get $DFI"
+      }
+    ]
   }
 }

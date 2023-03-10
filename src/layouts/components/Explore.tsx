@@ -40,7 +40,7 @@ export function Explore() {
         },
         {
           icon: "masternode",
-          href: "",
+          href: "/explore/masternodes",
           title: entries[4].title,
           subtitle: entries[4].subtitle,
         },

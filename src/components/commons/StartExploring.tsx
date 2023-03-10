@@ -1,12 +1,15 @@
 import { IoChevronDown } from "react-icons/io5";
 
 import classNames from "classnames";
+import { useTranslation } from "next-i18next";
 
 export function StartExploring({
   startExploringJumpLink,
 }: {
   startExploringJumpLink: string;
 }) {
+  const { t } = useTranslation("common");
+
   return (
     <a
       href={startExploringJumpLink}
@@ -17,7 +20,7 @@ export function StartExploring({
         className="group flex flex-col items-center gap-y-[17px]"
       >
         <div className="text-sm text-dark-700 group-hover:text-brand-100">
-          Start exploring
+          {t("StartExploring.button")}
         </div>
         <IoChevronDown className="group-hover:text-brand-100" />
       </button>

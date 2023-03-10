@@ -21,7 +21,7 @@ export default function ExploreMasternodes() {
         <ExploreCards
           title={t("MasternodesFooterCards.cardTitle")}
           desc={entries[1].title}
-          bgImage={ExploreCardsImage.ARROW}
+          bgImage={ExploreCardsImage.METALCOIN}
           href=""
         />
       </div>

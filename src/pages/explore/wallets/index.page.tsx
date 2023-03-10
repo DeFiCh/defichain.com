@@ -21,7 +21,7 @@ export default function ExploreWallets() {
         <ExploreCards
           title={t("WalletsFooterCards.cardTitle")}
           desc={entries[1].title}
-          bgImage={ExploreCardsImage.ARROW}
+          bgImage={ExploreCardsImage.METALCOIN}
           href=""
         />
       </div>

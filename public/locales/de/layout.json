@@ -182,35 +182,42 @@
     }
   },
   "footer": {
-    "title": "Natives dezentrales Finanzwesen, basierend auf Bitcoin",
     "sitemap": {
-      "foundation": "Foundation",
-      "dfi": "$DFI",
-      "dex": "DEX",
-      "developers": "Entwickler",
-      "ecosystem": "Ökosystem",
-      "downloads": "Downloads",
-      "media": "Medien",
-      "learn": "Mehr erfahren",
-      "security": "Sicherheit",
-      "bugbounty": "Bug-Bounty",
-      "whitepaper": "White Paper",
-      "dfcblog": "Blog",
-      "language": "de",
-      "newsletter": "Newsletter"
+      "EXPLORE": {
+        "category": "ERKUNDEN",
+        "dfi": "$DFI",
+        "investTradeNEarn": "Investieren, Handeln und Verdienen",
+        "decentralizedExchange": "Dezentrale Börse",
+        "wallets": "Wallets",
+        "masternodes": "Masternodes"
+      },
+      "ECOSYSTEM": {
+        "category": "ÖKOSYSTEM",
+        "defichainapps": "DeFiChain Apps",
+        "defimetachain": "DeFi MetaChain",
+        "defiscan": "DeFiScan",
+        "governance": "Governance",
+        "bugbounty": "Bug-Bounty",
+        "100macceleratorprogram": "100 Mio. $ Accelerator-Programm"
+      },
+      "BUILD": {
+        "category": "BAUEN",
+        "jellyfishsdk": "Jellyfish SDK",
+        "defichainwhitepaper": "DeFiChain White Paper",
+        "github": "GitHub",
+        "developerResource": "Ressourcen für Entwickler",
+        "mediaAssets": "Medien",
+        "security": "Sicherheit"
+      },
+      "COMMUNITY": {
+        "category": "COMMUNITY",
+        "blog": "Blog",
+        "newsletter": "Newsletter"
+      }
     },
-    "social": {
-      "title": "Soziale Netze",
-      "twitter": "Twitter",
-      "youtube": "YouTube",
-      "reddit": "Reddit",
-      "linkedin": "LinkedIn",
-      "facebook": "Facebook",
-      "discord": "Discord",
-      "github": "GitHub",
-      "coinMarketCap": "CoinMarketCap",
-      "telegram": "Telegram",
-      "merch": "Verkaufsartikel"
+    "bottomlink": {
+      "privacy": "Datenschutzrichtlinie",
+      "terms": "Nutzungsbedingungen"
     }
   }
 }

@@ -90,6 +90,10 @@
       "DFIElectrum": {
         "title": "DeFiChain Electrum",
         "desc": "Portefeuille DeFiChain multi signature construit avec Electrum pour les cas d'utilisation de la trésorerie et plus encore."
+      },
+      "QUANTUM": {
+        "title": "Quantum",
+        "desc": "Quantum est un pont blockchain fiable qui permet un transfert transparent entre DeFiChain et Ethereum."
       }
     }
   }

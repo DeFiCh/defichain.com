@@ -7,6 +7,9 @@
     "title": "Connecting old and new worlds",
     "desc": "A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone."
   },
+  "HeroBannerSection": {
+    "button": "Start exploring"
+  },
   "StatisticsSection": {
     "dfiMinted": {
       "title": "TOTAL DFI MINTED",
@@ -25,8 +28,9 @@
   "ReadyForFlexibilitySection": {
     "label": "READY FOR FLEXIBILITY",
     "title": "DeFi MetaChain the upgrade",
-    "descParaOne": "DeFi Meta Chain is an EVM-compatible blockchain that uses Proof of Authority (POA) and runs in parallel with the Native DeFiChain blockchain.",
-    "descParaTwo": "Read through the documentation to get started with deploying next generation DeFi applications on DeFi Meta Chain."
+    "descParaOne": "DeFi MetaChain is an EVM-compatible blockchain that uses Proof of Authority (POA) and runs in parallel with the Native DeFiChain blockchain.",
+    "descParaTwo": "Read through the documentation to get started with deploying next generation DeFi applications on DeFi MetaChain.",
+    "button": "Explore DeFi MetaChain"
   },
   "CardsSection": {
     "cards": [

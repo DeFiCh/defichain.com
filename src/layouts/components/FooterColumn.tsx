@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import { useTranslation } from "next-i18next";
 import FooterLink from "./FooterLink";
 
 interface FooterLinkItemProps {
@@ -20,6 +21,7 @@ export default function FooterColumn({
   customStyle?: string;
   childLinks: FooterLinkItemProps[];
 }): JSX.Element {
+  const { t } = useTranslation("layout");
   return (
     <section>
       <h3
@@ -28,13 +30,14 @@ export default function FooterColumn({
           customStyle
         )}
       >
-        {category}
+        {t(`footer.sitemap.${category}.category`)}
       </h3>
       <div className="grid grid-flow-row grid-cols-2 gap-6 md:grid-cols-1">
         {childLinks.map((link) => (
           <FooterLink
             key={link.label}
             altLabel={link.altLabel}
+            category={category}
             isExternaLink={link.isExternaLink}
             // use external url instead of internal pathname
             url={link.url ?? link.pathname}

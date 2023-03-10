@@ -181,35 +181,42 @@
     }
   },
   "footer": {
-    "title": "比特币生态中的开放式金融",
     "sitemap": {
-      "foundation": "递飞链基金会",
-      "dfi": "$DFI",
-      "dex": "DEX",
-      "developers": "开发者",
-      "ecosystem": "生态系统",
-      "downloads": "下载区",
-      "media": "媒体素材",
-      "learn": "学习中心",
-      "security": "安全性",
-      "bugbounty": "漏洞悬赏",
-      "whitepaper": "白皮书",
-      "dfcblog": "博客",
-      "language": "zh",
-      "newsletter": "Newsletter"
+      "EXPLORE": {
+        "category": "探索",
+        "$DFI": "$DFI",
+        "investTradeNEarn": "投资、交易和赚取",
+        "decentralizedExchange": "去中心化交易所",
+        "wallets": "钱包",
+        "masternodes": "主节点"
+      },
+      "ECOSYSTEM": {
+        "category": "生态圈",
+        "defichainapps": "DeFiChain 应用",
+        "defimetachain": "DeFi元链",
+        "defiscan": "DeFiScan",
+        "governance": "治理",
+        "bugbounty": "漏洞奖励",
+        "100macceleratorprogram": "1 亿美元的加速器计划"
+      },
+      "BUILD": {
+        "category": "建造",
+        "jellyfishsdk": "Jellyfish SDK",
+        "defichainwhitepaper": "DeFiChain 白皮书",
+        "github": "GitHub",
+        "developerResource": "开发者资源",
+        "mediaAssets": "媒体资源",
+        "security": "安全性"
+      },
+      "COMMUNITY": {
+        "category": "社区",
+        "blog": "部落格",
+        "newsletter": "通讯"
+      }
     },
-    "social": {
-      "title": "社区",
-      "twitter": "推特",
-      "youtube": "YouTube",
-      "reddit": "Reddit",
-      "linkedin": "領英",
-      "facebook": "脸书",
-      "discord": "Discord",
-      "github": "GitHub",
-      "coinMarketCap": "CoinMarketCap",
-      "telegram": "电报群",
-      "merch": "商品"
+    "bottomlink": {
+      "privacy": "隐私政策",
+      "terms": "使用条款"
     }
   }
 }

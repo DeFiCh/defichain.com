@@ -181,35 +181,42 @@
     }
   },
   "footer": {
-    "title": "比特幣生態中的開放式金融",
     "sitemap": {
-      "foundation": "遞飛鏈基金會",
-      "dfi": "$DFI",
-      "dex": "DEX",
-      "developers": "開發者",
-      "ecosystem": "生態系統",
-      "downloads": "下載區",
-      "media": "媒體素材",
-      "learn": "學習中心",
-      "security": "安全性",
-      "bugbounty": "漏洞懸賞",
-      "whitepaper": "白皮書",
-      "dfcblog": "博客",
-      "language": "zh-tw",
-      "newsletter": "Newsletter"
+      "EXPLORE": {
+        "category": "探索",
+        "$DFI": "$DFI",
+        "investTradeNEarn": "投資、交易和賺取",
+        "decentralizedExchange": "去中心化交易所",
+        "wallets": "錢包",
+        "masternodes": "主節點"
+      },
+      "ECOSYSTEM": {
+        "category": "生態圈",
+        "defichainapps": "DeFiChain 應用",
+        "defimetachain": "DeFi元鏈",
+        "defiscan": "DeFiScan",
+        "governance": "治理",
+        "bugbounty": "漏洞獎勵",
+        "100macceleratorprogram": "1 億美元的加速器計劃"
+      },
+      "BUILD": {
+        "category": "建造",
+        "jellyfishsdk": "Jellyfish SDK",
+        "defichainwhitepaper": "DeFiChain 白皮書",
+        "github": "GitHub",
+        "developerResource": "開發者資源",
+        "mediaAssets": "媒體資源",
+        "security": "安全性"
+      },
+      "COMMUNITY": {
+        "category": "社區",
+        "blog": "部落格",
+        "newsletter": "通訊"
+      }
     },
-    "social": {
-      "title": "社區",
-      "twitter": "推特",
-      "youtube": "YouTube",
-      "reddit": "Reddit",
-      "linkedin": "領英",
-      "facebook": "臉書",
-      "discord": "Discord",
-      "github": "GitHub",
-      "coinMarketCap": "CoinMarketCap",
-      "telegram": "電報群",
-      "merch": "商品"
+    "bottomlink": {
+      "privacy": "隱私政策",
+      "terms": "使用條款"
     }
   }
 }

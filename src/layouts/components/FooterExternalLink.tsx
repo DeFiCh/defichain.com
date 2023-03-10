@@ -4,11 +4,12 @@ import { useEffect, useState } from "react";
 
 export default function FooterExternalLink(props: {
   text: string;
+  category: string;
   url: string;
   testId: string;
   hasUpArrowIcon?: boolean;
 }): JSX.Element {
-  const { text, url, testId, hasUpArrowIcon } = props;
+  const { text, category, url, testId, hasUpArrowIcon } = props;
   const [isHovered, setIsHovered] = useState(false);
   const { t } = useTranslation("layout");
   const hoverTextState = document.getElementById("FooterExternalLinkText");
@@ -28,7 +29,7 @@ export default function FooterExternalLink(props: {
         data-testid={testId}
         className="flex flex-row items-center"
       >
-        {t(`footer.sitemap.${text}`)}
+        {t(`footer.sitemap.${category}.${text}`)}
         <svg width="0" height="0">
           <linearGradient
             id="accent-gradient"

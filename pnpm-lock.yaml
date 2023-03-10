@@ -10,9 +10,9 @@ specifiers:
   '@types/lodash': ^4.14.191
   '@types/node': ^18.11.12
   '@types/react': ^18.0.28
-  '@waveshq/standard-defichain-jellyfishsdk': ^0.44.3
-  '@waveshq/standard-web': ^0.44.3
-  '@waveshq/standard-web-linter': ^0.44.3
+  '@waveshq/standard-defichain-jellyfishsdk': ^0.44.4
+  '@waveshq/standard-web': ^0.44.4
+  '@waveshq/standard-web-linter': ^0.44.4
   autoprefixer: ^10.4.13
   babel-plugin-istanbul: ^6.1.1
   babel-plugin-jsx-remove-data-test-id: ^3.0.0
@@ -38,9 +38,8 @@ specifiers:
 dependencies:
   '@defichain/whale-api-client': 3.29.1_defichain@3.29.1
   '@headlessui/react': 1.7.13_biqbaboplfbrettd7655fr4n2y
-  '@waveshq/standard-defichain-jellyfishsdk': 0.44.3_@types+tar-fs@2.0.1
-  '@waveshq/standard-web': 0.44.3_cr5zkokuk2klt2llupyfqftb3y
-  bignumber.js: 9.1.1
+  '@waveshq/standard-defichain-jellyfishsdk': 0.44.4_@types+tar-fs@2.0.1
+  '@waveshq/standard-web': 0.44.4_cr5zkokuk2klt2llupyfqftb3y
   classnames: 2.3.2
   gray-matter: 4.0.3
   lodash: 4.17.21
@@ -64,7 +63,7 @@ devDependencies:
   '@types/lodash': 4.14.191
   '@types/node': 18.14.6
   '@types/react': 18.0.28
-  '@waveshq/standard-web-linter': 0.44.3_a4kv4a5zeu2o4krfkisqmpob5u
+  '@waveshq/standard-web-linter': 0.44.4_a4kv4a5zeu2o4krfkisqmpob5u
   autoprefixer: 10.4.13_postcss@8.4.21
   babel-plugin-istanbul: 6.1.1
   babel-plugin-jsx-remove-data-test-id: 3.0.0_@babel+core@7.21.0
@@ -2822,8 +2821,8 @@ packages:
     resolution: {integrity: sha512-haGBC8noyA5BfjCRXRH+VIkHCDVW5iD5UX24P2nOdilwUxI4qWsattS/co8QBGq64XsNLRAMdM5pQUE3zxkF9Q==}
     dev: true
 
-  /@waveshq/standard-defichain-jellyfishsdk/0.44.3_@types+tar-fs@2.0.1:
-    resolution: {integrity: sha512-53MP+Lhbj2DBDRlg6Bo6WyCIF9+uzhlxYleiWA53sx+ojWc/BHGDE7pwfqi5IhtSvW/tghC9H3BSiE9bC2ynUA==}
+  /@waveshq/standard-defichain-jellyfishsdk/0.44.4_@types+tar-fs@2.0.1:
+    resolution: {integrity: sha512-DBk67j1bAShCanljKfJugsgMlosKc52FVoezPaqy4bqDHMF2L9Lk97W17GKXfRy962yCWWaiMGKBDqpD3GsjDA==}
     dependencies:
       '@defichain/jellyfish-address': 3.29.1_defichain@3.29.1
       '@defichain/jellyfish-api-core': 3.29.1_defichain@3.29.1
@@ -2845,8 +2844,8 @@ packages:
       - supports-color
     dev: false
 
-  /@waveshq/standard-web-linter/0.44.3_a4kv4a5zeu2o4krfkisqmpob5u:
-    resolution: {integrity: sha512-Nzt3neKzou9/scKymOH3/2RbEUbrVi+FowNS6ZiuExr2BHMWlaP9gog5u7UmrOA2i4+Dzhg715ZGG7R760/L5g==}
+  /@waveshq/standard-web-linter/0.44.4_a4kv4a5zeu2o4krfkisqmpob5u:
+    resolution: {integrity: sha512-oE0fhEdgDCK43P8xQE/JJrtAC/xqNhxGnMcD5g6qo1FOoZnXANRhEpUeDvvBWaouTdvNfL8YoPcClxx5b+9CJQ==}
     dependencies:
       eslint: 8.35.0
       eslint-config-airbnb: 19.0.4_oy6wj56dgwy2h2u3ilgcukh654
@@ -2883,8 +2882,8 @@ packages:
       - supports-color
     dev: true
 
-  /@waveshq/standard-web/0.44.3_cr5zkokuk2klt2llupyfqftb3y:
-    resolution: {integrity: sha512-R1LROgZW1ojSCB/77CeBFZbBTxZQEp9ydA50NwUUC/00vSp7X7qKIrW0TEgbl0VAJGjNHhWFX/kf72BYW2G+8A==}
+  /@waveshq/standard-web/0.44.4_cr5zkokuk2klt2llupyfqftb3y:
+    resolution: {integrity: sha512-SUewsYM9EknCXqFz1z/gHMQ2nWEyJhvoQwbp7rrtFRQciJG83m4Gli/31Awvf2NhG4gOr8IgOF52KswTpq4aPQ==}
     dependencies:
       '@netlify/ipx': 1.3.3
       '@reduxjs/toolkit': 1.9.3_k4ae6lp43ej6mezo3ztvx6pykq
@@ -2892,7 +2891,7 @@ packages:
       '@types/react-dom': 18.0.11
       follow-redirects: 1.15.2
       next: 13.2.3_6m24vuloj5ihw4zc5lbsktc4fu
-      next-sitemap: 4.0.2_xeg3tdra7hobsncwzvo3da7vxi
+      next-sitemap: 4.0.5_xeg3tdra7hobsncwzvo3da7vxi
       nextjs-progressbar: 0.0.16_next@13.2.3+react@18.2.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -7082,8 +7081,8 @@ packages:
       - react-native
     dev: false
 
-  /next-sitemap/4.0.2_xeg3tdra7hobsncwzvo3da7vxi:
-    resolution: {integrity: sha512-NQVzguzW6xkh0fZzmgZJ//H9f1DdvKmhJmTO1xuIPmDuZxM2Gd48CrKHXVnbK0zAx52hpyNe3ZUGkrExUWyljg==}
+  /next-sitemap/4.0.5_xeg3tdra7hobsncwzvo3da7vxi:
+    resolution: {integrity: sha512-kIABX4n8wJqY2sttRjivBF2r1MgQ1pg12y87qGT+5meippq0ivxaNSRldMDOj8pIGhXW6uFAsCxyH/JftqkwWQ==}
     engines: {node: '>=14.18'}
     hasBin: true
     peerDependencies:

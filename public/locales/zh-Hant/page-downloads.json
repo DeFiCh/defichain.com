@@ -86,6 +86,10 @@
       "DFIElectrum": {
         "title": "遞飛鏈 Electrum 錢包",
         "desc": "多重簽名 DeFiChain 錢包採用 Electrum 軟件技術，適用於於財務或更多用例。"
+      },
+      "QUANTUM": {
+        "title": "Quantum",
+        "desc": "Quantum 是一個可讓 DeFiChain 和以太坊之間無縫且可信賴傳輸的橋樑。"
       }
     }
   }

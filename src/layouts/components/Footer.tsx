@@ -2,6 +2,7 @@ import DeFiChainLogo from "@components/icons/DeFiChainLogo";
 import { Container } from "@components/commons/Container";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { useTranslation } from "next-i18next";
 import { LanguageDropdownV2 } from "./LanguageDropdownV2";
 import FooterInternalBottomLink from "./FooterInternalBottomLink";
 import FooterColumn from "./FooterColumn";
@@ -167,7 +168,7 @@ export const MenuItems = [
 
 export default function Footer(): JSX.Element {
   const router = useRouter();
-
+  const { t } = useTranslation("layout");
   // default set language to be english to be directed to international telegram link
   const [language, setLanguage] = useState(router.locale ?? "");
 
@@ -232,13 +233,13 @@ export default function Footer(): JSX.Element {
               </div>
               <div className="flex flex-row items-center pt-2">
                 <FooterInternalBottomLink
-                  text="Privacy Policy"
+                  text={t("footer.bottomlink.privacy")}
                   pathname="/privacy-policy"
                   testId="Footer.Mobile.Privacy"
                 />
                 <span className="px-2">•</span>
                 <FooterInternalBottomLink
-                  text="Terms of use"
+                  text={t("footer.bottomlink.terms")}
                   pathname="/terms-of-use"
                   testId="Footer.Mobile.Terms"
                 />
@@ -254,13 +255,13 @@ export default function Footer(): JSX.Element {
               <div className="flex flex-row">
                 <div className="flex flex-row items-center pl-3">
                   <FooterInternalBottomLink
-                    text="Privacy Policy"
+                    text={t("footer.bottomlink.privacy")}
                     pathname="/privacy-policy"
                     testId="Footer.Web.Privacy"
                   />
                   <span className="px-2 text-dark-500">•</span>
                   <FooterInternalBottomLink
-                    text="Terms of use"
+                    text={t("footer.bottomlink.terms")}
                     pathname="/terms-of-use"
                     testId="Footer.Web.Terms"
                   />

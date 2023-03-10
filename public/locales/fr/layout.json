@@ -181,35 +181,42 @@
     }
   },
   "footer": {
-    "title": "Finance décentralisée native sur Bitcoin",
     "sitemap": {
-      "foundation": "Fondation",
-      "dfi": "$DFI",
-      "dex": "DEX",
-      "developers": "Développeurs",
-      "ecosystem": "Écosystème",
-      "downloads": "Downloads",
-      "media": "Médias",
-      "learn": "Apprendre",
-      "security": "Sécurité",
-      "bugbounty": "Prime aux bogues",
-      "whitepaper": "Livre blanc",
-      "dfcblog": "Blog",
-      "language": "fr",
-      "newsletter": "Newsletter"
+      "EXPLORE": {
+        "category": "EXPLORER",
+        "$DFI": "$DFI",
+        "investTradeNEarn": "Investir, négocier et gagner",
+        "decentralizedExchange": "Échange décentralisé",
+        "wallets": "Portefeuilles",
+        "masternodes": "Masternodes"
+      },
+      "ECOSYSTEM": {
+        "category": "ECOSYSTÈME",
+        "defichainapps": "Applications DeFiChain",
+        "defimetachain": "DeFi MetaChain",
+        "defiscan": "DeFiScan",
+        "governance": "Gouvernance",
+        "bugbounty": "Bounty de bogues",
+        "100macceleratorprogram": "Programme d'accélérateur de 100 millions de $"
+      },
+      "BUILD": {
+        "category": "CONSTRUIRE",
+        "jellyfishsdk": "Kit de développement logiciel Jellyfish",
+        "defichainwhitepaper": "Livre blanc de DeFiChain",
+        "github": "GitHub",
+        "developerResource": "Ressource pour les développeurs",
+        "mediaAssets": "Ressources média",
+        "security": "Sécurité"
+      },
+      "COMMUNITY": {
+        "category": "COMMUNAUTÉ",
+        "blog": "Blog",
+        "newsletter": "Bulletin d'information"
+      }
     },
-    "social": {
-      "title": "Réseaux sociaux",
-      "twitter": "Twitter",
-      "youtube": "YouTube",
-      "reddit": "Reddit",
-      "linkedin": "LinkedIn",
-      "facebook": "Facebook",
-      "discord": "Discord",
-      "github": "GitHub",
-      "coinMarketCap": "CoinMarketCap",
-      "telegram": "Telegram",
-      "merch": "Marchandise"
+    "bottomlink": {
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d'utilisation"
     }
   }
 }

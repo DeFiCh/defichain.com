@@ -2,7 +2,7 @@ import { useUnitSuffix } from "@hooks/useUnitSuffix";
 import CountUp from "react-countup";
 import classNames from "classnames";
 
-interface DataStripProps {
+interface DisplayItemProps {
   title: string;
   stats?: number;
   desc?: string;
@@ -17,7 +17,7 @@ export function DataStrip({
   displayStripCustomStyle,
   displayItem,
 }: {
-  displayItem: DataStripProps[];
+  displayItem: DisplayItemProps[];
   displayId?: string;
   displayStripCustomStyle?: string;
 }) {

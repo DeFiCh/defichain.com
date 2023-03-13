@@ -45,7 +45,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
   // translations
 
   return (
-    <div className="relative overflow-hidden pt-[136px]">
+    <div className="relative overflow-hidden lg:pt-[136px]">
       <Container
         className={classNames(
           "no-scrollbar z-10 relative lg:flex lg:justify-center",

@@ -37,7 +37,7 @@ export function Card({
   // const IconOnHover = iconMapping[`${content.id}_hover`] as React.ElementType;
 
   return (
-    <div className="">
+    <div>
       <div
         key={content.id}
         onMouseEnter={() => {

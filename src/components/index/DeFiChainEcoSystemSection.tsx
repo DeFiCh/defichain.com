@@ -45,10 +45,10 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
   // translations
 
   return (
-    <div className="relative overflow-hidden mt-[48px] md:mt-[96px] lg:pt-[292px]">
+    <div className="relative overflow-hidden pt-[136px]">
       <Container
         className={classNames(
-          "no-scrollbar z-10 relative lg:flex lg:justify-center md:mt-[24px]",
+          "no-scrollbar z-10 relative lg:flex lg:justify-center",
           { "flexbox-wrapper": dimensions.width >= 1033 } // only apply styling when in large screen
         )}
       >

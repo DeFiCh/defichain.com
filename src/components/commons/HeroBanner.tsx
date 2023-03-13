@@ -5,7 +5,7 @@ import { Button } from "@components/commons/Buttons";
 import { StartExploring } from "@components/commons/StartExploring";
 
 // The HeroBanner component takes in title, subtitle, desc and HeroBannerBG
-// currently only COIN_ARROW, DFI_COIN and CUBE image are available
+// currently only COIN_ARROW, DFI_COIN, DIAMOND_COIN and CUBE image are available
 // it also takes in optional params on the customBgPosStyle
 // if cta button is required, to pass in hasCtaButton, ctaButtonText and ctaButtonLink
 // if start exploring button is required, to pass in hasStartExploringButton and startExploringJumpLink

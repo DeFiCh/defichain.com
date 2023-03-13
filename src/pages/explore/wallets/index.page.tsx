@@ -1,7 +1,7 @@
 import { Container } from "@components/commons/Container";
 import { SSRConfig, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { HeroBanner, HeroBannerBG } from "@components/commons/HeroBanner";
+import { HeroBanner, HeroBannerBg } from "@components/commons/HeroBanner";
 import { ExploreCards, ExploreCardsImage } from "../_components/ExploreCards";
 
 export default function ExploreWallets() {
@@ -16,7 +16,7 @@ export default function ExploreWallets() {
         title={t("heroBanner.title")}
         subtitle={t("heroBanner.subtitle")}
         desc={t("heroBanner.desc")}
-        heroBG={HeroBannerBG.COIN_ARROW}
+        heroBg={HeroBannerBg.COIN_ARROW}
         hasStartExploringButton
         startExploringJumpLink=""
       />

@@ -3,7 +3,7 @@ import { IoChevronDown } from "react-icons/io5";
 import classNames from "classnames";
 import { useTranslation } from "next-i18next";
 
-export function StartExploring({
+export function StartExploringButton({
   startExploringJumpLink,
 }: {
   startExploringJumpLink: string;

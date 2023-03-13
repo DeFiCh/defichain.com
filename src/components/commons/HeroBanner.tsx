@@ -2,7 +2,7 @@ import { Container } from "@components/commons/Container";
 import classNames from "classnames";
 import { SectionTitle } from "@components/commons/SectionTitle";
 import { Button } from "@components/commons/Buttons";
-import { StartExploring } from "@components/commons/StartExploring";
+import { StartExploringButton } from "@components/commons/StartExploringButton";
 
 // The HeroBanner component takes in title, subtitle, desc and HeroBannerBG
 // currently only COIN_ARROW, DFI_COIN, DIAMOND_COIN and CUBE image are available
@@ -14,7 +14,7 @@ export function HeroBanner({
   subtitle,
   desc,
   customBgPosStyle,
-  heroBG,
+  heroBg,
   hasCtaButton = false,
   ctaButtonLink,
   ctaButtonText,
@@ -25,7 +25,7 @@ export function HeroBanner({
   subtitle: string;
   desc: string;
   customBgPosStyle?: string;
-  heroBG: HeroBannerBG;
+  heroBg: HeroBannerBg;
   hasCtaButton?: boolean;
   ctaButtonLink?: string;
   ctaButtonText?: string;
@@ -70,12 +70,14 @@ export function HeroBanner({
           )}
         </div>
         {hasStartExploringButton && startExploringJumpLink && (
-          <StartExploring startExploringJumpLink={startExploringJumpLink} />
+          <StartExploringButton
+            startExploringJumpLink={startExploringJumpLink}
+          />
         )}
       </Container>
       <div
         className={classNames(
-          bgMapping[heroBG],
+          bgMapping[heroBg],
           "absolute bg-contain bg-no-repeat bg-right-top inset-0 z-[-1]",
           "lg:h-[686px] md:h-[512px] h-[358px]",
           customBgPosStyle ??
@@ -86,18 +88,18 @@ export function HeroBanner({
   );
 }
 
-export enum HeroBannerBG {
+export enum HeroBannerBg {
   COIN_ARROW,
   CUBE,
   DFI_COIN,
   DIAMOND_COIN,
 }
 const bgMapping = {
-  [HeroBannerBG.COIN_ARROW]:
+  [HeroBannerBg.COIN_ARROW]:
     "bg-[url(/assets/img/herobanner/hero-banner-coin-arrow.png)]",
-  [HeroBannerBG.CUBE]: "bg-[url(/assets/img/herobanner/hero-banner-cube.png)]",
-  [HeroBannerBG.DFI_COIN]:
+  [HeroBannerBg.CUBE]: "bg-[url(/assets/img/herobanner/hero-banner-cube.png)]",
+  [HeroBannerBg.DFI_COIN]:
     "bg-[url(/assets/img/herobanner/hero-banner-dfi-coin.png)]",
-  [HeroBannerBG.DIAMOND_COIN]:
+  [HeroBannerBg.DIAMOND_COIN]:
     "bg-[url(/assets/img/herobanner/hero-banner-diamond-coin.png)]",
 };

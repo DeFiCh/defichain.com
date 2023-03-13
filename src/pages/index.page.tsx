@@ -7,7 +7,7 @@ import { DeFiChainEcoSystemSection } from "@components/index/DeFiChainEcoSystemS
 import { StatsDisplay } from "@components/index/StatisticsDisplay";
 import { ReadyForFlexibility } from "@components/index/ReadyForFlexibility";
 import { Container } from "@components/commons/Container";
-import { StartExploring } from "@components/commons/StartExploring";
+import { StartExploringButton } from "@components/commons/StartExploringButton";
 
 export default function HomePage(): JSX.Element {
   const { t } = useTranslation(["page-index"]);
@@ -17,7 +17,7 @@ export default function HomePage(): JSX.Element {
       <Head title={t("Head.title")} description={t("Head.desc")} />
       <HomePageHeader />
       <Container className="justify-center md:mt-0 mt-9 hidden md:flex">
-        <StartExploring startExploringJumpLink="#statistics_display" />
+        <StartExploringButton startExploringJumpLink="#statistics_display" />
       </Container>
 
       <StatsDisplay />

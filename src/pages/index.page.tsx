@@ -19,7 +19,6 @@ export default function HomePage(): JSX.Element {
       <Container className="justify-center md:mt-0 mt-9 hidden md:flex">
         <StartExploringButton startExploringJumpLink="#statistics_display" />
       </Container>
-
       <StatsDisplay />
       <BlockchainFeaturesSection />
       <DeFiChainEcoSystemSection />

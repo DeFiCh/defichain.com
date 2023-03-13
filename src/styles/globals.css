@@ -106,10 +106,6 @@ html {
     text-fill-color: transparent;
   }
 
-  .hover-icons:hover {
-    fill: #ff00ff;
-  }
-
   .accent-gradient-1 {
     background-image: linear-gradient(
       72.57deg,
@@ -194,6 +190,80 @@ html {
 
 .mouse-cursor-gradient-tracking > * {
   transition: opacity 0.2s ease-in-out;
+}
+
+.hover-icons:hover {
+  fill: #ff00ff;
+}
+/* TODO hover out onto the original image*/
+
+#invest_hover {
+  transform-box: fill-box;
+  transform-origin: 40% 60%;
+  animation: transform 0.2s linear both;
+  animation-play-state: paused;
+  --rotateDeg: -45deg;
+  --xLength: -40px;
+  --yLength: 10px;
+}
+.dapp-card #invest_hover,
+.dapp-card #masternode_hover {
+  animation-play-state: running;
+}
+
+#masternode_hover {
+  animation: fade-out 0.3s ease-in;
+  animation-play-state: paused;
+}
+
+#quantum_donut {
+  position: absolute;
+  right: -64.51px;
+  top: 36.68px;
+  width: 266px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(var(--rotateDeg));
+  }
+}
+@keyframes transform {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(var(--xLength), var(--yLength))
+      rotate(var(--rotateDeg));
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 0.5;
+    transform: scale(1.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.flexbox-wrapper {
+  display: flex;
+  overflow: auto;
+  height: 639px;
+}
+
+.sticky-container {
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  top: 0;
+  align-self: flex-start; /* <-- this is the fix */
 }
 
 .jellyfish-item {

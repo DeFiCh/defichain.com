@@ -2,7 +2,7 @@ import { useUnitSuffix } from "@hooks/useUnitSuffix";
 import CountUp from "react-countup";
 import classNames from "classnames";
 
-interface DisplayItemProps {
+interface StatisticPanelItemProps {
   title: string;
   stats?: number;
   desc?: string;
@@ -12,12 +12,12 @@ interface DisplayItemProps {
   displayStripCustomStyle?: string;
 }
 
-export function DataStrip({
+export function StatisticPanel({
   displayId,
   displayStripCustomStyle,
   displayItem,
 }: {
-  displayItem: DisplayItemProps[];
+  displayItem: StatisticPanelItemProps[];
   displayId?: string;
   displayStripCustomStyle?: string;
 }) {
@@ -32,7 +32,7 @@ export function DataStrip({
       <div className="card-bg rounded-[30px] py-10 px-6">
         <div className="flex lg:flex-row flex-col gap-y-4">
           {displayItem.map((item, key) => (
-            <DataStripItem
+            <StatisticsPanelItem
               key={key}
               title={item.title}
               stats={item.stats}
@@ -47,7 +47,7 @@ export function DataStrip({
   );
 }
 
-function DataStripItem({
+function StatisticsPanelItem({
   title,
   stats,
   desc,

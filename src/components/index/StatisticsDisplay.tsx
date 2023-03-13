@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import classNames from "classnames";
 import { useTranslation } from "next-i18next";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
-import { DataStrip } from "@components/commons/DataStrip";
+import { StatisticPanel } from "@components/commons/StatisticPanel";
 import { useWhaleApiClient } from "../../layouts/context/WhaleContext";
 import { calculatePercentage } from "../../shared/calculatePercentage";
 
@@ -73,7 +73,7 @@ export function StatsDisplay() {
   return (
     <div className="relative z-0">
       <Container className="relative lg:mt-[57px] mt-[76px]">
-        <DataStrip
+        <StatisticPanel
           displayItem={statsItems}
           displayStripCustomStyle="scroll-mt-[200px]"
           displayId="statistics_display"

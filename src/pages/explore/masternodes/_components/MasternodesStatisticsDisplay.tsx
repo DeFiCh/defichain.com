@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { StatsData } from "@defichain/whale-api-client/dist/api/stats";
-import { DataStrip } from "@components/commons/DataStrip";
+import { StatisticPanel } from "@components/commons/StatisticPanel";
 import { useUnitSuffix } from "@hooks/useUnitSuffix";
 import { Container } from "@components/commons/Container";
 import { useWhaleApiClient } from "../../../../layouts/context/WhaleContext";
@@ -44,7 +44,7 @@ export function MasternodesStatisticsDisplay() {
   ];
   return (
     <Container className="lg:mt-[69px] md:mt-[33px] mt-0 lg:mb-[180px] mb-[72px]">
-      <DataStrip
+      <StatisticPanel
         displayItem={statsItems}
         displayStripCustomStyle="scroll-mt-[200px]"
         displayId="statistics_display_masternodes"

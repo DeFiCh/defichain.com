@@ -27,11 +27,13 @@ export function MasternodesStatisticsDisplay() {
       "N/A"
   );
 
+  const masternodeValue = value === "N/A" ? undefined : `${value + suffix}+`;
+
   const statsItems = [
     {
       title: "MASTERNODES",
       stats: reducer(stats?.masternodes.locked, "count"),
-      desc: `${value + suffix} locked for 10 years`,
+      desc: `${masternodeValue} locked for 10 years`,
     },
     {
       title: "TOTAL VALUE LOCKED",

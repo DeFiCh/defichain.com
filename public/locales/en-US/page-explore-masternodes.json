@@ -1,0 +1,19 @@
+{
+  "heroBanner": {
+    "title": "Learn about masternodes",
+    "subtitle": "DeFiChain Masternodes",
+    "desc": "Secure, incentivized, community-driven nodes powering decentralized blockchain networks."
+  },
+  "footerCards": {
+    "cardTitle": "EXPLORE DEFICHAIN",
+    "cards": [
+      {
+        "title": "Choose your wallet"
+      },
+      {
+        "title": "Get $DFI"
+      }
+    ]
+  }
+}
+

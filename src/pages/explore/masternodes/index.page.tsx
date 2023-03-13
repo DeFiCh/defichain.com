@@ -5,17 +5,17 @@ import { HeroBanner, HeroBannerBG } from "@components/commons/HeroBanner";
 import { ExploreCards, ExploreCardsImage } from "../_components/ExploreCards";
 
 export default function ExploreMasternodes() {
-  const { t } = useTranslation("page-explore");
+  const { t } = useTranslation("page-explore-masternodes");
   const entries: Array<{ title: string; subtitle: string }> = t(
-    "masternodes.footerCards.cards",
+    "footerCards.cards",
     { returnObjects: true }
   );
   return (
     <>
       <HeroBanner
-        title={t("masternodes.heroBanner.title")}
-        subtitle={t("masternodes.heroBanner.subtitle")}
-        desc={t("masternodes.heroBanner.desc")}
+        title={t("heroBanner.title")}
+        subtitle={t("heroBanner.subtitle")}
+        desc={t("heroBanner.desc")}
         heroBG={HeroBannerBG.CUBE}
         startExploring
         startExploringJumpLink=""
@@ -23,13 +23,13 @@ export default function ExploreMasternodes() {
       <Container className="lg:mb-8 md:mb-6 mb-4">
         <div className="flex flex-row overflow-x-scroll lg:gap-x-[32.97px] md:gap-x-[24.97px] gap-x-[16.97px]">
           <ExploreCards
-            title={t("masternodes.footerCards.cardTitle")}
+            title={t("footerCards.cardTitle")}
             desc={entries[0].title}
             bgImage={ExploreCardsImage.PHONE}
             href=""
           />
           <ExploreCards
-            title={t("masternodes.footerCards.cardTitle")}
+            title={t("footerCards.cardTitle")}
             desc={entries[1].title}
             bgImage={ExploreCardsImage.METALCOIN}
             href=""
@@ -48,7 +48,7 @@ export async function getStaticProps({
       ...(await serverSideTranslations(locale, [
         "common",
         "layout",
-        "page-explore",
+        "page-explore-masternodes",
       ])),
     },
   };

@@ -17,7 +17,7 @@ export default function ExploreWallets() {
         subtitle={t("heroBanner.subtitle")}
         desc={t("heroBanner.desc")}
         heroBG={HeroBannerBG.COIN_ARROW}
-        startExploring
+        hasStartExploringButton
         startExploringJumpLink=""
       />
 

@@ -7,18 +7,18 @@ import { StartExploring } from "@components/commons/StartExploring";
 // The HeroBanner component takes in title, subtitle, desc and HeroBannerBG
 // currently only COIN_ARROW, DFI_COIN and CUBE image are available
 // it also takes in optional params on the customBgPosStyle
-// if cta button is needed to pass in ctaButton, text and link
-// if start exploring button is needed to pass in start exploring and jumplink
+// if cta button is required, to pass in hasCtaButton, ctaButtonText and ctaButtonLink
+// if start exploring button is required, to pass in hasStartExploringButton and startExploringJumpLink
 export function HeroBanner({
   title,
   subtitle,
   desc,
   customBgPosStyle,
   heroBG,
-  ctaButton = false,
+  hasCtaButton = false,
   ctaButtonLink,
   ctaButtonText,
-  startExploring = false,
+  hasStartExploringButton = false,
   startExploringJumpLink,
 }: {
   title: string;
@@ -26,10 +26,10 @@ export function HeroBanner({
   desc: string;
   customBgPosStyle?: string;
   heroBG: HeroBannerBG;
-  ctaButton?: boolean;
+  hasCtaButton?: boolean;
   ctaButtonLink?: string;
   ctaButtonText?: string;
-  startExploring?: boolean;
+  hasStartExploringButton?: boolean;
   startExploringJumpLink?: string;
 }) {
   return (
@@ -61,7 +61,7 @@ export function HeroBanner({
           >
             {desc}
           </div>
-          {ctaButton && ctaButtonText && (
+          {hasCtaButton && ctaButtonText && (
             <Button
               className="lg:py-4 py-3 md:w-1/2 w-auto lg:text-base text-sm md:mt-7 mt-10"
               text={ctaButtonText}
@@ -69,7 +69,7 @@ export function HeroBanner({
             />
           )}
         </div>
-        {startExploring && startExploringJumpLink && (
+        {hasStartExploringButton && startExploringJumpLink && (
           <StartExploring startExploringJumpLink={startExploringJumpLink} />
         )}
       </Container>

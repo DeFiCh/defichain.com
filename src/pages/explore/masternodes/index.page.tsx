@@ -17,7 +17,7 @@ export default function ExploreMasternodes() {
         subtitle={t("heroBanner.subtitle")}
         desc={t("heroBanner.desc")}
         heroBG={HeroBannerBG.CUBE}
-        startExploring
+        hasStartExploringButton
         startExploringJumpLink=""
       />
       <Container className="lg:mb-8 md:mb-6 mb-4">

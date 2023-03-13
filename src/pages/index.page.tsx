@@ -3,6 +3,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { HomePageHeader } from "@components/index/HomePageHeader";
 import { BlockchainFeaturesSection } from "@components/index/BlockchainFeaturesSection";
 import { Head } from "@components/commons/Head";
+import { DeFiChainEcoSystemSection } from "@components/index/DeFiChainEcoSystemSection";
 import { StatsDisplay } from "@components/index/StatisticsDisplay";
 import { StartExploring } from "@components/index/StartExploring";
 import { ReadyForFlexibility } from "@components/index/ReadyForFlexibility";
@@ -17,6 +18,7 @@ export default function HomePage(): JSX.Element {
       <StartExploring />
       <StatsDisplay />
       <BlockchainFeaturesSection />
+      <DeFiChainEcoSystemSection />
       <ReadyForFlexibility />
     </>
   );

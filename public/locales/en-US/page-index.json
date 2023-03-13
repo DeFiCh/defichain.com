@@ -32,6 +32,20 @@
     "descParaTwo": "Read through the documentation to get started with deploying next generation DeFi applications on DeFi MetaChain.",
     "button": "Explore DeFi MetaChain"
   },
+  "EcosystemSection": {
+    "label": "JUMPSTART INTO DEFICHAIN ECOSYSTEM",
+    "title": "Constant evolution to build, deliver and outperform",
+    "cards": {
+      "investTitle": "Invest, Trade and Earn with DeFiChain",
+      "investSubtitle": "Learn More",
+      "masternodeTitle": "Own a Masternode",
+      "masternodeSubtitle": "Learn More",
+      "dappsTitle": "dApps for DeFiChain",
+      "dappsSubtitle": "Explore",
+      "quantumTitle": "Connecting blockchains with Quantum",
+      "quantumSubtitle": "Learn More"
+    }
+  },
   "CardsSection": {
     "cards": [
       {

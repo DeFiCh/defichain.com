@@ -86,14 +86,15 @@ export function HeroBanner({
   );
 }
 
-const bgMapping = {
-  coinArrow: "bg-[url(/assets/img/herobanner/hero-banner-coin-arrow.png)]",
-  cube: "bg-[url(/assets/img/herobanner/hero-banner-cube.png)]",
-  dfiCoin: "bg-[url(/assets/img/herobanner/hero-banner-dfi-coin.png)]",
-};
-
 export enum HeroBannerBG {
-  COIN_ARROW = "coinArrow",
-  CUBE = "cube",
-  DFI_COIN = "dfiCoin",
+  COIN_ARROW,
+  CUBE,
+  DFI_COIN,
 }
+const bgMapping = {
+  [HeroBannerBG.COIN_ARROW]:
+    "bg-[url(/assets/img/herobanner/hero-banner-coin-arrow.png)]",
+  [HeroBannerBG.CUBE]: "bg-[url(/assets/img/herobanner/hero-banner-cube.png)]",
+  [HeroBannerBG.DFI_COIN]:
+    "bg-[url(/assets/img/herobanner/hero-banner-dfi-coin.png)]",
+};

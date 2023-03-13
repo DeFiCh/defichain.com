@@ -9,7 +9,7 @@ import { DownloadCard } from "./DownloadCard";
 import { CardLink, IconType } from "./CardLink";
 
 export function AdvanceUsageSection() {
-  const { t } = useTranslation(["page-downloads"]);
+  const { t } = useTranslation(["page-explore-wallets"]);
 
   return (
     <Container className="mt-[120px] md:mt-[96px] lg:mt-[240px] lg:mb-[240px] md:mb-[112px] mb-[72px]">
@@ -23,9 +23,9 @@ export function AdvanceUsageSection() {
             "lg:text-[60px] lg:leading-[72px] md:text-[40px] md:leading-[44px] text-[32px] leading-[36px]",
             "text-dark-1000 md:text-center text-left"
           )}
-          data-testid="FullNodeSection.Title"
+          data-testid="AdvanceUseSection.Title"
         >
-          {t("FullNodeWallets.title")}
+          {t("advanceUseSection.title")}
         </h2>
         <p
           className={classNames(
@@ -33,18 +33,18 @@ export function AdvanceUsageSection() {
             "lg:tracking-normal tracking-[0.03em]",
             "text-dark-700 md:text-center text-left"
           )}
-          data-testid="FullNodeSection.Subtitle"
+          data-testid="AdvanceUseSection.Subtitle"
         >
-          {t("FullNodeWallets.subtitle")}
+          {t("advanceUseSection.subtitle")}
         </p>
       </div>
 
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-6 gap-5 md:mt-16 mt-8">
         <DynamicDownloadCard
-          title={t("FullNodeWallets.entries.DFC.title")}
-          desc={t("FullNodeWallets.entries.DFC.desc")}
+          title={t("advanceUseSection.entries.DFC.title")}
+          desc={t("advanceUseSection.entries.DFC.desc")}
           imageSrc="/assets/img/downloads/dfiwallet.png"
-          testid="FullNodeWallets.Dfc"
+          testid="AdvanceUseSection.Dfc"
           repoName="defiCh/app"
           keywords={{
             mac: ".dmg",
@@ -54,10 +54,10 @@ export function AdvanceUsageSection() {
         />
 
         <DownloadCard
-          title={t("FullNodeWallets.entries.RPI.title")}
-          desc={t("FullNodeWallets.entries.RPI.desc")}
+          title={t("advanceUseSection.entries.RPI.title")}
+          desc={t("advanceUseSection.entries.RPI.desc")}
           imageSrc="/assets/img/downloads/dfinode.png"
-          testid="FullNodeWallets.Rpi"
+          testid="AdvanceUseSection.Rpi"
         >
           <CardLink
             url="https://github.com/Martin8617/Defi-Wallet-for-Raspberry-Pi"
@@ -67,12 +67,12 @@ export function AdvanceUsageSection() {
         </DownloadCard>
 
         <DynamicDownloadCard
-          title={t("FullNodeWallets.entries.CLI.title")}
-          desc={t("FullNodeWallets.entries.CLI.desc")}
+          title={t("advanceUseSection.entries.CLI.title")}
+          desc={t("advanceUseSection.entries.CLI.desc")}
           imageSrc={
             <BsFillTerminalFill fontSize={50} className="fill-brand-100" />
           }
-          testid="FullNodeWallets.Cli"
+          testid="AdvanceUseSection.Cli"
           repoName="defiCh/ain"
           keywords={{
             mac: "apple",
@@ -82,10 +82,10 @@ export function AdvanceUsageSection() {
         />
 
         <DynamicDownloadCard
-          title={t("FullNodeWallets.entries.DFIElectrum.title")}
-          desc={t("FullNodeWallets.entries.DFIElectrum.desc")}
+          title={t("advanceUseSection.entries.DFIElectrum.title")}
+          desc={t("advanceUseSection.entries.DFIElectrum.desc")}
           imageSrc={<FaReact fontSize={50} className="fill-brand-100" />}
-          testid="FullNodeWallets.DFIElectrum"
+          testid="AdvanceUseSection.DFIElectrum"
           repoName="BirthdayResearch/defichain-electrum"
           keywords={{
             win: ".exe",

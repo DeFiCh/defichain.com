@@ -6,10 +6,13 @@ import { DownloadCard } from "./DownloadCard";
 import { CardLink, IconType } from "./CardLink";
 
 export function ForDailyUseSection() {
-  const { t } = useTranslation(["page-downloads"]);
+  const { t } = useTranslation(["page-explore-wallets"]);
   return (
     <Container className="lg:mt-[129px] md:mt-[57px] mt-0">
-      <div className="flex flex-col gap-y-5">
+      <div
+        id="explore-wallets-daily-use-section"
+        className="flex flex-col gap-y-5 scroll-mt-[150px]"
+      >
         <div className="flex md:justify-center justify-start">
           <SectionTitle text="FOR DAILY USE" />
         </div>
@@ -19,9 +22,9 @@ export function ForDailyUseSection() {
             "lg:text-[60px] lg:leading-[72px] md:text-[40px] md:leading-[44px] text-[32px] leading-[36px]",
             "text-dark-1000 md:text-center text-left"
           )}
-          data-testid="WalletSection.Title"
+          data-testid="ForDailyUseSection.Title"
         >
-          {t("LightWallets.title")}
+          {t("dailyUseSection.title")}
         </h2>
         <p
           className={classNames(
@@ -29,17 +32,17 @@ export function ForDailyUseSection() {
             "lg:tracking-normal tracking-[0.03em]",
             "text-dark-700 md:text-center text-left"
           )}
-          data-testid="WalletSection.Subtitle"
+          data-testid="ForDailyUseSection.Subtitle"
         >
-          {t("LightWallets.subtitle")}
+          {t("dailyUseSection.subtitle")}
         </p>
       </div>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-6 gap-5 md:mt-16 mt-8">
         <DownloadCard
-          title={t("LightWallets.entries.DFC.title")}
-          desc={t("LightWallets.entries.DFC.desc")}
+          title={t("dailyUseSection.entries.DFC.title")}
+          desc={t("dailyUseSection.entries.DFC.desc")}
           imageSrc="/assets/img/downloads/dfi.png"
-          testid="LightWallets.Dfc"
+          testid="DailyUseSection.Dfc"
         >
           <div className="flex flex-row lg:gap-x-4 gap-x-3">
             <CardLink
@@ -56,10 +59,10 @@ export function ForDailyUseSection() {
         </DownloadCard>
 
         <DownloadCard
-          title={t("LightWallets.entries.DFX.title")}
-          desc={t("LightWallets.entries.DFX.desc")}
+          title={t("dailyUseSection.entries.DFX.title")}
+          desc={t("dailyUseSection.entries.DFX.desc")}
           imageSrc="/assets/img/explore/explore-wallet-dfx.png"
-          testid="LightWallets.Dfx"
+          testid="DailyUseSection.Dfx"
         >
           <div className="flex flex-row lg:gap-x-4 gap-x-3">
             <CardLink
@@ -76,10 +79,10 @@ export function ForDailyUseSection() {
         </DownloadCard>
 
         <DownloadCard
-          title={t("LightWallets.entries.JLY.title")}
-          desc={t("LightWallets.entries.JLY.desc")}
+          title={t("dailyUseSection.entries.JLY.title")}
+          desc={t("dailyUseSection.entries.JLY.desc")}
           imageSrc="/assets/img/explore/explore-wallet-jellywallet.png"
-          testid="LightWallets.Jly"
+          testid="DailyUseSection.Jly"
         >
           <div className="flex items-center space-x-4 text-lg font-medium">
             <CardLink

@@ -45,7 +45,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
   // translations
 
   return (
-    <div className="relative overflow-hidden pt-48px md:pt-[96px] lg:pt-[292px]">
+    <div className="relative overflow-hidden mt-[48px] md:mt-[96px] lg:pt-[292px]">
       <Container
         className={classNames(
           "no-scrollbar z-10 relative lg:flex lg:justify-center md:mt-[24px]",
@@ -54,7 +54,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
       >
         <div
           className={classNames(
-            "lg:pl-[144px] lg:order-1 md:pb-[72px] pb-[48px] lg:pb-0",
+            "lg:pl-[144px] lg:order-1 md:pb-[72px] pb-[48px]",
             { "sticky-container": dimensions.width >= 1033 } // only apply styling when in large screen
           )}
         >

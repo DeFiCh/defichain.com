@@ -47,7 +47,7 @@ export function Card({
           setHoverState(undefined);
         }}
         className={classNames(
-          "dapp-card",
+          "relative dapp-card overflow-hidden",
           "p-[0.5px] rounded-[15px] h-[215px] w-full xs:w-[327px] lg:w-[487px] xl:h-[215]",
           "md:block md:mb-[24px]",
           "card-outline-2 hover:accent-gradient-1"
@@ -56,7 +56,7 @@ export function Card({
         <a
           href={content.href}
           className={classNames(
-            "overflow-hidden relative w-full h-full p-6 rounded-[15px] border-[0.5px] flex flex-col",
+            " w-full h-full p-6 rounded-[15px] border-[0.5px] flex flex-col",
             "border-dark-200 bg-dark-00",
             "duration-1000 hover:transition hover:ease-in delay-250"
           )}

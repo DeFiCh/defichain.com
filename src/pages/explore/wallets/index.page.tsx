@@ -3,6 +3,7 @@ import { SSRConfig, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { ExploreCards, ExploreCardsImage } from "../_components/ExploreCards";
 import { AdvanceUsageSection } from "./_components/AdvanceUsageSection";
+import { ForDailyUseSection } from "./_components/ForDailyUseSection";
 
 export default function ExploreWallets() {
   const { t } = useTranslation("page-explore");
@@ -12,6 +13,7 @@ export default function ExploreWallets() {
   );
   return (
     <>
+      <ForDailyUseSection />
       <AdvanceUsageSection />
       <Container className="lg:mb-8 md:mb-6 mb-4">
         <div className="flex flex-row overflow-x-scroll lg:gap-x-[32.97px] md:gap-x-[24.97px] gap-x-[16.97px]">

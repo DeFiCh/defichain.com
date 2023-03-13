@@ -1,0 +1,105 @@
+import { SectionTitle } from "@components/commons/SectionTitle";
+import { Container } from "@components/commons/Container";
+import { useTranslation } from "next-i18next";
+import classNames from "classnames";
+import { DownloadCard } from "./DownloadCard";
+import { CardLink, IconType } from "./CardLink";
+
+export function ForDailyUseSection() {
+  const { t } = useTranslation(["page-downloads"]);
+  return (
+    <Container className="lg:mt-[129px] md:mt-[57px] mt-0">
+      <div className="flex flex-col gap-y-5">
+        <div className="flex md:justify-center justify-start">
+          <SectionTitle text="FOR DAILY USE" />
+        </div>
+
+        <h2
+          className={classNames(
+            "lg:text-[60px] lg:leading-[72px] md:text-[40px] md:leading-[44px] text-[32px] leading-[36px]",
+            "text-dark-1000 md:text-center text-left"
+          )}
+          data-testid="WalletSection.Title"
+        >
+          {t("LightWallets.title")}
+        </h2>
+        <p
+          className={classNames(
+            "lg:text-xl text-base font-desc",
+            "lg:tracking-normal tracking-[0.03em]",
+            "text-dark-700 md:text-center text-left"
+          )}
+          data-testid="WalletSection.Subtitle"
+        >
+          {t("LightWallets.subtitle")}
+        </p>
+      </div>
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-6 gap-5 md:mt-16 mt-8">
+        <DownloadCard
+          title={t("LightWallets.entries.DFC.title")}
+          desc={t("LightWallets.entries.DFC.desc")}
+          imageSrc="/assets/img/downloads/dfi.png"
+          testid="LightWallets.Dfc"
+        >
+          <div className="flex flex-row lg:gap-x-4 gap-x-3">
+            <CardLink
+              url="https://apps.apple.com/us/app/defichain-wallet/id1572472820"
+              descText="Get It On"
+              text={IconType.MACOS}
+            />
+            <CardLink
+              url="https://play.google.com/store/apps/details?id=com.defichain.app"
+              descText="Get It On"
+              text={IconType.CHROME}
+            />
+          </div>
+        </DownloadCard>
+
+        <DownloadCard
+          title={t("LightWallets.entries.DFX.title")}
+          desc={t("LightWallets.entries.DFX.desc")}
+          imageSrc="/assets/img/explore/explore-wallet-dfx.png"
+          testid="LightWallets.Dfx"
+        >
+          <div className="flex flex-row lg:gap-x-4 gap-x-3">
+            <CardLink
+              url="https://apps.apple.com/app/id1582633093"
+              descText="Get It On"
+              text={IconType.MACOS}
+            />
+            <CardLink
+              url="https://play.google.com/store/apps/details?id=com.defichain.app.dfx"
+              descText="Get It On"
+              text={IconType.CHROME}
+            />
+          </div>
+        </DownloadCard>
+
+        <DownloadCard
+          title={t("LightWallets.entries.JLY.title")}
+          desc={t("LightWallets.entries.JLY.desc")}
+          imageSrc="/assets/img/explore/explore-wallet-jellywallet.png"
+          testid="LightWallets.Jly"
+        >
+          <div className="flex items-center space-x-4 text-lg font-medium">
+            <CardLink
+              url="https://chrome.google.com/webstore/detail/jellywallet/eegcfalgkkhehkhbjbggbhhlcnckadih"
+              descText="Download For"
+              text={IconType.CHROME}
+            />
+            <CardLink
+              url="https://addons.mozilla.org/en-US/firefox/addon/jellywallet/"
+              descText="Download For"
+              text={IconType.FIREFOX}
+            />
+            <CardLink
+              url="https://chrome.google.com/webstore/detail/jellywallet/eegcfalgkkhehkhbjbggbhhlcnckadih"
+              descText="Download For"
+              text={IconType.BRAVE}
+            />
+          </div>
+        </DownloadCard>
+      </div>
+    </Container>
+  );
+}

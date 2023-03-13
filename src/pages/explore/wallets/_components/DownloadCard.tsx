@@ -14,7 +14,7 @@ export function DownloadCard(
   return (
     <div
       data-testid={props.testid}
-      className="border-[0.5px] border-dark-200 rounded-[15px] bg-dark-00 backdrop-blur bg-opacity-90 p-8 w-full flex flex-col flex-1 gap-y-6"
+      className="border-[0.5px] border-dark-200 rounded-[15px] bg-dark-00 backdrop-blur bg-opacity-90 p-6 w-full flex flex-col flex-1 gap-y-6"
     >
       {typeof props.imageSrc === "string" ? (
         <div className="w-full overflow-hidden">

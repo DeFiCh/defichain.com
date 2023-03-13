@@ -3,6 +3,7 @@ import { BsFillTerminalFill } from "react-icons/bs";
 import { FaReact } from "react-icons/fa";
 import { Container } from "@components/commons/Container";
 import { SectionTitle } from "@components/commons/SectionTitle";
+import classNames from "classnames";
 import { DynamicDownloadCard } from "./DynamicDownloadCard";
 import { DownloadCard } from "./DownloadCard";
 import { CardLink, IconType } from "./CardLink";
@@ -18,20 +19,27 @@ export function AdvanceUsageSection() {
         </div>
 
         <h2
-          className="text-[60px] leading-[72px] text-dark-1000 md:text-center text-left"
+          className={classNames(
+            "lg:text-[60px] lg:leading-[72px] md:text-[40px] md:leading-[44px] text-[32px] leading-[36px]",
+            "text-dark-1000 md:text-center text-left"
+          )}
           data-testid="FullNodeSection.Title"
         >
           {t("FullNodeWallets.title")}
         </h2>
         <p
-          className="text-lg lg:text-xl font-desc text-dark-700 md:text-center text-left"
+          className={classNames(
+            "lg:text-xl text-base font-desc",
+            "lg:tracking-normal tracking-[0.03em]",
+            "text-dark-700 md:text-center text-left"
+          )}
           data-testid="FullNodeSection.Subtitle"
         >
           {t("FullNodeWallets.subtitle")}
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-8 md:mt-16 mt-8">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-6 gap-5 md:mt-16 mt-8">
         <DynamicDownloadCard
           title={t("FullNodeWallets.entries.DFC.title")}
           desc={t("FullNodeWallets.entries.DFC.desc")}

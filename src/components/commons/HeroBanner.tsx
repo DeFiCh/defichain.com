@@ -61,16 +61,16 @@ export function HeroBanner({
           >
             {desc}
           </div>
-          {ctaButton && (
+          {ctaButton && ctaButtonText && (
             <Button
               className="lg:py-4 py-3 md:w-1/2 w-auto lg:text-base text-sm md:mt-7 mt-10"
-              text={ctaButtonText!}
+              text={ctaButtonText}
               href={ctaButtonLink}
             />
           )}
         </div>
-        {startExploring && (
-          <StartExploring startExploringJumpLink={startExploringJumpLink!} />
+        {startExploring && startExploringJumpLink && (
+          <StartExploring startExploringJumpLink={startExploringJumpLink} />
         )}
       </Container>
       <div

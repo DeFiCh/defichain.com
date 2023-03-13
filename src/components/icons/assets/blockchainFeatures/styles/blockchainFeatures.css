@@ -1,0 +1,84 @@
+.throughputSmallSquare {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: spin 0.3s ease-in-out;
+  --rotateDeg: -90deg;
+}
+#security-icon-small-circle {
+  animation: move 0.3s ease-in-out both;
+  animation-play-state: paused;
+  --xLength: -20px;
+  --yLength: 0px;
+}
+#security-icon-med-circle {
+  animation: move 0.3s ease-in-out both;
+  animation-play-state: paused;
+  --xLength: -8px;
+  --yLength: 0px;
+}
+#immutability-icon-top {
+  animation: move 0.3s ease-in-out both;
+  animation-play-state: paused;
+  --xLength: 0px;
+  --yLength: 20px;
+}
+#immutability-icon-middle {
+  animation: move 0.3s ease-in-out both;
+  animation-play-state: paused;
+  --xLength: 0px;
+  --yLength: 10px;
+}
+
+.blockchain-feature-item:hover #security-icon-small-circle,
+.blockchain-feature-item:hover #security-icon-med-circle,
+.blockchain-feature-item:hover #immutability-icon-top,
+.blockchain-feature-item:hover #immutability-icon-middle {
+  animation-play-state: running;
+}
+
+/* on mouseout animations */
+.throughputSmallSquareMouseOut {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: spin 0.3s ease-in-out;
+  --rotateDeg: 90deg;
+}
+
+#security-icon-small-circle-mouse-out {
+  animation: move 0.3s ease-in-out both;
+  --xLength: 20px;
+  --yLength: 0px;
+}
+
+#security-icon-med-circle-mouse-out {
+  animation: move 0.3s ease-in-out both;
+  --xLength: 8px;
+  --yLength: 0px;
+}
+
+#immutability-icon-top-mouse-out {
+  animation: move 0.3s ease-in-out both;
+  --xLength: 0px;
+  --yLength: -20px;
+}
+
+#immutability-icon-middle-mouse-out {
+  animation: move 0.3s ease-in-out both;
+  --xLength: 0px;
+  --yLength: -10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(var(--rotateDeg));
+  }
+}
+
+@keyframes move {
+  to {
+    transform: translate(var(--xLength), var(--yLength));
+  }
+}

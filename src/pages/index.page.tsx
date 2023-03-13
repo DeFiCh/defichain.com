@@ -1,6 +1,7 @@
 import { SSRConfig, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { HomePageHeader } from "@components/index/HomePageHeader";
+import { BlockchainFeaturesSection } from "@components/index/BlockchainFeaturesSection";
 import { Head } from "@components/commons/Head";
 import { DeFiChainEcoSystemSection } from "@components/index/DeFiChainEcoSystemSection";
 import { StatsDisplay } from "@components/index/StatisticsDisplay";
@@ -17,6 +18,7 @@ export default function HomePage(): JSX.Element {
       <StartExploring />
       <StatsDisplay />
       <DeFiChainEcoSystemSection />
+      <BlockchainFeaturesSection />
       <ReadyForFlexibility />
     </>
   );

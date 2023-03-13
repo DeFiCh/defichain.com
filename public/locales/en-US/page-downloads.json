@@ -90,6 +90,10 @@
       "DFIElectrum": {
         "title": "DeFiChain Electrum",
         "desc": "Multi-signature DeFiChain wallet built with Electrum for treasury use cases and more."
+      },
+      "QUANTUM": {
+        "title": "Quantum",
+        "desc": "Quantum is a trusted bridge that facilitates seamless transfers between DeFiChain and Ethereum."
       }
     }
   }

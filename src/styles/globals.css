@@ -5,6 +5,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@300;400;500;600;700&display=swap");
 
+@import "@components/icons/assets/blockchainFeatures/styles/blockchainFeatures.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -277,4 +279,43 @@ html {
   100% {
     transform: translate(130px, 20px);
   }
+}
+
+.custom-dots {
+  display: inline-block;
+  vertical-align: middle;
+  margin: auto;
+  margin-top: 32px;
+  padding: 0;
+  text-align: center;
+  width: 70px;
+}
+
+.custom-dots li {
+  list-style: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 8px;
+  padding: 0;
+}
+
+.custom-dots li button {
+  border: 1px solid #8c8c8c;
+  color: transparent;
+  cursor: pointer;
+  display: block;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+}
+
+.custom-dots li.slick-active button {
+  background-color: #ff00af;
+  border: 1px solid #ff00af;
+}
+
+.slick-slide img {
+  border: 5px solid #fff;
+  display: block;
+  margin: auto;
 }

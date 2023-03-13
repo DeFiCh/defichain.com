@@ -1,0 +1,24 @@
+{
+  "WalletsFooterCards": {
+    "cardTitle": "EXPLORE DEFICHAIN",
+    "cards": [
+      {
+        "title": "Trade with DEX"
+      },
+      {
+        "title": "Get $DFI"
+      }
+    ]
+  },
+  "MasternodesFooterCards": {
+    "cardTitle": "EXPLORE DEFICHAIN",
+    "cards": [
+      {
+        "title": "Choose your wallet"
+      },
+      {
+        "title": "Get $DFI"
+      }
+    ]
+  }
+}

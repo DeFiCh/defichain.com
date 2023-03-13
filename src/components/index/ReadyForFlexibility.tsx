@@ -42,7 +42,7 @@ export function ReadyForFlexibility() {
           </div>
 
           <Button
-            text="Explore DeFi MetaChain"
+            text={t("ReadyForFlexibilitySection.button")}
             className="lg:text-base text-sm lg:mt-16 mt-8 py-4 lg:w-[294px] w-[245px]"
           />
         </div>

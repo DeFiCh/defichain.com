@@ -17,8 +17,8 @@ export default function HomePage(): JSX.Element {
       <HomePageHeader />
       <StartExploring />
       <StatsDisplay />
-      <DeFiChainEcoSystemSection />
       <BlockchainFeaturesSection />
+      <DeFiChainEcoSystemSection />
       <ReadyForFlexibility />
     </>
   );

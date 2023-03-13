@@ -2,5 +2,8 @@
   "title": "DeFiChain",
   "Punctuation": {
     "fullStop": "."
+  },
+  "StartExploring": {
+    "button": "Commencer à explorer"
   }
 }

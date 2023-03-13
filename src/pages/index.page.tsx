@@ -5,8 +5,9 @@ import { BlockchainFeaturesSection } from "@components/index/BlockchainFeaturesS
 import { Head } from "@components/commons/Head";
 import { DeFiChainEcoSystemSection } from "@components/index/DeFiChainEcoSystemSection";
 import { StatsDisplay } from "@components/index/StatisticsDisplay";
-import { StartExploring } from "@components/index/StartExploring";
 import { ReadyForFlexibility } from "@components/index/ReadyForFlexibility";
+import { Container } from "@components/commons/Container";
+import { StartExploringButton } from "@components/commons/StartExploringButton";
 
 export default function HomePage(): JSX.Element {
   const { t } = useTranslation(["page-index"]);
@@ -15,7 +16,9 @@ export default function HomePage(): JSX.Element {
     <>
       <Head title={t("Head.title")} description={t("Head.desc")} />
       <HomePageHeader />
-      <StartExploring />
+      <Container className="justify-center md:mt-0 mt-9 hidden md:flex">
+        <StartExploringButton startExploringJumpLink="#statistics_display" />
+      </Container>
       <StatsDisplay />
       <BlockchainFeaturesSection />
       <DeFiChainEcoSystemSection />

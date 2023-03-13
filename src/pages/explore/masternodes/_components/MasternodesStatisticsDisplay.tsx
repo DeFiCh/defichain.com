@@ -3,11 +3,13 @@ import { StatsData } from "@defichain/whale-api-client/dist/api/stats";
 import { StatisticPanel } from "@components/commons/StatisticPanel";
 import { useUnitSuffix } from "@hooks/useUnitSuffix";
 import { Container } from "@components/commons/Container";
+import { useTranslation } from "next-i18next";
 import { useWhaleApiClient } from "../../../../layouts/context/WhaleContext";
 
 export function MasternodesStatisticsDisplay() {
   const api = useWhaleApiClient();
   const [stats, setStats] = useState<StatsData>();
+  const { t } = useTranslation("page-explore-masternodes");
 
   useEffect(() => {
     void api.stats.get().then((statsItem) => {
@@ -31,15 +33,20 @@ export function MasternodesStatisticsDisplay() {
 
   const statsItems = [
     {
-      title: "MASTERNODES",
+      title: t("statisticsDisplay.masternodes.title"),
       stats: reducer(stats?.masternodes.locked, "count"),
-      desc: `${masternodeValue} locked for 10 years`,
+      desc:
+        masternodeValue === undefined
+          ? masternodeValue
+          : t("statisticsDisplay.masternodes.desc", {
+              value: masternodeValue,
+            }),
     },
     {
-      title: "TOTAL VALUE LOCKED",
+      title: t("statisticsDisplay.tvl.title"),
       prefix: "$",
       stats: stats?.tvl.masternodes,
-      desc: "in user engagement network",
+      desc: t("statisticsDisplay.tvl.desc"),
     },
   ];
   return (

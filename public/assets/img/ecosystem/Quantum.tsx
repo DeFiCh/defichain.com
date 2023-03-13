@@ -5,35 +5,19 @@ import QuantumEllipseBackground from "./quantum-bg-gradient.png";
 
 interface QuantumProps {
   id: string;
-  className?: string;
 }
 export function Quantum(props: QuantumProps): JSX.Element {
-  const { id, className } = props;
+  const { id } = props;
   return (
     <div>
-      <Image
-        src={QuantumDonut}
-        alt="Quantum Donut Icon"
-        id={`${id}_donut`}
-        className={className}
-      />
-      <Image
-        src={QuantumEllipseBackground}
-        alt="Quantum Background"
-        className="absolute right-0 z-10"
-      />
+      {/* className not used as id is being used in globals.css */}
+      <Image src={QuantumDonut} alt="Quantum Donut Icon" id={`${id}_donut`} />
+      <Image src={QuantumEllipseBackground} alt="Quantum Background" />
     </div>
   );
 }
 
 export function QuantumHover(props: QuantumProps): JSX.Element {
-  const { id, className } = props;
-  return (
-    <Image
-      src={QuantumIconHover}
-      alt="Quantum Icon Hover"
-      id={id}
-      className={className}
-    />
-  );
+  const { id } = props;
+  return <Image src={QuantumIconHover} alt="Quantum Icon Hover" id={id} />;
 }

@@ -101,7 +101,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             content={cardItems[2]}
             setHoverState={setHoverState}
             hoverState={hoverState}
-            customIconStyle={classNames("w-[420.9px] top-0 ", {
+            customIconStyle={classNames("w-[420.9px] top-0", {
               "right-0": dimensions.width > 768,
               "right-[-100px]": dimensions.width <= 768,
             })}
@@ -112,10 +112,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             content={cardItems[3]}
             setHoverState={setHoverState}
             hoverState={hoverState}
-            customIconStyle={classNames("w-full top-0 left-0", {
-              "w-[500px]": dimensions.width >= 943,
-              "w-[300px]": dimensions.width <= 943,
-            })}
+            customIconStyle={classNames("left-0 top-0")}
           />
         </div>
       </Container>

@@ -40,6 +40,7 @@ dependencies:
   '@headlessui/react': 1.7.13_biqbaboplfbrettd7655fr4n2y
   '@waveshq/standard-defichain-jellyfishsdk': 0.44.4_@types+tar-fs@2.0.1
   '@waveshq/standard-web': 0.44.4_cr5zkokuk2klt2llupyfqftb3y
+  bignumber.js: 9.1.1
   classnames: 2.3.2
   gray-matter: 4.0.3
   lodash: 4.17.21

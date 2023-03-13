@@ -17,7 +17,7 @@ export function CardLink(
     text: IconType;
   }>
 ): JSX.Element {
-  const Icon = iconMap[props.text.toLowerCase().replace(" ", "")];
+  const Icon = iconMap[props.text];
   return (
     <div
       className={classNames(
@@ -60,12 +60,12 @@ export enum IconType {
 }
 
 const iconMap = {
-  linux: FcLinux,
-  macos: AiFillApple,
-  windows: WindowsIcon,
-  googleplay: PlayStoreIcon,
-  github: AiFillGithub,
-  chrome: ChromeIcon,
-  brave: BraveIcon,
-  firefox: FirefoxIcon,
+  [IconType.LINUX]: FcLinux,
+  [IconType.MACOS]: AiFillApple,
+  [IconType.WINDOWS]: WindowsIcon,
+  [IconType.GOOGLE_PLAY]: PlayStoreIcon,
+  [IconType.GITHUB]: AiFillGithub,
+  [IconType.CHROME]: ChromeIcon,
+  [IconType.BRAVE]: BraveIcon,
+  [IconType.FIREFOX]: FirefoxIcon,
 };

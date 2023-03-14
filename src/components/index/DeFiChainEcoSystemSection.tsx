@@ -116,27 +116,6 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
           />
         </div>
       </Container>
-      <div
-        className={classNames(
-          "absolute h-1/3 w-1/3 lg:bottom-[200px] md:bottom-[100px] left-0 bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/ecosystem/dfi-logo-vector.png')]",
-          {
-            "h-[475px] w-[475px] left-[-300px] top-[300px]":
-              dimensions.width <= 700,
-          }
-        )}
-      />
-      <div
-        className={classNames(
-          "absolute h-1/4 w-1/4 bottom-0 right-[21px] bg-contain bg-no-repeat mix-blend-screen bg-bottom md:bg-right bg-[url('/assets/img/footer/arrow_1.png')]",
-          {
-            "bottom-[225px] right-[-110px]": dimensions.width < 900,
-          },
-          {
-            "top-[400px] right-[-220px] h-[300px] w-[300px]":
-              dimensions.width < 596,
-          }
-        )}
-      />
     </div>
   );
 }

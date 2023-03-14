@@ -23,6 +23,8 @@ export default function HomePage(): JSX.Element {
       <BlockchainFeaturesSection />
       <DeFiChainEcoSystemSection />
       <ReadyForFlexibility />
+      {/* homepage's bg, subpages will have a generic bg */}
+      <div className="absolute inset-0 bg-no-repeat h-full mix-blend-screen bg-light bg-[url('/assets/img/background/background-mobile.png')] sm:bg-[url('/assets/img/background/background-mobile.png')] md:bg-[url('/assets/img/background/background-tablet.png')] lg:bg-[url('/assets/img/background/background-web.png')]" />
     </>
   );
 }

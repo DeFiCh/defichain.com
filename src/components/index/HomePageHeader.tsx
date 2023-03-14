@@ -39,7 +39,7 @@ export function HomePageHeader(): JSX.Element {
         </div>
         <div
           className={classNames(
-            "z-[-1] w-full mt-[-31px] md:mt-[-49px] lg:mt-[-49px] xl:mt-[-57px] 2xl:mt-[-80px]",
+            "w-full mt-[-31px] md:mt-[-49px] lg:mt-[-49px] xl:mt-[-57px] 2xl:mt-[-80px]",
             "min-w-[364px] md:min-w-[382px] md:max-w-[584px] max-w-[379px] lg:max-w-[722px] xl:max-w-[758px] 2xl:max-w-[929px]",
             "md:ml-0 ml-auto mr-[-16px] md:mr-[-32.18px]"
           )}

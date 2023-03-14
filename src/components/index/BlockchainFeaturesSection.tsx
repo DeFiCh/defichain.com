@@ -102,7 +102,6 @@ export function BlockchainFeaturesSection(): JSX.Element {
           </Slider>
         </div>
       </Container>
-      <div className="hidden md:block absolute h-[785.44px] w-[785.44px] md:left-[-240px] md:bottom-0 lg:left-0 lg:bottom-[-289.56px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/blockchainFeatures/blockchainFeaturesBg.png')]" />
     </section>
   );
 }

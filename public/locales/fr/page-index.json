@@ -4,8 +4,30 @@
     "desc": "Une blockchain dédiée aux services financiers décentralisés rapides, intelligents et transparents, accessibles à tous."
   },
   "Header": {
-    "title": "Finance décentralisée native sur Bitcoin",
+    "title": "Connecter l'ancien et le nouveau monde",
     "desc": "Une blockchain dédiée aux services financiers décentralisés rapides, intelligents et transparents, accessibles à tous."
+  },
+  "StatisticsSection": {
+    "dfiMinted": {
+      "title": "TOTAL DES DFI MINTÉS",
+      "desc": "{{perc}} de l'offre maximale"
+    },
+    "tvlLocked": {
+      "title": "VALEUR TOTALE BLOQUÉE EN USD",
+      "mobileTitle": "TVL EN USD",
+      "desc": "Pool | Masternodes | Vaults"
+    },
+    "masternodes": {
+      "title": "MASTERNODES",
+      "desc": "{{perc}} $ bloqués"
+    }
+  },
+  "ReadyForFlexibilitySection": {
+    "label": "PRÊT POUR LA FLEXIBILITÉ",
+    "title": "DeFi MetaChain : la mise à niveau",
+    "descParaOne": "DeFi MetaChain est une blockchain compatible EVM qui utilise la preuve d'autorité (Proof-of-Authority : POA) et fonctionne en parallèle avec la blockchain native DeFiChain",
+    "descParaTwo": "Consulter la documentation pour commencer à déployer les applications DeFi de nouvelle génération sur DeFi MetaChain.",
+    "button": "Explorer DeFi MetaChain"
   },
   "CardsSection": {
     "cards": [

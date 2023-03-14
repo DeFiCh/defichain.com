@@ -4,8 +4,30 @@
     "desc": "全民都能使用快速，智能与透明去中心化的金融区块链"
   },
   "Header": {
-    "title": "比特币生态中的DeFi",
-    "desc": "递飞链：原生区块链专为全民堤共快速，智能和透明化的DeFi金融服务"
+    "title": "旧世界与新世界之间的桥梁",
+    "desc": "每个人都可以访问，一个致力于快速、智能和透明的去中心化金融服务区块链"
+  },
+  "StatisticsSection": {
+    "dfiMinted": {
+      "title": "DFI 铸造总量",
+      "desc": "最大供应量的{{perc}}"
+    },
+    "tvlLocked": {
+      "title": "以美元计价的总价值",
+      "mobileTitle": "以美元计价的总价值",
+      "desc": "池 | 主节点 | 资金库"
+    },
+    "masternodes": {
+      "title": "主节点",
+      "desc": "已锁定 ${{perc}}"
+    }
+  },
+  "ReadyForFlexibilitySection": {
+    "label": "为灵活性做好准备",
+    "title": "DeFi MetaChain 升级",
+    "descParaOne": "DeFi MetaChain （DeFi 元链）是一个兼容 EVM 的区块链，它使用权威证明（Proof of Authority，POA）并与原生 DeFiChain 区块链并列运行。",
+    "descParaTwo": "通读文档以开始在 DeFi MetaChain 上部署下一代 DeFi 应用程序。",
+    "button": "探索 DeFi MetaChain"
   },
   "CardsSection": {
     "cards": [

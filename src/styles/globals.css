@@ -5,6 +5,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@300;400;500;600;700&display=swap");
 
+@import "@components/icons/assets/blockchainFeatures/styles/blockchainFeatures.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,8 +17,8 @@ body {
   box-sizing: border-box;
 }
 
-html{
-  scroll-behavior:smooth
+html {
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
@@ -104,10 +106,6 @@ html{
     text-fill-color: transparent;
   }
 
-  .hover-icons:hover {
-    fill: #ff00ff;
-  }
-
   .accent-gradient-1 {
     background-image: linear-gradient(
       72.57deg,
@@ -181,7 +179,7 @@ html{
 }
 
 .mouse-cursor-gradient-tracking {
-  background: linear-gradient(to right, #A6A6A6, #A6A6A6);
+  background: linear-gradient(to right, #a6a6a6, #a6a6a6);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -194,8 +192,83 @@ html{
   transition: opacity 0.2s ease-in-out;
 }
 
+.hover-icons:hover {
+  fill: #ff00ff;
+}
+/* TODO hover out onto the original image*/
+
+#invest_hover {
+  transform-box: fill-box;
+  transform-origin: 40% 60%;
+  animation: transform 0.2s linear both;
+  animation-play-state: paused;
+  --rotateDeg: -45deg;
+  --xLength: -40px;
+  --yLength: 10px;
+}
+.dapp-card #invest_hover,
+.dapp-card #masternode_hover {
+  animation-play-state: running;
+}
+
+#masternode_hover {
+  animation: fade-out 0.3s ease-in;
+  animation-play-state: paused;
+}
+
+#quantum_donut {
+  position: absolute;
+  right: -64.51px;
+  top: 36.68px;
+  width: 266px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(var(--rotateDeg));
+  }
+}
+@keyframes transform {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(var(--xLength), var(--yLength))
+      rotate(var(--rotateDeg));
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 0.5;
+    transform: scale(1.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.flexbox-wrapper {
+  display: flex;
+  overflow: auto;
+  height: 639px;
+}
+
+.sticky-container {
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  top: 0;
+  align-self: flex-start; /* <-- this is the fix */
+}
+
 .jellyfish-item {
-  animation: diagonal-move-anim 2.5s cubic-bezier(0.42, 0, 0.58, 1) infinite alternate;
+  animation: diagonal-move-anim 2.5s cubic-bezier(0.42, 0, 0.58, 1) infinite
+    alternate;
   position: absolute;
 }
 
@@ -207,4 +280,43 @@ html{
   100% {
     transform: translate(130px, 20px);
   }
+}
+
+.custom-dots {
+  display: inline-block;
+  vertical-align: middle;
+  margin: auto;
+  margin-top: 32px;
+  padding: 0;
+  text-align: center;
+  width: 70px;
+}
+
+.custom-dots li {
+  list-style: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 8px;
+  padding: 0;
+}
+
+.custom-dots li button {
+  border: 1px solid #8c8c8c;
+  color: transparent;
+  cursor: pointer;
+  display: block;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+}
+
+.custom-dots li.slick-active button {
+  background-color: #ff00af;
+  border: 1px solid #ff00af;
+}
+
+.slick-slide img {
+  border: 5px solid #fff;
+  display: block;
+  margin: auto;
 }

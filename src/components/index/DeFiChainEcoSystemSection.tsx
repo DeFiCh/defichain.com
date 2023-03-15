@@ -39,10 +39,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
   const { t } = useTranslation("page-index");
   const sectionTitle = t("EcosystemSection.title").split(" ");
 
-  // TODO
-  // animation of svg
-  // remove unused code
-  // translations
+  console.log("hoverState", hoverState);
 
   return (
     <div className="relative overflow-hidden lg:pt-[136px]">
@@ -84,8 +81,6 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             setHoverState={setHoverState}
             hoverState={hoverState}
             customIconStyle="w-[487.9px] right-0 top-0"
-            // TODO styles for animating only coin icon
-            // customIconStyle="right-0 top-0 bottom-[-23.26%] w-[307px]"
           />
           <Card
             title={t("EcosystemSection.cards.masternodeTitle")}
@@ -112,7 +107,10 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             content={cardItems[3]}
             setHoverState={setHoverState}
             hoverState={hoverState}
-            customIconStyle={classNames("left-0 top-0")}
+            customIconStyle={classNames("top-[-430px] left-[-280px]", {
+              "right-0": dimensions.width > 768,
+              "right-[-100px]": dimensions.width <= 768,
+            })}
           />
         </div>
       </Container>

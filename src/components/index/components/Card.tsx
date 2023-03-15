@@ -33,8 +33,7 @@ export function Card({
   customIconStyle?: string;
 }): JSX.Element {
   const Icon = iconMapping[content.id] as React.ElementType;
-  // TODO animate icons
-  // const IconOnHover = iconMapping[`${content.id}_hover`] as React.ElementType;
+  const IconOnHover = iconMapping[`${content.id}_hover`] as React.ElementType;
 
   return (
     <div>
@@ -56,7 +55,7 @@ export function Card({
         <a
           href={content.href}
           className={classNames(
-            " w-full h-full p-6 rounded-[15px] border-[0.5px] flex flex-col",
+            "w-full h-full p-6 rounded-[15px] border-[0.5px] flex flex-col",
             "border-dark-200 bg-dark-00",
             "duration-1000 hover:transition hover:ease-in delay-250"
           )}
@@ -82,19 +81,11 @@ export function Card({
           <div
             className={classNames("absolute mix-blend-screen", customIconStyle)}
           >
-            <div>
-              <Icon id={`${content.id}`} />
-            </div>
-            {/* TODO animate icons */}
-            {/* {hoverState !== undefined && hoverState === content.id && Icon ? (
-              <div className="relative">
-                <IconOnHover id={`${content.id}_hover`} />
-              </div>
+            {hoverState !== undefined && hoverState === content.id && Icon ? (
+              <IconOnHover id={`${content.id}_hover`} />
             ) : (
-              <div className="relative">
-                <Icon id={`${content.id}`} />
-              </div>
-            )} */}
+              <Icon id={`${content.id}`} />
+            )}
           </div>
         </a>
       </div>
@@ -110,5 +101,5 @@ const iconMapping = {
   dapps: WalletApps,
   dapps_hover: WalletAppsHover,
   quantum: Quantum,
-  quantum_hover: QuantumHover,
+  quantum_hover: QuantumHover, // change in hover icon will cause animation to flicker once
 };

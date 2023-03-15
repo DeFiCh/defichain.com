@@ -1,19 +1,15 @@
 interface VideoProps {
   src: string;
+  poster: string;
   width?: number;
   height?: number;
+  id?: string;
 }
 
 export function Video(props: VideoProps): JSX.Element {
-  const { src, width, height } = props;
+  const { src, width, height, poster, id } = props;
   return (
-    <video
-      poster="/assets/img/index/dficoin.png"
-      autoPlay
-      muted
-      loop
-      playsInline
-    >
+    <video id={id} poster={poster} autoPlay muted playsInline>
       <source src={src} type="video/mp4" width={width} height={height} />
     </video>
   );

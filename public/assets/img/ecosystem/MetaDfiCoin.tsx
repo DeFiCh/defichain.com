@@ -1,6 +1,7 @@
 import Image from "next/image";
 import MetaDFICoinIcon from "./meta-dfi-coin.png";
 import MetaDFICoinIconHover from "./meta-dfi-coin-hover.png";
+import MetaDFICoinEllipse from "./meta-dfi-coin-ellipse.png";
 
 interface MetaDfiCoinProps {
   id: string;
@@ -8,25 +9,16 @@ interface MetaDfiCoinProps {
 }
 
 export function MetaDfiCoin(props: MetaDfiCoinProps): JSX.Element {
-  const { id, className } = props;
+  const { id } = props;
   return (
-    <Image
-      src={MetaDFICoinIcon}
-      alt="Meta DFI Coin Icon"
-      id={id}
-      className={className}
-    />
+    <div>
+      <Image src={MetaDFICoinEllipse} alt="Meta DFI Coin Ellipse" />
+      <Image src={MetaDFICoinIcon} alt="Meta DFI Coin Icon" id={id} />
+    </div>
   );
 }
 
 export function MetaDfiCoinHover(props: MetaDfiCoinProps): JSX.Element {
-  const { id, className } = props;
-  return (
-    <Image
-      src={MetaDFICoinIconHover}
-      alt="Meta DFI Coin Icon"
-      id={id}
-      className={className}
-    />
-  );
+  const { id } = props;
+  return <Image src={MetaDFICoinIconHover} alt="Meta DFI Coin Icon" id={id} />;
 }

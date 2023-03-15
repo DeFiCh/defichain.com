@@ -1,0 +1,29 @@
+{
+  "heroBanner": {
+    "title": "LEARN ABOUT MASTERNODES",
+    "subtitle": "DeFiChain Masternodes",
+    "desc": "Secure, incentivized, community-driven nodes powering decentralized blockchain networks."
+  },
+  "footerCards": {
+    "cardTitle": "EXPLORE DEFICHAIN",
+    "cards": [
+      {
+        "title": "Choose your wallet"
+      },
+      {
+        "title": "Get $DFI"
+      }
+    ]
+  },
+  "statisticsDisplay" : {
+    "masternodes": {
+      "title": "MASTERNODES",
+      "desc": "{{value}} locked for 10 years"
+    },
+    "tvl" : {
+      "title": "TOTAL VALUE LOCKED",
+      "desc": "in user engagement network"
+    }
+  }
+}
+

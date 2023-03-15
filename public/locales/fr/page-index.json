@@ -742,27 +742,27 @@
   "BlockchainFeatureSection": {
     "title": "Conçu pour la finance décentralisée",
     "subtitle": "BLOCKCHAIN NON-TURING-COMPLÈTE",
-    "desc": "DeFiChain bietet umfassende Funktionen, die auf die Bedürfnisse der Distributed Ledger Technology (DLT)-Community zugeschnitten sind und bei denen Einfachheit, schneller Durchsatz und Sicherheit im Vordergrund stehen.",
-    "button": "Mit der Entwicklung beginnen",
+    "desc": "DeFiChain offre des fonctionnalités complètes adaptées aux besoins de la communauté DLT (Distributed Ledger Technology), en donnant la priorité à la simplicité, au débit rapide et à la sécurité.",
+    "button": "Commencer à construire",
     "THROUGHPUT": {
       "title": "THROUGHPUT",
-      "desc": "Unerreicht hoher Transaktionsdurchsatz für alle Transaktionen."
+      "desc": "Débit élevé inégalé pour toutes les transactions."
     },
     "SECURITY": {
       "title": "SECURITY",
-      "desc": "Nicht Turing-vollständig für reduzierte Angriffsvektoren."
+      "desc": "Turing-incomplet pour les vecteurs d'attaque réduits."
     },
     "IMMUTABILITY": {
       "title": "IMMUTABILITY",
-      "desc": "Verbindet das Beste von Proof-of-Stake mit der Sicherheit von Bitcoin."
+      "desc": "Marie le meilleur de la preuve d'enjeu (Proof-of-Stake), avec la sécurité de Bitcoin."
     },
     "DEVELOPMENT": {
       "title": "DEVELOPMENT",
-      "desc": "Schnelles Erstellen einer Vielzahl von DeFi-Apps auf einer Chain."
+      "desc": "Créer rapidement une variété d'applications DeFi sur une seule chaîne."
     },
     "VARIETY": {
       "title": "VARIETY",
-      "desc": "Breites Spektrum an kryptoökonomischen Finanzoperationen."
+      "desc": "Large gamme d'opérations financières crypto-économiques."
     }
   }
 }

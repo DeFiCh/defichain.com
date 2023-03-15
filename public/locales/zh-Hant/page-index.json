@@ -133,14 +133,6 @@
       "cards": [
         {
           "title": "2023 Q1",
-          "desc": "DeFiChain 聯盟",
-          "image": {
-            "url": "/img/timeline/2023/2023_Q1_CONSORTIUM.png",
-            "alt": "DeFiChain 聯盟"
-          }
-        },
-        {
-          "title": "2023 Q1",
           "desc": "DeFiChain On-Chain Governance",
           "image": {
             "url": "/img/timeline/2023/2023_Q1_OCG.png",
@@ -149,10 +141,10 @@
         },
         {
           "title": "2023 Q1",
-          "desc": "ERC-20 橋",
+          "desc": "Quantum",
           "image": {
             "url": "/img/timeline/2023/2023_Q1_ERC_20_BRIDGE.png",
-            "alt": "ERC-20 橋"
+            "alt": "Quantum"
           }
         },
         {
@@ -185,14 +177,6 @@
           "image": {
             "url": "/img/timeline/2023/2023_Q1_DFC_REDESIGN.png",
             "alt": "重新設計DeFiChain.com"
-          }
-        },
-        {
-          "title": "2023 Q1",
-          "desc": "桌面端Light Wallet 錢包",
-          "image": {
-            "url": "/img/timeline/2023/2023_Q1_DESKTOP LW.png",
-            "alt": "桌面端Light Wallet 錢包"
           }
         },
         {

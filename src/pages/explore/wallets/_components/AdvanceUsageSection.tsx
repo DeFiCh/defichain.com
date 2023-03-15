@@ -1,5 +1,4 @@
 import { useTranslation } from "next-i18next";
-import { BsFillTerminalFill } from "react-icons/bs";
 import { FaReact } from "react-icons/fa";
 import { Container } from "@components/commons/Container";
 import { SectionTitle } from "@components/commons/SectionTitle";
@@ -43,7 +42,7 @@ export function AdvanceUsageSection() {
         <DynamicDownloadCard
           title={t("advanceUseSection.entries.DFC.title")}
           desc={t("advanceUseSection.entries.DFC.desc")}
-          imageSrc="/assets/img/downloads/dfiwallet.png"
+          imageSrc="/assets/img/explore/explore-wallet-dfiwallet.png"
           testid="AdvanceUseSection.Dfc"
           repoName="defiCh/app"
           keywords={{
@@ -56,7 +55,7 @@ export function AdvanceUsageSection() {
         <DownloadCard
           title={t("advanceUseSection.entries.RPI.title")}
           desc={t("advanceUseSection.entries.RPI.desc")}
-          imageSrc="/assets/img/downloads/dfinode.png"
+          imageSrc="/assets/img/explore/explore-wallet-dfinode.png"
           testid="AdvanceUseSection.Rpi"
         >
           <CardLink
@@ -69,9 +68,7 @@ export function AdvanceUsageSection() {
         <DynamicDownloadCard
           title={t("advanceUseSection.entries.CLI.title")}
           desc={t("advanceUseSection.entries.CLI.desc")}
-          imageSrc={
-            <BsFillTerminalFill fontSize={50} className="fill-brand-100" />
-          }
+          imageSrc="/assets/img/explore/explore-wallet-cli.png"
           testid="AdvanceUseSection.Cli"
           repoName="defiCh/ain"
           keywords={{

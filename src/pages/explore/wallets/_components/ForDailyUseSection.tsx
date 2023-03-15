@@ -41,19 +41,19 @@ export function ForDailyUseSection() {
         <DownloadCard
           title={t("dailyUseSection.entries.DFC.title")}
           desc={t("dailyUseSection.entries.DFC.desc")}
-          imageSrc="/assets/img/downloads/dfi.png"
+          imageSrc="/assets/img/explore/explore-wallet-dfi.png"
           testid="DailyUseSection.Dfc"
         >
           <div className="flex flex-row lg:gap-x-4 gap-x-3">
             <CardLink
               url="https://apps.apple.com/us/app/defichain-wallet/id1572472820"
               descText="Get It On"
-              text={IconType.MACOS}
+              text={IconType.APPSTORE}
             />
             <CardLink
               url="https://play.google.com/store/apps/details?id=com.defichain.app"
               descText="Get It On"
-              text={IconType.CHROME}
+              text={IconType.GOOGLE_PLAY}
             />
           </div>
         </DownloadCard>
@@ -68,12 +68,12 @@ export function ForDailyUseSection() {
             <CardLink
               url="https://apps.apple.com/app/id1582633093"
               descText="Get It On"
-              text={IconType.MACOS}
+              text={IconType.APPSTORE}
             />
             <CardLink
               url="https://play.google.com/store/apps/details?id=com.defichain.app.dfx"
               descText="Get It On"
-              text={IconType.CHROME}
+              text={IconType.GOOGLE_PLAY}
             />
           </div>
         </DownloadCard>

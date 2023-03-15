@@ -51,6 +51,7 @@ export function CardLink(
 export enum IconType {
   LINUX = "Linux",
   MACOS = "Mac OS",
+  APPSTORE = "App Store",
   WINDOWS = "Windows",
   GOOGLE_PLAY = "Google Play",
   GITHUB = "GitHub",
@@ -62,6 +63,7 @@ export enum IconType {
 const iconMap = {
   [IconType.LINUX]: FcLinux,
   [IconType.MACOS]: AiFillApple,
+  [IconType.APPSTORE]: AiFillApple,
   [IconType.WINDOWS]: WindowsIcon,
   [IconType.GOOGLE_PLAY]: PlayStoreIcon,
   [IconType.GITHUB]: AiFillGithub,

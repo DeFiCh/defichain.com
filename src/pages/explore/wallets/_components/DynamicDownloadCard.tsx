@@ -38,29 +38,13 @@ export function DynamicDownloadCard(
         return;
       }
 
-      if (props.keywords.mac !== undefined) {
-        const link = getLink(assets, props.keywords.mac);
+      Object.keys(props.keywords).forEach((key) => {
+        const link = getLink(assets, props.keywords[key]);
         if (link === undefined) {
           setHasError(true);
         }
-        links.mac = link;
-      }
-
-      if (props.keywords.win !== undefined) {
-        const link = getLink(assets, props.keywords.win);
-        if (link === undefined) {
-          setHasError(true);
-        }
-        links.win = link;
-      }
-
-      if (props.keywords.linux !== undefined) {
-        const link = getLink(assets, props.keywords.linux);
-        if (link === undefined) {
-          setHasError(true);
-        }
-        links.linux = link;
-      }
+        links[key] = link;
+      });
 
       setDownloadLinks(links);
       setLoading(false);

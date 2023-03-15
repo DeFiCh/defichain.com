@@ -157,14 +157,6 @@
         },
         {
           "title": "2023 Q1",
-          "desc": "DeFi Meta Chain Explorer",
-          "image": {
-            "url": "/img/timeline/2023/2023_Q1_DMC_EXPLORER.png",
-            "alt": "DeFi Meta Chain Explorer"
-          }
-        },
-        {
-          "title": "2023 Q1",
           "desc": "DeFiChain DevNet",
           "image": {
             "url": "/img/timeline/2023/2023_Q1_DFC_DEVNET.png",
@@ -172,7 +164,15 @@
           }
         },
         {
-          "title": "2023 Q1",
+          "title": "2023 Q2",
+          "desc": "DeFi Meta Chain Explorer",
+          "image": {
+            "url": "/img/timeline/2023/2023_Q1_DMC_EXPLORER.png",
+            "alt": "DeFi Meta Chain Explorer"
+          }
+        },
+        {
+          "title": "2023 Q2",
           "desc": "DeFiChain.com-Neugestaltung",
           "image": {
             "url": "/img/timeline/2023/2023_Q1_DFC_REDESIGN.png",

@@ -39,8 +39,6 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
   const { t } = useTranslation("page-index");
   const sectionTitle = t("EcosystemSection.title").split(" ");
 
-  console.log("hoverState", hoverState);
-
   return (
     <div className="relative overflow-hidden lg:pt-[136px]">
       <Container

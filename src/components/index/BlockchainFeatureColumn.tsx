@@ -63,8 +63,6 @@ function FeatureIcon({
     setIsHovering(false);
   };
 
-  console.log(`BlockchainFeatureSection.${item.title}.title`);
-
   return (
     <div
       className="blockchain-feature-item flex flex-row md:flex-col w-full md:w-[304px] lg:w-[216px]"

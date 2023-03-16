@@ -14,6 +14,16 @@
         "title": "Get $DFI"
       }
     ]
+  },
+  "statisticsDisplay" : {
+    "masternodes": {
+      "title": "MASTERNODES",
+      "desc": "{{value}} locked for 10 years"
+    },
+    "tvl" : {
+      "title": "TOTAL VALUE LOCKED",
+      "desc": "in user engagement network"
+    }
   }
 }
 

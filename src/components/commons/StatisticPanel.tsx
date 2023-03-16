@@ -21,8 +21,7 @@ export function StatisticPanel({
   displayId?: string;
   displayStripCustomStyle?: string;
 }) {
-  const displayLength = displayItem.length;
-  const isTabletHorizontal = displayLength <= 2;
+  const isHorizontalInTablet = displayItem.length <= 2;
 
   return (
     <div
@@ -35,7 +34,7 @@ export function StatisticPanel({
       <div className="card-bg rounded-[30px] py-10 px-6">
         <div
           className={classNames("flex lg:flex-row flex-col gap-y-4", {
-            "md:flex-row": isTabletHorizontal,
+            "md:flex-row": isHorizontalInTablet,
           })}
         >
           {displayItem.map((item, key) => (
@@ -46,7 +45,7 @@ export function StatisticPanel({
               desc={item.desc}
               prefix={item.prefix}
               descStyle={item.descStyle}
-              isTabletHorizontal={isTabletHorizontal}
+              isTabletHorizontal={isHorizontalInTablet}
             />
           ))}
         </div>

@@ -32,7 +32,7 @@ export function DynamicDownloadCard(
     setLoading(true);
     const links: DownloadLinks = {};
 
-    void getGitHubAssets(props.repoName).then((assets) => {
+    getGitHubAssets(props.repoName).then((assets) => {
       if (assets === undefined) {
         setHasError(true);
         return;
@@ -51,6 +51,12 @@ export function DynamicDownloadCard(
     });
   }, []);
 
+  const OSIconMapping = {
+    mac: "MACOS",
+    win: "WINDOWS",
+    linux: "LINUX",
+  };
+
   return (
     <DownloadCard
       title={props.title}
@@ -67,30 +73,15 @@ export function DynamicDownloadCard(
           />
         ) : (
           <div className="flex items-center space-x-4 text-lg font-medium">
-            {props.keywords.mac !== undefined &&
-              downloadLinks?.mac !== undefined && (
+            {Object.keys(props.keywords).map((key) =>
+              downloadLinks && downloadLinks[key] ? (
                 <CardLink
                   descText="Download for"
-                  text={IconType.MACOS}
-                  url={downloadLinks.mac}
+                  text={IconType[OSIconMapping[key]]}
+                  url={downloadLinks[key]}
                 />
-              )}
-            {props.keywords.win !== undefined &&
-              downloadLinks?.win !== undefined && (
-                <CardLink
-                  descText="Download for"
-                  text={IconType.WINDOWS}
-                  url={downloadLinks.win}
-                />
-              )}
-            {props.keywords.linux !== undefined &&
-              downloadLinks?.linux !== undefined && (
-                <CardLink
-                  descText="Download for"
-                  text={IconType.LINUX}
-                  url={downloadLinks.linux}
-                />
-              )}
+              ) : null
+            )}
           </div>
         )}
       </div>
@@ -115,15 +106,13 @@ export async function getGitHubAssets(
 }
 
 function getLink(assets, keyword: string): string | undefined {
-  const blockList = [".sha256", ".blockmap", ".yml"];
+  const invalidExtList = [".sha256", ".blockmap", ".yml"];
 
   const results = assets.filter((asset) => {
     const url: string = asset.browser_download_url;
     return (
       url.toLowerCase().includes(keyword.toLowerCase()) &&
-      !blockList.some((blockWord) =>
-        url.toLowerCase().includes(blockWord.toLowerCase())
-      )
+      !invalidExtList.some((ext) => url.toLowerCase().includes(ext))
     );
   });
 

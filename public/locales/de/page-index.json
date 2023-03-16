@@ -745,23 +745,23 @@
     "desc": "DeFiChain bietet umfassende Funktionen, die auf die Bedürfnisse der Distributed Ledger Technology (DLT)-Community zugeschnitten sind und bei denen Einfachheit, schneller Durchsatz und Sicherheit im Vordergrund stehen.",
     "button": "Mit der Entwicklung beginnen",
     "THROUGHPUT": {
-      "title": "THROUGHPUT",
+      "title": "DURCHSATZ",
       "desc": "Unerreicht hoher Transaktionsdurchsatz für alle Transaktionen."
     },
     "SECURITY": {
-      "title": "SECURITY",
+      "title": "SICHERHEIT",
       "desc": "Nicht Turing-vollständig für reduzierte Angriffsvektoren."
     },
     "IMMUTABILITY": {
-      "title": "IMMUTABILITY",
+      "title": "UNVERÄNDERLICHKEIT",
       "desc": "Verbindet das Beste von Proof-of-Stake mit der Sicherheit von Bitcoin."
     },
     "DEVELOPMENT": {
-      "title": "DEVELOPMENT",
+      "title": "ENTWICKLUNG",
       "desc": "Schnelles Erstellen einer Vielzahl von DeFi-Apps auf einer Chain."
     },
     "VARIETY": {
-      "title": "VARIETY",
+      "title": "VIELFALT",
       "desc": "Breites Spektrum an kryptoökonomischen Finanzoperationen."
     }
   }

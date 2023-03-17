@@ -742,23 +742,23 @@
     "desc": "DeFiChain 優先考慮簡單性、快速吞吐量和安全性的情況下提供全面的功能，以滿足分佈式賬本技術 (Distributed Ledger Technology，簡稱DLT) 社區的需求。",
     "button": "開始建造",
     "THROUGHPUT": {
-      "title": "THROUGHPUT",
+      "title": "吞吐量",
       "desc": "所有交易擁有極快的交易吞吐量。"
     },
     "SECURITY": {
-      "title": "SECURITY",
+      "title": "安全",
       "desc": "非圖靈完備可減少攻擊角度。"
     },
     "IMMUTABILITY": {
-      "title": "IMMUTABILITY",
+      "title": "不可變性",
       "desc": "比特幣的安全性完美結合起來的股權證明設計"
     },
     "DEVELOPMENT": {
-      "title": "DEVELOPMENT",
+      "title": "發展",
       "desc": "在一條鏈上快速創建各種 DeFi 應用程序。"
     },
     "VARIETY": {
-      "title": "VARIETY",
+      "title": "品類",
       "desc": "提供廣泛的加密經濟金融業務"
     }
   }

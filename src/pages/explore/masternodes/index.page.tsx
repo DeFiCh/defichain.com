@@ -4,6 +4,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { HeroBanner, HeroBannerBg } from "@components/commons/HeroBanner";
 import { ExploreCards, ExploreCardsImage } from "../_components/ExploreCards";
 import { MasternodesStatisticsDisplay } from "./_components/MasternodesStatisticsDisplay";
+import { MasternodesBenefitsSection } from "./MasternodesBenefitsSection";
 
 export default function ExploreMasternodes() {
   const { t } = useTranslation("page-explore-masternodes");
@@ -22,6 +23,7 @@ export default function ExploreMasternodes() {
         startExploringJumpLink="#statistics_display_masternodes"
       />
       <MasternodesStatisticsDisplay />
+      <MasternodesBenefitsSection />
       <Container className="lg:mb-8 md:mb-6 mb-4">
         <div className="flex flex-row overflow-x-scroll lg:gap-x-[32.97px] md:gap-x-[24.97px] gap-x-[16.97px]">
           <ExploreCards

@@ -24,6 +24,184 @@
       "title": "TOTAL VALUE LOCKED",
       "desc": "in user engagement network"
     }
+  },
+  "technicalGuide": {
+    "title": "TECHNICAL GUIDE",
+    "subtitle": "Own a Masternode",
+    "desc": "Empower your DeFiChain journey with the step-by-step technical guide to owning a masternode.",
+    "outline": "Outline",
+    "step": "STEP",
+    "intro": {
+      "title": "Introduction",
+      "toc": "Introduction",
+      "desc": "Setting up a masternode on DeFiChain allows you to participate in the consensus protocol and receive staking awards. One thing to note is that in order to set up a masternode, you must have a minimum of 20,000 DFI.",
+      "note": "Note: This how-to expects some basic familiarity with the Linux terminal."
+    },
+    "setup":{
+      "title": "Roles and setting up",
+      "desc": "There are two distinct roles: 'masternode owner' and 'masternode operator'. The owner holds the collateral and the primary activity (minting new coins, voting for anchors) is performed by operator. In general, a node can play both roles.",
+      "toc": "Roles and set up",
+      "create": {
+        "title": "Creating masternode via DeFiChain desktop wallet",
+        "desc": "It's easy to set up your masternode through the DeFiChain Desktop Wallet, simply browse to the Masternodes tab and click on \"+ Create\" in the upper right corner of the screen. The process is automated and seamless.",
+        "toc": "Creating masternodes"
+      },
+      "operate": {
+        "title": "Operating your own masternodes",
+        "desc": "In this scenario, the operator's address will be equal to the owner's (collateral) address.",
+        "toc": "Operating a masternode",
+        "step1": {
+          "title": "Create new user",
+          "desc1": "The first step is to create new user. Any name will suffice.",
+          "desc2": "In this example, we will use",
+          "desc3":"`defichainmasternode`.",
+          "desc4": "`sudo usermod -a -G sudo`defichainmasternode`"
+        },
+        "step2": {
+          "title": "Download and extract node software",
+          "desc1": "Download the binaries. Here are links to binaries for Windows, Linux and Macosx. Download the latest release",
+          "link": "here.",
+          "desc2": "Following that we can extract the tar file by running (Replace x.x.x with your version number):",
+          "code1": "tar -xvzf defichain-x.x.x-x86_64-pc-linux-gnu.tar.gz"
+        },
+        "step3": {
+          "title": "Copy binaries to user directory",
+          "desc1": "We would like the node software to be stored in a consistent and easily accessible directory, so let's create one in our home folder. This can be done by running:",
+          "code1": "mkdir /home/defichainmasternode/.defi",
+          "desc2": "Now copy the binaries by running:",
+          "code2": "cp ./defichain-x.x.x/bin/* /home/defichainmasternode/.defi"
+        },
+        "step4": {
+          "title": "Setting up crontab to keep our node running in the background",
+          "desc1": "Now we may directly run our node by running",
+          "desc2": "/home/defichainmasternode/.defi/defid`",
+          "desc3": ", but this would not be very convenient, as we would have to keep the terminal session open the whole time, and run this command every time we restart our computer or SSH session.",
+          "desc4": "Instead, we'll use crontab to keep the process running. Run",
+          "desc5": "`crontab -e`",
+          "desc6": ", and select an editor (I recommend Nano if you are unsure which to pick), afterwards paste:",
+          "code1": "* * * * * pidof defid || /home/defichainmasternode/.defi/defid",
+          "desc7": "into the file and hit Ctrl-X then enter to save the file."
+        },
+        "step5": {
+          "title": "Setting up owner address with sufficient fund",
+          "desc1": "In order to run a masternode, you must own",
+          "desc2": "at least 20,000 DFI",
+          "desc3": ". Let's set up an address with sufficient funds to use as an owner. Masternodes currently only support legacy addresses, so create a masternode address using:",
+          "code1": "home/defichainmasternode/.defi/defi-cli getnewaddress \"<label>\" legacy",
+          "desc4": "into the file and hit Ctrl-X then enter to save the file.",
+          "desc5": "Now in order to transfer the funds to this address, you may use:",
+          "code2": "home/defichainmasternode/.defi/defi-cli sendtoaddress address",
+          "desc6": "where address is the new owner address you have created."
+        },
+        "step6": {
+          "title": "Register as a Masternode on the network",
+          "desc1": "In order to participate in the staking algorithm, you must broadcast to the network that you intend to participate, this can be done by running a command using the CLI, the command is:",
+          "code1": "home/defichainmasternode/.defi/defi-cli createmasternode address",
+          "desc2": "where",
+          "desc3": "`address`",
+          "desc4": "for both operator and collateral address should be the new legacy address you created. Please note that it costs 10 DFI to run this command."
+        },
+        "step7": {
+          "title": "Configure the Masternode and restart",
+          "desc1": "We're almost done, in order for the master node to operate correctly, we must make a couple of configuration changes. The configuration file will sit in",
+          "desc2": "`home/defichainmasternode/.defi/defi.conf`.",
+          "desc3": "Let's make sure the configuration file exists by running",
+          "desc4": "`touch/home/defichainmasternode/.defi.defi.conf`.",
+          "desc5": "Now open this configuration file in the editor of your choice and add the following:",
+          "code1": "gen=1 \nspv=1 \nmasternode_operator=OPERATOR_ADDRESS",
+          "desc6": "Because we have decided to run owner and operator on the same address, just substitute the same legacy address you created for",
+          "desc7": "`OPERATOR_ADDRESS`",
+          "desc8": ". There is no need to specify owner address in this case.",
+          "desc9": "Now the final step is to restart the node. Since we have crontab running, we just have to kill the process and crontab will start it again for us after one minute. We can do this final step by running",
+          "desc10": "`killall defi-init`",
+          "desc11": ". One minute later, we should have our masternode running and minting coins.",
+          "desc12": "We can confirm the masternode is running by running:",
+          "code2": "/home/defichainmasternode/.defi/defi-cli listmasternodes",
+          "desc13": "look for your masternode address in the list of masternodes to confirm that you have successfully set everything up.",
+          "desc14": "You may run the command",
+          "desc15": "`getmasternodeblocks OPERATOR_ADDRESS`",
+          "desc16": "to see how many blocks your masternode has minted so far."
+        }
+      },
+      "delegate": {
+        "title": "Delegating the masternode duties to another node",
+        "desc": "In this scenario, the operator's address will be different to the owner's (collateral) address.",
+        "toc": "Delegating masternode duties",
+        "step2-4": {
+          "title": "Same as above",
+          "desc1": "Perform",
+          "desc2": "steps 2-4",
+          "desc3": "the same as the above section for operating your own masternodes. If you are also setting up the operator node yourself, then repeat steps 1-4 again for the operator node on a different machine; else, you can move to step 5."
+        },
+        "step5":{
+          "title": "Register as a Masternode on the network",
+          "desc1": "In order to participate in the staking algorithm, you must broadcast to the network that you intend to participate, this can be done by running a command using the CLI, the command is:",
+          "code1": "/home/defichainmasternode/.defi/defi-cli createmasternode \nOWNER_ADDRESS \nOPERATOR_ADDRESS",
+          "desc2": "where",
+          "desc3": "`OWNER_ADDRESS`",
+          "desc4": "is the address for the collateral/owner node and",
+          "desc5": "`OPERATOR_ADDRESS`",
+          "desc6": "is the address for the operator. Please note that it costs 10 DFI to run this command.",
+          "desc7": "There is nothing to do after this, you may simply ensure that your masternode operator is correctly running the masternode on their side by passing them the operator address.",
+          "desc8": "We can confirm the masternode is running by running:",
+          "code2" : "/home/defichainmasternode/.defi/defi-cli listmasternodes",
+          "desc9": "Look for your masternode address in the list of masternodes to confirm that you have successfully set everything up.",
+          "desc10": "You may run the command",
+          "desc11": "`getmasternodeblocks OPERATOR_ADDRESS`",
+          "desc12": "to see how many blocks your masternode has minted so far."
+        }
+
+      },
+      "multiple": {
+        "title": "Running multiple masternodes on the same machine",
+        "toc": "Running multiple masternodes",
+        "desc1": "If you would like to run multiple masternodes on the same machine, you simply need to specify multiple",
+        "desc2": "`masternode_operator`",
+        "desc3": "entries in your",
+        "desc4": "`defi.conf`:",
+        "code1": "gen=1 \nspv=1 \nmasternode_operator=OPERATOR_ADDRESS_1 \nmasternode_operator=OPERATOR_ADDRESS_2 \nmasternode_operator=OPERATOR_ADDRESS_3",
+        "desc5": "On the next run, the node will begin minting for all the specified masternodes. There is no hard limit to how many masternodes a single machine can run."
+      },
+      "resigning": {
+        "title": "Resigning masternodes",
+        "desc1": "If you decide to resign your masternode, you may run",
+        "code1": "/home/defichainmasternode/.defi/defi-cli resignmasternode",
+        "toc": "Resigning masternodes"
+      },
+      "states": {
+        "title": "Masternode states",
+        "toc": "Masternode states",
+        "desc1": "Sending",
+        "desc2": "`createmasternode`",
+        "desc3": "(or 'resignmasternode') transaction doesn't mean that it acts immediately after submitting to the blockchain. There are special delays for each state.",
+        "desc4": "Masternodes can exist in these states:",
+        "code1": "PRE_ENABLED, \nENABLED, \nPRE_RESIGNED, \nRESIGNED, \nPRE_BANNED, \nBANNED",
+        "preEnabled": {
+          "title": "`PRE_ENABLED`",
+          "desc1": "Masternode was created, but waits for enough blocks after creation to get activated."
+        },
+        "enabled": {
+          "title": "`ENABLED`",
+          "desc1": "Masternode is in fully operable state, can mint blocks and sign anchors"
+        },
+        "registered": {
+          "title": "`PRE_RESIGNED`",
+          "desc1": "Masternode is still operable, but have received a 'resign' transaction and will wait for a special delay to get resigned"
+        },
+        "resigned": {
+          "title": "`RESIGNED`",
+          "desc1": "Masternode resigned, collateral unlocked and is available to be reclaimed"
+        },
+        "preBanned": {
+          "title": "`PRE_BANNED`",
+          "desc1": "Masternode was caught as a 'criminal' (signing two blocks from parallel forks on close heights and we got special proofing tx on chain) but still operable (waiting, as in the case of PRE_RESIGNED)"
+        },
+        "banned": {
+          "title": "`BANNED`",
+          "desc1": "Masternode deactivated, collateral unlocked and can be reclaimed (same as RESIGNED, but forced through deactivation)"
+        }
+      }
+    }
   }
 }
 

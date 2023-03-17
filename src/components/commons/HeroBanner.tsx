@@ -3,6 +3,8 @@ import classNames from "classnames";
 import { SectionTitle } from "@components/commons/SectionTitle";
 import { Button } from "@components/commons/Buttons";
 import { StartExploringButton } from "@components/commons/StartExploringButton";
+import { SectionSubTitle } from "./SectionSubTitle";
+import { SectionDescription } from "./SectionDescription";
 
 // The HeroBanner component takes in title, subtitle, desc and HeroBannerBG
 // currently only COIN_ARROW, DFI_COIN, DIAMOND_COIN and CUBE image are available
@@ -44,23 +46,8 @@ export function HeroBanner({
           )}
         >
           <SectionTitle text={title} />
-          <div
-            className={classNames(
-              "text-dark-1000 text-[40px] leading-[44px] tracking-[-0.02em]",
-              "md:text-5xl md:leading-[52px] md:tracking-normal",
-              "lg:text-[80px] lg:leading-[84px] md:tracking-normal"
-            )}
-          >
-            {subtitle}
-          </div>
-          <div
-            className={classNames(
-              "font-desc tracking-[0.03em] text-xl text-dark-700",
-              "lg:text-2xl tracking-normal"
-            )}
-          >
-            {desc}
-          </div>
+          <SectionSubTitle text={subtitle} />
+          <SectionDescription text={desc} />
           {hasCtaButton && ctaButtonText && (
             <Button
               className="lg:py-4 py-3 md:w-1/2 w-auto lg:text-base text-sm md:mt-7 mt-10"

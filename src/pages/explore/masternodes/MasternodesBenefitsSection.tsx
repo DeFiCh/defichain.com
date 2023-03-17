@@ -2,6 +2,7 @@ import { Button } from "@components/commons/Buttons";
 import { Container } from "@components/commons/Container";
 import { useTranslation } from "next-i18next";
 import { SectionTitle } from "@components/commons/SectionTitle";
+import { MasternodesBenefitsColumn } from "./MasternodesBenefitsColumn";
 
 export const masternodesBenefitsItems = [
   {
@@ -55,8 +56,26 @@ export function MasternodesBenefitsSection(): JSX.Element {
             />
           </div>
         </div>
-        <div className="z-10 justify-between hidden md:flex md:gap-x-16 lg:w-[568px] lg:gap-x-10 w-full lg:px-12 mt-14 md:mt-[72px] lg:mt-0" />
-        <div className="block z-0 md:z-[-1] mt-[56.5px] md:hidden" />
+        <div className="z-10 justify-between hidden md:flex md:gap-x-16 lg:w-[568px] lg:gap-x-10 w-full lg:px-12 mt-14 md:mt-[72px] lg:mt-0">
+          {/* <BlockchainFeatureColumn
+            items={BlockchainFeatureItems}
+            id="tablet-desktop-screen"
+          /> */}
+          <MasternodesBenefitsColumn
+            items={masternodesBenefitsItems}
+            id="tablet-desktop-screen"
+          />
+        </div>
+        <div className="block z-0 md:z-[-1] mt-[56.5px] md:hidden">
+          {/* <BlockchainFeatureColumn
+            items={BlockchainFeatureItems.slice(0, 3)}
+            id="mobile-screen"
+          />
+          <BlockchainFeatureColumn
+            items={BlockchainFeatureItems.slice(3)}
+            id="mobile-screen"
+          /> */}
+        </div>
       </Container>
       <div className="hidden md:block absolute h-[785.44px] w-[785.44px] md:left-[-240px] md:bottom-0 lg:left-0 lg:bottom-[-289.56px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/blockchainFeatures/blockchainFeaturesBg.png')]" />
     </section>

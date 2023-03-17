@@ -79,7 +79,7 @@ export function BlockchainFeaturesSection(): JSX.Element {
             </div>
             <Button
               className="z-10 text-sm min-w-0 w-[206px] py-3 !mt-[23px] md:!mt-9 lg:text-base lg:w-[232px] lg:py-4 lg:!mt-10"
-              text="Start building"
+              text={t("BlockchainFeatureSection.button")}
             />
           </div>
         </div>

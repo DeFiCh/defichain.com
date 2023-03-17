@@ -20,8 +20,8 @@ function ContentHeader({
       id={id?.replaceAll(" ", "_")}
       title={id}
       className={classNames(
-        "text-[32px] leading-9",
-        "lg:text-[52px] lg:leading-[52px]",
+        "text-[32px] leading-9 scroll-mt-40",
+        "lg:text-[52px] lg:leading-[52px] ",
         customStyle
       )}
     >
@@ -43,7 +43,7 @@ function ContentSubHeader({
     <h3
       id={id?.replaceAll(" ", "_")}
       title={id}
-      className={classNames("text-2xl font-bold", customStyle)}
+      className={classNames("text-2xl font-bold scroll-mt-40", customStyle)}
     >
       {text}
     </h3>
@@ -115,11 +115,9 @@ export function MasternodesSetupInfo() {
   }, []);
   const contentRef = useRef(null);
 
-  // console.log(contentRef?.current?.offsetTop)
-
   return (
     <Container className="flex flex-row gap-x-12">
-      <div className="hidden lg:block md:w-3/12 lg:pt-[64px]">
+      <div className="hidden h-full sticky top-[100px] lg:block md:w-3/12 lg:pt-[64px]">
         <TableOfContents parentReference={contentRef} />
       </div>
 

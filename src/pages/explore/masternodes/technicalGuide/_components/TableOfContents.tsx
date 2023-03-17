@@ -122,7 +122,7 @@ const useIntersectionObserver = (setActiveId, parentReference) => {
   const headingElementsRef = useRef({});
   useEffect(() => {
     const headingElements = Array.from(
-      parentReference.current.querySelectorAll("h2, h3")
+      parentReference.current.querySelectorAll("h2[id], h3[id]")
     );
     const callback = (headings) => {
       headingElementsRef.current = headings.reduce((map, headingElement) => {
@@ -158,7 +158,7 @@ const useIntersectionObserver = (setActiveId, parentReference) => {
 
     const observer = new IntersectionObserver(callback, {
       root: document.querySelector("iframe"),
-      rootMargin: "500px",
+      rootMargin: "100px",
     });
     headingElements.forEach((element: Element) => observer.observe(element));
 

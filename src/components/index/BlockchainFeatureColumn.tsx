@@ -20,6 +20,7 @@ import {
 } from "@components/icons/assets/blockchainFeatures/DevelopmentIcon";
 import classNames from "classnames";
 import { useState } from "react";
+import { useTranslation } from "next-i18next";
 
 interface BlockchainFeatureItemProp {
   title: string;
@@ -52,6 +53,7 @@ function FeatureIcon({
   const Icon = iconMapping[item.title] as React.ElementType;
   const IconOnHover = iconMapping[`${item.title}_hover`] as React.ElementType;
   const [isHovering, setIsHovering] = useState(false);
+  const { t } = useTranslation("page-index");
 
   const handleMouseOver = () => {
     setIsHovering(true);
@@ -89,10 +91,10 @@ function FeatureIcon({
             }
           )}
         >
-          {item.title}
+          {t(`BlockchainFeatureSection.${item.title}.title`)}
         </h3>
         <div className="text-dark-700 text-sm md:text-base font-desc">
-          {item.desc}
+          {t(`BlockchainFeatureSection.${item.title}.desc`)}
         </div>
       </div>
     </div>

@@ -20,22 +20,26 @@ export default function TechnicalGuide() {
 
   return (
     <>
-      <div className="flex flex-row w-full">
-        <div className="hidden md:block md:w-4/12">&nbsp;</div>
-        <div className="flex flex-col md:w-8/12">
-          <div
-            className={classNames(
-              "flex flex-col gap-y-5 w-full",
-              "py-11 px-6",
-              "md:py-6 md:px-10",
-              "lg:py-11 lg:px-[120px]"
-            )}
-          >
-            <SectionTitle text={t("technicalGuide.title")} />
-            <SectionSubTitle text={t("technicalGuide.subtitle")} />
-            <SectionDescription text={t("technicalGuide.desc")} />
+      <div
+        className="py-16 md:py-10 lg:py-16"
+        style={{
+          backgroundImage:
+            "url('/assets/img/mnTechnicalGuide/emptyCubeDesktop.png')",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "left center",
+        }}
+      >
+        <Container className="flex flex-row gap-x-12 ">
+          <div className="hidden md:block md:w-3/12">&nbsp;</div>
+          <div className="flex flex-col md:w-9/12">
+            <div className={classNames("flex flex-col gap-y-5")}>
+              <SectionTitle text={t("technicalGuide.title")} />
+              <SectionSubTitle text={t("technicalGuide.subtitle")} />
+              <SectionDescription text={t("technicalGuide.desc")} />
+            </div>
           </div>
-        </div>
+        </Container>
       </div>
       <MasternodesSetupInfo />
       <Container className="lg:mb-8 md:mb-6 mb-4">

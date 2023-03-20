@@ -157,8 +157,8 @@ const useIntersectionObserver = (setActiveId, parentReference) => {
     };
 
     const observer = new IntersectionObserver(callback, {
-      root: document.querySelector("iframe"),
-      rootMargin: "100px",
+      root: null,
+      rootMargin: "0px",
     });
     headingElements.forEach((element: Element) => observer.observe(element));
 

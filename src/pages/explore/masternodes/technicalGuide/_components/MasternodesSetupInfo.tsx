@@ -1,102 +1,16 @@
-import classNames from "classnames";
-import { PropsWithChildren, useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "next-i18next";
 import { Container } from "@components/commons/Container";
 import Image from "next/image";
 import CreateMN from "../../../../../../public/assets/img/mnTechnicalGuide/create.png";
 import TableOfContents from "./TableOfContents";
-
-function ContentHeader({
-  text,
-  id,
-  customStyle,
-}: {
-  text: string;
-  id?: string;
-  customStyle?: string;
-}) {
-  return (
-    <h2
-      id={id?.replaceAll(" ", "_")}
-      title={id}
-      className={classNames(
-        "text-[32px] leading-9 scroll-mt-40",
-        "lg:text-[52px] lg:leading-[52px] ",
-        customStyle
-      )}
-    >
-      {text}
-    </h2>
-  );
-}
-
-function ContentSubHeader({
-  text,
-  id,
-  customStyle,
-}: {
-  text: string;
-  id?: string;
-  customStyle?: string;
-}) {
-  return (
-    <h3
-      id={id?.replaceAll(" ", "_")}
-      title={id}
-      className={classNames("text-2xl font-bold scroll-mt-40", customStyle)}
-    >
-      {text}
-    </h3>
-  );
-}
-
-function ContentDescription({
-  text,
-  customStyle,
-  containerStyle,
-  children,
-}: PropsWithChildren<{
-  text: string;
-  customStyle?: string;
-  containerStyle?: string;
-}>) {
-  return (
-    <div className={containerStyle ?? "mt-5"}>
-      <span
-        className={classNames(
-          "font-desc text-dark-700",
-          "text-xl tracking-[0.03em]",
-          "lg:text-2xl lg:tracking-normal",
-          customStyle
-        )}
-      >
-        {text}
-      </span>
-      {children}
-    </div>
-  );
-}
-
-function Step({ count }: { count: string }) {
-  const { t } = useTranslation("page-explore-masternodes");
-  return (
-    <div className="flex flex-row mb-2 mt-[72px] lg:mt-12">
-      <span className="font-mono text-dark-700 tracking-[0.04em]">
-        {t("technicalGuide.step")}&nbsp;{count}
-      </span>
-    </div>
-  );
-}
-
-function Code({ text }: { text: string }) {
-  return (
-    <div className="flex flex-row mt-5 p-6 bg-dark-100 rounded-[5px]">
-      <span className="font-code text-dark-900 lg:leading-[48px] whitespace-pre-line">
-        {text}
-      </span>
-    </div>
-  );
-}
+import {
+  ContentHeader,
+  ContentSubHeader,
+  ContentDescription,
+  Code,
+  Step,
+} from "./GuideComponents";
 
 export function MasternodesSetupInfo() {
   const { t } = useTranslation("page-explore-masternodes");
@@ -120,7 +34,6 @@ export function MasternodesSetupInfo() {
       <div className="hidden h-full sticky top-[100px] lg:block md:w-3/12 lg:pt-[64px]">
         <TableOfContents parentReference={contentRef} />
       </div>
-
       <div className="flex flex-col lg:w-9/12">
         <div className="py-6 lg:py-16" ref={contentRef}>
           {/* Introduction start */}

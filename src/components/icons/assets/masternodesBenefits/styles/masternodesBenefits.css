@@ -1,0 +1,29 @@
+#staking-reward-icon-small-square {
+  animation: move2 0.3s ease-in-out both;
+  animation-play-state: paused;
+  --xLength: -10px;
+  --yLength: 0px;
+}
+
+.masternode-benefits-feature-item:hover #staking-reward-icon-small-square {
+  animation-play-state: running;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(var(--rotateDeg));
+  }
+}
+
+@keyframes move2 {
+  0% {
+    top: 0;
+    right: 0;
+  }
+  100% {
+    transform: translate(var(--xLength), var(--yLength));
+  }
+}

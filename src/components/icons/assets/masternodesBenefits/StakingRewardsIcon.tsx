@@ -89,13 +89,14 @@ export function StakingRewardsIconHover(props: SVGProps<SVGSVGElement>) {
         stroke="black"
       />
       <rect
+        id="staking-reward-icon-small-square"
         x="49.5"
         y="0.590942"
         width="29"
         height="29"
         transform="rotate(90 49.5 0.590942)"
         fill="url(#paint2_linear_5601_70136)"
-        stroke="black"
+        stroke="red"
       />
       <defs>
         <linearGradient

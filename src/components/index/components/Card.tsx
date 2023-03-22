@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { Dispatch, SetStateAction } from "react";
+import { useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import { MetaDfiCoin } from "@public/assets/img/ecosystem/MetaDfiCoin";
 import {
@@ -19,19 +19,16 @@ interface CardProps {
 
 export function Card({
   content,
-  setHoverState,
-  hoverState,
   title,
   subTitle,
   customIconStyle,
 }: {
   content: CardProps;
-  setHoverState: Dispatch<SetStateAction<string | undefined>>;
-  hoverState?: string;
   title: string;
   subTitle: string;
   customIconStyle?: string;
 }): JSX.Element {
+  const [hoverState, setHoverState] = useState<string | undefined>(undefined);
   const Icon = iconMapping[content.id] as React.ElementType;
   const IconOnHover = iconMapping[`${content.id}_hover`] as React.ElementType;
 
@@ -98,8 +95,8 @@ const iconMapping = {
   invest_hover: MetaDfiCoin,
   masternode: GlassCube,
   masternode_hover: GlassCubeHover,
-  dapps: WalletApps,
+  dapps: WalletApps, // TODO handle flickering issue
   dapps_hover: WalletAppsHover,
-  quantum: Quantum,
-  quantum_hover: QuantumHover, // change in hover icon will cause animation to flicker once
+  quantum: Quantum, // TODO handle flickering issue
+  quantum_hover: QuantumHover,
 };

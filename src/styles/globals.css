@@ -249,7 +249,7 @@ html {
 
   transform-box: fill-box;
   transform-origin: 20% 50%;
-  animation: transform-out 0.3s linear both;
+  animation: transform-out 0.3s both;
   animation-delay: 0s;
   animation-play-state: paused;
   --rotateDeg: -38.35deg;

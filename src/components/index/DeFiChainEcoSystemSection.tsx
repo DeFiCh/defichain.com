@@ -2,7 +2,6 @@ import { Container } from "@components/commons/Container";
 import { SectionTitle } from "@components/commons/SectionTitle";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import classNames from "classnames";
-import { useState } from "react";
 import { useTranslation } from "next-i18next";
 import { Card } from "./components/Card";
 
@@ -34,7 +33,6 @@ const cardItems = [
 ];
 
 export function DeFiChainEcoSystemSection(): JSX.Element {
-  const [hoverState, setHoverState] = useState<string | undefined>(undefined);
   const dimensions = useWindowDimensions();
   const { t } = useTranslation("page-index");
   const sectionTitle = t("EcosystemSection.title").split(" ");
@@ -76,24 +74,18 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             title={t("EcosystemSection.cards.investTitle")}
             subTitle={t("EcosystemSection.cards.investSubtitle")}
             content={cardItems[0]}
-            setHoverState={setHoverState}
-            hoverState={hoverState}
             customIconStyle="w-[487.9px] right-0 top-0"
           />
           <Card
             title={t("EcosystemSection.cards.masternodeTitle")}
             subTitle={t("EcosystemSection.cards.masternodeSubtitle")}
             content={cardItems[1]}
-            setHoverState={setHoverState}
-            hoverState={hoverState}
             customIconStyle="right-0 top-0 bottom-[-23.26%] w-[307px]"
           />
           <Card
             title={t("EcosystemSection.cards.dappsTitle")}
             subTitle={t("EcosystemSection.cards.dappsSubtitle")}
             content={cardItems[2]}
-            setHoverState={setHoverState}
-            hoverState={hoverState}
             customIconStyle={classNames("w-[420.9px] top-0", {
               "right-0": dimensions.width > 768,
               "right-[-100px]": dimensions.width <= 768,
@@ -103,8 +95,6 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             title={t("EcosystemSection.cards.quantumTitle")}
             subTitle={t("EcosystemSection.cards.quantumSubtitle")}
             content={cardItems[3]}
-            setHoverState={setHoverState}
-            hoverState={hoverState}
             customIconStyle={classNames("top-[-430px] left-[-280px]", {
               "right-0": dimensions.width > 768,
               "right-[-100px]": dimensions.width <= 768,

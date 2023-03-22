@@ -11,8 +11,8 @@ export function WalletApps(props: WalletAppsProps): JSX.Element {
     <div
       style={{
         position: "absolute",
-        top: "-175px",
-        right: "-65px",
+        top: "-9.2em",
+        right: "-4em",
       }}
     >
       <Video
@@ -28,14 +28,12 @@ export function WalletApps(props: WalletAppsProps): JSX.Element {
 
 export function WalletAppsHover(props: WalletAppsProps): JSX.Element {
   const { id } = props;
-
   return (
     <div
       style={{
         position: "absolute",
-        top: "-175px",
-        right: "-65px",
-        bottom: "-200px",
+        top: "-9.2em",
+        right: "-4em",
       }}
     >
       <Video

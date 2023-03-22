@@ -86,7 +86,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             title={t("EcosystemSection.cards.dappsTitle")}
             subTitle={t("EcosystemSection.cards.dappsSubtitle")}
             content={cardItems[2]}
-            customIconStyle={classNames("w-[420.9px] top-0", {
+            customIconStyle={classNames("w-[320px]", {
               "right-0": dimensions.width > 768,
               "right-[-100px]": dimensions.width <= 768,
             })}

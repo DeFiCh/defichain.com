@@ -95,8 +95,8 @@ const iconMapping = {
   invest_hover: MetaDfiCoin,
   masternode: GlassCube,
   masternode_hover: GlassCubeHover,
-  dapps: WalletApps, // TODO handle flickering issue
+  dapps: WalletApps,
   dapps_hover: WalletAppsHover,
-  quantum: Quantum, // TODO handle flickering issue
+  quantum: Quantum,
   quantum_hover: QuantumHover,
 };

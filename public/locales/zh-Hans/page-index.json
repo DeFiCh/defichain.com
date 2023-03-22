@@ -719,5 +719,31 @@
         }
       ]
     }
+  },
+  "BlockchainFeatureSection": {
+    "title": "专为去中心化金融设计",
+    "subtitle": "非图灵完备区块链",
+    "desc": "DeFiChain 优先考虑简单性、快速吞吐量和安全性的情况下提供全面的功能，以满足分布式账本技术 (Distributed Ledger Technology，简称DLT) 社区的需求。",
+    "button": "开始建造",
+    "THROUGHPUT": {
+      "title": "吞吐量",
+      "desc": "所有交易拥有极快的交易吞吐量。"
+    },
+    "SECURITY": {
+      "title": "安全",
+      "desc": "非图灵完备可减少攻击角度。"
+    },
+    "IMMUTABILITY": {
+      "title": "不可变性",
+      "desc": "比特币的安全性完美结合起来的股权证明设计"
+    },
+    "DEVELOPMENT": {
+      "title": "发展",
+      "desc": "在一条链上快速创建各种 DeFi 应用程序。"
+    },
+    "VARIETY": {
+      "title": "品类",
+      "desc": "提供广泛的加密经济金融业务"
+    }
   }
 }

@@ -81,7 +81,7 @@ export function AdvanceUsageSection() {
         <DynamicDownloadCard
           title={t("advanceUseSection.entries.DFIElectrum.title")}
           desc={t("advanceUseSection.entries.DFIElectrum.desc")}
-          imageSrc={<FaReact fontSize={50} className="fill-brand-100" />}
+          imageSrc={<FaReact className="fill-brand-100 w-[72px] h-[63px]" />}
           testid="AdvanceUseSection.DFIElectrum"
           repoName="BirthdayResearch/defichain-electrum"
           keywords={{

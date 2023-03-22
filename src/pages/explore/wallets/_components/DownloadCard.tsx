@@ -21,8 +21,8 @@ export function DownloadCard(
           <Image
             unoptimized
             src={props.imageSrc}
-            width={64}
-            height={64}
+            width={72}
+            height={72}
             className={classNames(props.imgClassName)}
             alt=""
           />

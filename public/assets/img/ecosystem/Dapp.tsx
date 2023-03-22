@@ -16,6 +16,7 @@ export function WalletApps(props: WalletAppsProps): JSX.Element {
       }}
     >
       <Video
+        // TODO @chloe get png from Jon
         poster=""
         src="/assets/img/ecosystem/dapp.mov"
         width={500}
@@ -38,7 +39,9 @@ export function WalletAppsHover(props: WalletAppsProps): JSX.Element {
     >
       <Video
         id={id}
+        // TODO @chloe get png from Jon
         poster=""
+        // TODO @chloe get updated vid from Jon
         src="/assets/img/ecosystem/dapp-hover.mov"
         width={500}
         height={500}

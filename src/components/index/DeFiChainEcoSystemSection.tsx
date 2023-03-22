@@ -74,21 +74,21 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             title={t("EcosystemSection.cards.investTitle")}
             subTitle={t("EcosystemSection.cards.investSubtitle")}
             content={cardItems[0]}
-            customIconStyle="w-[487.9px] right-0 top-0"
+            customIconStyle="w-[100%] right-0 top-0"
           />
           <Card
             title={t("EcosystemSection.cards.masternodeTitle")}
             subTitle={t("EcosystemSection.cards.masternodeSubtitle")}
             content={cardItems[1]}
-            customIconStyle="right-0 top-0 bottom-[-23.26%] w-[307px]"
+            customIconStyle="w-[307px] right-0 top-0 bottom-[-23.26%]"
           />
           <Card
             title={t("EcosystemSection.cards.dappsTitle")}
             subTitle={t("EcosystemSection.cards.dappsSubtitle")}
             content={cardItems[2]}
-            customIconStyle={classNames("w-[320px]", {
+            customIconStyle={classNames("w-[320px] top-[1.5em]", {
               "right-0": dimensions.width > 768,
-              "right-[-100px]": dimensions.width <= 768,
+              "right-[-7em]": dimensions.width <= 768,
             })}
           />
           <Card
@@ -97,7 +97,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             content={cardItems[3]}
             customIconStyle={classNames("top-[-430px] left-[-280px]", {
               "right-0": dimensions.width > 768,
-              "right-[-100px]": dimensions.width <= 768,
+              "right-[-3em]": dimensions.width <= 768,
             })}
           />
         </div>

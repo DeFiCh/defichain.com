@@ -169,14 +169,6 @@
       "cards": [
         {
           "title": "2023 Q1",
-          "desc": "DeFiChain Consortium",
-          "image": {
-            "url": "/img/timeline/2023/2023_Q1_CONSORTIUM.png",
-            "alt": "DeFiChain Consortium"
-          }
-        },
-        {
-          "title": "2023 Q1",
           "desc": "DeFiChain On-Chain Governance",
           "image": {
             "url": "/img/timeline/2023/2023_Q1_OCG.png",
@@ -185,10 +177,10 @@
         },
         {
           "title": "2023 Q1",
-          "desc": "ERC-20 Bridge",
+          "desc": "Quantum",
           "image": {
             "url": "/img/timeline/2023/2023_Q1_ERC_20_BRIDGE.png",
-            "alt": "ERC-20 Bridge"
+            "alt": "Quantum"
           }
         },
         {
@@ -201,14 +193,6 @@
         },
         {
           "title": "2023 Q1",
-          "desc": "DeFi Meta Chain Explorer",
-          "image": {
-            "url": "/img/timeline/2023/2023_Q1_DMC_EXPLORER.png",
-            "alt": "DeFi Meta Chain Explorer"
-          }
-        },
-        {
-          "title": "2023 Q1",
           "desc": "DeFiChain DevNet",
           "image": {
             "url": "/img/timeline/2023/2023_Q1_DFC_DEVNET.png",
@@ -216,19 +200,19 @@
           }
         },
         {
-          "title": "2023 Q1",
+          "title": "2023 Q2",
+          "desc": "DeFi Meta Chain Explorer",
+          "image": {
+            "url": "/img/timeline/2023/2023_Q1_DMC_EXPLORER.png",
+            "alt": "DeFi Meta Chain Explorer"
+          }
+        },
+        {
+          "title": "2023 Q2",
           "desc": "DeFiChain.com Redesign",
           "image": {
             "url": "/img/timeline/2023/2023_Q1_DFC_REDESIGN.png",
             "alt": "DeFiChain.com Redesign"
-          }
-        },
-        {
-          "title": "2023 Q1",
-          "desc": "Desktop Light Wallet",
-          "image": {
-            "url": "/img/timeline/2023/2023_Q1_DESKTOP LW.png",
-            "alt": "Desktop Light Wallet"
           }
         },
         {

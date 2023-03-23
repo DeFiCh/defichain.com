@@ -12,7 +12,7 @@ export function MasternodesStatisticsDisplay() {
   const { t } = useTranslation("page-explore-masternodes");
 
   useEffect(() => {
-    api.stats.get().then((statsItem) => {
+    void api.stats.get().then((statsItem) => {
       setStats(statsItem);
     });
   }, [api.stats]);

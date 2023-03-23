@@ -20,11 +20,11 @@ export function StatsDisplay() {
   const dimensions = useWindowDimensions();
 
   useEffect(() => {
-    api.stats.getSupply().then((supplyItem) => {
+    void api.stats.getSupply().then((supplyItem) => {
       setSupply(supplyItem);
     });
 
-    api.stats.get().then((statsItem) => {
+    void api.stats.get().then((statsItem) => {
       setStats(statsItem);
     });
   }, [api.stats]);

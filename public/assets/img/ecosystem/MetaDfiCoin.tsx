@@ -23,9 +23,5 @@ export function MetaDfiCoin(props: MetaDfiCoinProps): JSX.Element {
 
 export function MetaDfiCoinHover(props: MetaDfiCoinProps): JSX.Element {
   const { id } = props;
-  return (
-    <div>
-      <Image src={MetaDFICoinIconHover} alt="Meta DFI Coin Icon" id={id} />
-    </div>
-  );
+  return <Image src={MetaDFICoinIconHover} alt="Meta DFI Coin Icon" id={id} />;
 }

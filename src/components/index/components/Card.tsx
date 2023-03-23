@@ -8,6 +8,7 @@ import {
 } from "@public/assets/img/ecosystem/GlassCube";
 import { WalletApps, WalletAppsHover } from "@public/assets/img/ecosystem/Dapp";
 import { Quantum, QuantumHover } from "@public/assets/img/ecosystem/Quantum";
+import { useDeviceDetect, ViewPort } from "@hooks/useDeviceDetect";
 
 export function Card({
   title,
@@ -27,6 +28,7 @@ export function Card({
   const [hoverState, setHoverState] = useState<string | undefined>(undefined);
   const Icon = iconMapping[id] as React.ElementType;
   const IconOnHover = iconMapping[`${id}_hover`] as React.ElementType;
+  const device = useDeviceDetect();
 
   return (
     <div>
@@ -50,7 +52,10 @@ export function Card({
           className={classNames(
             "w-full h-full p-6 rounded-[15px] border-[0.5px] flex flex-col",
             "border-dark-200 bg-dark-00",
-            "duration-1000 hover:transition hover:ease-in delay-250"
+            "duration-1000 hover:transition hover:ease-in delay-250",
+            {
+              "pointer-events-none": device !== ViewPort.DESKTOP, // prevents user from holding onto the image
+            }
           )}
         >
           <div className={classNames(customTextStyle)}>
@@ -70,15 +75,18 @@ export function Card({
               {subTitle}
               <FiArrowUpRight size={20} className="ml-[13px]" />
             </div>
-          </div>
-          <div
-            className={classNames("absolute mix-blend-screen", customIconStyle)}
-          >
-            {hoverState !== undefined && hoverState === id && Icon ? (
-              <IconOnHover id={`${id}_hover`} />
-            ) : (
-              <Icon id={`${id}`} />
-            )}
+            <div
+              className={classNames(
+                "absolute mix-blend-screen",
+                customIconStyle
+              )}
+            >
+              {hoverState !== undefined && hoverState === id && Icon ? (
+                <IconOnHover id={`${id}_hover`} />
+              ) : (
+                <Icon id={`${id}`} />
+              )}
+            </div>
           </div>
         </a>
       </div>

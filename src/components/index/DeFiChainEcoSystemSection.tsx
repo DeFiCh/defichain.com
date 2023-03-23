@@ -1,5 +1,6 @@
 import { Container } from "@components/commons/Container";
 import { SectionTitle } from "@components/commons/SectionTitle";
+import { useDeviceDetect, ViewPort } from "@hooks/useDeviceDetect";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import classNames from "classnames";
 import { useTranslation } from "next-i18next";
@@ -9,9 +10,15 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
   const dimensions = useWindowDimensions();
   const { t } = useTranslation("page-index");
   const sectionTitle = t("EcosystemSection.title").split(" ");
+  const device = useDeviceDetect();
 
   return (
-    <div className="relative overflow-hidden lg:pt-[136px]">
+    <div
+      className={classNames("relative lg:pt-[136px]", {
+        "overflow-hidden": device === ViewPort.DESKTOP,
+        "pb-[292px]": device === ViewPort.TABLET,
+      })}
+    >
       <Container
         className={classNames(
           "no-scrollbar z-10 relative lg:flex lg:justify-center",
@@ -42,7 +49,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             </span>
           </span>
         </div>
-        <div className="no-scrollbar grid grid-flow-row grid-cols-1 gap-6 md:grid-flow-row md:grid-cols-2 lg:block lg:h-[639px] lg:place-self-end">
+        <div className="grid grid-flow-row grid-cols-1 gap-6 md:grid-flow-row md:grid-cols-2 lg:block lg:h-[639px] lg:place-self-end">
           <Card
             title={t("EcosystemSection.cards.investTitle")}
             subTitle={t("EcosystemSection.cards.investSubtitle")}

@@ -15,11 +15,10 @@ export function WalletApps(props: WalletAppsProps): JSX.Element {
       }}
     >
       <Video
-        poster=""
         src="/assets/img/ecosystem/dapp.mov"
         width={500}
         height={500}
-        id={id}
+        id={`${id}_video`}
       />
     </div>
   );
@@ -36,8 +35,7 @@ export function WalletAppsHover(props: WalletAppsProps): JSX.Element {
       }}
     >
       <Video
-        poster=""
-        id={id}
+        id={`${id}_video_hover`}
         src="/assets/img/ecosystem/dapp-hover.mov"
         width={500}
         height={500}

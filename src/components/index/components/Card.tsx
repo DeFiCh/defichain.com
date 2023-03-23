@@ -54,7 +54,7 @@ export function Card({
             "border-dark-200 bg-dark-00",
             "duration-1000 hover:transition hover:ease-in delay-250",
             {
-              "pointer-events-none": device !== ViewPort.DESKTOP, // prevents user from holding onto the image
+              "pointer-events-none": device !== ViewPort.DESKTOP, // prevents user from holding onto the image on touch screen
             }
           )}
         >

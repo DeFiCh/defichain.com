@@ -1,6 +1,6 @@
 interface VideoProps {
   src: string;
-  poster: string;
+  poster?: string;
   width?: number;
   height?: number;
   id?: string;

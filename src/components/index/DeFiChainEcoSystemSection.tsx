@@ -5,33 +5,6 @@ import classNames from "classnames";
 import { useTranslation } from "next-i18next";
 import { Card } from "./components/Card";
 
-const cardItems = [
-  {
-    img: "meta-dfi-coin",
-    id: "invest",
-    href: "",
-    customStyle: "xs:w-full md:w-[70%] lg:w-[251px]",
-  },
-  {
-    img: "glass-cube",
-    id: "masternode",
-    href: "",
-    customStyle: "w-[45%]",
-  },
-  {
-    img: "wallet-apps",
-    id: "dapps",
-    href: "",
-    customStyle: "w-[50%]",
-  },
-  {
-    img: "quantum",
-    id: "quantum",
-    href: "",
-    customStyle: "w-11/12 md:w-[251px]",
-  },
-];
-
 export function DeFiChainEcoSystemSection(): JSX.Element {
   const dimensions = useWindowDimensions();
   const { t } = useTranslation("page-index");
@@ -73,32 +46,36 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
           <Card
             title={t("EcosystemSection.cards.investTitle")}
             subTitle={t("EcosystemSection.cards.investSubtitle")}
-            content={cardItems[0]}
             customIconStyle="w-[100%] right-0 top-0"
+            id="invest"
+            customTextStyle="xs:w-full md:w-[70%] lg:w-[251px]"
           />
           <Card
             title={t("EcosystemSection.cards.masternodeTitle")}
             subTitle={t("EcosystemSection.cards.masternodeSubtitle")}
-            content={cardItems[1]}
             customIconStyle="w-[307px] right-0 top-0 bottom-[-23.26%]"
+            id="masternode"
+            customTextStyle="w-[45%]"
           />
           <Card
             title={t("EcosystemSection.cards.dappsTitle")}
             subTitle={t("EcosystemSection.cards.dappsSubtitle")}
-            content={cardItems[2]}
             customIconStyle={classNames("w-[320px] top-[1.5em]", {
               "right-0": dimensions.width > 768,
               "right-[-7em]": dimensions.width <= 768,
             })}
+            id="dapps"
+            customTextStyle="w-[50%]"
           />
           <Card
             title={t("EcosystemSection.cards.quantumTitle")}
             subTitle={t("EcosystemSection.cards.quantumSubtitle")}
-            content={cardItems[3]}
             customIconStyle={classNames("top-[-430px] left-[-280px]", {
               "right-0": dimensions.width > 768,
               "right-[-3em]": dimensions.width <= 768,
             })}
+            id="quantum"
+            customTextStyle="w-11/12 md:w-[251px]"
           />
         </div>
       </Container>

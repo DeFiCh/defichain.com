@@ -21,6 +21,8 @@ export function StatisticPanel({
   displayId?: string;
   displayStripCustomStyle?: string;
 }) {
+  const isHorizontalInTablet = displayItem.length <= 2;
+
   return (
     <div
       id={displayId}
@@ -30,7 +32,11 @@ export function StatisticPanel({
       )}
     >
       <div className="card-bg rounded-[30px] py-10 px-6">
-        <div className="flex lg:flex-row flex-col gap-y-4">
+        <div
+          className={classNames("flex lg:flex-row flex-col gap-y-4", {
+            "md:flex-row": isHorizontalInTablet,
+          })}
+        >
           {displayItem.map((item, key) => (
             <StatisticsPanelItem
               key={key}
@@ -39,6 +45,7 @@ export function StatisticPanel({
               desc={item.desc}
               prefix={item.prefix}
               descStyle={item.descStyle}
+              isTabletHorizontal={isHorizontalInTablet}
             />
           ))}
         </div>
@@ -53,24 +60,48 @@ function StatisticsPanelItem({
   desc,
   prefix,
   descStyle,
+  isTabletHorizontal = false,
 }: {
   title: string;
   stats?: number;
   desc?: string;
   prefix?: string;
   descStyle?: string;
+  isTabletHorizontal?: boolean;
 }) {
   const { suffix, value } = useUnitSuffix(
     stats === undefined ? "N/A" : stats.toString()
   );
 
   return (
-    <div className="flex lg:grow grow-0 lg:flex-col flex-row lg:items-center items-start gap-y-2 gap-x-2">
-      <div className="lg:w-full md:w-[316px] w-[135px] lg:text-center bg-clip-text text-transparent accent-gradient-2 font-bold leading-5">
+    <div
+      className={classNames(
+        "flex lg:grow grow-0 lg:flex-col flex-row lg:items-center items-start gap-y-2 gap-x-2",
+        { "md:flex-col md:items-center md:grow": isTabletHorizontal }
+      )}
+    >
+      <div
+        className={classNames(
+          "lg:w-full md:w-[316px] w-[135px] lg:text-center bg-clip-text text-transparent accent-gradient-2 font-bold leading-5",
+          { "md:w-full md:text-center": isTabletHorizontal }
+        )}
+      >
         {title}
       </div>
-      <div className="flex flex-col lg:items-center items-end lg:gap-y-2 gap-y-1 lg:grow-0 grow">
-        <div className="text-dark-1000 text-xl leading-6 lg:text-[52px] lg:leading-[52px]">
+      <div
+        className={classNames(
+          "flex flex-col lg:items-center items-end lg:gap-y-2 gap-y-1 lg:grow-0 grow",
+          { "md:items-center md:gap-y-2 md:grow-0": isTabletHorizontal }
+        )}
+      >
+        <div
+          className={classNames(
+            "text-dark-1000 text-xl leading-6 lg:text-[52px] lg:leading-[52px]",
+            {
+              "md:text-[32px] md:leading-[36px]": isTabletHorizontal,
+            }
+          )}
+        >
           {stats ? (
             <>
               {prefix ?? ""}

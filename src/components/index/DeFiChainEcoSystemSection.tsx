@@ -14,7 +14,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
 
   return (
     <div
-      className={classNames("relative lg:pt-[136px]", {
+      className={classNames("relative lg:pt-[136px] md:-mb-6 lg:mb-0", {
         "overflow-hidden": device === ViewPort.DESKTOP,
         "pb-[292px]": device === ViewPort.TABLET,
       })}

@@ -14,7 +14,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
 
   return (
     <div
-      className={classNames("relative lg:pt-[136px]", {
+      className={classNames("relative lg:pt-[136px] lg:mb-0 md:-mb-[24px]", {
         "overflow-hidden": device === ViewPort.DESKTOP,
         "pb-[292px]": device === ViewPort.TABLET,
       })}
@@ -49,7 +49,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             </span>
           </span>
         </div>
-        <div className="grid grid-flow-row grid-cols-1 gap-x-6 md:grid-flow-row md:grid-cols-2 lg:block lg:h-[639px] lg:place-self-end">
+        <div className="grid grid-flow-row grid-cols-1 gap-x-6 sm:gap-y-6 md:grid-flow-row md:grid-cols-2 lg:block lg:h-[639px] lg:place-self-end">
           <Card
             title={t("EcosystemSection.cards.investTitle")}
             subTitle={t("EcosystemSection.cards.investSubtitle")}

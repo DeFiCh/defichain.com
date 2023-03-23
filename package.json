@@ -16,8 +16,8 @@
   "dependencies": {
     "@defichain/whale-api-client": "^3.29.1",
     "@headlessui/react": "^1.7.13",
-    "@waveshq/standard-defichain-jellyfishsdk": "^0.45.0",
-    "@waveshq/standard-web": "^0.45.0",
+    "@waveshq/standard-defichain-jellyfishsdk": "^0.44.4",
+    "@waveshq/standard-web": "^0.44.4",
     "classnames": "^2.3.2",
     "gray-matter": "^4.0.3",
     "bignumber.js": "^9.1.0",
@@ -42,7 +42,7 @@
     "@types/lodash": "^4.14.191",
     "@types/node": "^18.11.12",
     "@types/react": "^18.0.28",
-    "@waveshq/standard-web-linter": "^0.45.0",
+    "@waveshq/standard-web-linter": "^0.44.4",
     "autoprefixer": "^10.4.13",
     "babel-plugin-istanbul": "^6.1.1",
     "babel-plugin-jsx-remove-data-test-id": "^3.0.0",
@@ -52,7 +52,7 @@
   },
   "engines": {
     "node": "^18.0.0 || ^16.16.0",
-    "pnpm": ">=7.30.0"
+    "pnpm": ">=7.29.0"
   },
-  "packageManager": "pnpm@7.30.0"
+  "packageManager": "pnpm@7.29.0"
 }

@@ -20,7 +20,6 @@ import BitLogo from "../../../../public/assets/img/exchanges/bit.png";
 import HuobiLogo from "../../../../public/assets/img/exchanges/logo-huobi.png";
 import BitmartLogo from "../../../../public/assets/svg/exchanges/logo-bitmart.svg";
 import GateioLogo from "../../../../public/assets/svg/exchanges/logo-gateio.svg";
-import LOCKLogo from "../../../../public/assets/svg/exchanges/logo-lock.svg";
 
 export function ExchangeSection(): JSX.Element {
   const { t } = useTranslation(["page-dfi"]);
@@ -160,10 +159,10 @@ export function ExchangeSection(): JSX.Element {
               name="Cake DeFi"
             />
             <ExchangeCard
-              url="https://lock.space/"
-              image={LOCKLogo}
-              testid="DfiPage.Staking.Lock"
-              name="LOCK"
+              url="https://dfx.swiss/en/"
+              image={DFXLogo}
+              testid="DfiPage.Staking.Dfx"
+              name="Dfx"
             />
           </div>
         </div>

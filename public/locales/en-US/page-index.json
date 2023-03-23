@@ -169,6 +169,14 @@
       "cards": [
         {
           "title": "2023 Q1",
+          "desc": "DeFiChain Consortium",
+          "image": {
+            "url": "/img/timeline/2023/2023_Q1_CONSORTIUM.png",
+            "alt": "DeFiChain Consortium"
+          }
+        },
+        {
+          "title": "2023 Q1",
           "desc": "DeFiChain On-Chain Governance",
           "image": {
             "url": "/img/timeline/2023/2023_Q1_OCG.png",
@@ -177,10 +185,10 @@
         },
         {
           "title": "2023 Q1",
-          "desc": "Quantum",
+          "desc": "ERC-20 Bridge",
           "image": {
             "url": "/img/timeline/2023/2023_Q1_ERC_20_BRIDGE.png",
-            "alt": "Quantum"
+            "alt": "ERC-20 Bridge"
           }
         },
         {
@@ -193,14 +201,6 @@
         },
         {
           "title": "2023 Q1",
-          "desc": "DeFiChain DevNet",
-          "image": {
-            "url": "/img/timeline/2023/2023_Q1_DFC_DEVNET.png",
-            "alt": "DeFiChain DevNet"
-          }
-        },
-        {
-          "title": "2023 Q2",
           "desc": "DeFi Meta Chain Explorer",
           "image": {
             "url": "/img/timeline/2023/2023_Q1_DMC_EXPLORER.png",
@@ -208,11 +208,27 @@
           }
         },
         {
-          "title": "2023 Q2",
+          "title": "2023 Q1",
+          "desc": "DeFiChain DevNet",
+          "image": {
+            "url": "/img/timeline/2023/2023_Q1_DFC_DEVNET.png",
+            "alt": "DeFiChain DevNet"
+          }
+        },
+        {
+          "title": "2023 Q1",
           "desc": "DeFiChain.com Redesign",
           "image": {
             "url": "/img/timeline/2023/2023_Q1_DFC_REDESIGN.png",
             "alt": "DeFiChain.com Redesign"
+          }
+        },
+        {
+          "title": "2023 Q1",
+          "desc": "Desktop Light Wallet",
+          "image": {
+            "url": "/img/timeline/2023/2023_Q1_DESKTOP LW.png",
+            "alt": "Desktop Light Wallet"
           }
         },
         {

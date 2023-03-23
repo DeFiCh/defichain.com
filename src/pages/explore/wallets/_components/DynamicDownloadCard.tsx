@@ -72,7 +72,7 @@ export function DynamicDownloadCard(
             url={`https://github.com/${props.repoName}/releases/latest`}
           />
         ) : (
-          <div className="flex items-center space-x-4 text-lg font-medium">
+          <div className="flex items-center lg:space-x-4 space-x-3 text-lg font-medium">
             {Object.keys(props.keywords).map((key) =>
               downloadLinks && downloadLinks[key] ? (
                 <CardLink

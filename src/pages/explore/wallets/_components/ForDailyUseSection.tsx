@@ -84,7 +84,7 @@ export function ForDailyUseSection() {
           imageSrc="/assets/img/explore/explore-wallet-jellywallet.png"
           testid="DailyUseSection.Jly"
         >
-          <div className="flex items-center space-x-4 text-lg font-medium">
+          <div className="flex items-center lg:space-x-4 space-x-3 text-lg font-medium">
             <CardLink
               url="https://chrome.google.com/webstore/detail/jellywallet/eegcfalgkkhehkhbjbggbhhlcnckadih"
               descText="Download For"

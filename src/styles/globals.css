@@ -197,6 +197,11 @@ html {
 }
 
 #invest_ellipse {
+  position: absolute;
+  height: 300px;
+}
+#invest_hover_ellipse {
+  position: absolute;
   height: 300px;
 }
 
@@ -220,7 +225,7 @@ html {
   width: 316px;
   top: 60px;
   left: 272px;
-  transform-box: fill-box;
+  /* transform-box: fill-box; */
   transform-origin: 40% 60%;
   animation: transform 0.2s linear both;
   animation-play-state: paused;

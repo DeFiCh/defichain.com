@@ -5,12 +5,10 @@ import MetaDFICoinEllipse from "./meta-dfi-coin-ellipse.png";
 
 interface MetaDfiCoinProps {
   id: string;
-  className?: string;
 }
 
 export function MetaDfiCoin(props: MetaDfiCoinProps): JSX.Element {
   const { id } = props;
-  console.log(`${id}_ellipse`);
   return (
     <div>
       <Image
@@ -25,5 +23,9 @@ export function MetaDfiCoin(props: MetaDfiCoinProps): JSX.Element {
 
 export function MetaDfiCoinHover(props: MetaDfiCoinProps): JSX.Element {
   const { id } = props;
-  return <Image src={MetaDFICoinIconHover} alt="Meta DFI Coin Icon" id={id} />;
+  return (
+    <div>
+      <Image src={MetaDFICoinIconHover} alt="Meta DFI Coin Icon" id={id} />
+    </div>
+  );
 }

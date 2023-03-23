@@ -49,7 +49,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             </span>
           </span>
         </div>
-        <div className="grid grid-flow-row grid-cols-1 gap-6 md:grid-flow-row md:grid-cols-2 lg:block lg:h-[639px] lg:place-self-end">
+        <div className="lg:block lg:h-[639px] lg:place-self-end">
           <Card
             title={t("EcosystemSection.cards.investTitle")}
             subTitle={t("EcosystemSection.cards.investSubtitle")}
@@ -67,7 +67,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
           <Card
             title={t("EcosystemSection.cards.dappsTitle")}
             subTitle={t("EcosystemSection.cards.dappsSubtitle")}
-            customIconStyle={classNames("w-[320px] top-[1.5em]", {
+            customIconStyle={classNames("w-[100%] top-0", {
               "right-0": dimensions.width > 768,
               "right-[-7em]": dimensions.width <= 768,
             })}

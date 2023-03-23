@@ -6,13 +6,12 @@ interface WalletAppsProps {
 
 export function WalletApps(props: WalletAppsProps): JSX.Element {
   const { id } = props;
-
   return (
     <div
       style={{
         position: "absolute",
-        top: "-9.2em",
-        right: "-4em",
+        top: "-9.9em",
+        right: "-3em",
       }}
     >
       <Video
@@ -32,14 +31,13 @@ export function WalletAppsHover(props: WalletAppsProps): JSX.Element {
     <div
       style={{
         position: "absolute",
-        top: "-9.2em",
-        right: "-4em",
+        top: "-9.9em",
+        right: "-3em",
       }}
     >
       <Video
-        id={id}
         poster=""
-        // TODO @chloe get updated vid from Jon
+        id={id}
         src="/assets/img/ecosystem/dapp-hover.mov"
         width={500}
         height={500}

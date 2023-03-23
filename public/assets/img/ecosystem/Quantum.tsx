@@ -10,11 +10,7 @@ export function Quantum(props: QuantumProps): JSX.Element {
   return (
     <div>
       {/* className not used as id is being used in globals.css */}
-      <Image
-        src={QuantumEllipseBackground}
-        alt="Quantum Background"
-        id={`${id}_ellipse_bg`}
-      />
+      <Image src={QuantumEllipseBackground} alt="Quantum Background" />
       <Image src={QuantumDonut} alt="Quantum Donut Icon" id={`${id}_donut`} />
     </div>
   );
@@ -24,11 +20,7 @@ export function QuantumHover(props: QuantumProps): JSX.Element {
   const { id } = props;
   return (
     <div>
-      <Image
-        src={QuantumEllipseBackground}
-        alt="Quantum Background Hover"
-        id={`${id}_ellipse_bg`}
-      />
+      <Image src={QuantumEllipseBackground} alt="Quantum Background" />
       <Image src={QuantumDonut} alt="Quantum Icon Hover" id={`${id}_donut`} />
     </div>
   );

@@ -271,35 +271,12 @@ html {
   --yLength: 0px;
 }
 
-#quantum_ellipse_bg {
-  /* position: absolute;
-  left: 0px;
-  top: 0px;
-
-  transform-box: fill-box;
-  animation: fade-to-center-left 0.4s linear both;
-  animation-play-state: paused; */
-}
-
-#quantum_hover_ellipse_bg {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: 0;
-
-  transform-box: fill-box;
-  animation: fade-to-top-right 0.4s ease both;
-  animation-play-state: paused;
-}
-
 .dapp-card #invest,
 #invest_hover,
 #masternode,
 #masternode_hover,
 #quantum_donut,
-#quantum_ellipse_bg,
-#quantum_hover_donut,
-#quantum_hover_ellipse_bg {
+#quantum_hover_donut {
   animation-play-state: running;
 }
 
@@ -373,32 +350,6 @@ html {
   100% {
     opacity: 1;
     transform: translateZ(0px);
-  }
-}
-
-/* For quantum ellipse lighting background */
-@keyframes fade-to-top-right {
-  0% {
-    opacity: 1;
-    transform: translate(0, 0);
-    z-index: -1;
-  }
-  100% {
-    opacity: 1;
-    transform: translate(50%, -8%);
-    z-index: -1;
-  }
-}
-@keyframes fade-to-center-left {
-  0% {
-    opacity: 1;
-    transform: translate(50%, -10%);
-    z-index: -1;
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0%, 1%);
-    z-index: -1;
   }
 }
 

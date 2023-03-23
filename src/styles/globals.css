@@ -196,6 +196,10 @@ html {
   fill: #ff00ff;
 }
 
+#invest_ellipse {
+  height: 300px;
+}
+
 #invest {
   position: absolute;
   width: 316px;

@@ -10,9 +10,14 @@ interface MetaDfiCoinProps {
 
 export function MetaDfiCoin(props: MetaDfiCoinProps): JSX.Element {
   const { id } = props;
+  console.log(`${id}_ellipse`);
   return (
     <div>
-      <Image src={MetaDFICoinEllipse} alt="Meta DFI Coin Ellipse" />
+      <Image
+        src={MetaDFICoinEllipse}
+        alt="Meta DFI Coin Ellipse"
+        id={`${id}_ellipse`}
+      />
       <Image src={MetaDFICoinIcon} alt="Meta DFI Coin Icon" id={id} />
     </div>
   );

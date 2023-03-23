@@ -49,7 +49,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             </span>
           </span>
         </div>
-        <div className="grid grid-flow-row grid-cols-1 gap-6 md:grid-flow-row md:grid-cols-2 lg:block lg:h-[639px] lg:place-self-end">
+        <div className="grid grid-flow-row grid-cols-1 gap-x-6 md:grid-flow-row md:grid-cols-2 lg:block lg:h-[639px] lg:place-self-end">
           <Card
             title={t("EcosystemSection.cards.investTitle")}
             subTitle={t("EcosystemSection.cards.investSubtitle")}

@@ -195,10 +195,37 @@ html {
 .hover-icons:hover {
   fill: #ff00ff;
 }
-/* TODO hover out onto the original image*/
+
+#invest_ellipse {
+  position: absolute;
+  height: 300px;
+}
+#invest_hover_ellipse {
+  position: absolute;
+  height: 300px;
+}
+
+#invest {
+  position: absolute;
+  width: 316px;
+  top: 60px;
+  left: 272px;
+  animation: transform-in 0.3s;
+  animation-play-state: paused;
+  transform-box: fill-box;
+  transform-origin: 40% 60%;
+  animation-play-state: paused;
+  --rotateDeg: -45deg;
+  --xLength: -40px;
+  --yLength: 10px;
+}
 
 #invest_hover {
-  transform-box: fill-box;
+  position: absolute;
+  width: 316px;
+  top: 60px;
+  left: 272px;
+  /* transform-box: fill-box; */
   transform-origin: 40% 60%;
   animation: transform 0.2s linear both;
   animation-play-state: paused;
@@ -206,9 +233,15 @@ html {
   --xLength: -40px;
   --yLength: 10px;
 }
-.dapp-card #invest_hover,
-.dapp-card #masternode_hover {
-  animation-play-state: running;
+
+#masternode {
+  position: absolute;
+  left: 50px;
+  bottom: 10px;
+  scale: 1.5;
+
+  animation: fade-in 0.3s ease-in;
+  animation-play-state: paused;
 }
 
 #masternode_hover {
@@ -217,10 +250,43 @@ html {
 }
 
 #quantum_donut {
+  /* original position of unhovered donut, dependent on customIconStyle passed into Card component */
   position: absolute;
-  right: -64.51px;
-  top: 36.68px;
   width: 266px;
+  right: -40px;
+  top: 450px;
+
+  transform-origin: 20% 50%;
+  animation: transform-out 0.3s both;
+  animation-delay: 0s;
+  animation-play-state: paused;
+  --rotateDeg: -38.35deg;
+  --xLength: 20px;
+  --yLength: -35px;
+}
+
+#quantum_hover_donut {
+  position: absolute;
+  width: 250px;
+  right: -40px;
+  top: 450px;
+
+  transform-box: fill-box;
+  transform-origin: 20% 50%;
+  animation: transform-into 0.3s linear both;
+  animation-play-state: paused;
+  --rotateDeg: -38.35deg;
+  --xLength: 20px;
+  --yLength: 0px;
+}
+
+.dapp-card #invest,
+#invest_hover,
+#masternode,
+#masternode_hover,
+#quantum_donut,
+#quantum_hover_donut {
+  animation-play-state: running;
 }
 
 @keyframes spin {
@@ -241,7 +307,16 @@ html {
       rotate(var(--rotateDeg));
   }
 }
-
+@keyframes transform-in {
+  0% {
+    opacity: 1;
+    transform: translate(var(--xLength), var(--yLength))
+      rotate(var(--rotateDeg));
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes fade-out {
   0% {
     opacity: 0.5;
@@ -250,6 +325,40 @@ html {
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* For quantum donut */
+@keyframes transform-into {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(var(--rotateDeg))
+      translate3d(var(--xLength), var(--yLength), -600px);
+    scale: 0.85;
+  }
+}
+@keyframes transform-out {
+  0% {
+    opacity: 1;
+    transform: translate(var(--xLength), var(--yLength))
+      rotate(var(--rotateDeg));
+    scale: 0.85;
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0px);
   }
 }
 

@@ -3,6 +3,17 @@
     "title": "EXPLORE THE POWER OF DFI",
     "subtitle": "Experience DeFi with DFI",
     "desc": "Our native token unlocks the power of decentralized finance, giving you access to a growing ecosystem of cutting-edge DeFi tools and innovative blockchain applications."
+  },
+
+  "statisticsDisplay" : {
+    "circulatingSupply": {
+      "title": "CIRCULATING SUPPLY",
+      "desc": "{{perc}} of max supply"
+    },
+    "dfiMinted": {
+      "title": "TOTAL DFI MINTED",
+      "desc": "out of {{value}}{{suffix}} fixed supply"
+    }
   }
 }
 

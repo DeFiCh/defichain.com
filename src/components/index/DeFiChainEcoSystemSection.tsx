@@ -1,51 +1,27 @@
 import { Container } from "@components/commons/Container";
 import { SectionTitle } from "@components/commons/SectionTitle";
+import { useDeviceDetect, ViewPort } from "@hooks/useDeviceDetect";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import classNames from "classnames";
-import { useState } from "react";
 import { useTranslation } from "next-i18next";
 import { Card } from "./components/Card";
 
-const cardItems = [
-  {
-    img: "meta-dfi-coin",
-    id: "invest",
-    href: "",
-    customStyle: "xs:w-full md:w-[70%] lg:w-[251px]",
-  },
-  {
-    img: "glass-cube",
-    id: "masternode",
-    href: "",
-    customStyle: "w-[45%]",
-  },
-  {
-    img: "wallet-apps",
-    id: "dapps",
-    href: "",
-    customStyle: "w-[50%]",
-  },
-  {
-    img: "quantum",
-    id: "quantum",
-    href: "",
-    customStyle: "w-11/12 md:w-[251px]",
-  },
-];
-
 export function DeFiChainEcoSystemSection(): JSX.Element {
-  const [hoverState, setHoverState] = useState<string | undefined>(undefined);
   const dimensions = useWindowDimensions();
   const { t } = useTranslation("page-index");
   const sectionTitle = t("EcosystemSection.title").split(" ");
-
-  // TODO
-  // animation of svg
-  // remove unused code
-  // translations
+  const device = useDeviceDetect();
 
   return (
-    <div className="relative overflow-hidden lg:pt-[136px]">
+    <div
+      className={classNames(
+        "relative lg:pt-[136px] md:-mb-6 lg:mb-0 scrolling-touch overflow-hidden",
+        {
+          "overflow-hidden": device === ViewPort.DESKTOP,
+          "pb-[292px]": device === ViewPort.TABLET && dimensions.width > 1500, // for bigger ipad sizes
+        }
+      )}
+    >
       <Container
         className={classNames(
           "no-scrollbar z-10 relative lg:flex lg:justify-center",
@@ -76,43 +52,40 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             </span>
           </span>
         </div>
-        <div className="no-scrollbar grid grid-flow-row grid-cols-1 gap-6 md:grid-flow-row md:grid-cols-2 lg:block lg:h-[639px] lg:place-self-end">
+        <div className="grid grid-flow-row grid-cols-1 gap-6 md:grid-flow-row md:grid-cols-2 md:gap-y-0 lg:block lg:h-[639px] lg:place-self-end">
           <Card
             title={t("EcosystemSection.cards.investTitle")}
             subTitle={t("EcosystemSection.cards.investSubtitle")}
-            content={cardItems[0]}
-            setHoverState={setHoverState}
-            hoverState={hoverState}
-            customIconStyle="w-[487.9px] right-0 top-0"
-            // TODO styles for animating only coin icon
-            // customIconStyle="right-0 top-0 bottom-[-23.26%] w-[307px]"
+            customIconStyle="w-[100%] right-0 top-0"
+            id="invest"
+            customTextStyle="xs:w-full md:w-[70%] lg:w-[251px]"
           />
           <Card
             title={t("EcosystemSection.cards.masternodeTitle")}
             subTitle={t("EcosystemSection.cards.masternodeSubtitle")}
-            content={cardItems[1]}
-            setHoverState={setHoverState}
-            hoverState={hoverState}
-            customIconStyle="right-0 top-0 bottom-[-23.26%] w-[307px]"
+            customIconStyle="w-[307px] right-0 top-0 bottom-[-23.26%]"
+            id="masternode"
+            customTextStyle="w-[45%]"
           />
           <Card
             title={t("EcosystemSection.cards.dappsTitle")}
             subTitle={t("EcosystemSection.cards.dappsSubtitle")}
-            content={cardItems[2]}
-            setHoverState={setHoverState}
-            hoverState={hoverState}
-            customIconStyle={classNames("w-[420.9px] top-0", {
+            customIconStyle={classNames("w-[400px] top-0", {
               "right-0": dimensions.width > 768,
-              "right-[-100px]": dimensions.width <= 768,
+              "right-[-8em]": dimensions.width <= 768,
             })}
+            id="dapps"
+            customTextStyle="w-[50%]"
           />
           <Card
             title={t("EcosystemSection.cards.quantumTitle")}
             subTitle={t("EcosystemSection.cards.quantumSubtitle")}
-            content={cardItems[3]}
-            setHoverState={setHoverState}
-            hoverState={hoverState}
-            customIconStyle={classNames("left-0 top-0")}
+            customIconStyle={classNames("top-[-430px] left-[-280px]", {
+              "right-0": dimensions.width > 768,
+              "right-[-3em]": dimensions.width <= 768,
+            })}
+            id="quantum"
+            customTextStyle="w-11/12 md:w-[251px]"
           />
         </div>
       </Container>

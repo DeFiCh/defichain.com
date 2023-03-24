@@ -16,7 +16,7 @@ export function Explore() {
       items: [
         {
           icon: "dfi",
-          href: "",
+          href: "/explore/dfi",
           title: entries[0].title,
           subtitle: entries[0].subtitle,
         },

@@ -14,10 +14,13 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
 
   return (
     <div
-      className={classNames("relative lg:pt-[136px] md:-mb-6 lg:mb-0", {
-        "overflow-hidden": device === ViewPort.DESKTOP,
-        "pb-[292px]": device === ViewPort.TABLET,
-      })}
+      className={classNames(
+        "relative lg:pt-[136px] md:-mb-6 lg:mb-0 scrolling-touch overflow-hidden",
+        {
+          "overflow-hidden": device === ViewPort.DESKTOP,
+          "pb-[292px]": device === ViewPort.TABLET && dimensions.width > 1500, // for bigger ipad sizes
+        }
+      )}
     >
       <Container
         className={classNames(

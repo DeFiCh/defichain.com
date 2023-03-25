@@ -45,6 +45,7 @@ export function HomePageHeader(): JSX.Element {
           )}
         >
           <Video
+            poster="/assets/img/index/dficoin.png"
             src="/assets/svg/hero/dfi-coin-video.mp4"
             width={595}
             height={595}

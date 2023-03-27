@@ -36,7 +36,7 @@
     "@netlify/plugin-nextjs": "^4.31.0",
     "@tailwindcss/typography": "^0.5.9",
     "@testing-library/cypress": "^9.0.0",
-    "@types/lodash": "^4.14.191",
+    "@types/lodash": "^4.14.192",
     "@types/node": "^18.11.12",
     "@types/react": "^18.0.28",
     "@waveshq/standard-web-linter": "^0.47.0",

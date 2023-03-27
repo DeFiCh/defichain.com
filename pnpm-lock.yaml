@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@cypress/code-coverage': ^3.10.0
   '@headlessui/react': ^1.7.13
-  '@netlify/plugin-nextjs': ^4.31.0
+  '@netlify/plugin-nextjs': ^4.33.0
   '@tailwindcss/typography': ^0.5.9
   '@testing-library/cypress': ^9.0.0
   '@types/lodash': ^4.14.191
@@ -52,7 +52,7 @@ dependencies:
 
 devDependencies:
   '@cypress/code-coverage': 3.10.0_3tcoj6n52jqx2qqhef54glmqnm
-  '@netlify/plugin-nextjs': 4.31.0
+  '@netlify/plugin-nextjs': 4.33.0
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
   '@testing-library/cypress': 9.0.0_cypress@12.7.0
   '@types/lodash': 4.14.191
@@ -2194,8 +2194,8 @@ packages:
       - encoding
       - supports-color
 
-  /@netlify/plugin-nextjs/4.31.0:
-    resolution: {integrity: sha512-SBsHkcSCnkFxDMWpJYXHkAdEZw7kq+yRx/kmHv6OQv7pGsxctwNxaFZ5YqjS6T/uW1wsWIBYqTvnB0ncMoDL8w==}
+  /@netlify/plugin-nextjs/4.33.0:
+    resolution: {integrity: sha512-Q7fgbbYn6e7yc22DqnukVhq0ObxIuxzs4oAEtgZogH4NxPDjaGPrT9ET9lcbFAbZjDRW7qnPDhwE9bhMTMT2RQ==}
     engines: {node: '>=12.0.0'}
     dependencies:
       '@netlify/esbuild': 0.14.39
@@ -2203,6 +2203,7 @@ packages:
       '@netlify/ipx': 1.3.3
       '@vercel/node-bridge': 2.2.2
       chalk: 4.1.2
+      chokidar: 3.5.3
       destr: 1.2.2
       execa: 5.1.1
       follow-redirects: 1.15.2

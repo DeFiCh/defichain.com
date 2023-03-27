@@ -40,7 +40,7 @@
     "@types/node": "^18.11.12",
     "@types/react": "^18.0.28",
     "@waveshq/standard-web-linter": "^0.47.0",
-    "autoprefixer": "^10.4.13",
+    "autoprefixer": "^10.4.14",
     "babel-plugin-istanbul": "^6.1.1",
     "babel-plugin-jsx-remove-data-test-id": "^3.0.0",
     "cypress": "^12.7.0",

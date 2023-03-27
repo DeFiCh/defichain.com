@@ -13,7 +13,6 @@ export function DFIStatisticsDisplay() {
   const { t } = useTranslation("page-explore-dfi");
 
   const { value, suffix } = useUnitSuffix(supply?.max, 1);
-  console.log(value, suffix);
 
   useEffect(() => {
     api.stats.getSupply().then((supplyItem) => {

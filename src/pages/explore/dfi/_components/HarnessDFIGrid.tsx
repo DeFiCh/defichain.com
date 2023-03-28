@@ -80,7 +80,7 @@ function HarnessDFIGridItem({ title, desc, icon }: HarnessDFIGridProps) {
         )}
       </div>
 
-      <div className="md:place-self-center text-dark-1000 leading-5 font-semibold">
+      <div className="md:place-self-center text-dark-1000 leading-5 font-bold">
         {title}
       </div>
       <div className="md:text-center font-desc text-dark-700">{desc}</div>

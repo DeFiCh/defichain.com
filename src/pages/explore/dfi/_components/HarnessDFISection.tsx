@@ -28,7 +28,7 @@ export default function HarnessDFISection() {
     },
     {
       title: "BE A MASTERNODE OWNER",
-      desc: "Marries the best of Proof-of-Stake, with the security of Bitcoin.",
+      desc: "Fund a new staking node for just 20,000 DFI",
       icon: HarnessDFIICONS.MASTERNODE,
     },
     {

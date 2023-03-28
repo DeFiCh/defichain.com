@@ -42,8 +42,9 @@ export function HarnessDFIGrid({
         "gap-12"
       )}
     >
-      {gridItems.map((item) => (
+      {gridItems.map((item, index) => (
         <HarnessDFIGridItem
+          key={index}
           title={item.title}
           desc={item.desc}
           icon={item.icon}
@@ -57,8 +58,6 @@ function HarnessDFIGridItem({ title, desc, icon }: HarnessDFIGridProps) {
   const Icon = iconMapping[icon];
   const HoverIcon = iconMapping[`${icon + 1}`];
   const [isHovering, setIsHovering] = useState(false);
-
-  console.log(isHovering);
 
   return (
     <div

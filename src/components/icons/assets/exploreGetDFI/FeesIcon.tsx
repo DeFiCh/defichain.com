@@ -61,7 +61,7 @@ export function FeesIconHover({
   width = 88,
   height = 57,
 }: {
-  className: string;
+  className?: string;
   width?: number;
   height?: number;
 }) {

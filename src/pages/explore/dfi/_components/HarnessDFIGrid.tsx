@@ -18,7 +18,10 @@ import {
   CommunityIcon,
   CommunityIconHover,
 } from "@components/icons/assets/exploreGetDFI/CommunityIcon";
-import { LPIcon } from "@components/icons/assets/exploreGetDFI/LPIcon";
+import {
+  LPIcon,
+  LPIconHover,
+} from "@components/icons/assets/exploreGetDFI/LPIcon";
 import classNames from "classnames";
 import { useState } from "react";
 
@@ -112,4 +115,5 @@ const iconMapping = {
   [HarnessDFIICONS.COMMUNITY]: CommunityIcon,
   [HarnessDFIICONS.COMMUNITY_HOVER]: CommunityIconHover,
   [HarnessDFIICONS.POOLS]: LPIcon,
+  [HarnessDFIICONS.POOLS_HOVER]: LPIconHover,
 };

@@ -43,9 +43,9 @@ export function HarnessDFIGrid({
     <div
       className={classNames(
         "grid grid-flow-row ",
-        "lg:grid-rows-2 lg:grid-cols-3 lg:gap-[90px]",
-        "md:grid-rows-3 md:grid-cols-2 md:gap-[70px]",
-        "gap-12"
+        "lg:grid-rows-2 lg:grid-cols-3 lg:gap-[89.5px]",
+        "md:grid-rows-3 md:grid-cols-2 md:gap-x-[89.5px] md:gap-y-[75px]",
+        "gap-y-12"
       )}
     >
       {gridItems.map((item, index) => (

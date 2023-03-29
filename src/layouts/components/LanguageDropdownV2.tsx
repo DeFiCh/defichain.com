@@ -8,11 +8,11 @@ import classNames from "classnames";
 export function LanguageDropdownV2(): JSX.Element {
   const router = useRouter();
   const languages = [
-    { locale: "en-US", name: "English" },
-    { locale: "de", name: "Deutch" },
-    { locale: "fr", name: "Français" },
-    { locale: "zh-Hans", name: "简体中文" },
-    { locale: "zh-Hant", name: "繁體中文" },
+    { locale: "en-US", name: "English", display: "EN" },
+    { locale: "de", name: "Deutch", display: "Deutch" },
+    { locale: "fr", name: "Français", display: "Français" },
+    { locale: "zh-Hans", name: "简体中文", display: "简体中文" },
+    { locale: "zh-Hant", name: "繁體中文", display: "繁體中文" },
   ];
   const [selectedLanguage, setSelectedLanguage] = useState(
     languages.find((language) => language.locale === router.locale) ??
@@ -37,9 +37,9 @@ export function LanguageDropdownV2(): JSX.Element {
     >
       <div className="p-[0.5px]">
         <Listbox value={selectedLanguage} onChange={setSelectedLanguage}>
-          <Listbox.Button className="bg-dark-100 text-dark-1000 px-4 py-2 rounded-[10px] text-sm focus:outline-none flex flex-row justify-center items-center">
+          <Listbox.Button className="bg-dark-100 text-dark-1000 px-4 py-2 rounded-[10px] text-sm focus:outline-none flex flex-row">
             <VscGlobe className="pr-[5px] flex-shrink-0" size={20} />
-            {selectedLanguage.name}
+            {selectedLanguage.display}
             <RxChevronDown className="pl-[9px] flex-shrink-0" size={20} />
           </Listbox.Button>
 
@@ -50,16 +50,19 @@ export function LanguageDropdownV2(): JSX.Element {
             leave="transition duration-75 ease-out"
             leaveFrom="transform scale-100 opacity-100"
             leaveTo="transform scale-95 opacity-0"
-            className="absolute left-0 w-full lg:w-32 z-50"
+            className="absolute left-0 w-full z-50"
           >
-            <div className="absolute right-0 w-full top-[-37px] lg:top-[-70px] lg:right-1 -translate-y-full lg:mt-8 text-center text-dark-1000 text-sm shadow-lg bg-dark-100 rounded-[10px]">
+            <div className="absolute right-0 w-full top-[-40px] lg:top-[-70px] lg:right-0 -translate-y-full lg:mt-8 text-center text-dark-1000 text-sm shadow-lg bg-dark-100 rounded-[10px]">
               <Listbox.Options className="focus:outline-none">
                 {languages.map((language, index) => (
                   <div
                     className={classNames(
-                      "border-dark-200 mx-[8px] text-center",
+                      "border-dark-200 text-left pl-3 hover:bg-dark-200 active:opacity-70",
                       {
                         "border-b": languages.length - 1 !== index,
+                        "hover:rounded-t-[10px]": index === 0,
+                        "hover:rounded-b-[10px]":
+                          languages.length - 1 === index,
                       }
                     )}
                     key={language.locale}
@@ -67,7 +70,7 @@ export function LanguageDropdownV2(): JSX.Element {
                     <Listbox.Option
                       key={language.locale}
                       value={language}
-                      className="p-2 hover:bg-brand-100 cursor-pointer focus:outline-none"
+                      className="py-2 cursor-pointer focus:outline-none"
                     >
                       {language.name}
                     </Listbox.Option>

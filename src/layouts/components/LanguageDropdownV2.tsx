@@ -52,7 +52,7 @@ export function LanguageDropdownV2(): JSX.Element {
             leaveTo="transform scale-95 opacity-0"
             className="absolute left-0 w-full z-50"
           >
-            <div className="absolute right-0 w-full top-[-40px] lg:top-[-70px] lg:right-0 -translate-y-full lg:mt-8 text-center text-dark-1000 text-sm shadow-lg bg-dark-100 rounded-[10px]">
+            <div className="absolute right-0 w-full top-[-48px] lg:top-[-78px] lg:right-0 -translate-y-full lg:mt-8 text-center text-dark-1000 text-sm shadow-lg bg-dark-100 rounded-[10px]">
               <Listbox.Options className="focus:outline-none">
                 {languages.map((language, index) => (
                   <div

@@ -2,10 +2,12 @@ export function NodesIcon({
   className,
   width = 88,
   height = 57,
+  id,
 }: {
   className?: string;
   width?: number;
   height?: number;
+  id: string;
 }) {
   return (
     <svg
@@ -24,15 +26,10 @@ export function NodesIcon({
         stroke="#D9D9D9"
       />
       <rect x="16.5" y="13.5913" width="36.6376" height="37" stroke="#D9D9D9" />
-      <circle
-        cx="60.0889"
-        cy="39.2511"
-        r="12"
-        fill="url(#paint0_linear_5778_74907)"
-      />
+      <circle cx="60.0889" cy="39.2511" r="12" fill={`url('#${id}')`} />
       <defs>
         <linearGradient
-          id="paint0_linear_5778_74907"
+          id={id}
           x1="43.2139"
           y1="18.5011"
           x2="67.7321"

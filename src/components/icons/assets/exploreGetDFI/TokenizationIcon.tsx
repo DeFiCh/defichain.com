@@ -2,10 +2,12 @@ export function TokenizationIcon({
   className,
   width = 88,
   height = 57,
+  id,
 }: {
   className?: string;
   width?: number;
   height?: number;
+  id: string;
 }) {
   return (
     <svg
@@ -18,15 +20,10 @@ export function TokenizationIcon({
     >
       <circle cx="39" cy="34.0909" r="14.5" stroke="#D9D9D9" />
       <circle cx="51.5" cy="20.5909" r="17" stroke="#D9D9D9" />
-      <circle
-        cx="28.5"
-        cy="43.5909"
-        r="9.5"
-        fill="url(#paint0_linear_5778_74914)"
-      />
+      <circle cx="28.5" cy="43.5909" r="9.5" fill={`url('#${id}')`} />
       <defs>
         <linearGradient
-          id="paint0_linear_5778_74914"
+          id={id}
           x1="15.1406"
           y1="27.1639"
           x2="34.5509"

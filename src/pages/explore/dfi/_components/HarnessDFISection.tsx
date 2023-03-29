@@ -79,8 +79,8 @@ export default function HarnessDFISection() {
       </div>
       <div className="block md:hidden mt-16">
         <Slider {...sliderSettings}>
-          <HarnessDFIGrid gridItems={harnessDFIItems.slice(0, 3)} />
-          <HarnessDFIGrid gridItems={harnessDFIItems.slice(3)} />
+          <HarnessDFIGrid gridItems={harnessDFIItems.slice(0, 3)} isMobile />
+          <HarnessDFIGrid gridItems={harnessDFIItems.slice(3)} isMobile />
         </Slider>
       </div>
     </Container>

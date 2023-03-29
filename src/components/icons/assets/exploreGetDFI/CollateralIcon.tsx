@@ -2,10 +2,12 @@ export function CollateralIcon({
   className,
   width = 88,
   height = 57,
+  id,
 }: {
   className?: string;
   width?: number;
   height?: number;
+  id: string;
 }) {
   return (
     <svg
@@ -39,7 +41,7 @@ export function CollateralIcon({
         cy="35.028"
         rx="10.537"
         ry="10.5049"
-        fill="url(#paint0_linear_5778_74894)"
+        fill={`url('#${id}')`}
       />
       <rect
         x="20.0002"
@@ -89,7 +91,7 @@ export function CollateralIcon({
       />
       <defs>
         <linearGradient
-          id="paint0_linear_5778_74894"
+          id={id}
           x1="28.4378"
           y1="16.8632"
           x2="49.9551"
@@ -131,7 +133,7 @@ export function CollateralIconHover({
         fill="url(#paint0_linear_5778_74896)"
       />
       <path
-        d="M20.0002 18.2073H53.7937V53.091H20.0002V18.2073Z"
+        d="M20.0002 18L53.7937 18.2073V53.091H20.0002V18Z"
         fill="url(#paint1_linear_5778_74896)"
       />
       <ellipse
@@ -166,9 +168,9 @@ export function CollateralIconHover({
         <linearGradient
           id="paint1_linear_5778_74896"
           x1="13.1359"
-          y1="5.48925"
-          x2="47.8509"
-          y2="-5.06951"
+          y1="5.20641"
+          x2="47.8855"
+          y2="-5.30046"
           gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#EC008C" />

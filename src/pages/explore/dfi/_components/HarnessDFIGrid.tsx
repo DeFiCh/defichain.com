@@ -1,7 +1,7 @@
 import {
-  FeesIcon,
-  FeesIconHover,
-} from "@components/icons/assets/exploreGetDFI/FeesIcon";
+  VarietyIcon,
+  VarietyIconHover,
+} from "@components/icons/assets/exploreGetDFI/VarietyIcon";
 import {
   CollateralIcon,
   CollateralIconHover,
@@ -29,12 +29,15 @@ interface HarnessDFIGridProps {
   title: string;
   desc: string;
   icon: HarnessDFIICONS;
+  id?: string;
 }
 
 export function HarnessDFIGrid({
   gridItems,
+  isMobile = false,
 }: {
   gridItems: HarnessDFIGridProps[];
+  isMobile?: boolean;
 }) {
   return (
     <div
@@ -51,13 +54,14 @@ export function HarnessDFIGrid({
           title={item.title}
           desc={item.desc}
           icon={item.icon}
+          id={isMobile ? `${item.icon}-mobile` : `${item.icon}`}
         />
       ))}
     </div>
   );
 }
 
-function HarnessDFIGridItem({ title, desc, icon }: HarnessDFIGridProps) {
+function HarnessDFIGridItem({ title, desc, icon, id }: HarnessDFIGridProps) {
   const Icon = iconMapping[icon];
   const HoverIcon = iconMapping[`${icon + 1}`];
   const [isHovering, setIsHovering] = useState(false);
@@ -75,7 +79,7 @@ function HarnessDFIGridItem({ title, desc, icon }: HarnessDFIGridProps) {
           </div>
         ) : (
           <div className="transition-all duration-300 ease-in-out">
-            <Icon />
+            <Icon id={id ?? `${icon}`} />
           </div>
         )}
       </div>
@@ -104,8 +108,8 @@ export enum HarnessDFIICONS {
 }
 
 const iconMapping = {
-  [HarnessDFIICONS.VARIETY]: FeesIcon,
-  [HarnessDFIICONS.VARIETY_HOVER]: FeesIconHover,
+  [HarnessDFIICONS.VARIETY]: VarietyIcon,
+  [HarnessDFIICONS.VARIETY_HOVER]: VarietyIconHover,
   [HarnessDFIICONS.COLLATERAL]: CollateralIcon,
   [HarnessDFIICONS.COLLATERAL_HOVER]: CollateralIconHover,
   [HarnessDFIICONS.MASTERNODE]: NodesIcon,

@@ -1,11 +1,13 @@
-export function FeesIcon({
+export function VarietyIcon({
   className,
   width = 88,
   height = 57,
+  id,
 }: {
   className?: string;
   width?: number;
   height?: number;
+  id?: string;
 }) {
   return (
     <svg
@@ -32,15 +34,10 @@ export function FeesIcon({
         rx="1.5"
         stroke="#D9D9D9"
       />
-      <circle
-        cx="60.166"
-        cy="18.0909"
-        r="12"
-        fill="url(#paint0_linear_5778_74887)"
-      />
+      <circle cx="60.166" cy="18.0909" r="12" fill={`url('#${id}')`} />
       <defs>
         <linearGradient
-          id="paint0_linear_5778_74887"
+          id={id}
           x1="43.291"
           y1="-2.65906"
           x2="67.8093"
@@ -56,7 +53,7 @@ export function FeesIcon({
   );
 }
 
-export function FeesIconHover({
+export function VarietyIconHover({
   className,
   width = 88,
   height = 57,

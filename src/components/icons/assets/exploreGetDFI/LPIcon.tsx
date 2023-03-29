@@ -2,10 +2,12 @@ export function LPIcon({
   className,
   width = 88,
   height = 57,
+  id,
 }: {
   className?: string;
   width?: number;
   height?: number;
+  id: string;
 }) {
   return (
     <svg
@@ -18,7 +20,7 @@ export function LPIcon({
     >
       <path
         d="M44.3224 28.7881L44.3224 4.97114C44.3224 4.97114 49.833 5.4572 53.833 6.91538C57.833 8.37355 61.1789 12.624 61.1789 12.624L44.3224 28.7881Z"
-        fill="url(#paint0_linear_5778_74929)"
+        fill={`url('#${id}')`}
       />
       <path
         d="M61.3576 12.6073L27.0041 46.003"
@@ -33,7 +35,7 @@ export function LPIcon({
       />
       <defs>
         <linearGradient
-          id="paint0_linear_5778_74929"
+          id={id}
           x1="51.8277"
           y1="41.6016"
           x2="31.9309"

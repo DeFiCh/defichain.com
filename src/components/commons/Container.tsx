@@ -8,10 +8,10 @@ export function Container(
   props: PropsWithChildren<{ className?: string; bgClassName?: string }>
 ): JSX.Element {
   return (
-    <div className={classNames("w-full", props.bgClassName)}>
+    <div className={classNames("flex mx-auto container", props.bgClassName)}>
       <div
         className={classNames(
-          "mx-6 md:mx-12 xl:mx-[120px] 2xl:mx-[300px]",
+          "mx-6 md:mx-12 xl:mx-[120px] 2xl:mx-[300px] w-full",
           props.className
         )}
       >

@@ -12,7 +12,10 @@ export function DFIStatisticsDisplay() {
   const [supply, setSupply] = useState<SupplyData>();
   const { t } = useTranslation("page-explore-dfi");
 
-  const { value, suffix } = useUnitSuffix(supply?.max, 1);
+  const { value: dfiMintedValue, suffix: dfiMintedSuffix } = useUnitSuffix(
+    supply?.max,
+    1
+  );
 
   useEffect(() => {
     api.stats.getSupply().then((supplyItem) => {
@@ -38,8 +41,8 @@ export function DFIStatisticsDisplay() {
         supply === undefined
           ? supply
           : t("statisticsDisplay.dfiMinted.desc", {
-              value,
-              suffix,
+              value: dfiMintedValue,
+              suffix: dfiMintedSuffix,
             }),
     },
   ];

@@ -75,10 +75,11 @@ export function Default(props: PropsWithChildren<any>): JSX.Element | null {
 
       {mounted && (
         <WhaleProvider>
-          <div className="bg-dark-00">
+          <div className="bg-dark-00 relative">
             <Header />
             <main className="flex-grow text-dark-1000">{props.children}</main>
             <Footer />
+            <div className="absolute z-0 bg-top bg-no-repeat inset-0 bg-[url(/assets/img/background/background-768.png)] md:bg-[url(/assets/img/background/background-1024.png)] lg:bg-[url(/assets/img/background/background-1440.png)] xl:bg-[url(/assets/img/background/background-1536.png)] 2xl:bg-[url(/assets/img/background/background-1920.png)]" />
           </div>
         </WhaleProvider>
       )}

@@ -14,17 +14,14 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
 
   return (
     <div
-      className={classNames(
-        "relative lg:pt-[136px] md:-mb-6 lg:mb-0 scrolling-touch overflow-hidden",
-        {
-          "overflow-hidden": device === ViewPort.DESKTOP,
-          "pb-[292px]": device === ViewPort.TABLET && dimensions.width > 1500, // for bigger ipad sizes
-        }
-      )}
+      className={classNames("relative lg:pt-[136px] md:-mb-6 lg:mb-0", {
+        "overflow-hidden": device === ViewPort.DESKTOP,
+        "pb-[292px]": device === ViewPort.TABLET && dimensions.width > 1500, // for bigger ipad sizes
+      })}
     >
       <Container
         className={classNames(
-          "no-scrollbar z-10 relative lg:flex lg:justify-center",
+          "relative no-scrollbar z-10 lg:flex lg:justify-center",
           { "flexbox-wrapper": dimensions.width >= 1033 } // only apply styling when in large screen
         )}
       >
@@ -91,23 +88,16 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
       </Container>
       <div
         className={classNames(
-          "absolute h-1/3 w-1/3 lg:bottom-[200px] md:bottom-[100px] left-0 bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/ecosystem/dfi-logo-vector.png')]",
-          {
-            "h-[475px] w-[475px] left-[-300px] top-[300px]":
-              dimensions.width <= 700,
-          }
+          "absolute bg-contain bg-no-repeat bg-center bg-[url('/assets/img/ecosystem/dfi-logo-vector.png')] w-full h-[250px] top-[400px] left-[-100px]",
+          "md:top-[230px] md:left-[-100px] md:bg-left md:h-[300px] lg:right-[100px] lg:w-1/3 lg:bg-right"
         )}
       />
+      {/* TODO @chloe get arrow without background */}
       <div
         className={classNames(
-          "absolute h-1/4 w-1/4 bottom-0 right-[21px] bg-contain bg-no-repeat mix-blend-screen bg-bottom md:bg-right bg-[url('/assets/img/footer/arrow_1.png')]",
-          {
-            "bottom-[225px] right-[-110px]": dimensions.width < 900,
-          },
-          {
-            "top-[400px] right-[-220px] h-[300px] w-[300px]":
-              dimensions.width < 596,
-          }
+          "absolute inset-0 bg-no-repeat bg-center hidden lg:block bg-[url('/assets/img/footer/arrow_1.png')]",
+          "w-full h-1/2",
+          "left-[500px] top-[400px]"
         )}
       />
     </div>

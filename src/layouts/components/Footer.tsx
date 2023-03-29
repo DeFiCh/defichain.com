@@ -185,7 +185,7 @@ export default function Footer(): JSX.Element {
   }, [router]);
   return (
     <footer className="relative bg-dark-00">
-      <Container className="relative z-10 py-10 pb-[108px] md:pb-[132px] lg:pb-[144px]">
+      <Container className="relative z-20 py-10 pb-[108px] md:pb-[132px] lg:pb-[144px]">
         <div className="py-10 h-full w-full footer-background rounded-[30px] px-6 md:px-14 lg:px-24">
           <div className="text-sm md:grid md:grid-cols-2 md:grid-flow-row md:gap-[62px] lg:flex lg:flex-row md:justify-between md:pb-[86px]">
             {/* EXPLORE */}
@@ -274,8 +274,8 @@ export default function Footer(): JSX.Element {
           </div>
         </div>
       </Container>
-      <div className="absolute bottom-20 md:bottom-[150px] left-0 bg-contain bg-no-repeat bg-clip-border bg-origin-padding mix-blend-screen w-[150px] h-full md:w-2/5 bg-[url('/assets/img/footer/transparent_coin_2.png')]" />
-      <div className="absolute bottom-6 md:bottom-[65px] right-0 bg-contain bg-no-repeat mix-blend-screen bg-bottom md:bg-right h-1/4 w-1/4 bg-[url('/assets/img/footer/arrow_1.png')]" />
+      <div className="absolute z-10 bottom-20 md:bottom-[150px] left-0 bg-contain bg-no-repeat bg-origin-padding h-full w-full bg-[url('/assets/img/footer/transparent_coin_2.png')]" />
+      <div className="absolute z-10 bottom-6 md:bottom-[65px] right-0 bg-contain bg-no-repeat bg-bottom md:bg-right h-1/4 w-1/4 bg-[url('/assets/img/footer/arrow_1.png')]" />
     </footer>
   );
 }

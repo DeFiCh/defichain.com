@@ -23,7 +23,6 @@ import {
   LPIconHover,
 } from "@components/icons/assets/exploreGetDFI/LPIcon";
 import classNames from "classnames";
-import { useState } from "react";
 
 interface HarnessDFIGridProps {
   title: string;
@@ -63,25 +62,27 @@ export function HarnessDFIGrid({
 
 function HarnessDFIGridItem({ title, desc, icon, id }: HarnessDFIGridProps) {
   const Icon = iconMapping[icon];
-  const HoverIcon = iconMapping[`${icon + 1}`];
-  const [isHovering, setIsHovering] = useState(false);
+
+  // Todo: to uncomment when animations are ready
+  // const HoverIcon = iconMapping[`${icon + 1}`];
+  // const [isHovering, setIsHovering] = useState(false);
 
   return (
     <div
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
+      // onMouseEnter={() => setIsHovering(true)}
+      // onMouseLeave={() => setIsHovering(false)}
       className={classNames("flex flex-col md:w-[246px] w-full gap-y-4")}
     >
       <div className="md:place-self-center">
-        {isHovering && HoverIcon !== undefined ? (
-          <div className="transition-all duration-300 ease-in-out">
-            <HoverIcon />
-          </div>
-        ) : (
-          <div className="transition-all duration-300 ease-in-out">
-            <Icon id={id ?? `${icon}`} />
-          </div>
-        )}
+        {/* {isHovering && HoverIcon !== undefined ? ( */}
+        {/*  <div className="transition-all duration-300 ease-in-out"> */}
+        {/*    <HoverIcon /> */}
+        {/*  </div> */}
+        {/* ) : ( */}
+        <div className="transition-all duration-300 ease-in-out">
+          <Icon id={id ?? `${icon}`} />
+        </div>
+        {/* )} */}
       </div>
 
       <div className="md:place-self-center text-dark-1000 leading-5 font-bold">

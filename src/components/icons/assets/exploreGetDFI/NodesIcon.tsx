@@ -25,8 +25,33 @@ export function NodesIcon({
         height="37"
         stroke="#D9D9D9"
       />
-      <rect x="16.5" y="13.5913" width="36.6376" height="37" stroke="#D9D9D9" />
-      <circle cx="60.0889" cy="39.2511" r="12" fill={`url('#${id}')`} />
+      <rect x="16.5" y="13.5913" width="36.6376" height="37" stroke="#D9D9D9">
+        <animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="rotate"
+          from="45 34.5 36.05659"
+          to="0 16.5 13.5913"
+          dur="0.3s"
+          fill="freeze"
+        />
+      </rect>
+      <circle cx="60.0889" cy="39.2511" r="12" fill={`url('#${id}')`}>
+        <animate
+          attributeName="cx"
+          from="38.1889"
+          to="60.0889"
+          dur="0.3s"
+          fill="freeze"
+        />
+        <animate
+          attributeName="cy"
+          from="30.2511"
+          to="39.2511"
+          dur="0.3s"
+          fill="freeze"
+        />
+      </circle>
       <defs>
         <linearGradient
           id={id}

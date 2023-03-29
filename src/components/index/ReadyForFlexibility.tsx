@@ -21,7 +21,7 @@ export function ReadyForFlexibility() {
       )}
     >
       <Container>
-        <div className={classNames("flex flex-col md:w-1/2 w-auto")}>
+        <div className={classNames("flex flex-col md:w-1/2")}>
           <SectionTitle
             text={t("ReadyForFlexibilitySection.label")}
             customStyle="lg:w-fit md:w-[409px] w-[272px]"

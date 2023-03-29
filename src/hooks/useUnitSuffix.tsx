@@ -12,7 +12,7 @@ interface UnitSuffix {
   value: string;
 }
 
-export function useUnitSuffix(value: string): UnitSuffix {
+export function useUnitSuffix(value, decimalPlace = 0): UnitSuffix {
   const updatedValue = BigNumber(value);
   const places = updatedValue.e !== null ? Math.floor(updatedValue.e / 3) : 0;
   const suffix = `${units[places * 3] ?? ""}`;
@@ -24,7 +24,7 @@ export function useUnitSuffix(value: string): UnitSuffix {
   if (suffix) {
     unitValueWithSuffix.value = updatedValue
       .dividedBy(1000 ** places)
-      .toFormat(0);
+      .toFormat(decimalPlace);
   }
 
   return unitValueWithSuffix;

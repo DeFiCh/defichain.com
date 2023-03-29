@@ -2,6 +2,7 @@ import { Container } from "@components/commons/Container";
 import { SectionTitle } from "@components/commons/SectionTitle";
 import classNames from "classnames";
 import Slider from "react-slick";
+import { useTranslation } from "next-i18next";
 import { HarnessDFIGrid, HarnessDFIICONS } from "./HarnessDFIGrid";
 
 export default function HarnessDFISection() {
@@ -15,35 +16,40 @@ export default function HarnessDFISection() {
     dotsClass: "custom-dots",
   };
 
+  const { t } = useTranslation("page-explore-dfi");
+  const entries: Array<{ title; desc }> = t("harnessDFISection.items", {
+    returnObjects: true,
+  });
+
   const harnessDFIItems = [
     {
-      title: "WIDE VARIETY OF DEFI SERVICES",
-      desc: "With minimal DFI fees, you have access to DeFi Applications",
+      title: entries[0].title,
+      desc: entries[0].desc,
       icon: HarnessDFIICONS.VARIETY,
     },
     {
-      title: "STORE AS COLLATERAL",
-      desc: "Borrow decentralized assets using crypto tokens as collateral",
+      title: entries[1].title,
+      desc: entries[1].desc,
       icon: HarnessDFIICONS.COLLATERAL,
     },
     {
-      title: "BE A MASTERNODE OWNER",
-      desc: "Fund a new staking node for just 20,000 DFI",
+      title: entries[2].title,
+      desc: entries[2].desc,
       icon: HarnessDFIICONS.MASTERNODE,
     },
     {
-      title: "TOKENIZATION",
-      desc: "Tokenize assets, manage and trade with dTokens",
+      title: entries[3].title,
+      desc: entries[3].desc,
       icon: HarnessDFIICONS.TOKENIZATION,
     },
     {
-      title: "COMMUNITY FUND GOVERNANCE",
-      desc: "Participate in shaping the future of the blockchain",
+      title: entries[4].title,
+      desc: entries[4].desc,
       icon: HarnessDFIICONS.COMMUNITY,
     },
     {
-      title: "EARN FROM LIQUIDITY POOLS",
-      desc: "Earn rewards by providing liquidity on DEX",
+      title: entries[5].title,
+      desc: entries[5].desc,
       icon: HarnessDFIICONS.POOLS,
     },
   ];
@@ -52,7 +58,7 @@ export default function HarnessDFISection() {
     <Container className="lg:mb-[417px] md:mb-[180px] mb-24">
       <div className="flex flex-col w-full mx-auto gap-y-5">
         <div className="flex md:justify-center justify-start">
-          <SectionTitle text="BUILDING A BETTER TOMORROW WITH DFI" />
+          <SectionTitle text={t("harnessDFISection.title")} />
         </div>
 
         <h2
@@ -61,7 +67,7 @@ export default function HarnessDFISection() {
             "text-dark-1000 md:text-center text-left"
           )}
         >
-          Harness the power of DFI
+          {t("harnessDFISection.subtitle")}
         </h2>
         <div
           className={classNames(
@@ -70,8 +76,7 @@ export default function HarnessDFISection() {
             "text-dark-700 md:text-center text-left"
           )}
         >
-          A gateway to decentralized applications and tools, offering potential
-          for greater returns, lower fees, and democratic governance.
+          {t("harnessDFISection.desc")}
         </div>
       </div>
       <div className="flex justify-center mt-16 hidden md:flex">

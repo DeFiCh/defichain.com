@@ -1,6 +1,7 @@
 import { HeroBanner, HeroBannerBg } from "@components/commons/HeroBanner";
 import { SSRConfig, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { DFIStatisticsDisplay } from "./_components/DFIStatisticsDisplay";
 import HarnessDFISection from "./_components/HarnessDFISection";
 
 export default function ExploreDFI() {
@@ -13,9 +14,9 @@ export default function ExploreDFI() {
         desc={t("heroBanner.desc")}
         heroBg={HeroBannerBg.DFI_COIN}
         hasStartExploringButton
-        startExploringJumpLink="/"
+        startExploringJumpLink="#statistics_display_dfi"
       />
-
+      <DFIStatisticsDisplay />
       <HarnessDFISection />
     </>
   );

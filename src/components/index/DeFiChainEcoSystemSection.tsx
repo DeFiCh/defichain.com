@@ -92,14 +92,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
           "md:top-[230px] md:left-[-100px] md:bg-left md:h-[300px] lg:right-[100px] lg:w-1/3 lg:bg-right"
         )}
       />
-      {/* TODO @chloe get arrow without background */}
-      <div
-        className={classNames(
-          "absolute inset-0 bg-no-repeat bg-center hidden lg:block bg-[url('/assets/img/footer/arrow_1.png')]",
-          "w-full h-1/2",
-          "left-[500px] top-[400px]"
-        )}
-      />
+      <div className="absolute z-10 bottom-6 md:bottom-[-190px] hidden lg:block right-0 bg-contain bg-no-repeat bg-bottom md:bg-right h-[80%] w-full bg-[url('/assets/img/footer/arrow_1.png')]" />
     </div>
   );
 }

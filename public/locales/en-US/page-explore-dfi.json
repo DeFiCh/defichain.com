@@ -13,6 +13,43 @@
       "title": "TOTAL DFI MINTED",
       "desc": "out of {{value}}{{suffix}} fixed supply"
     }
+  },
+
+  "harnessDFISection" : {
+    "title": "BUILDING A BETTER TOMORROW WITH DFI",
+    "subtitle": "Harness the power of DFI",
+    "desc": "A gateway to decentralized applications and tools, offering potential for greater returns, lower fees, and democratic governance.",
+    "items" : [
+      {
+        "title": "WIDE VARIETY OF DEFI SERVICES",
+        "desc": "With minimal DFI fees, you have access to DeFi Applications"
+      },
+      {
+        "title": "STORE AS COLLATERAL",
+        "desc": "Borrow decentralized assets using crypto tokens as collateral"
+      },
+      {
+        "title": "BE A MASTERNODE OWNER",
+        "desc": "Fund a new staking node for just 20,000 DFI"
+
+      },
+      {
+        "title": "TOKENIZATION",
+        "desc": "Tokenize assets, manage and trade with dTokens"
+
+      },
+      {
+        "title": "COMMUNITY FUND GOVERNANCE",
+        "desc": "Participate in shaping the future of the blockchain"
+
+      },
+      {
+        "title": "EARN FROM LIQUIDITY POOLS",
+        "desc": "Earn rewards by providing liquidity on DEX"
+      }
+    ]
   }
+
+
 }
 

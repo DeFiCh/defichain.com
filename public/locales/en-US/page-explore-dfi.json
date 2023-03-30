@@ -13,6 +13,16 @@
       "title": "TOTAL DFI MINTED",
       "desc": "out of {{value}}{{suffix}} fixed supply"
     }
+  },
+  "footerCards": {
+    "wallet" : {
+      "title": "EXPLORE DEFICHAIN",
+      "subtitle": "Choose your wallet"
+    },
+    "dapps" : {
+      "title": "THE GROWING ECOSYSTEM",
+      "subtitle": "Explore dApps"
+    }
   }
 }
 

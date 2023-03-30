@@ -23,7 +23,7 @@ export default function ExploreMasternodes() {
       />
       <MasternodesStatisticsDisplay />
       <Container className="lg:mb-8 md:mb-6 mb-4">
-        <div className="flex flex-row overflow-x-scroll lg:gap-x-[32.97px] md:gap-x-[24.97px] gap-x-[16.97px]">
+        <div className="flex flex-row overflow-x-scroll lg:gap-x-8 md:gap-x-6 gap-x-4">
           <ExploreCards
             title={t("footerCards.cardTitle")}
             desc={entries[0].title}

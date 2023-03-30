@@ -1,7 +1,9 @@
 import { HeroBanner, HeroBannerBg } from "@components/commons/HeroBanner";
 import { SSRConfig, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { Container } from "@components/commons/Container";
 import { DFIStatisticsDisplay } from "./_components/DFIStatisticsDisplay";
+import { ExploreCards, ExploreCardsImage } from "../_components/ExploreCards";
 
 export default function ExploreDFI() {
   const { t } = useTranslation("page-explore-dfi");
@@ -16,6 +18,22 @@ export default function ExploreDFI() {
         startExploringJumpLink="#statistics_display_dfi"
       />
       <DFIStatisticsDisplay />
+      <Container className="lg:mb-8 md:mb-6 mb-4">
+        <div className="flex flex-row overflow-x-scroll lg:gap-x-8 md:gap-x-6 gap-x-4">
+          <ExploreCards
+            title={t("footerCards.wallet.title")}
+            desc={t("footerCards.wallet.subtitle")}
+            bgImage={ExploreCardsImage.PHONE}
+            href=""
+          />
+          <ExploreCards
+            title={t("footerCards.dapps.title")}
+            desc={t("footerCards.dapps.subtitle")}
+            bgImage={ExploreCardsImage.DAPPS}
+            href=""
+          />
+        </div>
+      </Container>
     </>
   );
 }

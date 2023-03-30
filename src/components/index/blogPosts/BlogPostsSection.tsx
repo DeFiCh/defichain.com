@@ -22,21 +22,21 @@ export function BlogPostsSection() {
     <div
       className={classNames(
         "relative z-0",
-        "lg:mt-[336px] md:mt-[131px] mt-[142px]",
+        "lg:mt-36 md:mt-[131px] mt-[142px]",
         "lg:mb-60 md:mb-[164px] mb-40"
       )}
     >
       <Container>
-        <div className="flex flex-col w-auto items-center text-center">
-          <div>
-            <div className="lg:mt-8 mt-5 lg:text-6xl md:text-base lg:tracking-normal tracking-[0.03em] text-dark-800 lg:leading-[72px]">
+        <div className="flex flex-col w-auto items-center lg:text-center">
+          <div className="w-full">
+            <div className="tracking-[-0.02em] text-dark-800 text-[40px] leading-[44px] lg:tracking-normal lg:text-6xl lg:leading-[72px]">
               {t("BlogPostsSection.title")}
             </div>
-            <div className="lg:max-w-[623px] lg:mt-5 mt-5 lg:text-xl md:text-base lg:tracking-normal tracking-[0.03em] text-dark-700 font-desc">
+            <div className="mt-5 mx-0 tracking-[0.03em] text-dark-700 font-desc text-base md:max-w-[516px] lg:max-w-[623px] lg:text-xl lg:tracking-normal lg:mx-auto">
               {t("BlogPostsSection.desc")}
             </div>
           </div>
-          <div className="flex">
+          <div className="flex mt-12 flex-wrap justify-between lg:space-x-6">
             <ProjectCard />
             <ProjectCard />
             <ProjectCard />

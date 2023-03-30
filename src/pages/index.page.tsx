@@ -21,10 +21,10 @@ export default function HomePage(): JSX.Element {
         <StartExploringButton startExploringJumpLink="#statistics_display" />
       </Container>
       <StatsDisplay />
-      <BlogPostsSection />
       <BlockchainFeaturesSection />
       <DeFiChainEcoSystemSection />
       <ReadyForFlexibility />
+      <BlogPostsSection />
     </>
   );
 }

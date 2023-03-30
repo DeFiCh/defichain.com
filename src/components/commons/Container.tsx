@@ -9,11 +9,14 @@ export function Container(
 ): JSX.Element {
   return (
     <div
-      className={classNames("xl:mx-auto xl:container flex", props.bgClassName)}
+      className={classNames(
+        "w-full lg:container lg:mx-auto",
+        props.bgClassName
+      )}
     >
       <div
         className={classNames(
-          "mx-6 md:mx-12 xl:mx-[120px] 2xl:mx-[300px] w-full",
+          "mx-6 md:mx-12 xl:mx-[120px] 2xl:mx-[300px]",
           props.className
         )}
       >

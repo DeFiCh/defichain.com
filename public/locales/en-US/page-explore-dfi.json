@@ -14,7 +14,6 @@
       "desc": "out of {{value}}{{suffix}} fixed supply"
     }
   },
-
   "harnessDFISection" : {
     "title": "BUILDING A BETTER TOMORROW WITH DFI",
     "subtitle": "Harness the power of DFI",
@@ -48,8 +47,16 @@
         "desc": "Earn rewards by providing liquidity on DEX"
       }
     ]
+  },
+  "footerCards": {
+    "wallet" : {
+      "title": "EXPLORE DEFICHAIN",
+      "subtitle": "Choose your wallet"
+    },
+    "dapps" : {
+      "title": "THE GROWING ECOSYSTEM",
+      "subtitle": "Explore dApps"
+    }
   }
-
-
 }
 

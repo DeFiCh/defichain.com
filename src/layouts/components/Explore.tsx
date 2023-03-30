@@ -22,7 +22,7 @@ export function Explore() {
         },
         {
           icon: "dex",
-          href: "",
+          href: "/explore/dex",
           title: entries[2].title,
           subtitle: entries[2].subtitle,
         },

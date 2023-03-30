@@ -14,28 +14,28 @@ export const MenuItems = [
     childLink: [
       {
         label: "$DFI",
-        pathname: "/dfi",
+        pathname: "/explore/dfi",
         testId: "DFI",
         altLabel: "dfi",
         isExternaLink: false,
       },
       {
         label: "Decentralized Exchange",
-        pathname: "/decentralizedExchange",
+        pathname: "/explore/dex",
         testId: "decentralizedExchange",
         altLabel: "decentralizedExchange",
         isExternaLink: false,
       },
       {
         label: "Wallets",
-        pathname: "/wallets",
+        pathname: "/explore/wallets",
         testId: "wallets",
         altLabel: "wallets",
         isExternaLink: false,
       },
       {
         label: "Masternodes",
-        pathname: "/masternodes",
+        pathname: "/exploreg/masternodes",
         testId: "masternodes",
         altLabel: "masternodes",
         isExternaLink: false,

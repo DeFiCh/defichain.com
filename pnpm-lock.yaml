@@ -5,6 +5,8 @@ specifiers:
   '@defichain/whale-api-client': ^3.29.1
   '@headlessui/react': ^1.7.13
   '@netlify/plugin-nextjs': ^4.31.0
+  '@prismicio/client': ^6.7.3
+  '@prismicio/react': ^2.5.2
   '@tailwindcss/typography': ^0.5.9
   '@testing-library/cypress': ^9.0.0
   '@types/lodash': ^4.14.191
@@ -38,6 +40,8 @@ specifiers:
 dependencies:
   '@defichain/whale-api-client': 3.30.0_defichain@3.30.0
   '@headlessui/react': 1.7.13_biqbaboplfbrettd7655fr4n2y
+  '@prismicio/client': 6.7.3
+  '@prismicio/react': 2.5.2_wrodp6pbc64pk2dl4m4urioxiu
   '@waveshq/standard-defichain-jellyfishsdk': 0.45.0_@types+tar-fs@2.0.1
   '@waveshq/standard-web': 0.45.0_kkrdj5zxwfugttiio4xepb7j2q
   bignumber.js: 9.1.1
@@ -2377,6 +2381,52 @@ packages:
     engines: {node: '>=16'}
     requiresBuild: true
     optional: true
+
+  /@prismicio/client/6.7.3:
+    resolution: {integrity: sha512-zQVZhuQDYIgdaY636u+QNk2tvvbtpkaKsEiLT0Ef51nFW/y5fqpOG5U0eU3cVsikZaYNlZ17x6O1wmvVCLdimQ==}
+    engines: {node: '>=12.13.0'}
+    dependencies:
+      '@prismicio/helpers': 2.3.9
+      '@prismicio/types': 0.2.7
+    dev: false
+
+  /@prismicio/helpers/2.3.9:
+    resolution: {integrity: sha512-p7Y1sG83A2YPZvptfAzuZA8xH1bdM2wGRjqSKW9Qa0rAnBq2OfVKRvwl9OMCZML4eLUMxSEUAEWRVSoKpQnJvA==}
+    engines: {node: '>=12.7.0'}
+    dependencies:
+      '@prismicio/richtext': 2.1.4
+      '@prismicio/types': 0.2.7
+      imgix-url-builder: 0.0.3
+    dev: false
+
+  /@prismicio/react/2.5.2_wrodp6pbc64pk2dl4m4urioxiu:
+    resolution: {integrity: sha512-X00mT3/mHDnnb9NKUeAZnBWDDngXhr84RVzh9+eSeZjJKIVYEHHgfZqex4R6LgjZzeueaGp0UCLhwrUeiRp5DA==}
+    engines: {node: '>=12.7.0'}
+    peerDependencies:
+      '@prismicio/client': ^6
+      react: ^16.8 || ^17 || ^18
+    peerDependenciesMeta:
+      '@prismicio/client':
+        optional: true
+    dependencies:
+      '@prismicio/client': 6.7.3
+      '@prismicio/helpers': 2.3.9
+      '@prismicio/richtext': 2.1.4
+      '@prismicio/types': 0.2.7
+      react: 18.2.0
+    dev: false
+
+  /@prismicio/richtext/2.1.4:
+    resolution: {integrity: sha512-hyC8XItj+2yMmLGNjg9xGA/lRMO5UgbPF132VFrpZHzHhtIKvHN3iYxCZxnrEoPaTcT6JjA8vWyYLjmmB49bvw==}
+    engines: {node: '>=12.7.0'}
+    dependencies:
+      '@prismicio/types': 0.2.7
+    dev: false
+
+  /@prismicio/types/0.2.7:
+    resolution: {integrity: sha512-xHPBWg+lPcl8U97VB/2oYK3MJlQoVPZq91hbeQO8WRyvq+zgpNST3xFOTk8SkQpgoH6wd50AxGZELvPrpojajQ==}
+    engines: {node: '>=12.7.0'}
+    dev: false
 
   /@reduxjs/toolkit/1.9.3_k4ae6lp43ej6mezo3ztvx6pykq:
     resolution: {integrity: sha512-GU2TNBQVofL09VGmuSioNPQIu6Ml0YLf4EJhgj0AvBadRlCGzUWet8372LjvO4fqKZF2vH1xU0htAa7BrK9pZg==}
@@ -5718,6 +5768,11 @@ packages:
   /image-meta/0.1.1:
     resolution: {integrity: sha512-+oXiHwOEPr1IE5zY0tcBLED/CYcre15J4nwL50x3o0jxWqEkyjrusiKP3YSU+tr9fvJp33ZcP5Gpj2295g3aEw==}
     engines: {node: '>=10.18.0'}
+
+  /imgix-url-builder/0.0.3:
+    resolution: {integrity: sha512-8Oc2Cn4+jF06sEfJcVPlWYfD2F6RjrwIMbk1xEzux8unoB5LsvFc/GL1BQ47HPaeE12ReX2nMUcjUslGYWLxHA==}
+    engines: {node: '>=12.7.0'}
+    dev: false
 
   /immer/9.0.19:
     resolution: {integrity: sha512-eY+Y0qcsB4TZKwgQzLaE/lqYMlKhv5J9dyd2RhhtGhNo2njPXDqU9XPfcNfa3MIDsdtZt5KlkIsirlo4dHsWdQ==}

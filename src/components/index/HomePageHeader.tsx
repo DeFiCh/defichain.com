@@ -49,6 +49,7 @@ export function HomePageHeader(): JSX.Element {
             src="/assets/svg/hero/dfi-coin-video.mp4"
             width={595}
             height={595}
+            loop
           />
         </div>
       </Container>

@@ -71,9 +71,9 @@ function HarnessDFIGridItem({ title, desc, icon, id }: HarnessDFIGridProps) {
     <div
       // onMouseEnter={() => setIsHovering(true)}
       // onMouseLeave={() => setIsHovering(false)}
-      className={classNames("flex flex-col md:w-[246px] w-full gap-y-4")}
+      className={classNames("flex flex-col md:w-[246px] w-full")}
     >
-      <div className="md:place-self-center">
+      <div className="md:place-self-center mb-5">
         {/* {isHovering && HoverIcon !== undefined ? ( */}
         {/*  <div className="transition-all duration-300 ease-in-out"> */}
         {/*    <HoverIcon /> */}
@@ -85,7 +85,7 @@ function HarnessDFIGridItem({ title, desc, icon, id }: HarnessDFIGridProps) {
         {/* )} */}
       </div>
 
-      <div className="md:place-self-center text-dark-1000 leading-5 font-bold">
+      <div className="md:place-self-center text-dark-1000 leading-5 font-bold mb-4">
         {title}
       </div>
       <div className="md:text-center font-desc text-dark-700">{desc}</div>

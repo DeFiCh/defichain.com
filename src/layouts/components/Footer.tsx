@@ -198,23 +198,23 @@ export default function Footer(): JSX.Element {
             <FooterColumn
               category={MenuItems[1].category}
               childLinks={MenuItems[1].childLink}
-              customStyle="sm:pt-[54px]"
+              customStyle="pt-[54px]"
             />
             {/* BUILD */}
             <FooterColumn
               category={MenuItems[2].category}
               childLinks={MenuItems[2].childLink}
-              customStyle="sm:pt-[54px]"
+              customStyle="pt-[54px]"
             />
             {/* COMMUNITY */}
             <div className="justify-between flex flex-col">
               <FooterColumn
                 category={MenuItems[3].category}
                 childLinks={MenuItems[3].childLink}
-                customStyle="sm:pt-[54px]"
+                customStyle="pt-[54px]"
               />
               <SocialsRow
-                customStyle="text-dark-500 flex flex-row gap-5 sm:pb-[54px] sm:pt-[38px] md:pb-0"
+                customStyle="text-dark-500 flex flex-row gap-5 pb-[54px] pt-[38px] md:pb-0"
                 language={language}
               />
             </div>

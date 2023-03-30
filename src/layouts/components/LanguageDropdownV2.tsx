@@ -9,10 +9,10 @@ export function LanguageDropdownV2(): JSX.Element {
   const router = useRouter();
   const languages = [
     { locale: "en-US", name: "English", display: "EN" },
-    { locale: "de", name: "Deutch", display: "Deutch" },
-    { locale: "fr", name: "Français", display: "Français" },
-    { locale: "zh-Hans", name: "简体中文", display: "简体中文" },
-    { locale: "zh-Hant", name: "繁體中文", display: "繁體中文" },
+    { locale: "de", name: "Deutch", display: "DE" },
+    // { locale: "fr", name: "Français", display: "Français" },
+    // { locale: "zh-Hans", name: "简体中文", display: "简体中文" },
+    // { locale: "zh-Hant", name: "繁體中文", display: "繁體中文" },
   ];
   const [selectedLanguage, setSelectedLanguage] = useState(
     languages.find((language) => language.locale === router.locale) ??

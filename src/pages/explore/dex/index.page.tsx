@@ -8,7 +8,7 @@ export default function ExploreWallets() {
     <HeroBanner
       title={t("heroBanner.title")}
       subtitle={t("heroBanner.subtitle")}
-      desc="Inside DeFiChain’s DEX, you are in full control. Trade, Arbitrage, and Earn from your dTokens."
+      desc={t("heroBanner.desc")}
       heroBg={HeroBannerBg.DIAMOND_COIN}
       hasStartExploringButton
       startExploringJumpLink=""

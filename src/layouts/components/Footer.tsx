@@ -20,13 +20,6 @@ export const MenuItems = [
         isExternaLink: false,
       },
       {
-        label: "Invest, Trade and Earn",
-        pathname: "/investtradeearn",
-        testId: "investTradeNEarn",
-        altLabel: "investTradeNEarn",
-        isExternaLink: false,
-      },
-      {
         label: "Decentralized Exchange",
         pathname: "/decentralizedExchange",
         testId: "decentralizedExchange",

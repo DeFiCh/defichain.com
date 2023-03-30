@@ -21,12 +21,6 @@ export function Explore() {
           subtitle: entries[0].subtitle,
         },
         {
-          icon: "invest",
-          href: "",
-          title: entries[1].title,
-          subtitle: entries[1].subtitle,
-        },
-        {
           icon: "dex",
           href: "",
           title: entries[2].title,
@@ -58,7 +52,7 @@ export function Explore() {
 
   return (
     <div className="flex flex-col">
-      <div className="text-dark-500 font-bold leading-5 mb-10 md:block hidden">
+      <div className="text-dark-500 font-bold leading-5 lg:mb-6 mb-10 md:block hidden">
         {MenuItems.dropDownItems.label}
       </div>
       <div
@@ -69,8 +63,8 @@ export function Explore() {
       >
         <div
           className={classNames(
-            "grid md:grid-rows-[minmax(50px,_0.8fr)_minmax(50px,_1fr)_50px] lg:grid-cols-[364px_minmax(364px,_1fr)_1px] md:grid-cols-2 grid-rows-5",
-            "gap-x-10 grid-flow-col gap-y-8"
+            "grid md:grid-rows-2 lg:grid-cols-[364px_minmax(364px,_1fr)_1px] md:grid-cols-2 grid-rows-4",
+            "gap-x-10 grid-flow-col lg:gap-y-0 gap-y-8"
           )}
         >
           {MenuItems.dropDownItems.items.map((item, key) => (

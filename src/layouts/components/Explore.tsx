@@ -43,7 +43,7 @@ export function Explore() {
     image: {
       title: t("header.explore.image.title"),
       subtitle: t("header.explore.image.subtitle"),
-      href: "",
+      href: "/explore/dfi",
     },
   };
 

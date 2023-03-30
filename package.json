@@ -45,7 +45,7 @@
     "babel-plugin-jsx-remove-data-test-id": "^3.0.0",
     "cypress": "^12.7.0",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.7"
+    "tailwindcss": "^3.3.1"
   },
   "engines": {
     "node": "^18.0.0 || ^16.16.0",

@@ -23,10 +23,6 @@
           "subtitle": "Learn about the token"
         },
         {
-          "title": "Invest, Trade and Earn",
-          "subtitle": "Explore use cases of DeFiChain"
-        },
-        {
           "title": "Decentralized Exchange",
           "subtitle": "Maximize your assets"
         },
@@ -186,7 +182,6 @@
       "EXPLORE": {
         "category": "EXPLORE",
         "dfi": "$DFI",
-        "investTradeNEarn": "Invest, Trade and Earn",
         "decentralizedExchange": "Decentralized Exchange",
         "wallets": "Wallets",
         "masternodes": "Masternodes"

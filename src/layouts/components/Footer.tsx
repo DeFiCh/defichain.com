@@ -35,7 +35,7 @@ export const MenuItems = [
       },
       {
         label: "Masternodes",
-        pathname: "/exploreg/masternodes",
+        pathname: "/explore/masternodes",
         testId: "masternodes",
         altLabel: "masternodes",
         isExternaLink: false,

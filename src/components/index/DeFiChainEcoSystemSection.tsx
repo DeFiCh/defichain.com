@@ -88,11 +88,11 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
       </Container>
       <div
         className={classNames(
-          "absolute bg-contain bg-no-repeat bg-center bg-[url('/assets/img/ecosystem/dfi-logo-vector.png')] w-full h-[250px] top-[400px] left-[-100px]",
-          "md:top-[230px] md:left-[-100px] md:bg-left md:h-[300px] lg:right-[100px] lg:w-1/3 lg:bg-right"
+          "absolute bg-contain bg-no-repeat bg-center bg-[url('/assets/img/ecosystem/dfi-logo-vector.png')] w-full h-[300px] top-[400px] left-[-100px]",
+          "md:top-[230px] md:left-[-100px] md:bg-left md:h-[250px] lg:right-[100px] lg:w-1/3 lg:bg-right"
         )}
       />
-      <div className="absolute z-10 bottom-6 md:bottom-[-190px] hidden lg:block right-0 bg-contain bg-no-repeat bg-bottom md:bg-right h-[80%] w-full bg-[url('/assets/img/footer/arrow_1.png')]" />
+      <div className="absolute z-10 bottom-6 md:bottom-[-190px] hidden lg:block right-0 bg-contain bg-no-repeat bg-bottom md:bg-right md:h-[70%] lg:h-[80%] w-full bg-[url('/assets/img/footer/arrow_1.png')]" />
     </div>
   );
 }

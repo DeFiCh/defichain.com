@@ -8,6 +8,7 @@ import { StatsDisplay } from "@components/index/StatisticsDisplay";
 import { ReadyForFlexibility } from "@components/index/ReadyForFlexibility";
 import { Container } from "@components/commons/Container";
 import { StartExploringButton } from "@components/commons/StartExploringButton";
+import { BlogPostsSection } from "@components/index/blogPosts/BlogPostsSection";
 
 export default function HomePage(): JSX.Element {
   const { t } = useTranslation(["page-index"]);
@@ -20,6 +21,7 @@ export default function HomePage(): JSX.Element {
         <StartExploringButton startExploringJumpLink="#statistics_display" />
       </Container>
       <StatsDisplay />
+      <BlogPostsSection />
       <BlockchainFeaturesSection />
       <DeFiChainEcoSystemSection />
       <ReadyForFlexibility />

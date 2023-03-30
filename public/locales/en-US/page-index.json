@@ -759,5 +759,9 @@
       "title": "VARIETY",
       "desc": "Wide range of crypto-economic financial operations."
     }
+  },
+  "BlogPostsSection": {
+    "title": "What's happening",
+    "desc": "Stay informed about the latest happenings in the ecosystem by getting the latest scoop through DeFiChain’s blog"
   }
 }

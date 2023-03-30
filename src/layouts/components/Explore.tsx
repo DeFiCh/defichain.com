@@ -64,7 +64,8 @@ export function Explore() {
         <div
           className={classNames(
             "grid md:grid-rows-2 lg:grid-cols-[364px_minmax(364px,_1fr)_1px] md:grid-cols-2 grid-rows-4",
-            "gap-x-10 grid-flow-col lg:gap-y-0 gap-y-8"
+            "gap-x-10 grid-flow-col",
+            dimension.width < 1280 ? "gap-y-8" : "gap-y-0"
           )}
         >
           {MenuItems.dropDownItems.items.map((item, key) => (

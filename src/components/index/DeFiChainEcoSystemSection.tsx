@@ -21,7 +21,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
     >
       <Container
         className={classNames(
-          "relative no-scrollbar z-10 justify-between",
+          "relative no-scrollbar z-20 justify-between",
           { "flexbox-wrapper": dimensions.width >= 1033 } // only apply styling when in large screen
         )}
       >

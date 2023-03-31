@@ -101,9 +101,9 @@ export default function GetDFISectionExchanges() {
       <ExchangeGrid items={exchanges} />
 
       <div className="mt-14">
-        <span className="font-desc text-dark-700 mb-4">
+        <div className="font-desc text-dark-700 mb-4">
           {t("getDfiSection.staking.title")}
-        </span>
+        </div>
         <ExchangeGrid items={staking} />
       </div>
     </div>

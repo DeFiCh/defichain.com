@@ -15,7 +15,8 @@ export function Build() {
       items: [
         {
           icon: "jellyfish",
-          href: "",
+          href: "https://jellyfishsdk.com/",
+          target: "_blank",
           title: entries[0].title,
           subtitle: entries[0].subtitle,
         },

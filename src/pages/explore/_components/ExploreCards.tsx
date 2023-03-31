@@ -46,6 +46,12 @@ export function ExploreCards({
       "url(/assets/img/explore/cube.png)",
       mobileView ? "bg-[right_10%_top_-2em]" : "bg-right-bottom",
     ],
+    dapps: [
+      "url(/assets/img/explore/dapps.png)",
+      mobileView
+        ? "bg-[right_-3em_bottom_3em]"
+        : "bg-[right_-.2em_bottom_-0.2em]",
+    ],
   };
 
   return (
@@ -108,4 +114,5 @@ export enum ExploreCardsImage {
   PHONE = "phone",
   CUBE = "cube",
   ARROW = "arrow",
+  DAPPS = "dapps",
 }

@@ -22,10 +22,6 @@
           "subtitle": "了解代幣（Token）"
         },
         {
-          "title": "投資、交易和賺取",
-          "subtitle": "探索 DeFiChain 的實例"
-        },
-        {
           "title": "去中心化交易所",
           "subtitle": "最大化你的資產"
         },
@@ -185,7 +181,6 @@
       "EXPLORE": {
         "category": "探索",
         "$DFI": "$DFI",
-        "investTradeNEarn": "投資、交易和賺取",
         "decentralizedExchange": "去中心化交易所",
         "wallets": "錢包",
         "masternodes": "主節點"

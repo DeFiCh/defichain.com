@@ -22,10 +22,6 @@
           "subtitle": "En savoir plus sur le token"
         },
         {
-          "title": "Investir, négocier et gagner",
-          "subtitle": "Explorer les cas d'utilisation de DeFiChain"
-        },
-        {
           "title": "Échange décentralisé",
           "subtitle": "Maximisez vos actifs"
         },
@@ -185,7 +181,6 @@
       "EXPLORE": {
         "category": "EXPLORER",
         "$DFI": "$DFI",
-        "investTradeNEarn": "Investir, négocier et gagner",
         "decentralizedExchange": "Échange décentralisé",
         "wallets": "Portefeuilles",
         "masternodes": "Masternodes"

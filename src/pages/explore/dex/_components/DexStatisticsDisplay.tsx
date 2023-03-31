@@ -4,6 +4,7 @@ import { PoolPairData } from "@defichain/whale-api-client/dist/api/poolpairs";
 import { Container } from "@components/commons/Container";
 import { StatisticPanel } from "@components/commons/StatisticPanel";
 import { TokenData } from "@defichain/whale-api-client/dist/api/tokens";
+import { WhaleApiClient } from "@defichain/whale-api-client";
 import { useWhaleApiClient } from "../../../../layouts/context/WhaleContext";
 
 export function DexStatisticsDisplay() {
@@ -17,29 +18,14 @@ export function DexStatisticsDisplay() {
       setStats(statsItem);
     });
 
-    const poolpairs: PoolPairData[] = [];
-    api.poolpairs.list(200).then((result) => {
-      poolpairs.push(...result);
-      if (result.hasNext) {
-        api.poolpairs
-          .list(200, result.nextToken)
-          .then((resultNext) => poolpairs.push(...resultNext));
-      }
-      setTotal24h(poolpairs.reduce((a, b) => a + (b.volume?.h24 ?? 0), 0));
+    getTotal24Vol(api).then((res) => {
+      setTotal24h(res);
     });
 
-    let tokens: TokenData[] = [];
-    api.tokens.list(200).then((tokenList) => {
-      tokens.push(...tokenList);
-      if (tokenList.hasNext) {
-        api.tokens.list(200, tokenList.nextToken).then((tokenListNext) => {
-          tokens.push(...tokenListNext);
-        });
-        tokens = tokens.filter((token) => token.isLPS || token.isDAT);
-        setNumTokens(tokens.length);
-      }
+    getTotalTokens(api).then((result) => {
+      setNumTokens(result);
     });
-  }, [api.stats, api.tokens]);
+  }, [api, api.poolpairs, api.stats, api.tokens]);
 
   const statsItems = [
     {
@@ -70,4 +56,40 @@ export function DexStatisticsDisplay() {
       />
     </Container>
   );
+}
+
+async function getTotal24Vol(api: WhaleApiClient) {
+  const allPoolpairs: PoolPairData[] = [];
+  let hasNext = false;
+  let next;
+
+  do {
+    // eslint-disable-next-line no-await-in-loop
+    const poolpairs = await api.poolpairs.list(200, next);
+    allPoolpairs.push(...poolpairs);
+    hasNext = poolpairs.hasNext;
+    next = poolpairs.nextToken;
+  } while (hasNext);
+
+  return allPoolpairs.reduce((a, b) => a + (b.volume?.h24 ?? 0), 0);
+}
+
+async function getTotalTokens(api: WhaleApiClient) {
+  const allTokens: TokenData[] = [];
+  let hasNext = false;
+  let next;
+
+  do {
+    // eslint-disable-next-line no-await-in-loop
+    const tokens = await api.tokens.list(200, next);
+    allTokens.push(...tokens);
+    hasNext = tokens.hasNext;
+    next = tokens.nextToken;
+  } while (hasNext);
+
+  const allDatNLpsTokens = allTokens.filter(
+    (token) => token.isLPS || token.isDAT
+  );
+
+  return allDatNLpsTokens.length;
 }

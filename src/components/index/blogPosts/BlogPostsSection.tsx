@@ -30,7 +30,7 @@ export function BlogPostsSection({ blogPosts }) {
               text={t("BlogPostsSection.label")}
               customStyle="lg:w-fit md:w-[409px] w-[272px]"
             />
-            <div className="mt-5 md:text-[32px] md:leading-9 lg:text-[52px] lg:leading-none">
+            <div className="mt-5 text-[32px] leading-9 lg:text-[52px] lg:leading-none">
               {separatedTitle.map((word, index) =>
                 index === 1 ? (
                   <span key={`${word}`}>
@@ -50,11 +50,11 @@ export function BlogPostsSection({ blogPosts }) {
             </div>
             <Button
               text={t("BlogPostsSection.button")}
-              className="text-sm mt-9 py-4 w-[232px] lg:text-base lg:mt-12"
+              className="text-sm mt-9 py-4 w-[272px] lg:w-[232px] lg:text-base lg:mt-12"
               href="https://blog.defichain.com/"
             />
           </div>
-          <div className="flex flex-wrap gap-x-6 gap-y-12 md:mt-12 lg:mt-0 lg:w-[660px]">
+          <div className="flex flex-wrap gap-x-6 gap-y-6 md:gap-y-12 mt-12 lg:mt-0 lg:w-[660px]">
             {/* <ProjectCard />
             <ProjectCard />
             <ProjectCard /> */}
@@ -69,6 +69,7 @@ export function BlogPostsSection({ blogPosts }) {
           </div>
         </div>
       </Container>
+      <div className="hidden absolute h-[567.69px] w-[768.77px] right-[-380.71px] md:block md:top-0 lg:bottom-0 bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/blogPosts/blogPostsBg.png')]" />
     </div>
   ) : (
     <div />

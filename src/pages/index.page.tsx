@@ -9,8 +9,9 @@ import { ReadyForFlexibility } from "@components/index/ReadyForFlexibility";
 import { Container } from "@components/commons/Container";
 import { StartExploringButton } from "@components/commons/StartExploringButton";
 import { BlogPostsSection } from "@components/index/blogPosts/BlogPostsSection";
+import * as prismic from "@prismicio/client";
 
-export default function HomePage(): JSX.Element {
+export default function HomePage({ blogPosts }): JSX.Element {
   const { t } = useTranslation(["page-index"]);
 
   return (
@@ -24,14 +25,19 @@ export default function HomePage(): JSX.Element {
       <BlockchainFeaturesSection />
       <DeFiChainEcoSystemSection />
       <ReadyForFlexibility />
-      <BlogPostsSection />
+      <BlogPostsSection blogPosts={blogPosts} />
     </>
   );
+}
+async function getPostsFromPrismic(): Promise<any> {
+  const endpoint = prismic.createClient("defichain");
+  return endpoint.getByType("news");
 }
 
 export async function getStaticProps({
   locale,
 }): Promise<{ props: SSRConfig }> {
+  const blogPosts = await getPostsFromPrismic();
   return {
     props: {
       ...(await serverSideTranslations(locale, [
@@ -39,6 +45,9 @@ export async function getStaticProps({
         "layout",
         "page-index",
       ])),
+      blogPosts: blogPosts.results.map((r) => ({
+        ...r.data,
+      })),
     },
   };
 }

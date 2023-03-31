@@ -761,7 +761,9 @@
     }
   },
   "BlogPostsSection": {
-    "title": "What's happening",
-    "desc": "Stay informed about the latest happenings in the ecosystem by getting the latest scoop through DeFiChain’s blog"
+    "title": "Stay updated with DeFiChain",
+    "desc": "Stay up-to-date with the latest blogposts on the developments in the DeFiChain ecosystem.",
+    "label": "THE LATEST NEWS",
+    "button": "View all articles"
   }
 }

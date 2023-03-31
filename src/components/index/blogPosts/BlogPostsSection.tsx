@@ -1,7 +1,8 @@
-import * as prismic from "@prismicio/client";
 import classNames from "classnames";
 import { Container } from "@components/commons/Container";
 import { useTranslation } from "next-i18next";
+import { SectionTitle } from "@components/commons/SectionTitle";
+import { Button } from "@components/commons/Buttons";
 import ProjectCard from "./PostCard";
 
 export interface Posts {
@@ -16,27 +17,45 @@ export interface Posts {
   // };
 }
 
-export function BlogPostsSection() {
+export function BlogPostsSection({ blogPosts }) {
   const { t } = useTranslation("page-index");
+  const separatedTitle = t("BlogPostsSection.title").split(" ");
+  console.log(blogPosts);
   return (
-    <div
-      className={classNames(
-        "relative z-0",
-        "lg:mt-36 md:mt-[131px] mt-[142px]",
-        "lg:mb-60 md:mb-[164px] mb-40"
-      )}
-    >
+    <div className={classNames("relative z-0", "my-6", "py-20")}>
       <Container>
-        <div className="flex flex-col w-auto items-center lg:text-center">
-          <div className="w-full">
-            <div className="tracking-[-0.02em] text-dark-800 text-[40px] leading-[44px] lg:tracking-normal lg:text-6xl lg:leading-[72px]">
-              {t("BlogPostsSection.title")}
+        <div className="flex w-auto justify-between">
+          <div className="max-w-[468px]">
+            <SectionTitle
+              text={t("BlogPostsSection.label")}
+              customStyle="lg:w-fit md:w-[409px] w-[272px]"
+            />
+            <div className="mt-5 text-[52px] leading-none">
+              {separatedTitle.map((word, index) =>
+                index === 1 ? (
+                  <span key={`${word}`}>
+                    <span
+                      className="text-electric"
+                      key={`${word}`}
+                    >{`${word} `}</span>
+                    <br />
+                  </span>
+                ) : (
+                  <span key={`${word}`}>{`${word} `}</span>
+                )
+              )}
             </div>
-            <div className="mt-5 mx-0 tracking-[0.03em] text-dark-700 font-desc text-base md:max-w-[516px] lg:max-w-[623px] lg:text-xl lg:tracking-normal lg:mx-auto">
+            <div className="mt-5 tracking-[0.03em] text-dark-700 font-desc md:text-base lg:text-xl lg:tracking-normal">
               {t("BlogPostsSection.desc")}
             </div>
+            <Button
+              text={t("BlogPostsSection.button")}
+              className="text-sm mt-8 py-4 w-[232px] lg:text-base lg:mt-12"
+            />
           </div>
-          <div className="flex mt-12 flex-wrap justify-between lg:space-x-6">
+
+          <div className="flex flex-wrap gap-x-6 gap-y-12 lg:w-[660px]">
+            <ProjectCard />
             <ProjectCard />
             <ProjectCard />
             <ProjectCard />
@@ -45,20 +64,4 @@ export function BlogPostsSection() {
       </Container>
     </div>
   );
-}
-
-async function getPostsFromPrismic(): Promise<any> {
-  const endpoint = prismic.createClient("defichain.com");
-  return endpoint.getByType("project");
-}
-
-export async function getStaticProps() {
-  const blogPosts = await getPostsFromPrismic();
-  return {
-    props: {
-      blogPosts: blogPosts.results.map((r) => ({
-        ...r.data,
-      })),
-    },
-  };
 }

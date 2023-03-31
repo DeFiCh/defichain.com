@@ -9,7 +9,6 @@ import ProjectCard from "./PostCard";
 export function BlogPostsSection({ blogPosts }: { blogPosts: Posts[] }) {
   const { t } = useTranslation("page-index");
   const separatedTitle = t("BlogPostsSection.title").split(" ");
-  console.log(blogPosts);
   return blogPosts?.length > 0 ? (
     <div className={classNames("relative z-0", "my-6", "py-20")}>
       <Container>
@@ -44,11 +43,9 @@ export function BlogPostsSection({ blogPosts }: { blogPosts: Posts[] }) {
             />
           </div>
           <div className="flex flex-wrap gap-x-6 gap-y-6 md:gap-y-12 mt-12 lg:mt-0 lg:w-[660px]">
-            {/* <ProjectCard />
-            <ProjectCard />
-            <ProjectCard /> */}
             {blogPosts.slice(-4).map((p, i) => (
               <>
+                {/* added 3 more ProjectCard for testing purposes as endpoint only returns one record now */}
                 <ProjectCard post={p} isLatest={i === 0} />
                 <ProjectCard post={p} isLatest={i !== 0} />
                 <ProjectCard post={p} isLatest={i !== 0} />

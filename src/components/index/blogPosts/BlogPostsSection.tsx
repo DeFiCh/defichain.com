@@ -3,21 +3,10 @@ import { Container } from "@components/commons/Container";
 import { useTranslation } from "next-i18next";
 import { SectionTitle } from "@components/commons/SectionTitle";
 import { Button } from "@components/commons/Buttons";
+import { Posts } from "@components/commons/prismicTypes";
 import ProjectCard from "./PostCard";
 
-export interface Posts {
-  // description: ProjectTitle[];
-  // title: ProjectTitle[];
-  // sort: number;
-  // featuredimage: {
-  //   url: string;
-  // };
-  // github?: {
-  //   url: string;
-  // };
-}
-
-export function BlogPostsSection({ blogPosts }) {
+export function BlogPostsSection({ blogPosts }: { blogPosts: Posts[] }) {
   const { t } = useTranslation("page-index");
   const separatedTitle = t("BlogPostsSection.title").split(" ");
   console.log(blogPosts);

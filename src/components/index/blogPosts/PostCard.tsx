@@ -1,13 +1,20 @@
 import Image from "next/image";
+import { Posts } from "@components/commons/prismicTypes";
 import testBg from "./test-post.png";
 
-export default function ProjectCard({ post, isLatest }) {
+export default function ProjectCard({
+  post,
+  isLatest,
+}: {
+  post: Posts;
+  isLatest: boolean;
+}) {
   return (
     <section
       className="w-full max-w-[318px] flex flex-col"
       data-testid={`card_container_${post.title[0]?.text}`}
     >
-      <a href={post.url.url} target="_blank" rel="noreferrer">
+      <a href={post.url?.url} target="_blank" rel="noreferrer">
         <section
           className="w-full min-h-[180px] bg-light-50 bg-cover bg-center flex flex-col justify-end"
           data-testid={`card_title_${post.title[0]?.text}`}

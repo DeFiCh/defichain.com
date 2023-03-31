@@ -1,11 +1,14 @@
-export interface Project {
-  description: ProjectTitle[];
-  title: ProjectTitle[];
-  sort: number;
-  featuredimage: {
+interface PostTitle {
+  text: string;
+}
+
+export interface Posts {
+  title: PostTitle[];
+  // featuredimage: {
+  //   url: string;
+  // };
+  url?: {
     url: string;
   };
-  github?: {
-    url: string;
-  };
+  date: string;
 }

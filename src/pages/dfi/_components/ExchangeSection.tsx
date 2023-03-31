@@ -22,6 +22,7 @@ import BitmartLogo from "../../../../public/assets/svg/exchanges/logo-bitmart.sv
 import GateioLogo from "../../../../public/assets/svg/exchanges/logo-gateio.svg";
 import LOCKLogo from "../../../../public/assets/svg/exchanges/logo-lock.svg";
 
+// TODO: Remove this V1 file and all svg assets
 export function ExchangeSection(): JSX.Element {
   const { t } = useTranslation(["page-dfi"]);
 

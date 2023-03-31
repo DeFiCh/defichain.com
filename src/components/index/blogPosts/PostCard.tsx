@@ -27,7 +27,7 @@ export default function ProjectCard({
             )}
 
             <Image src={testBg} alt="Blog post image" />
-            <div className="text-dark-1000 font-semibold px-3 mt-4 lg:text-lg lg:leading-6 lg:mt-6">
+            <div className="text-dark-1000 font-semibold px-3 mt-4 max-w-[294px] line-clamp-2 h-12 lg:text-lg lg:leading-6 lg:mt-6">
               {post.title[0]?.text}
             </div>
           </section>

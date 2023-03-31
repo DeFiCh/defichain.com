@@ -18,6 +18,7 @@
     "@headlessui/react": "^1.7.13",
     "@prismicio/client": "^6.7.3",
     "@prismicio/react": "^2.5.2",
+    "@tailwindcss/line-clamp": "^0.4.4",
     "@waveshq/standard-defichain-jellyfishsdk": "^0.45.0",
     "@waveshq/standard-web": "^0.45.0",
     "bignumber.js": "^9.1.0",

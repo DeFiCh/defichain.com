@@ -43,23 +43,8 @@ export const MenuItems = [
     ],
   },
   {
-    category: "ECOSYSTEM",
+    category: "RESOURCES",
     childLink: [
-      {
-        label: "DeFiChain Apps",
-        pathname: "/defichainapps",
-        testId: "defichainapps",
-        altLabel: "defichainapps",
-        isExternaLink: false,
-      },
-      {
-        label: "DeFi Meta Chain",
-        pathname: "/defimetachain",
-        testId: "defimetachain",
-        altLabel: "defimetachain",
-        isExternaLink: true,
-        url: "https://meta.defichain.com/",
-      },
       {
         label: "DeFiScan",
         pathname: "/defiscan",
@@ -69,79 +54,114 @@ export const MenuItems = [
         url: "https://defiscan.live/",
       },
       {
-        label: "Governance",
-        pathname: "/governance",
-        testId: "governance",
-        altLabel: "governance",
-        isExternaLink: true,
-        url: "https://defiscan.live/governance",
-      },
-      {
-        label: "Bug Bounty",
-        pathname: "/bugbounty",
-        testId: "bugbounty",
-        altLabel: "bugbounty",
-        isExternaLink: false,
-      },
-      {
-        label: "$100M Accelerator Program",
-        pathname: "/100macceleratorprogram",
-        testId: "100macceleratorprogram",
-        altLabel: "100macceleratorprogram",
-        isExternaLink: false,
-      },
-    ],
-  },
-  {
-    category: "BUILD",
-    childLink: [
-      {
-        label: "Jellyfish SDK",
-        pathname: "/jellyfishsdk",
-        testId: "jellyfishsdk",
-        altLabel: "jellyfishsdk",
-        isExternaLink: true,
-        url: "https://jellyfishsdk.com/",
-      },
-      {
-        label: "DeFiChain White Paper",
+        label: "White paper",
         pathname: "/defichainwhitepaper",
         testId: "defichainwhitepaper",
         altLabel: "defichainwhitepaper",
         isExternaLink: false,
       },
-      {
-        label: "GitHub",
-        pathname: "/github",
-        testId: "github",
-        altLabel: "github",
-        isExternaLink: true,
-        url: "https://github.com/DeFiCh/ain",
-        hasUpArrowIcon: true,
-      },
-      {
-        label: "Developer Resource",
-        pathname: "/developerResource",
-        testId: "developerResource",
-        altLabel: "developerResource",
-        isExternaLink: false,
-      },
-      {
-        label: "Media Assets",
-        pathname: "/mediaAssets",
-        testId: "mediaAssets",
-        altLabel: "mediaAssets",
-        isExternaLink: false,
-      },
-      {
-        label: "Security",
-        pathname: "/security",
-        testId: "security",
-        altLabel: "security",
-        isExternaLink: false,
-      },
     ],
   },
+  // {
+  //   category: "ECOSYSTEM",
+  //   childLink: [
+  //     {
+  //       label: "DeFiChain Apps",
+  //       pathname: "/defichainapps",
+  //       testId: "defichainapps",
+  //       altLabel: "defichainapps",
+  //       isExternaLink: false,
+  //     },
+  //     {
+  //       label: "DeFi Meta Chain",
+  //       pathname: "/defimetachain",
+  //       testId: "defimetachain",
+  //       altLabel: "defimetachain",
+  //       isExternaLink: true,
+  //       url: "https://meta.defichain.com/",
+  //     },
+  //     {
+  //       label: "DeFiScan",
+  //       pathname: "/defiscan",
+  //       testId: "defiscan",
+  //       altLabel: "defiscan",
+  //       isExternaLink: true,
+  //       url: "https://defiscan.live/",
+  //     },
+  //     {
+  //       label: "Governance",
+  //       pathname: "/governance",
+  //       testId: "governance",
+  //       altLabel: "governance",
+  //       isExternaLink: true,
+  //       url: "https://defiscan.live/governance",
+  //     },
+  //     {
+  //       label: "Bug Bounty",
+  //       pathname: "/bugbounty",
+  //       testId: "bugbounty",
+  //       altLabel: "bugbounty",
+  //       isExternaLink: false,
+  //     },
+  //     {
+  //       label: "$100M Accelerator Program",
+  //       pathname: "/100macceleratorprogram",
+  //       testId: "100macceleratorprogram",
+  //       altLabel: "100macceleratorprogram",
+  //       isExternaLink: false,
+  //     },
+  //   ],
+  // },
+  // {
+  //   category: "BUILD",
+  //   childLink: [
+  //     {
+  //       label: "Jellyfish SDK",
+  //       pathname: "/jellyfishsdk",
+  //       testId: "jellyfishsdk",
+  //       altLabel: "jellyfishsdk",
+  //       isExternaLink: true,
+  //       url: "https://jellyfishsdk.com/",
+  //     },
+  //     {
+  //       label: "DeFiChain White Paper",
+  //       pathname: "/defichainwhitepaper",
+  //       testId: "defichainwhitepaper",
+  //       altLabel: "defichainwhitepaper",
+  //       isExternaLink: false,
+  //     },
+  //     {
+  //       label: "GitHub",
+  //       pathname: "/github",
+  //       testId: "github",
+  //       altLabel: "github",
+  //       isExternaLink: true,
+  //       url: "https://github.com/DeFiCh/ain",
+  //       hasUpArrowIcon: true,
+  //     },
+  //     {
+  //       label: "Developer Resource",
+  //       pathname: "/developerResource",
+  //       testId: "developerResource",
+  //       altLabel: "developerResource",
+  //       isExternaLink: false,
+  //     },
+  //     {
+  //       label: "Media Assets",
+  //       pathname: "/mediaAssets",
+  //       testId: "mediaAssets",
+  //       altLabel: "mediaAssets",
+  //       isExternaLink: false,
+  //     },
+  //     {
+  //       label: "Security",
+  //       pathname: "/security",
+  //       testId: "security",
+  //       altLabel: "security",
+  //       isExternaLink: false,
+  //     },
+  //   ],
+  // },
   {
     category: "COMMUNITY",
     childLink: [
@@ -194,22 +214,28 @@ export default function Footer(): JSX.Element {
               customStyle="pt-0"
             />
             {/* ECOSYSTEM */}
+            {/* <FooterColumn
+              category={MenuItems[1].category}
+              childLinks={MenuItems[1].childLink}
+              customStyle="sm:pt-[54px]"
+            /> */}
+            {/* BUILD */}
+            {/* <FooterColumn
+              category={MenuItems[2].category}
+              childLinks={MenuItems[2].childLink}
+              customStyle="sm:pt-[54px]"
+            /> */}
+            {/* RESOURCES */}
             <FooterColumn
               category={MenuItems[1].category}
               childLinks={MenuItems[1].childLink}
               customStyle="sm:pt-[54px]"
             />
-            {/* BUILD */}
-            <FooterColumn
-              category={MenuItems[2].category}
-              childLinks={MenuItems[2].childLink}
-              customStyle="sm:pt-[54px]"
-            />
             {/* COMMUNITY */}
             <div className="justify-between flex flex-col">
               <FooterColumn
-                category={MenuItems[3].category}
-                childLinks={MenuItems[3].childLink}
+                category={MenuItems[2].category}
+                childLinks={MenuItems[2].childLink}
                 customStyle="sm:pt-[54px]"
               />
               <SocialsRow
@@ -258,12 +284,12 @@ export default function Footer(): JSX.Element {
                     pathname="/privacy-policy"
                     testId="Footer.Web.Privacy"
                   />
-                  <span className="px-2 text-dark-500">•</span>
+                  {/* <span className="px-2 text-dark-500">•</span>
                   <FooterInternalBottomLink
                     text={t("footer.bottomlink.terms")}
                     pathname="/terms-of-use"
                     testId="Footer.Web.Terms"
-                  />
+                  /> */}
                 </div>
                 <div className="flex pl-[23px]">
                   <LanguageDropdownV2 />

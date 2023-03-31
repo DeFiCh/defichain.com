@@ -1,6 +1,8 @@
 import classNames from "classnames";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
+import { useState } from "react";
+import { RiArrowRightUpLine } from "react-icons/ri";
 import FooterExternalLink from "./FooterExternalLink";
 
 export default function FooterLink({
@@ -19,6 +21,7 @@ export default function FooterLink({
   hasUpArrowIcon?: boolean;
 }): JSX.Element {
   const { t } = useTranslation("layout");
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <div>
       {isExternaLink === true && url !== undefined ? (
@@ -35,9 +38,24 @@ export default function FooterLink({
           className={classNames(
             "text-dark-1000 font-semibold hover:accent-dfc-gradient-text cursor-pointer w-[133px] md:w-full"
           )}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
         >
-          <Link href={url} passHref data-testid={testId}>
+          <Link
+            href={url}
+            passHref
+            data-testid={testId}
+            className="flex flex-row items-center"
+          >
             {t(`footer.sitemap.${category}.${altLabel}`)}
+            {hasUpArrowIcon ? (
+              <RiArrowRightUpLine
+                className="pl-0.5"
+                // uses the gradient color defined with the same svg id
+                style={{ fill: isHovered ? "url(#accent-gradient)" : "" }}
+                size={20}
+              />
+            ) : null}
           </Link>
         </div>
       )}

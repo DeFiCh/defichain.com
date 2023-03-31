@@ -5,6 +5,7 @@ import { Container } from "@components/commons/Container";
 import { StatisticPanel } from "@components/commons/StatisticPanel";
 import { TokenData } from "@defichain/whale-api-client/dist/api/tokens";
 import { WhaleApiClient } from "@defichain/whale-api-client";
+import { useTranslation } from "next-i18next";
 import { useWhaleApiClient } from "../../../../layouts/context/WhaleContext";
 
 export function DexStatisticsDisplay() {
@@ -12,6 +13,7 @@ export function DexStatisticsDisplay() {
   const [stats, setStats] = useState<StatsData>();
   const [total24h, setTotal24h] = useState<number | undefined>(undefined);
   const [numTokens, setNumTokens] = useState<number | undefined>(undefined);
+  const { t } = useTranslation("page-explore-dex");
 
   useEffect(() => {
     api.stats.get().then((statsItem) => {
@@ -29,21 +31,21 @@ export function DexStatisticsDisplay() {
 
   const statsItems = [
     {
-      title: "TOTAL VALUE LOCKED",
+      title: t("statisticsDisplay.totalValueLocked.title"),
       prefix: "$",
       stats: stats?.tvl.dex,
-      desc: "Data from DeFiScan",
+      desc: t("statisticsDisplay.totalValueLocked.desc"),
     },
     {
-      title: "TRADING VOLUME (24H)",
+      title: t("statisticsDisplay.tradingVolume.title"),
       prefix: "$",
       stats: total24h,
-      desc: "Data from DeFiScan",
+      desc: t("statisticsDisplay.tradingVolume.desc"),
     },
     {
-      title: "Tokens",
+      title: t("statisticsDisplay.tokens.title"),
       stats: numTokens,
-      desc: "Crypto • dStocks • ETFs ",
+      desc: t("statisticsDisplay.tokens.desc"),
     },
   ];
 

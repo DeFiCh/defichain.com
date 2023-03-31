@@ -48,8 +48,33 @@
       }
     ]
   },
+  "initialTokenDistributionSection": {
+    "title": "FAIR TOKEN DISTRIBUTIONS AND STAKING REWARDS",
+    "subtitle": "Initial Token Distribution",
+    "desc": "",
+    "button": "Read from Whitepaper",
+    "initialSupply": {
+      "title": "INITIAL SUPPLY",
+      "percentage": "49%",
+      "desc": "Of the 1.2 billion $DFI coins, 49% will be in the initial supply.  From the initial supply,",
+      "descAirDrop": "26% are airdropped",
+      "descBurn": "27% burned",
+      "descDestroy": "47% destroyed.",
+      "airDrop": "Airdropped",
+      "burn": "Burned",
+      "destroy": "Destroyed",
+      "airDropPercentage": "26%",
+      "burnPercentage": "27%",
+      "destroyPercentage": "47%"
+    },
+    "masternodes": {
+      "title": "TO MASTERNODES OVER TIME",
+      "percentage": "51%",
+      "desc": "The remaining supply is issued to masternode holders over time."
+    }
+  },
   "footerCards": {
-    "wallet" : {
+    "wallet": {
       "title": "EXPLORE DEFICHAIN",
       "subtitle": "Choose your wallet"
     },

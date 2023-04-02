@@ -1,6 +1,7 @@
 import { SVGProps } from "react";
 import Bittrex from "./Bittrex";
 import Bitrue from "./Bitrue";
+import Dfx from "./Dfx";
 import Kucoin from "./Kucoin";
 import Huobi from "./Huobi";
 import Gateio from "./Gateio";
@@ -12,12 +13,13 @@ import Latoken from "./Latoken";
 import Bitmart from "./Bitmart";
 import EasycryptoAu from "./EasycryptoAu";
 import EasycryptoNz from "./EasycryptoNz";
-import Dfx from "./Dfx";
 import Cakedefi from "./Cakedefi";
+import Lock from "./Lock";
 
 const mapping: Record<string, (props: SVGProps<SVGElement>) => JSX.Element> = {
   Bittrex,
   Bitrue,
+  Dfx,
   Kucoin,
   Huobi,
   Gateio,
@@ -29,8 +31,8 @@ const mapping: Record<string, (props: SVGProps<SVGElement>) => JSX.Element> = {
   Bitmart,
   EasycryptoAu,
   EasycryptoNz,
-  Dfx,
   Cakedefi,
+  Lock,
 };
 
 export function getExchangeLogo(

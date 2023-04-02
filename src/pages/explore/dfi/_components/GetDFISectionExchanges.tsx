@@ -22,6 +22,11 @@ export default function GetDFISectionExchanges() {
       url: "https://www.bitrue.com/trade/dfi_btc",
     },
     {
+      id: "GetDFISection.Exchange.Dfx",
+      name: "Dfx",
+      url: "https://dfx.swiss/en/",
+    },
+    {
       id: "GetDFISection.Exchange.Kucoin",
       name: "Kucoin",
       url: "https://trade.kucoin.com/DFI-BTC",
@@ -80,9 +85,9 @@ export default function GetDFISectionExchanges() {
 
   const staking: ExchangeItem[] = [
     {
-      id: "GetDFISection.Staking.Dfx",
-      name: "Dfx",
-      url: "https://dfx.swiss/en/",
+      id: "GetDFISection.Staking.Kucoin",
+      name: "Kucoin",
+      url: "https://www.kucoin.com/earn/finance/list",
     },
     {
       id: "GetDFISection.Staking.Cakedefi",
@@ -90,9 +95,9 @@ export default function GetDFISectionExchanges() {
       url: "https://cakedefi.com/",
     },
     {
-      id: "GetDFISection.Staking.Kucoin",
-      name: "Kucoin",
-      url: "https://www.kucoin.com/earn/finance/list",
+      id: "GetDFISection.Staking.Lock",
+      name: "Lock",
+      url: "https://lock.space/",
     },
   ];
 

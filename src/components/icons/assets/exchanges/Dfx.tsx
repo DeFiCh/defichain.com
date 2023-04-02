@@ -8,10 +8,10 @@ export default function Dfx(): JSX.Element {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
-      <rect width="49" height="49" rx="15" fill="url(#pattern0)" />
+      <rect width="49" height="49" rx="15" fill="url(#patternDfx)" />
       <defs>
         <pattern
-          id="pattern0"
+          id="patternDfx"
           patternContentUnits="objectBoundingBox"
           width="1"
           height="1"

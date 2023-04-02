@@ -1,24 +1,48 @@
 import classNames from "classnames";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Container } from "@components/commons/Container";
 import { SectionTitle } from "@components/commons/SectionTitle";
 import { useTranslation } from "next-i18next";
 import BigNumber from "bignumber.js";
 import { NumericFormat } from "react-number-format";
-import { useWhaleApiClient } from "../../../../layouts/context/WhaleContext";
+import CoinGeckoIcon from "@components/icons/assets/exploreGetDFI/CoinGeckoIcon";
+import CoinMarketCapIcon from "@components/icons/assets/exploreGetDFI/CoinMarketCapIcon";
 import GetDFISectionExchanges from "./GetDFISectionExchanges";
 
 export default function GetDFISection() {
-  const api = useWhaleApiClient();
-  const [dfiPrice, setDfiPrice] = useState<string>("0");
+  const [coinMarketCapPrice, setCoinMarketCapPrice] = useState<string>("0");
+  const [coinGeckoPrice, setCoinGeckoPrice] = useState<string>("0");
   const { t } = useTranslation("page-explore-dfi");
 
+  const getDFIPriceFromCoinMarketCap = () => {
+    fetch(
+      "https://3rdparty-apis.coinmarketcap.com/v1/cryptocurrency/widget?id=5804&convert_id=1,2781,2781"
+    ).then((resp) =>
+      resp.json().then((data) => {
+        const dfiId = 5804;
+        const usdFiatId = 2781;
+        const price = data?.data?.[dfiId]?.quote[usdFiatId]?.price ?? "0";
+        setCoinMarketCapPrice(price);
+      })
+    );
+  };
+
+  const getDFIPriceFromCoinGecko = () => {
+    fetch(
+      "https://api.coingecko.com/api/v3/coins/defichain?developer_data=false&community_data=false&tickers=false"
+    ).then((resp) =>
+      resp.json().then((data) => {
+        const price = data?.market_data?.current_price.usd ?? "0";
+        setCoinGeckoPrice(price);
+      })
+    );
+  };
+
   useEffect(() => {
-    // TODO: Replace price with CoinGecko and CoinMarketCap prices
-    api.prices.get("DFI", "USD").then((priceTicker) => {
-      setDfiPrice(priceTicker.price.aggregated.amount);
-    });
-  }, [api.prices]);
+    getDFIPriceFromCoinMarketCap();
+    getDFIPriceFromCoinGecko();
+  }, []);
 
   return (
     <Container
@@ -48,27 +72,56 @@ export default function GetDFISection() {
           <br />
           <p>{t("getDfiSection.desc2")}</p>
         </div>
-
-        {/* TODO: Update average price display and add CoinGecko and CoinMarketCap icons */}
-        {/* Average DFI price */}
-        <div className="border-[0.5px] border-dark-200 rounded-[30px] bg-dark-00 backdrop-blur bg-opacity-90 w-full flex flex-col flex-1 gap-y-2 p-6 text-center mt-9 lg:mt-3 grow-0">
-          <span className="bg-clip-text text-transparent accent-gradient-2 font-bold leading-5">
-            {t("getDfiSection.exchange.avgDfiPrice")}
-          </span>
-          <NumericFormat
-            value={BigNumber(dfiPrice).toFixed(2)}
-            displayType="text"
-            prefix="$"
-            className={classNames(
-              "text-dark-1000 text-[32px] leading-9",
-              "lg:text-[52px] lg:leading-none"
-            )}
-          />
+        {/* DFI price from CoinMarketCap and CoinGecko */}
+        <div className="w-full md:w-fit lg:w-full border-[0.5px] border-dark-200 rounded-[15px] bg-dark-00 backdrop-blur bg-opacity-90 py-6 text-center mt-9 lg:mt-3">
+          <div className="grid grid-cols-2 items-center divide-x divide-dark-200">
+            <DfiPrice
+              name="marketCap"
+              price={coinMarketCapPrice}
+              url="https://coinmarketcap.com/currencies/defichain/?utm_medium=widget&utm_campaign=cmcwidget&utm_source=defichain.com&utm_content=defichain"
+            />
+            <DfiPrice
+              name="gecko"
+              price={coinGeckoPrice}
+              url="https://www.coingecko.com/en/coins/defichain?utm_content=defichain&utm_medium=coin_ticker_widget&utm_source=defichain.com"
+            />
+          </div>
         </div>
       </div>
-
       {/* Exchanges */}
       <GetDFISectionExchanges />
     </Container>
+  );
+}
+
+function DfiPrice({
+  name,
+  price,
+  url,
+}: {
+  name: "marketCap" | "gecko";
+  price: string;
+  url: string;
+}) {
+  const priceMarketIcon = {
+    gecko: CoinGeckoIcon,
+    marketCap: CoinMarketCapIcon,
+  };
+  const MarketLogo = priceMarketIcon[name];
+  return (
+    <div className="flex items-center justify-center px-6">
+      <Link className="group flex items-center" href={url} target="_blank">
+        <MarketLogo />
+        <NumericFormat
+          value={BigNumber(price).toFixed(2)}
+          displayType="text"
+          prefix="$"
+          className={classNames(
+            "text-dark-1000 text-xl leading-6 ml-2",
+            "lg:text-[32px] lg:leading-10"
+          )}
+        />
+      </Link>
+    </div>
   );
 }

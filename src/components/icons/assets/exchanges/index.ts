@@ -16,28 +16,29 @@ import EasycryptoNz from "./EasycryptoNz";
 import Cakedefi from "./Cakedefi";
 import Lock from "./Lock";
 
-const mapping: Record<string, (props: SVGProps<SVGElement>) => JSX.Element> = {
-  Bittrex,
-  Bitrue,
-  Dfx,
-  Kucoin,
-  Huobi,
-  Gateio,
-  Transak,
-  Bybit,
-  Swyftx,
-  Bitdotcom,
-  Latoken,
-  Bitmart,
-  EasycryptoAu,
-  EasycryptoNz,
-  Cakedefi,
-  Lock,
-};
+const mapping: Record<string, (props: SVGProps<SVGSVGElement>) => JSX.Element> =
+  {
+    Bittrex,
+    Bitrue,
+    Dfx,
+    Kucoin,
+    Huobi,
+    Gateio,
+    Transak,
+    Bybit,
+    Swyftx,
+    Bitdotcom,
+    Latoken,
+    Bitmart,
+    EasycryptoAu,
+    EasycryptoNz,
+    Cakedefi,
+    Lock,
+  };
 
 export function getExchangeLogo(
   name: string
-): (props: SVGProps<SVGElement>) => JSX.Element {
+): (props: SVGProps<SVGSVGElement>) => JSX.Element {
   const Logo = mapping[name];
   return Logo;
 }

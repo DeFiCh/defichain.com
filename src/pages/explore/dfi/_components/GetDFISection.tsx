@@ -47,8 +47,8 @@ export default function GetDFISection() {
   return (
     <Container
       className={classNames(
-        "mb-24 flex flex-col gap-[72px]",
-        "md:mb-28",
+        "mb-24 flex flex-col gap-12",
+        "md:mb-[108px]",
         "lg:mb-60 lg:flex-row lg:gap-[69px]"
       )}
     >
@@ -57,7 +57,7 @@ export default function GetDFISection() {
         <div
           className={classNames(
             "text-[40px] leading-[44px] tracking-[-0.02em]",
-            "lg:text-6xl lg:leading-[72px] lg:tracking-normal"
+            "lg:text-6xl lg:leading-[72px] lg:tracking-normal lg:mt-4"
           )}
         >
           {t("getDfiSection.subtitle")}
@@ -73,8 +73,8 @@ export default function GetDFISection() {
           <p>{t("getDfiSection.desc2")}</p>
         </div>
         {/* DFI price from CoinMarketCap and CoinGecko */}
-        <div className="w-full md:w-fit lg:w-full border-[0.5px] border-dark-200 rounded-[15px] bg-dark-00 backdrop-blur bg-opacity-90 py-6 text-center mt-9 lg:mt-3">
-          <div className="grid grid-cols-2 items-center divide-x divide-dark-200">
+        <div className="w-full md:w-fit lg:w-full text-center mt-3">
+          <div className="grid grid-cols-2 items-center divide-x divide-dark-200 border-[0.5px] border-dark-200 rounded-[15px] bg-dark-00 backdrop-blur bg-opacity-90 py-6">
             <DfiPrice
               name="marketCap"
               price={coinMarketCapPrice}
@@ -85,6 +85,9 @@ export default function GetDFISection() {
               price={coinGeckoPrice}
               url="https://www.coingecko.com/en/coins/defichain?utm_content=defichain&utm_medium=coin_ticker_widget&utm_source=defichain.com"
             />
+          </div>
+          <div className="text-dark-700 tracking-[0.03em] text-xs lg:text-sm mt-2">
+            {t("getDfiSection.exhangePriceText")}
           </div>
         </div>
       </div>

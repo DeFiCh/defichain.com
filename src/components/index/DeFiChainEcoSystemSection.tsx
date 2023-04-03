@@ -97,7 +97,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
       <div
         className={classNames(
           "absolute bg-contain bg-no-repeat bg-[url('/assets/img/ecosystem/dfi-logo-vector.png')] w-full",
-          "lg:bg-center lg:top-60 lg:left-[-690px] md:h-[300px] md:top-[250px] md:left-[-50px] sm:h-[200px] sm:top-[400px]",
+          "lg:bg-center lg:top-60 lg:left-[-630px] md:h-[300px] md:top-[250px] md:left-[-100px] sm:h-[200px] sm:top-[400px]",
           "bg-left top-[400px] right-10 h-[250px]"
         )}
       />

@@ -23,7 +23,7 @@ export function ExploreDTokensGrid({
     <>
       <div
         className={classNames(
-          "md:flex hidden flex-wrap justify-center",
+          "md:flex hidden flex-wrap justify-center md:mt-16",
           "lg:w-[1000px] w-auto",
           "lg:gap-8 md:gap-6 gap-5"
         )}
@@ -39,7 +39,7 @@ export function ExploreDTokensGrid({
           ))}
       </div>
 
-      <div className="md:hidden block w-full">
+      <div className="md:hidden block w-full mt-8">
         <Slider className="" {...sliderSettings}>
           <div className="flex flex-col space-y-5">
             {selectionTokens &&

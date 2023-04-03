@@ -9,14 +9,15 @@ export function ExploreDTokensSelection({
   setTokenSectionChoice: Dispatch<SetStateAction<TokenLabels>>;
 }) {
   return (
-    <div className="md:card-outline-2 p-[0.5px] rounded-[40px] w-fit">
+    <div className="md:card-outline-2 p-[0.5px] rounded-[40px] w-fit mt-8">
       <div className="flex flex-row gap-x-3 rounded-[40px] md:bg-dark-100 p-1 w-fit">
         <div className="card-outline-2 md:bg-none p-[0.5px] rounded-[52px]">
           <button
             type="button"
             onClick={() => setTokenSectionChoice(TokenLabels.CRYPTO)}
             className={classNames(
-              "px-5 py-3 text-dark-1000 font-medium rounded-[52px] md:bg-none bg-dark-100",
+              "px-5 py-3 text-dark-1000 md:font-medium font-semibold rounded-[52px] md:bg-none bg-dark-100",
+              "md:text-[16px] md:leading-5 text-sm",
               {
                 "bg-dark-1000 !text-dark-00":
                   tokenSectionChoice === TokenLabels.CRYPTO,
@@ -32,7 +33,8 @@ export function ExploreDTokensSelection({
             type="button"
             onClick={() => setTokenSectionChoice(TokenLabels.DSTOCKS)}
             className={classNames(
-              "px-5 py-3 text-dark-1000 font-medium rounded-[52px] md:bg-none bg-dark-100",
+              "px-5 py-3 text-dark-1000 md:font-medium font-semibold rounded-[52px] md:bg-none bg-dark-100",
+              "md:text-[16px] md:leading-5 text-sm",
               {
                 "bg-dark-1000 !text-dark-00":
                   tokenSectionChoice === TokenLabels.DSTOCKS,
@@ -48,7 +50,8 @@ export function ExploreDTokensSelection({
             type="button"
             onClick={() => setTokenSectionChoice(TokenLabels.ETFS)}
             className={classNames(
-              "px-5 py-3 text-dark-1000 font-medium rounded-[52px] md:bg-none bg-dark-100",
+              "px-5 py-3 text-dark-1000 md:font-medium font-semibold rounded-[52px] md:bg-none bg-dark-100",
+              "md:text-[16px] md:leading-5 text-sm",
               {
                 "bg-dark-1000 !text-dark-00":
                   tokenSectionChoice === TokenLabels.ETFS,

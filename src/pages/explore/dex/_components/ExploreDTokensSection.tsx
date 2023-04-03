@@ -104,33 +104,31 @@ export function ExploreDTokensSection() {
 
   return (
     <Container className="mb-[240px]">
-      <div className="flex flex-col">
-        <SectionTitle
-          customStyle="md:place-self-center"
-          text="WIDE ARRAY OF TOKENS"
-        />
+      <div className="flex flex-col md:items-center items-start">
+        <SectionTitle text="WIDE ARRAY OF TOKENS" />
         <div
           className={classNames(
-            "md:text-center text-[60px] leading-[72px] mt-5"
+            "lg:text-[60px] lg:leading-[72px] mt-5 lg:tracking-normal",
+            "text-[40px] leading-[44px] tracking-[-0.02em]"
           )}
         >
           Explore dTokens
         </div>
-        <div className="flex md:justify-center mt-8">
-          <ExploreDTokensSelection
-            tokenSectionChoice={tokenSectionChoice}
-            setTokenSectionChoice={setTokenSectionChoice}
-          />
-        </div>
-        <div className="flex md:justify-center md:mt-16 mt-8">
-          <ExploreDTokensGrid selectionTokens={selectedTabTokens} />
-        </div>
-        <div className="flex justify-center mt-16">
-          <SecondaryButton
-            className="lg:py-4 py-3 md:px-[56px] px-[43px] w-fit"
-            text="View all dTokens"
-            hasDiagonalArrow
-          />
+
+        <ExploreDTokensSelection
+          tokenSectionChoice={tokenSectionChoice}
+          setTokenSectionChoice={setTokenSectionChoice}
+        />
+        <ExploreDTokensGrid selectionTokens={selectedTabTokens} />
+
+        <SecondaryButton
+          className="place-self-center mt-16 lg:py-4 py-3 md:px-[56px] px-[43px] w-fit place"
+          text="View all dTokens"
+          hasDiagonalArrow
+        />
+
+        <div className="text-dark-700 md:text-base text-sm place-self-center mt-4 text-center font-desc">
+          Prices listed are approximate and may change in real-time.
         </div>
       </div>
     </Container>

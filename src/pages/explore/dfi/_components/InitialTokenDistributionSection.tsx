@@ -66,7 +66,7 @@ export function InitialTokenDistributionSection() {
                 </span>
               </div>
 
-              <div className="mt-[34.33px] flex flex-wrap gap-y-[34.92px]">
+              <div className="mt-[34.33px] flex flex-wrap gap-x-2 gap-y-[34.92px]">
                 <InitialTokenSectionItem
                   desc={t(
                     "initialTokenDistributionSection.initialSupply.airDrop"
@@ -77,7 +77,6 @@ export function InitialTokenDistributionSection() {
                   )}
                 />
                 <InitialTokenSectionItem
-                  className="mx-[21.5px] md:ml-[64.33px] md:mr-[91.33px] lg:ml-[52.33px] lg:mr-[83.33px]"
                   desc={t("initialTokenDistributionSection.initialSupply.burn")}
                   icon={InitialTokenSectionIcons.BURN}
                   percentage={t(

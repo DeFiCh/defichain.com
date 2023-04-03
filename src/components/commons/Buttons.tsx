@@ -69,6 +69,90 @@ function ButtonElement({
   );
 }
 
+export function SecondaryButton({
+  text,
+  className,
+  disabled,
+  href,
+  onClick,
+  hasDiagonalArrow = false,
+}: {
+  text: string;
+  className?: string;
+  disabled?: boolean;
+  href?: string;
+  onClick?: () => void;
+  hasDiagonalArrow?: boolean;
+}) {
+  if (href) {
+    return (
+      <a
+        rel="noreferrer"
+        target="_blank"
+        href={href}
+        className={classNames({ "pointer-events-none": disabled })}
+      >
+        <SecondaryButtonElement
+          hasDiagonalArrow={hasDiagonalArrow}
+          text={text}
+          className={className}
+          disabled={disabled}
+          onClick={onClick}
+        />
+      </a>
+    );
+  }
+  return (
+    <SecondaryButtonElement
+      hasDiagonalArrow={hasDiagonalArrow}
+      text={text}
+      className={className}
+      disabled={disabled}
+      onClick={onClick}
+    />
+  );
+}
+
+function SecondaryButtonElement({
+  text,
+  className,
+  disabled,
+  onClick,
+  hasDiagonalArrow = false,
+}: {
+  text: string;
+  className?: string;
+  disabled?: boolean;
+  onClick?: () => void;
+  hasDiagonalArrow?: boolean;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      disabled={disabled}
+      className={classNames(
+        className ?? "py-4",
+        "flex items-center justify-center rounded-[92px] font-bold disabled:opacity-30 disabled:pointer-events-none min-w-[232px]",
+        "text-dark-1000 border-dark-1000 border hover:border-brand-100 active:text-brand-100",
+        "active:border-opacity-70 active:text-opacity-70"
+      )}
+    >
+      <div className="flex flex-row items-center">
+        {text}
+        {hasDiagonalArrow && (
+          <IoMdArrowRoundForward
+            size={24}
+            className={classNames(
+              "-rotate-45 ml-[15px] active:text-brand-100 active:text-opacity-70"
+            )}
+          />
+        )}
+      </div>
+    </button>
+  );
+}
+
 export function GradientButton({
   buttonText,
   className,

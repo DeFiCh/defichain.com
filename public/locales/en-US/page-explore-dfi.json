@@ -70,6 +70,14 @@
       "desc": "The remaining supply is issued to masternode holders over time."
     }
   },
+  "getDfiSection": {
+    "title": "PURCHASE AND RECEIVE DFI TOKENS EASILY",
+    "subtitle": "Get DFI on trusted exchanges",
+    "desc1": "Securely buy DFI on trusted cryptocurrency exchanges and easily store them in your DeFiChain wallet.",
+    "desc2": "Click on our partner links to purchase DFI and receive your tokens by sending them to your wallet address.",
+    "exhangePriceText": "Prices may vary from different sources",
+    "stakingText": "Also available for staking in"
+  },
   "footerCards": {
     "wallet": {
       "title": "EXPLORE DEFICHAIN",

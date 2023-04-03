@@ -125,10 +125,10 @@ function ExchangeGrid({ items }: { items: ExchangeItem[] }): JSX.Element {
             key={item.id}
             data-testid={item.id}
             href={item.url}
-            className=""
+            className="rounded-[5px] p-[0.5px] bg-dark-200 hover:accent-gradient-1 active:opacity-70"
             target="_blank"
           >
-            <div className="w-full h-[115px] rounded-[5px] border-[0.5px] border-dark-200 flex justify-center items-center">
+            <div className="w-full h-[115px] rounded-[5px] flex justify-center items-center bg-dark-00">
               <Logo />
             </div>
           </Link>

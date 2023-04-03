@@ -117,7 +117,11 @@ function DfiPrice({
   const value = price === undefined ? "N/A" : `$${BigNumber(price).toFixed(2)}`;
   return (
     <div className="flex items-center justify-center px-6">
-      <Link className="group flex items-center" href={url} target="_blank">
+      <Link
+        className="group flex items-center active:opacity-70"
+        href={url}
+        target="_blank"
+      >
         <MarketLogo />
         <span
           className={classNames(

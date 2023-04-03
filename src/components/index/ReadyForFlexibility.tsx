@@ -16,7 +16,7 @@ export function ReadyForFlexibility() {
     <div
       className={classNames(
         "relative z-0",
-        "lg:mt-[316.02px] md:mt-[131px] mt-[142px]",
+        "lg:mt-[336px] md:mt-[131px] mt-[142px]",
         "lg:mb-60 md:mb-[164px] mb-40"
       )}
     >

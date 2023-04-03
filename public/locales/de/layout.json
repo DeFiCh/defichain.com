@@ -23,10 +23,6 @@
           "subtitle": "Erfahre mehr über den Token"
         },
         {
-          "title": "Investieren, Handeln und Verdienen",
-          "subtitle": "Einsatzmöglichkeiten von DeFiChain erkunden"
-        },
-        {
           "title": "Dezentrale Börse",
           "subtitle": "Maximiere dein Vermögen"
         },
@@ -186,7 +182,6 @@
       "EXPLORE": {
         "category": "ERKUNDEN",
         "dfi": "$DFI",
-        "investTradeNEarn": "Investieren, Handeln und Verdienen",
         "decentralizedExchange": "Dezentrale Börse",
         "wallets": "Wallets",
         "masternodes": "Masternodes"

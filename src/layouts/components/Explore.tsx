@@ -16,40 +16,34 @@ export function Explore() {
       items: [
         {
           icon: "dfi",
-          href: "",
+          href: "/explore/dfi",
           title: entries[0].title,
           subtitle: entries[0].subtitle,
         },
         {
-          icon: "invest",
-          href: "",
+          icon: "dex",
+          href: "/explore/dex",
           title: entries[1].title,
           subtitle: entries[1].subtitle,
         },
         {
-          icon: "dex",
-          href: "",
+          icon: "wallet",
+          href: "/explore/wallets",
           title: entries[2].title,
           subtitle: entries[2].subtitle,
         },
         {
-          icon: "wallet",
-          href: "/explore/wallets",
-          title: entries[3].title,
-          subtitle: entries[3].subtitle,
-        },
-        {
           icon: "masternode",
           href: "/explore/masternodes",
-          title: entries[4].title,
-          subtitle: entries[4].subtitle,
+          title: entries[3].title,
+          subtitle: entries[3].subtitle,
         },
       ],
     },
     image: {
       title: t("header.explore.image.title"),
       subtitle: t("header.explore.image.subtitle"),
-      href: "",
+      href: "/explore/dfi",
     },
   };
 
@@ -58,7 +52,7 @@ export function Explore() {
 
   return (
     <div className="flex flex-col">
-      <div className="text-dark-500 font-bold leading-5 mb-10 md:block hidden">
+      <div className="text-dark-500 font-bold leading-5 lg:mb-6 mb-10 md:block hidden">
         {MenuItems.dropDownItems.label}
       </div>
       <div
@@ -69,8 +63,9 @@ export function Explore() {
       >
         <div
           className={classNames(
-            "grid md:grid-rows-[minmax(50px,_0.8fr)_minmax(50px,_1fr)_50px] lg:grid-cols-[364px_minmax(364px,_1fr)_1px] md:grid-cols-2 grid-rows-5",
-            "gap-x-10 grid-flow-col gap-y-8"
+            "grid md:grid-rows-2 lg:grid-cols-[364px_minmax(364px,_1fr)_1px] md:grid-cols-2 grid-rows-4",
+            "gap-x-10 grid-flow-col",
+            dimension.width < 1280 ? "gap-y-8" : "gap-y-0"
           )}
         >
           {MenuItems.dropDownItems.items.map((item, key) => (

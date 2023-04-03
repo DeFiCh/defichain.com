@@ -4,7 +4,7 @@
     "subtitle": "Enter the world of dTokens",
     "desc": "Inside DeFiChain’s DEX, you are in full control. Trade, Arbitrage, and Earn from your dTokens."
   },
-  "statisticsDisplay" : {
+  "statisticsDisplay": {
     "totalValueLocked": {
       "title": "TOTAL VALUE LOCKED",
       "desc": "Data from DeFiScan"
@@ -17,5 +17,30 @@
       "title": "TOKENS",
       "desc": "Crypto • dStocks • ETFs"
     }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "content": [
+      {
+        "question": "What are dTokens and where can I get them?",
+        "answer": [
+          "Metaverse-based clout-chasing influencer. College Dropout, overenthusiastic founder. Microdosing CryptoPunk rationalist. Cap table joining consumer social app.",
+          "Y-combinator raised Facebook PM. Chamath-like, sketchy venture capitalist. PMF-focused, overfunded LIDAR startup. Ex-Uber resume flexing, FAANG worker.",
+          "Alexis Ohanian-tweeted overhyped ed-Tech series D. Solidity focused crypto mining installation. Out of touch, ad buying venture investor. VR headset wearable network effect. CPG product loving, podcast hosting veteran."
+        ]
+      },
+      {
+        "question": "Can I use any wallet for dTokens?",
+        "answer": ["Hello"]
+      },
+      {
+        "question": "Why are the prices of stock tokens different from the prices from the stocks exchange?",
+        "answer": ["Hello"]
+      },
+      {
+        "question": "What are liquidity pools?",
+        "answer": ["Hello"]
+      }
+    ]
   }
 }

@@ -13,7 +13,7 @@ export default function ExploreWallets() {
     { returnObjects: true }
   );
   return (
-    <>
+    <div className="relative z-10">
       <HeroBanner
         title={t("heroBanner.title")}
         subtitle={t("heroBanner.subtitle")}
@@ -40,7 +40,7 @@ export default function ExploreWallets() {
           />
         </div>
       </Container>
-    </>
+    </div>
   );
 }
 

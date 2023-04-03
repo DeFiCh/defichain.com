@@ -11,7 +11,7 @@ import { InitialTokenDistributionSection } from "./_components/InitialTokenDistr
 export default function ExploreDFI() {
   const { t } = useTranslation("page-explore-dfi");
   return (
-    <>
+    <div className="relative z-10">
       <HeroBanner
         title={t("heroBanner.title")}
         subtitle={t("heroBanner.subtitle")}
@@ -40,7 +40,7 @@ export default function ExploreDFI() {
           />
         </div>
       </Container>
-    </>
+    </div>
   );
 }
 

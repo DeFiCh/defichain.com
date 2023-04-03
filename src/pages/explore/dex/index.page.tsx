@@ -6,7 +6,7 @@ import { DexStatisticsDisplay } from "./_components/DexStatisticsDisplay";
 export default function ExploreWallets() {
   const { t } = useTranslation("page-explore-dex");
   return (
-    <>
+    <div className="relative z-10">
       <HeroBanner
         title={t("heroBanner.title")}
         subtitle={t("heroBanner.subtitle")}
@@ -17,7 +17,7 @@ export default function ExploreWallets() {
       />
 
       <DexStatisticsDisplay />
-    </>
+    </div>
   );
 }
 

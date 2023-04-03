@@ -5,38 +5,41 @@ import { Container } from "@components/commons/Container";
 import { SectionTitle } from "@components/commons/SectionTitle";
 import { useTranslation } from "next-i18next";
 import BigNumber from "bignumber.js";
-import { NumericFormat } from "react-number-format";
 import CoinGeckoIcon from "@components/icons/assets/exploreGetDFI/CoinGeckoIcon";
 import CoinMarketCapIcon from "@components/icons/assets/exploreGetDFI/CoinMarketCapIcon";
 import GetDFISectionExchanges from "./GetDFISectionExchanges";
 
 export default function GetDFISection() {
-  const [coinMarketCapPrice, setCoinMarketCapPrice] = useState<string>("0");
-  const [coinGeckoPrice, setCoinGeckoPrice] = useState<string>("0");
+  const [coinMarketCapPrice, setCoinMarketCapPrice] = useState<string>();
+  const [coinGeckoPrice, setCoinGeckoPrice] = useState<string>();
   const { t } = useTranslation("page-explore-dfi");
 
-  const getDFIPriceFromCoinMarketCap = () => {
-    fetch(
-      "https://3rdparty-apis.coinmarketcap.com/v1/cryptocurrency/widget?id=5804&convert_id=1,2781,2781"
-    ).then((resp) =>
-      resp.json().then((data) => {
-        const dfiId = 5804;
-        const usdFiatId = 2781;
-        const price = data?.data?.[dfiId]?.quote[usdFiatId]?.price ?? "0";
-        setCoinMarketCapPrice(price);
-      })
-    );
+  const getDFIPriceFromCoinMarketCap = async () => {
+    try {
+      const response = await fetch(
+        "https://3rdparty-apis.coinmarketcap.com/v1/cryptocurrency/widget?id=5804&convert_id=1,2781,2781"
+      );
+      const data = await response.json();
+      const dfiId = 5804;
+      const usdFiatId = 2781;
+      const price = data?.data?.[dfiId]?.quote[usdFiatId]?.price;
+      setCoinMarketCapPrice(price);
+    } catch (e) {
+      setCoinMarketCapPrice(undefined);
+    }
   };
 
-  const getDFIPriceFromCoinGecko = () => {
-    fetch(
-      "https://api.coingecko.com/api/v3/coins/defichain?developer_data=false&community_data=false&tickers=false"
-    ).then((resp) =>
-      resp.json().then((data) => {
-        const price = data?.market_data?.current_price.usd ?? "0";
-        setCoinGeckoPrice(price);
-      })
-    );
+  const getDFIPriceFromCoinGecko = async () => {
+    try {
+      const response = await fetch(
+        "https://api.coingecko.com/api/v3/coins/defichain?developer_data=false&community_data=false&tickers=false"
+      );
+      const data = await response.json();
+      const price = data?.market_data?.current_price.usd;
+      setCoinGeckoPrice(price);
+    } catch (e) {
+      setCoinGeckoPrice(undefined);
+    }
   };
 
   useEffect(() => {
@@ -103,7 +106,7 @@ function DfiPrice({
   url,
 }: {
   name: "marketCap" | "gecko";
-  price: string;
+  price: string | undefined;
   url: string;
 }) {
   const priceMarketIcon = {
@@ -111,19 +114,19 @@ function DfiPrice({
     marketCap: CoinMarketCapIcon,
   };
   const MarketLogo = priceMarketIcon[name];
+  const value = price === undefined ? "N/A" : `$${BigNumber(price).toFixed(2)}`;
   return (
     <div className="flex items-center justify-center px-6">
       <Link className="group flex items-center" href={url} target="_blank">
         <MarketLogo />
-        <NumericFormat
-          value={BigNumber(price).toFixed(2)}
-          displayType="text"
-          prefix="$"
+        <span
           className={classNames(
             "text-dark-1000 text-xl leading-6 ml-2",
             "lg:text-[32px] lg:leading-10"
           )}
-        />
+        >
+          {value}
+        </span>
       </Link>
     </div>
   );

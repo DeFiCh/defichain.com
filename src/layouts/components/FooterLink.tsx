@@ -36,7 +36,7 @@ export default function FooterLink({
         // Internal link
         <div
           className={classNames(
-            "text-dark-1000 font-semibold hover:accent-dfc-gradient-text cursor-pointer md:w-[133px] md:w-full"
+            "text-dark-1000 font-semibold hover:accent-dfc-gradient-text cursor-pointer w-[133px] md:w-full"
           )}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}

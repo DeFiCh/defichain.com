@@ -65,7 +65,6 @@ export function Community() {
             href: "https://coinmarketcap.com/community/profile/DeFiChain",
             title: entries[1].labels[7].title,
           },
-
           {
             href: "https://t.me/defiblockchain",
             title: entries[1].labels[8].title,

@@ -7,7 +7,7 @@ interface FooterLinkItemProps {
   pathname: string; // href
   testId: string;
   altLabel: string;
-  isExternaLink: boolean;
+  isExternaLink?: boolean;
   url?: string;
   hasUpArrowIcon?: boolean;
 }

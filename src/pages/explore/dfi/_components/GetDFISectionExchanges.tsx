@@ -64,7 +64,7 @@ export default function GetDFISectionExchanges() {
     {
       id: "GetDFISection.Exchange.Latoken",
       name: "Latoken",
-      url: "https://latoken.com/exchange/DFI_BTC",
+      url: "https://latoken.com/exchange/DFI_USDT",
     },
     {
       id: "GetDFISection.Exchange.Bitmart",

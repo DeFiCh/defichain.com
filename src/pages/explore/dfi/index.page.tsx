@@ -5,6 +5,7 @@ import { Container } from "@components/commons/Container";
 import { DFIStatisticsDisplay } from "./_components/DFIStatisticsDisplay";
 import HarnessDFISection from "./_components/HarnessDFISection";
 import { ExploreCards, ExploreCardsImage } from "../_components/ExploreCards";
+import { InitialTokenDistributionSection } from "./_components/InitialTokenDistributionSection";
 
 export default function ExploreDFI() {
   const { t } = useTranslation("page-explore-dfi");
@@ -20,6 +21,7 @@ export default function ExploreDFI() {
       />
       <DFIStatisticsDisplay />
       <HarnessDFISection />
+      <InitialTokenDistributionSection />
       <Container className="lg:mb-8 md:mb-6 mb-4">
         <div className="flex flex-row overflow-x-scroll lg:gap-x-8 md:gap-x-6 gap-x-4">
           <ExploreCards

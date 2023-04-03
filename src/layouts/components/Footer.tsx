@@ -208,7 +208,7 @@ export default function Footer(): JSX.Element {
     <footer className="relative bg-dark-00">
       <Container className="relative z-10 py-10 pb-[108px] md:pb-[132px] lg:pb-[144px]">
         <div className="py-10 h-full w-full footer-background rounded-[30px] px-6 md:px-14 lg:px-24">
-          <div className="text-sm md:grid md:grid-cols-2 md:grid-flow-row md:gap-[62px] lg:flex lg:flex-row md:justify-between md:pb-[86px]">
+          <div className="text-sm md:grid md:grid-cols-2 md:grid-flow-row md:gap-[38px] lg:flex lg:flex-row md:justify-between md:pb-12">
             {/* EXPLORE */}
             <FooterColumn
               category={MenuItems[0].category}
@@ -231,17 +231,17 @@ export default function Footer(): JSX.Element {
             <FooterColumn
               category={MenuItems[1].category}
               childLinks={MenuItems[1].childLink}
-              customStyle="sm:pt-[54px]"
+              customStyle="pt-[38px]"
             />
             {/* COMMUNITY */}
-            <div className="justify-between flex flex-col">
+            <div className="flex flex-col md:flex-row md:items-end lg:flex-col">
               <FooterColumn
                 category={MenuItems[2].category}
                 childLinks={MenuItems[2].childLink}
-                customStyle="sm:pt-[54px]"
+                customStyle="pt-[38px]"
               />
               <SocialsRow
-                customStyle="text-dark-500 flex flex-row gap-5 sm:pb-[54px] sm:pt-[38px] md:pb-0"
+                customStyle="text-dark-500 flex flex-row gap-5 mt-[22px] mb-8 md:mt-[26px] md:pb-0"
                 language={language}
               />
             </div>
@@ -250,26 +250,24 @@ export default function Footer(): JSX.Element {
           {/* Mobile View */}
           <div className="block md:hidden">
             <div className="text-dark-500">
-              <div className="flex flex-row items-center justify-between">
-                <div data-testid="Footer.Mobile.Logo">
-                  <DeFiChainLogo className="w-[128px]" />
+              <div className="flex flex-col items-start">
+                <div className="mb-4" data-testid="Footer.Mobile.Logo">
+                  <DeFiChainLogo className="w-[176.67px]" />
                 </div>
-                <div className="flex justify-end">
+                <div className="flex items-center space-x-4">
                   <LanguageDropdownV2 />
-                </div>
-              </div>
-              <div className="flex flex-row items-center pt-2">
-                <FooterInternalBottomLink
-                  text={t("footer.bottomlink.privacy")}
-                  pathname="/privacy-policy"
-                  testId="Footer.Mobile.Privacy"
-                />
-                <span className="px-2">•</span>
+                  <FooterInternalBottomLink
+                    text={t("footer.bottomlink.privacy")}
+                    pathname="/privacy-policy"
+                    testId="Footer.Mobile.Privacy"
+                  />
+                  {/* <span className="px-2">•</span>
                 <FooterInternalBottomLink
                   text={t("footer.bottomlink.terms")}
                   pathname="/terms-of-use"
                   testId="Footer.Mobile.Terms"
-                />
+                /> */}
+                </div>
               </div>
             </div>
           </div>
@@ -293,7 +291,7 @@ export default function Footer(): JSX.Element {
                     testId="Footer.Web.Terms"
                   /> */}
                 </div>
-                <div className="flex pl-[23px]">
+                <div className="flex pl-6">
                   <LanguageDropdownV2 />
                 </div>
               </div>

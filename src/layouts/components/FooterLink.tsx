@@ -23,7 +23,7 @@ export default function FooterLink({
   const { t } = useTranslation("layout");
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <div>
+    <div className="md:w-[210px]">
       {isExternaLink === true && url !== undefined ? (
         <FooterExternalLink
           text={altLabel}
@@ -36,7 +36,7 @@ export default function FooterLink({
         // Internal link
         <div
           className={classNames(
-            "text-dark-1000 font-semibold hover:accent-dfc-gradient-text cursor-pointer w-[133px] md:w-full"
+            "text-dark-1000 font-semibold hover:accent-dfc-gradient-text cursor-pointer md:w-[133px] md:w-full"
           )}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
@@ -50,7 +50,7 @@ export default function FooterLink({
             {t(`footer.sitemap.${category}.${altLabel}`)}
             {hasUpArrowIcon ? (
               <RiArrowRightUpLine
-                className="pl-0.5"
+                className="pl-1"
                 // uses the gradient color defined with the same svg id
                 style={{ fill: isHovered ? "url(#accent-gradient)" : "" }}
                 size={20}

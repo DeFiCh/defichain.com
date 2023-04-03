@@ -29,7 +29,7 @@ export default function FooterExternalLink(props: {
         {t(`footer.sitemap.${category}.${text}`)}
         {hasUpArrowIcon ? (
           <RiArrowRightUpLine
-            className="pl-0.5"
+            className="pl-1"
             // uses the gradient color defined with the same svg id
             style={{ fill: isHovered ? "url(#accent-gradient)" : "" }}
             size={20}

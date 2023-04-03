@@ -22,12 +22,12 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
       <Container
         className={classNames(
           "relative no-scrollbar z-20 justify-between",
-          { "flexbox-wrapper": dimensions.width >= 1033 } // only apply styling when in large screen
+          { "flexbox-wrapper": dimensions.width >= 1023 } // only apply styling when in large screen
         )}
       >
         <div
           className={classNames(
-            "lg:pl-[144px] lg:order-1 md:pb-[72px] pb-[48px]",
+            "relative lg:pl-[144px] lg:order-1 md:pb-[72px] pb-[48px] w-full",
             { "sticky-container": dimensions.width >= 1033 } // only apply styling when in large screen
           )}
         >
@@ -48,7 +48,15 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
               <span className="text-electric">{sectionTitle[6]}</span>
             </span>
           </span>
+
+          <div
+            className={classNames(
+              "absolute bg-contain bg-no-repeat hidden lg:block h-[500px] w-full bg-[url('/assets/img/footer/arrow_1.png')]",
+              "lg:left-20 lg:top-[300px] xl:left-[350px] xl:top-[250px]"
+            )}
+          />
         </div>
+
         <div className="grid grid-flow-row grid-cols-1 gap-6 md:grid-flow-row md:grid-cols-2 md:gap-y-0 lg:block lg:h-[639px] lg:place-self-end">
           <Card
             title={t("EcosystemSection.cards.investTitle")}
@@ -88,11 +96,11 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
       </Container>
       <div
         className={classNames(
-          "absolute bg-contain bg-no-repeat bg-center bg-[url('/assets/img/ecosystem/dfi-logo-vector.png')] w-full h-[300px] top-[400px] left-[-100px]",
-          "md:top-[230px] md:left-[-100px] md:bg-left md:h-[250px] lg:right-[100px] lg:w-1/3 lg:bg-right"
+          "absolute bg-contain  bg-no-repeat bg-[url('/assets/img/ecosystem/dfi-logo-vector.png')] w-full h-[300px]",
+          "lg:bg-center lg:top-60 lg:left-[-690px]",
+          "bg-left top-[300px] right-20"
         )}
       />
-      <div className="absolute z-10 bottom-6 md:bottom-[-190px] hidden lg:block right-0 bg-contain bg-no-repeat bg-bottom md:bg-right md:h-[70%] lg:h-[80%] w-full bg-[url('/assets/img/footer/arrow_1.png')]" />
     </div>
   );
 }

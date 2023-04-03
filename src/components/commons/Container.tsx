@@ -10,7 +10,7 @@ export function Container(
   return (
     <div
       className={classNames(
-        "w-full lg:container lg:mx-auto",
+        "w-full xl:container xl:mx-auto",
         props.bgClassName
       )}
     >

@@ -28,13 +28,13 @@ export function MasternodesBenefitsSection(): JSX.Element {
 
   return (
     <section
-      className="pt-14 pb-12 md:py-24 lg:py-[156px] relative"
+      className="pb-24 pt-0 md:pb-28 lg:pb-[120px] lg:mb-[120px] relative"
       data-testid="masternodesBenefits"
     >
       <Container className="flex flex-col justify-between lg:flex-row 2xl:max-w-[1920px] 2xl:mx-[300px]">
-        <div className="flex lg:w-[504px]">
+        <div className="flex lg:w-[551px]">
           <div
-            className="w-full flex flex-col space-y-5 md:space-y-5 lg:mt-32 lg:space-y-5"
+            className="w-full flex flex-col space-y-5 md:space-y-5 lg:space-y-5"
             data-testid="masternodesBenefits.text"
           >
             <SectionTitle text={t("masternodesBenefits.subtitle")} />
@@ -51,33 +51,19 @@ export function MasternodesBenefitsSection(): JSX.Element {
               {t("masternodesBenefits.desc")}
             </div>
             <Button
-              className="z-10 text-sm min-w-0 w-[206px] py-3 !mt-[23px] md:!mt-9 lg:text-base lg:w-[232px] lg:py-4 lg:!mt-10"
+              className="z-10 text-sm !min-w-0 w-[188px] py-3 !mt-12 lg:text-base lg:w-[199px] lg:py-4"
               text={t("masternodesBenefits.button")}
             />
           </div>
         </div>
-        <div className="z-10 justify-between hidden md:flex md:gap-x-16 lg:w-[568px] lg:gap-x-10 w-full lg:px-12 mt-14 md:mt-[72px] lg:mt-0">
-          {/* <BlockchainFeatureColumn
-            items={BlockchainFeatureItems}
-            id="tablet-desktop-screen"
-          /> */}
+        <div className="z-10 justify-between md:gap-x-16 lg:w-[600px] lg:gap-x-[114px] w-full mt-16 md:mt-[80px] lg:mt-0">
           <MasternodesBenefitsColumn
             items={masternodesBenefitsItems}
             id="tablet-desktop-screen"
           />
         </div>
-        <div className="block z-0 md:z-[-1] mt-[56.5px] md:hidden">
-          {/* <BlockchainFeatureColumn
-            items={BlockchainFeatureItems.slice(0, 3)}
-            id="mobile-screen"
-          />
-          <BlockchainFeatureColumn
-            items={BlockchainFeatureItems.slice(3)}
-            id="mobile-screen"
-          /> */}
-        </div>
       </Container>
-      <div className="hidden md:block absolute h-[785.44px] w-[785.44px] md:left-[-240px] md:bottom-0 lg:left-0 lg:bottom-[-289.56px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/blockchainFeatures/blockchainFeaturesBg.png')]" />
+      {/* <div className="hidden md:block absolute h-[785.44px] w-[785.44px] md:left-[-240px] md:bottom-0 lg:left-0 lg:bottom-[-289.56px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/blockchainFeatures/blockchainFeaturesBg.png')]" /> */}
     </section>
   );
 }

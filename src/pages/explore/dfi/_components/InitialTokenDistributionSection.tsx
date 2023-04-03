@@ -13,7 +13,7 @@ export function InitialTokenDistributionSection() {
   const { t } = useTranslation("page-explore-dfi");
 
   return (
-    <Container className="mb-[96px]">
+    <Container className="mb-[96px] md:mb-[108px] lg:mb-60">
       <div className="flex flex-col">
         <div className="flex flex-col gap-y-5">
           <SectionTitle text={t("initialTokenDistributionSection.title")} />

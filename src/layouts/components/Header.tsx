@@ -18,7 +18,7 @@ import { GradientButton } from "@components/commons/Buttons";
 import { useTranslation } from "next-i18next";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import { useDeviceDetect, ViewPort } from "@hooks/useDeviceDetect";
-import { useWhaleApiClient } from "../context/WhaleContext";
+// import { useWhaleApiClient } from "../context/WhaleContext";
 import { Explore } from "./Explore";
 import { Ecosystem } from "./Ecosystem";
 import { Build } from "./Build";
@@ -31,9 +31,9 @@ export const DropDownContext = createContext<any | undefined>(undefined);
 export function Header(): JSX.Element {
   const [menu, setMenu] = useState(false);
   const [headerHeight, setHeaderHeight] = useState<number>(0);
-  const [dfiPrice, setDfiPrice] = useState<string>("0");
+  // const [dfiPrice, setDfiPrice] = useState<string>("0"); // TODO: uncomment when price is required
   const router = useRouter();
-  const api = useWhaleApiClient();
+  // const api = useWhaleApiClient();
   const [isHoverOn, setIsHoverOn] = useState(false);
   const [dropDownState, setDropDownState] = useState<
     MobileTabletDropDownState | undefined
@@ -49,9 +49,10 @@ export function Header(): JSX.Element {
       setMenu(false);
     }
 
-    void api.prices.get("DFI", "USD").then((priceTicker) => {
-      setDfiPrice(priceTicker.price.aggregated.amount);
-    });
+    // TODO: uncomment if DFI oracle price is required
+    // void api.prices.get("DFI", "USD").then((priceTicker) => {
+    //   setDfiPrice(priceTicker.price.aggregated.amount);
+    // });
 
     router.events.on("routeChangeStart", routeChangeStart);
     return () => router.events.off("routeChangeStart", routeChangeStart);
@@ -75,9 +76,8 @@ export function Header(): JSX.Element {
     () => ({
       dropDownState,
       setDropDownState,
-      dfiPrice,
     }),
-    [dropDownState, setDropDownState, dfiPrice]
+    [dropDownState, setDropDownState]
   );
 
   const desktopContextObj = useMemo(
@@ -163,9 +163,8 @@ export function Header(): JSX.Element {
           <div className="hidden md:flex h-full flex lg:pt-4">
             <GradientButton
               className="py-3 px-5 bg-dark-00"
-              buttonText={`${t("header.navbar.buy")} DFI $${Number(
-                dfiPrice
-              ).toFixed(2)}`}
+              buttonText={`${t("header.navbar.get")} DFI`}
+              href="/explore/dfi#get_dfi"
             />
           </div>
         </div>
@@ -273,7 +272,7 @@ function DesktopMenu({ item }: { item: string }) {
 
 function TabletMobileMenu() {
   const { t } = useTranslation("layout");
-  const { dfiPrice, dropDownState } = useContext(DropDownContext);
+  const { dropDownState } = useContext(DropDownContext);
   const ref = useRef<HTMLDivElement>(null);
   const dimension = useWindowDimensions();
   useEffect(() => {
@@ -318,9 +317,8 @@ function TabletMobileMenu() {
           <GradientButton
             className="py-3 bg-dark-00"
             borderClassName="w-full"
-            buttonText={`${t("header.navbar.buy")} DFI $${Number(
-              dfiPrice
-            ).toFixed(2)}`}
+            buttonText={`${t("header.navbar.get")} DFI`}
+            href="/explore/dfi#get_dfi"
           />
         </Container>
 

@@ -55,7 +55,10 @@ export default function GetDFISection() {
         "lg:mb-60 lg:flex-row lg:gap-[69px]"
       )}
     >
-      <div className="lg:w-[45%] flex flex-col gap-5 shrink-0">
+      <div
+        id="get_dfi"
+        className="lg:w-[45%] flex flex-col gap-5 shrink-0 scroll-mt-[200px]"
+      >
         <SectionTitle text={t("getDfiSection.title")} />
         <div
           className={classNames(

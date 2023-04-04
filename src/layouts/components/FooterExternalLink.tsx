@@ -27,6 +27,18 @@ export default function FooterExternalLink(props: {
         className="flex flex-row items-center"
       >
         {t(`footer.sitemap.${category}.${text}`)}
+        <svg width="0" height="0">
+          <linearGradient
+            id="accent-gradient"
+            x1="100%"
+            y1="100%"
+            x2="0%"
+            y2="0%"
+          >
+            <stop stopColor="#FF00FF" offset="0%" />
+            <stop stopColor="#EC0C8D" offset="100%" />
+          </linearGradient>
+        </svg>
         {hasUpArrowIcon ? (
           <RiArrowRightUpLine
             className="pl-1"

@@ -169,7 +169,6 @@ export function Header(): JSX.Element {
               href="/explore/dfi#get-dfi"
               onClick={() => {
                 if (isMenuActive) {
-                  console.log("clicked");
                   setIsMenuActive(false);
                 }
               }}
@@ -330,7 +329,6 @@ function TabletMobileMenu() {
             href="/explore/dfi#get-dfi"
             onClick={() => {
               if (isMenuActive) {
-                console.log("clicked");
                 setIsMenuActive(false);
               }
             }}

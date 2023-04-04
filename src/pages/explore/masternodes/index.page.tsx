@@ -4,6 +4,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { HeroBanner, HeroBannerBg } from "@components/commons/HeroBanner";
 import { ExploreCards, ExploreCardsImage } from "../_components/ExploreCards";
 import { MasternodesStatisticsDisplay } from "./_components/MasternodesStatisticsDisplay";
+import { MasternodesBenefitsSection } from "./MasternodesBenefitsSection";
 
 export default function ExploreMasternodes() {
   const { t } = useTranslation("page-explore-masternodes");
@@ -22,19 +23,20 @@ export default function ExploreMasternodes() {
         startExploringJumpLink="#statistics_display_masternodes"
       />
       <MasternodesStatisticsDisplay />
+      <MasternodesBenefitsSection />
       <Container className="lg:mb-8 md:mb-6 mb-4">
         <div className="flex flex-row overflow-x-scroll lg:gap-x-8 md:gap-x-6 gap-x-4">
           <ExploreCards
             title={t("footerCards.cardTitle")}
             desc={entries[0].title}
             bgImage={ExploreCardsImage.PHONE}
-            href=""
+            href="/explore/wallets"
           />
           <ExploreCards
             title={t("footerCards.cardTitle")}
             desc={entries[1].title}
             bgImage={ExploreCardsImage.METALCOIN}
-            href=""
+            href="/explore/dfi"
           />
         </div>
       </Container>

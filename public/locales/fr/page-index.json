@@ -155,14 +155,6 @@
       "cards": [
         {
           "title": "2023 Q1",
-          "desc": "Consortium DeFiChain",
-          "image": {
-            "url": "/img/timeline/2023/2023_Q1_CONSORTIUM.png",
-            "alt": "Consortium DeFiChain"
-          }
-        },
-        {
-          "title": "2023 Q1",
           "desc": "DeFiChain Gouvernance on-chain",
           "image": {
             "url": "/img/timeline/2023/2023_Q1_OCG.png",
@@ -171,10 +163,10 @@
         },
         {
           "title": "2023 Q1",
-          "desc": "Bridge ERC-20",
+          "desc": "Quantum",
           "image": {
             "url": "/img/timeline/2023/2023_Q1_ERC_20_BRIDGE.png",
-            "alt": "Bridge ERC-20"
+            "alt": "Quantum"
           }
         },
         {
@@ -187,14 +179,6 @@
         },
         {
           "title": "2023 Q1",
-          "desc": "Explorateur DeFi Meta Chain",
-          "image": {
-            "url": "/img/timeline/2023/2023_Q1_DMC_EXPLORER.png",
-            "alt": "Explorateur DeFi Meta Chain"
-          }
-        },
-        {
-          "title": "2023 Q1",
           "desc": "DevNet DeFiChain",
           "image": {
             "url": "/img/timeline/2023/2023_Q1_DFC_DEVNET.png",
@@ -202,19 +186,19 @@
           }
         },
         {
-          "title": "2023 Q1",
+          "title": "2023 Q2",
+          "desc": "Explorateur DeFi Meta Chain",
+          "image": {
+            "url": "/img/timeline/2023/2023_Q1_DMC_EXPLORER.png",
+            "alt": "Explorateur DeFi Meta Chain"
+          }
+        },
+        {
+          "title": "2023 Q2",
           "desc": "Refonte du site DeFiChain.com",
           "image": {
             "url": "/img/timeline/2023/2023_Q1_DFC_REDESIGN.png",
             "alt": "Refonte du site DeFiChain.com"
-          }
-        },
-        {
-          "title": "2023 Q1",
-          "desc": "Portefeuille léger de bureau",
-          "image": {
-            "url": "/img/timeline/2023/2023_Q1_DESKTOP LW.png",
-            "alt": "Portefeuille léger de bureau"
           }
         },
         {
@@ -734,6 +718,32 @@
           }
         }
       ]
+    }
+  },
+  "BlockchainFeatureSection": {
+    "title": "Conçu pour la finance décentralisée",
+    "subtitle": "BLOCKCHAIN NON-TURING-COMPLÈTE",
+    "desc": "DeFiChain offre des fonctionnalités complètes adaptées aux besoins de la communauté DLT (Distributed Ledger Technology), en donnant la priorité à la simplicité, au débit rapide et à la sécurité.",
+    "button": "Commencer à construire",
+    "THROUGHPUT": {
+      "title": "DÉBIT",
+      "desc": "Débit élevé inégalé pour toutes les transactions."
+    },
+    "SECURITY": {
+      "title": "SÉCURITÉ",
+      "desc": "Turing-incomplet pour les vecteurs d'attaque réduits."
+    },
+    "IMMUTABILITY": {
+      "title": "IMMUTABILITÉ",
+      "desc": "Marie le meilleur de la preuve d'enjeu (Proof-of-Stake), avec la sécurité de Bitcoin."
+    },
+    "DEVELOPMENT": {
+      "title": "DÉVELOPPEMENT",
+      "desc": "Créer rapidement une variété d'applications DeFi sur une seule chaîne."
+    },
+    "VARIETY": {
+      "title": "VARIÉTÉ",
+      "desc": "Large gamme d'opérations financières crypto-économiques."
     }
   }
 }

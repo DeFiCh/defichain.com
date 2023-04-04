@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { Dispatch, SetStateAction } from "react";
+import { useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import { MetaDfiCoin } from "@public/assets/img/ecosystem/MetaDfiCoin";
 import {
@@ -8,40 +8,34 @@ import {
 } from "@public/assets/img/ecosystem/GlassCube";
 import { WalletApps, WalletAppsHover } from "@public/assets/img/ecosystem/Dapp";
 import { Quantum, QuantumHover } from "@public/assets/img/ecosystem/Quantum";
-
-interface CardProps {
-  id: string;
-  href: string;
-  img: string;
-  customStyle?: string;
-  mobileImg?: string;
-}
+import { useDeviceDetect, ViewPort } from "@hooks/useDeviceDetect";
 
 export function Card({
-  content,
-  setHoverState,
-  hoverState,
   title,
   subTitle,
   customIconStyle,
+  id,
+  href,
+  customTextStyle,
 }: {
-  content: CardProps;
-  setHoverState: Dispatch<SetStateAction<string | undefined>>;
-  hoverState?: string;
+  id: string;
+  href?: string;
+  customTextStyle?: string;
   title: string;
   subTitle: string;
   customIconStyle?: string;
 }): JSX.Element {
-  const Icon = iconMapping[content.id] as React.ElementType;
-  // TODO animate icons
-  // const IconOnHover = iconMapping[`${content.id}_hover`] as React.ElementType;
+  const [hoverState, setHoverState] = useState<string | undefined>(undefined);
+  const Icon = iconMapping[id] as React.ElementType;
+  const IconOnHover = iconMapping[`${id}_hover`] as React.ElementType;
+  const device = useDeviceDetect();
 
   return (
     <div>
       <div
-        key={content.id}
+        key={id}
         onMouseEnter={() => {
-          setHoverState(content.id);
+          setHoverState(id);
         }}
         onMouseLeave={() => {
           setHoverState(undefined);
@@ -54,18 +48,21 @@ export function Card({
         )}
       >
         <a
-          href={content.href}
+          href={href}
           className={classNames(
-            " w-full h-full p-6 rounded-[15px] border-[0.5px] flex flex-col",
+            "w-full h-full p-6 rounded-[15px] border-[0.5px] flex flex-col",
             "border-dark-200 bg-dark-00",
-            "duration-1000 hover:transition hover:ease-in delay-250"
+            "duration-1000 hover:transition hover:ease-in delay-250",
+            {
+              "pointer-events-none": device !== ViewPort.DESKTOP, // prevents user from holding onto the image on touch screen
+            }
           )}
         >
-          <div className={classNames(content.customStyle)}>
+          <div className={classNames(customTextStyle)}>
             <span
               className={classNames("md:w-full text-2xl tracking-[-2%]", {
                 "accent-dfc-gradient-text":
-                  hoverState !== undefined && hoverState === content.id,
+                  hoverState !== undefined && hoverState === id,
               })}
             >
               {title}
@@ -78,23 +75,18 @@ export function Card({
               {subTitle}
               <FiArrowUpRight size={20} className="ml-[13px]" />
             </div>
-          </div>
-          <div
-            className={classNames("absolute mix-blend-screen", customIconStyle)}
-          >
-            <div>
-              <Icon id={`${content.id}`} />
+            <div
+              className={classNames(
+                "absolute mix-blend-screen",
+                customIconStyle
+              )}
+            >
+              {hoverState !== undefined && hoverState === id && Icon ? (
+                <IconOnHover id={`${id}_hover`} />
+              ) : (
+                <Icon id={`${id}`} />
+              )}
             </div>
-            {/* TODO animate icons */}
-            {/* {hoverState !== undefined && hoverState === content.id && Icon ? (
-              <div className="relative">
-                <IconOnHover id={`${content.id}_hover`} />
-              </div>
-            ) : (
-              <div className="relative">
-                <Icon id={`${content.id}`} />
-              </div>
-            )} */}
           </div>
         </a>
       </div>

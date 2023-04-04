@@ -1,0 +1,91 @@
+{
+  "heroBanner": {
+    "title": "EXPLORE THE POWER OF DFI",
+    "subtitle": "Experience DeFi with DFI",
+    "desc": "Our native token unlocks the power of decentralized finance, giving you access to a growing ecosystem of cutting-edge DeFi tools and innovative blockchain applications."
+  },
+  "statisticsDisplay": {
+    "circulatingSupply": {
+      "title": "CIRCULATING SUPPLY",
+      "desc": "{{perc}} of max supply"
+    },
+    "dfiMinted": {
+      "title": "TOTAL DFI MINTED",
+      "desc": "out of {{value}}{{suffix}} fixed supply"
+    }
+  },
+  "harnessDFISection": {
+    "title": "BUILDING A BETTER TOMORROW WITH DFI",
+    "subtitle": "Harness the power of DFI",
+    "desc": "A gateway to decentralized applications and tools, offering potential for greater returns, lower fees, and democratic governance.",
+    "items": [
+      {
+        "title": "WIDE VARIETY OF DEFI SERVICES",
+        "desc": "With minimal DFI fees, you have access to DeFi Applications"
+      },
+      {
+        "title": "STORE AS COLLATERAL",
+        "desc": "Borrow decentralized assets using crypto tokens as collateral"
+      },
+      {
+        "title": "BE A MASTERNODE OWNER",
+        "desc": "Fund a new staking node for just 20,000 DFI"
+      },
+      {
+        "title": "TOKENIZATION",
+        "desc": "Tokenize assets, manage and trade with dTokens"
+      },
+      {
+        "title": "COMMUNITY FUND GOVERNANCE",
+        "desc": "Participate in shaping the future of the blockchain"
+      },
+      {
+        "title": "EARN FROM LIQUIDITY POOLS",
+        "desc": "Earn rewards by providing liquidity on DEX"
+      }
+    ]
+  },
+  "initialTokenDistributionSection": {
+    "title": "FAIR TOKEN DISTRIBUTIONS AND STAKING REWARDS",
+    "subtitle": "Initial Token Distribution",
+    "desc": "",
+    "button": "Read from Whitepaper",
+    "initialSupply": {
+      "title": "INITIAL SUPPLY",
+      "percentage": "49%",
+      "desc": "Of the 1.2 billion $DFI coins, 49% will be in the initial supply. From the initial supply,",
+      "descAirDrop": "26% are airdropped",
+      "descBurn": "27% burned",
+      "descDestroy": "47% destroyed.",
+      "airDrop": "Airdropped",
+      "burn": "Burned",
+      "destroy": "Destroyed",
+      "airDropPercentage": "26%",
+      "burnPercentage": "27%",
+      "destroyPercentage": "47%"
+    },
+    "masternodes": {
+      "title": "TO MASTERNODES OVER TIME",
+      "percentage": "51%",
+      "desc": "The remaining supply is issued to masternode holders over time."
+    }
+  },
+  "getDfiSection": {
+    "title": "PURCHASE AND RECEIVE DFI TOKENS EASILY",
+    "subtitle": "Get DFI on trusted exchanges",
+    "desc1": "Securely buy DFI on trusted cryptocurrency exchanges and easily store them in your DeFiChain wallet.",
+    "desc2": "Click on our partner links to purchase DFI and receive your tokens by sending them to your wallet address.",
+    "exhangePriceText": "Prices may vary from different sources",
+    "stakingText": "Also available for staking in"
+  },
+  "footerCards": {
+    "wallet": {
+      "title": "EXPLORE DEFICHAIN",
+      "subtitle": "Choose your wallet"
+    },
+    "dapps": {
+      "title": "THE GROWING ECOSYSTEM",
+      "subtitle": "Explore dApps"
+    }
+  }
+}

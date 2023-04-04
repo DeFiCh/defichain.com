@@ -155,14 +155,6 @@
       "cards": [
         {
           "title": "2023 Q1",
-          "desc": "DeFiChain 聯盟",
-          "image": {
-            "url": "/img/timeline/2023/2023_Q1_CONSORTIUM.png",
-            "alt": "DeFiChain 聯盟"
-          }
-        },
-        {
-          "title": "2023 Q1",
           "desc": "DeFiChain On-Chain Governance",
           "image": {
             "url": "/img/timeline/2023/2023_Q1_OCG.png",
@@ -171,10 +163,10 @@
         },
         {
           "title": "2023 Q1",
-          "desc": "ERC-20 橋",
+          "desc": "Quantum",
           "image": {
             "url": "/img/timeline/2023/2023_Q1_ERC_20_BRIDGE.png",
-            "alt": "ERC-20 橋"
+            "alt": "Quantum"
           }
         },
         {
@@ -187,14 +179,6 @@
         },
         {
           "title": "2023 Q1",
-          "desc": "DeFi Meta Chain Explorer",
-          "image": {
-            "url": "/img/timeline/2023/2023_Q1_DMC_EXPLORER.png",
-            "alt": "DeFi Meta Chain Explorer"
-          }
-        },
-        {
-          "title": "2023 Q1",
           "desc": "DeFiChain DevNet 開發網",
           "image": {
             "url": "/img/timeline/2023/2023_Q1_DFC_DEVNET.png",
@@ -202,19 +186,19 @@
           }
         },
         {
-          "title": "2023 Q1",
+          "title": "2023 Q2",
+          "desc": "DeFi Meta Chain Explorer",
+          "image": {
+            "url": "/img/timeline/2023/2023_Q1_DMC_EXPLORER.png",
+            "alt": "DeFi Meta Chain Explorer"
+          }
+        },
+        {
+          "title": "2023 Q2",
           "desc": "重新設計DeFiChain.com",
           "image": {
             "url": "/img/timeline/2023/2023_Q1_DFC_REDESIGN.png",
             "alt": "重新設計DeFiChain.com"
-          }
-        },
-        {
-          "title": "2023 Q1",
-          "desc": "桌面端Light Wallet 錢包",
-          "image": {
-            "url": "/img/timeline/2023/2023_Q1_DESKTOP LW.png",
-            "alt": "桌面端Light Wallet 錢包"
           }
         },
         {
@@ -734,6 +718,32 @@
           }
         }
       ]
+    }
+  },
+  "BlockchainFeatureSection": {
+    "title": "專為去中心化金融設計",
+    "subtitle": "非圖靈完備區塊鏈",
+    "desc": "DeFiChain 優先考慮簡單性、快速吞吐量和安全性的情況下提供全面的功能，以滿足分佈式賬本技術 (Distributed Ledger Technology，簡稱DLT) 社區的需求。",
+    "button": "開始建造",
+    "THROUGHPUT": {
+      "title": "吞吐量",
+      "desc": "所有交易擁有極快的交易吞吐量。"
+    },
+    "SECURITY": {
+      "title": "安全",
+      "desc": "非圖靈完備可減少攻擊角度。"
+    },
+    "IMMUTABILITY": {
+      "title": "不可變性",
+      "desc": "比特幣的安全性完美結合起來的股權證明設計"
+    },
+    "DEVELOPMENT": {
+      "title": "發展",
+      "desc": "在一條鏈上快速創建各種 DeFi 應用程序。"
+    },
+    "VARIETY": {
+      "title": "品類",
+      "desc": "提供廣泛的加密經濟金融業務"
     }
   }
 }

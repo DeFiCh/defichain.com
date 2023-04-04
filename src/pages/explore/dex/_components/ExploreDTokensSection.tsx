@@ -185,16 +185,14 @@ function setTokens(
 
   const allTokensWithUpdatedName = {};
 
-  // eslint-disable-next-line array-callback-return
-  Object.entries(allUncleanTokens.dexPrices).map(([key, value]) => {
+  Object.entries(allUncleanTokens.dexPrices).forEach(([key, value]) => {
     allTokensWithUpdatedName[key] = value;
     allTokensWithUpdatedName[key].token.name =
       tokenNameMap[value.token.symbol] ?? value.token.name;
   });
 
   const initialSelectedTabTokens = {};
-  // eslint-disable-next-line array-callback-return
-  Object.entries(allUncleanTokens.dexPrices).map(([key, value]) => {
+  Object.entries(allUncleanTokens.dexPrices).forEach(([key, value]) => {
     if (crypto.includes(key)) {
       initialSelectedTabTokens[key] = value;
     }

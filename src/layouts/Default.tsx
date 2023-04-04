@@ -80,12 +80,12 @@ export function Default(props: PropsWithChildren<any>): JSX.Element | null {
 
       {mounted && (
         <WhaleProvider>
-          <div className="bg-dark-00 relative">
+          <div className="bg-dark-00 relative z-0">
             <Header />
             <main className="flex-grow text-dark-1000">{props.children}</main>
             <div
               className={classNames(
-                "absolute z-0 bg-top bg-no-repeat inset-0",
+                "absolute z-[-1] bg-top bg-no-repeat inset-0",
                 bgPicture
               )}
             />

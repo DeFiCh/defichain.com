@@ -51,7 +51,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
 
           <div
             className={classNames(
-              "absolute bg-contain bg-no-repeat hidden lg:block h-[500px] w-full bg-[url('/assets/img/footer/arrow_1.png')]",
+              "absolute z-[-1] mix-blend-screen bg-contain bg-no-repeat hidden lg:block h-[400px] w-full bg-[url('/assets/img/footer/arrow_1.png')]",
               "lg:left-20 lg:top-[300px] xl:left-[350px] xl:top-[250px]"
             )}
           />

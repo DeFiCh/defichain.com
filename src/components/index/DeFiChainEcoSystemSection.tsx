@@ -14,23 +14,20 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
 
   return (
     <div
-      className={classNames(
-        "relative lg:pt-[136px] md:-mb-6 lg:mb-0 scrolling-touch overflow-hidden",
-        {
-          "overflow-hidden": device === ViewPort.DESKTOP,
-          "pb-[292px]": device === ViewPort.TABLET && dimensions.width > 1500, // for bigger ipad sizes
-        }
-      )}
+      className={classNames("relative lg:pt-[136px] md:-mb-6 lg:mb-0", {
+        "overflow-hidden": device === ViewPort.DESKTOP,
+        "pb-[292px]": device === ViewPort.TABLET && dimensions.width > 1500, // for bigger ipad sizes
+      })}
     >
       <Container
         className={classNames(
-          "no-scrollbar z-10 relative lg:flex lg:justify-center",
-          { "flexbox-wrapper": dimensions.width >= 1033 } // only apply styling when in large screen
+          "relative no-scrollbar z-20 justify-between",
+          { "flexbox-wrapper": dimensions.width >= 1023 } // only apply styling when in large screen
         )}
       >
         <div
           className={classNames(
-            "lg:pl-[144px] lg:order-1 md:pb-[72px] pb-[48px]",
+            "relative lg:pl-[144px] lg:order-1 md:pb-[72px] pb-[48px] w-full",
             { "sticky-container": dimensions.width >= 1033 } // only apply styling when in large screen
           )}
         >
@@ -51,7 +48,15 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
               <span className="text-electric">{sectionTitle[6]}</span>
             </span>
           </span>
+
+          <div
+            className={classNames(
+              "absolute z-[-1] mix-blend-screen bg-contain bg-no-repeat hidden lg:block h-[400px] w-full bg-[url('/assets/img/footer/arrow_1.png')]",
+              "lg:left-20 lg:top-[300px] xl:left-[350px] xl:top-[250px]"
+            )}
+          />
         </div>
+
         <div className="grid grid-flow-row grid-cols-1 gap-6 md:grid-flow-row md:grid-cols-2 md:gap-y-0 lg:block lg:h-[639px] lg:place-self-end">
           <Card
             title={t("EcosystemSection.cards.investTitle")}
@@ -91,23 +96,9 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
       </Container>
       <div
         className={classNames(
-          "absolute h-1/3 w-1/3 lg:bottom-[200px] md:bottom-[100px] left-0 bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/ecosystem/dfi-logo-vector.png')]",
-          {
-            "h-[475px] w-[475px] left-[-300px] top-[300px]":
-              dimensions.width <= 700,
-          }
-        )}
-      />
-      <div
-        className={classNames(
-          "absolute h-1/4 w-1/4 bottom-0 right-[21px] bg-contain bg-no-repeat mix-blend-screen bg-bottom md:bg-right bg-[url('/assets/img/footer/arrow_1.png')]",
-          {
-            "bottom-[225px] right-[-110px]": dimensions.width < 900,
-          },
-          {
-            "top-[400px] right-[-220px] h-[300px] w-[300px]":
-              dimensions.width < 596,
-          }
+          "absolute bg-contain bg-no-repeat bg-[url('/assets/img/ecosystem/dfi-logo-vector.png')] w-full",
+          "lg:bg-center lg:top-60 lg:left-[-630px] md:h-[300px] md:top-[250px] md:left-[-100px] sm:h-[200px] sm:top-[400px]",
+          "bg-left top-[400px] right-10 h-[250px]"
         )}
       />
     </div>

@@ -25,7 +25,7 @@ export function ExploreDTokensGrid({
         className={classNames(
           "md:flex hidden flex-wrap justify-center md:mt-16",
           "lg:w-[1000px] w-auto",
-          "lg:gap-8 md:gap-6 gap-5"
+          "lg:gap-8 md:gap-6"
         )}
       >
         {selectionTokens &&
@@ -113,7 +113,7 @@ function ExploreDTokenCard({
             <div className="text-xs text-dark-800 md:text-center line-clamp-1">
               {name}
             </div>
-            <div className="mt-3 text-[18px] leading-6 text-dark-1000 font-semibold md:text-center">
+            <div className="mt-3 lg:text-[18px] lg:leading-6 text-sm text-dark-1000 font-semibold md:text-center">
               ${value}
               {suffix}
             </div>

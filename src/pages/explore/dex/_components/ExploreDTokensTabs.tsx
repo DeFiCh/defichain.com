@@ -1,13 +1,15 @@
 import { Dispatch, SetStateAction } from "react";
 import classNames from "classnames";
+import { useTranslation } from "next-i18next";
 
-export function ExploreDTokensSelection({
+export function ExploreDTokensTabs({
   tokenSectionChoice,
   setTokenSectionChoice,
 }: {
   tokenSectionChoice: TokenLabels;
   setTokenSectionChoice: Dispatch<SetStateAction<TokenLabels>>;
 }) {
+  const { t } = useTranslation("page-explore-dex");
   return (
     <div className="md:card-outline-2 p-[0.5px] rounded-[40px] w-fit mt-8">
       <div className="flex flex-row gap-x-3 rounded-[40px] md:bg-dark-100 p-1 w-fit">
@@ -24,7 +26,7 @@ export function ExploreDTokensSelection({
               }
             )}
           >
-            {TokenLabels.CRYPTO}
+            {t("exploreDTokensSection.buttonSelectionTabs.crypto")}
           </button>
         </div>
 
@@ -41,7 +43,7 @@ export function ExploreDTokensSelection({
               }
             )}
           >
-            {TokenLabels.DSTOCKS}
+            {t("exploreDTokensSection.buttonSelectionTabs.dstocks")}
           </button>
         </div>
 
@@ -58,7 +60,7 @@ export function ExploreDTokensSelection({
               }
             )}
           >
-            {TokenLabels.ETFS}
+            {t("exploreDTokensSection.buttonSelectionTabs.etfs")}
           </button>
         </div>
       </div>

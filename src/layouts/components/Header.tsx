@@ -29,7 +29,7 @@ export const HoverContext = createContext<any>(undefined);
 export const DropDownContext = createContext<any | undefined>(undefined);
 
 export function Header(): JSX.Element {
-  const [menu, setMenu] = useState(false);
+  const [isMenuActive, setIsMenuActive] = useState(false);
   const [headerHeight, setHeaderHeight] = useState<number>(0);
   // const [dfiPrice, setDfiPrice] = useState<string>("0"); // TODO: uncomment when price is required
   const router = useRouter();
@@ -46,7 +46,7 @@ export function Header(): JSX.Element {
 
   useEffect(() => {
     function routeChangeStart(): void {
-      setMenu(false);
+      setIsMenuActive(false);
     }
 
     // TODO: uncomment if DFI oracle price is required
@@ -59,25 +59,27 @@ export function Header(): JSX.Element {
   }, []);
 
   useEffect(() => {
-    if (menu) {
+    if (isMenuActive) {
       document.documentElement.style.overflow = "hidden";
     } else {
       document.documentElement.style.overflow = "auto";
     }
-  }, [menu]);
+  }, [isMenuActive]);
 
   useEffect(() => {
-    if (dimension.width >= 1024 && menu) {
-      setMenu(false);
+    if (dimension.width >= 1024 && isMenuActive) {
+      setIsMenuActive(false);
     }
-  }, [dimension.width, menu]);
+  }, [dimension.width, isMenuActive]);
 
   const tabletMobileDropDownObj = useMemo(
     () => ({
       dropDownState,
       setDropDownState,
+      isMenuActive,
+      setIsMenuActive,
     }),
-    [dropDownState, setDropDownState]
+    [dropDownState, setDropDownState, isMenuActive, setIsMenuActive]
   );
 
   const desktopContextObj = useMemo(
@@ -137,7 +139,7 @@ export function Header(): JSX.Element {
       ref={ref}
       className={classNames(
         "sticky top-0 left-0 right-0 w-full bg-dark-00 z-50 transition-opacity ease-in-out duration-500",
-        isHoverOn || menu
+        isHoverOn || isMenuActive
           ? "header-dropdown-bg border-b-0 "
           : "border-b-[0.1px] border-b-dark-200"
       )}
@@ -164,17 +166,23 @@ export function Header(): JSX.Element {
             <GradientButton
               className="py-3 px-5 bg-dark-00"
               buttonText={`${t("header.navbar.get")} DFI`}
-              href="/explore/dfi#get_dfi"
+              href="/explore/dfi#get-dfi"
+              onClick={() => {
+                if (isMenuActive) {
+                  console.log("clicked");
+                  setIsMenuActive(false);
+                }
+              }}
             />
           </div>
         </div>
 
         <div className="lg:hidden ml-[27px]">
-          {menu ? (
+          {isMenuActive ? (
             <IoCloseCircleOutline
               className="cursor-pointer hover:text-brand-100 active:opacity-70 h-8 w-8 text-dark-1000"
               onClick={async () => {
-                setMenu(false);
+                setIsMenuActive(false);
               }}
               data-testid="Header.CloseMenu"
             />
@@ -182,7 +190,7 @@ export function Header(): JSX.Element {
             <MdMenu
               className="cursor-pointer hover:text-brand-100 active:opacity-70 h-8 w-8 text-dark-1000"
               onClick={() => {
-                setMenu(true);
+                setIsMenuActive(true);
               }}
               data-testid="Header.OpenMenu"
             />
@@ -190,7 +198,7 @@ export function Header(): JSX.Element {
         </div>
       </Container>
       <Transition
-        show={menu}
+        show={isMenuActive}
         enter="transition-opacity duration-300"
         enterFrom="opacity-0"
         enterTo="opacity-100"
@@ -272,7 +280,8 @@ function DesktopMenu({ item }: { item: string }) {
 
 function TabletMobileMenu() {
   const { t } = useTranslation("layout");
-  const { dropDownState } = useContext(DropDownContext);
+  const { dropDownState, isMenuActive, setIsMenuActive } =
+    useContext(DropDownContext);
   const ref = useRef<HTMLDivElement>(null);
   const dimension = useWindowDimensions();
   useEffect(() => {
@@ -318,7 +327,13 @@ function TabletMobileMenu() {
             className="py-3 bg-dark-00"
             borderClassName="w-full"
             buttonText={`${t("header.navbar.get")} DFI`}
-            href="/explore/dfi#get_dfi"
+            href="/explore/dfi#get-dfi"
+            onClick={() => {
+              if (isMenuActive) {
+                console.log("clicked");
+                setIsMenuActive(false);
+              }
+            }}
           />
         </Container>
 

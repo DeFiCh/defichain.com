@@ -56,7 +56,7 @@ export default function GetDFISection() {
       )}
     >
       <div
-        id="get_dfi"
+        id="get-dfi"
         className="lg:w-[45%] flex flex-col gap-5 shrink-0 scroll-mt-[200px]"
       >
         <SectionTitle text={t("getDfiSection.title")} />

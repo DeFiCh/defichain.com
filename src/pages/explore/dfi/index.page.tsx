@@ -18,7 +18,7 @@ export default function ExploreDFI() {
         desc={t("heroBanner.desc")}
         heroBg={HeroBannerBg.DFI_COIN}
         hasStartExploringButton
-        startExploringJumpLink="#statistics_display_dfi"
+        startExploringJumpLink="#statistics-display-dfi"
       />
       <DFIStatisticsDisplay />
       <HarnessDFISection />

@@ -107,13 +107,15 @@ export function ExploreDTokensSection() {
         />
         <ExploreDTokensGrid selectionTokens={selectedTabTokens} />
 
-        <SecondaryButton
-          href="https://defiscan.live/tokens"
-          className="place-self-center md:mt-16 mt-14 lg:py-4 py-3 md:px-[56px] px-[43px] w-fit lg:text-base text-sm lg::font-bold font-semibold"
-          text={t("exploreDTokensSection.secondaryButtonText")}
-          hasDiagonalArrow
-          arrowSize={dimension.width >= 1024 ? 24 : 20}
-        />
+        <div className="flex place-self-center">
+          <SecondaryButton
+            href="https://defiscan.live/tokens"
+            className="md:mt-16 mt-14 lg:py-4 py-3 md:px-[56px] px-[43px] w-fit lg:text-base text-sm lg::font-bold font-semibold"
+            text={t("exploreDTokensSection.secondaryButtonText")}
+            hasDiagonalArrow
+            arrowSize={dimension.width >= 1024 ? 24 : 20}
+          />
+        </div>
 
         <div className="text-dark-700 md:text-base text-sm place-self-center mt-4 text-center font-desc">
           {t("exploreDTokensSection.pricesDesc")}

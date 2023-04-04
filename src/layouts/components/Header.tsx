@@ -109,7 +109,7 @@ export function Header(): JSX.Element {
         y * 100
       }%, #ff00af 0%, #A6A6A6 15%)`;
       header.style.backgroundImage = gradient;
-      if (e.clientY >= headerRect.bottom) {
+      if (e.clientY >= headerRect.bottom - 10) {
         setIsCursorOnHeader(false);
       } else {
         setIsCursorOnHeader(true);
@@ -224,6 +224,8 @@ function DesktopMenu({ item }: { item: string }) {
   const { t } = useTranslation("layout");
   const router = useRouter();
 
+  console.log(isHoverOn, isCursorOnHeader);
+
   return (
     <Menu
       className="lg:pb-10 cursor-pointer lg:w-[136px] text-center"
@@ -246,7 +248,7 @@ function DesktopMenu({ item }: { item: string }) {
             "text-brand-100": isShowing && !isCursorOnHeader,
           },
           {
-            "text-brand-100":
+            "!text-brand-100":
               !isCursorOnHeader &&
               !isHoverOn &&
               router.pathname.includes(item.toLowerCase()),

@@ -3,6 +3,7 @@ import Head from "next/head";
 import { PropsWithChildren, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import classNames from "classnames";
+import { ReusableSVGElements } from "@components/icons/assets/tokens/ReuseableSVGElements";
 import Footer from "./components/Footer";
 import { Header } from "./components/Header";
 import { WhaleProvider } from "./context/WhaleContext";
@@ -80,6 +81,7 @@ export function Default(props: PropsWithChildren<any>): JSX.Element | null {
 
       {mounted && (
         <WhaleProvider>
+          <ReusableSVGElements />
           <div className="bg-dark-00 relative z-0">
             <Header />
             <main className="flex-grow text-dark-1000">{props.children}</main>

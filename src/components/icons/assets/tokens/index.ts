@@ -1,4 +1,5 @@
 import { SVGProps } from "react";
+import { dEUROC } from "@components/icons/assets/tokens/dEUROC";
 import { dBCH } from "./dBCH";
 import { dBTC } from "./dBTC";
 import { dDFI } from "./dDFI";
@@ -16,7 +17,7 @@ const mapping: Record<string, (props: SVGProps<SVGSVGElement>) => JSX.Element> =
     _UTXO: DFI,
     DFI,
     "DFI (UTXO)": DFI,
-    "DFI (Token)": dDFI,
+    "DFI (Token)": DFI,
     dBCH,
     dBTC,
     dDFI,
@@ -27,6 +28,7 @@ const mapping: Record<string, (props: SVGProps<SVGSVGElement>) => JSX.Element> =
     dUSDC,
     dDUSD: DUSD,
     DUSD,
+    dEUROC,
   };
 
 // TODO(@defich): move assets into it's own repo where anyone can create pull request into.
@@ -34,14 +36,17 @@ const mapping: Record<string, (props: SVGProps<SVGSVGElement>) => JSX.Element> =
 
 /**
  * @param {string} symbol of the asset icon
+ * @param isLoanToken
  * @return {(props: SVGProps<SVGSVGElement>) => JSX.Element}
  */
 export function getAssetIcon(
-  symbol: string
+  symbol: string,
+  isLoanToken?: boolean,
+  id?: string
 ): (props: SVGProps<SVGSVGElement>) => JSX.Element {
   const Icon = mapping[`d${symbol}`];
   if (Icon === undefined) {
-    return _TokenDefault(symbol);
+    return _TokenDefault(symbol, isLoanToken, id);
   }
   return Icon;
 }

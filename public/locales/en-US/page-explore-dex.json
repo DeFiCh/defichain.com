@@ -17,5 +17,40 @@
       "title": "TOKENS",
       "desc": "Crypto • dStocks • ETFs"
     }
+  },
+  "exploreDTokensSection": {
+    "title": "WIDE ARRAY OF TOKENS",
+    "subtitle": "Explore dTokens",
+    "secondaryButtonText": "View all dTokens",
+    "buttonSelectionTabs": {
+      "crypto": "Crypto",
+      "dstocks": "dStocks",
+      "etfs": "ETFs"
+    },
+    "pricesDesc": "Prices listed are approximate and may change in real-time.",
+    "tokenNames": {
+      "DUSD": "Decentralized USD Token",
+      "BTC": "Bitcoin Token",
+      "ETH": "Ether Token",
+      "USDC": "USD Coin Token",
+      "EUROC": "Euro Coin Token",
+      "USDT": "Tether Token",
+      "LTC": "Litecoin Token",
+      "BCH": "Bitcoin Cash Token",
+      "TSLA": "Tesla Token",
+      "BABA": "Alibaba Stock Token",
+      "GOOGL": "Google Stock Token",
+      "AAPL": "Apple Stock Token",
+      "NVDA": "Nvidia Tokenized Stock",
+      "MSFT": "Microsoft Stock Token",
+      "PYPL": "Paypal Token",
+      "ARKK": "ARK Innovation",
+      "SPY": "Smarty Pay Token",
+      "GLD": "Digital Gold Token",
+      "VNQ": "Vanguard Real Estate Token",
+      "SLV": "iShares Silver Trust Defichain",
+      "URTH": "iShares MSCI World ETF Tokenized",
+      "QQQ": "Invesco QQQ token"
+    }
   }
 }

@@ -32,13 +32,13 @@
     "outline": "Outline",
     "step": "STEP",
     "intro": {
-      "title": "Introduction",
+      "title": "1. Introduction",
       "toc": "Introduction",
       "desc": "Setting up a masternode on DeFiChain allows you to participate in the consensus protocol and receive staking awards. One thing to note is that in order to set up a masternode, you must have a minimum of 20,000 DFI.",
       "note": "Note: This how-to expects some basic familiarity with the Linux terminal."
     },
     "setup": {
-      "title": "Roles and setting up",
+      "title": "2. Roles and setting up",
       "desc": "There are two distinct roles: 'masternode owner' and 'masternode operator'. The owner holds the collateral and the primary activity (minting new coins, voting for anchors) is performed by operator. In general, a node can play both roles.",
       "toc": "Roles and set up",
       "create": {
@@ -60,7 +60,7 @@
         "step2": {
           "title": "Download and extract node software",
           "desc1": "Download the binaries. Here are links to binaries for Windows, Linux and Macosx. Download the latest release",
-          "link": "here.",
+          "link": "here",
           "desc2": "Following that we can extract the tar file by running (Replace x.x.x with your version number):",
           "code1": "tar -xvzf defichain-x.x.x-x86_64-pc-linux-gnu.tar.gz"
         },
@@ -74,7 +74,7 @@
         "step4": {
           "title": "Setting up crontab to keep our node running in the background",
           "desc1": "Now we may directly run our node by running",
-          "desc2": "/home/defichainmasternode/.defi/defid`",
+          "desc2": "/home/\ndefichainmasternode/.defi/defid`",
           "desc3": ", but this would not be very convenient, as we would have to keep the terminal session open the whole time, and run this command every time we restart our computer or SSH session.",
           "desc4": "Instead, we'll use crontab to keep the process running. Run",
           "desc5": "`crontab -e`",
@@ -106,7 +106,7 @@
           "desc1": "We're almost done, in order for the master node to operate correctly, we must make a couple of configuration changes. The configuration file will sit in",
           "desc2": "`home/defichainmasternode/.defi/defi.conf`.",
           "desc3": "Let's make sure the configuration file exists by running",
-          "desc4": "`touch/home/defichainmasternode/.defi.defi.conf`.",
+          "desc4": "`touch/home/\ndefichainmasternode/.defi.defi.conf`.",
           "desc5": "Now open this configuration file in the editor of your choice and add the following:",
           "code1": "gen=1 \nspv=1 \nmasternode_operator=OPERATOR_ADDRESS",
           "desc6": "Because we have decided to run owner and operator on the same address, just substitute the same legacy address you created for",

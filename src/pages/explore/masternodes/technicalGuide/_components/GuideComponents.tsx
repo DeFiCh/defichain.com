@@ -77,16 +77,27 @@ export function Step({ count }: { count: string }) {
   const { t } = useTranslation("page-explore-masternodes");
   return (
     <div className="flex flex-row mb-2 mt-[72px] lg:mt-12">
-      <span className="font-mono text-dark-700 tracking-[0.04em]">
+      <span className="font-mono text-dark-700 tracking-[0.04em] leading-4">
         {t("technicalGuide.step")}&nbsp;{count}
       </span>
     </div>
   );
 }
 
-export function Code({ text }: { text: string }) {
+export function Code({
+  text,
+  customStyle,
+}: {
+  text: string;
+  customStyle?: string;
+}) {
   return (
-    <div className="flex flex-row mt-5 p-6 bg-dark-100 rounded-[5px]">
+    <div
+      className={classNames(
+        "flex flex-row mt-5 p-6 bg-dark-100 rounded-[5px]",
+        customStyle
+      )}
+    >
       <span className="font-code text-dark-900 lg:leading-[48px] whitespace-pre-line">
         {text}
       </span>

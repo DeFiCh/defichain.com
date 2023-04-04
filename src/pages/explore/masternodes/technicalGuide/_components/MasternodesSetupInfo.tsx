@@ -30,7 +30,7 @@ export function MasternodesSetupInfo() {
   const contentRef = useRef(null);
 
   return (
-    <Container className="flex flex-row gap-x-12">
+    <Container className="flex flex-row gap-x-12 lg:mb-[436px] lg:pr-12">
       <div className="hidden h-full sticky top-[100px] lg:block md:w-3/12 lg:pt-[64px]">
         <TableOfContents parentReference={contentRef} />
       </div>
@@ -45,7 +45,8 @@ export function MasternodesSetupInfo() {
             <ContentDescription text={t("technicalGuide.intro.desc")} />
             <ContentDescription
               text={t("technicalGuide.intro.note")}
-              customStyle="lg:mt-7 !text-sm lg:!text-base"
+              containerStyle="lg:mt-12"
+              customStyle="!text-sm lg:!text-base"
             />
           </div>
           {/* Introduction end */}
@@ -66,9 +67,10 @@ export function MasternodesSetupInfo() {
             />
             <ContentDescription
               text={t("technicalGuide.setup.create.desc")}
+              containerStyle="mt-6"
               customStyle="!text-base lg:!text-xl"
             />
-            <Image src={CreateMN} alt="Create" className="mt-5" />
+            <Image src={CreateMN} alt="Create" className="mt-6" />
             {/* Creating end */}
 
             {/* Operating start */}
@@ -122,10 +124,11 @@ export function MasternodesSetupInfo() {
                 href={downloadLinks}
                 rel="noreferrer"
                 target="_blank"
-                className="font-desc text-base lg:text-xl tracking-[0.03em] lg:tracking-normal text-electric ml-1"
+                className="font-desc text-base lg:text-xl tracking-[0.03em] lg:tracking-normal text-electric ml-1 underline"
               >
                 {t("technicalGuide.setup.operate.step2.link")}
               </a>
+              .
             </ContentDescription>
             <ContentDescription
               text={t("technicalGuide.setup.operate.step2.desc2")}
@@ -283,7 +286,7 @@ export function MasternodesSetupInfo() {
             >
               <ContentDescription
                 text={t("technicalGuide.setup.operate.step7.desc4")}
-                customStyle="!text-base lg:!text-xl !text-dark-1000 font-semibold mr-1 break-all"
+                customStyle="!text-base lg:!text-xl !text-dark-1000 font-semibold mr-1"
                 containerStyle="contents"
               />
               <ContentDescription
@@ -296,7 +299,7 @@ export function MasternodesSetupInfo() {
             <ContentDescription
               text={t("technicalGuide.setup.operate.step7.desc6")}
               customStyle="!text-base lg:!text-xl inline-block contents"
-              containerStyle="block mt-5"
+              containerStyle="block mt-8"
             >
               <ContentDescription
                 text={t("technicalGuide.setup.operate.step7.desc7")}
@@ -330,10 +333,14 @@ export function MasternodesSetupInfo() {
               text={t("technicalGuide.setup.operate.step7.desc12")}
               customStyle="!text-base lg:!text-xl"
             />
-            <Code text={t("technicalGuide.setup.operate.step7.code2")} />
+            <Code
+              text={t("technicalGuide.setup.operate.step7.code2")}
+              customStyle="mt-8"
+            />
             <ContentDescription
               text={t("technicalGuide.setup.operate.step7.desc13")}
               customStyle="!text-base lg:!text-xl"
+              containerStyle="mt-8"
             />
             <ContentDescription
               text={t("technicalGuide.setup.operate.step7.desc14")}
@@ -481,10 +488,14 @@ export function MasternodesSetupInfo() {
                 containerStyle="contents"
               />
             </ContentDescription>
-            <Code text={t("technicalGuide.setup.multiple.code1")} />
+            <Code
+              text={t("technicalGuide.setup.multiple.code1")}
+              customStyle="mt-12"
+            />
             <ContentDescription
               text={t("technicalGuide.setup.multiple.desc5")}
               customStyle="!text-base lg:!text-xl"
+              containerStyle="mt-12"
             />
             {/* Running multiple MN end */}
 
@@ -498,7 +509,10 @@ export function MasternodesSetupInfo() {
               text={t("technicalGuide.setup.resigning.desc1")}
               customStyle="!text-base lg:!text-xl"
             />
-            <Code text={t("technicalGuide.setup.resigning.code1")} />
+            <Code
+              text={t("technicalGuide.setup.resigning.code1")}
+              customStyle="mt-12"
+            />
             {/* Resigning MN end */}
 
             {/* States MN start */}

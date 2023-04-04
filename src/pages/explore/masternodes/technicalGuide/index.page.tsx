@@ -21,7 +21,7 @@ export default function TechnicalGuide() {
   return (
     <>
       <div
-        className="py-16 md:py-10 lg:py-16"
+        className="py-16 md:py-10 lg:py-16 border-b border-gray-800 border-opacity-50"
         style={{
           backgroundImage:
             "url('/assets/img/mnTechnicalGuide/emptyCubeDesktop.png')",
@@ -33,10 +33,13 @@ export default function TechnicalGuide() {
         <Container className="flex flex-row gap-x-12 ">
           <div className="hidden md:block md:w-3/12">&nbsp;</div>
           <div className="flex flex-col md:w-9/12">
-            <div className={classNames("flex flex-col gap-y-5")}>
+            <div className={classNames("flex flex-col gap-y-5 lg:w-[812px]")}>
               <SectionTitle text={t("technicalGuide.title")} />
               <SectionSubTitle text={t("technicalGuide.subtitle")} />
-              <SectionDescription text={t("technicalGuide.desc")} />
+              <SectionDescription
+                text={t("technicalGuide.desc")}
+                customStyle="lg:text-xl lg:leading-7"
+              />
             </div>
           </div>
         </Container>

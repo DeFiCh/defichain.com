@@ -15,13 +15,13 @@ export function ReadyForFlexibility() {
   return (
     <div
       className={classNames(
-        "relative z-0",
+        "relative z-10",
         "lg:mt-[336px] md:mt-[131px] mt-[142px]",
         "lg:mb-60 md:mb-[164px] mb-40"
       )}
     >
-      <Container>
-        <div className={classNames("flex flex-col md:w-1/2 w-auto")}>
+      <Container className="relative">
+        <div className={classNames("flex flex-col md:w-1/2")}>
           <SectionTitle
             text={t("ReadyForFlexibilitySection.label")}
             customStyle="lg:w-fit md:w-[409px] w-[272px]"
@@ -46,21 +46,28 @@ export function ReadyForFlexibility() {
             className="lg:text-base text-sm lg:mt-16 mt-8 py-4 lg:w-[294px] w-[245px]"
           />
         </div>
+        <div
+          className={classNames(
+            "mix-blend-screen absolute z-[-1] inset-0 bg-right bg-contain bg-no-repeat",
+            "md:bg-[url(/assets/img/index/ready-for-flexibility.png)]",
+            "lg:h-[871.39px] h-[514.78px] lg:-top-[150px] md:-top-[78.29px] md:right-0 top-[50%]"
+          )}
+        />
+
+        <div
+          className={classNames(
+            "jellyfish-item z-[-2] bg-[url(/assets/img/index/jellyfish.png)] hidden md:block",
+            "lg:h-[317.38px] md:h-[161.58px] absolute inset-0 z-[-1] bg-contain bg-no-repeat bg-right",
+            "2xl:right-[20%] xl:right-[25%] lg:right-[30%] lg:top-[60%] top-[50%] right-[35%]",
+            { "right-[40%]": dimension.width <= 750 }
+          )}
+        />
       </Container>
       <div
         className={classNames(
           "mix-blend-screen absolute z-[-1] inset-0 bg-right bg-contain bg-no-repeat",
-          "md:bg-[url(/assets/img/index/ready-for-flexibility.png)] bg-[url(/assets/img/index/ready-for-flex-mobile.png)]",
-          "lg:h-[871.39px] h-[514.78px] lg:-top-[150px] md:-top-[78.29px] md:right-0 top-[50%]"
-        )}
-      />
-
-      <div
-        className={classNames(
-          "jellyfish-item z-[-2] bg-[url(/assets/img/index/jellyfish.png)] hidden md:block",
-          "lg:h-[317.38px] md:h-[161.58px] absolute inset-0 z-[-1] bg-contain bg-no-repeat bg-right",
-          "2xl:right-[20%] xl:right-[25%] lg:right-[30%] lg:top-[60%] top-[50%] right-[35%]",
-          { "right-[40%]": dimension.width <= 750 }
+          "bg-[url(/assets/img/index/ready-for-flex-mobile.png)]",
+          "md:hidden block"
         )}
       />
     </div>

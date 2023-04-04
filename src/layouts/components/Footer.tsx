@@ -3,6 +3,7 @@ import { Container } from "@components/commons/Container";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
+import classNames from "classnames";
 import { LanguageDropdownV2 } from "./LanguageDropdownV2";
 import FooterInternalBottomLink from "./FooterInternalBottomLink";
 import FooterColumn from "./FooterColumn";
@@ -205,8 +206,8 @@ export default function Footer(): JSX.Element {
   }, [router]);
   return (
     <footer className="relative bg-dark-00">
-      <Container className="relative z-10 mb-[41px] !mx-0 md:mb-[64px] md:mx-10 lg:mb-[82px]">
-        <div className="py-8 h-full w-full footer-background rounded-[30px] px-6 md:py-10 md:px-14 lg:px-24">
+      <Container className="relative z-20 mb-[41px] mx-0 md:mb-[64px] lg:mb-[82px]">
+        <div className="py-8 h-full footer-background rounded-[30px] px-6 md:py-10 md:px-14 lg:px-24">
           <div className="text-sm md:grid md:grid-cols-2 md:grid-flow-row md:gap-[38px] lg:flex lg:flex-row md:justify-between md:pb-12">
             {/* EXPLORE */}
             <FooterColumn
@@ -219,7 +220,7 @@ export default function Footer(): JSX.Element {
               category={MenuItems[1].category}
               childLinks={MenuItems[1].childLink}
               customStyle="sm:pt-[54px]"
-            /> */}
+            />
             {/* BUILD */}
             {/* <FooterColumn
               category={MenuItems[2].category}
@@ -305,9 +306,19 @@ export default function Footer(): JSX.Element {
             </div>
           </div>
         </div>
+        <div
+          className={classNames(
+            "absolute z-[-1] bg-contain bg-no-repeat bg-origin-padding h-full w-full bg-[url('/assets/img/footer/transparent_coin_2.png')] top-[-60px] -left-40 md:-top-10 lg:left-[-200px] lg:top-[-50px]",
+            "lg:w-full lg:h-[400px] md:w-[280px] md:h-[280px] md:left-[-50px] lg:left-[-130px] w-[208px] h-[208px]"
+          )}
+        />
+        <div
+          className={classNames(
+            "absolute z-[-1] bottom-0 right-[-200px] bg-contain bg-no-repeat bg-bottom md:bg-right bg-[url('/assets/img/footer/arrow_1.png')] md:-right-20",
+            "w-full md:w-[580px] h-[210px] lg:h-[300px] lg:bottom-0 lg:-right-40"
+          )}
+        />
       </Container>
-      <div className="absolute bottom-20 md:bottom-[150px] left-0 bg-contain bg-no-repeat bg-clip-border bg-origin-padding mix-blend-screen w-[150px] h-full md:w-2/5 bg-[url('/assets/img/footer/transparent_coin_2.png')]" />
-      <div className="absolute bottom-6 md:bottom-[65px] right-0 bg-contain bg-no-repeat mix-blend-screen bg-bottom md:bg-right h-1/4 w-1/4 bg-[url('/assets/img/footer/arrow_1.png')]" />
     </footer>
   );
 }

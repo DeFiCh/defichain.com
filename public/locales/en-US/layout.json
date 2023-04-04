@@ -186,6 +186,11 @@
         "wallets": "Wallets",
         "masternodes": "Masternodes"
       },
+      "RESOURCES": {
+        "category": "RESOURCES",
+        "defiscan": "DeFiScan",
+        "defichainwhitepaper": "White paper"
+      },
       "ECOSYSTEM": {
         "category": "ECOSYSTEM",
         "defichainapps": "DeFiChain Apps",
@@ -206,7 +211,7 @@
       },
       "COMMUNITY": {
         "category": "COMMUNITY",
-        "blog": "Blog",
+        "blog": "DeFiChain Blog",
         "newsletter": "Newsletter"
       }
     },

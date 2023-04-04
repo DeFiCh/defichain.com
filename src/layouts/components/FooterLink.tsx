@@ -33,7 +33,7 @@ export default function FooterLink({
         // Internal link
         <div
           className={classNames(
-            "text-dark-1000 font-semibold hover:accent-dfc-gradient-text cursor-pointer w-[133px] md:w-full"
+            "text-dark-1000 font-semibold hover:accent-dfc-gradient-text cursor-pointer text-ellipsis overflow-auto"
           )}
         >
           <Link href={url} passHref data-testid={testId}>

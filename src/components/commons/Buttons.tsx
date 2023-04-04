@@ -94,6 +94,7 @@ export function GradientButton({
         target={target}
         href={href}
         className={classNames({ "pointer-events-none": disabled })}
+        scroll={false}
       >
         <GradientButtonElement
           borderClassName={borderClassName}

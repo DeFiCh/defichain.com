@@ -6,7 +6,8 @@ import { useTranslation } from "next-i18next";
 export default function ERC20Section(): JSX.Element {
   const { t } = useTranslation("page-explore-dfi");
   const assetStyle =
-    "left-1/2 transform -translate-x-1/2 -translate-y-[30%] top-[-30px] sm:-top-20 md:top-[-60px] lg:top-0";
+    "bg-contain bg-top w-[333.31px] inset-0 bg-no-repeat left-1/2 transform -translate-x-1/2 -translate-y-[30%] top-[-30px] md:top-[-30px] lg:top-0";
+
   return (
     <Container className="relative pb-[96px] md:pb-[192px] lg:pb-[248px] text-center flex justify-center">
       <div className="max-w-[551px] flex flex-col items-center">
@@ -31,23 +32,26 @@ export default function ERC20Section(): JSX.Element {
           className="mt-8 md:mt-[56px] lg:px-[72.5px] md:px-[130px] py-3 lg:py-4"
           href="https://blog.defichain.com/defichains-first-move-to-become-an-interoperable-defi-powerhouse/"
         />
-        <div
+        <a
+          rel="noreferrer"
+          target="_blank"
+          href="https://etherscan.io/token/0x8Fc8f8269ebca376D046Ce292dC7eaC40c8D358A"
           className={classNames(
-            "pt-4 font-desc text-dark-800 text-sm md:text-base font-semibold"
+            "pt-4 font-desc text-dark-800 text-sm md:text-base font-semibold hover:accent-dfc-gradient-text cursor-pointer"
           )}
         >
           <p>{t("erc20Section.contract")}</p>
-        </div>
+        </a>
       </div>
       <div
         className={classNames(
-          "absolute z-[-1] mix-blend-hard-light bg-contain bg-top w-[333.31px] inset-0 bg-no-repeat bg-[url(/assets/img/explore/erc20-dfi-coin.png)]",
+          "absolute z-[-2] mix-blend-hard-light bg-[url(/assets/img/explore/erc20-dfi-coin.png)]",
           assetStyle
         )}
       />
       <div
         className={classNames(
-          "absolute mix-blend-screen bg-contain bg-top w-[333.31px] inset-0 bg-no-repeat bg-[url(/assets/img/explore/erc20-dfi-coin-ellipse.png)]",
+          "absolute z-[-1] mix-blend-screen bg-[url(/assets/img/explore/erc20-dfi-coin-ellipse.png)]",
           assetStyle
         )}
       />

@@ -63,7 +63,8 @@ export function MasternodesBenefitsSection(): JSX.Element {
           />
         </div>
       </Container>
-      {/* <div className="hidden md:block absolute h-[785.44px] w-[785.44px] md:left-[-240px] md:bottom-0 lg:left-0 lg:bottom-[-289.56px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/blockchainFeatures/blockchainFeaturesBg.png')]" /> */}
+      <div className="hidden md:block absolute md:h-8 md:w-8 md:right-8 md:bottom-[249px] lg:h-[45px] lg:w-[45px] lg:top-[169px] lg:right-[98px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/masternodesBenefits/masternodesBenefitsBg.png')]" />
+      <div className="hidden md:block absolute right-0 opacity-70 md:top-[85px] md:h-[445.91px] md:w-[290.56px] lg:top-auto lg:bottom-[-251.33px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/masternodesBenefits/masternodesGridBg.png')]" />
     </section>
   );
 }

@@ -114,7 +114,7 @@ function StatisticsPanelItem({
                 enableScrollSpy
                 duration={0.5}
               />
-              {suffix !== "" ? `${suffix}+` : suffix}
+              {suffix !== "" ? `${suffix}+` : `+`}
             </>
           ) : (
             <>N/A</>

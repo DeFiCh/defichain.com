@@ -3,5 +3,19 @@
     "title": "DECENTRALIZED EXCHANGE",
     "subtitle": "Enter the world of dTokens",
     "desc": "Inside DeFiChain’s DEX, you are in full control. Trade, Arbitrage, and Earn from your dTokens."
+  },
+  "statisticsDisplay" : {
+    "totalValueLocked": {
+      "title": "TOTAL VALUE LOCKED",
+      "desc": "Data from DeFiScan"
+    },
+    "tradingVolume": {
+      "title": "TRADING VOLUME (24H)",
+      "desc": "Data from DeFiScan"
+    },
+    "tokens": {
+      "title": "TOKENS",
+      "desc": "Crypto • dStocks • ETFs"
+    }
   }
 }

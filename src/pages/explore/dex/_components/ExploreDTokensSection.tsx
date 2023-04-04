@@ -108,6 +108,7 @@ export function ExploreDTokensSection() {
         <ExploreDTokensGrid selectionTokens={selectedTabTokens} />
 
         <SecondaryButton
+          href="https://defiscan.live/tokens"
           className="place-self-center md:mt-16 mt-14 lg:py-4 py-3 md:px-[56px] px-[43px] w-fit lg:text-base text-sm lg::font-bold font-semibold"
           text={t("exploreDTokensSection.secondaryButtonText")}
           hasDiagonalArrow

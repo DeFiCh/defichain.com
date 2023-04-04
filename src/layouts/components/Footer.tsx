@@ -44,23 +44,8 @@ export const MenuItems = [
     ],
   },
   {
-    category: "ECOSYSTEM",
+    category: "RESOURCES",
     childLink: [
-      {
-        label: "DeFiChain Apps",
-        pathname: "/defichainapps",
-        testId: "defichainapps",
-        altLabel: "defichainapps",
-        isExternaLink: false,
-      },
-      {
-        label: "DeFi Meta Chain",
-        pathname: "/defimetachain",
-        testId: "defimetachain",
-        altLabel: "defimetachain",
-        isExternaLink: true,
-        url: "https://meta.defichain.com/",
-      },
       {
         label: "DeFiScan",
         pathname: "/defiscan",
@@ -68,100 +53,136 @@ export const MenuItems = [
         altLabel: "defiscan",
         isExternaLink: true,
         url: "https://defiscan.live/",
-      },
-      {
-        label: "Governance",
-        pathname: "/governance",
-        testId: "governance",
-        altLabel: "governance",
-        isExternaLink: true,
-        url: "https://defiscan.live/governance",
-      },
-      {
-        label: "Bug Bounty",
-        pathname: "/bugbounty",
-        testId: "bugbounty",
-        altLabel: "bugbounty",
-        isExternaLink: false,
-      },
-      {
-        label: "$100M Accelerator Program",
-        pathname: "/100macceleratorprogram",
-        testId: "100macceleratorprogram",
-        altLabel: "100macceleratorprogram",
-        isExternaLink: false,
-      },
-    ],
-  },
-  {
-    category: "BUILD",
-    childLink: [
-      {
-        label: "Jellyfish SDK",
-        pathname: "/jellyfishsdk",
-        testId: "jellyfishsdk",
-        altLabel: "jellyfishsdk",
-        isExternaLink: true,
-        url: "https://jellyfishsdk.com/",
-      },
-      {
-        label: "DeFiChain White Paper",
-        pathname: "/defichainwhitepaper",
-        testId: "defichainwhitepaper",
-        altLabel: "defichainwhitepaper",
-        isExternaLink: false,
-      },
-      {
-        label: "GitHub",
-        pathname: "/github",
-        testId: "github",
-        altLabel: "github",
-        isExternaLink: true,
-        url: "https://github.com/DeFiCh/ain",
         hasUpArrowIcon: true,
       },
       {
-        label: "Developer Resource",
-        pathname: "/developerResource",
-        testId: "developerResource",
-        altLabel: "developerResource",
-        isExternaLink: false,
-      },
-      {
-        label: "Media Assets",
-        pathname: "/mediaAssets",
-        testId: "mediaAssets",
-        altLabel: "mediaAssets",
-        isExternaLink: false,
-      },
-      {
-        label: "Security",
-        pathname: "/security",
-        testId: "security",
-        altLabel: "security",
-        isExternaLink: false,
+        label: "White paper",
+        pathname: "/white-paper",
+        testId: "defichainwhitepaper",
+        altLabel: "defichainwhitepaper",
       },
     ],
   },
+  // {
+  //   category: "ECOSYSTEM",
+  //   childLink: [
+  //     {
+  //       label: "DeFiChain Apps",
+  //       pathname: "/defichainapps",
+  //       testId: "defichainapps",
+  //       altLabel: "defichainapps",
+  //       isExternaLink: false,
+  //     },
+  //     {
+  //       label: "DeFi Meta Chain",
+  //       pathname: "/defimetachain",
+  //       testId: "defimetachain",
+  //       altLabel: "defimetachain",
+  //       isExternaLink: true,
+  //       url: "https://meta.defichain.com/",
+  //     },
+  //     {
+  //       label: "DeFiScan",
+  //       pathname: "/defiscan",
+  //       testId: "defiscan",
+  //       altLabel: "defiscan",
+  //       isExternaLink: true,
+  //       url: "https://defiscan.live/",
+  //     },
+  //     {
+  //       label: "Governance",
+  //       pathname: "/governance",
+  //       testId: "governance",
+  //       altLabel: "governance",
+  //       isExternaLink: true,
+  //       url: "https://defiscan.live/governance",
+  //     },
+  //     {
+  //       label: "Bug Bounty",
+  //       pathname: "/bugbounty",
+  //       testId: "bugbounty",
+  //       altLabel: "bugbounty",
+  //       isExternaLink: false,
+  //     },
+  //     {
+  //       label: "$100M Accelerator Program",
+  //       pathname: "/100macceleratorprogram",
+  //       testId: "100macceleratorprogram",
+  //       altLabel: "100macceleratorprogram",
+  //       isExternaLink: false,
+  //     },
+  //   ],
+  // },
+  // {
+  //   category: "BUILD",
+  //   childLink: [
+  //     {
+  //       label: "Jellyfish SDK",
+  //       pathname: "/jellyfishsdk",
+  //       testId: "jellyfishsdk",
+  //       altLabel: "jellyfishsdk",
+  //       isExternaLink: true,
+  //       url: "https://jellyfishsdk.com/",
+  //     },
+  //     {
+  //       label: "DeFiChain White Paper",
+  //       pathname: "/defichainwhitepaper",
+  //       testId: "defichainwhitepaper",
+  //       altLabel: "defichainwhitepaper",
+  //       isExternaLink: false,
+  //     },
+  //     {
+  //       label: "GitHub",
+  //       pathname: "/github",
+  //       testId: "github",
+  //       altLabel: "github",
+  //       isExternaLink: true,
+  //       url: "https://github.com/DeFiCh/ain",
+  //       hasUpArrowIcon: true,
+  //     },
+  //     {
+  //       label: "Developer Resource",
+  //       pathname: "/developerResource",
+  //       testId: "developerResource",
+  //       altLabel: "developerResource",
+  //       isExternaLink: false,
+  //     },
+  //     {
+  //       label: "Media Assets",
+  //       pathname: "/mediaAssets",
+  //       testId: "mediaAssets",
+  //       altLabel: "mediaAssets",
+  //       isExternaLink: false,
+  //     },
+  //     {
+  //       label: "Security",
+  //       pathname: "/security",
+  //       testId: "security",
+  //       altLabel: "security",
+  //       isExternaLink: false,
+  //     },
+  //   ],
+  // },
   {
     category: "COMMUNITY",
     childLink: [
       {
-        label: "Blog",
+        label: "DeFiChain Blog",
         pathname: "/blog",
         testId: "blog",
         altLabel: "blog",
         isExternaLink: true,
         url: "https://blog.defichain.com/",
+        hasUpArrowIcon: true,
       },
-      {
-        label: "Newsletter",
-        pathname: "/newsletter",
-        testId: "newsletter",
-        altLabel: "newsletter",
-        isExternaLink: true,
-        url: "https://bit.ly/3yQxtmW",
-      },
+      // {
+      //   label: "Newsletter",
+      //   pathname: "/newsletter",
+      //   testId: "newsletter",
+      //   altLabel: "newsletter",
+      //   isExternaLink: true,
+      //   url: "https://bit.ly/3yQxtmW",
+      // },
     ],
   },
 ];
@@ -184,10 +205,10 @@ export default function Footer(): JSX.Element {
     }
   }, [router]);
   return (
-    <footer>
-      <Container className="relative z-20 py-10 pb-[108px] md:pb-[132px] lg:pb-[144px]">
-        <div className="py-10 h-full w-full footer-background rounded-[30px] px-6 md:px-14 lg:px-24">
-          <div className="text-sm md:grid md:grid-cols-2 md:grid-flow-row md:gap-[62px] lg:flex lg:flex-row md:justify-between md:pb-[86px]">
+    <footer className="relative bg-dark-00">
+      <Container className="relative z-20 mb-[41px] mx-0 md:mb-[64px] lg:mb-[82px]">
+        <div className="py-8 h-full footer-background rounded-[30px] px-6 md:py-10 md:px-14 lg:px-24">
+          <div className="text-sm md:grid md:grid-cols-2 md:grid-flow-row md:gap-[38px] lg:flex lg:flex-row md:justify-between md:pb-12">
             {/* EXPLORE */}
             <FooterColumn
               category={MenuItems[0].category}
@@ -195,26 +216,40 @@ export default function Footer(): JSX.Element {
               customStyle="pt-0"
             />
             {/* ECOSYSTEM */}
+            {/* <FooterColumn
+              category={MenuItems[1].category}
+              childLinks={MenuItems[1].childLink}
+              customStyle="sm:pt-[54px]"
+            />
+            {/* BUILD */}
+            {/* <FooterColumn
+              category={MenuItems[2].category}
+              childLinks={MenuItems[2].childLink}
+              customStyle="sm:pt-[54px]"
+            /> */}
+            {/* RESOURCES */}
             <FooterColumn
               category={MenuItems[1].category}
               childLinks={MenuItems[1].childLink}
-              customStyle="pt-[54px]"
-            />
-            {/* BUILD */}
-            <FooterColumn
-              category={MenuItems[2].category}
-              childLinks={MenuItems[2].childLink}
-              customStyle="pt-[54px]"
+              customStyle="pt-[38px]"
             />
             {/* COMMUNITY */}
-            <div className="justify-between flex flex-col">
+            <div className="flex flex-col md:flex-row md:items-end lg:flex-col">
               <FooterColumn
-                category={MenuItems[3].category}
-                childLinks={MenuItems[3].childLink}
-                customStyle="pt-[54px]"
+                category={MenuItems[2].category}
+                childLinks={MenuItems[2].childLink}
+                customStyle="pt-[38px]"
               />
+              <div className="block md:hidden lg:block lg:w-full">
+                <SocialsRow
+                  customStyle="text-dark-500 flex flex-row gap-5 mt-[22px] mb-8 md:pb-0 md:m-0 md:items-end lg:mt-[26px]"
+                  language={language}
+                />
+              </div>
+            </div>
+            <div className="hidden md:flex md:items-end lg:hidden">
               <SocialsRow
-                customStyle="text-dark-500 flex flex-row gap-5 pb-[54px] pt-[38px] md:pb-0"
+                customStyle="text-dark-500 flex flex-row gap-5 mt-[22px] mb-8 md:pb-0 md:m-0 md:items-end lg:mt-[26px]"
                 language={language}
               />
             </div>
@@ -223,50 +258,48 @@ export default function Footer(): JSX.Element {
           {/* Mobile View */}
           <div className="block md:hidden">
             <div className="text-dark-500">
-              <div className="flex flex-row items-center justify-between">
-                <div data-testid="Footer.Mobile.Logo">
-                  <DeFiChainLogo className="w-[128px]" />
+              <div className="flex flex-col items-start">
+                <div className="mb-4" data-testid="Footer.Mobile.Logo">
+                  <DeFiChainLogo className="w-[176.67px]" />
                 </div>
-                <div className="flex justify-end">
+                <div className="flex items-center space-x-4">
                   <LanguageDropdownV2 />
-                </div>
-              </div>
-              <div className="flex flex-row items-center pt-2">
-                <FooterInternalBottomLink
-                  text={t("footer.bottomlink.privacy")}
-                  pathname="/privacy-policy"
-                  testId="Footer.Mobile.Privacy"
-                />
-                <span className="px-2">•</span>
+                  <FooterInternalBottomLink
+                    text={t("footer.bottomlink.privacy")}
+                    pathname="/privacy-policy"
+                    testId="Footer.Mobile.Privacy"
+                  />
+                  {/* <span className="px-2">•</span>
                 <FooterInternalBottomLink
                   text={t("footer.bottomlink.terms")}
                   pathname="/terms-of-use"
                   testId="Footer.Mobile.Terms"
-                />
+                /> */}
+                </div>
               </div>
             </div>
           </div>
           {/* Web View */}
           <div className="md:block hidden">
-            <div className="flex flex-row justify-between items-center">
+            <div className="md:grid md:grid-cols-2 md:grid-flow-row md:gap-[38px] lg:flex lg:flex-row md:justify-between">
               <div data-testid="Footer.Web.Logo">
                 <DeFiChainLogo className="w-[176.67px]" />
               </div>
-              <div className="flex flex-row">
-                <div className="flex flex-row items-center pl-3">
+              <div className="flex flex-row items-center">
+                <div className="flex flex-row items-center lg:pl-3">
                   <FooterInternalBottomLink
                     text={t("footer.bottomlink.privacy")}
                     pathname="/privacy-policy"
                     testId="Footer.Web.Privacy"
                   />
-                  <span className="px-2 text-dark-500">•</span>
+                  {/* <span className="px-2 text-dark-500">•</span>
                   <FooterInternalBottomLink
                     text={t("footer.bottomlink.terms")}
                     pathname="/terms-of-use"
                     testId="Footer.Web.Terms"
-                  />
+                  /> */}
                 </div>
-                <div className="flex pl-[23px]">
+                <div className="flex pl-6">
                   <LanguageDropdownV2 />
                 </div>
               </div>

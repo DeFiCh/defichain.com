@@ -103,11 +103,8 @@ function ExploreDTokenCard({
   id: string;
 }) {
   const Icon = getAssetIcon(symbol.replace("d", ""), true, id);
-  // eslint-disable-next-line prefer-const
-  let { suffix, value } = useUnitSuffix(price, 2);
-  if (!suffix) {
-    value = new BigNumber(value).toFixed(2);
-  }
+  const { suffix, value } = useUnitSuffix(price, 2);
+
   return (
     <div className="card-outline-2 p-[0.5px] rounded-[15px]">
       <div className="rounded-[15px] bg-dark-00 py-6 px-[31.2px] w-full">
@@ -119,7 +116,7 @@ function ExploreDTokenCard({
               {name}
             </div>
             <div className="mt-3 lg:text-[18px] lg:leading-6 text-sm text-dark-1000 font-semibold md:text-center">
-              ${value}
+              ${new BigNumber(value).toFixed(2)}
               {suffix}
             </div>
           </div>

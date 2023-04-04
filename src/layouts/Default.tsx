@@ -2,6 +2,7 @@
 import Head from "next/head";
 import { PropsWithChildren, useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import classNames from "classnames";
 import Footer from "./components/Footer";
 import { Header } from "./components/Header";
 import { WhaleProvider } from "./context/WhaleContext";
@@ -16,6 +17,10 @@ const description =
 export function Default(props: PropsWithChildren<any>): JSX.Element | null {
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
+  const isHome = router.pathname === "/";
+  const bgPicture = isHome
+    ? "bg-[url(/assets/img/background/background-320.png)] md:bg-[url(/assets/img/background/background-768.png)] lg:bg-[url(/assets/img/background/background-1440.png)] xl:bg-[url(/assets/img/background/background-1920.png)] 2xl:bg-[url(/assets/img/background/background-2560.png)]"
+    : "bg-fixed bg-[url(/assets/img/background/generic-background-320.png)] md:bg-[url(/assets/img/background/generic-background-1920.png)]";
 
   useEffect(() => {
     setMounted(true);
@@ -75,9 +80,15 @@ export function Default(props: PropsWithChildren<any>): JSX.Element | null {
 
       {mounted && (
         <WhaleProvider>
-          <div className="bg-dark-00">
+          <div className="bg-dark-00 relative z-0">
             <Header />
             <main className="flex-grow text-dark-1000">{props.children}</main>
+            <div
+              className={classNames(
+                "absolute z-[-1] bg-top bg-no-repeat inset-0",
+                bgPicture
+              )}
+            />
             <Footer />
           </div>
         </WhaleProvider>

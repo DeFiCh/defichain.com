@@ -15,7 +15,6 @@ import {
   GovernanceIconHover,
 } from "@components/icons/assets/masternodesBenefits/GovernanceIcon";
 import classNames from "classnames";
-import { useState } from "react";
 
 interface BlockchainFeatureItemProp {
   title: string;
@@ -46,43 +45,47 @@ function FeatureIcon({
   id: string;
 }) {
   const Icon = iconMapping[item.title] as React.ElementType;
-  const IconOnHover = iconMapping[`${item.title}_hover`] as React.ElementType;
-  const [isHovering, setIsHovering] = useState(false);
+  // const IconOnHover = iconMapping[`${item.title}_hover`] as React.ElementType;
+  // const [isHovering, setIsHovering] = useState(false);
 
-  const handleMouseOver = () => {
-    setIsHovering(true);
-  };
+  // const handleMouseOver = () => {
+  //   setIsHovering(true);
+  // };
 
-  const handleMouseOut = () => {
-    setIsHovering(false);
-  };
+  // const handleMouseOut = () => {
+  //   setIsHovering(false);
+  // };
 
   return (
     <div
       className="masternode-benefits-feature-item flex flex-row md:flex-col w-full md:w-[306px] lg:w-[206px]"
-      onMouseOver={handleMouseOver}
-      onFocus={handleMouseOver}
-      onMouseOut={handleMouseOut}
-      onBlur={handleMouseOut}
+      // onMouseOver={handleMouseOver}
+      // onFocus={handleMouseOver}
+      // onMouseOut={handleMouseOut}
+      // onBlur={handleMouseOut}
     >
       <div className="w-[50px]">
-        {isHovering && Icon ? (
+        <Icon
+          className="w-[50px] md:w-fit h-[50px]"
+          id={`${id}-${item.title}`}
+        />
+        {/* {isHovering && Icon ? (
           <IconOnHover className="w-[50px] md:w-fit h-[50px]" />
         ) : (
           <Icon
             className="w-[50px] md:w-fit h-[50px]"
             id={`${id}-${item.title}`}
           />
-        )}
+        )} */}
       </div>
 
       <div className="space-y-4 ml-[58px] md:ml-0 md:mt-5">
         <h3
           className={classNames(
-            "font-bold leading-5 text-dark-1000 transition duration-300 ease-in-out",
-            {
-              "!text-brand-100": isHovering,
-            }
+            "font-bold leading-5 text-dark-1000 transition duration-300 ease-in-out"
+            // {
+            //   "!text-brand-100": isHovering,
+            // }
           )}
         >
           {item.title}

@@ -28,13 +28,13 @@ export default function ExploreMasternodes() {
             title={t("footerCards.cardTitle")}
             desc={entries[0].title}
             bgImage={ExploreCardsImage.PHONE}
-            href=""
+            href="/explore/wallets"
           />
           <ExploreCards
             title={t("footerCards.cardTitle")}
             desc={entries[1].title}
             bgImage={ExploreCardsImage.METALCOIN}
-            href=""
+            href="/explore/dfi"
           />
         </div>
       </Container>

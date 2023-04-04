@@ -30,13 +30,13 @@ export default function ExploreWallets() {
             title={t("footerCards.cardTitle")}
             desc={entries[0].title}
             bgImage={ExploreCardsImage.DIAMONDCOIN}
-            href=""
+            href="/explore/dex"
           />
           <ExploreCards
             title={t("footerCards.cardTitle")}
             desc={entries[1].title}
             bgImage={ExploreCardsImage.METALCOIN}
-            href=""
+            href="/explore/dfi"
           />
         </div>
       </Container>

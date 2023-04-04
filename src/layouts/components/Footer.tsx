@@ -184,7 +184,7 @@ export default function Footer(): JSX.Element {
     }
   }, [router]);
   return (
-    <footer className="relative">
+    <footer>
       <Container className="relative z-20 py-10 pb-[108px] md:pb-[132px] lg:pb-[144px]">
         <div className="py-10 h-full w-full footer-background rounded-[30px] px-6 md:px-14 lg:px-24">
           <div className="text-sm md:grid md:grid-cols-2 md:grid-flow-row md:gap-[62px] lg:flex lg:flex-row md:justify-between md:pb-[86px]">
@@ -276,7 +276,7 @@ export default function Footer(): JSX.Element {
         <div
           className={classNames(
             "absolute z-[-1] bg-contain bg-no-repeat bg-origin-padding h-full w-full bg-[url('/assets/img/footer/transparent_coin_2.png')] top-[-60px] -left-40 md:-top-10 lg:left-[-200px] lg:top-[-50px]",
-            "lg:w-full lg:h-[400px] md:w-[280px] md:h-[280px] w-[208px] h-[208px]"
+            "lg:w-full lg:h-[400px] md:w-[280px] md:h-[280px] md:left-[-50px] lg:left-[-130px] w-[208px] h-[208px]"
           )}
         />
         <div

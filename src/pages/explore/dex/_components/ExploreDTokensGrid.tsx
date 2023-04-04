@@ -29,8 +29,8 @@ export function ExploreDTokensGrid({
         )}
       >
         {selectionTokens &&
-          Object.entries(selectionTokens).map(([, value]) => (
-            <div className="lg:w-[214.4px] md:w-[30%]">
+          Object.entries(selectionTokens).map(([, value], key) => (
+            <div className="lg:w-[214.4px] md:w-[30%]" key={key}>
               <ExploreDTokenCard
                 id={`desktop-${value.token.symbol}`}
                 symbol={value.token.displaySymbol}
@@ -47,8 +47,9 @@ export function ExploreDTokensGrid({
             {selectionTokens &&
               Object.entries(selectionTokens)
                 .slice(0, 3)
-                .map(([, value]) => (
+                .map(([, value], key) => (
                   <ExploreDTokenCard
+                    key={key}
                     id={`mobile-${value.token.symbol}`}
                     symbol={value.token.displaySymbol}
                     name={value.token.name}
@@ -60,8 +61,9 @@ export function ExploreDTokensGrid({
             {selectionTokens &&
               Object.entries(selectionTokens)
                 .slice(3, 6)
-                .map(([, value]) => (
+                .map(([, value], key) => (
                   <ExploreDTokenCard
+                    key={key}
                     id={`mobile-${value.token.symbol}`}
                     symbol={value.token.displaySymbol}
                     name={value.token.name}
@@ -73,8 +75,9 @@ export function ExploreDTokensGrid({
             {selectionTokens &&
               Object.entries(selectionTokens)
                 .slice(6)
-                .map(([, value]) => (
+                .map(([, value], key) => (
                   <ExploreDTokenCard
+                    key={key}
                     id={`mobile-${value.token.symbol}`}
                     symbol={value.token.displaySymbol}
                     name={value.token.name}

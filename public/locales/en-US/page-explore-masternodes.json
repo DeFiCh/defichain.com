@@ -15,12 +15,12 @@
       }
     ]
   },
-  "statisticsDisplay" : {
+  "statisticsDisplay": {
     "masternodes": {
       "title": "MASTERNODES",
       "desc": "{{value}} locked for 10 years"
     },
-    "tvl" : {
+    "tvl": {
       "title": "TOTAL VALUE LOCKED",
       "desc": "in user engagement network"
     }
@@ -37,7 +37,7 @@
       "desc": "Setting up a masternode on DeFiChain allows you to participate in the consensus protocol and receive staking awards. One thing to note is that in order to set up a masternode, you must have a minimum of 20,000 DFI.",
       "note": "Note: This how-to expects some basic familiarity with the Linux terminal."
     },
-    "setup":{
+    "setup": {
       "title": "Roles and setting up",
       "desc": "There are two distinct roles: 'masternode owner' and 'masternode operator'. The owner holds the collateral and the primary activity (minting new coins, voting for anchors) is performed by operator. In general, a node can play both roles.",
       "toc": "Roles and set up",
@@ -54,7 +54,7 @@
           "title": "Create new user",
           "desc1": "The first step is to create new user. Any name will suffice.",
           "desc2": "In this example, we will use",
-          "desc3":"`defichainmasternode`.",
+          "desc3": "`defichainmasternode`.",
           "desc4": "`sudo usermod -a -G sudo`defichainmasternode`"
         },
         "step2": {
@@ -133,7 +133,7 @@
           "desc2": "steps 2-4",
           "desc3": "the same as the above section for operating your own masternodes. If you are also setting up the operator node yourself, then repeat steps 1-4 again for the operator node on a different machine; else, you can move to step 5."
         },
-        "step5":{
+        "step5": {
           "title": "Register as a Masternode on the network",
           "desc1": "In order to participate in the staking algorithm, you must broadcast to the network that you intend to participate, this can be done by running a command using the CLI, the command is:",
           "code1": "/home/defichainmasternode/.defi/defi-cli createmasternode \nOWNER_ADDRESS \nOPERATOR_ADDRESS",
@@ -144,13 +144,12 @@
           "desc6": "is the address for the operator. Please note that it costs 10 DFI to run this command.",
           "desc7": "There is nothing to do after this, you may simply ensure that your masternode operator is correctly running the masternode on their side by passing them the operator address.",
           "desc8": "We can confirm the masternode is running by running:",
-          "code2" : "/home/defichainmasternode/.defi/defi-cli listmasternodes",
+          "code2": "/home/defichainmasternode/.defi/defi-cli listmasternodes",
           "desc9": "Look for your masternode address in the list of masternodes to confirm that you have successfully set everything up.",
           "desc10": "You may run the command",
           "desc11": "`getmasternodeblocks OPERATOR_ADDRESS`",
           "desc12": "to see how many blocks your masternode has minted so far."
         }
-
       },
       "multiple": {
         "title": "Running multiple masternodes on the same machine",
@@ -202,6 +201,27 @@
         }
       }
     }
+  },
+  "masternodesBenefits": {
+    "title": "Benefits of Masternodes",
+    "subtitle": "WHY OWN A MASTERNODE?",
+    "desc": "Unlock the full potential of DeFiChain with a masternode.",
+    "button": "Learn more",
+    "passiveIncome": {
+      "title": "PASSIVE INCOME",
+      "desc": "Earn a portion of block rewards and transaction fees"
+    },
+    "stakingRewards": {
+      "title": "STAKING REWARDS",
+      "desc": "Get rewarded with masternodes staking"
+    },
+    "networkSecurity": {
+      "title": "NETWORK SECURITY",
+      "desc": "Secure transactions by validating transactions"
+    },
+    "governance": {
+      "title": "GOVERNANCE",
+      "desc": "Have a voice by voting on governance proposal"
+    }
   }
 }
-

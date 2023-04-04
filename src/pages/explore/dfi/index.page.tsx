@@ -30,7 +30,7 @@ export default function ExploreDFI() {
             title={t("footerCards.wallet.title")}
             desc={t("footerCards.wallet.subtitle")}
             bgImage={ExploreCardsImage.PHONE}
-            href=""
+            href="/explore/wallets"
           />
           <ExploreCards
             title={t("footerCards.dapps.title")}

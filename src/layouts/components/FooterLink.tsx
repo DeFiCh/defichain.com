@@ -15,7 +15,7 @@ export default function FooterLink({
   altLabel: string;
   category: string;
   testId: string;
-  isExternaLink: boolean;
+  isExternaLink?: boolean;
   hasUpArrowIcon?: boolean;
 }): JSX.Element {
   const { t } = useTranslation("layout");
@@ -33,7 +33,7 @@ export default function FooterLink({
         // Internal link
         <div
           className={classNames(
-            "text-dark-1000 font-semibold hover:accent-dfc-gradient-text cursor-pointer w-[133px] md:w-full"
+            "text-dark-1000 font-semibold hover:accent-dfc-gradient-text cursor-pointer min-w-[133px] md:w-full"
           )}
         >
           <Link

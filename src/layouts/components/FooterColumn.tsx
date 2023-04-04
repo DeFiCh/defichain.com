@@ -33,9 +33,13 @@ export default function FooterColumn({
         {t(`footer.sitemap.${category}.category`)}
       </h3>
       <div
-        className={classNames("grid grid-flow-col gap-y-6 md:gap-x-14", {
-          "grid-rows-2 md:grid-rows-4 lg:grid-rows-2": childLinks.length >= 2,
-        })}
+        className={classNames(
+          "grid gap-y-6 grid-flow-col gap-x-3 md:gap-x-14",
+          {
+            "grid-rows-[20px_minmax(40px,_1fr)] md:grid-rows-4 lg:grid-rows-2":
+              childLinks.length >= 2,
+          }
+        )}
       >
         {childLinks.map((link) => (
           <FooterLink

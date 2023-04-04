@@ -105,7 +105,7 @@ export function ExploreDTokensSection() {
         <ExploreDTokensGrid selectionTokens={selectedTabTokens} />
 
         <SecondaryButton
-          className="place-self-center mt-16 lg:py-4 py-3 md:px-[56px] px-[43px] w-fit place"
+          className="place-self-center mt-16 lg:py-4 py-3 md:px-[56px] px-[43px] w-fit lg:text-base text-sm lg::font-bold font-semibold"
           text={t("exploreDTokensSection.secondaryButtonText")}
           hasDiagonalArrow
         />

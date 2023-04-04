@@ -45,7 +45,7 @@ function Headings({ headings, activeId, parentReference }) {
             {heading.title}
           </a>
           {heading.items.length > 0 && (
-            <ul className="mt-4">
+            <ul className="mt-5">
               {heading.items.map((child) => (
                 <li
                   key={child.id}

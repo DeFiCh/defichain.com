@@ -20,25 +20,20 @@ export default function TechnicalGuide() {
 
   return (
     <>
-      <div
-        className="py-16 md:py-10 lg:py-16 border-b border-gray-800 border-opacity-50"
-        style={{
-          backgroundImage:
-            "url('/assets/img/mnTechnicalGuide/emptyCubeDesktop.png')",
-          backgroundSize: "contain",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "left center",
-        }}
-      >
-        <Container className="flex flex-row gap-x-12 ">
-          <div className="hidden md:block md:w-3/12">&nbsp;</div>
-          <div className="flex flex-col md:w-9/12">
-            <div className={classNames("flex flex-col gap-y-5 lg:w-[812px]")}>
+      <div className="py-16 md:py-10 lg:py-16 border-b border-gray-800 border-opacity-50 relative">
+        <div className="block absolute w-[417px] h-[237px] top-[-133px] left-[-228px] md:top-0 md:left-[-172px] lg:h-[297px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/mnTechnicalGuide/emptyCubeDesktop.png')]" />
+        <Container className="flex flex-row justify-end">
+          <div className="flex flex-col">
+            <div
+              className={classNames(
+                "flex flex-col gap-y-5 md:w-[573px] lg:w-[812px]"
+              )}
+            >
               <SectionTitle text={t("technicalGuide.title")} />
               <SectionSubTitle text={t("technicalGuide.subtitle")} />
               <SectionDescription
                 text={t("technicalGuide.desc")}
-                customStyle="lg:text-xl lg:leading-7"
+                customStyle="md:text-base md:tracking-[.03em] lg:tracking-normal lg:text-xl lg:leading-7"
               />
             </div>
           </div>

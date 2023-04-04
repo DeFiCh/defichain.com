@@ -59,7 +59,6 @@ export const MenuItems = [
         pathname: "/white-paper",
         testId: "defichainwhitepaper",
         altLabel: "defichainwhitepaper",
-        hasUpArrowIcon: true,
       },
     ],
   },

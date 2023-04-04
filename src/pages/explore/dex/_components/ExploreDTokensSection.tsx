@@ -8,6 +8,7 @@ import {
 } from "@defichain/whale-api-client/dist/api/poolpairs";
 import { SecondaryButton } from "@components/commons/Buttons";
 import { useTranslation } from "next-i18next";
+import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import { ExploreDTokensGrid } from "./ExploreDTokensGrid";
 import { useWhaleApiClient } from "../../../../layouts/context/WhaleContext";
 import { ExploreDTokensTabs, TokenLabels } from "./ExploreDTokensTabs";
@@ -85,6 +86,8 @@ export function ExploreDTokensSection() {
     }
   }, [tokenSectionChoice]);
 
+  const dimension = useWindowDimensions();
+
   return (
     <Container className="mb-[240px]">
       <div className="flex flex-col md:items-center items-start">
@@ -105,9 +108,10 @@ export function ExploreDTokensSection() {
         <ExploreDTokensGrid selectionTokens={selectedTabTokens} />
 
         <SecondaryButton
-          className="place-self-center mt-16 lg:py-4 py-3 md:px-[56px] px-[43px] w-fit lg:text-base text-sm lg::font-bold font-semibold"
+          className="place-self-center md:mt-16 mt-14 lg:py-4 py-3 md:px-[56px] px-[43px] w-fit lg:text-base text-sm lg::font-bold font-semibold"
           text={t("exploreDTokensSection.secondaryButtonText")}
           hasDiagonalArrow
+          arrowSize={dimension.width >= 1024 ? 24 : 20}
         />
 
         <div className="text-dark-700 md:text-base text-sm place-self-center mt-4 text-center font-desc">

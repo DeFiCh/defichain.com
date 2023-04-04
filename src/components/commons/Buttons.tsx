@@ -1,6 +1,7 @@
 import { PropsWithChildren, useState } from "react";
 import classNames from "classnames";
 import { IoMdArrowRoundForward } from "react-icons/io";
+import { FiArrowUpRight } from "react-icons/fi";
 
 export function Button({
   text,
@@ -76,6 +77,7 @@ export function SecondaryButton({
   href,
   onClick,
   hasDiagonalArrow = false,
+  arrowSize = 24,
 }: {
   text: string;
   className?: string;
@@ -83,6 +85,7 @@ export function SecondaryButton({
   href?: string;
   onClick?: () => void;
   hasDiagonalArrow?: boolean;
+  arrowSize?: number;
 }) {
   if (href) {
     return (
@@ -109,6 +112,7 @@ export function SecondaryButton({
       className={className}
       disabled={disabled}
       onClick={onClick}
+      arrowSize={arrowSize}
     />
   );
 }
@@ -119,12 +123,14 @@ function SecondaryButtonElement({
   disabled,
   onClick,
   hasDiagonalArrow = false,
+  arrowSize = 24,
 }: {
   text: string;
   className?: string;
   disabled?: boolean;
   onClick?: () => void;
   hasDiagonalArrow?: boolean;
+  arrowSize?: number;
 }) {
   return (
     <button
@@ -141,10 +147,10 @@ function SecondaryButtonElement({
       <div className="flex flex-row items-center">
         {text}
         {hasDiagonalArrow && (
-          <IoMdArrowRoundForward
-            size={24}
+          <FiArrowUpRight
+            size={arrowSize}
             className={classNames(
-              "-rotate-45 ml-[15px] active:text-brand-100 active:text-opacity-70"
+              "ml-[15px] active:text-brand-100 active:text-opacity-70"
             )}
           />
         )}

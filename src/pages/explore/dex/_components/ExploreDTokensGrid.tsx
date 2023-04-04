@@ -30,12 +30,14 @@ export function ExploreDTokensGrid({
       >
         {selectionTokens &&
           Object.entries(selectionTokens).map(([, value]) => (
-            <ExploreDTokenCard
-              id={`desktop-${value.token.symbol}`}
-              symbol={value.token.displaySymbol}
-              name={value.token.name}
-              price={value.denominationPrice}
-            />
+            <div className="lg:w-[214.4px] md:w-[30%]">
+              <ExploreDTokenCard
+                id={`desktop-${value.token.symbol}`}
+                symbol={value.token.displaySymbol}
+                name={value.token.name}
+                price={value.denominationPrice}
+              />
+            </div>
           ))}
       </div>
 
@@ -105,7 +107,7 @@ function ExploreDTokenCard({
   }
   return (
     <div className="card-outline-2 p-[0.5px] rounded-[15px]">
-      <div className="rounded-[15px] bg-dark-00 py-6 px-[31.2px] md:w-[214.4px]">
+      <div className="rounded-[15px] bg-dark-00 py-6 px-[31.2px] w-full">
         <div className="flex md:flex-col flex-row md:gap-x-0 gap-x-4">
           <Icon className="h-12 w-12 place-self-center md:mb-4" />
           <div className="flex flex-col">

@@ -429,6 +429,7 @@ function TabletMobileDropDown({
 }
 
 function ComingSoonTag() {
+  const { t } = useTranslation("layout");
   return (
     <div
       className={classNames(
@@ -437,7 +438,7 @@ function ComingSoonTag() {
         "lg:mr-0 mr-1"
       )}
     >
-      COMING SOON
+      {t("comingSoon")}
     </div>
   );
 }

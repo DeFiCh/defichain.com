@@ -6,6 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@300;400;500;600;700&display=swap");
 
 @import "@components/icons/assets/blockchainFeatures/styles/blockchainFeatures.css";
+@import "@components/icons/assets/masternodesBenefits/styles/masternodesBenefits.css";
 
 @tailwind base;
 @tailwind components;

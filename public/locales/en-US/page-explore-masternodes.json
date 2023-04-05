@@ -24,6 +24,28 @@
       "title": "TOTAL VALUE LOCKED",
       "desc": "in user engagement network"
     }
+  },
+  "masternodesBenefits": {
+    "title": "Benefits of Masternodes",
+    "subtitle": "WHY OWN A MASTERNODE?",
+    "desc": "Unlock the full potential of DeFiChain with a masternode.",
+    "button": "Learn more",
+    "passiveIncome": {
+      "title": "PASSIVE INCOME",
+      "desc": "Earn a portion of block rewards and transaction fees"
+    },
+    "stakingRewards": {
+      "title": "STAKING REWARDS",
+      "desc": "Get rewarded with masternodes staking"
+    },
+    "networkSecurity": {
+      "title": "NETWORK SECURITY",
+      "desc": "Secure transactions by validating transactions"
+    },
+    "governance": {
+      "title": "GOVERNANCE",
+      "desc": "Have a voice by voting on governance proposal"
+    }
   }
 }
 

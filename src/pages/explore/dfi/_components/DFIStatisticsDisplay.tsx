@@ -52,7 +52,7 @@ export function DFIStatisticsDisplay() {
       <StatisticPanel
         displayItem={supplyItems}
         displayStripCustomStyle="scroll-mt-[200px]"
-        displayId="statistics_display_dfi"
+        displayId="statistics-display-dfi"
       />
     </Container>
   );

@@ -33,7 +33,7 @@ export function HeroBanner({
   startExploringJumpLink?: string;
 }) {
   return (
-    <Container className={classNames("md:mt-[25px] mt-6 relative")}>
+    <Container className={classNames("md:mt-[25px] mt-6 relative z-10")}>
       <div
         className={classNames(
           "flex flex-col md:gap-y-5 gap-y-2",

@@ -438,7 +438,7 @@ function ComingSoonTag() {
         "lg:mr-0 mr-1"
       )}
     >
-      {t("comingSoon")}
+      {t("header.comingSoon")}
     </div>
   );
 }

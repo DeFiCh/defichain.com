@@ -18,7 +18,7 @@ export function HomePageHeader(): JSX.Element {
           "2xl:max-w-[1920px] max-w-full"
         )}
       >
-        <div className="mt-[-41px] md:w-[316px] md:mt-[92px] lg:max-w-none lg:w-[479px] xl:mt-[120px] 2xl:mt-[148px]">
+        <div className="mt-[-41px] md:w-[316px] md:mt-[92px] lg:max-w-none lg:w-[479px] xl:mt-[120px] 2xl:mt-[148px] relative z-[1]">
           <h1
             className="w-full text-5xl leading-[52px] lg:text-[80px] lg:leading-[84px]"
             data-testid="Header.title"

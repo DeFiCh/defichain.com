@@ -41,12 +41,10 @@
           "title": "EXPLORATEURS DE BLOCS",
           "labels": [
             {
-              "title": "DeFiScan",
-              "subtitle": "Explorateur de blocs officiel"
+              "title": "DeFiScan (Official)"
             },
             {
-              "title": "Crypto ID",
-              "subtitle": "Stockez vos actifs à votre manière"
+              "title": "Crypto ID"
             }
           ]
         }

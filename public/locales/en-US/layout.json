@@ -44,12 +44,10 @@
           "title": "BLOCK EXPLORERS",
           "labels": [
             {
-              "title": "DeFiScan",
-              "subtitle": "Official Block Explorer"
+              "title": "DeFiScan (Official)"
             },
             {
-              "title": "Crypto ID",
-              "subtitle": "Store assets in your own way"
+              "title": "Crypto ID"
             }
           ]
         }

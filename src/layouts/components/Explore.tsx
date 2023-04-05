@@ -3,7 +3,7 @@ import { useTranslation } from "next-i18next";
 import { HeaderNavLinkItem } from "./HeaderNavLinkItem";
 
 interface ColLabels {
-  title: string;
+  title?: string;
   subtitle: string;
 }
 
@@ -51,13 +51,11 @@ export function Explore() {
             icon: "dfi",
             href: "https://defiscan.live/",
             title: entries[1].labels[0].title,
-            subtitle: entries[1].labels[0].subtitle,
           },
           {
             icon: "crypto",
             href: "https://chainz.cryptoid.info/",
             title: entries[1].labels[1].title,
-            subtitle: entries[1].labels[1].subtitle,
           },
         ],
       },
@@ -73,7 +71,7 @@ export function Explore() {
 
   return (
     <>
-      <div className="flex lg:flex-row flex-col gap-y-12 gap-x-20">
+      <div className="flex lg:flex-row flex-col gap-y-12 gap-x-[120px]">
         {/* first col */}
         <div className="flex flex-col">
           <div className="text-dark-500 font-bold leading-5 lg:mb-10 md:mb-[36px] mb-8">
@@ -98,14 +96,13 @@ export function Explore() {
           <div className="text-dark-500 font-bold leading-5 md:mb-10 mb-8">
             {MenuItems.dropDownItems[1].label}
           </div>
-          <div className="grid lg:grid-cols-1 md:grid-cols-2 gap-x-20 lg:gap-y-8 gap-y-10">
+          <div className="grid grid-cols-1 gap-x-20 gap-y-7">
             {MenuItems.dropDownItems[1].items.map((item, key) => (
               <HeaderNavLinkItem
                 key={key}
                 hoverState={hoverState}
                 setHoverState={setHoverState}
                 label={item.title}
-                subLabel={item.subtitle}
                 href={item.href}
                 icon={item.icon}
               />

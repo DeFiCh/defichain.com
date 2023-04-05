@@ -23,7 +23,7 @@ export default function GetDFISection() {
         if (hashElement !== null) {
           document.querySelector(hash)!.scrollIntoView({ behavior: "smooth" });
         }
-      }, 50);
+      }, 350);
     }
   });
 

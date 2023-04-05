@@ -224,8 +224,6 @@ function DesktopMenu({ item }: { item: string }) {
   const { t } = useTranslation("layout");
   const router = useRouter();
 
-  console.log(isHoverOn, isCursorOnHeader);
-
   return (
     <Menu
       className="lg:pb-10 cursor-pointer lg:w-[136px] text-center"
@@ -319,7 +317,7 @@ function TabletMobileMenu() {
               </Container>
 
               {key !== MenuItems.length - 1 && (
-                <hr className="card-outline-2 border-0 h-[0.5px] w-[990px]" />
+                <hr className="bg-dark-200 border-0 h-[0.5px]" />
               )}
             </div>
           );

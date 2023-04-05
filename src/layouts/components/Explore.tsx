@@ -55,7 +55,7 @@ export function Explore() {
           },
           {
             icon: "crypto",
-            href: "https://defiscan.live/",
+            href: "https://chainz.cryptoid.info/",
             title: entries[1].labels[1].title,
             subtitle: entries[1].labels[1].subtitle,
           },

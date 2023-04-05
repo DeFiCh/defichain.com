@@ -36,6 +36,19 @@
               "subtitle": "Staking de DeFiChain"
             }
           ]
+        },
+        {
+          "title": "EXPLORATEURS DE BLOCS",
+          "labels": [
+            {
+              "title": "DeFiScan",
+              "subtitle": "Explorateur de blocs officiel"
+            },
+            {
+              "title": "Crypto ID",
+              "subtitle": "Stockez vos actifs à votre manière"
+            }
+          ]
         }
       ],
       "image": {

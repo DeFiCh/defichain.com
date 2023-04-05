@@ -39,15 +39,15 @@
           ]
         },
         {
-          "title": "BLOCK EXPLORERS",
+          "title": "BLOCK EXPLORER",
           "labels": [
             {
               "title": "DeFiScan",
-              "subtitle": "Official Block Explorer"
+              "subtitle": "Offizieller Block Explorer"
             },
             {
-              "title": "Crypto ID",
-              "subtitle": "Store assets in your own way"
+              "title": "Krypto ID",
+              "subtitle": "Bewahre Assets auf deine eigene Weise auf"
             }
           ]
         }

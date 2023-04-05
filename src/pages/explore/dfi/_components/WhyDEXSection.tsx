@@ -36,7 +36,7 @@ export function WhyDEXSection(): JSX.Element {
           id="tablet-desktop-screen"
           customClassStyle="flex-col"
           customParagraphStyle="mt-[25px]"
-          customSectionStyle="gap-y-12"
+          customSectionStyle="gap-y-[66.5px]"
         />
         <div className="absolute h-8 w-8 right-[-15px] sm:top-[-70px] md:-right-10 md:top-0 lg:h-[45px] lg:w-[45px] lg:top-[-50px] lg:right-[-22px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/explore/cross-accent-6.png')]" />
         <div className="absolute left-[200px] opacity-70 top-0 h-[445.91px] w-[290.56px] rotate-90 md:left-[500px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/explore/grid-accent-6.png')]" />

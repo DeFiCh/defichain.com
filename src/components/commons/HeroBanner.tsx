@@ -33,58 +33,54 @@ export function HeroBanner({
   startExploringJumpLink?: string;
 }) {
   return (
-    <div className="relative z-0">
-      <Container className={classNames("md:mt-[25px] mt-6")}>
+    <Container className={classNames("md:mt-[25px] mt-6 relative")}>
+      <div
+        className={classNames(
+          "flex flex-col md:gap-y-5 gap-y-2",
+          "md:w-1/2 w-auto",
+          "md:pt-[88px] pt-[380px]",
+          "lg:mb-[278px] md:mb-[148px] mb-24"
+        )}
+      >
+        <SectionTitle text={title} />
         <div
           className={classNames(
-            "flex flex-col md:gap-y-5 gap-y-2",
-            "md:w-1/2 w-auto",
-            "md:pt-[88px] pt-[380px]",
-            "lg:mb-[278px] md:mb-[148px] mb-24"
+            "text-dark-1000 text-[40px] leading-[44px] tracking-[-0.02em]",
+            "md:text-5xl md:leading-[52px] md:tracking-normal",
+            "lg:text-[80px] lg:leading-[84px] md:tracking-normal"
           )}
         >
-          <SectionTitle text={title} />
-          <div
-            className={classNames(
-              "text-dark-1000 text-[40px] leading-[44px] tracking-[-0.02em]",
-              "md:text-5xl md:leading-[52px] md:tracking-normal",
-              "lg:text-[80px] lg:leading-[84px] md:tracking-normal"
-            )}
-          >
-            {subtitle}
-          </div>
-          <div
-            className={classNames(
-              "font-desc tracking-[0.03em] text-base text-dark-700",
-              "lg:text-xl tracking-normal"
-            )}
-          >
-            {desc}
-          </div>
-          {hasCtaButton && ctaButtonText && (
-            <Button
-              className="lg:py-4 py-3 md:w-1/2 w-auto lg:text-base text-sm md:mt-7 mt-10"
-              text={ctaButtonText}
-              href={ctaButtonLink}
-            />
-          )}
+          {subtitle}
         </div>
-        {hasStartExploringButton && startExploringJumpLink && (
-          <StartExploringButton
-            startExploringJumpLink={startExploringJumpLink}
+        <div
+          className={classNames(
+            "font-desc tracking-[0.03em] text-base text-dark-700",
+            "lg:text-xl tracking-normal"
+          )}
+        >
+          {desc}
+        </div>
+        {hasCtaButton && ctaButtonText && (
+          <Button
+            className="lg:py-4 py-3 md:w-1/2 w-auto lg:text-base text-sm md:mt-7 mt-10"
+            text={ctaButtonText}
+            href={ctaButtonLink}
           />
         )}
-      </Container>
+      </div>
+      {hasStartExploringButton && startExploringJumpLink && (
+        <StartExploringButton startExploringJumpLink={startExploringJumpLink} />
+      )}
       <div
         className={classNames(
           bgMapping[heroBg],
           "absolute bg-contain bg-no-repeat bg-right-top inset-0 z-[-1]",
           "lg:h-[686px] md:h-[512px] h-[358px]",
           customBgPosStyle ??
-            "xl:right-0 2xl:right-0 md:-right-[5%] -right-[3rem] md:-top-[5rem] top-0"
+            "lg:-right-[10rem] md:-right-[7em] -right-[5em] md:-top-[5rem] top-0"
         )}
       />
-    </div>
+    </Container>
   );
 }
 

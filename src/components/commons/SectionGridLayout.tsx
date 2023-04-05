@@ -44,7 +44,7 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
               {title}
             </h2>
             <div
-              className="text-dark-700 lg:text-xl font-desc md:w-9/12"
+              className="text-dark-700 lg:text-xl font-desc md:w-9/12 lg:w-10/12"
               data-testid="desc"
             >
               {description}

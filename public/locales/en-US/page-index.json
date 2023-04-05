@@ -161,6 +161,36 @@
     "title": "Decentralized and distributed",
     "desc": "The DeFiChain community runs more than 10,000 masternodes which are distributed globally."
   },
+  "YearAheadRoadMapSection": {
+    "label": "THE ROADMAP FOR DEFICHAIN",
+    "title": "The year ahead",
+    "cards": [
+      {
+        "title": "Project name",
+        "timeline": "2023 Q1",
+        "description": "Explain what this is all about in this text upon hover. Text can reach 3-4 lines of text before truncation to something similar to this blah blah blah…",
+        "image": "/assets/img/roadmap/sample.png"
+      },
+      {
+        "title": "Project name",
+        "timeline": "2023 Q1",
+        "description": "Explain what this is all about in this text upon hover. Text can reach 3-4 lines of text before truncation to something similar to this blah blah blah…",
+        "image": "/assets/img/roadmap/sample.png"
+      },
+      {
+        "title": "Project name",
+        "timeline": "2023 Q1",
+        "description": "Explain what this is all about in this text upon hover. Text can reach 3-4 lines of text before truncation to something similar to this blah blah blah…",
+        "image": "/assets/img/roadmap/sample.png"
+      },
+      {
+        "title": "Project name",
+        "timeline": "2023 Q1",
+        "description": "Explain what this is all about in this text upon hover. Text can reach 3-4 lines of text before truncation to something similar to this blah blah blah…",
+        "image": "/assets/img/roadmap/sample.png"
+      }
+    ]
+  },
   "RoadmapSection": {
     "title": "Roadmap",
     "2023": {

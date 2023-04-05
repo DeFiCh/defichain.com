@@ -392,7 +392,8 @@ html {
   }
 }
 
-.custom-dots {
+.blockchain-features-dots,
+.harness-dfi-dots {
   display: inline-block;
   vertical-align: middle;
   margin: auto;
@@ -402,7 +403,8 @@ html {
   width: 70px;
 }
 
-.custom-dots li {
+.blockchain-features-dots li,
+.harness-dfi-dots li {
   list-style: none;
   cursor: pointer;
   display: inline-block;
@@ -410,7 +412,8 @@ html {
   padding: 0;
 }
 
-.custom-dots li button {
+.blockchain-features-dots li button,
+.harness-dfi-dots li button {
   border: 1px solid #8c8c8c;
   color: transparent;
   cursor: pointer;
@@ -420,7 +423,8 @@ html {
   border-radius: 50%;
 }
 
-.custom-dots li.slick-active button {
+.blockchain-features-dots li.slick-active button,
+.harness-dfi-dots li.slick-active button {
   background-color: #ff00af;
   border: 1px solid #ff00af;
 }
@@ -429,4 +433,23 @@ html {
   border: 5px solid #fff;
   display: block;
   margin: auto;
+}
+
+.roadmap-dots {
+  display: flex !important; /* override inline block display from library */
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  background-color: #2b2b2b;
+  border-radius: 4px;
+}
+
+.roadmap-dots li {
+  width: 100%;
+  margin: 0;
+}
+
+.roadmap-dots li.slick-active {
+  background-color: #ff00af;
+  border-radius: 4px;
 }

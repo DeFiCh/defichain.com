@@ -8,6 +8,7 @@ import { StatsDisplay } from "@components/index/StatisticsDisplay";
 import { ReadyForFlexibility } from "@components/index/ReadyForFlexibility";
 import { Container } from "@components/commons/Container";
 import { StartExploringButton } from "@components/commons/StartExploringButton";
+import { YearAheadRoadMapSection } from "@components/index/RoadMapSection";
 
 export default function HomePage(): JSX.Element {
   const { t } = useTranslation(["page-index"]);
@@ -23,6 +24,7 @@ export default function HomePage(): JSX.Element {
       <BlockchainFeaturesSection />
       <DeFiChainEcoSystemSection />
       <ReadyForFlexibility />
+      <YearAheadRoadMapSection />
     </>
   );
 }

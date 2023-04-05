@@ -13,7 +13,7 @@ export default function HarnessDFISection() {
     slidesToShow: 1,
     slidesToScroll: 1,
     lazyLoad: true,
-    dotsClass: "custom-dots",
+    dotsClass: "harness-dfi-dots",
   };
 
   const { t } = useTranslation("page-explore-dfi");

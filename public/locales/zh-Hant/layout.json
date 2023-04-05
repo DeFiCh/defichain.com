@@ -15,23 +15,27 @@
       "community": "社區"
     },
     "explore": {
-      "title": "探索 DeFiChain",
-      "labels": [
+      "info": [
         {
-          "title": "$DFI",
-          "subtitle": "了解代幣（Token）"
-        },
-        {
-          "title": "去中心化交易所",
-          "subtitle": "最大化你的資產"
-        },
-        {
-          "title": "錢包",
-          "subtitle": "以自己的方式存儲資產"
-        },
-        {
-          "title": "主節點",
-          "subtitle": "將您的部分投入 DeFiChain"
+          "title": "探索 DeFiChain",
+          "labels": [
+            {
+              "title": "$DFI",
+              "subtitle": "了解代幣（Token）"
+            },
+            {
+              "title": "去中心化交易所",
+              "subtitle": "最大化你的資產"
+            },
+            {
+              "title": "錢包",
+              "subtitle": "以自己的方式存儲資產"
+            },
+            {
+              "title": "主節點",
+              "subtitle": "將您的部分投入 DeFiChain"
+            }
+          ]
         }
       ],
       "image": {

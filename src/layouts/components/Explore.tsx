@@ -2,57 +2,62 @@ import { useState } from "react";
 import { useTranslation } from "next-i18next";
 import { HeaderNavLinkItem } from "./HeaderNavLinkItem";
 
+interface ColLabels {
+  title: string;
+  subtitle: string;
+}
+
 export function Explore() {
   const { t } = useTranslation("layout");
-  const entries: Array<{ title: string; subtitle: string }> = t(
-    "header.explore.labels",
+  const entries: Array<{ title: string; labels: ColLabels[] }> = t(
+    "header.explore.info",
     { returnObjects: true }
   );
   const MenuItems = {
     dropDownItems: [
       {
-        label: t("header.explore.title"),
+        label: entries[0].title,
         items: [
           {
             icon: "dfi",
             href: "/explore/dfi",
-            title: entries[0].title,
-            subtitle: entries[0].subtitle,
+            title: entries[0].labels[0].title,
+            subtitle: entries[0].labels[0].subtitle,
           },
           {
             icon: "dex",
             href: "/explore/dex",
-            title: entries[1].title,
-            subtitle: entries[1].subtitle,
+            title: entries[0].labels[1].title,
+            subtitle: entries[0].labels[1].subtitle,
           },
           {
             icon: "wallet",
             href: "/explore/wallets",
-            title: entries[2].title,
-            subtitle: entries[2].subtitle,
+            title: entries[0].labels[2].title,
+            subtitle: entries[0].labels[2].subtitle,
           },
           {
             icon: "masternode",
             href: "/explore/masternodes",
-            title: entries[3].title,
-            subtitle: entries[3].subtitle,
+            title: entries[0].labels[3].title,
+            subtitle: entries[0].labels[3].subtitle,
           },
         ],
       },
       {
-        label: "BLOCK EXPLORERS",
+        label: entries[1].title,
         items: [
           {
             icon: "dfi",
             href: "https://defiscan.live/",
-            title: "DeFiScan",
-            subtitle: "Official Block Explorer",
+            title: entries[1].labels[0].title,
+            subtitle: entries[1].labels[0].subtitle,
           },
           {
             icon: "crypto",
             href: "https://defiscan.live/",
-            title: "Crypto ID",
-            subtitle: "Store assets in your own way",
+            title: entries[1].labels[1].title,
+            subtitle: entries[1].labels[1].subtitle,
           },
         ],
       },
@@ -67,14 +72,14 @@ export function Explore() {
   const [hoverState, setHoverState] = useState<string | undefined>(undefined);
 
   return (
-    <div className="flex flex-col">
-      <div className="flex md:flex-row flex-col gap-y-[72px] gap-x-20">
+    <>
+      <div className="flex lg:flex-row flex-col gap-y-12 gap-x-20">
         {/* first col */}
         <div className="flex flex-col">
-          <div className="hidden md:block text-dark-500 font-bold leading-5 mb-10">
+          <div className="text-dark-500 font-bold leading-5 lg:mb-10 md:mb-[36px] mb-8">
             {MenuItems.dropDownItems[0].label}
           </div>
-          <div className="grid grid-cols-2 gap-x-20 gap-y-8">
+          <div className="grid md:grid-flow-col md:grid-rows-2 md:grid-cols-2 gap-x-20 lg:gap-y-8 gap-y-10">
             {MenuItems.dropDownItems[0].items.map((item, key) => (
               <HeaderNavLinkItem
                 key={key}
@@ -90,10 +95,10 @@ export function Explore() {
         </div>
         {/* second col */}
         <div className="flex flex-col">
-          <div className="text-dark-500 font-bold leading-5 mb-10">
+          <div className="text-dark-500 font-bold leading-5 md:mb-10 mb-8">
             {MenuItems.dropDownItems[1].label}
           </div>
-          <div className="flex flex-col gap-y-8">
+          <div className="grid lg:grid-cols-1 md:grid-cols-2 gap-x-20 lg:gap-y-8 gap-y-10">
             {MenuItems.dropDownItems[1].items.map((item, key) => (
               <HeaderNavLinkItem
                 key={key}
@@ -132,6 +137,6 @@ export function Explore() {
       {/*    </div> */}
       {/*  </a> */}
       {/* </div> */}
-    </div>
+    </>
   );
 }

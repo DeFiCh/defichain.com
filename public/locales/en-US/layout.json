@@ -16,25 +16,43 @@
       "community": "Community"
     },
     "explore": {
-      "title": "EXPLORE DEFICHAIN",
-      "labels": [
+      "info": [
         {
-          "title": "$DFI",
-          "subtitle": "Learn about the token"
+          "title": "EXPLORE DEFICHAIN",
+          "labels": [
+            {
+              "title": "$DFI",
+              "subtitle": "Learn about the token"
+            },
+            {
+              "title": "Decentralized Exchange",
+              "subtitle": "Maximize your assets"
+            },
+            {
+              "title": "Wallets",
+              "subtitle": "Store assets in your own way"
+            },
+            {
+              "title": "Masternodes",
+              "subtitle": "Place your stakes in DeFiChain"
+            }
+          ]
         },
         {
-          "title": "Decentralized Exchange",
-          "subtitle": "Maximize your assets"
-        },
-        {
-          "title": "Wallets",
-          "subtitle": "Store assets in your own way"
-        },
-        {
-          "title": "Masternodes",
-          "subtitle": "Place your stakes in DeFiChain"
+          "title": "BLOCK EXPLORERS",
+          "labels": [
+            {
+              "title": "DeFiScan",
+              "subtitle": "Official Block Explorer"
+            },
+            {
+              "title": "Crypto ID",
+              "subtitle": "Store assets in your own way"
+            }
+          ]
         }
       ],
+
       "image": {
         "title": "$DFI",
         "subtitle": "Learn about the token and where to get"

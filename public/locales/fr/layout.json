@@ -15,23 +15,27 @@
       "community": "Communauté"
     },
     "explore": {
-      "title": "Explorer DeFiChain",
-      "labels": [
+      "info": [
         {
-          "title": "$DFI",
-          "subtitle": "En savoir plus sur le token"
-        },
-        {
-          "title": "Échange décentralisé",
-          "subtitle": "Maximisez vos actifs"
-        },
-        {
-          "title": "Portefeuilles",
-          "subtitle": "Stockez vos actifs à votre manière"
-        },
-        {
-          "title": "Masternodes",
-          "subtitle": "Staking de DeFiChain"
+          "title": "Explorer DeFiChain",
+          "labels": [
+            {
+              "title": "$DFI",
+              "subtitle": "En savoir plus sur le token"
+            },
+            {
+              "title": "Échange décentralisé",
+              "subtitle": "Maximisez vos actifs"
+            },
+            {
+              "title": "Portefeuilles",
+              "subtitle": "Stockez vos actifs à votre manière"
+            },
+            {
+              "title": "Masternodes",
+              "subtitle": "Staking de DeFiChain"
+            }
+          ]
         }
       ],
       "image": {

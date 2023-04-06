@@ -2,6 +2,7 @@ import { Button } from "@components/commons/Buttons";
 import { Container } from "@components/commons/Container";
 import { useTranslation } from "next-i18next";
 import { SectionTitle } from "@components/commons/SectionTitle";
+import classNames from "classnames";
 import { MasternodesBenefitsColumn } from "./MasternodesBenefitsColumn";
 
 export const masternodesBenefitsItems = [
@@ -28,10 +29,10 @@ export function MasternodesBenefitsSection(): JSX.Element {
 
   return (
     <section
-      className="pb-24 pt-0 md:pb-28 lg:pb-[120px] lg:mb-[120px] relative"
+      className="pb-24 pt-0 md:pb-28 lg:pb-[120px] lg:mb-[120px]"
       data-testid="masternodesBenefits"
     >
-      <Container className="flex flex-col justify-between lg:flex-row 2xl:max-w-[1920px] 2xl:mx-[300px]">
+      <Container className="flex flex-col justify-between lg:flex-row 2xl:max-w-[1920px] 2xl:mx-[300px] relative">
         <div className="flex lg:w-[551px]">
           <div
             className="w-full flex flex-col space-y-5 md:space-y-5 lg:space-y-5"
@@ -62,9 +63,30 @@ export function MasternodesBenefitsSection(): JSX.Element {
             id="tablet-desktop-screen"
           />
         </div>
+        <div
+          className={classNames(
+            "hidden md:block absolute bg-contain bg-no-repeat ",
+            "lg:h-[45px] lg:w-[45px] lg:top-[169px] lg:-right-[1.5em]",
+            "md:h-8 md:w-8 md:-right-[2em] md:bottom-[10em]",
+            "bg-[url('/assets/img/background/explore/masternodes/masternodesBenefitsBg.png')]"
+          )}
+        />
+        <div
+          className={classNames(
+            "lg:hidden md:block hidden absolute right-0 opacity-70 bg-contain bg-no-repeat",
+            " md:h-[445.91px] md:w-[290.56px] md:top-[5em] md:-right-[4.5em]",
+            "bg-[url('/assets/img/background/explore/masternodes/masternodesGridBg.png')]"
+          )}
+        />
+        <div
+          className={classNames(
+            "hidden md:block absolute bg-contain bg-no-repeat rotate-90",
+            "lg:w-[682px] lg:h-[341.33px] lg:-right-[17.5em] lg:top-[31em]",
+            "md:h-[240.24px] md:w-[480px] md:-bottom-[28em] md:-right-[10em]",
+            "bg-[url('/assets/img/background/explore/masternodes/benefits-accent-desktop.png')]"
+          )}
+        />
       </Container>
-      <div className="hidden md:block absolute md:h-8 md:w-8 md:right-8 md:bottom-[249px] lg:h-[45px] lg:w-[45px] lg:top-[169px] lg:right-[98px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/masternodesBenefits/masternodesBenefitsBg.png')]" />
-      <div className="hidden md:block absolute right-0 opacity-70 md:top-[85px] md:h-[445.91px] md:w-[290.56px] lg:top-auto lg:bottom-[-251.33px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/masternodesBenefits/masternodesGridBg.png')]" />
     </section>
   );
 }

@@ -59,7 +59,7 @@ export function MasternodesStatisticsDisplay() {
       />
       <div
         className={classNames(
-          "z-[-1] lg:block md:hidden absolute bg-contain bg-no-repeat md:rotate-0",
+          "z-[-1] lg:block hidden absolute bg-contain bg-no-repeat md:rotate-0",
           "bg-[url(/assets/img/background/explore/masternodes/stats-accent-desktop.png)]",
           "lg:h-[386.45px] lg:w-[772.13px] lg:-left-[7.5em] lg:-bottom-[2em]",
           "h-[183.04px] w-[292.57px] rotate-90 -right-[11em] -bottom-[6.5em]"

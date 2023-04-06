@@ -55,7 +55,7 @@ export default function HarnessDFISection() {
   ];
 
   return (
-    <Container className="lg:mb-[303px] md:mb-[180px] mb-24">
+    <Container className="lg:mb-[303px] md:mb-[180px] mb-24 relative z-[10]">
       <div className="flex flex-col w-full mx-auto gap-y-5">
         <div className="flex md:justify-center justify-start">
           <SectionTitle text={t("harnessDFISection.title")} />
@@ -88,6 +88,25 @@ export default function HarnessDFISection() {
           <HarnessDFIGrid gridItems={harnessDFIItems.slice(3)} isMobile />
         </Slider>
       </div>
+      <div
+        className={classNames(
+          "absolute bg-contain bg-no-repeat ",
+          "lg:h-[45px] lg:w-[45px] lg:right-[2.3em]",
+          "md:h-8 md:w-8 md:-right-[0.25em] md:bottom-[8em]",
+          "h-7 w-7 -right-[0.8em] bottom-[15em]",
+          "bg-[url('/assets/img/background/explore/masternodes/masternodesBenefitsBg.png')]"
+        )}
+      />
+      <div
+        className={classNames(
+          "absolute bg-contain bg-no-repeat ",
+          "lg:h-[682px] lg:w-[341.33px] lg:-bottom-[50em] lg:-right-[1em]",
+          "md:h-[480px] md:w-[240.24px] md:-right-[2.5em] md:-bottom-[35em] md:left-auto",
+          "w-[203.76px] h-[152.08px] left-[12.5em] -bottom-[3.5em]",
+          "md:bg-[url('/assets/img/background/explore/dfi/harness-accent-desktop.png')]",
+          "bg-[url('/assets/img/background/explore/dfi/harness-accent-mobile.png')]"
+        )}
+      />
     </Container>
   );
 }

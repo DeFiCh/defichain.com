@@ -11,7 +11,7 @@ export function AdvanceUsageSection() {
   const { t } = useTranslation(["page-explore-wallets"]);
 
   return (
-    <Container className="mt-[120px] md:mt-[96px] lg:mt-[240px] lg:mb-[240px] md:mb-[112px] mb-[72px]">
+    <Container className="mt-[120px] md:mt-[96px] lg:mt-[240px] lg:mb-[240px] md:mb-[112px] mb-[72px] relative">
       <div className="flex flex-col gap-y-5">
         <div className="flex md:justify-center justify-start">
           <SectionTitle text="SUITABLE FOR ADVANCE USAGE" />
@@ -90,6 +90,22 @@ export function AdvanceUsageSection() {
           }}
         />
       </div>
+      <div
+        className={classNames(
+          "z-[-1] absolute bg-contain bg-no-repeat md:rotate-0",
+          "bg-[url(/assets/img/background/explore/wallet/grids-accent.png)]",
+          "lg:h-[300.18px] lg:w-[479.8px] lg:-right-[15em] lg:-bottom-[7.75em]",
+          "md:h-[281.94px] md:w-[450.65px] md:-right-[10.7em] md:-bottom-[5em]",
+          "h-[183.04px] w-[292.57px] rotate-90 -right-[11em] -bottom-[6.5em]"
+        )}
+      />
+      <div
+        className={classNames(
+          "hidden md:block absolute bg-contain bg-no-repeat mix-blend-screen bg-[url(/assets/img/background/explore/wallet/union.png)]",
+          "lg:h-[45px] lg:w-[45px] lg:-right-[1.5em] lg:-bottom-[1.5em]",
+          "md:h-8 md:w-8 -right-[1.2em] -bottom-[4.75em]"
+        )}
+      />
     </Container>
   );
 }

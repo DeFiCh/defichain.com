@@ -3,17 +3,14 @@ import { Posts } from "@components/commons/prismicTypes";
 export default function ProjectCard({
   post,
   isLatest,
-  key,
 }: {
   post: Posts;
   isLatest: boolean;
-  key: string;
 }) {
   return (
     <section
       className="w-full max-w-[318px] flex flex-col"
       data-testid={`card_container_${post.title[0]?.text}`}
-      key={key}
     >
       <a href={post.url?.url} target="_blank" rel="noreferrer">
         <section

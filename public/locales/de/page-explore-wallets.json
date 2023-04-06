@@ -1,0 +1,64 @@
+{
+  "heroBanner": {
+    "title": "WÄHLE EINE WALLET, DIE ZU DIR PASST",
+    "subtitle": "DeFiChain-Wallets",
+    "desc": "Erhalte Zugang zur DeFi-Welt durch Non-Custodial Wallets, die für eine Vielzahl von Anforderungen entwickelt wurden."
+  },
+  "footerCards": {
+    "cardTitle": "EXPLORE DEFICHAIN",
+    "cards": [
+      {
+        "title": "Trade with DEX"
+      },
+      {
+        "title": "Get $DFI"
+      }
+    ]
+  },
+  "dailyUseSection": {
+    "sectionTitle": "FÜR DEN TÄGLICHEN GEBRAUCH",
+    "title": "Täglicher Zugang zu DeFiChain",
+    "subtitle": "Diese Wallets bieten einen leichten und einfachen Zugang zu den Funktionen von DeFiChain. Sie eignen sich am besten für Nutzer, die fast täglich mit DeFiChain interagieren und dabei keine Kompromisse bei der Geschwindigkeit und Sicherheit ihrer Einlagen eingehen.",
+    "entries": {
+      "DFC": {
+        "title": "DeFiChain Wallet Handy-App",
+        "desc": "Einfacher, schneller Zugang zum dezentralen Finanzsystem für Bitcoin, per Fingertipp."
+      },
+      "DFX": {
+        "title": "DFX wallet Handy-App",
+        "desc": "Dein Weg zur finanziellen Freiheit - kaufe und verkaufe DeFiChain-Assets mit einfachen Banküberweisungen und nutze die Non-Custodial DFX-Wallet, um mit Liquiditäts-Mining und $DFI-Staking passiven Cashflow aufzubauen."
+      },
+      "JLY": {
+        "title": "Jellywallet",
+        "desc": "Jellywallet ist die ultimative, Non-Custodial Browser-Wallet für das DeFiChain-Ökosystem, die einen nahtlosen Zugang zur spannenden Welt von DeFi und Web3 ermöglicht. Verfügbar für Chrome, Firefox und den Brave Browser."
+      }
+    }
+  },
+  "advanceUseSection": {
+    "sectionTitle": "FÜR FORTGESCHRITTENEN EINSATZ GEEIGNET",
+    "title": "Erweiterte Nutzung von DeFiChain",
+    "subtitle": "Fortgeschrittene Wallets, die für die komplexe Nutzung von DeFiChain geeignet sind, wie z.B. Masternode-Management, Multi-Signatur-Management und mehr.",
+    "entries": {
+      "DFC": {
+        "title": "DeFi Wallet desktop app",
+        "desc": "Mit der funktionsfähigen und vollständig dezentralen Wallet-App kannst du Transaktionen durchführen, Liquiditäts-Mining betreiben, tauschen und vieles mehr. Full-Node enthalten."
+      },
+      "RPI": {
+        "title": "DeFi Wallet für Raspberry Pi",
+        "desc": "Eine Version der Desktop-Wallet für Raspberry Pi 4B 4GB mit offiziellem Raspberry Pi OS (32-Bit)"
+      },
+      "CLI": {
+        "title": "CLI",
+        "desc": "Führe Transaktionen und Interaktionen mit DeFiChain über eine Befehlszeilenschnittstelle durch. Full-Node enthalten"
+      },
+      "DFIElectrum": {
+        "title": "DeFiChain Electrum",
+        "desc": "Multi-Signatur DeFiChain Wallet mit Electrum für Treasury-Anwendungen und mehr."
+      },
+      "QUANTUM": {
+        "title": "Quantum",
+        "desc": "Quantum ist eine verlässliche Blockchain Bridge, die einen nahtlosen Transfer zwischen DeFiChain und Ethereum ermöglicht."
+      }
+    }
+  }
+}

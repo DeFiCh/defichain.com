@@ -52,8 +52,8 @@ function RoadMapSlider(): JSX.Element {
     centerPadding: "0px",
     lazyload: "progressive",
     variableWidth: true,
-    prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />,
+    // prevArrow: <PrevArrow />, // TODO: uncomment when more than 3 cards in road map
+    // nextArrow: <NextArrow />,
     responsive: [
       {
         breakpoint: 600,
@@ -67,12 +67,18 @@ function RoadMapSlider(): JSX.Element {
   };
 
   return (
-    <div className="roadmap-section">
+    <div className="roadmap-section lg:mb-60 md:mb-24 mb-40 relative">
       <Slider {...settings}>
         {cards.map((card) => (
           <RoadMapCard key={card.title} {...card} />
         ))}
       </Slider>
+      <div
+        className={classNames(
+          "bg-[url('/assets/img/index/accent-2.png')] absolute w-[772px] h-[386px] bg-contain bg-no-repeat z-[-1]",
+          "2xl:left-0 lg:top-[66px] lg:left-[-326px] hidden lg:block"
+        )}
+      />
     </div>
   );
 }
@@ -81,19 +87,14 @@ function RoadMapCard(props: RoadMap): JSX.Element {
   return (
     <div
       data-bg-image={`url(${props.image})`}
-      className="group card-outline-2 hover:accent-gradient-1 rounded-[15px] md:h-[202px] md:w-[384px] h-[184px] w-[272px] p-px"
+      className="card-outline-2 hover:accent-gradient-1 rounded-[15px] md:h-[202px] md:w-[384px] h-[202px] w-[272px] p-px"
     >
       <div
-        className="p-6 group-hover:bg-dark-00/90 rounded-[15px] h-full"
+        className="p-6 group-hover:bg-dark-00/90 rounded-[15px] h-full bg-[75%]"
         style={{ backgroundImage: `url(${props.image})` }}
       >
-        <div className="flex items-center justify-between mb-4">
-          <div className="text-dark-1000 group-hover:text-brand-100 text-2xl transition-colors">
-            {props.title}
-          </div>
-          <div className="bg-dark-100 rounded-[5px] py-1 px-3 text-dark-1000 text-sm font-semibold">
-            {props.timeline}
-          </div>
+        <div className="text-dark-1000 group-hover:text-brand-100 text-2xl transition-colors w-2/4 md:w-full">
+          {props.title}
         </div>
         <div className="opacity-0 group-hover:opacity-100 transition-colors text-dark-1000 font-desc line-clamp-4">
           {props.description}
@@ -102,6 +103,8 @@ function RoadMapCard(props: RoadMap): JSX.Element {
     </div>
   );
 }
+
+// eslint-disable-next-line
 function PrevArrow(props: {
   className?: string;
   onClick?: ReactEventHandler;
@@ -120,6 +123,8 @@ function PrevArrow(props: {
     </button>
   );
 }
+
+// eslint-disable-next-line
 function NextArrow(props: {
   className?: string;
   onClick?: ReactEventHandler;

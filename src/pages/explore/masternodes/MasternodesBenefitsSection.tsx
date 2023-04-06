@@ -30,7 +30,7 @@ export function MasternodesBenefitsSection(): JSX.Element {
       description={t("masternodesBenefits.desc")}
       buttonText={t("masternodesBenefits.button")}
       isCTAButton
-      href="masternodes/technicalGuide"
+      href="masternodes/technical-guide"
     >
       <div className="relative">
         <SvgIconsColumn

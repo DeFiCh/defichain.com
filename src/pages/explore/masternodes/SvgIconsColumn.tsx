@@ -15,23 +15,56 @@ import {
   GovernanceIconHover,
 } from "@components/icons/assets/masternodesBenefits/GovernanceIcon";
 import classNames from "classnames";
+import {
+  TradeAssetsIcon,
+  TradeAssetsIconHover,
+} from "@components/icons/assets/whyDex/TradeAssets";
+import {
+  WideSelectionIcon,
+  WideSelectionIconHover,
+} from "@components/icons/assets/whyDex/WideSelection";
+import {
+  MineLiquidityIcon,
+  MineLiquidityIconHover,
+} from "@components/icons/assets/whyDex/MineLiquidity";
+import {
+  AdvancedSwapsIcon,
+  AdvancedSwapsIconHover,
+} from "@components/icons/assets/whyDex/AdvancedSwaps";
 
 interface BlockchainFeatureItemProp {
   title: string;
   desc: string;
 }
 
-export function MasternodesBenefitsColumn({
+export function SvgIconsColumn({
   items,
   id,
+  customSectionStyle,
+  customClassStyle,
+  customParagraphStyle,
 }: {
   items: Array<BlockchainFeatureItemProp>;
   id: string;
+  customSectionStyle?: string;
+  customClassStyle?: string;
+  customParagraphStyle?: string;
 }): JSX.Element {
   return (
-    <div className="flex flex-1 flex-wrap gap-12 justify-between md:gap-y-[120px] lg:mr-[64px] lg:gap-y-16 lg:gap-x-10">
+    <div
+      className={classNames(
+        customSectionStyle,
+        "flex flex-1 flex-wrap justify-between md:gap-y-[120px] lg:mr-[64px] lg:gap-y-16 lg:gap-x-10"
+      )}
+    >
       {items.map((item) => (
-        <FeatureIcon item={item} id={id} key={item.title} />
+        <FeatureIcon
+          item={item}
+          id={id}
+          key={item.title}
+          customClassStyle={customClassStyle}
+          customParagraphStyle={customParagraphStyle}
+        />
       ))}
     </div>
   );
@@ -40,9 +73,13 @@ export function MasternodesBenefitsColumn({
 function FeatureIcon({
   item,
   id,
+  customClassStyle,
+  customParagraphStyle,
 }: {
   item: BlockchainFeatureItemProp;
   id: string;
+  customClassStyle?: string;
+  customParagraphStyle?: string;
 }) {
   const Icon = iconMapping[item.title] as React.ElementType;
   // const IconOnHover = iconMapping[`${item.title}_hover`] as React.ElementType;
@@ -58,17 +95,17 @@ function FeatureIcon({
 
   return (
     <div
-      className="masternode-benefits-feature-item flex flex-row md:flex-col w-full md:w-[306px] lg:w-[206px]"
+      className={classNames(
+        customClassStyle,
+        "flex md:flex-col w-full md:w-[306px] lg:w-[206px]"
+      )}
       // onMouseOver={handleMouseOver}
       // onFocus={handleMouseOver}
       // onMouseOut={handleMouseOut}
       // onBlur={handleMouseOut}
     >
       <div className="w-[50px]">
-        <Icon
-          className="w-[50px] md:w-fit h-[50px]"
-          id={`${id}-${item.title}`}
-        />
+        <Icon className="w-fit h-[50px]" id={`${id}-${item.title}`} />
         {/* {isHovering && Icon ? (
           <IconOnHover className="w-[50px] md:w-fit h-[50px]" />
         ) : (
@@ -79,7 +116,12 @@ function FeatureIcon({
         )} */}
       </div>
 
-      <div className="space-y-4 ml-[58px] md:ml-0 md:mt-5">
+      <div
+        className={classNames(
+          "space-y-4 md:ml-0 md:mt-5",
+          customParagraphStyle
+        )}
+      >
         <h3
           className={classNames(
             "font-bold leading-5 text-dark-1000 transition duration-300 ease-in-out"
@@ -99,6 +141,7 @@ function FeatureIcon({
 }
 
 const iconMapping = {
+  // /explore - masternode items
   "PASSIVE INCOME": PassiveIncomeIcon,
   "PASSIVE INCOME_hover": PassiveIncomeIconHover,
   "STAKING REWARDS": StakingRewardsIcon,
@@ -107,4 +150,14 @@ const iconMapping = {
   "NETWORK SECURITY_hover": NetworkSecurityIconHover,
   GOVERNANCE: GovernanceIcon,
   GOVERNANCE_hover: GovernanceIconHover,
+
+  // /explore - Why DEX items
+  "TRADE ASSETS": TradeAssetsIcon,
+  "TRADE ASSETS_hover": TradeAssetsIconHover,
+  "WIDE SELECTION OF TOKENS": WideSelectionIcon,
+  "WIDE SELECTION OF TOKENS_hover": WideSelectionIconHover,
+  "MINE LIQUIDITY FROM POOLS": MineLiquidityIcon,
+  "MINE LIQUIDITY FROM POOLS_hover": MineLiquidityIconHover,
+  "ADVANCED SWAPS": AdvancedSwapsIcon,
+  "ADVANCED SWAPS_hover": AdvancedSwapsIconHover,
 };

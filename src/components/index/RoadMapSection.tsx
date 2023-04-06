@@ -52,9 +52,18 @@ function RoadMapSlider(): JSX.Element {
     centerPadding: "0px",
     lazyload: "progressive",
     variableWidth: true,
+    swipeToSlide: false,
+    draggable: false,
     // prevArrow: <PrevArrow />, // TODO: uncomment when more than 3 cards in road map
     // nextArrow: <NextArrow />,
     responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          draggable: true,
+          swipeToSlide: true,
+        },
+      },
       {
         breakpoint: 600,
         settings: {

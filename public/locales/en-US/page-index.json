@@ -166,14 +166,14 @@
     "title": "Milestones",
     "cards": [
       {
-        "title": "TestNet for MetaChain",
-        "description": "",
-        "image": "/assets/img/roadmap/TestNet.png"
-      },
-      {
         "title": "DevNet for MetaChain",
         "description": "",
         "image": "/assets/img/roadmap/DevNet.png"
+      },
+      {
+        "title": "TestNet for MetaChain",
+        "description": "",
+        "image": "/assets/img/roadmap/TestNet.png"
       },
       {
         "title": "MainNet Launch",

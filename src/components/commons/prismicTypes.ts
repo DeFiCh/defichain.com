@@ -1,9 +1,7 @@
-interface PostTitle {
-  text: string;
-}
-
 export interface Posts {
-  title: PostTitle[];
+  title: {
+    text: string;
+  };
   url: {
     url: string;
   };

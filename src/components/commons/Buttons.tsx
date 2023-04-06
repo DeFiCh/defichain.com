@@ -76,26 +76,35 @@ export function SecondaryButton({
   className,
   disabled,
   onClick,
+  href,
 }: {
   text: string;
   className?: string;
   disabled?: boolean;
   onClick?: () => void;
+  href?: string;
 }) {
   return (
-    <button
-      type="button"
-      onClick={onClick}
-      disabled={disabled}
-      className={classNames(
-        className ?? "py-4",
-        "flex items-center justify-center rounded-[92px] font-bold disabled:opacity-30 disabled:pointer-events-none !mt-0",
-        "outline outline-1 outline-dark-1000 hover:outline-brand-100 active:text-brand-100 text-dark-1000 active:opacity-70"
-      )}
+    <Link
+      rel="noreferrer"
+      target="_blank"
+      href={href ?? ""}
+      className={classNames({ "pointer-events-none": disabled })}
     >
-      {text}
-      <FiArrowUpRight size={20} className="ml-[15px]" />
-    </button>
+      <button
+        type="button"
+        onClick={onClick}
+        disabled={disabled}
+        className={classNames(
+          className ?? "py-4",
+          "flex items-center justify-center rounded-[92px] font-bold disabled:opacity-30 disabled:pointer-events-none !mt-0",
+          "outline outline-1 outline-dark-1000 hover:outline-brand-100 active:text-brand-100 text-dark-1000 active:opacity-70"
+        )}
+      >
+        {text}
+        <FiArrowUpRight size={20} className="ml-[15px]" />
+      </button>
+    </Link>
   );
 }
 

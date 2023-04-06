@@ -9,6 +9,7 @@ interface SectionGridLayoutProps {
   buttonText: string;
   isCTAButton?: boolean;
   isSecondaryButton?: boolean;
+  href?: string;
   children;
 }
 
@@ -20,6 +21,7 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
     buttonText,
     isCTAButton,
     isSecondaryButton,
+    href,
     children,
   } = props;
 
@@ -59,6 +61,7 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
               <SecondaryButton
                 className="text-sm w-[236px] py-3 lg:py-4 lg:text-base sm:w-[272px] !mt-[32px]"
                 text={buttonText}
+                href={href}
               />
             ) : null}
           </div>

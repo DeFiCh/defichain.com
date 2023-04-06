@@ -2,33 +2,34 @@ import { SectionGridLayout } from "@components/commons/SectionGridLayout";
 import { useTranslation } from "next-i18next";
 import { SvgIconsColumn } from "pages/explore/masternodes/SvgIconsColumn";
 
-export const whyDEXItems = [
-  {
-    title: "TRADE ASSETS",
-    desc: "Easy and convenient way to swap your tokens to another.",
-  },
-  {
-    title: "WIDE SELECTION OF TOKENS",
-    desc: "With over 60+ tokens, you have a vast playing field for DeFi activities",
-  },
-  {
-    title: "MINE LIQUIDITY FROM POOLS",
-    desc: "Earn rewards by providing liquidity. Withdraw anytime.",
-  },
-  {
-    title: "ADVANCED SWAPS",
-    desc: "Swap through multiple pools instantly, or swap based on future prices of each dToken",
-  },
-];
-
 export function WhyDEXSection(): JSX.Element {
   const { t } = useTranslation("page-explore-dex");
+
+  const whyDEXItems = [
+    {
+      title: t("whyDEX.trade.title"),
+      desc: t("whyDEX.trade.desc"),
+    },
+    {
+      title: t("whyDEX.wideSelection.title"),
+      desc: t("whyDEX.wideSelection.desc"),
+    },
+    {
+      title: t("whyDEX.mineLiquidity.title"),
+      desc: t("whyDEX.mineLiquidity.desc"),
+    },
+    {
+      title: t("whyDEX.advancedSwaps.title"),
+      desc: t("whyDEX.advancedSwaps.desc"),
+    },
+  ];
   return (
     <SectionGridLayout
       title={t("whyDEX.title")}
       description={t("whyDEX.desc")}
       buttonText={t("whyDEX.button")}
       isSecondaryButton
+      href="https://defiscan.live/dex"
     >
       <div className="relative">
         <SvgIconsColumn

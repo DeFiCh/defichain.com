@@ -2,27 +2,27 @@ import { SectionGridLayout } from "@components/commons/SectionGridLayout";
 import { useTranslation } from "next-i18next";
 import { SvgIconsColumn } from "./SvgIconsColumn";
 
-export const masternodesBenefitsItems = [
-  {
-    title: "PASSIVE INCOME",
-    desc: "Earn a portion of block rewards and transaction fees",
-  },
-  {
-    title: "STAKING REWARDS",
-    desc: "Get rewarded with masternodes staking",
-  },
-  {
-    title: "NETWORK SECURITY",
-    desc: "Secure transactions by validating transactions",
-  },
-  {
-    title: "GOVERNANCE",
-    desc: "Have a voice by voting on governance proposal",
-  },
-];
-
 export function MasternodesBenefitsSection(): JSX.Element {
   const { t } = useTranslation("page-explore-masternodes");
+
+  const masternodesBenefitsItems = [
+    {
+      title: t("masternodesBenefits.passiveIncome.title"),
+      desc: t("masternodesBenefits.passiveIncome.desc"),
+    },
+    {
+      title: t("masternodesBenefits.stakingRewards.title"),
+      desc: t("masternodesBenefits.stakingRewards.desc"),
+    },
+    {
+      title: t("masternodesBenefits.networkSecurity.title"),
+      desc: t("masternodesBenefits.networkSecurity.desc"),
+    },
+    {
+      title: t("masternodesBenefits.governance.title"),
+      desc: t("masternodesBenefits.governance.desc"),
+    },
+  ];
   return (
     <SectionGridLayout
       sectionTitle={t("masternodesBenefits.subtitle")}

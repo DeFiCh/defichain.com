@@ -18,6 +18,7 @@ import { NewsLetterIcon } from "@public/assets/icon/NewsLetterIcon";
 import { CryptoIDIcon } from "@public/assets/icon/CryptoIDIcon";
 import { useRouter } from "next/router";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
+import Link from "next/link";
 
 export function HeaderNavLinkItem({
   icon,
@@ -76,7 +77,7 @@ export function HeaderNavLinkItem({
   }
 
   return (
-    <a
+    <Link
       onMouseEnter={() => {
         setHoverState(label);
         setIsMouseEnter(true);
@@ -172,7 +173,7 @@ export function HeaderNavLinkItem({
           {subLabel}
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
 

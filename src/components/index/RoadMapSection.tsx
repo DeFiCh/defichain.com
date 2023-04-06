@@ -84,7 +84,7 @@ function RoadMapSlider(): JSX.Element {
       </Slider>
       <div
         className={classNames(
-          "bg-[url('/assets/img/index/accent-2.png')] absolute w-[772px] h-[386px] bg-contain bg-no-repeat z-[-1]",
+          "bg-[url('/assets/img/index/accent.png')] absolute w-[772px] h-[386px] bg-contain bg-no-repeat z-[-1]",
           "2xl:left-0 lg:top-[66px] lg:left-[-326px] hidden lg:block"
         )}
       />

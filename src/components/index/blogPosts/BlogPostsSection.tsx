@@ -9,7 +9,7 @@ import ProjectCard from "./PostCard";
 export function BlogPostsSection({ blogPosts }: { blogPosts: Posts[] }) {
   const { t } = useTranslation("page-index");
   return blogPosts?.length > 0 ? (
-    <div className={classNames("relative z-0", "my-6", "py-20")}>
+    <div className={classNames("relative lg:mb-56 md:mb-52 mb-48")}>
       <Container>
         <div className="flex flex-col lg:flex-row w-auto justify-between">
           <div className="max-w-[468px]">
@@ -34,6 +34,18 @@ export function BlogPostsSection({ blogPosts }: { blogPosts: Posts[] }) {
         </div>
         <div className="hidden absolute z-[-1] h-[567.69px] w-[768.77px] right-[-380.71px] md:block md:top-0 lg:bottom-0 bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/blogPosts/blogPostsBg.png')]" />
       </Container>
+      <div
+        className={classNames(
+          "bg-[url('/assets/img/index/accent-mobile.png')] absolute w-[266px] h-[598px] bg-contain bg-no-repeat z-[-1]",
+          "bottom-[-30%] block md:hidden"
+        )}
+      />
+      <div
+        className={classNames(
+          "bg-[url('/assets/img/index/accent-tablet.png')] absolute w-[598px] h-[365px] bg-contain bg-no-repeat z-[-1]",
+          "bottom-[-30%] left-[-8%] hidden md:block lg:hidden"
+        )}
+      />
     </div>
   ) : (
     <div />

@@ -759,5 +759,10 @@
       "title": "VARIETY",
       "desc": "Wide range of crypto-economic financial operations."
     }
+  },
+  "BlogPostsSection": {
+    "title": "DeFiChain \nin the news",
+    "label": "DEFICHAIN BLOG",
+    "button": "View all articles"
   }
 }

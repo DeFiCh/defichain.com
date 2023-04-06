@@ -1,6 +1,7 @@
-import { PropsWithChildren, useState } from "react";
+import { HTMLAttributeAnchorTarget, PropsWithChildren, useState } from "react";
 import classNames from "classnames";
 import { IoMdArrowRoundForward } from "react-icons/io";
+import Link from "next/link";
 
 export function Button({
   text,
@@ -76,6 +77,7 @@ export function GradientButton({
   disabled,
   onClick,
   href,
+  target,
 }: {
   buttonText: string;
   className?: string;
@@ -83,14 +85,16 @@ export function GradientButton({
   disabled?: boolean;
   onClick?: () => void;
   href?: string;
+  target?: HTMLAttributeAnchorTarget;
 }) {
   if (href) {
     return (
-      <a
+      <Link
         rel="noreferrer"
-        target="_blank"
+        target={target}
         href={href}
         className={classNames({ "pointer-events-none": disabled })}
+        scroll={false}
       >
         <GradientButtonElement
           borderClassName={borderClassName}
@@ -99,7 +103,7 @@ export function GradientButton({
           disabled={disabled}
           onClick={onClick}
         />
-      </a>
+      </Link>
     );
   }
   return (

@@ -20,9 +20,9 @@ export default function TechnicalGuide() {
 
   return (
     <>
-      <div className="py-16 md:py-10 lg:py-16 border-b border-gray-800 border-opacity-50 relative">
-        <div className="block absolute w-[417px] h-[237px] top-[-133px] left-[-228px] md:top-0 md:left-[-172px] lg:h-[297px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/mnTechnicalGuide/emptyCubeDesktop.png')]" />
-        <Container className="flex flex-row justify-end">
+      <div className="py-16 md:py-10 lg:py-16 border-b border-gray-800 border-opacity-50">
+        <Container className="flex flex-row justify-end relative">
+          <div className="block absolute w-[417px] h-[237px] top-[-158px] left-[-267px] md:top-[-42px] md:left-[-224px] lg:h-[297px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/mnTechnicalGuide/emptyCubeDesktop.png')]" />
           <div className="flex flex-col">
             <div
               className={classNames(

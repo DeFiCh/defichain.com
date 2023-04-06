@@ -14,6 +14,19 @@ export default function GetDFISection() {
   const [coinGeckoPrice, setCoinGeckoPrice] = useState<string>();
   const { t } = useTranslation("page-explore-dfi");
 
+  useEffect(() => {
+    // To scroll to hash element on page refresh
+    const { hash } = window.location;
+    if (hash) {
+      setTimeout(() => {
+        const hashElement = document.querySelector(hash);
+        if (hashElement !== null) {
+          document.querySelector(hash)!.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 350);
+    }
+  });
+
   const getDFIPriceFromCoinMarketCap = async () => {
     try {
       const response = await fetch(
@@ -50,12 +63,15 @@ export default function GetDFISection() {
   return (
     <Container
       className={classNames(
-        "mb-24 flex flex-col gap-12",
-        "md:mb-[108px]",
-        "lg:mb-60 lg:flex-row lg:gap-[69px]"
+        "mb-[314px] flex flex-col gap-12",
+        "md:mb-[326px]",
+        "lg:mb-[458px] lg:flex-row lg:gap-[69px]"
       )}
     >
-      <div className="lg:w-[45%] flex flex-col gap-5 shrink-0">
+      <div
+        id="get-dfi"
+        className="lg:w-[45%] flex flex-col gap-5 shrink-0 lg:scroll-mt-[200px] scroll-mt-[150px]"
+      >
         <SectionTitle text={t("getDfiSection.title")} />
         <div
           className={classNames(

@@ -78,6 +78,12 @@
     "exhangePriceText": "Prices may vary from different sources",
     "stakingText": "Also available for staking in"
   },
+  "erc20Section": {
+    "title": "DeFiChain ERC-20",
+    "subtitle": "DeFiChain created an ERC-20 token, to provide greater flexibility for users between Ethereum and DeFiChain. This allows more users to experience the real value of Native DeFi on DeFiChain.",
+    "buttonText": "Learn more",
+    "contract": "View contract address"
+  },
   "footerCards": {
     "wallet": {
       "title": "EXPLORE DEFICHAIN",

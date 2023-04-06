@@ -15,12 +15,12 @@ export default function FooterLink({
   altLabel: string;
   category: string;
   testId: string;
-  isExternaLink: boolean;
+  isExternaLink?: boolean;
   hasUpArrowIcon?: boolean;
 }): JSX.Element {
   const { t } = useTranslation("layout");
   return (
-    <div>
+    <div className="md:w-[210px]">
       {isExternaLink === true && url !== undefined ? (
         <FooterExternalLink
           text={altLabel}
@@ -33,10 +33,15 @@ export default function FooterLink({
         // Internal link
         <div
           className={classNames(
-            "text-dark-1000 font-semibold hover:accent-dfc-gradient-text cursor-pointer w-[133px] md:w-full"
+            "text-dark-1000 font-semibold hover:accent-dfc-gradient-text cursor-pointer min-w-[133px] text-ellipsis overflow-auto md:w-full"
           )}
         >
-          <Link href={url} passHref data-testid={testId}>
+          <Link
+            href={url}
+            passHref
+            data-testid={testId}
+            className="flex flex-row items-center"
+          >
             {t(`footer.sitemap.${category}.${altLabel}`)}
           </Link>
         </div>

@@ -18,7 +18,7 @@ import { GradientButton } from "@components/commons/Buttons";
 import { useTranslation } from "next-i18next";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import { useDeviceDetect, ViewPort } from "@hooks/useDeviceDetect";
-import { useWhaleApiClient } from "../context/WhaleContext";
+// import { useWhaleApiClient } from "../context/WhaleContext";
 import { Explore } from "./Explore";
 import { Ecosystem } from "./Ecosystem";
 import { Build } from "./Build";
@@ -29,11 +29,11 @@ export const HoverContext = createContext<any>(undefined);
 export const DropDownContext = createContext<any | undefined>(undefined);
 
 export function Header(): JSX.Element {
-  const [menu, setMenu] = useState(false);
+  const [isMenuActive, setIsMenuActive] = useState(false);
   const [headerHeight, setHeaderHeight] = useState<number>(0);
-  const [dfiPrice, setDfiPrice] = useState<string>("0");
+  // const [dfiPrice, setDfiPrice] = useState<string>("0"); // TODO: uncomment when price is required
   const router = useRouter();
-  const api = useWhaleApiClient();
+  // const api = useWhaleApiClient();
   const [isHoverOn, setIsHoverOn] = useState(false);
   const [dropDownState, setDropDownState] = useState<
     MobileTabletDropDownState | undefined
@@ -46,38 +46,40 @@ export function Header(): JSX.Element {
 
   useEffect(() => {
     function routeChangeStart(): void {
-      setMenu(false);
+      setIsMenuActive(false);
     }
 
-    void api.prices.get("DFI", "USD").then((priceTicker) => {
-      setDfiPrice(priceTicker.price.aggregated.amount);
-    });
+    // TODO: uncomment if DFI oracle price is required
+    // void api.prices.get("DFI", "USD").then((priceTicker) => {
+    //   setDfiPrice(priceTicker.price.aggregated.amount);
+    // });
 
     router.events.on("routeChangeStart", routeChangeStart);
     return () => router.events.off("routeChangeStart", routeChangeStart);
   }, []);
 
   useEffect(() => {
-    if (menu) {
+    if (isMenuActive) {
       document.documentElement.style.overflow = "hidden";
     } else {
       document.documentElement.style.overflow = "auto";
     }
-  }, [menu]);
+  }, [isMenuActive]);
 
   useEffect(() => {
-    if (dimension.width >= 1024 && menu) {
-      setMenu(false);
+    if (dimension.width >= 1024 && isMenuActive) {
+      setIsMenuActive(false);
     }
-  }, [dimension.width, menu]);
+  }, [dimension.width, isMenuActive]);
 
   const tabletMobileDropDownObj = useMemo(
     () => ({
       dropDownState,
       setDropDownState,
-      dfiPrice,
+      isMenuActive,
+      setIsMenuActive,
     }),
-    [dropDownState, setDropDownState, dfiPrice]
+    [dropDownState, setDropDownState, isMenuActive, setIsMenuActive]
   );
 
   const desktopContextObj = useMemo(
@@ -109,7 +111,7 @@ export function Header(): JSX.Element {
         y * 100
       }%, #ff00af 0%, #A6A6A6 15%)`;
       header.style.backgroundImage = gradient;
-      if (e.clientY >= headerRect.bottom) {
+      if (e.clientY >= headerRect.bottom - 10) {
         setIsCursorOnHeader(false);
       } else {
         setIsCursorOnHeader(true);
@@ -137,7 +139,7 @@ export function Header(): JSX.Element {
       ref={ref}
       className={classNames(
         "sticky top-0 left-0 right-0 w-full bg-dark-00 z-50 transition-opacity ease-in-out duration-500",
-        isHoverOn || menu
+        isHoverOn || isMenuActive
           ? "header-dropdown-bg border-b-0 "
           : "border-b-[0.1px] border-b-dark-200"
       )}
@@ -163,19 +165,23 @@ export function Header(): JSX.Element {
           <div className="hidden md:flex h-full flex lg:pt-4">
             <GradientButton
               className="py-3 px-5 bg-dark-00"
-              buttonText={`${t("header.navbar.buy")} DFI $${Number(
-                dfiPrice
-              ).toFixed(2)}`}
+              buttonText={`${t("header.navbar.get")} DFI`}
+              href="/explore/dfi#get-dfi"
+              onClick={() => {
+                if (isMenuActive) {
+                  setIsMenuActive(false);
+                }
+              }}
             />
           </div>
         </div>
 
         <div className="lg:hidden ml-[27px]">
-          {menu ? (
+          {isMenuActive ? (
             <IoCloseCircleOutline
               className="cursor-pointer hover:text-brand-100 active:opacity-70 h-8 w-8 text-dark-1000"
               onClick={async () => {
-                setMenu(false);
+                setIsMenuActive(false);
               }}
               data-testid="Header.CloseMenu"
             />
@@ -183,7 +189,7 @@ export function Header(): JSX.Element {
             <MdMenu
               className="cursor-pointer hover:text-brand-100 active:opacity-70 h-8 w-8 text-dark-1000"
               onClick={() => {
-                setMenu(true);
+                setIsMenuActive(true);
               }}
               data-testid="Header.OpenMenu"
             />
@@ -191,7 +197,7 @@ export function Header(): JSX.Element {
         </div>
       </Container>
       <Transition
-        show={menu}
+        show={isMenuActive}
         enter="transition-opacity duration-300"
         enterFrom="opacity-0"
         enterTo="opacity-100"
@@ -208,7 +214,7 @@ export function Header(): JSX.Element {
 }
 function DesktopNavbar(): JSX.Element {
   return (
-    <div className="mouse-cursor-gradient-tracking w-full hidden lg:flex flex-row justify-center gap-x-1">
+    <div className="mouse-cursor-gradient-tracking w-full hidden lg:flex flex-row justify-center items-end gap-x-1">
       {MenuItems.map((item, key) => (
         <DesktopMenu key={key} item={item} />
       ))}
@@ -218,14 +224,15 @@ function DesktopNavbar(): JSX.Element {
 
 function DesktopMenu({ item }: { item: string }) {
   const [isShowing, setIsShowing] = useState(false);
-  const { headerHeight, setIsHoverOn, isCursorOnHeader } =
+  const { headerHeight, setIsHoverOn, isCursorOnHeader, isHoverOn } =
     useContext(HoverContext);
   const DesktopDropDown = dropDownMapping[item.toLowerCase()];
   const { t } = useTranslation("layout");
+  const router = useRouter();
 
   return (
     <Menu
-      className="lg:pt-6 lg:pb-10 cursor-pointer lg:w-[136px] text-center"
+      className="lg:pb-10 cursor-pointer lg:w-[136px] text-center"
       as="div"
       onMouseLeave={() => {
         setIsShowing(false);
@@ -240,40 +247,56 @@ function DesktopMenu({ item }: { item: string }) {
         onClick={() => {
           setIsShowing(!isShowing);
         }}
-        className={classNames({
-          "text-brand-100": isShowing && !isCursorOnHeader,
-        })}
+        className={classNames(
+          {
+            "text-brand-100": isShowing && !isCursorOnHeader,
+          },
+          {
+            "!text-brand-100":
+              !isCursorOnHeader &&
+              !isHoverOn &&
+              router.pathname.includes(item.toLowerCase()),
+          }
+        )}
       >
-        {t(`header.navbar.${item.toLowerCase()}`)}
+        <div className={classNames("flex flex-col")}>
+          {(item === MobileTabletDropDownState.ECOSYSTEM ||
+            item === MobileTabletDropDownState.BUILD) && <ComingSoonTag />}
+          {t(`header.navbar.${item.toLowerCase()}`)}
+        </div>
       </Menu.Button>
 
-      <Container className="cursor-auto text-left">
-        <Transition
-          style={{ top: headerHeight - 1 }}
-          className="absolute inset-x-0 header-dropdown-bg w-screen"
-          show={isShowing}
-          enter="transition ease duration-500 transform"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="transition ease duration-200 transform"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0 "
-        >
-          <Menu.Items as="div" data-testid="Desktop.HeaderLink.More.Items">
-            <Container className="pt-[48.77px] pb-16">
-              <DesktopDropDown />
-            </Container>
-            <div className="accent-gradient-1 h-[0.5px]" />
-          </Menu.Items>
-        </Transition>
-      </Container>
+      {(item === MobileTabletDropDownState.EXPLORE ||
+        item === MobileTabletDropDownState.COMMUNITY) && (
+        <Container className="cursor-auto text-left">
+          <Transition
+            style={{ top: headerHeight - 1 }}
+            className="absolute inset-x-0 header-dropdown-bg w-screen"
+            show={isShowing}
+            enter="transition ease duration-500 transform"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="transition ease duration-200 transform"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0 "
+          >
+            <Menu.Items as="div" data-testid="Desktop.HeaderLink.More.Items">
+              <Container className="pt-[48.77px] pb-16">
+                <DesktopDropDown />
+              </Container>
+              <div className="accent-gradient-1 h-[0.5px]" />
+            </Menu.Items>
+          </Transition>
+        </Container>
+      )}
     </Menu>
   );
 }
 
 function TabletMobileMenu() {
   const { t } = useTranslation("layout");
-  const { dfiPrice, dropDownState } = useContext(DropDownContext);
+  const { dropDownState, isMenuActive, setIsMenuActive } =
+    useContext(DropDownContext);
   const ref = useRef<HTMLDivElement>(null);
   const dimension = useWindowDimensions();
   useEffect(() => {
@@ -301,7 +324,7 @@ function TabletMobileMenu() {
               </Container>
 
               {key !== MenuItems.length - 1 && (
-                <hr className="card-outline-2 border-0 h-[0.5px] w-[990px]" />
+                <hr className="bg-dark-200 border-0 h-[0.5px]" />
               )}
             </div>
           );
@@ -318,9 +341,13 @@ function TabletMobileMenu() {
           <GradientButton
             className="py-3 bg-dark-00"
             borderClassName="w-full"
-            buttonText={`${t("header.navbar.buy")} DFI $${Number(
-              dfiPrice
-            ).toFixed(2)}`}
+            buttonText={`${t("header.navbar.get")} DFI`}
+            href="/explore/dfi#get-dfi"
+            onClick={() => {
+              if (isMenuActive) {
+                setIsMenuActive(false);
+              }
+            }}
           />
         </Container>
 
@@ -339,11 +366,25 @@ function TabletMobileDropDown({
 }) {
   const { dropDownState, setDropDownState } = useContext(DropDownContext);
   const { t } = useTranslation("layout");
+  const router = useRouter();
+
+  useEffect(() => {
+    if (router.pathname.includes(label.toLowerCase())) {
+      setDropDownState(label);
+    }
+  }, [label, router, setDropDownState]);
 
   return (
     <div className="flex flex-col">
       <div
-        className="flex flex-row cursor-pointer items-center py-5"
+        className={classNames(
+          "flex flex-row cursor-pointer items-center py-5",
+          {
+            "pointer-events-none":
+              label === MobileTabletDropDownState.ECOSYSTEM ||
+              label === MobileTabletDropDownState.BUILD,
+          }
+        )}
         onClick={async () => {
           if (dropDownState === label) {
             setDropDownState(undefined);
@@ -360,6 +401,9 @@ function TabletMobileDropDown({
         >
           {t(`header.navbar.${label.toLowerCase()}`)}
         </div>
+
+        {(label === MobileTabletDropDownState.ECOSYSTEM ||
+          label === MobileTabletDropDownState.BUILD) && <ComingSoonTag />}
 
         <IoChevronDown
           size={20}
@@ -380,6 +424,21 @@ function TabletMobileDropDown({
       >
         <div className="md:pb-9 py-4 mb-4 ">{children}</div>
       </Transition>
+    </div>
+  );
+}
+
+function ComingSoonTag() {
+  const { t } = useTranslation("layout");
+  return (
+    <div
+      className={classNames(
+        "bg-dark-200 rounded-[10px] lg:py-0.5 py-[6px] px-2",
+        "font-bold text-dark-1000 text-[10px] leading-3 tracking-[0.08em] font-bold",
+        "lg:mr-0 mr-1"
+      )}
+    >
+      {t("header.comingSoon")}
     </div>
   );
 }

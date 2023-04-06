@@ -9,32 +9,50 @@
       "downloads": "Downloads",
       "learn": "Learn",
       "buy": "Buy",
+      "get": "Get",
       "dfcblog": "Blog",
       "bloglink": "https://blog.defichain.com/",
       "explore": "Explore",
       "build": "Build",
       "community": "Community"
     },
+    "comingSoon" : "COMING SOON",
     "explore": {
-      "title": "EXPLORE DEFICHAIN",
-      "labels": [
+      "info": [
         {
-          "title": "$DFI",
-          "subtitle": "Learn about the token"
+          "title": "EXPLORE DEFICHAIN",
+          "labels": [
+            {
+              "title": "$DFI",
+              "subtitle": "Learn about the token"
+            },
+            {
+              "title": "Decentralized Exchange",
+              "subtitle": "Maximize your assets"
+            },
+            {
+              "title": "Wallets",
+              "subtitle": "Store assets in your own way"
+            },
+            {
+              "title": "Masternodes",
+              "subtitle": "Place your stakes in DeFiChain"
+            }
+          ]
         },
         {
-          "title": "Decentralized Exchange",
-          "subtitle": "Maximize your assets"
-        },
-        {
-          "title": "Wallets",
-          "subtitle": "Store assets in your own way"
-        },
-        {
-          "title": "Masternodes",
-          "subtitle": "Place your stakes in DeFiChain"
+          "title": "BLOCK EXPLORERS",
+          "labels": [
+            {
+              "title": "DeFiScan (Official)"
+            },
+            {
+              "title": "Crypto ID"
+            }
+          ]
         }
       ],
+
       "image": {
         "title": "$DFI",
         "subtitle": "Learn about the token and where to get"
@@ -131,7 +149,7 @@
               "title": "GitHub"
             },
             {
-              "title": "Youtube"
+              "title": "YouTube"
             },
             {
               "title": "LinkedIn"
@@ -186,6 +204,11 @@
         "wallets": "Wallets",
         "masternodes": "Masternodes"
       },
+      "RESOURCES": {
+        "category": "RESOURCES",
+        "defiscan": "DeFiScan",
+        "defichainwhitepaper": "White paper"
+      },
       "ECOSYSTEM": {
         "category": "ECOSYSTEM",
         "defichainapps": "DeFiChain Apps",
@@ -206,7 +229,7 @@
       },
       "COMMUNITY": {
         "category": "COMMUNITY",
-        "blog": "Blog",
+        "blog": "DeFiChain Blog",
         "newsletter": "Newsletter"
       }
     },

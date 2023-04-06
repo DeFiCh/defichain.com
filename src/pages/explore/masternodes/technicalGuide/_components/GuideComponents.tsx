@@ -98,7 +98,7 @@ export function Code({
         customStyle
       )}
     >
-      <span className="font-code overflow-x-auto text-dark-900 lg:leading-[48px] whitespace-pre-line">
+      <span className="font-code overflow-x-auto text-dark-900 leading-[48px] whitespace-pre-line">
         {text}
       </span>
     </div>

@@ -2,6 +2,7 @@ import { HTMLAttributeAnchorTarget, PropsWithChildren, useState } from "react";
 import classNames from "classnames";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import Link from "next/link";
+import { FiArrowUpRight } from "react-icons/fi";
 
 export function Button({
   text,
@@ -22,7 +23,9 @@ export function Button({
         rel="noreferrer"
         target="_blank"
         href={href}
-        className={classNames({ "pointer-events-none": disabled })}
+        className={classNames("block w-fit", {
+          "pointer-events-none": disabled,
+        })}
       >
         <ButtonElement
           text={text}
@@ -67,6 +70,43 @@ function ButtonElement({
     >
       {text}
     </button>
+  );
+}
+
+export function SecondaryButton({
+  text,
+  className,
+  disabled,
+  onClick,
+  href,
+}: {
+  text: string;
+  className?: string;
+  disabled?: boolean;
+  onClick?: () => void;
+  href: string;
+}) {
+  return (
+    <Link
+      rel="noreferrer"
+      target="_blank"
+      href={href}
+      className={classNames({ "pointer-events-none": disabled })}
+    >
+      <button
+        type="button"
+        onClick={onClick}
+        disabled={disabled}
+        className={classNames(
+          className ?? "py-4",
+          "flex items-center justify-center rounded-[92px] font-bold disabled:opacity-30 disabled:pointer-events-none !mt-0",
+          "outline outline-1 outline-dark-1000 hover:outline-brand-100 active:text-brand-100 text-dark-1000 active:opacity-70"
+        )}
+      >
+        {text}
+        <FiArrowUpRight size={20} className="ml-[15px]" />
+      </button>
+    </Link>
   );
 }
 

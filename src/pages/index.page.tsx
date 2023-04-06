@@ -1,4 +1,4 @@
-import { SSRConfig, useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { HomePageHeader } from "@components/index/HomePageHeader";
 import { BlockchainFeaturesSection } from "@components/index/BlockchainFeaturesSection";
@@ -9,8 +9,10 @@ import { ReadyForFlexibility } from "@components/index/ReadyForFlexibility";
 import { Container } from "@components/commons/Container";
 import { StartExploringButton } from "@components/commons/StartExploringButton";
 import { YearAheadRoadMapSection } from "@components/index/RoadMapSection";
+import { BlogPostsSection } from "@components/index/blogPosts/BlogPostsSection";
+import * as prismic from "@prismicio/client";
 
-export default function HomePage(): JSX.Element {
+export default function HomePage({ blogPosts }): JSX.Element {
   const { t } = useTranslation(["page-index"]);
 
   return (
@@ -25,13 +27,17 @@ export default function HomePage(): JSX.Element {
       <DeFiChainEcoSystemSection />
       <ReadyForFlexibility />
       <YearAheadRoadMapSection />
+      <BlogPostsSection blogPosts={blogPosts} />
     </>
   );
 }
+async function getPostsFromPrismic(): Promise<any> {
+  const endpoint = prismic.createClient("defichain");
+  return endpoint.getByType("news");
+}
 
-export async function getStaticProps({
-  locale,
-}): Promise<{ props: SSRConfig }> {
+export async function getStaticProps({ locale }) {
+  const blogPosts = await getPostsFromPrismic();
   return {
     props: {
       ...(await serverSideTranslations(locale, [
@@ -39,6 +45,9 @@ export async function getStaticProps({
         "layout",
         "page-index",
       ])),
+      blogPosts: blogPosts.results.map((r) => ({
+        ...r.data,
+      })),
     },
   };
 }

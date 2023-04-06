@@ -16,16 +16,18 @@
   "dependencies": {
     "@defichain/whale-api-client": "^3.29.1",
     "@headlessui/react": "^1.7.13",
+    "@prismicio/client": "^6.7.3",
+    "@prismicio/react": "^2.5.2",
     "@tailwindcss/line-clamp": "^0.4.4",
-    "@waveshq/standard-defichain-jellyfishsdk": "^0.45.0",
-    "@waveshq/standard-web": "^0.45.0",
     "bignumber.js": "^9.1.0",
+    "@waveshq/standard-defichain-jellyfishsdk": "^0.48.0",
+    "@waveshq/standard-web": "^0.48.0",
     "classnames": "^2.3.2",
     "gray-matter": "^4.0.3",
     "lodash": "^4.17.21",
     "next-i18next": "^12.1.0",
-    "react-countup": "^6.4.1",
-    "react-markdown": "^8.0.5",
+    "react-countup": "^6.4.1",    
+    "react-markdown": "^8.0.6",
     "react-number-format": "^5.1.4",
     "react-slick": "^0.29.0",
     "rehype-autolink-headings": "^6.1.1",
@@ -36,24 +38,24 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
-    "@cypress/code-coverage": "^3.10.0",
-    "@netlify/plugin-nextjs": "^4.31.0",
+    "@cypress/code-coverage": "^3.10.3",
+    "@netlify/plugin-nextjs": "^4.33.0",
     "@tailwindcss/typography": "^0.5.9",
     "@testing-library/cypress": "^9.0.0",
-    "@types/lodash": "^4.14.191",
-    "@types/node": "^18.11.12",
-    "@types/react": "^18.0.28",
-    "@waveshq/standard-web-linter": "^0.45.0",
-    "autoprefixer": "^10.4.13",
+    "@types/lodash": "^4.14.192",
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.33",
+    "@waveshq/standard-web-linter": "^0.48.0",
+    "autoprefixer": "^10.4.14",
     "babel-plugin-istanbul": "^6.1.1",
     "babel-plugin-jsx-remove-data-test-id": "^3.0.0",
-    "cypress": "^12.7.0",
+    "cypress": "^12.9.0",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.7"
+    "tailwindcss": "^3.3.1"
   },
   "engines": {
     "node": "^18.0.0 || ^16.16.0",
-    "pnpm": ">=7.30.0"
+    "pnpm": ">=8.1.0"
   },
-  "packageManager": "pnpm@7.30.0"
+  "packageManager": "pnpm@8.1.0"
 }

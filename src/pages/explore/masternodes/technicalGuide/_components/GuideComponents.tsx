@@ -60,7 +60,7 @@ export function ContentDescription({
     <div className={containerStyle ?? "mt-5"}>
       <span
         className={classNames(
-          "font-desc text-dark-700",
+          "font-desc text-dark-700 break-words",
           "text-xl tracking-[0.03em]",
           "lg:text-2xl lg:tracking-normal",
           customStyle
@@ -98,7 +98,7 @@ export function Code({
         customStyle
       )}
     >
-      <span className="font-code text-dark-900 lg:leading-[48px] whitespace-pre-line">
+      <span className="font-code overflow-x-auto text-dark-900 lg:leading-[48px] whitespace-pre-line">
         {text}
       </span>
     </div>

@@ -34,8 +34,8 @@ export function MasternodesSetupInfo() {
       <div className="hidden h-full sticky top-[100px] lg:block md:w-3/12 lg:pt-[64px]">
         <TableOfContents parentReference={contentRef} />
       </div>
-      <div className="flex flex-col lg:w-9/12">
-        <div className="py-6 lg:py-16" ref={contentRef}>
+      <div className="flex flex-col w-full mt-12 mb-24 md:mb-16 lg:mb-10 lg:mt-0 lg:w-9/12">
+        <div className="p-0 md:p-6 lg:px-0 lg:py-16" ref={contentRef}>
           {/* Introduction start */}
           <div>
             <ContentHeader
@@ -45,8 +45,8 @@ export function MasternodesSetupInfo() {
             <ContentDescription text={t("technicalGuide.intro.desc")} />
             <ContentDescription
               text={t("technicalGuide.intro.note")}
-              containerStyle="lg:mt-12"
-              customStyle="!text-sm lg:!text-base"
+              containerStyle="mt-5 lg:mt-12"
+              customStyle="!text-sm tracking-normal lg:!text-base"
             />
           </div>
           {/* Introduction end */}

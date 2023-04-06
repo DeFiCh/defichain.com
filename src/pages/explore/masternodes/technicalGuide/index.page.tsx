@@ -33,7 +33,7 @@ export default function TechnicalGuide() {
               <SectionSubTitle text={t("technicalGuide.subtitle")} />
               <SectionDescription
                 text={t("technicalGuide.desc")}
-                customStyle="md:text-base md:tracking-[.03em] lg:tracking-normal lg:text-xl lg:leading-7"
+                customStyle="!text-base !tracking-[.03em] lg:tracking-normal lg:text-xl lg:leading-7"
               />
             </div>
           </div>

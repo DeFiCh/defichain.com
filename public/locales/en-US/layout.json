@@ -16,26 +16,43 @@
       "build": "Build",
       "community": "Community"
     },
+    "comingSoon" : "COMING SOON",
     "explore": {
-      "title": "EXPLORE DEFICHAIN",
-      "labels": [
+      "info": [
         {
-          "title": "$DFI",
-          "subtitle": "Learn about the token"
+          "title": "EXPLORE DEFICHAIN",
+          "labels": [
+            {
+              "title": "$DFI",
+              "subtitle": "Learn about the token"
+            },
+            {
+              "title": "Decentralized Exchange",
+              "subtitle": "Maximize your assets"
+            },
+            {
+              "title": "Wallets",
+              "subtitle": "Store assets in your own way"
+            },
+            {
+              "title": "Masternodes",
+              "subtitle": "Place your stakes in DeFiChain"
+            }
+          ]
         },
         {
-          "title": "Decentralized Exchange",
-          "subtitle": "Maximize your assets"
-        },
-        {
-          "title": "Wallets",
-          "subtitle": "Store assets in your own way"
-        },
-        {
-          "title": "Masternodes",
-          "subtitle": "Place your stakes in DeFiChain"
+          "title": "BLOCK EXPLORERS",
+          "labels": [
+            {
+              "title": "DeFiScan (Official)"
+            },
+            {
+              "title": "Crypto ID"
+            }
+          ]
         }
       ],
+
       "image": {
         "title": "$DFI",
         "subtitle": "Learn about the token and where to get"
@@ -132,7 +149,7 @@
               "title": "GitHub"
             },
             {
-              "title": "Youtube"
+              "title": "YouTube"
             },
             {
               "title": "LinkedIn"

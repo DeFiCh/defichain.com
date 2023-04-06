@@ -23,7 +23,9 @@ export function Button({
         rel="noreferrer"
         target="_blank"
         href={href}
-        className={classNames({ "pointer-events-none": disabled })}
+        className={classNames("block w-fit", {
+          "pointer-events-none": disabled,
+        })}
       >
         <ButtonElement
           text={text}

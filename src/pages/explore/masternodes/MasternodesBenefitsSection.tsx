@@ -1,71 +1,48 @@
-import { Button } from "@components/commons/Buttons";
-import { Container } from "@components/commons/Container";
+import { SectionGridLayout } from "@components/commons/SectionGridLayout";
 import { useTranslation } from "next-i18next";
-import { SectionTitle } from "@components/commons/SectionTitle";
-import { MasternodesBenefitsColumn } from "./MasternodesBenefitsColumn";
-
-export const masternodesBenefitsItems = [
-  {
-    title: "PASSIVE INCOME",
-    desc: "Earn a portion of block rewards and transaction fees",
-  },
-  {
-    title: "STAKING REWARDS",
-    desc: "Get rewarded with masternodes staking",
-  },
-  {
-    title: "NETWORK SECURITY",
-    desc: "Secure transactions by validating transactions",
-  },
-  {
-    title: "GOVERNANCE",
-    desc: "Have a voice by voting on governance proposal",
-  },
-];
+import { SvgIconsColumn } from "./SvgIconsColumn";
 
 export function MasternodesBenefitsSection(): JSX.Element {
   const { t } = useTranslation("page-explore-masternodes");
 
+  const masternodesBenefitsItems = [
+    {
+      title: t("masternodesBenefits.passiveIncome.title"),
+      desc: t("masternodesBenefits.passiveIncome.desc"),
+    },
+    {
+      title: t("masternodesBenefits.stakingRewards.title"),
+      desc: t("masternodesBenefits.stakingRewards.desc"),
+    },
+    {
+      title: t("masternodesBenefits.networkSecurity.title"),
+      desc: t("masternodesBenefits.networkSecurity.desc"),
+    },
+    {
+      title: t("masternodesBenefits.governance.title"),
+      desc: t("masternodesBenefits.governance.desc"),
+    },
+  ];
   return (
-    <section
-      className="pb-24 pt-0 md:pb-28 lg:pb-[120px] lg:mb-[120px] relative"
-      data-testid="masternodesBenefits"
+    <SectionGridLayout
+      sectionTitle={t("masternodesBenefits.subtitle")}
+      title={t("masternodesBenefits.title")}
+      description={t("masternodesBenefits.desc")}
+      buttonText={t("masternodesBenefits.button")}
+      isCTAButton
     >
-      <Container className="flex flex-col justify-between lg:flex-row 2xl:max-w-[1920px] 2xl:mx-[300px]">
-        <div className="flex lg:w-[551px]">
-          <div
-            className="w-full flex flex-col space-y-5 md:space-y-5 lg:space-y-5"
-            data-testid="masternodesBenefits.text"
-          >
-            <SectionTitle text={t("masternodesBenefits.subtitle")} />
-            <h2
-              className="text-[40px] leading-[44px] tracking-[-0.02em] lg:text-6xl lg:leading-[72px] lg:tracking-normal"
-              data-testid="title"
-            >
-              {t("masternodesBenefits.title")}
-            </h2>
-            <div
-              className="text-dark-700 tracking-[.03em] lg:text-xl lg:tracking-normal font-desc"
-              data-testid="desc"
-            >
-              {t("masternodesBenefits.desc")}
-            </div>
-            <Button
-              className="z-10 text-sm !min-w-0 w-[188px] py-3 !mt-12 lg:text-base lg:w-[199px] lg:py-4"
-              text={t("masternodesBenefits.button")}
-              href="/explore/masternodes/technicalGuide"
-            />
-          </div>
-        </div>
-        <div className="z-10 justify-between md:gap-x-16 lg:w-[600px] lg:gap-x-[114px] w-full mt-16 md:mt-[80px] lg:mt-0">
-          <MasternodesBenefitsColumn
-            items={masternodesBenefitsItems}
-            id="tablet-desktop-screen"
-          />
-        </div>
-      </Container>
-      <div className="hidden md:block absolute md:h-8 md:w-8 md:right-8 md:bottom-[249px] lg:h-[45px] lg:w-[45px] lg:top-[169px] lg:right-[98px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/masternodesBenefits/masternodesBenefitsBg.png')]" />
-      <div className="hidden md:block absolute right-0 opacity-70 md:top-[85px] md:h-[445.91px] md:w-[290.56px] lg:top-auto lg:bottom-[-251.33px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/masternodesBenefits/masternodesGridBg.png')]" />
-    </section>
+      <div className="relative">
+        <SvgIconsColumn
+          items={masternodesBenefitsItems}
+          id="tablet-desktop-screen"
+          customClassStyle="masternode-benefits-feature-item flex-row"
+          customParagraphStyle="ml-[58px]"
+          customSectionStyle="gap-12"
+        />
+        <div className="hidden md:block absolute md:h-8 md:w-8 md:-right-10 md:bottom-[140px] lg:h-[45px] lg:w-[45px] lg:top-[200px] lg:-right-5 bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/explore/cross-accent-6.png')]" />
+        <div className="hidden md:block lg:hidden absolute opacity-70 top-20 right-[-24px] h-[445.91px] w-[290.56px] lg:-top-60 bg-contain bg-no-repeat mix-blend-screen bg-[url(/assets/img/masternodesBenefits/accent-5.png)]" />
+        <div className="hidden md:block absolute -rotate-90 -right-[160px] opacity-70 -bottom-[280px] h-[445.91px] w-[290.56px] lg:top-auto lg:bottom-[-251.33px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/explore/grid-accent-6.png')]" />
+      </div>
+    </SectionGridLayout>
   );
 }

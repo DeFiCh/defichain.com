@@ -1,6 +1,4 @@
-import Image from "next/image";
 import { Posts } from "@components/commons/prismicTypes";
-import testBg from "./test-post.png";
 
 export default function ProjectCard({
   post,
@@ -19,14 +17,19 @@ export default function ProjectCard({
           className="w-full min-h-[180px] bg-light-50 bg-cover bg-center flex flex-col justify-end"
           data-testid={`card_title_${post.title[0]?.text}`}
         >
-          <section className="text-start relative">
-            {isLatest && (
-              <div className="absolute right-0 bg-electric text-dark-00 font-bold text-[10px] leading-3 tracking-[0.08em] py-2 px-3 w-fit rounded-tr-[5px] rounded-bl-[5px]">
-                LATEST
-              </div>
-            )}
-
-            <Image src={testBg} alt="Blog post image" />
+          <section className="text-start">
+            <div
+              className="relative bg-cover bg-[center_left_0rem] w-full h-[179px] rounded-[5px]"
+              style={{
+                backgroundImage: `url('${post.image.url}')`,
+              }}
+            >
+              {isLatest && (
+                <div className="absolute right-0 bg-electric text-dark-00 font-bold text-[10px] leading-3 tracking-[0.08em] py-2 px-3 w-fit rounded-tr-[5px] rounded-bl-[5px]">
+                  LATEST
+                </div>
+              )}
+            </div>
             <div className="text-dark-1000 font-semibold px-3 mt-4 max-w-[294px] line-clamp-2 h-12 lg:text-lg lg:leading-6 lg:mt-6">
               {post.title[0]?.text}
             </div>

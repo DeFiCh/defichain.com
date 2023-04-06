@@ -4,11 +4,11 @@ interface PostTitle {
 
 export interface Posts {
   title: PostTitle[];
-  // featuredimage: {
-  //   url: string;
-  // };
-  url?: {
+  url: {
     url: string;
   };
   date: string;
+  image: {
+    url: string;
+  };
 }

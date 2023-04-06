@@ -15,7 +15,7 @@ export function Button({
   text: string;
   className?: string;
   disabled?: boolean;
-  target?: string;
+  target?: HTMLAttributeAnchorTarget;
   href?: string;
   onClick?: () => void;
 }) {

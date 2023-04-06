@@ -19,7 +19,7 @@ export function Default(props: PropsWithChildren<any>): JSX.Element | null {
   const [mounted, setMounted] = useState(false);
   const isHome = router.pathname === "/";
   const bgPicture = isHome
-    ? "bg-[url(/assets/img/background/background-320.png)] md:bg-[url(/assets/img/background/background-768.png)] lg:bg-[url(/assets/img/background/background-1440.png)] xl:bg-[url(/assets/img/background/background-1920.png)] 2xl:bg-[url(/assets/img/background/background-2560.png)]"
+    ? "bg-[url(/assets/img/background/background-320.png)] sm:bg-[url(/assets/img/background/background-768.png)] md:bg-[url(/assets/img/background/background-1024.png)] lg:bg-[url(/assets/img/background/background-1440.png)] 2xl:bg-[url(/assets/img/background/background-1920.png)]"
     : "bg-fixed bg-[url(/assets/img/background/generic-background-320.png)] md:bg-[url(/assets/img/background/generic-background-1920.png)]";
 
   useEffect(() => {

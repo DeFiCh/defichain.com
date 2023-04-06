@@ -53,6 +53,7 @@ export function MasternodesBenefitsSection(): JSX.Element {
             <Button
               className="z-10 text-sm !min-w-0 w-[188px] py-3 !mt-12 lg:text-base lg:w-[199px] lg:py-4"
               text={t("masternodesBenefits.button")}
+              href="/explore/masternodes/technicalGuide"
             />
           </div>
         </div>

@@ -7,20 +7,22 @@ export function Button({
   text,
   className,
   disabled,
+  target,
   href,
   onClick,
 }: {
   text: string;
   className?: string;
   disabled?: boolean;
+  target?: boolean;
   href?: string;
   onClick?: () => void;
 }) {
   if (href) {
     return (
-      <a
+      <Link
         rel="noreferrer"
-        target="_blank"
+        target={target ? "_blank" : ""}
         href={href}
         className={classNames({ "pointer-events-none": disabled })}
       >
@@ -30,7 +32,7 @@ export function Button({
           disabled={disabled}
           onClick={onClick}
         />
-      </a>
+      </Link>
     );
   }
   return (

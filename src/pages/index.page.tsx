@@ -1,4 +1,4 @@
-import { SSRConfig, useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { HomePageHeader } from "@components/index/HomePageHeader";
 import { BlockchainFeaturesSection } from "@components/index/BlockchainFeaturesSection";
@@ -34,9 +34,7 @@ async function getPostsFromPrismic(): Promise<any> {
   return endpoint.getByType("news");
 }
 
-export async function getStaticProps({
-  locale,
-}): Promise<{ props: SSRConfig }> {
+export async function getStaticProps({ locale }) {
   const blogPosts = await getPostsFromPrismic();
   return {
     props: {

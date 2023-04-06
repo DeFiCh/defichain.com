@@ -15,6 +15,10 @@ import { DeveloperResourceIcon } from "@public/assets/icon/DeveloperResourceIcon
 import { RiArrowRightUpLine } from "react-icons/ri";
 import { Dispatch, SetStateAction, useState } from "react";
 import { NewsLetterIcon } from "@public/assets/icon/NewsLetterIcon";
+import { CryptoIDIcon } from "@public/assets/icon/CryptoIDIcon";
+import { useRouter } from "next/router";
+import { useWindowDimensions } from "@hooks/useWindowDimensions";
+import Link from "next/link";
 
 export function HeaderNavLinkItem({
   icon,
@@ -25,6 +29,7 @@ export function HeaderNavLinkItem({
   setHoverState,
   haveIcon = false,
   target = "_self",
+  disabled = false,
 }: {
   icon?: string;
   label: string;
@@ -34,6 +39,7 @@ export function HeaderNavLinkItem({
   setHoverState: Dispatch<SetStateAction<string | undefined>>;
   haveIcon?: boolean;
   target?: string;
+  disabled?: boolean;
 }) {
   const Icon = iconMapping[icon!] as React.ElementType;
   const iconsStrokes = [
@@ -49,6 +55,12 @@ export function HeaderNavLinkItem({
   ];
 
   const [isMouseEnter, setIsMouseEnter] = useState(false);
+  const router = useRouter();
+  const dimension = useWindowDimensions();
+  let stroke = false;
+  if (icon) {
+    stroke = iconsStrokes.includes(icon);
+  }
 
   let dfiId = "dfi-ecosystem";
 
@@ -65,7 +77,7 @@ export function HeaderNavLinkItem({
   }
 
   return (
-    <a
+    <Link
       onMouseEnter={() => {
         setHoverState(label);
         setIsMouseEnter(true);
@@ -79,23 +91,42 @@ export function HeaderNavLinkItem({
       target={target}
       className={classNames(
         "group flex flex-row items-center gap-x-[28px]",
+        {
+          "lg:!gap-x-3": subLabel === undefined,
+        },
         hoverState !== undefined && hoverState !== label
           ? "opacity-60 duration-300 transition"
-          : "opacity-100 duration-300 transition"
+          : "opacity-100 duration-300 transition",
+        {
+          "pointer-events-none opacity-30": disabled,
+        }
       )}
     >
       {Icon && (
-        <div>
-          <Icon
-            id={dfiId}
-            className={classNames(
-              "group-hover:duration-500 group-hover:transition group-active:opacity-70",
-              iconsStrokes.some((element) => icon!.includes(element))
-                ? "group-hover:stroke-brand-100"
-                : "fill-dark-700 group-hover:fill-brand-100"
-            )}
-          />
-        </div>
+        <Icon
+          hover={isMouseEnter}
+          id={dfiId}
+          className={classNames(
+            "group-hover:duration-500 group-hover:transition group-active:opacity-70 place-self-center",
+            iconsStrokes.some((element) => icon!.includes(element))
+              ? "group-hover:stroke-brand-100"
+              : "fill-dark-700 group-hover:fill-brand-100",
+            {
+              "!stroke-brand-100":
+                router.pathname.includes(href) &&
+                hoverState === undefined &&
+                dimension.width <= 1023 &&
+                stroke,
+            },
+            {
+              "!fill-brand-100":
+                router.pathname.includes(href) &&
+                hoverState === undefined &&
+                dimension.width <= 1023 &&
+                !stroke,
+            }
+          )}
+        />
       )}
 
       <div className="flex flex-col">
@@ -104,7 +135,13 @@ export function HeaderNavLinkItem({
             className={classNames(
               "mr-[7px] flex font-semibold text-dark-1000 md:text-lg leading-6",
               "group-hover:duration-500 group-hover:transition group-hover:text-brand-100 group-active:opacity-70",
-              "md:whitespace-pre-wrap whitespace-nowrap"
+              "md:whitespace-pre-wrap whitespace-nowrap",
+              {
+                "!text-brand-100":
+                  router.pathname.includes(href) &&
+                  hoverState === undefined &&
+                  dimension.width <= 1023,
+              }
             )}
           >
             {label}
@@ -136,7 +173,7 @@ export function HeaderNavLinkItem({
           {subLabel}
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
 
@@ -155,4 +192,5 @@ const iconMapping = {
   media: MediaAssetsIcon,
   developer: DeveloperResourceIcon,
   newsletter: NewsLetterIcon,
+  crypto: CryptoIDIcon,
 };

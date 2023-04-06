@@ -30,7 +30,7 @@ export function MasternodesSetupInfo() {
   const contentRef = useRef(null);
 
   return (
-    <Container className="flex flex-row gap-x-12 lg:mb-[436px] lg:pr-12">
+    <Container className="flex flex-row gap-x-12 lg:mb-[216px] lg:pr-12">
       <div className="hidden h-full sticky top-[100px] lg:block md:w-3/12 lg:pt-[64px]">
         <TableOfContents parentReference={contentRef} />
       </div>

@@ -80,6 +80,28 @@ export function HeroBanner({
             "lg:-right-[10rem] md:-right-[7em] -right-[5em] md:-top-[5rem] top-0"
         )}
       />
+
+      {heroBg === HeroBannerBg.COIN_ARROW && (
+        <div
+          className={classNames(
+            "absolute bg-contain bg-no-repeat lg:rotate-90",
+            "lg:w-[682px] lg:h-[341.33px] lg:-right-[17.5em] lg:top-[25em]",
+            "md:h-[505.52px] md:w-[253.01px] md:top-[8em] md:-right-[4.5em]",
+            "h-[433.23px] w-[216.83px] top-[6em] -right-[8em]",
+            "lg:bg-[url('/assets/img/background/explore/masternodes/benefits-accent-desktop.png')]",
+            "bg-[url(/assets/img/herobanner/background/coin-arrow-bg.png)]"
+          )}
+        />
+      )}
+      {heroBg === HeroBannerBg.CUBE && (
+        <div
+          className={classNames(
+            "absolute bg-contain bg-no-repeat lg:rotate-90",
+            "lg:w-[682px] lg:h-[341.33px] lg:-right-[32em] lg:top-[25em]",
+            "lg:bg-[url('/assets/img/background/explore/masternodes/benefits-accent-desktop.png')]"
+          )}
+        />
+      )}
     </Container>
   );
 }

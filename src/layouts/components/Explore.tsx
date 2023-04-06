@@ -99,6 +99,7 @@ export function Explore() {
           <div className="grid grid-cols-1 gap-x-20 gap-y-7">
             {MenuItems.dropDownItems[1].items.map((item, key) => (
               <HeaderNavLinkItem
+                target="_blank"
                 key={key}
                 hoverState={hoverState}
                 setHoverState={setHoverState}

@@ -17,7 +17,7 @@ export function BlogPostsSection({ blogPosts }: { blogPosts: Posts[] }) {
               text={t("BlogPostsSection.label")}
               customStyle="lg:w-fit md:w-[409px] w-[272px]"
             />
-            <div className="mt-5 text-[32px] leading-9 lg:text-[52px] lg:leading-none">
+            <div className="mt-5 text-[32px] leading-9 whitespace-pre-line lg:text-[52px] lg:leading-none">
               {t("BlogPostsSection.title")}
             </div>
             <Button

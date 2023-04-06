@@ -18,8 +18,6 @@ export function Default(props: PropsWithChildren<any>): JSX.Element | null {
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
   const isHome = router.pathname === "/";
-
-  // no background for other pages except for homepage
   const bgPicture = isHome
     ? "bg-[url(/assets/img/background/background-320.png)] sm:bg-[url(/assets/img/background/background-768.png)] md:bg-[url(/assets/img/background/background-1024.png)] lg:bg-[url(/assets/img/background/background-1440.png)] 2xl:bg-[url(/assets/img/background/background-1920.png)]"
     : "";

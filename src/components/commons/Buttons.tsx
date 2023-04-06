@@ -82,13 +82,13 @@ export function SecondaryButton({
   className?: string;
   disabled?: boolean;
   onClick?: () => void;
-  href?: string;
+  href: string;
 }) {
   return (
     <Link
       rel="noreferrer"
       target="_blank"
-      href={href ?? ""}
+      href={href}
       className={classNames({ "pointer-events-none": disabled })}
     >
       <button

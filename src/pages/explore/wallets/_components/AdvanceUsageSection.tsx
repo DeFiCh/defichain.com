@@ -14,7 +14,7 @@ export function AdvanceUsageSection() {
     <Container className="mt-[120px] md:mt-[96px] lg:mt-[240px] lg:mb-[240px] md:mb-[112px] mb-[72px]">
       <div className="flex flex-col gap-y-5">
         <div className="flex md:justify-center justify-start">
-          <SectionTitle text="SUITABLE FOR ADVANCE USAGE" />
+          <SectionTitle text={t("advanceUseSection.sectionTitle")} />
         </div>
 
         <h2

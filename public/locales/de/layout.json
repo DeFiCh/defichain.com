@@ -16,23 +16,38 @@
       "community": "Community"
     },
     "explore": {
-      "title": "Entdecke DeFiChain",
-      "labels": [
+      "info": [
         {
-          "title": "$DFI",
-          "subtitle": "Erfahre mehr über den Token"
+          "title": "Entdecke DeFiChain",
+          "labels": [
+            {
+              "title": "$DFI",
+              "subtitle": "Erfahre mehr über den Token"
+            },
+            {
+              "title": "Dezentrale Börse",
+              "subtitle": "Maximiere dein Vermögen"
+            },
+            {
+              "title": "Wallets",
+              "subtitle": "Bewahre Aktiva auf deine eigene Weise auf"
+            },
+            {
+              "title": "Masternodes",
+              "subtitle": "DefiChain-Staking"
+            }
+          ]
         },
         {
-          "title": "Dezentrale Börse",
-          "subtitle": "Maximiere dein Vermögen"
-        },
-        {
-          "title": "Wallets",
-          "subtitle": "Bewahre Aktiva auf deine eigene Weise auf"
-        },
-        {
-          "title": "Masternodes",
-          "subtitle": "DefiChain-Staking"
+          "title": "BLOCK EXPLORER",
+          "labels": [
+            {
+              "title": "DeFiScan (Official)"
+            },
+            {
+              "title": "Krypto ID"
+            }
+          ]
         }
       ],
       "image": {
@@ -131,7 +146,7 @@
               "title": "GitHub"
             },
             {
-              "title": "Youtube"
+              "title": "YouTube"
             },
             {
               "title": "LinkedIn"

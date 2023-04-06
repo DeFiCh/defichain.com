@@ -15,7 +15,7 @@ export function Button({
   text: string;
   className?: string;
   disabled?: boolean;
-  target?: boolean;
+  target?: string;
   href?: string;
   onClick?: () => void;
 }) {
@@ -23,7 +23,7 @@ export function Button({
     return (
       <Link
         rel="noreferrer"
-        target={target ? "_blank" : ""}
+        target={target}
         href={href}
         className={classNames("block w-fit", {
           "pointer-events-none": disabled,
@@ -86,30 +86,32 @@ export function SecondaryButton({
   className?: string;
   disabled?: boolean;
   onClick?: () => void;
-  href: string;
+  href?: string;
 }) {
-  return (
-    <Link
-      rel="noreferrer"
-      target="_blank"
-      href={href}
-      className={classNames({ "pointer-events-none": disabled })}
-    >
-      <button
-        type="button"
-        onClick={onClick}
-        disabled={disabled}
-        className={classNames(
-          className ?? "py-4",
-          "flex items-center justify-center rounded-[92px] font-bold disabled:opacity-30 disabled:pointer-events-none !mt-0",
-          "outline outline-1 outline-dark-1000 hover:outline-brand-100 active:text-brand-100 text-dark-1000 active:opacity-70"
-        )}
+  if (href) {
+    return (
+      <Link
+        rel="noreferrer"
+        target="_blank"
+        href={href}
+        className={classNames({ "pointer-events-none": disabled })}
       >
-        {text}
-        <FiArrowUpRight size={20} className="ml-[15px]" />
-      </button>
-    </Link>
-  );
+        <button
+          type="button"
+          onClick={onClick}
+          disabled={disabled}
+          className={classNames(
+            className ?? "py-4",
+            "flex items-center justify-center rounded-[92px] font-bold disabled:opacity-30 disabled:pointer-events-none !mt-0",
+            "outline outline-1 outline-dark-1000 hover:outline-brand-100 active:text-brand-100 text-dark-1000 active:opacity-70"
+          )}
+        >
+          {text}
+          <FiArrowUpRight size={20} className="ml-[15px]" />
+        </button>
+      </Link>
+    );
+  }
 }
 
 export function GradientButton({

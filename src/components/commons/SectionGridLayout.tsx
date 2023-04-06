@@ -11,6 +11,7 @@ interface SectionGridLayoutProps {
   isSecondaryButton?: boolean;
   href?: string;
   children;
+  target?: string;
 }
 
 export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
@@ -23,6 +24,7 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
     isSecondaryButton,
     href,
     children,
+    target,
   } = props;
 
   return (
@@ -55,6 +57,8 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
               <Button
                 className="z-10 text-sm !min-w-0 w-[188px] lg:text-base lg:w-[199px] py-3 lg:py-4"
                 text={buttonText}
+                href={href}
+                target={target}
               />
             ) : null}
             {isSecondaryButton === true ? (

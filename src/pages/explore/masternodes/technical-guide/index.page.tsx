@@ -5,18 +5,10 @@ import { SectionTitle } from "@components/commons/SectionTitle";
 import { SectionSubTitle } from "@components/commons/SectionSubTitle";
 import { SectionDescription } from "@components/commons/SectionDescription";
 import classNames from "classnames";
-import {
-  ExploreCards,
-  ExploreCardsImage,
-} from "../../_components/ExploreCards";
 import { MasternodesSetupInfo } from "./_components/MasternodesSetupInfo";
 
 export default function TechnicalGuide() {
   const { t } = useTranslation("page-explore-masternodes");
-  const entries: Array<{ title: string; subtitle: string }> = t(
-    "footerCards.cards",
-    { returnObjects: true }
-  );
 
   return (
     <>
@@ -41,7 +33,9 @@ export default function TechnicalGuide() {
         </Container>
       </div>
       <MasternodesSetupInfo />
-      <Container className="lg:mb-8 md:mb-6 mb-4">
+
+      {/* hiding this section for initial release MVP  */}
+      {/* <Container className="lg:mb-8 md:mb-6 mb-4">
         <div className="flex flex-row overflow-x-scroll lg:gap-x-[32.97px] md:gap-x-[24.97px] gap-x-[16.97px]">
           <ExploreCards
             title={t("footerCards.cardTitle")}
@@ -56,7 +50,7 @@ export default function TechnicalGuide() {
             href=""
           />
         </div>
-      </Container>
+      </Container> */}
     </>
   );
 }

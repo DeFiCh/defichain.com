@@ -21,7 +21,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
     >
       <Container
         className={classNames(
-          "relative no-scrollbar z-20 justify-between",
+          "relative no-scrollbar z-30 justify-between",
           { "flexbox-wrapper": dimensions.width >= 1023 } // only apply styling when in large screen
         )}
       >
@@ -57,7 +57,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
           />
         </div>
 
-        <div className="grid grid-flow-row grid-cols-1 gap-6 md:grid-flow-row md:grid-cols-2 md:gap-y-0 lg:block lg:h-[639px] lg:place-self-end">
+        <div className="relative z-30 grid grid-flow-row grid-cols-1 gap-6 md:grid-flow-row md:grid-cols-2 md:gap-y-0 lg:block lg:h-[639px] lg:place-self-end">
           <Card
             title={t("EcosystemSection.cards.investTitle")}
             subTitle={t("EcosystemSection.cards.investSubtitle")}
@@ -99,6 +99,12 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
           "absolute bg-contain bg-no-repeat bg-[url('/assets/img/ecosystem/dfi-logo-vector.png')] w-full",
           "lg:bg-center lg:top-60 lg:left-[-630px] md:h-[300px] md:top-[250px] md:left-[-100px] sm:h-[200px] sm:top-[400px]",
           "bg-left top-[400px] right-10 h-[250px]"
+        )}
+      />
+      <div
+        className={classNames(
+          "absolute bg-cover bg-right bg-no-repeat bg-[url(/assets/img/accents/accent-9.png)] h-[204px] w-[405px]",
+          "lg:hidden block -bottom-40 left-[40%] md:bottom-[-100px] md:left-[70%] md:z-20"
         )}
       />
     </div>

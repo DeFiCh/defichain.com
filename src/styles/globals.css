@@ -145,28 +145,6 @@ html {
   display: none !important;
 }
 
-.slick-prev {
-  @apply left-[65%] md:left-[70%] lg:left-[75%] !important;
-  top: -50px !important;
-}
-
-.slick-next {
-  top: -50px !important;
-  right: 20% !important;
-}
-
-.slick-list {
-  margin: -16px;
-}
-
-.slick-slide {
-  padding: 16px;
-}
-
-.slick-dots {
-  bottom: -25px;
-}
-
 .footer-background {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     linear-gradient(
@@ -392,6 +370,7 @@ html {
   }
 }
 
+/* Overwrite slick-carousel default stylings */
 .blockchain-features-dots,
 .harness-dfi-dots {
   display: inline-block;
@@ -435,18 +414,87 @@ html {
   margin: auto;
 }
 
+.roadmap-section .slick-slide {
+  @apply py-8 px-3 md:py-6;
+}
+
+.roadmap-section .slick-arrow {
+  top: -48px !important;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.roadmap-section .slick-arrow:hover,
+.roadmap-section .slick-arrow:focus {
+  background-color: #121212 !important;
+}
+
 .roadmap-dots {
   display: flex !important; /* override inline block display from library */
+  width: calc(100% - 48px);
   position: absolute;
-  width: 100%;
   top: 0px;
+  left: 24px;
   background-color: #2b2b2b;
   border-radius: 4px;
+  max-width: 1320px;
+}
+
+@media only screen and (min-width: 600px) {
+  .roadmap-section .slick-prev {
+    left: calc(100% - 48px - 48px - 48px - 8px);
+  }
+  .roadmap-section .slick-next {
+    right: 48px;
+  }
+  .roadmap-dots {
+    left: 48px;
+    width: calc(100% - 96px);
+  }
+  .roadmap-section .slick-slide:first-child {
+    padding-left: 48px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .roadmap-section .slick-prev {
+    left: calc((100% - 1200px) / 2 + 1200px - 48px - 8px - 48px);
+  }
+  .roadmap-section .slick-next {
+    right: calc((100% - 1200px) / 2);
+  }
+  .roadmap-dots {
+    left: calc((100% - 1200px) / 2);
+    width: 1200px;
+  }
+  .roadmap-section .slick-slide:first-child {
+    padding-left: calc((100vw - 1200px) / 2);
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .roadmap-section .slick-prev {
+    left: calc((100% - 1320px) / 2 + 1320px - 48px - 8px - 48px);
+  }
+  .roadmap-section .slick-next {
+    right: calc((100% - 1320px) / 2);
+  }
+  .roadmap-dots {
+    left: calc((100% - 1320px) / 2);
+    width: 100%;
+  }
+  .roadmap-section .slick-slide:first-child {
+    padding-left: calc((100vw - 1320px) / 2);
+  }
 }
 
 .roadmap-dots li {
   width: 100%;
   margin: 0;
+  background-color: transparent;
+  transition-property: background-color;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .roadmap-dots li.slick-active {

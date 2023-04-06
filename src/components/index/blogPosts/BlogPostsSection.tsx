@@ -28,7 +28,7 @@ export function BlogPostsSection({ blogPosts }: { blogPosts: Posts[] }) {
           </div>
           <div className="flex flex-wrap gap-x-6 gap-y-6 md:gap-y-12 mt-12 lg:mt-0 lg:w-[660px]">
             {blogPosts.slice(-4).map((p, i) => (
-              <ProjectCard key={p.title.text} post={p} isLatest={i === 0} />
+              <ProjectCard key={p.title[0].text} post={p} isLatest={i === 0} />
             ))}
           </div>
         </div>

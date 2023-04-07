@@ -1,17 +1,17 @@
-import { Container } from "@components/commons/Container";
+// import { Container } from "@components/commons/Container";
 import { SSRConfig, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { HeroBanner, HeroBannerBg } from "@components/commons/HeroBanner";
-import { ExploreCards, ExploreCardsImage } from "../_components/ExploreCards";
+// import { ExploreCards, ExploreCardsImage } from "../_components/ExploreCards";
 import { MasternodesStatisticsDisplay } from "./_components/MasternodesStatisticsDisplay";
 import { MasternodesBenefitsSection } from "./MasternodesBenefitsSection";
 
 export default function ExploreMasternodes() {
   const { t } = useTranslation("page-explore-masternodes");
-  const entries: Array<{ title: string; subtitle: string }> = t(
-    "footerCards.cards",
-    { returnObjects: true }
-  );
+  // const entries: Array<{ title: string; subtitle: string }> = t(
+  //   "footerCards.cards",
+  //   { returnObjects: true }
+  // );
   return (
     <>
       <HeroBanner
@@ -24,7 +24,8 @@ export default function ExploreMasternodes() {
       />
       <MasternodesStatisticsDisplay />
       <MasternodesBenefitsSection />
-      <Container className="lg:mb-8 md:mb-6 mb-4">
+      {/* TODO: uncomment after mvp */}
+      {/* <Container className="lg:mb-8 md:mb-6 mb-4">
         <div className="flex flex-row overflow-x-scroll lg:gap-x-8 md:gap-x-6 gap-x-4">
           <ExploreCards
             title={t("footerCards.cardTitle")}
@@ -39,7 +40,7 @@ export default function ExploreMasternodes() {
             href="/explore/dfi"
           />
         </div>
-      </Container>
+      </Container> */}
     </>
   );
 }

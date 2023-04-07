@@ -31,7 +31,7 @@ export function MasternodesSetupInfo() {
 
   return (
     <Container className="flex flex-row gap-x-12 lg:mb-[216px] lg:pr-12">
-      <div className="hidden h-full sticky top-[100px] lg:block md:w-3/12 lg:pt-[64px]">
+      <div className="hidden h-full sticky top-[100px] lg:block md:w-3/12 lg:pt-[64px] flex-1">
         <TableOfContents parentReference={contentRef} />
       </div>
       <div className="flex flex-col w-full mt-12 mb-24 md:mb-16 lg:mb-10 lg:mt-0 lg:w-9/12">

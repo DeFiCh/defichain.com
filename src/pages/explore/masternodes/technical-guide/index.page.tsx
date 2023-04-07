@@ -15,7 +15,7 @@ export default function TechnicalGuide() {
       <div className="py-16 md:py-10 lg:py-16 border-b border-gray-800 border-opacity-50">
         <Container className="flex flex-row gap-x-12 relative lg:pr-12">
           <div className="block absolute w-[417px] h-[237px] top-[-158px] left-[-267px] md:top-[-42px] md:left-[-281px] lg:h-[297px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/mnTechnicalGuide/emptyCubeDesktop.png')]" />
-          <div className="hidden lg:block md:w-3/12">&nbsp;</div>
+          <div className="hidden lg:block md:w-3/12 flex-1" />
           <div className="flex flex-col w-full lg:w-9/12 md:px-6 lg:px-0">
             <div
               className={classNames(

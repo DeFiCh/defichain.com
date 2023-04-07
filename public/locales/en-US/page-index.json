@@ -33,14 +33,15 @@
     "label": "JUMPSTART INTO DEFICHAIN ECOSYSTEM",
     "title": "Constant evolution to build, deliver and outperform",
     "cards": {
-      "investTitle": "Invest, Trade and Earn with DeFiChain",
-      "investSubtitle": "Learn More",
-      "masternodeTitle": "Own a Masternode",
-      "masternodeSubtitle": "Learn More",
-      "dappsTitle": "dApps for DeFiChain",
-      "dappsSubtitle": "Explore",
-      "quantumTitle": "Connecting blockchains with Quantum",
-      "quantumSubtitle": "Learn More"
+      "dfiTitle": "All about $DFI",
+      "dfiSubtitle": "Learn More",
+      "tradeWithDexTitle": "Trade with DEX",
+      "tradeWithDexSubtitle": "Get Started",
+      "walletsTitle": "Wallets for DeFiChain",
+      "walletsSubtitle": "Get Started",
+      "governanceTitle": "Governance: \nOwn a Masternode",
+      "governanceHoverTitle": "Own a \nMasternode",
+      "governanceSubtitle": "Get Started"
     }
   },
   "CardsSection": {

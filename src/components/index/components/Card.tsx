@@ -7,12 +7,13 @@ import {
   GlassCubeHover,
 } from "@public/assets/img/ecosystem/GlassCube";
 import { WalletApps, WalletAppsHover } from "@public/assets/img/ecosystem/Dapp";
-import { Quantum, QuantumHover } from "@public/assets/img/ecosystem/Quantum";
+import { Cube } from "@public/assets/img/ecosystem/Cube";
 import { useDeviceDetect, ViewPort } from "@hooks/useDeviceDetect";
 
 export function Card({
   title,
   subTitle,
+  hoverTitle,
   customIconStyle,
   id,
   href,
@@ -23,6 +24,7 @@ export function Card({
   customTextStyle?: string;
   title: string;
   subTitle: string;
+  hoverTitle?: string;
   customIconStyle?: string;
 }): JSX.Element {
   const [hoverState, setHoverState] = useState<string | undefined>(undefined);
@@ -44,7 +46,8 @@ export function Card({
           "relative dapp-card overflow-hidden",
           "p-[0.5px] rounded-[15px] h-[215px] w-full xs:w-[327px] lg:w-[487px] xl:h-[215]",
           "md:block md:mb-[24px]",
-          "card-outline-2 hover:accent-gradient-1"
+          "card-outline-2 hover:accent-gradient-1",
+          "cursor-pointer"
         )}
       >
         <a
@@ -60,12 +63,18 @@ export function Card({
         >
           <div className={classNames(customTextStyle)}>
             <span
-              className={classNames("md:w-full text-2xl tracking-[-2%]", {
-                "accent-dfc-gradient-text":
-                  hoverState !== undefined && hoverState === id,
-              })}
+              className={classNames(
+                "md:w-full text-2xl tracking-[-2%]",
+                "whitespace-pre-line",
+                {
+                  "accent-dfc-gradient-text":
+                    hoverState !== undefined && hoverState === id,
+                }
+              )}
             >
-              {title}
+              {hoverTitle && hoverState !== undefined && hoverState === id
+                ? hoverTitle
+                : title}
             </span>
             <div
               className={classNames(
@@ -95,12 +104,12 @@ export function Card({
 }
 
 const iconMapping = {
-  invest: MetaDfiCoin,
-  invest_hover: MetaDfiCoin,
-  masternode: GlassCube,
-  masternode_hover: GlassCubeHover,
-  dapps: WalletApps,
-  dapps_hover: WalletAppsHover,
-  quantum: Quantum,
-  quantum_hover: QuantumHover,
+  dfi: MetaDfiCoin,
+  dfi_hover: MetaDfiCoin,
+  dex: GlassCube,
+  dex_hover: GlassCubeHover,
+  wallets: WalletApps,
+  wallets_hover: WalletAppsHover,
+  cube: Cube,
+  cube_hover: Cube,
 };

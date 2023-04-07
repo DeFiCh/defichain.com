@@ -59,38 +59,40 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
 
         <div className="relative z-30 grid grid-flow-row grid-cols-1 gap-6 md:grid-flow-row md:grid-cols-2 md:gap-y-0 lg:block lg:h-[639px] lg:place-self-end">
           <Card
-            title={t("EcosystemSection.cards.investTitle")}
-            subTitle={t("EcosystemSection.cards.investSubtitle")}
-            customIconStyle="w-[100%] right-0 top-0"
-            id="invest"
+            title={t("EcosystemSection.cards.dfiTitle")}
+            subTitle={t("EcosystemSection.cards.dfiSubtitle")}
+            customIconStyle="w-[100%] lg:right-0 md:right-[10em] right-0 top-0"
+            id="dfi"
             customTextStyle="xs:w-full md:w-[70%] lg:w-[251px]"
           />
           <Card
-            title={t("EcosystemSection.cards.masternodeTitle")}
-            subTitle={t("EcosystemSection.cards.masternodeSubtitle")}
+            title={t("EcosystemSection.cards.tradeWithDexTitle")}
+            subTitle={t("EcosystemSection.cards.tradeWithDexSubtitle")}
             customIconStyle="w-[307px] right-0 top-0 bottom-[-23.26%]"
-            id="masternode"
+            id="dex"
             customTextStyle="w-[45%]"
           />
           <Card
-            title={t("EcosystemSection.cards.dappsTitle")}
-            subTitle={t("EcosystemSection.cards.dappsSubtitle")}
+            title={t("EcosystemSection.cards.walletsTitle")}
+            subTitle={t("EcosystemSection.cards.walletsSubtitle")}
             customIconStyle={classNames("w-[400px] top-0", {
               "right-0": dimensions.width > 768,
               "right-[-8em]": dimensions.width <= 768,
             })}
-            id="dapps"
+            id="wallets"
             customTextStyle="w-[50%]"
           />
           <Card
-            title={t("EcosystemSection.cards.quantumTitle")}
-            subTitle={t("EcosystemSection.cards.quantumSubtitle")}
-            customIconStyle={classNames("top-[-430px] left-[-280px]", {
-              "right-0": dimensions.width > 768,
-              "right-[-3em]": dimensions.width <= 768,
-            })}
-            id="quantum"
-            customTextStyle="w-11/12 md:w-[251px]"
+            title={t("EcosystemSection.cards.governanceTitle")}
+            subTitle={t("EcosystemSection.cards.governanceSubtitle")}
+            customIconStyle={classNames(
+              "w-[100%] lg:right-[2em] lg:-top-[5.5em]",
+              "md:right-[3.5em] md:-top-[4.5em]",
+              "right-0 -top-[4.5em]"
+            )}
+            id="cube"
+            hoverTitle={t("EcosystemSection.cards.governanceHoverTitle")}
+            customTextStyle="w-[284px]"
           />
         </div>
       </Container>

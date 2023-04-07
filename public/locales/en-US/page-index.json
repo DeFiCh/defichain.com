@@ -23,7 +23,7 @@
     }
   },
   "ReadyForFlexibilitySection": {
-    "label": "READY FOR FLEXIBILITY",
+    "label": "WHAT'S NEXT",
     "title": "DeFi MetaChain the upgrade",
     "descParaOne": "DeFi MetaChain is an EVM-compatible blockchain that uses Proof of Authority (POA) and runs in parallel with the Native DeFiChain blockchain.",
     "descParaTwo": "Read through the documentation to get started with deploying next generation DeFi applications on DeFi MetaChain.",
@@ -738,7 +738,7 @@
   "BlockchainFeatureSection": {
     "title": "Designed for Decentralized Finance",
     "subtitle": "NON-TURING-COMPLETE BLOCKCHAIN",
-    "desc": "DeFiChain offers comprehensive functionality tailored to the needs of the Distributed Ledger Technology (DLT) community, prioritizing simplicity, rapid throughput, and security.",
+    "desc": "DeFiChain offers comprehensive functionality tailored to the Distributed Ledger Technology (DLT) community, with an emphasis on simplicity, speed, and security.",
     "button": "Start building",
     "THROUGHPUT": {
       "title": "THROUGHPUT",

@@ -51,19 +51,19 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
             >
               {description}
             </div>
-            {isCTAButton === true ? (
+            {isCTAButton === true && (
               <Button
-                className="z-10 text-sm !min-w-0 w-[188px] lg:text-base lg:w-[199px] py-3 lg:py-4"
+                className="z-10 text-sm lg:text-base px-14 py-3 lg:py-4 w-fit"
                 text={buttonText}
               />
-            ) : null}
-            {isSecondaryButton === true && href !== undefined ? (
+            )}
+            {isSecondaryButton === true && href !== undefined && (
               <SecondaryButton
-                className="text-sm w-[236px] py-3 lg:py-4 lg:text-base sm:w-[272px] !mt-[32px]"
+                className="text-sm py-3 lg:py-4 md:px-14 w-full md:w-fit lg:text-base !mt-[32px]"
                 text={buttonText}
                 href={href}
               />
-            ) : null}
+            )}
           </div>
         </div>
         <div className="z-0 justify-between md:gap-x-16 lg:w-[600px] lg:gap-x-[114px] w-full mt-16 md:mt-[86px] lg:mt-0">

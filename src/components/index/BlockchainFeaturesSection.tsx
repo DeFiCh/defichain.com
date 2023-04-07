@@ -1,4 +1,4 @@
-import { Button } from "@components/commons/Buttons";
+// import { Button } from "@components/commons/Buttons";
 import { Container } from "@components/commons/Container";
 import { useTranslation } from "next-i18next";
 import Slider from "react-slick";
@@ -77,10 +77,11 @@ export function BlockchainFeaturesSection(): JSX.Element {
             >
               {t("BlockchainFeatureSection.desc")}
             </div>
-            <Button
+            {/* TODO: uncomment after mvp */}
+            {/* <Button
               className="z-10 text-sm min-w-0 w-[206px] py-3 !mt-[23px] md:!mt-9 lg:text-base lg:w-[232px] lg:py-4 lg:!mt-10"
               text={t("BlockchainFeatureSection.button")}
-            />
+            /> */}
           </div>
         </div>
         <div className="z-10 justify-between hidden md:flex md:gap-x-16 lg:w-[568px] lg:gap-x-10 w-full lg:px-12 mt-14 md:mt-[72px] lg:mt-0">

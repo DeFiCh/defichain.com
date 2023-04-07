@@ -28,7 +28,7 @@ export function InitialTokenDistributionSection() {
 
         <Button
           text={t("initialTokenDistributionSection.button")}
-          className="mt-6 w-fit px-10 py-3"
+          className="mt-6 w-fit px-10 py-3 lg:px-14 lg:py-4"
         />
 
         <ProgressBar value={49} containerClass="bg-dark-200 mt-16 mb-8" />

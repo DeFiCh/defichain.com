@@ -16,7 +16,7 @@
       "build": "Build",
       "community": "Community"
     },
-    "comingSoon" : "COMING SOON",
+    "comingSoon": "COMING SOON",
     "explore": {
       "info": [
         {
@@ -28,7 +28,7 @@
             },
             {
               "title": "Decentralized Exchange",
-              "subtitle": "Maximize your assets"
+              "subtitle": "Trade, arbitrage and earn"
             },
             {
               "title": "Wallets",
@@ -36,7 +36,7 @@
             },
             {
               "title": "Masternodes",
-              "subtitle": "Place your stakes in DeFiChain"
+              "subtitle": "Decide on the future of DeFiChain"
             }
           ]
         },
@@ -125,7 +125,7 @@
     "community": {
       "info": [
         {
-          "title": "DIVE INTO THE ECOSYSTEM",
+          "title": "STAY UPDATED",
           "labels": [
             {
               "title": "DeFiChain Blog",

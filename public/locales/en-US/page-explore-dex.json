@@ -1,8 +1,8 @@
 {
   "heroBanner": {
     "title": "DECENTRALIZED EXCHANGE",
-    "subtitle": "Trade your assets with DEX",
-    "desc": "Inside DeFiChain’s DEX, you are in full control. Trade, Arbitrage, and Earn from your dTokens."
+    "subtitle": "Trade effortlessly with DeFiChain DEX",
+    "desc": "Trade, Arbitrage and Earn in a DEX which empowers you with full control."
   },
   "statisticsDisplay": {
     "totalValueLocked": {
@@ -32,7 +32,7 @@
       "desc": "Discover endless possibilities with 60+ dTokens - Your key to a diverse DeFi playground."
     },
     "mineLiquidity": {
-      "title": "MINE LIQUIDITY FROM POOLS",
+      "title": "PROFIT FROM LIQUIDITY MINING",
       "desc": "Contribute liquidity, earn rewards, and withdraw whenever you want."
     },
     "advancedSwaps": {

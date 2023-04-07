@@ -59,7 +59,7 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
             )}
             {isSecondaryButton === true && href !== undefined && (
               <SecondaryButton
-                className="text-sm w-[236px] py-3 lg:py-4 lg:text-base sm:w-[272px] !mt-[32px]"
+                className="text-sm py-3 lg:py-4 md:px-14 w-full md:w-fit lg:text-base !mt-[32px]"
                 text={buttonText}
                 href={href}
               />

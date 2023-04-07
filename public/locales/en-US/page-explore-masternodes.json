@@ -2,7 +2,7 @@
   "heroBanner": {
     "title": "LEARN ABOUT MASTERNODES",
     "subtitle": "DeFiChain Masternodes",
-    "desc": "Secure, incentivized, community-driven nodes powering decentralized blockchain networks."
+    "desc": "Secure, incentivized, community-driven nodes powering DeFiChain."
   },
   "footerCards": {
     "cardTitle": "EXPLORE DEFICHAIN",
@@ -15,20 +15,20 @@
       }
     ]
   },
-  "statisticsDisplay" : {
+  "statisticsDisplay": {
     "masternodes": {
       "title": "MASTERNODES",
       "desc": "{{value}} locked for 10 years"
     },
-    "tvl" : {
+    "tvl": {
       "title": "TOTAL VALUE LOCKED",
       "desc": "in user engagement network"
     }
   },
   "masternodesBenefits": {
     "title": "Benefits of Masternodes",
-    "subtitle": "WHY OWN A MASTERNODE?",
-    "desc": "Unlock the full potential of DeFiChain with a masternode.",
+    "subtitle": "OWN A MASTERNODE",
+    "desc": "Unlock the full utility of DeFiChain with a masternode.",
     "button": "Learn more",
     "passiveIncome": {
       "title": "PASSIVE INCOME",
@@ -36,7 +36,7 @@
     },
     "stakingRewards": {
       "title": "STAKING REWARDS",
-      "desc": "Get rewarded with masternodes staking"
+      "desc": "Reap the exclusive benefits of masternode staking"
     },
     "networkSecurity": {
       "title": "NETWORK SECURITY",
@@ -44,8 +44,7 @@
     },
     "governance": {
       "title": "GOVERNANCE",
-      "desc": "Have a voice by voting on governance proposal"
+      "desc": "Make a difference with your vote on DeFiChain governance proposals"
     }
   }
 }
-

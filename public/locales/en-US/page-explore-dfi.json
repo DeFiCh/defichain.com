@@ -40,13 +40,13 @@
         "desc": "Participate in shaping the future of the blockchain"
       },
       {
-        "title": "EARN FROM LIQUIDITY POOLS",
-        "desc": "Earn rewards by providing liquidity on DEX"
+        "title": "PROFIT FROM LIQUIDITY MINING",
+        "desc": "Contribute liquidity, earn rewards, and withdraw whenever you want"
       }
     ]
   },
   "initialTokenDistributionSection": {
-    "title": "FAIR TOKEN DISTRIBUTIONS AND STAKING REWARDS",
+    "title": "TRANSPARENT DISTRIBUTION",
     "subtitle": "Initial Token Distribution",
     "desc": "",
     "button": "Read from Whitepaper",
@@ -71,16 +71,17 @@
     }
   },
   "getDfiSection": {
-    "title": "PURCHASE AND RECEIVE DFI TOKENS EASILY",
+    "title": "PURCHASE $DFI EASILY",
     "subtitle": "Get DFI on trusted exchanges",
-    "desc1": "Securely buy DFI on trusted cryptocurrency exchanges and easily store them in your DeFiChain wallet.",
-    "desc2": "Click on our partner links to purchase DFI and receive your tokens by sending them to your wallet address.",
+    "desc1": "Use our partner links to securely buy DFI on trusted cryptocurrency exchanges and easily transfer them to your DeFiChain wallet address.",
+    "desc2": "",
     "exhangePriceText": "Prices may vary from different sources",
     "stakingText": "Also available for staking in"
   },
   "erc20Section": {
     "title": "DeFiChain ERC-20",
-    "subtitle": "DeFiChain created an ERC-20 token, to provide greater flexibility for users between Ethereum and DeFiChain. This allows more users to experience the real value of Native DeFi on DeFiChain.",
+    "subtitle1": "DeFiChain ERC-20 token provides greater flexibility for users between Ethereum and DeFiChain.",
+    "subtitle2": "This allows the wider crypto ecosystem to experience the real value of Native DeFi on DeFiChain.",
     "buttonText": "Learn more",
     "contract": "View contract address"
   },

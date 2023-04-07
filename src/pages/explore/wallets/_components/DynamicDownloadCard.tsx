@@ -76,6 +76,7 @@ export function DynamicDownloadCard(
             {Object.keys(props.keywords).map((key) =>
               downloadLinks && downloadLinks[key] ? (
                 <CardLink
+                  key={key}
                   descText="Download for"
                   text={IconType[OSIconMapping[key]]}
                   url={downloadLinks[key]}

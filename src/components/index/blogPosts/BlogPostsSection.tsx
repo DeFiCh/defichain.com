@@ -22,7 +22,7 @@ export function BlogPostsSection({ blogPosts }: { blogPosts: Posts[] }) {
             </div>
             <Button
               text={t("BlogPostsSection.button")}
-              className="text-sm mt-9 py-4 w-[272px] lg:w-[232px] lg:text-base lg:mt-12"
+              className="text-sm mt-9 lg:py-4 lg:px-14 py-3 px-10 lg:text-base lg:mt-12"
               href="https://blog.defichain.com/"
             />
           </div>

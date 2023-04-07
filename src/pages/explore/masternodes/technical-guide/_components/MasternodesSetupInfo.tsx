@@ -295,7 +295,10 @@ export function MasternodesSetupInfo() {
                 containerStyle="contents"
               />
             </ContentDescription>
-            <Code text={t("technicalGuide.setup.operate.step7.code1")} />
+            <Code
+              text={t("technicalGuide.setup.operate.step7.code1")}
+              textStyle="whitespace-pre-line"
+            />
             <ContentDescription
               text={t("technicalGuide.setup.operate.step7.desc6")}
               customStyle="!text-base lg:!text-xl inline-block contents"
@@ -491,6 +494,7 @@ export function MasternodesSetupInfo() {
             <Code
               text={t("technicalGuide.setup.multiple.code1")}
               customStyle="mt-12"
+              textStyle="whitespace-pre-line"
             />
             <ContentDescription
               text={t("technicalGuide.setup.multiple.desc5")}
@@ -541,7 +545,10 @@ export function MasternodesSetupInfo() {
               text={t("technicalGuide.setup.states.desc4")}
               customStyle="!text-base lg:!text-xl"
             />
-            <Code text={t("technicalGuide.setup.states.code1")} />
+            <Code
+              text={t("technicalGuide.setup.states.code1")}
+              textStyle="whitespace-pre-line"
+            />
 
             <ContentSubHeader
               text={t("technicalGuide.setup.states.preEnabled.title")}

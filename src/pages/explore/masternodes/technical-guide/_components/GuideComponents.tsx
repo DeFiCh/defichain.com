@@ -87,20 +87,24 @@ export function Step({ count }: { count: string }) {
 export function Code({
   text,
   customStyle,
+  textStyle,
 }: {
   text: string;
   customStyle?: string;
+  textStyle?: string;
 }) {
   return (
     <div
-      className={classNames(
-        "flex flex-row mt-5 p-6 bg-dark-100 rounded-[5px]",
-        customStyle
-      )}
+      className={classNames("mt-5 p-6 bg-dark-100 rounded-[5px]", customStyle)}
     >
-      <span className="font-code overflow-x-auto text-dark-900 leading-[48px] whitespace-pre-line">
+      <div
+        className={classNames(
+          "whitespace-nowrap font-code overflow-x-auto text-dark-900 leading-[48px]",
+          textStyle
+        )}
+      >
         {text}
-      </span>
+      </div>
     </div>
   );
 }

@@ -5,10 +5,23 @@ import { SectionTitle } from "@components/commons/SectionTitle";
 import { SectionSubTitle } from "@components/commons/SectionSubTitle";
 import { SectionDescription } from "@components/commons/SectionDescription";
 import classNames from "classnames";
+import { useEffect } from "react";
 import { MasternodesSetupInfo } from "./_components/MasternodesSetupInfo";
 
 export default function TechnicalGuide() {
   const { t } = useTranslation("page-explore-masternodes");
+  useEffect(() => {
+    // To scroll to hash element on page refresh
+    const { hash } = window.location;
+    if (hash) {
+      setTimeout(() => {
+        const hashElement = document.querySelector(hash);
+        if (hashElement !== null) {
+          document.querySelector(hash)!.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 0);
+    }
+  });
 
   return (
     <>

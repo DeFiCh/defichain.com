@@ -27,7 +27,7 @@ export function MasternodesSetupInfo() {
         setDownloadLinks(assets.html_url);
       });
   }, []);
-  const contentRef = useRef(null);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   return (
     <Container className="flex flex-row gap-x-12 lg:mb-[216px] lg:pr-12">

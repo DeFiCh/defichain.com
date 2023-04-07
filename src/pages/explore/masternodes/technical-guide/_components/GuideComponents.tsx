@@ -11,9 +11,10 @@ export function ContentHeader({
   id?: string;
   customStyle?: string;
 }) {
+  const escapedId = id?.toLowerCase().replaceAll(" ", "-");
   return (
     <h2
-      id={id?.replaceAll(" ", "_")}
+      id={escapedId}
       title={id}
       className={classNames(
         "text-[32px] leading-9 scroll-mt-40",
@@ -35,9 +36,10 @@ export function ContentSubHeader({
   id?: string;
   customStyle?: string;
 }) {
+  const escapedId = id?.toLowerCase().replaceAll(" ", "-");
   return (
     <h3
-      id={id?.replaceAll(" ", "_")}
+      id={escapedId}
       title={id}
       className={classNames("text-2xl font-bold scroll-mt-40", customStyle)}
     >

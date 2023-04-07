@@ -1,6 +1,13 @@
 import classnames from "classnames";
 import { useTranslation } from "next-i18next";
-import { useState, useEffect, useRef } from "react";
+import {
+  useState,
+  useEffect,
+  useRef,
+  Dispatch,
+  SetStateAction,
+  RefObject,
+} from "react";
 
 interface HeadingsI {
   id: string;
@@ -23,7 +30,7 @@ function Headings({ headings, activeId, parentReference }) {
           {t("technicalGuide.outline")}
         </a>
       </li>
-      {headings.map((heading) => (
+      {headings.map((heading, index) => (
         <li
           key={heading.id}
           className={classnames("mb-6", { active: heading.id === activeId })}
@@ -33,8 +40,7 @@ function Headings({ headings, activeId, parentReference }) {
             className={classnames("font-sans font-bold text-xl text-dark-800", {
               "!text-brand-100": heading.id === activeId,
             })}
-            onClick={(e) => {
-              e.preventDefault();
+            onClick={() => {
               parentReference.current
                 .querySelector(`#${heading.id}`)
                 .scrollIntoView({
@@ -42,7 +48,7 @@ function Headings({ headings, activeId, parentReference }) {
                 });
             }}
           >
-            {heading.title}
+            {`${index + 1}. ${heading.title}`}
           </a>
           {heading.items.length > 0 && (
             <ul className="mt-5">
@@ -58,8 +64,7 @@ function Headings({ headings, activeId, parentReference }) {
                     className={classnames("font-sans text-sm text-dark-800", {
                       "!text-brand-100": child.id === activeId,
                     })}
-                    onClick={(e) => {
-                      e.preventDefault();
+                    onClick={() => {
                       document.querySelector(`#${child.id}`)?.scrollIntoView({
                         behavior: "smooth",
                         block: "start",
@@ -118,9 +123,13 @@ const getNestedHeadings = (headingElements) => {
   return nestedHeadings;
 };
 
-const useIntersectionObserver = (setActiveId, parentReference) => {
+const useIntersectionObserver = (
+  setActiveId: Dispatch<SetStateAction<string | undefined>>,
+  parentReference: RefObject<HTMLDivElement>
+) => {
   const headingElementsRef = useRef({});
   useEffect(() => {
+    if (parentReference.current === null) return () => {};
     const headingElements = Array.from(
       parentReference.current.querySelectorAll("h2[id], h3[id]")
     );
@@ -169,8 +178,12 @@ const useIntersectionObserver = (setActiveId, parentReference) => {
 /**
  * Renders the table of contents.
  */
-export default function TableOfContents({ parentReference }) {
-  const [activeId, setActiveId] = useState();
+export default function TableOfContents({
+  parentReference,
+}: {
+  parentReference: RefObject<HTMLDivElement>;
+}) {
+  const [activeId, setActiveId] = useState<string | undefined>();
   const { nestedHeadings } = useHeadingsData(parentReference);
   useIntersectionObserver(setActiveId, parentReference);
 

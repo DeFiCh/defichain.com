@@ -86,32 +86,30 @@ export function SecondaryButton({
   className?: string;
   disabled?: boolean;
   onClick?: () => void;
-  href?: string;
+  href: string;
 }) {
-  if (href) {
-    return (
-      <Link
-        rel="noreferrer"
-        target="_blank"
-        href={href}
-        className={classNames({ "pointer-events-none": disabled })}
+  return (
+    <Link
+      rel="noreferrer"
+      target="_blank"
+      href={href}
+      className={classNames({ "pointer-events-none": disabled })}
+    >
+      <button
+        type="button"
+        onClick={onClick}
+        disabled={disabled}
+        className={classNames(
+          className ?? "py-4",
+          "flex items-center justify-center rounded-[92px] font-bold disabled:opacity-30 disabled:pointer-events-none !mt-0",
+          "outline outline-1 outline-dark-1000 hover:outline-brand-100 active:text-brand-100 text-dark-1000 active:opacity-70"
+        )}
       >
-        <button
-          type="button"
-          onClick={onClick}
-          disabled={disabled}
-          className={classNames(
-            className ?? "py-4",
-            "flex items-center justify-center rounded-[92px] font-bold disabled:opacity-30 disabled:pointer-events-none !mt-0",
-            "outline outline-1 outline-dark-1000 hover:outline-brand-100 active:text-brand-100 text-dark-1000 active:opacity-70"
-          )}
-        >
-          {text}
-          <FiArrowUpRight size={20} className="ml-[15px]" />
-        </button>
-      </Link>
-    );
-  }
+        {text}
+        <FiArrowUpRight size={20} className="ml-[15px]" />
+      </button>
+    </Link>
+  );
 }
 
 export function GradientButton({

@@ -27,7 +27,8 @@ export default function ERC20Section(): JSX.Element {
             "lg:text-xl lg:tracking-normal"
           )}
         >
-          <p>{t("erc20Section.subtitle")}</p>
+          <p>{t("erc20Section.subtitle1")}</p>
+          <p className="mt-5">{t("erc20Section.subtitle2")}</p>
         </div>
         <Button
           text={t("erc20Section.buttonText")}

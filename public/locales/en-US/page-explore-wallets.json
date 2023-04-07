@@ -37,10 +37,10 @@
   "advanceUseSection": {
     "sectionTitle": "SUITABLE FOR ADVANCE USAGE",
     "title": "Advanced usage of DeFiChain",
-    "subtitle": "Advanced wallets that are suited for complex usage of DeFiChain, such as masternode management, multi-signature management, and more.",
+    "subtitle": "Advanced wallets that are suited for complex usage of DeFiChain, such as masternode and multi-signature management along with much more.",
     "entries": {
       "DFC": {
-        "title": "DeFi Wallet desktop app",
+        "title": "Desktop Full-Node Wallet",
         "desc": "Transact, liquidity mine, swap and more with the full-featured and fully-decentralized wallet app. Full node included."
       },
       "RPI": {

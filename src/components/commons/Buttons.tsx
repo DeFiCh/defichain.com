@@ -66,7 +66,7 @@ function ButtonElement({
       disabled={disabled}
       className={classNames(
         className ?? "py-4",
-        "flex items-center justify-center rounded-[92px] font-bold disabled:opacity-30 disabled:pointer-events-none min-w-[232px]",
+        "rounded-[92px] font-bold disabled:opacity-30 disabled:pointer-events-none min-w-[232px]",
         "bg-dark-1000 text-dark-100 hover:bg-brand-100 active:bg-brand-100 active:opacity-70"
       )}
     >

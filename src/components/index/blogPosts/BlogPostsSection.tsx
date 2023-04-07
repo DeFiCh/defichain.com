@@ -22,13 +22,13 @@ export function BlogPostsSection({ blogPosts }: { blogPosts: Posts[] }) {
             </div>
             <Button
               text={t("BlogPostsSection.button")}
-              className="text-sm mt-9 py-4 w-[272px] lg:w-[232px] lg:text-base lg:mt-12"
+              className="text-sm mt-9 lg:py-4 lg:px-14 py-3 px-10 lg:text-base lg:mt-12"
               href="https://blog.defichain.com/"
             />
           </div>
           <div className="flex flex-wrap gap-x-6 gap-y-6 md:gap-y-12 mt-12 lg:mt-0 lg:w-[660px]">
             {blogPosts.slice(-4).map((p, i) => (
-              <ProjectCard key={p.title.text} post={p} isLatest={i === 0} />
+              <ProjectCard key={p.title[0].text} post={p} isLatest={i === 0} />
             ))}
           </div>
         </div>

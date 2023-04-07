@@ -1,11 +1,11 @@
 import { HeroBanner, HeroBannerBg } from "@components/commons/HeroBanner";
 import { SSRConfig, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { Container } from "@components/commons/Container";
+// import { Container } from "@components/commons/Container";
 import { DFIStatisticsDisplay } from "./_components/DFIStatisticsDisplay";
 import HarnessDFISection from "./_components/HarnessDFISection";
 import GetDFISection from "./_components/GetDFISection";
-import { ExploreCards, ExploreCardsImage } from "../_components/ExploreCards";
+// import { ExploreCards, ExploreCardsImage } from "../_components/ExploreCards";
 import { InitialTokenDistributionSection } from "./_components/InitialTokenDistributionSection";
 import ERC20Section from "./_components/ERC20Section";
 
@@ -26,7 +26,8 @@ export default function ExploreDFI() {
       <InitialTokenDistributionSection />
       <GetDFISection />
       <ERC20Section />
-      <Container className="lg:mb-8 md:mb-6 mb-4">
+      {/* TODO: uncomment after mvp */}
+      {/* <Container className="lg:mb-8 md:mb-6 mb-4">
         <div className="flex flex-row overflow-x-scroll lg:gap-x-8 md:gap-x-6 gap-x-4">
           <ExploreCards
             title={t("footerCards.wallet.title")}
@@ -41,7 +42,7 @@ export default function ExploreDFI() {
             href=""
           />
         </div>
-      </Container>
+      </Container> */}
     </>
   );
 }

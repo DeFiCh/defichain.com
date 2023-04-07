@@ -9,7 +9,7 @@ const securityHeaders = [
       `child-src 'self' app.netlify.com;` +
       `form-action 'none';` +
       `frame-ancestors 'none';` +
-      `img-src 'self' assets.coingecko.com s2.coinmarketcap.com *.cloudfront.net data:;` +
+      `img-src 'self' images.prismic.io assets.coingecko.com s2.coinmarketcap.com *.cloudfront.net data:;` +
       `media-src 'self';` +
       `object-src 'none';` +
       `script-src 'self' ajax.googleapis.com widgets.coingecko.com files.coinmarketcap.com 3rdparty-apis.coinmarketcap.com app.netlify.com netlify-cdp-loader.netlify.app ${
@@ -60,6 +60,6 @@ module.exports = {
     ];
   },
   images: {
-    domains: ['images.prismic.io'],
+    domains: ["images.prismic.io"],
   },
 };

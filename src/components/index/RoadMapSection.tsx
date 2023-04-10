@@ -15,7 +15,7 @@ export function YearAheadRoadMapSection(): JSX.Element {
       <Container>
         <SectionTitle
           text={t("YearAheadRoadMapSection.label")}
-          customStyle="lg:w-fit md:w-[409px] w-[272px]"
+          customStyle="w-fit"
         />
         <div className="lg:text-[52px] lg:leading-[52px] text-[32px] leading-[36px] text-dark-1000 pt-5 pb-6">
           {t("YearAheadRoadMapSection.title")}
@@ -44,7 +44,7 @@ function RoadMapSlider(): JSX.Element {
         <div className="w-full h-0.5" />
       </a>
     ),
-    dots: true,
+    dots: false,
     dotsClass: "roadmap-dots",
     infinite: false,
     speed: 300,
@@ -60,6 +60,7 @@ function RoadMapSlider(): JSX.Element {
       {
         breakpoint: 1024,
         settings: {
+          dots: true,
           draggable: true,
           swipeToSlide: true,
         },
@@ -67,6 +68,7 @@ function RoadMapSlider(): JSX.Element {
       {
         breakpoint: 600,
         settings: {
+          dots: true,
           centerMode: true,
           arrows: false,
           swipeToSlide: true,
@@ -96,7 +98,7 @@ function RoadMapCard(props: RoadMap): JSX.Element {
   return (
     <div
       data-bg-image={`url(${props.image})`}
-      className="card-outline-2 hover:accent-gradient-1 rounded-[15px] md:h-[202px] md:w-[384px] h-[202px] w-[272px] p-px"
+      className="card-outline-2 hover:accent-gradient-1 rounded-[15px] md:h-[202px] md:w-[384px] h-[202px] w-[272px] p-[0.5px]"
     >
       <div
         className="p-6 group-hover:bg-dark-00/90 rounded-[15px] h-full bg-[75%]"

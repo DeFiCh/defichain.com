@@ -258,7 +258,6 @@ html {
   --yLength: 10px;
 }
 
-
 .dapp-card #dfi,
 #dfi_hover,
 #dex,
@@ -424,7 +423,7 @@ html {
 }
 
 .roadmap-section .slick-slide {
-  @apply py-8 px-3 md:py-6;
+  @apply py-8 px-3 md:py-9;
 }
 
 .roadmap-section .slick-arrow {

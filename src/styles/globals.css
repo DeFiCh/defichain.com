@@ -423,7 +423,7 @@ html {
 }
 
 .roadmap-section .slick-slide {
-  @apply py-8 px-3 md:py-9;
+  @apply pt-8 pb-6 px-3 md:pt-9 lg:pt-[26px];
 }
 
 .roadmap-section .slick-arrow {

@@ -78,7 +78,7 @@ function RoadMapSlider(): JSX.Element {
   };
 
   return (
-    <div className="roadmap-section lg:mb-60 md:mb-24 mb-40 relative">
+    <div className="roadmap-section lg:mb-60 mb-24 relative">
       <Slider {...settings}>
         {cards.map((card) => (
           <RoadMapCard key={card.title} {...card} />

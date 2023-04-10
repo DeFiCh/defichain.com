@@ -50,8 +50,8 @@ export function DexStatisticsDisplay() {
     <Container className="lg:mt-[69px] md:mt-[33px] mt-0 lg:mb-[180px] mb-[72px]">
       <StatisticPanel
         displayItem={statsItems}
-        displayStripCustomStyle="scroll-mt-[200px]"
-        displayId="statistics_display_masternodes"
+        displayStripCustomStyle="-scroll-mt-[100px]"
+        displayId="explore-dex-statistics-display"
       />
     </Container>
   );

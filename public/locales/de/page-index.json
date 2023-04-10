@@ -23,11 +23,25 @@
     }
   },
   "ReadyForFlexibilitySection": {
-    "label": "BEREIT FÜR FLEXIBILITÄT",
+    "label": "WAS KOMMT ALS NÄCHSTES?",
     "title": "DeFi MetaChain, DAS Upgrade",
     "descParaOne": "DeFi MetaChain ist eine EVM-kompatible Blockchain, die Proof of Authority (POA) verwendet und parallel zur nativen DeFiChain-Blockchain läuft.",
     "descParaTwo": "Lies die Dokumentation, um mit dem Einsatz von DeFi-Anwendungen der nächsten Generation auf DeFi MetaChain zu beginnen.",
     "button": "DeFi MetaChain erkunden"
+  },
+  "EcosystemSection": {
+    "label": "EINSTIEG IN DAS DEFICHAIN-ÖKOSYSTEM",
+    "title": "Ständige Weiterentwicklung, um zu bauen, zu liefern und zu übertreffen",
+    "cards": {
+      "investTitle": "Investieren, Handeln und Verdienen mit DeFiChain",
+      "investSubtitle": "Mehr erfahren",
+      "masternodeTitle": "Einen Masternode besitzen",
+      "masternodeSubtitle": "Mehr erfahren",
+      "dappsTitle": "dApps für DeFiChain",
+      "dappsSubtitle": "Erkunden",
+      "quantumTitle": "Connecting blockchains with Quantum",
+      "quantumSubtitle": "Mehr erfahren"
+    }
   },
   "CardsSection": {
     "cards": [
@@ -150,7 +164,7 @@
   "BlockchainFeatureSection": {
     "title": "Entwickelt für das dezentrale Finanzwesen",
     "subtitle": "NICHT TURING-VOLLSTÄNDIGE BLOCKCHAIN",
-    "desc": "DeFiChain bietet umfassende Funktionen, die auf die Bedürfnisse der Distributed Ledger Technology (DLT)-Community zugeschnitten sind und bei denen Einfachheit, schneller Durchsatz und Sicherheit im Vordergrund stehen.",
+    "desc": "DeFiChain bietet umfassende Funktionen, die auf die Distributed Ledger Technologie (DLT)-Community zugeschnitten sind, wobei der Schwerpunkt auf Einfachheit, Geschwindigkeit und Sicherheit liegt.",
     "button": "Mit der Entwicklung beginnen",
     "THROUGHPUT": {
       "title": "DURCHSATZ",
@@ -172,5 +186,10 @@
       "title": "VIELFALT",
       "desc": "Breites Spektrum an kryptoökonomischen Finanzoperationen."
     }
+  },
+  "BlogPostsSection": {
+    "title": "DeFiChain \nin den Medien",
+    "label": "DEFICHAIN-BLOG",
+    "button": "Alle Artikel anzeigen"
   }
 }

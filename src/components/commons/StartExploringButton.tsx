@@ -13,6 +13,7 @@ export function StartExploringButton({
     <a
       href={startExploringJumpLink}
       className={classNames("hidden md:flex justify-center relative z-10")}
+      data-testid="startExploring-button"
     >
       <button
         type="button"

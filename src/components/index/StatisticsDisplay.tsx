@@ -74,7 +74,7 @@ export function StatsDisplay() {
     <Container className="relative lg:mt-[57px] mt-[76px] lg:z-10">
       <StatisticPanel
         displayItem={statsItems}
-        displayStripCustomStyle="scroll-mt-[200px]"
+        displayStripCustomStyle="-scroll-mt-[150px]"
         displayId="statistics_display"
       />
       <div

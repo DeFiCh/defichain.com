@@ -1,6 +1,6 @@
 import { SectionGridLayout } from "@components/commons/SectionGridLayout";
 import { useTranslation } from "next-i18next";
-import { SvgIconsColumn } from "./SvgIconsColumn";
+import { IconTypes, SvgIconsColumn } from "./SvgIconsColumn";
 
 export function MasternodesBenefitsSection(): JSX.Element {
   const { t } = useTranslation("page-explore-masternodes");
@@ -9,18 +9,22 @@ export function MasternodesBenefitsSection(): JSX.Element {
     {
       title: t("masternodesBenefits.passiveIncome.title"),
       desc: t("masternodesBenefits.passiveIncome.desc"),
+      icon: IconTypes.PASSIVE_INCOME,
     },
     {
       title: t("masternodesBenefits.stakingRewards.title"),
       desc: t("masternodesBenefits.stakingRewards.desc"),
+      icon: IconTypes.STAKING_REWARDS,
     },
     {
       title: t("masternodesBenefits.networkSecurity.title"),
       desc: t("masternodesBenefits.networkSecurity.desc"),
+      icon: IconTypes.NETWORK_SECURITY,
     },
     {
       title: t("masternodesBenefits.governance.title"),
       desc: t("masternodesBenefits.governance.desc"),
+      icon: IconTypes.GOVERNANCE,
     },
   ];
   return (

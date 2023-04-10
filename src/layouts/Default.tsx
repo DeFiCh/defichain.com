@@ -63,7 +63,7 @@ export function Default(props: PropsWithChildren<any>): JSX.Element | null {
         <meta
           property="og:image"
           name="og:image"
-          content="https://defichain.com/img/og/ogimage_en.png"
+          content="https://defichain.com/img/og/share.png"
         />
         <meta
           property="og:image:type"
@@ -72,8 +72,15 @@ export function Default(props: PropsWithChildren<any>): JSX.Element | null {
         />
 
         {/* Twitter */}
-        <meta property="twitter:card" content="summary" />
-        <meta property="twitter:site" content="@defichain" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@defichain" />
+        <meta name="twitter:creator" content="@defichain" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta
+          name="twitter:image"
+          content="https://defichain.com/img/og/share.png"
+        />
         <link rel="icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
       </Head>

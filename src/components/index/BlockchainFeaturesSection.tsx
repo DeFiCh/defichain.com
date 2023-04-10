@@ -50,7 +50,7 @@ export function BlockchainFeaturesSection(): JSX.Element {
         <div className="flex lg:w-[504px]">
           <div
             className="w-full flex flex-col space-y-5 md:space-y-5 lg:mt-32 lg:space-y-5"
-            data-testid="BlockchainFeatureSection.text"
+            data-testid="blockchainFeatureSection-text"
           >
             <SectionTitle text={t("BlockchainFeatureSection.subtitle")} />
             <h2

@@ -1,6 +1,7 @@
 import { Button, SecondaryButton } from "@components/commons/Buttons";
 import { Container } from "@components/commons/Container";
 import { SectionTitle } from "@components/commons/SectionTitle";
+import { HTMLAttributeAnchorTarget } from "react";
 
 interface SectionGridLayoutProps {
   sectionTitle?: string;
@@ -11,6 +12,7 @@ interface SectionGridLayoutProps {
   isSecondaryButton?: boolean;
   href?: string;
   children;
+  target?: HTMLAttributeAnchorTarget;
 }
 
 export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
@@ -23,6 +25,7 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
     isSecondaryButton,
     href,
     children,
+    target,
   } = props;
 
   return (
@@ -55,6 +58,8 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
               <Button
                 className="z-10 text-sm lg:text-base px-14 py-3 lg:py-4 w-fit"
                 text={buttonText}
+                href={href}
+                target={target}
               />
             )}
             {isSecondaryButton === true && href !== undefined && (

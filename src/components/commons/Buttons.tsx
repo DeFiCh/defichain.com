@@ -8,20 +8,22 @@ export function Button({
   text,
   className,
   disabled,
+  target,
   href,
   onClick,
 }: {
   text: string;
   className?: string;
   disabled?: boolean;
+  target?: HTMLAttributeAnchorTarget;
   href?: string;
   onClick?: () => void;
 }) {
   if (href) {
     return (
-      <a
+      <Link
         rel="noreferrer"
-        target="_blank"
+        target={target}
         href={href}
         className={classNames("block w-fit", {
           "pointer-events-none": disabled,
@@ -33,7 +35,7 @@ export function Button({
           disabled={disabled}
           onClick={onClick}
         />
-      </a>
+      </Link>
     );
   }
   return (

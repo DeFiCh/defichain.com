@@ -13,7 +13,12 @@ import { SecurityIcon } from "@public/assets/icon/SecurityIcon";
 import { MediaAssetsIcon } from "@public/assets/icon/MediaAssetsIcon";
 import { DeveloperResourceIcon } from "@public/assets/icon/DeveloperResourceIcon";
 import { RiArrowRightUpLine } from "react-icons/ri";
-import { Dispatch, SetStateAction, useState } from "react";
+import {
+  Dispatch,
+  HTMLAttributeAnchorTarget,
+  SetStateAction,
+  useState,
+} from "react";
 import { NewsLetterIcon } from "@public/assets/icon/NewsLetterIcon";
 import { CryptoIDIcon } from "@public/assets/icon/CryptoIDIcon";
 import { useRouter } from "next/router";
@@ -38,7 +43,7 @@ export function HeaderNavLinkItem({
   hoverState: string | undefined;
   setHoverState: Dispatch<SetStateAction<string | undefined>>;
   haveIcon?: boolean;
-  target?: string;
+  target?: HTMLAttributeAnchorTarget;
   disabled?: boolean;
 }) {
   const Icon = iconMapping[icon!] as React.ElementType;

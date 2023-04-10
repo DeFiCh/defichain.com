@@ -53,6 +53,7 @@ export function Card({
       >
         <Link
           href={href}
+          data-testid={`ecosystem-link-${title.split(" ").pop()}`}
           className={classNames(
             "w-full h-full p-6 rounded-[15px] border-[0.5px] flex flex-col",
             "border-dark-200 bg-dark-00",

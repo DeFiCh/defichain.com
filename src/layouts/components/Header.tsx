@@ -437,6 +437,7 @@ function ComingSoonTag() {
         "font-bold text-dark-1000 text-[10px] leading-3 tracking-[0.08em] font-bold",
         "lg:mr-0 mr-1"
       )}
+      data-testid="header-coming-soon-tag"
     >
       {t("header.comingSoon")}
     </div>

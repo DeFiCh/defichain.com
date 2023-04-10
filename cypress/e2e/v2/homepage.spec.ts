@@ -13,6 +13,14 @@ context("/ on macbook-16", () => {
     cy.findByTestId("explore-dropDownItems-$DFI").should("be.visible");
   });
 
+  it("should have Blockchain feature section title and description", () => {
+    cy.findByTestId("blockchainFeatureSection-text").should(
+      "have.text",
+      "NON-TURING-COMPLETE BLOCKCHAINDesigned for Decentralized Finance DeFiChain offers comprehensive functionality " +
+        "tailored to the Distributed Ledger Technology (DLT) community, with an emphasis on simplicity, speed, and security."
+    );
+  });
+
   // No TC
   it("should have Get DFI button", () => {
     cy.findByTestId("header-getDfi-button").click();

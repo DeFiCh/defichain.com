@@ -56,10 +56,7 @@ export function Card({
           className={classNames(
             "w-full h-full p-6 rounded-[15px] border-[0.5px] flex flex-col",
             "border-dark-200 bg-dark-00",
-            "duration-1000 hover:transition hover:ease-in delay-250",
-            {
-              "pointer-events-none": device !== ViewPort.DESKTOP, // prevents user from holding onto the image on touch screen
-            }
+            "duration-1000 hover:transition hover:ease-in delay-250"
           )}
         >
           <div className={classNames(customTextStyle)}>
@@ -91,7 +88,10 @@ export function Card({
                 customIconStyle
               )}
             >
-              {hoverState !== undefined && hoverState === id && Icon ? (
+              {hoverState !== undefined &&
+              hoverState === id &&
+              Icon &&
+              device === ViewPort.DESKTOP ? (
                 <IconOnHover id={`${id}_hover`} />
               ) : (
                 <Icon id={`${id}`} />

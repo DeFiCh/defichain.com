@@ -14,7 +14,6 @@
 @tailwind utilities;
 
 body {
-  overflow-x: clip;
   width: 100%;
   box-sizing: border-box;
 }

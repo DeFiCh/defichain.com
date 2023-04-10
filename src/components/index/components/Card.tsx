@@ -9,6 +9,7 @@ import {
 import { WalletApps, WalletAppsHover } from "@public/assets/img/ecosystem/Dapp";
 import { Cube } from "@public/assets/img/ecosystem/Cube";
 import { useDeviceDetect, ViewPort } from "@hooks/useDeviceDetect";
+import Link from "next/link";
 
 export function Card({
   title,
@@ -20,7 +21,7 @@ export function Card({
   customTextStyle,
 }: {
   id: string;
-  href?: string;
+  href: string;
   customTextStyle?: string;
   title: string;
   subTitle: string;
@@ -50,7 +51,7 @@ export function Card({
           "cursor-pointer"
         )}
       >
-        <a
+        <Link
           href={href}
           className={classNames(
             "w-full h-full p-6 rounded-[15px] border-[0.5px] flex flex-col",
@@ -97,7 +98,7 @@ export function Card({
               )}
             </div>
           </div>
-        </a>
+        </Link>
       </div>
     </div>
   );

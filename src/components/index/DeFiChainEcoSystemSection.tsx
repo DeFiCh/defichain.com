@@ -59,6 +59,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
 
         <div className="relative z-30 grid grid-flow-row grid-cols-1 gap-6 md:grid-flow-row md:grid-cols-2 md:gap-y-0 lg:block lg:h-[639px] lg:place-self-end">
           <Card
+            href="/explore/dfi"
             title={t("EcosystemSection.cards.dfiTitle")}
             subTitle={t("EcosystemSection.cards.dfiSubtitle")}
             customIconStyle="w-[100%] lg:right-0 md:right-[10em] right-0 top-0"
@@ -66,6 +67,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             customTextStyle="xs:w-full md:w-[70%] lg:w-[251px]"
           />
           <Card
+            href="/explore/dex"
             title={t("EcosystemSection.cards.tradeWithDexTitle")}
             subTitle={t("EcosystemSection.cards.tradeWithDexSubtitle")}
             customIconStyle="w-[307px] right-0 top-0 bottom-[-23.26%]"
@@ -73,6 +75,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             customTextStyle="w-[45%]"
           />
           <Card
+            href="/explore/wallets"
             title={t("EcosystemSection.cards.walletsTitle")}
             subTitle={t("EcosystemSection.cards.walletsSubtitle")}
             customIconStyle={classNames("w-[400px] top-0", {
@@ -83,6 +86,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             customTextStyle="w-[50%]"
           />
           <Card
+            href="/explore/masternodes"
             title={t("EcosystemSection.cards.governanceTitle")}
             subTitle={t("EcosystemSection.cards.governanceSubtitle")}
             customIconStyle={classNames(

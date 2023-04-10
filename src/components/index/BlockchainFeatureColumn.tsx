@@ -84,6 +84,7 @@ function FeatureIcon({
 
       <div className="ml-5 space-y-2 md:ml-0 md:mt-5 md:space-y-4">
         <h3
+          data-testid={`highlights-${item.title}-title`}
           className={classNames(
             "font-bold leading-5 text-dark-1000 transition duration-300 ease-in-out",
             {
@@ -93,7 +94,10 @@ function FeatureIcon({
         >
           {t(`BlockchainFeatureSection.${item.title}.title`)}
         </h3>
-        <div className="text-dark-700 text-sm md:text-base font-desc">
+        <div
+          data-testid={`highlights-${item.title}-desc`}
+          className="text-dark-700 text-sm md:text-base font-desc"
+        >
           {t(`BlockchainFeatureSection.${item.title}.desc`)}
         </div>
       </div>

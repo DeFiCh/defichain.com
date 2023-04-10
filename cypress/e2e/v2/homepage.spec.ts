@@ -21,6 +21,25 @@ context("/ on macbook-16", () => {
     );
   });
 
+  it("should have Blockchain feature section highlights", () => {
+    const textAreas = ["title", "desc"];
+    textAreas.forEach((area) => {
+      cy.get(`[data-testid='highlights-THROUGHPUT-${area}']`).should(
+        "be.visible"
+      );
+      cy.get(`[data-testid='highlights-SECURITY-${area}']`).should(
+        "be.visible"
+      );
+      cy.get(`[data-testid='highlights-IMMUTABILITY-${area}']`).should(
+        "be.visible"
+      );
+      cy.get(`[data-testid='highlights-DEVELOPMENT-${area}']`).should(
+        "be.visible"
+      );
+      cy.get(`[data-testid='highlights-VARIETY-${area}']`).should("be.visible");
+    });
+  });
+
   // No TC
   it("should have Get DFI button", () => {
     cy.findByTestId("header-getDfi-button").click();

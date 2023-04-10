@@ -23,20 +23,19 @@ context("/ on macbook-16", () => {
 
   it("should have Blockchain feature section highlights", () => {
     const textAreas = ["title", "desc"];
+    const features = [
+      "THROUGHPUT",
+      "SECURITY",
+      "IMMUTABILITY",
+      "DEVELOPMENT",
+      "VARIETY",
+    ];
     textAreas.forEach((area) => {
-      cy.get(`[data-testid='highlights-THROUGHPUT-${area}']`).should(
-        "be.visible"
-      );
-      cy.get(`[data-testid='highlights-SECURITY-${area}']`).should(
-        "be.visible"
-      );
-      cy.get(`[data-testid='highlights-IMMUTABILITY-${area}']`).should(
-        "be.visible"
-      );
-      cy.get(`[data-testid='highlights-DEVELOPMENT-${area}']`).should(
-        "be.visible"
-      );
-      cy.get(`[data-testid='highlights-VARIETY-${area}']`).should("be.visible");
+      features.forEach((feature) => {
+        cy.get(`[data-testid='highlights-${feature}-${area}']`).should(
+          "be.visible"
+        );
+      });
     });
   });
 

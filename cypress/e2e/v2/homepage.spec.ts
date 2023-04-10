@@ -1,11 +1,35 @@
 context("/ on macbook-16", () => {
   before(() => {
-    cy.visit("/");
+    cy.viewport("macbook-16");
   });
 
   beforeEach(() => {
-    cy.viewport("macbook-16");
-    cy.interceptGeckoApi();
+    cy.visit("/");
+  });
+
+  // TODO
+  it.skip("should have Explore section dropdown elements", () => {
+    cy.findByTestId("header-dropDownItem-explore").trigger("mouseover");
+    cy.findByTestId("explore-dropDownItems-$DFI").should("be.visible");
+  });
+
+  // No TC
+  it("should have Get DFI button", () => {
+    cy.findByTestId("header-getDfi-button").click();
+    cy.url().should("include", "/explore/dfi#get-dfi");
+  });
+
+  // No TC
+  it("should have expected Header title and description", () => {
+    cy.findByTestId("header-title").should(
+      "have.text",
+      "Connecting old and new worlds"
+    );
+
+    cy.findByTestId("header-desc").should(
+      "have.text",
+      "A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone."
+    );
   });
 
   // QA-813 - TC2 - Step 2 & 3

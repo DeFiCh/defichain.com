@@ -50,24 +50,25 @@ export function Card({
     >
       <Link
         href={href}
-        className={classNames(
-          "w-full h-full p-6 rounded-[15px] border-[0.5px] flex flex-col",
-          "border-dark-200 bg-dark-00",
-          "duration-1000 hover:transition hover:ease-in delay-250"
-        )}
-      >
-        <div className={classNames(customTextStyle)}>
-          <span
-            className={classNames(
-              "md:w-full text-2xl tracking-[-2%]",
-              "whitespace-pre-line",
-              {
-                "accent-dfc-gradient-text":
-                  hoverState !== undefined && hoverState === id,
-              }
-            )}
-          >
-            {title}
+        data-testid={`ecosystem-link-${title.split(" ").pop()}`}
+          className={classNames(
+            "w-full h-full p-6 rounded-[15px] border-[0.5px] flex flex-col",
+            "border-dark-200 bg-dark-00",
+            "duration-1000 hover:transition hover:ease-in delay-250"
+          )}
+        >
+          <div className={classNames(customTextStyle)}>
+            <span
+              className={classNames(
+                "md:w-full text-2xl tracking-[-2%]",
+                "whitespace-pre-line",
+                {
+                  "accent-dfc-gradient-text":
+                    hoverState !== undefined && hoverState === id,
+                }
+              )}
+            >
+              {title}
           </span>
           <div
             className={classNames(

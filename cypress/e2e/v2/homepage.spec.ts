@@ -13,6 +13,41 @@ context("/ on macbook-16", () => {
     cy.findByTestId("explore-dropDownItems-$DFI").should("be.visible");
   });
 
+  it("should have Ecosystem links", () => {
+    const ecosystemLinks = [
+      // todo: move to fixtures
+      {
+        title: "All about $DFI",
+        testid: "$DFI",
+        link: "/explore/dfi",
+      },
+      {
+        title: "Trade with DEX",
+        testid: "DEX",
+        link: "/explore/dex",
+      },
+      {
+        title: "Wallets for DeFiChain",
+        testid: "DeFiChain",
+        link: "explore/wallets",
+      },
+      {
+        title: "Governance: \n" + "Own a Masternode",
+        testid: "Masternode",
+        link: "explore/masternodes",
+      },
+    ];
+
+    ecosystemLinks.forEach((ecosystemItem) => {
+      cy.findByTestId(`ecosystem-link-${ecosystemItem.testid}`)
+        .scrollIntoView()
+        .should("contain", ecosystemItem.title)
+        .and("be.visible")
+        .and("have.attr", "href")
+        .and("include", ecosystemItem.link);
+    });
+  });
+
   it("should have Blockchain feature section title and description", () => {
     cy.findByTestId("blockchainFeatureSection-text").should(
       "have.text",

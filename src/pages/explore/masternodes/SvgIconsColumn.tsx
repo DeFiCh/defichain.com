@@ -35,6 +35,7 @@ import {
 interface BlockchainFeatureItemProp {
   title: string;
   desc: string;
+  icon: IconTypes;
 }
 
 export function SvgIconsColumn({
@@ -81,8 +82,8 @@ function FeatureIcon({
   customClassStyle?: string;
   customParagraphStyle?: string;
 }) {
-  const Icon = iconMapping[item.title] as React.ElementType;
-  // const IconOnHover = iconMapping[`${item.title}_hover`] as React.ElementType;
+  const Icon = iconMapping[item.icon] as React.ElementType;
+  // const IconOnHover = iconMapping[`${item.icon}_hover`] as React.ElementType;
   // const [isHovering, setIsHovering] = useState(false);
 
   // const handleMouseOver = () => {
@@ -105,7 +106,7 @@ function FeatureIcon({
       // onBlur={handleMouseOut}
     >
       <div className="w-[50px]">
-        <Icon className="w-fit h-[50px]" id={`${id}-${item.title}`} />
+        <Icon className="w-fit h-[50px]" id={`${id}-${item.icon}`} />
         {/* {isHovering && Icon ? (
           <IconOnHover className="w-[50px] md:w-fit h-[50px]" />
         ) : (
@@ -140,24 +141,35 @@ function FeatureIcon({
   );
 }
 
+export enum IconTypes {
+  PASSIVE_INCOME = "PASSIVE INCOME",
+  STAKING_REWARDS = "STAKING REWARDS",
+  NETWORK_SECURITY = "NETWORK SECURITY",
+  GOVERNANCE = "GOVERNANCE",
+  TRADE_ASSETS = "TRADE ASSETS",
+  WIDE_SELECTION_OF_TOKENS = "WIDE SELECTION OF TOKENS",
+  PROFIT_FROM_LIQUIDITY_MINING = "PROFIT FROM LIQUIDITY MINING",
+  ADVANCED_SWAPS = "ADVANCED SWAPS",
+}
+
 const iconMapping = {
   // /explore - masternode items
-  "PASSIVE INCOME": PassiveIncomeIcon,
-  "PASSIVE INCOME_hover": PassiveIncomeIconHover,
-  "STAKING REWARDS": StakingRewardsIcon,
-  "STAKING REWARDS_hover": StakingRewardsIconHover,
-  "NETWORK SECURITY": NetworkSecurityIcon,
-  "NETWORK SECURITY_hover": NetworkSecurityIconHover,
-  GOVERNANCE: GovernanceIcon,
-  GOVERNANCE_hover: GovernanceIconHover,
+  [IconTypes.PASSIVE_INCOME]: PassiveIncomeIcon,
+  [`${IconTypes.PASSIVE_INCOME}_hover`]: PassiveIncomeIconHover,
+  [IconTypes.STAKING_REWARDS]: StakingRewardsIcon,
+  [`${IconTypes.STAKING_REWARDS}_hover`]: StakingRewardsIconHover,
+  [IconTypes.NETWORK_SECURITY]: NetworkSecurityIcon,
+  [`${IconTypes.NETWORK_SECURITY}_hover`]: NetworkSecurityIconHover,
+  [IconTypes.GOVERNANCE]: GovernanceIcon,
+  [`${IconTypes.GOVERNANCE}_hover`]: GovernanceIconHover,
 
   // /explore - Why DEX items
-  "TRADE ASSETS": TradeAssetsIcon,
-  "TRADE ASSETS_hover": TradeAssetsIconHover,
-  "WIDE SELECTION OF TOKENS": WideSelectionIcon,
-  "WIDE SELECTION OF TOKENS_hover": WideSelectionIconHover,
-  "MINE LIQUIDITY FROM POOLS": MineLiquidityIcon,
-  "MINE LIQUIDITY FROM POOLS_hover": MineLiquidityIconHover,
-  "ADVANCED SWAPS": AdvancedSwapsIcon,
-  "ADVANCED SWAPS_hover": AdvancedSwapsIconHover,
+  [IconTypes.TRADE_ASSETS]: TradeAssetsIcon,
+  [`${IconTypes.TRADE_ASSETS}_hover`]: TradeAssetsIconHover,
+  [IconTypes.WIDE_SELECTION_OF_TOKENS]: WideSelectionIcon,
+  [`${IconTypes.WIDE_SELECTION_OF_TOKENS}_hover`]: WideSelectionIconHover,
+  [IconTypes.PROFIT_FROM_LIQUIDITY_MINING]: MineLiquidityIcon,
+  [`${IconTypes.PROFIT_FROM_LIQUIDITY_MINING}_hover`]: MineLiquidityIconHover,
+  [IconTypes.ADVANCED_SWAPS]: AdvancedSwapsIcon,
+  [`${IconTypes.ADVANCED_SWAPS}_hover`]: AdvancedSwapsIconHover,
 };

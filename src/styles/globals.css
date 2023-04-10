@@ -14,7 +14,6 @@
 @tailwind utilities;
 
 body {
-  overflow-x: clip;
   width: 100%;
   box-sizing: border-box;
 }
@@ -207,7 +206,7 @@ html {
   height: 300px;
 }
 
-#invest {
+#dfi {
   position: absolute;
   width: 316px;
   top: 60px;
@@ -222,7 +221,7 @@ html {
   --yLength: 10px;
 }
 
-#invest_hover {
+#dfi_hover {
   position: absolute;
   width: 316px;
   top: 60px;
@@ -236,7 +235,7 @@ html {
   --yLength: 10px;
 }
 
-#masternode {
+#dex {
   position: absolute;
   left: 50px;
   bottom: 10px;
@@ -246,48 +245,47 @@ html {
   animation-play-state: paused;
 }
 
-#masternode_hover {
+#dex_hover {
   animation: fade-out 0.3s ease-in;
   animation-play-state: paused;
 }
 
-#quantum_donut {
-  /* original position of unhovered donut, dependent on customIconStyle passed into Card component */
+#cube {
   position: absolute;
-  width: 266px;
-  right: -40px;
-  top: 450px;
-
-  transform-origin: 20% 50%;
-  animation: transform-out 0.3s both;
-  animation-delay: 0s;
+  width: 261.07px;
+  top: 60px;
+  left: 272px;
+  animation: transform-in 0.3s, width-in 0.3s;
   animation-play-state: paused;
-  --rotateDeg: -38.35deg;
-  --xLength: 20px;
-  --yLength: -35px;
-}
-
-#quantum_hover_donut {
-  position: absolute;
-  width: 250px;
-  right: -40px;
-  top: 450px;
-
   transform-box: fill-box;
-  transform-origin: 20% 50%;
-  animation: transform-into 0.3s linear both;
+  transform-origin: 40% 60%;
   animation-play-state: paused;
-  --rotateDeg: -38.35deg;
-  --xLength: 20px;
-  --yLength: 0px;
+  --rotateDeg: -45deg;
+  --xLength: -40px;
+  --yLength: 10px;
 }
 
-.dapp-card #invest,
-#invest_hover,
-#masternode,
-#masternode_hover,
-#quantum_donut,
-#quantum_hover_donut {
+#cube_hover {
+  position: absolute;
+  width: 380px;
+  top: 60px;
+  left: 300px;
+  /* transform-box: fill-box; */
+  transform-origin: 40% 60%;
+  animation: transform 0.3s linear both;
+  animation-play-state: paused;
+  --rotateDeg: -40deg;
+  --xLength: -50px;
+  --yLength: 10px;
+}
+
+
+.dapp-card #dfi,
+#dfi_hover,
+#dex,
+#dex_hover,
+#cube,
+#cube_hover {
   animation-play-state: running;
 }
 
@@ -361,6 +359,15 @@ html {
   100% {
     opacity: 1;
     transform: translateZ(0px);
+  }
+}
+
+@keyframes width-in {
+  0% {
+    width: 380px;
+  }
+  100% {
+    width: 261.07px;
   }
 }
 

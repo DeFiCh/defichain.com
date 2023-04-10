@@ -15,6 +15,7 @@
       "build": "Bauen",
       "community": "Community"
     },
+    "comingSoon": "DEMNÄCHST",
     "explore": {
       "info": [
         {
@@ -26,7 +27,7 @@
             },
             {
               "title": "Dezentrale Börse",
-              "subtitle": "Maximiere dein Vermögen"
+              "subtitle": "Handeln, Arbitrieren und Verdienen"
             },
             {
               "title": "Wallets",
@@ -34,7 +35,7 @@
             },
             {
               "title": "Masternodes",
-              "subtitle": "DefiChain-Staking"
+              "subtitle": "Entscheide über die Zukunft von DeFiChain"
             }
           ]
         },

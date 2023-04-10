@@ -1,6 +1,9 @@
 import { SectionGridLayout } from "@components/commons/SectionGridLayout";
 import { useTranslation } from "next-i18next";
-import { SvgIconsColumn } from "pages/explore/masternodes/SvgIconsColumn";
+import {
+  IconTypes,
+  SvgIconsColumn,
+} from "pages/explore/masternodes/SvgIconsColumn";
 
 export function WhyDEXSection(): JSX.Element {
   const { t } = useTranslation("page-explore-dex");
@@ -9,18 +12,22 @@ export function WhyDEXSection(): JSX.Element {
     {
       title: t("whyDEX.trade.title"),
       desc: t("whyDEX.trade.desc"),
+      icon: IconTypes.TRADE_ASSETS,
     },
     {
       title: t("whyDEX.wideSelection.title"),
       desc: t("whyDEX.wideSelection.desc"),
+      icon: IconTypes.WIDE_SELECTION_OF_TOKENS,
     },
     {
       title: t("whyDEX.mineLiquidity.title"),
       desc: t("whyDEX.mineLiquidity.desc"),
+      icon: IconTypes.PROFIT_FROM_LIQUIDITY_MINING,
     },
     {
       title: t("whyDEX.advancedSwaps.title"),
       desc: t("whyDEX.advancedSwaps.desc"),
+      icon: IconTypes.ADVANCED_SWAPS,
     },
   ];
   return (

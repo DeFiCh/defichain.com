@@ -89,14 +89,16 @@ export function Default(props: PropsWithChildren<any>): JSX.Element | null {
         <WhaleProvider>
           <div className="bg-dark-00 relative z-0">
             <Header />
-            <main className="flex-grow text-dark-1000">{props.children}</main>
-            <div
-              className={classNames(
-                "absolute z-[-1] bg-top bg-no-repeat inset-0",
-                bgPicture
-              )}
-            />
-            <Footer />
+            <div className="overflow-x-hidden">
+              <main className="flex-grow text-dark-1000">{props.children}</main>
+              <div
+                className={classNames(
+                  "absolute z-[-1] bg-top bg-no-repeat inset-0",
+                  bgPicture
+                )}
+              />
+              <Footer />
+            </div>
           </div>
         </WhaleProvider>
       )}

@@ -8,6 +8,7 @@ import { StatsDisplay } from "@components/index/StatisticsDisplay";
 import { ReadyForFlexibility } from "@components/index/ReadyForFlexibility";
 import { Container } from "@components/commons/Container";
 import { StartExploringButton } from "@components/commons/StartExploringButton";
+import { YearAheadRoadMapSection } from "@components/index/RoadMapSection";
 import { BlogPostsSection } from "@components/index/blogPosts/BlogPostsSection";
 import * as prismic from "@prismicio/client";
 
@@ -25,6 +26,7 @@ export default function HomePage({ blogPosts }): JSX.Element {
       <BlockchainFeaturesSection />
       <DeFiChainEcoSystemSection />
       <ReadyForFlexibility />
+      <YearAheadRoadMapSection />
       <BlogPostsSection blogPosts={blogPosts} />
     </>
   );

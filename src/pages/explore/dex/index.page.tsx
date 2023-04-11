@@ -2,7 +2,7 @@ import { SSRConfig, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { HeroBanner, HeroBannerBg } from "@components/commons/HeroBanner";
 import { DexStatisticsDisplay } from "./_components/DexStatisticsDisplay";
-import { WhyDEXSection } from "../dfi/_components/WhyDEXSection";
+import { WhyDEXSection } from "./_components/WhyDEXSection";
 
 export default function ExploreWallets() {
   const { t } = useTranslation("page-explore-dex");
@@ -14,7 +14,7 @@ export default function ExploreWallets() {
         desc={t("heroBanner.desc")}
         heroBg={HeroBannerBg.DIAMOND_COIN}
         hasStartExploringButton
-        startExploringJumpLink=""
+        startExploringJumpLink="#explore-dex-statistics-display"
       />
       <DexStatisticsDisplay />
       <WhyDEXSection />

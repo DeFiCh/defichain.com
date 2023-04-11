@@ -54,7 +54,7 @@ export function MasternodesStatisticsDisplay() {
     <Container className="lg:mt-[69px] md:mt-[33px] mt-0 lg:mb-[180px] mb-[72px] relative">
       <StatisticPanel
         displayItem={statsItems}
-        displayStripCustomStyle="scroll-mt-[200px]"
+        displayStripCustomStyle="lg:-scroll-mt-[150px] -scroll-mt-[100px]"
         displayId="statistics_display_masternodes"
       />
       <div

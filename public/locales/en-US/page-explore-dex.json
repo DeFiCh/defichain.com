@@ -6,21 +6,17 @@
   },
   "statisticsDisplay": {
     "totalValueLocked": {
-      "title": "TOTAL VALUE LOCKED",
-      "desc": "Data from DeFiScan"
+      "title": "TOTAL VALUE LOCKED"
     },
     "tradingVolume": {
-      "title": "TRADING VOLUME (24H)",
-      "desc": "Data from DeFiScan"
+      "title": "TRADING VOLUME (24H)"
     },
     "tokens": {
-      "title": "TOKENS",
-      "desc": "Crypto • dStocks • ETFs"
+      "title": "TOKENS"
     }
   },
   "whyDEX": {
     "title": "Why DEX?",
-    "subtitle": "FEATURES OF DEFICHAIN DEX",
     "desc": "Experience trustless trading, arbitrage, and earnings with DeFiChain DEX's wide array of liquidity pools.",
     "button": "Explore DEX",
     "trade": {

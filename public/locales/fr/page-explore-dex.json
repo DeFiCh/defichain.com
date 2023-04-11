@@ -1,0 +1,39 @@
+{
+  "heroBanner": {
+    "title": "Échange décentralisé",
+    "subtitle": "Négocier sans effort avec le DEX de DeFiChain",
+    "desc": "Négocier, arbitrer et gagner de l'argent sur un DEX qui vous donne un contrôle total."
+  },
+  "statisticsDisplay": {
+    "totalValueLocked": {
+      "title": "VALEUR TOTALE BLOQUÉE"
+    },
+    "tradingVolume": {
+      "title": "VOLUME D'ÉCHANGE (24 hrs.)"
+    },
+    "tokens": {
+      "title": "TOKENS"
+    }
+  },
+  "whyDEX": {
+    "title": "Pourquoi DEX ?",
+    "desc": "Faites l'expérience d'un négoce, d'un arbitrage et de gains non fondés sur la confiance grâce au large éventail de pools de liquidité du DEX de DeFiChain.",
+    "button": "Explorer DEX",
+    "trade": {
+      "title": "ÉCHANGER DES ACTIFS",
+      "desc": "Échanger des tokens en toute transparence, avec facilité et commodité."
+    },
+    "wideSelection": {
+      "title": "VASTE SÉLECTION DE TOKENS",
+      "desc": "Découvrez des possibilités infinies avec plus de 60 dTokens - votre clé pour un terrain de jeu DeFi diversifié."
+    },
+    "mineLiquidity": {
+      "title": "PROFITER DU LIQUIDITY MINING",
+      "desc": "Contribuer à la liquidité, gagner des récompenses et retirer quand l'on souhaite."
+    },
+    "advancedSwaps": {
+      "title": "ÉCHANGES AVANCÉS",
+      "desc": "Des échanges multi-pools instantanés ou des échanges de dTokens basés sur les prix futurs à portée de main."
+    }
+  }
+}

@@ -108,30 +108,32 @@ export function HeaderNavLinkItem({
       )}
     >
       {Icon && (
-        <Icon
-          hover={isMouseEnter}
-          id={dfiId}
-          className={classNames(
-            "group-hover:duration-500 group-hover:transition group-active:opacity-70 place-self-center",
-            iconsStrokes.some((element) => icon!.includes(element))
-              ? "group-hover:stroke-brand-100"
-              : "fill-dark-700 group-hover:fill-brand-100",
-            {
-              "!stroke-brand-100":
-                router.pathname.includes(href) &&
-                hoverState === undefined &&
-                dimension.width <= 1023 &&
-                stroke,
-            },
-            {
-              "!fill-brand-100":
-                router.pathname.includes(href) &&
-                hoverState === undefined &&
-                dimension.width <= 1023 &&
-                !stroke,
-            }
-          )}
-        />
+        <div>
+          <Icon
+            hover={isMouseEnter}
+            id={dfiId}
+            className={classNames(
+              "group-hover:duration-500 group-hover:transition group-active:opacity-70 place-self-center",
+              iconsStrokes.some((element) => icon!.includes(element))
+                ? "group-hover:stroke-brand-100"
+                : "fill-dark-700 group-hover:fill-brand-100",
+              {
+                "!stroke-brand-100":
+                  router.pathname.includes(href) &&
+                  hoverState === undefined &&
+                  dimension.width <= 1023 &&
+                  stroke,
+              },
+              {
+                "!fill-brand-100":
+                  router.pathname.includes(href) &&
+                  hoverState === undefined &&
+                  dimension.width <= 1023 &&
+                  !stroke,
+              }
+            )}
+          />
+        </div>
       )}
 
       <div className="flex flex-col">

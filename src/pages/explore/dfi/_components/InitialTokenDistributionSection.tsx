@@ -3,6 +3,7 @@ import { SectionTitle } from "@components/commons/SectionTitle";
 import classNames from "classnames";
 import { Button } from "@components/commons/Buttons";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 import { ProgressBar } from "./ProgressBar";
 import {
   InitialTokenSectionIcons,
@@ -11,6 +12,7 @@ import {
 
 export function InitialTokenDistributionSection() {
   const { t } = useTranslation("page-explore-dfi");
+  const router = useRouter();
 
   return (
     <Container className="mb-[96px] md:mb-[108px] lg:mb-60">
@@ -60,7 +62,11 @@ export function InitialTokenDistributionSection() {
                 <span className="font-desc text-dark-700">,</span>
                 <span className="font-desc text-dark-700">
                   &nbsp;
-                  {t("initialTokenDistributionSection.initialSupply.descAnd")}
+                  {router.locale === "zh-Hans" || router.locale === "zh-Hant"
+                    ? ","
+                    : t(
+                        "initialTokenDistributionSection.initialSupply.descAnd"
+                      )}
                   &nbsp;
                 </span>
                 <span className="text-dark-1000 font-desc font-semibold">

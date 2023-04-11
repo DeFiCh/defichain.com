@@ -2,6 +2,7 @@ import { ecosystemLinks, resourcesLinks } from "../../fixture/homepage.config";
 
 context("/ on macbook-16", () => {
   before(() => {
+    // TODO: add mobile
     cy.viewport("macbook-16");
   });
 

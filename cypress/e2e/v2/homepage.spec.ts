@@ -1,3 +1,5 @@
+import { ecosystemLinks } from "../../fixture/homepage.config";
+
 context("/ on macbook-16", () => {
   before(() => {
     cy.viewport("macbook-16");
@@ -13,34 +15,26 @@ context("/ on macbook-16", () => {
     cy.findByTestId("explore-dropDownItems-$DFI").should("be.visible");
   });
 
-  it("should have Ecosystem links", () => {
-    const ecosystemLinks = [
-      // todo: move to fixtures
-      {
-        title: "All about $DFI",
-        testid: "$DFI",
-        link: "/explore/dfi",
-      },
-      {
-        title: "Trade with DEX",
-        testid: "DEX",
-        link: "/explore/dex",
-      },
-      {
-        title: "Wallets for DeFiChain",
-        testid: "DeFiChain",
-        link: "explore/wallets",
-      },
-      {
-        title: "Governance: \n" + "Own a Masternode",
-        testid: "Masternode",
-        link: "explore/masternodes",
-      },
-    ];
+  it("should have clickable Explore DeFi Meta Chain button", () => {
+    cy.findByTestId("explore-dmc-button-Explore DeFi Meta Chain")
+      .should("be.visible")
+      .and("have.attr", "href")
+      .and("include", "https://meta.defichain.com");
+  });
 
+  it("should have clickable View all articles button", () => {
+    cy.findByTestId("explore-dmc-button-View all articles")
+      .should("be.visible")
+      .and("have.attr", "href")
+      .and("include", "https://blog.defichain.com");
+  });
+
+  it("should have Ecosystem links", () => {
     ecosystemLinks.forEach((ecosystemItem) => {
+      cy.findByTestId(
+        `ecosystem-link-${ecosystemItem.testid}`
+      ).scrollIntoView();
       cy.findByTestId(`ecosystem-link-${ecosystemItem.testid}`)
-        .scrollIntoView()
         .should("contain", ecosystemItem.title)
         .and("be.visible")
         .and("have.attr", "href")
@@ -78,6 +72,14 @@ context("/ on macbook-16", () => {
   it("should have Get DFI button", () => {
     cy.findByTestId("header-getDfi-button").click();
     cy.url().should("include", "/explore/dfi#get-dfi");
+  });
+
+  // No TC
+  it("should have Blog posts with links", () => {
+    cy.get("[data-testid='blog-post-container-link']")
+      .should("be.visible")
+      .and("have.attr", "href")
+      .and("include", "https://blog.defichain.com/");
   });
 
   // No TC

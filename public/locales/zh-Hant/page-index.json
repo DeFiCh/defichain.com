@@ -147,6 +147,27 @@
     "title": "去中心化與分散式",
     "desc": "超過10,000 多個主節點在DeFiChain 社區運行 ，並分佈在全球各地。"
   },
+  "YearAheadRoadMapSection": {
+    "label": "前方路途",
+    "title": "里程碑",
+    "cards": [
+      {
+        "title": "Meta Chain 的 DevNet",
+        "description": "",
+        "image": "/assets/img/roadmap/DevNet.png"
+      },
+      {
+        "title": "Meta Chain 測試網",
+        "description": "",
+        "image": "/assets/img/roadmap/TestNet.png"
+      },
+      {
+        "title": "主網絡啟動",
+        "description": "",
+        "image": "/assets/img/roadmap/MainNet.png"
+      }
+    ]
+  },
   "BlockchainFeatureSection": {
     "title": "專為去中心化金融設計",
     "subtitle": "非圖靈完備區塊鏈",
@@ -172,5 +193,10 @@
       "title": "品類",
       "desc": "提供廣泛的加密經濟金融業務"
     }
+  },
+  "BlogPostsSection": {
+    "title": "DeFiChain \nin the news",
+    "label": "DEFICHAIN BLOG",
+    "button": "View all articles"
   }
 }

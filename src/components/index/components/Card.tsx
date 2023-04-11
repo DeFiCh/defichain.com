@@ -14,7 +14,6 @@ import Link from "next/link";
 export function Card({
   title,
   subTitle,
-  hoverTitle,
   customIconStyle,
   id,
   href,
@@ -25,7 +24,6 @@ export function Card({
   customTextStyle?: string;
   title: string;
   subTitle: string;
-  hoverTitle?: string;
   customIconStyle?: string;
 }): JSX.Element {
   const [hoverState, setHoverState] = useState<string | undefined>(undefined);
@@ -71,9 +69,7 @@ export function Card({
                 }
               )}
             >
-              {hoverTitle && hoverState !== undefined && hoverState === id
-                ? hoverTitle
-                : title}
+              {title}
             </span>
             <div
               className={classNames(

@@ -40,7 +40,6 @@
       "walletsTitle": "Wallets for DeFiChain",
       "walletsSubtitle": "Get Started",
       "governanceTitle": "Governance: \nOwn a Masternode",
-      "governanceHoverTitle": "Own a \nMasternode",
       "governanceSubtitle": "Get Started"
     }
   },
@@ -167,12 +166,12 @@
     "title": "Milestones",
     "cards": [
       {
-        "title": "DevNet for MetaChain",
+        "title": "DevNet for Meta Chain",
         "description": "",
         "image": "/assets/img/roadmap/DevNet.png"
       },
       {
-        "title": "TestNet for MetaChain",
+        "title": "TestNet for Meta Chain",
         "description": "",
         "image": "/assets/img/roadmap/TestNet.png"
       },

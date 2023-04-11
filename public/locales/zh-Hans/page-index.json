@@ -147,6 +147,27 @@
     "title": "去中心化与分散式",
     "desc": "超过10,000 多个主节点在DeFiChain 社区运行 ，并分布在全球各地。"
   },
+  "YearAheadRoadMapSection": {
+    "label": "前方路途",
+    "title": "里程碑",
+    "cards": [
+      {
+        "title": "Meta Chain 的 DevNet",
+        "description": "",
+        "image": "/assets/img/roadmap/DevNet.png"
+      },
+      {
+        "title": "Meta Chain 测试网",
+        "description": "",
+        "image": "/assets/img/roadmap/TestNet.png"
+      },
+      {
+        "title": "主网络启动",
+        "description": "",
+        "image": "/assets/img/roadmap/MainNet.png"
+      }
+    ]
+  },
   "BlockchainFeatureSection": {
     "title": "专为去中心化金融设计",
     "subtitle": "非图灵完备区块链",

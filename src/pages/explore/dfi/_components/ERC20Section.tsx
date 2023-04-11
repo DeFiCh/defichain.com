@@ -1,4 +1,4 @@
-import { Button } from "@components/commons/Buttons";
+import { Button, LinkButton } from "@components/commons/Buttons";
 import { Container } from "@components/commons/Container";
 import classNames from "classnames";
 import { useTranslation } from "next-i18next";
@@ -35,16 +35,12 @@ export default function ERC20Section(): JSX.Element {
           className="lg:px-[72.5px] md:px-[130px] py-3 lg:py-4"
           href="https://blog.defichain.com/defichains-first-move-to-become-an-interoperable-defi-powerhouse/"
         />
-        <a
-          rel="noreferrer"
-          target="_blank"
+        <LinkButton
+          buttonText={t("erc20Section.contract")}
           href="https://etherscan.io/token/0x8Fc8f8269ebca376D046Ce292dC7eaC40c8D358A"
-          className={classNames(
-            "pt-4 text-dark-800 text-sm md:text-base font-semibold hover:accent-dfc-gradient-text cursor-pointer"
-          )}
-        >
-          <p>{t("erc20Section.contract")}</p>
-        </a>
+          diagonalArrow
+          className="pt-4 text-dark-800 text-sm md:text-base font-semibold hover:accent-dfc-gradient-text cursor-pointer"
+        />
       </div>
       <div
         className={classNames(

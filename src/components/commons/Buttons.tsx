@@ -1,6 +1,7 @@
-import { HTMLAttributeAnchorTarget, PropsWithChildren, useState } from "react";
+import { HTMLAttributeAnchorTarget, PropsWithChildren } from "react";
 import classNames from "classnames";
 import { IoMdArrowRoundForward } from "react-icons/io";
+import { RiArrowRightUpLine } from "react-icons/ri";
 import Link from "next/link";
 import { FiArrowUpRight } from "react-icons/fi";
 
@@ -209,13 +210,10 @@ export function LinkButton({
   horizontalArrow?: boolean;
   diagonalArrow?: boolean;
 }) {
-  const [isMouseEnter, setIsMouseEnter] = useState(false);
   return (
-    <a
+    <Link
       rel="noreferrer"
       target="_blank"
-      onMouseEnter={() => setIsMouseEnter(true)}
-      onMouseLeave={() => setIsMouseEnter(false)}
       href={href}
       className={classNames(
         "hover:text-brand-100 flex flex-row gap-x-2 items-center",
@@ -226,12 +224,9 @@ export function LinkButton({
       )}
     >
       {buttonText}
-      {(horizontalArrow || diagonalArrow) && isMouseEnter && (
-        <IoMdArrowRoundForward
-          className={classNames({ "-rotate-45": diagonalArrow })}
-        />
-      )}
-    </a>
+      {horizontalArrow && <IoMdArrowRoundForward />}
+      {diagonalArrow && <RiArrowRightUpLine size={20} />}
+    </Link>
   );
 }
 

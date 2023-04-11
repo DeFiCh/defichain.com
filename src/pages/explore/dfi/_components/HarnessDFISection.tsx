@@ -90,7 +90,7 @@ export default function HarnessDFISection() {
       </div>
       <div
         className={classNames(
-          "absolute bg-contain bg-no-repeat ",
+          "absolute bg-contain bg-no-repeat z-[-1]",
           "lg:h-[45px] lg:w-[45px] lg:right-[2.3em]",
           "md:h-8 md:w-8 md:-right-[0.25em] md:bottom-[8em]",
           "h-7 w-7 -right-[0.8em] bottom-[15em]",

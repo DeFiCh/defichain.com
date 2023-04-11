@@ -33,14 +33,14 @@
     "label": "EINSTIEG IN DAS DEFICHAIN-ÖKOSYSTEM",
     "title": "Ständige Weiterentwicklung, um zu bauen, zu liefern und zu übertreffen",
     "cards": {
-      "investTitle": "Investieren, Handeln und Verdienen mit DeFiChain",
-      "investSubtitle": "Mehr erfahren",
-      "masternodeTitle": "Einen Masternode besitzen",
-      "masternodeSubtitle": "Mehr erfahren",
-      "dappsTitle": "dApps für DeFiChain",
-      "dappsSubtitle": "Erkunden",
-      "quantumTitle": "Connecting blockchains with Quantum",
-      "quantumSubtitle": "Mehr erfahren"
+      "dfiTitle": "Alles über $DFI",
+      "dfiSubtitle": "Mehr Erfahren",
+      "tradeWithDexTitle": "Handeln auf der DEX",
+      "tradeWithDexSubtitle": "Starten",
+      "walletsTitle": "Wallets für DeFiChain",
+      "walletsSubtitle": "Starten",
+      "governanceTitle": "Gouvernance : \nEinen Masternode besitzen",
+      "governanceSubtitle": "Starten"
     }
   },
   "CardsSection": {

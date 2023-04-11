@@ -1,4 +1,4 @@
-import { ecosystemLinks } from "../../fixture/homepage.config";
+import { ecosystemLinks, resourcesLinks } from "../../fixture/homepage.config";
 
 context("/ on macbook-16", () => {
   before(() => {
@@ -121,5 +121,19 @@ context("/ on macbook-16", () => {
       .last()
       .parent()
       .should("contain", "Build");
+  });
+
+  it.only("should have Footer Explore links", () => {
+    ecosystemLinks.forEach((ecosystemItem) => {
+      cy.findByTestId(`footer-${ecosystemItem.footerTestid}`)
+        .should("be.visible")
+        .should("have.attr", "href", ecosystemItem.link);
+    });
+
+    resourcesLinks.forEach((resourcesItem) => {
+      cy.findByTestId(`footer-${resourcesItem.footerTestid}`)
+        .should("be.visible")
+        .should("have.attr", "href", resourcesItem.link);
+    });
   });
 });

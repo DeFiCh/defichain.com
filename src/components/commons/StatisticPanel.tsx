@@ -85,6 +85,7 @@ function StatisticsPanelItem({
           "lg:w-full md:w-[316px] w-[135px] lg:text-center bg-clip-text text-transparent accent-gradient-2 font-bold leading-5",
           { "md:w-full md:text-center": isTabletHorizontal }
         )}
+        data-testid={`statistic-title-${title}`}
       >
         {title}
       </div>

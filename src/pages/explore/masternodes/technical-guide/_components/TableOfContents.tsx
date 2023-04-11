@@ -22,6 +22,7 @@ interface NestedHeadingsI extends HeadingsI {
  */
 function Headings({ headings, activeId, parentReference }) {
   const { t } = useTranslation("page-explore-masternodes");
+  console.log(t("technicalGuide.outline"));
 
   return (
     <ul>

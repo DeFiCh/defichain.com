@@ -17,7 +17,7 @@ import { SectionDescription } from "@components/commons/SectionDescription";
 import classNames from "classnames";
 import { getMDPageBySlug } from "../../utils/api";
 import { Post } from "./learn/utils/api";
-import TableOfContents from "../components/index/whitePaper/TableOfContents";
+import TableOfContents from "./whitePaper/TableOfContents";
 
 interface WhitePaperPageProps {
   props: {
@@ -33,29 +33,32 @@ interface WhitePaperPageProps {
 export default function WhitePaperPage({ post }): JSX.Element {
   const contentRef = useRef<HTMLDivElement>(null);
   return (
-    <div className="py-16 md:py-10 lg:py-16 border-b border-gray-800 border-opacity-50">
-      <Container className="flex flex-row gap-x-12 relative lg:pr-12">
-        <div className="block absolute w-[417px] h-[237px] top-[-158px] left-[-267px] md:top-[-42px] md:left-[-281px] lg:h-[297px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/mnTechnicalGuide/emptyCubeDesktop.png')]" />
-        <div className="hidden lg:block md:w-3/12 flex-1" />
-        <div className="flex flex-col w-full lg:w-9/12 md:px-6 lg:px-0">
-          <div
-            className={classNames("flex flex-col gap-y-5 w-full lg:w-[812px]")}
-          >
-            <SectionTitle text={post.title} />
-            <SectionSubTitle text={post.subtitle} />
-            <SectionDescription
-              text={post.description}
-              customStyle="!text-base !tracking-[.03em] lg:!tracking-normal lg:!text-xl lg:!leading-7"
-            />
+    <>
+      <div className="py-16 md:py-10 lg:py-16 border-b border-gray-800 border-opacity-50">
+        <Container className="flex flex-row gap-x-12 relative lg:pr-12">
+          <div className="block absolute w-[417px] h-[237px] top-[-158px] left-[-267px] md:top-[-42px] md:left-[-281px] lg:h-[297px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/mnTechnicalGuide/emptyCubeDesktop.png')]" />
+          <div className="hidden lg:block md:w-3/12 flex-1" />
+          <div className="flex flex-col w-full lg:w-9/12 md:px-6 lg:px-0">
+            <div
+              className={classNames(
+                "flex flex-col gap-y-5 w-full lg:w-[812px]"
+              )}
+            >
+              <SectionTitle text={post.title} />
+              <SectionSubTitle text={post.subtitle} />
+              <SectionDescription
+                text={post.description}
+                customStyle="!text-base !tracking-[.03em] lg:!tracking-normal lg:!text-xl lg:!leading-7"
+              />
+            </div>
           </div>
-        </div>
-      </Container>
-
+        </Container>
+      </div>
       <Container className="flex flex-row gap-x-12 lg:mb-[216px] lg:pr-12">
         <div className="hidden h-full sticky top-[100px] lg:block md:w-3/12 lg:pt-[64px] flex-1">
           <TableOfContents parentReference={contentRef} />
         </div>
-        <div className="flex flex-col w-full mt-12 mb-24 md:mb-16 lg:mb-10 lg:mt-0 lg:w-9/12">
+        <div className="flex flex-col w-full mt-6 mb-24 md:mt-8 lg:mb-10 lg:mt-0 lg:pt-[64px] lg:w-9/12">
           <div
             ref={contentRef}
             className={classNames(
@@ -67,7 +70,6 @@ export default function WhitePaperPage({ post }): JSX.Element {
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
               rehypePlugins={[
-                // rehypeSanitize,
                 rehypeSlug,
                 [
                   rehypeAutolinkHeadings,
@@ -86,44 +88,7 @@ export default function WhitePaperPage({ post }): JSX.Element {
           </div>
         </div>
       </Container>
-    </div>
-    // <>
-    //   <Head title={post.title} description={post.description} />
-    //   <div>
-
-    //           <SectionTitle text={post.subtitle} />
-    //           <SectionSubTitle text={post.title} />
-    //           <SectionDescription
-    //             text={post.description}
-    //             customStyle="!text-base !tracking-[.03em] lg:!tracking-normal lg:!text-xl lg:!leading-7"
-    //           />
-
-    //   </div>
-
-    // <Container>
-    //   <article className="text-dark-1000">
-    //     <ReactMarkdown
-    //       remarkPlugins={[remarkGfm]}
-    //       rehypePlugins={[
-    //         // rehypeSanitize,
-    //         rehypeSlug,
-    //         [
-    //           rehypeAutolinkHeadings,
-    //           {
-    //             behavior: "wrap",
-    //             properties: {
-    //               className: ["no-underline hover:underline"],
-    //             },
-    //           },
-    //         ],
-    //         [rehypeRaw]
-    //       ]}
-    //     >
-    //       {post.content}
-    //     </ReactMarkdown>
-    //   </article>
-    // </Container>
-    // </>
+    </>
   );
 }
 

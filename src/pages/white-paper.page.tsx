@@ -1,15 +1,12 @@
 import { UserConfig } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-// import { PageHeader } from "@components/commons/PageHeader";
 import { Container } from "@components/commons/Container";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-// import rehypeSanitize from "rehype-sanitize";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import React, { useRef } from "react";
 import { remark } from "remark";
-// import { Head } from "@components/commons/Head";
 import { SectionTitle } from "@components/commons/SectionTitle";
 import rehypeRaw from "rehype-raw";
 import { SectionSubTitle } from "@components/commons/SectionSubTitle";

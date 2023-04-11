@@ -89,6 +89,7 @@ context("/ on macbook-16", () => {
       "Connecting old and new worlds"
     );
 
+    // No TC
     cy.findByTestId("header-desc").should(
       "have.text",
       "A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone."

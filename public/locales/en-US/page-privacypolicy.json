@@ -1,0 +1,24 @@
+{
+  "Header": {
+    "sectionTitle": "PROTECTING YOUR PRIVACY",
+    "subtitle": "Privacy Policy",
+    "desc": "Discover our commitment to protecting your privacy through our strict privacy policy"
+  },
+  "content": {
+    "outline": "Outline",
+    "introduction": "Introduction",
+    "informationCollected": "Information Collected",
+    "whenCollected": "When is information collected?",
+    "useInformation": "Use of Information and details",
+    "security": "Security of your personal information",
+    "cookies": "Do you use cookies",
+    "thirdParty": "Third Party disclosure",
+    "websiteLinks": "Links to other websites",
+    "google": "Google",
+    "signals": "\"Do Not Track\" Signals",
+    "thirdPartyBehavioural": "Third Party Behavioural Tracking",
+    "accessInfo": "Access to, updating, and non-use of your personal information",
+    "changesToStatement": "Changes to this statement",
+    "contactInfo": "Contact Information"
+  }
+}

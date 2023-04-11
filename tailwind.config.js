@@ -14,7 +14,7 @@ module.exports = {
       sans: ['"Space Grotesk"', "sans-serif"],
       desc: ['"Montserrat"', "sans-serif"],
       mono: ['"Space Mono"', "monospace"],
-      code: ['"Source Code Pro"']
+      code: ['"Source Code Pro"'],
     },
     colors: {
       transparent: "rgba(0, 0, 0 ,0)",

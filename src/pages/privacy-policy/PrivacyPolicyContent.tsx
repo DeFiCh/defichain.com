@@ -75,7 +75,7 @@ export function PrivacyPolicyContent({ post }) {
         </div>
       </div>
       <div className="flex flex-col w-full mt-8 lg:mt-0 lg:pt-16 lg:w-9/12">
-        <article className="prose lg:prose-xl">
+        <article>
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             rehypePlugins={[rehypeRaw]}

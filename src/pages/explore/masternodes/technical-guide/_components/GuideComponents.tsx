@@ -18,7 +18,7 @@ export function ContentHeader({
       title={id}
       className={classNames(
         "text-[32px] leading-9 scroll-mt-40",
-        "lg:text-[52px] lg:leading-[52px] ",
+        "lg:text-[52px] lg:leading-[52px]",
         customStyle
       )}
     >

@@ -10,15 +10,14 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import React, { useRef } from "react";
 import { remark } from "remark";
 // import { Head } from "@components/commons/Head";
-// import { getMDPageBySlug } from "../../utils/api";
 import { SectionTitle } from "@components/commons/SectionTitle";
 import rehypeRaw from "rehype-raw";
 import { SectionSubTitle } from "@components/commons/SectionSubTitle";
 import { SectionDescription } from "@components/commons/SectionDescription";
 import classNames from "classnames";
+import { getMDPageBySlug } from "../../utils/api";
 import { Post } from "./learn/utils/api";
 import TableOfContents from "../components/index/whitePaper/TableOfContents";
-import style from "./styles/markdown.module.css";
 
 interface WhitePaperPageProps {
   props: {
@@ -66,7 +65,6 @@ export default function WhitePaperPage({ post }): JSX.Element {
             )}
           >
             <ReactMarkdown
-              className={style.reactMarkDown}
               remarkPlugins={[remarkGfm]}
               rehypePlugins={[
                 // rehypeSanitize,

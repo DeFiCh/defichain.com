@@ -141,6 +141,11 @@ function FooterSectionSitemap(): JSX.Element {
         url="https://bit.ly/3yQxtmW"
         testId="FooterSectionSitemap.Newsletter"
       />
+      <FooterExternalLink
+        text={t("footer.sitemap.wiki")}
+        url="https://defichainwiki.com"
+        testId="FooterSectionSitemap.Wiki"
+      />
     </FooterSection>
   );
 }

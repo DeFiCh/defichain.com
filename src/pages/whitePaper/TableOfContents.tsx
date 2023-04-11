@@ -1,5 +1,4 @@
 import classnames from "classnames";
-import { useTranslation } from "next-i18next";
 import {
   useState,
   useEffect,
@@ -21,14 +20,10 @@ interface NestedHeadingsI extends HeadingsI {
  * scrollIntoView is used to ensure that when a user clicks on an item, it will smoothly scroll.
  */
 function Headings({ headings, activeId, parentReference }) {
-  const { t } = useTranslation("page-whitepaper");
-
   return (
     <ul>
       <li className="mb-6">
-        <a className="font-sans font-bold text-xl text-dark-800">
-          {t("whitePaper.outline")}
-        </a>
+        <a className="font-sans font-bold text-xl text-dark-800">Outline</a>
       </li>
       {headings.map((heading, index) => (
         <li

@@ -147,6 +147,27 @@
     "title": "Décentralisé et distribué",
     "desc": "La communauté DeFiChain gère plus de 10.000 masternodes répartis dans le monde entier."
   },
+  "YearAheadRoadMapSection": {
+    "label": "LA ROUTE À PARCOURIR",
+    "title": "Étapes importantes",
+    "cards": [
+      {
+        "title": "DevNet pour Meta Chain",
+        "description": "",
+        "image": "/assets/img/roadmap/DevNet.png"
+      },
+      {
+        "title": "TestNet pour Meta Chain",
+        "description": "",
+        "image": "/assets/img/roadmap/TestNet.png"
+      },
+      {
+        "title": "Lancement du mainnet",
+        "description": "",
+        "image": "/assets/img/roadmap/MainNet.png"
+      }
+    ]
+  },
   "BlockchainFeatureSection": {
     "title": "Conçu pour la finance décentralisée",
     "subtitle": "BLOCKCHAIN NON-TURING-COMPLÈTE",

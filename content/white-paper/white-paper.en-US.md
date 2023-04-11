@@ -5,7 +5,7 @@ description: Last updated mm/dd/yyyy
 ---
 
   <h2
-      id="Abstract"
+      id="abstract"
       title="Abstract"
       className=
         "text-[24px] leading-8 scroll-mt-40 tracking-normal lg:text-[32px] lg:leading-[40px]"
@@ -28,7 +28,7 @@ This Document is not a final technical specification
 <div className="mt-4 text-dark-800 ">This document does not constitute nor imply a final technical specification of DeFiChain. Information presented on this whitepaper, technical or otherwise, is meant to outline the general idea of DeFiChain, its design and its use-cases and is subject to change with or without notice. For the latest up-to-date technical specification, check out the updates and documentations on the official website.
 </div>
 
-<h2 id="Executive Summary"
+<h2 id="executive-summary"
       title="Executive Summary"
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal lg:text-[32px] lg:leading-[40px]">
@@ -102,7 +102,7 @@ The Timeline
 
 ---
 
-<h2 id="Background"
+<h2 id="background"
   title="Background"
   className="text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal lg:text-[32px] lg:leading-[40px]">
   3.Background/Industry

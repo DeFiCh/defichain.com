@@ -24,23 +24,23 @@
   },
   "ReadyForFlexibilitySection": {
     "label": "WAS KOMMT ALS NÄCHSTES?",
-    "title": "DeFi MetaChain, DAS Upgrade",
-    "descParaOne": "DeFi MetaChain ist eine EVM-kompatible Blockchain, die Proof of Authority (POA) verwendet und parallel zur nativen DeFiChain-Blockchain läuft.",
-    "descParaTwo": "Lies die Dokumentation, um mit dem Einsatz von DeFi-Anwendungen der nächsten Generation auf DeFi MetaChain zu beginnen.",
-    "button": "DeFi MetaChain erkunden"
+    "title": "DeFi Meta Chain, DAS Upgrade",
+    "descParaOne": "DeFi Meta Chain ist eine EVM-kompatible Blockchain, die Proof of Authority (POA) verwendet und parallel zur nativen DeFiChain-Blockchain läuft.",
+    "descParaTwo": "Lies die Dokumentation, um mit dem Einsatz von DeFi-Anwendungen der nächsten Generation auf DeFi Meta Chain zu beginnen.",
+    "button": "DeFi Meta Chain erkunden"
   },
   "EcosystemSection": {
     "label": "EINSTIEG IN DAS DEFICHAIN-ÖKOSYSTEM",
     "title": "Ständige Weiterentwicklung, um zu bauen, zu liefern und zu übertreffen",
     "cards": {
-      "investTitle": "Investieren, Handeln und Verdienen mit DeFiChain",
-      "investSubtitle": "Mehr erfahren",
-      "masternodeTitle": "Einen Masternode besitzen",
-      "masternodeSubtitle": "Mehr erfahren",
-      "dappsTitle": "dApps für DeFiChain",
-      "dappsSubtitle": "Erkunden",
-      "quantumTitle": "Connecting blockchains with Quantum",
-      "quantumSubtitle": "Mehr erfahren"
+      "dfiTitle": "Alles über $DFI",
+      "dfiSubtitle": "Mehr Erfahren",
+      "tradeWithDexTitle": "Handeln auf der DEX",
+      "tradeWithDexSubtitle": "Starten",
+      "walletsTitle": "Wallets für DeFiChain",
+      "walletsSubtitle": "Starten",
+      "governanceTitle": "Gouvernance : \nEinen Masternode besitzen",
+      "governanceSubtitle": "Starten"
     }
   },
   "CardsSection": {

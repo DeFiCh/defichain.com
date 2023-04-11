@@ -9,6 +9,7 @@
       "downloads": "Downloads",
       "learn": "Mehr erfahren",
       "buy": "Erwerb von",
+      "getDfi": "DFI erwerben",
       "dfcblog": "Blog",
       "bloglink": "https://blog.defichain.com/de/",
       "explore": "Erkunden",
@@ -205,7 +206,7 @@
       "ECOSYSTEM": {
         "category": "ÖKOSYSTEM",
         "defichainapps": "DeFiChain Apps",
-        "defimetachain": "DeFi MetaChain",
+        "defimetachain": "DeFi Meta Chain",
         "defiscan": "DeFiScan",
         "governance": "Governance",
         "bugbounty": "Bug-Bounty",

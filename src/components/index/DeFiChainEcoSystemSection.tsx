@@ -95,7 +95,6 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
               "right-0 -top-[4.5em]"
             )}
             id="cube"
-            hoverTitle={t("EcosystemSection.cards.governanceHoverTitle")}
             customTextStyle="w-[284px]"
           />
         </div>

@@ -38,7 +38,7 @@ export function BlockchainFeaturesSection(): JSX.Element {
     slidesToShow: 1,
     slidesToScroll: 1,
     lazyLoad: true,
-    dotsClass: "custom-dots",
+    dotsClass: "blockchain-features-dots",
   };
 
   return (

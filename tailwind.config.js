@@ -5,16 +5,13 @@ module.exports = {
     "./src/layouts/**/*.{js,ts,jsx,tsx}",
     "./src/pages/**/*.{js,ts,jsx,tsx}",
   ],
-  plugins: [
-    require("@tailwindcss/typography"),
-    require("@tailwindcss/line-clamp"),
-  ],
+  plugins: [require("@tailwindcss/typography")],
   theme: {
     fontFamily: {
       sans: ['"Space Grotesk"', "sans-serif"],
       desc: ['"Montserrat"', "sans-serif"],
       mono: ['"Space Mono"', "monospace"],
-      code: ['"Source Code Pro"']
+      code: ['"Source Code Pro"'],
     },
     colors: {
       transparent: "rgba(0, 0, 0 ,0)",

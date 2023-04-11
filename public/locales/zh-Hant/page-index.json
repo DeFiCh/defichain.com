@@ -24,10 +24,24 @@
   },
   "ReadyForFlexibilitySection": {
     "label": "為靈活性做好準備",
-    "title": "DeFi MetaChain 升级",
-    "descParaOne": "DeFi MetaChain （DeFi 元链）是一个兼容 EVM 的区块链，它使用权威证明（Proof of Authority，POA）并与原生 DeFiChain 区块链并列运行。",
-    "descParaTwo": "通读文档以开始在 DeFi MetaChain 上部署下一代 DeFi 应用程序。",
-    "button": "探索 DeFi MetaChain"
+    "title": "DeFi Meta Chain 升级",
+    "descParaOne": "DeFi Meta Chain （DeFi 元链）是一个兼容 EVM 的区块链，它使用权威证明（Proof of Authority，POA）并与原生 DeFiChain 区块链并列运行。",
+    "descParaTwo": "通读文档以开始在 DeFi Meta Chain 上部署下一代 DeFi 应用程序。",
+    "button": "探索 DeFi Meta Chain"
+  },
+  "EcosystemSection": {
+    "label": "快速加入 DEFICHAIN 生態圈",
+    "title": "不斷進化以進一步構建、交付和超越",
+    "cards": {
+      "dfiTitle": "關於 $DFI",
+      "dfiSubtitle": "了解更多",
+      "tradeWithDexTitle": "使用 DEX 進行交易",
+      "tradeWithDexSubtitle": "讓我們開始",
+      "walletsTitle": "DeFiChain 錢包",
+      "walletsSubtitle": "讓我們開始",
+      "governanceTitle": "治理：\n擁有一個主節點",
+      "governanceSubtitle": "讓我們開始"
+    }
   },
   "CardsSection": {
     "cards": [

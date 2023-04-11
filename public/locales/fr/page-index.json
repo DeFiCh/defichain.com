@@ -29,13 +29,27 @@
     "descParaTwo": "Consulter la documentation pour commencer à déployer les applications DeFi de nouvelle génération sur DeFi MetaChain.",
     "button": "Explorer DeFi MetaChain"
   },
+  "EcosystemSection": {
+    "label": "UN COUP DE POUCE DANS L'ÉCOSYSTÈME DEFICHAIN",
+    "title": "Une évolution constante pour construire, livrer et surpasser les performances",
+    "cards": {
+      "dfiTitle": "Tout savoir sur $DFI",
+      "dfiSubtitle": "En savoir plus",
+      "tradeWithDexTitle": "Échanger avec le DEX",
+      "tradeWithDexSubtitle": "Commencer",
+      "walletsTitle": "Portefeuilles pour DeFiChain",
+      "walletsSubtitle": "Commencer",
+      "governanceTitle": "Gouvernance : \nPosséder un masternode",
+      "governanceSubtitle": "Commencer"
+    }
+  },
   "CardsSection": {
     "cards": [
       {
         "label": "DERNIÈRES NOUVELLES",
         "title": "Actifs décentralisés",
         "desc": "Accéder à des actifs décentralisés avec des garanties dans son vault",
-        "buttonText": "n savoir plus",
+        "buttonText": "En savoir plus",
         "buttonType": "full",
         "url": "https://blog.defichain.com/what-are-decentralised-stock-tokens-and-how-do-they-work/"
       },

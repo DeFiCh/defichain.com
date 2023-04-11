@@ -58,7 +58,11 @@ export function InitialTokenDistributionSection() {
                   {t("initialTokenDistributionSection.initialSupply.descBurn")}
                 </span>
                 <span className="font-desc text-dark-700">,</span>
-                <span className="font-desc text-dark-700">&nbsp;and&nbsp;</span>
+                <span className="font-desc text-dark-700">
+                  &nbsp;
+                  {t("initialTokenDistributionSection.initialSupply.descAnd")}
+                  &nbsp;
+                </span>
                 <span className="text-dark-1000 font-desc font-semibold">
                   {t(
                     "initialTokenDistributionSection.initialSupply.descDestroy"

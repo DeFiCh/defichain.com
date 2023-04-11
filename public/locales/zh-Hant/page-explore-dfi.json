@@ -1,0 +1,99 @@
+{
+  "heroBanner": {
+    "title": "探索 DFI 的力量",
+    "subtitle": "用 DFI 一起體驗 DeFi",
+    "desc": "我們的原生代幣釋放了去中心化金融的力量，讓您可以訪問由尖端 DeFi 工具和創新區塊鏈應用組成的不斷發展的生態系統。"
+  },
+  "statisticsDisplay": {
+    "circulatingSupply": {
+      "title": "循環供應",
+      "desc": "最大供應量的 {{perc}}"
+    },
+    "dfiMinted": {
+      "title": "DFI 鑄造總量",
+      "desc": "對於 {{value}}{{suffix}} 的固定供應"
+    }
+  },
+  "harnessDFISection": {
+    "title": "與 DFI 共創美好明天",
+    "subtitle": "利用 DFI 的力量",
+    "desc": "是一個去中心化應用程序和工具的門戶，以提供更大回報、更低費用和民主治理的潛力。",
+    "items": [
+      {
+        "title": "廣泛的 DFI 服務",
+        "desc": "以最低的 DFI 費用訪問 DeFi 應用程序。"
+      },
+      {
+        "title": "作為抵押品存儲",
+        "desc": "使用加密代幣作為抵押品借入去中心化資產。"
+      },
+      {
+        "title": "成為主節點的所有者",
+        "desc": "只需 20,000 DFI 即可擁有一個新的質押節點"
+      },
+      {
+        "title": "代幣化",
+        "desc": "標記資產，使用 dTokens 進行管理和交易"
+      },
+      {
+        "title": "社區基金治理",
+        "desc": "參與塑造區塊鏈的未來"
+      },
+      {
+        "title": "利潤來自流動性挖礦",
+        "desc": "貢獻流動性，賺取獎勵，隨時提現"
+      }
+    ]
+  },
+  "initialTokenDistributionSection": {
+    "title": "透明分配",
+    "subtitle": "初始代幣分配",
+    "desc": "",
+    "button": "閱讀白皮書",
+    "initialSupply": {
+      "title": "初始供應",
+      "percentage": "49%",
+      "desc": "在 12 億的 DFI 代幣中，49% 是初始供應量。從最初的供應量來看，",
+      "descAnd": "and",
+      "descAirDrop": "26% 空投",
+      "descBurn": "27% 被燃燒",
+      "descDestroy": "47% 被銷毀。",
+      "airDrop": "空投",
+      "burn": "被燃燒",
+      "destroy": "被銷毀",
+      "airDropPercentage": "26%",
+      "burnPercentage": "27%",
+      "destroyPercentage": "47%"
+    },
+    "masternodes": {
+      "title": "主節點之後將會擁有剩餘",
+      "percentage": "51%",
+      "desc": "隨著時間的推移，主節點將會獲得剩餘的部分"
+    }
+  },
+  "getDfiSection": {
+    "title": "輕鬆購買 $DFI",
+    "subtitle": "在受信任的交易所獲得 DFI",
+    "desc1": "使用我們的合作夥伴鏈接在受信任的加密貨幣交易所安全地購買 DFI，並輕鬆將它們轉移到您的 DeFiChain 錢包地址。",
+    "desc2": "",
+    "exhangePriceText": "Prices may vary from different sources",
+    "stakingText": "Also available for staking in"
+  },
+  "erc20Section": {
+    "title": "DeFiChain ERC-20",
+    "subtitle1": "DeFiChain ERC-20 代幣讓以太坊（Ethereum）和 DeFiChain 之間的用戶提供了更大的靈活性。",
+    "subtitle2": "這使得更廣泛的加密生態系統能夠在 DeFiChain 上體驗 Native DeFi 的真正價值。",
+    "buttonText": "了解更多",
+    "contract": "查看合約地址"
+  },
+  "footerCards": {
+    "wallet": {
+      "title": "EXPLORE DEFICHAIN",
+      "subtitle": "Choose your wallet"
+    },
+    "dapps": {
+      "title": "THE GROWING ECOSYSTEM",
+      "subtitle": "Explore dApps"
+    }
+  }
+}

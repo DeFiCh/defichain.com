@@ -233,6 +233,7 @@ function DesktopMenu({ item }: { item: string }) {
   return (
     <Menu
       className="lg:pb-10 cursor-pointer lg:w-[136px] text-center"
+      data-testid={`header-dropDownItem-${item.toLowerCase()}`}
       as="div"
       onMouseLeave={() => {
         setIsShowing(false);

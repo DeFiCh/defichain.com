@@ -23,6 +23,7 @@ export function Button({
   if (href) {
     return (
       <Link
+        data-testid={`explore-dmc-button-${text}`}
         rel="noreferrer"
         target={target}
         href={href}

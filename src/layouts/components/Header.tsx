@@ -165,7 +165,7 @@ export function Header(): JSX.Element {
           <div className="hidden md:flex h-full flex lg:pt-4">
             <GradientButton
               className="py-3 px-5 bg-dark-00"
-              buttonText={`${t("header.navbar.get")} DFI`}
+              buttonText={t("header.navbar.getDfi")}
               href="/explore/dfi#get-dfi"
               onClick={() => {
                 if (isMenuActive) {
@@ -341,7 +341,7 @@ function TabletMobileMenu() {
           <GradientButton
             className="py-3 bg-dark-00"
             borderClassName="w-full"
-            buttonText={`${t("header.navbar.get")} DFI`}
+            buttonText={t("header.navbar.getDfi")}
             href="/explore/dfi#get-dfi"
             onClick={() => {
               if (isMenuActive) {

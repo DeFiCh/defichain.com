@@ -10,7 +10,6 @@ import { remark } from "remark";
 import { SectionTitle } from "@components/commons/SectionTitle";
 import rehypeRaw from "rehype-raw";
 import { SectionSubTitle } from "@components/commons/SectionSubTitle";
-import { SectionDescription } from "@components/commons/SectionDescription";
 import classNames from "classnames";
 import { getMDPageBySlug } from "../../utils/api";
 import { Post } from "./learn/utils/api";
@@ -43,10 +42,6 @@ export default function WhitePaperPage({ post }): JSX.Element {
             >
               <SectionTitle text={post.title} />
               <SectionSubTitle text={post.subtitle} />
-              <SectionDescription
-                text={post.description}
-                customStyle="!text-base !tracking-[.03em] lg:!tracking-normal lg:!text-xl lg:!leading-7"
-              />
             </div>
           </div>
         </Container>

@@ -77,8 +77,7 @@ DeFiChain is designed for investors in the cryptocurrency market who are looking
 The function set includes among others:
 <div className="grid grid-rows-3 grid-flow-col list-disc">
 
-<ul className="flex flex-col" style="list-style:disc; display:grid; grid-template-rows: repeat(3, minmax(0, 1fr));
-grid-auto-flow: column; column-gap: 64px; list-style-position: inside;">
+<ul class="list-inside list-disc mt-2" style="list-style-position: inside;">
   <li>Decentralized lending </li>
   <li>Decentralized wrapping of tokens</li>
   <li>Decentralized Pricing oracles</li>
@@ -577,98 +576,98 @@ Design Parameters
   </div>
 </div>
 
-<div class="table-responsive">
+<div className="table-responsive table-auto text-base text-left border-solid border-2 border-dark-1000 mt-7" style="overflow: scroll;">
   <table>
     <thead>
-      <tr>
-        <th scope="col"></th>
-        <th scope="col">Block time (s)</th>
-        <th scope="col">Block size (MB)</th>
-        <th scope="col">Tx block space (% of block size)</th>
-        <th scope="col">Min tx size (B)</th>
-        <th scope="col">Avg tx size (B)</th>
-        <th scope="col">Txs in a block (max)</th>
-        <th scope="col">Txs in a block (avg)</th>
-        <th scope="col">Max tps</th>
-        <th scope="col">Average tps</th>
+      <tr style="border-bottom: 1px solid #dddddd;">
+        <th style="border: 1px solid #dddddd;" scope="col"></th>
+        <th style="border: 1px solid #dddddd;" scope="col">Block time (s)</th>
+        <th style="border: 1px solid #dddddd;" scope="col">Block size (MB)</th>
+        <th style="border: 1px solid #dddddd;" scope="col">Tx block space (% of block size)</th>
+        <th style="border: 1px solid #dddddd;" scope="col">Min tx size (B)</th>
+        <th style="border: 1px solid #dddddd;" scope="col">Avg tx size (B)</th>
+        <th style="border: 1px solid #dddddd;" scope="col">Txs in a block (max)</th>
+        <th style="border: 1px solid #dddddd;" scope="col">Txs in a block (avg)</th>
+        <th style="border: 1px solid #dddddd;" scope="col">Max tps</th>
+        <th style="border: 1px solid #dddddd;" scope="col">Average tps</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th>Bitcoin Core</th>
-        <td>600</td>
-        <td>1</td>
-        <td>98%</td>
-        <td>220</td>
-        <td>500</td>
-        <td>4,561.45</td>
-        <td>2,007.04</td>
-        <td>7.6</td>
-        <td>3.35</td>
+      <tr style="border-bottom: 1px solid #dddddd;">
+        <th style="border: 1px solid #dddddd;">Bitcoin Core</th>
+        <td style="border: 1px solid #dddddd;">600</td>
+        <td style="border: 1px solid #dddddd;">1</td>
+        <td style="border: 1px solid #dddddd;">98%</td>
+        <td style="border: 1px solid #dddddd;">220</td>
+        <td style="border: 1px solid #dddddd;">500</td>
+        <td style="border: 1px solid #dddddd;">4,561.45</td>
+        <td style="border: 1px solid #dddddd;">2,007.04</td>
+        <td style="border: 1px solid #dddddd;">7.6</td>
+        <td style="border: 1px solid #dddddd;">3.35</td>
       </tr>
-      <tr>
-        <th>Bitcoin Cash</th>
-        <td>600</td>
-        <td>10</td>
-        <td>98%</td>
-        <td>220</td>
-        <td>500</td>
-        <td>45,614.55</td>
-        <td>20,070.40</td>
-        <td>76</td>
-        <td>33.45</td>
+      <tr style="border-bottom: 1px solid #dddddd;">
+        <th style="border: 1px solid #dddddd;">Bitcoin Cash</th>
+        <td style="border: 1px solid #dddddd;">600</td>
+        <td style="border: 1px solid #dddddd;">10</td>
+        <td style="border: 1px solid #dddddd;">98%</td>
+        <td style="border: 1px solid #dddddd;">220</td>
+        <td style="border: 1px solid #dddddd;">500</td>
+        <td style="border: 1px solid #dddddd;">45,614.55</td>
+        <td style="border: 1px solid #dddddd;">20,070.40</td>
+        <td style="border: 1px solid #dddddd;">76</td>
+        <td style="border: 1px solid #dddddd;">33.45</td>
       </tr>
-      <tr>
-        <th>Bitcoin SV</th>
-        <td>600</td>
-        <td>32</td>
-        <td>98%</td>
-        <td>220</td>
-        <td>500</td>
-        <td>145,966.55</td>
-        <td>64,225.28</td>
-        <td>243.28</td>
-        <td>107.04</td>
+      <tr style="border-bottom: 1px solid #dddddd;">
+        <th style="border: 1px solid #dddddd;">Bitcoin SV</th>
+        <td style="border: 1px solid #dddddd;">600</td>
+        <td style="border: 1px solid #dddddd;">32</td>
+        <td style="border: 1px solid #dddddd;">98%</td>
+        <td style="border: 1px solid #dddddd;">220</td>
+        <td style="border: 1px solid #dddddd;">500</td>
+        <td style="border: 1px solid #dddddd;">145,966.55</td>
+        <td style="border: 1px solid #dddddd;">64,225.28</td>
+        <td style="border: 1px solid #dddddd;">243.28</td>
+        <td style="border: 1px solid #dddddd;">107.04</td>
       </tr>
-      <tr class="highlight">
-        <th>DeFi Chain</th>
-        <td>30</td>
-        <td>16</td>
-        <td>98%</td>
-        <td>220</td>
-        <td>500</td>
-        <td>72,983.27</td>
-        <td>32,112.64</td>
-        <td>2432.78</td>
-        <td>1,070.42</td>
+      <tr class="highlight" style="border-bottom: 1px solid #dddddd;">
+        <th style="border: 1px solid #dddddd;">DeFi Chain</th>
+        <td style="border: 1px solid #dddddd;">30</td>
+        <td style="border: 1px solid #dddddd;">16</td>
+        <td style="border: 1px solid #dddddd;">98%</td>
+        <td style="border: 1px solid #dddddd;">220</td>
+        <td style="border: 1px solid #dddddd;">500</td>
+        <td style="border: 1px solid #dddddd;">72,983.27</td>
+        <td style="border: 1px solid #dddddd;">32,112.64</td>
+        <td style="border: 1px solid #dddddd;">2432.78</td>
+        <td style="border: 1px solid #dddddd;">1,070.42</td>
       </tr>
     </tbody>
     <thead>
-      <tr>
-        <th scope="col"></th>
-        <th scope="col">Block time (s)</th>
-        <th scope="col">Gas limit</th>
-        <th scope="col">Tx block space (% of block size)</th>
-        <th scope="col">Min tx size (gas)</th>
-        <th scope="col">Avg tx size (gas)</th>
-        <th scope="col">Txs in a block (max)</th>
-        <th scope="col">Txs in a block (avg)</th>
-        <th scope="col">Max tps</th>
-        <th scope="col">Average tps</th>
+      <tr style="border-bottom: 1px solid #dddddd;">
+        <th style="border: 1px solid #dddddd;" scope="col"></th>
+        <th style="border: 1px solid #dddddd;" scope="col">Block time (s)</th>
+        <th style="border: 1px solid #dddddd;" scope="col">Gas limit</th>
+        <th style="border: 1px solid #dddddd;" scope="col">Tx block space (% of block size)</th>
+        <th style="border: 1px solid #dddddd;" scope="col">Min tx size (gas)</th>
+        <th style="border: 1px solid #dddddd;" scope="col">Avg tx size (gas)</th>
+        <th style="border: 1px solid #dddddd;" scope="col">Txs in a block (max)</th>
+        <th style="border: 1px solid #dddddd;" scope="col">Txs in a block (avg)</th>
+        <th style="border: 1px solid #dddddd;" scope="col">Max tps</th>
+        <th style="border: 1px solid #dddddd;" scope="col">Average tps</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th>Ethereum</th>
-        <td>13.5</td>
-        <td>10m0</td>
-        <td>100%</td>
-        <td>21k</td>
-        <td>60k</td>
-        <td>476.19</td>
-        <td>166.67</td>
-        <td>35.27</td>
-        <td>12.35</td>
+      <tr style="border-bottom: 1px solid #dddddd;">
+        <th style="border: 1px solid #dddddd;">Ethereum</th>
+        <td style="border: 1px solid #dddddd;">13.5</td>
+        <td style="border: 1px solid #dddddd;">10m0</td>
+        <td style="border: 1px solid #dddddd;">100%</td>
+        <td style="border: 1px solid #dddddd;">21k</td>
+        <td style="border: 1px solid #dddddd;">60k</td>
+        <td style="border: 1px solid #dddddd;">476.19</td>
+        <td style="border: 1px solid #dddddd;">166.67</td>
+        <td style="border: 1px solid #dddddd;">35.27</td>
+        <td style="border: 1px solid #dddddd;">12.35</td>
         </tr>
     </tbody>
   </table>
@@ -1320,175 +1319,175 @@ Token Issuance Schedule via Staking
   <div className="mt-5">
   The proposed staking schedule for the first 10 years is according to the following table:
   </div>
-  <div class="table-responsive">
+  <div className="table-responsive table-auto text-base text-left border-solid border-2 border-dark-1000 mt-7" style="overflow: scroll;">
     <table>
       <thead>
-        <tr>
-          <th scope="col">
+        <tr style="border: 1px solid #dddddd;">
+          <th style="border: 1px solid #dddddd;" scope="col">
             Year
           </th>
-          <th scope="col">
+          <th style="border: 1px solid #dddddd;" scope="col">
             Start of year token in circulation
           </th>
-          <th scope="col">
+          <th style="border: 1px solid #dddddd;" scope="col">
             % of supply staked
           </th>
-          <th scope="col">
+          <th style="border: 1px solid #dddddd;" scope="col">
             Block reward
           </th>
-          <th scope="col">
+          <th style="border: 1px solid #dddddd;" scope="col">
             Targeted new token %
           </th>
-          <th scope="col">
+          <th style="border: 1px solid #dddddd;" scope="col">
             Targeted new token
           </th>
-          <th scope="col">
+          <th style="border: 1px solid #dddddd;" scope="col">
             Staking return %
           </th>
-          <th scope="col">
+          <th style="border: 1px solid #dddddd;" scope="col">
             Actual new token
           </th>
-          <th scope="col">
+          <th style="border: 1px solid #dddddd;" scope="col">
             End of year token in circulation
           </th>
-          <th scope="col">
+          <th style="border: 1px solid #dddddd;" scope="col">
             % of cap
           </th>
-          <th scope="col">
+          <th style="border: 1px solid #dddddd;" scope="col">
             New token for year
           </th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>490,000,000</td>
-          <td>95%</td>
-          <td>200</td>
-          <td>20.00%</td>
-          <td>98,000,000</td>
-          <td>42.91%</td>
-          <td>210,240,000</td>
-          <td>700,240,000</td>
-          <td>58.35%</td>
-          <td>210,240,000</td>
+        <tr style="border: 1px solid #dddddd;">
+          <td style="border: 1px solid #dddddd;">1</td>
+          <td style="border: 1px solid #dddddd;">490,000,000</td>
+          <td style="border: 1px solid #dddddd;">95%</td>
+          <td style="border: 1px solid #dddddd;">200</td>
+          <td style="border: 1px solid #dddddd;">20.00%</td>
+          <td style="border: 1px solid #dddddd;">98,000,000</td>
+          <td style="border: 1px solid #dddddd;">42.91%</td>
+          <td style="border: 1px solid #dddddd;">210,240,000</td>
+          <td style="border: 1px solid #dddddd;">700,240,000</td>
+          <td style="border: 1px solid #dddddd;">58.35%</td>
+          <td style="border: 1px solid #dddddd;">210,240,000</td>
         </tr>
-        <tr>
-          <td>2</td>
-          <td>700,240,000</td>
-          <td>85%</td>
-          <td>150</td>
-          <td>13.33%</td>
-          <td>93,365,333</td>
-          <td>22.52%</td>
-          <td>157,680,000</td>
-          <td>857,920,000</td>
-          <td>71.49%</td>
-          <td>157,680,000</td>
+        <tr style="border: 1px solid #dddddd;">
+          <td style="border: 1px solid #dddddd;">2</td>
+          <td style="border: 1px solid #dddddd;">700,240,000</td>
+          <td style="border: 1px solid #dddddd;">85%</td>
+          <td style="border: 1px solid #dddddd;">150</td>
+          <td style="border: 1px solid #dddddd;">13.33%</td>
+          <td style="border: 1px solid #dddddd;">93,365,333</td>
+          <td style="border: 1px solid #dddddd;">22.52%</td>
+          <td style="border: 1px solid #dddddd;">157,680,000</td>
+          <td style="border: 1px solid #dddddd;">857,920,000</td>
+          <td style="border: 1px solid #dddddd;">71.49%</td>
+          <td style="border: 1px solid #dddddd;">157,680,000</td>
         </tr>
-        <tr>
-          <td>3</td>
-          <td>857,920,000</td>
-          <td>75%</td>
-          <td>100</td>
-          <td>8.89%</td>
-          <td>76,259,556</td>
-          <td>12.25%</td>
-          <td>105,120,000</td>
-          <td>963,040,000</td>
-          <td>80.25%</td>
-          <td>105,120,000</td>
+        <tr style="border: 1px solid #dddddd;">
+          <td style="border: 1px solid #dddddd;">3</td>
+          <td style="border: 1px solid #dddddd;">857,920,000</td>
+          <td style="border: 1px solid #dddddd;">75%</td>
+          <td style="border: 1px solid #dddddd;">100</td>
+          <td style="border: 1px solid #dddddd;">8.89%</td>
+          <td style="border: 1px solid #dddddd;">76,259,556</td>
+          <td style="border: 1px solid #dddddd;">12.25%</td>
+          <td style="border: 1px solid #dddddd;">105,120,000</td>
+          <td style="border: 1px solid #dddddd;">963,040,000</td>
+          <td style="border: 1px solid #dddddd;">80.25%</td>
+          <td style="border: 1px solid #dddddd;">105,120,000</td>
         </tr>
-        <tr>
-          <td>4</td>
-          <td>963,040,000</td>
-          <td>70%</td>
-          <td>70</td>
-          <td>5.93%</td>
-          <td>57,069,037</td>
-          <td>7.64%</td>
-          <td>73,584,000</td>
-          <td>1,036,624,000</td>
-          <td>86.39%</td>
-          <td>73,584,000</td>
+        <tr style="border: 1px solid #dddddd;">
+          <td style="border: 1px solid #dddddd;">4</td>
+          <td style="border: 1px solid #dddddd;">963,040,000</td>
+          <td style="border: 1px solid #dddddd;">70%</td>
+          <td style="border: 1px solid #dddddd;">70</td>
+          <td style="border: 1px solid #dddddd;">5.93%</td>
+          <td style="border: 1px solid #dddddd;">57,069,037</td>
+          <td style="border: 1px solid #dddddd;">7.64%</td>
+          <td style="border: 1px solid #dddddd;">73,584,000</td>
+          <td style="border: 1px solid #dddddd;">1,036,624,000</td>
+          <td style="border: 1px solid #dddddd;">86.39%</td>
+          <td style="border: 1px solid #dddddd;">73,584,000</td>
         </tr>
-        <tr>
-          <td>5</td>
-          <td>1,036,624,000</td>
-          <td>70%</td>
-          <td>50</td>
-          <td>3.95%</td>
-          <td>40,953,047</td>
-          <td>5.07%</td>
-          <td>52,560,000</td>
-          <td>1,089,184,000</td>
-          <td>90.77%</td>
-          <td>52,560,000</td>
+        <tr style="border: 1px solid #dddddd;">
+          <td style="border: 1px solid #dddddd;">5</td>
+          <td style="border: 1px solid #dddddd;">1,036,624,000</td>
+          <td style="border: 1px solid #dddddd;">70%</td>
+          <td style="border: 1px solid #dddddd;">50</td>
+          <td style="border: 1px solid #dddddd;">3.95%</td>
+          <td style="border: 1px solid #dddddd;">40,953,047</td>
+          <td style="border: 1px solid #dddddd;">5.07%</td>
+          <td style="border: 1px solid #dddddd;">52,560,000</td>
+          <td style="border: 1px solid #dddddd;">1,089,184,000</td>
+          <td style="border: 1px solid #dddddd;">90.77%</td>
+          <td style="border: 1px solid #dddddd;">52,560,000</td>
         </tr>
-        <tr>
-          <td>6</td>
-          <td>1,089,184,000</td>
-          <td>70%</td>
-          <td>40</td>
-          <td>2.63%</td>
-          <td>28,686,328</td>
-          <td>3.86%</td>
-          <td>42,048,000</td>
-          <td>1,131,232,000</td>
-          <td>94.27%</td>
-          <td>42,048,000</td>
+        <tr style="border: 1px solid #dddddd;">
+          <td style="border: 1px solid #dddddd;">6</td>
+          <td style="border: 1px solid #dddddd;">1,089,184,000</td>
+          <td style="border: 1px solid #dddddd;">70%</td>
+          <td style="border: 1px solid #dddddd;">40</td>
+          <td style="border: 1px solid #dddddd;">2.63%</td>
+          <td style="border: 1px solid #dddddd;">28,686,328</td>
+          <td style="border: 1px solid #dddddd;">3.86%</td>
+          <td style="border: 1px solid #dddddd;">42,048,000</td>
+          <td style="border: 1px solid #dddddd;">1,131,232,000</td>
+          <td style="border: 1px solid #dddddd;">94.27%</td>
+          <td style="border: 1px solid #dddddd;">42,048,000</td>
         </tr>
-        <tr>
-          <td>7</td>
-          <td>1,131,232,000</td>
-          <td>70%</td>
-          <td>25</td>
-          <td>1.76%</td>
-          <td>19,862,510</td>
-          <td>2.32%</td>
-          <td>26,280,000</td>
-          <td>1,157,512,000</td>
-          <td>96.46%</td>
-          <td>26,280,000</td>
+        <tr style="border: 1px solid #dddddd;">
+          <td style="border: 1px solid #dddddd;">7</td>
+          <td style="border: 1px solid #dddddd;">1,131,232,000</td>
+          <td style="border: 1px solid #dddddd;">70%</td>
+          <td style="border: 1px solid #dddddd;">25</td>
+          <td style="border: 1px solid #dddddd;">1.76%</td>
+          <td style="border: 1px solid #dddddd;">19,862,510</td>
+          <td style="border: 1px solid #dddddd;">2.32%</td>
+          <td style="border: 1px solid #dddddd;">26,280,000</td>
+          <td style="border: 1px solid #dddddd;">1,157,512,000</td>
+          <td style="border: 1px solid #dddddd;">96.46%</td>
+          <td style="border: 1px solid #dddddd;">26,280,000</td>
         </tr>
-        <tr>
-          <td>8</td>
-          <td>1,157,512,000</td>
-          <td>70%</td>
-          <td>20</td>
-          <td>1.17%</td>
-          <td>13,549,295</td>
-          <td>1.82%</td>
-          <td>21,024,000</td>
-          <td>1,178,536,000</td>
-          <td>98.21%</td>
-          <td>21,024,000</td>
+        <tr style="border: 1px solid #dddddd;">
+          <td style="border: 1px solid #dddddd;">8</td>
+          <td style="border: 1px solid #dddddd;">1,157,512,000</td>
+          <td style="border: 1px solid #dddddd;">70%</td>
+          <td style="border: 1px solid #dddddd;">20</td>
+          <td style="border: 1px solid #dddddd;">1.17%</td>
+          <td style="border: 1px solid #dddddd;">13,549,295</td>
+          <td style="border: 1px solid #dddddd;">1.82%</td>
+          <td style="border: 1px solid #dddddd;">21,024,000</td>
+          <td style="border: 1px solid #dddddd;">1,178,536,000</td>
+          <td style="border: 1px solid #dddddd;">98.21%</td>
+          <td style="border: 1px solid #dddddd;">21,024,000</td>
         </tr>
-        <tr>
-          <td>9</td>
-          <td>1,178,536,000</td>
-          <td>70%</td>
-          <td>10</td>
-          <td>0.78%</td>
-          <td>9,196,928</td>
-          <td>0.89%</td>
-          <td>10,512,000</td>
-          <td>1,189,048,000</td>
-          <td>99.09%</td>
-          <td>10,512,000</td>
+        <tr style="border: 1px solid #dddddd;">
+          <td style="border: 1px solid #dddddd;">9</td>
+          <td style="border: 1px solid #dddddd;">1,178,536,000</td>
+          <td style="border: 1px solid #dddddd;">70%</td>
+          <td style="border: 1px solid #dddddd;">10</td>
+          <td style="border: 1px solid #dddddd;">0.78%</td>
+          <td style="border: 1px solid #dddddd;">9,196,928</td>
+          <td style="border: 1px solid #dddddd;">0.89%</td>
+          <td style="border: 1px solid #dddddd;">10,512,000</td>
+          <td style="border: 1px solid #dddddd;">1,189,048,000</td>
+          <td style="border: 1px solid #dddddd;">99.09%</td>
+          <td style="border: 1px solid #dddddd;">10,512,000</td>
         </tr>
-        <tr>
-          <td>10</td>
-          <td>1,189,048,000</td>
-          <td>70%</td>
-          <td>5</td>
-          <td>0.52%</td>
-          <td>6,185,973</td>
-          <td>0.44%</td>
-          <td>5,256,000</td>
-          <td>1,194,304,000</td>
-          <td>99.53%</td>
-          <td>5,256,000</td>
+        <tr style="border: 1px solid #dddddd;">
+          <td style="border: 1px solid #dddddd;">10</td>
+          <td style="border: 1px solid #dddddd;">1,189,048,000</td>
+          <td style="border: 1px solid #dddddd;">70%</td>
+          <td style="border: 1px solid #dddddd;">5</td>
+          <td style="border: 1px solid #dddddd;">0.52%</td>
+          <td style="border: 1px solid #dddddd;">6,185,973</td>
+          <td style="border: 1px solid #dddddd;">0.44%</td>
+          <td style="border: 1px solid #dddddd;">5,256,000</td>
+          <td style="border: 1px solid #dddddd;">1,194,304,000</td>
+          <td style="border: 1px solid #dddddd;">99.53%</td>
+          <td style="border: 1px solid #dddddd;">5,256,000</td>
         </tr>
       </tbody>
     </table>

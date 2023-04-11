@@ -2,62 +2,60 @@ import { useTranslation } from "next-i18next";
 import { Container } from "@components/commons/Container";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import rehypeSlug from "rehype-slug";
 import rehypeRaw from "rehype-raw";
 import classNames from "classnames";
 import React from "react";
 
 export function PrivacyPolicyContent({ post }) {
   const { t } = useTranslation("page-privacypolicy");
-  const [currentRef, setCurrentRef] = React.useState<string>("");
-  // TODO @chloe add href into .json
   const headings = [
-    { title: t("content.introduction"), href: "#1-introduction" },
+    { title: t("content.introduction"), href: "#introduction" },
     {
       title: t("content.informationCollected"),
-      href: "#2-information-collected",
+      href: "#information-collected",
     },
     {
       title: t("content.whenCollected"),
-      href: "#3-when-is-information-collected",
+      href: "#when-information-collected",
     },
     {
       title: t("content.useInformation"),
-      href: "#4-use-of-information-and-details",
+      href: "#use-of-information",
     },
     {
       title: t("content.security"),
-      href: "#5-security-of-your-personal-information",
+      href: "#security",
     },
-    { title: t("content.cookies"), href: "#6-do-you-use-cookies" },
-    { title: t("content.thirdParty"), href: "#7-third-party-disclosure" },
-    { title: t("content.websiteLinks"), href: "#8-links-to-other-websites" },
-    { title: t("content.google"), href: "#9-google" },
-    { title: t("content.signals"), href: "#10-do-not-track-signals" },
+    { title: t("content.cookies"), href: "#cookies" },
+    { title: t("content.thirdParty"), href: "#third-party" },
+    { title: t("content.websiteLinks"), href: "#links" },
+    { title: t("content.google"), href: "#google" },
+    { title: t("content.signals"), href: "#do-not-track" },
     {
       title: t("content.thirdPartyBehavioural"),
-      href: "#11-third-party-behavioural-tracking",
+      href: "#third-party",
     },
     {
       title: t("content.accessInfo"),
-      href: "#12-access-to-updating-and-non-use-of-your-personal-information",
+      href: "#access-personal-information",
     },
     {
       title: t("content.changesToStatement"),
-      href: "#13-changes-to-this-statement",
+      href: "#statement",
     },
-    { title: t("content.contactInfo"), href: "#14-contact-information" },
+    { title: t("content.contactInfo"), href: "#contact-information" },
   ];
 
+  const [currentRef, setCurrentRef] = React.useState<string>(headings[0].href);
+
   return (
-    <Container className="flex flex-row lg:mb-[216px]">
+    <Container className="flex flex-row mb-[72px] md:mb-[96px] lg:mb-[184px]">
       <div className="hidden h-full top-[100px] sticky lg:block md:w-3/12 lg:pt-[64px] flex-1">
         <div className="min-w-[312px] hidden lg:block">
           <div className="text-dark-800 text-[20px] leading-[28px] font-bold pb-[24px]">
             {t("content.outline")}
           </div>
 
-          {/* TODO @chloe increase accuracy of href jump to section */}
           {headings.map((heading, index) => (
             <a
               onClick={() => setCurrentRef(heading.href)}
@@ -76,11 +74,11 @@ export function PrivacyPolicyContent({ post }) {
           ))}
         </div>
       </div>
-      <div className="flex flex-col w-full mt-12 mb-24 md:mb-16 lg:mb-10 lg:mt-0 lg:pt-[64px] lg:w-9/12 md:px-6 lg:px-0">
-        <article className="prose-xl">
+      <div className="flex flex-col w-full mt-8 lg:mt-0 lg:pt-16 lg:w-9/12">
+        <article className="prose lg:prose-xl">
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
-            rehypePlugins={[rehypeSlug, [rehypeRaw]]}
+            rehypePlugins={[rehypeRaw]}
           >
             {post.content}
           </ReactMarkdown>

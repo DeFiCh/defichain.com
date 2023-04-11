@@ -27,11 +27,11 @@ export default function PrivacyPolicyPage({ post }): JSX.Element {
 
   return (
     <>
-      <div className="py-16 md:py-10 lg:py-16 border-b border-gray-800 border-opacity-50">
+      <div className="py-8 md:py-8 lg:py-16 border-b border-gray-800 border-opacity-50">
         <Container className="flex flex-row gap-x-12 relative lg:pr-12">
           <div className="absolute lg:block hidden w-[417px] h-[324px] top-[-158px] left-[-267px] md:top-[-42px] md:left-[-110px] lg:h-[297px] bg-contain bg-no-repeat mix-blend-screen bg-[url(/assets/img/common/emptyCubeDesktop.png)]" />
           <div className="hidden lg:block md:w-3/12 flex-1" />
-          <div className="flex flex-col w-full lg:w-9/12 md:px-6 lg:px-0">
+          <div className="flex flex-col w-full lg:w-9/12 lg:px-2">
             <div
               className={classNames(
                 "flex flex-col gap-y-5 w-full lg:w-[812px]"

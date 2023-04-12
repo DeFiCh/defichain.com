@@ -17,7 +17,7 @@ export default function HomePage({ blogPosts }): JSX.Element {
 
   return (
     <>
-      <Head title={t("Head.title")} description={t("Head.desc")} />
+      <Head title={t("Header.title")} />
       <HomePageHeader />
       <Container className="justify-center md:mt-0 mt-9 hidden md:flex relative z-10">
         <StartExploringButton startExploringJumpLink="#statistics_display" />

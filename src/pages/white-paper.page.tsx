@@ -31,7 +31,7 @@ export default function WhitePaperPage({ post }): JSX.Element {
   const contentRef = useRef<HTMLDivElement>(null);
   return (
     <>
-      <Head title={post.title} />
+      <Head title={post.subtitle} />
       <div className="py-16 md:py-10 lg:py-16 border-b border-gray-800 border-opacity-50">
         <Container className="flex flex-row gap-x-12 relative lg:pr-12">
           <div className="block absolute w-[417px] h-[237px] top-[-158px] left-[-267px] md:top-[-42px] md:left-[-281px] lg:h-[297px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/mnTechnicalGuide/emptyCubeDesktop.png')]" />

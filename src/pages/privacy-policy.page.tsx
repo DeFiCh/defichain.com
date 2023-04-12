@@ -34,8 +34,8 @@ export default function PrivacyPolicyPage({ post }): JSX.Element {
 
   return (
     <>
+      <Head title={t("Header.subtitle")} />
       <div className="py-8 md:py-8 lg:py-16 border-b border-gray-800 border-opacity-50">
-        <Head title={post.title} />
         <Container className="flex flex-row gap-x-12 relative">
           <div className="absolute lg:block hidden w-[417px] h-[324px] top-[-158px] left-[-267px] md:top-[-42px] md:left-[-110px] lg:h-[297px] bg-contain bg-no-repeat mix-blend-screen bg-[url(/assets/img/common/emptyCubeDesktop.png)]" />
           <div className="hidden lg:block md:w-3/12 flex-1" />

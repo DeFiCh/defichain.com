@@ -9,6 +9,7 @@ export function SectionTitle({
 }) {
   return (
     <h3
+      data-testid={`section-title-${text}`}
       className={classNames(
         "accent-gradient-1 text-transparent bg-clip-text font-mono",
         "leading-4 tracking-[0.04em] text-base",

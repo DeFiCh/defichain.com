@@ -34,9 +34,12 @@ function Headings({ headings, activeId, parentReference }) {
         >
           <a
             href={`#${heading.id}`}
-            className={classnames("font-sans font-bold text-xl text-dark-800", {
-              "!text-brand-100": heading.id === activeId,
-            })}
+            className={classnames(
+              "font-sans font-semibold text-xl text-dark-500",
+              {
+                "!text-brand-100": heading.id === activeId,
+              }
+            )}
             onClick={() => {
               parentReference.current
                 .querySelector(`#${heading.id}`)

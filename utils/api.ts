@@ -5,6 +5,7 @@ import matter from "gray-matter";
 export interface Post {
   slug: string;
   title: string;
+  subtitle: string;
   description: string;
   content: string;
 }
@@ -23,12 +24,14 @@ export function getMDPageBySlug(name: string, locale: string): Post {
   const post: Post = {
     slug: "",
     title: "",
+    subtitle: "",
     description: "",
     content: "",
   };
 
   post.slug = realSlug;
   post.title = data.title;
+  post.subtitle = data.subtitle;
   post.description = data.description;
   post.content = content;
 

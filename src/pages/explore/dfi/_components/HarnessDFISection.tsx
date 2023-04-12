@@ -82,7 +82,7 @@ export default function HarnessDFISection() {
       <section className="flex justify-center mt-16 hidden md:flex">
         <HarnessDFIGrid gridItems={harnessDFIItems} />
       </section>
-      <section className="block md:hidden mt-16">
+      <section className="block md:hidden mt-16 h-[660px]">
         <Slider {...sliderSettings}>
           <HarnessDFIGrid gridItems={harnessDFIItems.slice(0, 3)} isMobile />
           <HarnessDFIGrid gridItems={harnessDFIItems.slice(3)} isMobile />

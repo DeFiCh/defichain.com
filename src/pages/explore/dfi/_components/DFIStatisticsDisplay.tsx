@@ -4,6 +4,7 @@ import { StatisticPanel } from "@components/commons/StatisticPanel";
 import { Container } from "@components/commons/Container";
 import { useUnitSuffix } from "@hooks/useUnitSuffix";
 import { useTranslation } from "next-i18next";
+import classNames from "classnames";
 import { useWhaleApiClient } from "../../../../layouts/context/WhaleContext";
 import { calculatePercentage } from "../../../../shared/calculatePercentage";
 
@@ -48,11 +49,20 @@ export function DFIStatisticsDisplay() {
   ];
 
   return (
-    <Container className="lg:mt-[69px] md:mt-[33px] mt-0 lg:mb-[180px] mb-[72px]">
+    <Container className="lg:mt-[69px] md:mt-[33px] mt-0 lg:mb-[180px] mb-[72px] relative">
       <StatisticPanel
         displayItem={supplyItems}
-        displayStripCustomStyle="scroll-mt-[200px]"
-        displayId="statistics_display_dfi"
+        displayStripCustomStyle="lg:-scroll-mt-[150px] -scroll-mt-[100px]"
+        displayId="statistics-display-dfi"
+      />
+      <div
+        className={classNames(
+          "absolute bg-contain bg-no-repeat z-[-1]",
+          "bg-[url(/assets/img/background/explore/dfi/stats-accent.png)]",
+          "lg:h-[689px] lg:w-[354px] lg:-left-[4.2em] lg:-bottom-[25em]",
+          "md:h-[558px] md:w-[287px] md:-left-[3.2em] md:-bottom-[20em] md:-left-[8em]",
+          "w-[364.07px] h-[187.25px] -bottom-[9em] -left-[7em]"
+        )}
       />
     </Container>
   );

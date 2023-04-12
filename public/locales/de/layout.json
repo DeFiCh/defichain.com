@@ -9,30 +9,47 @@
       "downloads": "Downloads",
       "learn": "Mehr erfahren",
       "buy": "Erwerb von",
+      "getDfi": "DFI erwerben",
       "dfcblog": "Blog",
       "bloglink": "https://blog.defichain.com/de/",
       "explore": "Erkunden",
       "build": "Bauen",
       "community": "Community"
     },
+    "comingSoon": "DEMNÄCHST",
     "explore": {
-      "title": "Entdecke DeFiChain",
-      "labels": [
+      "info": [
         {
-          "title": "$DFI",
-          "subtitle": "Erfahre mehr über den Token"
+          "title": "Entdecke DeFiChain",
+          "labels": [
+            {
+              "title": "$DFI",
+              "subtitle": "Erfahre mehr über den Token"
+            },
+            {
+              "title": "Dezentrale Börse",
+              "subtitle": "Handeln, Arbitrieren und Verdienen"
+            },
+            {
+              "title": "Wallets",
+              "subtitle": "Bewahre Aktiva auf deine eigene Weise auf"
+            },
+            {
+              "title": "Masternodes",
+              "subtitle": "Entscheide über die Zukunft von DeFiChain"
+            }
+          ]
         },
         {
-          "title": "Dezentrale Börse",
-          "subtitle": "Maximiere dein Vermögen"
-        },
-        {
-          "title": "Wallets",
-          "subtitle": "Bewahre Aktiva auf deine eigene Weise auf"
-        },
-        {
-          "title": "Masternodes",
-          "subtitle": "DefiChain-Staking"
+          "title": "BLOCK EXPLORER",
+          "labels": [
+            {
+              "title": "DeFiScan (Official)"
+            },
+            {
+              "title": "Krypto ID"
+            }
+          ]
         }
       ],
       "image": {
@@ -131,7 +148,7 @@
               "title": "GitHub"
             },
             {
-              "title": "Youtube"
+              "title": "YouTube"
             },
             {
               "title": "LinkedIn"
@@ -189,7 +206,7 @@
       "ECOSYSTEM": {
         "category": "ÖKOSYSTEM",
         "defichainapps": "DeFiChain Apps",
-        "defimetachain": "DeFi MetaChain",
+        "defimetachain": "DeFi Meta Chain",
         "defiscan": "DeFiScan",
         "governance": "Governance",
         "bugbounty": "Bug-Bounty",

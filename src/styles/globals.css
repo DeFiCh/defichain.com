@@ -4,15 +4,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700&display=swap");
 
 @import "@components/icons/assets/blockchainFeatures/styles/blockchainFeatures.css";
+@import "@components/icons/assets/masternodesBenefits/styles/masternodesBenefits.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  overflow-x: clip;
   width: 100%;
   box-sizing: border-box;
 }
@@ -144,28 +145,6 @@ html {
   display: none !important;
 }
 
-.slick-prev {
-  @apply left-[65%] md:left-[70%] lg:left-[75%] !important;
-  top: -50px !important;
-}
-
-.slick-next {
-  top: -50px !important;
-  right: 20% !important;
-}
-
-.slick-list {
-  margin: -16px;
-}
-
-.slick-slide {
-  padding: 16px;
-}
-
-.slick-dots {
-  bottom: -25px;
-}
-
 .footer-background {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     linear-gradient(
@@ -205,7 +184,7 @@ html {
   height: 300px;
 }
 
-#invest {
+#dfi {
   position: absolute;
   width: 316px;
   top: 60px;
@@ -220,7 +199,7 @@ html {
   --yLength: 10px;
 }
 
-#invest_hover {
+#dfi_hover {
   position: absolute;
   width: 316px;
   top: 60px;
@@ -234,7 +213,7 @@ html {
   --yLength: 10px;
 }
 
-#masternode {
+#dex {
   position: absolute;
   left: 50px;
   bottom: 10px;
@@ -244,48 +223,46 @@ html {
   animation-play-state: paused;
 }
 
-#masternode_hover {
+#dex_hover {
   animation: fade-out 0.3s ease-in;
   animation-play-state: paused;
 }
 
-#quantum_donut {
-  /* original position of unhovered donut, dependent on customIconStyle passed into Card component */
+#cube {
   position: absolute;
-  width: 266px;
-  right: -40px;
-  top: 450px;
-
-  transform-origin: 20% 50%;
-  animation: transform-out 0.3s both;
-  animation-delay: 0s;
+  width: 261.07px;
+  top: 60px;
+  left: 272px;
+  animation: transform-in 0.3s, width-in 0.3s;
   animation-play-state: paused;
-  --rotateDeg: -38.35deg;
-  --xLength: 20px;
-  --yLength: -35px;
-}
-
-#quantum_hover_donut {
-  position: absolute;
-  width: 250px;
-  right: -40px;
-  top: 450px;
-
   transform-box: fill-box;
-  transform-origin: 20% 50%;
-  animation: transform-into 0.3s linear both;
+  transform-origin: 40% 60%;
   animation-play-state: paused;
-  --rotateDeg: -38.35deg;
-  --xLength: 20px;
-  --yLength: 0px;
+  --rotateDeg: -45deg;
+  --xLength: -40px;
+  --yLength: 10px;
 }
 
-.dapp-card #invest,
-#invest_hover,
-#masternode,
-#masternode_hover,
-#quantum_donut,
-#quantum_hover_donut {
+#cube_hover {
+  position: absolute;
+  width: 380px;
+  top: 60px;
+  left: 300px;
+  /* transform-box: fill-box; */
+  transform-origin: 40% 60%;
+  animation: transform 0.3s linear both;
+  animation-play-state: paused;
+  --rotateDeg: -40deg;
+  --xLength: -50px;
+  --yLength: 10px;
+}
+
+.dapp-card #dfi,
+#dfi_hover,
+#dex,
+#dex_hover,
+#cube,
+#cube_hover {
   animation-play-state: running;
 }
 
@@ -362,6 +339,15 @@ html {
   }
 }
 
+@keyframes width-in {
+  0% {
+    width: 380px;
+  }
+  100% {
+    width: 261.07px;
+  }
+}
+
 .flexbox-wrapper {
   display: flex;
   overflow: auto;
@@ -391,7 +377,9 @@ html {
   }
 }
 
-.custom-dots {
+/* Overwrite slick-carousel default stylings */
+.blockchain-features-dots,
+.harness-dfi-dots {
   display: inline-block;
   vertical-align: middle;
   margin: auto;
@@ -401,7 +389,8 @@ html {
   width: 70px;
 }
 
-.custom-dots li {
+.blockchain-features-dots li,
+.harness-dfi-dots li {
   list-style: none;
   cursor: pointer;
   display: inline-block;
@@ -409,7 +398,8 @@ html {
   padding: 0;
 }
 
-.custom-dots li button {
+.blockchain-features-dots li button,
+.harness-dfi-dots li button {
   border: 1px solid #8c8c8c;
   color: transparent;
   cursor: pointer;
@@ -419,7 +409,8 @@ html {
   border-radius: 50%;
 }
 
-.custom-dots li.slick-active button {
+.blockchain-features-dots li.slick-active button,
+.harness-dfi-dots li.slick-active button {
   background-color: #ff00af;
   border: 1px solid #ff00af;
 }
@@ -428,4 +419,98 @@ html {
   border: 5px solid #fff;
   display: block;
   margin: auto;
+}
+
+.roadmap-section .slick-slide {
+  @apply pt-8 pb-6 px-3 md:pt-9 lg:pt-[26px];
+}
+
+.roadmap-section .slick-arrow {
+  top: -48px !important;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.roadmap-section .slick-arrow:hover,
+.roadmap-section .slick-arrow:focus {
+  background-color: #121212 !important;
+}
+
+.roadmap-dots {
+  display: flex !important; /* override inline block display from library */
+  width: calc(100% - 48px);
+  position: absolute;
+  top: 0px;
+  left: 24px;
+  background-color: #2b2b2b;
+  border-radius: 4px;
+  max-width: 1320px;
+}
+
+@media only screen and (min-width: 600px) {
+  .roadmap-section .slick-prev {
+    left: calc(100% - 48px - 48px - 48px - 8px);
+  }
+  .roadmap-section .slick-next {
+    right: 48px;
+  }
+  .roadmap-dots {
+    left: 48px;
+    width: calc(100% - 96px);
+  }
+  .roadmap-section .slick-slide:first-child {
+    padding-left: 48px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .roadmap-section .slick-prev {
+    left: calc((100% - 1200px) / 2 + 1200px - 48px - 8px - 48px);
+  }
+  .roadmap-section .slick-next {
+    right: calc((100% - 1200px) / 2);
+  }
+  .roadmap-dots {
+    left: calc((100% - 1200px) / 2);
+    width: 1200px;
+  }
+  .roadmap-section .slick-slide:first-child {
+    padding-left: calc((100vw - 1200px) / 2);
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .roadmap-section .slick-prev {
+    left: calc((100% - 1320px) / 2 + 1320px - 48px - 8px - 48px);
+  }
+  .roadmap-section .slick-next {
+    right: calc((100% - 1320px) / 2);
+  }
+  .roadmap-dots {
+    left: calc((100% - 1320px) / 2);
+    width: 100%;
+  }
+  .roadmap-section .slick-slide:first-child {
+    padding-left: calc((100vw - 1320px) / 2);
+  }
+}
+
+.roadmap-dots li {
+  width: 100%;
+  margin: 0;
+  background-color: transparent;
+  transition-property: background-color;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.roadmap-dots li.slick-active {
+  background-color: #ff00af;
+  border-radius: 4px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .roadmap-dots li.slick-active {
+    background-color: transparent;
+  }
 }

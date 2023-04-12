@@ -3,6 +3,7 @@ import { SectionTitle } from "@components/commons/SectionTitle";
 import classNames from "classnames";
 import { Button } from "@components/commons/Buttons";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 import { ProgressBar } from "./ProgressBar";
 import {
   InitialTokenSectionIcons,
@@ -11,6 +12,7 @@ import {
 
 export function InitialTokenDistributionSection() {
   const { t } = useTranslation("page-explore-dfi");
+  const router = useRouter();
 
   return (
     <Container className="mb-[96px] md:mb-[108px] lg:mb-60">
@@ -28,7 +30,7 @@ export function InitialTokenDistributionSection() {
 
         <Button
           text={t("initialTokenDistributionSection.button")}
-          className="mt-6 w-fit px-10 py-3"
+          className="mt-6 w-fit px-10 py-3 lg:px-14 lg:py-4"
         />
 
         <ProgressBar value={49} containerClass="bg-dark-200 mt-16 mb-8" />
@@ -58,7 +60,15 @@ export function InitialTokenDistributionSection() {
                   {t("initialTokenDistributionSection.initialSupply.descBurn")}
                 </span>
                 <span className="font-desc text-dark-700">,</span>
-                <span className="font-desc text-dark-700">&nbsp;and&nbsp;</span>
+                <span className="font-desc text-dark-700">
+                  &nbsp;
+                  {router.locale === "zh-Hans" || router.locale === "zh-Hant"
+                    ? ","
+                    : t(
+                        "initialTokenDistributionSection.initialSupply.descAnd"
+                      )}
+                  &nbsp;
+                </span>
                 <span className="text-dark-1000 font-desc font-semibold">
                   {t(
                     "initialTokenDistributionSection.initialSupply.descDestroy"

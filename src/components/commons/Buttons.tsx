@@ -1,27 +1,34 @@
-import { PropsWithChildren, useState } from "react";
+import { HTMLAttributeAnchorTarget, PropsWithChildren } from "react";
 import classNames from "classnames";
 import { IoMdArrowRoundForward } from "react-icons/io";
+import { RiArrowRightUpLine } from "react-icons/ri";
+import Link from "next/link";
+import { FiArrowUpRight } from "react-icons/fi";
 
 export function Button({
   text,
   className,
   disabled,
+  target,
   href,
   onClick,
 }: {
   text: string;
   className?: string;
   disabled?: boolean;
+  target?: HTMLAttributeAnchorTarget;
   href?: string;
   onClick?: () => void;
 }) {
   if (href) {
     return (
-      <a
+      <Link
         rel="noreferrer"
-        target="_blank"
+        target={target}
         href={href}
-        className={classNames({ "pointer-events-none": disabled })}
+        className={classNames("block w-fit", {
+          "pointer-events-none": disabled,
+        })}
       >
         <ButtonElement
           text={text}
@@ -29,7 +36,7 @@ export function Button({
           disabled={disabled}
           onClick={onClick}
         />
-      </a>
+      </Link>
     );
   }
   return (
@@ -60,12 +67,49 @@ function ButtonElement({
       disabled={disabled}
       className={classNames(
         className ?? "py-4",
-        "flex items-center justify-center rounded-[92px] font-bold disabled:opacity-30 disabled:pointer-events-none min-w-[232px]",
+        "rounded-[92px] font-bold disabled:opacity-30 disabled:pointer-events-none min-w-[232px]",
         "bg-dark-1000 text-dark-100 hover:bg-brand-100 active:bg-brand-100 active:opacity-70"
       )}
     >
       {text}
     </button>
+  );
+}
+
+export function SecondaryButton({
+  text,
+  className,
+  disabled,
+  onClick,
+  href,
+}: {
+  text: string;
+  className?: string;
+  disabled?: boolean;
+  onClick?: () => void;
+  href: string;
+}) {
+  return (
+    <Link
+      rel="noreferrer"
+      target="_blank"
+      href={href}
+      className={classNames({ "pointer-events-none": disabled })}
+    >
+      <button
+        type="button"
+        onClick={onClick}
+        disabled={disabled}
+        className={classNames(
+          className ?? "py-4",
+          "flex items-center justify-center rounded-[92px] font-bold disabled:opacity-30 disabled:pointer-events-none !mt-0",
+          "outline outline-1 outline-dark-1000 hover:outline-brand-100 active:text-brand-100 text-dark-1000 active:opacity-70"
+        )}
+      >
+        {text}
+        <FiArrowUpRight size={20} className="ml-[15px]" />
+      </button>
+    </Link>
   );
 }
 
@@ -76,6 +120,7 @@ export function GradientButton({
   disabled,
   onClick,
   href,
+  target,
 }: {
   buttonText: string;
   className?: string;
@@ -83,14 +128,16 @@ export function GradientButton({
   disabled?: boolean;
   onClick?: () => void;
   href?: string;
+  target?: HTMLAttributeAnchorTarget;
 }) {
   if (href) {
     return (
-      <a
+      <Link
         rel="noreferrer"
-        target="_blank"
+        target={target}
         href={href}
         className={classNames({ "pointer-events-none": disabled })}
+        scroll={false}
       >
         <GradientButtonElement
           borderClassName={borderClassName}
@@ -99,7 +146,7 @@ export function GradientButton({
           disabled={disabled}
           onClick={onClick}
         />
-      </a>
+      </Link>
     );
   }
   return (
@@ -162,13 +209,10 @@ export function LinkButton({
   horizontalArrow?: boolean;
   diagonalArrow?: boolean;
 }) {
-  const [isMouseEnter, setIsMouseEnter] = useState(false);
   return (
-    <a
+    <Link
       rel="noreferrer"
       target="_blank"
-      onMouseEnter={() => setIsMouseEnter(true)}
-      onMouseLeave={() => setIsMouseEnter(false)}
       href={href}
       className={classNames(
         "hover:text-brand-100 flex flex-row gap-x-2 items-center",
@@ -179,12 +223,9 @@ export function LinkButton({
       )}
     >
       {buttonText}
-      {(horizontalArrow || diagonalArrow) && isMouseEnter && (
-        <IoMdArrowRoundForward
-          className={classNames({ "-rotate-45": diagonalArrow })}
-        />
-      )}
-    </a>
+      {horizontalArrow && <IoMdArrowRoundForward />}
+      {diagonalArrow && <RiArrowRightUpLine size={20} />}
+    </Link>
   );
 }
 

@@ -23,24 +23,24 @@
     }
   },
   "ReadyForFlexibilitySection": {
-    "label": "READY FOR FLEXIBILITY",
-    "title": "DeFi MetaChain the upgrade",
-    "descParaOne": "DeFi MetaChain is an EVM-compatible blockchain that uses Proof of Authority (POA) and runs in parallel with the Native DeFiChain blockchain.",
-    "descParaTwo": "Read through the documentation to get started with deploying next generation DeFi applications on DeFi MetaChain.",
-    "button": "Explore DeFi MetaChain"
+    "label": "WHAT'S NEXT",
+    "title": "DeFi Meta Chain the upgrade",
+    "descParaOne": "DeFi Meta Chain is an EVM-compatible blockchain that uses Proof of Authority (POA) and runs in parallel with the Native DeFiChain blockchain.",
+    "descParaTwo": "Read through the documentation to get started with deploying next generation DeFi applications on DeFi Meta Chain.",
+    "button": "Explore DeFi Meta Chain"
   },
   "EcosystemSection": {
     "label": "JUMPSTART INTO DEFICHAIN ECOSYSTEM",
     "title": "Constant evolution to build, deliver and outperform",
     "cards": {
-      "investTitle": "Invest, Trade and Earn with DeFiChain",
-      "investSubtitle": "Learn More",
-      "masternodeTitle": "Own a Masternode",
-      "masternodeSubtitle": "Learn More",
-      "dappsTitle": "dApps for DeFiChain",
-      "dappsSubtitle": "Explore",
-      "quantumTitle": "Connecting blockchains with Quantum",
-      "quantumSubtitle": "Learn More"
+      "dfiTitle": "All about $DFI",
+      "dfiSubtitle": "Learn More",
+      "tradeWithDexTitle": "Trade with DEX",
+      "tradeWithDexSubtitle": "Get Started",
+      "walletsTitle": "Wallets for DeFiChain",
+      "walletsSubtitle": "Get Started",
+      "governanceTitle": "Governance: \nOwn a Masternode",
+      "governanceSubtitle": "Get Started"
     }
   },
   "CardsSection": {
@@ -161,583 +161,31 @@
     "title": "Decentralized and distributed",
     "desc": "The DeFiChain community runs more than 10,000 masternodes which are distributed globally."
   },
-  "RoadmapSection": {
-    "title": "Roadmap",
-    "2023": {
-      "title": "2023",
-      "status": "On track",
-      "cards": [
-        {
-          "title": "2023 Q1",
-          "desc": "DeFiChain On-Chain Governance",
-          "image": {
-            "url": "/img/timeline/2023/2023_Q1_OCG.png",
-            "alt": "DeFiChain On-Chain Governance"
-          }
-        },
-        {
-          "title": "2023 Q1",
-          "desc": "Quantum",
-          "image": {
-            "url": "/img/timeline/2023/2023_Q1_ERC_20_BRIDGE.png",
-            "alt": "Quantum"
-          }
-        },
-        {
-          "title": "2023 Q1",
-          "desc": "DeFi Meta Chain",
-          "image": {
-            "url": "/img/timeline/2023/2023_Q1_DMC.png",
-            "alt": "DeFi Meta Chain"
-          }
-        },
-        {
-          "title": "2023 Q1",
-          "desc": "DeFiChain DevNet",
-          "image": {
-            "url": "/img/timeline/2023/2023_Q1_DFC_DEVNET.png",
-            "alt": "DeFiChain DevNet"
-          }
-        },
-        {
-          "title": "2023 Q2",
-          "desc": "DeFi Meta Chain Explorer",
-          "image": {
-            "url": "/img/timeline/2023/2023_Q1_DMC_EXPLORER.png",
-            "alt": "DeFi Meta Chain Explorer"
-          }
-        },
-        {
-          "title": "2023 Q2",
-          "desc": "DeFiChain.com Redesign",
-          "image": {
-            "url": "/img/timeline/2023/2023_Q1_DFC_REDESIGN.png",
-            "alt": "DeFiChain.com Redesign"
-          }
-        },
-        {
-          "title": "2023 Q2",
-          "desc": "DeFi Meta Chain Launchpad",
-          "image": {
-            "url": "/img/timeline/2023/2023_Q2_DMC_LAUNCH_PAD.png",
-            "alt": "DeFi Meta Chain Launchpad"
-          }
-        },
-        {
-          "title": "2023 Q2",
-          "desc": "DeFi Meta Chain Launchpool",
-          "image": {
-            "url": "/img/timeline/2023/2023_Q2_DMC_LAUNCH_POOL.png",
-            "alt": "DeFi Meta Chain Launchpool"
-          }
-        },
-        {
-          "title": "2023 Q2",
-          "desc": "DeFi Meta Chain Hackathon",
-          "image": {
-            "url": "/img/timeline/2023/2023_Q2_DMC_HACKATHON.png",
-            "alt": "DeFi Meta Chain Hackathon"
-          }
-        },
-        {
-          "title": "2023 Q2",
-          "desc": "DeFi Meta Chain Incubator Program",
-          "image": {
-            "url": "/img/timeline/2023/2023_Q2_DMC_INCUBATOR.png",
-            "alt": "DeFi Meta Chain Incubator Program"
-          }
-        }
-      ]
-    },
-    "2022": {
-      "title": "2022",
-      "status": "Achieved",
-      "cards": [
-        {
-          "title": "2022 Q1",
-          "desc": "DeFiChain Electrum was launched",
-          "image": {
-            "url": "/img/timeline/2022/2022_Q1_DFC_ELECTRUM.png",
-            "alt": "DeFiChain Electrum was launched"
-          }
-        },
-        {
-          "title": "2022 Q2",
-          "desc": "FutureSwap was introduced",
-          "image": {
-            "url": "/img/timeline/2022/2022_Q2_FUTURE_SWAP.png",
-            "alt": "FutureSwap was introduced"
-          }
-        },
-        {
-          "title": "2022 Q2",
-          "desc": "Listing on ByBit",
-          "image": {
-            "url": "/img/timeline/2022/2022_Q2_BYBIT_LISTING.png",
-            "alt": "Listing on ByBit"
-          }
-        },
-        {
-          "title": "2022 Q3",
-          "desc": "Listing on GateIO",
-          "image": {
-            "url": "/img/timeline/2022/2022_Q3_GATEIO_LISTING.png",
-            "alt": "Listing on GateIO"
-          }
-        },
-        {
-          "title": "2022 Q3",
-          "desc": "Listing on Huobi",
-          "image": {
-            "url": "/img/timeline/2022/2022_Q3_HUOBI_LISTING.png",
-            "alt": "Listing on Huobi"
-          }
-        },
-        {
-          "title": "2022 Q4",
-          "desc": "DeFi Meta Chain Official website Launch",
-          "image": {
-            "url": "/img/timeline/2022/2022_Q4_DMC_WEBSITE_LAUNCH.png",
-            "alt": "DeFi Meta Chain Official website Launch"
-          }
-        },
-        {
-          "title": "2022 Q4",
-          "desc": "Grand Central HardFork was introduced",
-          "image": {
-            "url": "/img/timeline/2022/2022_Q4_GRAND_CENTRAL_HARDFORK.png",
-            "alt": "Grand Central HardFork was introduced"
-          }
-        },
-        {
-          "title": "2022 Q4",
-          "desc": "Top 10 Projects by Community Followers on CoinMarketCap",
-          "image": {
-            "url": "/img/timeline/2022/2022_Q4_TOP_10_PROJECT_CMC.png",
-            "alt": "Top 10 Projects by Community Followers on CoinMarketCap"
-          }
-        }
-      ]
-    },
-    "2021": {
-      "title": "2021",
-      "status": "Achieved",
-      "cards": [
-        {
-          "title": "Jan",
-          "desc": "DFIP 3, 4, 5 and 6 are approved by the community.",
-          "url": "https://defiblockchain.medium.com/voting-results-defichain-improvement-community-proposals-45f5e81436b1",
-          "image": {
-            "url": "/img/timeline/2021/dfips3456@2x.png",
-            "alt": "DFIP 3, 4, 5 and 6"
-          }
-        },
-        {
-          "title": "Jan",
-          "desc": "Q4 2020 transparency report released.",
-          "url": "https://defichain.ghost.io/defichain-transparency-report-q4-2020/",
-          "image": {
-            "url": "/img/timeline/2021/transparency-report@2x.png",
-            "alt": "Q4 2020 transparency report"
-          }
-        },
-        {
-          "title": "Jan",
-          "desc": "DeFiChain listed on Messari.",
-          "url": "https://messari.io/asset/defi",
-          "image": {
-            "url": "/img/timeline/2021/messari@2x.png",
-            "alt": "DeFiChain listed on Messari"
-          }
-        },
-        {
-          "title": "Jan",
-          "desc": "DeFiChain listed on KuCoin.",
-          "url": "https://www.kucoin.com/news/en-defichain-gets-listed-on-kucoin?utm_source=DFI",
-          "image": {
-            "url": "/img/timeline/2021/kucoin@2x.png",
-            "alt": "DeFiChain listed on KuCoin"
-          }
-        },
-        {
-          "title": "Jan",
-          "desc": "DFIP 3 (liquidity mining bonus rewards extended) in Clarke Quay hard fork.",
-          "url": "https://defichain.ghost.io/voting-results-defichain-improvement-community-proposals/",
-          "image": {
-            "url": "/img/timeline/2021/lm-bonus@2x.png",
-            "alt": "Liquidity mining bonus extended"
-          }
-        },
-        {
-          "title": "Jan",
-          "desc": "LTC-DFI pool pair added to DEX.",
-          "image": {
-            "url": "/img/timeline/2021/bch-ltc-pairs@2x.png",
-            "alt": "New LTC-DFI pool pair"
-          }
-        },
-        {
-          "title": "Jan",
-          "desc": "DOGE-DFI pool pair added to DEX.",
-          "url": "https://blog.defichain.com/doge-420-liquidity-mining/",
-          "image": {
-            "url": "/img/timeline/2021/doge-pair@2x.jpg",
-            "alt": "New DOGE-DFI pool pair"
-          }
-        },
-        {
-          "title": "Feb",
-          "desc": "Further decentralization via Dakota upgrade.",
-          "url": "https://blog.defichain.com/dakota-upgrade/",
-          "image": {
-            "url": "/img/timeline/2021/dakota-upgrade@2x.jpg",
-            "alt": "Dakota upgrade"
-          }
-        },
-        {
-          "title": "Feb",
-          "desc": "Collateral required to start a masternode lowered to 20k DFI.",
-          "url": "https://blog.defichain.com/dakota-upgrade/",
-          "image": {
-            "url": "/img/timeline/2021/lower-masternode-collateral@2x.png",
-            "alt": "Lower masternode collateral"
-          }
-        },
-        {
-          "title": "Mar",
-          "desc": "BCH-DFI pool pair added to DEX.",
-          "url": "https://blog.defichain.com/new-liquidity-mining-pool-pair-bitcoin-cash-dfi/",
-          "image": {
-            "url": "/img/timeline/2021/bch-ltc-pairs@2x.png",
-            "alt": "New BCH-DFI pool pair"
-          }
-        },
-        {
-          "title": "Mar",
-          "desc": "Bitcoin anchoring implemented.",
-          "url": "https://blog.defichain.com/100-grand-in-less-than-100-seconds/",
-          "image": {
-            "url": "/img/timeline/2021/bitcoin-anchoring@2x.png",
-            "alt": "Bitcoin anchoring"
-          }
-        },
-        {
-          "title": "Apr",
-          "desc": "DeFiChain listed on Transak.",
-          "image": {
-            "url": "/img/timeline/2021/Tranak_April.jpg",
-            "alt": "DeFiChain listed on Transak"
-          }
-        },
-        {
-          "title": "Apr",
-          "desc": "Pink paper on stocks trading, loan and decentralized BTC.",
-          "url": "https://github.com/defich/pinkpaper/",
-          "image": {
-            "url": "/img/timeline/2021/pink-paper-q1@2x.png",
-            "alt": "Q1 pink paper"
-          }
-        },
-        {
-          "title": "May",
-          "desc": "Introduced Atomic Swap via Eunos Upgrade",
-          "image": {
-            "url": "/img/timeline/2021/Eunos-Upgrade.jpg",
-            "alt": "Introduced Atomic Swap via Eunos Upgrade"
-          }
-        },
-        {
-          "title": "June",
-          "desc": "Release of open-source DeFiChain JS library.",
-          "url": "https://github.com/defich/jellyfish/",
-          "image": {
-            "url": "/img/timeline/2021/js-library@2x.png",
-            "alt": "JS library"
-          }
-        },
-        {
-          "title": "June",
-          "desc": "Decentralized cross-chain asset bridge via atomic swap.",
-          "url": "https://github.com/DeFiCh/ain/wiki/Interchain-Exchange-Tutorial/",
-          "image": {
-            "url": "/img/timeline/2021/atomic-swap@2x.png",
-            "alt": "Atomic swap"
-          }
-        },
-        {
-          "title": "June",
-          "desc": "Struck off the DeFiChain Foundation",
-          "url": "https://blog.defichain.com/we-struck-off-the-foundation-long-live-the-decentralization/",
-          "image": {
-            "url": "/img/timeline/2021/DFC-Foundation.jpg",
-            "alt": "Struck off the DeFiChain Foundation"
-          }
-        },
-        {
-          "title": "Aug",
-          "desc": "Release of the DeFiChain Light Wallet Mobile App on iOS and Android.",
-          "url": "https://defichain.com/downloads/",
-          "image": {
-            "url": "/img/timeline/2021/mobile-app@2x.png",
-            "alt": "Mobile app download"
-          }
-        },
-        {
-          "title": "Sep",
-          "desc": "Release of DeFi Scan, the block explorer for DeFiChain.",
-          "url": "https://defiscan.live/",
-          "image": {
-            "url": "/img/timeline/2021/DeFi-Scan.jpg",
-            "alt": "DeFi Scan release"
-          }
-        },
-        {
-          "title": "Oct",
-          "desc": "100% carbon neutral blockchain.",
-          "image": {
-            "url": "/img/timeline/2021/Carbon-neutral.jpg",
-            "alt": "100% carbon neutral blockchain."
-          }
-        },
-        {
-          "title": "Nov",
-          "desc": "Decentralized Assets and Liquidity Mining with dTokens via Fort Canning Upgrade.",
-          "image": {
-            "url": "/img/timeline/2021/Fort-Canning-Update-blank.jpg",
-            "alt": "Decentralized Assets and Liquidity Mining"
-          }
-        }
-      ]
-    },
-    "future": {
-      "title": "Within the next 3, 5 and 10 years",
-      "cards": [
-        {
-          "title": "3 years",
-          "desc": "Decentralized leveraged trading (10x or 50x leverage of collateral).",
-          "image": {
-            "url": "/img/timeline/3y/decentralized-leverage@2x.png",
-            "alt": "Decentralized leveraged trading"
-          }
-        },
-        {
-          "title": "3 years",
-          "desc": "Decentralized options.",
-          "image": {
-            "url": "/img/timeline/3y/options@2x.png",
-            "alt": "Decentralized Options"
-          }
-        },
-        {
-          "title": "3 years",
-          "desc": "Secondary market.",
-          "image": {
-            "url": "/img/timeline/3y/secondary-market@2x.png",
-            "alt": "Secondary market"
-          }
-        },
-        {
-          "title": "3 years",
-          "desc": "Financial derivatives implemented as native on-chain transactions.",
-          "image": {
-            "url": "/img/timeline/3y/derivatives@2x.png",
-            "alt": "Financial derivatives"
-          }
-        },
-        {
-          "title": "3 years",
-          "desc": "The de-facto blockchain for peer-to-peer financial transactions.",
-          "image": {
-            "url": "/img/timeline/3y/p2p@2x.png",
-            "alt": "De-facto blockchain for peer-to-peer financial transactions"
-          }
-        },
-        {
-          "title": "5 years",
-          "desc": "On-chain Automated Clearing House (ACH) and Real-time Gross Settlement (RTGS).",
-          "image": {
-            "url": "/img/timeline/5y/ach@2x.png",
-            "alt": "ACH and RTGS"
-          }
-        },
-        {
-          "title": "5 years",
-          "desc": "The de-facto blockchain for transactions across financial institutions.",
-          "image": {
-            "url": "/img/timeline/5y/xfi-txns@2x.png",
-            "alt": "De-facto blockchain for cross-financial institutional transactions"
-          }
-        },
-        {
-          "title": "10 years",
-          "desc": "The de-facto blockchain for transactions between countries and sovereign states.",
-          "image": {
-            "url": "/img/timeline/10y/x-border-txns@2x.png",
-            "alt": "De-facto blockchain for international financial transactions between countries and sovereign states"
-          }
-        }
-      ]
-    },
-    "2020": {
-      "title": "2020",
-      "status": "Achieved",
-      "cards": [
-        {
-          "title": "May",
-          "desc": "DeFiChain launch and DFI airdrops.",
-          "url": "https://github.com/DeFiCh/",
-          "image": {
-            "url": "/img/timeline/2020/blockchain-launch@2x.png",
-            "alt": "DeFi logo"
-          }
-        },
-        {
-          "title": "Jun",
-          "desc": "$DFI coin started trading on LATOKEN.",
-          "url": "https://exchange.latoken.com/exchange/DFI-USDT",
-          "image": {
-            "url": "/img/timeline/2020/dfi-latoken@2x.png",
-            "alt": "DFI on LATOKEN"
-          }
-        },
-        {
-          "title": "Jun",
-          "desc": "$DFI coin listed on Coinpaprika.",
-          "url": "https://coinpaprika.com/coin/dfi-defi-chain/",
-          "image": {
-            "url": "/img/timeline/2019/dfi-coinpaprika@2x.png",
-            "alt": "DFI on CoinPaprika"
-          }
-        },
-        {
-          "title": "Jul",
-          "desc": "CoinGecko lists DFI.",
-          "url": "https://www.coingecko.com/en/coins/defichain",
-          "image": {
-            "url": "/img/timeline/2020/dfi-coingecko@2x.png",
-            "alt": "DFI on CoinGecko"
-          }
-        },
-        {
-          "title": "Jul",
-          "desc": "Indoex lists DFI.",
-          "url": "https://international.indoex.io/trade/DFI_USDT",
-          "image": {
-            "url": "/img/timeline/2020/dfi-indoex@2x.png",
-            "alt": "DFI on Indoex"
-          }
-        },
-        {
-          "title": "Jul",
-          "desc": "DeFiChain desktop app (GUI) launch.",
-          "url": "https://github.com/DeFiCh/defi-app",
-          "image": {
-            "url": "/img/timeline/2020/defi-app@2x.png",
-            "alt": "DeFiChain client app"
-          }
-        },
-        {
-          "title": "Aug",
-          "desc": "DeFiChain brand refresh.",
-          "image": {
-            "url": "/img/timeline/2020/dechain-site-redesign@2x.jpg",
-            "alt": "DeFiChain.com redesign"
-          }
-        },
-        {
-          "title": "Aug",
-          "desc": "DeFiChain listed on CoinMarketCap.",
-          "url": "https://coinmarketcap.com/currencies/defichain/markets/",
-          "image": {
-            "url": "/img/timeline/2020/dfi-coinmarketcap@2x.png",
-            "alt": "DFI on CoinMarketCap"
-          }
-        },
-        {
-          "title": "Sep",
-          "desc": "DFIP 1 & 2 are approved by the DeFiChain community.",
-          "url": "https://defiblockchain.medium.com/dfip-1-2-voting-results-29bfc8c7a608",
-          "image": {
-            "url": "/img/timeline/2020/dfips-approved@2x.jpg",
-            "alt": "DFIP 1 & 2 approved"
-          }
-        },
-        {
-          "title": "Oct",
-          "desc": "DeFiChain listed on Bitrue.",
-          "url": "https://www.bitrue.com/trade/dfi_btc",
-          "image": {
-            "url": "/img/timeline/2020/bittrue@2x.jpg",
-            "alt": "DeFiChain listed on Bittrue"
-          }
-        },
-        {
-          "title": "Oct",
-          "desc": "Ang Mo Kio hardfork with asset tokenization support.",
-          "url": "https://defiblockchain.medium.com/defichain-hardfork-successful-everything-you-need-to-know-5aa4ea92438b",
-          "image": {
-            "url": "/img/timeline/2020/amk-hardfork@2x.jpg",
-            "alt": "Ang Mo Kio hardfork with asset tokenization support"
-          }
-        },
-        {
-          "title": "Oct",
-          "desc": "DeFiChain listed on Bittrex.",
-          "url": "https://global.bittrex.com/Market/Index?MarketName=BTC-DFI",
-          "image": {
-            "url": "/img/timeline/2020/bittrex@2x.png",
-            "alt": "DeFiChain listed on Bittrex"
-          }
-        },
-        {
-          "title": "Nov",
-          "desc": "Bayfront hard fork with liquidity pool support.",
-          "url": "https://www.reddit.com/r/defiblockchain/comments/jem20f/defichain_version_130_for_bayfront_with_liquidity/",
-          "image": {
-            "url": "/img/timeline/2020/bayfront-hardfork@2x.jpg",
-            "alt": "Bayfront hard fork"
-          }
-        },
-        {
-          "title": "Dec",
-          "desc": "Swap, Liquidity Pool and Yield Farming.",
-          "url": "https://www.youtube.com/watch?v=0uBwWK85BLU",
-          "image": {
-            "url": "/img/timeline/2020/liquidity-pool@2x.png",
-            "alt": "Liquidity Pool"
-          }
-        }
-      ]
-    },
-    "2019": {
-      "title": "2019",
-      "status": "Achieved",
-      "cards": [
-        {
-          "title": "Sep",
-          "desc": "Conceptualization of DeFiChain.",
-          "url": "https://cryptopotato.com/defichain-the-story-from-the-co-founders/",
-          "image": {
-            "url": "/img/timeline/2019/concept@2x.jpg",
-            "alt": "Conceptualization of DeFiChain"
-          }
-        },
-        {
-          "title": "Oct",
-          "desc": "DeFiChain White paper released.",
-          "url": "/white-paper/",
-          "image": {
-            "url": "/img/timeline/2019/white-paper@2x.png",
-            "alt": "DeFi logo"
-          }
-        }
-      ]
-    }
+  "YearAheadRoadMapSection": {
+    "label": "THE ROAD AHEAD",
+    "title": "Milestones",
+    "cards": [
+      {
+        "title": "DevNet for Meta Chain",
+        "description": "",
+        "image": "/assets/img/roadmap/DevNet.png"
+      },
+      {
+        "title": "TestNet for Meta Chain",
+        "description": "",
+        "image": "/assets/img/roadmap/TestNet.png"
+      },
+      {
+        "title": "MainNet Launch",
+        "description": "",
+        "image": "/assets/img/roadmap/MainNet.png"
+      }
+    ]
   },
   "BlockchainFeatureSection": {
     "title": "Designed for Decentralized Finance",
     "subtitle": "NON-TURING-COMPLETE BLOCKCHAIN",
-    "desc": "DeFiChain offers comprehensive functionality tailored to the needs of the Distributed Ledger Technology (DLT) community, prioritizing simplicity, rapid throughput, and security.",
+    "desc": "DeFiChain offers comprehensive functionality tailored to the Distributed Ledger Technology (DLT) community, with an emphasis on simplicity, speed, and security.",
     "button": "Start building",
     "THROUGHPUT": {
       "title": "THROUGHPUT",
@@ -759,5 +207,10 @@
       "title": "VARIETY",
       "desc": "Wide range of crypto-economic financial operations."
     }
+  },
+  "BlogPostsSection": {
+    "title": "DeFiChain \nin the news",
+    "label": "DEFICHAIN BLOG",
+    "button": "View all articles"
   }
 }

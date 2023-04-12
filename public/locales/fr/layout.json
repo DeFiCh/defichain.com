@@ -9,29 +9,45 @@
       "downloads": "Téléchargements",
       "learn": "Apprendre",
       "buy": "Acheter",
+      "getDfi": "Obtenir DFI",
       "dfcblog": "Blog",
       "explore": "Explorer",
       "build": "Construire",
       "community": "Communauté"
     },
     "explore": {
-      "title": "Explorer DeFiChain",
-      "labels": [
+      "info": [
         {
-          "title": "$DFI",
-          "subtitle": "En savoir plus sur le token"
+          "title": "Explorer DeFiChain",
+          "labels": [
+            {
+              "title": "$DFI",
+              "subtitle": "En savoir plus sur le token"
+            },
+            {
+              "title": "Échange décentralisé",
+              "subtitle": "Maximisez vos actifs"
+            },
+            {
+              "title": "Portefeuilles",
+              "subtitle": "Stockez vos actifs à votre manière"
+            },
+            {
+              "title": "Masternodes",
+              "subtitle": "Staking de DeFiChain"
+            }
+          ]
         },
         {
-          "title": "Échange décentralisé",
-          "subtitle": "Maximisez vos actifs"
-        },
-        {
-          "title": "Portefeuilles",
-          "subtitle": "Stockez vos actifs à votre manière"
-        },
-        {
-          "title": "Masternodes",
-          "subtitle": "Staking de DeFiChain"
+          "title": "EXPLORATEURS DE BLOCS",
+          "labels": [
+            {
+              "title": "DeFiScan (Official)"
+            },
+            {
+              "title": "Crypto ID"
+            }
+          ]
         }
       ],
       "image": {
@@ -188,7 +204,7 @@
       "ECOSYSTEM": {
         "category": "ECOSYSTÈME",
         "defichainapps": "Applications DeFiChain",
-        "defimetachain": "DeFi MetaChain",
+        "defimetachain": "DeFi Meta Chain",
         "defiscan": "DeFiScan",
         "governance": "Gouvernance",
         "bugbounty": "Bounty de bogues",

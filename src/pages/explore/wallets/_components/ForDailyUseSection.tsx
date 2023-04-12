@@ -11,10 +11,10 @@ export function ForDailyUseSection() {
     <Container className="lg:mt-[129px] md:mt-[57px] mt-0">
       <div
         id="explore-wallets-daily-use-section"
-        className="flex flex-col gap-y-5 scroll-mt-[150px]"
+        className="flex flex-col gap-y-5 lg:scroll-mt-[200px] scroll-mt-[150px]"
       >
         <div className="flex md:justify-center justify-start">
-          <SectionTitle text="FOR DAILY USE" />
+          <SectionTitle text={t("dailyUseSection.sectionTitle")} />
         </div>
 
         <h2

@@ -7,7 +7,7 @@ interface FooterLinkItemProps {
   pathname: string; // href
   testId: string;
   altLabel: string;
-  isExternaLink: boolean;
+  isExternaLink?: boolean;
   url?: string;
   hasUpArrowIcon?: boolean;
 }
@@ -26,13 +26,21 @@ export default function FooterColumn({
     <section>
       <h3
         className={classNames(
-          "text-sm font-semibold pb-[22px] text-dark-500 md:pb-[38px] md:pt-0",
+          "text-sm font-semibold pb-[22px] text-dark-500 md:pb-[30px] md:pt-0 lg:pb-[38px]",
           customStyle
         )}
       >
         {t(`footer.sitemap.${category}.category`)}
       </h3>
-      <div className="grid grid-flow-row grid-cols-2 gap-6 md:grid-cols-1">
+      <div
+        className={classNames(
+          "grid gap-y-6 grid-flow-col gap-x-3 md:gap-x-14",
+          {
+            "grid-rows-[20px_minmax(40px,_1fr)] md:grid-rows-4 lg:grid-rows-2":
+              childLinks.length >= 2,
+          }
+        )}
+      >
         {childLinks.map((link) => (
           <FooterLink
             key={link.label}

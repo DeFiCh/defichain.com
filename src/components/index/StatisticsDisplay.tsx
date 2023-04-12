@@ -71,21 +71,19 @@ export function StatsDisplay() {
   ];
 
   return (
-    <div className="relative z-0">
-      <Container className="relative lg:mt-[57px] mt-[76px]">
-        <StatisticPanel
-          displayItem={statsItems}
-          displayStripCustomStyle="scroll-mt-[200px]"
-          displayId="statistics_display"
-        />
-      </Container>
+    <Container className="relative lg:mt-[57px] mt-[76px] lg:z-10">
+      <StatisticPanel
+        displayItem={statsItems}
+        displayStripCustomStyle="-scroll-mt-[150px]"
+        displayId="statistics_display"
+      />
       <div
         className={classNames(
           "absolute z-[-1] bg-contain bg-no-repeat bg-left bg-[url(/assets/img/index/index-cube.png)]",
-          "lg:top-0 md:top-[84px] top-[108px] lg:left-0 md:-left-14",
-          "2xl:w-full 2xl:h-[600px] lg:w-full lg:h-[400px] md:w-[280px] md:h-[280px] w-[208px] h-[208px]"
+          "lg:top-0 md:top-[65px] top-[108px] lg:left-[-200px] md:-left-[12em] -left-20",
+          "2xl:w-full 2xl:h-[600px] 2xl:left-[-600.86px] lg:w-full lg:h-[400px] md:w-[280px] md:h-[280px] w-[208px] h-[208px]"
         )}
       />
-    </div>
+    </Container>
   );
 }

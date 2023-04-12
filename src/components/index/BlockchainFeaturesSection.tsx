@@ -1,4 +1,4 @@
-import { Button } from "@components/commons/Buttons";
+// import { Button } from "@components/commons/Buttons";
 import { Container } from "@components/commons/Container";
 import { useTranslation } from "next-i18next";
 import Slider from "react-slick";
@@ -38,12 +38,12 @@ export function BlockchainFeaturesSection(): JSX.Element {
     slidesToShow: 1,
     slidesToScroll: 1,
     lazyLoad: true,
-    dotsClass: "custom-dots",
+    dotsClass: "blockchain-features-dots",
   };
 
   return (
     <section
-      className="pt-14 pb-12 md:py-24 lg:py-[156px] relative"
+      className="lg:py-[156px] md:py-24 pt-20 pb-12"
       data-testid="BlockchainFeatureSection"
     >
       <Container className="flex flex-col justify-between lg:flex-row 2xl:max-w-[1920px] 2xl:mx-[300px]">
@@ -77,10 +77,11 @@ export function BlockchainFeaturesSection(): JSX.Element {
             >
               {t("BlockchainFeatureSection.desc")}
             </div>
-            <Button
+            {/* TODO: uncomment after mvp */}
+            {/* <Button
               className="z-10 text-sm min-w-0 w-[206px] py-3 !mt-[23px] md:!mt-9 lg:text-base lg:w-[232px] lg:py-4 lg:!mt-10"
               text={t("BlockchainFeatureSection.button")}
-            />
+            /> */}
           </div>
         </div>
         <div className="z-10 justify-between hidden md:flex md:gap-x-16 lg:w-[568px] lg:gap-x-10 w-full lg:px-12 mt-14 md:mt-[72px] lg:mt-0">
@@ -102,7 +103,6 @@ export function BlockchainFeaturesSection(): JSX.Element {
           </Slider>
         </div>
       </Container>
-      <div className="hidden md:block absolute h-[785.44px] w-[785.44px] md:left-[-240px] md:bottom-0 lg:left-0 lg:bottom-[-289.56px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/blockchainFeatures/blockchainFeaturesBg.png')]" />
     </section>
   );
 }

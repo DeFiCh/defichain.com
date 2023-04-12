@@ -47,7 +47,7 @@ export default function WhitePaperPage({ post }): JSX.Element {
         </Container>
       </div>
       <Container className="flex flex-row gap-x-12 lg:mb-[216px] lg:pr-12">
-        <div className="hidden h-full sticky top-[100px] lg:block md:w-3/12 lg:pt-[64px] flex-1">
+        <div className="hidden h-[100vh] sticky top-[100px] no-scrollbar overflow-y-auto lg:block md:w-3/12 lg:pt-[64px] flex-1">
           <TableOfContents parentReference={contentRef} />
         </div>
         <div className="flex flex-col w-full mt-6 mb-24 md:mt-8 lg:mb-10 lg:mt-0 lg:pt-[64px] lg:w-9/12">

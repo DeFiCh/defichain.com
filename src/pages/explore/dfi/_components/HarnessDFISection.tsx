@@ -56,7 +56,7 @@ export default function HarnessDFISection() {
 
   return (
     <Container className="lg:mb-[303px] md:mb-[180px] mb-24 relative z-[10]">
-      <div className="flex flex-col w-full mx-auto gap-y-5">
+      <section className="flex flex-col w-full mx-auto gap-y-5">
         <div className="flex md:justify-center justify-start">
           <SectionTitle text={t("harnessDFISection.title")} />
         </div>
@@ -69,7 +69,7 @@ export default function HarnessDFISection() {
         >
           {t("harnessDFISection.subtitle")}
         </h2>
-        <div
+        <h4
           className={classNames(
             "lg:text-xl text-base font-desc lg:w-[60%] w-full md:place-self-center",
             "lg:tracking-normal tracking-[0.03em]",
@@ -77,17 +77,17 @@ export default function HarnessDFISection() {
           )}
         >
           {t("harnessDFISection.desc")}
-        </div>
-      </div>
-      <div className="flex justify-center mt-16 hidden md:flex">
+        </h4>
+      </section>
+      <section className="flex justify-center mt-16 hidden md:flex">
         <HarnessDFIGrid gridItems={harnessDFIItems} />
-      </div>
-      <div className="block md:hidden mt-16">
+      </section>
+      <section className="block md:hidden mt-16">
         <Slider {...sliderSettings}>
           <HarnessDFIGrid gridItems={harnessDFIItems.slice(0, 3)} isMobile />
           <HarnessDFIGrid gridItems={harnessDFIItems.slice(3)} isMobile />
         </Slider>
-      </div>
+      </section>
       <div
         className={classNames(
           "absolute bg-contain bg-no-repeat z-[-1]",

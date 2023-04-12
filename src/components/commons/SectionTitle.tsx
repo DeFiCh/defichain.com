@@ -8,7 +8,7 @@ export function SectionTitle({
   customStyle?: string;
 }) {
   return (
-    <div
+    <h3
       className={classNames(
         "accent-gradient-1 text-transparent bg-clip-text font-mono",
         "leading-4 tracking-[0.04em] text-base",
@@ -16,6 +16,6 @@ export function SectionTitle({
       )}
     >
       {text}
-    </div>
+    </h3>
   );
 }

@@ -17,8 +17,8 @@ export function ContentHeader({
       id={escapedId}
       title={id}
       className={classNames(
-        "text-[32px] leading-9 scroll-mt-40",
-        "lg:text-[52px] lg:leading-[52px] ",
+        "text-[24px] leading-8 scroll-mt-40",
+        "lg:text-[32px] lg:leading-[40px]",
         customStyle
       )}
     >
@@ -63,8 +63,8 @@ export function ContentDescription({
       <span
         className={classNames(
           "font-desc text-dark-700 break-words",
-          "text-xl tracking-[0.03em]",
-          "lg:text-2xl lg:tracking-normal",
+          "text-base tracking-[0.03em]",
+          "lg:text-xl lg:tracking-normal lg:leading-8",
           customStyle
         )}
       >

@@ -93,11 +93,19 @@ context("/ on macbook-16", () => {
 
   // No TC
   it("should have expected Blockchain feature section title and description", () => {
-    cy.findByTestId("blockchainFeatureSection-text").should(
-      "have.text",
-      "NON-TURING-COMPLETE BLOCKCHAINDesigned for Decentralized Finance DeFiChain offers comprehensive functionality " +
-        "tailored to the Distributed Ledger Technology (DLT) community, with an emphasis on simplicity, speed, and security."
+    cy.findByTestId("section-title-NON-TURING-COMPLETE BLOCKCHAIN").should(
+      "be.visible"
     );
+    cy.findByTestId("section-header-Designed,for,Decentralized,Finance").should(
+      "be.visible"
+    );
+    cy.findByTestId("section-desc-Designed,for,Decentralized,Finance")
+      .should("be.visible")
+      .and(
+        "have.text",
+        "DeFiChain offers comprehensive functionality tailored to the Distributed Ledger Technology (DLT) " +
+          "community, with an emphasis on simplicity, speed, and security."
+      );
   });
 
   // No TC

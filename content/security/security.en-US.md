@@ -1,5 +1,6 @@
 ---
 title: Security
+subtitle: Security
 description: Security audits
 ---
 

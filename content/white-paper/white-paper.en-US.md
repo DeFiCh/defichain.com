@@ -1,6 +1,6 @@
 ---
-subtitle: Whitepaper
 title: DOCUMENTATION FOR DEFICHAIN ECOSYSTEM
+subtitle: Whitepaper
 description: Last updated mm/dd/yyyy
 ---
 

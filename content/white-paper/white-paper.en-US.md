@@ -456,7 +456,7 @@ Decentralized Non-Collateralized Debt
 Asset Tokenization
 </h3>
 <div className="mt-4 text-dark-800">
-  Asset tokenization is the representation of an asset, such as real estate or company equity, in immutable tokens on the blockchain<a className="text-electric" href="#user-content-fn-8"><sup>8</sup></a>. This particular area of decentralized finance has tremendous potential and is one of the most exciting areas of investment for holders of cryptocurrency<a className="text-electric" href="#user-content-fn-9"><sup>9</sup></a>.
+  Asset tokenization is the representation of an asset, such as real estate or company equity, in immutable tokens on the blockchain. This particular area of decentralized finance has tremendous potential and is one of the most exciting areas of investment for holders of cryptocurrency<a className="text-electric" href="#user-content-fn-8"><sup>8</sup></a>.
   <div className="mt-5">
   While several attempts have been made at asset tokenization in the blockchain space, most of them have pivoted and now provide services not directly related to asset tokenization (LAtoken, Etherparty). Tokeny and Tokenize-IT advertise themselves as tokenization platforms, but as of the writing of this paper, their processes are still fairly manual, and are heavily reliant on specific localities and regulatory requirements for those specific jurisdictions. Other blockchains, such as Tezos, have been mentioned as good platforms for asset tokenization, but, as with other multi-use blockchains, the Turing-complete set of commands will create complex smart contracts that are unnecessary when using DeFiChain.
   DeFiChain will provide a module specifically designed for asset tokenization, and will be particularly easy to use to tokenize assets such as company equity, real estate, and other valued holdings.
@@ -1278,7 +1278,7 @@ Governance
 Community Development Fund
 </h3>
 <div className="mt-4 text-dark-800">
-The DeFiChain Foundation will create a community development fund with up to 10% of the block rewards under management. This percentage can be updated by submitting a DAO proposal that will be voted on by all masternodes. Community development funds were popularized by DASH<a className="text-electric" href="#user-content-fn-10"><sup>10</sup></a> and are used in some selective DAOs today. The community will determine the use of these funds for development, marketing, or research that forwards the DeFi community. DFI masternodes vote for projects they like and the highest voted proposals every month will be funded.
+The DeFiChain Foundation will create a community development fund with up to 10% of the block rewards under management. This percentage can be updated by submitting a DAO proposal that will be voted on by all masternodes. Community development funds were popularized by DASH<a className="text-electric" href="#user-content-fn-9"><sup>9</sup></a> and are used in some selective DAOs today. The community will determine the use of these funds for development, marketing, or research that forwards the DeFi community. DFI masternodes vote for projects they like and the highest voted proposals every month will be funded.
 <div className="mt-5">
 It costs 10 DFI to submit a budget proposal and a proposal can be submitted by anyone. This fee is burned and non-refundable regardless of whether the budget is approved. Budgets are proposals which receive a net total of yes votes equal to or greater than 10% of the total possible votes (for example over 448 out of 4480). Budgets can be nullified at any time if vote totals (cast or re-cast) fall below the approval threshold. Budgets are processed (paid) in order of yes minus no votes. More popular budgets get payment priority. Voting happens on a monthly basis but can be changed by a masternode vote.
 </div>
@@ -1636,10 +1636,8 @@ This is what DeFiChain is all about - To make the world a better place!
 
   <div className="scroll-mt-40" id="user-content-fn-7">7. <a className="underline" href="https://coinsutra.com/best-decentralized-exchanges-dex/" target="_blank">https://coinsutra.com/best-decentralized-exchanges-dex/ ↩</a></div>
 
-  <div className="scroll-mt-40" id="user-content-fn-8">8. <a className="underline" href="https://www2.deloitte.com/lu/en/pages/technology/articles/tokenization-assets-disrupting-financial-industry.html" target="_blank">https://www2.deloitte.com/lu/en/pages/technology/articles/tokenization-assets-disrupting-financial-industry.html ↩</a></div>
+  <div className="scroll-mt-40" id="user-content-fn-8">8. <a className="underline" href="https://www.forbes.com/sites/laurencoleman/2019/04/25/heres-why-interest-in-tokenizing-assets-is-starting-to-surge/#2ddeec4640a5" target="_blank">https://www.forbes.com/sites/laurencoleman/2019/04/25/heres-why-interest-in-tokenizing-assets-is-starting-to-surge/#2ddeec4640a5 ↩</a></div>
 
-  <div className="scroll-mt-40" id="user-content-fn-9">9. <a className="underline" href="https://www.forbes.com/sites/laurencoleman/2019/04/25/heres-why-interest-in-tokenizing-assets-is-starting-to-surge/#2ddeec4640a5" target="_blank">https://www.forbes.com/sites/laurencoleman/2019/04/25/heres-why-interest-in-tokenizing-assets-is-starting-to-surge/#2ddeec4640a5 ↩</a></div>
-
-  <div className="scroll-mt-40" id="user-content-fn-10">10. <a className="underline" href="https://docs.dash.org/en/stable/governance/understanding.html" target="_blank">https://docs.dash.org/en/stable/governance/understanding.html ↩</a></div>
+  <div className="scroll-mt-40" id="user-content-fn-9">9. <a className="underline" href="https://docs.dash.org/en/stable/governance/understanding.html" target="_blank">https://docs.dash.org/en/stable/governance/understanding.html ↩</a></div>
 
 </div>

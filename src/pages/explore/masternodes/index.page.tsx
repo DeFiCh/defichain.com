@@ -3,6 +3,7 @@ import { SSRConfig, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { HeroBanner, HeroBannerBg } from "@components/commons/HeroBanner";
 // import { ExploreCards, ExploreCardsImage } from "../_components/ExploreCards";
+import { Head } from "@components/commons/Head";
 import { MasternodesStatisticsDisplay } from "./_components/MasternodesStatisticsDisplay";
 import { MasternodesBenefitsSection } from "./MasternodesBenefitsSection";
 
@@ -14,6 +15,7 @@ export default function ExploreMasternodes() {
   // );
   return (
     <>
+      <Head title={t("heroBanner.subtitle")} />
       <HeroBanner
         title={t("heroBanner.title")}
         subtitle={t("heroBanner.subtitle")}

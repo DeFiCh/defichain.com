@@ -105,8 +105,8 @@ function FeatureIcon({
       // onMouseOut={handleMouseOut}
       // onBlur={handleMouseOut}
     >
-      <div className="w-[50px]">
-        <Icon className="w-fit h-[50px]" id={`${id}-${item.icon}`} />
+      <image>
+        <Icon id={`${id}-${item.icon}`} />
         {/* {isHovering && Icon ? (
           <IconOnHover className="w-[50px] md:w-fit h-[50px]" />
         ) : (
@@ -115,7 +115,7 @@ function FeatureIcon({
             id={`${id}-${item.title}`}
           />
         )} */}
-      </div>
+      </image>
 
       <div
         className={classNames(

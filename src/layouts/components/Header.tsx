@@ -191,7 +191,7 @@ export function Header(): JSX.Element {
               onClick={() => {
                 setIsMenuActive(true);
               }}
-              data-testid="Header.OpenMenu"
+              data-testid="header-openMenu"
             />
           )}
         </div>
@@ -399,6 +399,7 @@ function TabletMobileDropDown({
         }}
       >
         <div
+          data-testid={`header-menuItem-${label}`}
           className={classNames(
             "grow font-semibold md:text-lg text-base",
             dropDownState === label ? "text-brand-100" : "text-dark-700"

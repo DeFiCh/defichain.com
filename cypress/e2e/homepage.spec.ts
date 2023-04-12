@@ -17,16 +17,23 @@ context("/ on macbook-16", () => {
   });
 
   // QA-813 - TC2 - Step 2 & 3
-  it("should have Coming soon on Ecosystem and Build sections", () => {
-    cy.findAllByTestId("header-coming-soon-tag").should("have.length", 2);
-    cy.findAllByTestId("header-coming-soon-tag")
-      .first()
-      .parent()
-      .should("contain", "Ecosystem");
-    cy.findAllByTestId("header-coming-soon-tag")
-      .last()
-      .parent()
-      .should("contain", "Build");
+  it.only("should have Coming soon on Ecosystem and Build sections", () => {
+    cy.findByTestId("header-coming-soon-tag-Ecosystem").should(
+      "contain",
+      "COMING SOON"
+    );
+    cy.findByTestId("header-coming-soon-tag-Build").should(
+      "contain",
+      "COMING SOON"
+    );
+    cy.findByTestId("header-coming-soon-tag-Explore").should(
+      "not.contain",
+      "COMING SOON"
+    );
+    cy.findByTestId("header-coming-soon-tag-Community").should(
+      "not.contain",
+      "COMING SOON"
+    );
   });
 
   // No TC

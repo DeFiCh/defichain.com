@@ -260,7 +260,10 @@ function DesktopMenu({ item }: { item: string }) {
           }
         )}
       >
-        <div className={classNames("flex flex-col")}>
+        <div
+          data-testid={`header-coming-soon-tag-${item}`}
+          className={classNames("flex flex-col")}
+        >
           {(item === MobileTabletDropDownState.ECOSYSTEM ||
             item === MobileTabletDropDownState.BUILD) && <ComingSoonTag />}
           {t(`header.navbar.${item.toLowerCase()}`)}

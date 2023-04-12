@@ -41,7 +41,7 @@ export function MasternodesBenefitsSection(): JSX.Element {
           items={masternodesBenefitsItems}
           id="tablet-desktop-screen"
           customClassStyle="masternode-benefits-feature-item flex-row"
-          customParagraphStyle="ml-[58px]"
+          customParagraphStyle="ml-5"
           customSectionStyle="gap-12"
         />
         <div className="hidden md:block absolute md:h-8 md:w-8 md:-right-10 md:bottom-[140px] lg:h-[45px] lg:w-[45px] lg:top-[200px] lg:-right-5 bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/explore/cross-accent-6.png')]" />

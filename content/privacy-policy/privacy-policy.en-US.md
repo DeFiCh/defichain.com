@@ -3,8 +3,8 @@ title: DeFiChain's Privacy Policy
 description: Privacy Policy
 ---
 
-<div className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="introduction">1. Introduction</div>
-<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 md:pb-8 lg:pb-12">
+<h2 className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="introduction">1. Introduction</div>
+<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 pt-2 md:pb-8 lg:pb-12 lg:pt-4">
 <p>
 DEFICHAIN FOUNDATION LTD. (Company Number: 2068902) takes the privacy of your information seriously. This Privacy Policy applies to the defichain.com website (the “Website”) and governs data collection, processing and usage in compliance with the Data Protection Act, 2021 of the British Virgin Islands (“DPA”).
 </p>
@@ -17,9 +17,9 @@ This Privacy Policy has been compiled to better serve those who are concerned wi
 
 </div>
 
-<div className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="information-collected">2. Information Collected</div>
+<h2 className="text-dark-1000 scroll-mt-40 text-2xl lg:text-[32px] lg:leading-10" id="information-collected">2. Information Collected</div>
 
-<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 md:pb-8 lg:pb-12">
+<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 pt-2 md:pb-8 lg:pb-12 lg:pt-4">
 <p>
 When subscribing on our site, as appropriate, you may be asked to enter your name, email address, mailing address, phone number, company name, or other details to help you with your experience.
 </p>
@@ -32,15 +32,15 @@ This information is used by DEFICHAIN FOUNDATION LTD. for the operation of the s
 </p>
 </div>
 
-<div className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="when-information-collected">3. When is information collected?</div>
+<h2 className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="when-information-collected">3. When is information collected?</div>
 
-<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 md:pb-8 lg:pb-12">
+<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 pt-2 md:pb-8 lg:pb-12 lg:pt-4">
 We collect information from you when you subscribe to a newsletter, respond to a survey, fill out a form or enter information on our site.
 </div>
 
-<div className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="use-of-information">4. Use of information and details</div>
+<h2 className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="use-of-information">4. Use of information and details</div>
 
-<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 md:pb-8 lg:pb-12">
+<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 pt-2 md:pb-8 lg:pb-12 lg:pt-4">
 <p>
 We may use the information we collect from you when you sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways:
 </p>
@@ -53,9 +53,9 @@ We may use the information we collect from you when you sign up for our newslett
 </ul>
 </div>
 
-<div className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="security">5. Security of your personal information</div>
+<h2 className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="security">5. Security of your personal information</div>
 
-<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 md:pb-8 lg:pb-12">
+<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 pt-2 md:pb-8 lg:pb-12 lg:pt-4">
 <p>
 We strive to maintain the safety of your Personal Information. Unfortunately, no internet-based service is completely secure. Although we will do our best to protect your personal data, we cannot guarantee the security of your data transmitted to our site; any transmission is at your own risk. Once we have received your information, we will use strict procedures and security features to try to prevent unauthorised access.
 </p>
@@ -65,9 +65,9 @@ Aside from using regular Malware Scanning, your personal information is containe
 </p>
 </div>
 
-<div className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="cookies">6. Do you use Cookies?</div>
+<h2 className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="cookies">6. Do you use Cookies?</div>
 
-<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 md:pb-8 lg:pb-12">
+<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 pt-2 md:pb-8 lg:pb-12 lg:pt-4">
 <p>
 Yes. Cookies are small files that a site or its service provider transfers to your computer’s hard drive through your Web browser (if you allow) that enables the site’s or service provider’s systems to recognize your browser and capture and remember certain information. They are also used to help us understand your preferences based on previous or current site activity, which enables us to provide you with improved services. We also use cookies to help us compile aggregate data about site traffic and site interaction so that we can offer better site experiences and tools in the future.
 </p>
@@ -91,21 +91,21 @@ If you disable cookies off, some features will be disabled and some of our servi
 </p>
 </div>
 
-<div className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="third-party">7. Third party disclosure</div>
+<h2 className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="third-party">7. Third party disclosure</div>
 
-<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 md:pb-8 lg:pb-12">
+<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 pt-2 md:pb-8 lg:pb-12 lg:pt-4">
 We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information unless we provide you with advance notice. This does not include website hosting partners and other parties who assist us in operating our website, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies, or protect ours or others’ rights, property, or safety. However, non-personally identifiable visitor information may be provided to other parties for marketing, advertising, or other uses.
 </div>
 
-<div className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="links">8. Links to other websites</div>
+<h2 className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="links">8. Links to other websites</div>
 
-<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 md:pb-8 lg:pb-12">
+<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 pt-2 md:pb-8 lg:pb-12 lg:pt-4">
 Our Website may contain links to other websites. This Privacy Policy only applies to this website so when you link to other websites you should read their own privacy policies.
 </div>
 
-<div className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="google">9. Google</div>
+<h2 className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="google">9. Google</div>
 
-<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 md:pb-8 lg:pb-12">
+<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 pt-2 md:pb-8 lg:pb-12 lg:pt-4">
 <p>
 Google’s advertising requirements can be summed up by <a className="text-electric no-underline" href="https://support.google.com/adspolicy/answer/6008942?hl=en&visit_id=638167379473996035-3903878087&rd=1" target="_blank">Google’s Advertising Principles</a>. They are put in place to provide a positive experience for users.
 </p>
@@ -150,21 +150,21 @@ Users are able to change their personal information:
 </p>
   </div>
 
-<div className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="do-not-track">10. “Do Not Track” signals</div>
+<h2 className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="do-not-track">10. “Do Not Track” signals</div>
 
-<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 md:pb-8 lg:pb-12">
+<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 pt-2 md:pb-8 lg:pb-12 lg:pt-4">
 We don’t honor “do not track signals” and do not track, plant cookies, or use advertising when a “Do Not Track” (DNT) browser mechanism is in place. We don’t honor them because we do not use that information.
 </div>
 
-<div className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="third-party">11. Third party behavioural tracking</div>
+<h2 className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="third-party-tracking">11. Third party behavioural tracking</div>
 
-<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 md:pb-8 lg:pb-12">
+<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 pt-2 md:pb-8 lg:pb-12 lg:pt-4">
 It’s also important to note that we do not allow third party behavioral tracking.
 </div>
 
-<div className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="access-personal-information">12. Access to, updating, and non-use of your personal information</div>
+<h2 className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="access-personal-information">12. Access to, updating, and non-use of your personal information</div>
 
-<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 md:pb-8 lg:pb-12">
+<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 pt-2 md:pb-8 lg:pb-12 lg:pt-4">
 <p>
 We want to ensure that your Personal Information is accurate and up to date. If any of the information that you have provided to DEFICHAIN FOUNDATION LTD. changes, for example if you change your email address, name or contact number, please let us know the correct details by sending an <a className="text-electric no-underline" href="mailto:partners@defichain.com">email</a>. You may ask us, or we may ask you to correct information you or we think is inaccurate, and you may also ask us to remove information which is inaccurate.
 </p>
@@ -175,13 +175,13 @@ You have the right to ask us not to collect, use, process, or disclose your Pers
 
 </div>
 
-<div className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="statement">13. Changes to this statement</div>
+<h2 className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="statement">13. Changes to this statement</div>
 
-<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 md:pb-8 lg:pb-12">
+<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 pt-2 md:pb-8 lg:pb-12 lg:pt-4">
 Cake Pte Ltd will occasionally update this Privacy Policy to reflect customer feedback. DEFICHAIN FOUNDATION LTD. encourages you to periodically review this Privacy Policy to be informed of how DEFICHAIN FOUNDATION LTD. is protecting your information.
 </div>
 
-<div className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="contact-information">14. Contact information</div>
+<h2 className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="contact-information">14. Contact information</div>
 
 <div className="text-dark-800 font-desc leading-8 text-base lg:text-xl">
 DEFICHAIN FOUNDATION LTD. welcomes your comments regarding this Privacy Policy. If you believe that defichain.com has not adhered to this Privacy Policy, please <a className="text-electric no-underline" href="mailto:partners@defichain.com">contact us</a> at support.</div>

@@ -35,8 +35,8 @@ export default function PrivacyPolicyPage({ post }): JSX.Element {
   return (
     <>
       <div className="py-8 md:py-8 lg:py-16 border-b border-gray-800 border-opacity-50">
+        <Head title={post.title} />
         <Container className="flex flex-row gap-x-12 relative">
-          <Head title={post.title} />
           <div className="absolute lg:block hidden w-[417px] h-[324px] top-[-158px] left-[-267px] md:top-[-42px] md:left-[-110px] lg:h-[297px] bg-contain bg-no-repeat mix-blend-screen bg-[url(/assets/img/common/emptyCubeDesktop.png)]" />
           <div className="hidden lg:block md:w-3/12 flex-1" />
           <div className="flex flex-col w-full lg:w-9/12 lg:px-2">
@@ -56,7 +56,7 @@ export default function PrivacyPolicyPage({ post }): JSX.Element {
         </Container>
       </div>
       <Container className="flex flex-row mb-[72px] md:mb-[96px] lg:mb-[184px]">
-        <div className="hidden h-[90%] sticky top-[100px] no-scrollbar overflow-y-auto lg:block lg:pt-[64px] flex-1">
+        <div className="hidden h-full sticky top-[100px] lg:block md:w-3/12 lg:pt-[64px] flex-1">
           <TableOfContents parentReference={contentRef} />
         </div>
         <div className="flex flex-col w-full mt-8 lg:mt-0 lg:pt-16 lg:w-9/12 lg:pl-2">
@@ -65,7 +65,8 @@ export default function PrivacyPolicyPage({ post }): JSX.Element {
             className={classNames(
               "text-dark-1000 font-desc break-words",
               "text-base tracking-[0.03em]",
-              "lg:text-xl lg:tracking-normal lg:leading-8"
+              "lg:text-xl lg:tracking-normal lg:leading-8",
+              "lg:w-11/12"
             )}
           >
             <ReactMarkdown

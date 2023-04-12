@@ -129,8 +129,7 @@ const useIntersectionObserver = (
 
     const observer = new IntersectionObserver(callback, {
       root: null,
-      rootMargin: "-20% 0% -40% 0px", // values used to reach activeId of the last section title
-      threshold: 1.0,
+      rootMargin: "-15% 0% -65% 0px", // values used to reach activeId of the last section title
     });
     headingElements.forEach((element: Element) => observer.observe(element));
 

@@ -18,8 +18,8 @@ const securityHeaders = [
       `script-src-elem 'self' ajax.googleapis.com widgets.coingecko.com files.coinmarketcap.com 3rdparty-apis.coinmarketcap.com *.googletagmanager.com;` +
       `style-src 'self' fonts.googleapis.com 'unsafe-inline' files.coinmarketcap.com 'unsafe-inline';` +
       `font-src 'self' fonts.gstatic.com;` +
-      `connect-src 'self' api.coingecko.com 3rdparty-apis.coinmarketcap.com wss://cable.coingecko.com ocean.defichain.com api.github.com;` +
-      `prefetch-src 'self';`,
+      `connect-src 'self' api.coingecko.com 3rdparty-apis.coinmarketcap.com wss://cable.coingecko.com ocean.defichain.com api.github.com *.google-analytics.com;` +
+      
   },
   {
     key: "Referrer-Policy",

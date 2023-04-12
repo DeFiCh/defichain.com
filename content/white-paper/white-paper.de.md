@@ -22,7 +22,7 @@ description: Last updated mm/dd/yyyy
 Dieses Dokument stellt weder einen Prospekt dar noch beinhaltet es einen solchen. Keine der hierin enthaltenen Formulierungen sollte als Aufforderung zur Investition verstanden werden. Dementsprechend bezieht sich dieses Whitepaper in keiner Weise auf ein Angebot von Wertpapieren in irgendeiner Rechtsordnung weltweit. Vielmehr stellt dieses Whitepaper eine technische Beschreibung der Funktionsweise der Cake-Produkte und der Entwicklung und der Verbreitung von DeFiChain dar.
 </div>
 
-<div className="mt-6 font-bold font-sans font-sans font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl"">
+<div className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
 Dieses Dokument ist keine vollständige technische Dokumentation
 </div>
 
@@ -258,7 +258,7 @@ Turing-complete Lösungen: Ethereum, EOS, Tron...
 Bis heute wurden eine Reihe von DeFi-Anwendungen auf Ethereum, Tron, EOS und vielen anderen Turing-complete Chains entwickelt. Da Ethereum die größte Verbreitung hat, konnten die Probleme, die mit der Verwendung einer Turing-complete Blockchain für DeFi-Anwendungen einhergehen, am schnellsten aufgedeckt werden. Der DAO-Hack war eine der ersten und dramatischsten Enthüllungen über die Anfälligkeit der Verwendung einer so komplexen Programmiersprache. Jeder, der einen Token über das Netzwerk ausgibt, weiß, wie schwierig das ist. Allein die Erstellung und Ausgabe eines ERC20-Tokens kann leicht über 100.000 USD kosten, wenn man die Kosten für die Prüfung von Smart Contracts berücksichtigt, die für innovative Lösungen notwendig sind. Allein die Tatsache, dass es eine ganze Branche gibt, die sich mit der Prüfung von Smart Contracts beschäftigt, sollte ausreichen, um das Problem zu verdeutlichen. Obwohl ERC20 der Industriestandard ist, ist er immer noch so leicht zu hacken, dass es unmöglich ist, auch nur einen einfachen Token herauszugeben, ohne einen teuren professionellen Prüfer oder Programmierer zu engagieren.
 </div>
 <div className="mt-5 text-dark-800">
-Noch gravierender ist, dass es inzwischen möglich ist, automatisiert nach angreifbarem Code zu suchen. Eine Studie aus dem Jahr 2018 hat eine Million Smart Contracts gescannt und dabei über 34.000 hackbare Smart Contracts gefunden<href className="text-electric" href="#user-content-fn-3"><sup>3</sup></href>. Es ist unvorstellbar, dass 3,4 % der Finanztransaktionen angreifbar sind. Im Moment scheint sich dieses Problem vor allem auf Ethereum zu konzentrieren, aber wir glauben, dass die meisten anderen Turing-Complete Chains die gleichen Probleme haben werden, sobald mehr Anwendungsfälle auf ihnen laufen.
+Noch gravierender ist, dass es inzwischen möglich ist, automatisiert nach angreifbarem Code zu suchen. Eine Studie aus dem Jahr 2018 hat eine Million Smart Contracts gescannt und dabei über 34.000 hackbare Smart Contracts gefunden<a className="text-electric" href="#user-content-fn-3"><sup>3</sup></a>. Es ist unvorstellbar, dass 3,4 % der Finanztransaktionen angreifbar sind. Im Moment scheint sich dieses Problem vor allem auf Ethereum zu konzentrieren, aber wir glauben, dass die meisten anderen Turing-Complete Chains die gleichen Probleme haben werden, sobald mehr Anwendungsfälle auf ihnen laufen.
 </div>
 <div className="mt-5 text-dark-800">
 Das zweite Problem liegt vor allem in Ethereum selbst: Das Netzwerk ist bereits an der Kapazitätsgrenze angelangt. Es scheint einfach nicht machbar zu sein, das Netzwerk für alle dezentralen Finanzanwendungen zu nutzen. Die Marktkapitalisierung von Ethereum beträgt nur ein Zehntel von der von Bitcoin. Wenn das System bereits nahe an der Kapazitätsgrenze ist, ist es schwer vorstellbar, wie es die Kapazität eines echten DeFi-Netzwerks für den Rest des Ökosystems schaffen kann. Das hat Vitalik Buterin in einem Interview eingeräumt: <a className="text-electric" href="https://beincrypto.com/ethereum-founders-admit-never-designed-scalability/" target="_blank">https://beincrypto.com/ethereum-founders-admit-never-designed-scalability/</a>.
@@ -456,7 +456,7 @@ Dezentrale nicht besicherte Darlehen
 Tokenisierung von Aktiva
 </h3>
 <div className="mt-4 text-dark-800">
-  Die Tokenisierung von Aktiva ist die Darstellung eines Vermögenswerts, z. B. einer Immobilie oder eines Firmenkapitals, in unveränderliche Token auf der Blockchain<a className="text-electric" href="#user-content-fn-8"><sup>8</sup></a>. Dieser Bereich des dezentralen Finanzwesens hat ein enormes Potenzial und ist einer der spannendsten Investitionsbereiche für Inhaber/innen von Kryptowährungen<a className="text-electric" href="#user-content-fn-9"><sup>9</sup></a>.
+  Die Tokenisierung von Aktiva ist die Darstellung eines Vermögenswerts, z. B. einer Immobilie oder eines Firmenkapitals, in unveränderliche Token auf der Blockchain. Dieser Bereich des dezentralen Finanzwesens hat ein enormes Potenzial und ist einer der spannendsten Investitionsbereiche für Inhaber/innen von Kryptowährungen<a className="text-electric" href="#user-content-fn-8"><sup>8</sup></a>.
   <div className="mt-5">
   Es gab zwar mehrere Versuche zur Tokenisierung von Vermögenswerten im Blockchain-Bereich, aber die meisten von ihnen haben sich umorientiert und bieten jetzt Dienstleistungen an, die nicht direkt mit der Tokenisierung von Vermögenswerten zu tun haben (LAtoken, Etherparty). Tokeny und Tokenize-IT werben damit, Tokenisierungsplattformen zu sein, aber zum Zeitpunkt des Verfassens dieses Papiers sind ihre Prozesse immer noch ziemlich manuell und hängen stark von den jeweiligen lokalen Gegebenheiten und den regulatorischen Anforderungen dieser Länder ab. Andere Blockchains, wie z. B. Tezos, wurden als gute Plattformen für die Tokenisierung von Vermögenswerten erwähnt, aber wie bei anderen Blockchains mit mehreren Verwendungsmöglichkeiten wird der Turing-complete Befehlssatz komplexe Smart Contracts erzeugen, die bei DeFiChain überflüssig sind.
   DeFiChain wird ein Modul anbieten, das speziell für die Tokenisierung von Vermögenswerten entwickelt wurde und besonders einfach zu verwenden ist, um Vermögenswerte wie Unternehmensanteile, Immobilien und andere werthaltige Besitztümer zu tokenisieren.
@@ -863,8 +863,8 @@ DCT Parameter:
 </div>
 <div className="mt-3 text-dark-800">
   <ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
-    <li><span className="font-bold font-sans text-dark-1000">DCT ID:</span> <UDID> Eindeutige Blockchain-Kennung des Tokens</li>
-    <li><span className="font-bold font-sans text-dark-1000">Name:</span> <Token name> Name des Tokens</li>
+    <li><span className="font-bold font-sans text-dark-1000">DCT ID:</span>  Eindeutige Blockchain-Kennung des Tokens</li>
+    <li><span className="font-bold font-sans text-dark-1000">Name:</span>  Name des Tokens</li>
     <li><span className="font-bold font-sans text-dark-1000">Symbol:</span> Das Tickersymbol für den Token. Das DCT-Protokoll stellt eine Referenz zur Verfügung, um sicherzustellen, dass die Wahl auf ein eindeutiges Symbol fällt</li>
     <li><span className="font-bold font-sans text-dark-1000">Dezimalstellen:</span> Teilbare Anzahl von Nachkommastellen für den Token. Sie kann nicht mehr geändert werden, wenn sie einmal festgelegt wurde.</li>
     <li><span className="font-bold font-sans text-dark-1000">Gesamter Anfangsbestand:</span> Die Erstausgabe an Token, die im Zuge des Ereignisses generiert wird</li>
@@ -1277,7 +1277,7 @@ Governance / Verwaltung
 Community Development Fund
 </h3>
 <div className="mt-4 text-dark-800">
-Die DeFiChain Foundation wird einen gemeinschaftlichen Entwicklungsfonds einrichten, der bis zu 10 % der Block-Belohnungen verwaltet. Dieser Prozentsatz kann aktualisiert werden, indem ein DAO-Vorschlag eingereicht wird, über den alle Masternodes abstimmen. Community Development Funds wurden von DASH<a className="text-electric" href="#user-content-fn-10"><sup>10</sup></a> populär gemacht und werden heute in einigen ausgewählten DAOs eingesetzt. Die Community entscheidet über die Verwendung dieser Mittel für Entwicklung, Marketing oder Forschung, die der DeFi-Community zugute kommt. DFI Masternodes stimmen über Projekte ab, die ihnen gefallen, und die Vorschläge mit den meisten Stimmen werden jeden Monat finanziert.
+Die DeFiChain Foundation wird einen gemeinschaftlichen Entwicklungsfonds einrichten, der bis zu 10 % der Block-Belohnungen verwaltet. Dieser Prozentsatz kann aktualisiert werden, indem ein DAO-Vorschlag eingereicht wird, über den alle Masternodes abstimmen. Community Development Funds wurden von DASH<a className="text-electric" href="#user-content-fn-9"><sup>9</sup></a> populär gemacht und werden heute in einigen ausgewählten DAOs eingesetzt. Die Community entscheidet über die Verwendung dieser Mittel für Entwicklung, Marketing oder Forschung, die der DeFi-Community zugute kommt. DFI Masternodes stimmen über Projekte ab, die ihnen gefallen, und die Vorschläge mit den meisten Stimmen werden jeden Monat finanziert.
 <div className="mt-5">
 Die Einreichung eines Budgetvorschlags kostet 10 DFI und kann von jedem erfolgen. Diese Gebühr wird verbrannt und ist nicht erstattungsfähig, unabhängig davon, ob der Haushalt genehmigt wird. Budgets sind Vorschläge, die eine Nettosumme von Ja-Stimmen erhalten, die mindestens 10% der möglichen Gesamtstimmen ausmacht (z.B. mehr als 448 von 4480). Budgets können jederzeit annulliert werden, wenn die Gesamtzahl der Stimmen (abgegebene oder neu abgegebene) unter die Genehmigungsschwelle fällt. Die Budgets werden in der Reihenfolge der Ja- minus der Nein-Stimmen bearbeitet (bezahlt). Beliebtere Budgets werden vorrangig ausgezahlt. Die Abstimmung findet monatlich statt, kann aber durch eine Abstimmung auf dem Masternode geändert werden.
 </div>
@@ -1615,24 +1615,22 @@ Die DeFiChain Foundation wird eine Reihe von Maßnahmen ergreifen, um die besten
     </h2>
 
 <div className="mt-5 text-dark-800">
-  <div className="scroll-mt-40" id="user-content-fn-1">1. <a className="underline " href="https://www.investopedia.com/ask/answers/030515/what-percentage-global-economy-comprised-financial-services-sector.asp" target="_blank">https://www.investopedia.com/ask/answers/030515/what-percentage-global-economy-comprised-financial-services-sector.asp ↩</a></div>
+  <div className="scroll-mt-40" id="user-content-fn-1">1. <a className="underline " href="https://www.investopedia.com/ask/answers/030515/what-percentage-global-economy-comprised-financial-services-sector.asp" target="_blank">https://www.investopedia.com/ask/answers/030515/what-percentage-global-economy-comprised-financial-services-sector.asp</a></div>
 
-  <div className="scroll-mt-40" id="user-content-fn-2">2. <a className="underline" href="https://blog.openzeppelin.com/on-the-parity-wallet-multisig-hack-405a8c12e8f7/" target="_blank">https://blog.openzeppelin.com/on-the-parity-wallet-multisig-hack-405a8c12e8f7/ ↩</a></div>
+  <div className="scroll-mt-40" id="user-content-fn-2">2. <a className="underline" href="https://blog.openzeppelin.com/on-the-parity-wallet-multisig-hack-405a8c12e8f7/" target="_blank">https://blog.openzeppelin.com/on-the-parity-wallet-multisig-hack-405a8c12e8f7/</a></div>
 
-  <div className="scroll-mt-40" id="user-content-fn-3">3. <a className="underline" href="https://arxiv.org/pdf/1802.06038.pdf" target="_blank">https://arxiv.org/pdf/1802.06038.pdf ↩</a></div>
+  <div className="scroll-mt-40" id="user-content-fn-3">3. <a className="underline" href="https://arxiv.org/pdf/1802.06038.pdf" target="_blank">https://arxiv.org/pdf/1802.06038.pdf</a></div>
 
-  <div className="scroll-mt-40" id="user-content-fn-4">4. <a className="underline" href="https://cointelegraph.com/explained/blockchain-oracles-explained" target="_blank">https://cointelegraph.com/explained/blockchain-oracles-explained ↩</a></div>
+  <div className="scroll-mt-40" id="user-content-fn-4">4. <a className="underline" href="https://cointelegraph.com/explained/blockchain-oracles-explained" target="_blank">https://cointelegraph.com/explained/blockchain-oracles-explained</a></div>
 
   <div className="scroll-mt-40" id="user-content-fn-5">5. <a className="underline" href="https://hackernoon.com/oracles-help-smart-contracts-resolve-subjective-events-d81639d8291c" target="_blank">https://hackernoon.com/oracles-help-smart-contracts-resolve-subjective-events-d81639d8291c</a></div>
 
-  <div className="scroll-mt-40" id="user-content-fn-6">6. <a className="underline" href="https://en.wikipedia.org/wiki/Decentralized_exchange" target="_blank">https://en.wikipedia.org/wiki/Decentralized_exchange ↩</a></div>
+  <div className="scroll-mt-40" id="user-content-fn-6">6. <a className="underline" href="https://en.wikipedia.org/wiki/Decentralized_exchange" target="_blank">https://en.wikipedia.org/wiki/Decentralized_exchange</a></div>
 
-  <div className="scroll-mt-40" id="user-content-fn-7">7. <a className="underline" href="https://coinsutra.com/best-decentralized-exchanges-dex/" target="_blank">https://coinsutra.com/best-decentralized-exchanges-dex/ ↩</a></div>
+  <div className="scroll-mt-40" id="user-content-fn-7">7. <a className="underline" href="https://coinsutra.com/best-decentralized-exchanges-dex/" target="_blank">https://coinsutra.com/best-decentralized-exchanges-dex/</a></div>
 
-  <div className="scroll-mt-40" id="user-content-fn-8">8. <a className="underline" href="https://www2.deloitte.com/lu/en/pages/technology/articles/tokenization-assets-disrupting-financial-industry.html" target="_blank">https://www2.deloitte.com/lu/en/pages/technology/articles/tokenization-assets-disrupting-financial-industry.html ↩</a></div>
+  <div className="scroll-mt-40" id="user-content-fn-8">8. <a className="underline" href="https://www.forbes.com/sites/laurencoleman/2019/04/25/heres-why-interest-in-tokenizing-assets-is-starting-to-surge/#2ddeec4640a5" target="_blank">https://www.forbes.com/sites/laurencoleman/2019/04/25/heres-why-interest-in-tokenizing-assets-is-starting-to-surge/#2ddeec4640a5</a></div>
 
-  <div className="scroll-mt-40" id="user-content-fn-9">9. <a className="underline" href="https://www.forbes.com/sites/laurencoleman/2019/04/25/heres-why-interest-in-tokenizing-assets-is-starting-to-surge/#2ddeec4640a5" target="_blank">https://www.forbes.com/sites/laurencoleman/2019/04/25/heres-why-interest-in-tokenizing-assets-is-starting-to-surge/#2ddeec4640a5 ↩</a></div>
-
-  <div className="scroll-mt-40" id="user-content-fn-10">10. <a className="underline" href="https://docs.dash.org/en/stable/governance/understanding.html" target="_blank">https://docs.dash.org/en/stable/governance/understanding.html ↩</a></div>
+  <div className="scroll-mt-40" id="user-content-fn-9">9. <a className="underline" href="https://docs.dash.org/en/stable/governance/understanding.html" target="_blank">https://docs.dash.org/en/stable/governance/understanding.html</a></div>
 
 </div>

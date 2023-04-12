@@ -1,6 +1,6 @@
 import { Container } from "@components/commons/Container";
 import classNames from "classnames";
-import { Button } from "@components/commons/Buttons";
+import { SecondaryButton } from "@components/commons/Buttons";
 import { useTranslation } from "next-i18next";
 import { SectionTitle } from "@components/commons/SectionTitle";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
@@ -36,14 +36,13 @@ export function ReadyForFlexibility() {
             <div className="lg:mt-8 mt-5 lg:text-xl md:text-base lg:tracking-normal tracking-[0.03em] text-dark-700 font-desc">
               {t("ReadyForFlexibilitySection.descParaOne")}
             </div>
-            <div className="lg:mt-8 mt-5 lg:text-xl md:text-base lg:tracking-normal tracking-[0.03em] text-dark-700 font-desc">
+            <div className="lg:mt-8 mt-5 lg:text-xl md:text-base lg:tracking-normal tracking-[0.03em] text-dark-700 font-desc pb-6 md:pb-8 lg:pb-16">
               {t("ReadyForFlexibilitySection.descParaTwo")}
             </div>
           </h4>
-
-          <Button
+          <SecondaryButton
             text={t("ReadyForFlexibilitySection.button")}
-            className="lg:text-base text-sm lg:mt-16 mt-8 lg:py-4 py-3 lg:px-14 px-10"
+            className="lg:text-base text-sm lg:py-4 py-3 px-9 md:px-[56px]"
             href="https://meta.defichain.com/"
           />
         </div>

@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { Container } from "@components/commons/Container";
 import { useTranslation } from "next-i18next";
 import { SectionTitle } from "@components/commons/SectionTitle";
-import { Button } from "@components/commons/Buttons";
+import { SecondaryButton } from "@components/commons/Buttons";
 import { Posts } from "@components/commons/prismicTypes";
 import ProjectCard from "./PostCard";
 
@@ -17,12 +17,12 @@ export function BlogPostsSection({ blogPosts }: { blogPosts: Posts[] }) {
               text={t("BlogPostsSection.label")}
               customStyle="lg:w-fit md:w-[409px] w-[272px]"
             />
-            <h2 className="mt-5 text-[32px] leading-9 whitespace-pre-line lg:text-[52px] lg:leading-none">
+            <h2 className="mt-5 text-[32px] leading-9 whitespace-pre-line lg:text-[52px] lg:leading-none pb-[48px]">
               {t("BlogPostsSection.title")}
             </h2>
-            <Button
+            <SecondaryButton
               text={t("BlogPostsSection.button")}
-              className="text-sm mt-9 lg:py-4 lg:px-14 py-3 px-10 lg:text-base lg:mt-12"
+              className="text-sm mt-9 lg:py-4 py-3 px-[62px] md:px-[56px] lg:text-base"
               href="https://blog.defichain.com/"
             />
           </div>

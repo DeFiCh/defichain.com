@@ -24,7 +24,7 @@ export function StatisticPanel({
   const isHorizontalInTablet = displayItem.length <= 2;
 
   return (
-    <div
+    <section
       id={displayId}
       className={classNames(
         "card-outline-2 p-[0.5px] rounded-[30px]",
@@ -50,7 +50,7 @@ export function StatisticPanel({
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -74,7 +74,7 @@ function StatisticsPanelItem({
   );
 
   return (
-    <div
+    <article
       className={classNames(
         "flex lg:grow grow-0 lg:flex-col flex-row lg:items-center items-start gap-y-2 gap-x-2",
         { "md:flex-col md:items-center md:grow": isTabletHorizontal }
@@ -132,6 +132,6 @@ function StatisticsPanelItem({
           </div>
         )}
       </div>
-    </div>
+    </article>
   );
 }

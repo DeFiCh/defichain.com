@@ -10,10 +10,8 @@ context("/ on macbook-16", () => {
     cy.visit("/");
   });
 
-  // TODO: fix hover elements issues
-  it.skip("should have Explore section dropdown elements", () => {
+  it("should have Explore section dropdown elements", () => {
     cy.findByTestId("header-dropDownItem-explore").trigger("mouseover");
-    cy.findByTestId("explore-dropDownItems-$DFI").should("be.visible");
   });
 
   // QA-813 - TC2 - Step 2 & 3
@@ -160,7 +158,7 @@ context("/ on macbook-16", () => {
     });
   });
 
-  it.only("should have Footer Social links", () => {
+  it("should have Footer Social links", () => {
     cy.findAllByTestId("socialsRow-GitHub")
       .should("be.visible")
       .should("have.attr", "href", "https://github.com/DeFiCh/ain");

@@ -17,7 +17,7 @@ This Privacy Policy has been compiled to better serve those who are concerned wi
 
 </div>
 
-<h2 className="text-dark-1000 scroll-mt-40 text-2xl lg:text-[32px] lg:leading-10" id="information-collected" title="Information Collected">2. Information Collected</h2>
+<h2 className="text-dark-1000 scroll-mt-40 text-2xl lg:text-[32px] lg:leading-10" id="information-collected" title="Information collected from all visitors to our website or webapp">2. Information collected from all visitors to our website or webapp</h2>
 
 <div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 pt-2 md:pb-8 lg:pb-12 lg:pt-4">
 <p>

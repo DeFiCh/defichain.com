@@ -3,6 +3,7 @@ import Head from "next/head";
 import { PropsWithChildren, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import classNames from "classnames";
+import { useDeviceDetect, ViewPort } from "@hooks/useDeviceDetect";
 import Footer from "./components/Footer";
 import { Header } from "./components/Header";
 import { WhaleProvider } from "./context/WhaleContext";
@@ -21,6 +22,7 @@ export function Default(props: PropsWithChildren<any>): JSX.Element | null {
   const bgPicture = isHome
     ? "bg-[url(/assets/img/background/background-320.png)] sm:bg-[url(/assets/img/background/background-768.png)] md:bg-[url(/assets/img/background/background-1024.png)] lg:bg-[url(/assets/img/background/background-1440.png)] 2xl:bg-[url(/assets/img/background/background-1920.png)]"
     : "";
+  const device = useDeviceDetect();
 
   useEffect(() => {
     setMounted(true);
@@ -89,7 +91,13 @@ export function Default(props: PropsWithChildren<any>): JSX.Element | null {
         <WhaleProvider>
           <div className="bg-dark-00 relative z-0">
             <Header />
-            <div className="overflow-x-hidden">
+            <div
+              className={classNames(
+                device === ViewPort.DESKTOP
+                  ? "overflow-x-clip"
+                  : "overflow-x-hidden"
+              )}
+            >
               <main className="flex-grow text-dark-1000">{props.children}</main>
               <div
                 className={classNames(

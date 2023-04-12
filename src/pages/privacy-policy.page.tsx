@@ -1,15 +1,20 @@
 import { UserConfig, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Container } from "@components/commons/Container";
-import React from "react";
+import React, { useRef } from "react";
 import { remark } from "remark";
 import { SectionTitle } from "@components/commons/SectionTitle";
 import { SectionSubTitle } from "@components/commons/SectionSubTitle";
 import { SectionDescription } from "@components/commons/SectionDescription";
 import classNames from "classnames";
-import { PrivacyPolicyContent } from "./privacy-policy/PrivacyPolicyContent";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import ReactMarkdown from "react-markdown";
+import rehypeSlug from "rehype-slug";
 import { getMDPageBySlug } from "../../utils/api";
 import { Post } from "./learn/utils/api";
+import TableOfContents from "./privacy-policy/_components/TableOfContents";
 
 interface PrivacyPolicyPageProps {
   props: {
@@ -24,6 +29,7 @@ interface PrivacyPolicyPageProps {
 
 export default function PrivacyPolicyPage({ post }): JSX.Element {
   const { t } = useTranslation("page-privacypolicy");
+  const contentRef = useRef<HTMLDivElement>(null);
 
   return (
     <>
@@ -47,7 +53,40 @@ export default function PrivacyPolicyPage({ post }): JSX.Element {
           </div>
         </Container>
       </div>
-      <PrivacyPolicyContent post={post} />
+      <Container className="flex flex-row mb-[72px] md:mb-[96px] lg:mb-[184px]">
+        <div className="hidden h-[90%] sticky top-[100px] no-scrollbar overflow-y-auto lg:block md:w-3/12 lg:pt-[64px] flex-1">
+          <TableOfContents parentReference={contentRef} />
+        </div>
+        <div className="flex flex-col w-full mt-8 lg:mt-0 lg:pt-16 lg:w-9/12">
+          <div
+            ref={contentRef}
+            className={classNames(
+              "text-dark-1000 font-desc break-words",
+              "text-base tracking-[0.03em]",
+              "lg:text-xl lg:tracking-normal lg:leading-8"
+            )}
+          >
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[
+                rehypeSlug,
+                [
+                  rehypeAutolinkHeadings,
+                  {
+                    behavior: "wrap",
+                    properties: {
+                      className: ["no-underline hover:underline"],
+                    },
+                  },
+                ],
+                [rehypeRaw],
+              ]}
+            >
+              {post.content}
+            </ReactMarkdown>
+          </div>
+        </div>
+      </Container>
     </>
   );
 }

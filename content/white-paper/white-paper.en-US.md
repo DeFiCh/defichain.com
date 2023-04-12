@@ -411,7 +411,7 @@ Decentralized Pricing Oracles
   </div>
 </div>
 
-<h3 id="dex" title="Decentralized Exchanges" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="defi-solution-dex" title="Decentralized Exchanges" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Decentralized Exchanges
 </h3>
 <div className="mt-4 text-dark-800">
@@ -990,7 +990,7 @@ Loan Contract
 
 </div>
 
-<h3 id="dex" title="Decentralized Exchange (DEX)" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="building-block-dex" title="Decentralized Exchange (DEX)" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Decentralized Exchange (DEX)
 </h3>
 <div className="mt-4 text-dark-800">

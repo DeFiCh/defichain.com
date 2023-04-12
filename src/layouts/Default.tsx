@@ -10,7 +10,7 @@ import { WhaleProvider } from "./context/WhaleContext";
 
 const title = "DeFiChain";
 const description =
-  "A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone, and enabled on Bitcoin.";
+  "A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone.";
 
 /**
  * Default Layout with <Head> providing default Metadata for SEO

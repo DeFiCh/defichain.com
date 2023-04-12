@@ -3,6 +3,7 @@ import { SSRConfig, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { HeroBanner, HeroBannerBg } from "@components/commons/HeroBanner";
 // import { ExploreCards, ExploreCardsImage } from "../_components/ExploreCards";
+import { Head } from "@components/commons/Head";
 import { AdvanceUsageSection } from "./_components/AdvanceUsageSection";
 import { ForDailyUseSection } from "./_components/ForDailyUseSection";
 
@@ -14,6 +15,7 @@ export default function ExploreWallets() {
   // );
   return (
     <>
+      <Head title={t("heroBanner.subtitle")} />
       <HeroBanner
         title={t("heroBanner.title")}
         subtitle={t("heroBanner.subtitle")}

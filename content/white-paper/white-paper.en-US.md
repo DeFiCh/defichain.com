@@ -21,7 +21,7 @@ description: Last updated mm/dd/yyyy
 <div className="mt-4 text-dark-800 ">This document does not constitute nor imply a prospectus of any sort. No wording contained herein should be construed as a solicitation for investment. Accordingly, this whitepaper does not pertain in any way to an offering of securities in any jurisdiction worldwide whatsoever. Rather, this whitepaper constitutes a technical description of the functionality of the Cake products and the development and distribution of DeFiChain.
 </div>
 
-<div className="mt-6 font-bold font-sans font-sans font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl"">
+<div className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
 This Document is not a final technical specification
 </div>
 
@@ -867,8 +867,8 @@ DCT Parameters:
 </div>
 <div className="mt-3 text-dark-800">
   <ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
-    <li><span className="font-bold font-sans text-dark-1000">DCT ID:</span> <UDID> Unique blockchain identifier for the token.</li>
-    <li><span className="font-bold font-sans text-dark-1000">Name:</span> <Token name> Name of the tokens.</li>
+    <li><span className="font-bold font-sans text-dark-1000">DCT ID:</span>  Unique blockchain identifier for the token.</li>
+    <li><span className="font-bold font-sans text-dark-1000">Name:</span>  Name of the tokens.</li>
     <li><span className="font-bold font-sans text-dark-1000">Symbol:</span> The ticker symbol for the tokens. The DCT protocol will provide a reference for ensuring the choice will be a unique symbol.</li>
     <li><span className="font-bold font-sans text-dark-1000">Decimal places:</span> Divisible number of decimal places for the tokens. This cannot be changed once it is set.</li>
     <li><span className="font-bold font-sans text-dark-1000">Total initial supply:</span> Initial issue of tokens during the event generated.</li>

@@ -69,20 +69,20 @@ export default function GetDFISection() {
         "lg:mb-[458px] lg:flex-row lg:gap-[69px]"
       )}
     >
-      <div
+      <section
         id="get-dfi"
         className="lg:w-[45%] flex flex-col gap-5 shrink-0 lg:scroll-mt-[200px] scroll-mt-[150px]"
       >
         <SectionTitle text={t("getDfiSection.title")} />
-        <div
+        <h2
           className={classNames(
             "text-[40px] leading-[44px] tracking-[-0.02em]",
             "lg:text-6xl lg:leading-[72px] lg:tracking-normal lg:mt-4"
           )}
         >
           {t("getDfiSection.subtitle")}
-        </div>
-        <div
+        </h2>
+        <h4
           className={classNames(
             "font-desc text-dark-700 tracking-[0.03em] text-base",
             "lg:text-xl lg:tracking-normal"
@@ -91,7 +91,7 @@ export default function GetDFISection() {
           <p>{t("getDfiSection.desc1")}</p>
           <br />
           <p>{t("getDfiSection.desc2")}</p>
-        </div>
+        </h4>
         {/* DFI price from CoinMarketCap and CoinGecko */}
         {/* TODO: uncomment after mvp */}
         {/* <div className="w-full md:w-fit lg:w-full text-center mt-3">
@@ -111,7 +111,7 @@ export default function GetDFISection() {
             {t("getDfiSection.exhangePriceText")}
           </div>
         </div> */}
-      </div>
+      </section>
       {/* Exchanges */}
       <GetDFISectionExchanges />
     </Container>

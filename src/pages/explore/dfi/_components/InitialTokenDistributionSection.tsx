@@ -16,16 +16,16 @@ export function InitialTokenDistributionSection() {
 
   return (
     <Container className="mb-[96px] md:mb-[108px] lg:mb-60">
-      <div className="flex flex-col">
+      <section className="flex flex-col">
         <div className="flex flex-col gap-y-5">
           <SectionTitle text={t("initialTokenDistributionSection.title")} />
-          <div
+          <h2
             className={classNames(
               "tracking-[-0.02em] text-[40px] leading-[44px] text-dark-1000"
             )}
           >
             {t("initialTokenDistributionSection.subtitle")}
-          </div>
+          </h2>
         </div>
 
         <Button
@@ -111,9 +111,9 @@ export function InitialTokenDistributionSection() {
               {t("initialTokenDistributionSection.masternodes.percentage")}
             </div>
             <div className="flex flex-col lg:place-self-start place-self-center">
-              <div className="text-dark-1000 font-bold leading-5">
+              <span className="text-dark-1000 font-bold leading-5">
                 {t("initialTokenDistributionSection.masternodes.title")}
-              </div>
+              </span>
 
               <div className="mt-2">
                 <span className="font-desc text-dark-700">
@@ -123,7 +123,7 @@ export function InitialTokenDistributionSection() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </Container>
   );
 }

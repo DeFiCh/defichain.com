@@ -32,72 +32,66 @@ export function Card({
   const device = useDeviceDetect();
 
   return (
-    <div>
-      <div
-        key={id}
-        onMouseEnter={() => {
-          setHoverState(id);
-        }}
-        onMouseLeave={() => {
-          setHoverState(undefined);
-        }}
+    <article
+      key={id}
+      onMouseEnter={() => {
+        setHoverState(id);
+      }}
+      onMouseLeave={() => {
+        setHoverState(undefined);
+      }}
+      className={classNames(
+        "relative dapp-card overflow-hidden",
+        "p-[0.5px] rounded-[15px] h-[215px] w-full xs:w-[327px] lg:w-[487px] xl:h-[215]",
+        "md:block md:mb-[24px]",
+        "card-outline-2 hover:accent-gradient-1",
+        "cursor-pointer"
+      )}
+    >
+      <Link
+        href={href}
         className={classNames(
-          "relative dapp-card overflow-hidden",
-          "p-[0.5px] rounded-[15px] h-[215px] w-full xs:w-[327px] lg:w-[487px] xl:h-[215]",
-          "md:block md:mb-[24px]",
-          "card-outline-2 hover:accent-gradient-1",
-          "cursor-pointer"
+          "w-full h-full p-6 rounded-[15px] border-[0.5px] flex flex-col",
+          "border-dark-200 bg-dark-00",
+          "duration-1000 hover:transition hover:ease-in delay-250"
         )}
       >
-        <Link
-          href={href}
-          data-testid={`ecosystem-link-${title.split(" ").pop()}`}
-          className={classNames(
-            "w-full h-full p-6 rounded-[15px] border-[0.5px] flex flex-col",
-            "border-dark-200 bg-dark-00",
-            "duration-1000 hover:transition hover:ease-in delay-250"
-          )}
-        >
-          <div className={classNames(customTextStyle)}>
-            <span
-              className={classNames(
-                "md:w-full text-2xl tracking-[-2%]",
-                "whitespace-pre-line",
-                {
-                  "accent-dfc-gradient-text":
-                    hoverState !== undefined && hoverState === id,
-                }
-              )}
-            >
-              {title}
-            </span>
-            <div
-              className={classNames(
-                "text-base text-dark-500 pt-[22px] flex flex-row items-center font-semibold"
-              )}
-            >
-              {subTitle}
-              <FiArrowUpRight size={20} className="ml-[13px]" />
-            </div>
-            <div
-              className={classNames(
-                "absolute mix-blend-screen",
-                customIconStyle
-              )}
-            >
-              {hoverState !== undefined &&
-              hoverState === id &&
-              Icon &&
-              device === ViewPort.DESKTOP ? (
-                <IconOnHover id={`${id}_hover`} />
-              ) : (
-                <Icon id={`${id}`} />
-              )}
-            </div>
+        <div className={classNames(customTextStyle)}>
+          <span
+            className={classNames(
+              "md:w-full text-2xl tracking-[-2%]",
+              "whitespace-pre-line",
+              {
+                "accent-dfc-gradient-text":
+                  hoverState !== undefined && hoverState === id,
+              }
+            )}
+          >
+            {title}
+          </span>
+          <div
+            className={classNames(
+              "text-base text-dark-500 pt-[22px] flex flex-row items-center font-semibold"
+            )}
+          >
+            {subTitle}
+            <FiArrowUpRight size={20} className="ml-[13px]" />
           </div>
-        </Link>
-      </div>
-    </div>
+          <div
+            className={classNames("absolute mix-blend-screen", customIconStyle)}
+          >
+            {hoverState !== undefined &&
+            hoverState === id &&
+            Icon &&
+            device === ViewPort.DESKTOP ? (
+              <IconOnHover id={`${id}_hover`} />
+            ) : (
+              <Icon id={`${id}`} />
+            )}
+          </div>
+        </div>
+      </Link>
+    </article>
   );
 }
 

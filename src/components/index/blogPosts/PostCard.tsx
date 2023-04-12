@@ -8,7 +8,7 @@ export default function ProjectCard({
   isLatest: boolean;
 }) {
   return (
-    <section
+    <article
       className="w-full max-w-[318px] flex flex-col"
       data-testid={`card_container_${post.title[0]?.text}`}
     >
@@ -41,6 +41,6 @@ export default function ProjectCard({
           </section>
         </section>
       </a>
-    </section>
+    </article>
   );
 }

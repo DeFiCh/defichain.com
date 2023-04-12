@@ -104,7 +104,7 @@ export function SecondaryButton({
         className={classNames(
           className ?? "py-4",
           "flex items-center justify-center rounded-[92px] font-bold disabled:opacity-30 disabled:pointer-events-none !mt-0",
-          "outline outline-1 outline-dark-1000 hover:outline-brand-100 active:text-brand-100 text-dark-1000 active:opacity-70"
+          "border outline-dark-1000 hover:border-brand-100 active:text-brand-100 text-dark-1000 active:opacity-70"
         )}
       >
         {text}

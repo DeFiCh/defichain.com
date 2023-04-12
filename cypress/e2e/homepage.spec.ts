@@ -1,4 +1,4 @@
-import { ecosystemLinks, resourcesLinks } from "../../fixture/homepage.config";
+import { ecosystemLinks, resourcesLinks } from "../fixture/homepage.config";
 
 context("/ on macbook-16", () => {
   before(() => {

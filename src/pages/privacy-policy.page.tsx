@@ -12,6 +12,7 @@ import rehypeRaw from "rehype-raw";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import ReactMarkdown from "react-markdown";
 import rehypeSlug from "rehype-slug";
+import { Head } from "@components/commons/Head";
 import { getMDPageBySlug } from "../../utils/api";
 import { Post } from "./learn/utils/api";
 import TableOfContents from "./privacy-policy/_components/TableOfContents";
@@ -35,6 +36,7 @@ export default function PrivacyPolicyPage({ post }): JSX.Element {
     <>
       <div className="py-8 md:py-8 lg:py-16 border-b border-gray-800 border-opacity-50">
         <Container className="flex flex-row gap-x-12 relative">
+          <Head title={post.title} />
           <div className="absolute lg:block hidden w-[417px] h-[324px] top-[-158px] left-[-267px] md:top-[-42px] md:left-[-110px] lg:h-[297px] bg-contain bg-no-repeat mix-blend-screen bg-[url(/assets/img/common/emptyCubeDesktop.png)]" />
           <div className="hidden lg:block md:w-3/12 flex-1" />
           <div className="flex flex-col w-full lg:w-9/12 lg:px-2">

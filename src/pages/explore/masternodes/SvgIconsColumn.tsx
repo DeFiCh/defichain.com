@@ -95,7 +95,7 @@ function FeatureIcon({
   // };
 
   return (
-    <div
+    <article
       className={classNames(
         customClassStyle,
         "flex md:flex-col w-full md:w-[306px] lg:w-[206px]"
@@ -133,11 +133,11 @@ function FeatureIcon({
         >
           {item.title}
         </h3>
-        <div className="text-dark-700 text-sm pr-[26px] md:pr-0 md:w-[206px] lg:text-base font-desc">
+        <p className="text-dark-700 text-sm pr-[26px] md:pr-0 md:w-[206px] lg:text-base font-desc">
           {item.desc}
-        </div>
+        </p>
       </div>
-    </div>
+    </article>
   );
 }
 

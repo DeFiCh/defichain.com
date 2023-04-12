@@ -13,7 +13,7 @@ export function ReadyForFlexibility() {
   const dimension = useWindowDimensions();
 
   return (
-    <div
+    <section
       className={classNames(
         "relative z-10",
         "lg:mt-[336px] md:mt-[131px] mt-[142px]",
@@ -27,19 +27,19 @@ export function ReadyForFlexibility() {
             customStyle="lg:w-fit md:w-[409px] w-[272px]"
           />
 
-          <div className="mt-5 text-6xl text-[40px] tracking-normal leading-11 md:tracking-[-0.02em]">
+          <h2 className="mt-5 text-6xl text-[40px] tracking-normal leading-11 md:tracking-[-0.02em]">
             <span className="text-dark-1000">{separatedTitle.join(" ")}</span>
             <span className="text-electric">&nbsp;{lastWord}</span>
-          </div>
+          </h2>
 
-          <div>
+          <h4>
             <div className="lg:mt-8 mt-5 lg:text-xl md:text-base lg:tracking-normal tracking-[0.03em] text-dark-700 font-desc">
               {t("ReadyForFlexibilitySection.descParaOne")}
             </div>
             <div className="lg:mt-8 mt-5 lg:text-xl md:text-base lg:tracking-normal tracking-[0.03em] text-dark-700 font-desc">
               {t("ReadyForFlexibilitySection.descParaTwo")}
             </div>
-          </div>
+          </h4>
 
           <Button
             text={t("ReadyForFlexibilitySection.button")}
@@ -71,6 +71,6 @@ export function ReadyForFlexibility() {
           "md:hidden block"
         )}
       />
-    </div>
+    </section>
   );
 }

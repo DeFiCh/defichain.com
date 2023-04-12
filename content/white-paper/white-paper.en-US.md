@@ -69,7 +69,7 @@ Cryptocurrency and Decentralized Finance (DeFi) offer a way to start with a new 
 <h3 id="the-solution" title="The Solution" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 The Solution
 </h3>
-</div>
+
 <div className="mt-5 text-dark-800">
 DeFiChain is designed for investors in the cryptocurrency market who are looking to make their cryptocurrency work just like any other form of capital, such that they can ensure a return on investment in any market. DeFiChain is a dedicated non-Turing-complete blockchain, designed specifically for the decentralized finance (DeFi) industry. DeFi provides full functionality for this specific segment of the DLT community, sacrificing other types of functionality for simplicity, rapid throughput, and security.
 </div>

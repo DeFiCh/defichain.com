@@ -160,7 +160,21 @@ context("/ on macbook-16", () => {
     });
   });
 
-  it.skip("should have Footer Social links", () => {
-    // TODO
+  it.only("should have Footer Social links", () => {
+    cy.findAllByTestId("socialsRow-GitHub")
+      .should("be.visible")
+      .should("have.attr", "href", "https://github.com/DeFiCh/ain");
+    cy.findAllByTestId("socialsRow-Reddit")
+      .should("be.visible")
+      .should("have.attr", "href", "https://www.reddit.com/r/defiblockchain/");
+    cy.findAllByTestId("socialsRow-YouTube")
+      .should("be.visible")
+      .should("have.attr", "href", "https://www.youtube.com/DeFiChain");
+    cy.findAllByTestId("socialsRow-Telegram")
+      .should("be.visible")
+      .should("have.attr", "href", "https://t.me/defiblockchain");
+    cy.findAllByTestId("socialsRow-Twitter")
+      .should("be.visible")
+      .should("have.attr", "href", "https://twitter.com/defichain");
   });
 });

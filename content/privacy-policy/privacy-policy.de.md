@@ -183,5 +183,5 @@ Cake Pte Ltd will occasionally update this Privacy Policy to reflect customer fe
 
 <h2 className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="contact-information" title="Contact information">14. Contact information</div>
 
-<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl">
+<div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pt-2 lg:pt-4">
 DEFICHAIN FOUNDATION LTD. welcomes your comments regarding this Privacy Policy. If you believe that defichain.com has not adhered to this Privacy Policy, please <a className="text-electric no-underline" href="mailto:partners@defichain.com">contact us</a> at support.</div>

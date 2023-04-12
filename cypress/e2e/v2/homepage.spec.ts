@@ -18,15 +18,12 @@ context("/ on macbook-16", () => {
 
   // QA-813 - TC2 - Step 2 & 3
   it("should have Coming soon on Ecosystem and Build sections", () => {
-    cy.get("div[data-testid='header-coming-soon-tag']").should(
-      "have.length",
-      2
-    );
-    cy.get("div[data-testid='header-coming-soon-tag']")
+    cy.findAllByTestId("header-coming-soon-tag").should("have.length", 2);
+    cy.findAllByTestId("header-coming-soon-tag")
       .first()
       .parent()
       .should("contain", "Ecosystem");
-    cy.get("div[data-testid='header-coming-soon-tag']")
+    cy.findAllByTestId("header-coming-soon-tag")
       .last()
       .parent()
       .should("contain", "Build");
@@ -115,7 +112,7 @@ context("/ on macbook-16", () => {
     ];
     textAreas.forEach((area) => {
       features.forEach((feature) => {
-        cy.get(`[data-testid='highlights-${feature}-${area}']`).should(
+        cy.findAllByTestId(`highlights-${feature}-${area}`).should(
           "be.visible"
         );
       });
@@ -124,7 +121,7 @@ context("/ on macbook-16", () => {
 
   // No TC
   it("should have Blog posts with links displayed", () => {
-    cy.get("[data-testid='blog-post-container-link']")
+    cy.findAllByTestId("blog-post-container-link")
       .should("be.visible")
       .and("have.attr", "href")
       .and("include", "https://blog.defichain.com/");

@@ -4,16 +4,16 @@ export function TradeAssetsIcon(props: SVGProps<SVGSVGElement>) {
   const { className } = props;
   return (
     <svg
-      width="88"
-      height="56"
-      viewBox="0 0 88 56"
+      width="46"
+      height="45"
+      viewBox="0 0 46 45"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
       <rect
-        x="6.70109"
-        y="41.9291"
+        x="6.70108"
+        y="35.9291"
         width="29.0804"
         height="7.83908"
         rx="1.28086"
@@ -21,8 +21,8 @@ export function TradeAssetsIcon(props: SVGProps<SVGSVGElement>) {
         strokeWidth="1.26437"
       />
       <rect
-        x="0.632061"
-        y="29.7904"
+        x="0.632092"
+        y="23.7904"
         width="29.0804"
         height="7.83908"
         rx="1.28086"
@@ -30,14 +30,14 @@ export function TradeAssetsIcon(props: SVGProps<SVGSVGElement>) {
         strokeWidth="1.26437"
       />
       <path
-        d="M44.7585 39.0219C44.7585 44.8875 40.0034 49.6426 34.1378 49.6426C28.2721 49.6426 23.5171 44.8875 23.5171 39.0219C23.5171 33.1562 28.2721 28.4012 34.1378 28.4012C40.0034 28.4012 44.7585 33.1562 44.7585 39.0219Z"
-        fill="url(#paint0_linear_2762_41353)"
-        stroke="url(#paint1_linear_2762_41353)"
+        d="M44.7585 33.0219C44.7585 38.8875 40.0034 43.6426 34.1378 43.6426C28.2722 43.6426 23.5171 38.8875 23.5171 33.0219C23.5171 27.1562 28.2722 22.4012 34.1378 22.4012C40.0034 22.4012 44.7585 27.1562 44.7585 33.0219Z"
+        fill="url(#paint0_linear_3135_14654)"
+        stroke="url(#paint1_linear_3135_14654)"
         strokeWidth="1.51724"
       />
       <rect
-        x="6.70109"
-        y="19.1712"
+        x="6.70108"
+        y="13.1712"
         width="29.0804"
         height="7.83908"
         rx="1.28086"
@@ -45,8 +45,8 @@ export function TradeAssetsIcon(props: SVGProps<SVGSVGElement>) {
         strokeWidth="1.26437"
       />
       <rect
-        x="0.632122"
-        y="7.03257"
+        x="0.632138"
+        y="1.03257"
         width="29.0804"
         height="7.83908"
         rx="1.28086"
@@ -55,11 +55,11 @@ export function TradeAssetsIcon(props: SVGProps<SVGSVGElement>) {
       />
       <defs>
         <linearGradient
-          id="paint0_linear_2762_41353"
-          x1="18.1356"
-          y1="19.3452"
+          id="paint0_linear_3135_14654"
+          x1="18.1357"
+          y1="13.3452"
           x2="41.3857"
-          y2="12.0454"
+          y2="6.04538"
           gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#EC008C" />
@@ -67,11 +67,11 @@ export function TradeAssetsIcon(props: SVGProps<SVGSVGElement>) {
           <stop offset="1" stopColor="#0468D6" />
         </linearGradient>
         <linearGradient
-          id="paint1_linear_2762_41353"
-          x1="18.1356"
-          y1="19.3452"
+          id="paint1_linear_3135_14654"
+          x1="18.1357"
+          y1="13.3452"
           x2="41.3857"
-          y2="12.0454"
+          y2="6.04538"
           gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#EC008C" />

@@ -10,7 +10,7 @@ description: Last updated mm/dd/yyyy
       className=
         "text-[24px] leading-8 scroll-mt-40 tracking-normal lg:text-[32px] lg:leading-[40px]"
     >
-      1.Abstract
+      1. Abstract
     </h2>
     <div className="mt-4 text-dark-800">
         The DeFiChain Foundation is developing DeFiChain, a blockchain specifically dedicated to decentralized financial applications. By focusing on the functionality of the blockchain and dedicating it specifically to decentralized finance, DeFiChain provides unparalleled high transaction throughput, reduced risk of errors, and intelligent feature development specifically for the fulfillment of financial services on the blockchain.
@@ -32,7 +32,7 @@ This Document is not a final technical specification
       title="Executive Summary"
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal lg:text-[32px] lg:leading-[40px]">
-        2.Executive summary
+        2. Executive summary
 </h2>
 
 <div className="mt-4 text-dark-800">
@@ -77,7 +77,7 @@ DeFiChain is designed for investors in the cryptocurrency market who are looking
 The function set includes among others:
 <div className="grid grid-rows-3 grid-flow-col list-disc">
 
-<ul class="list-inside list-disc mt-2" style="list-style-position: inside;">
+<ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
   <li>Decentralized lending </li>
   <li>Decentralized wrapping of tokens</li>
   <li>Decentralized Pricing oracles</li>
@@ -104,7 +104,7 @@ The Timeline
 <h2 id="background"
   title="Background"
   className="text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal lg:text-[32px] lg:leading-[40px]">
-  3.Background/Industry
+  3. Background/Industry
 </h2>
 
 <h3 id="promises" title="DeFi’s promises and challenges" className="mt-6 font-bold text-xl md:mt-8 lg:mt-12 lg:text-2xl">
@@ -187,7 +187,7 @@ The state of DeFi
 <div className="mt-5 text-dark-800">
 The current state of Decentralized Finance (DeFi) is populated by general purpose blockchains, most of which provide Turing-complete command sets for the development of smart contracts on the chain. While appropriate for many programming languages, this dogmatic pursuit of Turing-complete smart contracts languages has resulted in a variety of problems when it comes to scalability, security and robustness of the blockchains.
 
-<ul class="list-inside list-disc" style="list-style-position: inside;">
+<ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
 <li class="mt-5">The sheer mass of dApps on networks such as Ethereum, EOS and TRON have potential (or proven) impact on other dApps on the network. The most obvious example was when CryptoKitties ground the Ethereum network practically to a halt. While some of the faster-throughput networks say this can’t happen, it will be some time before any other network reaches the critical mass of apps on Ethereum so that we can prove whether this is or isn’t the case.</li>
 <li class="mt-5">For serious financial type dApps, it’s important to know that the network is being maintained and managed in a responsible and secure manner. Having a blockchain that is swamped with games, gambling and other types of less “mission critical” apps will ultimately influence the development and direction of the blockchains. With governance models that allocate power to masternodes, dev groups, and token-holders, the core development team will ultimately be influenced by the biggest players. Decentralized Finance apps can’t afford the potential consequences of sharing a blockchain with anyone who chooses to use that operating system.</li>
 <li class="mt-5">Using Turing-complete command sets requires programmers to create complex programs to develop any kind of app. For example, to create a peer-to-peer lending contract on top of MakerDAO, a programmer requires approximately 2000 lines of code. Any bug in that code can cause loss of the funds, or some other consequence. Maintaining such a large code base intrinsically means larger chances for mistakes and a large attack surface for even simple apps.</li>
@@ -201,7 +201,7 @@ The limitations of general-purpose blockchains for DeFi apps has opened up a mar
 DeFi’s current problems
 </h3>
 <div className="mt-5 text-dark-800">
-<ul class="list-inside list-disc" style="list-style-position: inside;">
+<ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
 <li class="mt-5">Finance dApps require reliability and do not want to be associated with blockchains that host apps such as betting, entertainment or other apps that may tarnish the reputation of a blockchain at any time.</li>
 <li class="mt-5">Sudden increases in volume of any dApp on a blockchain can potentially impact all the other dApps on that blockchain, either in terms of throughput, transaction price, or additional impacts, as seen with CryptoKitties on Ethereum.</li>
 <li class="mt-5">General-purpose blockchains require a large amount of coding to provide financial services, increasing the risk of hackability or bugs in the code.
@@ -217,9 +217,9 @@ DeFi’s current problems
 Consequences in the DeFi Market
 </h3>
 <div className="mt-5 text-dark-800">
-<ul class="list-inside list-disc" style="list-style-position: inside;">
+<ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
 <li class="mt-5">Multisig wallets are the best the industry has to provide when it comes to joint management of funds, and the solutions for multi-sig are, to some degree, kludges. Multisig tends to be leger-specific and not flexible for different scenarios. For example, in traditional finance, multi-signature accounts can assign signatories different levels of authority, or require different signatures for different transaction types and levels. Different chains take different approaches to adding multisig capabilities to their existing blockchains.
-  <ul class="list-inside list-disc" style="list-style-position: inside;">
+  <ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
     <li class="mt-5 ml-4">
     The BIP 11: M-of-N Standard Transactions is a Bitcoin Improvement Proposal (BIP)designed to add multisig support to Bitcoin blockchain.</li>
     <li class="mt-5 ml-4">Ethereum provides a Turing-complete command set for development of multisig on chain, leading to multiple entities providing multisig smart contracts. Bugs such as those in the Parity multisig (discussed below) have resulted in untold sums in lost funds.</li>
@@ -242,7 +242,7 @@ The points described above are simply unacceptable for any type of financial tra
       title="Comparing existing alternatives"
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal lg:text-[32px] lg:leading-[40px]">
-        4.Comparing existing DeFi alternatives
+        4. Comparing existing DeFi alternatives
 </h2>
 
 <h3 id="bitcoinWhyNot" title="Bitcoin: Why not?" className="mt-6 font-bold text-xl md:mt-8 lg:mt-12 lg:text-2xl">
@@ -277,7 +277,7 @@ The second problem stays mostly within Ethereum, which is the network’s usage 
       title="DeFiChain Solution"
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal lg:text-[32px] lg:leading-[40px]">
-        5.DeFiChain Solution
+        5. DeFiChain Solution
 </h2>
 
 <h3 id="ecosystem" title="Staying in the Bitcoin Ecosystem" className="mt-6 font-bold text-xl md:mt-8 lg:mt-12 lg:text-2xl">
@@ -308,7 +308,7 @@ One of the major challenges in new blockchains is creating the robust immutabili
   DeFiChain utilizes a completely decentralized Proof-of-Stake mechanism allowing for:
   </div>
   <div className="mt-5">
-  <ul class="list-inside list-disc" style="list-style-position: inside;">
+   <ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
     <li>a massive scalable and energy conserving consensus.</li>
     <li>fast transactions and high security</li>
     <li>ability to create a variety of DeFi apps based on one chain, rapidly and with very low attack surface</li>
@@ -327,7 +327,7 @@ One of the major challenges in new blockchains is creating the robust immutabili
 Benefits of DeFiChain: Summary
 </h3>
 <div className="mt-4 text-dark-800">
-  <ul class="list-inside list-disc" style="list-style-position: inside;">
+  <ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
     <li>Development of a variety of financial operations & vehicles for cryptocurrency economy.</li>
     <li>High throughput for all transactions</li>
     <li>Safer, more secure blockchain specifically for decentralized finance..</li>
@@ -343,7 +343,7 @@ Benefits of DeFiChain: Summary
 Initial dAppSets
 </h3>
 <div className="mt-4 text-dark-800">
-  <ul class="list-inside list-disc" style="list-style-position: inside;">
+  <ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
     <li>The initial function set includes:</li>
     <li>Decentralized lending</li>
     <li>Decentralized wrapping of tokens</li>
@@ -476,7 +476,7 @@ Asset Tokenization
   Examples of assets people can now tokenize using the blockchain:
   </div>
   <div className="mt-5">
-  <ul class="list-inside list-disc" style="list-style-position: inside;">
+  <ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
     <li>Securities, such as ETF investing, stocks and shares.</li>
     <li>Shares in privately held companies.</li>
     <li>Energy and income generating devices, such as wind turbines, solar farms, satellites.</li>
@@ -517,7 +517,7 @@ Distribution of Dividends
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal lg:text-[32px] lg:leading-[40px]"
     >
-      6.DeFiChain Design
+      6. DeFiChain Design
     </h2>
 
 <h3 id="param" title="Design Parameters" className="mt-6 font-bold text-xl md:mt-8 lg:mt-12 lg:text-2xl">
@@ -822,7 +822,7 @@ Bitcoin Anchoring
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal lg:text-[32px] lg:leading-[40px]"
     >
-      7.DeFi Building Blocks
+      7. DeFi Building Blocks
     </h2>
 
 <div className="mt-4 text-dark-800">
@@ -865,7 +865,7 @@ DeFi Custom Token (DCT)
 DCT Parameters:
 </div>
 <div className="mt-3 text-dark-800">
-  <ul class="list-inside list-disc" style="list-style-position: inside;">
+  <ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
     <li><span className="font-bold text-dark-1000">DCT ID:</span> <UDID> Unique blockchain identifier for the token.</li>
     <li><span className="font-bold text-dark-1000">Name:</span> <Token name> Name of the tokens.</li>
     <li><span className="font-bold text-dark-1000">Symbol:</span> The ticker symbol for the tokens. The DCT protocol will provide a reference for ensuring the choice will be a unique symbol.</li>
@@ -887,7 +887,7 @@ DeFi Asset Token (DAT)
 <div className="mt-4 text-dark-800">
   DeFi Asset Tokens (DATs) are backed in a decentralized manner. DATs on DeFiChain are tokens and crypto assets external of DeFiChain, such as:
   <div className="mt-5">
-  <ul class="list-inside list-disc" style="list-style-position: inside;">
+  <ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
     <li>DBTC, backed by BTC</li>
     <li>DETH, backed by ETH</li>
     <li>DXRP, backed by XRP</li>
@@ -910,14 +910,14 @@ Economic Pegging of DATs
   </div>
   <div className="mt-5">
     <span className="font-bold text-dark-1000">1. Stablecoin approach</span> 
-    <ul class="list-inside list-disc" style="list-style-position: inside;">
+    <ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
       <li style="margin-left:32px">For every single issued 1 DBTC, 1 BTC has to be locked up in an address or a smart contract.</li>
       <li style="margin-left:32px">While this would help to build a guarantee to DBTC, it introduces some other issues – counterparty risks and affect the decentralized nature of DeFi.</li>
     </ul>
   </div>
   <div className="mt-5">
     <span className="font-bold text-dark-1000">2. Economic pegging</span> 
-    <ul class="list-inside list-disc" style="list-style-position: inside;">
+    <ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
       <li style="margin-left:32px">By providing a strong guarantee that the DAT representing an asset has its price closely tracking the native asset, i.e. by holding DBTC, one can have a good confidence that the value of DBTC will track that of BTC.</li>
     </ul>
   </div>
@@ -1011,7 +1011,7 @@ Cross-chain Exchange (XCX)
   We use the following terms to describe the parties in the XCX:
   </div>
   <div className="mt-5">
-  <ul class="list-inside list-disc" style="list-style-position: inside;">
+  <ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
     <li><span className="font-bold text-dark-1000">Borrower:</span> a person owning a DAT and wanting to get a native coin, e.g, a person who has DBTC and wanting to obtain BTC through the XCX.</li>
     <li><span className="font-bold text-dark-1000">Lender:</span> a person owning BTC and receiving a DAT through the XCX, either temporarily for the duration of the XCX, or permanently, if the XCX expires.</li>
   </ul>
@@ -1020,7 +1020,7 @@ Cross-chain Exchange (XCX)
   XCX orders contain several parameters that can be freely decided by the market marker (first lister of an order). For selling of DBTC for BTC (i.e. someone who’s interested in receiving actual BTC), the parameters are:
   </div>
   <div className="mt-5">
-    <ul class="list-inside list-disc" style="list-style-position: inside;">
+    <ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
       <li><span className="font-bold text-dark-1000">Amount:</span> Amount of coin/DAT a seller is looking for and how much DAT is locked up.</li>
       <li><span className="font-bold text-dark-1000">Premium:</span> Amount of additional fee a coin seller stands to make from this trade (Premium is listed per unit amount, thus allowing for partial fulfillment of trade orders). Together with expiry, it can also be considered as lending interest to the buyer. The Premium is paid instantly once an XCX is matched, before expiry of the lending contract. Premium can be positive (+) or negative (-) depending on supply and demand.</li>
       <li><span className="font-bold text-dark-1000">Guarantee:</span> An optional additional amount in DBTC and/or DFI that is locked in the XCX that will provide an extra incentive for a lender as it resolves in either of the following two outcomes:
@@ -1170,7 +1170,7 @@ Lending a Coin for Cashflow
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal lg:text-[32px] lg:leading-[40px]"
     >
-      8.$DFI coin
+      8. $DFI coin
     </h2>
 <div className="mt-4 text-dark-800">
 The $DFI coin will be the integral unit of account in DeFiChain ecosystem.
@@ -1186,16 +1186,16 @@ $DFI coin Utility
 </h3>
 
 <div className="mt-4 text-dark-800">
-<ul class="list-inside list-disc" style="list-style-position: inside;">
+<ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
   <li>DFI is used for fee payment for all transactions and smart contracts on DeFiChain.
-    <ul class="list-inside list-disc" style="list-style-position: inside;">
+    <ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
       <li class="ml-5">
       Fee payment for decentralized exchange transactions</li>
       <li class="ml-5">Fee payment for token transfers</li>
     </ul>
   </li>
   <li class="mt-7">Fees payment for DeFi activities:
-    <ul class="list-inside list-disc" style="list-style-position: inside;">
+    <ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
       <li class="ml-5">DEX fees</li>
       <li class="ml-5">XCX fees</li>
       <li class="ml-5">Lending loan interests payment</li>
@@ -1247,7 +1247,7 @@ Masternodes
   DeFi is a Proof of Stake blockchain. Initially, 1,000,000 DFI allows the owner to own a staking node. Today, the amount has been reduced to 20,000 DFI for ownership of a staking node. The returns for staking will decrease over time, as the volume and number of transactions compensate for the reduction in per-transaction staking rewards.
   <div className="mt-5">
   Nodes are entitled to:
-  <ul class="list-inside list-disc" style="list-style-position: inside;">
+  <ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
     <li>Periodic staking rewards as described later in this chapter.</li>
     <li>Submission of votes to key decisions that govern DeFiChain in the governance system.</li>
     <li>Submission of votes on how the DFI community budget is being allocated and distributed.</li>
@@ -1514,7 +1514,7 @@ Acquiring $DFI coins
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal lg:text-[32px] lg:leading-[40px]"
     >
-      9.DeFiChain Foundation
+      9. DeFiChain Foundation
     </h2>
 <div className="mt-5 text-dark-800">
 The DeFiChain Foundation is incorporated as a company limited by guarantee, resembling a foundation structure which holds the DeFiChain Trademarks, Domains and makes sure the DFI foundation funds are used as instructed by the masternodes.
@@ -1526,7 +1526,7 @@ The DeFiChain Foundation is incorporated as a company limited by guarantee, rese
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal lg:text-[32px] lg:leading-[40px]"
     >
-      10.Marketing
+      10. Marketing
     </h2>
 
 <h3 id="targetMarket" title="Target Market" className="mt-6 font-bold text-xl md:mt-8 lg:mt-12 lg:text-2xl">
@@ -1558,7 +1558,7 @@ Partnerships
   The DeFiChain Foundation will undertake a variety of efforts to choose the best projects for the expansion of DeFiChain:
   </div>
   <div className="mt-5">
-  <ul class="list-inside list-disc" style="list-style-position: inside;">
+  <ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
     <li className="ml-4">Creation of a formal application process so that worthy projects can apply for airdrop or foundation grants for their development</li>
     <li className="ml-4">Approaching developers in the ecosystem who are doing DeFi dApps on other blockchains, and providing grants for them to develop their dApps on DeFi.</li>
     <li className="ml-4">General marketing to get the word out about the availability of DeFiChain Foundation grants to fund worthy projects.</li>
@@ -1580,7 +1580,7 @@ Partnerships
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal lg:text-[32px] lg:leading-[40px]"
     >
-      10.Roadmap and Milestones
+      11. Roadmap and Milestones
     </h2>
 <div className="mt-8">
 
@@ -1594,7 +1594,7 @@ Partnerships
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal lg:text-[32px] lg:leading-[40px]"
     >
-      11.A Glimpse into the Future
+      12. A Glimpse into the Future
     </h2>
 <div className="mt-4 text-dark-800">
   Building on top of DeFiChain will lead to some of the most exciting benefits not only for first-world areas, but moreover also all those that need decentralized finance the most. For example, imagine Anna, who owns a small business in a developing economy, but who doesn’t have a traditional bank account. She uses mobile money and digital currencies to run her business, accepting payments through mobile--which makes perfect sense, because nobody in her province uses cash or credit cards. Anna uses DeFiChain to take out a loan when one of her suppliers pays late, saving her business. In the old days, she would have simply gone out of business, because no bank would loan money to her. Anna also invests wisely. When she is paid by the supplier, she immediately moves the cash into various tokenized assets to avoid the hyperinflation and instability of her national government’s currency, and on top of that, she is able to earn interest.
@@ -1617,7 +1617,7 @@ This is what DeFiChain is all about - To make the world a better place!
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal lg:text-[32px] lg:leading-[40px]"
     >
-      13.Footnotes
+      13. Footnotes
     </h2>
 
 <div className="mt-5 text-dark-800">

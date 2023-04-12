@@ -107,7 +107,7 @@ The Timeline
   3. Background/Industry
 </h2>
 
-<h3 id="promises" title="DeFi’s promises and challenges" className="mt-6 font-bold text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="promises" title="DeFi’s promises and challenges" className="mt-6 font-bold text-xl md:mt-8 lg:text-2xl">
 DeFi’s promises and challenges
 </h3>
 <div className="mt-5 text-dark-800">
@@ -245,7 +245,7 @@ The points described above are simply unacceptable for any type of financial tra
         4. Comparing existing DeFi alternatives
 </h2>
 
-<h3 id="bitcoinWhyNot" title="Bitcoin: Why not?" className="mt-6 font-bold text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="bitcoinWhyNot" title="Bitcoin: Why not?" className="mt-6 font-bold text-xl md:mt-8 lg:text-2xl">
 Bitcoin: Why Not?
 </h3>
 <div className="mt-5 text-dark-800">
@@ -255,7 +255,7 @@ Given our optimism on Bitcoin, the first question one might ask is why not devel
 <h3 id="turingComplete" title="Turing-complete solutions" className="mt-6 font-bold text-xl md:mt-8 lg:mt-12 lg:text-2xl">
 Turing-complete Solutions: Ethereum, EOS, Tron…
 </h3>
-<div className="mt-5 text-dark-800">
+<div className="mt-4 text-dark-800">
 To date, a number of DeFi applications have been built on Ethereum, Tron, EOS and many other turing-complete chains. Since Ethereum has the biggest adoption it allowed the surfacing of issues that come with using a turing-complete blockchain for DeFi applications the fastest. The DAO hack was one of the first and most dramatic exposures of the vulnerability of using such a complex language. Anyone issuing a token on the network knows how difficult it is. Just to create and issue an ERC20 token can easily cost over 100,000 USD, considering the cost of smart contract auditing that is necessary for innovative solutions. Simply the fact that there’s an entire industry built around “smart contract audits” should be enough to illustrate the problem. Despite the fact that ERC20 is the industry standard, it’s still so easy to hack that it’s impossible to issue even a simple token without getting a high-cost professional auditor as well as a programmer.
 </div>
 <div className="mt-5 text-dark-800">
@@ -280,7 +280,7 @@ The second problem stays mostly within Ethereum, which is the network’s usage 
         5. DeFiChain Solution
 </h2>
 
-<h3 id="ecosystem" title="Staying in the Bitcoin Ecosystem" className="mt-6 font-bold text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="ecosystem" title="Staying in the Bitcoin Ecosystem" className="mt-6 font-bold text-xl md:mt-8 lg:text-2xl">
 Staying in the Bitcoin Ecosystem
 </h3>
 <div className="mt-5 text-dark-800">
@@ -564,9 +564,10 @@ Design Parameters
   In order to implement a blockchain with the required speed and scalability, DeFiChain fork of Bitcoin Core will include the following improvements:
   </div>
   <div className="mt-5">
-  <div>- Block time: <span className="font-bold text-dark-1000">30 seconds</span></div>
-  <div>- Block size: <span className="font-bold text-dark-1000">16 MB</span></div>
-
+  <ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
+    <li>Block time: <span className="font-bold text-dark-1000">30 seconds</span></li>
+    <li>Block size: <span className="font-bold text-dark-1000">16 MB</span></li>
+  </ul>
   </div>
   <div className="mt-5">
   These improvements provide a transaction rate of over 2,200 transactions per second (tps) while maintaining manageable compute and bandwidth requirements to allow for decentralized operations of DeFiChain.
@@ -801,7 +802,7 @@ The chain uses a maximum future block time of only approx. 5 seconds, to protect
 Bitcoin Anchoring
 </h3>
 
-<div className="mt-2 text-dark-800">
+<div className="mt-4 text-dark-800">
   DeFiChain stakers publish blockchain block hashes periodically to the Bitcoin blockchain, providing public audit and block anchoring of DeFiChain to the strongest, most secure blockchain in the world.
   <div className="mt-5">
   Every 60 blocks (approximately 30 minutes), a staker gets the right to write the Merkle root of the previous block onto the Bitcoin blockchain. The information written is, specifically, the txid of the Bitcoin transaction, Bitcoin block header and Merkle proof containing the Merkle root onto the newly mined block. By doing so, the staker will be rewarded an extra block reward in DFI, incentivising nodes to regularly anchor all records to the Bitcoin blockchain.

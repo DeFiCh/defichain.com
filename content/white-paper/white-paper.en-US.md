@@ -56,7 +56,7 @@ Bitcoin, as described in the original Satoshi whitepaper, is designed as a form 
 DeFiChain approaches decentralized finance as a specific and critical segment of the blockchain community. DeFi is a dedicated blockchain that is optimized specifically for DeFi applications. DeFiChain is intentionally non-Turing-Complete and does not support any function, other than those needed for Decentralized Finance, resulting in a blockchain that provides higher throughput and better functionality specifically for dApps related to finance. The advantage of a non-Turing complete command set is that there is a much lower potential for coding errors of the type that have plagued Ethereum smart contracts such as with the DAO hack or the locked funds with Parity. While it is important that we have some smart contract languages that are Turing complete, in the area of finance, it is appropriate to restrict the capabilities of the language in favor of a more secure system with greatly-reduced attack vectors.
 </div>
 
-<h3 id="the-problem" title="The Problem" className="mt-6 font-bold font-sans font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="the-problem" title="The Problem" className="mt-6 font-bold font-sans scroll-mt-40 text-xl md:mt-8 lg:mt-12 lg:text-2xl">
 The Problem
 </h3>
 <div className="mt-5 text-dark-800">
@@ -66,7 +66,7 @@ Today, almost all financial services are run by banks. Investments, for example,
 Cryptocurrency and Decentralized Finance (DeFi) offer a way to start with a new system, circumventing the difficulties faced in changing the finance industry. While crypto has attracted billions in investments, decentralized financial services are lagging. When it comes to investment in cryptocurrency, crypto investors can buy and sell, but that’s it. The cryptocurrency itself cannot be invested in the same way fiat currency can be. Initial attempts to create peer-to-peer lending and asset tokenization so far have proven partial and unreliable, so investors have extremely limited options when it comes to an investment of their cryptoassets. The potential is enormous to provide financial services in crypto, the same way they are offered in fiat currency.
 </div>
 
-<h3 id="the-solution" title="The Solution" className="mt-6 font-bold font-sans font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="the-solution" title="The Solution" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 The Solution
 </h3>
 </div>
@@ -90,7 +90,7 @@ The function set includes among others:
 </div>
 </div>
 
-<h3 id="timeline" title="Timeline" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="timeline" title="Timeline" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 The Timeline
 </h3>
 <div className="mt-5">
@@ -107,7 +107,7 @@ The Timeline
   3. Background/Industry
 </h2>
 
-<h3 id="promises" title="DeFi’s promises and challenges" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:text-2xl">
+<h3 id="promises" title="DeFi’s promises and challenges" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:text-2xl">
 DeFi’s promises and challenges
 </h3>
 <div className="mt-5 text-dark-800">
@@ -181,7 +181,7 @@ Today, almost universally, cryptocurrency investors have only one way to earn mo
 
 </div>
 
-<h3 id="stateOfDefi" title="The state of DeFi" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="stateOfDefi" title="The state of DeFi" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 The state of DeFi
 </h3>
 <div className="mt-5 text-dark-800">
@@ -197,7 +197,7 @@ The current state of Decentralized Finance (DeFi) is populated by general purpos
 The limitations of general-purpose blockchains for DeFi apps has opened up a market opportunity to serve this market. While cryptocurrency momentum has continued to rise, most of the current applications are still on Ethereum. Concerns about the network have already led some of the major projects to consider porting or working with alternative or additional blockchains.
 </div>
 
-<h3 id="currentProblems" title="DeFi’s current problems" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="currentProblems" title="DeFi’s current problems" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 DeFi’s current problems
 </h3>
 <div className="mt-5 text-dark-800">
@@ -213,7 +213,7 @@ DeFi’s current problems
 </ul>
 </div>
 
-<h3 id="consequences" title="Consequences in the DeFi Market" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="consequences" title="Consequences in the DeFi Market" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Consequences in the DeFi Market
 </h3>
 <div className="mt-5 text-dark-800">
@@ -245,14 +245,14 @@ The points described above are simply unacceptable for any type of financial tra
         4. Comparing existing DeFi alternatives
 </h2>
 
-<h3 id="bitcoinWhyNot" title="Bitcoin: Why not?" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:text-2xl">
+<h3 id="bitcoinWhyNot" title="Bitcoin: Why not?" className="mt-6 font-bold font-sans text-xl md:mt-8 scroll-mt-40 lg:text-2xl">
 Bitcoin: Why Not?
 </h3>
 <div className="mt-5 text-dark-800">
 Given our optimism on Bitcoin, the first question one might ask is why not develop DeFi using the Bitcoin Blockchain. While Bitcoin allows only basic smart contracts, some projects have begun developing workarounds. However, the transaction costs are restrictive on the Bitcoin chain, and we don’t believe it is going to be appropriate for the speed required for financial transactions. The Bitcoin chain is currently working as designed as a store of value. In our opinion, sticking to that single purpose is the best use of the chain and it is proven over the last decade. Adding financial services into the main chain adds unnecessary complexity and may cause side effects both for DeFi and for Bitcoin that are undesirable. Furthermore, it is not something we think that the Bitcoin governance is prepared to handle, and at some point, if DeFiChain requirements differed from those of the miners or developers on the Bitcoin chain, we would be subject to their decisions.
 </div>
 
-<h3 id="turingComplete" title="Turing-complete solutions" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="turingComplete" title="Turing-complete solutions" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Turing-complete Solutions: Ethereum, EOS, Tron…
 </h3>
 <div className="mt-4 text-dark-800">
@@ -280,7 +280,7 @@ The second problem stays mostly within Ethereum, which is the network’s usage 
         5. DeFiChain Solution
 </h2>
 
-<h3 id="ecosystem" title="Staying in the Bitcoin Ecosystem" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:text-2xl">
+<h3 id="ecosystem" title="Staying in the Bitcoin Ecosystem" className="mt-6 font-bold font-sans scroll-mt-40 text-xl md:mt-8 lg:text-2xl">
 Staying in the Bitcoin Ecosystem
 </h3>
 <div className="mt-5 text-dark-800">
@@ -297,7 +297,7 @@ For that reason, creating decentralized financial services around Bitcoin repres
 Thus, we believe, building a DeFi Blockchain on top of Bitcoin would bring the best out of both worlds: Bitcoin’s stability and immutability and DeFi-chain’s scalability and functionality.
 </div>
 
-<h3 id="building" title="Building on Top of Bitcoin" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="building" title="Building on Top of Bitcoin" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Building on Top of Bitcoin
 </h3>
 <div className="mt-4 text-dark-800">
@@ -323,7 +323,7 @@ One of the major challenges in new blockchains is creating the robust immutabili
   </div>
 </div>
 
-<h3 id="benefits" title="Benefits of DeFiChain" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="benefits" title="Benefits of DeFiChain" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Benefits of DeFiChain: Summary
 </h3>
 <div className="mt-4 text-dark-800">
@@ -339,7 +339,7 @@ Benefits of DeFiChain: Summary
     <li>Highly immutable – by periodic anchoring to Bitcoin blockchain.</li>
   </ul>
 </div>
-<h3 id="dAppSets" title="Initial dAppSets" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="dAppSets" title="Initial dAppSets" className="mt-6 font-bold font-sans text-xl md:mt-8 scroll-mt-40 lg:mt-12 lg:text-2xl">
 Initial dAppSets
 </h3>
 <div className="mt-4 text-dark-800">
@@ -361,7 +361,7 @@ This chapter provides an overview of each of these functions and the following c
 
 </div>
 
-<h3 id="lending" title="Decentralized Lending" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="lending" title="Decentralized Lending" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Decentralized Lending
 </h3>
 <div className="mt-4 text-dark-800">
@@ -380,7 +380,7 @@ Decentralized Lending
   </div>
 </div>
 
-<h3 id="tokenWrapping" title="Decentralized Wrapping of Tokens" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="tokenWrapping" title="Decentralized Wrapping of Tokens" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Decentralized Wrapping of Tokens
 </h3>
 <div className="mt-4 text-dark-800">
@@ -398,7 +398,7 @@ Decentralized Wrapping of Tokens
   </div>
 </div>
 
-<h3 id="pricingOracles" title="Decentralized Pricing Oracles" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="pricingOracles" title="Decentralized Pricing Oracles" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Decentralized Pricing Oracles
 </h3>
 <div className="mt-4 text-dark-800">
@@ -411,7 +411,7 @@ Decentralized Pricing Oracles
   </div>
 </div>
 
-<h3 id="dex" title="Decentralized Exchanges" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="dex" title="Decentralized Exchanges" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Decentralized Exchanges
 </h3>
 <div className="mt-4 text-dark-800">
@@ -426,7 +426,7 @@ Decentralized Exchanges
 [^6]: https://en.wikipedia.org/wiki/Decentralized_exchange
 [^7]: https://coinsutra.com/best-decentralized-exchanges-dex/
 
-<h3 id="transferrableDebts" title="Transferable Debts and Receivables" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="transferrableDebts" title="Transferable Debts and Receivables" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Transferable Debts and Receivables
 </h3>
 <div className="mt-4 text-dark-800">
@@ -439,7 +439,7 @@ Transferable Debts and Receivables
   </div>
 </div>
 
-<h3 id="noncollateralizedDebt" title="Decentralized Non-Collateralized Debt" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="noncollateralizedDebt" title="Decentralized Non-Collateralized Debt" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Decentralized Non-Collateralized Debt
 </h3>
 <div className="mt-4 text-dark-800">
@@ -452,7 +452,7 @@ Decentralized Non-Collateralized Debt
   </div>
 </div>
 
-<h3 id="assetTokenization" title="Asset Tokenization" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="assetTokenization" title="Asset Tokenization" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Asset Tokenization
 </h3>
 <div className="mt-4 text-dark-800">
@@ -489,7 +489,7 @@ Asset Tokenization
   </div>
 </div>
 
-<h3 id="dividendsDist" title="Distribution of Dividends" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="dividendsDist" title="Distribution of Dividends" className="mt-6 font-bold font-sans scroll-mt-40 text-xl md:mt-8 lg:mt-12 lg:text-2xl">
 Distribution of Dividends
 </h3>
 <div className="mt-4 text-dark-800">
@@ -520,7 +520,7 @@ Distribution of Dividends
       6. DeFiChain Design
     </h2>
 
-<h3 id="param" title="Design Parameters" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="param" title="Design Parameters" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Design Parameters
 </h3>
 <div className="mt-4 text-dark-800">
@@ -577,7 +577,7 @@ Design Parameters
   </div>
 </div>
 
-<div className="table-responsive table-auto text-base text-left border-solid border-2 border-dark-1000 mt-7" style="overflow: scroll;">
+<div className="table-responsive table-auto text-base text-left border-solid border-2 border-dark-1000 no-scrollbar mt-7" style="overflow: scroll;">
   <table>
     <thead>
       <tr style="border-bottom: 1px solid #dddddd;">
@@ -707,7 +707,7 @@ Bitcoin Core is using Proof-of-Work (PoW) as the consensus mechanism. DeFiChain 
   </div>
 </div>
 
-<h3 id="consensus" title="Consensus Algorithm" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="consensus" title="Consensus Algorithm" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Consensus Algorithm
 </h3>
 
@@ -798,7 +798,7 @@ Time Drift Attack
 The chain uses a maximum future block time of only approx. 5 seconds, to protect the chain from time drift attacks, where stakers set a block time too far ahead in the future, in order to claim a reward for themselves. DeFi also uses NTP time synchronization to allow for ongoing adjustment to the block time.
 </div>
 
-<h3 id="bitcoinAnchoring" title="Bitcoin Anchoring" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="bitcoinAnchoring" title="Bitcoin Anchoring" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Bitcoin Anchoring
 </h3>
 
@@ -830,14 +830,14 @@ Bitcoin Anchoring
 To achieve our goals of enabling decentralized finance transactions on DeFiChain, the following build blocks will be included as a base native components on DeFiChain.
 </div>
 
-<h3 id="dst" title="Tokenization as a DeFi Standard Token (DST)" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="dst" title="Tokenization as a DeFi Standard Token (DST)" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Tokenization as a DeFi Standard Token (DST)
 </h3>
 <div className="mt-4 text-dark-800">
 The implementation of the features described in this whitepaper is performed with the use of standardized tokens. This chapter describes the mechanics of the tokens, interaction with other cryptoassets (tokens), and how they are used in DeFiChain.
 </div>
 
-<h3 id="crossChain" title="Cross-chain Mechanics" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="crossChain" title="Cross-chain Mechanics" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Cross-chain Mechanics
 </h3>
 <div className="mt-4 text-dark-800">
@@ -852,7 +852,7 @@ Cross-chain Mechanics
 
 </div>
 
-<h3 id="dct" title="DeFi Custom Token (DCT)" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="dct" title="DeFi Custom Token (DCT)" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 DeFi Custom Token (DCT)
 </h3>
 <div className="mt-4 text-dark-800">
@@ -882,7 +882,7 @@ DCT Parameters:
   </div>
 </div>
 
-<h3 id="dat" title="DeFi Asset Token (DAT)" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="dat" title="DeFi Asset Token (DAT)" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 DeFi Asset Token (DAT)
 </h3>
 <div className="mt-4 text-dark-800">
@@ -901,7 +901,7 @@ DeFi Asset Token (DAT)
   </div>
 </div>
 
-<h3 id="economicPegging" title="Economic Pegging of DATs" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="economicPegging" title="Economic Pegging of DATs" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Economic Pegging of DATs
 </h3>
 <div className="mt-4 text-dark-800">
@@ -912,14 +912,14 @@ Economic Pegging of DATs
   <div className="mt-5">
     <span className="font-bold font-sans text-dark-1000">1. Stablecoin approach</span> 
     <ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
-      <li style="margin-left:32px">For every single issued 1 DBTC, 1 BTC has to be locked up in an address or a smart contract.</li>
-      <li style="margin-left:32px">While this would help to build a guarantee to DBTC, it introduces some other issues – counterparty risks and affect the decentralized nature of DeFi.</li>
+      <li style="margin-left:20px">For every single issued 1 DBTC, 1 BTC has to be locked up in an address or a smart contract.</li>
+      <li style="margin-left:20px">While this would help to build a guarantee to DBTC, it introduces some other issues – counterparty risks and affect the decentralized nature of DeFi.</li>
     </ul>
   </div>
   <div className="mt-5">
     <span className="font-bold font-sans text-dark-1000">2. Economic pegging</span> 
     <ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
-      <li style="margin-left:32px">By providing a strong guarantee that the DAT representing an asset has its price closely tracking the native asset, i.e. by holding DBTC, one can have a good confidence that the value of DBTC will track that of BTC.</li>
+      <li style="margin-left:20px">By providing a strong guarantee that the DAT representing an asset has its price closely tracking the native asset, i.e. by holding DBTC, one can have a good confidence that the value of DBTC will track that of BTC.</li>
     </ul>
   </div>
   <div className="mt-5">
@@ -938,7 +938,7 @@ Economic Pegging of DATs
   </div>
 </div>
 
-<h3 id="loanContract" title="Loan Contract" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="loanContract" title="Loan Contract" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Loan Contract
 </h3>
 <div className="mt-5 text-dark-800">
@@ -990,7 +990,7 @@ Loan Contract
 
 </div>
 
-<h3 id="dex" title="Decentralized Exchange (DEX)" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="dex" title="Decentralized Exchange (DEX)" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Decentralized Exchange (DEX)
 </h3>
 <div className="mt-4 text-dark-800">
@@ -1000,7 +1000,7 @@ Decentralized Exchange (DEX)
   </div>
 </div>
 
-<h3 id="xcx" title="Cross-chain Exchange (XCX)" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="xcx" title="Cross-chain Exchange (XCX)" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Cross-chain Exchange (XCX)
 </h3>
 <div className="mt-4 text-dark-800">
@@ -1107,7 +1107,7 @@ Second Example:
   </div>
 </div>
 
-<h3 id="pricingOracles" title="Pricing Oracles" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="pricingOracles" title="Pricing Oracles" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Pricing Oracles
 </h3>
 <div className="mt-4 text-dark-800">
@@ -1117,7 +1117,7 @@ Pricing Oracles
   </div>
 </div>
 
-<h3 id="useCases" title="Use Case" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="useCases" title="Use Case" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Use Case Examples
 </h3>
 <div className="mt-4 text-dark-800">
@@ -1181,7 +1181,7 @@ DFI is divisible up to 8 decimal places.
 
 </div>
 
-<h3 id="utility" title="Utility" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="utility" title="Utility" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 $DFI coin Utility
 
 </h3>
@@ -1241,7 +1241,7 @@ Rewards from mining a block on DeFiChain are calculated as:
   </div>
 </div>
 
-<h3 id="masternodes" title="Masternodes" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="masternodes" title="Masternodes" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Masternodes
 </h3>
 <div className="mt-4 text-dark-800">
@@ -1256,7 +1256,7 @@ Masternodes
   </div>
 </div>
 
-<h3 id="governance" title="Governance" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="governance" title="Governance" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Governance
 </h3>
 <div className="mt-4 text-dark-800">
@@ -1274,7 +1274,7 @@ Governance
   </div>
 </div>
 
-<h3 id="cdf" title="Community Development Fund" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="cdf" title="Community Development Fund" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Community Development Fund
 </h3>
 <div className="mt-4 text-dark-800">
@@ -1290,7 +1290,7 @@ For governance decisions, only the Foundation may submit proposals. Proposals ar
 
 </div>
 
-<h3 id="initialToken" title="Initial Token Distribution" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="initialToken" title="Initial Token Distribution" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Initial Token Distribution
 </h3>
 <div className="mt-4 text-dark-800">
@@ -1309,7 +1309,7 @@ Initial Token Distribution
   </div>
 </div>
 
-<h3 id="tokenIssuance" title="Token Issuance Schedule" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="tokenIssuance" title="Token Issuance Schedule" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Token Issuance Schedule via Staking
 </h3>
 <div className="mt-4 text-dark-800">
@@ -1320,7 +1320,7 @@ Token Issuance Schedule via Staking
   <div className="mt-5">
   The proposed staking schedule for the first 10 years is according to the following table:
   </div>
-  <div className="table-responsive table-auto text-base text-left border-solid border-2 border-dark-1000 mt-7" style="overflow: scroll;">
+  <div className="table-responsive table-auto text-base text-left border-solid border-2 border-dark-1000 no-scrollbar mt-7" style="overflow: scroll;">
     <table>
       <thead>
         <tr style="border: 1px solid #dddddd;">
@@ -1496,7 +1496,7 @@ Token Issuance Schedule via Staking
 
 </div>
 
-<h3 id="acquiringDFI" title="Acquiring $DFI coins" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="acquiringDFI" title="Acquiring $DFI coins" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Acquiring $DFI coins
 </h3>
 <div className="mt-4 text-dark-800">
@@ -1530,14 +1530,14 @@ The DeFiChain Foundation is incorporated as a company limited by guarantee, rese
       10. Marketing
     </h2>
 
-<h3 id="targetMarket" title="Target Market" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="targetMarket" title="Target Market" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Target Market
 </h3>
 <div className="mt-4 text-dark-800">
 Unlike most other DeFi-focused initiatives, DeFiChain being built on top of Bitcoin can harness almost the entire crypto market without being limited to “smaller” chains like Ethereum etc. Thus, as of publication, the target market for DeFiChain are over 60-80 million cryptocurrency owners and we can expect that hundreds of millions of other users will join in the future. This group of investors is investing and holding cryptocurrency due to the returns as well as their belief in the future of the industry. As investors, they have widely done well with the rise in many of the cryptoassets, however, they are not able to use their holdings in order to get better returns. Providing DeFi services will allow these investors to hold the coins they believe in, and increase their holdings over time based on investments that go deeper than just currency trading.
 </div>
 
-<h3 id="goToMarketStrat" title="Go-to-market Strategy" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="goToMarketStrat" title="Go-to-market Strategy" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Go-to-market Strategy
 </h3>
 <div className="mt-4 text-dark-800">
@@ -1550,7 +1550,7 @@ Go-to-market Strategy
   </div>
 </div>
 
-<h3 id="partnership" title="Partnerships" className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="partnership" title="Partnerships" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Partnerships
 </h3>
 <div className="mt-4 text-dark-800">

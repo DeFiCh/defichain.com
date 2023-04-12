@@ -12,6 +12,20 @@ context("/ on macbook-16", () => {
 
   it("should have Explore section dropdown elements", () => {
     cy.findByTestId("header-dropDownItem-explore").trigger("mouseover");
+    cy.findByTestId("headerNavElem-DeFiScan (Official)")
+      .should("be.visible")
+      .and("have.attr", "href")
+      .and("include", "https://defiscan.live/");
+    cy.findByTestId("headerNavElem-Crypto ID")
+      .should("be.visible")
+      .and("have.attr", "href")
+      .and("include", "https://chainz.cryptoid.info/");
+    ecosystemLinks.forEach((ecosystemItem) => {
+      cy.findByTestId(`headerNavElem-${ecosystemItem.footerTestid}`)
+        .should("be.visible")
+        .and("have.attr", "href")
+        .and("include", ecosystemItem.link);
+    });
   });
 
   // QA-813 - TC2 - Step 2 & 3

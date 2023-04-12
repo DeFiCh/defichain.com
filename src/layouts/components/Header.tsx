@@ -276,6 +276,7 @@ function DesktopMenu({ item }: { item: string }) {
           <Transition
             style={{ top: headerHeight - 1 }}
             className="absolute inset-x-0 header-dropdown-bg w-screen"
+            data-testid={`header-tag-${item}`}
             show={isShowing}
             enter="transition ease duration-500 transform"
             enterFrom="opacity-0"

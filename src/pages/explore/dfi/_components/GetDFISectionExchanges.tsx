@@ -102,7 +102,7 @@ export default function GetDFISectionExchanges() {
   ];
 
   return (
-    <div className="w-full">
+    <section className="w-full">
       <ExchangeGrid items={exchanges} />
 
       <div className="mt-14">
@@ -111,7 +111,7 @@ export default function GetDFISectionExchanges() {
         </div>
         <ExchangeGrid items={staking} />
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -128,9 +128,9 @@ function ExchangeGrid({ items }: { items: ExchangeItem[] }): JSX.Element {
             className="rounded-[5px] p-[0.5px] bg-dark-200 hover:accent-gradient-1 active:opacity-70"
             target="_blank"
           >
-            <div className="w-full h-[115px] rounded-[5px] flex justify-center items-center bg-dark-00">
+            <article className="w-full h-[115px] rounded-[5px] flex justify-center items-center bg-dark-00">
               <Logo />
-            </div>
+            </article>
           </Link>
         );
       })}

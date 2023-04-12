@@ -4,6 +4,7 @@ import { useDeviceDetect, ViewPort } from "@hooks/useDeviceDetect";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import classNames from "classnames";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 import { Card } from "./components/Card";
 
 export function DeFiChainEcoSystemSection(): JSX.Element {
@@ -11,9 +12,10 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
   const { t } = useTranslation("page-index");
   const sectionTitle = t("EcosystemSection.title").split(" ");
   const device = useDeviceDetect();
+  const router = useRouter();
 
   return (
-    <div
+    <section
       className={classNames("relative lg:pt-[136px] md:-mb-6 lg:mb-0", {
         "overflow-hidden": device === ViewPort.DESKTOP,
         "pb-[292px]": device === ViewPort.TABLET && dimensions.width > 1500, // for bigger ipad sizes
@@ -35,7 +37,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             text={t("EcosystemSection.label")}
             customStyle="lg:w-fit md:w-[409px] w-[272px]"
           />
-          <span className="block lg:text-6xl text-[40px] leading-[44px] max-w-[560px] pt-[20px] lg:leading-[72px]">
+          <h2 className="block lg:text-6xl text-[40px] leading-[44px] max-w-[560px] pt-[20px] lg:leading-[72px]">
             <span>
               {sectionTitle[0]} {sectionTitle[1]}
             </span>
@@ -46,8 +48,11 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
               </span>
               <span> {sectionTitle[5]} </span>
               <span className="text-electric">{sectionTitle[6]}</span>
+              {router.locale === "de" && (
+                <span>&nbsp;{sectionTitle.slice(7).join(" ")}</span>
+              )}
             </span>
-          </span>
+          </h2>
 
           <div
             className={classNames(
@@ -112,6 +117,6 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
           "lg:hidden block -bottom-40 left-[40%] md:bottom-[-100px] md:left-[70%] md:z-20"
         )}
       />
-    </div>
+    </section>
   );
 }

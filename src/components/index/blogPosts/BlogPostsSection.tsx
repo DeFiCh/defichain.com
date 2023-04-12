@@ -9,7 +9,7 @@ import ProjectCard from "./PostCard";
 export function BlogPostsSection({ blogPosts }: { blogPosts: Posts[] }) {
   const { t } = useTranslation("page-index");
   return blogPosts?.length > 0 ? (
-    <div className={classNames("relative lg:mb-56 md:mb-52 mb-48")}>
+    <section className={classNames("relative lg:mb-56 md:mb-52 mb-48")}>
       <Container>
         <div className="flex flex-col lg:flex-row w-auto justify-between">
           <div className="max-w-[468px]">
@@ -17,9 +17,9 @@ export function BlogPostsSection({ blogPosts }: { blogPosts: Posts[] }) {
               text={t("BlogPostsSection.label")}
               customStyle="lg:w-fit md:w-[409px] w-[272px]"
             />
-            <div className="mt-5 text-[32px] leading-9 whitespace-pre-line lg:text-[52px] lg:leading-none">
+            <h2 className="mt-5 text-[32px] leading-9 whitespace-pre-line lg:text-[52px] lg:leading-none">
               {t("BlogPostsSection.title")}
-            </div>
+            </h2>
             <Button
               text={t("BlogPostsSection.button")}
               className="text-sm mt-9 lg:py-4 lg:px-14 py-3 px-10 lg:text-base lg:mt-12"
@@ -46,7 +46,7 @@ export function BlogPostsSection({ blogPosts }: { blogPosts: Posts[] }) {
           "bottom-[-30%] left-[-8%] hidden md:block lg:hidden"
         )}
       />
-    </div>
+    </section>
   ) : (
     <div />
   );

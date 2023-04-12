@@ -9,7 +9,7 @@ export function ForDailyUseSection() {
   const { t } = useTranslation(["page-explore-wallets"]);
   return (
     <Container className="lg:mt-[129px] md:mt-[57px] mt-0">
-      <div
+      <article
         id="explore-wallets-daily-use-section"
         className="flex flex-col gap-y-5 lg:scroll-mt-[200px] scroll-mt-[150px]"
       >
@@ -36,7 +36,7 @@ export function ForDailyUseSection() {
         >
           {t("dailyUseSection.subtitle")}
         </p>
-      </div>
+      </article>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-6 gap-5 md:mt-16 mt-8">
         <DownloadCard
           title={t("dailyUseSection.entries.DFC.title")}

@@ -35,12 +35,12 @@ export function CardLink(
         <div className="flex gap-x-[7.09px] bg-dark-00 h-full p-2 items-center rounded-[5px]">
           <Icon size={20} />
           <div className="lg:flex flex-col hidden">
-            <div className="text-[7.2px] leading-[9px] text-light-00 font-desc">
+            <p className="text-[7.2px] leading-[9px] text-light-00 font-desc">
               {props.descText}
-            </div>
-            <div className="text-[10px] leading-[12px] text-light-00 font-bold font-desc">
+            </p>
+            <p className="text-[10px] leading-[12px] text-light-00 font-bold font-desc">
               {props.text}
-            </div>
+            </p>
           </div>
         </div>
       </a>

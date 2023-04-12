@@ -64,7 +64,7 @@ function FeatureIcon({
   };
 
   return (
-    <div
+    <article
       className="blockchain-feature-item flex flex-row md:flex-col w-full md:w-[304px] lg:w-[216px]"
       onMouseOver={handleMouseOver}
       onFocus={handleMouseOver}
@@ -97,7 +97,7 @@ function FeatureIcon({
           {t(`BlockchainFeatureSection.${item.title}.desc`)}
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 

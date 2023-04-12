@@ -17,7 +17,10 @@ interface HeadProps {
 export function Head(props: PropsWithChildren<HeadProps>): JSX.Element {
   const title =
     props.title !== undefined ? `${props.title} – DeFiChain` : undefined;
-  const description = truncate(props.description, { length: 220 });
+  const description =
+    props.description !== undefined
+      ? truncate(props.description, { length: 220 })
+      : undefined;
 
   return (
     <NextHead>

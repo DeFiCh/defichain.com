@@ -2,6 +2,7 @@ import { HeroBanner, HeroBannerBg } from "@components/commons/HeroBanner";
 import { SSRConfig, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 // import { Container } from "@components/commons/Container";
+import { Head } from "@components/commons/Head";
 import { DFIStatisticsDisplay } from "./_components/DFIStatisticsDisplay";
 import HarnessDFISection from "./_components/HarnessDFISection";
 import GetDFISection from "./_components/GetDFISection";
@@ -13,6 +14,7 @@ export default function ExploreDFI() {
   const { t } = useTranslation("page-explore-dfi");
   return (
     <>
+      <Head title={t("heroBanner.subtitle")} />
       <HeroBanner
         title={t("heroBanner.title")}
         subtitle={t("heroBanner.subtitle")}

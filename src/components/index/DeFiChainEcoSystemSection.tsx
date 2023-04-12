@@ -4,6 +4,7 @@ import { useDeviceDetect, ViewPort } from "@hooks/useDeviceDetect";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import classNames from "classnames";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 import { Card } from "./components/Card";
 
 export function DeFiChainEcoSystemSection(): JSX.Element {
@@ -11,6 +12,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
   const { t } = useTranslation("page-index");
   const sectionTitle = t("EcosystemSection.title").split(" ");
   const device = useDeviceDetect();
+  const router = useRouter();
 
   return (
     <section
@@ -46,6 +48,9 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
               </span>
               <span> {sectionTitle[5]} </span>
               <span className="text-electric">{sectionTitle[6]}</span>
+              {router.locale === "de" && (
+                <span>&nbsp;{sectionTitle.slice(7).join(" ")}</span>
+              )}
             </span>
           </h2>
 

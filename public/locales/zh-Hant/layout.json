@@ -37,6 +37,17 @@
               "subtitle": "將您的部分投入 DeFiChain"
             }
           ]
+        },
+        {
+          "title": "區塊瀏覽器",
+          "labels": [
+            {
+              "title": "DeFiScan"
+            },
+            {
+              "title": "加密貨幣 ID"
+            }
+          ]
         }
       ],
       "image": {

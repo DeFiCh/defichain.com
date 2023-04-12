@@ -17,7 +17,7 @@ context("/ on macbook-16", () => {
   });
 
   // QA-813 - TC2 - Step 2 & 3
-  it.only("should have Coming soon on Ecosystem and Build sections", () => {
+  it("should have Coming soon on Ecosystem and Build sections", () => {
     cy.findByTestId("header-coming-soon-tag-Ecosystem").should(
       "contain",
       "COMING SOON"

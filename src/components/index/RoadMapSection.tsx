@@ -78,7 +78,7 @@ function RoadMapSlider(): JSX.Element {
   };
 
   return (
-    <div className="roadmap-section lg:mb-60 mb-24 relative">
+    <section className="roadmap-section lg:mb-60 mb-24 relative">
       <Slider {...settings}>
         {cards.map((card) => (
           <RoadMapCard key={card.title} {...card} />
@@ -90,13 +90,13 @@ function RoadMapSlider(): JSX.Element {
           "2xl:left-0 lg:top-[66px] lg:left-[-326px] hidden lg:block"
         )}
       />
-    </div>
+    </section>
   );
 }
 
 function RoadMapCard(props: RoadMap): JSX.Element {
   return (
-    <div
+    <article
       data-bg-image={`url(${props.image})`}
       className="card-outline-2 hover:accent-gradient-1 rounded-[15px] md:h-[202px] md:w-[384px] h-[202px] w-[272px] p-[0.5px]"
     >
@@ -111,7 +111,7 @@ function RoadMapCard(props: RoadMap): JSX.Element {
           {props.description}
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 

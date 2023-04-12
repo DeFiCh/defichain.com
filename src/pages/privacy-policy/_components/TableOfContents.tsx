@@ -21,11 +21,9 @@ function Headings({ headings, activeId, parentReference }) {
   const { t } = useTranslation("page-privacypolicy");
 
   return (
-    <ul>
+    <ul className="lg:w-9/12">
       <li className="mb-6">
-        <a className="font-sans font-bold text-xl text-dark-800">
-          {t("content.outline")}
-        </a>
+        <a className="font-sans font-bold text-xl">{t("content.outline")}</a>
       </li>
       {headings.map((heading, index) => (
         <li
@@ -35,7 +33,7 @@ function Headings({ headings, activeId, parentReference }) {
           <a
             href={`#${heading.id}`}
             className={classnames(
-              "font-sans font-semibold text-xl text-dark-500",
+              "font-sans font-semibold text-[18px] leading-6 text-dark-500",
               {
                 "!text-brand-100": heading.id === activeId,
               }

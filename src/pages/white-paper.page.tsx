@@ -11,6 +11,7 @@ import { SectionTitle } from "@components/commons/SectionTitle";
 import rehypeRaw from "rehype-raw";
 import { SectionSubTitle } from "@components/commons/SectionSubTitle";
 import classNames from "classnames";
+import { Head } from "@components/commons/Head";
 import { getMDPageBySlug } from "../../utils/api";
 import { Post } from "./learn/utils/api";
 import TableOfContents from "./whitePaper/TableOfContents";
@@ -30,6 +31,7 @@ export default function WhitePaperPage({ post }): JSX.Element {
   const contentRef = useRef<HTMLDivElement>(null);
   return (
     <>
+      <Head title={post.title} />
       <div className="py-16 md:py-10 lg:py-16 border-b border-gray-800 border-opacity-50">
         <Container className="flex flex-row gap-x-12 relative lg:pr-12">
           <div className="block absolute w-[417px] h-[237px] top-[-158px] left-[-267px] md:top-[-42px] md:left-[-281px] lg:h-[297px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/mnTechnicalGuide/emptyCubeDesktop.png')]" />

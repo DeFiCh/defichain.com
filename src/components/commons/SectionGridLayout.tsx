@@ -36,20 +36,20 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
       <Container className="flex flex-col justify-between lg:flex-row 2xl:max-w-[1920px] 2xl:mx-[300px]">
         <div className="flex lg:w-[551px] relative z-10">
           <div
-            className="w-full flex flex-col space-y-5 md:space-y-5 lg:space-y-5"
+            className="w-full flex flex-col"
             data-testid="masternodesBenefits.text"
           >
-            {sectionTitle !== undefined ? (
-              <SectionTitle text={sectionTitle} />
-            ) : null}
+            {sectionTitle !== undefined && (
+              <SectionTitle text={sectionTitle} customStyle="w-fit mb-5" />
+            )}
             <h2
-              className="text-[40px] leading-[44px] tracking-[-0.02em] lg:text-6xl lg:leading-[72px] lg:tracking-normal"
+              className="text-[40px] mb-5 leading-[44px] tracking-[-0.02em] lg:text-6xl lg:leading-[72px] lg:tracking-normal"
               data-testid="title"
             >
               {title}
             </h2>
             <div
-              className="text-dark-700 lg:text-xl font-desc md:w-9/12 lg:w-10/12"
+              className="text-dark-700 mb-8 lg:text-xl font-desc md:w-9/12 lg:w-10/12"
               data-testid="desc"
             >
               {description}
@@ -64,7 +64,7 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
             )}
             {isSecondaryButton === true && href !== undefined && (
               <SecondaryButton
-                className="text-sm py-3 lg:py-4 md:px-14 w-full md:w-fit lg:text-base !mt-[32px]"
+                className="text-sm py-3 lg:py-4 px-14 w-full md:w-fit lg:text-base"
                 text={buttonText}
                 href={href}
               />

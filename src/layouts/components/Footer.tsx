@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
 import classNames from "classnames";
-import { LanguageDropdownV2 } from "./LanguageDropdownV2";
+import { LanguageDropdown } from "./LanguageDropdown";
 import FooterInternalBottomLink from "./FooterInternalBottomLink";
 import FooterColumn from "./FooterColumn";
 import SocialsRow from "./SocialsRow";
@@ -263,7 +263,7 @@ export default function Footer(): JSX.Element {
                   <DeFiChainLogo className="w-[176.67px]" />
                 </div>
                 <div className="flex items-center space-x-4">
-                  <LanguageDropdownV2 />
+                  <LanguageDropdown />
                   <FooterInternalBottomLink
                     text={t("footer.bottomlink.privacy")}
                     pathname="/privacy-policy"
@@ -300,7 +300,7 @@ export default function Footer(): JSX.Element {
                   /> */}
                 </div>
                 <div className="flex pl-6">
-                  <LanguageDropdownV2 />
+                  <LanguageDropdown />
                 </div>
               </div>
             </div>

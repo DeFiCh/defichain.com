@@ -5,13 +5,14 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { remark } from "remark";
 import { SectionTitle } from "@components/commons/SectionTitle";
 import rehypeRaw from "rehype-raw";
 import { SectionSubTitle } from "@components/commons/SectionSubTitle";
 import classNames from "classnames";
 import { Head } from "@components/commons/Head";
+import { useRouter } from "next/router";
 import { getMDPageBySlug } from "../../utils/api";
 import { Post } from "./learn/utils/api";
 import TableOfContents from "./whitePaper/TableOfContents";
@@ -29,6 +30,20 @@ interface WhitePaperPageProps {
 
 export default function WhitePaperPage({ post }): JSX.Element {
   const contentRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleLocaleChange = () => {
+      window.location.reload();
+    };
+
+    router.events.on("routeChangeComplete", handleLocaleChange);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleLocaleChange);
+    };
+  }, [router]);
+
   return (
     <>
       <Head title={post.subtitle} />

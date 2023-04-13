@@ -78,6 +78,11 @@ module.exports = {
         destination: "/404",
         permanent: false,
       },
+      {
+        source: "/security",
+        destination: "/404",
+        permanent: false,
+      },
     ];
   },
 };

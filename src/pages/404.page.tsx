@@ -3,7 +3,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { PageError } from "@components/commons/error/PageError";
 
 export default function NotFound(): JSX.Element {
-  const { t } = useTranslation(["layout"]);
+  const { t } = useTranslation("layout");
   return (
     <PageError
       title={t("error.title")}

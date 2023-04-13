@@ -13,15 +13,13 @@ export function PageError(props: {
   const { title, subtitle, errorDesc, text } = props;
   return (
     <>
-      <Head>
-        <title>{title}</title>
-      </Head>
+      <Head title={title} />
 
-      <Container className="pt-[93px] pb-[95px] md:pt-[228px] md:pb-[436px] lg:pt-[210px] lg:pb-[370px] relative">
-        <h1 className="h-80 flex flex-col text-start items-start md:text-center md:items-center justify-center">
+      <Container className="pt-[93px] pb-[98px] md:pt-[164px] md:pb-[92px] lg:pt-[180px] lg:pb-[150px] relative">
+        <h1 className="flex flex-col text-start items-start md:text-center md:items-center justify-center">
           <div className="text-error text-sm font-desc w-full">{subtitle}</div>
           <SectionSubTitle
-            customStyle="!text-5xl !leading-[52px] lg:!text-[80px] lg:!leading-[84px]"
+            customStyle="!text-5xl !leading-[52px] !tracking-normal lg:!text-[80px] lg:!leading-[84px]"
             text={title}
           />
           <div className="text-base tracking-[0.03em] lg:tracking-normal lg:text-xl lg:leading-8 text-dark-500 mt-6 font-desc max-w-[509px]">
@@ -44,14 +42,14 @@ export function PageError(props: {
             "bg-[url('/assets/img/error/error-bg-1.png')]"
           )}
         />
-        <div
+        {/* <div
           className={classNames(
             "absolute bg-contain bg-no-repeat z-[-1]",
             "lg:w-[772.13px] lg:h-[386.45px] lg:left-[-7rem] lg:bottom-[8rem]",
             "md:w-[598.35px] md:h-[265.74px] md:left-[-7rem] md:bottom-[13rem]",
             "bg-[url('/assets/img/error/error-bg-2.png')]"
           )}
-        />
+        /> */}
       </Container>
     </>
   );

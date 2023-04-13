@@ -229,5 +229,11 @@
       "privacy": "Politique de confidentialité",
       "terms": "Conditions d'utilisation"
     }
+  },
+  "error": {
+    "title": "Page non trouvée",
+    "subtitle": "Erreur 404",
+    "errorDesc": "La page que vous recherchez a peut-être été déplacée, supprimée ou n'a peut-être jamais existé.",
+    "text": "Retour à l'accueil"
   }
 }

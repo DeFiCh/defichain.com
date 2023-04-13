@@ -231,5 +231,11 @@
       "privacy": "Datenschutzrichtlinie",
       "terms": "Nutzungsbedingungen"
     }
+  },
+  "error": {
+    "title": "Seite nicht gefunden",
+    "subtitle": "Fehler 404",
+    "errorDesc": "Die Seite, nach der du suchst, wurde möglicherweise verschoben, gelöscht oder hat nie existiert.",
+    "text": "Zurück zu Startseite"
   }
 }

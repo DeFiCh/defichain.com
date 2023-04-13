@@ -62,7 +62,7 @@ export function ContentDescription({
     <div className={containerStyle ?? "mt-5"}>
       <span
         className={classNames(
-          "font-desc text-dark-700 break-words",
+          "font-desc text-dark-800 break-words",
           "text-base tracking-[0.03em]",
           "lg:text-xl lg:tracking-normal lg:leading-8",
           customStyle

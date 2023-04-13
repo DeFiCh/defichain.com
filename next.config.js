@@ -61,4 +61,23 @@ module.exports = {
   images: {
     domains: ["images.prismic.io"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/learn",
+        destination: "/404",
+        permanent: false,
+      },
+      {
+        source: "/media",
+        destination: "/404",
+        permanent: false,
+      },
+      {
+        source: "/bug-bounty",
+        destination: "/404",
+        permanent: false,
+      },
+    ];
+  },
 };

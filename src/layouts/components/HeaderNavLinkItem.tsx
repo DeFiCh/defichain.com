@@ -142,7 +142,6 @@ export function HeaderNavLinkItem({
       <div className="flex flex-col">
         <div className="flex flex-row items-center">
           <div
-            data-testid={`headerNavElem-${testID}`}
             className={classNames(
               "mr-[7px] flex font-semibold text-dark-1000 md:text-lg leading-6",
               "group-hover:duration-500 group-hover:transition group-hover:text-brand-100 group-active:opacity-70",

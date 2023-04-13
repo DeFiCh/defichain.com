@@ -1,7 +1,7 @@
 ---
+title: White Paper
 subtitle: Whitepaper
-title: DOCUMENTATION FOR DEFICHAIN ECOSYSTEM
-description: Last updated mm/dd/yyyy
+description: DeFiChain White Paper
 ---
 
 <h2

@@ -1,5 +1,6 @@
 ---
 title: Livre blanc
+subtitle: Livre blanc
 description: DeFiChain livre blanc (traduit de l'original en anglais)
 ---
 

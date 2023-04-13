@@ -32,11 +32,13 @@ export function HeaderNavLinkItem({
   href,
   hoverState,
   setHoverState,
+  testID,
   haveIcon = false,
   target = "_self",
   disabled = false,
 }: {
   icon?: string;
+  testID: string;
   label: string;
   subLabel?: string;
   href: string;
@@ -91,12 +93,12 @@ export function HeaderNavLinkItem({
         setHoverState(undefined);
         setIsMouseEnter(false);
       }}
+      data-testid={`headerNavElem-${testID}`}
       href={href}
       rel="noreferrer"
       target={target}
-      data-testid={`headerNavElem-${label}`}
       className={classNames(
-        "group flex flex-row items-center gap-x-[28px]",
+        "group flex flex-row items-center gap-x-[28px] bg-light-300",
         {
           "lg:!gap-x-3": subLabel === undefined,
         },
@@ -140,6 +142,7 @@ export function HeaderNavLinkItem({
       <div className="flex flex-col">
         <div className="flex flex-row items-center">
           <div
+            data-testid={`headerNavElem-${testID}`}
             className={classNames(
               "mr-[7px] flex font-semibold text-dark-1000 md:text-lg leading-6",
               "group-hover:duration-500 group-hover:transition group-hover:text-brand-100 group-active:opacity-70",

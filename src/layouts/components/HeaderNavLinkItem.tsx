@@ -32,11 +32,13 @@ export function HeaderNavLinkItem({
   href,
   hoverState,
   setHoverState,
+  testID,
   haveIcon = false,
   target = "_self",
   disabled = false,
 }: {
   icon?: string;
+  testID: string;
   label: string;
   subLabel?: string;
   href: string;
@@ -91,6 +93,7 @@ export function HeaderNavLinkItem({
         setHoverState(undefined);
         setIsMouseEnter(false);
       }}
+      data-testid={`header-nav-elem-${testID}`}
       href={href}
       rel="noreferrer"
       target={target}

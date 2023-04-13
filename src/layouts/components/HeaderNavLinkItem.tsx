@@ -97,7 +97,6 @@ export function HeaderNavLinkItem({
       href={href}
       rel="noreferrer"
       target={target}
-      data-testid={`headerNavElem-${label}`}
       className={classNames(
         "group flex flex-row items-center gap-x-[28px]",
         {

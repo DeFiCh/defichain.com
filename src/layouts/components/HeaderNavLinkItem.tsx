@@ -93,7 +93,7 @@ export function HeaderNavLinkItem({
         setHoverState(undefined);
         setIsMouseEnter(false);
       }}
-      data-testid={`headerNavElem-${testID}`}
+      data-testid={`header-nav-elem-${testID}`}
       href={href}
       rel="noreferrer"
       target={target}

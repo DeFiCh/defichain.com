@@ -35,7 +35,7 @@ export function Build() {
           target: "_blank",
           title: entries[2].title,
           subtitle: entries[2].subtitle,
-          testID: "build-jellyfish-sdk",
+          testID: "build-github",
         },
         {
           icon: "developer",

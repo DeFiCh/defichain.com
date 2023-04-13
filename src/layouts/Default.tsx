@@ -93,6 +93,7 @@ export function Default(props: PropsWithChildren<any>): JSX.Element | null {
             <Header />
             <div
               className={classNames(
+                // responsive mode not counted as DESKTOP
                 device === ViewPort.DESKTOP
                   ? "overflow-x-clip"
                   : "overflow-x-hidden"

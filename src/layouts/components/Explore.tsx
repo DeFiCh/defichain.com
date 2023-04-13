@@ -23,24 +23,28 @@ export function Explore() {
             href: "/explore/dfi",
             title: entries[0].labels[0].title,
             subtitle: entries[0].labels[0].subtitle,
+            testID: "explore-dfi",
           },
           {
             icon: "dex",
             href: "/explore/dex",
             title: entries[0].labels[1].title,
             subtitle: entries[0].labels[1].subtitle,
+            testID: "explore-dex",
           },
           {
             icon: "wallet",
             href: "/explore/wallets",
             title: entries[0].labels[2].title,
             subtitle: entries[0].labels[2].subtitle,
+            testID: "explore-wallets",
           },
           {
             icon: "masternode",
             href: "/explore/masternodes",
             title: entries[0].labels[3].title,
             subtitle: entries[0].labels[3].subtitle,
+            testID: "explore-masternodes",
           },
         ],
       },
@@ -51,11 +55,13 @@ export function Explore() {
             icon: "dfi",
             href: "https://defiscan.live/",
             title: entries[1].labels[0].title,
+            testID: "explore-defiscan-live",
           },
           {
             icon: "crypto",
             href: "https://chainz.cryptoid.info/",
             title: entries[1].labels[1].title,
+            testID: "explore-crypto-id",
           },
         ],
       },
@@ -64,6 +70,7 @@ export function Explore() {
       title: t("header.explore.image.title"),
       subtitle: t("header.explore.image.subtitle"),
       href: "/explore/dfi",
+      testID: "explore-dfi-img",
     },
   };
 
@@ -87,6 +94,7 @@ export function Explore() {
                 subLabel={item.subtitle}
                 href={item.href}
                 icon={item.icon}
+                testID={item.testID}
               />
             ))}
           </div>
@@ -106,6 +114,7 @@ export function Explore() {
                 label={item.title}
                 href={item.href}
                 icon={item.icon}
+                testID={item.testID}
               />
             ))}
           </div>

@@ -27,18 +27,21 @@ export function Ecosystem() {
             href: "",
             title: entries[0].labels[0].title,
             subtitle: entries[0].labels[0].subtitle,
+            testID: "ecosystem-defichain-apps",
           },
           {
             icon: "dfi",
             href: "",
             title: entries[0].labels[1].title,
             subtitle: entries[0].labels[1].subtitle,
+            testID: "ecosystem-defimetachain",
           },
           {
             icon: "governance",
             href: "",
             title: entries[0].labels[2].title,
             subtitle: entries[0].labels[2].subtitle,
+            testID: "ecosystem-governance",
           },
         ],
       },
@@ -48,10 +51,12 @@ export function Ecosystem() {
           {
             href: "",
             title: entries[1].labels[0].title,
+            testID: "ecosystem-bug-bounty",
           },
           {
             href: "",
             title: entries[1].labels[1].title,
+            testID: "ecosystem-accelerator",
           },
         ],
       },
@@ -59,6 +64,7 @@ export function Ecosystem() {
     image: {
       href: "",
       subtitle: t("header.ecosystem.image.subtitle"),
+      testID: "ecosystem-img",
     },
   };
 
@@ -88,6 +94,7 @@ export function Ecosystem() {
                 subLabel={item.subtitle}
                 href={item.href}
                 icon={item.icon}
+                testID={item.testID}
               />
             ))}
           </div>
@@ -105,6 +112,7 @@ export function Ecosystem() {
                 setHoverState={setHoverState}
                 label={item.title}
                 href={item.href}
+                testID={item.testID}
               />
             ))}
           </div>

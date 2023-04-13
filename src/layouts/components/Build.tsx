@@ -19,14 +19,14 @@ export function Build() {
           target: "_blank",
           title: entries[0].title,
           subtitle: entries[0].subtitle,
-          testID: "jellyfish-sdk",
+          testID: "build-jellyfish-sdk",
         },
         {
           icon: "whitepaper",
           href: "",
           title: entries[1].title,
           subtitle: entries[1].subtitle,
-          testID: "defichain-whitepaper",
+          testID: "build-defichain-whitepaper",
         },
 
         {
@@ -35,14 +35,14 @@ export function Build() {
           target: "_blank",
           title: entries[2].title,
           subtitle: entries[2].subtitle,
-          testID: "jellyfish-sdk",
+          testID: "build-jellyfish-sdk",
         },
         {
           icon: "developer",
           href: "",
           title: entries[3].title,
           subtitle: entries[3].subtitle,
-          testID: "developer-resources",
+          testID: "build-developer-resources",
         },
 
         {
@@ -50,14 +50,14 @@ export function Build() {
           href: "",
           title: entries[4].title,
           subtitle: entries[4].subtitle,
-          testID: "media-assets",
+          testID: "build-media-assets",
         },
         {
           icon: "security",
           href: "",
           title: entries[5].title,
           subtitle: entries[5].subtitle,
-          testID: "security",
+          testID: "build-security",
         },
       ],
     },

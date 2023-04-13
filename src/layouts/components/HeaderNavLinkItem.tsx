@@ -98,7 +98,7 @@ export function HeaderNavLinkItem({
       rel="noreferrer"
       target={target}
       className={classNames(
-        "group flex flex-row items-center gap-x-[28px] bg-light-300",
+        "group flex flex-row items-center gap-x-[28px]",
         {
           "lg:!gap-x-3": subLabel === undefined,
         },

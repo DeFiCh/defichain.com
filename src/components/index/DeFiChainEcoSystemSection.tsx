@@ -4,6 +4,7 @@ import { useDeviceDetect, ViewPort } from "@hooks/useDeviceDetect";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import classNames from "classnames";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 import { Card } from "./components/Card";
 
 export function DeFiChainEcoSystemSection(): JSX.Element {
@@ -11,9 +12,10 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
   const { t } = useTranslation("page-index");
   const sectionTitle = t("EcosystemSection.title").split(" ");
   const device = useDeviceDetect();
+  const router = useRouter();
 
   return (
-    <div
+    <section
       className={classNames("relative lg:pt-[136px] md:-mb-6 lg:mb-0", {
         "overflow-hidden": device === ViewPort.DESKTOP,
         "pb-[292px]": device === ViewPort.TABLET && dimensions.width > 1500, // for bigger ipad sizes
@@ -35,7 +37,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             text={t("EcosystemSection.label")}
             customStyle="lg:w-fit md:w-[409px] w-[272px]"
           />
-          <span className="block lg:text-6xl text-[40px] leading-[44px] max-w-[560px] pt-[20px] lg:leading-[72px]">
+          <h2 className="block lg:text-6xl text-[40px] leading-[44px] max-w-[560px] pt-[20px] lg:leading-[72px]">
             <span>
               {sectionTitle[0]} {sectionTitle[1]}
             </span>
@@ -46,8 +48,11 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
               </span>
               <span> {sectionTitle[5]} </span>
               <span className="text-electric">{sectionTitle[6]}</span>
+              {router.locale === "de" && (
+                <span>&nbsp;{sectionTitle.slice(7).join(" ")}</span>
+              )}
             </span>
-          </span>
+          </h2>
 
           <div
             className={classNames(
@@ -59,38 +64,43 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
 
         <div className="relative z-30 grid grid-flow-row grid-cols-1 gap-6 md:grid-flow-row md:grid-cols-2 md:gap-y-0 lg:block lg:h-[639px] lg:place-self-end">
           <Card
-            title={t("EcosystemSection.cards.investTitle")}
-            subTitle={t("EcosystemSection.cards.investSubtitle")}
-            customIconStyle="w-[100%] right-0 top-0"
-            id="invest"
+            href="/explore/dfi"
+            title={t("EcosystemSection.cards.dfiTitle")}
+            subTitle={t("EcosystemSection.cards.dfiSubtitle")}
+            customIconStyle="w-[100%] lg:right-0 md:right-[10em] right-0 top-0"
+            id="dfi"
             customTextStyle="xs:w-full md:w-[70%] lg:w-[251px]"
           />
           <Card
-            title={t("EcosystemSection.cards.masternodeTitle")}
-            subTitle={t("EcosystemSection.cards.masternodeSubtitle")}
+            href="/explore/dex"
+            title={t("EcosystemSection.cards.tradeWithDexTitle")}
+            subTitle={t("EcosystemSection.cards.tradeWithDexSubtitle")}
             customIconStyle="w-[307px] right-0 top-0 bottom-[-23.26%]"
-            id="masternode"
+            id="dex"
             customTextStyle="w-[45%]"
           />
           <Card
-            title={t("EcosystemSection.cards.dappsTitle")}
-            subTitle={t("EcosystemSection.cards.dappsSubtitle")}
+            href="/explore/wallets"
+            title={t("EcosystemSection.cards.walletsTitle")}
+            subTitle={t("EcosystemSection.cards.walletsSubtitle")}
             customIconStyle={classNames("w-[400px] top-0", {
               "right-0": dimensions.width > 768,
               "right-[-8em]": dimensions.width <= 768,
             })}
-            id="dapps"
+            id="wallets"
             customTextStyle="w-[50%]"
           />
           <Card
-            title={t("EcosystemSection.cards.quantumTitle")}
-            subTitle={t("EcosystemSection.cards.quantumSubtitle")}
-            customIconStyle={classNames("top-[-430px] left-[-280px]", {
-              "right-0": dimensions.width > 768,
-              "right-[-3em]": dimensions.width <= 768,
-            })}
-            id="quantum"
-            customTextStyle="w-11/12 md:w-[251px]"
+            href="/explore/masternodes"
+            title={t("EcosystemSection.cards.governanceTitle")}
+            subTitle={t("EcosystemSection.cards.governanceSubtitle")}
+            customIconStyle={classNames(
+              "w-[100%] lg:right-[2em] lg:-top-[5.5em]",
+              "md:right-[3.5em] md:-top-[4.5em]",
+              "right-0 -top-[4.5em]"
+            )}
+            id="cube"
+            customTextStyle="w-[284px]"
           />
         </div>
       </Container>
@@ -107,6 +117,6 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
           "lg:hidden block -bottom-40 left-[40%] md:bottom-[-100px] md:left-[70%] md:z-20"
         )}
       />
-    </div>
+    </section>
   );
 }

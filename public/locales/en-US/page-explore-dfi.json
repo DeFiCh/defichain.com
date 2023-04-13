@@ -54,6 +54,7 @@
       "title": "INITIAL SUPPLY",
       "percentage": "49%",
       "desc": "Of the 1.2 billion $DFI coins, 49% will be in the initial supply. From the initial supply,",
+      "descAnd": "and",
       "descAirDrop": "26% are airdropped",
       "descBurn": "27% burned",
       "descDestroy": "47% destroyed.",

@@ -38,12 +38,12 @@ export function BlockchainFeaturesSection(): JSX.Element {
     slidesToShow: 1,
     slidesToScroll: 1,
     lazyLoad: true,
-    dotsClass: "custom-dots",
+    dotsClass: "blockchain-features-dots",
   };
 
   return (
     <section
-      className="pt-14 pb-12 md:py-24 lg:py-[156px]"
+      className="lg:py-[156px] md:py-24 pt-20 pb-12"
       data-testid="BlockchainFeatureSection"
     >
       <Container className="flex flex-col justify-between lg:flex-row 2xl:max-w-[1920px] 2xl:mx-[300px]">

@@ -1,4 +1,4 @@
-import { Button } from "@components/commons/Buttons";
+import { Button, LinkButton } from "@components/commons/Buttons";
 import { Container } from "@components/commons/Container";
 import classNames from "classnames";
 import { useTranslation } from "next-i18next";
@@ -11,8 +11,8 @@ export default function ERC20Section(): JSX.Element {
 
   return (
     <Container className="relative pb-24 md:pb-48 lg:pb-[248px] text-center flex justify-center">
-      <div className="max-w-[551px] flex flex-col items-center">
-        <div
+      <section className="max-w-[551px] flex flex-col items-center">
+        <h2
           className={classNames(
             "text-[40px] leading-[44px] tracking-[-0.02em] ",
             "lg:text-6xl lg:leading-[72px] lg:tracking-normal"
@@ -20,7 +20,7 @@ export default function ERC20Section(): JSX.Element {
         >
           <span>{title[0]} </span>
           <span className="whitespace-nowrap">{title[1]}</span>
-        </div>
+        </h2>
         <div
           className={classNames(
             "pb-8 lg:pb-12 pt-5 font-desc text-dark-800 text-base md:tracking-[0.03em]",
@@ -35,17 +35,13 @@ export default function ERC20Section(): JSX.Element {
           className="lg:px-[72.5px] md:px-[130px] py-3 lg:py-4"
           href="https://blog.defichain.com/defichains-first-move-to-become-an-interoperable-defi-powerhouse/"
         />
-        <a
-          rel="noreferrer"
-          target="_blank"
+        <LinkButton
+          buttonText={t("erc20Section.contract")}
           href="https://etherscan.io/token/0x8Fc8f8269ebca376D046Ce292dC7eaC40c8D358A"
-          className={classNames(
-            "pt-4 text-dark-800 text-sm md:text-base font-semibold hover:accent-dfc-gradient-text cursor-pointer"
-          )}
-        >
-          <p>{t("erc20Section.contract")}</p>
-        </a>
-      </div>
+          diagonalArrow
+          className="pt-4 text-dark-800 text-sm md:text-base font-semibold hover:accent-dfc-gradient-text cursor-pointer"
+        />
+      </section>
       <div
         className={classNames(
           "absolute z-[-2] mix-blend-hard-light bg-[url(/assets/img/explore/erc20-dfi-coin.png)]",

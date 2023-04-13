@@ -9,7 +9,7 @@ export function LanguageDropdown(): JSX.Element {
   const router = useRouter();
   const languages = [
     { locale: "en-US", name: "English", display: "EN" },
-    { locale: "de", name: "Deutch", display: "DE" },
+    { locale: "de", name: "Deutsch", display: "DE" },
     // { locale: "fr", name: "Français", display: "Français" },
     // { locale: "zh-Hans", name: "简体中文", display: "简体中文" },
     // { locale: "zh-Hant", name: "繁體中文", display: "繁體中文" },

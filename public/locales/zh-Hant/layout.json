@@ -9,6 +9,7 @@
       "downloads": "下載區",
       "learn": "學習中心",
       "buy": "購買",
+      "getDfi": "獲得 DFI",
       "dfcblog": "博客",
       "explore": "探索",
       "build": "建造",
@@ -34,6 +35,17 @@
             {
               "title": "主節點",
               "subtitle": "將您的部分投入 DeFiChain"
+            }
+          ]
+        },
+        {
+          "title": "區塊瀏覽器",
+          "labels": [
+            {
+              "title": "DeFiScan"
+            },
+            {
+              "title": "加密貨幣 ID"
             }
           ]
         }

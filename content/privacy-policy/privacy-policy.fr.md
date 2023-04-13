@@ -1,5 +1,6 @@
 ---
 title: DeFiChain's Privacy Policy
+subtitle: Privacy Policy
 description: Privacy Policy
 ---
 

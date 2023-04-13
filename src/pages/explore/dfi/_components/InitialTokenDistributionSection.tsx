@@ -3,6 +3,7 @@ import { SectionTitle } from "@components/commons/SectionTitle";
 import classNames from "classnames";
 import { Button } from "@components/commons/Buttons";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 import { ProgressBar } from "./ProgressBar";
 import {
   InitialTokenSectionIcons,
@@ -11,24 +12,26 @@ import {
 
 export function InitialTokenDistributionSection() {
   const { t } = useTranslation("page-explore-dfi");
+  const router = useRouter();
 
   return (
     <Container className="mb-[96px] md:mb-[108px] lg:mb-60">
-      <div className="flex flex-col">
+      <section className="flex flex-col">
         <div className="flex flex-col gap-y-5">
           <SectionTitle text={t("initialTokenDistributionSection.title")} />
-          <div
+          <h2
             className={classNames(
               "tracking-[-0.02em] text-[40px] leading-[44px] text-dark-1000"
             )}
           >
             {t("initialTokenDistributionSection.subtitle")}
-          </div>
+          </h2>
         </div>
 
         <Button
           text={t("initialTokenDistributionSection.button")}
           className="mt-6 w-fit px-10 py-3 lg:px-14 lg:py-4"
+          href="/white-paper"
         />
 
         <ProgressBar value={49} containerClass="bg-dark-200 mt-16 mb-8" />
@@ -58,7 +61,15 @@ export function InitialTokenDistributionSection() {
                   {t("initialTokenDistributionSection.initialSupply.descBurn")}
                 </span>
                 <span className="font-desc text-dark-700">,</span>
-                <span className="font-desc text-dark-700">&nbsp;and&nbsp;</span>
+                <span className="font-desc text-dark-700">
+                  &nbsp;
+                  {router.locale === "zh-Hans" || router.locale === "zh-Hant"
+                    ? ","
+                    : t(
+                        "initialTokenDistributionSection.initialSupply.descAnd"
+                      )}
+                  &nbsp;
+                </span>
                 <span className="text-dark-1000 font-desc font-semibold">
                   {t(
                     "initialTokenDistributionSection.initialSupply.descDestroy"
@@ -101,9 +112,9 @@ export function InitialTokenDistributionSection() {
               {t("initialTokenDistributionSection.masternodes.percentage")}
             </div>
             <div className="flex flex-col lg:place-self-start place-self-center">
-              <div className="text-dark-1000 font-bold leading-5">
+              <span className="text-dark-1000 font-bold leading-5">
                 {t("initialTokenDistributionSection.masternodes.title")}
-              </div>
+              </span>
 
               <div className="mt-2">
                 <span className="font-desc text-dark-700">
@@ -113,7 +124,7 @@ export function InitialTokenDistributionSection() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </Container>
   );
 }

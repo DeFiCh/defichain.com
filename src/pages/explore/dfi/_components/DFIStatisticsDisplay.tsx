@@ -52,7 +52,7 @@ export function DFIStatisticsDisplay() {
     <Container className="lg:mt-[69px] md:mt-[33px] mt-0 lg:mb-[180px] mb-[72px] relative">
       <StatisticPanel
         displayItem={supplyItems}
-        displayStripCustomStyle="scroll-mt-[200px]"
+        displayStripCustomStyle="lg:-scroll-mt-[150px] -scroll-mt-[100px]"
         displayId="statistics-display-dfi"
       />
       <div

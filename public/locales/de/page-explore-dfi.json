@@ -1,0 +1,99 @@
+{
+  "heroBanner": {
+    "title": "ENTDECKE, WELCHE LEISTUNGSFÄHIGKEIT DFI HAT",
+    "subtitle": "Erlebe DeFi mit DFI",
+    "desc": "Unser nativer Token erschließt die vollen Möglichkeiten des dezentralen Finanzsystems und verschafft dir Zugang zu einem wachsenden Ökosystem modernster DeFi-Tools und innovativer Blockchain-Anwendungen."
+  },
+  "statisticsDisplay": {
+    "circulatingSupply": {
+      "title": "UMLAUFMENGE",
+      "desc": "{{perc}} des maximalen Angebots"
+    },
+    "dfiMinted": {
+      "title": "INSGESAMT GEMINTETE DFI",
+      "desc": "Von {{value}}{{suffix}} festem Bestand"
+    }
+  },
+  "harnessDFISection": {
+    "title": "MIT DFI EINE BESSERE ZUKUNFT AUFBAUEN",
+    "subtitle": "Nutze die Leistungsfähigkeit von DFI",
+    "desc": "Ein Tor zu dezentralen Anwendungen und Instrumenten, die das Potenzial für höhere Renditen, niedrigere Gebühren und eine demokratische Verwaltung bieten.",
+    "items": [
+      {
+        "title": "VIELFÄLTIGE DFI-DIENSTE",
+        "desc": "Mit minimalen DFI-Gebühren hast du Zugang zu DeFi-Anwendungen."
+      },
+      {
+        "title": "ALS SICHERHEITEN HINTERLEGEN",
+        "desc": "Leihe dir dezentrale Assets mit Krypto-Token als Sicherheiten."
+      },
+      {
+        "title": "BESITZER EINES MASTERNODES SEIN",
+        "desc": "Finanziere einen neuen Staking-Node für nur 20.000 DFI."
+      },
+      {
+        "title": "TOKENISIERUNG",
+        "desc": "Assets in Token umwandeln, verwalten und mit dToken handeln."
+      },
+      {
+        "title": "GOVERNANCE DES COMMUNITY-FONDS",
+        "desc": "Beteilige dich an der Gestaltung der Zukunft der Blockchain."
+      },
+      {
+        "title": "VOM LIQUIDITÄTS-MINING PROFITIEREN",
+        "desc": "Liquidität einbringen, Rewards verdienen und abheben, wann immer du willst."
+      }
+    ]
+  },
+  "initialTokenDistributionSection": {
+    "title": "VERTEILUNG, TRANSPARENT GEMACHT",
+    "subtitle": "Initiale Token-Verteilung",
+    "desc": "",
+    "button": "Im Whitepaper lesen",
+    "initialSupply": {
+      "title": "ANFANGSBESTAND",
+      "percentage": "49%",
+      "desc": "49 % der 1,2 Milliarden $DFI-Coins waren der Anfangsbestand. Von diesem anfänglichen Angebot wurden",
+      "descAnd": "und",
+      "descAirDrop": "26 % per Airdrop ausgeschüttet",
+      "descBurn": "27 % verbrannt",
+      "descDestroy": "47 % vernichtet.",
+      "airDrop": "per Airdrop ausgeschüttet",
+      "burn": "verbrannt",
+      "destroy": "zerstört",
+      "airDropPercentage": "26%",
+      "burnPercentage": "27%",
+      "destroyPercentage": "47%"
+    },
+    "masternodes": {
+      "title": "AN MASTERNODES IM LAUFE DER ZEIT",
+      "percentage": "51%",
+      "desc": "Das restliche Angebot wird im Laufe der Zeit u.a. an Masternode-Inhaber ausgeschüttet."
+    }
+  },
+  "getDfiSection": {
+    "title": "EINFACHER $DFI-ERWERB",
+    "subtitle": "DFI auf zuverlässigen Börsen erwerben",
+    "desc1": "Nutze unsere Partnerlinks, um DFI sicher auf zuverlässigen Kryptowährungsbörsen zu kaufen und sie einfach auf deine DeFiChain-Walletadresse zu übertragen.",
+    "desc2": "",
+    "exhangePriceText": "Prices may vary from different sources",
+    "stakingText": "Auch zum Staking verfügbar bei"
+  },
+  "erc20Section": {
+    "title": "DeFiChain ERC-20",
+    "subtitle1": "Der DeFiChain ERC-20-Token bietet den Nutzern mehr Flexibilität zwischen Ethereum und DeFiChain.",
+    "subtitle2": "So kann das gesamte Krypto-Ökosystem den echten Wert von nativem DeFi auf DeFiChain erleben.",
+    "buttonText": "Mehr erfahren",
+    "contract": "Kontraktadresse anzeigen"
+  },
+  "footerCards": {
+    "wallet": {
+      "title": "EXPLORE DEFICHAIN",
+      "subtitle": "Choose your wallet"
+    },
+    "dapps": {
+      "title": "THE GROWING ECOSYSTEM",
+      "subtitle": "Explore dApps"
+    }
+  }
+}

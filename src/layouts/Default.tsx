@@ -3,13 +3,14 @@ import Head from "next/head";
 import { PropsWithChildren, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import classNames from "classnames";
+import { useDeviceDetect, ViewPort } from "@hooks/useDeviceDetect";
 import Footer from "./components/Footer";
 import { Header } from "./components/Header";
 import { WhaleProvider } from "./context/WhaleContext";
 
 const title = "DeFiChain";
 const description =
-  "A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone, and enabled on Bitcoin.";
+  "A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone.";
 
 /**
  * Default Layout with <Head> providing default Metadata for SEO
@@ -21,6 +22,7 @@ export function Default(props: PropsWithChildren<any>): JSX.Element | null {
   const bgPicture = isHome
     ? "bg-[url(/assets/img/background/background-320.png)] sm:bg-[url(/assets/img/background/background-768.png)] md:bg-[url(/assets/img/background/background-1024.png)] lg:bg-[url(/assets/img/background/background-1440.png)] 2xl:bg-[url(/assets/img/background/background-1920.png)]"
     : "";
+  const device = useDeviceDetect();
 
   useEffect(() => {
     setMounted(true);
@@ -63,7 +65,7 @@ export function Default(props: PropsWithChildren<any>): JSX.Element | null {
         <meta
           property="og:image"
           name="og:image"
-          content="https://defichain.com/img/og/ogimage_en.png"
+          content="https://defichain.com/img/og/share.png"
         />
         <meta
           property="og:image:type"
@@ -72,8 +74,15 @@ export function Default(props: PropsWithChildren<any>): JSX.Element | null {
         />
 
         {/* Twitter */}
-        <meta property="twitter:card" content="summary" />
-        <meta property="twitter:site" content="@defichain" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@defichain" />
+        <meta name="twitter:creator" content="@defichain" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta
+          name="twitter:image"
+          content="https://defichain.com/img/og/share.png"
+        />
         <link rel="icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
       </Head>
@@ -82,14 +91,23 @@ export function Default(props: PropsWithChildren<any>): JSX.Element | null {
         <WhaleProvider>
           <div className="bg-dark-00 relative z-0">
             <Header />
-            <main className="flex-grow text-dark-1000">{props.children}</main>
             <div
               className={classNames(
-                "absolute z-[-1] bg-top bg-no-repeat inset-0",
-                bgPicture
+                // responsive mode not counted as DESKTOP
+                device === ViewPort.DESKTOP
+                  ? "overflow-x-clip"
+                  : "overflow-x-hidden"
               )}
-            />
-            <Footer />
+            >
+              <main className="flex-grow text-dark-1000">{props.children}</main>
+              <div
+                className={classNames(
+                  "absolute z-[-1] bg-top bg-no-repeat inset-0",
+                  bgPicture
+                )}
+              />
+              <Footer />
+            </div>
           </div>
         </WhaleProvider>
       )}

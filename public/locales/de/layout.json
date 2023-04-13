@@ -9,12 +9,14 @@
       "downloads": "Downloads",
       "learn": "Mehr erfahren",
       "buy": "Erwerb von",
+      "getDfi": "DFI erwerben",
       "dfcblog": "Blog",
       "bloglink": "https://blog.defichain.com/de/",
       "explore": "Erkunden",
       "build": "Bauen",
       "community": "Community"
     },
+    "comingSoon": "DEMNÄCHST",
     "explore": {
       "info": [
         {
@@ -26,7 +28,7 @@
             },
             {
               "title": "Dezentrale Börse",
-              "subtitle": "Maximiere dein Vermögen"
+              "subtitle": "Handeln, Arbitrieren und Verdienen"
             },
             {
               "title": "Wallets",
@@ -34,7 +36,7 @@
             },
             {
               "title": "Masternodes",
-              "subtitle": "DefiChain-Staking"
+              "subtitle": "Entscheide über die Zukunft von DeFiChain"
             }
           ]
         },
@@ -42,7 +44,7 @@
           "title": "BLOCK EXPLORER",
           "labels": [
             {
-              "title": "DeFiScan (Official)"
+              "title": "DeFiScan"
             },
             {
               "title": "Krypto ID"
@@ -204,7 +206,7 @@
       "ECOSYSTEM": {
         "category": "ÖKOSYSTEM",
         "defichainapps": "DeFiChain Apps",
-        "defimetachain": "DeFi MetaChain",
+        "defimetachain": "DeFi Meta Chain",
         "defiscan": "DeFiScan",
         "governance": "Governance",
         "bugbounty": "Bug-Bounty",

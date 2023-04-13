@@ -9,6 +9,7 @@
       "downloads": "Téléchargements",
       "learn": "Apprendre",
       "buy": "Acheter",
+      "getDfi": "Obtenir DFI",
       "dfcblog": "Blog",
       "explore": "Explorer",
       "build": "Construire",
@@ -41,7 +42,7 @@
           "title": "EXPLORATEURS DE BLOCS",
           "labels": [
             {
-              "title": "DeFiScan (Official)"
+              "title": "DeFiScan"
             },
             {
               "title": "Crypto ID"
@@ -203,7 +204,7 @@
       "ECOSYSTEM": {
         "category": "ECOSYSTÈME",
         "defichainapps": "Applications DeFiChain",
-        "defimetachain": "DeFi MetaChain",
+        "defimetachain": "DeFi Meta Chain",
         "defiscan": "DeFiScan",
         "governance": "Gouvernance",
         "bugbounty": "Bounty de bogues",

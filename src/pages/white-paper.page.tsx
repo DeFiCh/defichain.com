@@ -1,17 +1,20 @@
 import { UserConfig } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { PageHeader } from "@components/commons/PageHeader";
 import { Container } from "@components/commons/Container";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import rehypeSanitize from "rehype-sanitize";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import React from "react";
+import React, { useRef } from "react";
 import { remark } from "remark";
+import { SectionTitle } from "@components/commons/SectionTitle";
+import rehypeRaw from "rehype-raw";
+import { SectionSubTitle } from "@components/commons/SectionSubTitle";
+import classNames from "classnames";
 import { Head } from "@components/commons/Head";
-import { Post } from "./learn/utils/api";
 import { getMDPageBySlug } from "../../utils/api";
+import { Post } from "./learn/utils/api";
+import TableOfContents from "./whitePaper/TableOfContents";
 
 interface WhitePaperPageProps {
   props: {
@@ -25,40 +28,59 @@ interface WhitePaperPageProps {
 }
 
 export default function WhitePaperPage({ post }): JSX.Element {
+  const contentRef = useRef<HTMLDivElement>(null);
   return (
     <>
-      <Head title={post.title} description={post.description} />
-      <PageHeader title={post.title}>
-        <div className="mt-10 flex flex-wrap">
+      <Head title={post.subtitle} />
+      <div className="py-16 md:py-10 lg:py-16 border-b border-gray-800 border-opacity-50">
+        <Container className="flex flex-row gap-x-12 relative lg:pr-12">
+          <div className="block absolute w-[417px] h-[237px] top-[-158px] left-[-267px] md:top-[-42px] md:left-[-281px] lg:h-[297px] bg-contain bg-no-repeat mix-blend-screen bg-[url('/assets/img/mnTechnicalGuide/emptyCubeDesktop.png')]" />
+          <div className="hidden lg:block md:w-3/12 flex-1" />
+          <div className="flex flex-col w-full lg:w-9/12 md:px-6 lg:px-0">
+            <div
+              className={classNames(
+                "flex flex-col gap-y-5 w-full lg:w-[812px]"
+              )}
+            >
+              <SectionTitle text={post.title} />
+              <SectionSubTitle text={post.subtitle} />
+            </div>
+          </div>
+        </Container>
+      </div>
+      <Container className="flex flex-row gap-x-12 lg:mb-[216px] lg:pr-12">
+        <div className="hidden h-[100vh] sticky top-[100px] no-scrollbar overflow-y-auto lg:block md:w-3/12 lg:pt-[64px] flex-1">
+          <TableOfContents parentReference={contentRef} />
+        </div>
+        <div className="flex flex-col w-full mt-6 mb-24 md:mt-8 lg:mb-10 lg:mt-0 lg:pt-[64px] lg:w-9/12">
           <div
-            className="w-full text-2xl text-gray-900"
-            data-testid="Header.desc.main"
+            ref={contentRef}
+            className={classNames(
+              "text-dark-1000 font-desc break-words",
+              "text-base tracking-[0.03em]",
+              "lg:text-xl lg:tracking-normal lg:leading-8"
+            )}
           >
-            {post.description}
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[
+                rehypeSlug,
+                [
+                  rehypeAutolinkHeadings,
+                  {
+                    behavior: "wrap",
+                    properties: {
+                      className: ["no-underline hover:underline"],
+                    },
+                  },
+                ],
+                [rehypeRaw],
+              ]}
+            >
+              {post.content}
+            </ReactMarkdown>
           </div>
         </div>
-      </PageHeader>
-      <Container>
-        <article className="prose lg:prose-xl mx-auto py-20">
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm]}
-            rehypePlugins={[
-              rehypeSanitize,
-              rehypeSlug,
-              [
-                rehypeAutolinkHeadings,
-                {
-                  behavior: "wrap",
-                  properties: {
-                    className: ["no-underline hover:underline"],
-                  },
-                },
-              ],
-            ]}
-          >
-            {post.content}
-          </ReactMarkdown>
-        </article>
       </Container>
     </>
   );

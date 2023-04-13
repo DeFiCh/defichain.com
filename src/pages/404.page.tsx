@@ -5,9 +5,10 @@ import { PageError } from "@components/commons/error/PageError";
 export default function NotFound(): JSX.Element {
   return (
     <PageError
-      title="Page Not Found - DeFiChain"
-      errorDesc="404 - Page Not Found"
-      text="BACK HOME"
+      title="Page Not Found"
+      subtitle="Error 404"
+      errorDesc="The page you’re looking may have been moved, deleted or possibly never existed."
+      text="Back to homepage"
     />
   );
 }

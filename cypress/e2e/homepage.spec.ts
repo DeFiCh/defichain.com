@@ -17,16 +17,16 @@ viewports.forEach((viewport) => {
         cy.findByTestId("header-dropDownItem-explore").trigger("mouseover");
       }
 
-      cy.findByTestId("headerNavElem-DeFiScan (Official)")
+      cy.findByTestId("header-nav-elem-explore-defiscan-live")
         .should("be.visible")
         .and("have.attr", "href")
         .and("include", "https://defiscan.live/");
-      cy.findByTestId("headerNavElem-Crypto ID")
+      cy.findByTestId("header-nav-elem-explore-crypto-id")
         .should("be.visible")
         .and("have.attr", "href")
         .and("include", "https://chainz.cryptoid.info/");
       ecosystemLinks.forEach((ecosystemItem) => {
-        cy.findByTestId(`headerNavElem-${ecosystemItem.footerTestid}`)
+        cy.findByTestId(`header-nav-elem-explore-${ecosystemItem.headerTestid}`)
           .should("be.visible")
           .and("have.attr", "href")
           .and("include", ecosystemItem.link);

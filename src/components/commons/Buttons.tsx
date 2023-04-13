@@ -82,19 +82,25 @@ export function SecondaryButton({
   disabled,
   onClick,
   href,
+  customSize,
+  customClass,
 }: {
   text: string;
   className?: string;
   disabled?: boolean;
   onClick?: () => void;
   href: string;
+  customClass?: string;
+  customSize?: number;
 }) {
+  const size = customSize ?? 20;
+  const customClassName = customClass ?? "ml-[15px]";
   return (
     <Link
       rel="noreferrer"
       target="_blank"
       href={href}
-      className={classNames({ "pointer-events-none": disabled })}
+      className={classNames("block w-fit", { "pointer-events-none": disabled })}
     >
       <button
         type="button"
@@ -107,7 +113,7 @@ export function SecondaryButton({
         )}
       >
         {text}
-        <FiArrowUpRight size={20} className="ml-[15px]" />
+        <FiArrowUpRight size={size} className={customClassName} />
       </button>
     </Link>
   );

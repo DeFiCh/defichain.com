@@ -24,6 +24,8 @@ export function BlogPostsSection({ blogPosts }: { blogPosts: Posts[] }) {
               text={t("BlogPostsSection.button")}
               className="text-sm mt-9 lg:py-4 py-3 px-[62px] md:px-[56px] lg:text-base"
               href="https://blog.defichain.com/"
+              customSize={24}
+              customClass="ml-[8px]"
             />
           </div>
           <div className="flex flex-wrap gap-x-6 gap-y-6 md:gap-y-12 mt-12 lg:mt-0 lg:w-[660px]">

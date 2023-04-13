@@ -398,7 +398,7 @@ Decentralized Wrapping of Tokens
   </div>
 </div>
 
-<h3 id="pricing-oracles" title="Decentralized Pricing Oracles" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="decentralized-pricing-oracles" title="Decentralized Pricing Oracles" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Decentralized Pricing Oracles
 </h3>
 <div className="mt-4 text-dark-800">
@@ -1622,22 +1622,22 @@ This is what DeFiChain is all about - To make the world a better place!
     </h2>
 
 <div className="mt-5 text-dark-800">
-  <div className="scroll-mt-40" id="user-content-fn-1">1. <a className="underline " href="https://www.investopedia.com/ask/answers/030515/what-percentage-global-economy-comprised-financial-services-sector.asp" target="_blank">https://www.investopedia.com/ask/answers/030515/what-percentage-global-economy-comprised-financial-services-sector.asp ↩</a></div>
+  <div className="scroll-mt-40" id="user-content-fn-1">1. <a className="underline " href="https://www.investopedia.com/ask/answers/030515/what-percentage-global-economy-comprised-financial-services-sector.asp" target="_blank">https://www.investopedia.com/ask/answers/030515/what-percentage-global-economy-comprised-financial-services-sector.asp</a></div>
 
-  <div className="scroll-mt-40" id="user-content-fn-2">2. <a className="underline" href="https://blog.openzeppelin.com/on-the-parity-wallet-multisig-hack-405a8c12e8f7/" target="_blank">https://blog.openzeppelin.com/on-the-parity-wallet-multisig-hack-405a8c12e8f7/ ↩</a></div>
+  <div className="scroll-mt-40" id="user-content-fn-2">2. <a className="underline" href="https://blog.openzeppelin.com/on-the-parity-wallet-multisig-hack-405a8c12e8f7/" target="_blank">https://blog.openzeppelin.com/on-the-parity-wallet-multisig-hack-405a8c12e8f7/</a></div>
 
-  <div className="scroll-mt-40" id="user-content-fn-3">3. <a className="underline" href="https://arxiv.org/pdf/1802.06038.pdf" target="_blank">https://arxiv.org/pdf/1802.06038.pdf ↩</a></div>
+  <div className="scroll-mt-40" id="user-content-fn-3">3. <a className="underline" href="https://arxiv.org/pdf/1802.06038.pdf" target="_blank">https://arxiv.org/pdf/1802.06038.pdf</a></div>
 
-  <div className="scroll-mt-40" id="user-content-fn-4">4. <a className="underline" href="https://cointelegraph.com/explained/blockchain-oracles-explained" target="_blank">https://cointelegraph.com/explained/blockchain-oracles-explained ↩</a></div>
+  <div className="scroll-mt-40" id="user-content-fn-4">4. <a className="underline" href="https://cointelegraph.com/explained/blockchain-oracles-explained" target="_blank">https://cointelegraph.com/explained/blockchain-oracles-explained</a></div>
 
   <div className="scroll-mt-40" id="user-content-fn-5">5. <a className="underline" href="https://hackernoon.com/oracles-help-smart-contracts-resolve-subjective-events-d81639d8291c" target="_blank">https://hackernoon.com/oracles-help-smart-contracts-resolve-subjective-events-d81639d8291c</a></div>
 
-  <div className="scroll-mt-40" id="user-content-fn-6">6. <a className="underline" href="https://en.wikipedia.org/wiki/Decentralized_exchange" target="_blank">https://en.wikipedia.org/wiki/Decentralized_exchange ↩</a></div>
+  <div className="scroll-mt-40" id="user-content-fn-6">6. <a className="underline" href="https://en.wikipedia.org/wiki/Decentralized_exchange" target="_blank">https://en.wikipedia.org/wiki/Decentralized_exchange</a></div>
 
-  <div className="scroll-mt-40" id="user-content-fn-7">7. <a className="underline" href="https://coinsutra.com/best-decentralized-exchanges-dex/" target="_blank">https://coinsutra.com/best-decentralized-exchanges-dex/ ↩</a></div>
+  <div className="scroll-mt-40" id="user-content-fn-7">7. <a className="underline" href="https://coinsutra.com/best-decentralized-exchanges-dex/" target="_blank">https://coinsutra.com/best-decentralized-exchanges-dex/</a></div>
 
-  <div className="scroll-mt-40" id="user-content-fn-8">8. <a className="underline" href="https://www.forbes.com/sites/laurencoleman/2019/04/25/heres-why-interest-in-tokenizing-assets-is-starting-to-surge/#2ddeec4640a5" target="_blank">https://www.forbes.com/sites/laurencoleman/2019/04/25/heres-why-interest-in-tokenizing-assets-is-starting-to-surge/#2ddeec4640a5 ↩</a></div>
+  <div className="scroll-mt-40" id="user-content-fn-8">8. <a className="underline" href="https://www.forbes.com/sites/laurencoleman/2019/04/25/heres-why-interest-in-tokenizing-assets-is-starting-to-surge/#2ddeec4640a5" target="_blank">https://www.forbes.com/sites/laurencoleman/2019/04/25/heres-why-interest-in-tokenizing-assets-is-starting-to-surge/#2ddeec4640a5</a></div>
 
-  <div className="scroll-mt-40" id="user-content-fn-9">9. <a className="underline" href="https://docs.dash.org/en/stable/governance/understanding.html" target="_blank">https://docs.dash.org/en/stable/governance/understanding.html ↩</a></div>
+  <div className="scroll-mt-40" id="user-content-fn-9">9. <a className="underline" href="https://docs.dash.org/en/stable/governance/understanding.html" target="_blank">https://docs.dash.org/en/stable/governance/understanding.html</a></div>
 
 </div>

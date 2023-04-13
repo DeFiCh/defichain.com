@@ -164,7 +164,7 @@ const useIntersectionObserver = (
 
     const observer = new IntersectionObserver(callback, {
       root: null,
-      rootMargin: "0px",
+      rootMargin: "-160px",
     });
     headingElements.forEach((element: Element) => observer.observe(element));
 

@@ -398,7 +398,7 @@ Decentralized Wrapping of Tokens
   </div>
 </div>
 
-<h3 id="pricing-oracles" title="Decentralized Pricing Oracles" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="decentralized-pricing-oracles" title="Decentralized Pricing Oracles" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Decentralized Pricing Oracles
 </h3>
 <div className="mt-4 text-dark-800">

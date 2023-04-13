@@ -1,5 +1,6 @@
 ---
 title: White Paper
+subtitle: Whitepaper
 description: DeFiChain White Paper
 ---
 

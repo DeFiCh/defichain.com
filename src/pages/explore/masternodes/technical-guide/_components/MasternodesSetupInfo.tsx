@@ -2,15 +2,15 @@ import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "next-i18next";
 import { Container } from "@components/commons/Container";
 import Image from "next/image";
-import CreateMN from "../../../../../../public/assets/img/mnTechnicalGuide/create.png";
-import TableOfContents from "./TableOfContents";
 import {
   ContentHeader,
   ContentSubHeader,
   ContentDescription,
   Code,
   Step,
-} from "./GuideComponents";
+} from "@components/commons/navigatedPages/GuideComponents";
+import CreateMN from "../../../../../../public/assets/img/mnTechnicalGuide/create.png";
+import TableOfContents from "./TableOfContents";
 
 export function MasternodesSetupInfo() {
   const { t } = useTranslation("page-explore-masternodes");

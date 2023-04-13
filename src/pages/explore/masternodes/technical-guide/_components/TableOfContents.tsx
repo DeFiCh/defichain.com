@@ -37,7 +37,7 @@ function Headings({ headings, activeId, parentReference }) {
         >
           <a
             href={`#${heading.id}`}
-            className={classnames("font-sans font-bold text-xl text-dark-800", {
+            className={classnames("font-sans font-bold text-xl text-dark-500", {
               "!text-brand-100": heading.id === activeId,
             })}
             onClick={() => {
@@ -61,7 +61,7 @@ function Headings({ headings, activeId, parentReference }) {
                 >
                   <a
                     href={`#${child.id}`}
-                    className={classnames("font-sans text-sm text-dark-800", {
+                    className={classnames("font-sans text-sm text-dark-500", {
                       "!text-brand-100": child.id === activeId,
                     })}
                     onClick={() => {

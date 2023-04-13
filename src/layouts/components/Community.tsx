@@ -27,6 +27,7 @@ export function Community() {
             href: "https://blog.defichain.com/",
             title: entries[0].labels[0].title,
             subtitle: entries[0].labels[0].subtitle,
+            testID: "community-dfi-blog",
           },
         ],
       },
@@ -36,74 +37,92 @@ export function Community() {
           {
             href: "https://www.reddit.com/r/defiblockchain/",
             title: entries[1].labels[0].title,
+            testID: "community-reddit",
           },
           {
             href: "https://twitter.com/defichain",
             title: entries[1].labels[1].title,
+            testID: "community-twitter",
           },
           {
             href: "https://www.facebook.com/defichain.official",
             title: entries[1].labels[2].title,
+            testID: "community-facebook",
           },
           {
             href: "https://github.com/DeFiCh/ain",
             title: entries[1].labels[3].title,
+            testID: "community-github",
           },
           {
             href: "https://www.youtube.com/DeFiChain",
             title: entries[1].labels[4].title,
+            testID: "community-youtube",
           },
           {
             href: "https://www.linkedin.com/company/defichain",
             title: entries[1].labels[5].title,
+            testID: "community-linkedin",
           },
           {
             href: "https://discord.com/invite/py55egyaGy",
             title: entries[1].labels[6].title,
+            testID: "community-discord",
           },
           {
             href: "https://coinmarketcap.com/community/profile/DeFiChain",
             title: entries[1].labels[7].title,
+            testID: "community-coinmarketcap",
           },
           {
             href: "https://t.me/defiblockchain",
             title: entries[1].labels[8].title,
+            testID: "community-telegram-blockchain",
           },
           {
             href: "https://t.me/defiblockchain_DE",
             title: entries[1].labels[9].title,
+            testID: "community-telegram-de-blockchain",
           },
           {
             href: "https://t.me/defiblockchain_FR",
             title: entries[1].labels[10].title,
+            testID: "community-telegram-fr-blockchain",
           },
           {
             href: "https://t.me/official_defichain_es",
             title: entries[1].labels[11].title,
+            testID: "community-telegram-es",
           },
           {
             href: "https://t.me/defiblockchain_IT",
             title: entries[1].labels[12].title,
+            testID: "community-telegram-it",
           },
           {
             href: "https://t.me/defiblockchain_ID",
             title: entries[1].labels[13].title,
+            testID: "community-telegram-id",
           },
           {
             href: "https://t.me/defiblockchain_TR",
             title: entries[1].labels[14].title,
+            testID: "community-telegram-tr",
           },
           {
             href: "https://t.me/defichain_ZH",
             title: entries[1].labels[15].title,
+            testID: "community-telegram-zh",
           },
           {
             href: "https://t.me/defichain_RU",
             title: entries[1].labels[16].title,
+            testID: "community-telegram-ru",
           },
           {
             href: "https://t.me/defichain_PT",
             title: entries[1].labels[17].title,
+            testID: "community-telegram-pt",
           },
         ],
       },
@@ -134,6 +153,7 @@ export function Community() {
                 subLabel={item.subtitle}
                 href={item.href}
                 icon={item.icon}
+                testID={item.testID}
               />
             ))}
           </div>
@@ -159,6 +179,7 @@ export function Community() {
                 setHoverState={setHoverState}
                 label={item.title}
                 href={item.href}
+                testID={item.testID}
               />
             </div>
           ))}

@@ -9,6 +9,7 @@ export function SectionSubTitle({
 }) {
   return (
     <div
+      data-testid="section-sub-title"
       className={classNames(
         "text-dark-1000 text-[40px] leading-[44px] tracking-[-0.02em]",
         "md:text-5xl md:leading-[52px] md:tracking-normal",

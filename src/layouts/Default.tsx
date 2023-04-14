@@ -89,7 +89,7 @@ export function Default(props: PropsWithChildren<any>): JSX.Element | null {
 
       {mounted && (
         <WhaleProvider>
-          <div className="bg-dark-00 relative z-0">
+          <div className="bg-dark-00 relative z-0 min-h-screen">
             <Header />
             <div
               className={classNames(

@@ -32,7 +32,9 @@ export default function ProjectCard({
                 </div>
               )}
             </div>
-            {post.title_de && router.locale === "de" ? (
+            {post.title_de &&
+            Object.keys(post.title_de).length > 0 &&
+            router.locale === "de" ? (
               <div className="text-dark-1000 font-semibold px-3 mt-4 max-w-[294px] line-clamp-2 h-12 lg:text-lg lg:leading-6 lg:mt-6">
                 {post.title_de[0].text}
               </div>

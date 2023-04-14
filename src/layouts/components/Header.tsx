@@ -243,28 +243,54 @@ function DesktopMenu({ item }: { item: string }) {
         setIsHoverOn!(true);
       }}
     >
-      <Menu.Button
-        onClick={() => {
-          setIsShowing(!isShowing);
-        }}
-        className={classNames(
-          {
-            "text-brand-100": isShowing && !isCursorOnHeader,
-          },
-          {
-            "!text-brand-100":
-              !isCursorOnHeader &&
-              !isHoverOn &&
-              router.pathname.includes(item.toLowerCase()),
-          }
-        )}
-      >
-        <div className={classNames("flex flex-col")}>
-          {(item === MobileTabletDropDownState.ECOSYSTEM ||
-            item === MobileTabletDropDownState.BUILD) && <ComingSoonTag />}
-          {t(`header.navbar.${item.toLowerCase()}`)}
-        </div>
-      </Menu.Button>
+      {isSafariBelow164() ? (
+        <Menu.Button
+          onClick={() => {
+            setIsShowing(!isShowing);
+          }}
+          className={classNames(
+            isHoverOn && isShowing ? "text-brand-100" : "text-dark-700",
+            {
+              "!text-brand-100": isShowing && !isCursorOnHeader,
+            },
+            {
+              "!text-brand-100":
+                !isCursorOnHeader &&
+                !isHoverOn &&
+                router.pathname.includes(item.toLowerCase()),
+            }
+          )}
+        >
+          <div className={classNames("flex flex-col")}>
+            {(item === MobileTabletDropDownState.ECOSYSTEM ||
+              item === MobileTabletDropDownState.BUILD) && <ComingSoonTag />}
+            {t(`header.navbar.${item.toLowerCase()}`)}
+          </div>
+        </Menu.Button>
+      ) : (
+        <Menu.Button
+          onClick={() => {
+            setIsShowing(!isShowing);
+          }}
+          className={classNames(
+            {
+              "text-brand-100": isShowing && !isCursorOnHeader,
+            },
+            {
+              "!text-brand-100":
+                !isCursorOnHeader &&
+                !isHoverOn &&
+                router.pathname.includes(item.toLowerCase()),
+            }
+          )}
+        >
+          <div className={classNames("flex flex-col")}>
+            {(item === MobileTabletDropDownState.ECOSYSTEM ||
+              item === MobileTabletDropDownState.BUILD) && <ComingSoonTag />}
+            {t(`header.navbar.${item.toLowerCase()}`)}
+          </div>
+        </Menu.Button>
+      )}
 
       {(item === MobileTabletDropDownState.EXPLORE ||
         item === MobileTabletDropDownState.COMMUNITY) && (
@@ -463,3 +489,11 @@ const dropDownMapping = {
   build: Build,
   community: Community,
 };
+
+function isSafariBelow164() {
+  const { userAgent } = navigator;
+  const isSafari =
+    userAgent.indexOf("Safari") !== -1 && userAgent.indexOf("Chrome") === -1;
+  const version = isSafari ? parseFloat(userAgent.split("Version/")[1]) : 0;
+  return isSafari && version < 16.4;
+}

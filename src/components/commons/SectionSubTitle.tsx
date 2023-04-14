@@ -8,7 +8,7 @@ export function SectionSubTitle({
   customStyle?: string;
 }) {
   return (
-    <div
+    <h1
       className={classNames(
         "text-dark-1000 text-[40px] leading-[44px] tracking-[-0.02em]",
         "md:text-5xl md:leading-[52px] md:tracking-normal",
@@ -17,6 +17,6 @@ export function SectionSubTitle({
       )}
     >
       {text}
-    </div>
+    </h1>
   );
 }

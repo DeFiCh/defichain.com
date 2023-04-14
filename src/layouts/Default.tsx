@@ -89,10 +89,11 @@ export function Default(props: PropsWithChildren<any>): JSX.Element | null {
 
       {mounted && (
         <WhaleProvider>
-          <div className="bg-dark-00 relative z-0">
+          <div className="flex flex-col bg-dark-00 relative z-0 min-h-screen">
             <Header />
             <div
               className={classNames(
+                "flex flex-col flex-grow",
                 // responsive mode not counted as DESKTOP
                 device === ViewPort.DESKTOP
                   ? "overflow-x-clip"

@@ -422,7 +422,7 @@ function TabletMobileDropDown({
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        <div className="md:pb-9 py-4 mb-4 ">{children}</div>
+        <div className="md:pb-9 py-4 mb-4">{children}</div>
       </Transition>
     </div>
   );

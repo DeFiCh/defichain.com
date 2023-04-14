@@ -8,6 +8,8 @@ export function WalletApps(props: WalletAppsProps): JSX.Element {
   const { id } = props;
   return (
     <div
+      // to handle Video overlapping issue on Safari
+      className="bg-dark-00"
       style={{
         position: "absolute",
         top: "-9.9em",
@@ -28,6 +30,7 @@ export function WalletAppsHover(props: WalletAppsProps): JSX.Element {
   const { id } = props;
   return (
     <div
+      className="bg-dark-00"
       style={{
         position: "absolute",
         top: "-9.9em",

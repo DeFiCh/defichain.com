@@ -1,4 +1,5 @@
 import { Posts } from "@components/commons/prismicTypes";
+import { useRouter } from "next/router";
 
 export default function ProjectCard({
   post,
@@ -7,6 +8,7 @@ export default function ProjectCard({
   post: Posts;
   isLatest: boolean;
 }) {
+  const router = useRouter();
   return (
     <article
       className="w-full max-w-[318px] flex flex-col"
@@ -30,9 +32,15 @@ export default function ProjectCard({
                 </div>
               )}
             </div>
-            <div className="text-dark-1000 font-semibold px-3 mt-4 max-w-[294px] line-clamp-2 h-12 lg:text-lg lg:leading-6 lg:mt-6">
-              {post.title[0]?.text}
-            </div>
+            {post.title_de[0]?.text && router.locale === "de" ? (
+              <div className="text-dark-1000 font-semibold px-3 mt-4 max-w-[294px] line-clamp-2 h-12 lg:text-lg lg:leading-6 lg:mt-6">
+                {post.title_de[0].text}
+              </div>
+            ) : (
+              <div className="text-dark-1000 font-semibold px-3 mt-4 max-w-[294px] line-clamp-2 h-12 lg:text-lg lg:leading-6 lg:mt-6">
+                {post.title[0]?.text}
+              </div>
+            )}
           </section>
         </section>
       </a>

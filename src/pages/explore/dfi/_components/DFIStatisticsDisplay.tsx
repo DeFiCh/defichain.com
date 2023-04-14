@@ -19,9 +19,12 @@ export function DFIStatisticsDisplay() {
   );
 
   useEffect(() => {
-    api.stats.getSupply().then((supplyItem) => {
-      setSupply(supplyItem);
-    });
+    api.stats
+      .getSupply()
+      .then((supplyItem) => {
+        setSupply(supplyItem);
+      })
+      .catch((e) => console.error(e));
   }, [api.stats]);
 
   const supplyItems = [

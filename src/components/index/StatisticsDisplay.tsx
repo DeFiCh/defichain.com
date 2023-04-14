@@ -20,13 +20,19 @@ export function StatsDisplay() {
   const dimensions = useWindowDimensions();
 
   useEffect(() => {
-    api.stats.getSupply().then((supplyItem) => {
-      setSupply(supplyItem);
-    });
+    api.stats
+      .getSupply()
+      .then((supplyItem) => {
+        setSupply(supplyItem);
+      })
+      .catch((e) => console.error(e));
 
-    api.stats.get().then((statsItem) => {
-      setStats(statsItem);
-    });
+    api.stats
+      .get()
+      .then((statsItem) => {
+        setStats(statsItem);
+      })
+      .catch((e) => console.error(e));
   }, [api.stats]);
 
   const { suffix, value } = useUnitSuffix(

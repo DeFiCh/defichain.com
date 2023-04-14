@@ -16,17 +16,24 @@ export function DexStatisticsDisplay() {
   const { t } = useTranslation("page-explore-dex");
 
   useEffect(() => {
-    api.stats.get().then((statsItem) => {
-      setStats(statsItem);
-    });
+    api.stats
+      .get()
+      .then((statsItem) => {
+        setStats(statsItem);
+      })
+      .catch((e) => console.error(e));
 
-    getTotal24Vol(api).then((res) => {
-      setTotal24h(res);
-    });
+    getTotal24Vol(api)
+      .then((res) => {
+        setTotal24h(res);
+      })
+      .catch((e) => console.error(e));
 
-    getTotalTokens(api).then((result) => {
-      setNumTokens(result);
-    });
+    getTotalTokens(api)
+      .then((result) => {
+        setNumTokens(result);
+      })
+      .catch((e) => console.error(e));
   }, [api, api.poolpairs, api.stats, api.tokens]);
 
   const statsItems = [

@@ -1,7 +1,6 @@
 export interface Posts {
-  title: {
-    text: string;
-  };
+  title: [{ text: string }];
+  title_de?: [{ text: string }];
   url: {
     url: string;
   };

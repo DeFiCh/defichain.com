@@ -138,7 +138,7 @@ export function Community() {
       })}
     >
       {/* first col */}
-      <div className="flex flex-col w-[250px]">
+      <div className="flex flex-col w-[320px]">
         <div>
           <div className="hidden md:block text-dark-500 font-bold leading-5 mb-10">
             {MenuItems.dropDownItems[0].label}

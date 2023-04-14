@@ -162,7 +162,7 @@ export function HeaderNavLinkItem({
                 style={{ fill: "url(#accent-gradient)" }}
                 size={24}
               />
-
+              {/* SVG gradient for external icon color */}
               <svg width="0" height="0">
                 <linearGradient
                   id="accent-gradient"

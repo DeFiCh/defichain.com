@@ -21,11 +21,11 @@
     "subtitle": "Diese Wallets bieten einen leichten und einfachen Zugang zu den Funktionen von DeFiChain. Sie eignen sich am besten für Nutzer, die fast täglich mit DeFiChain interagieren und dabei keine Kompromisse bei der Geschwindigkeit und Sicherheit ihrer Einlagen eingehen.",
     "entries": {
       "DFC": {
-        "title": "Lightwallet",
+        "title": "Light Wallet",
         "desc": "Einfacher, schneller Zugang zum dezentralen Finanzsystem für Bitcoin, per Fingertipp."
       },
       "DFX": {
-        "title": "DFX wallet Handy-App",
+        "title": "DFX Wallet",
         "desc": "Dein Weg zur finanziellen Freiheit - kaufe und verkaufe DeFiChain-Assets mit einfachen Banküberweisungen und nutze die Non-Custodial DFX-Wallet, um mit Liquiditäts-Mining und $DFI-Staking passiven Cashflow aufzubauen."
       },
       "JLY": {

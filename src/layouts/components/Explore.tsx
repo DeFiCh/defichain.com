@@ -56,12 +56,14 @@ export function Explore() {
             href: "https://defiscan.live/",
             title: entries[1].labels[0].title,
             testID: "explore-defiscan-live",
+            hasExternalIcon: true,
           },
           {
             icon: "crypto",
             href: "https://chainz.cryptoid.info/",
             title: entries[1].labels[1].title,
             testID: "explore-crypto-id",
+            hasExternalIcon: true,
           },
         ],
       },
@@ -99,7 +101,7 @@ export function Explore() {
             ))}
           </div>
         </div>
-        {/* second col */}
+        {/* BLOCK EXPLORERS */}
         <div className="flex flex-col">
           <div className="text-dark-500 font-bold leading-5 md:mb-10 mb-8">
             {MenuItems.dropDownItems[1].label}
@@ -115,6 +117,7 @@ export function Explore() {
                 href={item.href}
                 icon={item.icon}
                 testID={item.testID}
+                hasExternalIcon={item.hasExternalIcon}
               />
             ))}
           </div>

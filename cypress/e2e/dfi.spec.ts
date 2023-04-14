@@ -33,6 +33,21 @@ viewports.forEach((viewport) => {
       );
     });
 
+    it.only("should have Purchase DFI easily section with links ", () => {
+      cy.findByTestId("section-title-PURCHASE $DFI EASILY").should(
+        "be.visible"
+      );
+      cy.findByTestId("get-dfi-title")
+        .should("be.visible")
+        .and("have.text", "Get DFI on trusted exchanges");
+      cy.findByTestId("get-dfi-desc")
+        .should("be.visible")
+        .and(
+          "have.text",
+          "Use our partner links to securely buy DFI on trusted cryptocurrency exchanges and easily transfer them to your DeFiChain wallet address."
+        );
+    });
+
     it("should have Read from Whitepaper button visible and clickable", () => {
       cy.findByTestId("explore-dmc-button-Read from Whitepaper")
         .should("be.visible")

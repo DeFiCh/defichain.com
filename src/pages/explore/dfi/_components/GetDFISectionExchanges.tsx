@@ -12,72 +12,72 @@ export default function GetDFISectionExchanges() {
   const { t } = useTranslation("page-explore-dfi");
   const exchanges: ExchangeItem[] = [
     {
-      id: "GetDFISection.Exchange.Bittrex",
+      id: "get-dfi-section-exchange-Bittrex",
       name: "Bittrex",
       url: "https://global.bittrex.com/Market/Index?MarketName=BTC-DFI",
     },
     {
-      id: "GetDFISection.Exchange.Bitrue",
+      id: "get-dfi-section-exchange-Bitrue",
       name: "Bitrue",
       url: "https://www.bitrue.com/trade/dfi_btc",
     },
     {
-      id: "GetDFISection.Exchange.Dfx",
+      id: "get-dfi-section-exchange-Dfx",
       name: "Dfx",
       url: "https://dfx.swiss/en/",
     },
     {
-      id: "GetDFISection.Exchange.Kucoin",
+      id: "get-dfi-section-exchange-Kucoin",
       name: "Kucoin",
       url: "https://trade.kucoin.com/DFI-BTC",
     },
     {
-      id: "GetDFISection.Exchange.Huobi",
+      id: "get-dfi-section-exchange-Huobi",
       name: "Huobi",
       url: "https://www.huobi.com/en-us/exchange/dfi_usdt",
     },
     {
-      id: "GetDFISection.Exchange.Gateio",
+      id: "get-dfi-section-exchange-Gateio",
       name: "Gateio",
       url: "https://www.gate.io/trade/DFI_USDT",
     },
     {
-      id: "GetDFISection.Exchange.Transak",
+      id: "get-dfi-section-exchange-Transak",
       name: "Transak",
       url: "https://global.transak.com",
     },
     {
-      id: "GetDFISection.Exchange.Bybit",
+      id: "get-dfi-section-exchange-Bybit",
       name: "Bybit",
       url: "https://www.bybit.com/en-US/trade/spot/DFI/USDT",
     },
     {
-      id: "GetDFISection.Exchange.Swyftx",
+      id: "get-dfi-section-exchange-Swyftx",
       name: "Swyftx",
       url: "https://swyftx.com/au/buy/defichain",
     },
     {
-      id: "GetDFISection.Exchange.Bitdotcom",
+      id: "get-dfi-section-exchange-Bitdotcom",
       name: "Bitdotcom",
       url: "https://www.bit.com/legacy/spot?pair=DFI-USDT",
     },
     {
-      id: "GetDFISection.Exchange.Latoken",
+      id: "get-dfi-section-exchange-Latoken",
       name: "Latoken",
       url: "https://latoken.com/exchange/DFI_USDT",
     },
     {
-      id: "GetDFISection.Exchange.Bitmart",
+      id: "get-dfi-section-exchange-Bitmart",
       name: "Bitmart",
       url: "https://www.bitmart.com/trade/en?symbol=%24DFI_USDT&layout=basic",
     },
     {
-      id: "GetDFISection.Exchange.EasyAu",
+      id: "get-dfi-section-exchange-EasyAu",
       name: "EasycryptoAu",
       url: "https://easycrypto.com/au/buy-sell/dfi-defichain",
     },
     {
-      id: "GetDFISection.Exchange.EasyNz",
+      id: "get-dfi-section-exchange-EasyNz",
       name: "EasycryptoNz",
       url: "https://easycrypto.com/nz/buy-sell/dfi-defichain",
     },

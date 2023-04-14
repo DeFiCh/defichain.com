@@ -12,10 +12,10 @@ export function PageError(props: {
 }): JSX.Element {
   const { title, subtitle, errorDesc, text } = props;
   return (
-    <>
+    <div className="flex flex-col h-screen">
       <Head title={title} />
 
-      <Container className="pt-[93px] pb-[98px] md:pt-[164px] md:pb-[92px] lg:pt-[180px] lg:pb-[150px] relative">
+      <Container className="pt-[93px] md:pt-[164px] lg:pt-[180px] relative">
         <section className="flex flex-col text-start items-start md:text-center md:items-center justify-center">
           <div className="text-error text-sm font-desc w-full">{subtitle}</div>
           <SectionSubTitle
@@ -43,6 +43,6 @@ export function PageError(props: {
           )}
         />
       </Container>
-    </>
+    </div>
   );
 }

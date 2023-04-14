@@ -413,7 +413,7 @@ function TabletMobileDropDown({
         />
       </div>
 
-      <Transition
+      {/* <Transition
         show={dropDownState === label}
         enter="transition-opacity duration-300"
         enterFrom="opacity-0"
@@ -421,9 +421,9 @@ function TabletMobileDropDown({
         leave="transition-opacity duration-150"
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
-      >
-        <div className="md:pb-9 py-4 mb-4 ">{children}</div>
-      </Transition>
+      > */}
+      <div className="md:pb-9 py-4 mb-4">{children}</div>
+      {/* </Transition> */}
     </div>
   );
 }

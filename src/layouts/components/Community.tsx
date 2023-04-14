@@ -28,6 +28,7 @@ export function Community() {
             title: entries[0].labels[0].title,
             subtitle: entries[0].labels[0].subtitle,
             testID: "community-dfi-blog",
+            hasExternalIcon: true,
           },
         ],
       },
@@ -137,7 +138,7 @@ export function Community() {
       })}
     >
       {/* first col */}
-      <div className="flex flex-col">
+      <div className="flex flex-col w-[250px]">
         <div>
           <div className="hidden md:block text-dark-500 font-bold leading-5 mb-10">
             {MenuItems.dropDownItems[0].label}
@@ -154,6 +155,7 @@ export function Community() {
                 href={item.href}
                 icon={item.icon}
                 testID={item.testID}
+                hasExternalIcon={item.hasExternalIcon}
               />
             ))}
           </div>
@@ -174,7 +176,7 @@ export function Community() {
             <div key={key} className="w-[160px]">
               <HeaderNavLinkItem
                 target="_blank"
-                haveIcon
+                hasExternalIcon
                 hoverState={hoverState}
                 setHoverState={setHoverState}
                 label={item.title}

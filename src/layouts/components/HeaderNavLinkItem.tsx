@@ -33,7 +33,7 @@ export function HeaderNavLinkItem({
   hoverState,
   setHoverState,
   testID,
-  haveIcon = false,
+  hasExternalIcon = false,
   target = "_self",
   disabled = false,
 }: {
@@ -44,7 +44,7 @@ export function HeaderNavLinkItem({
   href: string;
   hoverState: string | undefined;
   setHoverState: Dispatch<SetStateAction<string | undefined>>;
-  haveIcon?: boolean;
+  hasExternalIcon?: boolean;
   target?: HTMLAttributeAnchorTarget;
   disabled?: boolean;
 }) {
@@ -156,7 +156,7 @@ export function HeaderNavLinkItem({
           >
             {label}
           </div>
-          {isMouseEnter && haveIcon && (
+          {isMouseEnter && hasExternalIcon && (
             <>
               <RiArrowRightUpLine
                 style={{ fill: "url(#accent-gradient)" }}

@@ -144,6 +144,8 @@ function getLocaledStatisticValue(t, locale, prefix, value, suffix) {
             duration={0.5}
           />
           {suffix !== "" ? `${t(`statisticsDisplay.suffix.${suffix}`)} ` : `+`}
+
+          {/* This prefix is for the $ symbol */}
           {prefix ?? ""}
         </>
       );

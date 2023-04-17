@@ -222,7 +222,7 @@ function DesktopNavbar(): JSX.Element {
   );
 }
 
-// Getting the key of the enum MobileTabletDropDownState for static testIds
+// Getting the key of the enum MobileTabletDropDownState for immutable testIds
 const getEnumKey = (value) => {
   const keyIndex = Object.values(MobileTabletDropDownState).indexOf(value);
   return Object.keys(MobileTabletDropDownState)[keyIndex];

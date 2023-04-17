@@ -5,5 +5,13 @@
   },
   "StartExploring": {
     "button": "开始探索"
+  },
+  "statisticsDisplay": {
+    "prefix": "",
+    "suffix": {
+      "B": "B+",
+      "M": "M+",
+      "K": "K+"
+    }
   }
 }

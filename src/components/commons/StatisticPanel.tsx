@@ -34,9 +34,12 @@ export function StatisticPanel({
     >
       <div className="card-bg rounded-[30px] py-10 px-6">
         <div
-          className={classNames("flex lg:flex-row flex-col gap-y-4", {
-            "md:flex-row": isHorizontalInTablet,
-          })}
+          className={classNames(
+            "flex lg:flex-row flex-col gap-y-4 text-center",
+            {
+              "md:flex-row": isHorizontalInTablet,
+            }
+          )}
         >
           {displayItem.map((item, key) => (
             <StatisticsPanelItem
@@ -76,6 +79,7 @@ function StatisticsPanelItem({
     stats === undefined ? "N/A" : stats.toString()
   );
 
+  console.log(router.locale);
   return (
     <article
       className={classNames(
@@ -106,23 +110,7 @@ function StatisticsPanelItem({
           )}
         >
           {stats ? (
-            <>
-              {prefix && router.locale === "en-US" ? prefix : ""}
-              {t("statisticsDisplay.prefix")}
-              <CountUp
-                onUpdate={({ reset, start }) => {
-                  reset();
-                  start();
-                }}
-                end={Number(value)}
-                enableScrollSpy
-                duration={0.5}
-              />
-              {suffix !== ""
-                ? `${t(`statisticsDisplay.suffix.${suffix}`)} `
-                : `+`}
-              {prefix && router.locale === "de" ? prefix : ""}
-            </>
+            getLocaledStatisticValue(t, router.locale, prefix, value, suffix)
           ) : (
             <>N/A</>
           )}
@@ -141,4 +129,80 @@ function StatisticsPanelItem({
       </div>
     </article>
   );
+}
+
+function getLocaledStatisticValue(t, locale, prefix, value, suffix) {
+  switch (locale) {
+    case "de":
+      return (
+        <>
+          {t("statisticsDisplay.prefix")}
+          <CountUp
+            onUpdate={({ reset, start }) => {
+              reset();
+              start();
+            }}
+            end={Number(value)}
+            enableScrollSpy
+            duration={0.5}
+          />
+          {suffix !== "" ? `${t(`statisticsDisplay.suffix.${suffix}`)} ` : `+`}
+          {prefix ?? ""}
+        </>
+      );
+
+    case "en-US":
+      return (
+        <>
+          {prefix ?? ""}
+          <CountUp
+            onUpdate={({ reset, start }) => {
+              reset();
+              start();
+            }}
+            end={Number(value)}
+            enableScrollSpy
+            duration={0.5}
+          />
+          {suffix !== "" ? `${t(`statisticsDisplay.suffix.${suffix}`)} ` : `+`}
+        </>
+      );
+
+    case "fr":
+      return (
+        <>
+          <CountUp
+            onUpdate={({ reset, start }) => {
+              reset();
+              start();
+            }}
+            end={Number(value)}
+            enableScrollSpy
+            duration={0.5}
+          />
+          {suffix !== ""
+            ? ` ${t(`statisticsDisplay.suffix.${suffix}`)} ${
+                prefix ? " de $" : ""
+              } ou plus`
+            : `+`}
+        </>
+      );
+
+    default:
+      return (
+        <>
+          {prefix ?? ""}
+          <CountUp
+            onUpdate={({ reset, start }) => {
+              reset();
+              start();
+            }}
+            end={Number(value)}
+            enableScrollSpy
+            duration={0.5}
+          />
+          {suffix !== "" ? `${t(`statisticsDisplay.suffix.${suffix}`)} ` : `+`}
+        </>
+      );
+  }
 }

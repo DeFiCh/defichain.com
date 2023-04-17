@@ -5,5 +5,13 @@
   },
   "StartExploring": {
     "button": "Commencer à explorer"
+  },
+  "statisticsDisplay": {
+    "prefix": "",
+    "suffix": {
+      "B": "md",
+      "M": "mns",
+      "K": "milles"
+    }
   }
 }

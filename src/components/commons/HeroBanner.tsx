@@ -22,6 +22,7 @@ export function HeroBanner({
   ctaButtonText,
   hasStartExploringButton = false,
   startExploringJumpLink,
+  testID,
 }: {
   title: string;
   subtitle: string;
@@ -33,6 +34,7 @@ export function HeroBanner({
   ctaButtonText?: string;
   hasStartExploringButton?: boolean;
   startExploringJumpLink?: string;
+  testID: string;
 }) {
   return (
     <Container className={classNames("md:mt-[25px] mt-6 relative z-0")}>
@@ -44,7 +46,7 @@ export function HeroBanner({
           "lg:mb-[278px] md:mb-[148px] mb-24"
         )}
       >
-        <SectionTitle text={title} />
+        <SectionTitle text={title} testID={testID} />
         <SectionSubTitle text={subtitle} />
         <SectionDescription text={desc} />
         {hasCtaButton && ctaButtonText && (

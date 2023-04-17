@@ -23,6 +23,7 @@ export default function ExploreMasternodes() {
         heroBg={HeroBannerBg.CUBE}
         hasStartExploringButton
         startExploringJumpLink="#statistics_display_masternodes"
+        testID="explore-masternodes-learn-about-masternodes"
       />
       <MasternodesStatisticsDisplay />
       <MasternodesBenefitsSection />

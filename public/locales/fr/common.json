@@ -9,9 +9,9 @@
   "statisticsDisplay": {
     "prefix": "",
     "suffix": {
-      "B": "md",
-      "M": "mns",
-      "K": "milles"
+      "B+": "md",
+      "M+": "mns",
+      "K+": "milles"
     }
   }
 }

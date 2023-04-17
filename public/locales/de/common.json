@@ -9,9 +9,9 @@
   "statisticsDisplay": {
     "prefix": "Über ",
     "suffix": {
-      "B": " Mrd.",
-      "M": " Mio.",
-      "K": " Tsd."
+      "B+": " Mrd.",
+      "M+": " Mio.",
+      "K+": " Tsd."
     }
   }
 }

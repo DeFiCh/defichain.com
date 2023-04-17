@@ -133,7 +133,7 @@ function getLocaledStatisticValue(t, locale, prefix, value, suffix) {
     case "de":
       return (
         <>
-          {t("statisticsDisplay.prefix")}
+          {suffix !== "" ? t("statisticsDisplay.prefix") : ``}
           <CountUp
             onUpdate={({ reset, start }) => {
               reset();
@@ -143,7 +143,7 @@ function getLocaledStatisticValue(t, locale, prefix, value, suffix) {
             enableScrollSpy
             duration={0.5}
           />
-          {suffix !== "" ? `${t(`statisticsDisplay.suffix.${suffix}`)} ` : `+`}
+          {suffix !== "" ? `${t(`statisticsDisplay.suffix.${suffix}`)} ` : ``}
 
           {/* This prefix is for the $ symbol */}
           {prefix ?? ""}
@@ -184,7 +184,7 @@ function getLocaledStatisticValue(t, locale, prefix, value, suffix) {
             enableScrollSpy
             duration={0.5}
           />
-          {suffix !== "" ? `${t(`statisticsDisplay.suffix.${suffix}`)} ` : `+`}
+          {suffix !== "" ? `${t(`statisticsDisplay.suffix.${suffix}`)} ` : ``}
         </>
       );
   }

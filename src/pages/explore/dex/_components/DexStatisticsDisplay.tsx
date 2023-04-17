@@ -41,18 +41,15 @@ export function DexStatisticsDisplay() {
       title: t("statisticsDisplay.totalValueLocked.title"),
       prefix: "$",
       stats: stats?.tvl.dex,
-      testID: "total-value-locked",
     },
     {
       title: t("statisticsDisplay.tradingVolume.title"),
       prefix: "$",
       stats: total24h,
-      testID: "trading-volume",
     },
     {
       title: t("statisticsDisplay.tokens.title"),
       stats: numTokens,
-      testID: "statistics-display-tokens",
     },
   ];
 

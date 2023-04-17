@@ -41,13 +41,11 @@ export function ReadyForFlexibility() {
             </div>
           </h4>
           <SecondaryButton
-            data-testid="explore-defi-meta-chain-button"
             text={t("ReadyForFlexibilitySection.button")}
             className="lg:text-base text-sm lg:py-4 py-3 px-9 md:px-[56px]"
             href="https://meta.defichain.com/"
             customSize={24}
             customClass="ml-[8px]"
-            testID="explore-dmc"
           />
         </div>
         <div

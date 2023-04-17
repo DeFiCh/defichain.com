@@ -21,7 +21,7 @@ export function HomePageHeader(): JSX.Element {
         <div className="mt-[-41px] md:w-[316px] md:mt-[92px] lg:max-w-none lg:w-[479px] xl:mt-[120px] 2xl:mt-[148px] relative z-[1]">
           <h1
             className="w-full text-5xl leading-[52px] lg:text-[80px] lg:leading-[84px]"
-            data-testid="header-title"
+            data-testid="Header.title"
           >
             <span className="text-brand-100">
               {firstWord} <br />
@@ -31,7 +31,7 @@ export function HomePageHeader(): JSX.Element {
           <div className="mt-5">
             <div
               className="w-full tracking-[0.03em] text-dark-700 font-desc lg:tracking-normal lg:text-xl "
-              data-testid="header-desc"
+              data-testid="Header.desc.main"
             >
               {t("Header.desc")}
             </div>

@@ -49,7 +49,7 @@ export default function FooterColumn({
             isExternaLink={link.isExternaLink}
             // use external url instead of internal pathname
             url={link.url ?? link.pathname}
-            testId={`footer-${link.label}`}
+            testId={`FooterColumn.${link.testId}`}
             hasUpArrowIcon={link.hasUpArrowIcon}
           />
         ))}

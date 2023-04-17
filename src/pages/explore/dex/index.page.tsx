@@ -17,7 +17,6 @@ export default function ExploreWallets() {
         heroBg={HeroBannerBg.DIAMOND_COIN}
         hasStartExploringButton
         startExploringJumpLink="#explore-dex-statistics-display"
-        testID="explore-dex-decentralized-exchange"
       />
       <DexStatisticsDisplay />
       <WhyDEXSection />

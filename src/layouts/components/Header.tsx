@@ -140,7 +140,7 @@ export function Header(): JSX.Element {
       className={classNames(
         "sticky top-0 left-0 right-0 w-full bg-dark-00 z-50 transition-opacity ease-in-out duration-500",
         isHoverOn || isMenuActive
-          ? "header-dropdown-bg border-b-0"
+          ? "header-dropdown-bg border-b-0 "
           : "border-b-[0.1px] border-b-dark-200"
       )}
     >
@@ -191,7 +191,7 @@ export function Header(): JSX.Element {
               onClick={() => {
                 setIsMenuActive(true);
               }}
-              data-testid="header-openMenu"
+              data-testid="Header.OpenMenu"
             />
           )}
         </div>
@@ -222,12 +222,6 @@ function DesktopNavbar(): JSX.Element {
   );
 }
 
-// Getting the key of the enum MobileTabletDropDownState for immutable testIds
-const getEnumKey = (value) => {
-  const keyIndex = Object.values(MobileTabletDropDownState).indexOf(value);
-  return Object.keys(MobileTabletDropDownState)[keyIndex];
-};
-
 function DesktopMenu({ item }: { item: string }) {
   const [isShowing, setIsShowing] = useState(false);
   const { headerHeight, setIsHoverOn, isCursorOnHeader, isHoverOn } =
@@ -236,12 +230,9 @@ function DesktopMenu({ item }: { item: string }) {
   const { t } = useTranslation("layout");
   const router = useRouter();
 
-  const getTestId = getEnumKey(item);
-
   return (
     <Menu
       className="lg:pb-10 cursor-pointer lg:w-[136px] text-center"
-      data-testid={`header-desktop-dropdown-item-${getTestId}`}
       as="div"
       onMouseLeave={() => {
         setIsShowing(false);
@@ -271,10 +262,7 @@ function DesktopMenu({ item }: { item: string }) {
           }
         )}
       >
-        <div
-          data-testid={`header-coming-soon-tag-${item}`}
-          className={classNames("flex flex-col")}
-        >
+        <div className={classNames("flex flex-col")}>
           {(item === MobileTabletDropDownState.ECOSYSTEM ||
             item === MobileTabletDropDownState.BUILD) && <ComingSoonTag />}
           {t(`header.navbar.${item.toLowerCase()}`)}
@@ -287,14 +275,13 @@ function DesktopMenu({ item }: { item: string }) {
           <Transition
             style={{ top: headerHeight - 1 }}
             className="absolute inset-x-0 header-dropdown-bg w-screen"
-            data-testid={`header-tag-${item}`}
             show={isShowing}
             enter="transition ease duration-500 transform"
             enterFrom="opacity-0"
             enterTo="opacity-100"
             leave="transition ease duration-200 transform"
             leaveFrom="opacity-100"
-            leaveTo="opacity-0"
+            leaveTo="opacity-0 "
           >
             <Menu.Items as="div" data-testid="Desktop.HeaderLink.More.Items">
               <Container className="pt-[48.77px] pb-16">
@@ -384,8 +371,6 @@ function TabletMobileDropDown({
   const { t } = useTranslation("layout");
   const router = useRouter();
 
-  const getTestId = getEnumKey(label);
-
   useEffect(() => {
     if (router.pathname.includes(label.toLowerCase())) {
       setDropDownState(label);
@@ -412,7 +397,6 @@ function TabletMobileDropDown({
         }}
       >
         <div
-          data-testid={`header-tablet-menu-item-${getTestId}`}
           className={classNames(
             "grow font-semibold md:text-lg text-base",
             dropDownState === label ? "text-brand-100" : "text-dark-700"
@@ -453,10 +437,9 @@ function ComingSoonTag() {
     <div
       className={classNames(
         "bg-dark-200 rounded-[10px] lg:py-0.5 py-[6px] px-2",
-        "font-bold text-dark-1000 text-[10px] leading-3 tracking-[0.08em]",
+        "font-bold text-dark-1000 text-[10px] leading-3 tracking-[0.08em] font-bold",
         "lg:mr-0 mr-1"
       )}
-      data-testid="header-coming-soon-tag"
     >
       {t("header.comingSoon")}
     </div>

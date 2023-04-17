@@ -207,23 +207,23 @@ viewports.forEach((viewport) => {
     });
 
     it("should have Footer Social links", () => {
-      cy.findAllByTestId("socialsRow-GitHub")
+      cy.findAllByTestId("socials-row-github")
         .should("be.visible")
         .should("have.attr", "href", "https://github.com/DeFiCh/ain");
-      cy.findAllByTestId("socialsRow-Reddit")
+      cy.findAllByTestId("socials-row-reddit")
         .should("be.visible")
         .should(
           "have.attr",
           "href",
           "https://www.reddit.com/r/defiblockchain/"
         );
-      cy.findAllByTestId("socialsRow-YouTube")
+      cy.findAllByTestId("socials-row-youtube")
         .should("be.visible")
         .should("have.attr", "href", "https://www.youtube.com/DeFiChain");
-      cy.findAllByTestId("socialsRow-Telegram")
+      cy.findAllByTestId("socials-row-telegram")
         .should("be.visible")
         .should("have.attr", "href", "https://t.me/defiblockchain");
-      cy.findAllByTestId("socialsRow-Twitter")
+      cy.findAllByTestId("socials-row-twitter")
         .should("be.visible")
         .should("have.attr", "href", "https://twitter.com/defichain");
     });

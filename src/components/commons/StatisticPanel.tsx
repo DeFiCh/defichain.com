@@ -24,6 +24,7 @@ export function StatisticPanel({
   displayStripCustomStyle?: string;
 }) {
   const isHorizontalInTablet = displayItem.length <= 2;
+
   return (
     <section
       id={displayId}
@@ -34,12 +35,9 @@ export function StatisticPanel({
     >
       <div className="card-bg rounded-[30px] py-10 px-6">
         <div
-          className={classNames(
-            "flex lg:flex-row flex-col gap-y-4 text-center",
-            {
-              "md:flex-row": isHorizontalInTablet,
-            }
-          )}
+          className={classNames("flex lg:flex-row flex-col gap-y-4", {
+            "md:flex-row": isHorizontalInTablet,
+          })}
         >
           {displayItem.map((item, key) => (
             <StatisticsPanelItem

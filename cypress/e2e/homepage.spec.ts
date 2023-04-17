@@ -98,7 +98,7 @@ viewports.forEach((viewport) => {
     });
 
     // No TC
-    it.only("should have clickable Explore DeFi Meta Chain button", () => {
+    it("should have clickable Explore DeFi Meta Chain button", () => {
       cy.findByTestId("explore-dmc-button-Explore DeFi Meta Chain")
         .should("be.visible")
         .and("have.attr", "href")

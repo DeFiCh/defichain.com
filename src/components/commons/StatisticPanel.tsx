@@ -128,7 +128,13 @@ function StatisticsPanelItem({
   );
 }
 
-function getLocaledStatisticValue(t, locale, prefix, value, suffix) {
+function getLocaledStatisticValue(
+  t: any,
+  locale: string,
+  prefix: string,
+  value: string,
+  suffix: string
+) {
   switch (locale) {
     case "de":
       return (

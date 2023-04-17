@@ -84,17 +84,23 @@ viewports.forEach((viewport) => {
     // No TC
     it("should have Start exploring section clickable", () => {
       if (viewport === "iphone-xr") {
-        cy.findByTestId("statistic-title-TVL IN USD").should("be.visible");
+        cy.findByTestId("statistic-title-tvl-locked")
+          .should("be.visible")
+          .and("have.text", "TVL IN USD");
       } else if (viewport === "macbook-16") {
         cy.findByTestId("startExploring-button").click({ force: true }); // covered by another element
         cy.url().should("include", "/#statistics_display");
-        cy.findByTestId("statistic-title-TOTAL VALUE LOCKED IN USD").should(
-          "be.visible"
-        );
+        cy.findByTestId("statistic-title-tvl-locked")
+          .should("be.visible")
+          .and("have.text", "TOTAL VALUE LOCKED IN USD");
       }
 
-      cy.findByTestId("statistic-title-TOTAL DFI MINTED").should("be.visible");
-      cy.findByTestId("statistic-title-MASTERNODES").should("be.visible");
+      cy.findByTestId("statistic-title-dfi-minted")
+        .should("be.visible")
+        .and("have.text", "TOTAL VALUE LOCKED IN USD");
+      cy.findByTestId("statistic-title-masternodes")
+        .should("be.visible")
+        .and("have.text", "MASTERNODES");
     });
 
     // No TC

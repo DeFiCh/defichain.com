@@ -11,8 +11,8 @@ viewports.forEach((viewport) => {
 
     it("should have Explore section dropdown elements", () => {
       if (viewport === "iphone-xr") {
-        cy.findByTestId("header-openMenu").click();
-        cy.findByTestId("header-menuItem-Explore").click();
+        cy.findByTestId("header-open-menu").click();
+        cy.findByTestId("header-tablet-menu-item-EXPLORE").click();
       } else if (viewport === "macbook-16") {
         cy.findByTestId("header-dropDownItem-explore").trigger("mouseover");
       }
@@ -56,15 +56,13 @@ viewports.forEach((viewport) => {
     // No TC
     it("should have Get DFI button", () => {
       if (viewport === "iphone-xr") {
-        cy.findByTestId("header-openMenu").click();
-        cy.findAllByTestId("header-getDfi-button").last().click();
+        cy.findByTestId("header-open-menu").click();
+        cy.findAllByTestId("header-get-dfi-button").last().click();
       } else if (viewport === "macbook-16") {
-        cy.findAllByTestId("header-getDfi-button").first().click();
+        cy.findAllByTestId("header-get-dfi-button").first().click();
       }
       cy.url().should("include", "/explore/dfi#get-dfi");
-      cy.findAllByTestId("section-title-PURCHASE $DFI EASILY").should(
-        "be.visible"
-      );
+      cy.findAllByTestId("section-title-purchase-dfi").should("be.visible");
     });
 
     // No TC
@@ -225,9 +223,15 @@ viewports.forEach((viewport) => {
     });
 
     it("should have Privacy policy link", () => {
-      cy.findAllByTestId("footer-web-privacy")
-        .should("be.visible")
-        .should("have.attr", "href", "/privacy-policy");
+      if (viewport === "iphone-xr") {
+        cy.findAllByTestId("footer-mobile-privacy")
+          .should("be.visible")
+          .should("have.attr", "href", "/privacy-policy");
+      } else if (viewport === "macbook-16") {
+        cy.findAllByTestId("footer-web-privacy")
+          .should("be.visible")
+          .should("have.attr", "href", "/privacy-policy");
+      }
     });
 
     it("should have Language dropdown", () => {

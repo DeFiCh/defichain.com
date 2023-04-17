@@ -191,7 +191,7 @@ export function Header(): JSX.Element {
               onClick={() => {
                 setIsMenuActive(true);
               }}
-              data-testid="header-openMenu"
+              data-testid="header-open-menu"
             />
           )}
         </div>

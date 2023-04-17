@@ -14,7 +14,9 @@ viewports.forEach((viewport) => {
         cy.findByTestId("header-open-menu").click();
         cy.findByTestId("header-tablet-menu-item-EXPLORE").click();
       } else if (viewport === "macbook-16") {
-        cy.findByTestId("header-dropDownItem-explore").trigger("mouseover");
+        cy.findByTestId("header-desktop-dropdown-item-EXPLORE").trigger(
+          "mouseover"
+        );
       }
 
       cy.findByTestId("header-nav-elem-explore-defiscan-live")
@@ -95,7 +97,7 @@ viewports.forEach((viewport) => {
 
       cy.findByTestId("statistic-title-dfi-minted")
         .should("be.visible")
-        .and("have.text", "TOTAL VALUE LOCKED IN USD");
+        .and("have.text", "TOTAL DFI MINTED");
       cy.findByTestId("statistic-title-masternodes")
         .should("be.visible")
         .and("have.text", "MASTERNODES");
@@ -103,20 +105,24 @@ viewports.forEach((viewport) => {
 
     // No TC
     it("should have clickable Explore DeFi Meta Chain button", () => {
-      cy.findByTestId("explore-dmc-button-Explore DeFi Meta Chain")
+      cy.findByTestId("secondary-button-explore-dmc")
         .should("be.visible")
         .and("have.attr", "href")
-        .and("include", "https://meta.defichain.com")
-        .and("have.attr", "target")
+        .and("include", "https://meta.defichain.com");
+      cy.findByTestId("secondary-button-explore-dmc")
+        .should("have.attr", "target")
         .and("include", "_blank");
     });
 
     // No TC
     it("should have clickable View all articles button", () => {
-      cy.findByTestId("explore-dmc-button-View all articles")
+      cy.findByTestId("secondary-button-view-all-articles")
         .should("be.visible")
         .and("have.attr", "href")
         .and("include", "https://blog.defichain.com");
+      cy.findByTestId("secondary-button-view-all-articles")
+        .should("have.attr", "target")
+        .and("include", "_blank");
     });
 
     // No TC
@@ -135,7 +141,7 @@ viewports.forEach((viewport) => {
 
     // No TC
     it("should have expected Blockchain feature section title and description", () => {
-      cy.findByTestId("section-title-NON-TURING-COMPLETE BLOCKCHAIN").should(
+      cy.findByTestId("section-title-non-turing-complete-blockchain").should(
         "be.visible"
       );
       cy.findByTestId(

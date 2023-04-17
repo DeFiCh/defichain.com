@@ -3,7 +3,7 @@ import { ecosystemLinks, resourcesLinks } from "../fixture/homepage.config";
 const viewports = ["iphone-xr", "macbook-16"];
 
 viewports.forEach((viewport) => {
-  context(`/Homepage on ${viewport}`, () => {
+  context(`Homepage on ${viewport}`, () => {
     beforeEach(() => {
       cy.visit("/");
       cy.viewport(<Cypress.ViewportPreset>viewport);
@@ -61,8 +61,10 @@ viewports.forEach((viewport) => {
       } else if (viewport === "macbook-16") {
         cy.findAllByTestId("header-getDfi-button").first().click();
       }
-
       cy.url().should("include", "/explore/dfi#get-dfi");
+      cy.findAllByTestId("section-title-PURCHASE $DFI EASILY").should(
+        "be.visible"
+      );
     });
 
     // No TC

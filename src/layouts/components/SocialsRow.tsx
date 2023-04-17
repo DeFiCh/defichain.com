@@ -20,7 +20,7 @@ export default function SocialsRow(props: SocialsRowProps): JSX.Element {
         href="https://github.com/DeFiCh/ain"
         target="_blank"
         rel="noreferrer"
-        data-testid="socialsRow-GitHub"
+        data-testid="socials-row-github"
         id="GitHub"
       >
         <AiFillGithub className="hover-icons" size={24} />
@@ -29,7 +29,7 @@ export default function SocialsRow(props: SocialsRowProps): JSX.Element {
         href="https://www.reddit.com/r/defiblockchain/"
         target="_blank"
         rel="noreferrer"
-        data-testid="socialsRow-Reddit"
+        data-testid="socials-row-reddit"
         id="Reddit"
       >
         <AiFillRedditCircle className="hover-icons" size={24} />
@@ -38,7 +38,7 @@ export default function SocialsRow(props: SocialsRowProps): JSX.Element {
         href="https://www.youtube.com/DeFiChain"
         target="_blank"
         rel="noreferrer"
-        data-testid="socialsRow-YouTube"
+        data-testid="socials-row-youtube"
         id="YouTube"
       >
         <AiFillYoutube className="hover-icons" size={24} />
@@ -47,7 +47,7 @@ export default function SocialsRow(props: SocialsRowProps): JSX.Element {
         href={`https://t.me/defiblockchain${language}`}
         target="_blank"
         rel="noreferrer"
-        data-testid="socialsRow-Telegram"
+        data-testid="socials-row-telegram"
         id="Telegram"
       >
         <FaTelegramPlane className="hover-icons" size={24} />
@@ -56,7 +56,7 @@ export default function SocialsRow(props: SocialsRowProps): JSX.Element {
         href="https://twitter.com/defichain"
         target="_blank"
         rel="noreferrer"
-        data-testid="socialsRow-Twitter"
+        data-testid="socials-row-twitter"
         id="Twitter"
       >
         <AiOutlineTwitter className="hover-icons" size={24} />

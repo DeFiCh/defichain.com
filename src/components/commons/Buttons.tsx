@@ -199,7 +199,7 @@ function GradientButtonElement({
           "font-medium text-sm leading-4 text-light-00 rounded-[44px] hover:gradient-button-hover w-full h-full whitespace-nowrap",
           className ?? "py-3 bg-dark-00"
         )}
-        data-testid="header-getDfi-button"
+        data-testid="header-get-dfi-button"
       >
         {buttonText}
       </div>

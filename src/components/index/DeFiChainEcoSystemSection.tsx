@@ -71,6 +71,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             customIconStyle="w-[100%] lg:right-0 md:right-[10em] right-0 top-0"
             id="dfi"
             customTextStyle="xs:w-full md:w-[70%] lg:w-[251px]"
+            testID="all-about-dfi"
           />
           <Card
             href="/explore/dex"
@@ -79,6 +80,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             customIconStyle="w-[307px] right-0 top-0 bottom-[-23.26%]"
             id="dex"
             customTextStyle="w-[45%]"
+            testID="trade-with-dex"
           />
           <Card
             href="/explore/wallets"
@@ -90,6 +92,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             })}
             id="wallets"
             customTextStyle="w-[50%]"
+            testID="wallets-for-defichain"
           />
           <Card
             href="/explore/masternodes"
@@ -102,6 +105,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             )}
             id="cube"
             customTextStyle="w-[284px]"
+            testID="governance-own-masternode"
           />
         </div>
       </Container>

@@ -74,7 +74,7 @@ export function Default(props: PropsWithChildren<any>): JSX.Element | null {
         />
 
         {/* Twitter */}
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@defichain" />
         <meta name="twitter:creator" content="@defichain" />
         <meta name="twitter:title" content={title} />

@@ -29,7 +29,8 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
       >
         <div
           className={classNames(
-            "relative lg:pl-[144px] lg:order-1 md:pb-[72px] pb-[48px] w-full",
+            // addition of overflow-hidden is to prevent the sticky container from overflowing in Firefox browser
+            "relative lg:pl-[144px] lg:order-1 md:pb-[72px] pb-[48px] w-full overflow-hidden lg:h-[600px]",
             { "sticky-container": dimensions.width >= 1033 } // only apply styling when in large screen
           )}
         >

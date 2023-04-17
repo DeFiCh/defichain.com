@@ -9,40 +9,239 @@
       "downloads": "Downloads",
       "learn": "Learn",
       "buy": "Buy",
+      "getDfi": "Get DFI",
       "dfcblog": "Blog",
-      "bloglink": "https://blog.defichain.com/"
+      "bloglink": "https://blog.defichain.com/",
+      "explore": "Explore",
+      "build": "Build",
+      "community": "Community"
+    },
+    "comingSoon": "COMING SOON",
+    "explore": {
+      "info": [
+        {
+          "title": "EXPLORE DEFICHAIN",
+          "labels": [
+            {
+              "title": "$DFI",
+              "subtitle": "Learn about the token"
+            },
+            {
+              "title": "Decentralized Exchange",
+              "subtitle": "Trade, arbitrage and earn"
+            },
+            {
+              "title": "Wallets",
+              "subtitle": "Store assets in your own way"
+            },
+            {
+              "title": "Masternodes",
+              "subtitle": "Decide on the future of DeFiChain"
+            }
+          ]
+        },
+        {
+          "title": "BLOCK EXPLORERS",
+          "labels": [
+            {
+              "title": "DeFiScan"
+            },
+            {
+              "title": "Crypto ID"
+            }
+          ]
+        }
+      ],
+
+      "image": {
+        "title": "$DFI",
+        "subtitle": "Learn about the token and where to get"
+      }
+    },
+    "ecosystem": {
+      "info": [
+        {
+          "title": "DIVE INTO THE ECOSYSTEM",
+          "labels": [
+            {
+              "title": "DeFiChain Apps",
+              "subtitle": "See DeFiChain in action"
+            },
+            {
+              "title": "DeFi Meta Chain",
+              "subtitle": "Expand possibilities in DeFiChain"
+            },
+            {
+              "title": "Governance",
+              "subtitle": "For DeFiChain, By DeFiChain"
+            }
+          ]
+        },
+        {
+          "title": "GET INVOLVED WITH DEFICHAIN",
+          "labels": [
+            {
+              "title": "Bug Bounty"
+            },
+            {
+              "title": "$100M Accelerator Program"
+            }
+          ]
+        }
+      ],
+      "image": {
+        "subtitle": "Powered by the Security of Bitcoin & Flexibility of Ethereum"
+      }
+    },
+    "build": {
+      "title": "START BUILDING",
+      "labels": [
+        {
+          "title": "Jellyfish SDK",
+          "subtitle": "Build for modern DeFi Applications"
+        },
+        {
+          "title": "DeFiChain White Paper",
+          "subtitle": "Fundamentals of DeFiChain"
+        },
+        {
+          "title": "GitHub",
+          "subtitle": "Track recent developments"
+        },
+        {
+          "title": "Developer Resources",
+          "subtitle": "Start building on DeFiChain"
+        },
+        {
+          "title": "Media Assets",
+          "subtitle": "Brand resources of DeFiChain"
+        },
+        {
+          "title": "Security",
+          "subtitle": "Trustless and decentralized"
+        }
+      ]
+    },
+    "community": {
+      "info": [
+        {
+          "title": "STAY UPDATED",
+          "labels": [
+            {
+              "title": "DeFiChain Blog",
+              "subtitle": "Get the latest news"
+            }
+          ]
+        },
+        {
+          "title": "JOIN COMMUNITIES",
+          "labels": [
+            {
+              "title": "Reddit"
+            },
+            {
+              "title": "Twitter"
+            },
+            {
+              "title": "Facebook"
+            },
+            {
+              "title": "GitHub"
+            },
+            {
+              "title": "YouTube"
+            },
+            {
+              "title": "LinkedIn"
+            },
+            {
+              "title": "Discord"
+            },
+            {
+              "title": "CoinMarketCap"
+            },
+            {
+              "title": "Telegram (EN)"
+            },
+            {
+              "title": "Telegram (DE)"
+            },
+            {
+              "title": "Telegram (FR)"
+            },
+            {
+              "title": "Telegram (ES)"
+            },
+            {
+              "title": "Telegram (IT)"
+            },
+            {
+              "title": "Telegram (ID)"
+            },
+            {
+              "title": "Telegram (TR)"
+            },
+            {
+              "title": "Telegram (ZH)"
+            },
+            {
+              "title": "Telegram (RU)"
+            },
+            {
+              "title": "Telegram (PT)"
+            }
+          ]
+        }
+      ]
     }
   },
   "footer": {
-    "title": "Native Decentralized Finance for Bitcoin.",
     "sitemap": {
-      "foundation": "Foundation",
-      "dfi": "$DFI",
-      "dex": "DEX",
-      "developers": "Developers",
-      "ecosystem": "Ecosystem",
-      "downloads": "Downloads",
-      "media": "Media",
-      "learn": "Learn",
-      "security": "Security",
-      "bugbounty": "Bug Bounty",
-      "whitepaper": "White Paper",
-      "dfcblog": "Blog",
-      "language": "en",
-      "newsletter": "Newsletter"
+      "EXPLORE": {
+        "category": "EXPLORE",
+        "dfi": "$DFI",
+        "decentralizedExchange": "Decentralized Exchange",
+        "wallets": "Wallets",
+        "masternodes": "Masternodes"
+      },
+      "RESOURCES": {
+        "category": "RESOURCES",
+        "defiscan": "DeFiScan",
+        "defichainwhitepaper": "White paper"
+      },
+      "ECOSYSTEM": {
+        "category": "ECOSYSTEM",
+        "defichainapps": "DeFiChain Apps",
+        "defimetachain": "DeFi Meta Chain",
+        "defiscan": "DeFiScan",
+        "governance": "Governance",
+        "bugbounty": "Bug Bounty",
+        "100macceleratorprogram": "$100M Accelerator Program"
+      },
+      "BUILD": {
+        "category": "BUILD",
+        "jellyfishsdk": "Jellyfish SDK",
+        "defichainwhitepaper": "DeFiChain White Paper",
+        "github": "GitHub",
+        "developerResource": "Developer Resource",
+        "mediaAssets": "Media Assets",
+        "security": "Security"
+      },
+      "COMMUNITY": {
+        "category": "COMMUNITY",
+        "blog": "DeFiChain Blog",
+        "newsletter": "Newsletter"
+      }
     },
-    "social": {
-      "title": "Social",
-      "twitter": "Twitter",
-      "youtube": "YouTube",
-      "reddit": "Reddit",
-      "linkedin": "LinkedIn",
-      "facebook": "Facebook",
-      "discord": "Discord",
-      "github": "GitHub",
-      "coinMarketCap": "CoinMarketCap",
-      "telegram": "Telegram",
-      "merch": "Merch"
+    "bottomlink": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of use"
     }
+  },
+  "error": {
+    "title": "Page Not Found",
+    "subtitle": "Error 404",
+    "errorDesc": "The page you’re looking may have been moved, deleted or possibly never existed.",
+    "text": "Back to homepage"
   }
 }

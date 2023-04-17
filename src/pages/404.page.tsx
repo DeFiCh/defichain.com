@@ -1,13 +1,15 @@
-import { SSRConfig } from "next-i18next";
+import { SSRConfig, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { PageError } from "@components/commons/error/PageError";
 
 export default function NotFound(): JSX.Element {
+  const { t } = useTranslation("layout");
   return (
     <PageError
-      title="Page Not Found - DeFiChain"
-      errorDesc="404 - Page Not Found"
-      text="BACK HOME"
+      title={t("error.title")}
+      subtitle={t("error.subtitle")}
+      errorDesc={t("error.errorDesc")}
+      text={t("error.text")}
     />
   );
 }

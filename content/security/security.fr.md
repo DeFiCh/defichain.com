@@ -1,5 +1,6 @@
 ---
 title: Sécurité
+subtitle: Sécurité
 description: Audits de sécurité
 ---
 

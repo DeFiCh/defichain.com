@@ -11,8 +11,8 @@ dependencies:
     specifier: ^2.5.2
     version: 2.5.2(@prismicio/client@6.7.3)(react@18.2.0)
   '@waveshq/standard-defichain-jellyfishsdk':
-    specifier: ^0.49.0
-    version: 0.49.0(@types/tar-fs@2.0.1)
+    specifier: ^0.49.1
+    version: 0.49.1(@types/tar-fs@2.0.1)
   '@waveshq/standard-web':
     specifier: ^0.49.1
     version: 0.49.1(@babel/core@7.21.0)(@next/env@13.3.0)(redux@4.2.1)
@@ -2901,8 +2901,8 @@ packages:
     resolution: {integrity: sha512-haGBC8noyA5BfjCRXRH+VIkHCDVW5iD5UX24P2nOdilwUxI4qWsattS/co8QBGq64XsNLRAMdM5pQUE3zxkF9Q==}
     dev: true
 
-  /@waveshq/standard-defichain-jellyfishsdk@0.49.0(@types/tar-fs@2.0.1):
-    resolution: {integrity: sha512-RdUJl3hEA74JHFSexxSb6G7RNokku7BGm8GxKRAO+oxNW5ypRpL3KNaAcqVe70q1YwhzIb+3/kzeqwqCcsenuQ==}
+  /@waveshq/standard-defichain-jellyfishsdk@0.49.1(@types/tar-fs@2.0.1):
+    resolution: {integrity: sha512-t2YGJoTxPSK8SXQVeaI9PObrs+fRa9vNkkAPJocpAbaKav/k+CAlNKtCZLgxFnJY3kVNXJIfTib3OPVzp86d2Q==}
     dependencies:
       '@defichain/jellyfish-address': 3.30.1(defichain@3.30.1)
       '@defichain/jellyfish-api-core': 3.30.1(defichain@3.30.1)

@@ -1,6 +1,8 @@
 import { useUnitSuffix } from "@hooks/useUnitSuffix";
 import CountUp from "react-countup";
 import classNames from "classnames";
+import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 
 interface StatisticPanelItemProps {
   title: string;
@@ -22,7 +24,6 @@ export function StatisticPanel({
   displayStripCustomStyle?: string;
 }) {
   const isHorizontalInTablet = displayItem.length <= 2;
-
   return (
     <section
       id={displayId}
@@ -69,6 +70,8 @@ function StatisticsPanelItem({
   descStyle?: string;
   isTabletHorizontal?: boolean;
 }) {
+  const { t } = useTranslation("common");
+  const router = useRouter();
   const { suffix, value } = useUnitSuffix(
     stats === undefined ? "N/A" : stats.toString()
   );
@@ -104,7 +107,8 @@ function StatisticsPanelItem({
         >
           {stats ? (
             <>
-              {prefix ?? ""}
+              {prefix && router.locale === "en-US" ? prefix : ""}
+              {t("statisticsDisplay.prefix")}
               <CountUp
                 onUpdate={({ reset, start }) => {
                   reset();
@@ -114,7 +118,10 @@ function StatisticsPanelItem({
                 enableScrollSpy
                 duration={0.5}
               />
-              {suffix !== "" ? `${suffix}+` : `+`}
+              {suffix !== ""
+                ? `${t(`statisticsDisplay.suffix.${suffix}`)} `
+                : `+`}
+              {prefix && router.locale === "de" ? prefix : ""}
             </>
           ) : (
             <>N/A</>

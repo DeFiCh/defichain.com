@@ -88,7 +88,7 @@ viewports.forEach((viewport) => {
           .should("be.visible")
           .and("have.text", "TVL IN USD");
       } else if (viewport === "macbook-16") {
-        cy.findByTestId("startExploring-button").click({ force: true }); // covered by another element
+        cy.findByTestId("start-exploring-button").click({ force: true }); // covered by another element
         cy.url().should("include", "/#statistics_display");
         cy.findByTestId("statistic-title-tvl-locked")
           .should("be.visible")

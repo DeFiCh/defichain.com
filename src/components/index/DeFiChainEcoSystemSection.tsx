@@ -36,6 +36,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
           <SectionTitle
             text={t("EcosystemSection.label")}
             customStyle="lg:w-fit md:w-[409px] w-[272px]"
+            testID="jumpstart-defichain-ecosystem"
           />
           <h2 className="block lg:text-6xl text-[40px] leading-[44px] max-w-[560px] pt-[20px] lg:leading-[72px]">
             <span>

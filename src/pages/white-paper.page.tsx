@@ -57,7 +57,10 @@ export default function WhitePaperPage({ post }): JSX.Element {
                 "flex flex-col gap-y-5 w-full lg:w-[812px]"
               )}
             >
-              <SectionTitle text={post.title} />
+              <SectionTitle
+                text={post.title}
+                testID="white-paper-documentation"
+              />
               <SectionSubTitle text={post.subtitle} />
             </div>
           </div>

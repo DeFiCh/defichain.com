@@ -25,6 +25,7 @@ export function ReadyForFlexibility() {
           <SectionTitle
             text={t("ReadyForFlexibilitySection.label")}
             customStyle="lg:w-fit md:w-[409px] w-[272px]"
+            testID="whats-next-for-defichain"
           />
 
           <h2 className="mt-5 text-6xl text-[40px] tracking-normal leading-11 md:tracking-[-0.02em]">

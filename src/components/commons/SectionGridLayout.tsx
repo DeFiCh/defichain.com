@@ -42,7 +42,11 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
             data-testid="masternodesBenefits.text"
           >
             {sectionTitle !== undefined && (
-              <SectionTitle text={sectionTitle} customStyle="w-fit mb-5" />
+              <SectionTitle
+                text={sectionTitle}
+                customStyle="w-fit mb-5"
+                testID={testID}
+              />
             )}
             <h2
               className="text-[40px] mb-5 leading-[44px] tracking-[-0.02em] lg:text-6xl lg:leading-[72px] lg:tracking-normal"

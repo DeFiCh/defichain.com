@@ -7,7 +7,7 @@ export function SectionTitle({
 }: {
   text: string;
   customStyle?: string;
-  testID?: string; // TODO (@chloe) change to compulsary testID
+  testID: string;
 }) {
   return (
     <h3

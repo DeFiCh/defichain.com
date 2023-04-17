@@ -14,7 +14,10 @@ export function ForDailyUseSection() {
         className="flex flex-col gap-y-5 lg:scroll-mt-[200px] scroll-mt-[150px]"
       >
         <div className="flex md:justify-center justify-start">
-          <SectionTitle text={t("dailyUseSection.sectionTitle")} />
+          <SectionTitle
+            text={t("dailyUseSection.sectionTitle")}
+            testID="for-daily-use"
+          />
         </div>
 
         <h2

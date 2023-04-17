@@ -18,7 +18,10 @@ export function InitialTokenDistributionSection() {
     <Container className="mb-[96px] md:mb-[108px] lg:mb-60">
       <section className="flex flex-col">
         <div className="flex flex-col gap-y-5">
-          <SectionTitle text={t("initialTokenDistributionSection.title")} />
+          <SectionTitle
+            text={t("initialTokenDistributionSection.title")}
+            testID="transparent-distribution"
+          />
           <h2
             className={classNames(
               "tracking-[-0.02em] text-[40px] leading-[44px] text-dark-1000"

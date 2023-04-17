@@ -16,6 +16,7 @@ export function BlogPostsSection({ blogPosts }: { blogPosts: Posts[] }) {
             <SectionTitle
               text={t("BlogPostsSection.label")}
               customStyle="lg:w-fit md:w-[409px] w-[272px]"
+              testID="defichain-blog"
             />
             <h2 className="mt-5 text-[32px] leading-9 whitespace-pre-line lg:text-[52px] lg:leading-none pb-[48px]">
               {t("BlogPostsSection.title")}
@@ -26,6 +27,7 @@ export function BlogPostsSection({ blogPosts }: { blogPosts: Posts[] }) {
               href="https://blog.defichain.com/"
               customSize={24}
               customClass="ml-[8px]"
+              testID="view-all-articles"
             />
           </div>
           <div className="flex flex-wrap gap-x-6 gap-y-6 md:gap-y-12 mt-12 lg:mt-0 lg:w-[660px]">

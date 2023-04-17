@@ -45,7 +45,10 @@ export default function PrivacyPolicyPage({ post }): JSX.Element {
                 "flex flex-col gap-y-5 w-full lg:w-[812px]"
               )}
             >
-              <SectionTitle text={t("Header.sectionTitle")} />
+              <SectionTitle
+                text={t("Header.sectionTitle")}
+                testID="privacy-policy-protecting"
+              />
               <SectionSubTitle text={t("Header.subtitle")} />
               <SectionDescription
                 text={t("Header.desc")}

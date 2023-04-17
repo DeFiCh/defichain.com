@@ -58,7 +58,10 @@ export default function HarnessDFISection() {
     <Container className="lg:mb-[303px] md:mb-[180px] mb-24 relative z-[10]">
       <section className="flex flex-col w-full mx-auto gap-y-5">
         <div className="flex md:justify-center justify-start">
-          <SectionTitle text={t("harnessDFISection.title")} />
+          <SectionTitle
+            text={t("harnessDFISection.title")}
+            testID="building-better-tomorrow"
+          />
         </div>
 
         <h2

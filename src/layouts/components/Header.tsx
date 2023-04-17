@@ -248,11 +248,11 @@ function DesktopMenu({ item }: { item: string }) {
           setIsShowing(!isShowing);
         }}
         className={classNames(
-          isSafariBelow164() && isHoverOn && isShowing
-            ? "text-brand-100"
-            : (isSafariBelow164() && "text-dark-700") || "",
+          { "text-dark-700": isSafariBelow164() },
           {
-            "!text-brand-100": isShowing && !isCursorOnHeader,
+            "!text-brand-100":
+              (isShowing && !isCursorOnHeader) ||
+              (isSafariBelow164() && isHoverOn && isShowing),
           },
           {
             "!text-brand-100":

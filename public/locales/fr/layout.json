@@ -201,6 +201,11 @@
         "wallets": "Portefeuilles",
         "masternodes": "Masternodes"
       },
+      "RESOURCES": {
+        "category": "RESSOURCES",
+        "defiscan": "DeFiScan",
+        "defichainwhitepaper": "Livre blanc"
+      },
       "ECOSYSTEM": {
         "category": "ECOSYSTÈME",
         "defichainapps": "Applications DeFiChain",

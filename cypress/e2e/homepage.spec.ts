@@ -88,7 +88,9 @@ viewports.forEach((viewport) => {
           .should("be.visible")
           .and("have.text", "TVL IN USD");
       } else if (viewport === "macbook-16") {
-        cy.findByTestId("start-exploring-button").click({ force: true }); // covered by another element
+        cy.findByTestId("start-exploring-button").click({
+          scrollBehavior: false,
+        });
         cy.url().should("include", "/#statistics_display");
         cy.findByTestId("statistic-title-tvl-locked")
           .should("be.visible")
@@ -169,9 +171,10 @@ viewports.forEach((viewport) => {
       textAreas.forEach((area) => {
         features.forEach((feature) => {
           if (viewport === "iphone-xr" && feature === "DEVELOPMENT") {
+            cy.get("ul.blockchain-features-dots").scrollIntoView();
             cy.get("ul.blockchain-features-dots > li > button")
               .last()
-              .click({ force: true }); // covered by div.mx-6 md:mx-12 xl:mx-[120px]
+              .click({ scrollBehavior: false });
           }
           cy.findAllByTestId(`highlights-${feature}-${area}`).should(
             "be.visible"

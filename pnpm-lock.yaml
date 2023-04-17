@@ -11,11 +11,11 @@ dependencies:
     specifier: ^2.5.2
     version: 2.5.2(@prismicio/client@6.7.3)(react@18.2.0)
   '@waveshq/standard-defichain-jellyfishsdk':
-    specifier: ^0.49.0
-    version: 0.49.0(@types/tar-fs@2.0.1)
+    specifier: ^0.49.1
+    version: 0.49.1(@types/tar-fs@2.0.1)
   '@waveshq/standard-web':
-    specifier: ^0.49.0
-    version: 0.49.0(@babel/core@7.21.0)(@next/env@13.3.0)(redux@4.2.1)
+    specifier: ^0.49.1
+    version: 0.49.1(@babel/core@7.21.0)(@next/env@13.3.0)(redux@4.2.1)
   bignumber.js:
     specifier: ^9.1.0
     version: 9.1.1
@@ -88,8 +88,8 @@ devDependencies:
     specifier: ^18.0.34
     version: 18.0.34
   '@waveshq/standard-web-linter':
-    specifier: ^0.49.0
-    version: 0.49.0(@babel/core@7.21.0)(@typescript-eslint/eslint-plugin@5.54.1)(@typescript-eslint/parser@5.54.1)(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^0.49.1
+    version: 0.49.1(@babel/core@7.21.0)(@typescript-eslint/eslint-plugin@5.54.1)(@typescript-eslint/parser@5.54.1)(react-dom@18.2.0)(react@18.2.0)
   autoprefixer:
     specifier: ^10.4.14
     version: 10.4.14(postcss@8.4.21)
@@ -2458,7 +2458,7 @@ packages:
     dependencies:
       immer: 9.0.19
       react: 18.2.0
-      react-redux: 8.0.5(@types/react-dom@18.0.11)(@types/react@18.0.33)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1)
+      react-redux: 8.0.5(@types/react-dom@18.0.11)(@types/react@18.0.35)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1)
       redux: 4.2.1
       redux-thunk: 2.4.2(redux@4.2.1)
       reselect: 4.1.7
@@ -2614,7 +2614,7 @@ packages:
   /@types/hoist-non-react-statics@3.3.1:
     resolution: {integrity: sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==}
     dependencies:
-      '@types/react': 18.0.34
+      '@types/react': 18.0.35
       hoist-non-react-statics: 3.3.2
     dev: false
 
@@ -2680,15 +2680,7 @@ packages:
   /@types/react-dom@18.0.11:
     resolution: {integrity: sha512-O38bPbI2CWtgw/OoQoY+BRelw7uysmXbWvw3nLWO21H1HSh+GOlqPuXshJfjmpNlKiiSDG9cc1JZAaMmVdcTlw==}
     dependencies:
-      '@types/react': 18.0.34
-    dev: false
-
-  /@types/react@18.0.33:
-    resolution: {integrity: sha512-sHxzVxeanvQyQ1lr8NSHaj0kDzcNiGpILEVt69g9S31/7PfMvNCKLKcsHw4lYKjs3cGNJjXSP4mYzX43QlnjNA==}
-    dependencies:
-      '@types/prop-types': 15.7.5
-      '@types/scheduler': 0.16.2
-      csstype: 3.1.1
+      '@types/react': 18.0.35
     dev: false
 
   /@types/react@18.0.34:
@@ -2697,6 +2689,14 @@ packages:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
       csstype: 3.1.1
+
+  /@types/react@18.0.35:
+    resolution: {integrity: sha512-6Laome31HpetaIUGFWl1VQ3mdSImwxtFZ39rh059a1MNnKGqBpC88J6NJ8n/Is3Qx7CefDGLgf/KhN/sYCf7ag==}
+    dependencies:
+      '@types/prop-types': 15.7.5
+      '@types/scheduler': 0.16.2
+      csstype: 3.1.1
+    dev: false
 
   /@types/scheduler@0.16.2:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
@@ -2901,8 +2901,8 @@ packages:
     resolution: {integrity: sha512-haGBC8noyA5BfjCRXRH+VIkHCDVW5iD5UX24P2nOdilwUxI4qWsattS/co8QBGq64XsNLRAMdM5pQUE3zxkF9Q==}
     dev: true
 
-  /@waveshq/standard-defichain-jellyfishsdk@0.49.0(@types/tar-fs@2.0.1):
-    resolution: {integrity: sha512-RdUJl3hEA74JHFSexxSb6G7RNokku7BGm8GxKRAO+oxNW5ypRpL3KNaAcqVe70q1YwhzIb+3/kzeqwqCcsenuQ==}
+  /@waveshq/standard-defichain-jellyfishsdk@0.49.1(@types/tar-fs@2.0.1):
+    resolution: {integrity: sha512-t2YGJoTxPSK8SXQVeaI9PObrs+fRa9vNkkAPJocpAbaKav/k+CAlNKtCZLgxFnJY3kVNXJIfTib3OPVzp86d2Q==}
     dependencies:
       '@defichain/jellyfish-address': 3.30.1(defichain@3.30.1)
       '@defichain/jellyfish-api-core': 3.30.1(defichain@3.30.1)
@@ -2924,8 +2924,8 @@ packages:
       - supports-color
     dev: false
 
-  /@waveshq/standard-web-linter@0.49.0(@babel/core@7.21.0)(@typescript-eslint/eslint-plugin@5.54.1)(@typescript-eslint/parser@5.54.1)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-ANVHDW/rU7eqjYn5I+F5wVvN+J3FDpEMSm0/3IfLcP4Ew7jitcAodMND3Laba/X2eLtY2MASH7E4PIPLI3xNrw==}
+  /@waveshq/standard-web-linter@0.49.1(@babel/core@7.21.0)(@typescript-eslint/eslint-plugin@5.54.1)(@typescript-eslint/parser@5.54.1)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-il/W8JP2wMPEbCVwuplh/rf5gVIuMWzDMXct2KrrHYrvDXRSO12lJCn63+fxhu7VEwYYdEcB+IOcQ83CcgdU3Q==}
     dependencies:
       eslint: 8.38.0
       eslint-config-airbnb: 19.0.4(eslint-plugin-import@2.27.5)(eslint-plugin-jsx-a11y@6.7.1)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react@7.32.2)(eslint@8.38.0)
@@ -2962,12 +2962,12 @@ packages:
       - supports-color
     dev: true
 
-  /@waveshq/standard-web@0.49.0(@babel/core@7.21.0)(@next/env@13.3.0)(redux@4.2.1):
-    resolution: {integrity: sha512-cEUfr3O1YRrejYbILHzQl6JeDRe2zA1MYdcANEOAMLYhRz+PiEY3JiHonvTxg81AlXUnM2/DUJOoqiS+oXy/kg==}
+  /@waveshq/standard-web@0.49.1(@babel/core@7.21.0)(@next/env@13.3.0)(redux@4.2.1):
+    resolution: {integrity: sha512-3flkQELF4mmJ1w0DJRoi9XHjfa6ivDXD0jXq+5kSdU6kdOnNWugvwyJsd50xuPBV0U7fmVYXr0FgOW803ymyuQ==}
     dependencies:
       '@netlify/ipx': 1.4.0
       '@reduxjs/toolkit': 1.9.3(react-redux@8.0.5)(react@18.2.0)
-      '@types/react': 18.0.33
+      '@types/react': 18.0.35
       '@types/react-dom': 18.0.11
       follow-redirects: 1.15.2
       next: 13.3.0(@babel/core@7.21.0)(react-dom@18.2.0)(react@18.2.0)
@@ -2976,7 +2976,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-icons: 4.8.0(react@18.2.0)
-      react-redux: 8.0.5(@types/react-dom@18.0.11)(@types/react@18.0.33)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1)
+      react-redux: 8.0.5(@types/react-dom@18.0.11)(@types/react@18.0.35)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1)
       react-responsive: 9.0.2(react@18.2.0)
       typescript: 4.9.5
     transitivePeerDependencies:
@@ -7935,7 +7935,7 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /react-redux@8.0.5(@types/react-dom@18.0.11)(@types/react@18.0.33)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1):
+  /react-redux@8.0.5(@types/react-dom@18.0.11)(@types/react@18.0.35)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1):
     resolution: {integrity: sha512-Q2f6fCKxPFpkXt1qNRZdEDLlScsDWyrgSj0mliK59qU6W5gvBiKkdMEG2lJzhd1rCctf0hb6EtePPLZ2e0m1uw==}
     peerDependencies:
       '@types/react': ^16.8 || ^17.0 || ^18.0
@@ -7958,7 +7958,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.21.0
       '@types/hoist-non-react-statics': 3.3.1
-      '@types/react': 18.0.33
+      '@types/react': 18.0.35
       '@types/react-dom': 18.0.11
       '@types/use-sync-external-store': 0.0.3
       hoist-non-react-statics: 3.3.2

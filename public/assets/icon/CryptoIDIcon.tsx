@@ -32,10 +32,11 @@ export function CryptoIDIcon({
           />
         </pattern>
         <image
+          key={hover ? "hover" : "normal"}
           id="image0_2769_200556"
           width="420"
           height="96"
-          xlinkHref={hover ? cryptoIDHoverIcon : cryptoIDIcon}
+          href={hover ? cryptoIDHoverIcon : cryptoIDIcon}
         />
       </defs>
     </svg>

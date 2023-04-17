@@ -249,8 +249,11 @@ function DesktopMenu({ item }: { item: string }) {
           setIsShowing(!isShowing);
         }}
         className={classNames(
+          { "text-dark-700": isSafariBelow164() },
           {
-            "text-brand-100": isShowing && !isCursorOnHeader,
+            "!text-brand-100":
+              (isShowing && !isCursorOnHeader) ||
+              (isSafariBelow164() && isHoverOn && isShowing),
           },
           {
             "!text-brand-100":
@@ -428,7 +431,7 @@ function TabletMobileDropDown({
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        <div className="md:pb-9 py-4 mb-4 ">{children}</div>
+        <div className="md:pb-9 py-4 mb-4">{children}</div>
       </Transition>
     </div>
   );
@@ -470,3 +473,11 @@ const dropDownMapping = {
   build: Build,
   community: Community,
 };
+
+function isSafariBelow164() {
+  const { userAgent } = navigator;
+  const isSafari =
+    userAgent.indexOf("Safari") !== -1 && userAgent.indexOf("Chrome") === -1;
+  const version = isSafari ? parseFloat(userAgent.split("Version/")[1]) : 0;
+  return isSafari && version < 16.4;
+}

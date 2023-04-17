@@ -33,7 +33,7 @@ export function LanguageDropdown(): JSX.Element {
   return (
     <div
       className="relative lg:p-0 hover:accent-gradient-1 rounded-[10px]"
-      data-testid="SiteLangDropdown"
+      data-testid="site-lang-dropdown"
     >
       <div className="p-[0.5px]">
         <Listbox value={selectedLanguage} onChange={setSelectedLanguage}>

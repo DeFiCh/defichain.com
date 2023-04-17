@@ -130,10 +130,10 @@ function StatisticsPanelItem({
 
 function getLocaledStatisticValue(
   t: any,
-  prefix: string,
-  value: string,
-  suffix: string,
-  locale: string | undefined
+  locale?: string,
+  prefix?: string,
+  value?: string,
+  suffix?: string
 ) {
   switch (locale) {
     case "de":

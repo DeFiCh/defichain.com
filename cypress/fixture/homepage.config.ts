@@ -2,28 +2,28 @@
 export const ecosystemLinks = [
   {
     title: "All about $DFI",
-    testid: "$DFI",
+    testid: "all-about-dfi",
     footerTestid: "$DFI",
     headerTestid: "dfi",
     link: "/explore/dfi",
   },
   {
     title: "Trade with DEX",
-    testid: "DEX",
+    testid: "trade-with-dex",
     footerTestid: "Decentralized Exchange",
     headerTestid: "dex",
     link: "/explore/dex",
   },
   {
     title: "Wallets for DeFiChain",
-    testid: "DeFiChain",
+    testid: "wallets-for-defichain",
     footerTestid: "Wallets",
     headerTestid: "wallets",
     link: "/explore/wallets",
   },
   {
     title: "Governance: \nOwn a Masternode",
-    testid: "Masternode",
+    testid: "governance-own-masternode",
     footerTestid: "Masternodes",
     headerTestid: "masternodes",
     link: "/explore/masternodes",

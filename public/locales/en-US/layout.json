@@ -237,5 +237,11 @@
       "privacy": "Privacy Policy",
       "terms": "Terms of use"
     }
+  },
+  "error": {
+    "title": "Page Not Found",
+    "subtitle": "Error 404",
+    "errorDesc": "The page you’re looking may have been moved, deleted or possibly never existed.",
+    "text": "Back to homepage"
   }
 }

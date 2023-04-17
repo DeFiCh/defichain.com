@@ -73,7 +73,6 @@ export function Build() {
         {MenuItems.dropDownItems.items.map((item, key) => (
           <HeaderNavLinkItem
             target={item.target}
-            haveIcon={item.title === "GitHub"}
             key={key}
             hoverState={hoverState}
             setHoverState={setHoverState}

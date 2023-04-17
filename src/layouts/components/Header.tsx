@@ -286,7 +286,7 @@ function DesktopMenu({ item }: { item: string }) {
             enterTo="opacity-100"
             leave="transition ease duration-200 transform"
             leaveFrom="opacity-100"
-            leaveTo="opacity-0 "
+            leaveTo="opacity-0"
           >
             <Menu.Items as="div" data-testid="Desktop.HeaderLink.More.Items">
               <Container className="pt-[48.77px] pb-16">
@@ -443,7 +443,7 @@ function ComingSoonTag() {
     <div
       className={classNames(
         "bg-dark-200 rounded-[10px] lg:py-0.5 py-[6px] px-2",
-        "font-bold text-dark-1000 text-[10px] leading-3 tracking-[0.08em] font-bold",
+        "font-bold text-dark-1000 text-[10px] leading-3 tracking-[0.08em]",
         "lg:mr-0 mr-1"
       )}
       data-testid="header-coming-soon-tag"

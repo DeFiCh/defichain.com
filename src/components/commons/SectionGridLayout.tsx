@@ -13,6 +13,7 @@ interface SectionGridLayoutProps {
   href?: string;
   children;
   target?: HTMLAttributeAnchorTarget;
+  testID: string;
 }
 
 export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
@@ -26,6 +27,7 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
     href,
     children,
     target,
+    testID,
   } = props;
 
   return (
@@ -60,6 +62,7 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
                 text={buttonText}
                 href={href}
                 target={target}
+                testID={testID}
               />
             )}
             {isSecondaryButton === true && href !== undefined && (
@@ -67,6 +70,7 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
                 className="text-sm py-3 lg:py-4 px-14 w-full md:w-fit lg:text-base"
                 text={buttonText}
                 href={href}
+                testID={testID}
               />
             )}
           </div>

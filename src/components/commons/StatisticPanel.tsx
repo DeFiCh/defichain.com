@@ -10,6 +10,7 @@ interface StatisticPanelItemProps {
   descStyle?: string;
   displayId?: string;
   displayStripCustomStyle?: string;
+  testID: string;
 }
 
 export function StatisticPanel({
@@ -46,6 +47,7 @@ export function StatisticPanel({
               prefix={item.prefix}
               descStyle={item.descStyle}
               isTabletHorizontal={isHorizontalInTablet}
+              testID={item.testID}
             />
           ))}
         </div>
@@ -60,6 +62,7 @@ function StatisticsPanelItem({
   desc,
   prefix,
   descStyle,
+  testID,
   isTabletHorizontal = false,
 }: {
   title: string;
@@ -68,6 +71,7 @@ function StatisticsPanelItem({
   prefix?: string;
   descStyle?: string;
   isTabletHorizontal?: boolean;
+  testID: string;
 }) {
   const { suffix, value } = useUnitSuffix(
     stats === undefined ? "N/A" : stats.toString()
@@ -85,7 +89,7 @@ function StatisticsPanelItem({
           "lg:w-full md:w-[316px] w-[135px] lg:text-center bg-clip-text text-transparent accent-gradient-2 font-bold leading-5",
           { "md:w-full md:text-center": isTabletHorizontal }
         )}
-        data-testid={`statistic-title-${title}`}
+        data-testid={`statistic-title-${testID}`}
       >
         {title}
       </div>

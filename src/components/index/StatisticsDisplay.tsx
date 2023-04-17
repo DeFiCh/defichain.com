@@ -50,6 +50,7 @@ export function StatsDisplay() {
           : t("StatisticsSection.dfiMinted.desc", {
               perc: calculatePercentage(supply.total, supply.max),
             }),
+      testID: "dfi-minted",
     },
     {
       title:
@@ -63,6 +64,7 @@ export function StatsDisplay() {
           ? stats?.tvl.total
           : t("StatisticsSection.tvlLocked.desc"),
       descStyle: "lg:block hidden",
+      testID: "tvl-locked",
     },
     {
       title: t("StatisticsSection.masternodes.title"),
@@ -73,6 +75,7 @@ export function StatsDisplay() {
           : t("StatisticsSection.masternodes.desc", {
               perc: masternodeValue,
             }),
+      testID: "masternodes",
     },
   ];
 

@@ -52,6 +52,7 @@ export function HeroBanner({
             className="lg:py-4 py-3 md:w-1/2 w-auto lg:text-base text-sm md:mt-7 mt-10"
             text={ctaButtonText}
             href={ctaButtonLink}
+            testID="hero-banner-cta-button"
           />
         )}
       </div>

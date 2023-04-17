@@ -46,6 +46,7 @@ export function ReadyForFlexibility() {
             href="https://meta.defichain.com/"
             customSize={24}
             customClass="ml-[8px]"
+            testID="explore-dmc"
           />
         </div>
         <div

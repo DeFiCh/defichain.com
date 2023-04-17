@@ -32,7 +32,7 @@ export default function BugBountyPage(): JSX.Element {
           </div>
           <div className="flex flex-wrap mt-14 items-center">
             <a className="contents" href="#submission">
-              <Button text={t("Header.submit")} />
+              <Button text={t("Header.submit")} testID="bug-bounty-btn" />
             </a>
           </div>
         </div>

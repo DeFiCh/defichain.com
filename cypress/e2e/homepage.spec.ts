@@ -98,11 +98,13 @@ viewports.forEach((viewport) => {
     });
 
     // No TC
-    it("should have clickable Explore DeFi Meta Chain button", () => {
+    it.only("should have clickable Explore DeFi Meta Chain button", () => {
       cy.findByTestId("explore-dmc-button-Explore DeFi Meta Chain")
         .should("be.visible")
         .and("have.attr", "href")
-        .and("include", "https://meta.defichain.com");
+        .and("include", "https://meta.defichain.com")
+        .and("have.attr", "target")
+        .and("include", "_blank");
     });
 
     // No TC
@@ -214,6 +216,16 @@ viewports.forEach((viewport) => {
       cy.findAllByTestId("socialsRow-Twitter")
         .should("be.visible")
         .should("have.attr", "href", "https://twitter.com/defichain");
+    });
+
+    it("should have Privacy policy link", () => {
+      cy.findAllByTestId("footer-web-privacy")
+        .should("be.visible")
+        .should("have.attr", "href", "/privacy-policy");
+    });
+
+    it("should have Language dropdown", () => {
+      cy.findAllByTestId("site-lang-dropdown").should("be.visible");
     });
   });
 });

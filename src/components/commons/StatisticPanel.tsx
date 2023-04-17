@@ -79,7 +79,6 @@ function StatisticsPanelItem({
     stats === undefined ? "N/A" : stats.toString()
   );
 
-  console.log(router.locale);
   return (
     <article
       className={classNames(
@@ -151,42 +150,26 @@ function getLocaledStatisticValue(t, locale, prefix, value, suffix) {
         </>
       );
 
-    case "en-US":
-      return (
-        <>
-          {prefix ?? ""}
-          <CountUp
-            onUpdate={({ reset, start }) => {
-              reset();
-              start();
-            }}
-            end={Number(value)}
-            enableScrollSpy
-            duration={0.5}
-          />
-          {suffix !== "" ? `${t(`statisticsDisplay.suffix.${suffix}`)} ` : `+`}
-        </>
-      );
-
-    case "fr":
-      return (
-        <>
-          <CountUp
-            onUpdate={({ reset, start }) => {
-              reset();
-              start();
-            }}
-            end={Number(value)}
-            enableScrollSpy
-            duration={0.5}
-          />
-          {suffix !== ""
-            ? ` ${t(`statisticsDisplay.suffix.${suffix}`)} ${
-                prefix ? " de $" : ""
-              } ou plus`
-            : `+`}
-        </>
-      );
+    // commented out for further discussions
+    // case "fr":
+    //   return (
+    //     <>
+    //       <CountUp
+    //         onUpdate={({ reset, start }) => {
+    //           reset();
+    //           start();
+    //         }}
+    //         end={Number(value)}
+    //         enableScrollSpy
+    //         duration={0.5}
+    //       />
+    //       {suffix !== ""
+    //         ? ` ${t(`statisticsDisplay.suffix.${suffix}`)} ${
+    //             prefix ? " de $" : ""
+    //           } ou plus`
+    //         : `+`}
+    //     </>
+    //   );
 
     default:
       return (

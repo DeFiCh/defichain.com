@@ -7,11 +7,11 @@
     "button": "Beginne mit der Erkundung"
   },
   "statisticsDisplay": {
-    "prefix": "Über ",
+    "prefix": "Über",
     "suffix": {
-      "B+": " Mrd.",
-      "M+": " Mio.",
-      "K+": " Tsd."
+      "B+": "Mrd.",
+      "M+": "Mio.",
+      "K+": "Tsd."
     }
   }
 }

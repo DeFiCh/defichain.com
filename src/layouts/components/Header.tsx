@@ -248,8 +248,11 @@ function DesktopMenu({ item }: { item: string }) {
           setIsShowing(!isShowing);
         }}
         className={classNames(
+          { "text-dark-700": isSafariBelow164() },
           {
-            "text-brand-100": isShowing && !isCursorOnHeader,
+            "!text-brand-100":
+              (isShowing && !isCursorOnHeader) ||
+              (isSafariBelow164() && isHoverOn && isShowing),
           },
           {
             "!text-brand-100":
@@ -463,3 +466,11 @@ const dropDownMapping = {
   build: Build,
   community: Community,
 };
+
+function isSafariBelow164() {
+  const { userAgent } = navigator;
+  const isSafari =
+    userAgent.indexOf("Safari") !== -1 && userAgent.indexOf("Chrome") === -1;
+  const version = isSafari ? parseFloat(userAgent.split("Version/")[1]) : 0;
+  return isSafari && version < 16.4;
+}

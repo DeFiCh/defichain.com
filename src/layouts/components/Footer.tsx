@@ -267,7 +267,7 @@ export default function Footer(): JSX.Element {
                   <FooterInternalBottomLink
                     text={t("footer.bottomlink.privacy")}
                     pathname="/privacy-policy"
-                    testId="Footer.Mobile.Privacy"
+                    testId="footer-mobile-privacy"
                   />
                   {/* <span className="px-2">•</span>
                 <FooterInternalBottomLink
@@ -290,7 +290,7 @@ export default function Footer(): JSX.Element {
                   <FooterInternalBottomLink
                     text={t("footer.bottomlink.privacy")}
                     pathname="/privacy-policy"
-                    testId="Footer.Web.Privacy"
+                    testId="footer-web-privacy"
                   />
                   {/* <span className="px-2 text-dark-500">•</span>
                   <FooterInternalBottomLink

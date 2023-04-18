@@ -10,12 +10,14 @@ export function ExploreCards({
   bgImage,
   customSize,
   href,
+  testID,
 }: {
   title: string;
   desc: string;
   bgImage: ExploreCardsImage;
   customSize?: string;
   href: string;
+  testID: string;
 }) {
   const dimension = useWindowDimensions();
   const mobileView = dimension.width <= 800;
@@ -83,7 +85,7 @@ export function ExploreCards({
         )}
       >
         <div className="flex flex-col mt-auto">
-          <SectionTitle text={title} />
+          <SectionTitle text={title} testID={testID} />
           <div
             className={classNames(
               "text-light-00 inline mt-2",

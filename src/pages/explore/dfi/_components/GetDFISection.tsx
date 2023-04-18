@@ -73,7 +73,7 @@ export default function GetDFISection() {
         id="get-dfi"
         className="lg:w-[45%] flex flex-col gap-5 shrink-0 lg:scroll-mt-[200px] scroll-mt-[150px]"
       >
-        <SectionTitle text={t("getDfiSection.title")} />
+        <SectionTitle text={t("getDfiSection.title")} testID="purchase-dfi" />
         <h2
           className={classNames(
             "text-[40px] leading-[44px] tracking-[-0.02em]",

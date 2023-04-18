@@ -42,12 +42,14 @@ export function MasternodesStatisticsDisplay() {
           : t("statisticsDisplay.masternodes.desc", {
               value: masternodeValue,
             }),
+      testID: "masternodes",
     },
     {
       title: t("statisticsDisplay.tvl.title"),
       prefix: "$",
       stats: stats?.tvl.masternodes,
       desc: t("statisticsDisplay.tvl.desc"),
+      testID: "tvl",
     },
   ];
   return (

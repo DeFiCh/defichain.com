@@ -14,7 +14,12 @@ export default function ProjectCard({
       className="w-full max-w-[318px] flex flex-col"
       data-testid={`card_container_${post.title[0]?.text}`}
     >
-      <a href={post.url?.url} target="_blank" rel="noreferrer">
+      <a
+        data-testid="blog-post-container-link"
+        href={post.url?.url}
+        target="_blank"
+        rel="noreferrer"
+      >
         <section
           className="w-full min-h-[180px] bg-light-50 bg-cover bg-center flex flex-col justify-end"
           data-testid={`card_title_${post.title[0]?.text}`}

@@ -50,12 +50,15 @@ export function BlockchainFeaturesSection(): JSX.Element {
         <div className="flex lg:w-[504px]">
           <div
             className="w-full flex flex-col space-y-5 md:space-y-5 lg:mt-32 lg:space-y-5"
-            data-testid="BlockchainFeatureSection.text"
+            data-testid="blockchain-feature-section-text"
           >
-            <SectionTitle text={t("BlockchainFeatureSection.subtitle")} />
+            <SectionTitle
+              text={t("BlockchainFeatureSection.subtitle")}
+              testID="non-turing-complete-blockchain"
+            />
             <h2
               className="text-[40px] leading-[44px] tracking-[-0.02em] lg:text-6xl lg:leading-[72px] lg:tracking-normal"
-              data-testid="title"
+              data-testid={`section-header-${separatedTitle}`}
             >
               {separatedTitle.map((word, index) =>
                 index === 2 ? (
@@ -73,7 +76,7 @@ export function BlockchainFeaturesSection(): JSX.Element {
             </h2>
             <div
               className="text-dark-700 tracking-[.03em] lg:text-xl lg:tracking-normal font-desc"
-              data-testid="desc"
+              data-testid={`section-desc-${separatedTitle}`}
             >
               {t("BlockchainFeatureSection.desc")}
             </div>

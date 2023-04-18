@@ -16,6 +16,7 @@ export function YearAheadRoadMapSection(): JSX.Element {
         <SectionTitle
           text={t("YearAheadRoadMapSection.label")}
           customStyle="w-fit"
+          testID="road-ahead"
         />
         <div className="lg:text-[52px] lg:leading-[52px] text-[32px] leading-[36px] text-dark-1000 pt-5 pb-6">
           {t("YearAheadRoadMapSection.title")}

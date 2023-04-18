@@ -23,6 +23,7 @@ export default function ExploreWallets() {
         heroBg={HeroBannerBg.COIN_ARROW}
         hasStartExploringButton
         startExploringJumpLink="#explore-wallets-daily-use-section"
+        testID="explore-wallets-defichain-wallets"
       />
       <ForDailyUseSection />
       <AdvanceUsageSection />

@@ -35,7 +35,10 @@ export default function TechnicalGuide() {
                 "flex flex-col gap-y-5 w-full lg:w-[812px]"
               )}
             >
-              <SectionTitle text={t("technicalGuide.title")} />
+              <SectionTitle
+                text={t("technicalGuide.title")}
+                testID="own-a-masternode"
+              />
               <SectionSubTitle text={t("technicalGuide.subtitle")} />
               <SectionDescription
                 text={t("technicalGuide.desc")}

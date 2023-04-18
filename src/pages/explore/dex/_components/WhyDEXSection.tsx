@@ -37,6 +37,7 @@ export function WhyDEXSection(): JSX.Element {
       buttonText={t("whyDEX.button")}
       isSecondaryButton
       href="https://defiscan.live/dex"
+      testID="explore-dex"
     >
       <div className="relative">
         <SvgIconsColumn

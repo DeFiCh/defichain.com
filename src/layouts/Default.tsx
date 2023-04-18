@@ -9,6 +9,7 @@ import { Header } from "./components/Header";
 import { WhaleProvider } from "./context/WhaleContext";
 
 const title = "DeFiChain";
+const linkTitle = "DeFiChain - Connecting old and new worlds";
 const description =
   "A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone.";
 
@@ -48,7 +49,7 @@ export function Default(props: PropsWithChildren<any>): JSX.Element | null {
         />
 
         {/* Open Graph */}
-        <meta property="og:title" name="og:title" content={title} />
+        <meta property="og:title" name="og:title" content={linkTitle} />
         <meta property="og:site_name" name="og:site_name" content={title} />
         <meta property="og:type" name="og:type" content="website" />
         <meta
@@ -77,7 +78,7 @@ export function Default(props: PropsWithChildren<any>): JSX.Element | null {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@defichain" />
         <meta name="twitter:creator" content="@defichain" />
-        <meta name="twitter:title" content={title} />
+        <meta name="twitter:title" content={linkTitle} />
         <meta name="twitter:description" content={description} />
         <meta
           name="twitter:image"

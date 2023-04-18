@@ -37,6 +37,7 @@ export function DFIStatisticsDisplay() {
           : t("statisticsDisplay.circulatingSupply.desc", {
               perc: calculatePercentage(supply?.circulating, supply?.total),
             }),
+      testID: "circulating-supply",
     },
     {
       title: t("statisticsDisplay.dfiMinted.title"),
@@ -48,6 +49,7 @@ export function DFIStatisticsDisplay() {
               value: dfiMintedValue,
               suffix: dfiMintedSuffix,
             }),
+      testID: "dfi-minted",
     },
   ];
 

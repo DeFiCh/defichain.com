@@ -30,6 +30,7 @@ export function PageError(props: {
               text={text}
               className="text-sm w-fit leading-5 lg:text-base lg:leading-6 py-3 px-14 lg:py-4"
               href="/"
+              testID="page-error"
             />
           </div>
         </section>

@@ -225,7 +225,7 @@ function DesktopNavbar(): JSX.Element {
 // Getting the key of the enum MobileTabletDropDownState for immutable testIds
 const getEnumKey = (value) => {
   const keyIndex = Object.values(MobileTabletDropDownState).indexOf(value);
-  return Object.keys(MobileTabletDropDownState)[keyIndex];
+  return Object.keys(MobileTabletDropDownState)[keyIndex].toLowerCase();
 };
 
 function DesktopMenu({ item }: { item: string }) {

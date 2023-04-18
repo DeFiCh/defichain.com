@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { remark } from "remark";
 import { SectionTitle } from "@components/commons/SectionTitle";
 import rehypeRaw from "rehype-raw";
@@ -31,18 +31,13 @@ interface WhitePaperPageProps {
 export default function WhitePaperPage({ post }): JSX.Element {
   const contentRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
+  const [localeKey, setLocaleKey] = useState(router.locale);
 
   useEffect(() => {
-    const handleLocaleChange = () => {
-      window.location.reload();
-    };
-
-    router.events.on("routeChangeComplete", handleLocaleChange);
-
-    return () => {
-      router.events.off("routeChangeComplete", handleLocaleChange);
-    };
-  }, [router]);
+    if (localeKey !== router.locale) {
+      setLocaleKey(router.locale);
+    }
+  });
 
   return (
     <>
@@ -68,7 +63,7 @@ export default function WhitePaperPage({ post }): JSX.Element {
       </div>
       <Container className="flex flex-row gap-x-12 lg:mb-[216px] lg:pr-12">
         <div className="hidden h-[100vh] sticky top-[100px] no-scrollbar overflow-y-auto lg:block md:w-3/12 lg:pt-[64px] flex-1">
-          <TableOfContents parentReference={contentRef} />
+          <TableOfContents key={localeKey} parentReference={contentRef} />
         </div>
         <div className="flex flex-col w-full mt-6 mb-24 md:mt-8 lg:mb-10 lg:mt-0 lg:pt-[64px] lg:w-9/12">
           <div

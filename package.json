@@ -14,7 +14,7 @@
     "playground:start": "docker-compose rm -fsv && docker-compose up"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.13",
+    "@headlessui/react": "^1.7.14",
     "@prismicio/client": "^6.7.3",
     "@prismicio/react": "^2.5.2",
     "@waveshq/standard-defichain-jellyfishsdk": "^0.49.1",

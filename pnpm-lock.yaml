@@ -17,7 +17,7 @@ dependencies:
     specifier: ^0.49.1
     version: 0.49.1(@babel/core@7.21.0)(@next/env@13.3.0)(redux@4.2.1)
   bignumber.js:
-    specifier: ^9.1.0
+    specifier: ^9.1.1
     version: 9.1.1
   classnames:
     specifier: ^2.3.2

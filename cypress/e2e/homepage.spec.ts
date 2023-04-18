@@ -12,9 +12,9 @@ viewports.forEach((viewport) => {
     it("should have Explore section dropdown elements", () => {
       if (viewport === "iphone-xr") {
         cy.findByTestId("header-open-menu").click();
-        cy.findByTestId("header-tablet-menu-item-EXPLORE").click();
+        cy.findByTestId("header-tablet-menu-item-explore").click();
       } else if (viewport === "macbook-16") {
-        cy.findByTestId("header-desktop-dropdown-item-EXPLORE").trigger(
+        cy.findByTestId("header-desktop-dropdown-item-explore").trigger(
           "mouseover"
         );
       }

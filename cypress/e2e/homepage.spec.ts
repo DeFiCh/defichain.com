@@ -220,6 +220,7 @@ viewports.forEach((viewport) => {
           "href",
           "https://www.reddit.com/r/defiblockchain/"
         );
+
       cy.findAllByTestId("socials-row-youtube")
         .should("be.visible")
         .should("have.attr", "href", "https://www.youtube.com/DeFiChain");

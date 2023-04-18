@@ -5,5 +5,13 @@
   },
   "StartExploring": {
     "button": "Beginne mit der Erkundung"
+  },
+  "statisticsDisplay": {
+    "prefix": "Über",
+    "suffix": {
+      "B+": "Mrd.",
+      "M+": "Mio.",
+      "K+": "Tsd."
+    }
   }
 }

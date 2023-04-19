@@ -1,6 +1,6 @@
 import { ecosystemLinks, resourcesLinks } from "../fixture/homepage.config";
 
-const viewports = ["iphone-xr", "macbook-16"];
+const viewports = ["macbook-16", "iphone-xr", "ipad-2"];
 
 viewports.forEach((viewport) => {
   context(`Homepage on ${viewport}`, () => {
@@ -10,7 +10,7 @@ viewports.forEach((viewport) => {
     });
 
     it("should have Explore section dropdown elements", () => {
-      if (viewport === "iphone-xr") {
+      if (viewport === "iphone-xr" || viewport === "ipad-2") {
         cy.findByTestId("header-open-menu").click();
         cy.findByTestId("header-tablet-menu-item-explore").click();
       } else if (viewport === "macbook-16") {
@@ -60,7 +60,7 @@ viewports.forEach((viewport) => {
       if (viewport === "iphone-xr") {
         cy.findByTestId("header-open-menu").click();
         cy.findAllByTestId("header-get-dfi-button").last().click();
-      } else if (viewport === "macbook-16") {
+      } else if (viewport === "macbook-16" || viewport === "ipad-2") {
         cy.findAllByTestId("header-get-dfi-button").first().click();
       }
       cy.url().should("include", "/explore/dfi#get-dfi");
@@ -237,7 +237,7 @@ viewports.forEach((viewport) => {
         cy.findAllByTestId("footer-mobile-privacy")
           .should("be.visible")
           .should("have.attr", "href", "/privacy-policy");
-      } else if (viewport === "macbook-16") {
+      } else if (viewport === "macbook-16" || viewport === "ipad-2") {
         cy.findAllByTestId("footer-web-privacy")
           .should("be.visible")
           .should("have.attr", "href", "/privacy-policy");

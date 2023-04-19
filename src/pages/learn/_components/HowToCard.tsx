@@ -26,7 +26,7 @@ export function HowToCard(
             passHref
             className="contents"
           >
-            <Button text={t("HowToSection.read")} />
+            <Button text={t("HowToSection.read")} testID="how-to-card" />
           </Link>
         </div>
       </div>

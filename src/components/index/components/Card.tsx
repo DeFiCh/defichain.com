@@ -18,6 +18,7 @@ export function Card({
   id,
   href,
   customTextStyle,
+  testID,
 }: {
   id: string;
   href: string;
@@ -25,6 +26,7 @@ export function Card({
   title: string;
   subTitle: string;
   customIconStyle?: string;
+  testID: string;
 }): JSX.Element {
   const [hoverState, setHoverState] = useState<string | undefined>(undefined);
   const Icon = iconMapping[id] as React.ElementType;
@@ -50,7 +52,7 @@ export function Card({
     >
       <Link
         href={href}
-        data-testid={`ecosystem-link-${title.split(" ").pop()}`}
+        data-testid={`ecosystem-link-${testID}`}
         className={classNames(
           "w-full h-full p-6 rounded-[15px] border-[0.5px] flex flex-col",
           "border-dark-200 bg-dark-00",

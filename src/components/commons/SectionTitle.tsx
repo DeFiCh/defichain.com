@@ -3,13 +3,15 @@ import classNames from "classnames";
 export function SectionTitle({
   text,
   customStyle,
+  testID,
 }: {
   text: string;
   customStyle?: string;
+  testID: string;
 }) {
   return (
     <h3
-      data-testid={`section-title-${text}`}
+      data-testid={`section-title-${testID}`}
       className={classNames(
         "accent-gradient-1 text-transparent bg-clip-text font-mono",
         "leading-4 tracking-[0.04em] text-base",

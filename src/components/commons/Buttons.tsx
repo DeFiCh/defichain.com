@@ -12,6 +12,7 @@ export function Button({
   target,
   href,
   onClick,
+  testID,
 }: {
   text: string;
   className?: string;
@@ -19,11 +20,12 @@ export function Button({
   target?: HTMLAttributeAnchorTarget;
   href?: string;
   onClick?: () => void;
+  testID: string;
 }) {
   if (href) {
     return (
       <Link
-        data-testid={`explore-dmc-button-${text}`}
+        data-testid={`explore-dmc-button-${testID}`}
         rel="noreferrer"
         target={target}
         href={href}
@@ -85,6 +87,7 @@ export function SecondaryButton({
   href,
   customSize,
   customClass,
+  testID,
 }: {
   text: string;
   className?: string;
@@ -93,6 +96,7 @@ export function SecondaryButton({
   href: string;
   customClass?: string;
   customSize?: number;
+  testID: string;
 }) {
   const size = customSize ?? 20;
   const customClassName = customClass ?? "ml-[15px]";
@@ -102,6 +106,7 @@ export function SecondaryButton({
       target="_blank"
       href={href}
       className={classNames("block w-fit", { "pointer-events-none": disabled })}
+      data-testID={`secondary-button-${testID}`}
     >
       <button
         type="button"
@@ -194,7 +199,7 @@ function GradientButtonElement({
           "font-medium text-sm leading-4 text-light-00 rounded-[44px] hover:gradient-button-hover w-full h-full whitespace-nowrap",
           className ?? "py-3 bg-dark-00"
         )}
-        data-testid="header-getDfi-button"
+        data-testid="header-get-dfi-button"
       >
         {buttonText}
       </div>

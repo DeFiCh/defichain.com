@@ -11,10 +11,12 @@ viewports.forEach((viewport) => {
 
     it("should have Explore section dropdown elements", () => {
       if (viewport === "iphone-xr") {
-        cy.findByTestId("header-openMenu").click();
-        cy.findByTestId("header-menuItem-Explore").click();
+        cy.findByTestId("header-open-menu").click();
+        cy.findByTestId("header-tablet-menu-item-explore").click();
       } else if (viewport === "macbook-16") {
-        cy.findByTestId("header-dropDownItem-explore").trigger("mouseover");
+        cy.findByTestId("header-desktop-dropdown-item-explore").trigger(
+          "mouseover"
+        );
       }
 
       cy.findByTestId("header-nav-elem-explore-defiscan-live")
@@ -56,15 +58,13 @@ viewports.forEach((viewport) => {
     // No TC
     it("should have Get DFI button", () => {
       if (viewport === "iphone-xr") {
-        cy.findByTestId("header-openMenu").click();
-        cy.findAllByTestId("header-getDfi-button").last().click();
+        cy.findByTestId("header-open-menu").click();
+        cy.findAllByTestId("header-get-dfi-button").last().click();
       } else if (viewport === "macbook-16") {
-        cy.findAllByTestId("header-getDfi-button").first().click();
+        cy.findAllByTestId("header-get-dfi-button").first().click();
       }
       cy.url().should("include", "/explore/dfi#get-dfi");
-      cy.findAllByTestId("section-title-PURCHASE $DFI EASILY").should(
-        "be.visible"
-      );
+      cy.findAllByTestId("section-title-purchase-dfi").should("be.visible");
     });
 
     // No TC
@@ -84,35 +84,47 @@ viewports.forEach((viewport) => {
     // No TC
     it("should have Start exploring section clickable", () => {
       if (viewport === "iphone-xr") {
-        cy.findByTestId("statistic-title-TVL IN USD").should("be.visible");
+        cy.findByTestId("statistic-title-tvl-locked")
+          .should("be.visible")
+          .and("have.text", "TVL IN USD");
       } else if (viewport === "macbook-16") {
-        cy.findByTestId("startExploring-button").click({ force: true }); // covered by another element
+        cy.findByTestId("start-exploring-button").click({
+          scrollBehavior: false,
+        });
         cy.url().should("include", "/#statistics_display");
-        cy.findByTestId("statistic-title-TOTAL VALUE LOCKED IN USD").should(
-          "be.visible"
-        );
+        cy.findByTestId("statistic-title-tvl-locked")
+          .should("be.visible")
+          .and("have.text", "TOTAL VALUE LOCKED IN USD");
       }
 
-      cy.findByTestId("statistic-title-TOTAL DFI MINTED").should("be.visible");
-      cy.findByTestId("statistic-title-MASTERNODES").should("be.visible");
+      cy.findByTestId("statistic-title-dfi-minted")
+        .should("be.visible")
+        .and("have.text", "TOTAL DFI MINTED");
+      cy.findByTestId("statistic-title-masternodes")
+        .should("be.visible")
+        .and("have.text", "MASTERNODES");
     });
 
     // No TC
-    it.only("should have clickable Explore DeFi Meta Chain button", () => {
-      cy.findByTestId("explore-dmc-button-Explore DeFi Meta Chain")
+    it("should have clickable Explore DeFi Meta Chain button", () => {
+      cy.findByTestId("secondary-button-explore-dmc")
         .should("be.visible")
         .and("have.attr", "href")
-        .and("include", "https://meta.defichain.com")
-        .and("have.attr", "target")
+        .and("include", "https://meta.defichain.com");
+      cy.findByTestId("secondary-button-explore-dmc")
+        .should("have.attr", "target")
         .and("include", "_blank");
     });
 
     // No TC
     it("should have clickable View all articles button", () => {
-      cy.findByTestId("explore-dmc-button-View all articles")
+      cy.findByTestId("secondary-button-view-all-articles")
         .should("be.visible")
         .and("have.attr", "href")
         .and("include", "https://blog.defichain.com");
+      cy.findByTestId("secondary-button-view-all-articles")
+        .should("have.attr", "target")
+        .and("include", "_blank");
     });
 
     // No TC
@@ -131,7 +143,7 @@ viewports.forEach((viewport) => {
 
     // No TC
     it("should have expected Blockchain feature section title and description", () => {
-      cy.findByTestId("section-title-NON-TURING-COMPLETE BLOCKCHAIN").should(
+      cy.findByTestId("section-title-non-turing-complete-blockchain").should(
         "be.visible"
       );
       cy.findByTestId(
@@ -159,9 +171,10 @@ viewports.forEach((viewport) => {
       textAreas.forEach((area) => {
         features.forEach((feature) => {
           if (viewport === "iphone-xr" && feature === "DEVELOPMENT") {
+            cy.get("ul.blockchain-features-dots").scrollIntoView();
             cy.get("ul.blockchain-features-dots > li > button")
               .last()
-              .click({ force: true }); // covered by div.mx-6 md:mx-12 xl:mx-[120px]
+              .click({ scrollBehavior: false });
           }
           cy.findAllByTestId(`highlights-${feature}-${area}`).should(
             "be.visible"
@@ -197,31 +210,38 @@ viewports.forEach((viewport) => {
     });
 
     it("should have Footer Social links", () => {
-      cy.findAllByTestId("socialsRow-GitHub")
+      cy.findAllByTestId("socials-row-github")
         .should("be.visible")
         .should("have.attr", "href", "https://github.com/DeFiCh/ain");
-      cy.findAllByTestId("socialsRow-Reddit")
+      cy.findAllByTestId("socials-row-reddit")
         .should("be.visible")
         .should(
           "have.attr",
           "href",
           "https://www.reddit.com/r/defiblockchain/"
         );
-      cy.findAllByTestId("socialsRow-YouTube")
+
+      cy.findAllByTestId("socials-row-youtube")
         .should("be.visible")
         .should("have.attr", "href", "https://www.youtube.com/DeFiChain");
-      cy.findAllByTestId("socialsRow-Telegram")
+      cy.findAllByTestId("socials-row-telegram")
         .should("be.visible")
         .should("have.attr", "href", "https://t.me/defiblockchain");
-      cy.findAllByTestId("socialsRow-Twitter")
+      cy.findAllByTestId("socials-row-twitter")
         .should("be.visible")
         .should("have.attr", "href", "https://twitter.com/defichain");
     });
 
     it("should have Privacy policy link", () => {
-      cy.findAllByTestId("footer-web-privacy")
-        .should("be.visible")
-        .should("have.attr", "href", "/privacy-policy");
+      if (viewport === "iphone-xr") {
+        cy.findAllByTestId("footer-mobile-privacy")
+          .should("be.visible")
+          .should("have.attr", "href", "/privacy-policy");
+      } else if (viewport === "macbook-16") {
+        cy.findAllByTestId("footer-web-privacy")
+          .should("be.visible")
+          .should("have.attr", "href", "/privacy-policy");
+      }
     });
 
     it("should have Language dropdown", () => {

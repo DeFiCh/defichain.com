@@ -1,10 +1,10 @@
 import BigNumber from "bignumber.js";
 
 const units = {
-  3: "K",
-  6: "M",
-  9: "B",
-  12: "T",
+  3: "K+",
+  6: "M+",
+  9: "B+",
+  12: "T+",
 };
 
 interface UnitSuffix {

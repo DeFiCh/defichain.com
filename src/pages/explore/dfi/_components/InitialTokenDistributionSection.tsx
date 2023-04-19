@@ -18,7 +18,10 @@ export function InitialTokenDistributionSection() {
     <Container className="mb-[96px] md:mb-[108px] lg:mb-60">
       <section className="flex flex-col">
         <div className="flex flex-col gap-y-5">
-          <SectionTitle text={t("initialTokenDistributionSection.title")} />
+          <SectionTitle
+            text={t("initialTokenDistributionSection.title")}
+            testID="transparent-distribution"
+          />
           <h2
             className={classNames(
               "tracking-[-0.02em] text-[40px] leading-[44px] text-dark-1000"
@@ -32,6 +35,7 @@ export function InitialTokenDistributionSection() {
           text={t("initialTokenDistributionSection.button")}
           className="mt-6 w-fit px-10 py-3 lg:px-14 lg:py-4"
           href="/white-paper"
+          testID="read-from-whitepaper"
         />
 
         <ProgressBar value={49} containerClass="bg-dark-200 mt-16 mb-8" />

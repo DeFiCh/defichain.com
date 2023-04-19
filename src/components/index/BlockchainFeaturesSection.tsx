@@ -50,9 +50,12 @@ export function BlockchainFeaturesSection(): JSX.Element {
         <div className="flex lg:w-[504px]">
           <div
             className="w-full flex flex-col space-y-5 md:space-y-5 lg:mt-32 lg:space-y-5"
-            data-testid="blockchainFeatureSection-text"
+            data-testid="blockchain-feature-section-text"
           >
-            <SectionTitle text={t("BlockchainFeatureSection.subtitle")} />
+            <SectionTitle
+              text={t("BlockchainFeatureSection.subtitle")}
+              testID="non-turing-complete-blockchain"
+            />
             <h2
               className="text-[40px] leading-[44px] tracking-[-0.02em] lg:text-6xl lg:leading-[72px] lg:tracking-normal"
               data-testid={`section-header-${separatedTitle}`}
@@ -90,7 +93,7 @@ export function BlockchainFeaturesSection(): JSX.Element {
             id="tablet-desktop-screen"
           />
         </div>
-        <div className="block md:z-[-1] mt-[56.5px] md:hidden">
+        <div className="block z-0 md:z-[-1] mt-[56.5px] md:hidden">
           <Slider {...sliderSettings}>
             <BlockchainFeatureColumn
               items={BlockchainFeatureItems.slice(0, 3)}

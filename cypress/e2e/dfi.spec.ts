@@ -7,7 +7,7 @@ viewports.forEach((viewport) => {
       cy.viewport(<Cypress.ViewportPreset>viewport);
     });
 
-    it("should have title,subtitle,desc displayed and expected text", () => {
+    it("should have Explore DFI section visible and expected text", () => {
       cy.findByTestId("section-title-explore-dfi")
         .should("be.visible")
         .and("have.text", "EXPLORE THE POWER OF DFI");
@@ -33,6 +33,10 @@ viewports.forEach((viewport) => {
       );
     });
 
+    it("should have Building better tomorrow section visible ", () => {
+      // TODO:
+    });
+
     it("should have Purchase DFI easily section with links ", () => {
       cy.findByTestId("section-title-purchase-dfi")
         .should("be.visible")
@@ -48,11 +52,29 @@ viewports.forEach((viewport) => {
         );
     });
 
-    it("should have Read from Whitepaper button visible and clickable", () => {
+    it("should have Trusted exchanges visible and clickable ", () => {
+      // TODO:
+    });
+
+    it("should have Read from Whitepaper section visible and clickable", () => {
+      cy.findByTestId("section-title-transparent-distribution")
+        .should("be.visible")
+        .and("have.text", "TRANSPARENT DISTRIBUTION");
+      cy.findByTestId("initial-token-dist-title")
+        .should("be.visible")
+        .and("have.text", "Initial Token Distribution");
       cy.findByTestId("explore-dmc-button-read-from-whitepaper")
         .should("be.visible")
         .and("have.attr", "href")
         .and("include", "/white-paper");
+    });
+
+    it("should have Initial supply and Masternodes sections visible ", () => {
+      // TODO:
+    });
+
+    it("should have DeFiChain ERC-20 section visible and clickable ", () => {
+      // TODO:
     });
   });
 });

@@ -23,6 +23,7 @@ export function InitialTokenDistributionSection() {
             testID="transparent-distribution"
           />
           <h2
+            data-testid="initial-token-dist-title"
             className={classNames(
               "tracking-[-0.02em] text-[40px] leading-[44px] text-dark-1000"
             )}

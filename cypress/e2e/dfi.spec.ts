@@ -24,19 +24,19 @@ viewports.forEach((viewport) => {
 
     it("should have Start exploring section clickable", () => {
       if (viewport === "macbook-16") {
-        cy.findByTestId("startExploring-button").click({ force: true }); // covered by another element
+        cy.findByTestId("start-exploring-button").click({ force: true }); // covered by another element
         cy.url().should("include", "#statistics-display-dfi");
       }
-      cy.findByTestId("statistic-title-TOTAL DFI MINTED").should("be.visible");
-      cy.findByTestId("statistic-title-CIRCULATING SUPPLY").should(
+      cy.findByTestId("statistic-title-dfi-minted").should("be.visible");
+      cy.findByTestId("statistic-title-circulating-supply").should(
         "be.visible"
       );
     });
 
     it("should have Purchase DFI easily section with links ", () => {
-      cy.findByTestId("section-title-PURCHASE $DFI EASILY").should(
-        "be.visible"
-      );
+      cy.findByTestId("section-title-purchase-dfi")
+        .should("be.visible")
+        .and("have.text", "PURCHASE $DFI EASILY");
       cy.findByTestId("get-dfi-title")
         .should("be.visible")
         .and("have.text", "Get DFI on trusted exchanges");
@@ -49,7 +49,7 @@ viewports.forEach((viewport) => {
     });
 
     it("should have Read from Whitepaper button visible and clickable", () => {
-      cy.findByTestId("explore-dmc-button-Read from Whitepaper")
+      cy.findByTestId("explore-dmc-button-read-from-whitepaper")
         .should("be.visible")
         .and("have.attr", "href")
         .and("include", "/white-paper");

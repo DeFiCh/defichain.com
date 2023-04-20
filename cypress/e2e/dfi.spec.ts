@@ -8,7 +8,7 @@ viewports.forEach((viewport) => {
     });
 
     it("should have title,subtitle,desc displayed and expected text", () => {
-      cy.findByTestId("section-title-EXPLORE THE POWER OF DFI")
+      cy.findByTestId("section-title-explore-dfi")
         .should("be.visible")
         .and("have.text", "EXPLORE THE POWER OF DFI");
       cy.findByTestId("section-sub-title")
@@ -33,7 +33,7 @@ viewports.forEach((viewport) => {
       );
     });
 
-    it.only("should have Purchase DFI easily section with links ", () => {
+    it("should have Purchase DFI easily section with links ", () => {
       cy.findByTestId("section-title-PURCHASE $DFI EASILY").should(
         "be.visible"
       );

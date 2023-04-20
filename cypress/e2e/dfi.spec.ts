@@ -74,7 +74,15 @@ viewports.forEach((viewport) => {
     });
 
     it("should have DeFiChain ERC-20 section visible and clickable ", () => {
-      // TODO:
+      cy.findByTestId("erc-20-title")
+        .should("be.visible")
+        .and("have.text", "DeFiChain ERC-20");
+      cy.findByTestId("erc-20-desc")
+        .should("be.visible")
+        .and(
+          "have.text",
+          "DeFiChain ERC-20 token provides greater flexibility for users between Ethereum and DeFiChain.This allows the wider crypto ecosystem to experience the real value of Native DeFi on DeFiChain."
+        );
     });
   });
 });

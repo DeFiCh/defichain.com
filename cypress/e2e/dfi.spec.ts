@@ -43,7 +43,7 @@ viewports.forEach((viewport) => {
       );
     });
 
-    it.only("should have Building better tomorrow section visible ", () => {
+    it("should have Building better tomorrow section visible ", () => {
       cy.checkElementVisibilityAndText(
         "section-title-building-better-tomorrow",
         "BUILDING A BETTER TOMORROW WITH DFI"

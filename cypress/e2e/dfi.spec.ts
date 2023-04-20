@@ -8,18 +8,20 @@ viewports.forEach((viewport) => {
     });
 
     it("should have Explore DFI section visible and expected text", () => {
-      cy.findByTestId("section-title-explore-dfi")
-        .should("be.visible")
-        .and("have.text", "EXPLORE THE POWER OF DFI");
-      cy.findByTestId("section-sub-title")
-        .should("be.visible")
-        .and("have.text", "Experience DeFi with DFI");
-      cy.findByTestId("section-desc")
-        .should("be.visible")
-        .and(
-          "have.text",
+      it("should be visible with expected text", () => {
+        cy.checkElementVisibilityAndText(
+          "section-title-explore-dfi",
+          "EXPLORE THE POWER OF DFI"
+        );
+        cy.checkElementVisibilityAndText(
+          "section-sub-title",
+          "Experience DeFi with DFI"
+        );
+        cy.checkElementVisibilityAndText(
+          "section-desc",
           "Our native token unlocks the power of decentralized finance, giving you access to a growing ecosystem of cutting-edge DeFi tools and innovative blockchain applications."
         );
+      });
     });
 
     it("should have Start exploring section clickable", () => {
@@ -27,9 +29,13 @@ viewports.forEach((viewport) => {
         cy.findByTestId("start-exploring-button").click({ force: true }); // covered by another element
         cy.url().should("include", "#statistics-display-dfi");
       }
-      cy.findByTestId("statistic-title-dfi-minted").should("be.visible");
-      cy.findByTestId("statistic-title-circulating-supply").should(
-        "be.visible"
+      cy.checkElementVisibilityAndText(
+        "statistic-title-dfi-minted",
+        "TOTAL DFI MINTED"
+      );
+      cy.checkElementVisibilityAndText(
+        "statistic-title-circulating-supply",
+        "CIRCULATING SUPPLY"
       );
     });
 
@@ -38,12 +44,19 @@ viewports.forEach((viewport) => {
     });
 
     it("should have Purchase DFI easily section with links ", () => {
-      cy.findByTestId("section-title-purchase-dfi")
-        .should("be.visible")
-        .and("have.text", "PURCHASE $DFI EASILY");
-      cy.findByTestId("get-dfi-title")
-        .should("be.visible")
-        .and("have.text", "Get DFI on trusted exchanges");
+      cy.checkElementVisibilityAndText(
+        "section-title-purchase-dfi",
+        "PURCHASE $DFI EASILY"
+      );
+      cy.checkElementVisibilityAndText(
+        "get-dfi-title",
+        "Get DFI on trusted exchanges"
+      );
+      cy.checkElementVisibilityAndText(
+        "get-dfi-desc",
+        "Use our partner links to securely buy DFI on trusted cryptocurrency exchanges and easily transfer them to your DeFiChain wallet address."
+      );
+
       cy.findByTestId("get-dfi-desc")
         .should("be.visible")
         .and(
@@ -57,12 +70,15 @@ viewports.forEach((viewport) => {
     });
 
     it("should have Read from Whitepaper section visible and clickable", () => {
-      cy.findByTestId("section-title-transparent-distribution")
-        .should("be.visible")
-        .and("have.text", "TRANSPARENT DISTRIBUTION");
-      cy.findByTestId("initial-token-dist-title")
-        .should("be.visible")
-        .and("have.text", "Initial Token Distribution");
+      cy.checkElementVisibilityAndText(
+        "section-title-transparent-distribution",
+        "TRANSPARENT DISTRIBUTION"
+      );
+      cy.checkElementVisibilityAndText(
+        "initial-token-dist-title",
+        "Initial Token Distribution"
+      );
+
       cy.findByTestId("explore-dmc-button-read-from-whitepaper")
         .should("be.visible")
         .and("have.attr", "href")
@@ -74,15 +90,11 @@ viewports.forEach((viewport) => {
     });
 
     it("should have DeFiChain ERC-20 section visible and clickable ", () => {
-      cy.findByTestId("erc-20-title")
-        .should("be.visible")
-        .and("have.text", "DeFiChain ERC-20");
-      cy.findByTestId("erc-20-desc")
-        .should("be.visible")
-        .and(
-          "have.text",
-          "DeFiChain ERC-20 token provides greater flexibility for users between Ethereum and DeFiChain.This allows the wider crypto ecosystem to experience the real value of Native DeFi on DeFiChain."
-        );
+      cy.checkElementVisibilityAndText("erc-20-title", "DeFiChain ERC-20");
+      cy.checkElementVisibilityAndText(
+        "erc-20-desc",
+        "DeFiChain ERC-20 token provides greater flexibility for users between Ethereum and DeFiChain.This allows the wider crypto ecosystem to experience the real value of Native DeFi on DeFiChain."
+      );
       cy.findByTestId("explore-dmc-button-erc-20-learn-more")
         .should("be.visible")
         .and("have.attr", "href")

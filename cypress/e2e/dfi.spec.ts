@@ -56,13 +56,6 @@ viewports.forEach((viewport) => {
         "get-dfi-desc",
         "Use our partner links to securely buy DFI on trusted cryptocurrency exchanges and easily transfer them to your DeFiChain wallet address."
       );
-
-      cy.findByTestId("get-dfi-desc")
-        .should("be.visible")
-        .and(
-          "have.text",
-          "Use our partner links to securely buy DFI on trusted cryptocurrency exchanges and easily transfer them to your DeFiChain wallet address."
-        );
     });
 
     it("should have Trusted exchanges visible and clickable ", () => {
@@ -79,10 +72,10 @@ viewports.forEach((viewport) => {
         "Initial Token Distribution"
       );
 
-      cy.findByTestId("explore-dmc-button-read-from-whitepaper")
-        .should("be.visible")
-        .and("have.attr", "href")
-        .and("include", "/white-paper");
+      cy.checkElementVisibilityAndHref(
+        "explore-dmc-button-read-from-whitepaper",
+        "/white-paper"
+      );
     });
 
     it("should have Initial supply and Masternodes sections visible ", () => {
@@ -95,20 +88,14 @@ viewports.forEach((viewport) => {
         "erc-20-desc",
         "DeFiChain ERC-20 token provides greater flexibility for users between Ethereum and DeFiChain.This allows the wider crypto ecosystem to experience the real value of Native DeFi on DeFiChain."
       );
-      cy.findByTestId("explore-dmc-button-erc-20-learn-more")
-        .should("be.visible")
-        .and("have.attr", "href")
-        .and(
-          "include",
-          "https://blog.defichain.com/defichains-first-move-to-become-an-interoperable-defi-powerhouse/"
-        );
-      cy.findByTestId("view-contract-btn")
-        .should("be.visible")
-        .and("have.attr", "href")
-        .and(
-          "include",
-          "https://etherscan.io/token/0x8Fc8f8269ebca376D046Ce292dC7eaC40c8D358A"
-        );
+      cy.checkElementVisibilityAndHref(
+        "explore-dmc-button-erc-20-learn-more",
+        "https://blog.defichain.com/defichains-first-move-to-become"
+      );
+      cy.checkElementVisibilityAndHref(
+        "view-contract-btn",
+        "https://etherscan.io/token/0x8Fc8f8269ebca376D046Ce292dC7eaC40c8D358A"
+      );
       cy.findByTestId("view-contract-btn")
         .should("have.attr", "target")
         .and("include", "_blank");

@@ -227,6 +227,7 @@ export function LinkButton({
       rel="noreferrer"
       target="_blank"
       href={href}
+      data-testid="view-contract-btn"
       className={classNames(
         "hover:text-brand-100 flex flex-row gap-x-2 items-center",
         className ?? "text-lg text-dark-1000 font-semibold",

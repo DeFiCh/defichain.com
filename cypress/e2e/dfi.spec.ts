@@ -83,6 +83,23 @@ viewports.forEach((viewport) => {
           "have.text",
           "DeFiChain ERC-20 token provides greater flexibility for users between Ethereum and DeFiChain.This allows the wider crypto ecosystem to experience the real value of Native DeFi on DeFiChain."
         );
+      cy.findByTestId("explore-dmc-button-erc-20-learn-more")
+        .should("be.visible")
+        .and("have.attr", "href")
+        .and(
+          "include",
+          "https://blog.defichain.com/defichains-first-move-to-become-an-interoperable-defi-powerhouse/"
+        );
+      cy.findByTestId("view-contract-btn")
+        .should("be.visible")
+        .and("have.attr", "href")
+        .and(
+          "include",
+          "https://etherscan.io/token/0x8Fc8f8269ebca376D046Ce292dC7eaC40c8D358A"
+        );
+      cy.findByTestId("view-contract-btn")
+        .should("have.attr", "target")
+        .and("include", "_blank");
     });
   });
 });

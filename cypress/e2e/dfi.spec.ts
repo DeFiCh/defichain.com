@@ -40,7 +40,20 @@ viewports.forEach((viewport) => {
     });
 
     it("should have Building better tomorrow section visible ", () => {
-      // TODO:
+      cy.checkElementVisibilityAndText(
+        "section-title-building-better-tomorrow",
+        "BUILDING A BETTER TOMORROW WITH DFI"
+      );
+      cy.checkElementVisibilityAndText(
+        "harness-dfi-power-title",
+        "Harness the power of DFI"
+      );
+      cy.checkElementVisibilityAndText(
+        "harness-dfi-power-desc",
+        "A gateway to decentralized applications and tools, offering potential for greater returns, lower fees, and democratic governance."
+      );
+
+      // todo: add mobile check for elements
     });
 
     it("should have Purchase DFI easily section with links ", () => {

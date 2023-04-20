@@ -65,6 +65,7 @@ export default function HarnessDFISection() {
         </div>
 
         <h2
+          data-testid="harness-dfi-power-title"
           className={classNames(
             "lg:text-[60px] lg:leading-[72px] md:text-[40px] md:leading-[44px] text-[32px] leading-[36px]",
             "text-dark-1000 md:text-center text-left"
@@ -73,6 +74,7 @@ export default function HarnessDFISection() {
           {t("harnessDFISection.subtitle")}
         </h2>
         <h4
+          data-testid="harness-dfi-power-desc"
           className={classNames(
             "lg:text-xl text-base font-desc lg:w-[60%] w-full md:place-self-center",
             "lg:tracking-normal tracking-[0.03em]",

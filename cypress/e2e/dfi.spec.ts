@@ -1,3 +1,5 @@
+import { exchanges } from "../fixture/dfi.config";
+
 const viewports = ["iphone-xr", "macbook-16"];
 
 viewports.forEach((viewport) => {
@@ -72,7 +74,12 @@ viewports.forEach((viewport) => {
     });
 
     it("should have Trusted exchanges visible and clickable ", () => {
-      // TODO:
+      exchanges.forEach((exchangeItem) => {
+        cy.checkElementVisibilityAndHref(
+          `getdfisection-exchange-${exchangeItem.id}`,
+          exchangeItem.url
+        );
+      });
     });
 
     it("should have Read from Whitepaper section visible and clickable", () => {

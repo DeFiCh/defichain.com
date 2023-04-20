@@ -123,7 +123,7 @@ function ExchangeGrid({ items }: { items: ExchangeItem[] }): JSX.Element {
         return (
           <Link
             key={item.id}
-            data-testid={item.id}
+            data-testid={item.id.toLowerCase().replaceAll(".", "-")}
             href={item.url}
             className="rounded-[5px] p-[0.5px] bg-dark-200 hover:accent-gradient-1 active:opacity-70"
             target="_blank"

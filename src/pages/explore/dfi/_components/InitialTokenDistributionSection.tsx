@@ -47,11 +47,14 @@ export function InitialTokenDistributionSection() {
               {t("initialTokenDistributionSection.initialSupply.percentage")}
             </div>
             <div className="flex flex-col place-self-center">
-              <div className="text-brand-100 font-bold leading-5 mt-[10px]">
+              <div
+                data-testid="initial-token-supply"
+                className="text-brand-100 font-bold leading-5 mt-[10px]"
+              >
                 {t("initialTokenDistributionSection.initialSupply.title")}
               </div>
 
-              <div className="mt-2">
+              <div data-testid="initial-token-dist-desc" className="mt-2">
                 <span className="font-desc text-dark-700">
                   {t("initialTokenDistributionSection.initialSupply.desc")}
                   &nbsp;
@@ -117,11 +120,17 @@ export function InitialTokenDistributionSection() {
               {t("initialTokenDistributionSection.masternodes.percentage")}
             </div>
             <div className="flex flex-col lg:place-self-start place-self-center">
-              <span className="text-dark-1000 font-bold leading-5">
+              <span
+                data-testid="initial-token-masternodes-title"
+                className="text-dark-1000 font-bold leading-5"
+              >
                 {t("initialTokenDistributionSection.masternodes.title")}
               </span>
 
-              <div className="mt-2">
+              <div
+                data-testid="initial-token-masternodes-desc"
+                className="mt-2"
+              >
                 <span className="font-desc text-dark-700">
                   {t("initialTokenDistributionSection.masternodes.desc")}
                 </span>

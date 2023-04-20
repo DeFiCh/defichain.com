@@ -1,6 +1,6 @@
 import { exchanges } from "../fixture/dfi.config";
 
-const viewports = ["iphone-xr", "macbook-16"];
+const viewports = ["iphone-xr", "ipad-2", "macbook-16"];
 
 viewports.forEach((viewport) => {
   context(`/explore/dfi on ${viewport}`, () => {
@@ -28,7 +28,9 @@ viewports.forEach((viewport) => {
 
     it("should have Start exploring section clickable", () => {
       if (viewport === "macbook-16") {
-        cy.findByTestId("start-exploring-button").click({ force: true }); // covered by another element
+        cy.findByTestId("start-exploring-button").click({
+          scrollBehavior: false,
+        }); // covered by another element
         cy.url().should("include", "#statistics-display-dfi");
       }
       cy.checkElementVisibilityAndText(
@@ -55,6 +57,7 @@ viewports.forEach((viewport) => {
         "A gateway to decentralized applications and tools, offering potential for greater returns, lower fees, and democratic governance."
       );
 
+      cy.get("article > span.font-bold.mb-4").should("be.visible");
       // todo: add mobile check for elements
     });
 
@@ -99,7 +102,23 @@ viewports.forEach((viewport) => {
     });
 
     it("should have Initial supply and Masternodes sections visible ", () => {
-      // TODO:
+      cy.checkElementVisibilityAndText(
+        "initial-token-supply",
+        "INITIAL SUPPLY"
+      );
+      cy.checkElementVisibilityAndText(
+        "initial-token-masternodes-title",
+        "TO MASTERNODES OVER TIME"
+      );
+      // to many special characters
+      // cy.checkElementVisibilityAndText(
+      //   "initial-token-dist-desc",
+      //   "Of the 1.2 billion $DFI coins, 49% will be in the initial supply. From the initial supply, 26% are airdropped, 27% burned, and 47% destroyed."
+      // );
+      cy.checkElementVisibilityAndText(
+        "initial-token-masternodes-desc",
+        "The remaining supply is issued to masternode holders over time."
+      );
     });
 
     it("should have DeFiChain ERC-20 section visible and clickable ", () => {

@@ -85,7 +85,10 @@ function HarnessDFIGridItem({ title, desc, icon, id }: HarnessDFIGridProps) {
         {/* )} */}
       </div>
 
-      <span className="md:place-self-center md:text-center text-left text-dark-1000 leading-5 font-bold mb-4">
+      <span
+        data-testid={`harness-${title}`}
+        className="md:place-self-center md:text-center text-left text-dark-1000 leading-5 font-bold mb-4"
+      >
         {title}
       </span>
       <span className="md:text-center font-desc text-dark-700">{desc}</span>

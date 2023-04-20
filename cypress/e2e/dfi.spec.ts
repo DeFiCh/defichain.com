@@ -30,7 +30,7 @@ viewports.forEach((viewport) => {
       if (viewport === "macbook-16") {
         cy.findByTestId("start-exploring-button").click({
           scrollBehavior: false,
-        }); // covered by another element
+        });
         cy.url().should("include", "#statistics-display-dfi");
       }
       cy.checkElementVisibilityAndText(
@@ -43,7 +43,7 @@ viewports.forEach((viewport) => {
       );
     });
 
-    it("should have Building better tomorrow section visible ", () => {
+    it.only("should have Building better tomorrow section visible ", () => {
       cy.checkElementVisibilityAndText(
         "section-title-building-better-tomorrow",
         "BUILDING A BETTER TOMORROW WITH DFI"
@@ -57,8 +57,27 @@ viewports.forEach((viewport) => {
         "A gateway to decentralized applications and tools, offering potential for greater returns, lower fees, and democratic governance."
       );
 
-      cy.get("article > span.font-bold.mb-4").should("be.visible");
-      // todo: add mobile check for elements
+      cy.get("article > span.font-bold.mb-4")
+        .should("be.visible")
+        .and("have.length", 9);
+      if (viewport === "iphone-xr") {
+        cy.get("div[data-index='0']")
+          .should("have.attr", "aria-hidden")
+          .and("include", "false");
+        cy.get("div[data-index='1']")
+          .should("have.attr", "aria-hidden")
+          .and("include", "true");
+        cy.get("ul.harness-dfi-dots").scrollIntoView();
+        cy.get("ul.harness-dfi-dots > li > button")
+          .last()
+          .click({ scrollBehavior: false });
+        cy.get("div[data-index='0']")
+          .should("have.attr", "aria-hidden")
+          .and("include", "true");
+        cy.get("div[data-index='1']")
+          .should("have.attr", "aria-hidden")
+          .and("include", "false");
+      }
     });
 
     it("should have Purchase DFI easily section with links ", () => {
@@ -110,11 +129,7 @@ viewports.forEach((viewport) => {
         "initial-token-masternodes-title",
         "TO MASTERNODES OVER TIME"
       );
-      // to many special characters
-      // cy.checkElementVisibilityAndText(
-      //   "initial-token-dist-desc",
-      //   "Of the 1.2 billion $DFI coins, 49% will be in the initial supply. From the initial supply, 26% are airdropped, 27% burned, and 47% destroyed."
-      // );
+      cy.findByTestId("initial-token-dist-desc").should("be.visible");
       cy.checkElementVisibilityAndText(
         "initial-token-masternodes-desc",
         "The remaining supply is issued to masternode holders over time."

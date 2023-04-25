@@ -21,7 +21,7 @@
     "subtitle": "Diese Wallets bieten einen leichten und einfachen Zugang zu den Funktionen von DeFiChain. Sie eignen sich am besten für Nutzer, die fast täglich mit DeFiChain interagieren und dabei keine Kompromisse bei der Geschwindigkeit und Sicherheit ihrer Einlagen eingehen.",
     "entries": {
       "DFC": {
-        "title": "Light Wallet",
+        "title": "Lightwallet",
         "desc": "Einfacher, schneller Zugang zum dezentralen Finanzsystem für Bitcoin, per Fingertipp."
       },
       "DFX": {
@@ -40,8 +40,8 @@
     "subtitle": "Fortgeschrittene Wallets, die für die komplexe Nutzung von DeFiChain geeignet sind, wie z.B. Masternode-Management, Multi-Signatur-Management und mehr.",
     "entries": {
       "DFC": {
-        "title": "DeFi Wallet desktop app",
-        "desc": "Mit der funktionsfähigen und vollständig dezentralen Wallet-App kannst du Transaktionen durchführen, Liquiditäts-Mining betreiben, tauschen und vieles mehr. Full-Node enthalten."
+        "title": "DeFi Wallet: Full-Node-Desktop-App",
+        "desc": "Mit der vollständig dezentralen Wallet-App, die über den vollen Funktionsumfang verfügt, kannst du Transaktionen durchführen, Liquiditäts-Mining betreiben, tauschen und vieles mehr. Full-Node enthalten."
       },
       "RPI": {
         "title": "DeFi Wallet für Raspberry Pi",

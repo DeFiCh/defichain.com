@@ -1,4 +1,4 @@
-import { exchanges } from "../fixture/dfi.config";
+import { exchanges } from "../../fixture/dfi.config";
 
 const viewports = ["iphone-xr", "ipad-2", "macbook-16"];
 

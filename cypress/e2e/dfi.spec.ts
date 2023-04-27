@@ -41,6 +41,10 @@ viewports.forEach((viewport) => {
         "statistic-title-circulating-supply",
         "CIRCULATING SUPPLY"
       );
+      cy.checkElementVisibilityAndText(
+        "harness-dfi-power-title",
+        "Harness the power of DFI"
+      );
     });
 
     it("should have Building better tomorrow section visible ", () => {

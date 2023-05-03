@@ -13,6 +13,7 @@ export default function ERC20Section(): JSX.Element {
     <Container className="relative pb-24 md:pb-48 lg:pb-[248px] text-center flex justify-center">
       <section className="max-w-[551px] flex flex-col items-center">
         <h2
+          data-testid="erc-20-title"
           className={classNames(
             "text-[40px] leading-[44px] tracking-[-0.02em] ",
             "lg:text-6xl lg:leading-[72px] lg:tracking-normal"
@@ -22,6 +23,7 @@ export default function ERC20Section(): JSX.Element {
           <span className="whitespace-nowrap">{title[1]}</span>
         </h2>
         <div
+          data-testid="erc-20-desc"
           className={classNames(
             "pb-8 lg:pb-12 pt-5 font-desc text-dark-800 text-base md:tracking-[0.03em]",
             "lg:text-xl lg:tracking-normal"
@@ -32,6 +34,7 @@ export default function ERC20Section(): JSX.Element {
         </div>
         <Button
           text={t("erc20Section.buttonText")}
+          data-testid="explore-dmc-button-erc-20-learn-more"
           className="lg:px-[72.5px] md:px-[130px] py-3 lg:py-4"
           href="https://blog.defichain.com/defichains-first-move-to-become-an-interoperable-defi-powerhouse/"
           testID="erc-20-learn-more"

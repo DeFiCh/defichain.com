@@ -224,6 +224,7 @@ export function LinkButton({
 }) {
   return (
     <Link
+      data-testid="view-contract-btn"
       rel="noreferrer"
       target="_blank"
       href={href}

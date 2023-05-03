@@ -134,6 +134,7 @@ viewports.forEach((viewport) => {
         "TO MASTERNODES OVER TIME"
       );
       cy.findByTestId("initial-token-dist-desc").should("be.visible");
+
       cy.checkElementVisibilityAndText(
         "initial-token-masternodes-desc",
         "The remaining supply is issued to masternode holders over time."

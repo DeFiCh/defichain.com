@@ -9,9 +9,34 @@ declare global {
        */
       interceptServerSideWait(exec: () => void): Chainable<null>;
       interceptGeckoApi(): Chainable<null>;
+      checkElementVisibilityAndText(
+        testId: string,
+        expectedText: string
+      ): Chainable<null>;
+      checkElementVisibilityAndHref(
+        testId: string,
+        expectedHref: string
+      ): Chainable<null>;
     }
   }
 }
+
+Cypress.Commands.add(
+  "checkElementVisibilityAndText",
+  (testId, expectedText) => {
+    cy.findByTestId(testId).should("be.visible").and("have.text", expectedText);
+  }
+);
+
+Cypress.Commands.add(
+  "checkElementVisibilityAndHref",
+  (testId, expectedHref) => {
+    cy.findByTestId(testId)
+      .should("be.visible")
+      .and("have.attr", "href")
+      .and("include", expectedHref);
+  }
+);
 
 Cypress.Commands.add("interceptServerSideWait", (exec: () => void) => {
   cy.intercept("GET", "/_next/data/**").as("nextData");

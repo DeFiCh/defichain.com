@@ -47,7 +47,7 @@ viewports.forEach((viewport) => {
       );
     });
 
-    it("should have Building better tomorrow section visible ", () => {
+    it("should have Building better tomorrow header visible ", () => {
       cy.checkElementVisibilityAndText(
         "section-title-building-better-tomorrow",
         "BUILDING A BETTER TOMORROW WITH DFI"
@@ -60,10 +60,60 @@ viewports.forEach((viewport) => {
         "harness-dfi-power-desc",
         "A gateway to decentralized applications and tools, offering potential for greater returns, lower fees, and democratic governance."
       );
+    });
 
-      cy.get("article > span.font-bold.mb-4")
-        .should("be.visible")
-        .and("have.length", 9);
+    it("should have Building better tomorrow elements visible ", () => {
+      if (viewport === "macbook-16" || viewport === "ipad-2") {
+        cy.checkElementVisibilityAndText(
+          "harness-dfi-variety-desktop-title",
+          "WIDE VARIETY OF DEFI SERVICES"
+        );
+        cy.checkElementVisibilityAndText(
+          "harness-dfi-variety-desktop-subtitle",
+          "With minimal DFI fees, you have access to DeFi Applications"
+        );
+        cy.checkElementVisibilityAndText(
+          "harness-dfi-collateral-desktop-title",
+          "STORE AS COLLATERAL"
+        );
+        cy.checkElementVisibilityAndText(
+          "harness-dfi-collateral-desktop-subtitle",
+          "Borrow decentralized assets using crypto tokens as collateral"
+        );
+        cy.checkElementVisibilityAndText(
+          "harness-dfi-masternode-desktop-title",
+          "BE A MASTERNODE OWNER"
+        );
+        cy.checkElementVisibilityAndText(
+          "harness-dfi-masternode-desktop-subtitle",
+          "Fund a new staking node for just 20,000 DFI"
+        );
+        cy.checkElementVisibilityAndText(
+          "harness-dfi-tokenization-desktop-title",
+          "TOKENIZATION"
+        );
+        cy.checkElementVisibilityAndText(
+          "harness-dfi-tokenization-desktop-subtitle",
+          "Tokenize assets, manage and trade with dTokens"
+        );
+        cy.checkElementVisibilityAndText(
+          "harness-dfi-community-desktop-title",
+          "COMMUNITY FUND GOVERNANCE"
+        );
+        cy.checkElementVisibilityAndText(
+          "harness-dfi-community-desktop-subtitle",
+          "Participate in shaping the future of the blockchain"
+        );
+        cy.checkElementVisibilityAndText(
+          "harness-dfi-pools-desktop-title",
+          "PROFIT FROM LIQUIDITY MINING"
+        );
+        cy.checkElementVisibilityAndText(
+          "harness-dfi-pools-desktop-subtitle",
+          "Contribute liquidity, earn rewards, and withdraw whenever you want"
+        );
+      }
+
       if (viewport === "iphone-xr") {
         cy.get("div[data-index='0']")
           .should("have.attr", "aria-hidden")

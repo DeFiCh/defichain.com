@@ -252,10 +252,10 @@ viewports.forEach((viewport) => {
         "https://blog.defichain.com/defichains-first-move-to-become"
       );
       cy.checkElementVisibilityAndHref(
-        "view-contract-btn",
+        "link-button-view-contract",
         "https://etherscan.io/token/0x8Fc8f8269ebca376D046Ce292dC7eaC40c8D358A"
       );
-      cy.findByTestId("view-contract-btn")
+      cy.findByTestId("link-button-view-contract")
         .should("have.attr", "target")
         .and("include", "_blank");
     });

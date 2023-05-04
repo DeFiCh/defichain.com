@@ -44,6 +44,7 @@ export default function ERC20Section(): JSX.Element {
           href="https://etherscan.io/token/0x8Fc8f8269ebca376D046Ce292dC7eaC40c8D358A"
           diagonalArrow
           className="pt-4 text-dark-800 text-sm md:text-base font-semibold hover:accent-dfc-gradient-text cursor-pointer"
+          testID="view-contract"
         />
       </section>
       <div

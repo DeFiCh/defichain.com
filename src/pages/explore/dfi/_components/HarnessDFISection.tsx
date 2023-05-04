@@ -26,31 +26,37 @@ export default function HarnessDFISection() {
       title: entries[0].title,
       desc: entries[0].desc,
       icon: HarnessDFIICONS.VARIETY,
+      testId: "harness-dfi-variety",
     },
     {
       title: entries[1].title,
       desc: entries[1].desc,
       icon: HarnessDFIICONS.COLLATERAL,
+      testId: "harness-dfi-collateral",
     },
     {
       title: entries[2].title,
       desc: entries[2].desc,
       icon: HarnessDFIICONS.MASTERNODE,
+      testId: "harness-dfi-masternode",
     },
     {
       title: entries[3].title,
       desc: entries[3].desc,
       icon: HarnessDFIICONS.TOKENIZATION,
+      testId: "harness-dfi-tokenization",
     },
     {
       title: entries[4].title,
       desc: entries[4].desc,
       icon: HarnessDFIICONS.COMMUNITY,
+      testId: "harness-dfi-community",
     },
     {
       title: entries[5].title,
       desc: entries[5].desc,
       icon: HarnessDFIICONS.POOLS,
+      testId: "harness-dfi-pools",
     },
   ];
 

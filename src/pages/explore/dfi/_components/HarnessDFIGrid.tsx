@@ -29,6 +29,7 @@ interface HarnessDFIGridProps {
   desc: string;
   icon: HarnessDFIICONS;
   id?: string;
+  testId: string;
 }
 
 export function HarnessDFIGrid({
@@ -49,6 +50,7 @@ export function HarnessDFIGrid({
     >
       {gridItems.map((item, index) => (
         <HarnessDFIGridItem
+          testId={item.testId}
           key={index}
           title={item.title}
           desc={item.desc}
@@ -60,7 +62,13 @@ export function HarnessDFIGrid({
   );
 }
 
-function HarnessDFIGridItem({ title, desc, icon, id }: HarnessDFIGridProps) {
+function HarnessDFIGridItem({
+  testId,
+  title,
+  desc,
+  icon,
+  id,
+}: HarnessDFIGridProps) {
   const Icon = iconMapping[icon];
 
   // Todo: to uncomment when animations are ready
@@ -72,6 +80,7 @@ function HarnessDFIGridItem({ title, desc, icon, id }: HarnessDFIGridProps) {
       // onMouseEnter={() => setIsHovering(true)}
       // onMouseLeave={() => setIsHovering(false)}
       className={classNames("flex flex-col md:w-[246px] w-full")}
+      data-testid={testId}
     >
       <div className="md:place-self-center mb-5">
         {/* {isHovering && HoverIcon !== undefined ? ( */}

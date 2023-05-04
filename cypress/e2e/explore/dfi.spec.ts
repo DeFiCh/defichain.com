@@ -115,6 +115,31 @@ viewports.forEach((viewport) => {
       }
 
       if (viewport === "iphone-xr") {
+        cy.checkElementVisibilityAndText(
+          "harness-dfi-variety-mobile-title",
+          "WIDE VARIETY OF DEFI SERVICES"
+        );
+        cy.checkElementVisibilityAndText(
+          "harness-dfi-variety-mobile-subtitle",
+          "With minimal DFI fees, you have access to DeFi Applications"
+        );
+        cy.checkElementVisibilityAndText(
+          "harness-dfi-collateral-mobile-title",
+          "STORE AS COLLATERAL"
+        );
+        cy.checkElementVisibilityAndText(
+          "harness-dfi-collateral-mobile-subtitle",
+          "Borrow decentralized assets using crypto tokens as collateral"
+        );
+        cy.checkElementVisibilityAndText(
+          "harness-dfi-masternode-mobile-title",
+          "BE A MASTERNODE OWNER"
+        );
+        cy.checkElementVisibilityAndText(
+          "harness-dfi-masternode-mobile-subtitle",
+          "Fund a new staking node for just 20,000 DFI"
+        );
+
         cy.get("div[data-index='0']")
           .should("have.attr", "aria-hidden")
           .and("include", "false");
@@ -131,6 +156,31 @@ viewports.forEach((viewport) => {
         cy.get("div[data-index='1']")
           .should("have.attr", "aria-hidden")
           .and("include", "false");
+
+        cy.checkElementVisibilityAndText(
+          "harness-dfi-tokenization-mobile-title",
+          "TOKENIZATION"
+        );
+        cy.checkElementVisibilityAndText(
+          "harness-dfi-tokenization-mobile-subtitle",
+          "Tokenize assets, manage and trade with dTokens"
+        );
+        cy.checkElementVisibilityAndText(
+          "harness-dfi-community-mobile-title",
+          "COMMUNITY FUND GOVERNANCE"
+        );
+        cy.checkElementVisibilityAndText(
+          "harness-dfi-community-mobile-subtitle",
+          "Participate in shaping the future of the blockchain"
+        );
+        cy.checkElementVisibilityAndText(
+          "harness-dfi-pools-mobile-title",
+          "PROFIT FROM LIQUIDITY MINING"
+        );
+        cy.checkElementVisibilityAndText(
+          "harness-dfi-pools-mobile-subtitle",
+          "Contribute liquidity, earn rewards, and withdraw whenever you want"
+        );
       }
     });
 

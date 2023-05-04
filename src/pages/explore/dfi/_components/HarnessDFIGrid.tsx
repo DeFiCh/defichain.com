@@ -29,6 +29,7 @@ interface HarnessDFIGridProps {
   desc: string;
   icon: HarnessDFIICONS;
   id?: string;
+  testId: string;
 }
 
 export function HarnessDFIGrid({
@@ -49,6 +50,7 @@ export function HarnessDFIGrid({
     >
       {gridItems.map((item, index) => (
         <HarnessDFIGridItem
+          testId={isMobile ? `${item.testId}-mobile` : `${item.testId}-desktop`}
           key={index}
           title={item.title}
           desc={item.desc}
@@ -60,7 +62,13 @@ export function HarnessDFIGrid({
   );
 }
 
-function HarnessDFIGridItem({ title, desc, icon, id }: HarnessDFIGridProps) {
+function HarnessDFIGridItem({
+  testId,
+  title,
+  desc,
+  icon,
+  id,
+}: HarnessDFIGridProps) {
   const Icon = iconMapping[icon];
 
   // Todo: to uncomment when animations are ready
@@ -85,10 +93,18 @@ function HarnessDFIGridItem({ title, desc, icon, id }: HarnessDFIGridProps) {
         {/* )} */}
       </div>
 
-      <span className="md:place-self-center md:text-center text-left text-dark-1000 leading-5 font-bold mb-4">
+      <span
+        className="md:place-self-center md:text-center text-left text-dark-1000 leading-5 font-bold mb-4"
+        data-testid={`${testId}-title`}
+      >
         {title}
       </span>
-      <span className="md:text-center font-desc text-dark-700">{desc}</span>
+      <span
+        className="md:text-center font-desc text-dark-700"
+        data-testid={`${testId}-subtitle`}
+      >
+        {desc}
+      </span>
     </article>
   );
 }

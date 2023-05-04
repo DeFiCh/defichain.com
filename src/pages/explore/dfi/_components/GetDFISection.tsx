@@ -75,6 +75,7 @@ export default function GetDFISection() {
       >
         <SectionTitle text={t("getDfiSection.title")} testID="purchase-dfi" />
         <h2
+          data-testid="get-dfi-title"
           className={classNames(
             "text-[40px] leading-[44px] tracking-[-0.02em]",
             "lg:text-6xl lg:leading-[72px] lg:tracking-normal lg:mt-4"
@@ -83,6 +84,7 @@ export default function GetDFISection() {
           {t("getDfiSection.subtitle")}
         </h2>
         <h4
+          data-testid="get-dfi-desc"
           className={classNames(
             "font-desc text-dark-700 tracking-[0.03em] text-base",
             "lg:text-xl lg:tracking-normal"

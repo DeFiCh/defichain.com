@@ -23,6 +23,7 @@ export function InitialTokenDistributionSection() {
             testID="transparent-distribution"
           />
           <h2
+            data-testid="initial-token-dist-title"
             className={classNames(
               "tracking-[-0.02em] text-[40px] leading-[44px] text-dark-1000"
             )}
@@ -46,12 +47,18 @@ export function InitialTokenDistributionSection() {
               {t("initialTokenDistributionSection.initialSupply.percentage")}
             </div>
             <div className="flex flex-col place-self-center">
-              <div className="text-brand-100 font-bold leading-5 mt-[10px]">
+              <div
+                data-testid="initial-token-supply"
+                className="text-brand-100 font-bold leading-5 mt-[10px]"
+              >
                 {t("initialTokenDistributionSection.initialSupply.title")}
               </div>
 
               <div className="mt-2">
-                <span className="font-desc text-dark-700">
+                <span
+                  data-testid="initial-token-dist-desc"
+                  className="font-desc text-dark-700"
+                >
                   {t("initialTokenDistributionSection.initialSupply.desc")}
                   &nbsp;
                 </span>
@@ -116,12 +123,18 @@ export function InitialTokenDistributionSection() {
               {t("initialTokenDistributionSection.masternodes.percentage")}
             </div>
             <div className="flex flex-col lg:place-self-start place-self-center">
-              <span className="text-dark-1000 font-bold leading-5">
+              <span
+                data-testid="initial-token-masternodes-title"
+                className="text-dark-1000 font-bold leading-5"
+              >
                 {t("initialTokenDistributionSection.masternodes.title")}
               </span>
 
               <div className="mt-2">
-                <span className="font-desc text-dark-700">
+                <span
+                  data-testid="initial-token-masternodes-desc"
+                  className="font-desc text-dark-700"
+                >
                   {t("initialTokenDistributionSection.masternodes.desc")}
                 </span>
               </div>

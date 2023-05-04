@@ -203,6 +203,11 @@
         "wallets": "Wallets",
         "masternodes": "Masternodes"
       },
+      "RESOURCES": {
+        "category": "RESSOURCEN",
+        "defiscan": "DeFiScan",
+        "defichainwhitepaper": "Whitepaper"
+      },
       "ECOSYSTEM": {
         "category": "ÖKOSYSTEM",
         "defichainapps": "DeFiChain Apps",

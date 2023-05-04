@@ -214,6 +214,7 @@ export function LinkButton({
   href,
   horizontalArrow,
   diagonalArrow,
+  testID,
 }: {
   buttonText: string;
   className?: string;
@@ -221,10 +222,11 @@ export function LinkButton({
   href: string;
   horizontalArrow?: boolean;
   diagonalArrow?: boolean;
+  testID?: string;
 }) {
   return (
     <Link
-      data-testid="view-contract-btn"
+      data-testid={`link-button-${testID}`}
       rel="noreferrer"
       target="_blank"
       href={href}

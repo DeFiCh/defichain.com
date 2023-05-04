@@ -106,7 +106,7 @@ export function SecondaryButton({
       target="_blank"
       href={href}
       className={classNames("block w-fit", { "pointer-events-none": disabled })}
-      data-testID={`secondary-button-${testID}`}
+      data-testid={`secondary-button-${testID}`}
     >
       <button
         type="button"

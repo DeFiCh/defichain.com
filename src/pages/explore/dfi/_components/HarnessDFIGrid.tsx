@@ -50,7 +50,7 @@ export function HarnessDFIGrid({
     >
       {gridItems.map((item, index) => (
         <HarnessDFIGridItem
-          testId={item.testId}
+          testId={isMobile ? `${item.testId}-mobile` : `${item.testId}-desktop`}
           key={index}
           title={item.title}
           desc={item.desc}
@@ -80,7 +80,6 @@ function HarnessDFIGridItem({
       // onMouseEnter={() => setIsHovering(true)}
       // onMouseLeave={() => setIsHovering(false)}
       className={classNames("flex flex-col md:w-[246px] w-full")}
-      data-testid={testId}
     >
       <div className="md:place-self-center mb-5">
         {/* {isHovering && HoverIcon !== undefined ? ( */}
@@ -94,10 +93,18 @@ function HarnessDFIGridItem({
         {/* )} */}
       </div>
 
-      <span className="md:place-self-center md:text-center text-left text-dark-1000 leading-5 font-bold mb-4">
+      <span
+        className="md:place-self-center md:text-center text-left text-dark-1000 leading-5 font-bold mb-4"
+        data-testid={`${testId}-title`}
+      >
         {title}
       </span>
-      <span className="md:text-center font-desc text-dark-700">{desc}</span>
+      <span
+        className="md:text-center font-desc text-dark-700"
+        data-testid={`${testId}-subtitle`}
+      >
+        {desc}
+      </span>
     </article>
   );
 }

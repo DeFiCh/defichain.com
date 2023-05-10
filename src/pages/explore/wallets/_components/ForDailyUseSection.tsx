@@ -25,7 +25,7 @@ export function ForDailyUseSection() {
             "lg:text-[60px] lg:leading-[72px] md:text-[40px] md:leading-[44px] text-[32px] leading-[36px]",
             "text-dark-1000 md:text-center text-left"
           )}
-          data-testid="ForDailyUseSection.Title"
+          data-testid="for-daily-use-section-title"
         >
           {t("dailyUseSection.title")}
         </h2>

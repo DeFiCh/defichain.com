@@ -35,7 +35,7 @@ export function ForDailyUseSection() {
             "lg:tracking-normal tracking-[0.03em]",
             "text-dark-700 md:text-center text-left"
           )}
-          data-testid="ForDailyUseSection.Subtitle"
+          data-testid="for-daily-use-section-subtitle"
         >
           {t("dailyUseSection.subtitle")}
         </p>
@@ -45,18 +45,20 @@ export function ForDailyUseSection() {
           title={t("dailyUseSection.entries.DFC.title")}
           desc={t("dailyUseSection.entries.DFC.desc")}
           imageSrc="/assets/img/explore/explore-wallet-dfi.png"
-          testid="DailyUseSection.Dfc"
+          testid="daily-use-section-dfc"
         >
           <div className="flex flex-row lg:gap-x-4 gap-x-3">
             <CardLink
               url="https://apps.apple.com/us/app/defichain-wallet/id1572472820"
               descText="Get It On"
               text={IconType.APPSTORE}
+              testId="appstore-link-dfc"
             />
             <CardLink
               url="https://play.google.com/store/apps/details?id=com.defichain.app"
               descText="Get It On"
               text={IconType.GOOGLE_PLAY}
+              testId="google-play-link-dfc"
             />
           </div>
         </DownloadCard>
@@ -65,18 +67,20 @@ export function ForDailyUseSection() {
           title={t("dailyUseSection.entries.DFX.title")}
           desc={t("dailyUseSection.entries.DFX.desc")}
           imageSrc="/assets/img/explore/explore-wallet-dfx.png"
-          testid="DailyUseSection.Dfx"
+          testid="daily-use-section-dfx"
         >
           <div className="flex flex-row lg:gap-x-4 gap-x-3">
             <CardLink
               url="https://apps.apple.com/app/id1582633093"
               descText="Get It On"
               text={IconType.APPSTORE}
+              testId="appstore-link-dfx"
             />
             <CardLink
               url="https://play.google.com/store/apps/details?id=com.defichain.app.dfx"
               descText="Get It On"
               text={IconType.GOOGLE_PLAY}
+              testId="google-play-link-dfx"
             />
           </div>
         </DownloadCard>
@@ -85,23 +89,26 @@ export function ForDailyUseSection() {
           title={t("dailyUseSection.entries.JLY.title")}
           desc={t("dailyUseSection.entries.JLY.desc")}
           imageSrc="/assets/img/explore/explore-wallet-jellywallet.png"
-          testid="DailyUseSection.Jly"
+          testid="daily-use-section-jly"
         >
           <div className="flex items-center lg:space-x-4 space-x-3 text-lg font-medium">
             <CardLink
               url="https://chrome.google.com/webstore/detail/jellywallet/eegcfalgkkhehkhbjbggbhhlcnckadih"
               descText="Download For"
               text={IconType.CHROME}
+              testId="chrome-link-jly"
             />
             <CardLink
               url="https://addons.mozilla.org/en-US/firefox/addon/jellywallet/"
               descText="Download For"
               text={IconType.FIREFOX}
+              testId="firefox-link-jly"
             />
             <CardLink
               url="https://chrome.google.com/webstore/detail/jellywallet/eegcfalgkkhehkhbjbggbhhlcnckadih"
               descText="Download For"
               text={IconType.BRAVE}
+              testId="brave-link-jly"
             />
           </div>
         </DownloadCard>

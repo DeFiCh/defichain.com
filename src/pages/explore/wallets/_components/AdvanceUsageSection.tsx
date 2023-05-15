@@ -25,7 +25,7 @@ export function AdvanceUsageSection() {
             "lg:text-[60px] lg:leading-[72px] md:text-[40px] md:leading-[44px] text-[32px] leading-[36px]",
             "text-dark-1000 md:text-center text-left"
           )}
-          data-testid="AdvanceUseSection.Title"
+          data-testid="advance-use-section-title"
         >
           {t("advanceUseSection.title")}
         </h2>
@@ -35,7 +35,7 @@ export function AdvanceUsageSection() {
             "lg:tracking-normal tracking-[0.03em]",
             "text-dark-700 md:text-center text-left"
           )}
-          data-testid="AdvanceUseSection.Subtitle"
+          data-testid="advance-use-section-subtitle"
         >
           {t("advanceUseSection.subtitle")}
         </p>

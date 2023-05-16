@@ -70,6 +70,7 @@ export function SvgIconsColumn({
     </div>
   );
 }
+// testId: string;
 
 function FeatureIcon({
   item,
@@ -124,6 +125,9 @@ function FeatureIcon({
         )}
       >
         <h3
+          data-testid={`dex-${item.title
+            .toLowerCase()
+            .replaceAll(" ", "-")}-title`}
           className={classNames(
             "font-bold leading-5 text-dark-1000 transition duration-300 ease-in-out"
             // {
@@ -133,7 +137,12 @@ function FeatureIcon({
         >
           {item.title}
         </h3>
-        <p className="text-dark-700 text-sm pr-[26px] md:pr-0 md:w-[206px] lg:text-base font-desc">
+        <p
+          data-testid={`dex-${item.title
+            .toLowerCase()
+            .replaceAll(" ", "-")}-desc`}
+          className="text-dark-700 text-sm pr-[26px] md:pr-0 md:w-[206px] lg:text-base font-desc"
+        >
           {item.desc}
         </p>
       </div>

@@ -5,11 +5,11 @@ dependencies:
     specifier: ^1.7.14
     version: 1.7.14(react-dom@18.2.0)(react@18.2.0)
   '@prismicio/client':
-    specifier: ^6.7.3
-    version: 6.7.3
+    specifier: ^6.8.0
+    version: 6.8.0
   '@prismicio/react':
     specifier: ^2.5.2
-    version: 2.5.2(@prismicio/client@6.7.3)(react@18.2.0)
+    version: 2.5.2(@prismicio/client@6.8.0)(react@18.2.0)
   '@waveshq/standard-defichain-jellyfishsdk':
     specifier: ^0.49.3
     version: 0.49.3(@types/tar-fs@2.0.1)
@@ -2404,8 +2404,8 @@ packages:
     requiresBuild: true
     optional: true
 
-  /@prismicio/client@6.7.3:
-    resolution: {integrity: sha512-zQVZhuQDYIgdaY636u+QNk2tvvbtpkaKsEiLT0Ef51nFW/y5fqpOG5U0eU3cVsikZaYNlZ17x6O1wmvVCLdimQ==}
+  /@prismicio/client@6.8.0:
+    resolution: {integrity: sha512-6E2dGp1zsZRKe9g/YH/vUeKf2OZJqZJGJjTXuI+EjQxNROf0L1aTDxcpcxWRwLbHxFyMxdNAMY4rUyuNzRKY9Q==}
     engines: {node: '>=12.13.0'}
     dependencies:
       '@prismicio/helpers': 2.3.9
@@ -2421,7 +2421,7 @@ packages:
       imgix-url-builder: 0.0.3
     dev: false
 
-  /@prismicio/react@2.5.2(@prismicio/client@6.7.3)(react@18.2.0):
+  /@prismicio/react@2.5.2(@prismicio/client@6.8.0)(react@18.2.0):
     resolution: {integrity: sha512-X00mT3/mHDnnb9NKUeAZnBWDDngXhr84RVzh9+eSeZjJKIVYEHHgfZqex4R6LgjZzeueaGp0UCLhwrUeiRp5DA==}
     engines: {node: '>=12.7.0'}
     peerDependencies:
@@ -2431,7 +2431,7 @@ packages:
       '@prismicio/client':
         optional: true
     dependencies:
-      '@prismicio/client': 6.7.3
+      '@prismicio/client': 6.8.0
       '@prismicio/helpers': 2.3.9
       '@prismicio/richtext': 2.1.4
       '@prismicio/types': 0.2.7

@@ -1,4 +1,4 @@
-const viewports = ["iphone-xr", "ipad-2", "macbook-16"];
+import { viewports } from "../../fixture/main.config";
 
 viewports.forEach((viewport) => {
   context(`/explore/dex on ${viewport}`, () => {

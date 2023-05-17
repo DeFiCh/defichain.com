@@ -1,4 +1,8 @@
-import { mobileWallets, webWallets } from "../../fixture/wallets.config";
+import {
+  desktopWalletsUrls,
+  mobileWalletsUrls,
+  webWallets,
+} from "../../fixture/wallets.config";
 
 const viewports = ["macbook-16", "iphone-xr", "ipad-2"];
 
@@ -47,7 +51,7 @@ viewports.forEach((viewport) => {
       webWallets.forEach((webWallet) => {
         cy.checkElementVisibilityAndHref(webWallet.testId, webWallet.url);
       });
-      mobileWallets.forEach((mobileWallet) => {
+      mobileWalletsUrls.forEach((mobileWallet) => {
         cy.checkElementVisibilityAndHref(mobileWallet.testId, mobileWallet.url);
       });
     });
@@ -65,6 +69,15 @@ viewports.forEach((viewport) => {
         "advance-use-section-subtitle",
         "Advanced wallets that are suited for complex usage of DeFiChain, such as masternode and multi-signature management along with much more."
       );
+    });
+
+    it("should have Desktop Wallets links visible and expected text", () => {
+      desktopWalletsUrls.forEach((desktopWallet) => {
+        cy.checkElementVisibilityAndHref(
+          desktopWallet.testId,
+          desktopWallet.url
+        );
+      });
     });
   });
 });

@@ -69,6 +69,7 @@ export function DynamicDownloadCard(
           <CardLink
             descText="View on"
             text={IconType.GITHUB}
+            testId="github-link-advance-use-section-electrum"
             url={`https://github.com/${props.repoName}/releases/latest`}
           />
         ) : (
@@ -77,6 +78,7 @@ export function DynamicDownloadCard(
               downloadLinks && downloadLinks[key] ? (
                 <CardLink
                   key={key}
+                  testId={`github-link-${props.testid}-${key}`}
                   descText="Download for"
                   text={IconType[OSIconMapping[key]]}
                   url={downloadLinks[key]}

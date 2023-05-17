@@ -25,7 +25,7 @@ viewports.forEach((viewport) => {
       );
     });
 
-    it.only("should have Start exploring section clickable", () => {
+    it("should have Start exploring section clickable", () => {
       if (viewport === "macbook-16") {
         cy.findByTestId("start-exploring-button").click({
           scrollBehavior: false,

@@ -25,7 +25,7 @@ viewports.forEach((viewport) => {
       );
     });
 
-    it("should have Start exploring section clickable", () => {
+    it.only("should have Start exploring section clickable", () => {
       if (viewport === "macbook-16") {
         cy.findByTestId("start-exploring-button").click({
           scrollBehavior: false,
@@ -41,10 +41,10 @@ viewports.forEach((viewport) => {
         "Daily access to DeFiChain"
       );
 
-      //   todo: fix unprocessable character
-      //   cy.checkElementVisibilityAndText(
-      //     "for-daily-use-section-subtitle",
-      //     "These wallets provide lightweight, easy access to DeFiChain’s suite of features. Best suited for users who interact with DeFiChain on a near-daily basis, while not compromising on speed and security of funds.");
+      cy.checkElementVisibilityAndText(
+        "for-daily-use-section-subtitle",
+        "These wallets provide lightweight, easy access to DeFiChain’s suite of features. Best suited for users who interact with DeFiChain on a near-daily basis, while not compromising on speed and security of funds."
+      );
     });
 
     it("should have For Daily Use elements visible and expected links", () => {

@@ -9,12 +9,10 @@ description: Last updated mm/dd/yyyy
       title="Abstract"
       className=
         "text-[24px] leading-8 scroll-mt-40 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]"
-    >
-      1. Abstract
-    </h2>
-    <div className="mt-4 text-dark-800">
-        The DeFiChain Foundation is developing DeFiChain, a blockchain specifically dedicated to decentralized financial applications. By focusing on the functionality of the blockchain and dedicating it specifically to decentralized finance, DeFiChain provides unparalleled high transaction throughput, reduced risk of errors, and intelligent feature development specifically for the fulfillment of financial services on the blockchain.
-    </div>
+    >1. Abstract</h2>
+  <div className="mt-4 text-dark-800">
+      The DeFiChain Foundation is developing DeFiChain, a blockchain specifically dedicated to decentralized financial applications. By focusing on the functionality of the blockchain and dedicating it specifically to decentralized finance, DeFiChain provides unparalleled high transaction throughput, reduced risk of errors, and intelligent feature development specifically for the fulfillment of financial services on the blockchain.
+  </div>
 
 <div className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">This Document is not a Prospectus</div>
 
@@ -31,9 +29,7 @@ This Document is not a final technical specification
 <h2 id="executive-summary"
       title="Executive Summary"
       className=
-        "text-[24px] leading-8 scroll-mt-40 mt-12 font-sans tracking-normal lg:text-[32px] lg:leading-[40px]">
-        2. Executive summary
-</h2>
+        "text-[24px] leading-8 scroll-mt-40 mt-12 font-sans tracking-normal lg:text-[32px] lg:leading-[40px]">2. Executive summary</h2>
 
 <div className="mt-4 text-dark-800">
       The cryptocurrency industry is based on a simple premise: people should be fully in control of their finances. While it seems like a simple and obvious statement, the current systems are far from providing financial services that are truly under the control of the people who use them. The mission of DeFiChain is to give people (and in the future, machines, and devices) seamless access to decentralized financial services.
@@ -103,9 +99,7 @@ The Timeline
 
 <h2 id="background"
   title="Background"
-  className="text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]">
-  3. Background/Industry
-</h2>
+  className="text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]">3. Background/Industry</h2>
 
 <h3 id="promises" title="DeFi’s promises and challenges" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:text-2xl">
 DeFi’s promises and challenges
@@ -241,9 +235,7 @@ The points described above are simply unacceptable for any type of financial tra
 <h2 id="alternatives"
       title="Comparing existing alternatives"
       className=
-        "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]">
-        4. Comparing existing DeFi alternatives
-</h2>
+        "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]">4. Comparing existing DeFi alternatives</h2>
 
 <h3 id="bitcoin-why-not" title="Bitcoin: Why not?" className="mt-6 font-bold font-sans text-xl md:mt-8 scroll-mt-40 lg:text-2xl">
 Bitcoin: Why Not?
@@ -276,9 +268,7 @@ The second problem stays mostly within Ethereum, which is the network’s usage 
 <h2 id="solution"
       title="DeFiChain Solution"
       className=
-        "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]">
-        5. DeFiChain Solution
-</h2>
+        "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]">5. DeFiChain Solution</h2>
 
 <h3 id="ecosystem" title="Staying in the Bitcoin Ecosystem" className="mt-6 font-bold font-sans scroll-mt-40 text-xl md:mt-8 lg:text-2xl">
 Staying in the Bitcoin Ecosystem
@@ -516,9 +506,7 @@ Distribution of Dividends
       title="DeFiChain Design"
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]"
-    >
-      6. DeFiChain Design
-    </h2>
+    >6. DeFiChain Design</h2>
 
 <h3 id="param" title="Design Parameters" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Design Parameters

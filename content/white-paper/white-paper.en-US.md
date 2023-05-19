@@ -810,9 +810,7 @@ Bitcoin Anchoring
       title="Building Blocks"
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]"
-    >
-      7. DeFi Building Blocks
-    </h2>
+    >7. DeFi Building Blocks</h2>
 
 <div className="mt-4 text-dark-800">
 To achieve our goals of enabling decentralized finance transactions on DeFiChain, the following build blocks will be included as a base native components on DeFiChain.
@@ -1158,9 +1156,7 @@ Lending a Coin for Cashflow
       title="$DFI coin"
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]"
-    >
-      8. $DFI coin
-    </h2>
+    >8. $DFI coin</h2>
 <div className="mt-4 text-dark-800">
 The $DFI coin will be the integral unit of account in DeFiChain ecosystem.
 
@@ -1502,9 +1498,7 @@ Acquiring $DFI coins
       title="DeFiChain Foundation"
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]"
-    >
-      9. DeFiChain Foundation
-    </h2>
+    >9. DeFiChain Foundation</h2>
 <div className="mt-5 text-dark-800">
 The DeFiChain Foundation is incorporated as a company limited by guarantee, resembling a foundation structure which holds the DeFiChain Trademarks, Domains and makes sure the DFI foundation funds are used as instructed by the masternodes.
 </div>
@@ -1514,9 +1508,7 @@ The DeFiChain Foundation is incorporated as a company limited by guarantee, rese
       title="Marketing"
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]"
-    >
-      10. Marketing
-    </h2>
+    >10. Marketing</h2>
 
 <h3 id="target-market" title="Target Market" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Target Market
@@ -1568,9 +1560,7 @@ Partnerships
       title="Roadmap"
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]"
-    >
-      11. Roadmap and Milestones
-    </h2>
+    >11. Roadmap and Milestones</h2>
 <div className="mt-8">
 
 ![Roadmap](/img/white-paper/roadmap.png)
@@ -1582,9 +1572,7 @@ Partnerships
       title="A Glimpse into the Future"
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]"
-    >
-      12. A Glimpse into the Future
-    </h2>
+    >12. A Glimpse into the Future</h2>
 <div className="mt-4 text-dark-800">
   Building on top of DeFiChain will lead to some of the most exciting benefits not only for first-world areas, but moreover also all those that need decentralized finance the most. For example, imagine Anna, who owns a small business in a developing economy, but who doesn’t have a traditional bank account. She uses mobile money and digital currencies to run her business, accepting payments through mobile--which makes perfect sense, because nobody in her province uses cash or credit cards. Anna uses DeFiChain to take out a loan when one of her suppliers pays late, saving her business. In the old days, she would have simply gone out of business, because no bank would loan money to her. Anna also invests wisely. When she is paid by the supplier, she immediately moves the cash into various tokenized assets to avoid the hyperinflation and instability of her national government’s currency, and on top of that, she is able to earn interest.
   <div className="mt-5">
@@ -1605,9 +1593,7 @@ This is what DeFiChain is all about - To make the world a better place!
       title="Footnotes"
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]"
-    >
-      13. Footnotes
-    </h2>
+    >13. Footnotes</h2>
 
 <div className="mt-5 text-dark-800">
   <div className="scroll-mt-40" id="user-content-fn-1">1. <a className="underline " href="https://www.investopedia.com/ask/answers/030515/what-percentage-global-economy-comprised-financial-services-sector.asp" target="_blank">https://www.investopedia.com/ask/answers/030515/what-percentage-global-economy-comprised-financial-services-sector.asp</a></div>

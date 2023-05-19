@@ -31,6 +31,19 @@ viewports.forEach((viewport) => {
       );
       cy.get("h2#solution").should("have.text", "5. DeFiChain Solution");
       cy.get("h2#design").should("have.text", "6. DeFiChain Design");
+      cy.get("h2#building-blocks").should(
+        "have.text",
+        "7. DeFi Building Blocks"
+      );
+      cy.get("h2#dfi-coin").should("have.text", "8. $DFI coin");
+      cy.get("h2#defichain-foundation").should(
+        "have.text",
+        "9. DeFiChain Foundation"
+      );
+      cy.get("h2#marketing").should("have.text", "10. Marketing");
+      cy.get("h2#roadmap").should("have.text", "11. Roadmap and Milestones");
+      cy.get("h2#future").should("have.text", "12. A Glimpse into the Future");
+      cy.get("h2#footnotes").should("have.text", "13. Footnotes");
     });
   });
 });

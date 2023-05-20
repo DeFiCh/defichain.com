@@ -37,7 +37,7 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
-    "@cypress/code-coverage": "^3.10.4",
+    "@cypress/code-coverage": "^3.10.5",
     "@netlify/plugin-nextjs": "^4.37.0",
     "@tailwindcss/typography": "^0.5.9",
     "@testing-library/cypress": "^9.0.0",

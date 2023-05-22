@@ -28,5 +28,18 @@ viewports.forEach((viewport) => {
           .and("have.text", wpTitle.text);
       });
     });
+
+    //
+    it.skip("should be able to navigate on sidemenu", () => {
+      if (viewport === "macbook-16") {
+        whitepaperTitles.forEach((wpTitle) => {
+          // if (wpTitle.id != "defichain-foundation")
+          cy.checkElementVisibilityAndHref(
+            `link-${wpTitle.id}`,
+            `#${wpTitle.id}`
+          );
+        });
+      }
+    });
   });
 });

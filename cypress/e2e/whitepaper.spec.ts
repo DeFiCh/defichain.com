@@ -29,7 +29,7 @@ viewports.forEach((viewport) => {
       });
     });
 
-    //
+    // remove skip once bug with scrolling fixed
     it.skip("should be able to navigate on sidemenu", () => {
       if (viewport === "macbook-16") {
         whitepaperTitles.forEach((wpTitle) => {

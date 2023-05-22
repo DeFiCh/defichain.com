@@ -1,4 +1,5 @@
 import { viewports } from "../../fixture/main.config";
+import { titles } from "../../fixture/privacy.config";
 
 viewports.forEach((viewport) => {
   context(`/privacy-policy on ${viewport}`, () => {
@@ -20,6 +21,15 @@ viewports.forEach((viewport) => {
         "section-desc-explore-dex-decentralized-exchange",
         "Discover our commitment to protecting your privacy through our strict privacy policy"
       );
+    });
+
+    it("should have all the expected Titles visible expected text", () => {
+      titles.forEach((privacyTitle) => {
+        cy.get(`h2#${privacyTitle.id}`)
+          .scrollIntoView()
+          .should("be.visible")
+          .and("include.text", privacyTitle.title);
+      });
     });
   });
 });

@@ -11,7 +11,8 @@
     "cypress:open": "cypress open",
     "cypress:build": "CYPRESS=true next build",
     "cypress:run": "TZ=UTC cypress run --headless --browser chrome",
-    "playground:start": "docker-compose rm -fsv && docker-compose up"
+    "playground:start": "docker-compose rm -fsv && docker-compose up",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",

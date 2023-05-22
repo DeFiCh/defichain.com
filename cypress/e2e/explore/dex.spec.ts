@@ -1,4 +1,4 @@
-const viewports = ["iphone-xr", "ipad-2", "macbook-16"];
+import { viewports } from "../../fixture/main.config";
 
 viewports.forEach((viewport) => {
   context(`/explore/dex on ${viewport}`, () => {
@@ -58,36 +58,33 @@ viewports.forEach((viewport) => {
     });
 
     it("should have Why DEX elements visible and expected text", () => {
+      cy.checkElementVisibilityAndText("trade-assets-title", "TRADE ASSETS");
       cy.checkElementVisibilityAndText(
-        "dex-trade-assets-title",
-        "TRADE ASSETS"
-      );
-      cy.checkElementVisibilityAndText(
-        "dex-trade-assets-desc",
+        "trade-assets-desc",
         "Seamlessly swap tokens with ease and convenience."
       );
       cy.checkElementVisibilityAndText(
-        "dex-wide-selection-of-tokens-title",
+        "wide-selection-of-tokens-title",
         "WIDE SELECTION OF TOKENS"
       );
       cy.checkElementVisibilityAndText(
-        "dex-wide-selection-of-tokens-desc",
+        "wide-selection-of-tokens-desc",
         "Discover endless possibilities with 60+ dTokens - Your key to a diverse DeFi playground."
       );
       cy.checkElementVisibilityAndText(
-        "dex-profit-from-liquidity-mining-title",
+        "profit-from-liquidity-mining-title",
         "PROFIT FROM LIQUIDITY MINING"
       );
       cy.checkElementVisibilityAndText(
-        "dex-profit-from-liquidity-mining-desc",
+        "profit-from-liquidity-mining-desc",
         "Contribute liquidity, earn rewards, and withdraw whenever you want."
       );
       cy.checkElementVisibilityAndText(
-        "dex-advanced-swaps-title",
+        "advanced-swaps-title",
         "ADVANCED SWAPS"
       );
       cy.checkElementVisibilityAndText(
-        "dex-advanced-swaps-desc",
+        "advanced-swaps-desc",
         "Instant multi-pool trades or future-price-based dToken swaps at your fingertips."
       );
     });

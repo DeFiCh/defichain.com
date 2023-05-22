@@ -1,6 +1,5 @@
 import { ecosystemLinks, resourcesLinks } from "../fixture/homepage.config";
-
-const viewports = ["macbook-16", "iphone-xr", "ipad-2"];
+import { viewports } from "../fixture/main.config";
 
 viewports.forEach((viewport) => {
   context(`Homepage on ${viewport}`, () => {

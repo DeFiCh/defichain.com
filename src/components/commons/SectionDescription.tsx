@@ -9,7 +9,7 @@ export function SectionDescription({
 }) {
   return (
     <div
-      data-testid="desc"
+      data-testid="section-desc-explore-dex-decentralized-exchange"
       className={classNames(
         "font-desc tracking-[0.03em] text-xl text-dark-700",
         "lg:text-2xl tracking-normal",

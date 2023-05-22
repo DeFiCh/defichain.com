@@ -31,5 +31,17 @@ viewports.forEach((viewport) => {
           .and("include.text", privacyTitle.title);
       });
     });
+
+    it("should be able to navigate on side menu", () => {
+      if (viewport === "macbook-16") {
+        titles.forEach((privacyTitle) => {
+          cy.get(`#${privacyTitle.id}`).click();
+          cy.checkElementVisibilityAndHref(
+            `link-${privacyTitle.id}`,
+            `#${privacyTitle.id}`
+          );
+        });
+      }
+    });
   });
 });

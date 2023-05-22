@@ -32,6 +32,7 @@ function Headings({ headings, activeId, parentReference }) {
         >
           <a
             href={`#${heading.id}`}
+            data-testid={`link-${heading.id}`}
             className={classnames(
               "font-sans font-semibold text-[18px] leading-6 text-dark-500",
               {

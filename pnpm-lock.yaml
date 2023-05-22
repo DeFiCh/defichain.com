@@ -38,8 +38,8 @@ dependencies:
     specifier: ^8.0.7
     version: 8.0.7(@types/react@18.2.2)(react@18.2.0)
   react-number-format:
-    specifier: ^5.2.1
-    version: 5.2.1(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^5.2.2
+    version: 5.2.2(react-dom@18.2.0)(react@18.2.0)
   react-slick:
     specifier: ^0.29.0
     version: 0.29.0(react-dom@18.2.0)(react@18.2.0)
@@ -7925,8 +7925,8 @@ packages:
       - supports-color
     dev: false
 
-  /react-number-format@5.2.1(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-C9L9GQDH/hv6ZDAwk6cdF0OhWw3EGXPvoigUtig47710SRh/HvCczuksrTXecMH2PBo/jjaaOSIVmUaKGxdZ3w==}
+  /react-number-format@5.2.2(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-wCh64Z1HCwXcO2dbgkeYIaB+Rmp/fcsH8kAeRtUkc46dv1pIrgDjie2WkOqKBw8YqyqhwNdYgNFNQuuY+iGJ/g==}
     peerDependencies:
       react: ^0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
       react-dom: ^0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0

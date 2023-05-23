@@ -18,9 +18,12 @@ viewports.forEach((viewport) => {
         "section-title-explore-wallets-defichain-wallets",
         "CHOOSE A WALLET THAT SUITS YOU"
       );
-      cy.checkElementVisibilityAndText("sub-title", "DeFiChain Wallets");
       cy.checkElementVisibilityAndText(
-        "desc",
+        "section-header-explore-dex-decentralized-exchange",
+        "DeFiChain Wallets"
+      );
+      cy.checkElementVisibilityAndText(
+        "section-desc-explore-dex-decentralized-exchange",
         "Gain access to the DeFi landscape through non-custodial wallets designed for a multitude of requirements."
       );
     });

@@ -80,7 +80,7 @@ viewports.forEach((viewport) => {
 
       const username = "mikhail-zlochevskyi";
       const password =
-        "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";
+        "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";
 
       cy.getLatestVersion("DeFiCh/ain", username, password)
         .then((latestVersion1: any) => {

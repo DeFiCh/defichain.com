@@ -75,12 +75,37 @@ viewports.forEach((viewport) => {
     });
 
     it("should have Desktop Wallets links visible and expected text", () => {
-      desktopWalletsUrls.forEach((desktopWallet) => {
-        cy.checkElementVisibilityAndHref(
-          desktopWallet.testId,
-          desktopWallet.url
-        );
-      });
+      let defichainAppVersion: string;
+      let ainVersion: string;
+
+      const username = "mikhail-zlochevskyi";
+      const password =
+        "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";
+
+      cy.getLatestVersion("DeFiCh/ain", username, password)
+        .then((latestVersion1: any) => {
+          ainVersion = latestVersion1;
+
+          return cy.getLatestVersion(
+            "BirthdayResearch/defichain-app",
+            username,
+            password
+          );
+        })
+        .then((latestVersion2: any) => {
+          defichainAppVersion = latestVersion2;
+
+          const walletsList = desktopWalletsUrls(
+            ainVersion,
+            defichainAppVersion
+          );
+          walletsList.forEach((desktopWallet) => {
+            cy.checkElementVisibilityAndHref(
+              desktopWallet.testId,
+              desktopWallet.url
+            );
+          });
+        });
     });
   });
 });

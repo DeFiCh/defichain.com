@@ -17,6 +17,11 @@ declare global {
         testId: string,
         expectedHref: string
       ): Chainable<null>;
+      getLatestVersion(
+        repo: string,
+        username: string,
+        password: string
+      ): Chainable<null>;
     }
   }
 }
@@ -37,6 +42,20 @@ Cypress.Commands.add(
       .and("include", expectedHref);
   }
 );
+
+Cypress.Commands.add("getLatestVersion", (repo, username, password) => {
+  return cy
+    .request({
+      method: "GET",
+      url: `https://api.github.com/repos/${repo}/releases/latest`,
+      auth: {
+        username,
+        password,
+      },
+    })
+    .its("body.tag_name")
+    .then((tag_name) => tag_name.replaceAll("v", ""));
+});
 
 Cypress.Commands.add("interceptServerSideWait", (exec: () => void) => {
   cy.intercept("GET", "/_next/data/**").as("nextData");

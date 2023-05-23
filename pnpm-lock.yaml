@@ -70,8 +70,8 @@ devDependencies:
     specifier: ^3.10.5
     version: 3.10.5(@babel/core@7.21.0)(@babel/preset-env@7.20.2)(babel-loader@9.1.2)(cypress@12.12.0)(webpack@5.75.0)
   '@netlify/plugin-nextjs':
-    specifier: ^4.37.1
-    version: 4.37.1
+    specifier: ^4.37.2
+    version: 4.37.2
   '@tailwindcss/typography':
     specifier: ^0.5.9
     version: 0.5.9(tailwindcss@3.3.2)
@@ -2242,8 +2242,8 @@ packages:
       - encoding
       - supports-color
 
-  /@netlify/plugin-nextjs@4.37.1:
-    resolution: {integrity: sha512-I2lIShQb9CiIBjGMihY9GMNDwoi2YMCtuq1ncUsePInIsIMazH3Z1b1TdQQnJ3d5KPt07hw1LvO6mOlpqy2F4w==}
+  /@netlify/plugin-nextjs@4.37.2:
+    resolution: {integrity: sha512-XDkSMIfz/MHVTXr08JMsirwUrpWEgZZC2qLFQh2IVp6Xb5rT8zlq4HBjxx2AbTyLJUsn3m7LB0uabuyln7XoMg==}
     engines: {node: '>=12.0.0'}
     dependencies:
       '@netlify/esbuild': 0.14.39

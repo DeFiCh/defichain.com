@@ -1,4 +1,8 @@
-import { ecosystemLinks, resourcesLinks } from "../fixture/homepage.config";
+import {
+  ecosystemLinks,
+  resourcesLinks,
+  communityLinks,
+} from "../fixture/homepage.config";
 import { viewports } from "../fixture/main.config";
 
 viewports.forEach((viewport) => {
@@ -48,10 +52,24 @@ viewports.forEach((viewport) => {
         "not.contain",
         "COMING SOON"
       );
-      cy.findByTestId("header-coming-soon-tag-Community").should(
-        "not.contain",
-        "COMING SOON"
-      );
+    });
+
+    it("should have links on Community section", () => {
+      if (viewport === "iphone-xr" || viewport === "ipad-2") {
+        cy.findByTestId("header-open-menu").click();
+        cy.findByTestId("header-tablet-menu-item-community").click();
+      } else if (viewport === "macbook-16") {
+        cy.findByTestId("header-coming-soon-tag-Community").trigger(
+          "mouseover"
+        );
+      }
+      communityLinks.forEach((communityItem) => {
+        cy.findByTestId(`header-nav-elem-community-${communityItem.headerId}`)
+          .scrollIntoView()
+          .should("be.visible")
+          .and("have.attr", "href")
+          .and("include", communityItem.href);
+      });
     });
 
     // No TC

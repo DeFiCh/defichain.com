@@ -22,7 +22,7 @@ export default function MetaChainPage() {
           hasStartExploringButton
           // TODO: update start exploring link to accurate section
           startExploringJumpLink="#statistics-display-dfi"
-          testID="meta-chain-section"
+          testID="meta-chain"
         />
       </div>
 

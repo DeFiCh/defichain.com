@@ -2,6 +2,27 @@
   "heroBanner": {
     "title": "THE UPGRADED ECOSYSTEM",
     "subtitle": "Meta Chain: Build for Bitcoin & Ethereum",
-    "desc": "Unrivaled innovation and interoperability, without compromising on scalability or security. MetaChain is for building dApps on the world’s largest blockchains."
+    "desc": "Unrivaled innovation and interoperability, without compromising on scalability or security. MetaChain is for building dApps on the world's largest blockchains."
+  },
+  "keyFeatures": {
+    "title": "Ethereum's power meets innovation",
+    "subtitle": "KEY FEATURES",
+    "desc": "Provides an EVM-compatible environment that allows developers, familiar with the Ethereum ecosystem, to seamlessly and effortlessly build next generation applications on the Native DeFiChain.",
+    "evmIntegration": {
+      "title": "EVM & UTXO INTEGRATION",
+      "desc": "Supports both UTXO and Ethereum account model, providing privacy and simplicity seamlessly."
+    },
+    "ecosystem": {
+      "title": "SCALABLE ECOSYSTEM",
+      "desc": "Unrestricted cross-compatibility empowers DFI users with extensive access to Ethereum and EVM-compatible chains."
+    },
+    "transactionFee": {
+      "title": "LOW TRANSACTION FEES",
+      "desc": "Empowering builders and users with cost-effective transaction fees."
+    },
+    "switchingCosts": {
+      "title": "LOW SWITCHING COSTS",
+      "desc": "Seamless dApp deployment and effortless cross-chain interaction simplified using Meta Chain."
+    }
   }
 }

@@ -4,6 +4,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import classNames from "classnames";
 import { Head } from "@components/commons/Head";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
+import { MetaChainKeyFeatures } from "./_components/MetaChainKeyFeatures";
 
 export default function MetaChainPage() {
   const { t } = useTranslation("page-meta-chain");
@@ -11,20 +12,19 @@ export default function MetaChainPage() {
   return (
     <>
       <Head title={t("heroBanner.subtitle")} />
-      <div className="w-full">
-        <HeroBanner
-          title={t("heroBanner.title")}
-          subtitle={t("heroBanner.subtitle")}
-          subtitleCustomStyle="lg:w-[629px]"
-          desc={t("heroBanner.desc")}
-          heroBg={HeroBannerBg.META_CHAIN}
-          customBgPosStyle="lg:right-[-8em] md:right-[-5em] right-[-4em]"
-          hasStartExploringButton
-          // TODO: update start exploring link to accurate section
-          startExploringJumpLink="#statistics-display-dfi"
-          testID="meta-chain"
-        />
-      </div>
+      <HeroBanner
+        title={t("heroBanner.title")}
+        subtitle={t("heroBanner.subtitle")}
+        subtitleCustomStyle="lg:w-[629px]"
+        desc={t("heroBanner.desc")}
+        heroBg={HeroBannerBg.META_CHAIN}
+        customBgPosStyle="lg:right-[-8em] md:right-[-5em] right-[-4em]"
+        hasStartExploringButton
+        // TODO: update start exploring link to accurate section
+        startExploringJumpLink="#metachain-key-features"
+        testID="meta-chain"
+      />
+      <MetaChainKeyFeatures />
 
       <div
         className={classNames(

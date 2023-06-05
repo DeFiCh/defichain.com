@@ -49,14 +49,18 @@ export function HeroBanner({
         )}
       >
         <SectionTitle text={title} testID={testID} />
-        <SectionSubTitle text={subtitle} customStyle={subtitleCustomStyle} />
-        <SectionDescription text={desc} />
+        <SectionSubTitle
+          text={subtitle}
+          testID={testID}
+          customStyle={subtitleCustomStyle}
+        />
+        <SectionDescription text={desc} testID={testID} />
         {hasCtaButton && ctaButtonText && (
           <Button
             className="lg:py-4 py-3 md:w-1/2 w-auto lg:text-base text-sm md:mt-7 mt-10"
             text={ctaButtonText}
             href={ctaButtonLink}
-            testID="hero-banner-cta-button"
+            testID={`hero-banner-cta-button-${testID}`}
           />
         )}
       </div>

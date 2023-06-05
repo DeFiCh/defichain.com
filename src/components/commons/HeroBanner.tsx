@@ -101,6 +101,7 @@ export enum HeroBannerBg {
   CUBE,
   DFI_COIN,
   DIAMOND_COIN,
+  META_CHAIN,
 }
 const bgMapping = {
   [HeroBannerBg.COIN_ARROW]:
@@ -110,4 +111,6 @@ const bgMapping = {
     "bg-[url(/assets/img/herobanner/hero-banner-dfi-coin.png)]",
   [HeroBannerBg.DIAMOND_COIN]:
     "bg-[url(/assets/img/herobanner/hero-banner-diamond-coin.png)]",
+  [HeroBannerBg.META_CHAIN]:
+    "bg-[url(/assets/img/herobanner/hero-banner-meta-chain.png)]",
 };

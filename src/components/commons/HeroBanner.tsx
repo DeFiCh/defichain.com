@@ -14,6 +14,7 @@ import { SectionDescription } from "./SectionDescription";
 export function HeroBanner({
   title,
   subtitle,
+  subtitleCustomStyle,
   desc,
   customBgPosStyle,
   heroBg,
@@ -26,6 +27,7 @@ export function HeroBanner({
 }: {
   title: string;
   subtitle: string;
+  subtitleCustomStyle?: string;
   desc: string;
   customBgPosStyle?: string;
   heroBg: HeroBannerBg;
@@ -47,7 +49,7 @@ export function HeroBanner({
         )}
       >
         <SectionTitle text={title} testID={testID} />
-        <SectionSubTitle text={subtitle} />
+        <SectionSubTitle text={subtitle} customStyle={subtitleCustomStyle} />
         <SectionDescription text={desc} />
         {hasCtaButton && ctaButtonText && (
           <Button

@@ -11,16 +11,20 @@ export default function MetaChainPage() {
   return (
     <>
       <Head title={t("heroBanner.subtitle")} />
-      <HeroBanner
-        title={t("heroBanner.title")}
-        subtitle={t("heroBanner.subtitle")}
-        desc={t("heroBanner.desc")}
-        heroBg={HeroBannerBg.META_CHAIN}
-        customBgPosStyle="lg:right-[-8em] md:right-[-5em] right-[-2em]"
-        hasStartExploringButton
-        // startExploringJumpLink="#statistics-display-dfi"
-        testID="meta-chain-section"
-      />
+      <div className="w-full">
+        <HeroBanner
+          title={t("heroBanner.title")}
+          subtitle={t("heroBanner.subtitle")}
+          subtitleCustomStyle="lg:w-[629px]"
+          desc={t("heroBanner.desc")}
+          heroBg={HeroBannerBg.META_CHAIN}
+          customBgPosStyle="lg:right-[-8em] md:right-[-5em] right-[-4em]"
+          hasStartExploringButton
+          // startExploringJumpLink="#statistics-display-dfi"
+          testID="meta-chain-section"
+        />
+      </div>
+
       <div
         className={classNames(
           "jellyfish-item bg-[url(/assets/img/index/metachain-jellyfish.png)]",

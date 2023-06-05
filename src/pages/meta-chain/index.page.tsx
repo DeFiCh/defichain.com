@@ -20,7 +20,8 @@ export default function MetaChainPage() {
           heroBg={HeroBannerBg.META_CHAIN}
           customBgPosStyle="lg:right-[-8em] md:right-[-5em] right-[-4em]"
           hasStartExploringButton
-          // startExploringJumpLink="#statistics-display-dfi"
+          // TODO: update start exploring link to accurate section
+          startExploringJumpLink="#statistics-display-dfi"
           testID="meta-chain-section"
         />
       </div>

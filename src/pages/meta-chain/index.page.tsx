@@ -23,7 +23,7 @@ export default function MetaChainPage() {
       />
       <div
         className={classNames(
-          "jellyfish-item bg-[url(/assets/img/index/jellyfish.png)]",
+          "jellyfish-item bg-[url(/assets/img/index/metachain-jellyfish.png)]",
           "h-[300.93px] absolute inset-0 bg-contain bg-no-repeat md:bg-right",
           "top-[10%] md:top-[16%] lg:top-[25%] left-[-35%] md:right-[35%] lg:right-[25%]",
           { "right-[40%]": dimension.width <= 750 }

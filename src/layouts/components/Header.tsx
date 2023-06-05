@@ -275,8 +275,7 @@ function DesktopMenu({ item }: { item: string }) {
           data-testid={`header-coming-soon-tag-${item}`}
           className={classNames("flex flex-col")}
         >
-          {(item === MobileTabletDropDownState.ECOSYSTEM ||
-            item === MobileTabletDropDownState.BUILD) && <ComingSoonTag />}
+          {item === MobileTabletDropDownState.BUILD && <ComingSoonTag />}
           {t(`header.navbar.${item.toLowerCase()}`)}
         </div>
       </Menu.Button>
@@ -399,7 +398,7 @@ function TabletMobileDropDown({
           "flex flex-row cursor-pointer items-center py-5",
           {
             "pointer-events-none":
-              label === MobileTabletDropDownState.ECOSYSTEM ||
+              label === MobileTabletDropDownState.METACHAIN ||
               label === MobileTabletDropDownState.BUILD,
           }
         )}
@@ -421,8 +420,7 @@ function TabletMobileDropDown({
           {t(`header.navbar.${label.toLowerCase()}`)}
         </div>
 
-        {(label === MobileTabletDropDownState.ECOSYSTEM ||
-          label === MobileTabletDropDownState.BUILD) && <ComingSoonTag />}
+        {label === MobileTabletDropDownState.BUILD && <ComingSoonTag />}
 
         <IoChevronDown
           size={20}
@@ -465,15 +463,15 @@ function ComingSoonTag() {
 
 enum MobileTabletDropDownState {
   EXPLORE = "Explore",
-  ECOSYSTEM = "Ecosystem",
   BUILD = "Build",
+  METACHAIN = "Meta Chain",
   COMMUNITY = "Community",
 }
 
 const MenuItems = [
   MobileTabletDropDownState.EXPLORE,
-  MobileTabletDropDownState.ECOSYSTEM,
   MobileTabletDropDownState.BUILD,
+  MobileTabletDropDownState.METACHAIN,
   MobileTabletDropDownState.COMMUNITY,
 ];
 

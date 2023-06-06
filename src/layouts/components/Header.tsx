@@ -20,7 +20,7 @@ import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import { useDeviceDetect, ViewPort } from "@hooks/useDeviceDetect";
 // import { useWhaleApiClient } from "../context/WhaleContext";
 import { Explore } from "./Explore";
-import { Ecosystem } from "./Ecosystem";
+// import { Ecosystem } from "./Ecosystem";
 import { Build } from "./Build";
 import { Community } from "./Community";
 
@@ -276,7 +276,19 @@ function DesktopMenu({ item }: { item: string }) {
           className={classNames("flex flex-col")}
         >
           {item === MobileTabletDropDownState.BUILD && <ComingSoonTag />}
-          {t(`header.navbar.${item.toLowerCase()}`)}
+          {item === MobileTabletDropDownState.METACHAIN ? (
+            <Link
+              data-testid="header-nav-elem-test"
+              href="/metachain"
+              rel="noreferrer"
+              target="_self"
+            >
+              {t(`header.navbar.${item.toLowerCase()}`)}
+            </Link>
+          ) : (
+            t(`header.navbar.${item.toLowerCase()}`)
+          )}
+          {/* {t(`header.navbar.${item.toLowerCase()}`)} */}
         </div>
       </Menu.Button>
 
@@ -477,7 +489,7 @@ const MenuItems = [
 
 const dropDownMapping = {
   explore: Explore,
-  ecosystem: Ecosystem,
+  // ecosystem: Ecosystem,
   build: Build,
   community: Community,
 };

@@ -235,6 +235,7 @@ function DesktopMenu({ item }: { item: string }) {
   const DesktopDropDown = dropDownMapping[item.toLowerCase()];
   const { t } = useTranslation("layout");
   const router = useRouter();
+  const trimmedItem = item.replace(/\s/g, "");
 
   const getTestId = getEnumKey(item);
 
@@ -267,12 +268,12 @@ function DesktopMenu({ item }: { item: string }) {
             "!text-brand-100":
               !isCursorOnHeader &&
               !isHoverOn &&
-              router.pathname.includes(item.toLowerCase()),
+              router.pathname.includes(trimmedItem.toLowerCase()),
           }
         )}
       >
         <div
-          data-testid={`header-coming-soon-tag-${item}`}
+          data-testid={`header-coming-soon-tag-${trimmedItem}`}
           className={classNames("flex flex-col")}
         >
           {item === MobileTabletDropDownState.BUILD && <ComingSoonTag />}
@@ -283,12 +284,11 @@ function DesktopMenu({ item }: { item: string }) {
               rel="noreferrer"
               target="_self"
             >
-              {t(`header.navbar.${item.toLowerCase()}`)}
+              {t(`header.navbar.${trimmedItem.toLowerCase()}`)}
             </Link>
           ) : (
-            t(`header.navbar.${item.toLowerCase()}`)
+            t(`header.navbar.${trimmedItem.toLowerCase()}`)
           )}
-          {/* {t(`header.navbar.${item.toLowerCase()}`)} */}
         </div>
       </Menu.Button>
 
@@ -298,7 +298,7 @@ function DesktopMenu({ item }: { item: string }) {
           <Transition
             style={{ top: headerHeight - 1 }}
             className="absolute inset-x-0 header-dropdown-bg w-screen"
-            data-testid={`header-tag-${item}`}
+            data-testid={`header-tag-${trimmedItem}`}
             show={isShowing}
             enter="transition ease duration-500 transform"
             enterFrom="opacity-0"
@@ -394,12 +394,13 @@ function TabletMobileDropDown({
   const { dropDownState, setDropDownState } = useContext(DropDownContext);
   const { t } = useTranslation("layout");
   const router = useRouter();
+  const trimmedLabel = label.replace(/\s/g, "");
 
   const getTestId = getEnumKey(label);
 
   useEffect(() => {
-    if (router.pathname.includes(label.toLowerCase())) {
-      setDropDownState(label);
+    if (router.pathname.includes(trimmedLabel.toLowerCase())) {
+      setDropDownState(trimmedLabel);
     }
   }, [label, router, setDropDownState]);
 
@@ -409,16 +410,14 @@ function TabletMobileDropDown({
         className={classNames(
           "flex flex-row cursor-pointer items-center py-5",
           {
-            "pointer-events-none":
-              label === MobileTabletDropDownState.METACHAIN ||
-              label === MobileTabletDropDownState.BUILD,
+            "pointer-events-none": label === MobileTabletDropDownState.BUILD,
           }
         )}
         onClick={async () => {
-          if (dropDownState === label) {
+          if (dropDownState === trimmedLabel) {
             setDropDownState(undefined);
-          } else {
-            setDropDownState(label);
+          } else if (label !== MobileTabletDropDownState.METACHAIN) {
+            setDropDownState(trimmedLabel);
           }
         }}
       >
@@ -426,24 +425,36 @@ function TabletMobileDropDown({
           data-testid={`header-tablet-menu-item-${getTestId}`}
           className={classNames(
             "grow font-semibold md:text-lg text-base",
-            dropDownState === label ? "text-brand-100" : "text-dark-700"
+            dropDownState === trimmedLabel ? "text-brand-100" : "text-dark-700"
           )}
         >
-          {t(`header.navbar.${label.toLowerCase()}`)}
+          {label === MobileTabletDropDownState.METACHAIN ? (
+            <Link
+              data-testid="header-nav-elem-test"
+              href="/metachain"
+              rel="noreferrer"
+              target="_self"
+            >
+              {t(`header.navbar.${trimmedLabel.toLowerCase()}`)}
+            </Link>
+          ) : (
+            t(`header.navbar.${trimmedLabel.toLowerCase()}`)
+          )}
         </div>
 
         {label === MobileTabletDropDownState.BUILD && <ComingSoonTag />}
-
-        <IoChevronDown
-          size={20}
-          className={classNames("text-dark-1000", {
-            "rotate-180": dropDownState === label,
-          })}
-        />
+        {label !== MobileTabletDropDownState.METACHAIN && (
+          <IoChevronDown
+            size={20}
+            className={classNames("text-dark-1000", {
+              "rotate-180": dropDownState === trimmedLabel,
+            })}
+          />
+        )}
       </div>
 
       <Transition
-        show={dropDownState === label}
+        show={dropDownState === trimmedLabel}
         enter="transition-opacity duration-300"
         enterFrom="opacity-0"
         enterTo="opacity-100"

@@ -43,8 +43,8 @@ export function HeroBanner({
       <div
         className={classNames(
           "flex flex-col md:gap-y-5 gap-y-2",
-          "md:w-1/2 w-auto",
-          "md:pt-[88px] pt-[380px]",
+          "md:w-[312px] w-auto",
+          "md:pt-[63px] pt-[380px]",
           "lg:mb-[278px] md:mb-[148px] mb-24"
         )}
       >

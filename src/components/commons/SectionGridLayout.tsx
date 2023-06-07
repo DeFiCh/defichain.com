@@ -5,6 +5,7 @@ import classNames from "classnames";
 import { HTMLAttributeAnchorTarget } from "react";
 
 interface SectionGridLayoutProps {
+  displayId?: string;
   sectionTitle?: string;
   isCenterAligned?: boolean;
   title: string;
@@ -20,6 +21,7 @@ interface SectionGridLayoutProps {
 
 export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
   const {
+    displayId,
     sectionTitle,
     isCenterAligned,
     title,
@@ -36,8 +38,9 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
   return (
     <section
       className={classNames(
-        "relative pb-24 pt-0 md:pb-28 lg:pb-[120px] lg:mb-[120px]"
+        "relative pb-24 pt-0 md:pb-28 lg:pb-[120px] lg:mb-[120px] scroll-mt-40"
       )}
+      id={displayId}
       data-testid={testID}
     >
       <Container className="flex flex-col justify-between lg:flex-row 2xl:max-w-[1920px] 2xl:mx-[300px]">

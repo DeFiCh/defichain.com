@@ -33,6 +33,7 @@ export function MetaChainKeyFeatures(): JSX.Element {
   return (
     <div className="md:mt-[120px] lg:mt-[168px]">
       <SectionGridLayout
+        displayId="metachain-key-features"
         sectionTitle={t("keyFeatures.subtitle")}
         title={t("keyFeatures.title")}
         description={t("keyFeatures.desc")}

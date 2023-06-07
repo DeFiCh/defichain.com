@@ -14,6 +14,7 @@ export default function MetaChainPage() {
       <div className="relative">
         <Head title={t("heroBanner.subtitle")} />
         <HeroBanner
+          customStyle="md:mb-[22px] lg:mb-[226px]"
           title={t("heroBanner.title")}
           subtitle={t("heroBanner.subtitle")}
           subtitleCustomStyle="lg:w-[629px]"
@@ -25,10 +26,11 @@ export default function MetaChainPage() {
           startExploringJumpLink="#metachain-key-features"
           testID="meta-chain"
         />
+
         <div
           className={classNames(
             "jellyfish-item bg-[url(/assets/img/index/metachain-jellyfish.png)]",
-            "h-[300.93px] absolute inset-0 bg-contain bg-no-repeat md:bg-right",
+            "h-[300.93px] absolute mix-blend-lighten inset-0 bg-contain bg-no-repeat md:bg-right",
             "top-[10%] md:top-[16%] lg:top-[25%] left-[-35%] md:right-[35%] lg:right-[25%]",
             { "right-[40%]": dimension.width <= 750 }
           )}

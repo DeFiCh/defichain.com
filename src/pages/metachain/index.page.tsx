@@ -13,6 +13,7 @@ export default function MetaChainPage() {
       <Head title={t("heroBanner.subtitle")} />
       <div className="w-full">
         <HeroBanner
+          customStyle="md:mb-[22px] lg:mb-[226px]"
           title={t("heroBanner.title")}
           subtitle={t("heroBanner.subtitle")}
           subtitleCustomStyle="lg:w-[629px]"

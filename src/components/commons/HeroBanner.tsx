@@ -12,6 +12,7 @@ import { SectionDescription } from "./SectionDescription";
 // if cta button is required, to pass in hasCtaButton, ctaButtonText and ctaButtonLink
 // if start exploring button is required, to pass in hasStartExploringButton and startExploringJumpLink
 export function HeroBanner({
+  customStyle,
   title,
   subtitle,
   subtitleCustomStyle,
@@ -25,6 +26,7 @@ export function HeroBanner({
   startExploringJumpLink,
   testID,
 }: {
+  customStyle?: string;
   title: string;
   subtitle: string;
   subtitleCustomStyle?: string;
@@ -45,7 +47,8 @@ export function HeroBanner({
           "flex flex-col md:gap-y-5 gap-y-2",
           "md:w-[312px] w-auto",
           "md:pt-[63px] pt-[380px]",
-          "lg:mb-[278px] md:mb-[148px] mb-24"
+          "lg:mb-[278px] md:mb-[148px] mb-24",
+          customStyle
         )}
       >
         <SectionTitle text={title} testID={testID} />

@@ -5,7 +5,6 @@
       "dfi": "$DFI",
       "dex": "DEX",
       "developers": "Développeurs",
-      "ecosystem": "Écosystème",
       "downloads": "Téléchargements",
       "learn": "Apprendre",
       "buy": "Acheter",
@@ -53,41 +52,6 @@
       "image": {
         "title": "$DFI",
         "subtitle": "En savoir plus sur le token et où l'obtenir"
-      }
-    },
-    "ecosystem": {
-      "info": [
-        {
-          "title": "PLONGEZ DANS L'ÉCOSYSTÈME",
-          "labels": [
-            {
-              "title": "Applications DeFiChain",
-              "subtitle": "Voyez DeFiChain en action"
-            },
-            {
-              "title": "DeFi Meta Chain",
-              "subtitle": "Élargir les possibilités sur DeFiChain"
-            },
-            {
-              "title": "Gouvernance",
-              "subtitle": "Pour DeFiChain, par DeFiChain"
-            }
-          ]
-        },
-        {
-          "title": "IMPLIQUEZ-VOUS DANS DEFICHAIN",
-          "labels": [
-            {
-              "title": "Bounty de bogues"
-            },
-            {
-              "title": "Programme d'accélérateur de 100 millions de $"
-            }
-          ]
-        }
-      ],
-      "image": {
-        "subtitle": "Propulsé par la sécurité du Bitcoin et la flexibilité d'Ethereum"
       }
     },
     "build": {
@@ -205,15 +169,6 @@
         "category": "RESSOURCES",
         "defiscan": "DeFiScan",
         "defichainwhitepaper": "Livre blanc"
-      },
-      "ECOSYSTEM": {
-        "category": "ECOSYSTÈME",
-        "defichainapps": "Applications DeFiChain",
-        "defimetachain": "DeFi Meta Chain",
-        "defiscan": "DeFiScan",
-        "governance": "Gouvernance",
-        "bugbounty": "Bounty de bogues",
-        "100macceleratorprogram": "Programme d'accélérateur de 100 millions de $"
       },
       "BUILD": {
         "category": "CONSTRUIRE",

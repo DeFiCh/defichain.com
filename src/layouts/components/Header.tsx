@@ -20,7 +20,6 @@ import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import { useDeviceDetect, ViewPort } from "@hooks/useDeviceDetect";
 // import { useWhaleApiClient } from "../context/WhaleContext";
 import { Explore } from "./Explore";
-// import { Ecosystem } from "./Ecosystem";
 import { Build } from "./Build";
 import { Community } from "./Community";
 
@@ -235,6 +234,7 @@ function DesktopMenu({ item }: { item: string }) {
   const DesktopDropDown = dropDownMapping[item.toLowerCase()];
   const { t } = useTranslation("layout");
   const router = useRouter();
+  // removing any spaces in item
   const trimmedItem = item.replace(/\s/g, "");
 
   const getTestId = getEnumKey(item);
@@ -500,7 +500,6 @@ const MenuItems = [
 
 const dropDownMapping = {
   explore: Explore,
-  // ecosystem: Ecosystem,
   build: Build,
   community: Community,
 };

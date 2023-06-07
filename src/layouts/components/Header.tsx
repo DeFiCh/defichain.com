@@ -277,7 +277,7 @@ function DesktopMenu({ item }: { item: string }) {
           className={classNames("flex flex-col")}
         >
           {item === MobileTabletDropDownState.BUILD && <ComingSoonTag />}
-          {item === MobileTabletDropDownState.METACHAIN ? (
+          {item === MobileTabletDropDownState.META_CHAIN ? (
             <Link
               data-testid="header-nav-elem-test"
               href="/metachain"
@@ -416,7 +416,7 @@ function TabletMobileDropDown({
         onClick={async () => {
           if (dropDownState === trimmedLabel) {
             setDropDownState(undefined);
-          } else if (label !== MobileTabletDropDownState.METACHAIN) {
+          } else if (label !== MobileTabletDropDownState.META_CHAIN) {
             setDropDownState(trimmedLabel);
           }
         }}
@@ -428,7 +428,7 @@ function TabletMobileDropDown({
             dropDownState === trimmedLabel ? "text-brand-100" : "text-dark-700"
           )}
         >
-          {label === MobileTabletDropDownState.METACHAIN ? (
+          {label === MobileTabletDropDownState.META_CHAIN ? (
             <Link
               data-testid="header-nav-elem-test"
               href="/metachain"
@@ -443,7 +443,7 @@ function TabletMobileDropDown({
         </div>
 
         {label === MobileTabletDropDownState.BUILD && <ComingSoonTag />}
-        {label !== MobileTabletDropDownState.METACHAIN && (
+        {label !== MobileTabletDropDownState.META_CHAIN && (
           <IoChevronDown
             size={20}
             className={classNames("text-dark-1000", {
@@ -487,14 +487,14 @@ function ComingSoonTag() {
 enum MobileTabletDropDownState {
   EXPLORE = "Explore",
   BUILD = "Build",
-  METACHAIN = "Meta Chain",
+  META_CHAIN = "Meta Chain",
   COMMUNITY = "Community",
 }
 
 const MenuItems = [
   MobileTabletDropDownState.EXPLORE,
   MobileTabletDropDownState.BUILD,
-  MobileTabletDropDownState.METACHAIN,
+  MobileTabletDropDownState.META_CHAIN,
   MobileTabletDropDownState.COMMUNITY,
 ];
 

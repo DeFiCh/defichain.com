@@ -39,16 +39,20 @@ viewports.forEach((viewport) => {
     });
 
     // QA-813 - TC2 - Step 2 & 3
-    it("should have Coming soon on Ecosystem and Build sections", () => {
-      cy.findByTestId("header-coming-soon-tag-Ecosystem").should(
-        "contain",
-        "COMING SOON"
-      );
+    it("should have Coming soon on Build sections", () => {
       cy.findByTestId("header-coming-soon-tag-Build").should(
         "contain",
         "COMING SOON"
       );
       cy.findByTestId("header-coming-soon-tag-Explore").should(
+        "not.contain",
+        "COMING SOON"
+      );
+      cy.findByTestId("header-coming-soon-tag-MetaChain").should(
+        "not.contain",
+        "COMING SOON"
+      );
+      cy.findByTestId("header-coming-soon-tag-Community").should(
         "not.contain",
         "COMING SOON"
       );

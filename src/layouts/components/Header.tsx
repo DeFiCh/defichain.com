@@ -235,7 +235,7 @@ function DesktopMenu({ item }: { item: string }) {
   const { t } = useTranslation("layout");
   const router = useRouter();
   // removing any spaces in item
-  const trimmedItem = item.replace(/\s/g, "");
+  const trimmedItem = item.replace(/\s/g, "-");
 
   const getTestId = getEnumKey(item);
 
@@ -394,7 +394,7 @@ function TabletMobileDropDown({
   const { dropDownState, setDropDownState } = useContext(DropDownContext);
   const { t } = useTranslation("layout");
   const router = useRouter();
-  const trimmedLabel = label.replace(/\s/g, "");
+  const trimmedLabel = label.replace(/\s/g, "-");
 
   const getTestId = getEnumKey(label);
 

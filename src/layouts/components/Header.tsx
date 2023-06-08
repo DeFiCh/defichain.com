@@ -234,8 +234,8 @@ function DesktopMenu({ item }: { item: string }) {
   const DesktopDropDown = dropDownMapping[item.toLowerCase()];
   const { t } = useTranslation("layout");
   const router = useRouter();
-  // removing any spaces in item
-  const trimmedItem = item.replace(/\s/g, "-");
+  // replacing any spaces in the item with '-'
+  const combinedItem = item.replace(/\s/g, "-");
 
   const getTestId = getEnumKey(item);
 
@@ -268,12 +268,12 @@ function DesktopMenu({ item }: { item: string }) {
             "!text-brand-100":
               !isCursorOnHeader &&
               !isHoverOn &&
-              router.pathname.includes(trimmedItem.toLowerCase()),
+              router.pathname.includes(combinedItem.toLowerCase()),
           }
         )}
       >
         <div
-          data-testid={`header-coming-soon-tag-${trimmedItem}`}
+          data-testid={`header-coming-soon-tag-${combinedItem}`}
           className={classNames("flex flex-col")}
         >
           {item === MobileTabletDropDownState.BUILD && <ComingSoonTag />}
@@ -284,10 +284,10 @@ function DesktopMenu({ item }: { item: string }) {
               rel="noreferrer"
               target="_self"
             >
-              {t(`header.navbar.${trimmedItem.toLowerCase()}`)}
+              {t(`header.navbar.${combinedItem.toLowerCase()}`)}
             </Link>
           ) : (
-            t(`header.navbar.${trimmedItem.toLowerCase()}`)
+            t(`header.navbar.${combinedItem.toLowerCase()}`)
           )}
         </div>
       </Menu.Button>
@@ -298,7 +298,7 @@ function DesktopMenu({ item }: { item: string }) {
           <Transition
             style={{ top: headerHeight - 1 }}
             className="absolute inset-x-0 header-dropdown-bg w-screen"
-            data-testid={`header-tag-${trimmedItem}`}
+            data-testid={`header-tag-${combinedItem}`}
             show={isShowing}
             enter="transition ease duration-500 transform"
             enterFrom="opacity-0"
@@ -394,13 +394,14 @@ function TabletMobileDropDown({
   const { dropDownState, setDropDownState } = useContext(DropDownContext);
   const { t } = useTranslation("layout");
   const router = useRouter();
-  const trimmedLabel = label.replace(/\s/g, "-");
+  // replacing any spaces in the item with '-'
+  const combinedLabel = label.replace(/\s/g, "-");
 
   const getTestId = getEnumKey(label);
 
   useEffect(() => {
-    if (router.pathname.includes(trimmedLabel.toLowerCase())) {
-      setDropDownState(trimmedLabel);
+    if (router.pathname.includes(combinedLabel.toLowerCase())) {
+      setDropDownState(combinedLabel);
     }
   }, [label, router, setDropDownState]);
 
@@ -414,10 +415,10 @@ function TabletMobileDropDown({
           }
         )}
         onClick={async () => {
-          if (dropDownState === trimmedLabel) {
+          if (dropDownState === combinedLabel) {
             setDropDownState(undefined);
           } else if (label !== MobileTabletDropDownState.META_CHAIN) {
-            setDropDownState(trimmedLabel);
+            setDropDownState(combinedLabel);
           }
         }}
       >
@@ -425,7 +426,7 @@ function TabletMobileDropDown({
           data-testid={`header-tablet-menu-item-${getTestId}`}
           className={classNames(
             "grow font-semibold md:text-lg text-base",
-            dropDownState === trimmedLabel ? "text-brand-100" : "text-dark-700"
+            dropDownState === combinedLabel ? "text-brand-100" : "text-dark-700"
           )}
         >
           {label === MobileTabletDropDownState.META_CHAIN ? (
@@ -435,10 +436,10 @@ function TabletMobileDropDown({
               rel="noreferrer"
               target="_self"
             >
-              {t(`header.navbar.${trimmedLabel.toLowerCase()}`)}
+              {t(`header.navbar.${combinedLabel.toLowerCase()}`)}
             </Link>
           ) : (
-            t(`header.navbar.${trimmedLabel.toLowerCase()}`)
+            t(`header.navbar.${combinedLabel.toLowerCase()}`)
           )}
         </div>
 
@@ -447,14 +448,14 @@ function TabletMobileDropDown({
           <IoChevronDown
             size={20}
             className={classNames("text-dark-1000", {
-              "rotate-180": dropDownState === trimmedLabel,
+              "rotate-180": dropDownState === combinedLabel,
             })}
           />
         )}
       </div>
 
       <Transition
-        show={dropDownState === trimmedLabel}
+        show={dropDownState === combinedLabel}
         enter="transition-opacity duration-300"
         enterFrom="opacity-0"
         enterTo="opacity-100"

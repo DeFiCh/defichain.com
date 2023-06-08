@@ -20,7 +20,6 @@ import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import { useDeviceDetect, ViewPort } from "@hooks/useDeviceDetect";
 // import { useWhaleApiClient } from "../context/WhaleContext";
 import { Explore } from "./Explore";
-import { Ecosystem } from "./Ecosystem";
 import { Build } from "./Build";
 import { Community } from "./Community";
 
@@ -235,6 +234,8 @@ function DesktopMenu({ item }: { item: string }) {
   const DesktopDropDown = dropDownMapping[item.toLowerCase()];
   const { t } = useTranslation("layout");
   const router = useRouter();
+  // replacing any spaces in the item with '-'
+  const combinedItem = item.replace(/\s/g, "-");
 
   const getTestId = getEnumKey(item);
 
@@ -267,17 +268,27 @@ function DesktopMenu({ item }: { item: string }) {
             "!text-brand-100":
               !isCursorOnHeader &&
               !isHoverOn &&
-              router.pathname.includes(item.toLowerCase()),
+              router.pathname.includes(combinedItem.toLowerCase()),
           }
         )}
       >
         <div
-          data-testid={`header-coming-soon-tag-${item}`}
+          data-testid={`header-coming-soon-tag-${combinedItem}`}
           className={classNames("flex flex-col")}
         >
-          {(item === MobileTabletDropDownState.ECOSYSTEM ||
-            item === MobileTabletDropDownState.BUILD) && <ComingSoonTag />}
-          {t(`header.navbar.${item.toLowerCase()}`)}
+          {item === MobileTabletDropDownState.BUILD && <ComingSoonTag />}
+          {item === MobileTabletDropDownState.META_CHAIN ? (
+            <Link
+              data-testid="header-nav-elem-test"
+              href="/metachain"
+              rel="noreferrer"
+              target="_self"
+            >
+              {t(`header.navbar.${combinedItem.toLowerCase()}`)}
+            </Link>
+          ) : (
+            t(`header.navbar.${combinedItem.toLowerCase()}`)
+          )}
         </div>
       </Menu.Button>
 
@@ -287,7 +298,7 @@ function DesktopMenu({ item }: { item: string }) {
           <Transition
             style={{ top: headerHeight - 1 }}
             className="absolute inset-x-0 header-dropdown-bg w-screen"
-            data-testid={`header-tag-${item}`}
+            data-testid={`header-tag-${combinedItem}`}
             show={isShowing}
             enter="transition ease duration-500 transform"
             enterFrom="opacity-0"
@@ -383,12 +394,14 @@ function TabletMobileDropDown({
   const { dropDownState, setDropDownState } = useContext(DropDownContext);
   const { t } = useTranslation("layout");
   const router = useRouter();
+  // replacing any spaces in the item with '-'
+  const combinedLabel = label.replace(/\s/g, "-");
 
   const getTestId = getEnumKey(label);
 
   useEffect(() => {
-    if (router.pathname.includes(label.toLowerCase())) {
-      setDropDownState(label);
+    if (router.pathname.includes(combinedLabel.toLowerCase())) {
+      setDropDownState(combinedLabel);
     }
   }, [label, router, setDropDownState]);
 
@@ -398,16 +411,14 @@ function TabletMobileDropDown({
         className={classNames(
           "flex flex-row cursor-pointer items-center py-5",
           {
-            "pointer-events-none":
-              label === MobileTabletDropDownState.ECOSYSTEM ||
-              label === MobileTabletDropDownState.BUILD,
+            "pointer-events-none": label === MobileTabletDropDownState.BUILD,
           }
         )}
         onClick={async () => {
-          if (dropDownState === label) {
+          if (dropDownState === combinedLabel) {
             setDropDownState(undefined);
-          } else {
-            setDropDownState(label);
+          } else if (label !== MobileTabletDropDownState.META_CHAIN) {
+            setDropDownState(combinedLabel);
           }
         }}
       >
@@ -415,25 +426,36 @@ function TabletMobileDropDown({
           data-testid={`header-tablet-menu-item-${getTestId}`}
           className={classNames(
             "grow font-semibold md:text-lg text-base",
-            dropDownState === label ? "text-brand-100" : "text-dark-700"
+            dropDownState === combinedLabel ? "text-brand-100" : "text-dark-700"
           )}
         >
-          {t(`header.navbar.${label.toLowerCase()}`)}
+          {label === MobileTabletDropDownState.META_CHAIN ? (
+            <Link
+              data-testid="header-nav-elem-test"
+              href="/metachain"
+              rel="noreferrer"
+              target="_self"
+            >
+              {t(`header.navbar.${combinedLabel.toLowerCase()}`)}
+            </Link>
+          ) : (
+            t(`header.navbar.${combinedLabel.toLowerCase()}`)
+          )}
         </div>
 
-        {(label === MobileTabletDropDownState.ECOSYSTEM ||
-          label === MobileTabletDropDownState.BUILD) && <ComingSoonTag />}
-
-        <IoChevronDown
-          size={20}
-          className={classNames("text-dark-1000", {
-            "rotate-180": dropDownState === label,
-          })}
-        />
+        {label === MobileTabletDropDownState.BUILD && <ComingSoonTag />}
+        {label !== MobileTabletDropDownState.META_CHAIN && (
+          <IoChevronDown
+            size={20}
+            className={classNames("text-dark-1000", {
+              "rotate-180": dropDownState === combinedLabel,
+            })}
+          />
+        )}
       </div>
 
       <Transition
-        show={dropDownState === label}
+        show={dropDownState === combinedLabel}
         enter="transition-opacity duration-300"
         enterFrom="opacity-0"
         enterTo="opacity-100"
@@ -465,21 +487,20 @@ function ComingSoonTag() {
 
 enum MobileTabletDropDownState {
   EXPLORE = "Explore",
-  ECOSYSTEM = "Ecosystem",
   BUILD = "Build",
+  META_CHAIN = "Meta Chain",
   COMMUNITY = "Community",
 }
 
 const MenuItems = [
   MobileTabletDropDownState.EXPLORE,
-  MobileTabletDropDownState.ECOSYSTEM,
   MobileTabletDropDownState.BUILD,
+  MobileTabletDropDownState.META_CHAIN,
   MobileTabletDropDownState.COMMUNITY,
 ];
 
 const dropDownMapping = {
   explore: Explore,
-  ecosystem: Ecosystem,
   build: Build,
   community: Community,
 };

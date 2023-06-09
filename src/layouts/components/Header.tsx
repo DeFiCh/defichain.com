@@ -280,7 +280,7 @@ function DesktopMenu({ item }: { item: string }) {
           {item === MobileTabletDropDownState.META_CHAIN ? (
             <Link
               data-testid="header-nav-elem-test"
-              href="/metachain"
+              href="/meta-chain"
               rel="noreferrer"
               target="_self"
             >
@@ -432,7 +432,7 @@ function TabletMobileDropDown({
           {label === MobileTabletDropDownState.META_CHAIN ? (
             <Link
               data-testid="header-nav-elem-test"
-              href="/metachain"
+              href="/meta-chain"
               rel="noreferrer"
               target="_self"
             >

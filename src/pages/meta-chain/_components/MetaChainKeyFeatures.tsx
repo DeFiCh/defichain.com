@@ -36,6 +36,7 @@ export function MetaChainKeyFeatures(): JSX.Element {
         displayId="metachain-key-features"
         sectionTitle={t("keyFeatures.subtitle")}
         title={t("keyFeatures.title")}
+        customTitleStyles="!text-[32px] !leading-9 w-10/12 md:!text-[40px] md:!leading-[44px] lg:!text-6xl lg:!leading-[72px] lg:!w-full"
         description={t("keyFeatures.desc")}
         testID="metachain-key-features"
         isCenterAligned
@@ -44,8 +45,10 @@ export function MetaChainKeyFeatures(): JSX.Element {
           <SvgIconsColumn
             items={MetachainKeyFeaturesItems}
             id="tablet-desktop-screen"
+            customSectionStyle="md:gap-y-[70px] lg:gap-y-[120px]"
             customClassStyle="flex-col"
             customParagraphStyle="mt-[25px]"
+            customDescStyle="pr-0"
             isCenterAligned
           />
         </div>

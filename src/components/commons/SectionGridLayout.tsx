@@ -9,6 +9,7 @@ interface SectionGridLayoutProps {
   sectionTitle?: string;
   isCenterAligned?: boolean;
   title: string;
+  customTitleStyles?: string;
   description: string;
   buttonText?: string;
   isCTAButton?: boolean;
@@ -25,6 +26,7 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
     sectionTitle,
     isCenterAligned,
     title,
+    customTitleStyles,
     description,
     buttonText,
     isCTAButton,
@@ -62,9 +64,10 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
               className={classNames(
                 "text-[40px] mb-5 leading-[44px] tracking-[-0.02em] lg:text-6xl lg:leading-[72px] lg:tracking-normal",
                 {
-                  "md:text-center md:mx-auto md:w-[642px] lg:text-left lg:mx-0":
+                  "md:text-center md:mx-auto md:max-w-[642px] lg:text-left lg:mx-0":
                     isCenterAligned,
-                }
+                },
+                customTitleStyles
               )}
               data-testid="title"
             >
@@ -72,9 +75,9 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
             </h2>
             <div
               className={classNames(
-                "text-dark-700 mb-8 lg:text-xl font-desc tracking-[0.03em] lg:tracking-normal md:w-9/12 lg:w-10/12",
+                "text-dark-700 mb-8 lg:text-xl font-desc tracking-[0.03em] lg:tracking-normal w-full",
                 {
-                  "md:text-center md:w-[642px] md:mx-auto lg:text-left lg:mx-0":
+                  "md:text-center md:max-w-[642px] md:mx-auto lg:text-left lg:mx-0 mb-0 text-xl":
                     isCenterAligned,
                 }
               )}
@@ -105,7 +108,8 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
           className={classNames(
             "z-0 justify-between md:gap-x-16 lg:w-[600px] lg:gap-x-[114px] w-full mt-16 md:mt-[86px] lg:mt-0",
             {
-              "md:text-center md:mx-auto lg:text-left lg:mx-0": isCenterAligned,
+              "md:text-center md:mx-auto lg:text-left lg:mx-0 !mt-16":
+                isCenterAligned,
             }
           )}
         >

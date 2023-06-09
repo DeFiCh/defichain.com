@@ -18,7 +18,7 @@ export default function MetaChainPage({ roadMapImg }): JSX.Element {
       <div className="relative">
         <Head title={t("heroBanner.subtitle")} />
         <HeroBanner
-          customStyle="md:mb-[22px] lg:mb-[226px]"
+          customStyle="mb-[72px] md:mb-[26px] lg:!mb-[226px]"
           title={t("heroBanner.title")}
           subtitle={t("heroBanner.subtitle")}
           subtitleCustomStyle="lg:w-[629px]"
@@ -35,7 +35,7 @@ export default function MetaChainPage({ roadMapImg }): JSX.Element {
           className={classNames(
             "jellyfish-item bg-[url(/assets/img/index/metachain-jellyfish.png)]",
             "h-[300.93px] absolute mix-blend-lighten inset-0 bg-contain bg-no-repeat md:bg-right",
-            "top-[10%] md:top-[16%] lg:top-[13%] left-[-35%] md:right-[35%] lg:right-[31%]",
+            "top-[3%] md:top-[16%] lg:top-[13%] left-[-30%] md:right-[35%] lg:right-[31%]",
             { "right-[40%]": dimension.width <= 750 }
           )}
         />

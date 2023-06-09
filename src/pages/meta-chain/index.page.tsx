@@ -23,7 +23,7 @@ export default function MetaChainPage({ roadMapImg }): JSX.Element {
           subtitleCustomStyle="lg:w-[629px]"
           desc={t("heroBanner.desc")}
           heroBg={HeroBannerBg.META_CHAIN}
-          customBgPosStyle="bg-auto lg:right-[-12em] lg:top-[-12em] lg:h-[1395px] md:right-[-15em] md:top-[-15em] md:h-[976px] h-auto top-[-22em] right-[-21em] left-[-2em]"
+          customBgPosStyle="!bg-auto lg:!right-[-12em] lg:!top-[-12em] lg:!h-[1395px] md:!right-[-15em] md:!top-[-15em] md:!h-[976px] !h-auto !top-[-22em] !right-[-21em] !left-[-2em]"
           hasStartExploringButton
           // TODO: update start exploring link to accurate section
           startExploringJumpLink="#metachain-key-features"

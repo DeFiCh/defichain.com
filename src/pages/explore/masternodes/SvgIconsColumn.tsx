@@ -48,6 +48,7 @@ export function SvgIconsColumn({
   customSectionStyle,
   customClassStyle,
   customParagraphStyle,
+  customDescStyle,
   isCenterAligned,
 }: {
   items: Array<BlockchainFeatureItemProp>;
@@ -55,6 +56,7 @@ export function SvgIconsColumn({
   customSectionStyle?: string;
   customClassStyle?: string;
   customParagraphStyle?: string;
+  customDescStyle?: string;
   isCenterAligned?: boolean;
 }): JSX.Element {
   return (
@@ -71,6 +73,7 @@ export function SvgIconsColumn({
           key={item.title}
           customClassStyle={customClassStyle}
           customParagraphStyle={customParagraphStyle}
+          customDescStyle={customDescStyle}
           isCenterAligned={isCenterAligned}
         />
       ))}
@@ -84,12 +87,14 @@ function FeatureIcon({
   id,
   customClassStyle,
   customParagraphStyle,
+  customDescStyle,
   isCenterAligned,
 }: {
   item: BlockchainFeatureItemProp;
   id: string;
   customClassStyle?: string;
   customParagraphStyle?: string;
+  customDescStyle?: string;
   isCenterAligned?: boolean;
 }) {
   const Icon = iconMapping[item.icon] as React.ElementType;
@@ -153,7 +158,10 @@ function FeatureIcon({
         </h3>
         <p
           data-testid={`${item.title.toLowerCase().replaceAll(" ", "-")}-desc`}
-          className="text-dark-700 text-sm pr-[26px] md:pr-0 md:w-[270px] lg:text-base font-desc"
+          className={classNames(
+            "text-dark-700 text-sm pr-[26px] md:pr-0 md:w-[270px] lg:text-base font-desc",
+            customDescStyle
+          )}
         >
           {item.desc}
         </p>

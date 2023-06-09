@@ -280,7 +280,7 @@ function DesktopMenu({ item }: { item: string }) {
           {item === MobileTabletDropDownState.META_CHAIN ? (
             <Link
               data-testid="header-nav-elem-test"
-              href="/metachain"
+              href="/meta-chain"
               rel="noreferrer"
               target="_self"
             >
@@ -346,7 +346,7 @@ function TabletMobileMenu() {
             <div key={key}>
               <Container className={classNames({ "mt-5": key === 0 })}>
                 <TabletMobileDropDown label={item}>
-                  <DropDown />
+                  {DropDown && <DropDown />}
                 </TabletMobileDropDown>
               </Container>
 
@@ -432,7 +432,7 @@ function TabletMobileDropDown({
           {label === MobileTabletDropDownState.META_CHAIN ? (
             <Link
               data-testid="header-nav-elem-test"
-              href="/metachain"
+              href="/meta-chain"
               rel="noreferrer"
               target="_self"
             >
@@ -463,7 +463,7 @@ function TabletMobileDropDown({
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        <div className="md:pb-9 py-4 mb-4">{children}</div>
+        {children && <div className="md:pb-9 py-4 mb-4">{children}</div>}
       </Transition>
     </div>
   );

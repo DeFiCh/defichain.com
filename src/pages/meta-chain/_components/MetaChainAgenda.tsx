@@ -1,6 +1,7 @@
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import classNames from "classnames";
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
 import { FaTelegramPlane } from "react-icons/fa";
 
@@ -54,7 +55,7 @@ export function MetaChainAgenda(): JSX.Element {
   }, [router]);
 
   return (
-    <>
+    <div className="relative">
       <div className="flex flex-wrap justify-center gap-6 max-w-[1200px] mx-auto">
         {cards.map((card) => (
           <AgendaCard key={card.title} {...card} />
@@ -92,7 +93,13 @@ export function MetaChainAgenda(): JSX.Element {
           </a>
         </div>
       </div>
-    </>
+      <div
+        className={classNames(
+          "bg-[url('/assets/img/index/mc_accent.png')] absolute w-[772px] h-[386px] bg-auto bg-no-repeat z-[-1]",
+          "2xl:left-0 md:left-[-105px] lg:top-[331px] md:top-[-173px] w-[1440px] h-[469px] left-[72px] top-[-154px]"
+        )}
+      />
+    </div>
   );
 }
 function AgendaCard(props): JSX.Element {

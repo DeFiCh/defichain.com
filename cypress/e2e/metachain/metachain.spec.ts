@@ -18,7 +18,7 @@ viewports.forEach((viewport) => {
       );
       cy.checkElementVisibilityAndText(
         "section-desc-meta-chain",
-        "Unrivaled innovation and interoperability, without compromising on scalability or security. MetaChain is for building dApps on the world's largest blockchains."
+        "Unrivaled innovation and interoperability, without compromising on scalability or security. Meta Chain is for building dApps on the world's largest blockchains."
       );
     });
   });

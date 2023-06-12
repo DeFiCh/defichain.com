@@ -23,12 +23,12 @@
     "switchingCosts": {
       "title": "LOW SWITCHING COSTS",
       "desc": "Seamless dApp deployment and effortless cross-chain interaction simplified using Meta Chain."
+    },
+    "roadmap": {
+      "title": "META CHAIN'S KEY UPDATES",
+      "subtitle": "Roadmap",
+      "desc": "Become an early pioneer in the next frontier of DeFiChain. Explore our roadmap and join us in testing and shaping the features of Meta Chain. Leverage our knowledge library below to start your journey.",
+      "button": "Documentation"
     }
-  },
-  "roadmap": {
-    "title": "META CHAIN'S KEY UPDATES",
-    "subtitle": "Roadmap",
-    "desc": "Become an early pioneer in the next frontier of DeFiChain. Explore our roadmap and join us in testing and shaping the features of Meta Chain. Leverage our knowledge library below to start your journey.",
-    "button": "Documentation"
   }
 }

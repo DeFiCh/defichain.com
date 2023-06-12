@@ -39,7 +39,6 @@ export function MetaChainAgenda(): JSX.Element {
   const { t } = useTranslation("page-meta-chain");
   const router = useRouter();
   const [language, setLanguage] = useState(router.locale ?? "");
-  console.log(language);
   const cards: AgendaItem[] = t("agenda.cards", {
     returnObjects: true,
   });

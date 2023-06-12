@@ -32,9 +32,9 @@ import {
   AdvancedSwapsIconHover,
 } from "@components/icons/assets/whyDex/AdvancedSwaps";
 import { EvmIntegrationIcon } from "@components/icons/assets/metaChainFeatures/EvmIntegration";
-import { ScalableEcosystemIcon } from "@components/icons/assets/metaChainFeatures/scalableEcosystem";
+import { ScalableEcosystemIcon } from "@components/icons/assets/metaChainFeatures/ScalableEcosystem";
 import { LowTransactionFeesIcon } from "@components/icons/assets/metaChainFeatures/LowTransactionFees";
-import { LowSwitchingCostsIcon } from "@components/icons/assets/metaChainFeatures/lowSwitchingCosts";
+import { LowSwitchingCostsIcon } from "@components/icons/assets/metaChainFeatures/LowSwitchingCosts";
 
 interface BlockchainFeatureItemProp {
   title: string;
@@ -63,7 +63,7 @@ export function SvgIconsColumn({
     <div
       className={classNames(
         customSectionStyle,
-        "flex flex-1 flex-wrap justify-between gap-y-12 md:gap-y-[120px] lg:gap-y-16 lg:gap-x-10"
+        "flex flex-1 flex-wrap justify-between gap-y-12 md:gap-y-[120px] lg:gap-x-[60px]"
       )}
     >
       {items.map((item) => (

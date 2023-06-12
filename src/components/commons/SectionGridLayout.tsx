@@ -39,9 +39,7 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
 
   return (
     <section
-      className={classNames(
-        "relative pb-24 pt-0 md:pb-28 lg:pb-[120px] lg:mb-[120px] scroll-mt-40"
-      )}
+      className="relative pb-24 pt-0 md:pb-28 lg:pb-[120px] lg:mb-[120px] scroll-mt-40"
       id={displayId}
       data-testid={testID}
     >
@@ -108,7 +106,7 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
           className={classNames(
             "z-0 justify-between md:gap-x-16 lg:w-[600px] lg:gap-x-[114px] w-full mt-16 md:mt-[86px] lg:mt-0",
             {
-              "md:text-center md:mx-auto lg:text-left lg:mx-0 !mt-16":
+              "md:text-center md:mx-auto lg:text-left lg:mx-0 lg:!mt-0 !mt-16":
                 isCenterAligned,
             }
           )}

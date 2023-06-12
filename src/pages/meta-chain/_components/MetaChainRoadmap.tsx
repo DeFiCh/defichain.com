@@ -25,7 +25,7 @@ export function MetaChainRoadmap({ roadMapImg }): JSX.Element {
             </h2>
             <div
               className={classNames(
-                "text-dark-700 mb-6 md:mb-9 lg:mb-12 lg:text-xl font-desc tracking-[0.03em] lg:tracking-normal"
+                "text-dark-700 mb-6 md:mb-9 lg:mb-12 text-xl lg:leading-8 font-desc tracking-[0.03em] lg:tracking-normal"
               )}
               data-testid="metachain-roadmap-desc"
             >
@@ -40,22 +40,13 @@ export function MetaChainRoadmap({ roadMapImg }): JSX.Element {
               testID="metachain-roadmap-documentation"
             />
           </div>
-          <div className="mt-12 lg:mt-0 lg:ml-auto max-w-[660px]">
-            <Image
-              width={660}
-              height={570}
-              alt="Meta Chain Roadmap"
-              src="https://images.prismic.io/defichain/a2b036e7-99f4-4142-936f-9de312aede35_metachain_roadmap_1.png?auto=compress,format&rect=0,0,660,584&w=660&h=584"
-            />
-          </div>
           {roadMapImg?.length > 0 ? (
             <div className="mt-12 lg:mt-0 lg:ml-auto max-w-[660px]">
-              {/* <Image alt="test" src={roadMapImg[-1].metachain_roadmap.url} /> */}
               <Image
                 width={660}
                 height={570}
                 alt="Meta Chain Roadmap"
-                src="https://images.prismic.io/defichain/a2b036e7-99f4-4142-936f-9de312aede35_metachain_roadmap_1.png?auto=compress,format&rect=0,0,660,584&w=660&h=584"
+                src={roadMapImg[0].metachain_roadmap.url}
               />
             </div>
           ) : (

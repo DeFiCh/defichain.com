@@ -7,7 +7,7 @@ viewports.forEach((viewport) => {
       cy.viewport(<Cypress.ViewportPreset>viewport);
     });
 
-    it("should have DEX header section visible and expected text", () => {
+    it("should have meta chain hero banner header section visible and expected text", () => {
       cy.checkElementVisibilityAndText(
         "section-title-meta-chain",
         "THE UPGRADED ECOSYSTEM"
@@ -18,10 +18,9 @@ viewports.forEach((viewport) => {
       );
       cy.checkElementVisibilityAndText(
         "section-desc-meta-chain",
-        "Unrivaled innovation and interoperability, without compromising on scalability or security. MetaChain is for building dApps on the world's largest blockchains."
+        "Unrivaled innovation and interoperability, without compromising on scalability or security. Meta Chain is for building dApps on the world's largest blockchains."
       );
     });
-
     it("should have Start exploring button visible and navigate to the expected area", () => {
       cy.findByTestId("start-exploring-button")
         .scrollIntoView()

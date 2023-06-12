@@ -63,7 +63,7 @@ export function SvgIconsColumn({
     <div
       className={classNames(
         customSectionStyle,
-        "flex flex-1 flex-wrap justify-between gap-y-12 md:gap-y-[120px] lg:gap-y-16 lg:gap-x-10"
+        "flex flex-1 flex-wrap justify-between gap-y-12 md:gap-y-[120px] lg:gap-x-[60px]"
       )}
     >
       {items.map((item) => (

@@ -32,9 +32,9 @@ import {
   AdvancedSwapsIconHover,
 } from "@components/icons/assets/whyDex/AdvancedSwaps";
 import { EvmIntegrationIcon } from "@components/icons/assets/metaChainFeatures/EvmIntegration";
-import { ScalableEcosystemIcon } from "@components/icons/assets/metaChainFeatures/scalableEcosystem";
+import { ScalableEcosystemIcon } from "@components/icons/assets/metaChainFeatures/ScalableEcosystem";
 import { LowTransactionFeesIcon } from "@components/icons/assets/metaChainFeatures/LowTransactionFees";
-import { LowSwitchingCostsIcon } from "@components/icons/assets/metaChainFeatures/lowSwitchingCosts";
+import { LowSwitchingCostsIcon } from "@components/icons/assets/metaChainFeatures/LowSwitchingCosts";
 
 interface BlockchainFeatureItemProp {
   title: string;

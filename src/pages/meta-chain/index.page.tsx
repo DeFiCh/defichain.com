@@ -12,7 +12,6 @@ import { MetaChainAgenda } from "./_components/MetaChainAgenda";
 export default function MetaChainPage({ roadMapImg }): JSX.Element {
   const { t } = useTranslation("page-meta-chain");
   const dimension = useWindowDimensions();
-  // console.log(roadMapImg[0].metachain_roadmap.url);
   return (
     <>
       <div className="relative">

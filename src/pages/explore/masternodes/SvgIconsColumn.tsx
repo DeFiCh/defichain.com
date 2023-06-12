@@ -139,10 +139,7 @@ function FeatureIcon({
       <div
         className={classNames(
           "space-y-4 md:ml-0 md:mt-5",
-          customParagraphStyle,
-          {
-            "md:mx-auto md:ml-auto lg:text-left lg:mx-0": isCenterAligned,
-          }
+          customParagraphStyle
         )}
       >
         <h3

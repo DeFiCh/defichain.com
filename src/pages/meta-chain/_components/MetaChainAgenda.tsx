@@ -116,7 +116,7 @@ function AgendaCard(props): JSX.Element {
       }}
     >
       <div
-        className="p-6 group-hover:bg-dark-00/90 rounded-[15px] h-full bg-[75%]"
+        className="p-6 rounded-[15px] h-full bg-[75%]"
         style={
           !isHoverOn
             ? { backgroundImage: `url(${props.image}.png)` }

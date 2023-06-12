@@ -108,7 +108,7 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
           className={classNames(
             "z-0 justify-between md:gap-x-16 lg:w-[600px] lg:gap-x-[114px] w-full mt-16 md:mt-[86px] lg:mt-0",
             {
-              "md:text-center md:mx-auto lg:text-left lg:mx-0 !mt-16":
+              "md:text-center md:mx-auto lg:text-left lg:mx-0 lg:!mt-0 !mt-16":
                 isCenterAligned,
             }
           )}

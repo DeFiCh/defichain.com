@@ -48,7 +48,7 @@ export function MetaChainKeyFeatures(): JSX.Element {
             customSectionStyle="md:gap-y-[70px] lg:gap-y-[120px]"
             customClassStyle="flex-col"
             customParagraphStyle="mt-[25px]"
-            customDescStyle="pr-0"
+            customDescStyle="!pr-0"
             isCenterAligned
           />
         </div>

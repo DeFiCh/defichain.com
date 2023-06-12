@@ -7,7 +7,7 @@ viewports.forEach((viewport) => {
       cy.viewport(<Cypress.ViewportPreset>viewport);
     });
 
-    it("should have DEX header section visible and expected text", () => {
+    it("should have meta chain hero banner header section visible and expected text", () => {
       cy.checkElementVisibilityAndText(
         "section-title-meta-chain",
         "THE UPGRADED ECOSYSTEM"

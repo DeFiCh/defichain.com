@@ -7,7 +7,7 @@ export function SectionSubTitle({
 }: {
   text: string;
   customStyle?: string;
-  testID?: string;
+  testID: string;
 }) {
   return (
     <h1

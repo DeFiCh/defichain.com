@@ -25,7 +25,7 @@ viewports.forEach((viewport) => {
       cy.findByTestId("start-exploring-button")
         .scrollIntoView()
         .then(() => {
-          if (viewport === "macbook-16") {
+          if (viewport === "macbook-16" || viewport === "ipad-2") {
             cy.findByTestId("start-exploring-button").click({
               scrollBehavior: false,
             });

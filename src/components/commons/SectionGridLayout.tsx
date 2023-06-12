@@ -39,9 +39,7 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
 
   return (
     <section
-      className={classNames(
-        "relative pb-24 pt-0 md:pb-28 lg:pb-[120px] lg:mb-[120px] scroll-mt-40"
-      )}
+      className="relative pb-24 pt-0 md:pb-28 lg:pb-[120px] lg:mb-[120px] scroll-mt-40"
       id={displayId}
       data-testid={testID}
     >

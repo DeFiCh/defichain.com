@@ -7,7 +7,7 @@ export function SectionDescription({
 }: {
   text: string;
   customStyle?: string;
-  testID?: string;
+  testID: string;
 }) {
   return (
     <div

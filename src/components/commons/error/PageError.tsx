@@ -21,6 +21,7 @@ export function PageError(props: {
           <SectionSubTitle
             customStyle="!text-5xl !leading-[52px] !tracking-normal lg:!text-[80px] lg:!leading-[84px]"
             text={title}
+            testID="page-error"
           />
           <div className="text-base tracking-[0.03em] lg:tracking-normal lg:text-xl lg:leading-8 text-dark-500 mt-6 font-desc max-w-[509px]">
             {errorDesc}

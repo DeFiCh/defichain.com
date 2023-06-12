@@ -124,11 +124,16 @@ function AgendaCard(props): JSX.Element {
         }
       >
         {!isHoverOn ? (
-          <div className="text-dark-1000 text-xl font-bold w-2/4 md:w-full">
+          <div
+            className={classNames(
+              "text-dark-1000 text-xl font-bold w-[47%] md:w-full",
+              { "break-words": props.title === "Infrastructure" }
+            )}
+          >
             {props.title}
           </div>
         ) : (
-          <div className="text-dark-1000 text-sm transition-colors w-8/12">
+          <div className="text-dark-1000 text-sm transition-colors w-[65%] md:w-8/12">
             {props.desc}
           </div>
         )}

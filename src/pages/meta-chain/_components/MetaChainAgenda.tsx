@@ -124,7 +124,7 @@ function AgendaCard(props): JSX.Element {
         }
       >
         {!isHoverOn ? (
-          <div className="text-dark-1000 group-hover:text-brand-100 hover:backdrop-blur text-2xl transition-colors w-2/4 md:w-full">
+          <div className="text-dark-1000 text-xl font-bold w-2/4 md:w-full">
             {props.title}
           </div>
         ) : (

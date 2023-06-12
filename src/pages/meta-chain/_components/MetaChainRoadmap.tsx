@@ -25,7 +25,7 @@ export function MetaChainRoadmap({ roadMapImg }): JSX.Element {
             </h2>
             <div
               className={classNames(
-                "text-dark-700 mb-6 md:mb-9 lg:mb-12 lg:text-xl font-desc tracking-[0.03em] lg:tracking-normal"
+                "text-dark-700 mb-6 md:mb-9 lg:mb-12 text-xl lg:leading-8 font-desc tracking-[0.03em] lg:tracking-normal"
               )}
               data-testid="metachain-roadmap-desc"
             >

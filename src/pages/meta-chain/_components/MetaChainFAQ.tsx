@@ -1,6 +1,8 @@
 import { useTranslation } from "next-i18next";
 import { Container } from "@components/commons/Container";
 import { IoChevronDown } from "react-icons/io5";
+import { useState } from "react";
+import classNames from "classnames";
 
 interface DropdownItemInterface {
   title: string;
@@ -27,20 +29,26 @@ export function MetaChainFAQ(): JSX.Element {
 }
 
 function DropdownItem(props): JSX.Element {
+  const [dropdownState, setDropDownState] = useState<boolean>(false);
   return (
-    <div className="border border-dark-200 cursor-pointer lg:mx-32 lg:py-5 lg:px-6 rounded-[10px]">
+    <div
+      className="border border-dark-200 cursor-pointer lg:mx-32 lg:py-5 lg:px-6 rounded-[10px]"
+      onClick={async () => {
+        setDropDownState(!dropdownState);
+      }}
+    >
       <div className="flex justify-between items-center">
         <span className="font-semibold text-lg leading-6 text-dark-900">
           {props.title}
         </span>
         <IoChevronDown
           size={20}
-          // className={classNames("text-dark-1000", {
-          //   "rotate-180": dropDownState === combinedLabel,
-          // })}
+          className={classNames({
+            "rotate-180": dropdownState,
+          })}
         />
       </div>
-      <div className="mt-8 leading-5">{props.desc}</div>
+      {dropdownState && <div className="mt-8 leading-5">{props.desc}</div>}
     </div>
   );
 }

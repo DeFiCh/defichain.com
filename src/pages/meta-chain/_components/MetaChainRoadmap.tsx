@@ -10,6 +10,7 @@ export function MetaChainRoadmap({ roadMapImg }): JSX.Element {
   const { t } = useTranslation("page-meta-chain");
   const dimension = useWindowDimensions();
   const mobileView = dimension.width <= 800;
+  console.log(roadMapImg);
   return (
     <section className={classNames("relative lg:mb-56 md:mb-52 mb-48")}>
       <Container>
@@ -46,7 +47,7 @@ export function MetaChainRoadmap({ roadMapImg }): JSX.Element {
                 width={660}
                 height={570}
                 alt="Meta Chain Roadmap"
-                src={roadMapImg[0].metachain_roadmap.url}
+                src={roadMapImg[roadMapImg.length - 1].metachain_roadmap.url}
               />
             </div>
           ) : (

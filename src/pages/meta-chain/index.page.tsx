@@ -45,13 +45,22 @@ export default function MetaChainPage({ roadMapImg }): JSX.Element {
     </>
   );
 }
-async function getRoadMapFromPrismic(): Promise<any> {
-  const endpoint = prismic.createClient("defichain");
-  return endpoint.getByType("metachain");
+
+async function getLatestRoadMapUrl(): Promise<string> {
+  try {
+    const endpoint = prismic.createClient("defichain");
+    const metachainData = await endpoint.getByType("metachain");
+    const metachainArr =
+      metachainData.results[metachainData.results.length - 1].data;
+    return metachainArr.metachain_roadmap.url;
+  } catch (e) {
+    console.error(e);
+    return "";
+  }
 }
 
 export async function getStaticProps({ locale }) {
-  const roadMapImg = await getRoadMapFromPrismic();
+  const roadMapImg = await getLatestRoadMapUrl();
   return {
     props: {
       ...(await serverSideTranslations(locale, [
@@ -59,9 +68,7 @@ export async function getStaticProps({ locale }) {
         "layout",
         "page-meta-chain",
       ])),
-      roadMapImg: roadMapImg.results.map((r) => ({
-        ...r.data,
-      })),
+      roadMapImg,
     },
   };
 }

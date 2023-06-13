@@ -40,13 +40,13 @@ export function MetaChainRoadmap({ roadMapImg }): JSX.Element {
               testID="metachain-roadmap-documentation"
             />
           </div>
-          {roadMapImg?.length > 0 ? (
+          {roadMapImg !== "" ? (
             <div className="mt-12 lg:mt-0 lg:ml-auto max-w-[660px]">
               <Image
                 width={660}
                 height={570}
                 alt="Meta Chain Roadmap"
-                src={roadMapImg[roadMapImg.length - 1].metachain_roadmap.url}
+                src={roadMapImg}
               />
             </div>
           ) : (

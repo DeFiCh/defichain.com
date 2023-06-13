@@ -59,7 +59,6 @@ async function getLatestRoadMapUrl(): Promise<string> {
 
 export async function getStaticProps({ locale }) {
   const roadMapImg = await getLatestRoadMapUrl();
-  console.log(roadMapImg);
   return {
     props: {
       ...(await serverSideTranslations(locale, [

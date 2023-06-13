@@ -43,9 +43,16 @@ export default function MetaChainPage({ roadMapImg }): JSX.Element {
     </>
   );
 }
-async function getRoadMapFromPrismic(): Promise<any> {
-  const endpoint = prismic.createClient("defichain");
-  return endpoint.getByType("metachain");
+
+async function getRoadMapFromPrismic(): Promise<MetachainDocument> {
+  try {
+    const endpoint = prismic.createClient("defichain");
+    const metachainData = await endpoint.getByType("metachain");
+    return metachainData;
+  } catch (e) {
+    console.error(e);
+    return [];
+  }
 }
 
 export async function getStaticProps({ locale }) {

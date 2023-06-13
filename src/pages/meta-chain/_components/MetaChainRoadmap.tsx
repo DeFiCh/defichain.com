@@ -11,7 +11,7 @@ export function MetaChainRoadmap({ roadMapImg }): JSX.Element {
   const dimension = useWindowDimensions();
   const mobileView = dimension.width <= 800;
   return (
-    <section className={classNames("relative lg:mb-56 md:mb-52 mb-48")}>
+    <section className={classNames("relative mb-12")}>
       <Container>
         <div className="flex flex-col lg:flex-row w-auto">
           <div className="max-w-[468px]">

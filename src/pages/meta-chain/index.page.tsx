@@ -1,12 +1,14 @@
 import { HeroBanner, HeroBannerBg } from "@components/commons/HeroBanner";
-import { SSRConfig, useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import classNames from "classnames";
 import { Head } from "@components/commons/Head";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
+import * as prismic from "@prismicio/client";
 import { MetaChainKeyFeatures } from "./_components/MetaChainKeyFeatures";
+import { MetaChainRoadmap } from "./_components/MetaChainRoadmap";
 
-export default function MetaChainPage() {
+export default function MetaChainPage({ roadMapImg }): JSX.Element {
   const { t } = useTranslation("page-meta-chain");
   const dimension = useWindowDimensions();
   return (
@@ -37,13 +39,26 @@ export default function MetaChainPage() {
         />
       </div>
       <MetaChainKeyFeatures />
+      <MetaChainRoadmap roadMapImg={roadMapImg} />
     </>
   );
 }
 
-export async function getStaticProps({
-  locale,
-}): Promise<{ props: SSRConfig }> {
+async function getLatestRoadMapUrl(): Promise<string> {
+  try {
+    const endpoint = prismic.createClient("defichain");
+    const metachainData = await endpoint.getByType("metachain");
+    const metachainArr =
+      metachainData.results[metachainData.results.length - 1].data;
+    return metachainArr.metachain_roadmap.url;
+  } catch (e) {
+    console.error(e);
+    return "";
+  }
+}
+
+export async function getStaticProps({ locale }) {
+  const roadMapImg = await getLatestRoadMapUrl();
   return {
     props: {
       ...(await serverSideTranslations(locale, [
@@ -51,6 +66,7 @@ export async function getStaticProps({
         "layout",
         "page-meta-chain",
       ])),
+      roadMapImg,
     },
   };
 }

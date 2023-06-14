@@ -78,6 +78,20 @@ viewports.forEach((viewport) => {
           );
         });
     });
+
+    it("should have the Roadmap section visible and expected text", () => {
+      cy.checkElementVisibilityAndText(
+        "section-title-metachain-roadmap-title",
+        "META CHAIN'S KEY UPDATES"
+      );
+      cy.checkElementVisibilityAndText("metachain-roadmap-subtitle", "Roadmap");
+      cy.checkElementVisibilityAndText(
+        "metachain-roadmap-desc",
+        "Become an early pioneer in the next frontier of DeFiChain. Explore our roadmap and join us in testing and shaping the features of Meta Chain. Leverage our knowledge library below to start your journey."
+      );
+      cy.findByTestId("metachain-roadmap-img").should("exist");
+    });
+
     it("should have the Roadmap Agenda section visible and expected text", () => {
       cy.checkElementVisibilityAndText(
         "metachain-agenda-title-DevNet",

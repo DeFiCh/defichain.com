@@ -106,6 +106,7 @@ function AgendaCard(props): JSX.Element {
   return (
     <article
       data-bg-image={`url(${props.image})`}
+      data-testid={`metachain-agenda-${props.title}`}
       className={classNames(
         "relative rounded-[15px] lg:w-[384px] md:w-[324px] h-[202px] w-[272px] p-[0.5px]",
         {
@@ -134,11 +135,15 @@ function AgendaCard(props): JSX.Element {
               "text-dark-1000 text-xl font-bold w-[47%] md:w-full",
               { "break-words": props.title === "Infrastructure" }
             )}
+            data-testid={`metachain-agenda-title-${props.title}`}
           >
             {props.title}
           </div>
         ) : (
-          <div className="text-dark-1000 text-sm transition-colors w-[65%] md:w-8/12">
+          <div
+            className="text-dark-1000 text-sm transition-colors w-[65%] md:w-8/12"
+            data-testid={`metachain-agenda-desc-${props.title}`}
+          >
             {props.desc}
           </div>
         )}

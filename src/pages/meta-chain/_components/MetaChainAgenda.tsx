@@ -106,7 +106,13 @@ function AgendaCard(props): JSX.Element {
   return (
     <article
       data-bg-image={`url(${props.image})`}
-      className="relative card-outline-2 hover:accent-gradient-1 rounded-[15px] lg:w-[384px] md:w-[324px] h-[202px] w-[272px] p-[0.5px]"
+      className={classNames(
+        "relative rounded-[15px] lg:w-[384px] md:w-[324px] h-[202px] w-[272px] p-[0.5px]",
+        {
+          "border-gradient relative before:absolute before:content-[''] before:inset-0 before:p-px before:rounded-[15px] before:z-[-1]":
+            isHoverOn,
+        }
+      )}
       onMouseLeave={() => {
         setIsHoverOn!(false);
       }}

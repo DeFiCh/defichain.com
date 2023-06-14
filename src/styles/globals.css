@@ -124,6 +124,21 @@ html {
       #082fd4 100%
     );
   }
+  .border-gradient {
+    position: relative;
+  }
+  .border-gradient::before {
+    background-image: linear-gradient(
+      72.57deg,
+      #ec008c 17.15%,
+      #5b10ff 89.41%,
+      #0468d6 102.56%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
 
   .accent-gradient-3 {
     background: linear-gradient(90.66deg, #42f9c2 -6.44%, #082fd4 76.25%);

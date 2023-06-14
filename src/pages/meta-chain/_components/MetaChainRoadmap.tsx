@@ -40,7 +40,7 @@ export function MetaChainRoadmap({ roadMapImg }): JSX.Element {
               testID="metachain-roadmap-documentation"
             />
           </div>
-          {roadMapImg !== "" ? (
+          {roadMapImg !== "" && (
             <div className="mt-12 lg:mt-0 lg:ml-auto max-w-[660px]">
               <Image
                 width={660}
@@ -49,8 +49,6 @@ export function MetaChainRoadmap({ roadMapImg }): JSX.Element {
                 src={roadMapImg}
               />
             </div>
-          ) : (
-            <div />
           )}
         </div>
       </Container>

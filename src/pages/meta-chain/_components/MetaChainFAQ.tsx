@@ -16,7 +16,7 @@ export function MetaChainFAQ(): JSX.Element {
   });
   return (
     <Container className="relative mb-24 md:mb-[184px] lg:mb-[288px]">
-      <div className="flex justify-center text-[32px] leading-[36px] lg:text-6xl lg:leading-[72px]">
+      <div className="flex text-center justify-center text-[32px] leading-[36px] lg:text-6xl lg:leading-[72px]">
         {t("faq.title")}
       </div>
       <div className="mt-12 lg:mt-16 flex flex-col gap-y-4">

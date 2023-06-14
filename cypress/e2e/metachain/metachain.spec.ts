@@ -78,5 +78,65 @@ viewports.forEach((viewport) => {
           );
         });
     });
+    it("should have the Roadmap Agenda section visible and expected text", () => {
+      cy.checkElementVisibilityAndText(
+        "metachain-agenda-title-DevNet",
+        "DevNet"
+      );
+      cy.findByTestId("metachain-agenda-DevNet")
+        .trigger("mouseover", { force: true })
+        .findByTestId("metachain-agenda-desc-DevNet")
+        .should(
+          "have.text",
+          "Kick-off stage, setting up Meta Chain's environment for internal testing."
+        );
+
+      cy.checkElementVisibilityAndText(
+        "metachain-agenda-title-FloppyNet",
+        "FloppyNet"
+      );
+      cy.findByTestId("metachain-agenda-FloppyNet")
+        .trigger("mouseover", { force: true })
+        .findByTestId("metachain-agenda-desc-FloppyNet")
+        .should(
+          "have.text",
+          "The alpha version of our TestNet - publicly accessible, expect rollbacks and limited volatility."
+        );
+
+      cy.checkElementVisibilityAndText(
+        "metachain-agenda-title-TestNet",
+        "TestNet"
+      );
+      cy.findByTestId("metachain-agenda-TestNet")
+        .trigger("mouseover", { force: true })
+        .findByTestId("metachain-agenda-desc-TestNet")
+        .should(
+          "have.text",
+          "Final version of TestNet - deploy and interact with smart contracts in a stable environment."
+        );
+
+      cy.checkElementVisibilityAndText(
+        "metachain-agenda-title-Infrastructure",
+        "Infrastructure"
+      );
+      cy.findByTestId("metachain-agenda-Infrastructure")
+        .trigger("mouseover", { force: true })
+        .findByTestId("metachain-agenda-desc-Infrastructure")
+        .should(
+          "have.text",
+          "Integrating key infrastructure like MetaScan and Ocean to prepare Meta Chain for MainNet."
+        );
+      cy.checkElementVisibilityAndText(
+        "metachain-agenda-title-MainNet Launch",
+        "MainNet Launch"
+      );
+      cy.findByTestId("metachain-agenda-MainNet Launch")
+        .trigger("mouseover", { force: true })
+        .findByTestId("metachain-agenda-desc-MainNet Launch")
+        .should(
+          "have.text",
+          "The official launch - experience Meta Chain's fully operational network."
+        );
+    });
   });
 });

@@ -16,7 +16,7 @@ export function MetaChainFAQ(): JSX.Element {
   });
   return (
     <Container className="relative">
-      <div className="flex justify-center lg:text-6xl lg:leading-[72px]">
+      <div className="flex justify-center text-[32px] leading-[36px] lg:text-6xl lg:leading-[72px]">
         {t("faq.title")}
       </div>
       <div className="my-16 flex flex-col gap-y-4">
@@ -36,7 +36,7 @@ function DropdownItem(props): JSX.Element {
   }
   return (
     <div
-      className="border border-dark-200 cursor-pointer lg:mx-32 lg:py-5 lg:px-6 rounded-[10px]"
+      className="border border-dark-200 cursor-pointer lg:mx-32 py-5 px-6 rounded-[10px]"
       onClick={async () => {
         setDropDownState(!dropdownState);
       }}

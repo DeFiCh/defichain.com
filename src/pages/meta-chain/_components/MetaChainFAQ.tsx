@@ -42,7 +42,7 @@ function DropdownItem(props): JSX.Element {
       }}
     >
       <div className="flex justify-between items-center">
-        <span className="font-semibold text-lg leading-6 text-dark-900">
+        <span className="text-sm lg:font-semibold lg:text-lg lg:leading-6 text-dark-900">
           {props.title}
         </span>
         <IoChevronDown
@@ -72,7 +72,7 @@ function DropdownItem(props): JSX.Element {
               </span>
             ))
           ) : (
-            <span>{props.desc}</span>
+            <p className="leading-6 mt-6">{props.desc}</p>
           )}
         </div>
       )}

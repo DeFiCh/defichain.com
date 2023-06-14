@@ -21,6 +21,7 @@ viewports.forEach((viewport) => {
         "Unrivaled innovation and interoperability, without compromising on scalability or security. Meta Chain is for building dApps on the world's largest blockchains."
       );
     });
+
     it("should have Start exploring button visible and navigate to the expected area (#metachain-key-features)", () => {
       cy.findByTestId("start-exploring-button")
         .scrollIntoView()

@@ -15,11 +15,11 @@ export function MetaChainFAQ(): JSX.Element {
     returnObjects: true,
   });
   return (
-    <Container className="relative">
+    <Container className="relative mb-24 md:mb-[184px] lg:mb-[288px]">
       <div className="flex justify-center text-[32px] leading-[36px] lg:text-6xl lg:leading-[72px]">
         {t("faq.title")}
       </div>
-      <div className="my-16 flex flex-col gap-y-4">
+      <div className="mt-12 lg:mt-16 flex flex-col gap-y-4">
         {items.map((item) => (
           <DropdownItem key={item.title} {...item} />
         ))}

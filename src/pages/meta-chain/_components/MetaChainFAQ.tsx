@@ -30,6 +30,10 @@ export function MetaChainFAQ(): JSX.Element {
 
 function DropdownItem(props): JSX.Element {
   const [dropdownState, setDropDownState] = useState<boolean>(false);
+  let separatedDesc;
+  if (props.link) {
+    separatedDesc = props.desc.split(" ");
+  }
   return (
     <div
       className="border border-dark-200 cursor-pointer lg:mx-32 lg:py-5 lg:px-6 rounded-[10px]"
@@ -48,7 +52,30 @@ function DropdownItem(props): JSX.Element {
           })}
         />
       </div>
-      {dropdownState && <div className="mt-8 leading-5">{props.desc}</div>}
+      {dropdownState && (
+        <div className="mt-8 leading-5">
+          {props.link ? (
+            separatedDesc.map((word, index) => (
+              <span key={index}>
+                {word === "here" ? (
+                  <a
+                    href={props.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    id="faq-link"
+                  >
+                    <span className="text-electric underline">{word}</span>{" "}
+                  </a>
+                ) : (
+                  <span>{word} </span>
+                )}
+              </span>
+            ))
+          ) : (
+            <span>{props.desc}</span>
+          )}
+        </div>
+      )}
     </div>
   );
 }

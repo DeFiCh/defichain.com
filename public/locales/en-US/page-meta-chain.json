@@ -81,7 +81,8 @@
       },
       {
         "title": "How can I build on Meta Chain?",
-        "desc": "Refer to the documentation here for more details."
+        "desc": "Refer to the documentation here for more details.",
+        "link": "https://defich.github.io/handbook/guides/guide_floppynet.html"
       },
       {
         "title": "What token(s) can be used on Meta Chain?",

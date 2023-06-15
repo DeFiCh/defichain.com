@@ -1,24 +1,24 @@
 import { viewports } from "../../fixture/main.config";
 
 viewports.forEach((viewport) => {
-  context(`/meta-chain on ${viewport}`, () => {
+  context(`/metachain on ${viewport}`, () => {
     beforeEach(() => {
-      cy.visit("/meta-chain");
+      cy.visit("/metachain");
       cy.viewport(<Cypress.ViewportPreset>viewport);
     });
 
-    it("should have meta chain hero banner header section visible and expected text", () => {
+    it("should have MetaChain hero banner header section visible and expected text", () => {
       cy.checkElementVisibilityAndText(
         "section-title-meta-chain",
         "THE UPGRADED ECOSYSTEM"
       );
       cy.checkElementVisibilityAndText(
         "section-header-meta-chain",
-        "Meta Chain: Build for Bitcoin & Ethereum"
+        "MetaChain: Build for Bitcoin & Ethereum"
       );
       cy.checkElementVisibilityAndText(
         "section-desc-meta-chain",
-        "Unrivaled innovation and interoperability, without compromising on scalability or security. Meta Chain is for building dApps on the world's largest blockchains."
+        "Unrivaled innovation and interoperability, without compromising on scalability or security. MetaChain is for building dApps on the world's largest blockchains."
       );
     });
 
@@ -75,7 +75,7 @@ viewports.forEach((viewport) => {
           );
           cy.checkElementVisibilityAndText(
             "low-switching-costs-desc",
-            "Seamless dApp deployment and effortless cross-chain interaction simplified using Meta Chain."
+            "Seamless dApp deployment and effortless cross-chain interaction simplified using MetaChain."
           );
         });
     });
@@ -83,12 +83,12 @@ viewports.forEach((viewport) => {
     it("should have the Roadmap section visible and expected text", () => {
       cy.checkElementVisibilityAndText(
         "section-title-metachain-roadmap-title",
-        "META CHAIN'S KEY UPDATES"
+        "METACHAIN'S KEY UPDATES"
       );
       cy.checkElementVisibilityAndText("metachain-roadmap-subtitle", "Roadmap");
       cy.checkElementVisibilityAndText(
         "metachain-roadmap-desc",
-        "Become an early pioneer in the next frontier of DeFiChain. Explore our roadmap and join us in testing and shaping the features of Meta Chain. Leverage our knowledge library below to start your journey."
+        "Become an early pioneer in the next frontier of DeFiChain. Explore our roadmap and join us in testing and shaping the features of MetaChain. Leverage our knowledge library below to start your journey."
       );
       cy.findByTestId("metachain-roadmap-img").should("exist");
     });
@@ -103,7 +103,7 @@ viewports.forEach((viewport) => {
         .findByTestId("metachain-agenda-desc-DevNet")
         .should(
           "have.text",
-          "Kick-off stage, setting up Meta Chain's environment for internal testing."
+          "Kick-off stage, setting up MetaChain's environment for internal testing."
         );
 
       cy.checkElementVisibilityAndText(
@@ -139,7 +139,7 @@ viewports.forEach((viewport) => {
         .findByTestId("metachain-agenda-desc-Infrastructure")
         .should(
           "have.text",
-          "Integrating key infrastructure like MetaScan and Ocean to prepare Meta Chain for MainNet."
+          "Integrating key infrastructure like MetaScan and Ocean to prepare MetaChain for MainNet."
         );
       cy.checkElementVisibilityAndText(
         "metachain-agenda-title-MainNet Launch",
@@ -150,7 +150,7 @@ viewports.forEach((viewport) => {
         .findByTestId("metachain-agenda-desc-MainNet Launch")
         .should(
           "have.text",
-          "The official launch - experience Meta Chain's fully operational network."
+          "The official launch - experience MetaChain's fully operational network."
         );
     });
   });

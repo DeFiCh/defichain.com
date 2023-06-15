@@ -203,7 +203,7 @@ const iconMapping = {
   [IconTypes.ADVANCED_SWAPS]: AdvancedSwapsIcon,
   [`${IconTypes.ADVANCED_SWAPS}_hover`]: AdvancedSwapsIconHover,
 
-  // /meta-chain - Key Features items
+  // /metachain - Key Features items
   [IconTypes.EVM_INTEGRATION]: EvmIntegrationIcon,
   [IconTypes.SCALABLE_ECOSYSTEM]: ScalableEcosystemIcon,
   [IconTypes.LOW_TRANSACTION_FEES]: LowTransactionFeesIcon,

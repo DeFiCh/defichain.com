@@ -1,8 +1,8 @@
 {
   "heroBanner": {
     "title": "THE UPGRADED ECOSYSTEM",
-    "subtitle": "Meta Chain: Build for Bitcoin & Ethereum",
-    "desc": "Unrivaled innovation and interoperability, without compromising on scalability or security. Meta Chain is for building dApps on the world's largest blockchains."
+    "subtitle": "MetaChain: Build for Bitcoin & Ethereum",
+    "desc": "Unrivaled innovation and interoperability, without compromising on scalability or security. MetaChain is for building dApps on the world's largest blockchains."
   },
   "keyFeatures": {
     "title": "Ethereum's power meets innovation",
@@ -22,13 +22,13 @@
     },
     "switchingCosts": {
       "title": "LOW SWITCHING COSTS",
-      "desc": "Seamless dApp deployment and effortless cross-chain interaction simplified using Meta Chain."
+      "desc": "Seamless dApp deployment and effortless cross-chain interaction simplified using MetaChain."
     }
   },
   "roadmap": {
-    "title": "META CHAIN'S KEY UPDATES",
+    "title": "METACHAIN'S KEY UPDATES",
     "subtitle": "Roadmap",
-    "desc": "Become an early pioneer in the next frontier of DeFiChain. Explore our roadmap and join us in testing and shaping the features of Meta Chain. Leverage our knowledge library below to start your journey.",
+    "desc": "Become an early pioneer in the next frontier of DeFiChain. Explore our roadmap and join us in testing and shaping the features of MetaChain. Leverage our knowledge library below to start your journey.",
     "button": "Documentation"
   },
   "agenda": {
@@ -36,7 +36,7 @@
       {
         "title": "DevNet",
         "status": "deployed",
-        "desc": "Kick-off stage, setting up Meta Chain's environment for internal testing.",
+        "desc": "Kick-off stage, setting up MetaChain's environment for internal testing.",
         "image": "/assets/img/metachain/mc_devnet"
       },
       {
@@ -54,13 +54,13 @@
       {
         "title": "Infrastructure",
         "status": "inProgress",
-        "desc": "Integrating key infrastructure like MetaScan and Ocean to prepare Meta Chain for MainNet.",
+        "desc": "Integrating key infrastructure like MetaScan and Ocean to prepare MetaChain for MainNet.",
         "image": "/assets/img/metachain/mc_infrastructure"
       },
       {
         "title": "MainNet Launch",
         "status": "upcoming",
-        "desc": "The official launch - experience Meta Chain's fully operational network.",
+        "desc": "The official launch - experience MetaChain's fully operational network.",
         "image": "/assets/img/metachain/mc_mainnet"
       }
     ],
@@ -72,21 +72,21 @@
     "title": "Frequently Asked Questions",
     "items": [
       {
-        "title": "What is Meta Chain?",
-        "desc": "Meta Chain is a Layer 2 blockchain that allows users to build scalable dApps on Bitcoin and Ethereum."
+        "title": "What is MetaChain?",
+        "desc": "MetaChain is a Layer 2 blockchain that allows users to build scalable dApps on Bitcoin and Ethereum."
       },
       {
-        "title": "How is Meta Chain related to DeFiChain?",
+        "title": "How is MetaChain related to DeFiChain?",
         "desc": "MetaChain expands the scope for DeFiChain, allowing it to link to various chains by enhancing interoperability."
       },
       {
-        "title": "How can I build on Meta Chain?",
+        "title": "How can I build on MetaChain?",
         "desc": "Refer to the documentation here for more details.",
         "link": "https://defich.github.io/handbook/guides/guide_floppynet.html"
       },
       {
-        "title": "What token(s) can be used on Meta Chain?",
-        "desc": "Meta Chain currently only supports native DFI tokens on MetaChain. You may obtain them by swapping DFI UTXO on Light Wallet (feature in progress)"
+        "title": "What token(s) can be used on MetaChain?",
+        "desc": "MetaChain currently only supports native DFI tokens on MetaChain. You may obtain them by swapping DFI UTXO on Light Wallet (feature in progress)"
       }
     ]
   }

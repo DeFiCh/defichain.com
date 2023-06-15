@@ -11,7 +11,7 @@ export function MetaChainRoadmap({ roadMapImg }): JSX.Element {
   const dimension = useWindowDimensions();
   const mobileView = dimension.width <= 800;
   return (
-    <section className={classNames("relative lg:mb-56 md:mb-52 mb-48")}>
+    <section className={classNames("relative mb-12")}>
       <Container>
         <div className="flex flex-col lg:flex-row w-auto">
           <div className="max-w-[468px]">
@@ -20,7 +20,10 @@ export function MetaChainRoadmap({ roadMapImg }): JSX.Element {
               customStyle="lg:w-fit md:w-[409px] w-[272px]"
               testID="metachain-roadmap-title"
             />
-            <h2 className="mt-5 mb-6 md:my-4 lg:my-5 text-[32px] leading-9 whitespace-pre-line lg:text-[52px] lg:leading-none">
+            <h2
+              className="mt-5 mb-6 md:my-4 lg:my-5 text-[32px] leading-9 whitespace-pre-line lg:text-[52px] lg:leading-none"
+              data-testid="metachain-roadmap-subtitle"
+            >
               {t("roadmap.subtitle")}
             </h2>
             <div
@@ -41,7 +44,10 @@ export function MetaChainRoadmap({ roadMapImg }): JSX.Element {
             />
           </div>
           {roadMapImg !== "" && (
-            <div className="mt-12 lg:mt-0 lg:ml-auto max-w-[660px]">
+            <div
+              className="mt-12 lg:mt-0 lg:ml-auto max-w-[660px]"
+              data-testid="metachain-roadmap-img"
+            >
               <Image
                 width={660}
                 height={570}

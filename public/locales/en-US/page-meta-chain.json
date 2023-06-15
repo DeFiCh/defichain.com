@@ -30,5 +30,42 @@
     "subtitle": "Roadmap",
     "desc": "Become an early pioneer in the next frontier of DeFiChain. Explore our roadmap and join us in testing and shaping the features of Meta Chain. Leverage our knowledge library below to start your journey.",
     "button": "Documentation"
+  },
+  "agenda": {
+    "cards": [
+      {
+        "title": "DevNet",
+        "status": "deployed",
+        "desc": "Kick-off stage, setting up Meta Chain's environment for internal testing.",
+        "image": "/assets/img/metachain/mc_devnet"
+      },
+      {
+        "title": "FloppyNet",
+        "status": "deployed",
+        "desc": "The alpha version of our TestNet - publicly accessible, expect rollbacks and limited volatility.",
+        "image": "/assets/img/metachain/mc_floppynet"
+      },
+      {
+        "title": "TestNet",
+        "status": "inProgress",
+        "desc": "Final version of TestNet - deploy and interact with smart contracts in a stable environment.",
+        "image": "/assets/img/metachain/mc_testnet"
+      },
+      {
+        "title": "Infrastructure",
+        "status": "inProgress",
+        "desc": "Integrating key infrastructure like MetaScan and Ocean to prepare Meta Chain for MainNet.",
+        "image": "/assets/img/metachain/mc_infrastructure"
+      },
+      {
+        "title": "MainNet Launch",
+        "status": "upcoming",
+        "desc": "The official launch - experience Meta Chain's fully operational network.",
+        "image": "/assets/img/metachain/mc_mainnet"
+      }
+    ],
+    "social": {
+      "title": "Get updates through social channels"
+    }
   }
 }

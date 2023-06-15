@@ -12,7 +12,7 @@ interface AgendaItem {
   image: string;
 }
 
-function renderStatus(param) {
+function renderStatus(param: string): JSX.Element {
   switch (param) {
     case "deployed":
       return (
@@ -101,7 +101,7 @@ export function MetaChainAgenda(): JSX.Element {
     </div>
   );
 }
-function AgendaCard(props): JSX.Element {
+function AgendaCard(props: AgendaItem): JSX.Element {
   const [isHoverOn, setIsHoverOn] = useState(false);
   return (
     <article

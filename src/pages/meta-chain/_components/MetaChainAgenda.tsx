@@ -12,8 +12,8 @@ interface AgendaItem {
   image: string;
 }
 
-function renderStatus(param: string): JSX.Element {
-  switch (param) {
+function StatusItem({ status }: { status: string }): JSX.Element {
+  switch (status) {
     case "deployed":
       return (
         <div className="absolute right-[20px] top-[28px] bg-[#00AD1D] text-[10px] leading-3 tracking-[0.08em] font-bold text-dark-1000 rounded-xl py-1 px-3">
@@ -107,7 +107,7 @@ function AgendaCard(props: AgendaItem): JSX.Element {
       className={classNames(
         "relative rounded-[15px] lg:w-[384px] md:w-[324px] h-[202px] w-[272px] p-[0.5px]",
         {
-          "border-gradient relative before:absolute before:content-[''] before:inset-0 before:p-px before:rounded-[15px] before:z-[-1]":
+          "border-gradient before:absolute before:content-[''] before:inset-0 before:p-px before:rounded-[15px] before:z-[-1]":
             isHoverOn,
         }
       )}
@@ -145,7 +145,7 @@ function AgendaCard(props: AgendaItem): JSX.Element {
           </div>
         )}
       </div>
-      {renderStatus(props.status)}
+      <StatusItem status={props.status} />
     </article>
   );
 }

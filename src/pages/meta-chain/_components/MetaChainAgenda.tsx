@@ -68,7 +68,6 @@ export function MetaChainAgenda(): JSX.Element {
             target="_blank"
             rel="noreferrer"
             data-testid="metachain-social-twitter"
-            id="Twitter"
           >
             <AiOutlineTwitter className="hover-icons" size={24} />
           </a>
@@ -77,7 +76,6 @@ export function MetaChainAgenda(): JSX.Element {
             target="_blank"
             rel="noreferrer"
             data-testid="metachain-social-telegram"
-            id="Telegram"
           >
             <FaTelegramPlane className="hover-icons" size={24} />
           </a>
@@ -86,7 +84,6 @@ export function MetaChainAgenda(): JSX.Element {
             target="_blank"
             rel="noreferrer"
             data-testid="metachain-social-github"
-            id="GitHub"
           >
             <AiFillGithub className="hover-icons" size={24} />
           </a>

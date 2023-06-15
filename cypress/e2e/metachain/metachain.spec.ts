@@ -99,7 +99,7 @@ viewports.forEach((viewport) => {
         "DevNet"
       );
       cy.findByTestId("metachain-agenda-DevNet")
-        .trigger("mouseover", { force: true })
+        .trigger("mouseover", { scrollBehavior: "center" })
         .findByTestId("metachain-agenda-desc-DevNet")
         .should(
           "have.text",
@@ -111,7 +111,7 @@ viewports.forEach((viewport) => {
         "FloppyNet"
       );
       cy.findByTestId("metachain-agenda-FloppyNet")
-        .trigger("mouseover", { force: true })
+        .trigger("mouseover", { scrollBehavior: "center" })
         .findByTestId("metachain-agenda-desc-FloppyNet")
         .should(
           "have.text",
@@ -123,7 +123,7 @@ viewports.forEach((viewport) => {
         "TestNet"
       );
       cy.findByTestId("metachain-agenda-TestNet")
-        .trigger("mouseover", { force: true })
+        .trigger("mouseover", { scrollBehavior: "center" })
         .findByTestId("metachain-agenda-desc-TestNet")
         .should(
           "have.text",
@@ -135,7 +135,7 @@ viewports.forEach((viewport) => {
         "Infrastructure"
       );
       cy.findByTestId("metachain-agenda-Infrastructure")
-        .trigger("mouseover", { force: true })
+        .trigger("mouseover", { scrollBehavior: "center" })
         .findByTestId("metachain-agenda-desc-Infrastructure")
         .should(
           "have.text",
@@ -146,7 +146,7 @@ viewports.forEach((viewport) => {
         "MainNet Launch"
       );
       cy.findByTestId("metachain-agenda-MainNet Launch")
-        .trigger("mouseover", { force: true })
+        .trigger("mouseover", { scrollBehavior: "center" })
         .findByTestId("metachain-agenda-desc-MainNet Launch")
         .should(
           "have.text",

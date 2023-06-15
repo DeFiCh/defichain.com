@@ -12,7 +12,7 @@ interface AgendaItem {
   image: string;
 }
 
-function renderStatus(param) {
+function renderStatus(param: string): JSX.Element {
   switch (param) {
     case "deployed":
       return (
@@ -60,7 +60,7 @@ export function MetaChainAgenda(): JSX.Element {
           <AgendaCard key={card.title} {...card} />
         ))}
       </div>
-      <div className="flex flex-wrap text-dark-700 md:justify-center justify-end lg:text-lg lg:leading-6 lg:mb-[264px] md:mt-10 md:mb-[216px] text-sm mt-8 mb-[104px] md:mr-0 mr-6">
+      <div className="flex flex-wrap text-dark-700 text-sm lg:text-lg lg:leading-6 w-[272px] md:w-auto justify-end md:justify-center mb-[104px] md:mb-[216px] lg:mb-[264px] mt-8 md:mt-10 mx-auto">
         {t("agenda.social.title")}
         <div className="flex md:ml-6 space-x-5 md:mt-0 mt-[16px]">
           <a
@@ -68,7 +68,6 @@ export function MetaChainAgenda(): JSX.Element {
             target="_blank"
             rel="noreferrer"
             data-testid="metachain-social-twitter"
-            id="Twitter"
           >
             <AiOutlineTwitter className="hover-icons" size={24} />
           </a>
@@ -77,7 +76,6 @@ export function MetaChainAgenda(): JSX.Element {
             target="_blank"
             rel="noreferrer"
             data-testid="metachain-social-telegram"
-            id="Telegram"
           >
             <FaTelegramPlane className="hover-icons" size={24} />
           </a>
@@ -86,7 +84,6 @@ export function MetaChainAgenda(): JSX.Element {
             target="_blank"
             rel="noreferrer"
             data-testid="metachain-social-github"
-            id="GitHub"
           >
             <AiFillGithub className="hover-icons" size={24} />
           </a>
@@ -101,7 +98,7 @@ export function MetaChainAgenda(): JSX.Element {
     </div>
   );
 }
-function AgendaCard(props): JSX.Element {
+function AgendaCard(props: AgendaItem): JSX.Element {
   const [isHoverOn, setIsHoverOn] = useState(false);
   return (
     <article

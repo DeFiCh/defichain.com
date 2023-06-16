@@ -57,7 +57,7 @@ function DropdownItem(props): JSX.Element {
           {props.link ? (
             separatedDesc.map((word, index) => (
               <span key={index}>
-                {word === "here" ? (
+                {word.includes("here") || word.includes("hier") ? (
                   <a
                     href={props.link}
                     target="_blank"

@@ -12,27 +12,44 @@ interface AgendaItem {
   image: string;
 }
 
+function getStatusBgClassName(status: string): string {
+  const deployedGreen = "bg-[#00AD1D]";
+  const inProgressOrange = "bg-warning";
+  const upcomingGrey = "bg-dark-200";
+
+  const statusClassMap: { [key: string]: string } = {
+    DEPLOYED: deployedGreen,
+    "IM EINSATZ": deployedGreen,
+    DÉPLOYÉ: deployedGreen,
+    已部署: deployedGreen,
+
+    "IN PROGRESS": inProgressOrange,
+    "IN BEARBEITUNG": inProgressOrange,
+    "EN COURS": inProgressOrange,
+    部署路上: inProgressOrange,
+
+    UPCOMING: upcomingGrey,
+    KÜNFTIG: upcomingGrey,
+    "À VENIR": upcomingGrey,
+    即将到来: upcomingGrey,
+    即將到來: upcomingGrey,
+  };
+
+  return statusClassMap[status];
+}
+
 function StatusItem({ status }: { status: string }): JSX.Element {
-  switch (status) {
-    case "deployed":
-      return (
-        <div className="absolute right-[20px] top-[28px] bg-[#00AD1D] text-[10px] leading-3 tracking-[0.08em] font-bold text-dark-1000 rounded-xl py-1 px-3">
-          DEPLOYED
-        </div>
-      );
-    case "inProgress":
-      return (
-        <div className="absolute right-[20px] top-[28px] bg-warning text-[10px] leading-3 tracking-[0.08em] font-bold text-dark-1000 rounded-xl py-1 px-3">
-          IN PROGRESS
-        </div>
-      );
-    default:
-      return (
-        <div className="absolute right-[20px] top-[28px] bg-dark-200 text-[10px] leading-3 tracking-[0.08em] font-bold text-dark-1000 rounded-xl py-1 px-3">
-          UPCOMING
-        </div>
-      );
-  }
+  const bgColor = getStatusBgClassName(status);
+  return (
+    <div
+      className={classNames(
+        "absolute right-[20px] top-[28px] text-[10px] leading-3 tracking-[0.08em] font-bold text-dark-1000 rounded-xl py-1 px-3",
+        bgColor
+      )}
+    >
+      {status}
+    </div>
+  );
 }
 
 export function MetaChainAgenda(): JSX.Element {

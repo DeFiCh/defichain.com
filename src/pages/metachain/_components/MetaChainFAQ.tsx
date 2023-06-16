@@ -6,8 +6,13 @@ import classNames from "classnames";
 
 interface DropdownItemInterface {
   title: string;
-  desc: string;
-  link?: string;
+  desc: [
+    {
+      value: string;
+      type: "string" | "link";
+      link?: string;
+    }
+  ];
 }
 
 export function MetaChainFAQ(): JSX.Element {
@@ -38,10 +43,6 @@ function DropdownItem({
   props: DropdownItemInterface;
 }): JSX.Element {
   const [dropdownState, setDropDownState] = useState<boolean>(false);
-  let separatedDesc;
-  if (props.link) {
-    separatedDesc = props.desc.split(" ");
-  }
   return (
     <div
       className="border border-dark-200 cursor-pointer lg:mx-32 py-5 px-6 rounded-[10px]"
@@ -65,27 +66,22 @@ function DropdownItem({
       </div>
       {dropdownState && (
         <div className="mt-8 leading-5" data-testid={`faq-desc-${props.title}`}>
-          {props.link ? (
-            separatedDesc.map((word, index) => (
-              <span key={index}>
-                {word === "here" ? (
-                  <a
-                    href={props.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    id="faq-link"
-                    data-testid="faq-link"
-                  >
-                    <span className="text-electric underline">{word}</span>{" "}
-                  </a>
-                ) : (
-                  <span>{word} </span>
-                )}
-              </span>
-            ))
-          ) : (
-            <p className="leading-6 mt-6">{props.desc}</p>
-          )}
+          {props.desc.map((item, index) => {
+            if (item.type === "link") {
+              return (
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  id="faq-link"
+                  data-testid="faq-link"
+                >
+                  <span className="text-electric underline">{item.value}</span>{" "}
+                </a>
+              );
+            }
+            return <span key={index}>{item.value}</span>;
+          })}
         </div>
       )}
     </div>

@@ -207,7 +207,7 @@ viewports.forEach((viewport) => {
         .and("have.attr", "href")
         .and(
           "include",
-          "https://defich.github.io/handbook/guides/guide_floppynet.html"
+          "https://defich.github.io/handbook/guides/guide_changi.html"
         );
 
       cy.checkElementVisibilityAndText(

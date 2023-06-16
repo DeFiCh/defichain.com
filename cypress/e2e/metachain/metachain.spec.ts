@@ -200,7 +200,7 @@ viewports.forEach((viewport) => {
       );
       cy.checkElementVisibilityAndText(
         "faq-desc-How can I build on MetaChain?",
-        "Refer to the documentation here for more details. "
+        "Refer to the documentation here for more details."
       );
       cy.findByTestId("faq-link")
         .should("be.visible")

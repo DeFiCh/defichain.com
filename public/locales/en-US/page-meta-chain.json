@@ -73,20 +73,48 @@
     "items": [
       {
         "title": "What is Meta Chain?",
-        "desc": "Meta Chain is a Layer 2 blockchain that allows users to build scalable dApps on Bitcoin and Ethereum."
+        "desc": [
+          {
+            "value": "Meta Chain is a Layer 2 blockchain that allows users to build scalable dApps on Bitcoin and Ethereum.",
+            "type": "string"
+          }
+        ]
       },
       {
         "title": "How is Meta Chain related to DeFiChain?",
-        "desc": "MetaChain expands the scope for DeFiChain, allowing it to link to various chains by enhancing interoperability."
+        "desc": [
+          {
+            "value": "MetaChain expands the scope for DeFiChain, allowing it to link to various chains by enhancing interoperability.",
+            "type": "string"
+          }
+        ]
       },
       {
         "title": "How can I build on Meta Chain?",
-        "desc": "Refer to the documentation here for more details.",
-        "link": "https://defich.github.io/handbook/guides/guide_changi.html"
+        "desc": [
+          {
+            "value": "Refer to the documentation ",
+            "type": "string"
+          },
+          {
+            "value": "here",
+            "type": "link",
+            "link": "https://defich.github.io/handbook/guides/guide_changi.html"
+          },
+          {
+            "value": " for more details.",
+            "type": "string"
+          }
+        ]
       },
       {
         "title": "What token(s) can be used on Meta Chain?",
-        "desc": "Meta Chain currently only supports native DFI tokens on MetaChain. You may obtain them by swapping DFI UTXO on Light Wallet (feature in progress)"
+        "desc": [
+          {
+            "value": "Meta Chain currently only supports native DFI tokens on MetaChain. You may obtain them by swapping DFI UTXO on Light Wallet (feature in progress)",
+            "type": "string"
+          }
+        ]
       }
     ]
   }

@@ -7,6 +7,7 @@ import classNames from "classnames";
 interface DropdownItemInterface {
   title: string;
   desc: string;
+  link?: string;
 }
 
 export function MetaChainFAQ(): JSX.Element {
@@ -24,14 +25,18 @@ export function MetaChainFAQ(): JSX.Element {
       </div>
       <div className="mt-12 lg:mt-16 flex flex-col gap-y-4">
         {items.map((item) => (
-          <DropdownItem key={item.title} {...item} />
+          <DropdownItem key={item.title} props={item} />
         ))}
       </div>
     </Container>
   );
 }
 
-function DropdownItem(props): JSX.Element {
+function DropdownItem({
+  props,
+}: {
+  props: DropdownItemInterface;
+}): JSX.Element {
   const [dropdownState, setDropDownState] = useState<boolean>(false);
   let separatedDesc;
   if (props.link) {

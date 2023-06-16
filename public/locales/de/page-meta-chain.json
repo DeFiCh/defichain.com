@@ -1,0 +1,93 @@
+{
+  "heroBanner": {
+    "title": "DAS ERWEITERTE ÖKOSYSTEM",
+    "subtitle": "MetaChain: Gebaut für Bitcoin & Ethereum",
+    "desc": "Unerreichte Innovation und Interoperabilität, ohne Kompromisse bei der Skalierbarkeit oder Sicherheit. MetaChain ist für die Entwicklung von dApps auf den größten Blockchains der Welt gedacht."
+  },
+  "keyFeatures": {
+    "title": "Ethereums Leistungsfähigkeit trifft auf Innovation",
+    "subtitle": "HAUPTMERKMALE",
+    "desc": "Bietet eine EVM-kompatible Umgebung, die es Entwicklern, die mit dem Ethereum-Ökosystem vertraut sind, ermöglicht, nahtlos und mühelos Anwendungen der nächsten Generation auf der nativen DeFiChain zu entwickeln.",
+    "evmIntegration": {
+      "title": "EVM- & UTXO-INTEGRATION",
+      "desc": "Unterstützt sowohl UTXO- als auch das Account-basierte Ethereum-Modell und bietet so nahtlos sowohl Privatsphäre als auch Einfachheit."
+    },
+    "ecosystem": {
+      "title": "SKALIERBARES ÖKOSYSTEM",
+      "desc": "Uneingeschränkte chainübergreifende Kompatibilität ermöglicht den DFI-Nutzern einen umfassenden Zugang zu Ethereum- und EVM-kompatiblen Chains."
+    },
+    "transactionFee": {
+      "title": "NIEDRIGE TRANSAKTIONSGEBÜHREN",
+      "desc": "Ermöglicht Entwicklern und Nutzern kostengünstige Transaktionsgebühren."
+    },
+    "switchingCosts": {
+      "title": "NIEDRIGE WECHSELKOSTEN",
+      "desc": "Nahtlose dApp-Bereitstellung und mühelose chainübergreifende Interaktion durch MetaChain."
+    }
+  },
+  "roadmap": {
+    "title": "METACHAIN'S WICHTIGSTE UPDATES",
+    "subtitle": "Fahrplan",
+    "desc": "Werde ein früher Pionier in der nächsten Phase von DeFiChain. Erkunde unsere Roadmap und teste und gestalte mit uns die Funktionen von MetaChain. Nutze unsere Wissensbibliothek, um deine Reise zu beginnen.",
+    "button": "Dokumentation"
+  },
+  "agenda": {
+    "cards": [
+      {
+        "title": "DevNet",
+        "status": "IM EINSATZ",
+        "desc": "Kick-off-Phase, Einrichten der MetaChain-Umgebung für interne Tests.",
+        "image": "/assets/img/metachain/mc_devnet"
+      },
+      {
+        "title": "FloppyNet",
+        "status": "IM EINSATZ",
+        "desc": "Die Alpha-Version unseres TestNet - öffentlich zugänglich, erwartet Rollbacks und begrenzte Volatilität.",
+        "image": "/assets/img/metachain/mc_floppynet"
+      },
+      {
+        "title": "TestNet",
+        "status": "IN BEARBEITUNG",
+        "desc": "Endgültige Version des TestNet - Einsatz und Interaktion mit Smart Contracts in einer stabilen Umgebung.",
+        "image": "/assets/img/metachain/mc_testnet"
+      },
+      {
+        "title": "Infrastruktur",
+        "status": "IN BEARBEITUNG",
+        "desc": "Wir integrieren wichtige Infrastrukturen wie MetaScan und Ocean, um die MetaChain für das MainNet vorzubereiten.",
+        "image": "/assets/img/metachain/mc_infrastructure"
+      },
+      {
+        "title": "MainNet-Start",
+        "status": "KÜNFTIG",
+        "desc": "Der offizielle Start - erlebe das voll funktionsfähige Netzwerk von MetaChain.",
+        "image": "/assets/img/metachain/mc_mainnet"
+      }
+    ],
+    "social": {
+      "title": "Erhalte Updates über die sozialen Kanäle."
+    }
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "items": [
+      {
+        "title": "Was ist MetaChain?",
+        "desc": "MetaChain ist eine Layer-2-Blockchain, mit der Nutzer skalierbare dApps auf Bitcoin und Ethereum erstellen können."
+      },
+      {
+        "title": "Wie hängt MetaChain mit DeFiChain zusammen?",
+        "desc": "MetaChain erweitert den Anwendungsbereich von DeFiChain und ermöglicht es ihr, sich mit verschiedenen Chains zu verbinden, indem sie die Interoperabilität verbessert."
+      },
+      {
+        "title": "Wie kann ich auf MetaChain aufbauen?",
+        "desc": "Weitere Informationen findest du in der Dokumentation hier.",
+        "link": "https://defich.github.io/handbook/guides/guide_floppynet.html"
+      },
+      {
+        "title": "Welche Token können auf MetaChain verwendet werden?",
+        "desc": "MetaChain unterstützt derzeit nur native DFI-Token auf MetaChain. Du kannst sie durch den Tausch von UTXO-DFI auf der Lightwallet erhalten (Feature in Arbeit)"
+      }
+    ]
+  }
+}

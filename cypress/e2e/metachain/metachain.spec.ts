@@ -159,47 +159,47 @@ viewports.forEach((viewport) => {
         "faq-title",
         "Frequently Asked Questions"
       );
-      cy.findByTestId("faq-title-What is Meta Chain?").click({
+      cy.findByTestId("faq-title-What is MetaChain?").click({
+        scrollBehavior: "center",
+      });
+      cy.findByTestId("faq-title-How is MetaChain related to DeFiChain?").click(
+        {
+          scrollBehavior: "center",
+        }
+      );
+      cy.findByTestId("faq-title-How can I build on MetaChain?").click({
         scrollBehavior: "center",
       });
       cy.findByTestId(
-        "faq-title-How is Meta Chain related to DeFiChain?"
-      ).click({
-        scrollBehavior: "center",
-      });
-      cy.findByTestId("faq-title-How can I build on Meta Chain?").click({
-        scrollBehavior: "center",
-      });
-      cy.findByTestId(
-        "faq-title-What token(s) can be used on Meta Chain?"
+        "faq-title-What token(s) can be used on MetaChain?"
       ).click({
         scrollBehavior: "center",
       });
 
       cy.checkElementVisibilityAndText(
-        "faq-title-What is Meta Chain?",
-        "What is Meta Chain?"
+        "faq-title-What is MetaChain?",
+        "What is MetaChain?"
       );
       cy.checkElementVisibilityAndText(
-        "faq-desc-What is Meta Chain?",
-        "Meta Chain is a Layer 2 blockchain that allows users to build scalable dApps on Bitcoin and Ethereum."
+        "faq-desc-What is MetaChain?",
+        "MetaChain is a Layer 2 blockchain that allows users to build scalable dApps on Bitcoin and Ethereum."
       );
 
       cy.checkElementVisibilityAndText(
-        "faq-title-How is Meta Chain related to DeFiChain?",
-        "How is Meta Chain related to DeFiChain?"
+        "faq-title-How is MetaChain related to DeFiChain?",
+        "How is MetaChain related to DeFiChain?"
       );
       cy.checkElementVisibilityAndText(
-        "faq-desc-How is Meta Chain related to DeFiChain?",
+        "faq-desc-How is MetaChain related to DeFiChain?",
         "MetaChain expands the scope for DeFiChain, allowing it to link to various chains by enhancing interoperability."
       );
 
       cy.checkElementVisibilityAndText(
-        "faq-title-How can I build on Meta Chain?",
-        "How can I build on Meta Chain?"
+        "faq-title-How can I build on MetaChain?",
+        "How can I build on MetaChain?"
       );
       cy.checkElementVisibilityAndText(
-        "faq-desc-How can I build on Meta Chain?",
+        "faq-desc-How can I build on MetaChain?",
         "Refer to the documentation here for more details. "
       );
       cy.findByTestId("faq-link")
@@ -211,12 +211,12 @@ viewports.forEach((viewport) => {
         );
 
       cy.checkElementVisibilityAndText(
-        "faq-title-What token(s) can be used on Meta Chain?",
-        "What token(s) can be used on Meta Chain?"
+        "faq-title-What token(s) can be used on MetaChain?",
+        "What token(s) can be used on MetaChain?"
       );
       cy.checkElementVisibilityAndText(
-        "faq-desc-What token(s) can be used on Meta Chain?",
-        "Meta Chain currently only supports native DFI tokens on MetaChain. You may obtain them by swapping DFI UTXO on Light Wallet (feature in progress)"
+        "faq-desc-What token(s) can be used on MetaChain?",
+        "MetaChain currently only supports native DFI tokens on MetaChain. You may obtain them by swapping DFI UTXO on Light Wallet (feature in progress)"
       );
     });
   });

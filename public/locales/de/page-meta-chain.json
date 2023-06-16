@@ -73,20 +73,44 @@
     "items": [
       {
         "title": "Was ist MetaChain?",
-        "desc": "MetaChain ist eine Layer-2-Blockchain, mit der Nutzer skalierbare dApps auf Bitcoin und Ethereum erstellen können."
+        "desc": [
+          {
+            "value": "MetaChain ist eine Layer-2-Blockchain, mit der Nutzer skalierbare dApps auf Bitcoin und Ethereum erstellen können.",
+            "type": "string"
+          }
+        ]
       },
       {
         "title": "Wie hängt MetaChain mit DeFiChain zusammen?",
-        "desc": "MetaChain erweitert den Anwendungsbereich von DeFiChain und ermöglicht es ihr, sich mit verschiedenen Chains zu verbinden, indem sie die Interoperabilität verbessert."
+        "desc": [
+          {
+            "value": "MetaChain erweitert den Anwendungsbereich von DeFiChain und ermöglicht es ihr, sich mit verschiedenen Chains zu verbinden, indem sie die Interoperabilität verbessert.",
+            "type": "string"
+          }
+        ]
       },
       {
         "title": "Wie kann ich auf MetaChain aufbauen?",
-        "desc": "Weitere Informationen findest du in der Dokumentation hier.",
-        "link": "https://defich.github.io/handbook/guides/guide_floppynet.html"
+        "desc": [
+          {
+            "value": "Weitere Informationen findest du in der Dokumentation ",
+            "type": "string"
+          },
+          {
+            "value": "hier.",
+            "type": "link",
+            "link": "https://defich.github.io/handbook/guides/guide_floppynet.html"
+          }
+        ]
       },
       {
         "title": "Welche Token können auf MetaChain verwendet werden?",
-        "desc": "MetaChain unterstützt derzeit nur native DFI-Token auf MetaChain. Du kannst sie durch den Tausch von UTXO-DFI auf der Lightwallet erhalten (Feature in Arbeit)"
+        "desc": [
+          {
+            "value": "MetaChain unterstützt derzeit nur native DFI-Token auf MetaChain. Du kannst sie durch den Tausch von UTXO-DFI auf der Lightwallet erhalten (Feature in Arbeit)",
+            "type": "string"
+          }
+        ]
       }
     ]
   }

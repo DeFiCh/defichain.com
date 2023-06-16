@@ -73,20 +73,48 @@
     "items": [
       {
         "title": "什麼是MetaChain?",
-        "desc": "MetaChain 是Layer 2，允許用戶在比特幣和以太坊上構建可擴展的 dApp。"
+        "desc": [
+          {
+            "value": "MetaChain 是Layer 2，允許用戶在比特幣和以太坊上構建可擴展的 dApp。",
+            "type": "string"
+          }
+        ]
       },
       {
         "title": "MetaChain 與 DeFiChain 有什麼關係？",
-        "desc": "MetaChain 擴展了 DeFiChain 的使用範圍，通過增強互操作性使其可以鏈接到各種鏈。"
+        "desc": [
+          {
+            "value": "MetaChain 擴展了 DeFiChain 的使用範圍，通過增強互操作性使其可以鏈接到各種鏈。",
+            "type": "string"
+          }
+        ]
       },
       {
         "title": "如何在 MetaChain 上構建？",
-        "desc": "請參閱此處的文檔以獲取更多詳細信息。",
-        "link": "https://defich.github.io/handbook/guides/guide_floppynet.html"
+        "desc": [
+          {
+            "value": "請參閱",
+            "type": "string"
+          },
+          {
+            "value": "此處",
+            "type": "link",
+            "link": "https://defich.github.io/handbook/guides/guide_changi.html"
+          },
+          {
+            "value": "的文檔以獲取更多詳細信息。",
+            "type": "string"
+          }
+        ]
       },
       {
         "title": "MetaChain 可以使用哪些代幣？",
-        "desc": "MetaChain 目前僅支持 MetaChain 上的原生 DFI 代幣。您可以通過在 Light Wallet 上交換 DFI UTXO 來獲得它們（目前功能正在部署中）"
+        "desc": [
+          {
+            "value": "MetaChain 目前僅支持 MetaChain 上的原生 DFI 代幣。您可以通過在 Light Wallet 上交換 DFI UTXO 來獲得它們（目前功能正在部署中）",
+            "type": "string"
+          }
+        ]
       }
     ]
   }

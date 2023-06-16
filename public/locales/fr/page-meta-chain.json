@@ -73,20 +73,48 @@
     "items": [
       {
         "title": "Qu'est-ce que MetaChain ?",
-        "desc": "MetaChain est une blockchain de couche 2 qui permet aux utilisateurs de construire des dApps évolutives sur Bitcoin et Ethereum."
+        "desc": [
+          {
+            "value": "MetaChain est une blockchain de couche 2 qui permet aux utilisateurs de construire des dApps évolutives sur Bitcoin et Ethereum.",
+            "type": "string"
+          }
+        ]
       },
       {
         "title": "Quel est le lien entre MetaChain et DeFiChain ?",
-        "desc": "MetaChain élargit le champ d'application de DeFiChain, lui permettant de se lier à diverses chaînes en améliorant l'interopérabilité."
+        "desc": [
+          {
+            "value": "MetaChain élargit le champ d'application de DeFiChain, lui permettant de se lier à diverses chaînes en améliorant l'interopérabilité.",
+            "type": "string"
+          }
+        ]
       },
       {
         "title": "Comment puis-je construire sur MetaChain ?",
-        "desc": "Reportez-vous à la documentation ici pour plus de détails.",
-        "link": "https://defich.github.io/handbook/guides/guide_floppynet.html"
+        "desc": [
+          {
+            "value": "Reportez-vous à la documentation ",
+            "type": "string"
+          },
+          {
+            "value": "ici",
+            "type": "link",
+            "link": "https://defich.github.io/handbook/guides/guide_changi.html"
+          },
+          {
+            "value": "pour plus de détails.",
+            "type": "string"
+          }
+        ]
       },
       {
         "title": "Quel(s) token(s) peuvent être utilisés sur MetaChain ?",
-        "desc": "MetaChain ne prend actuellement en charge que les tokens DFI natifs sur MetaChain. Vous pouvez les obtenir en échangeant des DFI UTXO sur le portefeuille léger (fonctionnalité en cours)"
+        "desc": [
+          {
+            "value": "MetaChain ne prend actuellement en charge que les tokens DFI natifs sur MetaChain. Vous pouvez les obtenir en échangeant des DFI UTXO sur le portefeuille léger (fonctionnalité en cours)",
+            "type": "string"
+          }
+        ]
       }
     ]
   }

@@ -10,29 +10,38 @@ interface AgendaItem {
   status: string;
   desc: string;
   image: string;
+  color: string;
 }
 
-function StatusItem({ status }: { status: string }): JSX.Element {
-  switch (status) {
-    case "deployed":
-      return (
-        <div className="absolute right-[20px] top-[28px] bg-[#00AD1D] text-[10px] leading-3 tracking-[0.08em] font-bold text-dark-1000 rounded-xl py-1 px-3">
-          DEPLOYED
-        </div>
-      );
-    case "inProgress":
-      return (
-        <div className="absolute right-[20px] top-[28px] bg-warning text-[10px] leading-3 tracking-[0.08em] font-bold text-dark-1000 rounded-xl py-1 px-3">
-          IN PROGRESS
-        </div>
-      );
-    default:
-      return (
-        <div className="absolute right-[20px] top-[28px] bg-dark-200 text-[10px] leading-3 tracking-[0.08em] font-bold text-dark-1000 rounded-xl py-1 px-3">
-          UPCOMING
-        </div>
-      );
-  }
+function StatusItem({
+  status,
+  color,
+}: {
+  status: string;
+  color: string;
+}): JSX.Element {
+  const deployedGreen = "bg-[#00AD1D]";
+  const inProgressOrange = "bg-warning";
+  const upcomingGrey = "bg-dark-200";
+
+  const statusColorMap: { [key: string]: string } = {
+    green: deployedGreen,
+    orange: inProgressOrange,
+    grey: upcomingGrey,
+  };
+
+  const bgColor = statusColorMap[color];
+
+  return (
+    <div
+      className={classNames(
+        "absolute right-[20px] top-[28px] text-[10px] leading-3 tracking-[0.08em] font-bold text-dark-1000 rounded-xl py-1 px-3",
+        bgColor
+      )}
+    >
+      {status}
+    </div>
+  );
 }
 
 export function MetaChainAgenda(): JSX.Element {
@@ -100,10 +109,11 @@ export function MetaChainAgenda(): JSX.Element {
 }
 function AgendaCard(props: AgendaItem): JSX.Element {
   const [isHoverOn, setIsHoverOn] = useState(false);
+  const { image, title, desc, status, color } = props;
   return (
     <article
-      data-bg-image={`url(${props.image})`}
-      data-testid={`metachain-agenda-${props.title}`}
+      data-bg-image={`url(${image})`}
+      data-testid={`metachain-agenda-${title}`}
       className={classNames(
         "relative rounded-[15px] lg:w-[384px] md:w-[324px] h-[202px] w-[272px] p-[0.5px]",
         {
@@ -122,30 +132,30 @@ function AgendaCard(props: AgendaItem): JSX.Element {
         className="p-6 rounded-[15px] h-full bg-[75%]"
         style={
           !isHoverOn
-            ? { backgroundImage: `url(${props.image}.png)` }
-            : { backgroundImage: `url(${props.image}_hover.png)` }
+            ? { backgroundImage: `url(${image}.png)` }
+            : { backgroundImage: `url(${image}_hover.png)` }
         }
       >
         {!isHoverOn ? (
           <div
             className={classNames(
               "text-dark-1000 text-xl font-bold w-[47%] md:w-full",
-              { "break-words": props.title === "Infrastructure" }
+              { "break-words": title === "Infrastructure" }
             )}
-            data-testid={`metachain-agenda-title-${props.title}`}
+            data-testid={`metachain-agenda-title-${title}`}
           >
-            {props.title}
+            {title}
           </div>
         ) : (
           <div
             className="text-dark-1000 text-sm transition-colors w-[65%] md:w-8/12"
-            data-testid={`metachain-agenda-desc-${props.title}`}
+            data-testid={`metachain-agenda-desc-${title}`}
           >
-            {props.desc}
+            {desc}
           </div>
         )}
       </div>
-      <StatusItem status={props.status} />
+      <StatusItem status={status} color={color} />
     </article>
   );
 }

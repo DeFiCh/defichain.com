@@ -24,10 +24,10 @@
   },
   "ReadyForFlexibilitySection": {
     "label": "PRÊT POUR LA FLEXIBILITÉ",
-    "title": "DeFi Meta Chain : la mise à niveau",
-    "descParaOne": "DeFi Meta Chain est une blockchain compatible EVM qui utilise la preuve d'autorité (Proof-of-Authority : POA) et fonctionne en parallèle avec la blockchain native DeFiChain",
-    "descParaTwo": "Consulter la documentation pour commencer à déployer les applications DeFi de nouvelle génération sur DeFi Meta Chain.",
-    "button": "Explorer DeFi Meta Chain"
+    "title": "DeFi MetaChain : la mise à niveau",
+    "descParaOne": "DeFi MetaChain est une blockchain compatible EVM qui utilise la preuve d'autorité (Proof-of-Authority : POA) et fonctionne en parallèle avec la blockchain native DeFiChain",
+    "descParaTwo": "Consulter la documentation pour commencer à déployer les applications DeFi de nouvelle génération sur DeFi MetaChain.",
+    "button": "Explorer DeFi MetaChain"
   },
   "EcosystemSection": {
     "label": "UN COUP DE POUCE DANS L'ÉCOSYSTÈME DEFICHAIN",
@@ -166,12 +166,12 @@
     "title": "Étapes importantes",
     "cards": [
       {
-        "title": "DevNet pour Meta Chain",
+        "title": "DevNet pour MetaChain",
         "description": "",
         "image": "/assets/img/roadmap/DevNet.png"
       },
       {
-        "title": "TestNet pour Meta Chain",
+        "title": "TestNet pour MetaChain",
         "description": "",
         "image": "/assets/img/roadmap/TestNet.png"
       },

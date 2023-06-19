@@ -280,7 +280,7 @@ function DesktopMenu({ item }: { item: string }) {
           {item === MobileTabletDropDownState.META_CHAIN ? (
             <Link
               data-testid="header-nav-elem-test"
-              href="/meta-chain"
+              href="/metachain"
               rel="noreferrer"
               target="_self"
             >
@@ -432,7 +432,7 @@ function TabletMobileDropDown({
           {label === MobileTabletDropDownState.META_CHAIN ? (
             <Link
               data-testid="header-nav-elem-test"
-              href="/meta-chain"
+              href="/metachain"
               rel="noreferrer"
               target="_self"
             >
@@ -488,7 +488,7 @@ function ComingSoonTag() {
 enum MobileTabletDropDownState {
   EXPLORE = "Explore",
   BUILD = "Build",
-  META_CHAIN = "Meta Chain",
+  META_CHAIN = "MetaChain",
   COMMUNITY = "Community",
 }
 

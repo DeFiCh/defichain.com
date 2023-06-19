@@ -51,7 +51,7 @@ export function MetaChainRoadmap({ roadMapImg }): JSX.Element {
               <Image
                 width={660}
                 height={570}
-                alt="Meta Chain Roadmap"
+                alt="MetaChain Roadmap"
                 src={roadMapImg}
               />
             </div>

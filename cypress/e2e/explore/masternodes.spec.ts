@@ -14,11 +14,11 @@ viewports.forEach((viewport) => {
         "LEARN ABOUT MASTERNODES"
       );
       cy.checkElementVisibilityAndText(
-        "section-header-explore-dex-decentralized-exchange",
+        "section-header-explore-masternodes-learn-about-masternodes",
         "DeFiChain Masternodes"
       );
       cy.checkElementVisibilityAndText(
-        "section-desc-explore-dex-decentralized-exchange",
+        "section-desc-explore-masternodes-learn-about-masternodes",
         "Secure, incentivized, community-driven nodes powering DeFiChain."
       );
     });

@@ -148,7 +148,7 @@ function AgendaCard(props: AgendaItem): JSX.Element {
           </div>
         ) : (
           <div
-            className="text-dark-1000 text-sm transition-colors w-[65%] md:w-8/12"
+            className="text-dark-1000 text-sm transition-colors w-[63%] md:w-8/12"
             data-testid={`metachain-agenda-desc-${title}`}
           >
             {desc}

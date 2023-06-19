@@ -36,30 +36,35 @@
       {
         "title": "DevNet",
         "status": "IM EINSATZ",
+        "color": "green",
         "desc": "Kick-off-Phase, Einrichten der MetaChain-Umgebung für interne Tests.",
         "image": "/assets/img/metachain/mc_devnet"
       },
       {
         "title": "FloppyNet",
         "status": "IM EINSATZ",
+        "color": "green",
         "desc": "Die Alpha-Version unseres TestNet - öffentlich zugänglich, erwartet Rollbacks und begrenzte Volatilität.",
         "image": "/assets/img/metachain/mc_floppynet"
       },
       {
         "title": "TestNet",
         "status": "IN BEARBEITUNG",
+        "color": "orange",
         "desc": "Endgültige Version des TestNet - Einsatz und Interaktion mit Smart Contracts in einer stabilen Umgebung.",
         "image": "/assets/img/metachain/mc_testnet"
       },
       {
         "title": "Infrastruktur",
         "status": "IN BEARBEITUNG",
+        "color": "orange",
         "desc": "Wir integrieren wichtige Infrastrukturen wie MetaScan und Ocean, um die MetaChain für das MainNet vorzubereiten.",
         "image": "/assets/img/metachain/mc_infrastructure"
       },
       {
         "title": "MainNet-Start",
         "status": "KÜNFTIG",
+        "color": "grey",
         "desc": "Der offizielle Start - erlebe das voll funktionsfähige Netzwerk von MetaChain.",
         "image": "/assets/img/metachain/mc_mainnet"
       }

@@ -36,30 +36,35 @@
       {
         "title": "DevNet开发网",
         "status": "已部署",
+        "color": "green",
         "desc": "启动阶段，搭建MetaChain内部测试环境。",
         "image": "/assets/img/metachain/mc_devnet"
       },
       {
         "title": "FloppyNet测试网",
         "status": "已部署",
+        "color": "green",
         "desc": "我们 TestNet 的 alpha 版本 - 可公开访问，预计回滚和有限的波动。",
         "image": "/assets/img/metachain/mc_floppynet"
       },
       {
         "title": "TestNet测试网",
         "status": "部署路上",
+        "color": "orange",
         "desc": "TestNet测试网的最终版本——在稳定的环境中部署智能合约并与之交互。",
         "image": "/assets/img/metachain/mc_testnet"
       },
       {
         "title": "基础设施",
         "status": "部署路上",
+        "color": "orange",
         "desc": "集成 MetaScan 和 Ocean 等关键基础设施，为主网准备 MetaChain。",
         "image": "/assets/img/metachain/mc_infrastructure"
       },
       {
         "title": "MainNet主网启动",
         "status": "即将到来",
+        "color": "grey",
         "desc": "正式上线 - 体验全面运营的MetaChain网络。",
         "image": "/assets/img/metachain/mc_mainnet"
       }

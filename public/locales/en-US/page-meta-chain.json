@@ -3,8 +3,6 @@
     "title": "THE UPGRADED ECOSYSTEM",
     "subtitle": "MetaChain: Build for Bitcoin & Ethereum",
     "desc": "Unrivaled innovation and interoperability, without compromising on scalability or security. MetaChain is for building dApps on the world's largest blockchains."
-    "subtitle": "MetaChain: Build for Bitcoin & Ethereum",
-    "desc": "Unrivaled innovation and interoperability, without compromising on scalability or security. MetaChain is for building dApps on the world's largest blockchains."
   },
   "keyFeatures": {
     "title": "Ethereum's power meets innovation",
@@ -38,30 +36,35 @@
       {
         "title": "DevNet",
         "status": "DEPLOYED",
+        "color": "green",
         "desc": "Kick-off stage, setting up MetaChain's environment for internal testing.",
         "image": "/assets/img/metachain/mc_devnet"
       },
       {
         "title": "FloppyNet",
         "status": "DEPLOYED",
+        "color": "green",
         "desc": "The alpha version of our TestNet - publicly accessible, expect rollbacks and limited volatility.",
         "image": "/assets/img/metachain/mc_floppynet"
       },
       {
         "title": "TestNet",
         "status": "IN PROGRESS",
+        "color": "orange",
         "desc": "Final version of TestNet - deploy and interact with smart contracts in a stable environment.",
         "image": "/assets/img/metachain/mc_testnet"
       },
       {
         "title": "Infrastructure",
         "status": "IN PROGRESS",
+        "color": "orange",
         "desc": "Integrating key infrastructure like MetaScan and Ocean to prepare MetaChain for MainNet.",
         "image": "/assets/img/metachain/mc_infrastructure"
       },
       {
         "title": "MainNet Launch",
         "status": "UPCOMING",
+        "color": "grey",
         "desc": "The official launch - experience MetaChain's fully operational network.",
         "image": "/assets/img/metachain/mc_mainnet"
       }

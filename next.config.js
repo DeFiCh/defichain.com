@@ -14,7 +14,7 @@ const securityHeaders = [
       `object-src 'none';` +
       `script-src 'self' ajax.googleapis.com widgets.coingecko.com files.coinmarketcap.com 3rdparty-apis.coinmarketcap.com app.netlify.com netlify-cdp-loader.netlify.app *.googletagmanager.com ${
         process.env.NODE_ENV === "development" ? `'unsafe-eval'` : ""
-      };` +
+      } https://connect.facebook.net;` +
       `script-src-elem 'self' ajax.googleapis.com widgets.coingecko.com files.coinmarketcap.com 3rdparty-apis.coinmarketcap.com *.googletagmanager.com;` +
       `style-src 'self' fonts.googleapis.com 'unsafe-inline' files.coinmarketcap.com 'unsafe-inline';` +
       `font-src 'self' fonts.gstatic.com;` +

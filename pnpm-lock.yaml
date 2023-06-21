@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  countup.js: 2.5.0
+  countup.js: 2.6.2
 
 dependencies:
   '@headlessui/react':
@@ -4030,8 +4030,8 @@ packages:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
     dev: false
 
-  /countup.js@2.5.0:
-    resolution: {integrity: sha512-/59H8Q6wzu6VfHeqGUgXoyh6kgboGr5mALmRKi8YA11DlcaXSnT1PZG6mTyBRLco4ZjExKlmfNHeMbQgZvis9Q==}
+  /countup.js@2.6.2:
+    resolution: {integrity: sha512-PRvoilkebwr1MKaRAllyJl2cD7mgunGZWXLaSFL+YqHXlJpjLX7SHTWonRfIx2xg1Xf7SPbo92bOOonSIomRYQ==}
     dev: false
 
   /cpu-features@0.0.8:
@@ -8330,7 +8330,7 @@ packages:
       react: '>= 16.3.0'
     dependencies:
       '@rollup/plugin-babel': 6.0.3(@babel/core@7.22.5)
-      countup.js: 2.5.0
+      countup.js: 2.6.2
       react: 18.2.0
     transitivePeerDependencies:
       - '@babel/core'

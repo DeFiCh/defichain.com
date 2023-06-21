@@ -49,10 +49,14 @@ export default function PrivacyPolicyPage({ post }): JSX.Element {
                 text={t("Header.sectionTitle")}
                 testID="privacy-policy-protecting"
               />
-              <SectionSubTitle text={t("Header.subtitle")} />
+              <SectionSubTitle
+                text={t("Header.subtitle")}
+                testID="privacy-policy-protecting"
+              />
               <SectionDescription
                 text={t("Header.desc")}
                 customStyle="!text-base !tracking-[.03em] lg:!tracking-normal lg:!text-xl lg:!leading-7"
+                testID="privacy-policy-protecting"
               />
             </div>
           </div>

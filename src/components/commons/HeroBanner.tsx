@@ -12,8 +12,10 @@ import { SectionDescription } from "./SectionDescription";
 // if cta button is required, to pass in hasCtaButton, ctaButtonText and ctaButtonLink
 // if start exploring button is required, to pass in hasStartExploringButton and startExploringJumpLink
 export function HeroBanner({
+  customStyle,
   title,
   subtitle,
+  subtitleCustomStyle,
   desc,
   customBgPosStyle,
   heroBg,
@@ -24,8 +26,10 @@ export function HeroBanner({
   startExploringJumpLink,
   testID,
 }: {
+  customStyle?: string;
   title: string;
   subtitle: string;
+  subtitleCustomStyle?: string;
   desc: string;
   customBgPosStyle?: string;
   heroBg: HeroBannerBg;
@@ -41,20 +45,25 @@ export function HeroBanner({
       <div
         className={classNames(
           "flex flex-col md:gap-y-5 gap-y-2",
-          "md:w-1/2 w-auto",
-          "md:pt-[88px] pt-[380px]",
-          "lg:mb-[278px] md:mb-[148px] mb-24"
+          "md:w-[312px] w-auto lg:w-1/2",
+          "md:pt-[63px] pt-[380px]",
+          "lg:mb-[278px] md:mb-[148px] mb-24",
+          customStyle
         )}
       >
         <SectionTitle text={title} testID={testID} />
-        <SectionSubTitle text={subtitle} />
-        <SectionDescription text={desc} />
+        <SectionSubTitle
+          text={subtitle}
+          testID={testID}
+          customStyle={subtitleCustomStyle}
+        />
+        <SectionDescription text={desc} testID={testID} />
         {hasCtaButton && ctaButtonText && (
           <Button
             className="lg:py-4 py-3 md:w-1/2 w-auto lg:text-base text-sm md:mt-7 mt-10"
             text={ctaButtonText}
             href={ctaButtonLink}
-            testID="hero-banner-cta-button"
+            testID={`hero-banner-cta-button-${testID}`}
           />
         )}
       </div>
@@ -101,6 +110,7 @@ export enum HeroBannerBg {
   CUBE,
   DFI_COIN,
   DIAMOND_COIN,
+  META_CHAIN,
 }
 const bgMapping = {
   [HeroBannerBg.COIN_ARROW]:
@@ -110,4 +120,6 @@ const bgMapping = {
     "bg-[url(/assets/img/herobanner/hero-banner-dfi-coin.png)]",
   [HeroBannerBg.DIAMOND_COIN]:
     "bg-[url(/assets/img/herobanner/hero-banner-diamond-coin.png)]",
+  [HeroBannerBg.META_CHAIN]:
+    "bg-[url(/assets/img/herobanner/hero-banner-meta-chain.png)]",
 };

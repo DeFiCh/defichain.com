@@ -8,8 +8,8 @@ dependencies:
     specifier: ^6.8.0
     version: 6.8.0
   '@prismicio/react':
-    specifier: ^2.6.2
-    version: 2.6.2(@prismicio/client@6.8.0)(react@18.2.0)
+    specifier: ^2.7.1
+    version: 2.7.1(@prismicio/client@6.8.0)(react@18.2.0)
   '@waveshq/standard-defichain-jellyfishsdk':
     specifier: ^0.52.0
     version: 0.52.0(@types/tar-fs@2.0.1)
@@ -2418,8 +2418,8 @@ packages:
       imgix-url-builder: 0.0.3
     dev: false
 
-  /@prismicio/react@2.6.2(@prismicio/client@6.8.0)(react@18.2.0):
-    resolution: {integrity: sha512-mdkogLMtK25Q9+95ym+58WycURXmGb8cRjPiZ3NRu2NxRKAwnieUwrEcczrCUN7+laQxSz71sEZIvDZDXZtzaw==}
+  /@prismicio/react@2.7.1(@prismicio/client@6.8.0)(react@18.2.0):
+    resolution: {integrity: sha512-AEPL1Ng6K5+dqUG6RTARMQg3g3oGWcIjRl5bgGaJwvRP43wp3gltdZm4P/63XV3Rb4MuMdp7IRT93XGhzLwkww==}
     engines: {node: '>=12.7.0'}
     peerDependencies:
       '@prismicio/client': ^6 || ^7

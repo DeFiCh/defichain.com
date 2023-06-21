@@ -29,11 +29,10 @@ viewports.forEach((viewport) => {
       });
     });
 
-    // remove skip once bug with scrolling fixed
-    it.skip("should be able to navigate on sidemenu", () => {
+    it("should be able to navigate on sidemenu", () => {
       if (viewport === "macbook-16") {
         whitepaperTitles.forEach((wpTitle) => {
-          // if (wpTitle.id != "defichain-foundation")
+          cy.scrollTo("bottom");
           cy.checkElementVisibilityAndHref(
             `link-${wpTitle.id}`,
             `#${wpTitle.id}`

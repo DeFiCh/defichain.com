@@ -38,8 +38,8 @@ jobs:
           install: false
           record: true
           parallel: true
-          build: npm run cypress:build
-          start: npm run start
+          build: pnpm run cypress:build
+          start: pnpm run start
           wait-on: "http://localhost:3000"
           browser: chrome
           spec: cypress/e2e/**

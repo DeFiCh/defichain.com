@@ -26,7 +26,7 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
       - run: tsc
-      - run: npm run lint
+      - run: pnpm run lint
 
   lint_prettier:
     name: Lint - Prettier

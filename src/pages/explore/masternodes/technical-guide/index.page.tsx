@@ -39,10 +39,14 @@ export default function TechnicalGuide() {
                 text={t("technicalGuide.title")}
                 testID="own-a-masternode"
               />
-              <SectionSubTitle text={t("technicalGuide.subtitle")} />
+              <SectionSubTitle
+                text={t("technicalGuide.subtitle")}
+                testID="technical-guide"
+              />
               <SectionDescription
                 text={t("technicalGuide.desc")}
                 customStyle="!text-base !tracking-[.03em] lg:!tracking-normal lg:!text-xl lg:!leading-7"
+                testID="technical-guide"
               />
             </div>
           </div>

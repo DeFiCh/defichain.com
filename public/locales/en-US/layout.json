@@ -5,7 +5,6 @@
       "dfi": "$DFI",
       "dex": "DEX",
       "developers": "Developers",
-      "ecosystem": "Ecosystem",
       "downloads": "Downloads",
       "learn": "Learn",
       "buy": "Buy",
@@ -14,6 +13,7 @@
       "bloglink": "https://blog.defichain.com/",
       "explore": "Explore",
       "build": "Build",
+      "metachain": "MetaChain",
       "community": "Community"
     },
     "comingSoon": "COMING SOON",
@@ -56,41 +56,6 @@
       "image": {
         "title": "$DFI",
         "subtitle": "Learn about the token and where to get"
-      }
-    },
-    "ecosystem": {
-      "info": [
-        {
-          "title": "DIVE INTO THE ECOSYSTEM",
-          "labels": [
-            {
-              "title": "DeFiChain Apps",
-              "subtitle": "See DeFiChain in action"
-            },
-            {
-              "title": "DeFi Meta Chain",
-              "subtitle": "Expand possibilities in DeFiChain"
-            },
-            {
-              "title": "Governance",
-              "subtitle": "For DeFiChain, By DeFiChain"
-            }
-          ]
-        },
-        {
-          "title": "GET INVOLVED WITH DEFICHAIN",
-          "labels": [
-            {
-              "title": "Bug Bounty"
-            },
-            {
-              "title": "$100M Accelerator Program"
-            }
-          ]
-        }
-      ],
-      "image": {
-        "subtitle": "Powered by the Security of Bitcoin & Flexibility of Ethereum"
       }
     },
     "build": {
@@ -208,15 +173,6 @@
         "category": "RESOURCES",
         "defiscan": "DeFiScan",
         "defichainwhitepaper": "Whitepaper"
-      },
-      "ECOSYSTEM": {
-        "category": "ECOSYSTEM",
-        "defichainapps": "DeFiChain Apps",
-        "defimetachain": "DeFi Meta Chain",
-        "defiscan": "DeFiScan",
-        "governance": "Governance",
-        "bugbounty": "Bug Bounty",
-        "100macceleratorprogram": "$100M Accelerator Program"
       },
       "BUILD": {
         "category": "BUILD",

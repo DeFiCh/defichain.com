@@ -1,4 +1,8 @@
-import { ecosystemLinks, resourcesLinks } from "../fixture/homepage.config";
+import {
+  ecosystemLinks,
+  resourcesLinks,
+  communityLinks,
+} from "../fixture/homepage.config";
 import { viewports } from "../fixture/main.config";
 
 viewports.forEach((viewport) => {
@@ -35,11 +39,7 @@ viewports.forEach((viewport) => {
     });
 
     // QA-813 - TC2 - Step 2 & 3
-    it("should have Coming soon on Ecosystem and Build sections", () => {
-      cy.findByTestId("header-coming-soon-tag-Ecosystem").should(
-        "contain",
-        "COMING SOON"
-      );
+    it("should have Coming soon on Build sections", () => {
       cy.findByTestId("header-coming-soon-tag-Build").should(
         "contain",
         "COMING SOON"
@@ -48,10 +48,32 @@ viewports.forEach((viewport) => {
         "not.contain",
         "COMING SOON"
       );
+      cy.findByTestId("header-coming-soon-tag-MetaChain").should(
+        "not.contain",
+        "COMING SOON"
+      );
       cy.findByTestId("header-coming-soon-tag-Community").should(
         "not.contain",
         "COMING SOON"
       );
+    });
+
+    it("should have links on Community section", () => {
+      if (viewport === "iphone-xr" || viewport === "ipad-2") {
+        cy.findByTestId("header-open-menu").click();
+        cy.findByTestId("header-tablet-menu-item-community").click();
+      } else if (viewport === "macbook-16") {
+        cy.findByTestId("header-coming-soon-tag-Community").trigger(
+          "mouseover"
+        );
+      }
+      communityLinks.forEach((communityItem) => {
+        cy.findByTestId(`header-nav-elem-community-${communityItem.headerId}`)
+          .scrollIntoView()
+          .should("be.visible")
+          .and("have.attr", "href")
+          .and("include", communityItem.href);
+      });
     });
 
     // No TC
@@ -105,7 +127,7 @@ viewports.forEach((viewport) => {
     });
 
     // No TC
-    it("should have clickable Explore DeFi Meta Chain button", () => {
+    it("should have clickable Explore DeFi MetaChain button", () => {
       cy.findByTestId("secondary-button-explore-dmc")
         .should("be.visible")
         .and("have.attr", "href")

@@ -14,7 +14,7 @@ export function SectionTitle({
       data-testid={`section-title-${testID}`}
       className={classNames(
         "accent-gradient-1 text-transparent bg-clip-text font-mono",
-        "leading-4 tracking-[0.04em] text-base",
+        "leading-[18px] lg:leading-4 tracking-[0.04em] text-base",
         customStyle ?? "w-fit"
       )}
     >

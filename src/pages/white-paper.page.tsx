@@ -56,7 +56,10 @@ export default function WhitePaperPage({ post }): JSX.Element {
                 text={post.title}
                 testID="white-paper-documentation"
               />
-              <SectionSubTitle text={post.subtitle} />
+              <SectionSubTitle
+                text={post.subtitle}
+                testID="white-paper-documentation"
+              />
             </div>
           </div>
         </Container>

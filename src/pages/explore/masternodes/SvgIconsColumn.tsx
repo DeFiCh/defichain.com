@@ -31,6 +31,10 @@ import {
   AdvancedSwapsIcon,
   AdvancedSwapsIconHover,
 } from "@components/icons/assets/whyDex/AdvancedSwaps";
+import { EvmIntegrationIcon } from "@components/icons/assets/metaChainFeatures/EvmIntegration";
+import { ScalableEcosystemIcon } from "@components/icons/assets/metaChainFeatures/ScalableEcosystem";
+import { LowTransactionFeesIcon } from "@components/icons/assets/metaChainFeatures/LowTransactionFees";
+import { LowSwitchingCostsIcon } from "@components/icons/assets/metaChainFeatures/LowSwitchingCosts";
 
 interface BlockchainFeatureItemProp {
   title: string;
@@ -44,18 +48,22 @@ export function SvgIconsColumn({
   customSectionStyle,
   customClassStyle,
   customParagraphStyle,
+  customDescStyle,
+  isCenterAligned,
 }: {
   items: Array<BlockchainFeatureItemProp>;
   id: string;
   customSectionStyle?: string;
   customClassStyle?: string;
   customParagraphStyle?: string;
+  customDescStyle?: string;
+  isCenterAligned?: boolean;
 }): JSX.Element {
   return (
     <div
       className={classNames(
         customSectionStyle,
-        "flex flex-1 flex-wrap justify-between md:gap-y-[120px] lg:mr-[64px] lg:gap-y-16 lg:gap-x-10"
+        "flex flex-1 flex-wrap justify-between gap-y-12 md:gap-y-[120px] lg:gap-x-[60px]"
       )}
     >
       {items.map((item) => (
@@ -65,6 +73,8 @@ export function SvgIconsColumn({
           key={item.title}
           customClassStyle={customClassStyle}
           customParagraphStyle={customParagraphStyle}
+          customDescStyle={customDescStyle}
+          isCenterAligned={isCenterAligned}
         />
       ))}
     </div>
@@ -77,11 +87,15 @@ function FeatureIcon({
   id,
   customClassStyle,
   customParagraphStyle,
+  customDescStyle,
+  isCenterAligned,
 }: {
   item: BlockchainFeatureItemProp;
   id: string;
   customClassStyle?: string;
   customParagraphStyle?: string;
+  customDescStyle?: string;
+  isCenterAligned?: boolean;
 }) {
   const Icon = iconMapping[item.icon] as React.ElementType;
   // const IconOnHover = iconMapping[`${item.icon}_hover`] as React.ElementType;
@@ -99,14 +113,18 @@ function FeatureIcon({
     <article
       className={classNames(
         customClassStyle,
-        "flex md:flex-col w-full md:w-[306px] lg:w-[206px]"
+        "flex md:flex-col w-full md:w-[306px] lg:w-[270px]"
       )}
       // onMouseOver={handleMouseOver}
       // onFocus={handleMouseOver}
       // onMouseOut={handleMouseOut}
       // onBlur={handleMouseOut}
     >
-      <div className="w-[88px] shrink-0 grow-0 flex-none">
+      <div
+        className={classNames("w-[88px] shrink-0 grow-0 flex-none", {
+          "md:w-fit md:mx-auto lg:text-left lg:mx-0": isCenterAligned,
+        })}
+      >
         <Icon id={`${id}-${item.icon}`} />
         {/* {isHovering && Icon ? (
           <IconOnHover className="w-[50px] md:w-fit h-[50px]" />
@@ -137,7 +155,10 @@ function FeatureIcon({
         </h3>
         <p
           data-testid={`${item.title.toLowerCase().replaceAll(" ", "-")}-desc`}
-          className="text-dark-700 text-sm pr-[26px] md:pr-0 md:w-[206px] lg:text-base font-desc"
+          className={classNames(
+            "text-dark-700 text-sm pr-[26px] md:pr-0 md:w-[270px] lg:text-base font-desc",
+            customDescStyle
+          )}
         >
           {item.desc}
         </p>
@@ -155,6 +176,10 @@ export enum IconTypes {
   WIDE_SELECTION_OF_TOKENS = "WIDE SELECTION OF TOKENS",
   PROFIT_FROM_LIQUIDITY_MINING = "PROFIT FROM LIQUIDITY MINING",
   ADVANCED_SWAPS = "ADVANCED SWAPS",
+  EVM_INTEGRATION = "EVM_INTEGRATION",
+  SCALABLE_ECOSYSTEM = "SCALABLE_ECOSYSTEM",
+  LOW_TRANSACTION_FEES = "LOW_TRANSACTION_FEES",
+  LOW_SWITCHING_COSTS = "LOW_SWITCHING_COSTS",
 }
 
 const iconMapping = {
@@ -177,4 +202,10 @@ const iconMapping = {
   [`${IconTypes.PROFIT_FROM_LIQUIDITY_MINING}_hover`]: MineLiquidityIconHover,
   [IconTypes.ADVANCED_SWAPS]: AdvancedSwapsIcon,
   [`${IconTypes.ADVANCED_SWAPS}_hover`]: AdvancedSwapsIconHover,
+
+  // /metachain - Key Features items
+  [IconTypes.EVM_INTEGRATION]: EvmIntegrationIcon,
+  [IconTypes.SCALABLE_ECOSYSTEM]: ScalableEcosystemIcon,
+  [IconTypes.LOW_TRANSACTION_FEES]: LowTransactionFeesIcon,
+  [IconTypes.LOW_SWITCHING_COSTS]: LowSwitchingCostsIcon,
 };

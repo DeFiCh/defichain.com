@@ -64,56 +64,6 @@ export const MenuItems = [
     ],
   },
   // {
-  //   category: "ECOSYSTEM",
-  //   childLink: [
-  //     {
-  //       label: "DeFiChain Apps",
-  //       pathname: "/defichainapps",
-  //       testId: "defichainapps",
-  //       altLabel: "defichainapps",
-  //       isExternaLink: false,
-  //     },
-  //     {
-  //       label: "DeFi Meta Chain",
-  //       pathname: "/defimetachain",
-  //       testId: "defimetachain",
-  //       altLabel: "defimetachain",
-  //       isExternaLink: true,
-  //       url: "https://meta.defichain.com/",
-  //     },
-  //     {
-  //       label: "DeFiScan",
-  //       pathname: "/defiscan",
-  //       testId: "defiscan",
-  //       altLabel: "defiscan",
-  //       isExternaLink: true,
-  //       url: "https://defiscan.live/",
-  //     },
-  //     {
-  //       label: "Governance",
-  //       pathname: "/governance",
-  //       testId: "governance",
-  //       altLabel: "governance",
-  //       isExternaLink: true,
-  //       url: "https://defiscan.live/governance",
-  //     },
-  //     {
-  //       label: "Bug Bounty",
-  //       pathname: "/bugbounty",
-  //       testId: "bugbounty",
-  //       altLabel: "bugbounty",
-  //       isExternaLink: false,
-  //     },
-  //     {
-  //       label: "$100M Accelerator Program",
-  //       pathname: "/100macceleratorprogram",
-  //       testId: "100macceleratorprogram",
-  //       altLabel: "100macceleratorprogram",
-  //       isExternaLink: false,
-  //     },
-  //   ],
-  // },
-  // {
   //   category: "BUILD",
   //   childLink: [
   //     {
@@ -214,12 +164,6 @@ export default function Footer(): JSX.Element {
               category={MenuItems[0].category}
               childLinks={MenuItems[0].childLink}
               customStyle="pt-0"
-            />
-            {/* ECOSYSTEM */}
-            {/* <FooterColumn
-              category={MenuItems[1].category}
-              childLinks={MenuItems[1].childLink}
-              customStyle="sm:pt-[54px]"
             />
             {/* BUILD */}
             {/* <FooterColumn

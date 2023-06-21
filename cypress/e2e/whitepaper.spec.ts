@@ -15,17 +15,17 @@ viewports.forEach((viewport) => {
         "DOCUMENTATION FOR DEFICHAIN ECOSYSTEM"
       );
       cy.checkElementVisibilityAndText(
-        "section-header-explore-dex-decentralized-exchange",
+        "section-header-white-paper-documentation",
         "Whitepaper"
       );
     });
 
     it("should have all the expected Titles visible expected text", () => {
       whitepaperTitles.forEach((wpTitle) => {
-        cy.get(`h2#${wpTitle.id}`)
+        cy.findByTestId(wpTitle.id)
           .scrollIntoView()
           .should("be.visible")
-          .and("have.text", wpTitle.text);
+          .and("include.text", wpTitle.text);
       });
     });
 

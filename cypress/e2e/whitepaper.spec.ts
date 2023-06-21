@@ -32,11 +32,10 @@ viewports.forEach((viewport) => {
     it("should be able to navigate on sidemenu", () => {
       if (viewport === "macbook-16") {
         whitepaperTitles.forEach((wpTitle) => {
-          cy.scrollTo("bottom");
-          cy.checkElementVisibilityAndHref(
-            `link-${wpTitle.id}`,
-            `#${wpTitle.id}`
-          );
+          cy.findByTestId(`link-${wpTitle.id}`)
+            .scrollIntoView()
+            .and("have.attr", "href")
+            .and("include", `#${wpTitle.id}`);
         });
       }
     });

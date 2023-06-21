@@ -114,6 +114,6 @@ export async function getStaticProps({ locale }): Promise<WhitePaperPageProps> {
         ...post,
         content: result.toString(),
       },
-    },
+    } as any,
   };
 }

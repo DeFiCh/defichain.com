@@ -76,6 +76,6 @@ export async function getStaticProps({ locale }): Promise<SecurityPageProps> {
         ...post,
         content: result.toString(),
       },
-    },
+    } as any,
   };
 }

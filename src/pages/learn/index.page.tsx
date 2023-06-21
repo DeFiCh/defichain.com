@@ -149,6 +149,6 @@ export async function getStaticProps({ locale }): Promise<LearnPageProps> {
         "page-learn",
       ])),
       posts: allPosts,
-    },
+    } as any,
   };
 }

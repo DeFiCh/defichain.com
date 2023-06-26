@@ -119,6 +119,6 @@ export async function getStaticProps({
         ...post,
         content: result.toString(),
       },
-    },
+    } as any,
   };
 }

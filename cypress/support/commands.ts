@@ -32,6 +32,7 @@ Cypress.Commands.add(
   "checkElementVisibilityAndHref",
   (testId, expectedHref) => {
     cy.findByTestId(testId)
+      .scrollIntoView()
       .should("be.visible")
       .and("have.attr", "href")
       .and("include", expectedHref);

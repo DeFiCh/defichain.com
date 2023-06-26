@@ -6,6 +6,7 @@ description: Last updated mm/dd/yyyy
 
   <h2
       id="abstract"
+      data-testid="abstract"
       title="Abstract"
       className=
         "text-[24px] leading-8 scroll-mt-40 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]"
@@ -29,6 +30,7 @@ This Document is not a final technical specification
 </div>
 
 <h2 id="executive-summary"
+      data-testid="executive-summary"
       title="Executive Summary"
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 font-sans tracking-normal lg:text-[32px] lg:leading-[40px]">
@@ -56,7 +58,7 @@ Bitcoin, as described in the original Satoshi whitepaper, is designed as a form 
 DeFiChain approaches decentralized finance as a specific and critical segment of the blockchain community. DeFi is a dedicated blockchain that is optimized specifically for DeFi applications. DeFiChain is intentionally non-Turing-Complete and does not support any function, other than those needed for Decentralized Finance, resulting in a blockchain that provides higher throughput and better functionality specifically for dApps related to finance. The advantage of a non-Turing complete command set is that there is a much lower potential for coding errors of the type that have plagued Ethereum smart contracts such as with the DAO hack or the locked funds with Parity. While it is important that we have some smart contract languages that are Turing complete, in the area of finance, it is appropriate to restrict the capabilities of the language in favor of a more secure system with greatly-reduced attack vectors.
 </div>
 
-<h3 id="the-problem" title="The Problem" className="mt-6 font-bold font-sans scroll-mt-40 text-xl md:mt-8 lg:mt-12 lg:text-2xl">
+<h3 id="the-problem" data-testid="the-problem" title="The Problem" className="mt-6 font-bold font-sans scroll-mt-40 text-xl md:mt-8 lg:mt-12 lg:text-2xl">
 The Problem
 </h3>
 <div className="mt-5 text-dark-800">
@@ -102,6 +104,7 @@ The Timeline
 ---
 
 <h2 id="background"
+  data-testid="background"
   title="Background"
   className="text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]">
   3. Background/Industry
@@ -239,6 +242,7 @@ The points described above are simply unacceptable for any type of financial tra
 [^2]: [https://blog.zeppelin.solutions/on-the-parity-wallet-multisig-hack-405a8c12e8f7](https://blog.zeppelin.solutions/on-the-parity-wallet-multisig-hack-405a8c12e8f7)
 
 <h2 id="alternatives"
+      data-testid="alternatives"
       title="Comparing existing alternatives"
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]">
@@ -274,6 +278,7 @@ The second problem stays mostly within Ethereum, which is the network’s usage 
 </div>
 
 <h2 id="solution"
+      data-testid="solution"
       title="DeFiChain Solution"
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]">
@@ -513,6 +518,7 @@ Distribution of Dividends
 
 <h2
       id="design"
+      data-testid="design"
       title="DeFiChain Design"
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]"
@@ -819,6 +825,7 @@ Bitcoin Anchoring
 
 <h2
       id="building-blocks"
+      data-testid="building-blocks"
       title="Building Blocks"
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]"
@@ -1167,6 +1174,7 @@ Lending a Coin for Cashflow
 
 <h2
       id="dfi-coin"
+      data-testid="dfi-coin"
       title="$DFI coin"
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]"
@@ -1511,6 +1519,7 @@ Acquiring $DFI coins
 
 <h2
       id="defichain-foundation"
+      data-testid="defichain-foundation"
       title="DeFiChain Foundation"
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]"
@@ -1523,6 +1532,7 @@ The DeFiChain Foundation is incorporated as a company limited by guarantee, rese
 
 <h2
       id="marketing"
+      data-testid="marketing"
       title="Marketing"
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]"
@@ -1577,6 +1587,7 @@ Partnerships
 
 <h2
       id="roadmap"
+      data-testid="roadmap"
       title="Roadmap"
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]"
@@ -1591,6 +1602,7 @@ Partnerships
 
 <h2
       id="future"
+      data-testid="future"
       title="A Glimpse into the Future"
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]"
@@ -1614,6 +1626,7 @@ This is what DeFiChain is all about - To make the world a better place!
 
 <h2
       id="footnotes"
+      data-testid="footnotes"
       title="Footnotes"
       className=
         "text-[24px] leading-8 scroll-mt-40 mt-12 tracking-normal font-sans lg:text-[32px] lg:leading-[40px]"

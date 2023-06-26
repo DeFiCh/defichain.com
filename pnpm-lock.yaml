@@ -80,8 +80,8 @@ devDependencies:
     specifier: ^4.1.1
     version: 4.1.1
   '@netlify/plugin-nextjs':
-    specifier: ^4.38.0
-    version: 4.38.0
+    specifier: ^4.38.1
+    version: 4.38.1
   '@tailwindcss/typography':
     specifier: ^0.5.9
     version: 0.5.9(tailwindcss@3.3.2)
@@ -2052,8 +2052,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@netlify/plugin-nextjs@4.38.0:
-    resolution: {integrity: sha512-aMgdH5l7OU0MnjN2bPVDLGGbbLyclbxaEl8fij6MwgYyte9UVnsUVggl1TOG86KgHMbMYpdrtRJoh6LwV+PHOg==}
+  /@netlify/plugin-nextjs@4.38.1:
+    resolution: {integrity: sha512-59iDg+zQzj9PZOVEGiEhCD84AdTXtWC6C8SQylBPfGMJ7xVYIVXdulNUpSy9F7NXhjDeM1y9IPyTKKan6D5QIA==}
     engines: {node: '>=12.0.0'}
     dependencies:
       '@netlify/esbuild': 0.14.39

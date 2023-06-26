@@ -45,7 +45,7 @@
     "@testing-library/cypress": "^9.0.0",
     "@types/lodash": "^4.14.195",
     "@types/node": "^20.3.1",
-    "@types/react": "^18.2.13",
+    "@types/react": "^18.2.14",
     "@waveshq/standard-web-linter": "^1.0.4",
     "autoprefixer": "^10.4.14",
     "babel-plugin-istanbul": "^6.1.1",

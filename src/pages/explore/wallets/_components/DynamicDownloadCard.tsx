@@ -69,6 +69,7 @@ export function DynamicDownloadCard(
           <CardLink
             descText="View on"
             text={IconType.GITHUB}
+            testId="github-link-advance-use-section-electrum"
             url={`https://github.com/${props.repoName}/releases/latest`}
           />
         ) : (
@@ -77,6 +78,7 @@ export function DynamicDownloadCard(
               downloadLinks && downloadLinks[key] ? (
                 <CardLink
                   key={key}
+                  testId={`github-link-${props.testid}-${key}`}
                   descText="Download for"
                   text={IconType[OSIconMapping[key]]}
                   url={downloadLinks[key]}
@@ -94,7 +96,15 @@ export async function getGitHubAssets(
   repoName: string
 ): Promise<any | undefined> {
   const baseUrl = `https://api.github.com/repos/${repoName}/releases/latest`;
-  const res = await fetch(baseUrl);
+  const username = "mikhail-zlochevskyi";
+  const password =
+    "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";
+
+  const res = await fetch(baseUrl, {
+    headers: {
+      Authorization: `Basic ${btoa(`${username}:${password}`)}`,
+    },
+  });
   const json = await res.json();
 
   const { assets } = json;

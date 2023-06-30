@@ -25,7 +25,7 @@ export function AdvanceUsageSection() {
             "lg:text-[60px] lg:leading-[72px] md:text-[40px] md:leading-[44px] text-[32px] leading-[36px]",
             "text-dark-1000 md:text-center text-left"
           )}
-          data-testid="AdvanceUseSection.Title"
+          data-testid="advance-use-section-title"
         >
           {t("advanceUseSection.title")}
         </h2>
@@ -35,7 +35,7 @@ export function AdvanceUsageSection() {
             "lg:tracking-normal tracking-[0.03em]",
             "text-dark-700 md:text-center text-left"
           )}
-          data-testid="AdvanceUseSection.Subtitle"
+          data-testid="advance-use-section-subtitle"
         >
           {t("advanceUseSection.subtitle")}
         </p>
@@ -46,7 +46,7 @@ export function AdvanceUsageSection() {
           title={t("advanceUseSection.entries.DFC.title")}
           desc={t("advanceUseSection.entries.DFC.desc")}
           imageSrc="/assets/img/explore/explore-wallet-dfiwallet.png"
-          testid="AdvanceUseSection.Dfc"
+          testid="advance-use-section-dfc"
           repoName="defiCh/app"
           keywords={{
             mac: ".dmg",
@@ -59,9 +59,10 @@ export function AdvanceUsageSection() {
           title={t("advanceUseSection.entries.RPI.title")}
           desc={t("advanceUseSection.entries.RPI.desc")}
           imageSrc="/assets/img/explore/explore-wallet-dfinode.png"
-          testid="AdvanceUseSection.Rpi"
+          testid="advance-use-section-rpi"
         >
           <CardLink
+            testId="github-link-rasp-pi"
             url="https://github.com/Martin8617/Defi-Wallet-for-Raspberry-Pi"
             descText="View on"
             text={IconType.GITHUB}
@@ -72,7 +73,7 @@ export function AdvanceUsageSection() {
           title={t("advanceUseSection.entries.CLI.title")}
           desc={t("advanceUseSection.entries.CLI.desc")}
           imageSrc="/assets/img/explore/explore-wallet-cli.png"
-          testid="AdvanceUseSection.Cli"
+          testid="advance-use-section-cli"
           repoName="defiCh/ain"
           keywords={{
             mac: "apple",
@@ -85,7 +86,7 @@ export function AdvanceUsageSection() {
           title={t("advanceUseSection.entries.DFIElectrum.title")}
           desc={t("advanceUseSection.entries.DFIElectrum.desc")}
           imageSrc={<FaReact className="fill-brand-100 w-[72px] h-[63px]" />}
-          testid="AdvanceUseSection.DFIElectrum"
+          testid="advance-use-section-electrum"
           repoName="BirthdayResearch/defichain-electrum"
           keywords={{
             win: ".exe",

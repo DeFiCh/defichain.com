@@ -11,11 +11,6 @@ export const exchanges = [
     url: "https://www.bitrue.com/trade/dfi_btc",
   },
   {
-    id: "dfx",
-    name: "Dfx",
-    url: "https://dfx.swiss/en/",
-  },
-  {
     id: "kucoin",
     name: "Kucoin",
     url: "https://trade.kucoin.com/DFI-BTC",

@@ -16,11 +16,6 @@ export function BuyDFIButton({
 
   const exchanges = [
     {
-      name: "DFX",
-      image: "/assets/svg/exchanges/logo-dfx.svg",
-      url: "https://dfx.swiss/en/",
-    },
-    {
       name: "KuCoin",
       image: "/assets/svg/exchanges/logo-kucoin.svg",
       url: "https://trade.kucoin.com/DFI-BTC",

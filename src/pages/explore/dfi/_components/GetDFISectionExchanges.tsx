@@ -22,11 +22,6 @@ export default function GetDFISectionExchanges() {
       url: "https://www.bitrue.com/trade/dfi_btc",
     },
     {
-      id: "GetDFISection.Exchange.Dfx",
-      name: "Dfx",
-      url: "https://dfx.swiss/en/",
-    },
-    {
       id: "GetDFISection.Exchange.Kucoin",
       name: "Kucoin",
       url: "https://trade.kucoin.com/DFI-BTC",

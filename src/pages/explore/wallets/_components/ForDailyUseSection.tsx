@@ -62,26 +62,6 @@ export function ForDailyUseSection() {
         </DownloadCard>
 
         <DownloadCard
-          title={t("dailyUseSection.entries.DFX.title")}
-          desc={t("dailyUseSection.entries.DFX.desc")}
-          imageSrc="/assets/img/explore/explore-wallet-dfx.png"
-          testid="DailyUseSection.Dfx"
-        >
-          <div className="flex flex-row lg:gap-x-4 gap-x-3">
-            <CardLink
-              url="https://apps.apple.com/app/id1582633093"
-              descText="Get It On"
-              text={IconType.APPSTORE}
-            />
-            <CardLink
-              url="https://play.google.com/store/apps/details?id=com.defichain.app.dfx"
-              descText="Get It On"
-              text={IconType.GOOGLE_PLAY}
-            />
-          </div>
-        </DownloadCard>
-
-        <DownloadCard
           title={t("dailyUseSection.entries.JLY.title")}
           desc={t("dailyUseSection.entries.JLY.desc")}
           imageSrc="/assets/img/explore/explore-wallet-jellywallet.png"

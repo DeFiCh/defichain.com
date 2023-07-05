@@ -1,7 +1,6 @@
 import { SVGProps } from "react";
 import Bittrex from "./Bittrex";
 import Bitrue from "./Bitrue";
-import Dfx from "./Dfx";
 import Kucoin from "./Kucoin";
 import Huobi from "./Huobi";
 import Gateio from "./Gateio";
@@ -20,7 +19,6 @@ const mapping: Record<string, (props: SVGProps<SVGSVGElement>) => JSX.Element> =
   {
     Bittrex,
     Bitrue,
-    Dfx,
     Kucoin,
     Huobi,
     Gateio,

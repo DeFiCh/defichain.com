@@ -68,7 +68,6 @@ context("/dfi page on desktop", () => {
       cy.findByTestId("ExchangeSection.EasyNz").should("be.visible");
       cy.findByTestId("ExchangeSection.Huobi").should("be.visible");
       cy.findByTestId("ExchangeSection.Transak").should("be.visible");
-      cy.findByTestId("ExchangeSection.Dfx").should("be.visible");
       cy.findByTestId("ExchangeSection.Bit").should("be.visible");
       cy.findByTestId("ExchangeSection.Bitmart").should("be.visible");
       cy.findByTestId("ExchangeSection.Gateio").should("be.visible");
@@ -154,7 +153,6 @@ context("/dfi page on mobile", () => {
       cy.findByTestId("ExchangeSection.EasyNz").should("be.visible");
       cy.findByTestId("ExchangeSection.Huobi").should("be.visible");
       cy.findByTestId("ExchangeSection.Transak").should("be.visible");
-      cy.findByTestId("ExchangeSection.Dfx").should("be.visible");
       cy.findByTestId("ExchangeSection.Bybit").should("be.visible");
       cy.findByTestId("ExchangeSection.Swyftx").should("be.visible");
 

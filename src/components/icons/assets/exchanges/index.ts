@@ -12,7 +12,7 @@ import Latoken from "./Latoken";
 import Bitmart from "./Bitmart";
 import EasycryptoAu from "./EasycryptoAu";
 import EasycryptoNz from "./EasycryptoNz";
-import Cakedefi from "./Cakedefi";
+import Bake from "./Bake";
 import Lock from "./Lock";
 
 const mapping: Record<string, (props: SVGProps<SVGSVGElement>) => JSX.Element> =
@@ -30,7 +30,7 @@ const mapping: Record<string, (props: SVGProps<SVGSVGElement>) => JSX.Element> =
     Bitmart,
     EasycryptoAu,
     EasycryptoNz,
-    Cakedefi,
+    Bake,
     Lock,
   };
 

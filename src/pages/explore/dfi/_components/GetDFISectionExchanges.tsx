@@ -85,9 +85,9 @@ export default function GetDFISectionExchanges() {
       url: "https://www.kucoin.com/earn/finance/list",
     },
     {
-      id: "GetDFISection.Staking.Cakedefi",
-      name: "Cakedefi",
-      url: "https://cakedefi.com/",
+      id: "GetDFISection.Staking.Bake",
+      name: "Bake",
+      url: "https://bake.io/",
     },
     {
       id: "GetDFISection.Staking.Lock",

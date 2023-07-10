@@ -77,7 +77,7 @@ context("/dfi page on desktop", () => {
         .should("have.text", "Staking");
       cy.findByTestId("DfiPage.Staking.Text").should("be.visible");
       cy.findByTestId("DfiPage.Staking.Kucoin").should("be.visible");
-      cy.findByTestId("DfiPage.Staking.Cakedefi").should("be.visible");
+      cy.findByTestId("DfiPage.Staking.Bake").should("be.visible");
       cy.findByTestId("DfiPage.Staking.Lock").should("be.visible");
     });
   });
@@ -161,7 +161,7 @@ context("/dfi page on mobile", () => {
         .should("have.text", "Staking");
       cy.findByTestId("DfiPage.Staking.Text").should("be.visible");
       cy.findByTestId("DfiPage.Staking.Kucoin").should("be.visible");
-      cy.findByTestId("DfiPage.Staking.Cakedefi").should("be.visible");
+      cy.findByTestId("DfiPage.Staking.Bake").should("be.visible");
     });
   });
 });

@@ -25,7 +25,7 @@
   "ReadyForFlexibilitySection": {
     "label": "PRÊT POUR LA FLEXIBILITÉ",
     "title": "MetaChain : la mise à niveau",
-    "descParaOne": "MetaChain adds an EVM-compatible environment to the DeFiChain ecosystem, which allows developers to seamlessly build next generation applications that runs in parallel with the native chain.",
+    "descParaOne": "MetaChain ajoute un environnement compatible EVM à l'écosystème DeFiChain, ce qui permet aux développeurs de créer de manière transparente des applications de nouvelle génération qui fonctionnent en parallèle avec la chaîne native.",
     "button": "Explorer MetaChain"
   },
   "EcosystemSection": {

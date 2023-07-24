@@ -25,7 +25,7 @@
   "ReadyForFlexibilitySection": {
     "label": "为灵活性做好准备",
     "title": "MetaChain 升级",
-    "descParaOne": "MetaChain （DeFi 元链）是一个兼容 EVM 的区块链，它使用权威证明（Proof of Authority，POA）并与原生 DeFiChain 区块链并列运行。",
+    "descParaOne": "MetaChain adds an EVM-compatible environment to the DeFiChain ecosystem, which allows developers to seamlessly build next generation applications that runs in parallel with the native chain.",
     "descParaTwo": "通读文档以开始在 MetaChain 上部署下一代 DeFi 应用程序。",
     "button": "探索 MetaChain"
   },

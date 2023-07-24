@@ -34,11 +34,8 @@ export function ReadyForFlexibility() {
           </h2>
 
           <h4>
-            <div className="lg:mt-8 mt-5 lg:text-xl md:text-base lg:tracking-normal tracking-[0.03em] text-dark-700 font-desc">
-              {t("ReadyForFlexibilitySection.descParaOne")}
-            </div>
             <div className="lg:mt-8 mt-5 lg:text-xl md:text-base lg:tracking-normal tracking-[0.03em] text-dark-700 font-desc pb-6 md:pb-8 lg:pb-16">
-              {t("ReadyForFlexibilitySection.descParaTwo")}
+              {t("ReadyForFlexibilitySection.descParaOne")}
             </div>
           </h4>
           <SecondaryButton

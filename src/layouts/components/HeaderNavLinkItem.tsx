@@ -72,7 +72,7 @@ export function HeaderNavLinkItem({
   let dfiId = "dfi-ecosystem";
 
   switch (label) {
-    case "DeFi METACHAIN":
+    case "METACHAIN":
       dfiId = "dfi-ecosystem";
       break;
     case "$DFI":

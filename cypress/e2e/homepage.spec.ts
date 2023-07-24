@@ -127,11 +127,11 @@ viewports.forEach((viewport) => {
     });
 
     // No TC
-    it("should have clickable Explore DeFi MetaChain button", () => {
+    it("should have clickable Explore MetaChain button", () => {
       cy.findByTestId("secondary-button-explore-dmc")
         .should("be.visible")
         .and("have.attr", "href")
-        .and("include", "https://meta.defichain.com");
+        .and("include", "/metachain");
       cy.findByTestId("secondary-button-explore-dmc")
         .should("have.attr", "target")
         .and("include", "_blank");

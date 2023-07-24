@@ -24,10 +24,10 @@
   },
   "ReadyForFlexibilitySection": {
     "label": "WHAT'S NEXT",
-    "title": "DeFi MetaChain the upgrade",
-    "descParaOne": "DeFi MetaChain is an EVM-compatible blockchain that uses Proof of Authority (POA) and runs in parallel with the Native DeFiChain blockchain.",
-    "descParaTwo": "Read through the documentation to get started with deploying next generation DeFi applications on DeFi MetaChain.",
-    "button": "Explore DeFi MetaChain"
+    "title": "MetaChain the upgrade",
+    "descParaOne": "MetaChain adds an EVM-compatible environment to the DeFiChain ecosystem, which allows developers to seamlessly build next generation applications that runs in parallel with the native chain.",
+    "descParaTwo": "Read through the documentation to get started with deploying next generation DeFi applications on MetaChain.",
+    "button": "Explore MetaChain"
   },
   "EcosystemSection": {
     "label": "JUMPSTART INTO DEFICHAIN ECOSYSTEM",

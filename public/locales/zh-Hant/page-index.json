@@ -25,7 +25,7 @@
   "ReadyForFlexibilitySection": {
     "label": "為靈活性做好準備",
     "title": "MetaChain 升级",
-    "descParaOne": "MetaChain adds an EVM-compatible environment to the DeFiChain ecosystem, which allows developers to seamlessly build next generation applications that runs in parallel with the native chain.",
+    "descParaOne": "MetaChain 為 DeFiChain 生態系統添加了兼容 EVM 的環境，使開發人員能夠無縫構建與原生鏈並行運行的下一代應用程序。",
     "button": "探索 MetaChain"
   },
   "EcosystemSection": {

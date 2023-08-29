@@ -64,7 +64,7 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: "/learn",
+        source: "/learn/:path*",
         destination: "/404",
         permanent: false,
       },

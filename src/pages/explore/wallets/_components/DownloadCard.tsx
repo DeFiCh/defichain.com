@@ -9,7 +9,7 @@ export function DownloadCard(
     desc: string;
     imageSrc: string | JSX.Element;
     imgClassName?: string;
-  }>
+  }>,
 ): JSX.Element {
   return (
     <div

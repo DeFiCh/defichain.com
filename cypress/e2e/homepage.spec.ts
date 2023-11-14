@@ -18,7 +18,7 @@ viewports.forEach((viewport) => {
         cy.findByTestId("header-tablet-menu-item-explore").click();
       } else if (viewport === "macbook-16") {
         cy.findByTestId("header-desktop-dropdown-item-explore").trigger(
-          "mouseover"
+          "mouseover",
         );
       }
 
@@ -42,19 +42,19 @@ viewports.forEach((viewport) => {
     it("should have Coming soon on Build sections", () => {
       cy.findByTestId("header-coming-soon-tag-Build").should(
         "contain",
-        "COMING SOON"
+        "COMING SOON",
       );
       cy.findByTestId("header-coming-soon-tag-Explore").should(
         "not.contain",
-        "COMING SOON"
+        "COMING SOON",
       );
       cy.findByTestId("header-coming-soon-tag-MetaChain").should(
         "not.contain",
-        "COMING SOON"
+        "COMING SOON",
       );
       cy.findByTestId("header-coming-soon-tag-Community").should(
         "not.contain",
-        "COMING SOON"
+        "COMING SOON",
       );
     });
 
@@ -64,7 +64,7 @@ viewports.forEach((viewport) => {
         cy.findByTestId("header-tablet-menu-item-community").click();
       } else if (viewport === "macbook-16") {
         cy.findByTestId("header-coming-soon-tag-Community").trigger(
-          "mouseover"
+          "mouseover",
         );
       }
       communityLinks.forEach((communityItem) => {
@@ -92,13 +92,13 @@ viewports.forEach((viewport) => {
     it("should have expected Header title and description", () => {
       cy.findByTestId("header-title").should(
         "have.text",
-        "Connecting old and new worlds"
+        "Connecting old and new worlds",
       );
 
       // No TC
       cy.findByTestId("header-desc").should(
         "have.text",
-        "A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone."
+        "A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone.",
       );
     });
 
@@ -152,7 +152,7 @@ viewports.forEach((viewport) => {
     it("should have Ecosystem links displayed", () => {
       ecosystemLinks.forEach((ecosystemItem) => {
         cy.findByTestId(
-          `ecosystem-link-${ecosystemItem.testid}`
+          `ecosystem-link-${ecosystemItem.testid}`,
         ).scrollIntoView();
         cy.findByTestId(`ecosystem-link-${ecosystemItem.testid}`)
           .should("contain", ecosystemItem.title)
@@ -165,17 +165,17 @@ viewports.forEach((viewport) => {
     // No TC
     it("should have expected Blockchain feature section title and description", () => {
       cy.findByTestId("section-title-non-turing-complete-blockchain").should(
-        "be.visible"
+        "be.visible",
       );
       cy.findByTestId(
-        "section-header-Designed,for,Decentralized,Finance"
+        "section-header-Designed,for,Decentralized,Finance",
       ).should("be.visible");
       cy.findByTestId("section-desc-Designed,for,Decentralized,Finance")
         .should("be.visible")
         .and(
           "have.text",
           "DeFiChain offers comprehensive functionality tailored to the Distributed Ledger Technology (DLT) " +
-            "community, with an emphasis on simplicity, speed, and security."
+            "community, with an emphasis on simplicity, speed, and security.",
         );
     });
 
@@ -198,7 +198,7 @@ viewports.forEach((viewport) => {
               .click({ scrollBehavior: false });
           }
           cy.findAllByTestId(`highlights-${feature}-${area}`).should(
-            "be.visible"
+            "be.visible",
           );
         });
       });
@@ -239,7 +239,7 @@ viewports.forEach((viewport) => {
         .should(
           "have.attr",
           "href",
-          "https://www.reddit.com/r/defiblockchain/"
+          "https://www.reddit.com/r/defiblockchain/",
         );
 
       cy.findAllByTestId("socials-row-youtube")

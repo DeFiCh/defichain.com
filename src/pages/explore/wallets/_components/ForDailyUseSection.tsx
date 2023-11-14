@@ -23,7 +23,7 @@ export function ForDailyUseSection() {
         <h2
           className={classNames(
             "lg:text-[60px] lg:leading-[72px] md:text-[40px] md:leading-[44px] text-[32px] leading-[36px]",
-            "text-dark-1000 md:text-center text-left"
+            "text-dark-1000 md:text-center text-left",
           )}
           data-testid="ForDailyUseSection.Title"
         >
@@ -33,7 +33,7 @@ export function ForDailyUseSection() {
           className={classNames(
             "lg:text-xl text-base font-desc",
             "lg:tracking-normal tracking-[0.03em]",
-            "text-dark-700 md:text-center text-left"
+            "text-dark-700 md:text-center text-left",
           )}
           data-testid="ForDailyUseSection.Subtitle"
         >

@@ -88,7 +88,7 @@ export function BuyDFIButton({
         <div
           className={classNames(
             "flex justify-center items-center text-white bg-primary-500 hover:bg-primary-600 p-2.5 lg:px-4 lg:rounded md:mb-0 cursor-pointer",
-            classname
+            classname,
           )}
         >
           <span>{t("header.navbar.buy")}</span>

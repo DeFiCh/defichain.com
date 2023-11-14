@@ -11,15 +11,15 @@ viewports.forEach((viewport) => {
     it("should have Learn About Masternodes section visible and expected text", () => {
       cy.checkElementVisibilityAndText(
         "section-title-explore-masternodes-learn-about-masternodes",
-        "LEARN ABOUT MASTERNODES"
+        "LEARN ABOUT MASTERNODES",
       );
       cy.checkElementVisibilityAndText(
         "section-header-explore-masternodes-learn-about-masternodes",
-        "DeFiChain Masternodes"
+        "DeFiChain Masternodes",
       );
       cy.checkElementVisibilityAndText(
         "section-desc-explore-masternodes-learn-about-masternodes",
-        "Secure, incentivized, community-driven nodes powering DeFiChain."
+        "Secure, incentivized, community-driven nodes powering DeFiChain.",
       );
     });
 
@@ -33,28 +33,28 @@ viewports.forEach((viewport) => {
       }
       cy.checkElementVisibilityAndText(
         "statistic-title-masternodes",
-        "MASTERNODES"
+        "MASTERNODES",
       );
       cy.checkElementVisibilityAndText(
         "statistic-title-tvl",
-        "TOTAL VALUE LOCKED"
+        "TOTAL VALUE LOCKED",
       );
     });
 
     it("should have Own A Masternode section displayed and with expected text", () => {
       cy.checkElementVisibilityAndText(
         "section-title-masternodes-benefits-section",
-        "OWN A MASTERNODE"
+        "OWN A MASTERNODE",
       );
       cy.checkElementVisibilityAndText("title", "Benefits of Masternodes");
       cy.checkElementVisibilityAndText(
         "desc",
-        "Unlock the full utility of DeFiChain with a masternode."
+        "Unlock the full utility of DeFiChain with a masternode.",
       );
 
       cy.checkElementVisibilityAndHref(
         "explore-dmc-button-masternodes-benefits-section",
-        "/explore/masternodes/technical-guide"
+        "/explore/masternodes/technical-guide",
       );
     });
 

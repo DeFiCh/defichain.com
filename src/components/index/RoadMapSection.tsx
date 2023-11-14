@@ -88,7 +88,7 @@ function RoadMapSlider(): JSX.Element {
       <div
         className={classNames(
           "bg-[url('/assets/img/index/accent.png')] absolute w-[772px] h-[386px] bg-contain bg-no-repeat z-[-1]",
-          "2xl:left-0 lg:top-[66px] lg:left-[-326px] hidden lg:block"
+          "2xl:left-0 lg:top-[66px] lg:left-[-326px] hidden lg:block",
         )}
       />
     </section>
@@ -126,7 +126,7 @@ function PrevArrow(props: {
     <button
       className={classNames(
         props.className,
-        "p-3 rounded-full bg-dark-100 mr-2 flex! w-12 h-12"
+        "p-3 rounded-full bg-dark-100 mr-2 flex! w-12 h-12",
       )}
       style={props.style}
       onClick={props.onClick}
@@ -146,7 +146,7 @@ function NextArrow(props: {
     <button
       className={classNames(
         props.className,
-        "p-3 rounded-full bg-dark-100 flex! w-12 h-12"
+        "p-3 rounded-full bg-dark-100 flex! w-12 h-12",
       )}
       style={props.style}
       onClick={props.onClick}

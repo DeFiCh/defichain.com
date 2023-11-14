@@ -27,7 +27,7 @@ export default function FooterColumn({
       <h3
         className={classNames(
           "text-sm font-semibold pb-[22px] text-dark-500 md:pb-[30px] md:pt-0 lg:pb-[38px]",
-          customStyle
+          customStyle,
         )}
       >
         {t(`footer.sitemap.${category}.category`)}
@@ -38,7 +38,7 @@ export default function FooterColumn({
           {
             "grid-rows-[20px_minmax(40px,_1fr)] md:grid-rows-4 lg:grid-rows-2":
               childLinks.length >= 2,
-          }
+          },
         )}
       >
         {childLinks.map((link) => (

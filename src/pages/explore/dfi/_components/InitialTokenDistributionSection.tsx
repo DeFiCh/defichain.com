@@ -25,7 +25,7 @@ export function InitialTokenDistributionSection() {
           <h2
             data-testid="initial-token-dist-title"
             className={classNames(
-              "tracking-[-0.02em] text-[40px] leading-[44px] text-dark-1000"
+              "tracking-[-0.02em] text-[40px] leading-[44px] text-dark-1000",
             )}
           >
             {t("initialTokenDistributionSection.subtitle")}
@@ -64,7 +64,7 @@ export function InitialTokenDistributionSection() {
                 </span>
                 <span className="text-dark-1000 font-desc font-semibold">
                   {t(
-                    "initialTokenDistributionSection.initialSupply.descAirDrop"
+                    "initialTokenDistributionSection.initialSupply.descAirDrop",
                   )}
                 </span>
                 <span className="font-desc text-dark-700">,&nbsp;</span>
@@ -77,13 +77,13 @@ export function InitialTokenDistributionSection() {
                   {router.locale === "zh-Hans" || router.locale === "zh-Hant"
                     ? ","
                     : t(
-                        "initialTokenDistributionSection.initialSupply.descAnd"
+                        "initialTokenDistributionSection.initialSupply.descAnd",
                       )}
                   &nbsp;
                 </span>
                 <span className="text-dark-1000 font-desc font-semibold">
                   {t(
-                    "initialTokenDistributionSection.initialSupply.descDestroy"
+                    "initialTokenDistributionSection.initialSupply.descDestroy",
                   )}
                 </span>
               </div>
@@ -91,27 +91,27 @@ export function InitialTokenDistributionSection() {
               <div className="mt-[34.33px] flex flex-wrap gap-x-2 gap-y-[34.92px]">
                 <InitialTokenSectionItem
                   desc={t(
-                    "initialTokenDistributionSection.initialSupply.airDrop"
+                    "initialTokenDistributionSection.initialSupply.airDrop",
                   )}
                   icon={InitialTokenSectionIcons.AIRDROP}
                   percentage={t(
-                    "initialTokenDistributionSection.initialSupply.airDropPercentage"
+                    "initialTokenDistributionSection.initialSupply.airDropPercentage",
                   )}
                 />
                 <InitialTokenSectionItem
                   desc={t("initialTokenDistributionSection.initialSupply.burn")}
                   icon={InitialTokenSectionIcons.BURN}
                   percentage={t(
-                    "initialTokenDistributionSection.initialSupply.burnPercentage"
+                    "initialTokenDistributionSection.initialSupply.burnPercentage",
                   )}
                 />
                 <InitialTokenSectionItem
                   desc={t(
-                    "initialTokenDistributionSection.initialSupply.destroy"
+                    "initialTokenDistributionSection.initialSupply.destroy",
                   )}
                   icon={InitialTokenSectionIcons.DESTROY}
                   percentage={t(
-                    "initialTokenDistributionSection.initialSupply.destroyPercentage"
+                    "initialTokenDistributionSection.initialSupply.destroyPercentage",
                   )}
                 />
               </div>

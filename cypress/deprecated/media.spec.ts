@@ -12,7 +12,7 @@ context("/media page on desktop", () => {
     cy.findByTestId("Header.title").should("have.text", "Media");
     cy.findByTestId("Header.desc.main").should(
       "have.text",
-      "Media resources and assets."
+      "Media resources and assets.",
     );
   });
 
@@ -20,11 +20,11 @@ context("/media page on desktop", () => {
     cy.findByTestId("MediaSection").within(() => {
       cy.findByTestId("Section.Title").should(
         "have.text",
-        "DeFiChain covered in the press and media."
+        "DeFiChain covered in the press and media.",
       );
       cy.findAllByTestId("MediaSection.Card").should(
         "have.length.at.least",
-        20
+        20,
       );
     });
   });
@@ -44,7 +44,7 @@ context("/media page on mobile", () => {
     cy.findByTestId("Header.title").should("have.text", "Media");
     cy.findByTestId("Header.desc.main").should(
       "have.text",
-      "Media resources and assets."
+      "Media resources and assets.",
     );
   });
 
@@ -52,11 +52,11 @@ context("/media page on mobile", () => {
     cy.findByTestId("MediaSection").within(() => {
       cy.findByTestId("Section.Title").should(
         "have.text",
-        "DeFiChain covered in the press and media."
+        "DeFiChain covered in the press and media.",
       );
       cy.findAllByTestId("MediaSection.Card").should(
         "have.length.at.least",
-        20
+        20,
       );
     });
   });

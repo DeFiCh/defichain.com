@@ -27,7 +27,7 @@ export function MasternodesStatisticsDisplay() {
 
   const { suffix, value } = useUnitSuffix(
     stats?.masternodes.locked?.find((l) => l.weeks === 520)?.count.toString() ??
-      "N/A"
+      "N/A",
   );
 
   const masternodeValue = value === "N/A" ? undefined : `${value + suffix}+`;
@@ -64,7 +64,7 @@ export function MasternodesStatisticsDisplay() {
           "z-[-1] lg:block hidden absolute bg-contain bg-no-repeat md:rotate-0",
           "bg-[url(/assets/img/background/explore/masternodes/stats-accent-desktop.png)]",
           "lg:h-[386.45px] lg:w-[772.13px] lg:-left-[7.5em] lg:-bottom-[2em]",
-          "h-[183.04px] w-[292.57px] rotate-90 -right-[11em] -bottom-[6.5em]"
+          "h-[183.04px] w-[292.57px] rotate-90 -right-[11em] -bottom-[6.5em]",
         )}
       />
       <div
@@ -75,7 +75,7 @@ export function MasternodesStatisticsDisplay() {
           "bg-[url(/assets/img/background/explore/masternodes/stats-greendot-mobile.png)]",
           "lg:h-[127.67px] lg:w-[430.42px] lg:-left-[7.5em] lg:bottom-[1em]",
           "md:h-[287px] md:w-[558px] md:-left-[3.2em] md:-bottom-[2.2em]",
-          "h-[364.07px] w-[187.25px] -bottom-[7.5em] -left-[1.5em]"
+          "h-[364.07px] w-[187.25px] -bottom-[7.5em] -left-[1.5em]",
         )}
       />
     </Container>

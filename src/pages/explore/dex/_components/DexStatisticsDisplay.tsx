@@ -97,7 +97,7 @@ async function getTotalTokens(api: WhaleApiClient) {
   } while (hasNext);
 
   const allDatNLpsTokens = allTokens.filter(
-    (token) => token.isLPS || token.isDAT
+    (token) => token.isLPS || token.isDAT,
   );
 
   return allDatNLpsTokens.length;

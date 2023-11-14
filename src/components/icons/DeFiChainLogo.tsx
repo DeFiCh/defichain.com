@@ -1,7 +1,7 @@
 import { SVGProps } from "react";
 
 export default function DeFiChainLogo(
-  props: SVGProps<SVGSVGElement>
+  props: SVGProps<SVGSVGElement>,
 ): JSX.Element {
   return (
     <svg

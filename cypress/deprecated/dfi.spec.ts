@@ -12,7 +12,7 @@ context("/dfi page on desktop", () => {
     cy.findByTestId("Header.title").should("have.text", "$DFI");
     cy.findByTestId("Header.desc.main").should(
       "have.text",
-      "Learn about and acquire the $DFI coin"
+      "Learn about and acquire the $DFI coin",
     );
   });
 
@@ -97,7 +97,7 @@ context("/dfi page on mobile", () => {
     cy.findByTestId("Header.title").should("have.text", "$DFI");
     cy.findByTestId("Header.desc.main").should(
       "have.text",
-      "Learn about and acquire the $DFI coin"
+      "Learn about and acquire the $DFI coin",
     );
   });
 

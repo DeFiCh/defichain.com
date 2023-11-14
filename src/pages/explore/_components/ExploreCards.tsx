@@ -69,7 +69,7 @@ export function ExploreCards({
         mobileView ? "p-[0.5px]" : "p-[1px]",
         customSize ?? "md:w-full min-w-[272px]",
         "cursor-pointer",
-        "card-outline-2 hover:accent-gradient-1 transition-all ease-in-out duration-300"
+        "card-outline-2 hover:accent-gradient-1 transition-all ease-in-out duration-300",
       )}
     >
       <a
@@ -81,7 +81,7 @@ export function ExploreCards({
           "lg:p-10 p-6 rounded-[15px] h-full w-full flex",
           "bg-dark-00 bg-no-repeat",
           "transition-all duration-300",
-          bgMapping[bgImage][1]
+          bgMapping[bgImage][1],
         )}
       >
         <div className="flex flex-col mt-auto">
@@ -91,7 +91,7 @@ export function ExploreCards({
               "text-light-00 inline mt-2",
               mobileView
                 ? "text-xl leading-6"
-                : "text-[32px] leading-10 max-w-[268px]"
+                : "text-[32px] leading-10 max-w-[268px]",
             )}
           >
             {desc}

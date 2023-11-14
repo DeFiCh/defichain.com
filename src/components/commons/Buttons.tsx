@@ -71,7 +71,7 @@ function ButtonElement({
       className={classNames(
         className ?? "py-4",
         "rounded-[92px] font-bold disabled:opacity-30 disabled:pointer-events-none min-w-[232px]",
-        "bg-dark-1000 text-dark-100 hover:bg-brand-100 active:bg-brand-100 active:opacity-70"
+        "bg-dark-1000 text-dark-100 hover:bg-brand-100 active:bg-brand-100 active:opacity-70",
       )}
     >
       {text}
@@ -115,7 +115,7 @@ export function SecondaryButton({
         className={classNames(
           className ?? "py-4",
           "flex items-center justify-center rounded-[92px] font-bold disabled:opacity-30 disabled:pointer-events-none !mt-0",
-          "border outline-dark-1000 hover:border-brand-100 active:text-brand-100 text-dark-1000 active:opacity-70"
+          "border outline-dark-1000 hover:border-brand-100 active:text-brand-100 text-dark-1000 active:opacity-70",
         )}
       >
         {text}
@@ -191,13 +191,13 @@ function GradientButtonElement({
       disabled={disabled}
       className={classNames(
         "accent-gradient-1 hover:gradient-button-hover rounded-[44px] p-0.5 w-auto h-auto disabled:opacity-30 disabled:pointer-events-none min-w-[133px] flex items-center active:opacity-70",
-        borderClassName
+        borderClassName,
       )}
     >
       <div
         className={classNames(
           "font-medium text-sm leading-4 text-light-00 rounded-[44px] hover:gradient-button-hover w-full h-full whitespace-nowrap",
-          className ?? "py-3 bg-dark-00"
+          className ?? "py-3 bg-dark-00",
         )}
         data-testid="header-get-dfi-button"
       >
@@ -235,7 +235,7 @@ export function LinkButton({
         className ?? "text-lg text-dark-1000 font-semibold",
         {
           "pointer-events-none opacity-30": disabled,
-        }
+        },
       )}
     >
       {buttonText}
@@ -247,13 +247,13 @@ export function LinkButton({
 
 // To remove currently not removed yet to load homescreen without error
 export function ButtonUnfilled(
-  props: PropsWithChildren<{ className?: string; text: string }>
+  props: PropsWithChildren<{ className?: string; text: string }>,
 ): JSX.Element {
   return (
     <button
       className={classNames(
         "button rounded border border-primary-500 py-2 px-6 font-medium text-primary-500 cursor-pointer hover:bg-primary-500 hover:text-white",
-        props.className
+        props.className,
       )}
     >
       {props.text}

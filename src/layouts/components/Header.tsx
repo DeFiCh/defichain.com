@@ -78,7 +78,7 @@ export function Header(): JSX.Element {
       isMenuActive,
       setIsMenuActive,
     }),
-    [dropDownState, setDropDownState, isMenuActive, setIsMenuActive]
+    [dropDownState, setDropDownState, isMenuActive, setIsMenuActive],
   );
 
   const desktopContextObj = useMemo(
@@ -88,7 +88,7 @@ export function Header(): JSX.Element {
       headerHeight,
       isCursorOnHeader,
     }),
-    [isHoverOn, headerHeight, isCursorOnHeader]
+    [isHoverOn, headerHeight, isCursorOnHeader],
   );
 
   useEffect(() => {
@@ -99,7 +99,7 @@ export function Header(): JSX.Element {
 
   useEffect(() => {
     const header = document.querySelector(
-      ".mouse-cursor-gradient-tracking"
+      ".mouse-cursor-gradient-tracking",
     ) as HTMLElement;
 
     function onMouseMove(e: MouseEvent) {
@@ -140,7 +140,7 @@ export function Header(): JSX.Element {
         "sticky top-0 left-0 right-0 w-full bg-dark-00 z-50 transition-opacity ease-in-out duration-500",
         isHoverOn || isMenuActive
           ? "header-dropdown-bg border-b-0"
-          : "border-b-[0.1px] border-b-dark-200"
+          : "border-b-[0.1px] border-b-dark-200",
       )}
     >
       <Container className="lg:pb-0 md:pt-14 md:pb-6 py-[30.69px] flex items-center justify-between 2xl:mx-[120px]">
@@ -269,7 +269,7 @@ function DesktopMenu({ item }: { item: string }) {
               !isCursorOnHeader &&
               !isHoverOn &&
               router.pathname.includes(combinedItem.toLowerCase()),
-          }
+          },
         )}
       >
         <div
@@ -362,7 +362,7 @@ function TabletMobileMenu() {
             "block md:hidden justify-center mb-[56px]",
             dropDownState === MobileTabletDropDownState.COMMUNITY
               ? "mt-[52px]"
-              : "mt-[68px]"
+              : "mt-[68px]",
           )}
         >
           <GradientButton
@@ -412,7 +412,7 @@ function TabletMobileDropDown({
           "flex flex-row cursor-pointer items-center py-5",
           {
             "pointer-events-none": label === MobileTabletDropDownState.BUILD,
-          }
+          },
         )}
         onClick={async () => {
           if (dropDownState === combinedLabel) {
@@ -426,7 +426,9 @@ function TabletMobileDropDown({
           data-testid={`header-tablet-menu-item-${getTestId}`}
           className={classNames(
             "grow font-semibold md:text-lg text-base",
-            dropDownState === combinedLabel ? "text-brand-100" : "text-dark-700"
+            dropDownState === combinedLabel
+              ? "text-brand-100"
+              : "text-dark-700",
           )}
         >
           {label === MobileTabletDropDownState.META_CHAIN ? (
@@ -476,7 +478,7 @@ function ComingSoonTag() {
       className={classNames(
         "bg-dark-200 rounded-[10px] lg:py-0.5 py-[6px] px-2",
         "font-bold text-dark-1000 text-[10px] leading-3 tracking-[0.08em]",
-        "lg:mr-0 mr-1"
+        "lg:mr-0 mr-1",
       )}
       data-testid="header-coming-soon-tag"
     >

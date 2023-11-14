@@ -12,7 +12,7 @@ context("Learn page on desktop", () => {
     cy.findByTestId("Header.title").should("contain.text", "Learn");
     cy.findByTestId("Header.desc.main").should(
       "have.text",
-      "Learn more and understand DeFiChain"
+      "Learn more and understand DeFiChain",
     );
   });
 
@@ -54,7 +54,7 @@ context("Learn page on mobile", () => {
     cy.findByTestId("Header.title").should("contain.text", "Learn");
     cy.findByTestId("Header.desc.main").should(
       "have.text",
-      "Learn more and understand DeFiChain"
+      "Learn more and understand DeFiChain",
     );
   });
 

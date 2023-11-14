@@ -41,7 +41,7 @@ export function PageError(props: {
             "lg:w-[725.44px] lg:h-[363.08px] lg:right-[-21rem] lg:top-0",
             "md:rotate-90 w-[505.52px] md:h-[253.01px] md:right-[-18rem] md:top-[10rem]",
             "rotate-90 w-[433.23px] h-[216.83px] right-[-14rem] top-[9rem]",
-            "bg-[url('/assets/img/error/error-bg-1.png')]"
+            "bg-[url('/assets/img/error/error-bg-1.png')]",
           )}
         />
       </Container>

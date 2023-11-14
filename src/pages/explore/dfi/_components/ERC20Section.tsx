@@ -16,7 +16,7 @@ export default function ERC20Section(): JSX.Element {
           data-testid="erc-20-title"
           className={classNames(
             "text-[40px] leading-[44px] tracking-[-0.02em] ",
-            "lg:text-6xl lg:leading-[72px] lg:tracking-normal"
+            "lg:text-6xl lg:leading-[72px] lg:tracking-normal",
           )}
         >
           <span>{title[0]} </span>
@@ -26,7 +26,7 @@ export default function ERC20Section(): JSX.Element {
           data-testid="erc-20-desc"
           className={classNames(
             "pb-8 lg:pb-12 pt-5 font-desc text-dark-800 text-base md:tracking-[0.03em]",
-            "lg:text-xl lg:tracking-normal"
+            "lg:text-xl lg:tracking-normal",
           )}
         >
           <p>{t("erc20Section.subtitle1")}</p>
@@ -50,13 +50,13 @@ export default function ERC20Section(): JSX.Element {
       <div
         className={classNames(
           "absolute z-[-2] mix-blend-hard-light bg-[url(/assets/img/explore/erc20-dfi-coin.png)]",
-          assetStyle
+          assetStyle,
         )}
       />
       <div
         className={classNames(
           "absolute z-[-1] mix-blend-screen bg-[url(/assets/img/explore/erc20-dfi-coin-ellipse.png)]",
-          assetStyle
+          assetStyle,
         )}
       />
     </Container>

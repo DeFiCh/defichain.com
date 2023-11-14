@@ -89,7 +89,7 @@ function FeatureIcon({
             "font-bold leading-5 text-dark-1000 transition duration-300 ease-in-out",
             {
               "!text-brand-100": isHovering,
-            }
+            },
           )}
         >
           {t(`BlockchainFeatureSection.${item.title}.title`)}

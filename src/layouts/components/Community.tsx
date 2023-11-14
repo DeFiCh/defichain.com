@@ -13,7 +13,7 @@ export function Community() {
   const { t } = useTranslation("layout");
   const entries: Array<{ title: string; labels: ColLabels[] }> = t(
     "header.community.info",
-    { returnObjects: true }
+    { returnObjects: true },
   );
   const dimension = useWindowDimensions();
 
@@ -169,7 +169,7 @@ export function Community() {
         <div
           className={classNames(
             "grid grid-flow-col xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 xl:grid-rows-4 lg:grid-rows-6 grid-rows-9",
-            "gap-y-6 gap-x-10 lg:gap-x-20 place-items-start"
+            "gap-y-6 gap-x-10 lg:gap-x-20 place-items-start",
           )}
         >
           {MenuItems.dropDownItems[1].items.map((item, key) => (

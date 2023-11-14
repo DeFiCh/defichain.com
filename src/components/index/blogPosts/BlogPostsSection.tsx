@@ -41,13 +41,13 @@ export function BlogPostsSection({ blogPosts }: { blogPosts: Posts[] }) {
       <div
         className={classNames(
           "bg-[url('/assets/img/index/accent-mobile.png')] absolute w-[266px] h-[598px] bg-contain bg-no-repeat z-[-1]",
-          "bottom-[-30%] block md:hidden"
+          "bottom-[-30%] block md:hidden",
         )}
       />
       <div
         className={classNames(
           "bg-[url('/assets/img/index/accent-tablet.png')] absolute w-[598px] h-[365px] bg-contain bg-no-repeat z-[-1]",
-          "bottom-[-30%] left-[-8%] hidden md:block lg:hidden"
+          "bottom-[-30%] left-[-8%] hidden md:block lg:hidden",
         )}
       />
     </section>

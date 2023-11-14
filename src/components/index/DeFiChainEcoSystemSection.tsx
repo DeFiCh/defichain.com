@@ -24,14 +24,14 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
       <Container
         className={classNames(
           "relative no-scrollbar z-30 justify-between",
-          { "flexbox-wrapper": dimensions.width >= 1023 } // only apply styling when in large screen
+          { "flexbox-wrapper": dimensions.width >= 1023 }, // only apply styling when in large screen
         )}
       >
         <div
           className={classNames(
             // addition of overflow-hidden is to prevent the sticky container from overflowing in Firefox browser
             "relative lg:pl-[144px] lg:order-1 md:pb-[72px] pb-[48px] w-full overflow-hidden lg:h-[600px]",
-            { "sticky-container": dimensions.width >= 1033 } // only apply styling when in large screen
+            { "sticky-container": dimensions.width >= 1033 }, // only apply styling when in large screen
           )}
         >
           <SectionTitle
@@ -59,7 +59,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
           <div
             className={classNames(
               "absolute z-[-1] mix-blend-screen bg-contain bg-no-repeat hidden lg:block h-[400px] w-full bg-[url('/assets/img/footer/arrow_1.png')]",
-              "lg:left-20 lg:top-[300px] xl:left-[350px] xl:top-[250px]"
+              "lg:left-20 lg:top-[300px] xl:left-[350px] xl:top-[250px]",
             )}
           />
         </div>
@@ -102,7 +102,7 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
             customIconStyle={classNames(
               "w-[100%] lg:right-[2em] lg:-top-[5.5em]",
               "md:right-[3.5em] md:-top-[4.5em]",
-              "right-0 -top-[4.5em]"
+              "right-0 -top-[4.5em]",
             )}
             id="cube"
             customTextStyle="w-[284px]"
@@ -114,13 +114,13 @@ export function DeFiChainEcoSystemSection(): JSX.Element {
         className={classNames(
           "absolute bg-contain bg-no-repeat bg-[url('/assets/img/ecosystem/dfi-logo-vector.png')] w-full",
           "lg:bg-center lg:top-60 lg:left-[-630px] md:h-[300px] md:top-[250px] md:left-[-100px] sm:h-[200px] sm:top-[400px]",
-          "bg-left top-[400px] right-10 h-[250px]"
+          "bg-left top-[400px] right-10 h-[250px]",
         )}
       />
       <div
         className={classNames(
           "absolute bg-cover bg-right bg-no-repeat bg-[url(/assets/img/accents/accent-9.png)] h-[204px] w-[405px]",
-          "lg:hidden block -bottom-40 left-[40%] md:bottom-[-100px] md:left-[70%] md:z-20"
+          "lg:hidden block -bottom-40 left-[40%] md:bottom-[-100px] md:left-[70%] md:z-20",
         )}
       />
     </section>

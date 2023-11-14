@@ -49,7 +49,7 @@ export default function WhitePaperPage({ post }): JSX.Element {
           <div className="flex flex-col w-full lg:w-9/12 md:px-6 lg:px-0">
             <div
               className={classNames(
-                "flex flex-col gap-y-5 w-full lg:w-[812px]"
+                "flex flex-col gap-y-5 w-full lg:w-[812px]",
               )}
             >
               <SectionTitle
@@ -74,7 +74,7 @@ export default function WhitePaperPage({ post }): JSX.Element {
             className={classNames(
               "text-dark-1000 font-desc break-words",
               "text-base tracking-[0.03em]",
-              "lg:text-xl lg:tracking-normal lg:leading-8"
+              "lg:text-xl lg:tracking-normal lg:leading-8",
             )}
           >
             <ReactMarkdown

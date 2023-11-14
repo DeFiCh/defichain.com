@@ -11,7 +11,7 @@ export function Explore() {
   const { t } = useTranslation("layout");
   const entries: Array<{ title: string; labels: ColLabels[] }> = t(
     "header.explore.info",
-    { returnObjects: true }
+    { returnObjects: true },
   );
   const MenuItems = {
     dropDownItems: [

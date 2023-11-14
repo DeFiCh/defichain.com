@@ -1,7 +1,7 @@
 import { SVGProps } from "react";
 
 export function _TokenDefault(
-  symbol: string
+  symbol: string,
 ): (props: SVGProps<SVGSVGElement>) => JSX.Element {
   // TODO (@joeldavidw): Need to properly determine whether a token is LPS or DAT.
 

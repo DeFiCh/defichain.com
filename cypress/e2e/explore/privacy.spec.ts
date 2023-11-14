@@ -11,15 +11,15 @@ viewports.forEach((viewport) => {
     it("should have Protection section visible", () => {
       cy.checkElementVisibilityAndText(
         "section-title-privacy-policy-protecting",
-        "PROTECTING YOUR PRIVACY"
+        "PROTECTING YOUR PRIVACY",
       );
       cy.checkElementVisibilityAndText(
         "section-header-privacy-policy-protecting",
-        "Privacy Policy"
+        "Privacy Policy",
       );
       cy.checkElementVisibilityAndText(
         "section-desc-privacy-policy-protecting",
-        "Discover our commitment to protecting your privacy through our strict privacy policy"
+        "Discover our commitment to protecting your privacy through our strict privacy policy",
       );
     });
 
@@ -38,7 +38,7 @@ viewports.forEach((viewport) => {
           cy.findByTestId(privacyTitle.id).click();
           cy.checkElementVisibilityAndHref(
             `link-${privacyTitle.id}`,
-            `#${privacyTitle.id}`
+            `#${privacyTitle.id}`,
           );
         });
       }

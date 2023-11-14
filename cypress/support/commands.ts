@@ -11,11 +11,11 @@ declare global {
       interceptGeckoApi(): Chainable<null>;
       checkElementVisibilityAndText(
         testId: string,
-        expectedText: string
+        expectedText: string,
       ): Chainable<null>;
       checkElementVisibilityAndHref(
         testId: string,
-        expectedHref: string
+        expectedHref: string,
       ): Chainable<null>;
     }
   }
@@ -25,7 +25,7 @@ Cypress.Commands.add(
   "checkElementVisibilityAndText",
   (testId, expectedText) => {
     cy.findByTestId(testId).should("be.visible").and("have.text", expectedText);
-  }
+  },
 );
 
 Cypress.Commands.add(
@@ -36,7 +36,7 @@ Cypress.Commands.add(
       .should("be.visible")
       .and("have.attr", "href")
       .and("include", expectedHref);
-  }
+  },
 );
 
 Cypress.Commands.add("interceptServerSideWait", (exec: () => void) => {
@@ -50,6 +50,6 @@ Cypress.Commands.add("interceptGeckoApi", () => {
   cy.intercept("https://api.coingecko.co/api/v3/coins/defichain", {});
   cy.intercept(
     "https://widgets.coingecko.com/coingecko-coin-ticker-widget.js",
-    {}
+    {},
   );
 });

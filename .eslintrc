@@ -19,6 +19,7 @@
     "react/button-has-type": "warn",
     "@typescript-eslint/naming-convention": "warn",
     "no-underscore-dangle": "warn",
-    "react/no-unused-prop-types": "warn"
+    "react/no-unused-prop-types": "warn",
+    "jsx-a11y/control-has-associated-label": "warn"
   }
 }

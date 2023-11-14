@@ -5,7 +5,7 @@ import { Container } from "@components/commons/Container";
  * Container implementation that is part of the design language.
  */
 export function PageHeader(
-  props: PropsWithChildren<{ className?: string; title: string }>
+  props: PropsWithChildren<{ className?: string; title: string }>,
 ): JSX.Element {
   return (
     <div

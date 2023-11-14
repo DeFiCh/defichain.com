@@ -11,15 +11,15 @@ context("/dex on macbook-16", () => {
   it("should have Header", () => {
     cy.findByTestId("Header.title").should(
       "have.text",
-      "Decentralized Exchange"
+      "Decentralized Exchange",
     );
     cy.findByTestId("Header.desc.main").should(
       "have.text",
-      "Liquidity mining for up to 100% returns, decentralized swapping, arbitrage and more, with the DeFi Wallet."
+      "Liquidity mining for up to 100% returns, decentralized swapping, arbitrage and more, with the DeFi Wallet.",
     );
     cy.findByTestId("Header.desc.secondary").should(
       "have.text",
-      "Available for Windows, macOS and Linux"
+      "Available for Windows, macOS and Linux",
     );
   });
 
@@ -28,7 +28,7 @@ context("/dex on macbook-16", () => {
       cy.findByTestId("Section.Title").should("have.text", "Liquidity Pools");
       cy.findByTestId("LiquidityPools.showAllBtn").should(
         "have.text",
-        "Show All"
+        "Show All",
       );
       cy.findByTestId("LiquidityPools.showAllBtn")
         .click()
@@ -40,13 +40,13 @@ context("/dex on macbook-16", () => {
     cy.findByTestId("LiquidityMiningSection.image").should("be.visible");
     cy.findByTestId("LiquidityMiningSection.title").should(
       "have.text",
-      "Earn More With Liquidity Mining!"
+      "Earn More With Liquidity Mining!",
     );
     cy.findByTestId("LiquidityMiningSection.desc")
       .click()
       .should(
         "have.text",
-        "Liquidity mine for incredibly high yields within the app! Supply liquidity to BTC, ETH, USDT and many other pool pairs to power the Decentralized Exchange, and earn fees and high block rewards in return. You can withdraw your liquidity at any time."
+        "Liquidity mine for incredibly high yields within the app! Supply liquidity to BTC, ETH, USDT and many other pool pairs to power the Decentralized Exchange, and earn fees and high block rewards in return. You can withdraw your liquidity at any time.",
       );
   });
 
@@ -59,68 +59,68 @@ context("/dex on macbook-16", () => {
         cy.findByTestId("title").should("have.text", "HD wallet");
         cy.findByTestId("desc").should(
           "have.text",
-          "A Hierarchical Deterministic (HD) wallet based on the leading BIP39 standard"
+          "A Hierarchical Deterministic (HD) wallet based on the leading BIP39 standard",
         );
       });
       cy.findByTestId("WalletFeaturesSection.BackupAndRestore").within(() => {
         cy.findByTestId("title").should("have.text", "Backup and restore");
         cy.findByTestId("desc").should(
           "have.text",
-          "Backup and restore your wallet and funds any time with your 24-word seed phrase"
+          "Backup and restore your wallet and funds any time with your 24-word seed phrase",
         );
       });
       cy.findByTestId("WalletFeaturesSection.DecentralizedExchange").within(
         () => {
           cy.findByTestId("title").should(
             "have.text",
-            "Decentralized Exchange"
+            "Decentralized Exchange",
           );
           cy.findByTestId("desc").should(
             "have.text",
-            "Swap between DFI and wrapped tokens in a completely decentralized, exchange"
+            "Swap between DFI and wrapped tokens in a completely decentralized, exchange",
           );
-        }
+        },
       );
       cy.findByTestId("WalletFeaturesSection.LiquidityMining").within(() => {
         cy.findByTestId("title").should("have.text", "Liquidity mining");
         cy.findByTestId("desc").should(
           "have.text",
-          "Supply and mine liquidity in popular pool pairs for potentially high yields"
+          "Supply and mine liquidity in popular pool pairs for potentially high yields",
         );
       });
       cy.findByTestId("WalletFeaturesSection.TokensSupport").within(() => {
         cy.findByTestId("title").should("have.text", "Tokens Support");
         cy.findByTestId("desc").should(
           "have.text",
-          "Store and transact in DFI, as well as all tokens in the DeFiChain ecosystem"
+          "Store and transact in DFI, as well as all tokens in the DeFiChain ecosystem",
         );
       });
       cy.findByTestId("WalletFeaturesSection.MiniExplorer").within(() => {
         cy.findByTestId("title").should("have.text", "Mini explorer");
         cy.findByTestId("desc").should(
           "have.text",
-          "Explore the blockchain and examine transactions"
+          "Explore the blockchain and examine transactions",
         );
       });
       cy.findByTestId("WalletFeaturesSection.Masternodes").within(() => {
         cy.findByTestId("title").should("have.text", "Masternodes");
         cy.findByTestId("desc").should(
           "have.text",
-          "View the full list of masternodes, and create your own masternodes"
+          "View the full list of masternodes, and create your own masternodes",
         );
       });
       cy.findByTestId("WalletFeaturesSection.Console").within(() => {
         cy.findByTestId("title").should("have.text", "Console");
         cy.findByTestId("desc").should(
           "have.text",
-          "Run account, blockchain, masternode, mining, network, wallet commands, and more"
+          "Run account, blockchain, masternode, mining, network, wallet commands, and more",
         );
       });
       cy.findByTestId("WalletFeaturesSection.NetworkSelection").within(() => {
         cy.findByTestId("title").should("have.text", "Network selection");
         cy.findByTestId("desc").should(
           "have.text",
-          "The app supports easy connecting and switching between Mainnet and Testnet"
+          "The app supports easy connecting and switching between Mainnet and Testnet",
         );
       });
     });
@@ -140,15 +140,15 @@ context("/dex on iphone-x", () => {
   it("should have Header", () => {
     cy.findByTestId("Header.title").should(
       "have.text",
-      "Decentralized Exchange"
+      "Decentralized Exchange",
     );
     cy.findByTestId("Header.desc.main").should(
       "have.text",
-      "Liquidity mining for up to 100% returns, decentralized swapping, arbitrage and more, with the DeFi Wallet."
+      "Liquidity mining for up to 100% returns, decentralized swapping, arbitrage and more, with the DeFi Wallet.",
     );
     cy.findByTestId("Header.desc.secondary").should(
       "have.text",
-      "Available for Windows, macOS and Linux"
+      "Available for Windows, macOS and Linux",
     );
   });
 
@@ -157,7 +157,7 @@ context("/dex on iphone-x", () => {
       cy.findByTestId("Section.Title").should("have.text", "Liquidity Pools");
       cy.findByTestId("LiquidityPools.showAllBtn").should(
         "have.text",
-        "Show All"
+        "Show All",
       );
       cy.findByTestId("LiquidityPools.showAllBtn")
         .click()
@@ -169,13 +169,13 @@ context("/dex on iphone-x", () => {
     cy.findByTestId("LiquidityMiningSection.image").should("be.visible");
     cy.findByTestId("LiquidityMiningSection.title").should(
       "have.text",
-      "Earn More With Liquidity Mining!"
+      "Earn More With Liquidity Mining!",
     );
     cy.findByTestId("LiquidityMiningSection.desc")
       .click()
       .should(
         "have.text",
-        "Liquidity mine for incredibly high yields within the app! Supply liquidity to BTC, ETH, USDT and many other pool pairs to power the Decentralized Exchange, and earn fees and high block rewards in return. You can withdraw your liquidity at any time."
+        "Liquidity mine for incredibly high yields within the app! Supply liquidity to BTC, ETH, USDT and many other pool pairs to power the Decentralized Exchange, and earn fees and high block rewards in return. You can withdraw your liquidity at any time.",
       );
   });
 
@@ -188,68 +188,68 @@ context("/dex on iphone-x", () => {
         cy.findByTestId("title").should("have.text", "HD wallet");
         cy.findByTestId("desc").should(
           "have.text",
-          "A Hierarchical Deterministic (HD) wallet based on the leading BIP39 standard"
+          "A Hierarchical Deterministic (HD) wallet based on the leading BIP39 standard",
         );
       });
       cy.findByTestId("WalletFeaturesSection.BackupAndRestore").within(() => {
         cy.findByTestId("title").should("have.text", "Backup and restore");
         cy.findByTestId("desc").should(
           "have.text",
-          "Backup and restore your wallet and funds any time with your 24-word seed phrase"
+          "Backup and restore your wallet and funds any time with your 24-word seed phrase",
         );
       });
       cy.findByTestId("WalletFeaturesSection.DecentralizedExchange").within(
         () => {
           cy.findByTestId("title").should(
             "have.text",
-            "Decentralized Exchange"
+            "Decentralized Exchange",
           );
           cy.findByTestId("desc").should(
             "have.text",
-            "Swap between DFI and wrapped tokens in a completely decentralized, exchange"
+            "Swap between DFI and wrapped tokens in a completely decentralized, exchange",
           );
-        }
+        },
       );
       cy.findByTestId("WalletFeaturesSection.LiquidityMining").within(() => {
         cy.findByTestId("title").should("have.text", "Liquidity mining");
         cy.findByTestId("desc").should(
           "have.text",
-          "Supply and mine liquidity in popular pool pairs for potentially high yields"
+          "Supply and mine liquidity in popular pool pairs for potentially high yields",
         );
       });
       cy.findByTestId("WalletFeaturesSection.TokensSupport").within(() => {
         cy.findByTestId("title").should("have.text", "Tokens Support");
         cy.findByTestId("desc").should(
           "have.text",
-          "Store and transact in DFI, as well as all tokens in the DeFiChain ecosystem"
+          "Store and transact in DFI, as well as all tokens in the DeFiChain ecosystem",
         );
       });
       cy.findByTestId("WalletFeaturesSection.MiniExplorer").within(() => {
         cy.findByTestId("title").should("have.text", "Mini explorer");
         cy.findByTestId("desc").should(
           "have.text",
-          "Explore the blockchain and examine transactions"
+          "Explore the blockchain and examine transactions",
         );
       });
       cy.findByTestId("WalletFeaturesSection.Masternodes").within(() => {
         cy.findByTestId("title").should("have.text", "Masternodes");
         cy.findByTestId("desc").should(
           "have.text",
-          "View the full list of masternodes, and create your own masternodes"
+          "View the full list of masternodes, and create your own masternodes",
         );
       });
       cy.findByTestId("WalletFeaturesSection.Console").within(() => {
         cy.findByTestId("title").should("have.text", "Console");
         cy.findByTestId("desc").should(
           "have.text",
-          "Run account, blockchain, masternode, mining, network, wallet commands, and more"
+          "Run account, blockchain, masternode, mining, network, wallet commands, and more",
         );
       });
       cy.findByTestId("WalletFeaturesSection.NetworkSelection").within(() => {
         cy.findByTestId("title").should("have.text", "Network selection");
         cy.findByTestId("desc").should(
           "have.text",
-          "The app supports easy connecting and switching between Mainnet and Testnet"
+          "The app supports easy connecting and switching between Mainnet and Testnet",
         );
       });
     });

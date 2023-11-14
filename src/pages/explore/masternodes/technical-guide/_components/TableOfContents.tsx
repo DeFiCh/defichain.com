@@ -91,7 +91,7 @@ const useHeadingsData = (parentReference) => {
 
   useEffect(() => {
     const headingElements = Array.from(
-      parentReference.current.querySelectorAll("main h2, main h3")
+      parentReference.current.querySelectorAll("main h2, main h3"),
     );
 
     // Created a list of headings, with H3s nested
@@ -125,13 +125,15 @@ const getNestedHeadings = (headingElements) => {
 
 const useIntersectionObserver = (
   setActiveId: Dispatch<SetStateAction<string | undefined>>,
-  parentReference: RefObject<HTMLDivElement>
+  parentReference: RefObject<HTMLDivElement>,
 ) => {
   const headingElementsRef = useRef({});
   useEffect(() => {
-    if (parentReference.current === null) return () => {};
+    if (parentReference.current === null) {
+      return () => {};
+    }
     const headingElements = Array.from(
-      parentReference.current.querySelectorAll("h2[id], h3[id]")
+      parentReference.current.querySelectorAll("h2[id], h3[id]"),
     );
     const callback = (headings) => {
       headingElementsRef.current = headings.reduce((map, headingElement) => {
@@ -158,7 +160,7 @@ const useIntersectionObserver = (
         // choose the one that is closest to the top of the page
       } else if (visibleHeadings.length > 1) {
         const sortedVisibleHeadings = visibleHeadings.sort(
-          (a, b) => getIndexFromId(a.target.id) - getIndexFromId(b.target.id)
+          (a, b) => getIndexFromId(a.target.id) - getIndexFromId(b.target.id),
         );
 
         setActiveId(sortedVisibleHeadings[0]?.target.id);

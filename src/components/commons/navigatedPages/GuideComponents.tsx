@@ -19,7 +19,7 @@ export function ContentHeader({
       className={classNames(
         "text-[24px] leading-8 scroll-mt-40",
         "lg:text-[32px] lg:leading-[40px]",
-        customStyle
+        customStyle,
       )}
     >
       {text}
@@ -65,7 +65,7 @@ export function ContentDescription({
           "font-desc text-dark-800 break-words",
           "text-base tracking-[0.03em]",
           "lg:text-xl lg:tracking-normal lg:leading-8",
-          customStyle
+          customStyle,
         )}
       >
         {text}
@@ -102,7 +102,7 @@ export function Code({
       <div
         className={classNames(
           "whitespace-nowrap font-code overflow-x-auto text-dark-900 leading-[48px]",
-          textStyle
+          textStyle,
         )}
       >
         {text}

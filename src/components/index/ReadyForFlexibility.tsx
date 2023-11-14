@@ -17,7 +17,7 @@ export function ReadyForFlexibility() {
       className={classNames(
         "relative z-10",
         "lg:mt-[336px] md:mt-[131px] mt-[142px]",
-        "lg:mb-60 md:mb-[164px] mb-40"
+        "lg:mb-60 md:mb-[164px] mb-40",
       )}
     >
       <Container className="relative">
@@ -52,7 +52,7 @@ export function ReadyForFlexibility() {
           className={classNames(
             "mix-blend-screen absolute z-[-1] inset-0 bg-right bg-contain bg-no-repeat",
             "md:bg-[url(/assets/img/index/ready-for-flexibility.png)]",
-            "lg:h-[871.39px] h-[514.78px] lg:-top-[150px] md:-top-[78.29px] md:right-0 top-[50%]"
+            "lg:h-[871.39px] h-[514.78px] lg:-top-[150px] md:-top-[78.29px] md:right-0 top-[50%]",
           )}
         />
 
@@ -61,7 +61,7 @@ export function ReadyForFlexibility() {
             "jellyfish-item z-[-2] bg-[url(/assets/img/index/jellyfish.png)] hidden md:block",
             "lg:h-[317.38px] md:h-[161.58px] absolute inset-0 z-[-1] bg-contain bg-no-repeat bg-right",
             "2xl:right-[20%] xl:right-[25%] lg:right-[30%] lg:top-[60%] top-[50%] right-[35%]",
-            { "right-[40%]": dimension.width <= 750 }
+            { "right-[40%]": dimension.width <= 750 },
           )}
         />
       </Container>
@@ -69,7 +69,7 @@ export function ReadyForFlexibility() {
         className={classNames(
           "mix-blend-screen absolute z-[-1] inset-0 bg-right bg-contain bg-no-repeat",
           "bg-[url(/assets/img/index/ready-for-flex-mobile.png)]",
-          "md:hidden block"
+          "md:hidden block",
         )}
       />
     </section>

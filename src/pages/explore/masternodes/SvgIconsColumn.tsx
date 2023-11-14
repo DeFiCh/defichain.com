@@ -63,7 +63,7 @@ export function SvgIconsColumn({
     <div
       className={classNames(
         customSectionStyle,
-        "flex flex-1 flex-wrap justify-between gap-y-12 md:gap-y-[120px] lg:gap-x-[60px]"
+        "flex flex-1 flex-wrap justify-between gap-y-12 md:gap-y-[120px] lg:gap-x-[60px]",
       )}
     >
       {items.map((item) => (
@@ -113,7 +113,7 @@ function FeatureIcon({
     <article
       className={classNames(
         customClassStyle,
-        "flex md:flex-col w-full md:w-[306px] lg:w-[270px]"
+        "flex md:flex-col w-full md:w-[306px] lg:w-[270px]",
       )}
       // onMouseOver={handleMouseOver}
       // onFocus={handleMouseOver}
@@ -139,13 +139,13 @@ function FeatureIcon({
       <div
         className={classNames(
           "space-y-4 md:ml-0 md:mt-5",
-          customParagraphStyle
+          customParagraphStyle,
         )}
       >
         <h3
           data-testid={`${item.title.toLowerCase().replaceAll(" ", "-")}-title`}
           className={classNames(
-            "font-bold leading-5 text-dark-1000 transition duration-300 ease-in-out"
+            "font-bold leading-5 text-dark-1000 transition duration-300 ease-in-out",
             // {
             //   "!text-brand-100": isHovering,
             // }
@@ -157,7 +157,7 @@ function FeatureIcon({
           data-testid={`${item.title.toLowerCase().replaceAll(" ", "-")}-desc`}
           className={classNames(
             "text-dark-700 text-sm pr-[26px] md:pr-0 md:w-[270px] lg:text-base font-desc",
-            customDescStyle
+            customDescStyle,
           )}
         >
           {item.desc}

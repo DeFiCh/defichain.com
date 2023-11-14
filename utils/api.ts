@@ -16,7 +16,7 @@ export function getMDPageBySlug(name: string, locale: string): Post {
     process.cwd(),
     "content",
     realSlug,
-    `${realSlug}.${locale}.md`
+    `${realSlug}.${locale}.md`,
   );
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);

@@ -33,7 +33,7 @@ export default function FooterLink({
         // Internal link
         <div
           className={classNames(
-            "text-dark-1000 font-semibold hover:accent-dfc-gradient-text cursor-pointer min-w-[133px] text-ellipsis overflow-auto md:w-full"
+            "text-dark-1000 font-semibold hover:accent-dfc-gradient-text cursor-pointer min-w-[133px] text-ellipsis overflow-auto md:w-full",
           )}
         >
           <Link

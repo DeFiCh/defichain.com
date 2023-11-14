@@ -32,7 +32,7 @@ export default function TechnicalGuide() {
           <div className="flex flex-col w-full lg:w-9/12 md:px-6 lg:px-0">
             <div
               className={classNames(
-                "flex flex-col gap-y-5 w-full lg:w-[812px]"
+                "flex flex-col gap-y-5 w-full lg:w-[812px]",
               )}
             >
               <SectionTitle

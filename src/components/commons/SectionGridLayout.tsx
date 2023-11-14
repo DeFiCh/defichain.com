@@ -65,7 +65,7 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
                   "md:text-center md:mx-auto md:max-w-[642px] lg:text-left lg:mx-0":
                     isCenterAligned,
                 },
-                customTitleStyles
+                customTitleStyles,
               )}
               data-testid="title"
             >
@@ -77,7 +77,7 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
                 {
                   "md:text-center md:max-w-[642px] md:mx-auto lg:text-left lg:mx-0 mb-0 text-xl":
                     isCenterAligned,
-                }
+                },
               )}
               data-testid="desc"
             >
@@ -108,7 +108,7 @@ export function SectionGridLayout(props: SectionGridLayoutProps): JSX.Element {
             {
               "md:text-center md:mx-auto lg:text-left lg:mx-0 lg:!mt-0 !mt-16":
                 isCenterAligned,
-            }
+            },
           )}
         >
           {children}

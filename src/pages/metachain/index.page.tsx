@@ -36,7 +36,7 @@ export default function MetaChainPage({ roadMapImg }): JSX.Element {
             "jellyfish-item bg-[url(/assets/img/index/metachain-jellyfish.png)]",
             "h-[300.93px] absolute mix-blend-lighten inset-0 bg-contain bg-no-repeat md:bg-right",
             "top-[3%] md:top-[16%] lg:top-[13%] left-[-30%] md:right-[35%] lg:right-[31%]",
-            { "right-[40%]": dimension.width <= 750 }
+            { "right-[40%]": dimension.width <= 750 },
           )}
         />
       </div>

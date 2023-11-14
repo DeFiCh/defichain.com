@@ -19,7 +19,7 @@ export function InitialTokenSectionItem({
     <div
       className={classNames(
         "flex flex-col md:w-[136.33px] w-[93.5px]",
-        className
+        className,
       )}
     >
       <Icon className="text-brand-100" size={28} />

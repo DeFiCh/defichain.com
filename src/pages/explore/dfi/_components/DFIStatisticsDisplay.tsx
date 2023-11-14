@@ -15,7 +15,7 @@ export function DFIStatisticsDisplay() {
 
   const { value: dfiMintedValue, suffix: dfiMintedSuffix } = useUnitSuffix(
     supply?.max,
-    1
+    1,
   );
 
   useEffect(() => {
@@ -66,7 +66,7 @@ export function DFIStatisticsDisplay() {
           "bg-[url(/assets/img/background/explore/dfi/stats-accent.png)]",
           "lg:h-[689px] lg:w-[354px] lg:-left-[4.2em] lg:-bottom-[25em]",
           "md:h-[558px] md:w-[287px] md:-left-[3.2em] md:-bottom-[20em] md:-left-[8em]",
-          "w-[364.07px] h-[187.25px] -bottom-[9em] -left-[7em]"
+          "w-[364.07px] h-[187.25px] -bottom-[9em] -left-[7em]",
         )}
       />
     </Container>

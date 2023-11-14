@@ -12,7 +12,7 @@ export function ProgressBar({
       <div
         className={classNames(
           "h-3 rounded-[5px] w-full bg-dark-200 relative overflow-hidden",
-          containerClass
+          containerClass,
         )}
       >
         <div

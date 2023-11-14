@@ -1,7 +1,7 @@
 import { PropsWithChildren } from "react";
 
 export function Section(
-  props: PropsWithChildren<{ title: string; testId: string }>
+  props: PropsWithChildren<{ title: string; testId: string }>,
 ): JSX.Element {
   return (
     <section

@@ -15,14 +15,14 @@ export function CardLink(
     className?: string;
     descText: string;
     text: IconType;
-  }>
+  }>,
 ): JSX.Element {
   const Icon = iconMap[props.text];
   return (
     <div
       className={classNames(
         "p-[0.5px] rounded-[5px]",
-        "bg-dark-200 hover:accent-gradient-1 active:opacity-70"
+        "bg-dark-200 hover:accent-gradient-1 active:opacity-70",
       )}
     >
       <a

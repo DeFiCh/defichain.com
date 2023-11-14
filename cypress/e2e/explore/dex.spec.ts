@@ -10,15 +10,15 @@ viewports.forEach((viewport) => {
     it("should have DEX header section visible and expected text", () => {
       cy.checkElementVisibilityAndText(
         "section-title-explore-dex-decentralized-exchange",
-        "DECENTRALIZED EXCHANGE"
+        "DECENTRALIZED EXCHANGE",
       );
       cy.checkElementVisibilityAndText(
         "section-header-explore-dex-decentralized-exchange",
-        "Trade effortlessly with DeFiChain DEX"
+        "Trade effortlessly with DeFiChain DEX",
       );
       cy.checkElementVisibilityAndText(
         "section-desc-explore-dex-decentralized-exchange",
-        "Trade, Arbitrage and Earn in a DEX which empowers you with full control."
+        "Trade, Arbitrage and Earn in a DEX which empowers you with full control.",
       );
     });
 
@@ -32,15 +32,15 @@ viewports.forEach((viewport) => {
       }
       cy.checkElementVisibilityAndText(
         "statistic-title-total-value-locked",
-        "TOTAL VALUE LOCKED"
+        "TOTAL VALUE LOCKED",
       );
       cy.checkElementVisibilityAndText(
         "statistic-title-trading-volume",
-        "TRADING VOLUME (24H)"
+        "TRADING VOLUME (24H)",
       );
       cy.checkElementVisibilityAndText(
         "statistic-title-statistics-display-tokens",
-        "TOKENS"
+        "TOKENS",
       );
     });
 
@@ -48,12 +48,12 @@ viewports.forEach((viewport) => {
       cy.checkElementVisibilityAndText("title", "Why DEX?");
       cy.checkElementVisibilityAndText(
         "desc",
-        "Experience trustless trading, arbitrage, and earnings with DeFiChain DEX's wide array of liquidity pools."
+        "Experience trustless trading, arbitrage, and earnings with DeFiChain DEX's wide array of liquidity pools.",
       );
 
       cy.checkElementVisibilityAndHref(
         "secondary-button-explore-dex",
-        "https://defiscan.live/dex"
+        "https://defiscan.live/dex",
       );
     });
 
@@ -61,31 +61,31 @@ viewports.forEach((viewport) => {
       cy.checkElementVisibilityAndText("trade-assets-title", "TRADE ASSETS");
       cy.checkElementVisibilityAndText(
         "trade-assets-desc",
-        "Seamlessly swap tokens with ease and convenience."
+        "Seamlessly swap tokens with ease and convenience.",
       );
       cy.checkElementVisibilityAndText(
         "wide-selection-of-tokens-title",
-        "WIDE SELECTION OF TOKENS"
+        "WIDE SELECTION OF TOKENS",
       );
       cy.checkElementVisibilityAndText(
         "wide-selection-of-tokens-desc",
-        "Discover endless possibilities with 60+ dTokens - Your key to a diverse DeFi playground."
+        "Discover endless possibilities with 60+ dTokens - Your key to a diverse DeFi playground.",
       );
       cy.checkElementVisibilityAndText(
         "profit-from-liquidity-mining-title",
-        "PROFIT FROM LIQUIDITY MINING"
+        "PROFIT FROM LIQUIDITY MINING",
       );
       cy.checkElementVisibilityAndText(
         "profit-from-liquidity-mining-desc",
-        "Contribute liquidity, earn rewards, and withdraw whenever you want."
+        "Contribute liquidity, earn rewards, and withdraw whenever you want.",
       );
       cy.checkElementVisibilityAndText(
         "advanced-swaps-title",
-        "ADVANCED SWAPS"
+        "ADVANCED SWAPS",
       );
       cy.checkElementVisibilityAndText(
         "advanced-swaps-desc",
-        "Instant multi-pool trades or future-price-based dToken swaps at your fingertips."
+        "Instant multi-pool trades or future-price-based dToken swaps at your fingertips.",
       );
     });
   });

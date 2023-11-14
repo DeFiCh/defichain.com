@@ -31,7 +31,7 @@ export function StatisticPanel({
       id={displayId}
       className={classNames(
         "card-outline-2 p-[0.5px] rounded-[30px]",
-        displayStripCustomStyle
+        displayStripCustomStyle,
       )}
     >
       <div className="card-bg rounded-[30px] py-10 px-6">
@@ -78,20 +78,20 @@ function StatisticsPanelItem({
   const { t } = useTranslation("common");
   const router = useRouter();
   const { suffix, value } = useUnitSuffix(
-    stats === undefined ? "N/A" : stats.toString()
+    stats === undefined ? "N/A" : stats.toString(),
   );
 
   return (
     <article
       className={classNames(
         "flex lg:grow grow-0 lg:flex-col flex-row lg:items-center items-start gap-y-2 gap-x-2",
-        { "md:flex-col md:items-center md:grow": isTabletHorizontal }
+        { "md:flex-col md:items-center md:grow": isTabletHorizontal },
       )}
     >
       <div
         className={classNames(
           "lg:w-full md:w-[316px] w-[135px] lg:text-center bg-clip-text text-transparent accent-gradient-2 font-bold leading-5",
-          { "md:w-full md:text-center": isTabletHorizontal }
+          { "md:w-full md:text-center": isTabletHorizontal },
         )}
         data-testid={`statistic-title-${testID}`}
       >
@@ -100,7 +100,7 @@ function StatisticsPanelItem({
       <div
         className={classNames(
           "flex flex-col lg:items-center items-end lg:gap-y-2 gap-y-1 lg:grow-0 grow",
-          { "md:items-center md:gap-y-2 md:grow-0": isTabletHorizontal }
+          { "md:items-center md:gap-y-2 md:grow-0": isTabletHorizontal },
         )}
       >
         <div
@@ -108,7 +108,7 @@ function StatisticsPanelItem({
             "text-dark-1000 text-xl leading-6 lg:text-[52px] lg:leading-[52px]",
             {
               "md:text-[32px] md:leading-[36px]": isTabletHorizontal,
-            }
+            },
           )}
         >
           {stats ? (
@@ -122,7 +122,7 @@ function StatisticsPanelItem({
           <div
             className={classNames(
               "font-desc text-dark-700 lg:text-base lg:leading-6 md:text-sm text-xs text-right",
-              descStyle
+              descStyle,
             )}
           >
             {desc}
@@ -138,7 +138,7 @@ function getLocaledStatisticValue(
   locale?: string,
   prefix?: string,
   value?: string,
-  suffix?: string
+  suffix?: string,
 ) {
   switch (locale) {
     case "de":

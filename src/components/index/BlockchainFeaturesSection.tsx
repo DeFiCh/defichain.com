@@ -71,7 +71,7 @@ export function BlockchainFeaturesSection(): JSX.Element {
                   </span>
                 ) : (
                   <span key={`${word}`}>{`${word} `}</span>
-                )
+                ),
               )}
             </h2>
             <div

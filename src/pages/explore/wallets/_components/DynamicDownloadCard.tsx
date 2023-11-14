@@ -22,7 +22,7 @@ interface DownloadLinks {
 }
 
 export function DynamicDownloadCard(
-  props: PropsWithChildren<DynamicDownloadCardProps>
+  props: PropsWithChildren<DynamicDownloadCardProps>,
 ): JSX.Element {
   const [downloadLinks, setDownloadLinks] = useState<DownloadLinks>();
   const [isLoading, setLoading] = useState(false);
@@ -81,7 +81,7 @@ export function DynamicDownloadCard(
                   text={IconType[OSIconMapping[key]]}
                   url={downloadLinks[key]}
                 />
-              ) : null
+              ) : null,
             )}
           </div>
         )}
@@ -91,7 +91,7 @@ export function DynamicDownloadCard(
 }
 
 export async function getGitHubAssets(
-  repoName: string
+  repoName: string,
 ): Promise<any | undefined> {
   const baseUrl = `https://api.github.com/repos/${repoName}/releases/latest`;
   const res = await fetch(baseUrl);

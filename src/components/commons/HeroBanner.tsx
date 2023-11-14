@@ -48,7 +48,7 @@ export function HeroBanner({
           "md:w-[312px] w-auto lg:w-1/2",
           "md:pt-[63px] pt-[380px]",
           "lg:mb-[278px] md:mb-[148px] mb-24",
-          customStyle
+          customStyle,
         )}
       >
         <SectionTitle text={title} testID={testID} />
@@ -76,7 +76,7 @@ export function HeroBanner({
           "absolute bg-contain bg-no-repeat bg-right-top inset-0 z-[-1]",
           "lg:h-[686px] md:h-[512px] h-[358px]",
           customBgPosStyle ??
-            "lg:-right-[10rem] md:-right-[7em] -right-[5em] md:-top-[5rem] top-0"
+            "lg:-right-[10rem] md:-right-[7em] -right-[5em] md:-top-[5rem] top-0",
         )}
       />
 
@@ -88,7 +88,7 @@ export function HeroBanner({
             "md:h-[505.52px] md:w-[253.01px] md:top-[8em] md:-right-[4.5em]",
             "h-[433.23px] w-[216.83px] top-[6em] -right-[8em]",
             "lg:bg-[url('/assets/img/background/explore/masternodes/benefits-accent-desktop.png')]",
-            "bg-[url(/assets/img/herobanner/background/coin-arrow-bg.png)]"
+            "bg-[url(/assets/img/herobanner/background/coin-arrow-bg.png)]",
           )}
         />
       )}
@@ -97,7 +97,7 @@ export function HeroBanner({
           className={classNames(
             "absolute bg-contain bg-no-repeat lg:rotate-90",
             "lg:w-[682px] lg:h-[341.33px] lg:-right-[32em] lg:top-[25em]",
-            "lg:bg-[url('/assets/img/background/explore/masternodes/benefits-accent-desktop.png')]"
+            "lg:bg-[url('/assets/img/background/explore/masternodes/benefits-accent-desktop.png')]",
           )}
         />
       )}

@@ -37,7 +37,7 @@ const mapping: Record<string, (props: SVGProps<SVGSVGElement>) => JSX.Element> =
  * @return {(props: SVGProps<SVGSVGElement>) => JSX.Element}
  */
 export function getAssetIcon(
-  symbol: string
+  symbol: string,
 ): (props: SVGProps<SVGSVGElement>) => JSX.Element {
   const Icon = mapping[`d${symbol}`];
   if (Icon === undefined) {

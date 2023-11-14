@@ -74,7 +74,7 @@ export function DevelopmentIcon(props: SVGProps<SVGSVGElement>): JSX.Element {
 }
 
 export function DevelopmentIconHover(
-  props: SVGProps<SVGSVGElement>
+  props: SVGProps<SVGSVGElement>,
 ): JSX.Element {
   const { className } = props;
   return (

@@ -1,6 +1,6 @@
 export function calculatePercentage(
   value1: number | undefined,
-  value2: number | undefined
+  value2: number | undefined,
 ): string {
   if (value1 === undefined || value2 === undefined) {
     return "N/A";

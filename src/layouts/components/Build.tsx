@@ -6,7 +6,7 @@ export function Build() {
   const { t } = useTranslation("layout");
   const entries: Array<{ title: string; subtitle: string }> = t(
     "header.build.labels",
-    { returnObjects: true }
+    { returnObjects: true },
   );
 
   const MenuItems = {

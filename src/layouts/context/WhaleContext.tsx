@@ -12,7 +12,7 @@ export function useWhaleApiClient(): WhaleApiClient {
 }
 
 export function WhaleProvider(
-  props: PropsWithChildren<any>
+  props: PropsWithChildren<any>,
 ): JSX.Element | null {
   const memo = useMemo(() => {
     const api = newWhaleClient();

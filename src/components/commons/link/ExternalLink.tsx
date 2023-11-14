@@ -7,14 +7,14 @@ export function ExternalLink(
     testId?: string;
     className?: string;
     text?: string;
-  }>
+  }>,
 ): JSX.Element {
   return (
     <a
       href={props.url}
       className={classNames(
         "text-primary-500 hover:text-primary-200",
-        props.className
+        props.className,
       )}
       target="_blank"
       rel="noreferrer"

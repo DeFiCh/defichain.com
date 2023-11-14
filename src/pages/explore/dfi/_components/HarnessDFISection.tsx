@@ -74,7 +74,7 @@ export default function HarnessDFISection() {
           data-testid="harness-dfi-power-title"
           className={classNames(
             "lg:text-[60px] lg:leading-[72px] md:text-[40px] md:leading-[44px] text-[32px] leading-[36px]",
-            "text-dark-1000 md:text-center text-left"
+            "text-dark-1000 md:text-center text-left",
           )}
         >
           {t("harnessDFISection.subtitle")}
@@ -84,7 +84,7 @@ export default function HarnessDFISection() {
           className={classNames(
             "lg:text-xl text-base font-desc lg:w-[60%] w-full md:place-self-center",
             "lg:tracking-normal tracking-[0.03em]",
-            "text-dark-700 md:text-center text-left"
+            "text-dark-700 md:text-center text-left",
           )}
         >
           {t("harnessDFISection.desc")}
@@ -105,7 +105,7 @@ export default function HarnessDFISection() {
           "lg:h-[45px] lg:w-[45px] lg:right-[2.3em]",
           "md:h-8 md:w-8 md:-right-[0.25em] md:bottom-[8em]",
           "h-7 w-7 -right-[0.8em] bottom-[15em]",
-          "bg-[url('/assets/img/background/explore/masternodes/masternodesBenefitsBg.png')]"
+          "bg-[url('/assets/img/background/explore/masternodes/masternodesBenefitsBg.png')]",
         )}
       />
       <div
@@ -115,7 +115,7 @@ export default function HarnessDFISection() {
           "md:h-[480px] md:w-[240.24px] md:-right-[2.5em] md:-bottom-[35em] md:left-auto",
           "w-[203.76px] h-[152.08px] left-[12.5em] -bottom-[3.5em]",
           "md:bg-[url('/assets/img/background/explore/dfi/harness-accent-desktop.png')]",
-          "bg-[url('/assets/img/background/explore/dfi/harness-accent-mobile.png')]"
+          "bg-[url('/assets/img/background/explore/dfi/harness-accent-mobile.png')]",
         )}
       />
     </Container>

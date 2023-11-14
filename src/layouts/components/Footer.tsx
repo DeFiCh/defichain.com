@@ -253,13 +253,13 @@ export default function Footer(): JSX.Element {
         <div
           className={classNames(
             "absolute z-[-1] bg-contain bg-no-repeat bg-origin-padding h-full w-full bg-[url('/assets/img/footer/transparent_coin_2.png')] top-[-60px] -left-40 md:-top-10 lg:left-[-200px] lg:top-[-50px]",
-            "lg:w-full lg:h-[400px] md:w-[280px] md:h-[280px] md:left-[-50px] lg:left-[-130px] w-[208px] h-[208px]"
+            "lg:w-full lg:h-[400px] md:w-[280px] md:h-[280px] md:left-[-50px] lg:left-[-130px] w-[208px] h-[208px]",
           )}
         />
         <div
           className={classNames(
             "absolute z-[-1] bottom-0 right-[-200px] bg-contain bg-no-repeat bg-bottom md:bg-right bg-[url('/assets/img/footer/arrow_1.png')] md:-right-20",
-            "w-full md:w-[580px] h-[210px] lg:h-[300px] lg:bottom-0 lg:-right-40"
+            "w-full md:w-[580px] h-[210px] lg:h-[300px] lg:bottom-0 lg:-right-40",
           )}
         />
       </Container>

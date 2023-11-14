@@ -66,7 +66,7 @@ export default function GetDFISection() {
       className={classNames(
         "mb-[314px] flex flex-col gap-12",
         "md:mb-[326px]",
-        "lg:mb-[458px] lg:flex-row lg:gap-[69px]"
+        "lg:mb-[458px] lg:flex-row lg:gap-[69px]",
       )}
     >
       <section
@@ -78,7 +78,7 @@ export default function GetDFISection() {
           data-testid="get-dfi-title"
           className={classNames(
             "text-[40px] leading-[44px] tracking-[-0.02em]",
-            "lg:text-6xl lg:leading-[72px] lg:tracking-normal lg:mt-4"
+            "lg:text-6xl lg:leading-[72px] lg:tracking-normal lg:mt-4",
           )}
         >
           {t("getDfiSection.subtitle")}
@@ -87,7 +87,7 @@ export default function GetDFISection() {
           data-testid="get-dfi-desc"
           className={classNames(
             "font-desc text-dark-700 tracking-[0.03em] text-base",
-            "lg:text-xl lg:tracking-normal"
+            "lg:text-xl lg:tracking-normal",
           )}
         >
           <p>{t("getDfiSection.desc1")}</p>
@@ -146,7 +146,7 @@ function DfiPrice({
         <span
           className={classNames(
             "text-dark-1000 text-xl leading-6 ml-2",
-            "lg:text-[32px] lg:leading-10"
+            "lg:text-[32px] lg:leading-10",
           )}
         >
           {value}

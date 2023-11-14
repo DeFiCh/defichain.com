@@ -8,7 +8,7 @@ export enum ViewPort {
 
 export function useDeviceDetect() {
   const [windowDevice, setWindowDevice] = useState<ViewPort | undefined>(
-    undefined
+    undefined,
   );
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export function useDeviceDetect() {
       setWindowDevice(ViewPort.TABLET);
     } else if (
       /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
-        ua
+        ua,
       )
     ) {
       setWindowDevice(ViewPort.MOBILE);

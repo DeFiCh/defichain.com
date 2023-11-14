@@ -36,7 +36,7 @@ export function StatsDisplay() {
   }, [api.stats]);
 
   const { suffix, value } = useUnitSuffix(
-    stats ? stats.tvl.masternodes.toString() : "N/A"
+    stats ? stats.tvl.masternodes.toString() : "N/A",
   );
   const masternodeValue = value === "N/A" ? undefined : `${value + suffix}+`;
 
@@ -90,7 +90,7 @@ export function StatsDisplay() {
         className={classNames(
           "absolute z-[-1] bg-contain bg-no-repeat bg-left bg-[url(/assets/img/index/index-cube.png)]",
           "lg:top-0 md:top-[65px] top-[108px] lg:left-[-200px] md:-left-[12em] -left-20",
-          "2xl:w-full 2xl:h-[600px] 2xl:left-[-600.86px] lg:w-full lg:h-[400px] md:w-[280px] md:h-[280px] w-[208px] h-[208px]"
+          "2xl:w-full 2xl:h-[600px] 2xl:left-[-600.86px] lg:w-full lg:h-[400px] md:w-[280px] md:h-[280px] w-[208px] h-[208px]",
         )}
       />
     </Container>

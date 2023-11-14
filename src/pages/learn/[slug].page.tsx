@@ -71,7 +71,7 @@ export async function getStaticProps({
   const post = getPostBySlug(
     params.slug,
     ["title", "description", "content"],
-    locale
+    locale,
   );
 
   const result = await remark().process(post.content);
@@ -101,7 +101,7 @@ export async function getStaticPaths(context): Promise<GetStaticPathsResult> {
             slug: post.slug,
           },
           locale: postsWithLocale.locale,
-        }))
+        })),
       )
       .flat(),
     fallback: false,

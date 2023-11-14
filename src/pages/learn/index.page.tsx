@@ -28,7 +28,7 @@ interface LearnPageProps {
 }
 
 export default function LearnPage(
-  props: InferGetStaticPropsType<typeof getStaticProps>
+  props: InferGetStaticPropsType<typeof getStaticProps>,
 ): JSX.Element {
   const { t } = useTranslation(["page-learn"]);
 
@@ -54,7 +54,7 @@ export default function LearnPage(
 }
 
 function HowToSection(
-  props: PropsWithChildren<{ posts: PostI[] }>
+  props: PropsWithChildren<{ posts: PostI[] }>,
 ): JSX.Element {
   return (
     <section className="my-16">
@@ -84,7 +84,7 @@ function FAQSection(): JSX.Element {
   const { t } = useTranslation(["page-learn"]);
   const entries: Array<{ title: string; desc: string }> = t(
     "FAQSection.entries",
-    { returnObjects: true }
+    { returnObjects: true },
   );
 
   return (
@@ -138,7 +138,7 @@ function FAQSection(): JSX.Element {
 export async function getStaticProps({ locale }): Promise<LearnPageProps> {
   const allPosts: PostI[] = getAllPosts(
     ["slug", "title", "description"],
-    locale
+    locale,
   ) as PostI[];
 
   return {

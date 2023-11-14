@@ -11,7 +11,7 @@ interface DropdownItemInterface {
       value: string;
       type: "string" | "link";
       link?: string;
-    }
+    },
   ];
 }
 

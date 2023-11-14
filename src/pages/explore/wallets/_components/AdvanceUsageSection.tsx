@@ -23,7 +23,7 @@ export function AdvanceUsageSection() {
         <h2
           className={classNames(
             "lg:text-[60px] lg:leading-[72px] md:text-[40px] md:leading-[44px] text-[32px] leading-[36px]",
-            "text-dark-1000 md:text-center text-left"
+            "text-dark-1000 md:text-center text-left",
           )}
           data-testid="AdvanceUseSection.Title"
         >
@@ -33,7 +33,7 @@ export function AdvanceUsageSection() {
           className={classNames(
             "lg:text-xl text-base font-desc",
             "lg:tracking-normal tracking-[0.03em]",
-            "text-dark-700 md:text-center text-left"
+            "text-dark-700 md:text-center text-left",
           )}
           data-testid="AdvanceUseSection.Subtitle"
         >
@@ -99,14 +99,14 @@ export function AdvanceUsageSection() {
           "bg-[url(/assets/img/background/explore/wallet/grids-accent.png)]",
           "lg:h-[300.18px] lg:w-[479.8px] lg:-right-[15em] lg:-bottom-[7.75em]",
           "md:h-[281.94px] md:w-[450.65px] md:-right-[10.7em] md:-bottom-[5em]",
-          "h-[183.04px] w-[292.57px] rotate-90 -right-[11em] -bottom-[6.5em]"
+          "h-[183.04px] w-[292.57px] rotate-90 -right-[11em] -bottom-[6.5em]",
         )}
       />
       <div
         className={classNames(
           "hidden md:block absolute bg-contain bg-no-repeat mix-blend-screen bg-[url(/assets/img/background/explore/wallet/union.png)]",
           "lg:h-[45px] lg:w-[45px] lg:-right-[1.5em] lg:-bottom-[1.5em]",
-          "md:h-8 md:w-8 -right-[1.2em] -bottom-[4.75em]"
+          "md:h-8 md:w-8 -right-[1.2em] -bottom-[4.75em]",
         )}
       />
     </Container>

@@ -10,7 +10,7 @@ export default function FooterInternalBottomLink(props: {
   return (
     <div
       className={classNames(
-        "text-xs text-gray-500 hover:accent-dfc-gradient-text cursor-pointer"
+        "text-xs text-gray-500 hover:accent-dfc-gradient-text cursor-pointer",
       )}
     >
       <Link href={{ pathname }} passHref data-testid={testId}>

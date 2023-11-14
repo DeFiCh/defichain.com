@@ -36,7 +36,7 @@ function StatusItem({
     <div
       className={classNames(
         "absolute right-[20px] top-[28px] text-[10px] leading-3 tracking-[0.08em] font-bold text-dark-1000 rounded-xl py-1 px-3",
-        bgColor
+        bgColor,
       )}
     >
       {status}
@@ -101,7 +101,7 @@ export function MetaChainAgenda(): JSX.Element {
       <div
         className={classNames(
           "bg-[url('/assets/img/index/mc_accent.png')] absolute w-[772px] h-[386px] bg-auto bg-no-repeat z-[-1]",
-          "2xl:left-0 md:left-[-105px] lg:top-[331px] md:top-[-173px] w-[1440px] h-[469px] left-[72px] top-[-154px]"
+          "2xl:left-0 md:left-[-105px] lg:top-[331px] md:top-[-173px] w-[1440px] h-[469px] left-[72px] top-[-154px]",
         )}
       />
     </div>
@@ -119,7 +119,7 @@ function AgendaCard(props: AgendaItem): JSX.Element {
         {
           "border-gradient before:absolute before:content-[''] before:inset-0 before:p-px before:rounded-[15px] before:z-[-1]":
             isHoverOn,
-        }
+        },
       )}
       onMouseLeave={() => {
         setIsHoverOn!(false);
@@ -140,7 +140,7 @@ function AgendaCard(props: AgendaItem): JSX.Element {
           <div
             className={classNames(
               "text-dark-1000 text-xl font-bold w-[47%] md:w-full",
-              { "break-words": title === "Infrastructure" }
+              { "break-words": title === "Infrastructure" },
             )}
             data-testid={`metachain-agenda-title-${title}`}
           >

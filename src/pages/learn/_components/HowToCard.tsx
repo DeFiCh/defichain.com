@@ -4,7 +4,7 @@ import { Button } from "@components/commons/Buttons";
 import { useTranslation } from "next-i18next";
 
 export function HowToCard(
-  props: PropsWithChildren<{ title: string; desc: string; slug: string }>
+  props: PropsWithChildren<{ title: string; desc: string; slug: string }>,
 ): JSX.Element {
   const { t } = useTranslation(["page-learn"]);
 

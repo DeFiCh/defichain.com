@@ -16,7 +16,7 @@ export function LanguageDropdown(): JSX.Element {
   ];
   const [selectedLanguage, setSelectedLanguage] = useState(
     languages.find((language) => language.locale === router.locale) ??
-      languages[0]
+      languages[0],
   );
 
   useEffect(() => {
@@ -63,7 +63,7 @@ export function LanguageDropdown(): JSX.Element {
                         "hover:rounded-t-[10px]": index === 0,
                         "hover:rounded-b-[10px]":
                           languages.length - 1 === index,
-                      }
+                      },
                     )}
                     key={language.locale}
                   >

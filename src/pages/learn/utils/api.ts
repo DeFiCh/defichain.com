@@ -20,7 +20,7 @@ export function getPostSlugs(locale): string[] {
 export function getPostBySlug(
   slug,
   fields: string[] = [],
-  locale: string
+  locale: string,
 ): Post {
   const realSlug: string = slug.replace(/\.md$/, "");
   const fullPath = join(getPostsDirectory(locale), `${realSlug}.md`);

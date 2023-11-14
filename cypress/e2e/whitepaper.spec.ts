@@ -12,11 +12,11 @@ viewports.forEach((viewport) => {
     it("should have Documentation section visible expected text", () => {
       cy.checkElementVisibilityAndText(
         "section-title-white-paper-documentation",
-        "DOCUMENTATION FOR DEFICHAIN ECOSYSTEM"
+        "DOCUMENTATION FOR DEFICHAIN ECOSYSTEM",
       );
       cy.checkElementVisibilityAndText(
         "section-header-white-paper-documentation",
-        "Whitepaper"
+        "Whitepaper",
       );
     });
 

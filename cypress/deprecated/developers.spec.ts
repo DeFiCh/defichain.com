@@ -12,7 +12,7 @@ context("Developers page on desktop", () => {
     cy.findByTestId("Header.title").should("contain.text", "Developers");
     cy.findByTestId("Header.desc.main").should(
       "have.text",
-      "Build on DeFiChain"
+      "Build on DeFiChain",
     );
   });
 
@@ -49,7 +49,7 @@ context("Developers page on mobile", () => {
     cy.findByTestId("Header.title").should("contain.text", "Developers");
     cy.findByTestId("Header.desc.main").should(
       "have.text",
-      "Build on DeFiChain"
+      "Build on DeFiChain",
     );
   });
 

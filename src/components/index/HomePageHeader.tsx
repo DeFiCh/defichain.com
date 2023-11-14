@@ -15,7 +15,7 @@ export function HomePageHeader(): JSX.Element {
         className={classNames(
           "relative z-0 flex flex-col-reverse md:flex-row items-start md:justify-between",
           "pr-6 md:pr-0 lg:pr-0 xl:pr-[59px] 2xl:pr-[39px]",
-          "2xl:max-w-[1920px] max-w-full"
+          "2xl:max-w-[1920px] max-w-full",
         )}
       >
         <div className="mt-[-41px] md:w-[316px] md:mt-[92px] lg:max-w-none lg:w-[479px] xl:mt-[120px] 2xl:mt-[148px] relative z-[1]">
@@ -41,7 +41,7 @@ export function HomePageHeader(): JSX.Element {
           className={classNames(
             "w-full mt-[-31px] md:mt-[-49px] lg:mt-[-49px] xl:mt-[-57px] 2xl:mt-[-80px]",
             "min-w-[364px] md:min-w-[382px] md:max-w-[584px] max-w-[379px] lg:max-w-[722px] xl:max-w-[758px] 2xl:max-w-[929px]",
-            "md:ml-0 ml-auto mr-[-16px] md:mr-[-32.18px]"
+            "md:ml-0 ml-auto mr-[-16px] md:mr-[-32.18px]",
           )}
         >
           <Video

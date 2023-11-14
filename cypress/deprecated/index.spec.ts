@@ -11,11 +11,11 @@ context("/ on macbook-16", () => {
   it("should have title is DeFiChain.com", () => {
     cy.findByTestId("Header.title").should(
       "have.text",
-      "Native Decentralized Finance for Bitcoin"
+      "Native Decentralized Finance for Bitcoin",
     );
     cy.findByTestId("Header.desc.main").should(
       "have.text",
-      "A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone."
+      "A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone.",
     );
   });
 
@@ -32,7 +32,7 @@ context("/ on macbook-16", () => {
         .should("be.visible")
         .should(
           "have.text",
-          "From trust-based to trust-less, decentralized finance overcomes what Fintech could not solve in traditional finance."
+          "From trust-based to trust-less, decentralized finance overcomes what Fintech could not solve in traditional finance.",
         );
     });
     cy.findByTestId("ComparisonGraph").should("be.visible");
@@ -58,7 +58,7 @@ context("/ on macbook-16", () => {
         .should("be.visible")
         .should(
           "have.text",
-          "Designed and engineered for decentralized finance dApps."
+          "Designed and engineered for decentralized finance dApps.",
         );
       cy.findByTestId("Lending").should("be.visible");
       cy.findByTestId("WrappedToken").should("be.visible");
@@ -80,7 +80,7 @@ context("/ on macbook-16", () => {
         .should("be.visible")
         .should(
           "have.text",
-          "DeFiChain marries the best of Proof-of-Stake, with the security and immutability of Bitcoin."
+          "DeFiChain marries the best of Proof-of-Stake, with the security and immutability of Bitcoin.",
         );
       cy.findByTestId("button").should("be.visible");
       cy.findByTestId("image").should("be.visible");
@@ -96,7 +96,7 @@ context("/ on macbook-16", () => {
         .should("be.visible")
         .should(
           "have.text",
-          "The DeFiChain community runs more than 10,000 masternodes which are distributed globally."
+          "The DeFiChain community runs more than 10,000 masternodes which are distributed globally.",
         );
       cy.findByTestId("Nodes.Image").should("be.visible");
     });
@@ -129,11 +129,11 @@ context("/ on iphone-x", () => {
   it("should have title is DeFiChain.com", () => {
     cy.findByTestId("Header.title").should(
       "have.text",
-      "Native Decentralized Finance for Bitcoin"
+      "Native Decentralized Finance for Bitcoin",
     );
     cy.findByTestId("Header.desc.main").should(
       "have.text",
-      "A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone."
+      "A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone.",
     );
   });
 
@@ -150,7 +150,7 @@ context("/ on iphone-x", () => {
         .should("be.visible")
         .should(
           "have.text",
-          "From trust-based to trust-less, decentralized finance overcomes what Fintech could not solve in traditional finance."
+          "From trust-based to trust-less, decentralized finance overcomes what Fintech could not solve in traditional finance.",
         );
     });
     cy.findByTestId("ComparisonGraph").should("be.visible");
@@ -176,7 +176,7 @@ context("/ on iphone-x", () => {
         .should("be.visible")
         .should(
           "have.text",
-          "Designed and engineered for decentralized finance dApps."
+          "Designed and engineered for decentralized finance dApps.",
         );
       cy.findByTestId("Lending").should("be.visible");
       cy.findByTestId("WrappedToken").should("be.visible");
@@ -198,7 +198,7 @@ context("/ on iphone-x", () => {
         .should("be.visible")
         .should(
           "have.text",
-          "DeFiChain marries the best of Proof-of-Stake, with the security and immutability of Bitcoin."
+          "DeFiChain marries the best of Proof-of-Stake, with the security and immutability of Bitcoin.",
         );
       cy.findByTestId("button").should("be.visible");
       cy.findByTestId("image").should("be.visible");
@@ -214,7 +214,7 @@ context("/ on iphone-x", () => {
         .should("be.visible")
         .should(
           "have.text",
-          "The DeFiChain community runs more than 10,000 masternodes which are distributed globally."
+          "The DeFiChain community runs more than 10,000 masternodes which are distributed globally.",
         );
       cy.findByTestId("Nodes.Image").should("be.visible");
     });

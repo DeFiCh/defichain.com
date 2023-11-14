@@ -107,7 +107,7 @@ export function HeaderNavLinkItem({
           : "opacity-100 duration-300 transition",
         {
           "pointer-events-none opacity-30": disabled,
-        }
+        },
       )}
     >
       {Icon && (
@@ -133,7 +133,7 @@ export function HeaderNavLinkItem({
                   hoverState === undefined &&
                   dimension.width <= 1023 &&
                   !stroke,
-              }
+              },
             )}
           />
         </div>
@@ -151,7 +151,7 @@ export function HeaderNavLinkItem({
                   router.pathname.includes(href) &&
                   hoverState === undefined &&
                   dimension.width <= 1023,
-              }
+              },
             )}
           >
             {label}

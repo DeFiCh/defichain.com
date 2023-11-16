@@ -89,11 +89,6 @@ export default function GetDFISectionExchanges() {
       name: "Bake",
       url: "https://bake.io/",
     },
-    {
-      id: "GetDFISection.Staking.Lock",
-      name: "Lock",
-      url: "https://lock.space/",
-    },
   ];
 
   return (

@@ -33,7 +33,7 @@ const mapping: Record<string, (props: SVGProps<SVGSVGElement>) => JSX.Element> =
   };
 
 export function getExchangeLogo(
-  name: string
+  name: string,
 ): (props: SVGProps<SVGSVGElement>) => JSX.Element {
   const Logo = mapping[name];
   return Logo;

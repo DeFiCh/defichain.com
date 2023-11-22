@@ -12,11 +12,6 @@ export default function GetDFISectionExchanges() {
   const { t } = useTranslation("page-explore-dfi");
   const exchanges: ExchangeItem[] = [
     {
-      id: "GetDFISection.Exchange.Bittrex",
-      name: "Bittrex",
-      url: "https://global.bittrex.com/Market/Index?MarketName=BTC-DFI",
-    },
-    {
       id: "GetDFISection.Exchange.Bitrue",
       name: "Bitrue",
       url: "https://www.bitrue.com/trade/dfi_btc",

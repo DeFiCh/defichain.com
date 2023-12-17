@@ -49,8 +49,8 @@
       },
       {
         "title": "TestNet",
-        "status": "EN COURS",
-        "color": "orange",
+        "status": "DÉPLOYÉ",
+        "color": "green",
         "desc": "Version finale du TestNet - déployez et interagissez avec des contrats intelligents dans un environnement stable.",
         "image": "/assets/img/metachain/mc_testnet"
       },
@@ -63,8 +63,8 @@
       },
       {
         "title": "Lancement de MainNet",
-        "status": "À VENIR",
-        "color": "grey",
+        "status": "DÉPLOYÉ",
+        "color": "green",
         "desc": "Le lancement officiel - découvrez le réseau entièrement opérationnel de MetaChain.",
         "image": "/assets/img/metachain/mc_mainnet"
       }

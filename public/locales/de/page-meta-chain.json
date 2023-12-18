@@ -49,8 +49,8 @@
       },
       {
         "title": "TestNet",
-        "status": "IN BEARBEITUNG",
-        "color": "orange",
+        "status": "IM EINSATZ",
+        "color": "green",
         "desc": "Endgültige Version des TestNet - Einsatz und Interaktion mit Smart Contracts in einer stabilen Umgebung.",
         "image": "/assets/img/metachain/mc_testnet"
       },
@@ -63,8 +63,8 @@
       },
       {
         "title": "MainNet-Start",
-        "status": "KÜNFTIG",
-        "color": "grey",
+        "status": "IM EINSATZ",
+        "color": "green",
         "desc": "Der offizielle Start - erlebe das voll funktionsfähige Netzwerk von MetaChain.",
         "image": "/assets/img/metachain/mc_mainnet"
       }

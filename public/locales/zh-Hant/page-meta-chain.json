@@ -49,8 +49,8 @@
       },
       {
         "title": "TestNet測試網",
-        "status": "部署路上",
-        "color": "orange",
+        "status": "已部署",
+        "color": "green",
         "desc": "TestNet測試網的最終版本——在穩定的環境中部署智能合約並與之交互。",
         "image": "/assets/img/metachain/mc_testnet"
       },
@@ -63,8 +63,8 @@
       },
       {
         "title": "MainNet主網啟動",
-        "status": "即將到來",
-        "color": "grey",
+        "status": "已部署",
+        "color": "green",
         "desc": "正式上線 - 體驗全面運營的MetaChain網絡。",
         "image": "/assets/img/metachain/mc_mainnet"
       }

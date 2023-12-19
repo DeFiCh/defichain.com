@@ -31,11 +31,6 @@ export function BuyDFIButton({
       url: "https://www.gate.io/trade/DFI_USDT",
     },
     {
-      name: "Bittrex",
-      image: "/assets/svg/exchanges/logo-bittrex.svg",
-      url: "https://global.bittrex.com/Market/Index?MarketName=BTC-DFI",
-    },
-    {
       name: "LATOKEN",
       image: "/assets/svg/exchanges/logo-latoken.svg",
       url: "https://go.latoken.com/1gd",

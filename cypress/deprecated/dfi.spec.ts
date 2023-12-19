@@ -62,7 +62,6 @@ context("/dfi page on desktop", () => {
         .should("have.text", "Exchanges");
       cy.findByTestId("ExchangeSection.Text").should("be.visible");
       cy.findByTestId("ExchangeSection.Bittrue").should("be.visible");
-      cy.findByTestId("ExchangeSection.Bittrex").should("be.visible");
       cy.findByTestId("ExchangeSection.Kucoin").should("be.visible");
       cy.findByTestId("ExchangeSection.EasyAu").should("be.visible");
       cy.findByTestId("ExchangeSection.EasyNz").should("be.visible");
@@ -147,7 +146,6 @@ context("/dfi page on mobile", () => {
         .should("have.text", "Exchanges");
       cy.findByTestId("ExchangeSection.Text").should("be.visible");
       cy.findByTestId("ExchangeSection.Bittrue").should("be.visible");
-      cy.findByTestId("ExchangeSection.Bittrex").should("be.visible");
       cy.findByTestId("ExchangeSection.Kucoin").should("be.visible");
       cy.findByTestId("ExchangeSection.EasyAu").should("be.visible");
       cy.findByTestId("ExchangeSection.EasyNz").should("be.visible");

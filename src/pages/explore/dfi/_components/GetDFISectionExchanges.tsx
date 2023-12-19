@@ -12,11 +12,6 @@ export default function GetDFISectionExchanges() {
   const { t } = useTranslation("page-explore-dfi");
   const exchanges: ExchangeItem[] = [
     {
-      id: "GetDFISection.Exchange.Bittrex",
-      name: "Bittrex",
-      url: "https://global.bittrex.com/Market/Index?MarketName=BTC-DFI",
-    },
-    {
       id: "GetDFISection.Exchange.Bitrue",
       name: "Bitrue",
       url: "https://www.bitrue.com/trade/dfi_btc",
@@ -93,11 +88,6 @@ export default function GetDFISectionExchanges() {
       id: "GetDFISection.Staking.Bake",
       name: "Bake",
       url: "https://bake.io/",
-    },
-    {
-      id: "GetDFISection.Staking.Lock",
-      name: "Lock",
-      url: "https://lock.space/",
     },
   ];
 

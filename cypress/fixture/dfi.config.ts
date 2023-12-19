@@ -1,11 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 export const exchanges = [
   {
-    id: "bittrex",
-    name: "Bittrex",
-    url: "https://global.bittrex.com/Market/Index?MarketName=BTC-DFI",
-  },
-  {
     id: "bitrue",
     name: "Bitrue",
     url: "https://www.bitrue.com/trade/dfi_btc",

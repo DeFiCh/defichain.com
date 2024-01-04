@@ -80,7 +80,7 @@
         "title": "什么是MetaChain?",
         "desc": [
           {
-            "value": "MetaChain 是Layer 2，允许用户在比特币和以太坊上构建可扩展的 dApp。",
+            "value": "MetaChain 是一个智能合约执行层，与 EVM 兼容并运行在原生 DeFiChain 之上。",
             "type": "string"
           }
         ]

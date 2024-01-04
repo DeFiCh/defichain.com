@@ -80,7 +80,7 @@
         "title": "Qu'est-ce que MetaChain ?",
         "desc": [
           {
-            "value": "MetaChain est une blockchain de couche 2 qui permet aux utilisateurs de construire des dApps évolutives sur Bitcoin et Ethereum.",
+            "value": "MetaChain est une couche d'exécution de contrats intelligents compatible avec EVM et fonctionnant au-dessus de DeFiChain native.",
             "type": "string"
           }
         ]

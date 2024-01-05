@@ -182,7 +182,7 @@ viewports.forEach((viewport) => {
       );
       cy.checkElementVisibilityAndText(
         "faq-desc-What is MetaChain?",
-        "MetaChain is a Layer 2 blockchain that allows users to build scalable dApps on Bitcoin and Ethereum.",
+        "MetaChain is a smart contract execution layer which is EVM compatible and runs on top of the native DeFiChain.",
       );
 
       cy.checkElementVisibilityAndText(

@@ -80,7 +80,7 @@
         "title": "What is MetaChain?",
         "desc": [
           {
-            "value": "MetaChain is a Layer 2 blockchain that allows users to build scalable dApps on Bitcoin and Ethereum.",
+            "value": "MetaChain is a smart contract execution layer which is EVM compatible and runs on top of the native DeFiChain.",
             "type": "string"
           }
         ]

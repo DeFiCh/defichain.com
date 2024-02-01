@@ -6,6 +6,7 @@ import { HeroBanner, HeroBannerBg } from "@components/commons/HeroBanner";
 import { Head } from "@components/commons/Head";
 import { AdvanceUsageSection } from "./_components/AdvanceUsageSection";
 import { ForDailyUseSection } from "./_components/ForDailyUseSection";
+import { VisualAssetsSection } from "./_components/VisualAssetsSection";
 
 export default function ExploreWallets() {
   const { t } = useTranslation("page-explore-wallets");
@@ -27,6 +28,7 @@ export default function ExploreWallets() {
       />
       <ForDailyUseSection />
       <AdvanceUsageSection />
+      <VisualAssetsSection />
       {/* TODO: uncomment after mvp */}
       {/* <Container className="lg:mb-8 md:mb-6 mb-4">
         <div className="flex flex-row overflow-x-scroll lg:gap-x-8 md:gap-x-6 gap-x-4">

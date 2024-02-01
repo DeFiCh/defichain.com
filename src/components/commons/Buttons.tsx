@@ -99,7 +99,7 @@ export function SecondaryButton({
   customClass?: string;
   customSize?: number;
   testID: string;
-  hasIcon: boolean;
+  hasIcon?: boolean;
   download?: boolean;
 }) {
   const size = customSize ?? 20;

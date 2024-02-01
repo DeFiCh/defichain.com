@@ -88,6 +88,8 @@ export function SecondaryButton({
   customSize,
   customClass,
   testID,
+  hasIcon = true,
+  download = false,
 }: {
   text: string;
   className?: string;
@@ -97,6 +99,8 @@ export function SecondaryButton({
   customClass?: string;
   customSize?: number;
   testID: string;
+  hasIcon: boolean;
+  download?: boolean;
 }) {
   const size = customSize ?? 20;
   const customClassName = customClass ?? "ml-[15px]";
@@ -107,6 +111,7 @@ export function SecondaryButton({
       href={href}
       className={classNames("block w-fit", { "pointer-events-none": disabled })}
       data-testid={`secondary-button-${testID}`}
+      download={download}
     >
       <button
         type="button"
@@ -119,7 +124,9 @@ export function SecondaryButton({
         )}
       >
         {text}
-        <FiArrowUpRight size={size} className={customClassName} />
+        {hasIcon ? (
+          <FiArrowUpRight size={size} className={customClassName} />
+        ) : null}
       </button>
     </Link>
   );

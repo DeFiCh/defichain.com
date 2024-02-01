@@ -7,10 +7,15 @@ import PoweredByDeFiChainLogo from "@components/icons/assets/downloadAssets/Powe
 import DeFiChainAsset from "@components/icons/assets/downloadAssets/DeFiChainAsset";
 import BTCDFILogo from "@components/icons/assets/downloadAssets/BTCDFILogo";
 import DFI3D from "@components/icons/assets/downloadAssets/DFI3D";
+import { SecondaryButton } from "@components/commons/Buttons";
+import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import { DownloadAssetsCard } from "./DownloadAssetsCard";
 
 export function VisualAssetsSection() {
   const { t } = useTranslation(["page-explore-wallets"]);
+
+  const dimension = useWindowDimensions();
+  const mobileView = dimension.width <= 800;
 
   return (
     <Container className="mt-[120px] md:mt-[96px] lg:mt-[240px] lg:mb-[240px] md:mb-[112px] mb-[72px] relative">
@@ -43,62 +48,76 @@ export function VisualAssetsSection() {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 grid-cols-1 md:gap-6 gap-5 md:mt-16 mt-8 items-center justify-center">
-        <DownloadAssetsCard
-          title={t("visualAssetsSection.entries.DFC.title")}
-          desc={t("visualAssetsSection.entries.DFC.desc")}
-          testid="visualAssetsSection.Dfc"
-          svgAssetPath="/downloads/visualAssets/dfi.svg"
-          pngAssetPath="/downloads/visualAssets/dfi.png"
-        >
-          <DeFiChainLogo
-            fill="#FFFFFF"
-            className="w-[159px] h-9 md:w-[194.33px] lg:block lg:w-40 lg:h-full md:h-[44px]"
-          />
-        </DownloadAssetsCard>
+      <div className="w-full flex-col flex items-center gap-y-16">
+        {/* Download cards */}
+        <div className="grid md:grid-cols-2 grid-cols-1 md:gap-6 gap-5 md:mt-16 mt-8 items-center w-full">
+          <DownloadAssetsCard
+            title={t("visualAssetsSection.entries.DFC.title")}
+            desc={t("visualAssetsSection.entries.DFC.desc")}
+            testid="visualAssetsSection.Dfc"
+            svgAssetPath="/downloads/visualAssets/dfi.svg"
+            pngAssetPath="/downloads/visualAssets/dfi.png"
+          >
+            <DeFiChainLogo
+              fill="#FFFFFF"
+              className="w-[159px] h-9 md:w-[194.33px] lg:block lg:w-40 lg:h-full md:h-[44px]"
+            />
+          </DownloadAssetsCard>
 
-        <DownloadAssetsCard
-          title={t("visualAssetsSection.entries.PowerDFC.title")}
-          desc={t("visualAssetsSection.entries.PowerDFC.desc")}
-          testid="visualAssetsSection.Dfc"
-          svgAssetPath="/downloads/visualAssets/dfi-powered-by.svg"
-          pngAssetPath="/downloads/visualAssets/dfi-powered-by.png"
-        >
-          <PoweredByDeFiChainLogo
-            fill="#FFFFFF"
-            className="w-[159px] h-9 md:w-[194.33px] lg:block lg:w-40 lg:h-full md:h-[44px]"
-          />
-        </DownloadAssetsCard>
+          <DownloadAssetsCard
+            title={t("visualAssetsSection.entries.PowerDFC.title")}
+            desc={t("visualAssetsSection.entries.PowerDFC.desc")}
+            testid="visualAssetsSection.Dfc"
+            svgAssetPath="/downloads/visualAssets/dfi-powered-by.svg"
+            pngAssetPath="/downloads/visualAssets/dfi-powered-by.png"
+          >
+            <PoweredByDeFiChainLogo
+              fill="#FFFFFF"
+              className="w-[159px] h-9 md:w-[194.33px] lg:block lg:w-40 lg:h-full md:h-[44px]"
+            />
+          </DownloadAssetsCard>
 
-        <DownloadAssetsCard
-          title={t("visualAssetsSection.entries.Jellyfish.title")}
-          desc={t("visualAssetsSection.entries.Jellyfish.desc")}
-          testid="visualAssetsSection.Dfc"
-          svgAssetPath="/downloads/visualAssets/dfi-logo.svg"
-          pngAssetPath="/downloads/visualAssets/dfi-logo.png"
-        >
-          <DeFiChainAsset className="w-[159px] h-9 md:w-[194.33px] lg:block lg:w-[48.75px] lg:h-full md:h-[44px]" />
-        </DownloadAssetsCard>
+          <DownloadAssetsCard
+            title={t("visualAssetsSection.entries.Jellyfish.title")}
+            desc={t("visualAssetsSection.entries.Jellyfish.desc")}
+            testid="visualAssetsSection.Dfc"
+            svgAssetPath="/downloads/visualAssets/dfi-logo.svg"
+            pngAssetPath="/downloads/visualAssets/dfi-logo.png"
+          >
+            <DeFiChainAsset className="w-[159px] h-9 md:w-[194.33px] lg:block lg:w-[48.75px] lg:h-full md:h-[44px]" />
+          </DownloadAssetsCard>
 
-        <DownloadAssetsCard
-          title={t("visualAssetsSection.entries.Built.title")}
-          desc={t("visualAssetsSection.entries.Built.desc")}
-          testid="visualAssetsSection.Dfc"
-          svgAssetPath="/downloads/visualAssets/dfi-btc-logo.svg"
-          pngAssetPath="/downloads/visualAssets/dfi-btc-logo.png"
-        >
-          <BTCDFILogo />
-        </DownloadAssetsCard>
+          <DownloadAssetsCard
+            title={t("visualAssetsSection.entries.Built.title")}
+            desc={t("visualAssetsSection.entries.Built.desc")}
+            testid="visualAssetsSection.Dfc"
+            svgAssetPath="/downloads/visualAssets/dfi-btc-logo.svg"
+            pngAssetPath="/downloads/visualAssets/dfi-btc-logo.png"
+          >
+            <BTCDFILogo />
+          </DownloadAssetsCard>
 
-        <DownloadAssetsCard
-          title={t("visualAssetsSection.entries.DFI3D.title")}
-          desc={t("visualAssetsSection.entries.DFI3D.desc")}
-          testid="visualAssetsSection.Dfc"
-          svgAssetPath="/downloads/visualAssets/dfi-3d-logo.svg"
-          pngAssetPath="/downloads/visualAssets/dfi-3d-logo.png"
-        >
-          <DFI3D className="w-[159px] h-9 md:w-[194.33px] lg:block lg:w-40 lg:h-full md:h-[44px]" />
-        </DownloadAssetsCard>
+          <DownloadAssetsCard
+            title={t("visualAssetsSection.entries.DFI3D.title")}
+            desc={t("visualAssetsSection.entries.DFI3D.desc")}
+            testid="visualAssetsSection.Dfc"
+            svgAssetPath="/downloads/visualAssets/dfi-3d-logo.svg"
+            pngAssetPath="/downloads/visualAssets/dfi-3d-logo.png"
+          >
+            <DFI3D />
+          </DownloadAssetsCard>
+        </div>
+
+        <SecondaryButton
+          text={t("visualAssetsSection.button")}
+          className="text-sm mt-9 lg:py-4 py-3 px-[62px] md:px-[56px] lg:text-base"
+          href="/downloads/visualAssets/visualAssets.zip"
+          customSize={mobileView ? 20 : 24}
+          customClass="ml-[8px]"
+          testID="metachain-roadmap-documentation"
+          hasIcon={false}
+          download
+        />
       </div>
 
       <div

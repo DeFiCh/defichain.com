@@ -55,7 +55,8 @@
         "title": "DFI 3D Coin",
         "desc": "3D asset for illustration purposes"
       }
-    }
+    },
+    "button": "Download .zipped files"
   },
   "advanceUseSection": {
     "sectionTitle": "SUITABLE FOR ADVANCE USAGE",

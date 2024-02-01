@@ -30,6 +30,34 @@
       }
     }
   },
+  "visualAssetsSection": {
+    "sectionTitle": "Supercharge your DeFi Blockchain development",
+    "title": "Visual Assets",
+    "subtitle": "The media assets are released under CCO license. \"No Rights Reserved\"",
+    "entries": {
+      "DFC": {
+        "title": "DeFiChain logo",
+        "desc": "The official and default logo"
+      },
+      "PowerDFC": {
+        "title": "Powered by DeFiChain",
+        "desc": "Useful for project works"
+      },
+      "Jellyfish": {
+        "title": "The DeFi jellyfish logo",
+        "desc": "Useful when space is constrained"
+      },
+      "Built": {
+        "title": "Built-on-Bitcoin",
+        "desc": "3D asset for illustration purposes"
+      },
+      "DFI3D": {
+        "title": "DFI 3D Coin",
+        "desc": "3D asset for illustration purposes"
+      }
+    },
+    "button": "Download .zipped files"
+  },
   "advanceUseSection": {
     "sectionTitle": "SUITABLE FOR ADVANCE USAGE",
     "title": "Advanced usage of DeFiChain",

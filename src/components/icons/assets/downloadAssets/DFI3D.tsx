@@ -1,4 +1,6 @@
-export default function DFI3D(): JSX.Element {
+import { SVGProps } from "react";
+
+export default function DFI3D(props: SVGProps<SVGSVGElement>): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,6 +8,7 @@ export default function DFI3D(): JSX.Element {
       height="51"
       viewBox="0 0 63 51"
       fill="none"
+      {...props}
     >
       <path
         d="M14.8834 4.31469C15.8792 4.03475 16.8886 3.80586 17.9078 3.62891M32.8849 6.17861C34.2275 6.44787 35.5545 6.78979 36.8601 7.20286C49.455 11.1829 57.6343 20.8472 55.1293 28.7901C54.0323 32.2653 51.074 34.8348 47.0364 36.2931"

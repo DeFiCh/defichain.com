@@ -7,10 +7,9 @@ import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import * as prismic from "@prismicio/client";
 import { MetaChainKeyFeatures } from "./_components/MetaChainKeyFeatures";
 import { MetaChainRoadmap } from "./_components/MetaChainRoadmap";
-import { MetaChainAgenda } from "./_components/MetaChainAgenda";
 import { MetaChainFAQ } from "./_components/MetaChainFAQ";
 
-export default function MetaChainPage({ roadMapImg }): JSX.Element {
+export default function MetaChainPage(): JSX.Element {
   const { t } = useTranslation("page-meta-chain");
   const dimension = useWindowDimensions();
   return (
@@ -41,8 +40,7 @@ export default function MetaChainPage({ roadMapImg }): JSX.Element {
         />
       </div>
       <MetaChainKeyFeatures />
-      <MetaChainRoadmap roadMapImg={roadMapImg} />
-      <MetaChainAgenda />
+      <MetaChainRoadmap />
       <MetaChainFAQ />
     </>
   );

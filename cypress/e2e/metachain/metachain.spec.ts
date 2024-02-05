@@ -90,7 +90,7 @@ viewports.forEach((viewport) => {
         "metachain-roadmap-desc",
         "Become an early pioneer in the next frontier of DeFiChain. Explore our roadmap and join us in testing and shaping the features of MetaChain. Leverage our knowledge library below to start your journey.",
       );
-      cy.findByTestId("metachain-roadmap-img").should("exist");
+      cy.findByTestId("metachain-roadmap-diagram").should("exist");
     });
 
     it("should have the Roadmap Agenda section visible and expected text", () => {

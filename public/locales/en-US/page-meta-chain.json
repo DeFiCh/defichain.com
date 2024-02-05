@@ -26,10 +26,30 @@
     }
   },
   "roadmap": {
-    "title": "METACHAIN'S KEY UPDATES",
+    "title": "H1 2024 OVERVIEW",
     "subtitle": "Roadmap",
-    "desc": "Become an early pioneer in the next frontier of DeFiChain. Explore our roadmap and join us in testing and shaping the features of MetaChain. Leverage our knowledge library below to start your journey.",
-    "button": "Documentation"
+    "desc": "The decentralized finance (DeFi) landscape is continuously evolving, and DeFiChain aims to be at the forefront by expanding DeFiChain’s capabilities, accessibility, and real-world impact.",
+    "descContinue": "After collaborative discussions between the DeFiChain Labs team and engaged community members, a roadmap has been formulated that charts an ambitious course for the first half of 2024. ",
+    "button": "Read more",
+    "diagDesc": "The plan focuses on enhancing four key areas:",
+    "cards": {
+      "dvm": {
+        "title": "DVM Native Layer",
+        "desc": "dToken Fixes, DUSD Locks Support, State Relayer Improvements"
+      },
+      "metachain": {
+        "title": "MetaChain EVM Layer",
+        "desc": "Ocean improvements, Stability Upgrades, Storage Upgrades"
+      },
+      "experimentation": {
+        "title": "R&D Experimentation",
+        "desc": "WASM Engine Design"
+      },
+      "growth": {
+        "title": "Growth",
+        "desc": "Developer Support Program, Event Series Kickoff, Partnerships Expansion, Digital Acquisition Campaign"
+      }
+    }
   },
   "agenda": {
     "cards": [

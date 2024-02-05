@@ -4,12 +4,14 @@ import { Container } from "@components/commons/Container";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import { SectionTitle } from "@components/commons/SectionTitle";
 import { SecondaryButton } from "@components/commons/Buttons";
-import Image from "next/image";
+import { IconType } from "react-icons";
+import { DvmIcon } from "@public/assets/icon/DvmIcon";
+import { MetachainIcon } from "@public/assets/icon/MetachainIcon";
+import { RndIcon } from "@public/assets/icon/RndIcon";
+import { GrowthIcon } from "@public/assets/icon/GrowthIcon";
 
-export function MetaChainRoadmap({ roadMapImg }): JSX.Element {
+export function MetaChainRoadmap(): JSX.Element {
   const { t } = useTranslation("page-meta-chain");
-  const dimension = useWindowDimensions();
-  const mobileView = dimension.width <= 800;
   return (
     <section className={classNames("relative mb-12")}>
       <Container>
@@ -28,36 +30,125 @@ export function MetaChainRoadmap({ roadMapImg }): JSX.Element {
             </h2>
             <div
               className={classNames(
-                "text-dark-700 mb-6 md:mb-9 lg:mb-12 text-xl lg:leading-8 font-desc tracking-[0.03em] lg:tracking-normal",
+                "text-dark-700 mb-6 md:mb-9 lg:mb-12 text-base md:text-xl lg:leading-8 font-desc tracking-[0.03em] lg:tracking-normal",
               )}
               data-testid="metachain-roadmap-desc"
             >
               {t("roadmap.desc")}
             </div>
-            <SecondaryButton
-              text={t("roadmap.button")}
-              className="text-sm mt-9 lg:py-4 py-3 px-[62px] md:px-[56px] lg:text-base"
-              href="https://defich.github.io/handbook/guides/guide_floppynet.html"
-              customSize={mobileView ? 20 : 24}
-              customClass="ml-[8px]"
-              testID="metachain-roadmap-documentation"
-            />
-          </div>
-          {roadMapImg !== "" && (
             <div
-              className="mt-12 lg:mt-0 lg:ml-auto max-w-[660px]"
-              data-testid="metachain-roadmap-img"
+              className={classNames(
+                "text-dark-700 lg:mb-12 text-base md:text-xl lg:leading-8 font-desc tracking-[0.03em] lg:tracking-normal",
+              )}
+              data-testid="metachain-roadmap-descContinue"
             >
-              <Image
-                width={660}
-                height={570}
-                alt="MetaChain Roadmap"
-                src={roadMapImg}
+              {t("roadmap.descContinue")}
+            </div>
+            <div className="lg:block hidden">
+              <SecondaryButton
+                text={t("roadmap.button")}
+                className="text-sm mt-9 lg:py-4 py-3 px-[62px] md:px-[56px] lg:text-base"
+                href="https://defich.github.io/handbook/guides/guide_floppynet.html"
+                customClass="ml-[8px]"
+                customSize={24}
+                testID="metachain-roadmap-documentation"
               />
             </div>
-          )}
+          </div>
+          <Roadmap />
         </div>
       </Container>
     </section>
+  );
+}
+
+function Roadmap() {
+  const { t } = useTranslation("page-meta-chain");
+  const dimension = useWindowDimensions();
+  const mobileView = dimension.width <= 800;
+
+  return (
+    <div
+      className="mt-12 lg:mt-0 lg:ml-auto lg:max-w-[660px]"
+      data-testid="metachain-roadmap-diagram"
+    >
+      <div
+        className={classNames(
+          "text-dark-700 mb-4 text-base md:text-xl lg:leading-8 font-desc tracking-[0.03em] lg:tracking-normal",
+        )}
+        data-testid="metachain-roadmap-desc"
+      >
+        {t("roadmap.diagDesc")}
+      </div>
+      <div className="card-outline-2 p-[0.5px] bg-dark-200 rounded-[15px]">
+        <div
+          className={`border-[0.5px] border-dark-300 rounded-[15px] bg-dark-00 px-6 md:px-10
+      w-full flex-col items-center grid grid-cols-1 divide-y divide-gray-50/25`}
+        >
+          <CardItem
+            title={t("roadmap.cards.dvm.title")}
+            desc={t("roadmap.cards.dvm.desc")}
+            Icon={DvmIcon}
+          />
+          <CardItem
+            title={t("roadmap.cards.metachain.title")}
+            desc={t("roadmap.cards.metachain.desc")}
+            Icon={MetachainIcon}
+          />
+          <CardItem
+            title={t("roadmap.cards.experimentation.title")}
+            desc={t("roadmap.cards.experimentation.desc")}
+            Icon={RndIcon}
+          />
+          <CardItem
+            title={t("roadmap.cards.growth.title")}
+            desc={t("roadmap.cards.growth.desc")}
+            Icon={GrowthIcon}
+          />
+        </div>
+      </div>
+      <div className="block lg:hidden mt-12 w-full">
+        <SecondaryButton
+          text={t("roadmap.button")}
+          className="text-sm mt-9 lg:py-4 py-3 px-[62px] md:px-[56px] lg:text-base"
+          href="https://defich.github.io/handbook/guides/guide_floppynet.html"
+          customSize={mobileView ? 20 : 24}
+          customClass="ml-[8px]"
+          testID="metachain-roadmap-documentation"
+        />
+      </div>
+    </div>
+  );
+}
+
+function CardItem({
+  title,
+  desc,
+  Icon,
+}: {
+  title: string;
+  desc: string;
+  Icon: IconType;
+}) {
+  return (
+    <div className="flex flex-col py-6 md:py-10">
+      <div className="flex flex-col md:flex-row gap-x-6 md:items-center gap-y-4">
+        <Icon width={49.37} height={49.999} />
+        <div className="flex flex-col gap-y-1">
+          <h3
+            className="text-xl font-bold leading-7 text-dark-1000"
+            data-testid={`${title}-title`}
+          >
+            {title}
+          </h3>
+          <p
+            className="text-base leading-7 text-dark-700"
+            data-testid={`${desc}-description`}
+          >
+            {desc}
+          </p>
+        </div>
+      </div>
+    </div>
   );
 }

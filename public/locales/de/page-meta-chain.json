@@ -26,10 +26,30 @@
     }
   },
   "roadmap": {
-    "title": "METACHAIN'S WICHTIGSTE UPDATES",
+    "title": "ÜBERSICHT 1H24",
     "subtitle": "Fahrplan",
-    "desc": "Werde ein früher Pionier in der nächsten Phase von DeFiChain. Erkunde unsere Roadmap und teste und gestalte mit uns die Funktionen von MetaChain. Nutze unsere Wissensbibliothek, um deine Reise zu beginnen.",
-    "button": "Dokumentation"
+    "desc": "Die dezentrale Finanzlandschaft (DeFi) entwickelt sich ständig weiter und DeFiChain möchte an der Spitze stehen, indem es die Fähigkeiten, die Zugänglichkeit und die Auswirkungen von DeFiChain in der realen Welt erweitert.",
+    "descContinue": "Nach gemeinsamen Diskussionen zwischen dem DeFiChain Labs-Team und engagierten Community-Mitgliedern wurde eine Roadmap formuliert, die einen ehrgeizigen Kurs für die erste Hälfte des Jahres 2024 vorgibt",
+    "button": "Mehr erfahren",
+    "diagDesc": "Der Plan konzentriert sich auf die Verbesserung von vier Schlüsselbereiche:",
+    "cards": {
+      "dvm": {
+        "title": "Nativer DVM-Layer",
+        "desc": "dToken-Korrekturen, Unterstützung von DUSD-Locks, Verbesserungen am State Relayers"
+      },
+      "metachain": {
+        "title": "MetaChain EVM-Layer",
+        "desc": "Ocean-Verbesserungen, Stabilitäts-Upgrades, Speicher-Upgrades"
+      },
+      "experimentation": {
+        "title": "F&E-Experimente",
+        "desc": "WASM-Engine-Design"
+      },
+      "growth": {
+        "title": "Wachstum",
+        "desc": "Unterstützungsprogramm für Entwickler, Start von Veranstaltungsreihen, Ausbau von Partnerschaften, digitale Akquisitionskampagne"
+      }
+    }
   },
   "agenda": {
     "cards": [

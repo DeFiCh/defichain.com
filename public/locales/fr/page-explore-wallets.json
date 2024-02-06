@@ -30,6 +30,34 @@
       }
     }
   },
+  "visualAssetsSection": {
+    "sectionTitle": "BOOSTEZ VOTRE DÉVELOPPEMENT DE LA BLOCKCHAIN DANS LE DOMAINE DEFI",
+    "title": "Ressources visuelles",
+    "subtitle": "es ressources médiatiques sont diffusées sous licence CCO. \"Aucun droit réservé\"",
+    "entries": {
+      "DFC": {
+        "title": "Logo DeFiChain",
+        "desc": "Le logo officiel et par défaut"
+      },
+      "PowerDFC": {
+        "title": "Propulsé par DeFiChain",
+        "desc": "Utile pour les projets"
+      },
+      "Jellyfish": {
+        "title": "Le logo méduse de DeFiChain",
+        "desc": "Utile lorsque l'espace est limité"
+      },
+      "Built": {
+        "title": "onstruit sur Bitcoin",
+        "desc": "Ressources 3D à des fins d'illustration"
+      },
+      "DFI3D": {
+        "title": "DFI 3D Coin",
+        "desc": "3D asset for illustration purposes"
+      }
+    },
+    "button": "Téléchargez les fichiers .zippés"
+  },
   "advanceUseSection": {
     "sectionTitle": "ADAPTÉS À UNE UTILISATION AVANCÉE",
     "title": "Utilisation avancée de DeFiChain",

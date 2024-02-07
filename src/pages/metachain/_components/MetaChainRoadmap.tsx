@@ -48,7 +48,7 @@ export function MetaChainRoadmap(): JSX.Element {
               <SecondaryButton
                 text={t("roadmap.button")}
                 className="text-sm mt-9 lg:py-4 py-3 px-[62px] md:px-[56px] lg:text-base"
-                href="https://defich.github.io/handbook/guides/guide_floppynet.html"
+                href="https://blog.defichain.com/defichains-roadmap-for-the-first-half-of-2024/"
                 customClass="ml-[8px]"
                 customSize={24}
                 testID="metachain-roadmap-documentation"
@@ -107,11 +107,11 @@ function Roadmap() {
           />
         </div>
       </div>
-      <div className="block lg:hidden mt-12 w-full">
+      <div className="block lg:hidden mt-12">
         <SecondaryButton
           text={t("roadmap.button")}
-          className="text-sm mt-9 lg:py-4 py-3 px-[62px] md:px-[56px] lg:text-base"
-          href="https://defich.github.io/handbook/guides/guide_floppynet.html"
+          className="text-sm mt-9 lg:py-4 py-3 px-[56px]"
+          href="https://blog.defichain.com/defichains-roadmap-for-the-first-half-of-2024/"
           customSize={mobileView ? 20 : 24}
           customClass="ml-[8px]"
           testID="metachain-roadmap-documentation"

@@ -76,7 +76,7 @@ function Roadmap() {
         className={classNames(
           "text-dark-700 mb-4 text-base md:text-xl lg:leading-8 font-desc tracking-[0.03em] lg:tracking-normal",
         )}
-        data-testid="metachain-roadmap-desc"
+        data-testid="metachain-roadmap-diagram-desc"
       >
         {t("roadmap.diagDesc")}
       </div>
@@ -89,21 +89,25 @@ function Roadmap() {
             title={t("roadmap.cards.dvm.title")}
             desc={t("roadmap.cards.dvm.desc")}
             Icon={DvmIcon}
+            testId="dvm"
           />
           <CardItem
             title={t("roadmap.cards.metachain.title")}
             desc={t("roadmap.cards.metachain.desc")}
             Icon={MetachainIcon}
+            testId="metachain"
           />
           <CardItem
             title={t("roadmap.cards.experimentation.title")}
             desc={t("roadmap.cards.experimentation.desc")}
             Icon={RndIcon}
+            testId="experimentation"
           />
           <CardItem
             title={t("roadmap.cards.growth.title")}
             desc={t("roadmap.cards.growth.desc")}
             Icon={GrowthIcon}
+            testId="growth"
           />
         </div>
       </div>
@@ -125,10 +129,12 @@ function CardItem({
   title,
   desc,
   Icon,
+  testId,
 }: {
   title: string;
   desc: string;
   Icon: IconType;
+  testId: string;
 }) {
   return (
     <div className="flex flex-col py-6 md:py-10">
@@ -137,13 +143,13 @@ function CardItem({
         <div className="flex flex-col gap-y-1">
           <h3
             className="text-xl font-bold leading-7 text-dark-1000"
-            data-testid={`${title}-title`}
+            data-testid={`roadmap-${testId}-title`}
           >
             {title}
           </h3>
           <p
             className="text-base leading-7 text-dark-700"
-            data-testid={`${desc}-description`}
+            data-testid={`roadmap-${testId}-description`}
           >
             {desc}
           </p>

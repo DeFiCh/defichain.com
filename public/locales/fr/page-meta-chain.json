@@ -26,10 +26,30 @@
     }
   },
   "roadmap": {
-    "title": "LES PRINCIPALES MISES À JOUR DE METACHAIN",
+    "title": "APERÇU DU S1 2024",
     "subtitle": "Feuille de route",
-    "desc": "Devenez un pionnier de la prochaine frontière de DeFiChain. Explorez notre feuille de route et rejoignez-nous pour tester et façonner les fonctionnalités de MetaChain. Tirez parti de notre bibliothèque de connaissances ci-dessous pour commencer votre voyage",
-    "button": "Documentation"
+    "desc": "Le paysage de la finance décentralisée (DeFi) est en constante évolution, et DeFiChain vise à être à l'avant-garde en élargissant les capacités, l'accessibilité et l'impact sur le monde réel de DeFiChain",
+    "descContinue": "    \"desc\": \"Le paysage de la finance décentralisée (DeFi) est en constante évolution, et DeFiChain vise à être à l'avant-garde en élargissant les capacités, l'accessibilité et l'impact sur le monde réel de DeFiChain",
+    "button": "En savoir plus",
+    "diagDesc": "Le plan se concentre sur l'amélioration de quatre domaines clés :",
+    "cards": {
+      "dvm": {
+        "title": "Couche native DVM",
+        "desc": "Corrections dToken, prise en charge des verrous DUSD, améliorations de la couche d’état"
+      },
+      "metachain": {
+        "title": "Couche EVM MetaChain",
+        "desc": "Améliorations de Ocean, améliorations de la stabilité, améliorations du stockage"
+      },
+      "experimentation": {
+        "title": "Expérimentation R&D",
+        "desc": "Conception du moteur WASM"
+      },
+      "growth": {
+        "title": "Croissance",
+        "desc": "Programme de soutien aux développeurs, lancement de la série d'événements, expansion des partenariats, campagne d'acquisition numérique"
+      }
+    }
   },
   "agenda": {
     "cards": [

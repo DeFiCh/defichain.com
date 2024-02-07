@@ -1,4 +1,8 @@
-export default function BTCDFILogo(): JSX.Element {
+import { SVGProps } from "react";
+
+export default function BTCDFILogo(
+  props: SVGProps<SVGSVGElement>,
+): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,6 +10,7 @@ export default function BTCDFILogo(): JSX.Element {
       height="51"
       viewBox="0 0 71 51"
       fill="none"
+      {...props}
     >
       <path
         fillRule="evenodd"

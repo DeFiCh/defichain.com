@@ -60,7 +60,7 @@ export function VisualAssetsSection() {
           >
             <DeFiChainLogo
               fill="#FFFFFF"
-              className="w-[159px] h-9 md:w-[194.33px] lg:block lg:w-40 lg:h-full md:h-[44px]"
+              className="w-[159px] h-9 lg:block lg:h-full md:h-[44px]"
             />
           </DownloadAssetsCard>
 
@@ -71,10 +71,7 @@ export function VisualAssetsSection() {
             svgAssetPath="/downloads/visualAssets/dfi-powered-by.svg"
             pngAssetPath="/downloads/visualAssets/dfi-powered-by.png"
           >
-            <PoweredByDeFiChainLogo
-              fill="#FFFFFF"
-              className="w-[159px] h-9 md:w-[194.33px] lg:block lg:w-40 lg:h-full md:h-[44px]"
-            />
+            <PoweredByDeFiChainLogo className="w-[159px] h-9 md:w-[194.33px] lg:block lg:w-40 lg:h-full md:h-[44px]" />
           </DownloadAssetsCard>
 
           <DownloadAssetsCard
@@ -94,7 +91,7 @@ export function VisualAssetsSection() {
             svgAssetPath="/downloads/visualAssets/dfi-btc-logo.svg"
             pngAssetPath="/downloads/visualAssets/dfi-btc-logo.png"
           >
-            <BTCDFILogo />
+            <BTCDFILogo className="w-[159px] h-9 md:w-[68.703px] lg:block lg:h-full md:h-[48.754px]" />
           </DownloadAssetsCard>
 
           <DownloadAssetsCard
@@ -104,7 +101,7 @@ export function VisualAssetsSection() {
             svgAssetPath="/downloads/visualAssets/dfi-3d-logo.svg"
             pngAssetPath="/downloads/visualAssets/dfi-3d-logo.png"
           >
-            <DFI3D />
+            <DFI3D className="w-[61.391px] h-9 lg:block lg:h-full md:h-[44px]" />
           </DownloadAssetsCard>
         </div>
 

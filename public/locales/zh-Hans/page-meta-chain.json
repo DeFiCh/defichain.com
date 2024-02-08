@@ -26,10 +26,30 @@
     }
   },
   "roadmap": {
-    "title": "METACHAIN 的关键更新",
+    "title": "2024 年上半年概览",
     "subtitle": "路线图",
-    "desc": "成为 DeFiChain 下一个前沿领域的先行者。探索我们的路线图并与我们一起测试和塑造 MetaChain 的功能。利用我们下面的知识库开始您的旅程。",
-    "button": "文档"
+    "desc": "去中心化金融 (DeFi) 格局在不断发展，而 DeFiChain 的目标是通过扩展 DeFiChain 的功能、可访问性和现实世界影响力来走在最前沿。",
+    "descContinue": "经过 DeFiChain Labs 团队和参与社区成员的合作讨论，制定了路线图，为 2024 年上半年制定了雄心勃勃的路线图。",
+    "button": "阅读更多",
+    "diagDesc": "T该计划重点加强四个关键领域：",
+    "cards": {
+      "dvm": {
+        "title": "DVM 原层",
+        "desc": "dToken 修复、DUSD 锁定支持、状态中继器改进"
+      },
+      "metachain": {
+        "title": "MetaChain 链 EVM 层",
+        "desc": "Ocean改进、稳定性升级、存储升级"
+      },
+      "experimentation": {
+        "title": "研发实验",
+        "desc": "WASM 引擎设计"
+      },
+      "growth": {
+        "title": "增长",
+        "desc": "开发者支持计划、系列活动启动、合作伙伴扩展、数字收购活动"
+      }
+    }
   },
   "agenda": {
     "cards": [

@@ -26,10 +26,30 @@
     }
   },
   "roadmap": {
-    "title": "METACHAIN 的關鍵更新",
+    "title": "2024 年上半年概覽",
     "subtitle": "路線圖",
-    "desc": "成為 DeFiChain 下一個前沿領域的先行者。探索我們的路線圖並與我們一起測試和塑造 MetaChain 的功能。利用我們下面的知識庫開始您的旅程。",
-    "button": "文檔"
+    "desc": "去中心化金融(DeFi) 在不斷發展的目標格局 透過擴展DeFiChain 的功能、可訪問性和現實世界影響力來走在最前沿。",
+    "descContinue": "After collaborative discussions between the DeFiChain Labs team and engaged community members, a roadmap has been formulated that charts an ambitious course for the first half of 2024. ",
+    "button": "閱讀更多",
+    "diagDesc": "該計劃重點加強四個關鍵領域：",
+    "cards": {
+      "dvm": {
+        "title": "DVM 原層",
+        "desc": "dToken 修復、DUSD 鎖定支援、狀態中繼器改進"
+      },
+      "metachain": {
+        "title": "MetaChain 鏈 EVM 層",
+        "desc": "Ocean改進、穩定性升級、儲存升級"
+      },
+      "experimentation": {
+        "title": "研發實驗",
+        "desc": "WASM 引擎設計"
+      },
+      "growth": {
+        "title": "成長",
+        "desc": "開發者支援計畫、系列活動啟動、合作夥伴擴展、數位收購活動"
+      }
+    }
   },
   "agenda": {
     "cards": [

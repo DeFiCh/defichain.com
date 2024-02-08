@@ -83,75 +83,49 @@ viewports.forEach((viewport) => {
     it("should have the Roadmap section visible and expected text", () => {
       cy.checkElementVisibilityAndText(
         "section-title-metachain-roadmap-title",
-        "METACHAIN'S KEY UPDATES",
+        "H1 2024 OVERVIEW",
       );
       cy.checkElementVisibilityAndText("metachain-roadmap-subtitle", "Roadmap");
       cy.checkElementVisibilityAndText(
         "metachain-roadmap-desc",
-        "Become an early pioneer in the next frontier of DeFiChain. Explore our roadmap and join us in testing and shaping the features of MetaChain. Leverage our knowledge library below to start your journey.",
+        "The decentralized finance (DeFi) landscape is continuously evolving, and DeFiChain aims to be at the forefront by expanding DeFiChain’s capabilities, accessibility, and real-world impact.",
       );
-      cy.findByTestId("metachain-roadmap-img").should("exist");
-    });
-
-    it("should have the Roadmap Agenda section visible and expected text", () => {
       cy.checkElementVisibilityAndText(
-        "metachain-agenda-title-DevNet",
-        "DevNet",
+        "metachain-roadmap-descContinue",
+        "After collaborative discussions between the DeFiChain Labs team and engaged community members, a roadmap has been formulated that charts an ambitious course for the first half of 2024. ",
       );
-      cy.findByTestId("metachain-agenda-DevNet")
-        .trigger("mouseover", { scrollBehavior: "center" })
-        .findByTestId("metachain-agenda-desc-DevNet")
-        .should(
-          "have.text",
-          "Kick-off stage, setting up MetaChain's environment for internal testing.",
-        );
+
+      cy.findByTestId("metachain-roadmap-diagram").should("exist");
+
+      cy.checkElementVisibilityAndText("roadmap-dvm-title", "DVM Native Layer");
+      cy.checkElementVisibilityAndText(
+        "roadmap-dvm-description",
+        "dToken Fixes, DUSD Locks Support, State Relayer Improvements",
+      );
 
       cy.checkElementVisibilityAndText(
-        "metachain-agenda-title-FloppyNet",
-        "FloppyNet",
+        "roadmap-metachain-title",
+        "MetaChain EVM Layer",
       );
-      cy.findByTestId("metachain-agenda-FloppyNet")
-        .trigger("mouseover", { scrollBehavior: "center" })
-        .findByTestId("metachain-agenda-desc-FloppyNet")
-        .should(
-          "have.text",
-          "The alpha version of our TestNet - publicly accessible, expect rollbacks and limited volatility.",
-        );
+      cy.checkElementVisibilityAndText(
+        "roadmap-metachain-description",
+        "Ocean improvements, Stability Upgrades, Storage Upgrades",
+      );
 
       cy.checkElementVisibilityAndText(
-        "metachain-agenda-title-TestNet",
-        "TestNet",
+        "roadmap-experimentation-title",
+        "R&D Experimentation",
       );
-      cy.findByTestId("metachain-agenda-TestNet")
-        .trigger("mouseover", { scrollBehavior: "center" })
-        .findByTestId("metachain-agenda-desc-TestNet")
-        .should(
-          "have.text",
-          "Final version of TestNet - deploy and interact with smart contracts in a stable environment.",
-        );
+      cy.checkElementVisibilityAndText(
+        "roadmap-experimentation-description",
+        "WASM Engine Design",
+      );
 
+      cy.checkElementVisibilityAndText("roadmap-growth-title", "Growth");
       cy.checkElementVisibilityAndText(
-        "metachain-agenda-title-Infrastructure",
-        "Infrastructure",
+        "roadmap-growth-description",
+        "Developer Support Program, Event Series Kickoff, Partnerships Expansion, Digital Acquisition Campaign",
       );
-      cy.findByTestId("metachain-agenda-Infrastructure")
-        .trigger("mouseover", { scrollBehavior: "center" })
-        .findByTestId("metachain-agenda-desc-Infrastructure")
-        .should(
-          "have.text",
-          "Integrating key infrastructure like MetaScan and Ocean to prepare MetaChain for MainNet.",
-        );
-      cy.checkElementVisibilityAndText(
-        "metachain-agenda-title-MainNet Launch",
-        "MainNet Launch",
-      );
-      cy.findByTestId("metachain-agenda-MainNet Launch")
-        .trigger("mouseover", { scrollBehavior: "center" })
-        .findByTestId("metachain-agenda-desc-MainNet Launch")
-        .should(
-          "have.text",
-          "The official launch - experience MetaChain's fully operational network.",
-        );
     });
 
     it("should have FAQ section visible and expected text", () => {

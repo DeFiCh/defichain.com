@@ -9,11 +9,14 @@ import classNames from "classnames";
 import { useTranslation } from "next-i18next";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import { StatisticPanel } from "@components/commons/StatisticPanel";
+import { useRouter } from "next/router";
 import { useWhaleApiClient } from "../../layouts/context/WhaleContext";
 import { calculatePercentage } from "../../shared/calculatePercentage";
 
 export function StatsDisplay() {
   const api = useWhaleApiClient();
+  const router = useRouter();
+
   const [stats, setStats] = useState<StatsData>();
   const [supply, setSupply] = useState<SupplyData>();
   const { t } = useTranslation("page-index");
@@ -38,7 +41,10 @@ export function StatsDisplay() {
   const { suffix, value } = useUnitSuffix(
     stats ? stats.tvl.masternodes.toString() : "N/A",
   );
-  const masternodeValue = value === "N/A" ? undefined : `${value + suffix}+`;
+
+  const formatSpacing =
+    router.locale === "de" ? `${value} ${suffix}` : value + suffix;
+  const masternodeValue = value === "N/A" ? undefined : `${formatSpacing}`;
 
   const statsItems = [
     {

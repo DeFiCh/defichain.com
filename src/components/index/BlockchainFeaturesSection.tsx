@@ -3,6 +3,7 @@ import { Container } from "@components/commons/Container";
 import { useTranslation } from "next-i18next";
 import Slider from "react-slick";
 import { SectionTitle } from "@components/commons/SectionTitle";
+import { useRouter } from "next/router";
 import { BlockchainFeatureColumn } from "./BlockchainFeatureColumn";
 
 export const BlockchainFeatureItems = [
@@ -30,6 +31,7 @@ export const BlockchainFeatureItems = [
 
 export function BlockchainFeaturesSection(): JSX.Element {
   const { t } = useTranslation("page-index");
+  const router = useRouter();
   const separatedTitle = t("BlockchainFeatureSection.title").split(" ");
   const sliderSettings = {
     arrows: false,
@@ -40,6 +42,16 @@ export function BlockchainFeaturesSection(): JSX.Element {
     lazyLoad: true,
     dotsClass: "blockchain-features-dots",
   };
+
+  function displayColorToLanguage(index: number): boolean {
+    if (router.locale === "de") {
+      return index === 3;
+    }
+    if (router.locale === "en-US") {
+      return index === 2;
+    }
+    return false;
+  }
 
   return (
     <section
@@ -61,7 +73,7 @@ export function BlockchainFeaturesSection(): JSX.Element {
               data-testid={`section-header-${separatedTitle}`}
             >
               {separatedTitle.map((word, index) =>
-                index === 2 ? (
+                displayColorToLanguage(index) ? (
                   <span key={`${word}`}>
                     <br />
                     <span

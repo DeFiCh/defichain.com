@@ -43,7 +43,7 @@ export function HomePageHeader(): JSX.Element {
                   >{`${word} `}</span>
                 </span>
               ) : (
-                <span key={`${word}`}>{`${word}`}</span>
+                <span key={`${word}`}>{`${word} `}</span>
               ),
             )}
           </h1>

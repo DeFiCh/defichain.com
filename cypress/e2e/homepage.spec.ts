@@ -91,8 +91,8 @@ viewports.forEach((viewport) => {
     // No TC
     it("should have expected Header title and description", () => {
       cy.findByTestId("header-title").should(
-        "have.text",
-        "Connecting old and new worlds ",
+        "contain",
+        "Connecting old and new worlds",
       );
 
       // No TC

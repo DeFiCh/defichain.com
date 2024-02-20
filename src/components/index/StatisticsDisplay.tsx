@@ -42,9 +42,9 @@ export function StatsDisplay() {
     stats ? stats.tvl.masternodes.toString() : "N/A",
   );
 
-  const formatSpacing =
+  const formattedValue =
     router.locale === "de" ? `${value} ${suffix}` : value + suffix;
-  const masternodeValue = value === "N/A" ? undefined : `${formatSpacing}`;
+  const masternodeValue = value === "N/A" ? undefined : `${formattedValue}`;
 
   const statsItems = [
     {

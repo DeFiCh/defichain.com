@@ -1,20 +1,20 @@
 # Define individuals that are responsible for code in a repository.
 # More details are here: https://help.github.com/articles/about-codeowners/
 
-/.github/                                       @thedoublejay
-/.husky/                                        @thedoublejay
+/.github/                                       @pierregee @nattadex @chloezxyy
+/.husky/                                        @pierregee @nattadex @chloezxyy
 
-/src/                                           @thedoublejay @kyleleow @pierregee @G9000 @veralygit @nattadex @chloezxyy @kevzzsk
+/src/                                           @pierregee @nattadex @chloezxyy
 
-/src/styles/                                    @thedoublejay @kyleleow @pierregee @G9000 @veralygit @nattadex @chloezxyy @kevzzsk
+/src/styles/                                    @pierregee @nattadex @chloezxyy
 
-/public/                                        @thedoublejay @kyleleow @pierregee @G9000 @veralygit @nattadex @chloezxyy @kevzzsk
+/public/                                        @pierregee @nattadex @chloezxyy
 
-next.config.js                                  @thedoublejay @kyleleow @pierregee @veralygit @nattadex @chloezxyy @kevzzsk
-package.json                                    @thedoublejay @kyleleow @pierregee @veralygit @nattadex @chloezxyy @kevzzsk
-package-lock.json                               @thedoublejay @kyleleow @pierregee @veralygit @nattadex @chloezxyy @kevzzsk
-tsconfig.json                                   @thedoublejay @kyleleow @pierregee @veralygit @nattadex @chloezxyy @kevzzsk
+next.config.js                                  @pierregee @nattadex @chloezxyy
+package.json                                    @pierregee @nattadex @chloezxyy
+package-lock.json                               @pierregee @nattadex @chloezxyy
+tsconfig.json                                   @pierregee @nattadex @chloezxyy
 
-CONTRIBUTING.md                                 @thedoublejay @kyleleow @pierregee
-README.md                                       @thedoublejay @kyleleow @pierregee
-LICENSE                                         @thedoublejay @kyleleow @pierregee
+CONTRIBUTING.md                                 @pierregee @nattadex @chloezxyy
+README.md                                       @pierregee @nattadex @chloezxyy
+LICENSE                                         @pierregee @nattadex @chloezxyy

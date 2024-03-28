@@ -153,11 +153,8 @@ function getLocaledStatisticValue(
             end={Number(value)}
             enableScrollSpy
             duration={0.5}
-          />
-          {suffix !== "" ? ` ${t(`statisticsDisplay.suffix.${suffix}`)} ` : ``}
-
-          {/* This prefix is for the $ symbol */}
-          {prefix ?? ""}
+          />{" "}
+          {suffix ?? ""} {prefix ?? ""} {/* This prefix is for the $ symbol */}
         </>
       );
 

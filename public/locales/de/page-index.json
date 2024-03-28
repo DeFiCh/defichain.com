@@ -19,7 +19,7 @@
     },
     "masternodes": {
       "title": "MASTERNODES",
-      "desc": "${{perc}} gesperrt"
+      "desc": "Über {{perc}} $ gesperrt"
     }
   },
   "ReadyForFlexibilitySection": {

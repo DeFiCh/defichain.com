@@ -1,4 +1,4 @@
-export default function Huobi(): JSX.Element {
+export default function Htx(): JSX.Element {
   return (
     <svg
       width="96"

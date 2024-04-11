@@ -11,8 +11,8 @@ export const exchanges = [
     url: "https://trade.kucoin.com/DFI-BTC",
   },
   {
-    id: "huobi",
-    name: "Huobi",
+    id: "htx",
+    name: "c",
     url: "https://www.htx.com/trade/dfi_usdt",
   },
   {

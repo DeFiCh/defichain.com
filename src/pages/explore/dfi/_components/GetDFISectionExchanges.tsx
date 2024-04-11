@@ -22,8 +22,8 @@ export default function GetDFISectionExchanges() {
       url: "https://trade.kucoin.com/DFI-BTC",
     },
     {
-      id: "GetDFISection.Exchange.Huobi",
-      name: "Huobi",
+      id: "GetDFISection.Exchange.Htx",
+      name: "Htx",
       url: "https://www.htx.com/trade/dfi_usdt",
     },
     {

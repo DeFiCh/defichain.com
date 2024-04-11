@@ -12,7 +12,7 @@ export const exchanges = [
   },
   {
     id: "htx",
-    name: "c",
+    name: "Htx",
     url: "https://www.htx.com/trade/dfi_usdt",
   },
   {

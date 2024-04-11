@@ -21,9 +21,9 @@ export function BuyDFIButton({
       url: "https://trade.kucoin.com/DFI-BTC",
     },
     {
-      name: "Huobi",
-      image: "/assets/img/exchanges/logo-huobi.png",
-      url: "https://www.huobi.com/en-us/exchange/dfi_usdt",
+      name: "Htx",
+      image: "/assets/img/exchanges/logo-htx.png",
+      url: "https://www.htx.com/trade/dfi_usdt",
     },
     {
       name: "Gate.io",

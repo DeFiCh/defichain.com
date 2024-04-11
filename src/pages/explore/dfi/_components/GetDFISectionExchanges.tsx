@@ -22,9 +22,9 @@ export default function GetDFISectionExchanges() {
       url: "https://trade.kucoin.com/DFI-BTC",
     },
     {
-      id: "GetDFISection.Exchange.Huobi",
-      name: "Huobi",
-      url: "https://www.huobi.com/en-us/exchange/dfi_usdt",
+      id: "GetDFISection.Exchange.Htx",
+      name: "HTX",
+      url: "https://www.htx.com/trade/dfi_usdt",
     },
     {
       id: "GetDFISection.Exchange.Gateio",

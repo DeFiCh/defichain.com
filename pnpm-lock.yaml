@@ -36,7 +36,7 @@ dependencies:
     specifier: ^4.17.21
     version: 4.17.21
   next-i18next:
-    specifier: ^14.0.0
+    specifier: ^14.0.3
     version: 14.0.3(i18next@23.7.6)(next@14.0.2)(react-i18next@13.4.1)(react@18.2.0)
   react-countup:
     specifier: ^6.5.0

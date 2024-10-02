@@ -1,12 +1,12 @@
 import { SectionTitle } from "@components/commons/SectionTitle";
 import { Container } from "@components/commons/Container";
-import { useTranslation } from "next-i18next";
 import classNames from "classnames";
+import { useTranslation } from "../../../../hooks/useTranslation";
 import { DownloadCard } from "./DownloadCard";
 import { CardLink, IconType } from "./CardLink";
 
 export function ForDailyUseSection() {
-  const { t } = useTranslation(["page-explore-wallets"]);
+  const { t } = useTranslation("page-explore-wallets");
   return (
     <Container className="lg:mt-[129px] md:mt-[57px] mt-0">
       <article

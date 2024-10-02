@@ -3,8 +3,8 @@ import { SupplyData } from "@defichain/whale-api-client/dist/api/stats";
 import { StatisticPanel } from "@components/commons/StatisticPanel";
 import { Container } from "@components/commons/Container";
 import { useUnitSuffix } from "@hooks/useUnitSuffix";
-import { useTranslation } from "next-i18next";
 import classNames from "classnames";
+import { useTranslation } from "../../../../hooks/useTranslation";
 import { useWhaleApiClient } from "../../../../layouts/context/WhaleContext";
 import { calculatePercentage } from "../../../../shared/calculatePercentage";
 

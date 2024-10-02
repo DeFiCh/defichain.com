@@ -1,9 +1,8 @@
 // import { Container } from "@components/commons/Container";
-import { SSRConfig, useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { HeroBanner, HeroBannerBg } from "@components/commons/HeroBanner";
 // import { ExploreCards, ExploreCardsImage } from "../_components/ExploreCards";
 import { Head } from "@components/commons/Head";
+import { useTranslation } from "../../../hooks/useTranslation";
 import { AdvanceUsageSection } from "./_components/AdvanceUsageSection";
 import { ForDailyUseSection } from "./_components/ForDailyUseSection";
 import { VisualAssetsSection } from "./_components/VisualAssetsSection";
@@ -48,18 +47,4 @@ export default function ExploreWallets() {
       </Container> */}
     </>
   );
-}
-
-export async function getStaticProps({
-  locale,
-}): Promise<{ props: SSRConfig }> {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale || "en-US", [
-        "common",
-        "layout",
-        "page-explore-wallets",
-      ])),
-    },
-  };
 }

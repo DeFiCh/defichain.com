@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import { useTranslation } from "next-i18next";
 import { Container } from "@components/commons/Container";
 import Image from "next/image";
 import {
@@ -9,6 +8,7 @@ import {
   Code,
   Step,
 } from "@components/commons/navigatedPages/GuideComponents";
+import { useTranslation } from "../../../../../hooks/useTranslation";
 import CreateMN from "../../../../../../public/assets/img/mnTechnicalGuide/create.png";
 import TableOfContents from "./TableOfContents";
 

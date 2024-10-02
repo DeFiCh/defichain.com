@@ -1,14 +1,13 @@
 import { PageHeader } from "@components/commons/PageHeader";
 import { Container } from "@components/commons/Container";
-import { SSRConfig, useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Head } from "@components/commons/Head";
 import { Section } from "@components/commons/Section";
 import { ExternalLink } from "@components/commons/link/ExternalLink";
 import Image from "next/image";
+import { useTranslation } from "../../hooks/useTranslation";
 
 export default function EcosystemPage(): JSX.Element {
-  const { t } = useTranslation(["page-media"]);
+  const { t } = useTranslation("page-media");
 
   return (
     <>
@@ -32,7 +31,7 @@ export default function EcosystemPage(): JSX.Element {
 }
 
 function MediaSection(): JSX.Element {
-  const { t } = useTranslation(["page-media"]);
+  const { t } = useTranslation("page-media");
   const mediaList: any[] = t("MediaSection.entries", { returnObjects: true });
 
   return (
@@ -76,18 +75,4 @@ function MediaSection(): JSX.Element {
       </div>
     </Section>
   );
-}
-
-export async function getStaticProps({
-  locale,
-}): Promise<{ props: SSRConfig }> {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale || "en-US", [
-        "common",
-        "layout",
-        "page-media",
-      ])),
-    },
-  };
 }

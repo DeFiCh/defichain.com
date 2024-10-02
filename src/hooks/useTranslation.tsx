@@ -5,6 +5,11 @@ import layout from "../../public/locales/en-US/layout.json";
 import metachain from "../../public/locales/en-US/page-meta-chain.json";
 import privacypolicy from "../../public/locales/en-US/page-privacypolicy.json";
 import learn from "../../public/locales/en-US/page-learn.json";
+import exploreWallets from "../../public/locales/en-US/page-explore-wallets.json";
+import exploreMNs from "../../public/locales/en-US/page-explore-masternodes.json";
+import exploreDFI from "../../public/locales/en-US/page-explore-dfi.json";
+import exploreDex from "../../public/locales/en-US/page-explore-dex.json";
+import media from "../../public/locales/en-US/page-media.json";
 
 interface TranslationOptions {
   returnObjects?: boolean; // Indicates whether to return objects
@@ -16,7 +21,12 @@ type FileProp =
   | "layout"
   | "page-meta-chain"
   | "page-privacypolicy"
-  | "page-learn";
+  | "page-learn"
+  | "page-explore-wallets"
+  | "page-explore-masternodes"
+  | "page-explore-dfi"
+  | "page-explore-dex"
+  | "page-media";
 
 // Properly typed getNestedValue function
 function getNestedValue<T>(obj: T, path: string): any {
@@ -39,6 +49,16 @@ function t(file: FileProp, key: string, options?: TranslationOptions): any {
     result = getNestedValue(privacypolicy, key);
   } else if (file === "page-learn") {
     result = getNestedValue(learn, key);
+  } else if (file === "page-explore-wallets") {
+    result = getNestedValue(exploreWallets, key);
+  } else if (file === "page-explore-masternodes") {
+    result = getNestedValue(exploreMNs, key);
+  } else if (file === "page-explore-dfi") {
+    result = getNestedValue(exploreDFI, key);
+  } else if (file === "page-explore-dex") {
+    result = getNestedValue(exploreDex, key);
+  } else if (file === "page-media") {
+    result = getNestedValue(media, key);
   }
 
   // If options.returnObjects is true, return the result directly (presuming it's an object)

@@ -53,9 +53,7 @@ export function StatsDisplay() {
       desc:
         supply?.total === undefined
           ? supply?.total
-          : t("StatisticsSection.dfiMinted.desc", {
-              perc: calculatePercentage(supply.total, supply.max),
-            }),
+          : `${calculatePercentage(supply.total, supply.max)} of max supply`,
       testID: "dfi-minted",
     },
     {
@@ -75,12 +73,7 @@ export function StatsDisplay() {
     {
       title: t("StatisticsSection.masternodes.title"),
       stats: stats?.count.masternodes,
-      desc:
-        masternodeValue === undefined
-          ? masternodeValue
-          : t("StatisticsSection.masternodes.desc", {
-              perc: masternodeValue,
-            }),
+      desc: masternodeValue === undefined ? masternodeValue : "{{perc}} locked",
       testID: "masternodes",
     },
   ];

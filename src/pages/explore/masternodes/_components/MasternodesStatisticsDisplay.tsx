@@ -39,9 +39,7 @@ export function MasternodesStatisticsDisplay() {
       desc:
         masternodeValue === undefined
           ? masternodeValue
-          : t("statisticsDisplay.masternodes.desc", {
-              value: masternodeValue,
-            }),
+          : `${masternodeValue} locked for 10 years`,
       testID: "masternodes",
     },
     {

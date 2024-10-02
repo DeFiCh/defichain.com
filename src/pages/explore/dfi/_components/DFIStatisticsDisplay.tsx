@@ -34,9 +34,10 @@ export function DFIStatisticsDisplay() {
       desc:
         supply === undefined
           ? supply
-          : t("statisticsDisplay.circulatingSupply.desc", {
-              perc: calculatePercentage(supply?.circulating, supply?.total),
-            }),
+          : `${calculatePercentage(
+              supply?.circulating,
+              supply?.total,
+            )} of max supply`,
       testID: "circulating-supply",
     },
     {
@@ -45,10 +46,7 @@ export function DFIStatisticsDisplay() {
       desc:
         supply === undefined
           ? supply
-          : t("statisticsDisplay.dfiMinted.desc", {
-              value: dfiMintedValue,
-              suffix: dfiMintedSuffix,
-            }),
+          : `out of ${dfiMintedValue}${dfiMintedSuffix}} fixed supply`,
       testID: "dfi-minted",
     },
   ];

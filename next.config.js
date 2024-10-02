@@ -41,7 +41,7 @@ const securityHeaders = [
 ];
 
 module.exports = {
-  // output: "export",
+  output: "export",
   experimental: {
     forceSwcTransforms: true,
   },
@@ -58,6 +58,7 @@ module.exports = {
   },
   images: {
     domains: ["images.prismic.io"],
+    unoptimized: true,
   },
   async redirects() {
     return [

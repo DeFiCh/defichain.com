@@ -1,9 +1,9 @@
 import { Container } from "@components/commons/Container";
 import classNames from "classnames";
 import { SecondaryButton } from "@components/commons/Buttons";
-import { useTranslation } from "next-i18next";
 import { SectionTitle } from "@components/commons/SectionTitle";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
+import { useTranslation } from "../../hooks/useTranslation";
 
 export function ReadyForFlexibility() {
   const { t } = useTranslation("page-index");

@@ -1,5 +1,4 @@
 import classnames from "classnames";
-import { useTranslation } from "next-i18next";
 import {
   useState,
   useEffect,
@@ -8,6 +7,7 @@ import {
   SetStateAction,
   RefObject,
 } from "react";
+import { useTranslation } from "../../../hooks/useTranslation";
 
 interface HeadingsI {
   id: string;

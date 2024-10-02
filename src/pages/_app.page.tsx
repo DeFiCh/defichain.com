@@ -1,6 +1,5 @@
 import NextNProgress from "nextjs-progressbar";
 import "../styles/globals.css";
-import { appWithTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
 import Script from "next/script";
 import { Default } from "../layouts/Default";
@@ -61,4 +60,4 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   );
 }
 
-export default appWithTranslation(MyApp);
+export default MyApp;

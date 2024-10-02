@@ -2,7 +2,7 @@ import { Container } from "@components/commons/Container";
 import { SectionTitle } from "@components/commons/SectionTitle";
 import classNames from "classnames";
 import Slider from "react-slick";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "../../../../hooks/useTranslation";
 import { HarnessDFIGrid, HarnessDFIICONS } from "./HarnessDFIGrid";
 
 export default function HarnessDFISection() {

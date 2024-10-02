@@ -3,9 +3,9 @@ import { SectionTitle } from "@components/commons/SectionTitle";
 import { LeftArrow } from "@components/icons/assets/roadmap/LeftArrow";
 import { RightArrow } from "@components/icons/assets/roadmap/RightArrow";
 import classNames from "classnames";
-import { useTranslation } from "next-i18next";
 import { CSSProperties, ReactEventHandler } from "react";
 import Slider from "react-slick";
+import { useTranslation } from "../../hooks/useTranslation";
 
 export function YearAheadRoadMapSection(): JSX.Element {
   const { t } = useTranslation("page-index");

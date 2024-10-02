@@ -1,5 +1,5 @@
 import { SectionGridLayout } from "@components/commons/SectionGridLayout";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "../../../hooks/useTranslation";
 import { IconTypes, SvgIconsColumn } from "./SvgIconsColumn";
 
 export function MasternodesBenefitsSection(): JSX.Element {

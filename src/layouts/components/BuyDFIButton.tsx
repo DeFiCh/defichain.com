@@ -1,9 +1,9 @@
 import classNames from "classnames";
 import { Fragment } from "react";
-import { useTranslation } from "next-i18next";
 import { Popover } from "@headlessui/react";
 import { ExternalLink } from "@components/commons/link/ExternalLink";
 import Image from "next/legacy/image";
+import { useTranslation } from "../../hooks/useTranslation";
 
 export function BuyDFIButton({
   classname,

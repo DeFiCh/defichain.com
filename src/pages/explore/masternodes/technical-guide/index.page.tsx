@@ -1,11 +1,10 @@
 import { Container } from "@components/commons/Container";
-import { SSRConfig, useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { SectionTitle } from "@components/commons/SectionTitle";
 import { SectionSubTitle } from "@components/commons/SectionSubTitle";
 import { SectionDescription } from "@components/commons/SectionDescription";
 import classNames from "classnames";
 import { useEffect } from "react";
+import { useTranslation } from "../../../../hooks/useTranslation";
 import { MasternodesSetupInfo } from "./_components/MasternodesSetupInfo";
 
 export default function TechnicalGuide() {
@@ -73,18 +72,4 @@ export default function TechnicalGuide() {
       </Container> */}
     </>
   );
-}
-
-export async function getStaticProps({
-  locale,
-}): Promise<{ props: SSRConfig }> {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, [
-        "common",
-        "layout",
-        "page-explore-masternodes",
-      ])),
-    },
-  };
 }

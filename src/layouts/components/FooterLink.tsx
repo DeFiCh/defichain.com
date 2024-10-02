@@ -1,6 +1,6 @@
 import classNames from "classnames";
-import { useTranslation } from "next-i18next";
 import Link from "next/link";
+import { useTranslation } from "../../hooks/useTranslation";
 import FooterExternalLink from "./FooterExternalLink";
 
 export default function FooterLink({

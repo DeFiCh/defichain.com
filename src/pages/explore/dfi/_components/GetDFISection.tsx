@@ -3,10 +3,10 @@ import Link from "next/link";
 import { useEffect } from "react";
 import { Container } from "@components/commons/Container";
 import { SectionTitle } from "@components/commons/SectionTitle";
-import { useTranslation } from "next-i18next";
 import BigNumber from "bignumber.js";
 import CoinGeckoIcon from "@components/icons/assets/exploreGetDFI/CoinGeckoIcon";
 import CoinMarketCapIcon from "@components/icons/assets/exploreGetDFI/CoinMarketCapIcon";
+import { useTranslation } from "../../../../hooks/useTranslation";
 import GetDFISectionExchanges from "./GetDFISectionExchanges";
 
 export default function GetDFISection() {

@@ -1,6 +1,5 @@
-import { SSRConfig, useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { PageError } from "@components/commons/error/PageError";
+import { useTranslation } from "../hooks/useTranslation";
 
 export default function NotFound(): JSX.Element {
   const { t } = useTranslation("layout");
@@ -12,14 +11,4 @@ export default function NotFound(): JSX.Element {
       text={t("error.text")}
     />
   );
-}
-
-export async function getStaticProps({
-  locale,
-}): Promise<{ props: SSRConfig }> {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["common", "layout"])),
-    },
-  };
 }

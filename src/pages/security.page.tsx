@@ -1,5 +1,3 @@
-import { UserConfig } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { PageHeader } from "@components/commons/PageHeader";
 import { Container } from "@components/commons/Container";
 import ReactMarkdown from "react-markdown";
@@ -15,11 +13,6 @@ import { getMDPageBySlug } from "../../utils/api";
 
 interface SecurityPageProps {
   props: {
-    _nextI18Next: {
-      initialI18nStore: any;
-      initialLocale: string;
-      userConfig: UserConfig | null;
-    };
     post: Post;
   };
 }
@@ -64,14 +57,13 @@ export default function SecurityPage({ post }): JSX.Element {
   );
 }
 
-export async function getStaticProps({ locale }): Promise<SecurityPageProps> {
-  const post = getMDPageBySlug("security", locale);
+export async function getStaticProps(): Promise<SecurityPageProps> {
+  const post = getMDPageBySlug("security", "en-US");
 
   const result = await remark().process(post.content);
 
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common", "layout"])),
       post: {
         ...post,
         content: result.toString(),

@@ -1,5 +1,3 @@
-import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { HomePageHeader } from "@components/index/HomePageHeader";
 import { BlockchainFeaturesSection } from "@components/index/BlockchainFeaturesSection";
 import { Head } from "@components/commons/Head";
@@ -11,9 +9,10 @@ import { StartExploringButton } from "@components/commons/StartExploringButton";
 import { YearAheadRoadMapSection } from "@components/index/RoadMapSection";
 import { BlogPostsSection } from "@components/index/blogPosts/BlogPostsSection";
 import * as prismic from "@prismicio/client";
+import { useTranslation } from "../hooks/useTranslation";
 
 export default function HomePage({ blogPosts }): JSX.Element {
-  const { t } = useTranslation(["page-index"]);
+  const { t } = useTranslation("page-index");
 
   return (
     <>
@@ -36,15 +35,10 @@ async function getPostsFromPrismic(): Promise<any> {
   return endpoint.getByType("news");
 }
 
-export async function getStaticProps({ locale }) {
+export async function getStaticProps() {
   const blogPosts = await getPostsFromPrismic();
   return {
     props: {
-      ...(await serverSideTranslations(locale, [
-        "common",
-        "layout",
-        "page-index",
-      ])),
       blogPosts: blogPosts.results.map((r) => ({
         ...r.data,
       })),

@@ -3,8 +3,8 @@ import { StatsData } from "@defichain/whale-api-client/dist/api/stats";
 import { StatisticPanel } from "@components/commons/StatisticPanel";
 import { useUnitSuffix } from "@hooks/useUnitSuffix";
 import { Container } from "@components/commons/Container";
-import { useTranslation } from "next-i18next";
 import classNames from "classnames";
+import { useTranslation } from "../../../../hooks/useTranslation";
 import { useWhaleApiClient } from "../../../../layouts/context/WhaleContext";
 
 export function MasternodesStatisticsDisplay() {
@@ -39,9 +39,7 @@ export function MasternodesStatisticsDisplay() {
       desc:
         masternodeValue === undefined
           ? masternodeValue
-          : t("statisticsDisplay.masternodes.desc", {
-              value: masternodeValue,
-            }),
+          : `${masternodeValue} locked for 10 years`,
       testID: "masternodes",
     },
     {

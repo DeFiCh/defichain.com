@@ -1,7 +1,7 @@
 import { Button, LinkButton } from "@components/commons/Buttons";
 import { Container } from "@components/commons/Container";
 import classNames from "classnames";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "../../../../hooks/useTranslation";
 
 export default function ERC20Section(): JSX.Element {
   const { t } = useTranslation("page-explore-dfi");

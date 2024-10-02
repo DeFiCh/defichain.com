@@ -1,8 +1,7 @@
 import { HeroBanner, HeroBannerBg } from "@components/commons/HeroBanner";
-import { SSRConfig, useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-// import { Container } from "@components/commons/Container";
 import { Head } from "@components/commons/Head";
+import { useTranslation } from "../../../hooks/useTranslation";
+// import { Container } from "@components/commons/Container";
 import { DFIStatisticsDisplay } from "./_components/DFIStatisticsDisplay";
 import HarnessDFISection from "./_components/HarnessDFISection";
 import GetDFISection from "./_components/GetDFISection";
@@ -48,18 +47,4 @@ export default function ExploreDFI() {
       </Container> */}
     </>
   );
-}
-
-export async function getStaticProps({
-  locale,
-}): Promise<{ props: SSRConfig }> {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, [
-        "common",
-        "layout",
-        "page-explore-dfi",
-      ])),
-    },
-  };
 }

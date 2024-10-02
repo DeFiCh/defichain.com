@@ -1,8 +1,8 @@
 import { Container } from "@components/commons/Container";
-import { useTranslation } from "next-i18next";
 import { Video } from "@components/commons/Video";
 import classNames from "classnames";
 import { useRouter } from "next/router";
+import { useTranslation } from "../../hooks/useTranslation";
 
 export function HomePageHeader(): JSX.Element {
   const { t } = useTranslation("page-index");

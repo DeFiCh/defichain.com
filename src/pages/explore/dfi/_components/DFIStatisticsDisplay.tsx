@@ -3,8 +3,8 @@ import { SupplyData } from "@defichain/whale-api-client/dist/api/stats";
 import { StatisticPanel } from "@components/commons/StatisticPanel";
 import { Container } from "@components/commons/Container";
 import { useUnitSuffix } from "@hooks/useUnitSuffix";
-import { useTranslation } from "next-i18next";
 import classNames from "classnames";
+import { useTranslation } from "../../../../hooks/useTranslation";
 import { useWhaleApiClient } from "../../../../layouts/context/WhaleContext";
 import { calculatePercentage } from "../../../../shared/calculatePercentage";
 
@@ -34,9 +34,10 @@ export function DFIStatisticsDisplay() {
       desc:
         supply === undefined
           ? supply
-          : t("statisticsDisplay.circulatingSupply.desc", {
-              perc: calculatePercentage(supply?.circulating, supply?.total),
-            }),
+          : `${calculatePercentage(
+              supply?.circulating,
+              supply?.total,
+            )} of max supply`,
       testID: "circulating-supply",
     },
     {
@@ -45,10 +46,7 @@ export function DFIStatisticsDisplay() {
       desc:
         supply === undefined
           ? supply
-          : t("statisticsDisplay.dfiMinted.desc", {
-              value: dfiMintedValue,
-              suffix: dfiMintedSuffix,
-            }),
+          : `out of ${dfiMintedValue}${dfiMintedSuffix}} fixed supply`,
       testID: "dfi-minted",
     },
   ];

@@ -1,14 +1,14 @@
-import { useTranslation } from "next-i18next";
 import { FaReact } from "react-icons/fa";
 import { Container } from "@components/commons/Container";
 import { SectionTitle } from "@components/commons/SectionTitle";
 import classNames from "classnames";
+import { useTranslation } from "../../../../hooks/useTranslation";
 import { DynamicDownloadCard } from "./DynamicDownloadCard";
 import { DownloadCard } from "./DownloadCard";
 import { CardLink, IconType } from "./CardLink";
 
 export function AdvanceUsageSection() {
-  const { t } = useTranslation(["page-explore-wallets"]);
+  const { t } = useTranslation("page-explore-wallets");
 
   return (
     <Container className="mt-[120px] md:mt-[96px] lg:mt-[240px] lg:mb-[240px] md:mb-[112px] mb-[72px] relative">

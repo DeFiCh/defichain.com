@@ -1,13 +1,11 @@
-import { SSRConfig, Trans, useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { PageHeader } from "@components/commons/PageHeader";
 import { Container } from "@components/commons/Container";
-import { ExternalLink } from "@components/commons/link/ExternalLink";
 import Link from "next/link";
 import { Section } from "@components/commons/Section";
 import { Button } from "@components/commons/Buttons";
 import { Head } from "@components/commons/Head";
 import React from "react";
+import { useTranslation } from "../../hooks/useTranslation";
 import { Hunter } from "./_components/Hunter";
 
 export default function BugBountyPage(): JSX.Element {
@@ -38,7 +36,7 @@ export default function BugBountyPage(): JSX.Element {
         <LeaderboardSection />
         <Section title={t("HowToSection.title")} testId="HowToSection">
           <div>
-            <Trans
+            {/* <Trans
               t={t}
               i18nKey="HowToSection.desc"
               components={[
@@ -51,7 +49,7 @@ export default function BugBountyPage(): JSX.Element {
                   url="https://github.com/defich/ain"
                 />,
               ]}
-            />
+            /> */}
             <span className="block font-semibold mt-2.5">
               {t("HowToSection.bolded")}
             </span>
@@ -62,7 +60,7 @@ export default function BugBountyPage(): JSX.Element {
           testId="SubmissionSection"
         >
           <div id="submission">
-            <Trans
+            {/* <Trans
               t={t}
               i18nKey="SubmissionSection.desc"
               components={[
@@ -77,7 +75,7 @@ export default function BugBountyPage(): JSX.Element {
                   url="mailto:security@defichain.com"
                 />,
               ]}
-            />
+            /> */}
             <div className="text-sm mt-1">
               [GPG:
               <Link
@@ -127,18 +125,4 @@ function LeaderboardSection(): JSX.Element {
       </div>
     </Section>
   );
-}
-
-export async function getStaticProps({
-  locale,
-}): Promise<{ props: SSRConfig }> {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, [
-        "common",
-        "layout",
-        "page-bugbounty",
-      ])),
-    },
-  };
 }

@@ -1,7 +1,6 @@
 import { useUnitSuffix } from "@hooks/useUnitSuffix";
 import CountUp from "react-countup";
 import classNames from "classnames";
-import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 
 interface StatisticPanelItemProps {
@@ -75,7 +74,6 @@ function StatisticsPanelItem({
   isTabletHorizontal?: boolean;
   testID: string;
 }) {
-  const { t } = useTranslation("common");
   const router = useRouter();
   const { suffix, value } = useUnitSuffix(
     stats === undefined ? "N/A" : stats.toString(),
@@ -112,7 +110,7 @@ function StatisticsPanelItem({
           )}
         >
           {stats ? (
-            getLocaledStatisticValue(t, router.locale, prefix, value, suffix)
+            getLocaledStatisticValue(router.locale, prefix, value, suffix)
           ) : (
             <>N/A</>
           )}
@@ -134,7 +132,6 @@ function StatisticsPanelItem({
 }
 
 function getLocaledStatisticValue(
-  t: any,
   locale?: string,
   prefix?: string,
   value?: string,
@@ -144,7 +141,7 @@ function getLocaledStatisticValue(
     case "de":
       return (
         <>
-          {suffix !== "" ? `${t("statisticsDisplay.prefix")} ` : ``}
+          {suffix !== "" ? ` ` : ``}
           <CountUp
             onUpdate={({ reset, start }) => {
               reset();
@@ -157,27 +154,6 @@ function getLocaledStatisticValue(
           {suffix ?? ""} {prefix ?? ""} {/* This prefix is for the $ symbol */}
         </>
       );
-
-    // commented out for further discussions
-    // case "fr":
-    //   return (
-    //     <>
-    //       <CountUp
-    //         onUpdate={({ reset, start }) => {
-    //           reset();
-    //           start();
-    //         }}
-    //         end={Number(value)}
-    //         enableScrollSpy
-    //         duration={0.5}
-    //       />
-    //       {suffix !== ""
-    //         ? ` ${t(`statisticsDisplay.suffix.${suffix}`)} ${
-    //             prefix ? " de $" : ""
-    //           } ou plus`
-    //         : `+`}
-    //     </>
-    //   );
 
     default:
       return (
@@ -192,7 +168,7 @@ function getLocaledStatisticValue(
             enableScrollSpy
             duration={0.5}
           />
-          {suffix !== "" ? `${t(`statisticsDisplay.suffix.${suffix}`)} ` : ``}
+          {suffix !== "" ? `${suffix}` : ``}
         </>
       );
   }

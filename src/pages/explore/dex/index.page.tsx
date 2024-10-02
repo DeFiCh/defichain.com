@@ -1,7 +1,6 @@
-import { SSRConfig, useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { HeroBanner, HeroBannerBg } from "@components/commons/HeroBanner";
 import { Head } from "@components/commons/Head";
+import { useTranslation } from "../../../hooks/useTranslation";
 import { DexStatisticsDisplay } from "./_components/DexStatisticsDisplay";
 import { WhyDEXSection } from "./_components/WhyDEXSection";
 
@@ -23,18 +22,4 @@ export default function ExploreWallets() {
       <WhyDEXSection />
     </>
   );
-}
-
-export async function getStaticProps({
-  locale,
-}): Promise<{ props: SSRConfig }> {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, [
-        "common",
-        "layout",
-        "page-explore-dex",
-      ])),
-    },
-  };
 }

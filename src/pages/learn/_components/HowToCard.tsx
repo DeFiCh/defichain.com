@@ -1,12 +1,12 @@
 import { PropsWithChildren } from "react";
 import Link from "next/link";
 import { Button } from "@components/commons/Buttons";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "../../../hooks/useTranslation";
 
 export function HowToCard(
   props: PropsWithChildren<{ title: string; desc: string; slug: string }>,
 ): JSX.Element {
-  const { t } = useTranslation(["page-learn"]);
+  const { t } = useTranslation("page-learn");
 
   return (
     <div

@@ -3,12 +3,20 @@ import pageIndex from "../../public/locales/en-US/page-index.json";
 import common from "../../public/locales/en-US/common.json";
 import layout from "../../public/locales/en-US/layout.json";
 import metachain from "../../public/locales/en-US/page-meta-chain.json";
+import privacypolicy from "../../public/locales/en-US/page-privacypolicy.json";
+import learn from "../../public/locales/en-US/page-learn.json";
 
 interface TranslationOptions {
   returnObjects?: boolean; // Indicates whether to return objects
 }
 
-type FileProp = "page-index" | "common" | "layout" | "page-meta-chain";
+type FileProp =
+  | "page-index"
+  | "common"
+  | "layout"
+  | "page-meta-chain"
+  | "page-privacypolicy"
+  | "page-learn";
 
 // Properly typed getNestedValue function
 function getNestedValue<T>(obj: T, path: string): any {
@@ -27,6 +35,10 @@ function t(file: FileProp, key: string, options?: TranslationOptions): any {
     result = getNestedValue(layout, key);
   } else if (file === "page-meta-chain") {
     result = getNestedValue(metachain, key);
+  } else if (file === "page-privacypolicy") {
+    result = getNestedValue(privacypolicy, key);
+  } else if (file === "page-learn") {
+    result = getNestedValue(learn, key);
   }
 
   // If options.returnObjects is true, return the result directly (presuming it's an object)

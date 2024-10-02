@@ -80,7 +80,7 @@ export async function getStaticProps({
 }): Promise<{ props: SSRConfig }> {
   return {
     props: {
-      ...(await serverSideTranslations(locale, [
+      ...(await serverSideTranslations(locale || "en-US", [
         "common",
         "layout",
         "page-explore-masternodes",

@@ -110,7 +110,7 @@ export async function getStaticProps({
 
   return {
     props: {
-      ...(await serverSideTranslations(locale, [
+      ...(await serverSideTranslations(locale || "en-US", [
         "common",
         "layout",
         "page-privacypolicy",

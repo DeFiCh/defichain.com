@@ -71,7 +71,10 @@ export async function getStaticProps({ locale }): Promise<SecurityPageProps> {
 
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common", "layout"])),
+      ...(await serverSideTranslations(locale || "en-US", [
+        "common",
+        "layout",
+      ])),
       post: {
         ...post,
         content: result.toString(),

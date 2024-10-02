@@ -40,7 +40,7 @@ export async function getStaticProps({ locale }) {
   const blogPosts = await getPostsFromPrismic();
   return {
     props: {
-      ...(await serverSideTranslations(locale, [
+      ...(await serverSideTranslations(locale || "en-US", [
         "common",
         "layout",
         "page-index",

@@ -63,7 +63,7 @@ export async function getStaticProps({ locale }) {
   const roadMapImg = await getLatestRoadMapUrl();
   return {
     props: {
-      ...(await serverSideTranslations(locale, [
+      ...(await serverSideTranslations(locale || "en-US", [
         "common",
         "layout",
         "page-meta-chain",

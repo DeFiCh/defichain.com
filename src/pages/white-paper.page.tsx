@@ -109,7 +109,10 @@ export async function getStaticProps({ locale }): Promise<WhitePaperPageProps> {
 
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common", "layout"])),
+      ...(await serverSideTranslations(locale || "en-US", [
+        "common",
+        "layout",
+      ])),
       post: {
         ...post,
         content: result.toString(),

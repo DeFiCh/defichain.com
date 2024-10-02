@@ -1,0 +1,117 @@
+{
+  "Head": {
+    "title": "Bug-Bounty-Programm",
+    "desc": "DeFiChain arbeitet sowohl mit Sicherheitsexperten als auch mit der Community zusammen, um Schwachstellen zu finden. Unser Bug-Bounty-Programm bietet eine Belohnung von bis zu 50.000 USD."
+  },
+  "Header": {
+    "title": "DeFiChain Bug-Bounty-Programm",
+    "desc": "DeFiChain arbeitet sowohl mit Sicherheitsexperten als auch mit der Community zusammen, um Schwachstellen zu finden. Unser Bug-Bounty-Programm bietet eine Belohnung von bis zu 50.000 USD.",
+    "submit": "Schwachstelle melden"
+  },
+  "LeaderboardSection": {
+    "title": "Rangliste",
+    "desc": "DeFiChain dankt den folgenden Sicherheitsforschern für ihre Bemühungen, DeFiChain sicher zu halten.",
+    "hunters": [
+      {
+        "name": "Dr. Daniel Cagara",
+        "github": "muirglacier",
+        "bounties": [
+          {
+            "name": "Masternode mining efficiency exploit",
+            "payout": {
+              "dfi": 7500,
+              "usd": 26250
+            },
+            "txid": "3855e22b35f26cc962d154639d3ce1ac14a40286182b0c897cd5dbe8c0b60503"
+          },
+          {
+            "name": "3rd-party masternode fund lockup issue",
+            "payout": {
+              "dfi": 2250,
+              "usd": 7875
+            },
+            "txid": "f715e5ec45ffccbaade5d0de451d18cf00e386b04f0c3d87d8b7a80278e6b709"
+          },
+          {
+            "name": "Probabilistic side mining exploit",
+            "payout": {
+              "dfi": 3750,
+              "usd": 13125
+            },
+            "txid": "e2fa3e133e35458328eded333f32e2c525c66861f37ca0be52f5b7e092c96cde"
+          },
+          {
+            "name": "Dropping of masternode through transaction malleability",
+            "payout": {
+              "dfi": 6000,
+              "usd": 21000
+            },
+            "txid": "ee46a62e455f6aad526d9664022afb4a5014b4031e034f00bdf53dee3d5a6070"
+          },
+          {
+            "name": "Masternode quorum anchor confirmation bug",
+            "payout": {
+              "dfi": 4500,
+              "usd": 15750
+            },
+            "txid": "471c0e3e1c6e06375be6eef63eb51cc068ecf765301366f1d3d82c7446b8c0e3"
+          },
+          {
+            "name": "Masternode boost with infinite timelock",
+            "payout": {
+              "dfi": 6000,
+              "usd": 21000
+            },
+            "txid": "3e8bef9fc348183d6f7f685d105ced7693dfa6bc5f94431c3abba7d47271eb08"
+          }
+        ]
+      },
+      {
+        "name": "(anonymous)",
+        "bounties": [
+          {
+            "name": "Atomic swap bug",
+            "payout": {
+              "dfi": 10500,
+              "usd": 31500
+            },
+            "txid": "d12dde9f5235f7787022f21601aff0a7ba9e4f4b46102d37c65a741be2fa867c"
+          }
+        ]
+      },
+      {
+        "name": "Alex Andreae",
+        "github": "sourcecoast",
+        "bounties": [
+          {
+            "name": "Bitcoin anchor fee validation issue",
+            "payout": {
+              "dfi": 3000,
+              "usd": 10500
+            },
+            "txid": "770e0ae17a4ae5158ccd8d716d2c256deeaad101625b2fb1784b3f60317b84c3"
+          }
+        ]
+      }
+    ]
+  },
+  "HowToSection": {
+    "title": "Wie du teilnehmen kannst",
+    "desc": "Es gibt viele Möglichkeiten, mit der Suche nach einer Schwachstelle zu beginnen. Zunächst kannst du dich in das Testnet von DeFiChain einloggen, indem du Folgendes ausführst <0>defid -testnet</0>. Alternativ kannst du unseren Quellcode unter folgender Adresse prüfen <1>GitHub</1>. Wenn du einen Fehler findest, während du mit unserem Programm interagierst und/oder unseren Quellcode untersuchst, können wir eine Prämie von bis zu 50.000 USD in DFI anbieten, vorausgesetzt, wir finden den Fehler signifikant und du bist in der Lage, nützliche Informationen über die Korrektur oder Reproduktion des Problems zu liefern.",
+    "bolded": "Achte darauf, dass du den Code untersuchst, der für offizielle Veröffentlichungen gekennzeichnet ist, nicht den Master-Branch oder anderen Code, der noch in der Entwicklung ist."
+  },
+  "SubmissionSection": {
+    "title": "Einreichungsvorgang",
+    "desc": "Da Sicherheit ein sensibles Thema ist, empfehlen wir den Nutzern, keine gefundenen Schwachstellen, die die Sicherheit der Blockchain betreffen, öffentlich einzureichen. Wir bitten dich, deinen eigenen Ermessensspielraum zu nutzen. Wenn du denkst, dass das Problem nicht etwas ist, das die Öffentlichkeit leicht ausnutzen kann, dann zögere nicht, ein Issue im Repo unter folgender Adresse zu erstellen <0>GitHub</0>. Wenn das Problem einen kritischen Exploit darstellt, dann schreibe uns bitte eine E-Mail an <1>security@defichain.com</1>.",
+    "list": {
+      "title": "Deine Einreichung sollte Folgendes enthalten:",
+      "entries": [
+        "Eine klare Beschreibung des Problems",
+        "Eine Lösung für das Problem, vorzugsweise als Pull-Request",
+        "Wenn du keine Lösung anbieten kannst, gib bitte eine klare Anleitung, wie man das Problem reproduzieren kann",
+        "Deine E-Mail-Adresse oder andere relevante Kontaktdaten (z.B. Telegram ID)",
+        "Deine DFI-Adresse, um die Prämie zu erhalten, wenn dein Antrag genehmigt wird"
+      ]
+    }
+  }
+}

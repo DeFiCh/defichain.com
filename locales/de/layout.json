@@ -1,0 +1,201 @@
+{
+  "header": {
+    "navbar": {
+      "foundation": "Foundation",
+      "dfi": "$DFI",
+      "dex": "DEX",
+      "developers": "Entwickler",
+      "downloads": "Downloads",
+      "learn": "Mehr erfahren",
+      "buy": "Erwerb von",
+      "getDfi": "DFI erwerben",
+      "dfcblog": "Blog",
+      "bloglink": "https://blog.defichain.com/de/",
+      "explore": "Erkunden",
+      "build": "Bauen",
+      "community": "Community"
+    },
+    "comingSoon": "DEMNÄCHST",
+    "explore": {
+      "info": [
+        {
+          "title": "Entdecke DeFiChain",
+          "labels": [
+            {
+              "title": "$DFI",
+              "subtitle": "Erfahre mehr über den Token"
+            },
+            {
+              "title": "Dezentrale Börse",
+              "subtitle": "Handeln, arbitrieren und verdienen"
+            },
+            {
+              "title": "Wallets",
+              "subtitle": "Bewahre Aktiva auf deine eigene Weise auf"
+            },
+            {
+              "title": "Masternodes",
+              "subtitle": "Entscheide über die Zukunft von DeFiChain"
+            }
+          ]
+        },
+        {
+          "title": "BLOCK EXPLORER",
+          "labels": [
+            {
+              "title": "DeFiScan"
+            },
+            {
+              "title": "CryptoID"
+            }
+          ]
+        }
+      ],
+      "image": {
+        "title": "$DFI",
+        "subtitle": "Erfahre mehr über den Token und wo du ihn erhältst"
+      }
+    },
+    "build": {
+      "title": "MIT DEM BAUEN BEGINNEN",
+      "labels": [
+        {
+          "title": "Jellyfish-SDK",
+          "subtitle": "Bauen für moderne DeFi-Anwendungen"
+        },
+        {
+          "title": "DeFiChain White Paper",
+          "subtitle": "Grundlagen von DeFiChain"
+        },
+        {
+          "title": "GitHub",
+          "subtitle": "Verfolge die neuesten Entwicklungen"
+        },
+        {
+          "title": "Ressourcen für Entwickler",
+          "subtitle": "Mit dem Bauen auf DeFiChain beginnen"
+        },
+        {
+          "title": "Medien",
+          "subtitle": "Markenressourcen von DeFiChain"
+        },
+        {
+          "title": "Sicherheit",
+          "subtitle": "Vertrauensunabhängig und dezentral"
+        }
+      ]
+    },
+    "community": {
+      "info": [
+        {
+          "title": "EINTAUCHEN IN DAS ÖKOSYSTEM",
+          "labels": [
+            {
+              "title": "DeFiChain Blog",
+              "subtitle": "Erfahre die neuesten Nachrichten"
+            }
+          ]
+        },
+        {
+          "title": "COMMUNITYS BEITRETEN",
+          "labels": [
+            {
+              "title": "Reddit"
+            },
+            {
+              "title": "Twitter"
+            },
+            {
+              "title": "Facebook"
+            },
+            {
+              "title": "GitHub"
+            },
+            {
+              "title": "YouTube"
+            },
+            {
+              "title": "LinkedIn"
+            },
+            {
+              "title": "Discord"
+            },
+            {
+              "title": "CoinMarketCap"
+            },
+            {
+              "title": "Telegram (EN)"
+            },
+            {
+              "title": "Telegram (DE)"
+            },
+            {
+              "title": "Telegram (FR)"
+            },
+            {
+              "title": "Telegram (ES)"
+            },
+            {
+              "title": "Telegram (IT)"
+            },
+            {
+              "title": "Telegram (ID)"
+            },
+            {
+              "title": "Telegram (TR)"
+            },
+            {
+              "title": "Telegram (ZH)"
+            },
+            {
+              "title": "Telegram (RU)"
+            },
+            {
+              "title": "Telegram (PT)"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "footer": {
+    "sitemap": {
+      "EXPLORE": {
+        "category": "ERKUNDEN",
+        "dfi": "$DFI",
+        "decentralizedExchange": "Dezentrale Börse",
+        "wallets": "Wallets",
+        "masternodes": "Masternodes"
+      },
+      "RESOURCES": {
+        "category": "RESSOURCEN",
+        "defiscan": "DeFiScan",
+        "defichainwhitepaper": "Whitepaper"
+      },
+      "BUILD": {
+        "category": "BAUEN",
+        "jellyfishsdk": "Jellyfish SDK",
+        "defichainwhitepaper": "DeFiChain White Paper",
+        "github": "GitHub",
+        "developerResource": "Ressourcen für Entwickler",
+        "mediaAssets": "Medien",
+        "security": "Sicherheit"
+      },
+      "COMMUNITY": {
+        "category": "COMMUNITY",
+        "blog": "Blog",
+        "newsletter": "Newsletter"
+      }
+    },
+    "bottomlink": {
+      "privacy": "Datenschutzrichtlinie",
+      "terms": "Nutzungsbedingungen"
+    }
+  },
+  "error": {
+    "title": "Seite nicht gefunden",
+    "subtitle": "Fehler 404",
+    "errorDesc": "Die Seite, nach der du suchst, wurde möglicherweise verschoben, gelöscht oder hat nie existiert.",
+    "text": "Zurück zu Startseite"
+  }
+}

@@ -8,18 +8,12 @@ import rehypeSanitize from "rehype-sanitize";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import remarkGfm from "remark-gfm";
-import { UserConfig } from "next-i18next";
 import { GetStaticPathsResult } from "next/types";
 import { Head } from "@components/commons/Head";
 import { getAllPosts, getPostBySlug, Post } from "./utils/api";
 
 interface PostPageProps {
   props: {
-    _nextI18Next: {
-      initialI18nStore: any;
-      initialLocale: string;
-      userConfig: UserConfig | null;
-    };
     post: Post;
   };
 }

@@ -6,7 +6,6 @@ import { PageHeader } from "@components/commons/PageHeader";
 import rehypeSlug from "rehype-slug";
 import rehypeSanitize from "rehype-sanitize";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import remarkGfm from "remark-gfm";
 import { GetStaticPathsResult } from "next/types";
 import { Head } from "@components/commons/Head";
@@ -72,7 +71,6 @@ export async function getStaticProps({
 
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common", "layout"])),
       post: {
         ...post,
         content: result.toString(),

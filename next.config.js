@@ -1,5 +1,3 @@
-const { i18n } = require("./next-i18next.config");
-
 const securityHeaders = [
   {
     key: "Content-Security-Policy",
@@ -43,7 +41,7 @@ const securityHeaders = [
 ];
 
 module.exports = {
-  output: "export",
+  // output: "export",
   experimental: {
     forceSwcTransforms: true,
   },

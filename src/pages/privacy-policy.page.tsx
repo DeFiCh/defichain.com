@@ -1,5 +1,3 @@
-import { UserConfig, useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Container } from "@components/commons/Container";
 import React, { useRef } from "react";
 import { remark } from "remark";
@@ -13,17 +11,13 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import ReactMarkdown from "react-markdown";
 import rehypeSlug from "rehype-slug";
 import { Head } from "@components/commons/Head";
+import { useTranslation } from "../hooks/useTranslation";
 import { getMDPageBySlug } from "../../utils/api";
 import { Post } from "./learn/utils/api";
 import TableOfContents from "./privacy-policy/_components/TableOfContents";
 
 interface PrivacyPolicyPageProps {
   props: {
-    _nextI18Next: {
-      initialI18nStore: any;
-      initialLocale: string;
-      userConfig: UserConfig | null;
-    };
     post: Post;
   };
 }
@@ -101,20 +95,13 @@ export default function PrivacyPolicyPage({ post }): JSX.Element {
   );
 }
 
-export async function getStaticProps({
-  locale,
-}): Promise<PrivacyPolicyPageProps> {
-  const post = getMDPageBySlug("privacy-policy", locale);
+export async function getStaticProps(): Promise<PrivacyPolicyPageProps> {
+  const post = getMDPageBySlug("privacy-policy", "en-US");
 
   const result = await remark().process(post.content);
 
   return {
     props: {
-      ...(await serverSideTranslations(locale || "en-US", [
-        "common",
-        "layout",
-        "page-privacypolicy",
-      ])),
       post: {
         ...post,
         content: result.toString(),

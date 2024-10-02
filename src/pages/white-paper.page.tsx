@@ -1,5 +1,3 @@
-import { UserConfig } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Container } from "@components/commons/Container";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -19,11 +17,6 @@ import TableOfContents from "./whitePaper/TableOfContents";
 
 interface WhitePaperPageProps {
   props: {
-    _nextI18Next: {
-      initialI18nStore: any;
-      initialLocale: string;
-      userConfig: UserConfig | null;
-    };
     post: Post;
   };
 }
@@ -102,17 +95,13 @@ export default function WhitePaperPage({ post }): JSX.Element {
   );
 }
 
-export async function getStaticProps({ locale }): Promise<WhitePaperPageProps> {
-  const post = getMDPageBySlug("white-paper", locale);
+export async function getStaticProps(): Promise<WhitePaperPageProps> {
+  const post = getMDPageBySlug("white-paper", "en-US");
 
   const result = await remark().process(post.content);
 
   return {
     props: {
-      ...(await serverSideTranslations(locale || "en-US", [
-        "common",
-        "layout",
-      ])),
       post: {
         ...post,
         content: result.toString(),

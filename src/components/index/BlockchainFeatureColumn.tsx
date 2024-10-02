@@ -20,7 +20,7 @@ import {
 } from "@components/icons/assets/blockchainFeatures/DevelopmentIcon";
 import classNames from "classnames";
 import { useState } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "../../hooks/useTranslation";
 
 interface BlockchainFeatureItemProp {
   title: string;

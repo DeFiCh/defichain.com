@@ -6,10 +6,10 @@ import {
 } from "@defichain/whale-api-client/dist/api/stats";
 import { useEffect, useState } from "react";
 import classNames from "classnames";
-import { useTranslation } from "next-i18next";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import { StatisticPanel } from "@components/commons/StatisticPanel";
 import { useRouter } from "next/router";
+import { useTranslation } from "../../hooks/useTranslation";
 import { useWhaleApiClient } from "../../layouts/context/WhaleContext";
 import { calculatePercentage } from "../../shared/calculatePercentage";
 

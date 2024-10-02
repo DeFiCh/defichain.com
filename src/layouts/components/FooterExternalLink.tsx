@@ -1,6 +1,6 @@
 import { RiArrowRightUpLine } from "react-icons/ri";
-import { useTranslation } from "next-i18next";
 import { useState } from "react";
+import { useTranslation } from "../../hooks/useTranslation";
 
 export default function FooterExternalLink(props: {
   text: string;

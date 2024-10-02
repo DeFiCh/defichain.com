@@ -1,6 +1,5 @@
 import classNames from "classnames";
 import { PropsWithChildren } from "react";
-import { useTranslation } from "next-i18next";
 
 export function ContentHeader({
   text,
@@ -76,11 +75,10 @@ export function ContentDescription({
 }
 
 export function Step({ count }: { count: string }) {
-  const { t } = useTranslation("page-explore-masternodes");
   return (
     <div className="flex flex-row mb-2 mt-[72px] lg:mt-12">
       <span className="font-mono text-dark-700 tracking-[0.04em] leading-4">
-        {t("technicalGuide.step")}&nbsp;{count}
+        STEP&nbsp;{count}
       </span>
     </div>
   );

@@ -787,8 +787,6 @@ La Fondation DeFiChain attribue des tokens aux utilisateurs et aux groupes pour 
 
 ![Gouvernance de DeFiChain](/img/white-paper/governance.png)
 
-Pour des raisons de clarification et de transparence, Cake Pte Ltd est une société privée située à Singapour. Cake Pte Ltd est un contributeur initial dans le cadre des partenariats à l'écosystème pour créer des services sur DeFiChain.
-
 ### Fonds de développement de la communauté
 
 La Fondation DeFiChain créera un fonds de développement de la communauté avec une gestion allant jusqu'à 10% des récompenses du bloc. Ce pourcentage peut être mis à jour en soumettant une proposition de DAO qui sera votée par tous les masternodes. Les fonds de développement communautaires ont été popularisés par DASH et sont utilisés aujourd'hui dans certaines DAO sélectives. La communauté déterminera l'utilisation de ces fonds pour le développement, le marketing ou la recherche au profit de la communauté DeFiChain. Les masternodes DFI votent pour les projets qu'ils aiment et les propositions les plus votées chaque mois seront financées.
@@ -997,7 +995,6 @@ Le programme de staking proposé pour les 10 premières années est conforme au 
 Les coins $DFI seront émis uniquement aux utilisateurs de DeFiChain ou aux partenaires ayant un intérêt à utiliser et à participer à l'écosystème. Il n'y aura PAS de vente publique ou d'offre publique de tokens. Voici les seules façons d'obtenir des $DFI :
 
 - Les investisseurs institutionnels, les investisseurs accrédités et les fonds qui sont intéressés par l'utilisation de DeFiChain peuvent contacter les fondateurs à (partners@defichain.com).
-- Au fil du temps, le DFI sera disponible sur des plateformes de staking (comme www.CakeDeFi.com) et sur des bourses sélectionnées.
 - La Fondation DeFiChain effectuera des airdrop pour les utilisateurs de DeFiChain. (Hodlers et autres faiseurs de marché).
 - La Fondation DeFiChain accorde des subventions aux développeurs qui développent des fonctionnalités pour DeFiChain ou des dApps à exécuter sur la blockchain.
 

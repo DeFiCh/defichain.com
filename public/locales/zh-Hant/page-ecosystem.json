@@ -17,11 +17,6 @@
   },
   "PartnersSection": {
     "title": "合作夥伴",
-    "CakeDeFi": {
-      "title": "Cake DeFi",
-      "desc": "在Cake DeFi上做DFI權益質押來收獲DFI",
-      "button": "前往 Cake DeFi"
-    },
     "StakingRewards": {
       "title": "權益質押獲利",
       "desc": "遞飛鏈(DFI)利息計算機和當前彙率",

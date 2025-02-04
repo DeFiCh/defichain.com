@@ -100,7 +100,7 @@ You have the right to ask us not to collect, use, process, or disclose your Pers
 
 ## Changes To This Statement
 
-Cake Pte Ltd will occasionally update this Privacy Policy to reflect customer feedback. DEFICHAIN FOUNDATION LTD. encourages you to periodically review this Privacy Policy to be informed of how DEFICHAIN FOUNDATION LTD. is protecting your information.
+We will occasionally update this Privacy Policy to reflect customer feedback. DEFICHAIN FOUNDATION LTD. encourages you to periodically review this Privacy Policy to be informed of how DEFICHAIN FOUNDATION LTD. is protecting your information.
 
 ## Contact Information
 

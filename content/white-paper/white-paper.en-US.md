@@ -19,7 +19,7 @@ description: Last updated mm/dd/yyyy
 
 <div className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">This Document is not a Prospectus</div>
 
-<div className="mt-4 text-dark-800 ">This document does not constitute nor imply a prospectus of any sort. No wording contained herein should be construed as a solicitation for investment. Accordingly, this whitepaper does not pertain in any way to an offering of securities in any jurisdiction worldwide whatsoever. Rather, this whitepaper constitutes a technical description of the functionality of the Cake products and the development and distribution of DeFiChain.
+<div className="mt-4 text-dark-800 ">This document does not constitute nor imply a prospectus of any sort. No wording contained herein should be construed as a solicitation for investment. Accordingly, this whitepaper does not pertain in any way to an offering of securities in any jurisdiction worldwide whatsoever. Rather, this whitepaper constitutes a technical description of the functionality of the products and the development and distribution of DeFiChain.
 </div>
 
 <div className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
@@ -1276,12 +1276,6 @@ Governance
 
 ![Governance](/img/white-paper/governance.png)
 
-  </div>
-  <div className="mt-5">
-  For clarification and transparency, Cake Pte Ltd is a private company located in Singapore. Cake Pte Ltd is an initial contributor as part of the ecosystem’s partners to creating services on DeFiChain.
-  </div>
-</div>
-
 <h3 id="cdf" title="Community Development Fund" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Community Development Fund
 </h3>
@@ -1511,7 +1505,6 @@ Acquiring $DFI coins
   $DFI coins will be issued only to the users of DeFiChain or partners with an interest in utilizing and participating in the ecosystem. There will be NO public sale or public token offering. Following are the only ways to get $DFI coins:
   <div className="mt-5">
   - Institutional investors, accredited investors and funds who are interested in the use of DeFiChain can contact the DeFi founders at (<a className="text-electric" href = "mailto: partners@defichain.com">partners@defichain.com</a>).
-  - Over time, DFI will be available on staking platforms (such as <a className="text-electric" href ="https://www.CakeDeFi.com" target="_blank">www.CakeDeFi.com</a>) and on selected exchanges.
   - The DeFiChain Foundation will issue airdrop tokens for users of DeFiChain. (Hodlers and other market makers).
   - The DeFiChain Foundation gives grants to developers who are developing functionality for DeFiChain or dApps to run on the blockchain.
   </div>

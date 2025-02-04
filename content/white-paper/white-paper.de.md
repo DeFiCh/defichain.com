@@ -19,7 +19,7 @@ description: DeFiChain White Paper
 <div className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">Dieses Dokument ist kein Verkaufsprospekt</div>
 
 <div className="mt-4 text-dark-800 ">
-Dieses Dokument stellt weder einen Prospekt dar noch beinhaltet es einen solchen. Keine der hierin enthaltenen Formulierungen sollte als Aufforderung zur Investition verstanden werden. Dementsprechend bezieht sich dieses Whitepaper in keiner Weise auf ein Angebot von Wertpapieren in irgendeiner Rechtsordnung weltweit. Vielmehr stellt dieses Whitepaper eine technische Beschreibung der Funktionsweise der Cake-Produkte und der Entwicklung und der Verbreitung von DeFiChain dar.
+Dieses Dokument stellt weder einen Prospekt dar noch beinhaltet es einen solchen. Keine der hierin enthaltenen Formulierungen sollte als Aufforderung zur Investition verstanden werden. Dementsprechend bezieht sich dieses Whitepaper in keiner Weise auf ein Angebot von Wertpapieren in irgendeiner Rechtsordnung weltweit. Vielmehr stellt dieses Whitepaper eine technische Beschreibung der Funktionsweise der Produkte und der Entwicklung und der Verbreitung von DeFiChain dar.
 </div>
 
 <div className="mt-6 font-bold font-sans text-xl md:mt-8 lg:mt-12 lg:text-2xl">
@@ -1267,12 +1267,6 @@ Governance / Verwaltung
 
 ![Governance](/img/white-paper/governance.png)
 
-</div>
-  <div className="mt-5">
-  Zur Klarstellung und Transparenz: Cake Pte Ltd ist ein privates Unternehmen mit Sitz in Singapur. Cake Pte Ltd ist einer der ersten Partner des Ökosystems, der Dienste auf DeFiChain entwickelt.
-  </div>
-</div>
-
 <h3 id="cdf" title="Community Development Fund" className="mt-6 font-bold font-sans text-xl scroll-mt-40 md:mt-8 lg:mt-12 lg:text-2xl">
 Community Development Fund
 </h3>
@@ -1498,7 +1492,6 @@ Erwerb von $DFI-Coins
   $DFI-Coins werden nur an die Nutzer von DeFiChain oder Partner ausgegeben, die ein Interesse daran haben, das Ökosystem zu nutzen und daran teilzunehmen. Es wird KEIN öffentlicher Verkauf oder ein öffentliches Token-Angebot geben. Dies sind die einzigen Möglichkeiten, $DFI-Coins zu erhalten:
   <div className="mt-5">
   - Institutionelle Investoren, zugelassene Investoren und Fonds, die an der Nutzung von DeFiChain interessiert sind, können die DeFi-Gründer unter (<a className="text-electric" href = "mailto: partners@defichain.com">partners@defichain.com</a>) kontaktieren.
-  - Im Laufe der Zeit wird DFI auf Staking-Plattformen (wie <a className="text-electric" href ="https://www.CakeDeFi.com" target="_blank">www.CakeDeFi.com</a>) und an ausgewählten Börsen verfügbar sein.
   - Die DeFiChain Foundation wird Airdrop-Token für die Nutzer von DeFiChain ausgeben. (Hodler und andere Akteure auf dem Markt).
   - Die DeFiChain Foundation vergibt Fördermittel an Entwickler, die Funktionen für DeFiChain oder dApps entwickeln, die auf der Blockchain laufen sollen.
   </div>

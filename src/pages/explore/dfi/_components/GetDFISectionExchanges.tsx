@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getExchangeLogo } from "@components/icons/assets/exchanges";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "../../../../hooks/useTranslation";
 
 interface ExchangeItem {
   id: string;

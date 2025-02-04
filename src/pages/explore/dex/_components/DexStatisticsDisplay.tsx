@@ -5,7 +5,7 @@ import { Container } from "@components/commons/Container";
 import { StatisticPanel } from "@components/commons/StatisticPanel";
 import { TokenData } from "@defichain/whale-api-client/dist/api/tokens";
 import { WhaleApiClient } from "@defichain/whale-api-client";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "../../../../hooks/useTranslation";
 import { useWhaleApiClient } from "../../../../layouts/context/WhaleContext";
 
 export function DexStatisticsDisplay() {

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useTranslation } from "next-i18next";
 import classNames from "classnames";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
+import { useTranslation } from "../../hooks/useTranslation";
 import { HeaderNavLinkItem } from "./HeaderNavLinkItem";
 
 interface ColLabels {

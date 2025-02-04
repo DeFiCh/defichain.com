@@ -1,6 +1,5 @@
 // import { Button } from "@components/commons/Buttons";
 import { Container } from "@components/commons/Container";
-import { useTranslation } from "next-i18next";
 import Slider from "react-slick";
 import { SectionTitle } from "@components/commons/SectionTitle";
 import { useRouter } from "next/router";
@@ -30,9 +29,8 @@ export const BlockchainFeatureItems = [
 ];
 
 export function BlockchainFeaturesSection(): JSX.Element {
-  const { t } = useTranslation("page-index");
   const router = useRouter();
-  const separatedTitle = t("BlockchainFeatureSection.title").split(" ");
+  const separatedTitle = "Designed for Decentralized Finance".split(" ");
   const sliderSettings = {
     arrows: false,
     dots: true,
@@ -65,7 +63,7 @@ export function BlockchainFeaturesSection(): JSX.Element {
             data-testid="blockchain-feature-section-text"
           >
             <SectionTitle
-              text={t("BlockchainFeatureSection.subtitle")}
+              text="NON-TURING-COMPLETE BLOCKCHAIN"
               testID="non-turing-complete-blockchain"
             />
             <h2
@@ -90,7 +88,9 @@ export function BlockchainFeaturesSection(): JSX.Element {
               className="text-dark-700 tracking-[.03em] lg:text-xl lg:tracking-normal font-desc"
               data-testid={`section-desc-${separatedTitle}`}
             >
-              {t("BlockchainFeatureSection.desc")}
+              DeFiChain offers comprehensive functionality tailored to the
+              Distributed Ledger Technology (DLT) community, with an emphasis on
+              simplicity, speed, and security.
             </div>
             {/* TODO: uncomment after mvp */}
             {/* <Button

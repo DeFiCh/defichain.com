@@ -1,9 +1,9 @@
 import { SectionGridLayout } from "@components/commons/SectionGridLayout";
-import { useTranslation } from "next-i18next";
 import {
   IconTypes,
   SvgIconsColumn,
 } from "pages/explore/masternodes/SvgIconsColumn";
+import { useTranslation } from "../../../hooks/useTranslation";
 
 export function MetaChainKeyFeatures(): JSX.Element {
   const { t } = useTranslation("page-meta-chain");

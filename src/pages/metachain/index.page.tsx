@@ -1,10 +1,9 @@
 import { HeroBanner, HeroBannerBg } from "@components/commons/HeroBanner";
-import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import classNames from "classnames";
 import { Head } from "@components/commons/Head";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import * as prismic from "@prismicio/client";
+import { useTranslation } from "../../hooks/useTranslation";
 import { MetaChainKeyFeatures } from "./_components/MetaChainKeyFeatures";
 import { MetaChainRoadmap } from "./_components/MetaChainRoadmap";
 import { MetaChainFAQ } from "./_components/MetaChainFAQ";
@@ -59,15 +58,10 @@ async function getLatestRoadMapUrl(): Promise<string> {
   }
 }
 
-export async function getStaticProps({ locale }) {
+export async function getStaticProps() {
   const roadMapImg = await getLatestRoadMapUrl();
   return {
     props: {
-      ...(await serverSideTranslations(locale, [
-        "common",
-        "layout",
-        "page-meta-chain",
-      ])),
       roadMapImg,
     },
   };

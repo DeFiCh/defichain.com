@@ -1,5 +1,4 @@
 import classNames from "classnames";
-import { useTranslation } from "next-i18next";
 import { Container } from "@components/commons/Container";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import { SectionTitle } from "@components/commons/SectionTitle";
@@ -9,6 +8,7 @@ import { DvmIcon } from "@public/assets/icon/DvmIcon";
 import { MetachainIcon } from "@public/assets/icon/MetachainIcon";
 import { RndIcon } from "@public/assets/icon/RndIcon";
 import { GrowthIcon } from "@public/assets/icon/GrowthIcon";
+import { useTranslation } from "../../../hooks/useTranslation";
 
 export function MetaChainRoadmap(): JSX.Element {
   const { t } = useTranslation("page-meta-chain");

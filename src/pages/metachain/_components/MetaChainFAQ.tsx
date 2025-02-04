@@ -1,8 +1,8 @@
-import { useTranslation } from "next-i18next";
 import { Container } from "@components/commons/Container";
 import { IoChevronDown } from "react-icons/io5";
 import { useState } from "react";
 import classNames from "classnames";
+import { useTranslation } from "../../../hooks/useTranslation";
 
 interface DropdownItemInterface {
   title: string;

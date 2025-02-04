@@ -2,8 +2,8 @@ import { Container } from "@components/commons/Container";
 import { SectionTitle } from "@components/commons/SectionTitle";
 import classNames from "classnames";
 import { Button } from "@components/commons/Buttons";
-import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
+import { useTranslation } from "../../../../hooks/useTranslation";
 import { ProgressBar } from "./ProgressBar";
 import {
   InitialTokenSectionIcons,

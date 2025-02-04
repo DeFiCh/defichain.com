@@ -1,4 +1,3 @@
-import { useTranslation } from "next-i18next";
 import { Container } from "@components/commons/Container";
 import { SectionTitle } from "@components/commons/SectionTitle";
 import classNames from "classnames";
@@ -9,10 +8,11 @@ import BTCDFILogo from "@components/icons/assets/downloadAssets/BTCDFILogo";
 import DFI3D from "@components/icons/assets/downloadAssets/DFI3D";
 import { SecondaryButton } from "@components/commons/Buttons";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
+import { useTranslation } from "../../../../hooks/useTranslation";
 import { DownloadAssetsCard } from "./DownloadAssetsCard";
 
 export function VisualAssetsSection() {
-  const { t } = useTranslation(["page-explore-wallets"]);
+  const { t } = useTranslation("page-explore-wallets");
 
   const dimension = useWindowDimensions();
   const mobileView = dimension.width <= 800;

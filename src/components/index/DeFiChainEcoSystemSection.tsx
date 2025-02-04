@@ -3,8 +3,8 @@ import { SectionTitle } from "@components/commons/SectionTitle";
 import { useDeviceDetect, ViewPort } from "@hooks/useDeviceDetect";
 import { useWindowDimensions } from "@hooks/useWindowDimensions";
 import classNames from "classnames";
-import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
+import { useTranslation } from "../../hooks/useTranslation";
 import { Card } from "./components/Card";
 
 export function DeFiChainEcoSystemSection(): JSX.Element {

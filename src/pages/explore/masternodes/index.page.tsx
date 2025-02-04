@@ -1,9 +1,8 @@
 // import { Container } from "@components/commons/Container";
-import { SSRConfig, useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { HeroBanner, HeroBannerBg } from "@components/commons/HeroBanner";
 // import { ExploreCards, ExploreCardsImage } from "../_components/ExploreCards";
 import { Head } from "@components/commons/Head";
+import { useTranslation } from "../../../hooks/useTranslation";
 import { MasternodesStatisticsDisplay } from "./_components/MasternodesStatisticsDisplay";
 import { MasternodesBenefitsSection } from "./MasternodesBenefitsSection";
 
@@ -46,18 +45,4 @@ export default function ExploreMasternodes() {
       </Container> */}
     </>
   );
-}
-
-export async function getStaticProps({
-  locale,
-}): Promise<{ props: SSRConfig }> {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, [
-        "common",
-        "layout",
-        "page-explore-masternodes",
-      ])),
-    },
-  };
 }

@@ -1,12 +1,11 @@
 import { PageHeader } from "@components/commons/PageHeader";
 import { Container } from "@components/commons/Container";
-import { UserConfig, useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { PropsWithChildren } from "react";
 import { InferGetStaticPropsType } from "next";
 import { Disclosure } from "@headlessui/react";
 import { BsChevronCompactDown } from "react-icons/bs";
 import { Head } from "@components/commons/Head";
+import { useTranslation } from "../../hooks/useTranslation";
 import { HowToCard } from "./_components/HowToCard";
 import { getAllPosts } from "./utils/api";
 
@@ -18,11 +17,6 @@ interface PostI {
 
 interface LearnPageProps {
   props: {
-    _nextI18Next: {
-      initialI18nStore: any;
-      initialLocale: string;
-      userConfig: UserConfig | null;
-    };
     posts: PostI[];
   };
 }
@@ -30,7 +24,7 @@ interface LearnPageProps {
 export default function LearnPage(
   props: InferGetStaticPropsType<typeof getStaticProps>,
 ): JSX.Element {
-  const { t } = useTranslation(["page-learn"]);
+  const { t } = useTranslation("page-learn");
 
   return (
     <>
@@ -81,7 +75,7 @@ function HowToSection(
 }
 
 function FAQSection(): JSX.Element {
-  const { t } = useTranslation(["page-learn"]);
+  const { t } = useTranslation("page-learn");
   const entries: Array<{ title: string; desc: string }> = t(
     "FAQSection.entries",
     { returnObjects: true },
@@ -135,19 +129,14 @@ function FAQSection(): JSX.Element {
   }
 }
 
-export async function getStaticProps({ locale }): Promise<LearnPageProps> {
+export async function getStaticProps(): Promise<LearnPageProps> {
   const allPosts: PostI[] = getAllPosts(
     ["slug", "title", "description"],
-    locale,
+    "en-US",
   ) as PostI[];
 
   return {
     props: {
-      ...(await serverSideTranslations(locale, [
-        "common",
-        "layout",
-        "page-learn",
-      ])),
       posts: allPosts,
     } as any,
   };

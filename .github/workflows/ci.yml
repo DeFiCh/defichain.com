@@ -6,42 +6,36 @@ on:
   pull_request:
     branches: [main]
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
   lint:
     name: Lint - Typescript and ESLint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
-
-      - uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c # v3.6.0
+      - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9
+      - uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c
         with:
           node-version-file: ".nvmrc"
           cache: "pnpm"
-
-      - run: corepack enable pnpm
-      - run: corepack prepare pnpm@8.10.0 --activate
-
-      - run: corepack exec pnpm install --frozen-lockfile
-      - run: tsc
-      - run: corepack exec pnpm run lint
+      - name: Install, compile and lint
+        run: |
+          corepack enable pnpm
+          corepack prepare pnpm@8.10.0 --activate
+          corepack exec pnpm install --frozen-lockfile
+          tsc
+          corepack exec pnpm run lint
 
   lint_prettier:
     name: Lint - Prettier
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
-
-      - uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c # v3.6.0
+      - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9
+      - uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c
         with:
           node-version-file: ".nvmrc"
           cache: "pnpm"
-
-      - run: corepack enable pnpm
-      - run: corepack prepare pnpm@8.10.0 --activate
-
-      - run: corepack exec pnpm install --frozen-lockfile
-      - run: npx --no-install prettier --check "src/**/*.{js,jsx,ts,tsx}"
+      - name: Install and check Prettier formatting
+        run: |
+          corepack enable pnpm
+          corepack prepare pnpm@8.10.0 --activate
+          corepack exec pnpm install --frozen-lockfile
+          npx --no-install prettier --check "src/**/*.{js,jsx,ts,tsx}"

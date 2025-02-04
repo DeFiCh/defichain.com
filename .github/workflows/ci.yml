@@ -21,27 +21,20 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "18"
-          cache: "pnpm"
 
       - name: Setup Corepack and Run Commands
         run: |
-          # Enable Corepack (sets up shims for pnpm and yarn)
           corepack enable
 
-          # Prepare the pinned version of pnpm
           corepack prepare pnpm@8.10.0 --activate
 
-          # Add the Corepack shims directory to PATH
           echo "$HOME/.corepack/shims" >> $GITHUB_PATH
 
-          # Debug: show contents of the shims directory
-          echo "Listing the contents of ~/.corepack/shims:"
+          echo "Contents of ~/.corepack/shims:"
           ls -la "$HOME/.corepack/shims"
 
-          # Verify that pnpm is accessible
           corepack exec pnpm --version
 
-          # Install dependencies, compile, and lint
           corepack exec pnpm install --frozen-lockfile
           tsc
           corepack exec pnpm run lint
@@ -56,14 +49,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "18"
-          cache: "pnpm"
 
       - name: Setup Corepack and Run Prettier Check
         run: |
           corepack enable
           corepack prepare pnpm@8.10.0 --activate
           echo "$HOME/.corepack/shims" >> $GITHUB_PATH
-          echo "Listing the contents of ~/.corepack/shims:"
+          echo "Contents of ~/.corepack/shims:"
           ls -la "$HOME/.corepack/shims"
           corepack exec pnpm --version
           corepack exec pnpm install --frozen-lockfile

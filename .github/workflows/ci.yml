@@ -6,57 +6,40 @@ on:
   pull_request:
     branches: [main]
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
   lint:
-    name: Lint - Typescript and ESLint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "18"
 
-      - name: Setup Corepack and Run Commands
-        run: |
-          corepack enable
+      - name: Install pnpm
+        run: npm install -g pnpm@8.10.0
 
-          corepack prepare pnpm@8.10.0 --activate
+      - name: Install dependencies
+        run: pnpm install
 
-          echo "$HOME/.corepack/shims" >> $GITHUB_PATH
+      - name: Run lint
+        run: pnpm run lint
 
-          echo "Contents of ~/.corepack/shims:"
-          ls -la "$HOME/.corepack/shims"
-
-          corepack exec pnpm --version
-
-          corepack exec pnpm install --frozen-lockfile
-          tsc
-          corepack exec pnpm run lint
-
-  lint_prettier:
-    name: Lint - Prettier
+  prettier:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "18"
 
-      - name: Setup Corepack and Run Prettier Check
-        run: |
-          corepack enable
-          corepack prepare pnpm@8.10.0 --activate
-          echo "$HOME/.corepack/shims" >> $GITHUB_PATH
-          echo "Contents of ~/.corepack/shims:"
-          ls -la "$HOME/.corepack/shims"
-          corepack exec pnpm --version
-          corepack exec pnpm install --frozen-lockfile
-          npx --no-install prettier --check "src/**/*.{js,jsx,ts,tsx}"
+      - name: Install pnpm
+        run: npm install -g pnpm@8.10.0
+
+      - name: Run Prettier check
+        run: npx prettier --check "src/**/*.{js,jsx,ts,tsx}"

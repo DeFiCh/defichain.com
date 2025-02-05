@@ -1,0 +1,117 @@
+{
+  "Head": {
+    "title": "遞飛鏈漏洞懸賞計畫",
+    "desc": "遞飛鏈正與安全專家以及社區合作尋找漏洞。賞金計畫獎勵高達五萬美元。"
+  },
+  "Header": {
+    "title": "遞飛鏈漏洞懸賞計畫",
+    "desc": "遞飛鏈正與安全專家以及社區合作尋找漏洞。賞金計畫獎勵高達五萬美元。",
+    "submit": "提交漏洞"
+  },
+  "LeaderboardSection": {
+    "title": "排行榜",
+    "desc": "递飞链感谢以下的赏金猎人们努力保持将递飞链更安全。",
+    "hunters": [
+      {
+        "name": "Dr. Daniel Cagara",
+        "github": "muirglacier",
+        "bounties": [
+          {
+            "name": "Masternode mining efficiency exploit",
+            "payout": {
+              "dfi": 7500,
+              "usd": 26250
+            },
+            "txid": "3855e22b35f26cc962d154639d3ce1ac14a40286182b0c897cd5dbe8c0b60503"
+          },
+          {
+            "name": "3rd-party masternode fund lockup issue",
+            "payout": {
+              "dfi": 2250,
+              "usd": 7875
+            },
+            "txid": "f715e5ec45ffccbaade5d0de451d18cf00e386b04f0c3d87d8b7a80278e6b709"
+          },
+          {
+            "name": "Probabilistic side mining exploit",
+            "payout": {
+              "dfi": 3750,
+              "usd": 13125
+            },
+            "txid": "e2fa3e133e35458328eded333f32e2c525c66861f37ca0be52f5b7e092c96cde"
+          },
+          {
+            "name": "Dropping of masternode through transaction malleability",
+            "payout": {
+              "dfi": 6000,
+              "usd": 21000
+            },
+            "txid": "ee46a62e455f6aad526d9664022afb4a5014b4031e034f00bdf53dee3d5a6070"
+          },
+          {
+            "name": "Masternode quorum anchor confirmation bug",
+            "payout": {
+              "dfi": 4500,
+              "usd": 15750
+            },
+            "txid": "471c0e3e1c6e06375be6eef63eb51cc068ecf765301366f1d3d82c7446b8c0e3"
+          },
+          {
+            "name": "Masternode boost with infinite timelock",
+            "payout": {
+              "dfi": 6000,
+              "usd": 21000
+            },
+            "txid": "3e8bef9fc348183d6f7f685d105ced7693dfa6bc5f94431c3abba7d47271eb08"
+          }
+        ]
+      },
+      {
+        "name": "(anonymous)",
+        "bounties": [
+          {
+            "name": "Atomic swap bug",
+            "payout": {
+              "dfi": 10500,
+              "usd": 31500
+            },
+            "txid": "d12dde9f5235f7787022f21601aff0a7ba9e4f4b46102d37c65a741be2fa867c"
+          }
+        ]
+      },
+      {
+        "name": "Alex Andreae",
+        "github": "sourcecoast",
+        "bounties": [
+          {
+            "name": "Bitcoin anchor fee validation issue",
+            "payout": {
+              "dfi": 3000,
+              "usd": 10500
+            },
+            "txid": "770e0ae17a4ae5158ccd8d716d2c256deeaad101625b2fb1784b3f60317b84c3"
+          }
+        ]
+      }
+    ]
+  },
+  "HowToSection": {
+    "title": "如何参与",
+    "desc": "有很多方法可以开始寻找漏洞悬赏。您可以通过运行<0>defid -testnet</0>连接到递飞链测试网开始。或者，您可以在<1>GitHub</1>学习初始程式码。如果您通过与程式互动或研究初始程式码发现一个漏洞，递飞链可以提供高达 五万美元DFI 的漏洞赏金，前提是要发现缺陷的严重性，和您能够提供关于修复或复制等有用的资讯。",
+    "bolded": "请注意要研究和确认标记的是正式发布的程式码，而不是主分支或其他仍在开发中的程式码。"
+  },
+  "SubmissionSection": {
+    "title": "提交过程",
+    "desc": "基于安全有一定的敏感性，我们鼓励抓漏洞者不要公开提交有关区块链安全性等议题。递飞链鼓励您自行决定，如果您觉得这个问题不是公众可以轻易利用的，那么可以在<0>GitHub</0>的回购中创建议题。如果议题有可能会被他人利用并是个关键，那么请给我们发邮件<1>security@defichain.com</1>。",
+    "list": {
+      "title": "在您提交的文件中，请包含：",
+      "entries": [
+        "对于问题的清楚描述。",
+        "对于问题的修复，最好是以请求代码合并。",
+        "如果无法提供修复程式，请提供有关如何重现问题的明确说明。",
+        "您的邮件地址或其他相关联系方式（如: 电报群 ID)。",
+        "如果您的申请获得批准，您的DFI地址将用于接收赏金。"
+      ]
+    }
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "header": {
+    "navbar": {
+      "foundation": "遞飛鏈基金會",
+      "dfi": "$DFI",
+      "dex": "DEX",
+      "developers": "開發者",
+      "downloads": "下載區",
+      "learn": "學習中心",
+      "buy": "購買",
+      "getDfi": "獲得 DFI",
+      "dfcblog": "博客",
+      "explore": "探索",
+      "build": "建造",
+      "community": "社區"
+    },
+    "explore": {
+      "info": [
+        {
+          "title": "探索 DeFiChain",
+          "labels": [
+            {
+              "title": "$DFI",
+              "subtitle": "了解代幣（Token）"
+            },
+            {
+              "title": "去中心化交易所",
+              "subtitle": "最大化你的資產"
+            },
+            {
+              "title": "錢包",
+              "subtitle": "以自己的方式存儲資產"
+            },
+            {
+              "title": "主節點",
+              "subtitle": "將您的部分投入 DeFiChain"
+            }
+          ]
+        },
+        {
+          "title": "區塊瀏覽器",
+          "labels": [
+            {
+              "title": "DeFiScan"
+            },
+            {
+              "title": "加密貨幣 ID"
+            }
+          ]
+        }
+      ],
+      "image": {
+        "title": "$DFI",
+        "subtitle": "了解代幣以及如何獲取"
+      }
+    },
+    "build": {
+      "title": "建造起點",
+      "labels": [
+        {
+          "title": "Jellyfish SDK",
+          "subtitle": "為現代 DeFi 應用進行構建"
+        },
+        {
+          "title": "DeFiChain 白皮書",
+          "subtitle": "DeFiChain 的基礎"
+        },
+        {
+          "title": "GitHub",
+          "subtitle": "跟進最新的進展"
+        },
+        {
+          "title": "開發人員資源",
+          "subtitle": "開始在 DeFiChain 上構建"
+        },
+        {
+          "title": "媒體資源",
+          "subtitle": "DeFiChain品牌資源"
+        },
+        {
+          "title": "安全性",
+          "subtitle": "去信任和去中心化"
+        }
+      ]
+    },
+    "community": {
+      "info": [
+        {
+          "title": "進入生態圈",
+          "labels": [
+            {
+              "title": "DeFiChain 部落格",
+              "subtitle": "獲取最新消息"
+            }
+          ]
+        },
+        {
+          "title": "加入大家庭",
+          "labels": [
+            {
+              "title": "Reddit"
+            },
+            {
+              "title": "Twitter"
+            },
+            {
+              "title": "Facebook"
+            },
+            {
+              "title": "GitHub"
+            },
+            {
+              "title": "Youtube"
+            },
+            {
+              "title": "LinkedIn"
+            },
+            {
+              "title": "Discord"
+            },
+            {
+              "title": "CoinMarketCap"
+            },
+            {
+              "title": "Telegram (EN)"
+            },
+            {
+              "title": "Telegram (DE)"
+            },
+            {
+              "title": "Telegram (FR)"
+            },
+            {
+              "title": "Telegram (ES)"
+            },
+            {
+              "title": "Telegram (IT)"
+            },
+            {
+              "title": "Telegram (ID)"
+            },
+            {
+              "title": "Telegram (TR)"
+            },
+            {
+              "title": "Telegram (ZH)"
+            },
+            {
+              "title": "Telegram (RU)"
+            },
+            {
+              "title": "Telegram (PT)"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "footer": {
+    "sitemap": {
+      "EXPLORE": {
+        "category": "探索",
+        "$DFI": "$DFI",
+        "decentralizedExchange": "去中心化交易所",
+        "wallets": "錢包",
+        "masternodes": "主節點"
+      },
+      "BUILD": {
+        "category": "建造",
+        "jellyfishsdk": "Jellyfish SDK",
+        "defichainwhitepaper": "DeFiChain 白皮書",
+        "github": "GitHub",
+        "developerResource": "開發者資源",
+        "mediaAssets": "媒體資源",
+        "security": "安全性"
+      },
+      "COMMUNITY": {
+        "category": "社區",
+        "blog": "部落格",
+        "newsletter": "通訊"
+      }
+    },
+    "bottomlink": {
+      "privacy": "隱私政策",
+      "terms": "使用條款"
+    }
+  },
+  "error": {
+    "title": "找不到頁面",
+    "subtitle": "404 錯誤",
+    "errorDesc": "您正在查看的頁面可能已被移動、刪除或可能從未存在過。",
+    "text": "返回首頁"
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "Head": {
+    "title": "DeFiChain | Connecting old and new worlds",
+    "desc": "A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone."
+  },
+  "Header": {
+    "title": "Connecting old and new worlds",
+    "desc": "A blockchain dedicated to fast, intelligent and transparent decentralized financial services, accessible by everyone."
+  },
+  "StatisticsSection": {
+    "dfiMinted": {
+      "title": "TOTAL DFI MINTED",
+      "desc": "{{perc}} of max supply"
+    },
+    "tvlLocked": {
+      "title": "TOTAL VALUE LOCKED IN USD",
+      "mobileTitle": "TVL IN USD",
+      "desc": "Pool | Masternodes | Vaults"
+    },
+    "masternodes": {
+      "title": "MASTERNODES",
+      "desc": "${{perc}} locked"
+    }
+  },
+  "ReadyForFlexibilitySection": {
+    "label": "WHAT'S NEXT",
+    "title": "MetaChain the upgrade",
+    "descParaOne": "MetaChain adds an EVM-compatible environment to the DeFiChain ecosystem, which allows developers to seamlessly build next generation applications that runs in parallel with the native chain.",
+    "button": "Explore MetaChain"
+  },
+  "EcosystemSection": {
+    "label": "JUMPSTART INTO DEFICHAIN ECOSYSTEM",
+    "title": "Constant evolution to build, deliver and outperform",
+    "cards": {
+      "dfiTitle": "All about $DFI",
+      "dfiSubtitle": "Learn More",
+      "tradeWithDexTitle": "Trade with DEX",
+      "tradeWithDexSubtitle": "Get Started",
+      "walletsTitle": "Wallets for DeFiChain",
+      "walletsSubtitle": "Get Started",
+      "governanceTitle": "Governance: \nOwn a Masternode",
+      "governanceSubtitle": "Get Started"
+    }
+  },
+  "CardsSection": {
+    "cards": [
+      {
+        "label": "LATEST FEATURE",
+        "title": "Decentralized Assets",
+        "desc": "Access decentralized assets with collateral in your vault.",
+        "buttonText": "Learn more",
+        "buttonType": "full",
+        "url": "https://blog.defichain.com/what-are-decentralised-stock-tokens-and-how-do-they-work/"
+      },
+      {
+        "label": "FEATURED DOWNLOAD",
+        "title": "DeFiChain Wallet",
+        "desc": "Experience DeFiChain with wallet apps built for both desktop and mobile.",
+        "buttonText": "Go to Downloads",
+        "buttonType": "full",
+        "url": "https://defichain.com/downloads/"
+      },
+      {
+        "label": "HOW-TO GUIDE",
+        "title": "Buy $DFI",
+        "desc": "Learn about and acquire the $DFI coin from various crypto exchanges.",
+        "buttonText": "Learn more",
+        "buttonType": "outline",
+        "url": "https://blog.defichain.com/where-and-how-to-buy-dfi-defichain/"
+      },
+      {
+        "label": "ECOSYSTEM",
+        "title": "Explore community projects",
+        "desc": "Comprehensive list of all things DeFiChain.",
+        "buttonText": "Explore",
+        "buttonType": "outline",
+        "url": "https://defilinks.io/"
+      }
+    ]
+  },
+  "SolutionSection": {
+    "title": "The Post-Fintech Revolution",
+    "desc": "From trust-based to trust-less, decentralized finance overcomes what Fintech could not solve in traditional finance.",
+    "graph": {
+      "TraditionalFinance": "Traditional Finance",
+      "Bureaucracy": "Bureaucracy",
+      "TrustSoftware": "Trust-based software",
+      "Fintech": "Fintech",
+      "MinimizedSoftware": "Trust-minimized software"
+    }
+  },
+  "BenefitsSection": {
+    "title": "Benefits of DeFiChain.",
+    "Variety": {
+      "title": "Variety",
+      "desc": "Wide range of crypto-economic financial operations."
+    },
+    "Throughput": {
+      "title": "Throughput",
+      "desc": "Unparalleled high transaction throughput for all transactions."
+    },
+    "Security": {
+      "title": "Security",
+      "desc": "Turing-incomplete for reduced attack vectors."
+    },
+    "Development": {
+      "title": "Development",
+      "desc": "Rapidly create a variety of DeFi apps on one chain."
+    },
+    "Governance": {
+      "title": "Governance",
+      "desc": "Reliable decentralized governance, on and off-chain."
+    },
+    "Immutability": {
+      "title": "Immutability",
+      "desc": "Immutable by anchoring to the Bitcoin blockchain."
+    }
+  },
+  "FunctionsSection": {
+    "title": "Designed and engineered for decentralized finance dApps.",
+    "Lending": {
+      "title": "Lending",
+      "desc": "Borrow and lend through collateralized systems."
+    },
+    "WrappedToken": {
+      "title": "Wrapping of tokens",
+      "desc": "Work with a variety of crypto-assets, directly, on-chain."
+    },
+    "Oracles": {
+      "title": "Pricing oracles",
+      "desc": "Collect data from other chains and non-crypto markets."
+    },
+    "Exchanges": {
+      "title": "Exchanges",
+      "desc": "Direct peer-to-peer trading between cryptocurrencies."
+    },
+    "Transferable": {
+      "title": "Transferable debts and receivables",
+      "desc": "Work with transparency not possible with institutions."
+    },
+    "Debt": {
+      "title": "Non-collateralized debt",
+      "desc": "Loans based on reputation and verifiable credentials."
+    },
+    "Tokenization": {
+      "title": "Asset tokenization",
+      "desc": "Tokenize equity, real estate, and other holdings."
+    },
+    "Dividends": {
+      "title": "Distribution of dividends",
+      "desc": "Automatic investment payouts with smart contracts."
+    }
+  },
+  "BuiltOnBitcoinSection": {
+    "title": "Built-on-bitcoin",
+    "desc": "DeFiChain marries the best of Proof-of-Stake, with the security and immutability of Bitcoin.",
+    "button": "Learn more"
+  },
+  "DistributionSection": {
+    "title": "Decentralized and distributed",
+    "desc": "The DeFiChain community runs more than 10,000 masternodes which are distributed globally."
+  },
+  "YearAheadRoadMapSection": {
+    "label": "THE ROAD AHEAD",
+    "title": "Milestones",
+    "cards": [
+      {
+        "title": "DevNet for MetaChain",
+        "description": "",
+        "image": "/assets/img/roadmap/DevNet.png"
+      },
+      {
+        "title": "TestNet for MetaChain",
+        "description": "",
+        "image": "/assets/img/roadmap/TestNet.png"
+      },
+      {
+        "title": "MainNet Launch",
+        "description": "",
+        "image": "/assets/img/roadmap/MainNet.png"
+      }
+    ]
+  },
+  "BlockchainFeatureSection": {
+    "title": "Designed for Decentralized Finance",
+    "subtitle": "NON-TURING-COMPLETE BLOCKCHAIN",
+    "desc": "DeFiChain offers comprehensive functionality tailored to the Distributed Ledger Technology (DLT) community, with an emphasis on simplicity, speed, and security.",
+    "button": "Start building",
+    "THROUGHPUT": {
+      "title": "THROUGHPUT",
+      "desc": "Unparalleled high transaction throughput for all transactions."
+    },
+    "SECURITY": {
+      "title": "SECURITY",
+      "desc": "Turing-incomplete for reduced attack vectors."
+    },
+    "IMMUTABILITY": {
+      "title": "IMMUTABILITY",
+      "desc": "Marries the best of Proof-of-Stake, with the security of Bitcoin."
+    },
+    "DEVELOPMENT": {
+      "title": "DEVELOPMENT",
+      "desc": "Rapidly create a variety of DeFi apps on one chain."
+    },
+    "VARIETY": {
+      "title": "VARIETY",
+      "desc": "Wide range of crypto-economic financial operations."
+    }
+  },
+  "BlogPostsSection": {
+    "title": "DeFiChain \nin the news",
+    "label": "DEFICHAIN BLOG",
+    "button": "View all articles"
+  }
+}

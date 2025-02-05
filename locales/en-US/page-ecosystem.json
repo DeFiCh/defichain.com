@@ -1,0 +1,41 @@
+{
+  "Head": {
+    "title": "Ecosystem",
+    "desc": "Be part of DeFiChain Ecosystem"
+  },
+  "Header": {
+    "title": "Ecosystem",
+    "desc": "Be part of the DeFiChain Ecosystem"
+  },
+  "ContributeSection": {
+    "title": "Contribute to DeFiChain",
+    "Developer": {
+      "title": "Become a developer",
+      "desc": "Learn how you can build on DeFiChain and use $DFI coin",
+      "button": "Developers"
+    }
+  },
+  "PartnersSection": {
+    "title": "Partners",
+    "StakingRewards": {
+      "title": "Staking Rewards",
+      "desc": "DeFiChain (DFI) interest calculator and current rates",
+      "button": "Go to Staking Rewards"
+    },
+    "Blockspot": {
+      "title": "Blockspot.io",
+      "desc": "DeFiChain (DFI) price, graph, data and info on Blockspot.io",
+      "button": "Go to Blockspot.io"
+    },
+    "Messari": {
+      "title": "Messari",
+      "desc": "Data tools that bring transparency to the cryptoeconomy",
+      "button": "Go to Messari"
+    },
+    "CoinGecko": {
+      "title": "CoinGecko",
+      "desc": "View DeFiChain DEX information on CoinGecko",
+      "button": "Go to CoinGecko"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "Head": {
+    "title": "Développeurs",
+    "desc": "Commencer à construire sur DeFiChain avec des ressources de développeurs et du code"
+  },
+  "Header": {
+    "title": "Développeurs",
+    "desc": "Construire sur DeFiChain"
+  },
+  "DeveloperResourcesSection": {
+    "title": "Commencer à construire sur DeFiChain avec des ressources de développeurs et du code",
+    "GitHub": {
+      "title": "Obtenir des ressources pour les développeurs et des guides de démarrage",
+      "button": "GitHub"
+    },
+    "Cli": {
+      "title": "Obtenir le CLI et l'application de bureau",
+      "button": "Téléchargements"
+    },
+    "Scan": {
+      "title": "Explorer la blockchain sur DeFi Scan",
+      "button": "Explore"
+    },
+    "WhitePaper": {
+      "title": "Lire le document technique de DeFiChain",
+      "button": "Livre blanc"
+    },
+    "Reddit": {
+      "title": "Prenez part à notre communauté de développeurs Reddit",
+      "button": "Discuter"
+    }
+  },
+  "CoreContributors": {
+    "title": "Contributeurs principaux",
+    "desc": "DeFiChain est un projet open-source avec une équipe mondiale de contributeurs principaux, soutenue par une communauté de développeurs. La liste complète des projets et des contributeurs se trouve à l'adresse suivante <0>GitHub<0>."
+  }
+}

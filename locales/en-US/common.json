@@ -1,0 +1,17 @@
+{
+  "title": "DeFiChain",
+  "Punctuation": {
+    "fullStop": "."
+  },
+  "StartExploring": {
+    "button": "Start exploring"
+  },
+  "statisticsDisplay": {
+    "prefix": "",
+    "suffix": {
+      "B+": "B+",
+      "M+": "M+",
+      "K+": "K+"
+    }
+  }
+}

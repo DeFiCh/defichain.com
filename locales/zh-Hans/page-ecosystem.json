@@ -1,0 +1,41 @@
+{
+  "Head": {
+    "title": "生态系统",
+    "desc": "加入友情链接"
+  },
+  "Header": {
+    "title": "生态系统",
+    "desc": "加入友情链接"
+  },
+  "ContributeSection": {
+    "title": "在递飞链上贡献",
+    "Developer": {
+      "title": "入门开发者",
+      "desc": "入门递飞链创建和使用$DFI币",
+      "button": "开发者"
+    }
+  },
+  "PartnersSection": {
+    "title": "合作伙伴",
+    "StakingRewards": {
+      "title": "权益质押获利",
+      "desc": "递飞链(DFI)利息计算机和当前汇率",
+      "button": "前往 权益质押获利"
+    },
+    "Blockspot": {
+      "title": "Blockspot.io",
+      "desc": "递飞链（DFI）的价格，图表，数据及资讯",
+      "button": "前往 Blockspot.io"
+    },
+    "Messari": {
+      "title": "Messari数据分析",
+      "desc": "加密经济透明化的数据工具",
+      "button": "前往 Messari数据分析"
+    },
+    "CoinGecko": {
+      "title": "CoinGecko",
+      "desc": "在 CoinGecko 查看递飞链 DEX 信息",
+      "button": "前往 CoinGecko"
+    }
+  }
+}

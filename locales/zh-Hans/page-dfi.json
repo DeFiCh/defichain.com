@@ -1,0 +1,68 @@
+{
+  "Head": {
+    "title": "$DFI",
+    "desc": "了解$DFI代币及其效用，分配，空投以及如何获取DFI"
+  },
+  "Header": {
+    "title": "$DFI",
+    "desc": "了解并获得$DFI代币"
+  },
+  "DFICoinSection": {
+    "title": "$DFI货币",
+    "desc": "DFI货币是递飞链中不可分割的单位。递飞链基金会在2020年5月11日发行了大约6亿个DFI。现时的流通供应（权益质押和流动性挖矿）可在",
+    "disclaimer": "重要提示：递飞链是个社区项目。没有最初的代币发行 (ICO)，只有免费的空投。"
+  },
+  "CoinUtility": {
+    "title": "$DFI货币效用",
+    "entries": {
+      "Fees": {
+        "title": "费用",
+        "desc": "支付交易、智能合约和其他递飞链运作的费用"
+      },
+      "LoanCollaterals": {
+        "title": "借贷抵押",
+        "desc": "其他加密资产贷款的资金抵押"
+      },
+      "StakingNodes": {
+        "title": "权益质押节点",
+        "desc": "创建新的权益质押节点的要提供两万个DFI"
+      },
+      "DeFiCustomToken": {
+        "title": "递飞链自定代币",
+        "desc": "以一百个DFI创建自定代币 (不能退还)"
+      },
+      "BudgetProposal": {
+        "title": "社区基金提议",
+        "desc": "以10 DFI提交社区基金提议（不可退还)"
+      },
+      "LiquidityPools": {
+        "title": "流动性池",
+        "desc": "为 DEX 提供加密资产流动性，并获得奖励回报"
+      }
+    }
+  },
+  "DistributionSection": {
+    "title": "初始代币分配",
+    "desc": "在12亿$DFI货币中，49%是最初供应的，其余的将随着时间推移发行给主节点持有者。",
+    "chart": {
+      "InitialSupply": "初始代币供应",
+      "ToMasternodes": "随着时间的推移主节点",
+      "Airdropped": "空投",
+      "Burned": "销毁",
+      "Destroyed": "于转换为 DAO 自治组织时被销毁",
+      "desc": "根据初始经济模型，空投数量为总供应量的 26% ，<0>27% 被销毁</0>，<1>47% 于转换为 DAO 自治组织时被销毁</1>。"
+    }
+  },
+  "ExchangeSection": {
+    "title": "获取$DFI货币",
+    "desc": "$DFI 货币将发给有兴趣利用和参与生态系统的用户和合作伙伴",
+    "Exchanges": {
+      "title": "交易所",
+      "desc": "您现在可以在这些交易所购买DFI，接下来还会有更多的交易所上币"
+    },
+    "Staking": {
+      "title": "权益质押平台",
+      "desc": "DFI可在这些平台上运作权益质押"
+    }
+  }
+}

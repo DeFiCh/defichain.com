@@ -1,0 +1,146 @@
+{
+  "heroBanner": {
+    "title": "生态系统升级版",
+    "subtitle": "为比特币和以太坊而构建",
+    "desc": "无与伦比的创新和操作性，同时不影响扩展性以及安全性。 MetaChain 主要用于在世界上最大的区块链上构建 dApp。"
+  },
+  "keyFeatures": {
+    "title": "利用以太坊的力量进行创新",
+    "subtitle": "主要特点",
+    "desc": "提供一个兼容 EVM 的环境，让熟悉以太坊生态系统的开发人员能够在 Native DeFiChain 上无缝、轻松地构建下一代应用程序。",
+    "evmIntegration": {
+      "title": "EVM 和 UTXO 集成",
+      "desc": "支持 UTXO 和以太坊账户模型，无缝提供隐私和简单性。"
+    },
+    "ecosystem": {
+      "title": "可扩展的生态系统",
+      "desc": "不受限制的交叉兼容性使 DFI 用户能够广泛访问以太坊和 EVM 兼容链。"
+    },
+    "transactionFee": {
+      "title": "低交易费用",
+      "desc": "为建设者和用户提供具有成本效益的交易费用。"
+    },
+    "switchingCosts": {
+      "title": "低交互成本",
+      "desc": "使用 MetaChain 让 dApp 部署和跨链交互更轻松且无缝"
+    }
+  },
+  "roadmap": {
+    "title": "2024 年上半年概览",
+    "subtitle": "路线图",
+    "desc": "去中心化金融 (DeFi) 格局在不断发展，而 DeFiChain 的目标是通过扩展 DeFiChain 的功能、可访问性和现实世界影响力来走在最前沿。",
+    "descContinue": "经过 DeFiChain Labs 团队和参与社区成员的合作讨论，制定了路线图，为 2024 年上半年制定了雄心勃勃的路线图。",
+    "button": "阅读更多",
+    "diagDesc": "T该计划重点加强四个关键领域：",
+    "cards": {
+      "dvm": {
+        "title": "DVM 原层",
+        "desc": "dToken 修复、DUSD 锁定支持、状态中继器改进"
+      },
+      "metachain": {
+        "title": "MetaChain 链 EVM 层",
+        "desc": "Ocean改进、稳定性升级、存储升级"
+      },
+      "experimentation": {
+        "title": "研发实验",
+        "desc": "WASM 引擎设计"
+      },
+      "growth": {
+        "title": "增长",
+        "desc": "开发者支持计划、系列活动启动、合作伙伴扩展、数字收购活动"
+      }
+    }
+  },
+  "agenda": {
+    "cards": [
+      {
+        "title": "DevNet开发网",
+        "status": "已部署",
+        "color": "green",
+        "desc": "启动阶段，搭建MetaChain内部测试环境。",
+        "image": "/assets/img/metachain/mc_devnet"
+      },
+      {
+        "title": "FloppyNet测试网",
+        "status": "已部署",
+        "color": "green",
+        "desc": "我们 TestNet 的 alpha 版本 - 可公开访问，预计回滚和有限的波动。",
+        "image": "/assets/img/metachain/mc_floppynet"
+      },
+      {
+        "title": "TestNet测试网",
+        "status": "已部署",
+        "color": "green",
+        "desc": "TestNet测试网的最终版本——在稳定的环境中部署智能合约并与之交互。",
+        "image": "/assets/img/metachain/mc_testnet"
+      },
+      {
+        "title": "基础设施",
+        "status": "部署路上",
+        "color": "orange",
+        "desc": "集成 MetaScan 和 Ocean 等关键基础设施，为主网准备 MetaChain。",
+        "image": "/assets/img/metachain/mc_infrastructure"
+      },
+      {
+        "title": "MainNet主网启动",
+        "status": "已部署",
+        "color": "green",
+        "desc": "正式上线 - 体验全面运营的MetaChain网络。",
+        "image": "/assets/img/metachain/mc_mainnet"
+      }
+    ],
+    "social": {
+      "title": "追踪社交渠道以获取更新"
+    }
+  },
+  "faq": {
+    "title": "常见问题",
+    "items": [
+      {
+        "title": "什么是MetaChain?",
+        "desc": [
+          {
+            "value": "MetaChain 是一个智能合约执行层，与 EVM 兼容并运行在原生 DeFiChain 之上。",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "title": "MetaChain 与 DeFiChain 有什么关系？",
+        "desc": [
+          {
+            "value": "MetaChain 扩展了 DeFiChain 的使用范围，通过增强互操作性使其可以链接到各种链。",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "title": "如何在 MetaChain 上构建？",
+        "desc": [
+          {
+            "value": "请参阅",
+            "type": "string"
+          },
+          {
+            "value": "此处",
+            "type": "link",
+            "link": "https://defich.github.io/handbook/guides/guide_changi.html"
+          },
+          {
+            "value": "的文档以获取更多详细信息。",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "title": "MetaChain 可以使用哪些代币？",
+        "desc": [
+          {
+            "value": "MetaChain 目前仅支持 MetaChain 上的原生 DFI 代币。 您可以通过在 Light Wallet 上交换 DFI UTXO 来获得它们（目前功能正在部署中）",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

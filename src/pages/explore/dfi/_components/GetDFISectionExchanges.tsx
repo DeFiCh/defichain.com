@@ -27,11 +27,6 @@ export default function GetDFISectionExchanges() {
       url: "https://www.htx.com/trade/dfi_usdt",
     },
     {
-      id: "GetDFISection.Exchange.Gateio",
-      name: "Gateio",
-      url: "https://www.gate.io/trade/DFI_USDT",
-    },
-    {
       id: "GetDFISection.Exchange.Transak",
       name: "Transak",
       url: "https://global.transak.com",

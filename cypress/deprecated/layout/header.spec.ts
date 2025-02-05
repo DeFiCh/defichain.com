@@ -26,9 +26,6 @@ context("<Header/> on desktop", () => {
       cy.findByTestId("Desktop.HeaderLink.Ecosystem")
         .should("be.visible")
         .should("have.attr", "href", "/ecosystem");
-      cy.findByTestId("Desktop.HeaderLink.Learn")
-        .should("be.visible")
-        .should("have.attr", "href", "/learn");
       cy.findByTestId("Desktop.HeaderLink.Downloads")
         .should("be.visible")
         .should("have.attr", "href", "/downloads");
@@ -86,9 +83,6 @@ context("<Header/> on mobile", () => {
           cy.findByTestId("Mobile.HeaderLink.Ecosystem")
             .should("be.visible")
             .should("have.attr", "href", "/ecosystem");
-          cy.findByTestId("Mobile.HeaderLink.Learn")
-            .should("be.visible")
-            .should("have.attr", "href", "/learn");
           cy.get('[data-testid="Mobile.HeaderLink.DFCBlog"]')
             .should("be.visible")
             .should("have.attr", "href", "https://blog.defichain.com/");

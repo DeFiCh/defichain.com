@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - pierregee/remove-translations-to-work-with-static-pages # Change this to your main branch if different
+      - privacy-policy-changes # Change this to your main branch if different
 
 jobs:
   deploy:

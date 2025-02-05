@@ -38,8 +38,5 @@ jobs:
         with:
           node-version: "18"
 
-      - name: Install pnpm
-        run: npm install -g pnpm@8.10.0
-
       - name: Run Prettier check
         run: npx prettier --check "src/**/*.{js,jsx,ts,tsx}"

@@ -23,7 +23,7 @@
     }
   },
   "ReadyForFlexibilitySection": {
-    "label": "WHAT'S NEXT",
+    "label": "",
     "title": "MetaChain the upgrade",
     "descParaOne": "MetaChain adds an EVM-compatible environment to the DeFiChain ecosystem, which allows developers to seamlessly build next generation applications that runs in parallel with the native chain.",
     "button": "Explore MetaChain"
@@ -161,7 +161,7 @@
     "desc": "The DeFiChain community runs more than 10,000 masternodes which are distributed globally."
   },
   "YearAheadRoadMapSection": {
-    "label": "THE ROAD AHEAD",
+    "label": "",
     "title": "Milestones",
     "cards": [
       {

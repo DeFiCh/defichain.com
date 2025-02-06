@@ -20,6 +20,9 @@
     "@prismicio/react": "^2.7.3",
     "@waveshq/standard-defichain-jellyfishsdk": "^3.0.1",
     "@waveshq/standard-web": "^3.0.1",
+    "next": "13.5.8",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "bignumber.js": "^9.1.2",
     "classnames": "^2.3.2",
     "gray-matter": "^4.0.3",
@@ -38,8 +41,6 @@
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.12.9",
-    "@netlify/plugin-lighthouse": "^5.0.0",
-    "@netlify/plugin-nextjs": "^4.41.1",
     "@tailwindcss/typography": "^0.5.10",
     "@testing-library/cypress": "^9.0.0",
     "@types/lodash": "^4.14.201",

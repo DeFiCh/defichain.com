@@ -54,7 +54,7 @@
     "tailwindcss": "^3.3.5"
   },
   "resolutions": {
-    "countup.js": "2.5.0"
+    "countup.js": "2.8.0"
   },
   "engines": {
     "node": "^18.0.0 || ^16.16.0",

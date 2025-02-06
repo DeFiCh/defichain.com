@@ -3,9 +3,48 @@
   publish = ".next"
 
 [[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+[[plugins]]
   package = "@netlify/plugin-nextjs"
 
 [[headers]]
   for = "/keys/security@defichain.com.public.key"
   [headers.values]
     Content-Type = "text/plain"
+
+[[redirects]]
+  from = "http://defichain.com/*"
+  to = "https://defichain.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://zhs.defichain.com/*"
+  to = "https://defichain.com/zh-Hans/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://zhs.defichain.com/*"
+  to = "https://defichain.com/zh-Hans/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://zht.defichain.com/*"
+  to = "https://defichain.com/zh-Hant/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://zht.defichain.com/*"
+  to = "https://defichain.com/zh-Hant/:splat"
+  status = 301
+  force = true
+  
+[[redirects]]
+  from = "https://defichain.com/dfi-token"
+  to = "https://defichain.com/dfi"
+  status = 301
+  force = true

@@ -33,11 +33,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Detect package manager
-        id: detect-package-manager
+      - name: Setup package manager
+        id: setup-package-manager
         run: |
           echo "manager=pnpm" >> $GITHUB_OUTPUT
-          echo "command=ci" >> $GITHUB_OUTPUT
+          echo "command=install --frozen-lockfile" >> $GITHUB_OUTPUT
           echo "runner=npx --no-install" >> $GITHUB_OUTPUT
 
       - name: Setup Pages

@@ -179,7 +179,7 @@ You have the right to ask us not to collect, use, process, or disclose your Pers
 <h2 className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="statement" data-testid="statement" title="Changes to this statement">13. Changes to this statement</h2>
 
 <div className="text-dark-800 font-desc leading-8 text-base lg:text-xl pb-6 pt-2 md:pb-8 lg:pb-12 lg:pt-4">
-Cake Pte Ltd will occasionally update this Privacy Policy to reflect customer feedback. DEFICHAIN FOUNDATION LTD. encourages you to periodically review this Privacy Policy to be informed of how DEFICHAIN FOUNDATION LTD. is protecting your information.
+We will occasionally update this Privacy Policy to reflect customer feedback. DEFICHAIN FOUNDATION LTD. encourages you to periodically review this Privacy Policy to be informed of how DEFICHAIN FOUNDATION LTD. is protecting your information.
 </div>
 
 <h2 className="text-dark-1000 scroll-mt-40 text-2xl mb-2 lg:text-[32px] lg:leading-10 lg:mb-4" id="contact-information" data-testid="contact-information" title="Contact information">14. Contact information</div>

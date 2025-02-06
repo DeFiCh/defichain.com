@@ -17,11 +17,6 @@
   },
   "PartnersSection": {
     "title": "Partenaires",
-    "CakeDeFi": {
-      "title": "Cake DeFi",
-      "desc": "Staking de DFI et recevoir des DFI en récompense avec Cake DeFi",
-      "button": "Aller sur Cake DeFi"
-    },
     "StakingRewards": {
       "title": "Staking Rewards",
       "desc": "Calculatrice d'intérêts de DeFiChain (DFI) et taux actuels",

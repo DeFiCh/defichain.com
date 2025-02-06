@@ -17,11 +17,6 @@
   },
   "PartnersSection": {
     "title": "合作伙伴",
-    "CakeDeFi": {
-      "title": "Cake DeFi",
-      "desc": "在Cake DeFi上做DFI权益质押来收获DFI",
-      "button": " 前往 Cake DeFi"
-    },
     "StakingRewards": {
       "title": "权益质押获利",
       "desc": "递飞链(DFI)利息计算机和当前汇率",

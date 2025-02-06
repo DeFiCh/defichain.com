@@ -38,7 +38,7 @@ jobs:
         run: |
           echo "manager=pnpm" >> $GITHUB_OUTPUT
           echo "command=install --frozen-lockfile" >> $GITHUB_OUTPUT
-          echo "runner=npx --no-install" >> $GITHUB_OUTPUT
+          echo "runner=pnpm exec" >> $GITHUB_OUTPUT
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

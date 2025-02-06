@@ -73,7 +73,7 @@ export function StatsDisplay() {
     {
       title: t("StatisticsSection.masternodes.title"),
       stats: stats?.count.masternodes,
-      desc: masternodeValue === undefined ? masternodeValue : "{{perc}} locked",
+      desc: masternodeValue === undefined ? masternodeValue : "4M+ locked",
       testID: "masternodes",
     },
   ];

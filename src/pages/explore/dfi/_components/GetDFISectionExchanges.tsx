@@ -14,7 +14,7 @@ export default function GetDFISectionExchanges() {
     {
       id: "GetDFISection.Exchange.Bitrue",
       name: "Bitrue",
-      url: "https://www.bitrue.com/trade/dfi_btc",
+      url: "https://www.bitrue.com/trade/dfi_usdt",
     },
     {
       id: "GetDFISection.Exchange.Kucoin",

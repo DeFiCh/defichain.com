@@ -38,7 +38,7 @@ export function BuyDFIButton({
     {
       name: "Bittrue",
       image: "/assets/svg/exchanges/logo-bittrue.svg",
-      url: "https://www.bitrue.com/trade/dfi_btc",
+      url: "https://www.bitrue.com/trade/dfi_usdt",
     },
     {
       name: "EasyCrypto (AU)",

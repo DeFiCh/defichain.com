@@ -75,6 +75,11 @@ export function BuyDFIButton({
       image: "/assets/svg/exchanges/logo-bitmart.svg",
       url: "https://www.bitmart.com/trade/en?symbol=%24DFI_USDT&layout=basic",
     },
+    {
+      name: "CoinEx.com",
+      image: "/assets/img/logo-black.svg",
+      url: "https://coinex.com/en/exchange/DFI-USDT",
+    },
   ];
 
   return (

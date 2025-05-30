@@ -71,6 +71,11 @@ export default function GetDFISectionExchanges() {
       name: "Bake",
       url: "https://bake.io/",
     },
+    {
+      id: "GetDFISection.Exchange.CoinEx",
+      name: "CoinEx",
+      url: "https://coinex.com/en/exchange/DFI-USDT",
+    },
   ];
 
   const staking: ExchangeItem[] = [

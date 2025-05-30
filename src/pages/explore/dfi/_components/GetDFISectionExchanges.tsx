@@ -42,11 +42,6 @@ export default function GetDFISectionExchanges() {
       url: "https://www.bybit.com/en-US/trade/spot/DFI/USDT",
     },
     {
-      id: "GetDFISection.Exchange.Swyftx",
-      name: "Swyftx",
-      url: "https://swyftx.com/au/buy/defichain",
-    },
-    {
       id: "GetDFISection.Exchange.Bitdotcom",
       name: "Bitdotcom",
       url: "https://www.bit.com/legacy/spot?pair=DFI-USDT",
@@ -55,11 +50,6 @@ export default function GetDFISectionExchanges() {
       id: "GetDFISection.Exchange.Latoken",
       name: "Latoken",
       url: "https://latoken.com/exchange/DFI_USDT",
-    },
-    {
-      id: "GetDFISection.Exchange.Bitmart",
-      name: "Bitmart",
-      url: "https://www.bitmart.com/trade/en?symbol=%24DFI_USDT&layout=basic",
     },
     {
       id: "GetDFISection.Exchange.EasyAu",
@@ -79,11 +69,6 @@ export default function GetDFISectionExchanges() {
   ];
 
   const staking: ExchangeItem[] = [
-    {
-      id: "GetDFISection.Staking.Kucoin",
-      name: "Kucoin",
-      url: "https://www.kucoin.com/earn/finance/list",
-    },
     {
       id: "GetDFISection.Staking.Bake",
       name: "Bake",

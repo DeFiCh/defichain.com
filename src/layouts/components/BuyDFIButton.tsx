@@ -18,7 +18,7 @@ export function BuyDFIButton({
     {
       name: "KuCoin",
       image: "/assets/svg/exchanges/logo-kucoin.svg",
-      url: "https://trade.kucoin.com/DFI-BTC",
+      url: "https://trade.kucoin.com/DFI-USDT",
     },
     {
       name: "Htx",

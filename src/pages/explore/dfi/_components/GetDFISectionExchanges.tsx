@@ -19,7 +19,7 @@ export default function GetDFISectionExchanges() {
     {
       id: "GetDFISection.Exchange.Kucoin",
       name: "Kucoin",
-      url: "https://trade.kucoin.com/DFI-BTC",
+      url: "https://trade.kucoin.com/DFI-USDT",
     },
     {
       id: "GetDFISection.Exchange.Htx",

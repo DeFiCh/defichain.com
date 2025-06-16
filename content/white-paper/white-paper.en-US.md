@@ -42,7 +42,7 @@ This Document is not a final technical specification
 </div>
 
 <div className="mt-5 text-dark-800">
-For that purpose, we are introducing 
+For that purpose, we are introducing
 <a className="text-electric" href="https://defichain.com/" target="_blank">DeFiChain</a>, a dedicated blockchain specifically for decentralized finance (DeFi).
 </div>
 
@@ -114,7 +114,7 @@ The Timeline
 DeFi’s promises and challenges
 </h3>
 <div className="mt-5 text-dark-800">
-Decentralized Finance promises to provide a variety of financial instruments without the need for middle(wo)men to ensure that the services are trusted. According to the OECD, financial services typically make up 20–30% of total service market revenue and about 
+Decentralized Finance promises to provide a variety of financial instruments without the need for middle(wo)men to ensure that the services are trusted. According to the OECD, financial services typically make up 20–30% of total service market revenue and about
 <a className="text-electric" href="https://www.investopedia.com/terms/g/gdp.asp" target="_blank">20% of the total gross domestic product</a> in <a className="text-electric" href="#user-content-fn-1">developed economies<sup>1</sup></a>. This is an enormous industry dedicated to one thing: making sure that financial transactions are trusted. With the advent of blockchain, trustless systems and smart contracts can be used to replace much of the functionality of this industry, dramatically increasing the return on investment for the individual investor.
 </div>
 <div className="mt-5 text-dark-800">
@@ -750,7 +750,7 @@ Stake Modifier
 <div className="mt-2 text-dark-800">
   A stake modifier is a collective source of random entropy. Without a stake modifier, the future PoS kernel would be completely predictable. A good stake modifier needs to be neither predictable nor influance-able by stakers.
   <div className="mt-5">
-  DeFiChain’s staker modifier is set to be 
+  DeFiChain’s staker modifier is set to be
   </div>
   <div className="mt-6 p-6 bg-dark-100 rounded-[5px]">
       <div className="font-code text-dark-900 text-base leading-6">
@@ -917,14 +917,14 @@ Economic Pegging of DATs
   There are two approaches to this:
   </div>
   <div className="mt-5">
-    <span className="font-bold font-sans text-dark-1000">1. Stablecoin approach</span> 
+    <span className="font-bold font-sans text-dark-1000">1. Stablecoin approach</span>
     <ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
       <li style="margin-left:20px">For every single issued 1 DBTC, 1 BTC has to be locked up in an address or a smart contract.</li>
       <li style="margin-left:20px">While this would help to build a guarantee to DBTC, it introduces some other issues – counterparty risks and affect the decentralized nature of DeFi.</li>
     </ul>
   </div>
   <div className="mt-5">
-    <span className="font-bold font-sans text-dark-1000">2. Economic pegging</span> 
+    <span className="font-bold font-sans text-dark-1000">2. Economic pegging</span>
     <ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
       <li style="margin-left:20px">By providing a strong guarantee that the DAT representing an asset has its price closely tracking the native asset, i.e. by holding DBTC, one can have a good confidence that the value of DBTC will track that of BTC.</li>
     </ul>
@@ -1184,7 +1184,7 @@ Lending a Coin for Cashflow
 <div className="mt-4 text-dark-800">
 The $DFI coin will be the integral unit of account in DeFiChain ecosystem.
 
-The DeFiChain Foundation will be issuing the DeFi utility token, DFI, capped at 1,200,000,000 (1.2 billion) for throughout its lifetime. There will only ever be 1.2 billion DFIs created.
+The DeFiChain Foundation will be issuing the DeFi utility token, DFI, capped at 1,300,000,000 (1.3 billion) for throughout its lifetime. There will only ever be 1.3 billion DFIs created.
 DFI is divisible up to 8 decimal places.
 
 </div>
@@ -1296,7 +1296,7 @@ For governance decisions, only the Foundation may submit proposals. Proposals ar
 Initial Token Distribution
 </h3>
 <div className="mt-4 text-dark-800">
-  Of the roughly 1.2 billion $DFI coins 49% will be issued to the DeFiChain Foundation at the start. The rest will be issued to Masternode holders over time.
+  Of the roughly 1.3 billion $DFI coins 49% will be issued to the DeFiChain Foundation at the start. The rest will be issued to Masternode holders over time.
   Of the 49% initially issued $DFI coins, 49% will be kept by the DeFiChain Foundation. The rest may be distributed to accredited investors, large funds and institutions, collectively known as external partners, to fund the initial development of DeFiChain. In order to decentralize the holdings of DFIs as much as possible the DeFiChain Foundation may not keep more than 49% of all initially issued tokens. The use of potential proceedings of the tokens will be decided by the DeFiChain Foundation board but will exclusively be directed towards the adoption and development of DeFiChain.
   <div className="mt-5">
   For any avoidance of doubt, there will NOT be a public ICO.
@@ -1317,7 +1317,7 @@ Token Issuance Schedule via Staking
 <div className="mt-4 text-dark-800">
   DeFiChain is initially launched with a 200 DFI block reward, of which 10% goes to the community fund. The Foundation pledges to guarantee this 200 DFI block reward for at least 1,050,000 blocks since the the first genesis block, so approximately 1 year.
   <div className="mt-5">
-  Subsequently, block rewards will be adjusted through governance vote. The Foundation also further pledges that there will never be more than 1,200,000,000 (1.2 billion) DFI in circulation, unless until the DAO governance votes to change this limit. Therefore DFI is a deflationary utility token.
+  Subsequently, block rewards will be adjusted through governance vote. The Foundation also further pledges that there will never be more than 1,300,000,000 (1.3 billion) DFI in circulation, unless until the DAO governance votes to change this limit. Therefore DFI is a deflationary utility token.
   </div>
   <div className="mt-5">
   The proposed staking schedule for the first 10 years is according to the following table:

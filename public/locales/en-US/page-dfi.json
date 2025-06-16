@@ -43,7 +43,7 @@
   },
   "DistributionSection": {
     "title": "Initial Token Distribution",
-    "desc": "Of the 1.2 billion $DFI coins, 49% will be in the initial supply, with the rest issued to masternode holders over time.",
+    "desc": "Of the 1.3 billion $DFI coins, 49% will be in the initial supply, with the rest issued to masternode holders over time.",
     "chart": {
       "InitialSupply": "Initial supply",
       "ToMasternodes": "To masternodes over time",

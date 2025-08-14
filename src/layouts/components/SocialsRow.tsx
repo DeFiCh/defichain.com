@@ -53,11 +53,11 @@ export default function SocialsRow(props: SocialsRowProps): JSX.Element {
         <FaTelegramPlane className="hover-icons" size={24} />
       </a>
       <a
-        href="https://twitter.com/defichain"
+        href="https://x.com/defichain"
         target="_blank"
         rel="noreferrer"
-        data-testid="socials-row-twitter"
-        id="Twitter"
+        data-testid="socials-row-x"
+        id="X"
       >
         <AiOutlineTwitter className="hover-icons" size={24} />
       </a>

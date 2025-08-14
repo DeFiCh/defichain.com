@@ -74,16 +74,13 @@ export function Default(props: PropsWithChildren<any>): JSX.Element | null {
           content="image/png"
         />
 
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@defichain" />
-        <meta name="twitter:creator" content="@defichain" />
-        <meta name="twitter:title" content={linkTitle} />
-        <meta name="twitter:description" content={description} />
-        <meta
-          name="twitter:image"
-          content="https://defichain.com/img/og/share.png"
-        />
+        {/* X (formerly twitter) */}
+        <meta name="x:card" content="summary_large_image" />
+        <meta name="x:site" content="@defichain" />
+        <meta name="x:creator" content="@defichain" />
+        <meta name="x:title" content={linkTitle} />
+        <meta name="x:description" content={description} />
+        <meta name="x:image" content="https://defichain.com/img/og/share.png" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
       </Head>

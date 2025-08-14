@@ -41,9 +41,9 @@ export function Community() {
             testID: "community-reddit",
           },
           {
-            href: "https://twitter.com/defichain",
+            href: "https://x.com/defichain",
             title: entries[1].labels[1].title,
-            testID: "community-twitter",
+            testID: "community-x",
           },
           {
             href: "https://www.facebook.com/defichain.official",
@@ -101,29 +101,19 @@ export function Community() {
             testID: "community-telegram-it",
           },
           {
-            href: "https://t.me/defiblockchain_ID",
-            title: entries[1].labels[13].title,
-            testID: "community-telegram-id",
-          },
-          {
             href: "https://t.me/defiblockchain_TR",
-            title: entries[1].labels[14].title,
+            title: entries[1].labels[13].title,
             testID: "community-telegram-tr",
           },
           {
-            href: "https://t.me/defichain_ZH",
-            title: entries[1].labels[15].title,
-            testID: "community-telegram-zh",
-          },
-          {
             href: "https://t.me/defichain_RU",
-            title: entries[1].labels[16].title,
+            title: entries[1].labels[14].title,
             testID: "community-telegram-ru",
           },
           {
-            href: "https://t.me/defichain_PT",
-            title: entries[1].labels[17].title,
-            testID: "community-telegram-pt",
+            href: "https://defichainwiki.com",
+            title: entries[1].labels[15].title,
+            testID: "community-wiki",
           },
         ],
       },

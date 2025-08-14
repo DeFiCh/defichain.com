@@ -105,7 +105,7 @@
               "title": "Reddit"
             },
             {
-              "title": "Twitter"
+                "title": "X (formerly Twitter)"
             },
             {
               "title": "Facebook"
@@ -141,19 +141,13 @@
               "title": "Telegram (IT)"
             },
             {
-              "title": "Telegram (ID)"
-            },
-            {
               "title": "Telegram (TR)"
-            },
-            {
-              "title": "Telegram (ZH)"
             },
             {
               "title": "Telegram (RU)"
             },
             {
-              "title": "Telegram (PT)"
+              "title": "Wiki"
             }
           ]
         }

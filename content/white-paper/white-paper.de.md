@@ -42,7 +42,7 @@ Dieses Dokument stellt keine vollständige technische Dokumentation von DeFiChai
 </div>
 
 <div className="mt-5 text-dark-800">
-Zu diesem Zweck entwickeln wir DeFiChain, eine Blockchain speziell für dezentrale Finanzsysteme (DeFi) 
+Zu diesem Zweck entwickeln wir DeFiChain, eine Blockchain speziell für dezentrale Finanzsysteme (DeFi)
 <a className="text-electric" href="https://defichain.com/" target="_blank">https://defichain.com</a>.
 </div>
 
@@ -741,7 +741,7 @@ Stake Modifier
 <div className="mt-2 text-dark-800">
   Ein Stake-Modifier ist eine kollektiver Erzeuger von zufälliger Entropie. Ohne einen Stake-Modifier wäre der zukünftige PoS-Kernel völlig vorhersehbar. Ein guter Stake-Modifier darf weder vorhersehbar sein noch von den Stakern beeinflusst werden können.
   <div className="mt-5">
-  Der Staker-Modifier von DeFiChain ist eingestellt auf 
+  Der Staker-Modifier von DeFiChain ist eingestellt auf
   </div>
   <div className="mt-6 p-6 bg-dark-100 rounded-[5px]">
       <div className="font-code text-dark-900 text-base leading-6">
@@ -908,14 +908,14 @@ Das Ziel von DAT ist es, dass es den nativen Vermögenswert auf den anderen Bloc
 Hier gibt es zwei Ansätze:
 </div>
   <div className="mt-5">
-    <span className="font-bold font-sans text-dark-1000">1. Stablecoin-Ansatz</span> 
+    <span className="font-bold font-sans text-dark-1000">1. Stablecoin-Ansatz</span>
     <ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
       <li style="margin-left:20px">Für jeden ausgegebenen 1 DBTC muss 1 BTC in einer Adresse oder einem Smart Contract hinterlegt werden.</li>
       <li style="margin-left:20px">Dies würde zwar helfen, eine Garantie für DBTC aufzubauen, bringt aber auch einige andere Probleme mit sich - Gegenparteirisiken und Auswirkungen auf den dezentralen Charakter von DeFi.</li>
     </ul>
   </div>
   <div className="mt-5">
-    <span className="font-bold font-sans text-dark-1000">2. Ökonomische Ankopplung</span> 
+    <span className="font-bold font-sans text-dark-1000">2. Ökonomische Ankopplung</span>
     <ul class="list-inside list-disc" style="list-style-type: disc;list-style-position: inside; text-indent: -1.4em; margin-left: 2rem;">
       <li style="margin-left:20px">Durch eine starke Garantie, dass der Preis des DAT, der einen Vermögenswert repräsentiert, sich eng an den entsprechenden Vermögenswert anlehnt, d.h. wenn man DBTC hält, kann man darauf vertrauen, dass sich der Wert von DBTC an den von BTC anpasst.</li>
     </ul>
@@ -1174,7 +1174,7 @@ Einen Coin verleihen und dadurch Cashflow generieren
 <div className="mt-4 text-dark-800">
 Der $DFI-Coin wird die integrale Rechnungseinheit im DeFiChain-Ökosystem sein.
 
-Die DeFiChain Foundation wird den DeFi Utility Token DFI ausgeben, der auf eine Gesamtmenge von 1.200.000.000 (1,2 Milliarden) begrenzt ist. Es werden niemals mehr als 1,2 Milliarden DFIs ausgegeben.
+Die DeFiChain Foundation wird den DeFi Utility Token DFI ausgeben, der auf eine Gesamtmenge von 1.300.000.000 (1,3 Milliarden) begrenzt ist. Es werden niemals mehr als 1,3 Milliarden DFIs ausgegeben.
 
 DFI ist bis zu 8 Dezimalstellen teilbar.
 
@@ -1285,7 +1285,7 @@ Für Governance-Entscheidungen kann nur die Foundation Vorschläge einreichen. D
 Anfängliche Verteilung der Token
 </h3>
 <div className="mt-4 text-dark-800">
-  Von den rund 1,2 Milliarden $DFI-Coins werden zu Beginn 49% an die DeFiChain Foundation ausgegeben. Der Rest wird im Laufe der Zeit an Masternode-Inhaber ausgegeben.
+  Von den rund 1,3 Milliarden $DFI-Coins werden zu Beginn 49% an die DeFiChain Foundation ausgegeben. Der Rest wird im Laufe der Zeit an Masternode-Inhaber ausgegeben.
   Von den 49% der anfänglich ausgegebenen $DFI-Coins werden 49% bei der DeFiChain Foundation verbleiben. Der Rest kann an akkreditierte Investoren, große Fonds und Institutionen, zusammenfassend als externe Partner bezeichnet, verteilt werden, um die anfängliche Entwicklung von DeFiChain zu finanzieren. Um die Bestände der DFI so weit wie möglich zu dezentralisieren, darf die DeFiChain Foundation nicht mehr als 49% aller ursprünglich ausgegebenen Token behalten. Über die Verwendung möglicher Einnahmen aus den Token entscheidet der Vorstand der DeFiChain Foundation, aber sie werden ausschließlich für die Einführung und Entwicklung von DeFiChain verwendet.
   <div className="mt-5">
   Um jeden Zweifel auszuschließen: Es wird KEIN öffentliches ICO (Unregulierte Emission von Utility Token zur Finanzierung) geben.
@@ -1306,7 +1306,7 @@ Zeitplan für die Ausgabe von Token über Staking
 <div className="mt-4 text-dark-800">
 DeFiChain wird zunächst mit einem Block Reward von 200 DFI gestartet, von denen 10% an den Community Fund gehen. Die Foundation verpflichtet sich, diese 200 DFI Blockbelohnung für mindestens 1.050.000 Blöcke ab dem ersten Genesis-Block, also etwa 1 Jahr, zu garantieren.
 <div className="mt-5">
-Später werden die Blockbelohnungen durch eine Governance-Abstimmung angepasst. Die Foundation verpflichtet sich außerdem, dass nie mehr als 1.200.000.000 (1,2 Milliarden) DFI im Umlauf sein werden, es sei denn, die DAO-Governance stimmt über eine Änderung dieser Grenze ab. DFI ist also ein deflationärer Utility-Token.
+Später werden die Blockbelohnungen durch eine Governance-Abstimmung angepasst. Die Foundation verpflichtet sich außerdem, dass nie mehr als 1.300.000.000 (1,3 Milliarden) DFI im Umlauf sein werden, es sei denn, die DAO-Governance stimmt über eine Änderung dieser Grenze ab. DFI ist also ein deflationärer Utility-Token.
 </div>
 <div className="mt-5">
 Der vorgeschlagene Staking-Zeitrahmen für die ersten 10 Jahre ist in der folgenden Tabelle dargestellt:

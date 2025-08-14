@@ -14,12 +14,12 @@ export default function GetDFISectionExchanges() {
     {
       id: "GetDFISection.Exchange.Bitrue",
       name: "Bitrue",
-      url: "https://www.bitrue.com/trade/dfi_btc",
+      url: "https://www.bitrue.com/trade/dfi_usdt",
     },
     {
       id: "GetDFISection.Exchange.Kucoin",
       name: "Kucoin",
-      url: "https://trade.kucoin.com/DFI-BTC",
+      url: "https://trade.kucoin.com/DFI-USDT",
     },
     {
       id: "GetDFISection.Exchange.Htx",
@@ -42,11 +42,6 @@ export default function GetDFISectionExchanges() {
       url: "https://www.bybit.com/en-US/trade/spot/DFI/USDT",
     },
     {
-      id: "GetDFISection.Exchange.Swyftx",
-      name: "Swyftx",
-      url: "https://swyftx.com/au/buy/defichain",
-    },
-    {
       id: "GetDFISection.Exchange.Bitdotcom",
       name: "Bitdotcom",
       url: "https://www.bit.com/legacy/spot?pair=DFI-USDT",
@@ -55,11 +50,6 @@ export default function GetDFISectionExchanges() {
       id: "GetDFISection.Exchange.Latoken",
       name: "Latoken",
       url: "https://latoken.com/exchange/DFI_USDT",
-    },
-    {
-      id: "GetDFISection.Exchange.Bitmart",
-      name: "Bitmart",
-      url: "https://www.bitmart.com/trade/en?symbol=%24DFI_USDT&layout=basic",
     },
     {
       id: "GetDFISection.Exchange.EasyAu",
@@ -76,14 +66,19 @@ export default function GetDFISectionExchanges() {
       name: "ChangeNow",
       url: "https://changenow.io/?_branch_match_id=1164181675870671265&_branch_referrer=H4sIAAAAAAAAAxXHWQqAIBAA0Nv46YK0EEhHiSHHlNyYRrp%2B9P5eZO7PptQZoV5Y2yuhd5lTvRVhQCLI%2B78jeWfXBXAGAxa0mQSUNio7o7UI1IrDQYKb8yF9nHrl9FUAAAA%3D&amount=100&from=eur&to=dfi",
     },
+    {
+      id: "GetDFISection.Exchange.Bake",
+      name: "Bake",
+      url: "https://bake.io/",
+    },
+    {
+      id: "GetDFISection.Exchange.CoinEx",
+      name: "CoinEx",
+      url: "https://coinex.com/en/exchange/DFI-USDT",
+    },
   ];
 
   const staking: ExchangeItem[] = [
-    {
-      id: "GetDFISection.Staking.Kucoin",
-      name: "Kucoin",
-      url: "https://www.kucoin.com/earn/finance/list",
-    },
     {
       id: "GetDFISection.Staking.Bake",
       name: "Bake",

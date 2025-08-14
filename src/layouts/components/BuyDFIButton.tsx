@@ -18,7 +18,7 @@ export function BuyDFIButton({
     {
       name: "KuCoin",
       image: "/assets/svg/exchanges/logo-kucoin.svg",
-      url: "https://trade.kucoin.com/DFI-BTC",
+      url: "https://trade.kucoin.com/DFI-USDT",
     },
     {
       name: "Htx",
@@ -38,7 +38,7 @@ export function BuyDFIButton({
     {
       name: "Bittrue",
       image: "/assets/svg/exchanges/logo-bittrue.svg",
-      url: "https://www.bitrue.com/trade/dfi_btc",
+      url: "https://www.bitrue.com/trade/dfi_usdt",
     },
     {
       name: "EasyCrypto (AU)",
@@ -74,6 +74,11 @@ export function BuyDFIButton({
       name: "Bitmart.com",
       image: "/assets/svg/exchanges/logo-bitmart.svg",
       url: "https://www.bitmart.com/trade/en?symbol=%24DFI_USDT&layout=basic",
+    },
+    {
+      name: "CoinEx.com",
+      image: "/assets/img/logo-black.svg",
+      url: "https://coinex.com/en/exchange/DFI-USDT",
     },
   ];
 

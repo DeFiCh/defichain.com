@@ -76,7 +76,9 @@ function DropdownItem({
                   id="faq-link"
                   data-testid="faq-link"
                 >
-                  <span className="text-electric underline">{item.value}</span>{" "}
+                  <span className="text-electric underline">
+                    {item.value}
+                  </span>{" "}
                 </a>
               );
             }

@@ -14,6 +14,7 @@ import EasycryptoNz from "./EasycryptoNz";
 import Bake from "./Bake";
 import Lock from "./Lock";
 import ChangeNow from "./ChangeNow";
+import CoinEx from "./CoinEx";
 
 const mapping: Record<string, (props: SVGProps<SVGSVGElement>) => JSX.Element> =
   {
@@ -32,6 +33,7 @@ const mapping: Record<string, (props: SVGProps<SVGSVGElement>) => JSX.Element> =
     Bake,
     Lock,
     ChangeNow,
+    CoinEx,
   };
 
 export function getExchangeLogo(

@@ -3,7 +3,7 @@ export const exchanges = [
   {
     id: "bitrue",
     name: "Bitrue",
-    url: "https://www.bitrue.com/trade/dfi_btc",
+    url: "https://www.bitrue.com/trade/dfi_usdt",
   },
   {
     id: "latoken",

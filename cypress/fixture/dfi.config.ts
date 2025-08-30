@@ -6,41 +6,6 @@ export const exchanges = [
     url: "https://www.bitrue.com/trade/dfi_btc",
   },
   {
-    id: "kucoin",
-    name: "Kucoin",
-    url: "https://trade.kucoin.com/DFI-BTC",
-  },
-  {
-    id: "htx",
-    name: "Htx",
-    url: "https://www.htx.com/trade/dfi_usdt",
-  },
-  {
-    id: "gateio",
-    name: "Gateio",
-    url: "https://www.gate.io/trade/DFI_USDT",
-  },
-  {
-    id: "transak",
-    name: "Transak",
-    url: "https://global.transak.com",
-  },
-  {
-    id: "bybit",
-    name: "Bybit",
-    url: "https://www.bybit.com/en-US/trade/spot/DFI/USDT",
-  },
-  {
-    id: "swyftx",
-    name: "Swyftx",
-    url: "https://swyftx.com/au/buy/defichain",
-  },
-  {
-    id: "bitdotcom",
-    name: "Bitdotcom",
-    url: "https://www.bit.com/legacy/spot?pair=DFI-USDT",
-  },
-  {
     id: "latoken",
     name: "Latoken",
     url: "https://latoken.com/exchange/DFI_USDT",
@@ -49,16 +14,6 @@ export const exchanges = [
     id: "bitmart",
     name: "Bitmart",
     url: "https://www.bitmart.com/trade/en?symbol=%24DFI_USDT&layout=basic",
-  },
-  {
-    id: "easyau",
-    name: "EasycryptoAu",
-    url: "https://easycrypto.com/au/buy-sell/dfi-defichain",
-  },
-  {
-    id: "easynz",
-    name: "EasycryptoNz",
-    url: "https://easycrypto.com/nz/buy-sell/dfi-defichain",
   },
 ];
 

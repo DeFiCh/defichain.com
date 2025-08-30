@@ -16,21 +16,6 @@ export function BuyDFIButton({
 
   const exchanges = [
     {
-      name: "KuCoin",
-      image: "/assets/svg/exchanges/logo-kucoin.svg",
-      url: "https://trade.kucoin.com/DFI-USDT",
-    },
-    {
-      name: "Htx",
-      image: "/assets/img/exchanges/logo-htx.png",
-      url: "https://www.htx.com/trade/dfi_usdt",
-    },
-    {
-      name: "Gate.io",
-      image: "/assets/svg/exchanges/logo-gateio.svg",
-      url: "https://www.gate.io/trade/DFI_USDT",
-    },
-    {
       name: "LATOKEN",
       image: "/assets/svg/exchanges/logo-latoken.svg",
       url: "https://go.latoken.com/1gd",
@@ -38,47 +23,7 @@ export function BuyDFIButton({
     {
       name: "Bittrue",
       image: "/assets/svg/exchanges/logo-bittrue.svg",
-      url: "https://www.bitrue.com/trade/dfi_usdt",
-    },
-    {
-      name: "EasyCrypto (AU)",
-      image: "/assets/img/exchanges/logo-easycrypto-au.png",
-      url: "https://easycrypto.ai/au/buy-sell/dfi-defichain",
-    },
-    {
-      name: "EasyCrypto (NZ)",
-      image: "/assets/img/exchanges/logo-easycrypto-nz.png",
-      url: "https://easycrypto.ai/nz/buy-sell/dfi-defichain",
-    },
-    {
-      name: "Transak",
-      image: "/assets/img/exchanges/logo-transak.png",
-      url: "https://global.transak.com",
-    },
-    {
-      name: "Bybit",
-      image: "/assets/svg/exchanges/logo-bybit.svg",
-      url: "https://www.bybit.com/en-US/trade/spot/DFI/USDT",
-    },
-    {
-      name: "Swyftx",
-      image: "/assets/svg/exchanges/logo-swyftx.svg",
-      url: "https://swyftx.com/au/buy/defichain/",
-    },
-    {
-      name: "Bit.com",
-      image: "/assets/img/exchanges/bit.png",
-      url: "https://www.bit.com/legacy/spot?pair=DFI-USDT",
-    },
-    {
-      name: "Bitmart.com",
-      image: "/assets/svg/exchanges/logo-bitmart.svg",
-      url: "https://www.bitmart.com/trade/en?symbol=%24DFI_USDT&layout=basic",
-    },
-    {
-      name: "CoinEx.com",
-      image: "/assets/img/logo-black.svg",
-      url: "https://coinex.com/en/exchange/DFI-USDT",
+      url: "https://www.bitrue.com/trade/dfi_btc",
     },
   ];
 

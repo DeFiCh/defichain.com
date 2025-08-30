@@ -14,7 +14,7 @@ export function DFIStatisticsDisplay() {
   const { t } = useTranslation("page-explore-dfi");
 
   const { value: dfiMintedValue, suffix: dfiMintedSuffix } = useUnitSuffix(
-    supply?.max,
+    1300000000,
     1,
   );
 

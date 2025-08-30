@@ -21,6 +21,11 @@ export default function GetDFISectionExchanges() {
       name: "Latoken",
       url: "https://latoken.com/exchange/DFI_USDT",
     },
+    {
+      id: "GetDFISection.Exchange.Bake",
+      name: "Bake",
+      url: "https://bake.io/",
+    },
   ];
 
   const staking: ExchangeItem[] = [

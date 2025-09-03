@@ -43,7 +43,7 @@
   },
   "DistributionSection": {
     "title": "Anfängliche Token-Verteilung",
-    "desc": "Von den 1,2 Milliarden $DFI Token befinden sich 49% in der Erstausgabe, der Rest wird im Laufe der Zeit an Masternode-Inhaber ausgegeben.",
+    "desc": "Von den 1,3 Milliarden $DFI Token befinden sich 49% in der Erstausgabe, der Rest wird im Laufe der Zeit an Masternode-Inhaber ausgegeben.",
     "chart": {
       "InitialSupply": "Anfangsbestand",
       "ToMasternodes": "An die Masternodes im Laufe der Zeit",

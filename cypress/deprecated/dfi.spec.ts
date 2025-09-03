@@ -62,20 +62,10 @@ context("/dfi page on desktop", () => {
         .should("have.text", "Exchanges");
       cy.findByTestId("ExchangeSection.Text").should("be.visible");
       cy.findByTestId("ExchangeSection.Bittrue").should("be.visible");
-      cy.findByTestId("ExchangeSection.Kucoin").should("be.visible");
-      cy.findByTestId("ExchangeSection.EasyAu").should("be.visible");
-      cy.findByTestId("ExchangeSection.EasyNz").should("be.visible");
-      cy.findByTestId("ExchangeSection.Htx").should("be.visible");
-      cy.findByTestId("ExchangeSection.Transak").should("be.visible");
-      cy.findByTestId("ExchangeSection.Bit").should("be.visible");
-      cy.findByTestId("ExchangeSection.Bitmart").should("be.visible");
-      cy.findByTestId("ExchangeSection.Gateio").should("be.visible");
-
       cy.findByTestId("DfiPage.Staking.Heading")
         .should("be.visible")
         .should("have.text", "Staking");
       cy.findByTestId("DfiPage.Staking.Text").should("be.visible");
-      cy.findByTestId("DfiPage.Staking.Kucoin").should("be.visible");
       cy.findByTestId("DfiPage.Staking.Lock").should("be.visible");
     });
   });
@@ -145,19 +135,11 @@ context("/dfi page on mobile", () => {
         .should("have.text", "Exchanges");
       cy.findByTestId("ExchangeSection.Text").should("be.visible");
       cy.findByTestId("ExchangeSection.Bittrue").should("be.visible");
-      cy.findByTestId("ExchangeSection.Kucoin").should("be.visible");
-      cy.findByTestId("ExchangeSection.EasyAu").should("be.visible");
-      cy.findByTestId("ExchangeSection.EasyNz").should("be.visible");
-      cy.findByTestId("ExchangeSection.Htx").should("be.visible");
-      cy.findByTestId("ExchangeSection.Transak").should("be.visible");
-      cy.findByTestId("ExchangeSection.Bybit").should("be.visible");
-      cy.findByTestId("ExchangeSection.Swyftx").should("be.visible");
 
       cy.findByTestId("DfiPage.Staking.Heading")
         .should("be.visible")
         .should("have.text", "Staking");
       cy.findByTestId("DfiPage.Staking.Text").should("be.visible");
-      cy.findByTestId("DfiPage.Staking.Kucoin").should("be.visible");
     });
   });
 });

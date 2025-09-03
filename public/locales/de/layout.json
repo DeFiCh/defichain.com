@@ -106,16 +106,10 @@
                 "title": "X (formerly Twitter)"
             },
             {
-              "title": "Facebook"
-            },
-            {
               "title": "GitHub"
             },
             {
               "title": "YouTube"
-            },
-            {
-              "title": "LinkedIn"
             },
             {
               "title": "Discord"
@@ -139,10 +133,22 @@
               "title": "Telegram (IT)"
             },
             {
+              "title": "Telegram (IN)"
+            },
+            {
               "title": "Telegram (TR)"
             },
             {
               "title": "Telegram (RU)"
+            },
+            {
+              "title": "Telegram (PT)"
+            },
+            {
+              "title": "Telegram (Masternodes EN)"
+            },
+            {
+              "title": "Telegram (Masternodes DE)"
             },
             {
               "title": "Wiki"

@@ -729,7 +729,7 @@ Ainsi, Alice peut obtenir une position longue cumulée en DFI sans investir d'ar
 
 Le $DFI sera l'unité de compte intégrale dans l'écosystème DeFiChain.
 
-La Fondation DeFiChain émettra le token utilitaire DeFi, DFI, plafonné à 1 200 000 000 (1,2 milliards) pendant toute sa durée de vie. Il n'y aura jamais plus que 1,2 milliard de DFI créés.
+La Fondation DeFiChain émettra le token utilitaire DeFi, DFI, plafonné à 1 300 000 000 (1,3 milliards) pendant toute sa durée de vie. Il n'y aura jamais plus que 1,3 milliard de DFI créés.
 
 DFI est divisible jusqu'à 8 décimales.
 
@@ -799,7 +799,7 @@ Pour les décisions de gouvernance, seule la Fondation peut soumettre des propos
 
 ### Distribution initiale des tokens
 
-Sur les 1.2 milliards de tokens $DFI, 49% seront émis à la Fondation DeFiChain au démarrage. Le reste sera émis aux détenteurs de masternodes au fil du temps.
+Sur les 1.3 milliards de tokens $DFI, 49% seront émis à la Fondation DeFiChain au démarrage. Le reste sera émis aux détenteurs de masternodes au fil du temps.
 Des 49% de tokens $DFI initialement émises, 49% seront conservées par la Fondation DeFiChain. Le reste peut être distribué aux investisseurs accrédités, aux grands fonds et aux institutions, collectivement connus comme partenaires externes, pour financer le développement initial de DeFiChain. Afin de décentraliser autant que possible les avoirs de DFI, la Fondation DeFiChain ne peut pas conserver plus de 49% de tous les tokens initialement émis. L'utilisation potentielle des tokens sera décidée par le conseil de la Fondation DeFiChain mais sera exclusivement dirigée vers l'adoption et le développement de DeFiChain.
 
 Pour éviter tout doute, il n'y aura PAS d'ICO publique.
@@ -812,7 +812,7 @@ D'autres tokens seront uniquement reçus que par le biais du staking, qui est d�
 
 DeFiChain est initialement lancée avec une récompense de 200 DFI par bloc, dont 10% vont au fonds communautaire. La Fondation s'engage à garantir cette récompense de 200 DFI pour au moins 1 050 000 blocs depuis le premier bloc de genèse, soit environ 1 an.
 
-Par la suite, les récompenses par bloc seront ajustées par un vote de la gouvernance. La Fondation s'engage également à ce qu'il n'y ait jamais plus de 1 200 000 000 (1,2 milliard) de DFI en circulation, à moins que la gouvernance de la DAO ne vote pour modifier cette limite. Par conséquent, le DFI est un token utilitaire déflationniste.
+Par la suite, les récompenses par bloc seront ajustées par un vote de la gouvernance. La Fondation s'engage également à ce qu'il n'y ait jamais plus de 1 300 000 000 (1,3 milliard) de DFI en circulation, à moins que la gouvernance de la DAO ne vote pour modifier cette limite. Par conséquent, le DFI est un token utilitaire déflationniste.
 
 Le programme de staking proposé pour les 10 premières années est conforme au tableau suivant :
 

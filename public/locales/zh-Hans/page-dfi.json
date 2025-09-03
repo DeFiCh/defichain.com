@@ -43,7 +43,7 @@
   },
   "DistributionSection": {
     "title": "初始代币分配",
-    "desc": "在12亿$DFI货币中，49%是最初供应的，其余的将随着时间推移发行给主节点持有者。",
+    "desc": "在13亿$DFI货币中，49%是最初供应的，其余的将随着时间推移发行给主节点持有者。",
     "chart": {
       "InitialSupply": "初始代币供应",
       "ToMasternodes": "随着时间的推移主节点",

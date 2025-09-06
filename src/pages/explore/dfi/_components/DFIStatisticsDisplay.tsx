@@ -46,7 +46,7 @@ export function DFIStatisticsDisplay() {
       desc:
         supply === undefined
           ? supply
-          : `out of ${dfiMintedValue}${dfiMintedSuffix}} fixed supply`,
+          : `out of ${dfiMintedValue}${dfiMintedSuffix} fixed supply`,
       testID: "dfi-minted",
     },
   ];

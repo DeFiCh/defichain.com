@@ -13,12 +13,12 @@ import rehypeSlug from "rehype-slug";
 import { Head } from "@components/commons/Head";
 import { useTranslation } from "../hooks/useTranslation";
 import { getMDPageBySlug } from "../../utils/api";
-import { Post } from "./learn/utils/api";
+import { LearnPost } from "./learn/utils/api";
 import TableOfContents from "./privacy-policy/_components/TableOfContents";
 
 interface PrivacyPolicyPageProps {
   props: {
-    post: Post;
+    post: LearnPost;
   };
 }
 

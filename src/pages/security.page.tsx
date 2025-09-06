@@ -8,12 +8,12 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import React from "react";
 import { remark } from "remark";
 import { Head } from "@components/commons/Head";
-import { Post } from "./learn/utils/api";
+import { LearnPost } from "./learn/utils/api";
 import { getMDPageBySlug } from "../../utils/api";
 
 interface SecurityPageProps {
   props: {
-    post: Post;
+    post: LearnPost;
   };
 }
 

@@ -33,7 +33,7 @@ export function DFIStatisticsDisplay() {
       stats: supply?.circulating,
       desc:
         supply === undefined
-          ? supply
+          ? undefined
           : `${calculatePercentage(
               supply?.circulating,
               supply?.total,
@@ -44,9 +44,7 @@ export function DFIStatisticsDisplay() {
       title: t("statisticsDisplay.dfiMinted.title"),
       stats: supply?.total,
       desc:
-        supply === undefined ? (
-          supply
-        ) : (
+        supply === undefined ? undefined : (
           <>
             Out of {dfiMintedValue}
             {dfiMintedSuffix} fixed supply. (

@@ -44,9 +44,23 @@ export function DFIStatisticsDisplay() {
       title: t("statisticsDisplay.dfiMinted.title"),
       stats: supply?.total,
       desc:
-        supply === undefined
-          ? supply
-          : `out of ${dfiMintedValue}${dfiMintedSuffix} fixed supply`,
+        supply === undefined ? (
+          supply
+        ) : (
+          <>
+            Out of {dfiMintedValue}
+            {dfiMintedSuffix} fixed supply. (
+            <a
+              href="https://www.reddit.com/r/defiblockchain/comments/1ka6cux/clarification_on_dfi_max_supply_overshooting_12b/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 underline"
+            >
+              read more...
+            </a>
+            )
+          </>
+        ),
       testID: "dfi-minted",
     },
   ];

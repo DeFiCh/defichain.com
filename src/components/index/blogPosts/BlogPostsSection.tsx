@@ -2,12 +2,13 @@ import classNames from "classnames";
 import { Container } from "@components/commons/Container";
 import { SectionTitle } from "@components/commons/SectionTitle";
 import { SecondaryButton } from "@components/commons/Buttons";
-import { Posts } from "@components/commons/prismicTypes";
 import { useTranslation } from "../../../hooks/useTranslation";
 import ProjectCard from "./PostCard";
+import type { Post } from "../../../lib/blogspotApi";
 
-export function BlogPostsSection({ blogPosts }: { blogPosts: Posts[] }) {
+export function BlogPostsSection({ blogPosts }: { blogPosts: Post[] }) {
   const { t } = useTranslation("page-index");
+
   return blogPosts?.length > 0 ? (
     <section className={classNames("relative lg:mb-56 md:mb-52 mb-48")}>
       <Container>
@@ -24,15 +25,15 @@ export function BlogPostsSection({ blogPosts }: { blogPosts: Posts[] }) {
             <SecondaryButton
               text={t("BlogPostsSection.button")}
               className="text-sm mt-9 lg:py-4 py-3 px-[62px] md:px-[56px] lg:text-base"
-              href="https://blog.defichain.com/"
+              href="https://defichainblog.blogspot.com/"
               customSize={24}
               customClass="ml-[8px]"
               testID="view-all-articles"
             />
           </div>
           <div className="flex flex-wrap gap-x-6 gap-y-6 md:gap-y-12 mt-12 lg:mt-0 lg:w-[660px]">
-            {blogPosts.slice(-4).map((p, i) => (
-              <ProjectCard key={p.title[0].text} post={p} isLatest={i === 0} />
+            {blogPosts.slice(0, 4).map((p, i) => (
+              <ProjectCard key={`${p.slug}-${i}`} post={p} isLatest={i === 0} />
             ))}
           </div>
         </div>

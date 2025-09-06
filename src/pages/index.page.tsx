@@ -8,10 +8,15 @@ import { Container } from "@components/commons/Container";
 import { StartExploringButton } from "@components/commons/StartExploringButton";
 import { YearAheadRoadMapSection } from "@components/index/RoadMapSection";
 import { BlogPostsSection } from "@components/index/blogPosts/BlogPostsSection";
-import * as prismic from "@prismicio/client";
 import { useTranslation } from "../hooks/useTranslation";
 
-export default function HomePage({ blogPosts }): JSX.Element {
+import { getBlogspotPosts, type Post } from "../lib/blogspotApi";
+
+export default function HomePage({
+  blogPosts,
+}: {
+  blogPosts: Post[];
+}): JSX.Element {
   const { t } = useTranslation("page-index");
 
   return (
@@ -30,18 +35,13 @@ export default function HomePage({ blogPosts }): JSX.Element {
     </>
   );
 }
-async function getPostsFromPrismic(): Promise<any> {
-  const endpoint = prismic.createClient("defichain");
-  return endpoint.getByType("news");
-}
 
 export async function getStaticProps() {
-  const blogPosts = await getPostsFromPrismic();
+  const posts = await getBlogspotPosts();
+  const blogPosts: Post[] = posts.slice(0, 8);
+
   return {
-    props: {
-      blogPosts: blogPosts.results.map((r) => ({
-        ...r.data,
-      })),
-    },
+    props: { blogPosts },
+    revalidate: 3600, // refresh every hour
   };
 }

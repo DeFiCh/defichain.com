@@ -10,7 +10,7 @@
       "buy": "Buy",
       "getDfi": "Get DFI",
       "dfcblog": "Blog",
-      "bloglink": "https://blog.defichain.com/",
+      "bloglink": "https://defichainblog.blogspot.com/",
       "explore": "Explore",
       "build": "Build",
       "metachain": "MetaChain",
@@ -105,7 +105,7 @@
               "title": "Reddit"
             },
             {
-                "title": "X (formerly Twitter)"
+              "title": "X (formerly Twitter)"
             },
             {
               "title": "GitHub"

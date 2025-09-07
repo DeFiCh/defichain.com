@@ -37,11 +37,11 @@ export default function HomePage({
 }
 
 export async function getStaticProps() {
-  const posts = await getBlogspotPosts();
-  const blogPosts: Post[] = posts.slice(0, 8);
-
-  return {
-    props: { blogPosts },
-    revalidate: 3600, // refresh every hour
-  };
+  try {
+    const posts = await getBlogspotPosts();
+    return { props: { blogPosts: posts.slice(0, 8) }, revalidate: 3600 };
+  } catch (e) {
+    console.error("Blogspot feed error:", e);
+    return { props: { blogPosts: [] }, revalidate: 600 };
+  }
 }

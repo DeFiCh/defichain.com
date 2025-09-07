@@ -9,7 +9,6 @@ import { StartExploringButton } from "@components/commons/StartExploringButton";
 import { YearAheadRoadMapSection } from "@components/index/RoadMapSection";
 import { BlogPostsSection } from "@components/index/blogPosts/BlogPostsSection";
 import { useTranslation } from "../hooks/useTranslation";
-
 import { getBlogspotPosts, type Post } from "../lib/blogspotApi";
 
 export default function HomePage({
@@ -31,7 +30,7 @@ export default function HomePage({
       <DeFiChainEcoSystemSection />
       <ReadyForFlexibility />
       <YearAheadRoadMapSection />
-      <BlogPostsSection blogPosts={blogPosts} />
+      <BlogPostsSection blogPosts={Array.isArray(blogPosts) ? blogPosts : []} />
     </>
   );
 }
@@ -39,9 +38,20 @@ export default function HomePage({
 export async function getStaticProps() {
   try {
     const posts = await getBlogspotPosts();
-    return { props: { blogPosts: posts.slice(0, 8) }, revalidate: 3600 };
-  } catch (e) {
-    console.error("Blogspot feed error:", e);
-    return { props: { blogPosts: [] }, revalidate: 600 };
+    const props = { blogPosts: posts.slice(0, 8) };
+
+    if (process.env.NETLIFY) {
+      return { props };
+    }
+
+    return { props, revalidate: 3600 };
+  } catch {
+    const props = { blogPosts: [] };
+
+    if (process.env.NETLIFY) {
+      return { props };
+    }
+
+    return { props, revalidate: 600 };
   }
 }

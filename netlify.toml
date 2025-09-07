@@ -2,6 +2,10 @@
   command = "pnpm run build"
   publish = ".next"
 
+[build.environment]
+  NODE_VERSION = "18"
+  PNPM_VERSION = "8.10.0"
+
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
 
@@ -42,7 +46,7 @@
   to = "https://defichain.com/zh-Hant/:splat"
   status = 301
   force = true
-  
+
 [[redirects]]
   from = "https://defichain.com/dfi-token"
   to = "https://defichain.com/dfi"

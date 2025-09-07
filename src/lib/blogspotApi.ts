@@ -5,7 +5,7 @@ export interface Post {
   description: string;
   content: string; // raw HTML from Blogger
   url: string; // canonical post URL
-  imageUrl: string; // first <img> in content or media$thumbnail
+  imageUrl?: string; // first <img> in content or static bg image
   published?: string;
 }
 

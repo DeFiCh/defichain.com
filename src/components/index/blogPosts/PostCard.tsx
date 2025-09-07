@@ -1,5 +1,7 @@
 import type { Post } from "../../../lib/blogspotApi";
 
+const LOCAL_BG = "/assets/img/blogPosts/localBg.png";
+
 export default function ProjectCard({
   post,
   isLatest,
@@ -19,16 +21,14 @@ export default function ProjectCard({
         rel="noreferrer"
       >
         <section
-          className="w-full min-h-[180px] bg-light-50 bg-cover bg-center flex flex-col justify-end"
+          className="w-full min-h-[180px] bg-light-50 flex flex-col justify-end"
           data-testid={`card_title_${post.title}`}
         >
           <section className="text-start">
             <div
-              className="relative bg-cover bg-[center_left_0rem] w-full h-[179px] rounded-[5px]"
+              className="relative w-full h-[179px] rounded-[5px] overflow-hidden"
               style={{
-                backgroundImage: post.imageUrl
-                  ? `url('${post.imageUrl}')`
-                  : undefined,
+                background: `url('${LOCAL_BG}') center / cover no-repeat`,
               }}
             >
               {isLatest && (
@@ -37,6 +37,7 @@ export default function ProjectCard({
                 </div>
               )}
             </div>
+
             <div className="text-dark-1000 font-semibold px-3 mt-4 max-w-[294px] line-clamp-2 h-12 lg:text-lg lg:leading-6 lg:mt-6">
               {post.title}
             </div>

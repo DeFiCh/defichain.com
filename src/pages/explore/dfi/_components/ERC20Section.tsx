@@ -36,7 +36,7 @@ export default function ERC20Section(): JSX.Element {
           text={t("erc20Section.buttonText")}
           data-testid="explore-dmc-button-erc-20-learn-more"
           className="lg:px-[72.5px] md:px-[130px] py-3 lg:py-4"
-          href="https://defichainblog.blogspot.com/defichains-first-move-to-become-an-interoperable-defi-powerhouse/"
+          href="https://defichainblog.blogspot.com/2021/03/defichains-first-move-to-become.html/"
           testID="erc-20-learn-more"
         />
         <LinkButton

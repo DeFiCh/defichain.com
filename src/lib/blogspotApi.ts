@@ -3,9 +3,9 @@ export interface Post {
   title: string;
   subtitle: string;
   description: string;
-  content: string;
-  url: string;
-  imageUrl: string;
+  content: string; // raw HTML from Blogger
+  url: string; // canonical post URL
+  imageUrl: string; // first <img> in content or media$thumbnail
   published?: string;
 }
 

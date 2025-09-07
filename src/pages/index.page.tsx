@@ -40,6 +40,7 @@ export async function getStaticProps() {
     const posts = await getBlogspotPosts();
     const props = { blogPosts: posts.slice(0, 8) };
 
+    // On Netlify we serve fully static to avoid ISR function crashes
     if (process.env.NETLIFY) {
       return { props };
     }

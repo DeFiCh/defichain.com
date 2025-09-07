@@ -1,6 +1,6 @@
 import type { Post } from "../../../lib/blogspotApi";
 
-const LOCAL_BG = "/assets/img/blogPosts/localBg.png";
+const LOCAL_BG = "/assets/img/background/static_post_BG_16x9_DeFiChain.png";
 
 export default function ProjectCard({
   post,

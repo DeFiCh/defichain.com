@@ -60,7 +60,7 @@ export function Explore() {
           },
           {
             icon: "crypto",
-            href: "https://chainz.cryptoid.info/",
+            href: "https://chainz.cryptoid.info/dfi/",
             title: entries[1].labels[1].title,
             testID: "explore-crypto-id",
             hasExternalIcon: true,

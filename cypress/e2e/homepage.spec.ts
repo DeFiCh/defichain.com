@@ -29,7 +29,7 @@ viewports.forEach((viewport) => {
       cy.findByTestId("header-nav-elem-explore-crypto-id")
         .should("be.visible")
         .and("have.attr", "href")
-        .and("include", "https://chainz.cryptoid.info/");
+        .and("include", "https://chainz.cryptoid.info/dfi/");
       ecosystemLinks.forEach((ecosystemItem) => {
         cy.findByTestId(`header-nav-elem-explore-${ecosystemItem.headerTestid}`)
           .should("be.visible")

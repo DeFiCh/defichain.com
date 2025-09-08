@@ -10,7 +10,7 @@
       "buy": "Erwerb von",
       "getDfi": "DFI erwerben",
       "dfcblog": "Blog",
-      "bloglink": "https://blog.defichain.com/de/",
+      "bloglink": "https://defichainblog.blogspot.com/",
       "explore": "Erkunden",
       "build": "Bauen",
       "community": "Community"
@@ -103,7 +103,7 @@
               "title": "Reddit"
             },
             {
-                "title": "X (formerly Twitter)"
+              "title": "X (formerly Twitter)"
             },
             {
               "title": "GitHub"

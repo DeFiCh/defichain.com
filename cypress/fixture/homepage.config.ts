@@ -41,14 +41,14 @@ export const resourcesLinks = [
   },
   {
     footerTestid: "DeFiChain Blog",
-    link: "https://blog.defichain.com/",
+    link: "https://defichainblog.blogspot.com/",
   },
 ];
 
 export const communityLinks = [
   {
     headerId: "dfi-blog",
-    href: "https://blog.defichain.com/",
+    href: "https://defichainblog.blogspot.com/",
   },
   {
     headerId: "reddit",

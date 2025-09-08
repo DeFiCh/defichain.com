@@ -2,6 +2,11 @@
   command = "pnpm run build"
   publish = ".next"
 
+[build.environment]
+  NODE_VERSION = "18"
+  PNPM_VERSION = "8.10.0"
+  AWS_LAMBDA_JS_RUNTIME = "nodejs18.x"
+
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
 

@@ -8,10 +8,14 @@ import { Container } from "@components/commons/Container";
 import { StartExploringButton } from "@components/commons/StartExploringButton";
 import { YearAheadRoadMapSection } from "@components/index/RoadMapSection";
 import { BlogPostsSection } from "@components/index/blogPosts/BlogPostsSection";
-import * as prismic from "@prismicio/client";
 import { useTranslation } from "../hooks/useTranslation";
+import { getBlogspotPosts, type Post } from "../lib/blogspotApi";
 
-export default function HomePage({ blogPosts }): JSX.Element {
+export default function HomePage({
+  blogPosts,
+}: {
+  blogPosts: Post[];
+}): JSX.Element {
   const { t } = useTranslation("page-index");
 
   return (
@@ -26,22 +30,29 @@ export default function HomePage({ blogPosts }): JSX.Element {
       <DeFiChainEcoSystemSection />
       <ReadyForFlexibility />
       <YearAheadRoadMapSection />
-      <BlogPostsSection blogPosts={blogPosts} />
+      <BlogPostsSection blogPosts={Array.isArray(blogPosts) ? blogPosts : []} />
     </>
   );
 }
-async function getPostsFromPrismic(): Promise<any> {
-  const endpoint = prismic.createClient("defichain");
-  return endpoint.getByType("news");
-}
 
 export async function getStaticProps() {
-  const blogPosts = await getPostsFromPrismic();
-  return {
-    props: {
-      blogPosts: blogPosts.results.map((r) => ({
-        ...r.data,
-      })),
-    },
-  };
+  try {
+    const posts = await getBlogspotPosts();
+    const props = { blogPosts: posts.slice(0, 8) };
+
+    // On Netlify we serve fully static to avoid ISR function crashes
+    if (process.env.NETLIFY) {
+      return { props };
+    }
+
+    return { props, revalidate: 3600 };
+  } catch {
+    const props = { blogPosts: [] };
+
+    if (process.env.NETLIFY) {
+      return { props };
+    }
+
+    return { props, revalidate: 600 };
+  }
 }

@@ -122,7 +122,7 @@ export const MenuItems = [
         testId: "blog",
         altLabel: "blog",
         isExternaLink: true,
-        url: "https://blog.defichain.com/",
+        url: "https://defichainblog.blogspot.com/",
         hasUpArrowIcon: true,
       },
       // {

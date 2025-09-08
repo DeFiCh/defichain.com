@@ -1,3 +1,4 @@
+import React, { ReactNode } from "react";
 import { useUnitSuffix } from "@hooks/useUnitSuffix";
 import CountUp from "react-countup";
 import classNames from "classnames";
@@ -6,7 +7,7 @@ import { useRouter } from "next/router";
 interface StatisticPanelItemProps {
   title: string;
   stats?: number;
-  desc?: string;
+  desc?: ReactNode; // JSX or string
   prefix?: string;
   descStyle?: string;
   displayId?: string;
@@ -68,7 +69,7 @@ function StatisticsPanelItem({
 }: {
   title: string;
   stats?: number;
-  desc?: string;
+  desc?: ReactNode;
   prefix?: string;
   descStyle?: string;
   isTabletHorizontal?: boolean;

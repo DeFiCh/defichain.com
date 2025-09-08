@@ -24,7 +24,7 @@ export function Community() {
         items: [
           {
             icon: "dfi",
-            href: "https://blog.defichain.com/",
+            href: "https://defichainblog.blogspot.com/",
             title: entries[0].labels[0].title,
             subtitle: entries[0].labels[0].subtitle,
             testID: "community-dfi-blog",

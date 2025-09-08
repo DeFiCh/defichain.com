@@ -248,7 +248,7 @@ viewports.forEach((viewport) => {
       );
       cy.checkElementVisibilityAndHref(
         "explore-dmc-button-erc-20-learn-more",
-        "https://blog.defichain.com/defichains-first-move-to-become",
+        "https://defichainblog.blogspot.com/defichains-first-move-to-become",
       );
       cy.checkElementVisibilityAndHref(
         "link-button-view-contract",

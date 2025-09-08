@@ -142,7 +142,7 @@ viewports.forEach((viewport) => {
       cy.findByTestId("secondary-button-view-all-articles")
         .should("be.visible")
         .and("have.attr", "href")
-        .and("include", "https://blog.defichain.com");
+        .and("include", "https://defichainblog.blogspot.com");
       cy.findByTestId("secondary-button-view-all-articles")
         .should("have.attr", "target")
         .and("include", "_blank");
@@ -209,7 +209,7 @@ viewports.forEach((viewport) => {
       cy.findAllByTestId("blog-post-container-link")
         .should("be.visible")
         .and("have.attr", "href")
-        .and("include", "https://blog.defichain.com/");
+        .and("include", "https://defichainblog.blogspot.com/");
     });
 
     // No TC

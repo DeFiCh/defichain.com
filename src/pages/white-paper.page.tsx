@@ -12,12 +12,12 @@ import classNames from "classnames";
 import { Head } from "@components/commons/Head";
 import { useRouter } from "next/router";
 import { getMDPageBySlug } from "../../utils/api";
-import { Post } from "./learn/utils/api";
+import { LearnPost } from "./learn/utils/api";
 import TableOfContents from "./whitePaper/TableOfContents";
 
 interface WhitePaperPageProps {
   props: {
-    post: Post;
+    post: LearnPost;
   };
 }
 

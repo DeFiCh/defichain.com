@@ -31,7 +31,7 @@ context("<Header/> on desktop", () => {
         .should("have.attr", "href", "/downloads");
       cy.get('[data-testid="Desktop.HeaderLink.DFCBlog"]')
         .should("be.visible")
-        .should("have.attr", "href", "https://blog.defichain.com/");
+        .should("have.attr", "href", "https://defichainblog.blogspot.com/");
       cy.get('[data-testid="Desktop.HeaderLink.DeFiScan"]')
         .should("be.visible")
         .should("have.attr", "href", "https://defiscan.live/");
@@ -85,7 +85,7 @@ context("<Header/> on mobile", () => {
             .should("have.attr", "href", "/ecosystem");
           cy.get('[data-testid="Mobile.HeaderLink.DFCBlog"]')
             .should("be.visible")
-            .should("have.attr", "href", "https://blog.defichain.com/");
+            .should("have.attr", "href", "https://defichainblog.blogspot.com/");
           cy.get('[data-testid="Mobile.HeaderLink.DeFiScan"]')
             .should("be.visible")
             .should("have.attr", "href", "https://defiscan.live/");

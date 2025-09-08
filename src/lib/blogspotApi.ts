@@ -1,0 +1,59 @@
+export interface Post {
+  slug: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  content: string; // raw HTML from Blogger
+  url: string; // canonical post URL
+  imageUrl?: string; // first <img> in content or static bg image
+  published?: string;
+}
+
+function firstImageFromHtml(html?: string): string {
+  if (!html) {
+    return "";
+  }
+  const m = html.match(/<img[^>]+src="([^">]+)"/i);
+  return m?.[1] ?? "";
+}
+
+export async function getBlogspotPosts(): Promise<Post[]> {
+  try {
+    const res = await fetch(
+      "https://defichainblog.blogspot.com/feeds/posts/default?alt=json",
+    );
+    if (!res.ok) {
+      return [];
+    }
+
+    const json = await res.json();
+    const entries: any[] = Array.isArray(json?.feed?.entry)
+      ? json.feed.entry
+      : [];
+
+    return entries.map((e: any): Post => {
+      const title = e?.title?.$t ?? "";
+      const url =
+        (e?.link || []).find((l: any) => l.rel === "alternate")?.href ?? "";
+      const html = e?.content?.$t ?? "";
+      const imageUrl =
+        firstImageFromHtml(html) || e?.media$thumbnail?.url || "";
+      const description = e?.summary?.$t ?? "";
+      const slug = e?.id?.$t ?? title.toLowerCase().replace(/\s+/g, "-");
+      const published = e?.published?.$t;
+
+      return {
+        slug,
+        title,
+        subtitle: "",
+        description,
+        content: html,
+        url,
+        imageUrl,
+        published,
+      };
+    });
+  } catch {
+    return [];
+  }
+}

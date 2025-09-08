@@ -1,34 +1,34 @@
-import { Posts } from "@components/commons/prismicTypes";
-import { useRouter } from "next/router";
+import type { Post } from "../../../lib/blogspotApi";
+
+const LOCAL_BG = "/assets/img/background/static_post_BG_16x9_DeFiChain.png";
 
 export default function ProjectCard({
   post,
   isLatest,
 }: {
-  post: Posts;
+  post: Post;
   isLatest: boolean;
 }) {
-  const router = useRouter();
   return (
     <article
       className="w-full max-w-[318px] flex flex-col"
-      data-testid={`card_container_${post.title[0]?.text}`}
+      data-testid={`card_container_${post.title}`}
     >
       <a
         data-testid="blog-post-container-link"
-        href={post.url?.url}
+        href={post.url}
         target="_blank"
         rel="noreferrer"
       >
         <section
-          className="w-full min-h-[180px] bg-light-50 bg-cover bg-center flex flex-col justify-end"
-          data-testid={`card_title_${post.title[0]?.text}`}
+          className="w-full min-h-[180px] bg-light-50 flex flex-col justify-end"
+          data-testid={`card_title_${post.title}`}
         >
           <section className="text-start">
             <div
-              className="relative bg-cover bg-[center_left_0rem] w-full h-[179px] rounded-[5px]"
+              className="relative w-full h-[179px] rounded-[5px] overflow-hidden"
               style={{
-                backgroundImage: `url('${post.image.url}')`,
+                background: `url('${LOCAL_BG}') center / cover no-repeat`,
               }}
             >
               {isLatest && (
@@ -37,17 +37,10 @@ export default function ProjectCard({
                 </div>
               )}
             </div>
-            {post.title_de &&
-            post.title_de?.length > 0 &&
-            router.locale === "de" ? (
-              <div className="text-dark-1000 font-semibold px-3 mt-4 max-w-[294px] line-clamp-2 h-12 lg:text-lg lg:leading-6 lg:mt-6">
-                {post.title_de[0].text}
-              </div>
-            ) : (
-              <div className="text-dark-1000 font-semibold px-3 mt-4 max-w-[294px] line-clamp-2 h-12 lg:text-lg lg:leading-6 lg:mt-6">
-                {post.title[0]?.text}
-              </div>
-            )}
+
+            <div className="text-dark-1000 font-semibold px-3 mt-4 max-w-[294px] line-clamp-2 h-12 lg:text-lg lg:leading-6 lg:mt-6">
+              {post.title}
+            </div>
           </section>
         </section>
       </a>

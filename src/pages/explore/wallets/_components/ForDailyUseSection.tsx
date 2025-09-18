@@ -54,7 +54,9 @@ export function ForDailyUseSection() {
               text={IconType.APPSTORE}
             />
             <CardLink
-              url="https://play.google.com/store/apps/details?id=com.defichaincommunity.app"
+              // Temporarily link until the app is available on Google Play
+              // url="https://play.google.com/store/apps/details?id=com.defichain.app"
+              url="https://www.reddit.com/r/defiblockchain/comments/1n1figg/update_on_the_missing_light_wallet_in_the_google/"
               descText="Get It On"
               text={IconType.GOOGLE_PLAY}
             />

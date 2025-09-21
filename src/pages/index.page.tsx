@@ -38,21 +38,8 @@ export default function HomePage({
 export async function getStaticProps() {
   try {
     const posts = await getBlogspotPosts();
-    const props = { blogPosts: posts.slice(0, 8) };
-
-    // On Netlify we serve fully static to avoid ISR function crashes
-    if (process.env.NETLIFY) {
-      return { props };
-    }
-
-    return { props, revalidate: 3600 };
+    return { props: { blogPosts: posts.slice(0, 8) }, revalidate: 3600 };
   } catch {
-    const props = { blogPosts: [] };
-
-    if (process.env.NETLIFY) {
-      return { props };
-    }
-
-    return { props, revalidate: 600 };
+    return { props: { blogPosts: [] }, revalidate: 600 };
   }
 }

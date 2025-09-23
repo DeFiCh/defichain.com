@@ -76,7 +76,7 @@ export const communityLinks = [
   },
   {
     headerId: "discord",
-    href: "https://discord.com/invite/py55egyaGy",
+    href: "https://discord.gg/5ncBGuj7",
   },
   {
     headerId: "coinmarketcap",

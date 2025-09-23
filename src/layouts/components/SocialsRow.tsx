@@ -5,7 +5,7 @@ import {
   AiFillYoutube,
   AiOutlineTwitter,
 } from "react-icons/ai";
-import { FaTelegramPlane } from "react-icons/fa";
+import { FaDiscord, FaTelegramPlane } from "react-icons/fa";
 
 interface SocialsRowProps {
   language: string;
@@ -16,6 +16,24 @@ export default function SocialsRow(props: SocialsRowProps): JSX.Element {
   const { language, customStyle } = props;
   return (
     <div className={classNames(customStyle)}>
+      <a
+        href={`https://t.me/defiblockchain${language}`}
+        target="_blank"
+        rel="noreferrer"
+        data-testid="socials-row-telegram"
+        id="Telegram"
+      >
+        <FaTelegramPlane className="hover-icons" size={24} />
+      </a>
+      <a
+        href="https://discord.gg/5ncBGuj7"
+        target="_blank"
+        rel="noreferrer"
+        data-testid="socials-row-discord"
+        id="Discord"
+      >
+        <FaDiscord className="hover-icons" size={24} />
+      </a>
       <a
         href="https://github.com/DeFiCh/ain"
         target="_blank"
@@ -42,15 +60,6 @@ export default function SocialsRow(props: SocialsRowProps): JSX.Element {
         id="YouTube"
       >
         <AiFillYoutube className="hover-icons" size={24} />
-      </a>
-      <a
-        href={`https://t.me/defiblockchain${language}`}
-        target="_blank"
-        rel="noreferrer"
-        data-testid="socials-row-telegram"
-        id="Telegram"
-      >
-        <FaTelegramPlane className="hover-icons" size={24} />
       </a>
       <a
         href="https://x.com/defichain"

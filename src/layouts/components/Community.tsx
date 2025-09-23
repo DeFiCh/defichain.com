@@ -56,7 +56,7 @@ export function Community() {
             testID: "community-youtube",
           },
           {
-            href: "https://discord.com/invite/py55egyaGy",
+            href: "https://discord.gg/5ncBGuj7",
             title: entries[1].labels[4].title,
             testID: "community-discord",
           },

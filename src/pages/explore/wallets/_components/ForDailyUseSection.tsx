@@ -60,31 +60,6 @@ export function ForDailyUseSection() {
             />
           </div>
         </DownloadCard>
-
-        <DownloadCard
-          title={t("dailyUseSection.entries.JLY.title")}
-          desc={t("dailyUseSection.entries.JLY.desc")}
-          imageSrc="/assets/img/explore/explore-wallet-jellywallet.png"
-          testid="DailyUseSection.Jly"
-        >
-          <div className="flex items-center lg:space-x-4 space-x-3 text-lg font-medium">
-            <CardLink
-              url="https://chrome.google.com/webstore/detail/jellywallet/eegcfalgkkhehkhbjbggbhhlcnckadih"
-              descText="Download For"
-              text={IconType.CHROME}
-            />
-            <CardLink
-              url="https://addons.mozilla.org/en-US/firefox/addon/jellywallet/"
-              descText="Download For"
-              text={IconType.FIREFOX}
-            />
-            <CardLink
-              url="https://chrome.google.com/webstore/detail/jellywallet/eegcfalgkkhehkhbjbggbhhlcnckadih"
-              descText="Download For"
-              text={IconType.BRAVE}
-            />
-          </div>
-        </DownloadCard>
       </div>
     </Container>
   );

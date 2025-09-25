@@ -34,7 +34,7 @@ export default function HomePage({
     </>
   );
 }
-
+// This function gets called at request time on server-side.
 export async function getServerSideProps() {
   const posts = await getBlogspotPosts();
   return { props: { blogPosts: posts.slice(0, 8) } };

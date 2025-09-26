@@ -34,14 +34,11 @@ export default function HomePage({
     </>
   );
 }
-
 export async function getStaticProps() {
-  const posts = await getBlogspotPosts().catch(() => []);
-  const props = { blogPosts: posts.slice(0, 8) };
-
-  const isDeployPreview = process.env.CONTEXT === "deploy-preview";
-  if (isDeployPreview) {
-    return { props };
-  } // fully static for previews
-  return { props, revalidate: 3600 }; // ISR for prod
+  try {
+    const posts = await getBlogspotPosts();
+    return { props: { blogPosts: posts.slice(0, 8) } };
+  } catch {
+    return { props: { blogPosts: [] } };
+  }
 }

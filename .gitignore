@@ -63,3 +63,6 @@ cypress/screenshots
 public/sitemap.xml
 public/robots.txt
 /instrumented/
+
+# Netlify CLI
+.netlify

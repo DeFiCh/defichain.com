@@ -1,6 +1,6 @@
 [![CI](https://github.com/DeFiCh/defichain.com/actions/workflows/ci.yml/badge.svg)](https://github.com/DeFiCh/defichain.com/actions/workflows/ci.yml)
 [![defichain.com](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/nfvd2a/main&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/nfvd2a/runs)
-[![codecov](https://codecov.io/gh/DeFiCh/defichain.com/branch/master/graph/badge.svg?token=UBP6EIO477)](https://codecov.io/gh/DeFiCh/defichain.com)
+[![codecov](https://codecov.io/gh/DeFiCh/defichain.com/graph/badge.svg?token=UBP6EIO477)](https://codecov.io/gh/DeFiCh/defichain.com)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2ce5af6b-2e37-47af-b6d1-174ceabf633c/deploy-status)](https://app.netlify.com/sites/defichain-website/deploys)
 
 # [DeFiChain.com](https://defichain.com)

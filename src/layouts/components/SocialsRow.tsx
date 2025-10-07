@@ -3,9 +3,9 @@ import {
   AiFillGithub,
   AiFillRedditCircle,
   AiFillYoutube,
-  AiOutlineTwitter,
 } from "react-icons/ai";
 import { FaDiscord, FaTelegramPlane } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 interface SocialsRowProps {
   language: string;
@@ -68,7 +68,7 @@ export default function SocialsRow(props: SocialsRowProps): JSX.Element {
         data-testid="socials-row-x"
         id="X"
       >
-        <AiOutlineTwitter className="hover-icons" size={24} />
+        <FaXTwitter className="hover-icons" size={24} />
       </a>
     </div>
   );

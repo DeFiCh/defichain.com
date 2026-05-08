@@ -1,4 +1,5 @@
 import { HomePageHeader } from "@components/index/HomePageHeader";
+import { SunsetBanner } from "@components/commons/SunsetBanner";
 import { BlockchainFeaturesSection } from "@components/index/BlockchainFeaturesSection";
 import { Head } from "@components/commons/Head";
 import { DeFiChainEcoSystemSection } from "@components/index/DeFiChainEcoSystemSection";
@@ -21,6 +22,7 @@ export default function HomePage({
   return (
     <>
       <Head title={t("Header.title")} />
+      <SunsetBanner />
       <HomePageHeader />
       <Container className="justify-center md:mt-0 mt-9 hidden md:flex relative z-10">
         <StartExploringButton startExploringJumpLink="#statistics_display" />

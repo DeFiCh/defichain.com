@@ -76,53 +76,18 @@ export function Community() {
             testID: "community-telegram-de-blockchain",
           },
           {
-            href: "https://t.me/defiblockchain_FR",
-            title: entries[1].labels[8].title,
-            testID: "community-telegram-fr-blockchain",
-          },
-          {
-            href: "https://t.me/official_defichain_es",
-            title: entries[1].labels[9].title,
-            testID: "community-telegram-es",
-          },
-          {
-            href: "https://t.me/defiblockchain_IT",
-            title: entries[1].labels[10].title,
-            testID: "community-telegram-it",
-          },
-          {
-            href: "https://t.me/DevHackBLR",
-            title: entries[1].labels[11].title,
-            testID: "community-telegram-in",
-          },
-          {
-            href: "https://t.me/defiblockchain_TR",
-            title: entries[1].labels[12].title,
-            testID: "community-telegram-tr",
-          },
-          {
-            href: "https://t.me/defichain_RU",
-            title: entries[1].labels[13].title,
-            testID: "community-telegram-ru",
-          },
-          {
-            href: "https://t.me/defiblockchain_PT",
-            title: entries[1].labels[14].title,
-            testID: "community-telegram-pt",
-          },
-          {
             href: "https://t.me/DeFiMasternodes",
-            title: entries[1].labels[15].title,
+            title: entries[1].labels[8].title,
             testID: "community-telegram-mn-en",
           },
           {
             href: "https://t.me/DeFiChainMNGerman",
-            title: entries[1].labels[16].title,
+            title: entries[1].labels[9].title,
             testID: "community-telegram-mn-de",
           },
           {
-            href: "https://defichainwiki.com",
-            title: entries[1].labels[17].title,
+            href: "https://wiki.defichain.com",
+            title: entries[1].labels[10].title,
             testID: "community-wiki",
           },
         ],

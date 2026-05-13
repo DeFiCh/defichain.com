@@ -90,36 +90,4 @@ export const communityLinks = [
     headerId: "telegram-de-blockchain",
     href: "https://t.me/defiblockchain_DE",
   },
-  {
-    headerId: "telegram-fr-blockchain",
-    href: "https://t.me/defiblockchain_FR",
-  },
-  {
-    headerId: "telegram-es",
-    href: "https://t.me/official_defichain_es",
-  },
-  {
-    headerId: "telegram-it",
-    href: "https://t.me/defiblockchain_IT",
-  },
-  {
-    headerId: "telegram-id",
-    href: "https://t.me/defiblockchain_ID",
-  },
-  {
-    headerId: "telegram-tr",
-    href: "https://t.me/defiblockchain_TR",
-  },
-  {
-    headerId: "telegram-zh",
-    href: "https://t.me/defichain_ZH",
-  },
-  {
-    headerId: "telegram-ru",
-    href: "https://t.me/defichain_RU",
-  },
-  {
-    headerId: "telegram-pt",
-    href: "https://t.me/defichain_PT",
-  },
 ];

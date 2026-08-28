@@ -1,6 +1,6 @@
 [build]
   command = "pnpm run build"
-  publish = ".next"
+  publish = "out"
 
 [build.environment]
   NODE_VERSION = "18"
@@ -10,13 +10,40 @@
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'none'; base-uri 'none'; child-src 'self' app.netlify.com; form-action 'none'; frame-ancestors 'none'; img-src 'self' images.prismic.io assets.coingecko.com s2.coinmarketcap.com *.cloudfront.net data:; media-src 'self'; object-src 'none'; script-src 'self' ajax.googleapis.com widgets.coingecko.com files.coinmarketcap.com 3rdparty-apis.coinmarketcap.com app.netlify.com netlify-cdp-loader.netlify.app *.googletagmanager.com https://connect.facebook.net; script-src-elem 'self' ajax.googleapis.com widgets.coingecko.com files.coinmarketcap.com 3rdparty-apis.coinmarketcap.com *.googletagmanager.com; style-src 'self' fonts.googleapis.com 'unsafe-inline' files.coinmarketcap.com; font-src 'self' fonts.gstatic.com; connect-src 'self' api.coingecko.com 3rdparty-apis.coinmarketcap.com wss://cable.coingecko.com ocean.defichain.com api.github.com *.google-analytics.com;"
+    Referrer-Policy = "same-origin"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
 
 [[headers]]
   for = "/keys/security@defichain.com.public.key"
   [headers.values]
     Content-Type = "text/plain"
+
+[[redirects]]
+  from = "/learn/*"
+  to = "/404"
+  status = 302
+
+[[redirects]]
+  from = "/media"
+  to = "/404"
+  status = 302
+
+[[redirects]]
+  from = "/bug-bounty"
+  to = "/404"
+  status = 302
+
+[[redirects]]
+  from = "/security"
+  to = "/404"
+  status = 302
 
 [[redirects]]
   from = "http://defichain.com/*"
@@ -47,7 +74,7 @@
   to = "https://defichain.com/zh-Hant/:splat"
   status = 301
   force = true
-  
+
 [[redirects]]
   from = "https://defichain.com/dfi-token"
   to = "https://defichain.com/dfi"
